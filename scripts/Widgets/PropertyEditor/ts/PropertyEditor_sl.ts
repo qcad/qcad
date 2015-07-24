@@ -22,7 +22,7 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+186"/>
+        <location filename="../PropertyEditor.js" line="+187"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
@@ -32,14 +32,18 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+173"/>
         <source>No Selection</source>
         <translation>Ni izbrano</translation>
     </message>
     <message>
-        <location line="+18"/>
         <source>Geometry</source>
-        <translation>Geometrija</translation>
+        <translation type="vanished">Geometrija</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Specific Properties</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+14"/>
@@ -52,7 +56,7 @@
         <translation>Dodatno</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+164"/>
         <source>Index</source>
         <translation>Indeks</translation>
     </message>
@@ -62,17 +66,17 @@
         <translation>Odstrani to lastnost iz izbranih objektov</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+41"/>
         <source>All</source>
         <translation>Vse</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <source>Add custom property to selected objects</source>
         <translation>Izbranim objektom dodaj dodatno lastnost</translation>
     </message>
     <message>
-        <location line="+599"/>
+        <location line="+604"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -113,7 +117,7 @@
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="-463"/>
+        <location line="-468"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
@@ -123,7 +127,7 @@
         <translation>Uporabi samodejne meritve</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+39"/>
         <source>Yes</source>
         <translation>Da</translation>
     </message>
@@ -133,7 +137,7 @@
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+307"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -145,29 +149,38 @@
         <translation>Izbor:</translation>
     </message>
     <message>
-        <location line="+31"/>
         <source>General</source>
-        <translation>Splošno</translation>
+        <translation type="vanished">Splošno</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+31"/>
+        <source>General Properties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+106"/>
         <source>Move Selection to a New Layer</source>
         <translation>Premakni izbrano na drugo plast</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+62"/>
         <source>Linetype Scale:</source>
+        <translation>Faktor tipa črte:</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Protected:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="-182"/>
         <source>Handle:</source>
         <translation>Identifikator:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži koordinate Z</translation>
     </message>
 </context>
 </TS>

@@ -11,7 +11,7 @@
     <message>
         <location line="+7"/>
         <source>Point on arc or radius</source>
-        <translation>Punt op boog of radius</translation>
+        <translation>Punt op boog of straal</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -36,28 +36,28 @@
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tegen de klok in (positief)</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+17"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Richting</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Met de klok mee (negatief)</translation>
     </message>
     <message>
         <location filename="../ArcCPAInit.js" line="+2"/>
         <source>&amp;Center, Point, Angles</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Center, punt, hoeken</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from center, point on arc and angles</source>
-        <translation type="unfinished"></translation>
+        <translation>Boog tekenen van middlepunt, punt op de boog en hoeken</translation>
     </message>
 </context>
 </TS>

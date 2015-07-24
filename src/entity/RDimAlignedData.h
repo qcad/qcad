@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -30,6 +30,7 @@
  * Aligned dimension entity data class.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RDimAlignedData: public RDimLinearData {
@@ -43,6 +44,8 @@ public:
     RDimAlignedData(const RDimensionData& dimData,
                     const RVector& extensionPoint1,
                     const RVector& extensionPoint2);
+
+    virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     virtual QList<RVector> getReferencePoints(
         RS::ProjectionRenderingHint hint = RS::RenderTop) const;
@@ -64,6 +67,7 @@ private:
     mutable RVector refDefinitionPoint2;
 };
 
+Q_DECLARE_METATYPE(RDimAlignedData)
 Q_DECLARE_METATYPE(RDimAlignedData*)
 Q_DECLARE_METATYPE(const RDimAlignedData*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimAlignedData>)

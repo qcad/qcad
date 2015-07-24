@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -20,7 +20,6 @@
 #include <QApplication>
 #include <QCoreApplication>
 #include <QFileInfo>
-#include <QFontMetrics>
 #include <QStringList>
 #include <QTranslator>
 
@@ -43,6 +42,7 @@ QFont* RSettings::rulerFont = NULL;
 QFont* RSettings::snapLabelFont = NULL;
 QFont* RSettings::infoLabelFont = NULL;
 QFont* RSettings::statusBarFont = NULL;
+RColor* RSettings::selectionColor = NULL;
 int RSettings::snapRange = -1;
 int RSettings::pickRange = -1;
 int RSettings::zeroWeightWeight = -1;
@@ -50,12 +50,17 @@ int RSettings::showCrosshair = -1;
 int RSettings::showLargeCrosshair = -1;
 int RSettings::showLargeOriginAxis = -1;
 int RSettings::concurrentDrawing = -1;
+int RSettings::highResolutionGraphicsView = -1;
 int RSettings::previewEntities = -1;
 int RSettings::limitZoomAndScroll = -1;
 int RSettings::autoScaleLinetypePattern = -1;
 int RSettings::useSecondarySelectionColor = -1;
+int RSettings::mouseThreshold = -1;
+int RSettings::positionByMousePress = -1;
 int RSettings::useSolidLineSelection = -1;
 double RSettings::arcAngleLengthThreshold = -1;
+double RSettings::minArcAngleStep = -1;
+int RSettings::dashThreshold = -1;
 QStringList RSettings::recentFiles;
 QLocale* RSettings::numberLocale = NULL;
 QString RSettings::applicationNameOverride;
@@ -65,6 +70,7 @@ QStringList RSettings::originalArguments;
 
 bool RSettings::quitFlag = false;
 bool RSettings::xDataEnabled = false;
+bool RSettings::nextVersionEnabled = false;
 
 QString RSettings::getAppId() {
     QString ret = qApp->applicationName();
@@ -76,6 +82,13 @@ QString RSettings::getAppId() {
     return ret;
 }
 
+double RSettings::getDevicePixelRatio() {
+#if QT_VERSION >= 0x050000
+    return qApp->devicePixelRatio();
+#else
+    return 1.0;
+#endif
+}
 
 QStringList RSettings::getOriginalArguments() {
     return originalArguments;
@@ -124,6 +137,31 @@ QString RSettings::getApplicationPath() {
     return ret.path();
 }
 
+/**
+ * \return List of all plugin paths for application plugins and add on
+ * plugins in the application data location.
+ */
+QStringList RSettings::getPluginPaths() {
+    QStringList ret;
+
+    ret << RSettings::getPluginPath();
+
+    QDir dataDir(RSettings::getDataLocation());
+    QStringList addOns = dataDir.entryList(QDir::NoDotAndDotDot|QDir::Readable|QDir::Dirs|QDir::Executable, QDir::Name);
+
+    for (int i=0; i<addOns.length(); i++) {
+        if (addOns[i]=="scripts") {
+            continue;
+        }
+        QFileInfo fi(dataDir.absolutePath() + QDir::separator() + addOns[i] + QDir::separator() + "plugins");
+        if (fi.exists()) {
+            ret.append(fi.absolutePath());
+        }
+    }
+
+    return ret;
+}
+
 QString RSettings::getPluginPath() {
     QDir appDir = QDir(getApplicationPath());
 
@@ -162,6 +200,14 @@ QString RSettings::getCacheLocation() {
     return RSettings::getStandardLocation(QStandardPaths::CacheLocation);
 #else
     return RSettings::getStandardLocation(QDesktopServices::CacheLocation);
+#endif
+}
+
+QString RSettings::getDataLocation() {
+#if QT_VERSION >= 0x050000
+    return RSettings::getStandardLocation(QStandardPaths::DataLocation);
+#else
+    return RSettings::getStandardLocation(QDesktopServices::DataLocation);
 #endif
 }
 
@@ -363,7 +409,7 @@ QFont RSettings::getRulerFont() {
     if (rulerFont==NULL) {
         // get application's default font (pixel size is -1, point size e.g. 10pt):
         QFont font;
-        font.setPointSize(9);
+        font.setPointSize(9*getDevicePixelRatio());
         rulerFont = new QFont(getValue("GraphicsViewFonts/Ruler", font).value<QFont>());
     }
     return *rulerFont;
@@ -407,6 +453,14 @@ QFont RSettings::getStatusBarFont() {
     return *statusBarFont;
 }
 
+RColor RSettings::getSelectionColor() {
+    if (selectionColor==NULL) {
+        // get application's default font (pixel size is -1, point size e.g. 10pt):
+        selectionColor = new RColor(getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128)));
+    }
+    return *selectionColor;
+}
+
 bool RSettings::getAutoScaleGrid() {
     return getValue("GraphicsView/AutoScaleGrid", true).toBool();
 }
@@ -436,6 +490,20 @@ double RSettings::getArcAngleLengthThreshold() {
         arcAngleLengthThreshold = RMath::deg2rad(getValue("GraphicsView/ArcAngleLengthThreshold", 0.0).toDouble());
     }
     return arcAngleLengthThreshold;
+}
+
+double RSettings::getMinArcAngleStep() {
+    if (minArcAngleStep<-0.9) {
+        minArcAngleStep = RMath::deg2rad(getValue("GraphicsView/MinArcAngleStep", 0.2).toDouble());
+    }
+    return minArcAngleStep;
+}
+
+int RSettings::getDashThreshold() {
+    if (dashThreshold==-1) {
+        dashThreshold = getValue("GraphicsView/DashThreshold", 1000).toInt();
+    }
+    return dashThreshold;
 }
 
 QString RSettings::getQtVersion() {
@@ -482,15 +550,14 @@ QString RSettings::getOSVersion() {
         return "Windows Vista, Windows Server 2008 (operating system version 6.0)";
     case QSysInfo::WV_WINDOWS7:
         return "Windows 7, Windows Server 2008 R2 (operating system version 6.1)";
-#if QT_VERSION >= 0x040800
-    case QSysInfo::WV_WINDOWS8:
+    // QSysInfo::WV_WINDOWS8:
+    case 0x00a0:
         return "Windows 8";
-    default:
-        return "Unknown / Unsupported";
-#else
+    // QSysInfo::WV_WINDOWS8_1:
+    case 0x00b0:
+        return "Windows 8.1";
     default:
         return "Windows >= 8";
-#endif
     }
 #elif defined (Q_OS_MAC)
     switch (QSysInfo::MacintoshVersion) {
@@ -514,11 +581,15 @@ QString RSettings::getOSVersion() {
         return "Mac OS X 10.7";
     case QSysInfo::MV_10_8:
         return "Mac OS X 10.8";
+    // QSysInfo::MV_10_9:
     case 0x000B:
         return "Mac OS X 10.9";
+    // QSysInfo::MV_10_10:
+    case 0x000C:
+        return "Mac OS X 10.10";
     default:
     case QSysInfo::MV_Unknown:
-        return "Mac OS X > 10.9";
+        return "Mac OS X > 10.10";
     }
 #else
     return "Unknown";
@@ -594,8 +665,7 @@ bool RSettings::getLimitZoomAndScroll() {
 
 bool RSettings::getShowCrosshair() {
     if (showCrosshair==-1) {
-        showCrosshair = getValue("GraphicsView/ShowCrosshair", 
-            QVariant(true)).toBool();
+        showCrosshair = getValue("GraphicsView/ShowCrosshair",  QVariant(true)).toBool();
     }
     return (bool)showCrosshair;
 }
@@ -607,8 +677,7 @@ void RSettings::setShowCrosshair(bool on) {
 
 bool RSettings::getShowLargeCrosshair() {
     if (showLargeCrosshair==-1) {
-        showLargeCrosshair = getValue("GraphicsView/ShowLargeCrosshair",
-                                 QVariant(true)).toBool();
+        showLargeCrosshair = getValue("GraphicsView/ShowLargeCrosshair",  QVariant(true)).toBool();
     }
     return (bool)showLargeCrosshair;
 }
@@ -620,8 +689,7 @@ void RSettings::setShowLargeCrosshair(bool on) {
 
 bool RSettings::getShowLargeOriginAxis() {
     if (showLargeOriginAxis==-1) {
-        showLargeOriginAxis = getValue("GraphicsView/ShowLargeOriginAxis",
-                                 QVariant(false)).toBool();
+        showLargeOriginAxis = getValue("GraphicsView/ShowLargeOriginAxis", QVariant(false)).toBool();
     }
     return (bool)showLargeOriginAxis;
 }
@@ -633,8 +701,7 @@ void RSettings::setShowLargeOriginAxis(bool on) {
 
 bool RSettings::getConcurrentDrawing() {
     if (concurrentDrawing==-1) {
-        concurrentDrawing = getValue("GraphicsView/ConcurrentDrawing", 
-            QVariant(false)).toBool();
+        concurrentDrawing = getValue("GraphicsView/ConcurrentDrawing",  QVariant(false)).toBool();
     }
     return (bool)concurrentDrawing;
 }
@@ -642,6 +709,13 @@ bool RSettings::getConcurrentDrawing() {
 void RSettings::setConcurrentDrawing(bool on) {
     setValue("GraphicsView/ConcurrentDrawing", on);
     concurrentDrawing = on;
+}
+
+bool RSettings::getHighResolutionGraphicsView() {
+    if (highResolutionGraphicsView==-1) {
+        highResolutionGraphicsView = getValue("GraphicsView/HighResolutionGraphicsView", QVariant(false)).toBool();
+    }
+    return (bool)highResolutionGraphicsView;
 }
 
 QLocale RSettings::getNumberLocale() {
@@ -727,6 +801,16 @@ bool RSettings::getBoolValue(const QString& key, bool defaultValue) {
     return ret.toBool();
 }
 
+RColor RSettings::getColorValue(const QString& key, const RColor& defaultValue) {
+    QVariant ret = getValue(key, defaultValue);
+    if (ret.canConvert<RColor>()) {
+        return ret.value<RColor>();
+    }
+    else {
+        return defaultValue;
+    }
+}
+
 double RSettings::getDoubleValue(const QString& key, double defaultValue) {
     QVariant ret = getValue(key, defaultValue);
 
@@ -753,6 +837,11 @@ int RSettings::getIntValue(const QString& key, int defaultValue) {
 QString RSettings::getStringValue(const QString& key, const QString& defaultValue) {
     QVariant ret = getValue(key, defaultValue);
     return ret.toString();
+}
+
+QStringList RSettings::getStringListValue(const QString& key, const QStringList& defaultValue) {
+    QVariant ret = getValue(key, defaultValue);
+    return ret.toStringList();
 }
 
 void RSettings::setValue(const QString& key, const QVariant& value, bool overwrite) {
@@ -802,6 +891,14 @@ bool RSettings::isXDataEnabled() {
     return xDataEnabled;
 }
 
+void RSettings::setNextVersionEnabled(bool on) {
+    nextVersionEnabled = on;
+}
+
+bool RSettings::isNextVersionEnabled() {
+    return nextVersionEnabled;
+}
+
 bool RSettings::getAutoScaleLinetypePatterns() {
     if (autoScaleLinetypePattern==-1) {
         autoScaleLinetypePattern = getValue("GraphicsView/AutoScaleLinetypePatterns", QVariant(true)).toBool();
@@ -811,7 +908,7 @@ bool RSettings::getAutoScaleLinetypePatterns() {
 
 bool RSettings::getUseSecondarySelectionColor() {
     if (useSecondarySelectionColor==-1) {
-        useSecondarySelectionColor = getValue("GraphicsView/UseSecondarySelectionColor", QVariant(false)).toBool();
+        useSecondarySelectionColor = getValue("GraphicsViewColors/UseSecondarySelectionColor", QVariant(false)).toBool();
     }
     return (bool)useSecondarySelectionColor;
 }
@@ -821,6 +918,20 @@ bool RSettings::getUseSolidLineSelection() {
         useSolidLineSelection = getValue("GraphicsView/UseSolidLineSelection", QVariant(true)).toBool();
     }
     return (bool)useSolidLineSelection;
+}
+
+int RSettings::getMouseThreshold() {
+    if (mouseThreshold==-1) {
+        mouseThreshold = getValue("GraphicsView/MouseThreshold", QVariant(5)).toInt();
+    }
+    return mouseThreshold;
+}
+
+bool RSettings::getPositionByMousePress() {
+    if (positionByMousePress==-1) {
+        positionByMousePress = getValue("GraphicsView/PositionByMousePress", QVariant(false)).toBool();
+    }
+    return (bool)positionByMousePress;
 }
 
 void RSettings::resetCache() {
@@ -846,12 +957,17 @@ void RSettings::resetCache() {
     showLargeCrosshair = -1;
     showLargeOriginAxis = -1;
     concurrentDrawing = -1;
+    highResolutionGraphicsView = -1;
     previewEntities = -1;
     limitZoomAndScroll = -1;
     autoScaleLinetypePattern = -1;
     useSecondarySelectionColor = -1;
     useSolidLineSelection = -1;
     arcAngleLengthThreshold = -1;
+    positionByMousePress = -1;
+    minArcAngleStep = -1;
+    dashThreshold = -1;
+    mouseThreshold = -1;
     cache.clear();
 }
 

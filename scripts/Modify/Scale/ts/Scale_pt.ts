@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Scale</name>
     <message>
         <location filename="../Scale.js" line="+71"/>
         <source>Focus point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>De ponto de foco</translation>
+        <translation>Ponto de foco</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -35,7 +35,7 @@ Ponto de destino</translatorcomment>
 &amp;Escala
 &amp;Escalone
 &amp;Escala:</translatorcomment>
-        <translation>&amp;Escala</translation>
+        <translation>&amp;Escalone</translation>
     </message>
 </context>
 <context>
@@ -105,17 +105,17 @@ Use camada e &amp;atributos atual</translatorcomment>
     <message>
         <location filename="../ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation>Opções de escala</translation>
+        <translation>Opções de escalonamento</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies</source>
-        <translation>Número de cópias</translation>
+        <translation>Número de Cópias</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;Apague o original</translation>
+        <translation>&amp;Elimine o original</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -145,7 +145,7 @@ Use camada e &amp;atributos atual</translatorcomment>
     <message>
         <location line="+57"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Use camada e &amp;atributos atual</translation>
+        <translation>Use a camada e os &amp;atributos atuais</translation>
     </message>
 </context>
 </TS>

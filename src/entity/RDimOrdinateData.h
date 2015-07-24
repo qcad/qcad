@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -30,6 +30,7 @@
  * Ordinate dimension entity data class.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RDimOrdinateData: public RDimensionData {
@@ -109,6 +110,7 @@ private:
     bool xType;
 };
 
+Q_DECLARE_METATYPE(RDimOrdinateData)
 Q_DECLARE_METATYPE(RDimOrdinateData*)
 Q_DECLARE_METATYPE(const RDimOrdinateData*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimOrdinateData>)

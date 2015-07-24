@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaPropertyAttributes {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaPropertyAttributes {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -128,6 +131,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isRedundant
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setRedundant
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isVisibleToParent

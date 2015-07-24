@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -47,6 +47,7 @@ public:
     static RPropertyTypeId PropertyLinetypeScale;
     static RPropertyTypeId PropertyLineweight;
     static RPropertyTypeId PropertyColor;
+    static RPropertyTypeId PropertyDisplayedColor;
     static RPropertyTypeId PropertyDrawOrder;
 
     static RPropertyTypeId PropertyCenterX;

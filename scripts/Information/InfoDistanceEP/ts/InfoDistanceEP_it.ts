@@ -19,7 +19,7 @@
         <translation>Fatto</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="+79"/>
         <source>Distance:</source>
         <translation>Distanza:</translation>
     </message>

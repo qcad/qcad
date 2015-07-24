@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -36,5 +36,5 @@ InfoPositionPol.prototype.getDisplayedLabel = function(p, prec) {
     }
 
     var di = this.getDocumentInterface();
-    return coordinateToString(p, prec, false, true);
+    return coordinateToString(p, prec, false, true, this.getDocument());
 };

@@ -109,21 +109,53 @@
         <translation>Escala del patrón de grosor de 0.00mm:</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="+36"/>
+        <source>Display and Performance</source>
+        <translation>Visualización y rendimiento</translation>
+    </message>
+    <message>
+        <location line="+146"/>
+        <source>Display entities with more than N dashes as continuous:</source>
+        <translation>Mostrar las entidades con más de N guiones como contínua:</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Minimum angle step for rendering arcs (degrees):</source>
+        <translation>Paso ángulo mínimo para la prestación de arcos (grados):</translation>
+    </message>
+    <message>
+        <location line="+82"/>
+        <source>Anti-aliasing on by default</source>
+        <translation>Antialiasing activado por defecto</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Timeout for hatch rendering:</source>
+        <translation>Tiempo de espera para la representación rayado:</translation>
+    </message>
+    <message>
+        <source>Antialiasing on by default</source>
+        <translation type="vanished">Antialiasing activado por defecto</translation>
+    </message>
+    <message>
+        <source>Display entities with N dashes as continuous:</source>
+        <translation type="obsolete">Mostrar entidades con guiones N como contínua:</translation>
+    </message>
+    <message>
+        <location line="-349"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Usar automáticamente los tipos de línea base de la pantalla de visualización del modelo</translation>
     </message>
     <message>
         <source>Auto switch linetypes</source>
-        <translation type="vanished">Ajusta automáticamente los tipos de línea</translation>
+        <translation type="obsolete">Ajusta automáticamente los tipos de línea</translation>
     </message>
     <message>
-        <location line="+72"/>
         <source>Performance</source>
-        <translation>Rendimiento</translation>
+        <translation type="vanished">Rendimiento</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+78"/>
         <source>Number of preview entities:</source>
         <translation>Número de entidades previsualizadas:</translation>
     </message>
@@ -142,7 +174,7 @@
         <translation type="obsolete">Mostrar límite para el texto:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+265"/>
         <source>Selection</source>
         <translation>Selección</translation>
     </message>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>InfoDistancePP</name>
     <message>
@@ -69,7 +69,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <location filename="../InfoDistancePPInit.js" line="+2"/>
         <source>Distance &amp;Point to Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Distância &amp;ponto a ponto</translation>
+        <translation>Distância de &amp;ponto a Ponto</translation>
     </message>
 </context>
 </TS>

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -17,27 +17,28 @@
  * along with QCAD.
  */
 
-include("../../WidgetFactory.js");
+include("scripts/WidgetFactory.js");
+include("scripts/Widgets/StatusBar/StatusBar.js");
 
 function SelectionDisplay() {
-    this.widget = undefined;
 }
 
-SelectionDisplay.init = function(basePath) {
-    var sd = new SelectionDisplay();
-    sd.widget = WidgetFactory.createWidget(basePath, "SelectionDisplay.ui");
-    var selectionText = sd.widget.findChild("SelectionText");
+SelectionDisplay.postInit = function(basePath) {
+    var widget = WidgetFactory.createWidget(basePath, "SelectionDisplay.ui");
+    StatusBar.addWidget(widget, 300, RSettings.getBoolValue("StatusBar/SelectionDisplay", true));
+
+    var selectionText = widget.findChild("SelectionText");
     selectionText.font = RSettings.getStatusBarFont();
     var appWin = EAction.getMainWindow();
     var adapter = new RSelectionListenerAdapter();
     appWin.addSelectionListener(adapter);
-    adapter.selectionChanged.connect(sd, "selectionChanged");
-    sd.widget.visible = RSettings.getBoolValue("StatusBar/SelectionDisplay", true);
-    EAction.addToStatusBar(sd.widget, 300);
+    adapter.selectionChanged.connect(SelectionDisplay, "selectionChanged");
 };
 
-SelectionDisplay.prototype.selectionChanged = function(documentInterface) {
-    var selectionText = this.widget.findChild("SelectionText");
+SelectionDisplay.selectionChanged = function(documentInterface) {
+    var appWin = EAction.getMainWindow();
+    var widget = appWin.findChild("SelectionDisplay");
+    var selectionText = widget.findChild("SelectionText");
 
     if (isNull(documentInterface)) {
         selectionText.text = "";
@@ -53,8 +54,8 @@ SelectionDisplay.prototype.selectionChanged = function(documentInterface) {
     var doc = documentInterface.getDocument();
     var entities = doc.querySelectedEntities();
     var count = entities.length;
-    if (count == 0) {
-        selectionText.text = qsTr("No selected entities.");
+    if (count === 0) {
+        selectionText.text = qsTr("No entities selected.");
         return;
     }
 

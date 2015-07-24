@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -32,7 +32,7 @@
  */
 class QCADCORE_EXPORT RSelectionChangedEvent : public QEvent {
 public:
-    RSelectionChangedEvent() : QEvent(QEvent::User) {}
+    RSelectionChangedEvent() : QEvent((QEvent::Type)(QEvent::User+100)) {}
     virtual ~RSelectionChangedEvent() {}
 };
 

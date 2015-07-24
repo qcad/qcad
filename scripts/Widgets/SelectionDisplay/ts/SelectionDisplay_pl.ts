@@ -4,10 +4,14 @@
 <context>
     <name>SelectionDisplay</name>
     <message>
-        <location filename="../SelectionDisplay.js" line="+57"/>
         <source>No selected entities.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Brak wybranych podmiotów.</translation>
+        <translation type="obsolete">Brak wybranych podmiotów.</translation>
+    </message>
+    <message>
+        <location filename="../SelectionDisplay.js" line="+58"/>
+        <source>No entities selected.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -61,6 +65,11 @@ Wymi&amp;ar</translatorcomment>
 %1.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybrane podmioty:.</translation>
+    </message>
+    <message>
+        <location filename="../SelectionDisplay.ui" line="+26"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

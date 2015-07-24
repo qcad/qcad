@@ -11,8 +11,11 @@
 * to anyone/anything when using this software.
 */
 
+#ifndef HAVE_SRAND48
+
 #include <math.h>
 #include <stdlib.h>
+#include <spatialindex/tools/rand48.h>
 
 #define	RAND48_SEED_0	(0x330e)
 #define	RAND48_SEED_1	(0xabcd)
@@ -62,7 +65,7 @@ _dorand48(unsigned short xseed[3])
 }
 
 	extern void
-srand48(long seed)
+srand48(long seed) __THROW
 {
 	__rand48_Seed[0] = RAND48_SEED_0;
 	__rand48_Seed[1] = (unsigned short) seed;
@@ -74,7 +77,7 @@ srand48(long seed)
 }
 
 	extern unsigned short *
-seed48(unsigned short xseed[3])
+seed48(unsigned short xseed[3]) __THROW
 {
 	static unsigned short sseed[3];
 
@@ -92,27 +95,27 @@ seed48(unsigned short xseed[3])
 }
 	
 	extern long
-nrand48(unsigned short xseed[3])
+nrand48(unsigned short xseed[3]) __THROW
 {
 	_dorand48(xseed);
 	return ((long) xseed[2] << 15) + ((long) xseed[1] >> 1);
 }
 	extern long
-mrand48(void)
+mrand48(void) __THROW
 {
 	_dorand48(__rand48_Seed);
 	return ((long) __rand48_Seed[2] << 16) + (long) __rand48_Seed[1];
 }
 
 	extern long
-lrand48(void)
+lrand48(void) __THROW
 {
 	_dorand48(__rand48_Seed);
 	return ((long) __rand48_Seed[2] << 15) + ((long) __rand48_Seed[1] >> 1);
 }
 
 	extern void
-lcong48(unsigned short p[7])
+lcong48(unsigned short p[7]) __THROW
 {
 	__rand48_Seed[0] = p[0];
 	__rand48_Seed[1] = p[1];
@@ -123,14 +126,14 @@ lcong48(unsigned short p[7])
 	__rand48_Add = p[6];
 }
 	extern long
-jrand48(unsigned short xseed[3])
+jrand48(unsigned short xseed[3]) __THROW
 {
 	_dorand48(xseed);
 	return ((long) xseed[2] << 16) + (long) xseed[1];
 }
 
 	extern double
-erand48(unsigned short xseed[3])
+erand48(unsigned short xseed[3]) __THROW
 {
 	_dorand48(xseed);
 	return ldexp((double) xseed[0], -48) +
@@ -139,7 +142,9 @@ erand48(unsigned short xseed[3])
 }
 
 	extern double
-drand48(void)
+drand48(void) __THROW
 {
 	return erand48(__rand48_Seed);
 }
+
+#endif

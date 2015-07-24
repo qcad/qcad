@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -56,7 +56,7 @@ MiscDraw.getToolBar = function() {
 
 MiscDraw.getCadToolBarPanel = function() {
     var mtb = Misc.getCadToolBarPanel();
-    var actionName = "MiscDrawToolsPanelButton";
+    var actionName = "MiscDrawToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Misc Drawing Tools"), mtb);
         action.setScriptFile(MiscDraw.includeBasePath + "/MiscDraw.js");

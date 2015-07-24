@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -156,7 +156,7 @@ Circle3T.prototype.pickEntity = function(event, preview) {
 
     if (this.state!==Circle3T.State.ChoosingSolution) {
         if (!isNull(entity)) {
-            shape = entity.getClosestShape(pos);
+            shape = entity.getClosestSimpleShape(pos);
 
             if (!isLineBasedShape(shape) &&
                 !isArcShape(shape) &&

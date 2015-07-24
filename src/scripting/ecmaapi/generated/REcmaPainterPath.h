@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaPainterPath {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaPainterPath {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -190,6 +193,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         transform
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        move
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         rotate

@@ -4,19 +4,19 @@
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../DimRegen.js" line="+63"/>
+        <location filename="../DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>没有选中具有自定义标签位置的标注实体。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Reset label position of %1 dimension(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>重置标签位置的 %1 个尺寸</translation>
     </message>
     <message>
         <location filename="../DimRegenInit.js" line="+2"/>
         <source>&amp;Reset Label Position</source>
-        <translation type="unfinished"></translation>
+        <translation>重置标签位置(&amp;R)</translation>
     </message>
 </context>
 </TS>

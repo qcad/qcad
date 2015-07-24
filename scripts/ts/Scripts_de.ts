@@ -33,11 +33,26 @@
         <source>Move entity to desired location</source>
         <translation>Objekt verschieben</translation>
     </message>
+    <message>
+        <location line="+332"/>
+        <source>Move Reference Point</source>
+        <translation>Referenzpunkt verschieben</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Selection</source>
+        <translation>Selektion verschieben</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Entity</source>
+        <translation>Objekt verschieben</translation>
+    </message>
 </context>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+57"/>
+        <location filename="../EAction.js" line="+58"/>
         <source>Back</source>
         <translation>Zurück</translation>
     </message>
@@ -47,7 +62,7 @@
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="+267"/>
+        <location line="+285"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
@@ -62,7 +77,7 @@
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+420"/>
+        <location line="+445"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
@@ -82,12 +97,12 @@
         <translation>CAD Werkzeuge</translation>
     </message>
     <message>
-        <location line="+692"/>
+        <location line="+659"/>
         <source>Entity is on a locked layer.</source>
         <translation>Element ist auf gesperrtem Layer.</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+86"/>
         <source>Entity is not a block reference.</source>
         <translation>Element ist keine Block Referenz.</translation>
     </message>
@@ -95,6 +110,11 @@
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
         <translation>Element ist keine Linie und kein Bogen.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc or polyline.</source>
+        <translation>Element ist keine Linie, kein Bogen und keine Polylinie.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -123,11 +143,21 @@
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
+        <translation>Element ist keine Linie, kein Bogen oder Kreis, keine Ellipse und keine Polylinie.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
         <translation>Element ist keine Linie, kein Bogen oder Kreis, keine Ellipse und keine Spline.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
+        <translation>Objekt ist keine Linie, kein Bogen oder Kreis und keine Ellipse, Spline oder Polylinie.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation>Element ist keine Polylinie.</translation>
     </message>
@@ -135,7 +165,7 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+307"/>
+        <location filename="../ShapeAlgorithms.js" line="+335"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreisen.</translation>
     </message>
@@ -145,7 +175,7 @@
         <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location line="+470"/>
+        <location line="+567"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>
@@ -178,7 +208,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+949"/>
+        <location filename="../WidgetFactory.js" line="+966"/>
         <source>Restore defaults</source>
         <translation>Standardwerte wieder herstellen</translation>
     </message>
@@ -248,7 +278,7 @@
         <translation>Gemessener Wert</translation>
     </message>
     <message>
-        <location line="+93"/>
+        <location line="+110"/>
         <source>Left</source>
         <translation>Links</translation>
     </message>
@@ -329,7 +359,7 @@
         <translation type="obsolete">Suche Plugins...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+303"/>
+        <location filename="../autostart.js" line="+328"/>
         <source>Loading add-on translations...</source>
         <translation>Lade Add-on Übersetzungen...</translation>
     </message>
@@ -373,7 +403,67 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+679"/>
+        <location filename="../library.js" line="+712"/>
+        <source>Objects</source>
+        <translation>Objekte</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Object</source>
+        <translation>Objekt</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Unknown Objects</source>
+        <translation>Unbekannte Objekte</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Unknown Object</source>
+        <translation>Unbekanntes Objekt</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Blocks</source>
+        <translation>Blöcke</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Block</source>
+        <translation>Block</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Layers</source>
+        <translation>Layer</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Layer</source>
+        <translation>Layer</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Linetypes</source>
+        <translation>Linientypen</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Linetype</source>
+        <translation>Linientyp</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Views</source>
+        <translation>Ansichten</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>View</source>
+        <translation>Ansicht</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity</source>
         <translation>Objekt</translation>
     </message>

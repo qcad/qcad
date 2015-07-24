@@ -113,6 +113,7 @@ else {
 
 HEADERS = \
     RAction.h \
+    RActionAdapter.h \
     RArcExporter.h \
     RBlock.h \
     RBlockListener.h \

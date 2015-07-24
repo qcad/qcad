@@ -9,22 +9,27 @@
         <translation>%1について</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+69"/>
         <source>Plugins</source>
         <translation>プラグイン</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>No information available</source>
         <translation>利用可能な情報がありません</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+1"/>
         <source>Plugin:</source>
         <translation>プラグイン:</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+20"/>
+        <source>ID:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Description:</source>
         <translation>記述:</translation>
     </message>
@@ -82,7 +87,7 @@
         <translation>エラー:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+32"/>
         <source>Script Add-Ons</source>
         <translation>スクリプトアドオン</translation>
     </message>

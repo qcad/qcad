@@ -6,12 +6,12 @@
     <message>
         <location filename="../LineHorizontal.ui" line="+17"/>
         <source>&amp;Length:</source>
-        <translation>Pituus:</translation>
+        <translation>&amp;Pituus:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Reference Point:</source>
-        <translation>&amp;Referenssipiste:</translation>
+        <translation>&amp;Viitepiste:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../LineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Line</source>
-        <translation>Vaakaviiva</translation>
+        <translation>&amp;Vaakaviiva</translation>
     </message>
     <message>
         <location line="+4"/>

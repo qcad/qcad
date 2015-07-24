@@ -9,7 +9,7 @@
         <translation>Izberi nosilno črto ali nosilni lok</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Choose end point of arc</source>
         <translation>Izberi končno točko loka</translation>
     </message>
@@ -25,7 +25,7 @@
     <message>
         <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tangencialno povezano</translation>
     </message>
     <message>
         <location line="+4"/>

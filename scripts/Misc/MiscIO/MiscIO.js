@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -55,7 +55,7 @@ MiscIO.getToolBar = function() {
 
 MiscIO.getCadToolBarPanel = function() {
     var mtb = Misc.getCadToolBarPanel();
-    var actionName = "MiscIOToolsPanelButton";
+    var actionName = "MiscIOToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Misc Import / Export Tools"), mtb);
         action.setScriptFile(MiscIO.includeBasePath + "/MiscIO.js");

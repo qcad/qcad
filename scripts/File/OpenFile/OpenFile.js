@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -30,6 +30,10 @@ if (new QFileInfo("scripts/File/AutoSave/AutoSave.js")) {
  */
 function OpenFile(guiAction) {
     NewFile.call(this, guiAction);
+
+    if (!isNull(guiAction)) {
+        this.args = guiAction.getArguments();
+    }
 }
 
 OpenFile.prototype = new NewFile();
@@ -39,17 +43,24 @@ OpenFile.prototype.beginEvent = function() {
 
     var filters = RFileImporterRegistry.getFilterStrings();
     if (filters.length===0) {
-        var dlg = new QMessageBox(QMessageBox.Warning,
-                qsTr("No import filters"),
-                "",
-                QMessageBox.OK);
-        dlg.text = qsTr("No import filters have been found. Aborting...");
-        dlg.exec();
+        EAction.handleUserWarning(qsTr("No import filters have been found. Aborting..."));
         return;
     }
 
+    var fileName;
+    if (!isNull(this.args) && this.args.length>=1) {
+        fileName = this.args[this.args.length-1];
+        if (!new QFileInfo(fileName).isAbsolute()) {
+            fileName = RSettings.getLaunchPath() + QDir.separator + fileName;
+        }
+        if (!isNull(fileName)) {
+            NewFile.createMdiChild(fileName);
+            return;
+        }
+    }
+
     if (!isNull(this.guiAction)) {
-        var fileName = this.guiAction.data();
+        fileName = this.guiAction.data();
         if (!isNull(fileName)) {
             NewFile.createMdiChild(fileName);
             return;

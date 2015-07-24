@@ -32,9 +32,9 @@ HatchTest00.prototype = new TdbTest();
 HatchTest00.prototype.test00 = function() {
     qDebug('running HatchTest00.test00()...');
     this.setUp();
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(39, 449), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(39, 449), Qt.LeftButton, 0, 0);
     this.importFile('scripts/Draw/Hatch/Tests/data/contour.dxf');
     this.selectAll();
@@ -46,7 +46,7 @@ HatchTest00.prototype.test00 = function() {
     this.dlgAppendCode("map.put('DialogOpenedByTdb/Angle',  [ 15, 0 ] )");
     this.dlgAppendCode("WidgetFactory.restoreState(dialog, 'DialogOpenedByTdb', undefined, false, undefined, map)");
     this.dlgEnd();
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel::HatchButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::HatchButton');
     this.verifyDrawing('HatchTest00_000.dxf');
     this.tearDown();
     qDebug('finished HatchTest00.test00()');

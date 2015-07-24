@@ -11,12 +11,12 @@
     <message>
         <location line="+7"/>
         <source>Status Bar Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>ステータスバー</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinate display</source>
-        <translation type="unfinished"></translation>
+        <translation>座標表示</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -29,7 +29,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../StatusBar.js" line="+27"/>
+        <location line="+10"/>
+        <source>Progress display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../StatusBar.js" line="+32"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
@@ -37,6 +42,11 @@
         <location line="+0"/>
         <source>Status Bar</source>
         <translation>ステータスバー</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&amp;Status Bar</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

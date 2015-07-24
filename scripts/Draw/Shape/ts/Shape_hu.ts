@@ -10,7 +10,7 @@
     </message>
     <message>
         <location line="+5"/>
-        <source>Show line tools</source>
+        <source>Show shape tools</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

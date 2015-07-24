@@ -4,7 +4,7 @@
 <context>
     <name>Paste</name>
     <message>
-        <location filename="../Paste.js" line="+71"/>
+        <location filename="../Paste.js" line="+77"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -28,7 +28,7 @@ Obracanie:</translatorcomment>
         <translation type="unfinished">Obróć wklejone podmioty &lt;br&gt; przez to kąt</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+97"/>
         <source>Scale:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -42,7 +42,7 @@ Skala:</translatorcomment>
         <translation type="unfinished">Skala wklejone podmioty &lt;br&gt; tym czynnikiem</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Przerzuć wklejone podmioty &lt;br&gt; poziomo</translation>
@@ -54,7 +54,7 @@ Skala:</translatorcomment>
         <translation type="unfinished">Przerzuć wklejone podmioty &lt;br&gt; pionowo</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wklej wszystkie podmioty &lt;br&gt; do bieżącej warstwy &lt;br&gt; Zamiast warstwy pierwotnego</translation>

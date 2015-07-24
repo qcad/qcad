@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -43,6 +43,10 @@ class RExporter;
 
 #ifndef RDEFAULT_QSET_INT
 #define RDEFAULT_QSET_INT QSet<int>()
+#endif
+
+#ifndef RDEFAULT_TOLERANCE_1E_MIN4
+#define RDEFAULT_TOLERANCE_1E_MIN4 1.0e-4
 #endif
 
 /**
@@ -108,7 +112,7 @@ public:
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     /**
-     * \return Vector of bounding boxes that contain this entity.
+     * \return List of bounding boxes that contain this entity.
      * This is used for complex entities such as block references
      * to further optimize algorithms that depend on bounding boxes
      * (e.g. spatial index algorithms). The default implementation
@@ -117,6 +121,8 @@ public:
     virtual QList<RBox> getBoundingBoxes(bool ignoreEmpty=false) const {
         return QList<RBox>() << getBoundingBox(ignoreEmpty);
     }
+
+    virtual RPolyline getHull(double offset) const;
 
     /**
      * \return True if the entity is currently selected. This can for example
@@ -282,7 +288,7 @@ public:
         return box.contains(getBoundingBox());
     }
 
-    virtual bool isOnEntity(const RVector& point, bool limited = true) const;
+    virtual bool isOnEntity(const RVector& point, bool limited = true, double tolerance = RDEFAULT_TOLERANCE_1E_MIN4) const;
 
     virtual bool intersectsWith(const RShape& shape) const;
 

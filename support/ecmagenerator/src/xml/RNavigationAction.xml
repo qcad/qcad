@@ -9,7 +9,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant>
         <arg type="RGuiAction *" typeName="RGuiAction *"
-        name="guiAction" hasDefault="true" default=" NULL"
+        name="guiAction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </constructor>

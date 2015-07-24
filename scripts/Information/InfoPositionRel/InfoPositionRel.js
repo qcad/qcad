@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -41,5 +41,5 @@ InfoPositionRel.prototype.getDisplayedLabel = function(p, prec) {
         relZero = new RVector(0,0);
     }
     p = p.operator_subtract(relZero);
-    return coordinateToString(p, prec, true, false);
+    return coordinateToString(p, prec, true, false, this.getDocument());
 };

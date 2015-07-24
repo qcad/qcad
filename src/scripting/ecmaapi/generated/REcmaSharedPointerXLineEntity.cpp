@@ -102,6 +102,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAngle, "getAngle");
             
+            REcmaHelper::registerFunction(&engine, proto, hasFixedAngle, "hasFixedAngle");
+            
+            REcmaHelper::registerFunction(&engine, proto, setFixedAngle, "setFixedAngle");
+            
             REcmaHelper::registerFunction(&engine, proto, getDirection1, "getDirection1");
             
             REcmaHelper::registerFunction(&engine, proto, getDirection2, "getDirection2");
@@ -142,6 +146,10 @@
                 qScriptValueFromValue(&engine, RXLineEntity::PropertyHandle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RXLineEntity::PropertyProtected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RXLineEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -168,6 +176,10 @@
             
             ctor.setProperty("PropertyColor",
                 qScriptValueFromValue(&engine, RXLineEntity::PropertyColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RXLineEntity::PropertyDisplayedColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyDrawOrder",
@@ -212,6 +224,10 @@
             
             ctor.setProperty("PropertyAngle",
                 qScriptValueFromValue(&engine, RXLineEntity::PropertyAngle),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyFixedAngle",
+                qScriptValueFromValue(&engine, RXLineEntity::PropertyFixedAngle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -296,7 +312,7 @@
                         return REcmaHelper::throwError("RXLineEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RXLineData*
                     ap1 =
                     qscriptvalue_cast<
@@ -306,11 +322,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RXLineEntity: Argument 1 is not of type RXLineData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RXLineEntity: Argument 1 is not of type RXLineData.",
                                context);                    
                     }
-                    RXLineData& a1 = *ap1;
+                    RXLineData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -391,7 +409,7 @@
                         return REcmaHelper::throwError("RXLineEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RXLineData*
                     ap1 =
                     qscriptvalue_cast<
@@ -401,11 +419,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RXLineEntity: Argument 1 is not of type RXLineData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RXLineEntity: Argument 1 is not of type RXLineData.",
                                context);                    
                     }
-                    RXLineData& a1 = *ap1;
+                    RXLineData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id
@@ -1808,6 +1828,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerXLineEntity::getAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerXLineEntity::hasFixedAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerXLineEntity::hasFixedAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLineEntity::hasFixedAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RXLineEntity* self = 
+                        getSelf("hasFixedAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasFixedAngle();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineEntity.hasFixedAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerXLineEntity::hasFixedAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerXLineEntity::setFixedAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerXLineEntity::setFixedAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLineEntity::setFixedAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RXLineEntity* self = 
+                        getSelf("setFixedAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setFixedAngle(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLineEntity.setFixedAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerXLineEntity::setFixedAngle", context, engine);
             return result;
         }
          QScriptValue

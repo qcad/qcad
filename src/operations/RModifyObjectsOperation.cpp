@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -33,11 +33,17 @@ void RModifyObjectsOperation::transformSelection(RTransformation* transformation
 
     bool translate = false;
     RVector translationOffset;
+    double rotationAngle = 0.0;
+    double scaleFactor = 1.0;
+    RVector center = RVector::nullVector;
 
     RTranslation* translation = dynamic_cast<RTranslation*>(transformation);
     if (translation!=NULL) {
         translate = true;
         translationOffset = translation->offset;
+        rotationAngle = translation->rotationAngle;
+        scaleFactor = translation->scaleFactor;
+        center = translation->center;
     }
 
     for (int k=1; k<=copies; k++) {
@@ -62,6 +68,12 @@ void RModifyObjectsOperation::transformSelection(RTransformation* transformation
 
             if (translate) {
                 // TODO: entity->applyTransformation(transformation, k);
+                if (!RMath::fuzzyCompare(scaleFactor, 0.0)) {
+                    entity->rotate(rotationAngle, center);
+                }
+                if (!RMath::fuzzyCompare(scaleFactor, 1.0)) {
+                    entity->scale(scaleFactor, center);
+                }
                 entity->move(translationOffset * k);
             }
 

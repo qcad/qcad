@@ -32,8 +32,10 @@ LineBisectorTest01.prototype = new TdbTest();
 LineBisectorTest01.prototype.test00 = function() {
     qDebug('running LineBisectorTest01.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
-    this.clickOnWidget('MainWindow::LineToolsPanel::LineRectangleButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
+    this.clickOnWidget('MainWindow::ShapeToolsPanel::ShapeRectanglePPButton');
+    this.setToolOption('Shape/CreatePolyline', 'false');
+    this.updateToolOptions();
     this.zoomTo(-19.038000000000007, -20.226, 64.33799999999998, 41.55);
     var p = new RVector(0, 30);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
@@ -44,7 +46,7 @@ LineBisectorTest01.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.sendMouseEventToGv(QEvent.MouseButtonPress, new QPoint(198, 221), Qt.RightButton, 2, 0);
     this.sendMouseEventToGv(QEvent.MouseButtonRelease, new QPoint(198, 221), Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::LineBisectorButton');
     this.setToolOption('LineBisector/Length',  [ 30, 0 ] );
     this.setToolOption('LineBisector/Number', '10');

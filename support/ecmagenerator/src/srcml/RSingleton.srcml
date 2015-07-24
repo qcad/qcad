@@ -1,231 +1,66 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RSingleton.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RSINGLETON_H_</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RSINGLETON_H_</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QApplication&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QObject&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;typeinfo&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDebug.h"</cpp:file></cpp:include>
-  <comment type="block">/** * \ingroup core */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RSingleton</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RSingleton</name>
-    <parameter_list>()</parameter_list>
-    <block>{ }</block>
-  </destructor>
-  <template>template
-  <parameter_list>&lt;
-  <param>
-    <type>class</type>
-    <name>Derived</name>
-  </param>&gt;</parameter_list>
-  <function_decl>
-  <type>
-  <name>static</name>
-  <name>Derived</name>&amp;</type>
-  <name>getInstance</name>
-  <parameter_list>()</parameter_list>;</function_decl></template>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>cleanUp</name>
-  <parameter_list>()</parameter_list>;</function_decl></public>
-  <protected>protected: 
-  <constructor_decl>
-  <name>RSingleton</name>
-  <parameter_list>
-  ()</parameter_list>;</constructor_decl></protected>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-      <name>
-      RSingleton</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>map</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RSingleton*</argument>)</argument_list>
-  </macro>
-  <template>template
-  <parameter_list>&lt;
-  <param>
-    <type>class</type>
-    <name>Derived</name>
-  </param>&gt;</parameter_list>
-  <function>
-    <type>
-    <name>Derived</name>&amp;</type>
-    <name>
-    <name>RSingleton</name>::
-    <name>getInstance</name></name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>!
-    <name>map</name>.
-    <call>
-      <name>contains</name>
-      <argument_list>(
-      <argument>
-        <expr>
-        <call>
-          <name>typeid</name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>Derived</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>.
-        <call>
-          <name>name</name>
-          <argument_list>()</argument_list>
-        </call></expr>
-      </argument>)</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <expr_stmt>
-      <expr>
-      <name>
-        <name>map</name>
-        <index>[
-        <expr>
-        <call>
-          <name>typeid</name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>Derived</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>.
-        <call>
-          <name>name</name>
-          <argument_list>()</argument_list>
-        </call></expr>]</index>
-      </name>= new 
-      <name>Derived</name></expr>;</expr_stmt>}</block>
-    </then></if>
-    <decl_stmt>
-    <decl>
-    <type>
-    <name>Derived</name>*</type>
-    <name>d</name>=
-    <init>
-      <expr>
-        <call>
-          <name>dynamic_cast
-          <argument_list>&lt;
-          <argument>
-          <name>
-          Derived</name>*</argument>&gt;</argument_list></name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>
-                <name>map</name>
-                <index>[
-                <expr>
-                <call>
-                  <name>typeid</name>
-                  <argument_list>(
-                  <argument>
-                    <expr>
-                      <name>Derived</name>
-                    </expr>
-                  </argument>)</argument_list>
-                </call>.
-                <call>
-                  <name>name</name>
-                  <argument_list>()</argument_list>
-                </call></expr>]</index>
-              </name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <if>if 
-    <condition>(
-    <expr>
-    <name>d</name>== 
-    <name>NULL</name></expr>)</condition>
-    <then>
-      <block>{ 
-      <expr_stmt>
-      <expr>
-        <call>
-          <name>Q_ASSERT</name>
-          <argument_list>(
-          <argument>
-            <expr>"RSingleton::getInstance(): \"Derived\" in not a
-            singleton"</expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>;</expr_stmt>}</block>
-    </then></if>
-    <return>return 
-    <expr>*
-    <name>d</name></expr>;</return>}</block>
-  </function></template>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
-  <comment type="block">/* RSINGLETON_H_ */</comment>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RSingleton.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RSINGLETON_H_</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RSINGLETON_H_</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QApplication&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QObject&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;typeinfo&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDebug.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * \ingroup core
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RSingleton</name> <block>{<private type="default">
+</private><public>public:
+    <destructor><specifier>virtual</specifier> <name>~RSingleton</name><parameter_list>()</parameter_list> <block>{
+    }</block></destructor>
+    <template>template<parameter_list>&lt;<param><type>class</type> <name>Derived</name></param>&gt;</parameter_list>
+        <function_decl><type><name>static</name> <name>Derived</name>&amp;</type> <name>getInstance</name><parameter_list>()</parameter_list>;</function_decl></template>
+        <function_decl><type><name>static</name> <name>void</name></type> <name>cleanUp</name><parameter_list>()</parameter_list>;</function_decl>
+
+</public><protected>protected:
+    <constructor_decl><name>RSingleton</name><parameter_list>()</parameter_list>;</constructor_decl>
+
+</protected><private>private:
+    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>RSingleton</name>*</argument>&gt;</argument_list></name></type> <name>map</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RSingleton*</argument>)</argument_list></macro>
+
+<template>template<parameter_list>&lt;<param><type>class</type> <name>Derived</name></param>&gt;</parameter_list>
+<function><type><name>Derived</name>&amp;</type> <name><name>RSingleton</name>::<name>getInstance</name></name><parameter_list>()</parameter_list> <block>{
+    <if>if <condition>(<expr>!<name>map</name>.<call><name>contains</name><argument_list>(<argument><expr><call><name>typeid</name><argument_list>(<argument><expr><name>Derived</name></expr></argument>)</argument_list></call>.<call><name>name</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+        <expr_stmt><expr><name><name>map</name><index>[<expr><call><name>typeid</name><argument_list>(<argument><expr><name>Derived</name></expr></argument>)</argument_list></call>.<call><name>name</name><argument_list>()</argument_list></call></expr>]</index></name> = new <name>Derived</name></expr>;</expr_stmt>
+    }</block></then></if>
+    <decl_stmt><decl><type><name>Derived</name>*</type> <name>d</name> =<init> <expr><call><name>dynamic_cast<argument_list>&lt;<argument><name>Derived</name>*</argument>&gt;</argument_list></name> <argument_list>(<argument><expr><name><name>map</name><index>[<expr><call><name>typeid</name><argument_list>(<argument><expr><name>Derived</name></expr></argument>)</argument_list></call>.<call><name>name</name><argument_list>()</argument_list></call></expr>]</index></name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+    <if>if <condition>(<expr><name>d</name> == <name>NULL</name></expr>)</condition><then> <block>{
+        <expr_stmt><expr><call><name>Q_ASSERT</name><argument_list>(<argument><expr>"RSingleton::getInstance(): \"Derived\" in not a singleton"</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></then></if>
+    <return>return <expr>*<name>d</name></expr>;</return>
+}</block></function></template>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif> <comment type="block">/* RSINGLETON_H_ */</comment>
 </unit>

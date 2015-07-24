@@ -9,7 +9,7 @@
         <translation>基礎エントリーを選択</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
         <source>Set position</source>
         <translation>位置を指定</translation>
     </message>

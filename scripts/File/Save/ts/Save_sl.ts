@@ -64,7 +64,7 @@
         <translation>Datoteka &apos;%1&apos;, ni bila shranjena.</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+16"/>
         <source>Saved drawing:</source>
         <translation>Shranjena risba:</translation>
     </message>

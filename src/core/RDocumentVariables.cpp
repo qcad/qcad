@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -21,6 +21,7 @@
 
 RPropertyTypeId RDocumentVariables::PropertyCustom;
 RPropertyTypeId RDocumentVariables::PropertyHandle;
+RPropertyTypeId RDocumentVariables::PropertyProtected;
 RPropertyTypeId RDocumentVariables::PropertyCurrentLayerId;
 RPropertyTypeId RDocumentVariables::PropertyUnit;
 RPropertyTypeId RDocumentVariables::PropertyLinetypeScale;
@@ -39,6 +40,7 @@ RDocumentVariables::~RDocumentVariables() {
 void RDocumentVariables::init() {
     RDocumentVariables::PropertyCustom.generateId(typeid(RDocumentVariables), RObject::PropertyCustom);
     RDocumentVariables::PropertyHandle.generateId(typeid(RDocumentVariables), RObject::PropertyHandle);
+    RDocumentVariables::PropertyProtected.generateId(typeid(RDocumentVariables), RObject::PropertyProtected);
     RDocumentVariables::PropertyCurrentLayerId.generateId(typeid(RDocumentVariables), "", QT_TRANSLATE_NOOP("RDocumentVariables", "Current Layer ID"));
     RDocumentVariables::PropertyUnit.generateId(typeid(RDocumentVariables), "", QT_TRANSLATE_NOOP("RDocumentVariables", "Drawing Unit"));
     RDocumentVariables::PropertyLinetypeScale.generateId(typeid(RDocumentVariables), "", QT_TRANSLATE_NOOP("RDocumentVariables", "Linetype Scale"));
@@ -130,11 +132,12 @@ void RDocumentVariables::setKnownVariable(RS::KnownVariable key, const RVector& 
 void RDocumentVariables::setKnownVariable(RS::KnownVariable key, const QVariant& value) {
     if (key==RS::INSUNITS) {
         setUnit((RS::Unit)value.toInt());
+        return;
     }
-    // TODO:
-//    else if (key==RS::LTSCALE) {
-//        setLinetypeScale(value.toDouble());
-//    }
+    else if (key==RS::LTSCALE) {
+        setLinetypeScale(value.toDouble());
+        return;
+    }
 
     knownVariables.insert(key, value);
 }
@@ -144,10 +147,9 @@ QVariant RDocumentVariables::getKnownVariable(RS::KnownVariable key) const {
         return getUnit();
     }
 
-//    if (key==RS::LTSCALE) {
-//        // TODO
-//        return getLinetypeScale();
-//    }
+    if (key==RS::LTSCALE) {
+        return getLinetypeScale();
+    }
 
     // if DIMADEC is -1, DIMDEC is used:
     if (key==RS::DIMADEC &&

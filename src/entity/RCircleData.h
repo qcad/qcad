@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -34,6 +34,7 @@
  * appearance of a circle entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RCircleData: public REntityData, protected RCircle {
@@ -77,6 +78,7 @@ public:
 
 };
 
+Q_DECLARE_METATYPE(RCircleData)
 Q_DECLARE_METATYPE(RCircleData*)
 Q_DECLARE_METATYPE(const RCircleData*)
 Q_DECLARE_METATYPE(QSharedPointer<RCircleData>)

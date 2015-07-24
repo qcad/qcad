@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -57,10 +57,11 @@ public:
     virtual QSet<RView::Id> queryAllViews(bool undone = false);
     virtual QSet<RLinetype::Id> queryAllLinetypes();
     virtual QSet<REntity::Id> queryInfiniteEntities();
-    virtual QSet<REntity::Id> querySelectedEntities();
+    virtual QSet<REntity::Id> querySelectedEntities() const;
 
     virtual QSet<REntity::Id> queryLayerEntities(RLayer::Id layerId, bool allBlocks = false);
     virtual QSet<REntity::Id> queryBlockEntities(RBlock::Id blockId);
+    virtual QSet<REntity::Id> queryLayerBlockEntities(RLayer::Id layerId, RBlock::Id blockId);
     virtual QSet<REntity::Id> queryChildEntities(REntity::Id parentId, RS::EntityType type = RS::EntityAll);
     virtual bool hasChildEntities(REntity::Id parentId);
     virtual QSet<REntity::Id> queryBlockReferences(RBlock::Id blockId);
@@ -85,6 +86,7 @@ public:
     virtual QSharedPointer<RLinetype> queryLinetype(RLinetype::Id linetypeId) const;
     virtual QSharedPointer<RLinetype> queryLinetype(const QString& linetypeName) const;
 
+    virtual int countSelectedEntities() const;
     virtual void clearEntitySelection(QSet<REntity::Id>* affectedEntities = NULL);
     virtual void selectAllEntites(QSet<REntity::Id>* affectedEntities = NULL);
     virtual void selectEntity(REntity::Id entityId, bool add = false,
@@ -94,7 +96,7 @@ public:
     virtual void selectEntities(const QSet<REntity::Id>& entityIds,
             bool add = false,
             QSet<REntity::Id>* affectedEntities = NULL);
-    virtual void deselectEntities(const QSet<REntity::Id>& entityIds,
+    virtual bool deselectEntities(const QSet<REntity::Id>& entityIds,
             QSet<REntity::Id>* affectedEntities = NULL);
     void setEntitySelected(QSharedPointer<REntity> entity, bool on,
         QSet<REntity::Id>* affectedEntities = NULL, bool onlyDescend = false);

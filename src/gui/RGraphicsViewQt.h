@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -68,11 +68,13 @@ public:
     virtual void repaintView();
     virtual void repaintNow();
 
+    virtual void giveFocus();
     virtual bool hasFocus();
     virtual void removeFocus();
 
     virtual int getWidth() const;
     virtual int getHeight() const;
+    virtual QRect getRect() const;
     
     virtual QCursor getCursor();
     virtual void setCursor(Qt::CursorShape cursorShape);
@@ -85,6 +87,10 @@ public:
     virtual void emitUpdateSnapInfo(RSnap* snap, RSnapRestriction* restriction);
     virtual void emitUpdateTextLabel(const RTextLabel& textLabel);
 
+    virtual void simulateMouseMoveEvent();
+
+    virtual double getDevicePixelRatio() const;
+
 signals:
     void drop(QDropEvent* event);
     void dragEnter(QDragEnterEvent* event);
@@ -93,6 +99,7 @@ signals:
 
     void updateSnapInfo(QPainter* painter, RSnap* snap, RSnapRestriction* restriction);
     void updateTextLabel(QPainter* painter, const RTextLabel& textLabel);
+
 
 protected:
     virtual QSize sizeHint() const;
@@ -130,6 +137,9 @@ private:
     QCursor lastCursor;
 
     bool gesturesEnabled;
+    QTime mouseClickTimer;
+    RVector mousePressScreenPosition;
+    RVector mousePressModelPosition;
 };
 
 Q_DECLARE_METATYPE(RGraphicsViewQt*)

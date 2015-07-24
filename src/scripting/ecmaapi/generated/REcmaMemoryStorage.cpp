@@ -100,6 +100,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryBlockEntities, "queryBlockEntities");
             
+            REcmaHelper::registerFunction(&engine, proto, queryLayerBlockEntities, "queryLayerBlockEntities");
+            
             REcmaHelper::registerFunction(&engine, proto, queryChildEntities, "queryChildEntities");
             
             REcmaHelper::registerFunction(&engine, proto, hasChildEntities, "hasChildEntities");
@@ -131,6 +133,8 @@
             REcmaHelper::registerFunction(&engine, proto, queryLinetypeDirect, "queryLinetypeDirect");
             
             REcmaHelper::registerFunction(&engine, proto, queryLinetype, "queryLinetype");
+            
+            REcmaHelper::registerFunction(&engine, proto, countSelectedEntities, "countSelectedEntities");
             
             REcmaHelper::registerFunction(&engine, proto, clearEntitySelection, "clearEntitySelection");
             
@@ -1441,6 +1445,80 @@
             return result;
         }
          QScriptValue
+        REcmaMemoryStorage::queryLayerBlockEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::queryLayerBlockEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::queryLayerBlockEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("queryLayerBlockEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayer::Id */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RBlock::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayer::Id
+                    a0 =
+                    (RLayer::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RBlock::Id
+                    a1 =
+                    (RBlock::Id)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < REntity::Id >'
+    QSet < REntity::Id > cppResult =
+        
+               self->queryLayerBlockEntities(a0
+        ,
+    a1);
+        // return type: QSet < REntity::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.queryLayerBlockEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::queryLayerBlockEntities", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaMemoryStorage::queryChildEntities
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2577,6 +2655,55 @@
             return result;
         }
          QScriptValue
+        REcmaMemoryStorage::countSelectedEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::countSelectedEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::countSelectedEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("countSelectedEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->countSelectedEntities();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.countSelectedEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::countSelectedEntities", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaMemoryStorage::clearEntitySelection
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -3179,9 +3306,14 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'void'
-    
+    // return type 'bool'
+    bool cppResult =
+        
                self->deselectEntities(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
     } else
 
 
@@ -3223,11 +3355,16 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'void'
-    
+    // return type 'bool'
+    bool cppResult =
+        
                self->deselectEntities(a0
         ,
     a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
     } else
 
 
@@ -3284,7 +3421,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < REntity >(o0->clone());
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < REntity >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -3355,7 +3495,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < REntity >(o0->clone());
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < REntity >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -3444,7 +3587,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < REntity >(o0->clone());
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < REntity >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -3846,7 +3992,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < RObject >(o0->clone());
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -3934,7 +4083,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < RObject >(o0->clone());
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -3997,7 +4149,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < RObject >(o0->clone());
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -4073,7 +4228,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < RObject >(o0->clone());
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work

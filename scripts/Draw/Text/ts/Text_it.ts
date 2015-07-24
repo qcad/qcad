@@ -6,7 +6,7 @@
     <message>
         <location filename="../TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation>mappa dei caratteri</translation>
+        <translation>Mappa del personaggio</translation>
     </message>
 </context>
 <context>
@@ -50,7 +50,7 @@
         <translation>Predefinito:</translation>
     </message>
     <message>
-        <location line="+255"/>
+        <location line="+258"/>
         <source>&amp;Undo</source>
         <translation>&amp;Annulla</translation>
     </message>

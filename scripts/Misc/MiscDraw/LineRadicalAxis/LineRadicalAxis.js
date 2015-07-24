@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -106,7 +106,7 @@ LineRadicalAxis.prototype.pickEntity = function(event, preview) {
         return;
     }
 
-    var shape = entity.getClosestShape(pos);
+    var shape = entity.getClosestSimpleShape(pos);
 
     if (!isArcShape(shape) &&
         !isCircleShape(shape)) {

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -32,6 +32,15 @@ RArc::RArc() :
     startAngle(0.0),
     endAngle(0.0),
     reversed(false) {
+}
+
+RArc::RArc(double cx, double cy, double radius, double startAngle,
+         double endAngle, bool reversed) :
+    center(cx, cy),
+    radius(radius),
+    startAngle(startAngle),
+    endAngle(endAngle),
+    reversed(reversed) {
 }
 
 RArc::RArc(const RVector& center, double radius, double startAngle,
@@ -393,8 +402,8 @@ RVector RArc::getPointAtAngle(double a) const {
     return RVector(center.x + cos(a) * radius, center.y + sin(a) * radius);
 }
 
-double RArc::getAngleAt(double distance) const {
-    QList<RVector> points = getPointsWithDistanceToEnd(distance, RS::FromStart);
+double RArc::getAngleAt(double distance, RS::From from) const {
+    QList<RVector> points = getPointsWithDistanceToEnd(distance, from);
     if (points.length()!=1) {
         return RNANDOUBLE;
     }
@@ -501,13 +510,13 @@ QList<RVector> RArc::getPointsWithDistanceToEnd(double distance, RS::From from) 
         a2 = getEndAngle() - aDist;
     }
 
-    if (from==RS::FromStart || from==RS::FromAny) {
+    if (from&RS::FromStart) {
         p.setPolar(radius, a1);
         p += center;
         ret.append(p);
     }
 
-    if (from==RS::FromEnd || from==RS::FromAny) {
+    if (from&RS::FromEnd) {
         p.setPolar(radius, a2);
         p += center;
         ret.append(p);
@@ -520,8 +529,7 @@ RVector RArc::getVectorTo(const RVector& point, bool limited, double strictRange
     Q_UNUSED(strictRange)
 
     double angle = center.getAngleTo(point);
-    if (limited
-            && !RMath::isAngleBetween(angle, startAngle, endAngle, reversed)) {
+    if (limited && !RMath::isAngleBetween(angle, startAngle, endAngle, reversed)) {
         return RVector::invalid;
     }
 
@@ -716,6 +724,59 @@ RPolyline RArc::approximateWithLines(double segmentLength) {
         for (a=a1-aStep; a>=a2; a-=aStep) {
             cix = center.x + cos(a) * radius;
             ciy = center.y + sin(a) * radius;
+            polyline.appendVertex(RVector(cix, ciy));
+        }
+    }
+    polyline.appendVertex(getEndPoint());
+
+    return polyline;
+}
+
+RPolyline RArc::approximateWithLinesTan(double segmentLength) {
+    RPolyline polyline;
+
+    // avoid a segment length of 0:
+    if (segmentLength<1.0e-6) {
+        segmentLength = 1.0e-6;
+    }
+
+    double a1 = getStartAngle();
+    double a2 = getEndAngle();
+
+    // ideal angle step to satisfy segmentLength:
+    double aStep = segmentLength / radius;
+    int steps = floor(fabs(getSweep()) / aStep);
+    // real angle step:
+    aStep = fabs(getSweep()) / steps;
+    if (fabs(cos(aStep/2))<RS::PointTolerance) {
+        qWarning() << "RArc::approximateWithLinesTan: segmentLenght too coarse to yield meaningful result";
+        polyline.appendVertex(getStartPoint());
+        polyline.appendVertex(getEndPoint());
+        return polyline;
+    }
+    double r2 = radius / cos(aStep/2);
+
+    double a, cix, ciy;
+
+    polyline.appendVertex(getStartPoint());
+    if (!reversed) {
+        // Arc Counterclockwise:
+        if (a1>a2-1.0e-10) {
+            a2+=2*M_PI;
+        }
+        for (a=a1+aStep/2; a<a2; a+=aStep) {
+            cix = center.x + cos(a) * r2;
+            ciy = center.y + sin(a) * r2;
+            polyline.appendVertex(RVector(cix, ciy));
+        }
+    } else {
+        // Arc Clockwise:
+        if (a1<a2+1.0e-10) {
+            a2-=2*M_PI;
+        }
+        for (a=a1-aStep/2; a>a2; a-=aStep) {
+            cix = center.x + cos(a) * r2;
+            ciy = center.y + sin(a) * r2;
             polyline.appendVertex(RVector(cix, ciy));
         }
     }

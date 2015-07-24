@@ -4,13 +4,13 @@
 <context>
     <name>Round</name>
     <message>
-        <location filename="../Round.js" line="+56"/>
+        <location filename="../Round.js" line="+57"/>
         <source>The two entities cannot be rounded.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Les deux entités ne peuvent pas être arrondis.</translation>
     </message>
     <message>
-        <location line="+220"/>
+        <location line="+216"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Première entité ne peut pas être ajuster.</translation>

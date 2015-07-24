@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>SetRelativeZero</name>
     <message>
@@ -17,7 +17,7 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <location filename="../SetRelativeZeroInit.js" line="+2"/>
         <source>Set &amp;Relative Zero</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Indique o zero &amp;relativo</translation>
+        <translation>Indique o Zero &amp;relativo</translation>
     </message>
 </context>
 </TS>

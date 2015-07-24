@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -82,8 +82,7 @@ RFileImporter* RFileImporterRegistry::getFileImporter(
         return bestMatch->instantiate(document, messageHandler, progressHandler);
     }
 
-    qWarning("RFileImporterRegistry::getFileImporter: "
-        "No suitable importer found");
+    qWarning() << "RFileImporterRegistry::getFileImporter: No suitable importer found for \n" << fileName;
 
     return NULL;
 }

@@ -104,6 +104,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, normalize, "normalize");
             
+            REcmaHelper::registerFunction(&engine, proto, prependShape, "prependShape");
+            
             REcmaHelper::registerFunction(&engine, proto, appendShape, "appendShape");
             
             REcmaHelper::registerFunction(&engine, proto, appendVertex, "appendVertex");
@@ -124,6 +126,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getVertexAt, "getVertexAt");
             
+            REcmaHelper::registerFunction(&engine, proto, getVertexIndex, "getVertexIndex");
+            
             REcmaHelper::registerFunction(&engine, proto, getLastVertex, "getLastVertex");
             
             REcmaHelper::registerFunction(&engine, proto, countVertices, "countVertices");
@@ -142,7 +146,9 @@
             
             REcmaHelper::registerFunction(&engine, proto, isClosed, "isClosed");
             
-            REcmaHelper::registerFunction(&engine, proto, isLogicallyClosed, "isLogicallyClosed");
+            REcmaHelper::registerFunction(&engine, proto, isGeometricallyClosed, "isGeometricallyClosed");
+            
+            REcmaHelper::registerFunction(&engine, proto, getOrientation, "getOrientation");
             
             REcmaHelper::registerFunction(&engine, proto, contains, "contains");
             
@@ -691,6 +697,71 @@
             return result;
         }
          QScriptValue
+        REcmaPolyline::prependShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::prependShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::prependShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("prependShape", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->prependShape(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.prependShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::prependShape", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPolyline::appendShape
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -744,6 +815,56 @@
     // return type 'void'
     
                self->appendShape(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->appendShape(a0
+        ,
+    a1);
     } else
 
 
@@ -1418,6 +1539,135 @@
             return result;
         }
          QScriptValue
+        REcmaPolyline::getVertexIndex
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::getVertexIndex", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::getVertexIndex";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getVertexIndex", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getVertexIndex(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getVertexIndex(a0
+        ,
+    a1);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getVertexIndex().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::getVertexIndex", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPolyline::getLastVertex
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1902,19 +2152,19 @@
             return result;
         }
          QScriptValue
-        REcmaPolyline::isLogicallyClosed
+        REcmaPolyline::isGeometricallyClosed
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPolyline::isLogicallyClosed", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::isLogicallyClosed";
+            //REcmaHelper::functionStart("REcmaPolyline::isGeometricallyClosed", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::isGeometricallyClosed";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RPolyline* self = 
-                        getSelf("isLogicallyClosed", context);
+                        getSelf("isGeometricallyClosed", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1934,7 +2184,39 @@
     // return type 'bool'
     bool cppResult =
         
-               self->isLogicallyClosed();
+               self->isGeometricallyClosed();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isGeometricallyClosed(a0);
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1944,10 +2226,59 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.isLogicallyClosed().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.isGeometricallyClosed().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPolyline::isLogicallyClosed", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolyline::isGeometricallyClosed", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::getOrientation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::getOrientation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::getOrientation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getOrientation", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::Orientation'
+    RS::Orientation cppResult =
+        
+               self->getOrientation();
+        // return type: RS::Orientation
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getOrientation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::getOrientation", context, engine);
             return result;
         }
          QScriptValue
@@ -2740,6 +3071,51 @@
     double cppResult =
         
                self->getAngleAt(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RS::From */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RS::From
+                    a1 =
+                    (RS::From)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getAngleAt(a0
+        ,
+    a1);
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);

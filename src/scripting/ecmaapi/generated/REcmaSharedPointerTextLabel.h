@@ -20,7 +20,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSharedPointerTextLabel {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSharedPointerTextLabel {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

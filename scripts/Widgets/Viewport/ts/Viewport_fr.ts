@@ -150,7 +150,22 @@ Points uniques</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+331"/>
+        <location filename="../Viewport.js" line="+244"/>
+        <source>Dropped data not supported</source>
+        <translation>Données insérées pas pris en charge</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Importing file: </source>
+        <translation>Importation fichier: </translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Importing URL: </source>
+        <translation>Importation URL: </translation>
+    </message>
+    <message>
+        <location line="+65"/>
         <source>Grid</source>
         <translation>Grille</translation>
     </message>

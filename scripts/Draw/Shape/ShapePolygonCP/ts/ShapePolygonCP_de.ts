@@ -51,9 +51,13 @@
         <translation>Ecken:</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Point)</source>
-        <translation>Pol&amp;ygon (Zentrum, Punkt)</translation>
+        <translation type="vanished">Pol&amp;ygon (Zentrum, Punkt)</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonCPInit.js" line="+2"/>
+        <source>Pol&amp;ygon (Center, Corner)</source>
+        <translation>Pol&amp;ygon (Zentrum, Ecke)</translation>
     </message>
     <message>
         <location line="+4"/>

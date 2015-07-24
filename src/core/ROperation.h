@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -51,8 +51,12 @@ public:
         spatialIndexDisabled(false),
         allowInvisible(false),
         entityTypeFilter(entityTypeFilter),
-        transactionGroup(-1) {}
+        transactionGroup(-1) {
+        RDebug::incCounter("ROperation");
+    }
+
     virtual ~ROperation() {
+        RDebug::decCounter("ROperation");
     }
     
     /**

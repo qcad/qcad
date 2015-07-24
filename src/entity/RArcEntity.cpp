@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -22,6 +22,7 @@
 
 RPropertyTypeId RArcEntity::PropertyCustom;
 RPropertyTypeId RArcEntity::PropertyHandle;
+RPropertyTypeId RArcEntity::PropertyProtected;
 RPropertyTypeId RArcEntity::PropertyType;
 RPropertyTypeId RArcEntity::PropertyBlock;
 RPropertyTypeId RArcEntity::PropertyLayer;
@@ -29,6 +30,7 @@ RPropertyTypeId RArcEntity::PropertyLinetype;
 RPropertyTypeId RArcEntity::PropertyLinetypeScale;
 RPropertyTypeId RArcEntity::PropertyLineweight;
 RPropertyTypeId RArcEntity::PropertyColor;
+RPropertyTypeId RArcEntity::PropertyDisplayedColor;
 RPropertyTypeId RArcEntity::PropertyDrawOrder;
 
 RPropertyTypeId RArcEntity::PropertyCenterX;
@@ -47,9 +49,17 @@ RPropertyTypeId RArcEntity::PropertyArea;
 RArcEntity::RArcEntity(RDocument* document, const RArcData& data,
         RObject::Id objectId) :
     REntity(document, objectId), data(document, data) {
+    RDebug::incCounter("RArcEntity");
+}
+
+RArcEntity::RArcEntity(const RArcEntity& other) : REntity(other) {
+    RDebug::incCounter("RArcEntity");
+    REntity::operator=(other);
+    data = other.data;
 }
 
 RArcEntity::~RArcEntity() {
+    RDebug::decCounter("RArcEntity");
 }
 
 void RArcEntity::setShape(const RArc& a) {
@@ -63,6 +73,7 @@ void RArcEntity::setShape(const RArc& a) {
 void RArcEntity::init() {
     RArcEntity::PropertyCustom.generateId(typeid(RArcEntity), RObject::PropertyCustom);
     RArcEntity::PropertyHandle.generateId(typeid(RArcEntity), RObject::PropertyHandle);
+    RArcEntity::PropertyProtected.generateId(typeid(RArcEntity), RObject::PropertyProtected);
     RArcEntity::PropertyType.generateId(typeid(RArcEntity), REntity::PropertyType);
     RArcEntity::PropertyBlock.generateId(typeid(RArcEntity), REntity::PropertyBlock);
     RArcEntity::PropertyLayer.generateId(typeid(RArcEntity), REntity::PropertyLayer);
@@ -70,6 +81,7 @@ void RArcEntity::init() {
     RArcEntity::PropertyLinetypeScale.generateId(typeid(RArcEntity), REntity::PropertyLinetypeScale);
     RArcEntity::PropertyLineweight.generateId(typeid(RArcEntity), REntity::PropertyLineweight);
     RArcEntity::PropertyColor.generateId(typeid(RArcEntity), REntity::PropertyColor);
+    RArcEntity::PropertyDisplayedColor.generateId(typeid(RArcEntity), REntity::PropertyDisplayedColor);
     RArcEntity::PropertyDrawOrder.generateId(typeid(RArcEntity), REntity::PropertyDrawOrder);
     RArcEntity::PropertyCenterX.generateId(typeid(RArcEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"));
     RArcEntity::PropertyCenterY.generateId(typeid(RArcEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"));
@@ -165,7 +177,7 @@ void RArcEntity::print(QDebug dbg) const {
     REntity::print(dbg);
     dbg.nospace() << ", center: " << getCenter();
     dbg.nospace() << ", radius: " << getRadius();
-    dbg.nospace() << ", startAngle: " << getStartAngle();
-    dbg.nospace() << ", endAngle: " << getEndAngle();
+    dbg.nospace() << ", startAngle: " << RMath::rad2deg(getStartAngle());
+    dbg.nospace() << ", endAngle: " << RMath::rad2deg(getEndAngle());
     dbg.nospace() << ", reversed: " << isReversed() << ")";
 }

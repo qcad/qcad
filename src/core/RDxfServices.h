@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -47,7 +47,7 @@ public:
     QString fixFontName(const QString& fontName) const;
 
     void fixQCad2String(QString& str) const;
-    void fixDimensionLabel(QString& text, QString& uTol, QString& lTol);
+    void fixDimensionLabel(QString& text, QString& uTol, QString& lTol) const;
     void detectQCad2Format(const QString& fileName);
 
     bool hasDIMZIN() const {

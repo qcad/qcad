@@ -70,6 +70,17 @@
         <translation>Rifletti blocco&lt;br&gt;verticalmente</translation>
     </message>
     <message>
+        <location line="+18"/>
+        <source>Single Block</source>
+        <translation>Blocco singolo</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location filename="../InsertBlockDialog.ui" line="+14"/>
+        <source>Array of Blocks</source>
+        <translation>Matrice di blocci</translation>
+    </message>
+    <message>
         <source>Attribute 1:</source>
         <translation type="obsolete">Attribute 1:</translation>
     </message>
@@ -80,6 +91,30 @@
     <message>
         <source>Attribute 3:</source>
         <translation type="obsolete">Attribute 3:</translation>
+    </message>
+    <message>
+        <source>Move / Copy Options</source>
+        <translation type="obsolete">Opzioni Spostamento</translation>
+    </message>
+    <message>
+        <location filename="../InsertBlockDialog.ui" line="+12"/>
+        <source>Columns:</source>
+        <translation>Colonne:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Rows:</source>
+        <translation>Righe:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Column Spacing:</source>
+        <translation>Interasse colonne:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Row Spacing:</source>
+        <translation>Interasse Righe:</translation>
     </message>
 </context>
 <context>

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -22,6 +22,7 @@
 
 RPropertyTypeId RLeaderEntity::PropertyCustom;
 RPropertyTypeId RLeaderEntity::PropertyHandle;
+RPropertyTypeId RLeaderEntity::PropertyProtected;
 RPropertyTypeId RLeaderEntity::PropertyType;
 RPropertyTypeId RLeaderEntity::PropertyBlock;
 RPropertyTypeId RLeaderEntity::PropertyLayer;
@@ -29,6 +30,7 @@ RPropertyTypeId RLeaderEntity::PropertyLinetype;
 RPropertyTypeId RLeaderEntity::PropertyLinetypeScale;
 RPropertyTypeId RLeaderEntity::PropertyLineweight;
 RPropertyTypeId RLeaderEntity::PropertyColor;
+RPropertyTypeId RLeaderEntity::PropertyDisplayedColor;
 RPropertyTypeId RLeaderEntity::PropertyDrawOrder;
 
 RPropertyTypeId RLeaderEntity::PropertyArrowHead;
@@ -39,14 +41,22 @@ RPropertyTypeId RLeaderEntity::PropertyVertexNZ;
 
 RLeaderEntity::RLeaderEntity(RDocument* document, const RLeaderData& data, RObject::Id objectId) :
     REntity(document, objectId), data(document, data) {
+    RDebug::incCounter("RLeaderEntity");
+}
+
+RLeaderEntity::RLeaderEntity(const RLeaderEntity& other) : REntity(other) {
+    RDebug::incCounter("RLeaderEntity");
+    data = other.data;
 }
 
 RLeaderEntity::~RLeaderEntity() {
+    RDebug::decCounter("RLeaderEntity");
 }
 
 void RLeaderEntity::init() {
     RLeaderEntity::PropertyCustom.generateId(typeid(RLeaderEntity), RObject::PropertyCustom);
     RLeaderEntity::PropertyHandle.generateId(typeid(RLeaderEntity), RObject::PropertyHandle);
+    RLeaderEntity::PropertyProtected.generateId(typeid(RLeaderEntity), RObject::PropertyProtected);
     RLeaderEntity::PropertyType.generateId(typeid(RLeaderEntity), REntity::PropertyType);
     RLeaderEntity::PropertyBlock.generateId(typeid(RLeaderEntity), REntity::PropertyBlock);
     RLeaderEntity::PropertyLayer.generateId(typeid(RLeaderEntity), REntity::PropertyLayer);
@@ -54,6 +64,7 @@ void RLeaderEntity::init() {
     RLeaderEntity::PropertyLinetypeScale.generateId(typeid(RLeaderEntity), REntity::PropertyLinetypeScale);
     RLeaderEntity::PropertyLineweight.generateId(typeid(RLeaderEntity), REntity::PropertyLineweight);
     RLeaderEntity::PropertyColor.generateId(typeid(RLeaderEntity), REntity::PropertyColor);
+    RLeaderEntity::PropertyDisplayedColor.generateId(typeid(RLeaderEntity), REntity::PropertyDisplayedColor);
     RLeaderEntity::PropertyDrawOrder.generateId(typeid(RLeaderEntity), REntity::PropertyDrawOrder);
 
     RLeaderEntity::PropertyArrowHead.generateId(typeid(RLeaderEntity), "", QT_TRANSLATE_NOOP("REntity", "Arrow"));
@@ -66,7 +77,12 @@ bool RLeaderEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
     bool ret = REntity::setProperty(propertyTypeId, value, transaction);
 
-    ret = ret || RObject::setMember(data.arrowHead, value, PropertyArrowHead == propertyTypeId);
+    if (PropertyArrowHead == propertyTypeId) {
+        if (value.toBool()==false || data.canHaveArrowHead()) {
+            ret = ret || RObject::setMember(data.arrowHead, value);
+        }
+    }
+//    ret = ret || RObject::setMember(data.arrowHead, value, PropertyArrowHead == propertyTypeId);
     ret = ret || RObject::setMemberX(data.vertices, value, PropertyVertexNX == propertyTypeId);
     ret = ret || RObject::setMemberY(data.vertices, value, PropertyVertexNY == propertyTypeId);
     ret = ret || RObject::setMemberZ(data.vertices, value, PropertyVertexNZ == propertyTypeId);

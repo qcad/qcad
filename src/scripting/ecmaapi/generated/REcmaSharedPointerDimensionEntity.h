@@ -20,7 +20,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSharedPointerDimensionEntity {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSharedPointerDimensionEntity {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -122,6 +125,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setLinearFactor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

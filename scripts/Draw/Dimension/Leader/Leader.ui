@@ -36,6 +36,9 @@
      <property name="text">
       <string>Arrow head</string>
      </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
   </layout>

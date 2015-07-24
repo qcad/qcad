@@ -6,11 +6,34 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>118</width>
+    <width>165</width>
     <height>50</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
+   <item>
+    <widget class="QToolButton" name="TypeAuto">
+     <property name="toolTip">
+      <string>Same Entity Type as Original</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>Auto.svg</normaloff>Auto.svg</iconset>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+     <property name="autoExclusive">
+      <bool>true</bool>
+     </property>
+     <attribute name="buttonGroup">
+      <string notr="true">Type</string>
+     </attribute>
+    </widget>
+   </item>
    <item>
     <widget class="QToolButton" name="TypeSegment">
      <property name="toolTip">
@@ -24,7 +47,7 @@
       <bool>true</bool>
      </property>
      <property name="checked">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <property name="autoExclusive">
       <bool>false</bool>

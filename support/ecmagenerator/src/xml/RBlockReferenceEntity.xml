@@ -19,6 +19,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="objectId" hasDefault="true"
         default="RObject :: INVALID_ID" isConst="false" />
       </variant>
+      <variant>
+        <arg type="RBlockReferenceEntity &amp;"
+        typeName="RBlockReferenceEntity" name="other"
+        isConst="true" />
+      </variant>
     </constructor>
     <method name="init" cppName="init" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
@@ -54,7 +59,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QVariant &amp;" typeName="QVariant" name="value"
         isConst="true" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -67,9 +72,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RPropertyTypeId" name="propertyTypeId"
         isConst="false" />
         <arg type="bool" typeName="bool" name="humanReadable"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="noAttributes"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="exportEntity" cppName="exportEntity"
@@ -79,9 +84,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RExporter &amp;" typeName="RExporter" name="e"
         isConst="false" />
         <arg type="bool" typeName="bool" name="preview"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="forceSelected"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getData" cppName="getData" specifier="public"
@@ -121,6 +126,64 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setRotation" cppName="setRotation"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="r"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getColumnCount" cppName="getColumnCount"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="setColumnCount" cppName="setColumnCount"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="c" isConst="false" />
+      </variant>
+    </method>
+    <method name="getRowCount" cppName="getRowCount"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="setRowCount" cppName="setRowCount"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="c" isConst="false" />
+      </variant>
+    </method>
+    <method name="getColumnSpacing" cppName="getColumnSpacing"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setColumnSpacing" cppName="setColumnSpacing"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="s"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getRowSpacing" cppName="getRowSpacing"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setRowSpacing" cppName="setRowSpacing"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="s"
+        isConst="false" />
+      </variant>
     </method>
     <method name="setReferencedBlockId"
     cppName="setReferencedBlockId" specifier="public"
@@ -177,6 +240,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyHandle" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyProtected" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyType" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyBlock" type="RPropertyTypeId"
@@ -190,6 +255,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyLineweight" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyColor" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyDisplayedColor" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyDrawOrder" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
@@ -208,6 +275,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyScaleZ" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyRotation" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyColumnCount" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyRowCount" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyColumnSpacing" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyRowSpacing" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>

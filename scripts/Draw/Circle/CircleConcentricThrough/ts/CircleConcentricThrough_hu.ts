@@ -14,7 +14,7 @@
         <translation>Koncentrikus (ponton átmenő)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle through point</source>
         <translation>Ponton átmenő koncentrikus kör szerkesztése</translation>
     </message>

@@ -1739,7 +1739,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < RBlock >(o0->clone());
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RBlock >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -1827,7 +1830,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < RObject >(o0->clone());
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -1890,7 +1896,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < RObject >(o0->clone());
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -1966,7 +1975,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < RObject >(o0->clone());
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -2055,7 +2067,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < RObject >(o0->clone());
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -2201,7 +2216,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < RObject >(o0->clone());
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -2367,7 +2385,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < RObject >(o0->clone());
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RObject >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -2544,6 +2565,38 @@
         // return type: QMap < RObject::Id , QList < RPropertyChange > >
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RObject::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RObject::Id
+                    a0 =
+                    (RObject::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RPropertyChange >'
+    QList < RPropertyChange > cppResult =
+        
+               self->getPropertyChanges(a0);
+        // return type: QList < RPropertyChange >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
             
     } else
 

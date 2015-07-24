@@ -6,12 +6,12 @@
     <message>
         <location filename="../Layer.js" line="+66"/>
         <source>Layer Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>レイヤツール</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show layer tools</source>
-        <translation type="unfinished"></translation>
+        <translation>表示レイヤツール</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -22,7 +22,7 @@
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+142"/>
+        <location filename="../LayerDialog.js" line="+144"/>
         <source>Leading or trailing spaces.</source>
         <translation>上部または下部の余白</translation>
     </message>
@@ -47,9 +47,13 @@
         <translation>画層名:</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>Pen</source>
-        <translation>ペン</translation>
+        <translation type="vanished">ペン</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Attributes</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+9"/>

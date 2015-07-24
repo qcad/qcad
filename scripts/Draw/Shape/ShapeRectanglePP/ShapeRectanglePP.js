@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -18,6 +18,7 @@
  */
 
 include("../Shape.js");
+include("../../DrawBasedOnRectanglePP.js");
 
 /**
  * \class ShapeRectanglePP
@@ -25,107 +26,23 @@ include("../Shape.js");
  * \ingroup ecma_draw_shape
  */
 function ShapeRectanglePP(guiAction) {
-    Shape.call(this, guiAction);
+    DrawBasedOnRectanglePP.call(this, guiAction);
 
-    this.corner1 = undefined;
-    this.corner2 = undefined;
-
+    this.createPolyline = false;
     this.setUiOptions("../Shape.ui");
 }
 
-ShapeRectanglePP.prototype = new Shape();
-
-ShapeRectanglePP.State = {
-    SettingCorner1 : 0,
-    SettingCorner2 : 1
-};
+ShapeRectanglePP.prototype = new DrawBasedOnRectanglePP();
 
 ShapeRectanglePP.prototype.beginEvent = function() {
-    Shape.prototype.beginEvent.call(this);
-
-    this.setState(ShapeRectanglePP.State.SettingCorner1);
-};
-
-ShapeRectanglePP.prototype.setState = function(state) {
-    Shape.prototype.setState.call(this, state);
-
-    this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
-    this.setCrosshairCursor();
-
-    var appWin = RMainWindowQt.getMainWindow();
-    switch (this.state) {
-    case ShapeRectanglePP.State.SettingCorner1:
-        var trFirstCorner = qsTr("First corner");
-        this.setCommandPrompt(trFirstCorner);
-        this.setLeftMouseTip(trFirstCorner);
-        this.setRightMouseTip(EAction.trCancel);
-        break;
-
-    case ShapeRectanglePP.State.SettingCorner2:
-        var trSecondCorner = qsTr("Second corner");
-        this.setCommandPrompt(trSecondCorner);
-        this.setLeftMouseTip(trSecondCorner);
-        this.setRightMouseTip(EAction.trCancel);
-        break;
-    }
-
-    EAction.showSnapTools();
-};
-
-ShapeRectanglePP.prototype.escapeEvent = function() {
-    switch (this.state) {
-    case ShapeRectanglePP.State.SettingCorner1:
-        EAction.prototype.escapeEvent.call(this);
-        break;
-
-    case ShapeRectanglePP.State.SettingCorner2:
-        this.setState(ShapeRectanglePP.State.SettingCorner1);
-        break;
-    }
-};
-
-ShapeRectanglePP.prototype.coordinateEvent = function(event) {
-    var di = this.getDocumentInterface();
-
-    switch (this.state) {
-    case ShapeRectanglePP.State.SettingCorner1:
-        this.corner1 = event.getModelPosition();
-        di.setRelativeZero(this.corner1);
-        this.setState(ShapeRectanglePP.State.SettingCorner2);
-        break;
-
-    case ShapeRectanglePP.State.SettingCorner2:
-        this.corner2 = event.getModelPosition();
-        di.setRelativeZero(this.corner2);
-        var op = this.getOperation(false);
-        if (!isNull(op)) {
-            di.applyOperation(op);
-            this.setState(ShapeRectanglePP.State.SettingCorner1);
-        }
-        break;
-    }
-};
-
-ShapeRectanglePP.prototype.coordinateEventPreview = function(event) {
-    switch (this.state) {
-    case ShapeRectanglePP.State.SettingCorner2:
-        this.corner2 = event.getModelPosition();
-        this.updatePreview();
-        break;
-    default:
-        break;
-    }
+    DrawBasedOnRectanglePP.prototype.beginEvent.call(this);
 };
 
 ShapeRectanglePP.prototype.getOperation = function(preview) {
-    var corners = [
-        new RVector(this.corner1.x, this.corner1.y),
-        new RVector(this.corner2.x, this.corner1.y),
-        new RVector(this.corner2.x, this.corner2.y),
-        new RVector(this.corner1.x, this.corner2.y)
-    ];
+    var corners = this.getCorners();
 
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
 
     var shapes = this.getShapes(corners);
     for (var i=0; i<shapes.length; ++i) {
@@ -139,3 +56,10 @@ ShapeRectanglePP.prototype.getOperation = function(preview) {
     return op;
 };
 
+ShapeRectanglePP.prototype.getShapes = function(corners) {
+    return Shape.prototype.getShapes.call(this, corners);
+};
+
+ShapeRectanglePP.prototype.slotCreatePolylineChanged = function(checked) {
+    this.createPolyline = checked;
+};

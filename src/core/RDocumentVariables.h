@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -37,6 +37,7 @@ class QCADCORE_EXPORT RDocumentVariables : public RObject {
 public:
     static RPropertyTypeId PropertyCustom;
     static RPropertyTypeId PropertyHandle;
+    static RPropertyTypeId PropertyProtected;
     static RPropertyTypeId PropertyCurrentLayerId;
     static RPropertyTypeId PropertyUnit;
     static RPropertyTypeId PropertyLinetypeScale;
@@ -85,6 +86,9 @@ public:
     }
 
     void setUnit(RS::Unit u) {
+        QVariant v;
+        v.setValue((int)u);
+        knownVariables.insert(RS::INSUNITS, v);
         unit = u;
     }
 
@@ -93,6 +97,9 @@ public:
     }
 
     void setLinetypeScale(double s) {
+        QVariant v;
+        v.setValue((double)s);
+        knownVariables.insert(RS::LTSCALE, v);
         linetypeScale = s;
     }
 

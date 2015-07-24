@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -27,10 +27,19 @@ function Transform(guiAction) {
     Modify.call(this, guiAction);
     
     this.useCurrentAttributes = false;
+    this.copies = 0;
+    this.copy = undefined;
+
+    this.useDialog = true;
 }
 
 Transform.prototype = new Modify();
 Transform.includeBasePath = includeBasePath;
+
+Transform.prototype.finishEvent = function() {
+    this.clearCache();
+    Modify.prototype.finishEvent.call(this);
+};
 
 Transform.prototype.verifySelection = function() {
     var di = this.getDocumentInterface();
@@ -63,22 +72,29 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
 
     var op, di, ids;
 
+    var doc = this.getDocument();
+
     if (cache) {
+        // return cached document as paste operation:
         if (!isNull(this.diTrans) && preview) {
             op = new RPasteOperation(this.diTrans.getDocument());
-            op.setOffset(this.targetPoint)
+            op.setOffset(this.targetPoint);
             return op;
         }
 
+        this.clearCache();
+
         var docTrans = new RDocument(new RMemoryStorage(), new RSpatialIndexNavel());
+        docTrans.copyVariablesFrom(doc);
         this.diTrans = new RDocumentInterface(docTrans);
         this.diTrans.setNotifyListeners(false);
 
-        this.diTrans.applyOperation(new RCopyOperation(new RVector(0,0), this.getDocument()));
-        docTrans.copyVariablesFrom(this.getDocument());
+        // copy seletion to cache document:
+        var copyOp = new RCopyOperation(new RVector(0,0), doc);
+        copyOp.setClear(false);
+        this.diTrans.applyOperation(copyOp);
         di = this.diTrans;
-        ids = di.getDocument().queryAllEntities();
-
+        ids = this.diTrans.getDocument().queryAllEntities();
     }
     else {
         di = this.getDocumentInterface();
@@ -86,14 +102,15 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
     }
 
     var document = di.getDocument();
-    var storage = document.getStorage();
     var i, k, id, entity, entityP;
-    var num = this.copies;
+    var copies = this.getCopies();
+    var num = copies;
     if (num===0) {
         num=1;
     }
 
     op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
     for (k=1; k<=num; k++) {
         for (i=0; i<ids.length; i++) {
             if (!cache && preview && op.getPreviewCounter()>RSettings.getPreviewEntities()) {
@@ -107,10 +124,11 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
             }
 
             // entity is valid as long as entityP is valid:
-            entity = entityP.data();
+            //entity = entityP.data();
+            entity = entityP.clone();
 
             // copy: assign new IDs
-            if (this.copies>0) {
+            if (copies>0) {
                 if (!preview && !selectResult) {
                     entity.setSelected(false);
                 }
@@ -121,7 +139,7 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
                 this.transform(entity, k, op, preview, true);
             }
             else {
-                this.transform(entity, k, op, preview, this.copies>0);
+                this.transform(entity, k, op, preview, copies>0);
             }
         }
         op.endCycle();
@@ -146,6 +164,39 @@ Transform.prototype.getOperation = function(preview, selectResult, cache) {
 
 Transform.prototype.clearCache = function() {
     // clear cache:
+    if (!isNull(this.diTrans)) {
+        this.diTrans.destroy();
+    }
+
     this.diTrans = undefined;
     //Modify.prototype.updatePreview.call(this);
+};
+
+Transform.prototype.slotCopyChanged = function(checked) {
+    this.copy = checked;
+
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var w = optionsToolBar.findChild("LabelNumberOfCopies");
+    if (!isNull(w)) {
+        w.enabled = checked;
+    }
+    w =  optionsToolBar.findChild("NumberOfCopies");
+    if (!isNull(w)) {
+        w.enabled = checked;
+    }
+};
+
+Transform.prototype.slotNumberOfCopiesChanged = function(v) {
+    this.copies = v;
+};
+
+Transform.prototype.slotUseCurrentAttributesChanged = function(checked) {
+    this.useCurrentAttributes = checked;
+};
+
+Transform.prototype.getCopies = function() {
+    if (this.copy===false) {
+        return 0;
+    }
+    return this.copies;
 };

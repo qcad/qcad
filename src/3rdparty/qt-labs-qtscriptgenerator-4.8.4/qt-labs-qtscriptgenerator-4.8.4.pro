@@ -1,4 +1,4 @@
 include( ../../../shared.pri )
 
-SUBDIRS = qtbindings
+SUBDIRS = ../qt-labs-qtscriptgenerator-4.8.7/qtbindings
 TEMPLATE = subdirs

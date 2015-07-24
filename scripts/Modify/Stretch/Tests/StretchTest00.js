@@ -32,9 +32,9 @@ StretchTest00.prototype = new TdbTest();
 StretchTest00.prototype.test00 = function() {
     qDebug('running StretchTest00.test00()...');
     this.setUp();
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(53, 455), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(53, 455), Qt.LeftButton, 0, 0);
     this.importFile('scripts/Modify/Stretch/Tests/data/entities0.dxf');
     var p = new RVector(40.969671, 25.048477);

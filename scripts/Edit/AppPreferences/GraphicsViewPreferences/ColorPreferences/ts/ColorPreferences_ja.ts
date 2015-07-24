@@ -19,7 +19,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Graphics View</source>
-        <translation type="unfinished">グラフィックスビュー</translation>
+        <translation>グラフィックスビュー</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -29,7 +29,7 @@
     <message>
         <location line="+33"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>カーソル</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -39,32 +39,32 @@
     <message>
         <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation>非アクティブな十字線:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>原点</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Relative zero:</source>
-        <translation type="unfinished"></translation>
+        <translation>相対ゼロ:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>グリッド</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>Meta grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>メタグリッド:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>選択</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -89,22 +89,22 @@
     <message>
         <location line="+36"/>
         <source>Selection box border:</source>
-        <translation type="unfinished"></translation>
+        <translation>選択ボックスの境界:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation>選択ボックス:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation>クロスセレクションボックス:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Snap Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>スナップツール</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -114,7 +114,7 @@
     <message>
         <location line="+33"/>
         <source>Info Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>情報</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -129,7 +129,7 @@
     <message>
         <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation type="unfinished"></translation>
+        <translation>補助輪郭:</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -139,24 +139,24 @@
     <message>
         <location line="+12"/>
         <source>Zoom box border:</source>
-        <translation type="unfinished"></translation>
+        <translation>ズームボックス:</translation>
     </message>
     <message>
         <source>Inactive Crosshairs:</source>
-        <translation type="vanished">非アクティブな十字線:</translation>
+        <translation type="obsolete">非アクティブな十字線:</translation>
     </message>
     <message>
-        <location line="-538"/>
+        <location line="-535"/>
         <source>Origin:</source>
         <translation>原点:</translation>
     </message>
     <message>
         <source>Relative Zero:</source>
-        <translation type="vanished">相対ゼロ:</translation>
+        <translation type="obsolete">相対ゼロ:</translation>
     </message>
     <message>
         <source>Reference Point:</source>
-        <translation type="vanished">基準点:</translation>
+        <translation type="obsolete">基準点:</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -165,43 +165,43 @@
     </message>
     <message>
         <source>Meta Grid:</source>
-        <translation type="vanished">メタグリッド:</translation>
+        <translation type="obsolete">メタグリッド:</translation>
     </message>
     <message>
         <source>Zoom Box:</source>
-        <translation type="vanished">ズームボックス:</translation>
+        <translation type="obsolete">ズームボックス:</translation>
     </message>
     <message>
         <source>Selection:</source>
-        <translation type="vanished">選択:</translation>
+        <translation type="obsolete">選択:</translation>
     </message>
     <message>
         <source>Selection Box Border:</source>
-        <translation type="vanished">選択ボックスの境界:</translation>
+        <translation type="obsolete">選択ボックスの境界:</translation>
     </message>
     <message>
         <source>Selection Box:</source>
-        <translation type="vanished">選択ボックス:</translation>
+        <translation type="obsolete">選択ボックス:</translation>
     </message>
     <message>
         <source>Cross Selection Box:</source>
-        <translation type="vanished">クロスセレクションボックス:</translation>
+        <translation type="obsolete">クロスセレクションボックス:</translation>
     </message>
     <message>
         <source>Auxiliary Shapes:</source>
-        <translation type="vanished">補助輪郭:</translation>
+        <translation type="obsolete">補助輪郭:</translation>
     </message>
     <message>
         <source>Info Label Background:</source>
-        <translation type="vanished">情報ラベル背景:</translation>
+        <translation type="obsolete">情報ラベル背景:</translation>
     </message>
     <message>
         <source>Info Label Font:</source>
-        <translation type="vanished">情報ラベルフォント:</translation>
+        <translation type="obsolete">情報ラベルフォント:</translation>
     </message>
     <message>
         <source>Measurement Tools:</source>
-        <translation type="vanished">計測ツール:</translation>
+        <translation type="obsolete">計測ツール:</translation>
     </message>
 </context>
 </TS>

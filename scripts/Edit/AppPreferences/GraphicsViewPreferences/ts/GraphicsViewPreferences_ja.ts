@@ -56,7 +56,7 @@
     <message>
         <location line="-64"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>原点</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -96,7 +96,7 @@
     <message>
         <location line="+9"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -109,21 +109,45 @@
         <translation>線の太さのパターン·スケール 0.00mm:</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="+36"/>
+        <source>Display and Performance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+146"/>
+        <source>Display entities with more than N dashes as continuous:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Minimum angle step for rendering arcs (degrees):</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+82"/>
+        <source>Anti-aliasing on by default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Timeout for hatch rendering:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-349"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>自動的にモデルビューの基本線種を使用</translation>
     </message>
     <message>
         <source>Auto switch linetypes</source>
-        <translation type="vanished">ラインタイプの自動切り替え</translation>
+        <translation type="obsolete">ラインタイプの自動切り替え</translation>
     </message>
     <message>
-        <location line="+72"/>
         <source>Performance</source>
-        <translation>パフォーマンス</translation>
+        <translation type="vanished">パフォーマンス</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+78"/>
         <source>Number of preview entities:</source>
         <translation>プレビューエンティティの数:</translation>
     </message>
@@ -142,7 +166,7 @@
         <translation type="obsolete">テキスト高さの表示閾値:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+265"/>
         <source>Selection</source>
         <translation>選択</translation>
     </message>

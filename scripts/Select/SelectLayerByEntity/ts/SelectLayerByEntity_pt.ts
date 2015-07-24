@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>SelectLayer</name>
     <message>
@@ -69,7 +69,7 @@ Interseção com a seleção atual</translatorcomment>
     <message>
         <location filename="../SelectLayerByEntity.js" line="+68"/>
         <source>Choose entity on layer</source>
-        <translation>Escolha entidade na camada</translation>
+        <translation>Escolha uma entidade na camada</translation>
     </message>
     <message>
         <location filename="../SelectLayerByEntity.ui" line="+17"/>
@@ -79,7 +79,7 @@ Interseção com a seleção atual</translatorcomment>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation>Substituir a seleção atual</translation>
+        <translation>Substitua a seleção atual</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -87,17 +87,17 @@ Interseção com a seleção atual</translatorcomment>
         <location line="+20"/>
         <location line="+20"/>
         <source>SelectionMode</source>
-        <translation>SelectionMode</translation>
+        <translation>ModoSeleção</translation>
     </message>
     <message>
         <location line="-53"/>
         <source>Add to the current selection</source>
-        <translation>Adicionar à seleção atual</translation>
+        <translation>Adicione à seleção atual</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation>Subtrair da seleção atual</translation>
+        <translation>Subtraia da seleção atual</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -107,12 +107,12 @@ Interseção com a seleção atual</translatorcomment>
     <message>
         <location filename="../SelectLayerByEntityInit.js" line="+2"/>
         <source>(De-)Select La&amp;yer</source>
-        <translation>(Des-)selecione Ca&amp;mada</translation>
+        <translation>(Des-)Selecione Ca&amp;mada</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities on the same layer</source>
-        <translation>(De-)selecione todas as entidades na mesma camada</translation>
+        <translation>(De-)Selecione todas as entidades da mesma camada</translation>
     </message>
 </context>
 </TS>

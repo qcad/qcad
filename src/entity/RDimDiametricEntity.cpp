@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -21,6 +21,7 @@
 
 RPropertyTypeId RDimDiametricEntity::PropertyCustom;
 RPropertyTypeId RDimDiametricEntity::PropertyHandle;
+RPropertyTypeId RDimDiametricEntity::PropertyProtected;
 RPropertyTypeId RDimDiametricEntity::PropertyType;
 RPropertyTypeId RDimDiametricEntity::PropertyBlock;
 RPropertyTypeId RDimDiametricEntity::PropertyLayer;
@@ -28,6 +29,7 @@ RPropertyTypeId RDimDiametricEntity::PropertyLinetype;
 RPropertyTypeId RDimDiametricEntity::PropertyLinetypeScale;
 RPropertyTypeId RDimDiametricEntity::PropertyLineweight;
 RPropertyTypeId RDimDiametricEntity::PropertyColor;
+RPropertyTypeId RDimDiametricEntity::PropertyDisplayedColor;
 RPropertyTypeId RDimDiametricEntity::PropertyDrawOrder;
 
 RPropertyTypeId RDimDiametricEntity::PropertyMiddleOfTextX;
@@ -40,6 +42,7 @@ RPropertyTypeId RDimDiametricEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimDiametricEntity::PropertyMeasuredValue;
 
 RPropertyTypeId RDimDiametricEntity::PropertyLinearFactor;
+RPropertyTypeId RDimDiametricEntity::PropertyDimScale;
 RPropertyTypeId RDimDiametricEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimDiametricEntity::PropertyFontName;
 
@@ -62,6 +65,7 @@ RDimDiametricEntity::~RDimDiametricEntity() {
 void RDimDiametricEntity::init() {
     RDimDiametricEntity::PropertyCustom.generateId(typeid(RDimDiametricEntity), RObject::PropertyCustom);
     RDimDiametricEntity::PropertyHandle.generateId(typeid(RDimDiametricEntity), RObject::PropertyHandle);
+    RDimDiametricEntity::PropertyProtected.generateId(typeid(RDimDiametricEntity), RObject::PropertyProtected);
     RDimDiametricEntity::PropertyType.generateId(typeid(RDimDiametricEntity), REntity::PropertyType);
     RDimDiametricEntity::PropertyBlock.generateId(typeid(RDimDiametricEntity), REntity::PropertyBlock);
     RDimDiametricEntity::PropertyLayer.generateId(typeid(RDimDiametricEntity), REntity::PropertyLayer);
@@ -69,6 +73,7 @@ void RDimDiametricEntity::init() {
     RDimDiametricEntity::PropertyLinetypeScale.generateId(typeid(RDimDiametricEntity), REntity::PropertyLinetypeScale);
     RDimDiametricEntity::PropertyLineweight.generateId(typeid(RDimDiametricEntity), REntity::PropertyLineweight);
     RDimDiametricEntity::PropertyColor.generateId(typeid(RDimDiametricEntity), REntity::PropertyColor);
+    RDimDiametricEntity::PropertyDisplayedColor.generateId(typeid(RDimDiametricEntity), REntity::PropertyDisplayedColor);
     RDimDiametricEntity::PropertyDrawOrder.generateId(typeid(RDimDiametricEntity), REntity::PropertyDrawOrder);
 
     RDimDiametricEntity::PropertyMiddleOfTextX.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyMiddleOfTextX);
@@ -81,6 +86,7 @@ void RDimDiametricEntity::init() {
     RDimDiametricEntity::PropertyMeasuredValue.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyMeasuredValue);
 
     RDimDiametricEntity::PropertyLinearFactor.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyLinearFactor);
+    RDimDiametricEntity::PropertyDimScale.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyDimScale);
     RDimDiametricEntity::PropertyAutoTextPos.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyAutoTextPos);
     RDimDiametricEntity::PropertyFontName.generateId(typeid(RDimDiametricEntity), RDimensionEntity::PropertyFontName);
 

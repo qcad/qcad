@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -45,7 +45,7 @@ RBlock::~RBlock() {
 
 void RBlock::init() {
     RBlock::PropertyName.generateId(typeid(RBlock), "", "Name");
-    RBlock::PropertyFrozen.generateId(typeid(RBlock), "", "Frozen");
+    RBlock::PropertyFrozen.generateId(typeid(RBlock), "", "Hidden");
 }
 
 RBlock* RBlock::clone() const {

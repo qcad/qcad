@@ -6,12 +6,12 @@
     <message>
         <location filename="../Layer.js" line="+66"/>
         <source>Layer Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodja plasti</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show layer tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži orodja plasti</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -22,7 +22,7 @@
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+142"/>
+        <location filename="../LayerDialog.js" line="+144"/>
         <source>Leading or trailing spaces.</source>
         <translation>Presledki spredaj ali zadaj.</translation>
     </message>
@@ -47,9 +47,13 @@
         <translation>Ime plasti:</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>Pen</source>
-        <translation>Pisalo</translation>
+        <translation type="vanished">Pisalo</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Attributes</source>
+        <translation>Atributi</translation>
     </message>
     <message>
         <location line="+9"/>

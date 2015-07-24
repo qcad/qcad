@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -18,6 +18,10 @@
  */
 
 include("../File.js");
+include("sprintf.js");
+if (RSettings.isGuiEnabled() && typeof(PrintPreview)=="undefined") {
+    include("../PrintPreview/PrintPreview.js");
+}
 if (typeof(PageSettings)=="undefined") {
     include("scripts/Edit/DrawingPreferences/PageSettings/PageSettings.js");
 }
@@ -31,6 +35,10 @@ function Print(guiAction, document, view) {
 
     this.document = document;
     this.view = view;
+
+    // save and restore current view:
+    this.saveView = false;
+
     if (!isNull(view)) {
         this.scene = view.getScene();
     }
@@ -44,10 +52,10 @@ Print.prototype.beginEvent = function() {
     File.prototype.beginEvent.call(this);
 
     // switch to print preview:
-    include("../PrintPreview/PrintPreview.js");
     if (!PrintPreview.isRunning()) {
         var guiAction = RGuiAction.getByScriptFile("scripts/File/PrintPreview/PrintPreview.js");
         var action = new PrintPreview(guiAction);
+        action.saveView = this.saveView;
         action.initialAction = "Print";
         var di = this.getDocumentInterface();
         di.setCurrentAction(action);
@@ -95,32 +103,42 @@ Print.prototype.print = function(pdfFile) {
         Print.cancel = false;
         Print.printDialog = new QPrintDialog(printer, EAction.getMainWindow());
 
-        // Mac, Win: exec() never returns without destroying the dialog through these signals:
-        // Linux: make sure that cancel is caught correctly:
-        Print.printDialog["accepted(QPrinter*)"].connect(
-                    function() {
-                        Print.cancel = false;
-                        Print.printDialog.close();
-                        if (RS.getSystemId()==="osx" && !RSettings.isQt(5)) {
-                            Print.printDialog.destroy();
-                        }
-                    });
-
-        Print.printDialog.rejected.connect(
-                    function() {
-                        Print.cancel = true;
-                        Print.printDialog.close();
-                        if (RS.getSystemId()==="osx" && !RSettings.isQt(5)) {
-                            Print.printDialog.destroy();
-                        }
-                    });
-
-        if (RS.getSystemId()==="osx" || RS.getSystemId()==="linux") {
+        if (RSettings.isQt(5)) {
+            Print.printDialog.rejected.connect(function() { Print.cancel = true; });
             Print.printDialog.exec();
+            Print.printDialog.destroy();
         }
-        else if (RS.getSystemId()==="win") {
-            // slot 'dummy' is never called:
-            Print.printDialog.open(this, "dummy");
+        else {
+            // Mac, Win: exec() never returns without destroying the dialog through these signals:
+            // Linux: make sure that cancel is caught correctly:
+            Print.printDialog["accepted(QPrinter*)"].connect(
+                        function() {
+                            Print.cancel = false;
+                            Print.printDialog.close();
+                            if (RS.getSystemId()==="osx") {
+                                Print.printDialog.destroy();
+                            }
+                        });
+
+            Print.printDialog.rejected.connect(
+                        function() {
+                            Print.cancel = true;
+                            Print.printDialog.close();
+                            if (RS.getSystemId()==="osx") {
+                                Print.printDialog.destroy();
+                            }
+                        });
+
+            // Windows:
+            if (RS.getSystemId()==="win") {
+                // slot 'dummy' is never called:
+                Print.printDialog.open(this, "dummy");
+            }
+
+            // Mac OS X, Linux, various other unices:
+            else {
+                Print.printDialog.exec();
+            }
         }
 
         if (Print.cancel===true) {
@@ -231,8 +249,9 @@ Print.prototype.print = function(pdfFile) {
 
         transform.translate(-paperBorder.x(), -paperBorder.y()-paperBorder.height());
 
-        // apply user defined offset and scale:
-        transform.translate(-offset.x*scale*unitScale, -offset.y*scale*unitScale);
+        // apply user defined scale:
+        // offset is NOT applied here to avoid huge values in transformation matrix:
+        transform.translate(-1*scale*unitScale, -1*scale*unitScale);
         transform.scale(scale, scale);
 
         // scale drawing unit to mm:
@@ -240,7 +259,10 @@ Print.prototype.print = function(pdfFile) {
 
         painter.setWorldTransform(transform);
 
+        // apply offset here to avoid huge values in transformation matrix:
+        this.view.setPaintOffset(offset.getNegated());
         this.printPage(painter, paperBorderTransformed);
+        this.view.setPaintOffset(new RVector(0,0));
 
         if (Print.getPrintCropMarks(this.document)) {
             Print.drawCropMarks(
@@ -1227,7 +1249,38 @@ Print.setPrintCropMarks = function(document, printCropMarks) {
 };
 
 Print.getScaleString = function(document) {
-    return EAction.getStringValue("PageSettings/Scale", "1:1", document);
+    var str = EAction.getStringValue("PageSettings/Scale", "1:1", document);
+
+    // round:
+    if (/^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?$/.test(str)) {
+        var v = parseFloat(str);
+        if (v>1) {
+            str = sprintf("%.2f", v);
+        }
+        else if (v>0.1) {
+            str = sprintf("%.3f", v);
+        }
+        else if (v>0.01) {
+            str = sprintf("%.4f", v);
+        }
+        else if (v>0.001) {
+            str = sprintf("%.5f", v);
+        }
+        else if (v>0.0001) {
+            str = sprintf("%.6f", v);
+        }
+        else if (v>0.00001) {
+            str = sprintf("%.7f", v);
+        }
+        else if (v>0.000001) {
+            str = sprintf("%.8f", v);
+        }
+        else {
+            str = sprintf("%.12f", v);
+        }
+    }
+
+    return str;
 };
 
 /**
@@ -1254,6 +1307,11 @@ Print.setScaleString = function(document, scaleString) {
 };
 
 Print.getColumns = function(document) {
+    var appWin = RMainWindowQt.getMainWindow();
+    if (isNull(appWin) || appWin.property("PrintPreview/InitialZoom")==="View") {
+        return 1;
+    }
+
     return EAction.getIntValue("MultiPageSettings/Columns", 1, document);
 };
 
@@ -1262,6 +1320,11 @@ Print.setColumns = function(document, columns) {
 };
 
 Print.getRows = function(document) {
+    var appWin = RMainWindowQt.getMainWindow();
+    if (isNull(appWin) || appWin.property("PrintPreview/InitialZoom")==="View") {
+        return 1;
+    }
+
     return EAction.getIntValue("MultiPageSettings/Rows", 1, document);
 };
 
@@ -1277,29 +1340,18 @@ Print.getBackgroundColor = function(document) {
         return color;
     }
     else if (isString(color)) {
-        return new RColor(color);
+        var ret = new RColor(color);
+        if (ret.isValid()) {
+            return ret;
+        }
+        // invalid color name: default to white:
+        return new RColor("white");
     }
     else {
         debugger;
         return new RColor("white");
     }
-
-//    var colorString = Print.getBackgroundColorString(document);
-//    return new QColor(colorString);
 };
-
-//Print.getBackgroundColorString = function(document) {
-//    return EAction.getValue("ColorSettings/BackgroundColor", "white", document);
-//}
-
-//Print.setBackgroundColor = function(document, color) {
-//    document.setVariable("ColorSettings/BackgroundColor", color);
-//    Print.setBackgroundColorString(document, color.getName());
-//}
-
-//Print.setBackgroundColorString = function(document, colorString) {
-//    document.setVariable("ColorSettings/BackgroundColor", colorString);
-//}
 
 Print.getEnablePageTags = function(document) {
     return EAction.getBoolValue("PageTagSettings/EnablePageTags", false, document);

@@ -38,12 +38,11 @@ IsoProjectTest03.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     var p = new RVector(1, 19);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    // key: 'P'
-    this.pressAndReleaseKeyOnGv(0x50, 0);
-    // key: 'J'
-    this.pressAndReleaseKeyOnGv(0x4a, 0);
+    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::ProjectionToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::ProjectionToolsPanel::IsoProjectButton');
     this.setToolOption('IsoProject/ProjectionType', 'Top');
     this.setToolOption('IsoProject/SegmentLength',  [ 5, 0 ] );
+    this.setToolOption('IsoProject/TrueScale', 'false');
     this.updateToolOptions();
     this.setZoom(6.914994309623345, new RVector(1.69613, 14.7619, 0) );
     var p = new RVector(9.43909, 19.80065);
@@ -55,6 +54,7 @@ IsoProjectTest03.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('IsoProject/ProjectionType', 'Right');
     this.setToolOption('IsoProject/SegmentLength',  [ 8, 0 ] );
+    this.setToolOption('IsoProject/TrueScale', 'false');
     this.updateToolOptions();
     this.setZoom(6.914994309623345, new RVector(1.69613, 14.7619, 0) );
     var p = new RVector(57.161472, 20.23449);
@@ -62,6 +62,7 @@ IsoProjectTest03.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setToolOption('IsoProject/ProjectionType', 'Left');
     this.setToolOption('IsoProject/SegmentLength',  [ 10, 0 ] );
+    this.setToolOption('IsoProject/TrueScale', 'false');
     this.updateToolOptions();
     this.setZoom(6.914994309623345, new RVector(1.69613, 14.7619, 0) );
     var p = new RVector(43.133984, 19.656037);

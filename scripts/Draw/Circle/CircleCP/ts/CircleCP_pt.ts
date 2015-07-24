@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>CircleCP</name>
     <message>
@@ -27,13 +27,13 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
     <message>
         <location filename="../CircleCPInit.js" line="+2"/>
         <source>&amp;Center, Point</source>
-        <translation>&amp;Centro, ponto</translation>
+        <translation>&amp;Centro, Ponto</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from center and point on circle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar círculo do centro e ponto no círculo</translation>
+        <translation>Desenhe um círculo a partir de um centro e um ponto no círculo</translation>
     </message>
 </context>
 </TS>

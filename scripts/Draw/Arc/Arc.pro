@@ -7,4 +7,5 @@ SUBDIRS = \
     ArcCPA \
     ArcConcentric \
     ArcConcentricThrough \
-    ArcTangential
+    ArcTangential \
+    ArcTPR

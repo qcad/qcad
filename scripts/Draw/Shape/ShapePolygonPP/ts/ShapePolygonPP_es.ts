@@ -54,13 +54,21 @@
         <translation>Puntos de esquina:</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Two Corners)</source>
+        <translation type="vanished">Polígo&amp;no (dos esquinas)</translation>
+    </message>
+    <message>
+        <source>Draw regular polygon from two corner points</source>
+        <translation type="vanished">Dibuja un polígono regular a partir de dos esquinas</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonPPInit.js" line="+2"/>
+        <source>Polygo&amp;n (2 Points of Side)</source>
         <translation>Polígo&amp;no (dos esquinas)</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Draw regular polygon from two corner points</source>
+        <source>Draw regular polygon from end points of one side</source>
         <translation>Dibuja un polígono regular a partir de dos esquinas</translation>
     </message>
 </context>

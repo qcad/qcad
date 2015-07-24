@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Start</name>
     <message>
@@ -23,7 +23,7 @@ Indique o ponto de início ou [Centro]</translatorcomment>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Enable Splash Screen</source>
-        <translation>Habilitar splash screen</translation>
+        <translation>Habilitar a Tela de Início</translation>
     </message>
 </context>
 <context>

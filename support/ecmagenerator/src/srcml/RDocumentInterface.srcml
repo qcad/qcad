@@ -1,2132 +1,366 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RDocumentInterface.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RDOCUMENTINTERFACE_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RDOCUMENTINTERFACE_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QKeyEvent&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMutex&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QStack&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QQueue&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QSwipeGesture&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QPanGesture&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QPinchGesture&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RAction.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RCoordinateEvent.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RCommandEvent.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RCoordinateListener.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDocument.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RExporter.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RStorage.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RTerminateEvent.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RTextLabel.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RUcs.h"</cpp:file></cpp:include>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RDEFAULT_QLIST_QREAL</name>
-  <name>QList</name>&lt;qreal&gt;()</cpp:define>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RDEFAULT_MIN1</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RDEFAULT_MIN1</name>-1</cpp:define>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
-  <class_decl>class 
-  <name>RGraphicsScene</name>;</class_decl>
-  <class_decl>class 
-  <name>RGraphicsView</name>;</class_decl>
-  <class_decl>class 
-  <name>RMouseEvent</name>;</class_decl>
-  <class_decl>class 
-  <name>ROperation</name>;</class_decl>
-  <class_decl>class 
-  <name>RPropertyEvent</name>;</class_decl>
-  <class_decl>class 
-  <name>RSnap</name>;</class_decl>
-  <class_decl>class 
-  <name>RSnapRestriction</name>;</class_decl>
-  <class_decl>class 
-  <name>RScriptHandler</name>;</class_decl>
-  <class_decl>class 
-  <name>RTransaction</name>;</class_decl>
-  <class_decl>class 
-  <name>RWheelEvent</name>;</class_decl>
-  <comment type="block">/** * \brief Interface for interaction
-  between a graphics document * and a user. * * Typically one
-  document interface exists for every document that * is open in an
-  MDI application. The document interface owns and * links the
-  various scenes, views and the currently active action. * * A
-  document interface can own multiple graphics scenes, each of *
-  which can have multiple views attached to it. The views forward *
-  all user events (mouse moves, mouse clicks, etc.) to the document
-  * interface for processing. The document interface dispatches the
-  * events to the currently active action object. * * \ingroup core
-  * \scriptable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RDocumentInterface</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <enum>enum 
-  <name>IoErrorCode</name>
-  <block>{ 
-  <comment type="block">/** * No error occurred during import or
-  export. */</comment>
-  <expr>
-    <name>IoErrorNoError</name>
-  </expr>, 
-  <comment type="block">/** * No suitable importer was found.
-  */</comment>
-  <expr>
-    <name>IoErrorNoImporterFound</name>
-  </expr>, 
-  <comment type="block">/** * File size is zero bytes. */</comment>
-  <expr>
-    <name>IoErrorZeroSize</name>
-  </expr>, 
-  <comment type="block">/** * File not found. */</comment>
-  <expr>
-    <name>IoErrorNotFound</name>
-  </expr>, 
-  <comment type="block">/** * No permissions to read file.
-  */</comment>
-  <expr>
-    <name>IoErrorPermission</name>
-  </expr>, 
-  <comment type="block">/** * General import error, i.e. non of the
-  errors above. */</comment>
-  <expr>
-    <name>IoErrorGeneralImportError</name>
-  </expr>, 
-  <comment type="block">/** * General import error if an URL was
-  given, i.e. non of the errors above. */</comment>
-  <expr>
-    <name>IoErrorGeneralImportUrlError</name>
-  </expr>}</block>;</enum></public>
-  <public>public: 
-  <constructor_decl>
-  <name>RDocumentInterface</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>document</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <name>~RDocumentInterface</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>clearCaches</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>RDocument</name>&amp;</type>
-  <name>getDocument</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>RStorage</name>&amp;</type>
-  <name>getStorage</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-    <name>
-    RGraphicsScene</name>*</argument>&gt;</argument_list></name>
-  </type>
-  <name>getGraphicsScenes</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>RGraphicsView</name>*</type>
-  <name>getGraphicsViewWithFocus</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>addCoordinateListener</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RCoordinateListener</name>*</type>
-      <name>l</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>notifyCoordinateListeners</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>clear</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-  <name>RScriptHandler</name>*</type>
-  <name>getScriptHandler</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>extension</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isScriptRunning</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setDefaultAction</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RAction</name>*</type>
-      <name>action</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentAction</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RAction</name>*</type>
-      <name>action</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>queueAction</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RAction</name>*</type>
-      <name>action</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>killAllActions</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>RAction</name>*</type>
-  <name>getCurrentAction</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>hasCurrentAction</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>suspend</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>resume</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setClickMode</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RAction</name>::
-        <name>ClickMode</name></name>
-      </type>
-      <name>m</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>
-    <name>RAction</name>::
-    <name>ClickMode</name></name>
-  </type>
-  <name>getClickMode</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>terminateEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RTerminateEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>keyPressEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QKeyEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>keyReleaseEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QKeyEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>mouseMoveEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RMouseEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>mousePressEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RMouseEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>mouseReleaseEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RMouseEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>mouseDoubleClickEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RMouseEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>coordinateEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RCoordinateEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>coordinateEventPreview</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RCoordinateEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>commandEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RCommandEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>commandEventPreview</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RCommandEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>wheelEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RWheelEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>tabletEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RTabletEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>swipeGestureEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QSwipeGesture</name>&amp;</type>
-      <name>gesture</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>panGestureEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPanGesture</name>&amp;</type>
-      <name>gesture</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>pinchGestureEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPinchGesture</name>&amp;</type>
-      <name>gesture</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>propertyChangeEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RPropertyEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>ucsSetEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>ucsName</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>enableUpdates</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>disableUpdates</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>enableRegeneration</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>disableRegeneration</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>enableMouseTracking</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>disableMouseTracking</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>updateAllEntities</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>regenerateScenes</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>undone</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>regenerateScenes</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>entityIds</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>updateViews</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>regenerateScenes</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </type>
-      <name>entityId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>updateViews</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>updateSelectionStatus</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>entityIds</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>updateViews</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>updateSelectionStatus</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </type>
-      <name>entityId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>updateViews</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>regenerateViews</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>force</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>repaintViews</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>registerScene</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RGraphicsScene</name>&amp;</type>
-      <name>scene</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>unregisterScene</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RGraphicsScene</name>&amp;</type>
-      <name>scene</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCursor</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QCursor</name>&amp;</type>
-      <name>cursor</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>global</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>
-    <name>RDocumentInterface</name>::
-    <name>IoErrorCode</name></name>
-  </type>
-  <name>importUrl</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QUrl</name>&amp;</type>
-      <name>url</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>notify</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>
-    <name>RDocumentInterface</name>::
-    <name>IoErrorCode</name></name>
-  </type>
-  <name>importFile</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>fileName</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>QString</name>&amp;</type>
-    <name>nameFilter</name>=
-    <init>
-      <expr>""</expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>notify</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QString</name>
-  </type>
-  <name>getCorrectedFileName</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>fileName</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>fileVersion</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>exportFile</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>fileName</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>QString</name>&amp;</type>
-    <name>fileVersion</name>=
-    <init>
-      <expr>""</expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>resetModified</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>undo</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>redo</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>flushTransactions</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setSnap</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RSnap</name>*</type>
-      <name>snap</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>RSnap</name>*</type>
-  <name>getSnap</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setSnapRestriction</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RSnapRestriction</name>*</type>
-      <name>snapRestriction</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>RSnapRestriction</name>*</type>
-  <name>getSnapRestriction</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>snap</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RMouseEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>
-    <name>REntity</name>::
-    <name>Id</name></name>
-  </type>
-  <name>getClosestEntity</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RMouseEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>
-    <name>REntity</name>::
-    <name>Id</name></name>
-  </type>
-  <name>getClosestEntity</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>position</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>range</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>strictRange</name>=
-    <init>
-      <expr>
-        <name>RMAXDOUBLE</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>includeLockedLayers</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>highlightEntity</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </type>
-      <name>entityId</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>highlightReferencePoint</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>position</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>selectEntities</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>entityIds</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>add</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>selectEntity</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </type>
-      <name>entityId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>add</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>deselectEntities</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>entityIds</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>deselectEntity</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>REntity</name>::
-        <name>Id</name></name>
-      </type>
-      <name>entityId</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>selectBoxXY</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RBox</name>&amp;</type>
-      <name>box</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>add</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>selectAll</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>deselectAll</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>clearSelection</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>hasSelection</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>addZoomBoxToPreview</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RBox</name>&amp;</type>
-      <name>box</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>addShapeToPreview</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RShape</name>&amp;</type>
-      <name>shape</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RColor</name>&amp;</type>
-      <name>color</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QBrush</name>&amp;</type>
-      <name>brush</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLineweight</name>::
-        <name>Lineweight</name></name>
-      </type>
-      <name>lineweight</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>Qt</name>::
-        <name>PenStyle</name></name>
-      </type>
-      <name>style</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>qreal</name>
-    </argument>&gt;</argument_list></name>&amp;</type>
-    <name>dashValues</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_QLIST_QREAL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>addAuxShapeToPreview</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RShape</name>&amp;</type>
-      <name>shape</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>addEntityToPreview</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>REntity</name>&amp;</type>
-      <name>entity</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>beginPreview</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>endPreview</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>clearPreview</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isPreviewEmpty</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>keepPreview</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>showPropertiesOf</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>REntity</name>&amp;</type>
-      <name>entity</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>clearProperties</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>zoomIn</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>zoomOut</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>autoZoom</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>margin</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_MIN1</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>zoomToSelection</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>zoomTo</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RBox</name>&amp;</type>
-      <name>region</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>margin</name>=
-    <init>
-      <expr>0</expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>zoomPrevious</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>previewOperation</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>ROperation</name>*</type>
-      <name>operation</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RTransaction</name>
-  </type>
-  <name>applyOperation</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>ROperation</name>*</type>
-      <name>operation</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>objectChangeEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>objectIds</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getRelativeZero</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getLastPosition</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setRelativeZero</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>p</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>lockRelativeZero</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>unlockRelativeZero</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isRelativeZeroLocked</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getCursorPosition</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCursorPosition</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>p</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCursorOverride</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>on</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>getCursorOverride</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>deleteTerminatedActions</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentColor</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RColor</name>&amp;</type>
-      <name>color</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RColor</name>
-  </type>
-  <name>getCurrentColor</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentLineweight</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLineweight</name>::
-        <name>Lineweight</name></name>
-      </type>
-      <name>lw</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>
-    <name>RLineweight</name>::
-    <name>Lineweight</name></name>
-  </type>
-  <name>getCurrentLineweight</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentLinetype</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RLinetype</name>::
-        <name>Id</name></name>
-      </type>
-      <name>ltId</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentLinetypePattern</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RLinetypePattern</name>&amp;</type>
-      <name>p</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>
-    <name>RLinetype</name>::
-    <name>Id</name></name>
-  </type>
-  <name>getCurrentLinetypeId</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RLinetypePattern</name>
-  </type>
-  <name>getCurrentLinetypePattern</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentLayer</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RLayer</name>&amp;</type>
-      <name>layer</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentLayer</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>layerName</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentBlock</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RBlock</name>&amp;</type>
-      <name>block</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentBlock</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>blockName</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentView</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>viewName</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentUcs</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RUcs</name>&amp;</type>
-      <name>ucs</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCurrentUcs</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>ucsName</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RUcs</name>
-  </type>
-  <name>getCurrentUcs</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QString</name>
-  </type>
-  <name>getCurrentUcsName</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>RGraphicsView</name>*</type>
-  <name>getLastKnownViewWithFocus</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setLastKnownViewWithFocus</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RGraphicsView</name>*</type>
-      <name>view</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>static</name>
-  <name>RDocumentInterface</name>&amp;</type>
-  <name>getClipboard</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isClipboard</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>this</name>==
-    <name>clipboard</name></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isSuspended</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>suspended</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setNotifyListeners</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>notifyListeners</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function></public>
-  <private>private: 
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>handleClickEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RAction</name>&amp;</type>
-      <name>action</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RMouseEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>previewClickEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RAction</name>&amp;</type>
-      <name>action</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RMouseEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></private>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RDocument</name>&amp;</type>
-    <name>document</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-      <name>
-      RGraphicsScene</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>scenes</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RGraphicsView</name>*</type>
-    <name>lastKnownViewWithFocus</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-      <name>
-      RScriptHandler</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>scriptHandlers</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RAction</name>*</type>
-    <name>defaultAction</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QStack
-      <argument_list>&lt;
-      <argument>
-      <name>RAction</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>currentActions</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QQueue
-      <argument_list>&lt;
-      <argument>
-      <name>RAction</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>queuedActions</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-      <name>
-      RCoordinateListener</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>coordinateListeners</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RSnap</name>*</type>
-    <name>currentSnap</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RSnapRestriction</name>*</type>
-    <name>currentSnapRestriction</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>lastPosition</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>relativeZero</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>relativeZeroLocked</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>cursorPosition</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RUcs</name>
-    </type>
-    <name>currentUcs</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>currentUcsName</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>suspended</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>allowUpdate</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>allowRegeneration</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>static</name>
-    <name>RDocumentInterface</name>*</type>
-    <name>clipboard</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>notifyListeners</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>deleting</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>cursorOverride</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>keepPreviewOnce</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>mouseTrackingEnabled</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    RDocumentInterface::IoErrorCode</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RDocumentInterface*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RDocumentInterface.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDOCUMENTINTERFACE_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDOCUMENTINTERFACE_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QKeyEvent&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMutex&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStack&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QQueue&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSwipeGesture&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPanGesture&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPinchGesture&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RAction.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RCoordinateEvent.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RCommandEvent.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RCoordinateListener.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RExporter.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RStorage.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTerminateEvent.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextLabel.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RUcs.h"</cpp:file></cpp:include>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QLIST_QREAL</name> <name>QList</name>&lt;qreal&gt;()</cpp:define>
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_MIN1</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_MIN1</name> -1</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+<class_decl>class <name>RGraphicsScene</name>;</class_decl>
+<class_decl>class <name>RGraphicsView</name>;</class_decl>
+<class_decl>class <name>RMouseEvent</name>;</class_decl>
+<class_decl>class <name>ROperation</name>;</class_decl>
+<class_decl>class <name>RPropertyEvent</name>;</class_decl>
+<class_decl>class <name>RSnap</name>;</class_decl>
+<class_decl>class <name>RSnapRestriction</name>;</class_decl>
+<class_decl>class <name>RScriptHandler</name>;</class_decl>
+<class_decl>class <name>RTransaction</name>;</class_decl>
+<class_decl>class <name>RWheelEvent</name>;</class_decl>
+
+
+
+<comment type="block">/**
+ * \brief Interface for interaction between a graphics document
+ * and a user.
+ *
+ * Typically one document interface exists for every document that
+ * is open in an MDI application. The document interface owns and
+ * links the various scenes, views and the currently active action.
+ *
+ * A document interface can own multiple graphics scenes, each of
+ * which can have multiple views attached to it. The views forward
+ * all user events (mouse moves, mouse clicks, etc.) to the document
+ * interface for processing. The document interface dispatches the
+ * events to the currently active action object.
+ *
+ * \ingroup core
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RDocumentInterface</name> <block>{<private type="default">
+</private><public>public:
+    <enum>enum <name>IoErrorCode</name> <block>{
+        <comment type="block">/**
+         * No error occurred during import or export.
+         */</comment>
+        <expr><name>IoErrorNoError</name></expr>,
+        <comment type="block">/**
+         * No suitable importer was found.
+         */</comment>
+        <expr><name>IoErrorNoImporterFound</name></expr>,
+        <comment type="block">/**
+         * File size is zero bytes.
+         */</comment>
+        <expr><name>IoErrorZeroSize</name></expr>,
+        <comment type="block">/**
+         * File not found.
+         */</comment>
+        <expr><name>IoErrorNotFound</name></expr>,
+        <comment type="block">/**
+         * No permissions to read file.
+         */</comment>
+        <expr><name>IoErrorPermission</name></expr>,
+        <comment type="block">/**
+         * General import error, i.e. non of the errors above.
+         */</comment>
+        <expr><name>IoErrorGeneralImportError</name></expr>,
+        <comment type="block">/**
+         * General import error if an URL was given, i.e. non of the errors above.
+         */</comment>
+        <expr><name>IoErrorGeneralImportUrlError</name></expr>
+    }</block>;</enum>
+
+</public><public>public:
+    <constructor_decl><name>RDocumentInterface</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><name>~RDocumentInterface</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>void</name></type> <name>clearCaches</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>RDocument</name>&amp;</type> <name>getDocument</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>RStorage</name>&amp;</type> <name>getStorage</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RGraphicsScene</name>*</argument>&gt;</argument_list></name></type> <name>getGraphicsScenes</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>RGraphicsView</name>*</type> <name>getGraphicsViewWithFocus</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>addCoordinateListener</name><parameter_list>(<param><decl><type><name>RCoordinateListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>notifyCoordinateListeners</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>clear</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>RScriptHandler</name>*</type> <name>getScriptHandler</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>extension</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isScriptRunning</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setDefaultAction</name><parameter_list>(<param><decl><type><name>RAction</name>*</type> <name>action</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCurrentAction</name><parameter_list>(<param><decl><type><name>RAction</name>*</type> <name>action</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>queueAction</name><parameter_list>(<param><decl><type><name>RAction</name>*</type> <name>action</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>killAllActions</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>RAction</name>*</type> <name>getCurrentAction</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>hasCurrentAction</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>suspend</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>resume</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setClickMode</name><parameter_list>(<param><decl><type><name><name>RAction</name>::<name>ClickMode</name></name></type> <name>m</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name><name>RAction</name>::<name>ClickMode</name></name></type> <name>getClickMode</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>terminateEvent</name><parameter_list>(<param><decl><type><name>RTerminateEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>keyPressEvent</name><parameter_list>(<param><decl><type><name>QKeyEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>keyReleaseEvent</name><parameter_list>(<param><decl><type><name>QKeyEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>mouseMoveEvent</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>mousePressEvent</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>mouseReleaseEvent</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>mouseDoubleClickEvent</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>coordinateEvent</name><parameter_list>(<param><decl><type><name>RCoordinateEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>coordinateEventPreview</name><parameter_list>(<param><decl><type><name>RCoordinateEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>commandEvent</name><parameter_list>(<param><decl><type><name>RCommandEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>commandEventPreview</name><parameter_list>(<param><decl><type><name>RCommandEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>wheelEvent</name><parameter_list>(<param><decl><type><name>RWheelEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>tabletEvent</name><parameter_list>(<param><decl><type><name>RTabletEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>swipeGestureEvent</name><parameter_list>(<param><decl><type><name>QSwipeGesture</name>&amp;</type> <name>gesture</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>panGestureEvent</name><parameter_list>(<param><decl><type><name>QPanGesture</name>&amp;</type> <name>gesture</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>pinchGestureEvent</name><parameter_list>(<param><decl><type><name>QPinchGesture</name>&amp;</type> <name>gesture</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>propertyChangeEvent</name><parameter_list>(<param><decl><type><name>RPropertyEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>ucsSetEvent</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>ucsName</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>enableUpdates</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>disableUpdates</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>enableRegeneration</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>disableRegeneration</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>enableMouseTracking</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>disableMouseTracking</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>updateAllEntities</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>regenerateScenes</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>undone</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>regenerateScenes</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>, <param><decl><type><name>bool</name></type> <name>updateViews</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>regenerateScenes</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>updateViews</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>updateSelectionStatus</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>, <param><decl><type><name>bool</name></type> <name>updateViews</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>updateSelectionStatus</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>updateViews</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>regenerateViews</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>force</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>repaintViews</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>registerScene</name><parameter_list>(<param><decl><type><name>RGraphicsScene</name>&amp;</type> <name>scene</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>unregisterScene</name><parameter_list>(<param><decl><type><name>RGraphicsScene</name>&amp;</type> <name>scene</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setCursor</name><parameter_list>(<param><decl><type><name>const</name> <name>QCursor</name>&amp;</type> <name>cursor</name></decl></param>, <param><decl><type><name>bool</name></type> <name>global</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name><name>RDocumentInterface</name>::<name>IoErrorCode</name></name></type> <name>importUrl</name><parameter_list>(
+        <param><decl><type><name>const</name> <name>QUrl</name>&amp;</type> <name>url</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>nameFilter</name> =<init> <expr>""</expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>notify</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name><name>RDocumentInterface</name>::<name>IoErrorCode</name></name></type> <name>importFile</name><parameter_list>(
+        <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>nameFilter</name> =<init> <expr>""</expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>notify</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>QString</name></type> <name>getCorrectedFileName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileVersion</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>exportFile</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileVersion</name> =<init> <expr>""</expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>resetModified</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>undo</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>redo</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>flushTransactions</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>flushRedo</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setSnap</name><parameter_list>(<param><decl><type><name>RSnap</name>*</type> <name>snap</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RSnap</name>*</type> <name>getSnap</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setSnapRestriction</name><parameter_list>(<param><decl><type><name>RSnapRestriction</name>*</type> <name>snapRestriction</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RSnapRestriction</name>*</type> <name>getSnapRestriction</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>RVector</name></type> <name>snap</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>getClosestEntity</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>getClosestEntity</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>range</name></decl></param>, <param><decl><type><name>double</name></type> <name>strictRange</name> =<init> <expr><name>RMAXDOUBLE</name></expr></init></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>includeLockedLayers</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>highlightEntity</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>highlightReferencePoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>selectEntities</name><parameter_list>(<param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>, <param><decl><type><name>bool</name></type> <name>add</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>selectEntity</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>add</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>deselectEntities</name><parameter_list>(<param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>entityIds</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>deselectEntity</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>selectBoxXY</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>, <param><decl><type><name>bool</name></type> <name>add</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>selectAll</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>deselectAll</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>clearSelection</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>hasSelection</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>addZoomBoxToPreview</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>addShapeToPreview</name><parameter_list>(<param><decl><type><name>RShape</name>&amp;</type> <name>shape</name></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>color</name></decl></param>,
+            <param><decl><type><name>const</name> <name>QBrush</name>&amp;</type> <name>brush</name></decl></param>, <param><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lineweight</name></decl></param>,
+            <param><decl><type><name><name>Qt</name>::<name>PenStyle</name></name></type> <name>style</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>qreal</name></argument>&gt;</argument_list></name>&amp;</type> <name>dashValues</name> =<init> <expr><name>RDEFAULT_QLIST_QREAL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>addAuxShapeToPreview</name><parameter_list>(<param><decl><type><name>RShape</name>&amp;</type> <name>shape</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>addEntityToPreview</name><parameter_list>(<param><decl><type><name>REntity</name>&amp;</type> <name>entity</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>beginPreview</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>endPreview</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>clearPreview</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isPreviewEmpty</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>keepPreview</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>showPropertiesOf</name><parameter_list>(<param><decl><type><name>REntity</name>&amp;</type> <name>entity</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>clearProperties</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>zoomIn</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>zoomOut</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>autoZoom</name><parameter_list>(<param><decl><type><name>int</name></type> <name>margin</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>zoomToSelection</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>zoomTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>region</name></decl></param>, <param><decl><type><name>int</name></type> <name>margin</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>zoomPrevious</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>previewOperation</name><parameter_list>(<param><decl><type><name>const</name> <name>ROperation</name>*</type> <name>operation</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RTransaction</name></type> <name>applyOperation</name><parameter_list>(<param><decl><type><name>const</name> <name>ROperation</name>*</type> <name>operation</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>objectChangeEvent</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>objectIds</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>RVector</name></type> <name>getRelativeZero</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getLastPosition</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setRelativeZero</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>lockRelativeZero</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>unlockRelativeZero</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isRelativeZeroLocked</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>RVector</name></type> <name>getCursorPosition</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCursorPosition</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCursorOverride</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>getCursorOverride</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>deleteTerminatedActions</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setCurrentColor</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>color</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RColor</name></type> <name>getCurrentColor</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setCurrentLineweight</name><parameter_list>(<param><decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>lw</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>getCurrentLineweight</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setCurrentLinetype</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>ltId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCurrentLinetypePattern</name><parameter_list>(<param><decl><type><name>const</name> <name>RLinetypePattern</name>&amp;</type> <name>p</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>getCurrentLinetypeId</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>RLinetypePattern</name></type> <name>getCurrentLinetypePattern</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setCurrentLayer</name><parameter_list>(<param><decl><type><name>const</name> <name>RLayer</name>&amp;</type> <name>layer</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCurrentLayer</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setCurrentBlock</name><parameter_list>(<param><decl><type><name>const</name> <name>RBlock</name>&amp;</type> <name>block</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCurrentBlock</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setCurrentView</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>viewName</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setCurrentUcs</name><parameter_list>(<param><decl><type><name>const</name> <name>RUcs</name>&amp;</type> <name>ucs</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCurrentUcs</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>ucsName</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RUcs</name></type> <name>getCurrentUcs</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getCurrentUcsName</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>RGraphicsView</name>*</type> <name>getLastKnownViewWithFocus</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setLastKnownViewWithFocus</name><parameter_list>(<param><decl><type><name>RGraphicsView</name>*</type> <name>view</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>RDocumentInterface</name>&amp;</type> <name>getClipboard</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>deleteClipboard</name><parameter_list>()</parameter_list>;</function_decl>
+    <function><type><name>bool</name></type> <name>isClipboard</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>this</name>==<name>clipboard</name></expr>;</return>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>isSuspended</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>suspended</name></expr>;</return>
+    }</block></function>
+    <function><type><name>void</name></type> <name>setNotifyListeners</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>notifyListeners</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function_decl><type><name>QVariant</name></type> <name>eval</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>ext</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>script</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><private>private:
+    <function_decl><type><name>void</name></type> <name>handleClickEvent</name><parameter_list>(<param><decl><type><name>RAction</name>&amp;</type> <name>action</name></decl></param>, <param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>previewClickEvent</name><parameter_list>(<param><decl><type><name>RAction</name>&amp;</type> <name>action</name></decl></param>, <param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+
+</private><private>private:
+    <decl_stmt><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RGraphicsScene</name>*</argument>&gt;</argument_list></name></type> <name>scenes</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RGraphicsView</name>*</type> <name>lastKnownViewWithFocus</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>RScriptHandler</name>*</argument>&gt;</argument_list></name></type> <name>scriptHandlers</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>RAction</name>*</type> <name>defaultAction</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>RAction</name>*</argument>&gt;</argument_list></name></type> <name>currentActions</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QQueue<argument_list>&lt;<argument><name>RAction</name>*</argument>&gt;</argument_list></name></type> <name>queuedActions</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RCoordinateListener</name>*</argument>&gt;</argument_list></name></type> <name>coordinateListeners</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>RSnap</name>*</type> <name>currentSnap</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RSnapRestriction</name>*</type> <name>currentSnapRestriction</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>RVector</name></type> <name>lastPosition</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>relativeZero</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>relativeZeroLocked</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>cursorPosition</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RUcs</name></type> <name>currentUcs</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>currentUcsName</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>suspended</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>bool</name></type> <name>allowUpdate</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>allowRegeneration</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>static</name> <name>RDocumentInterface</name>*</type> <name>clipboard</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>bool</name></type> <name>notifyListeners</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>deleting</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>cursorOverride</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>bool</name></type> <name>keepPreviewOnce</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>mouseTrackingEnabled</name></decl>;</decl_stmt>
+
+    <comment type="line">// used to use mouse button press (not release) to define points</comment>
+    <comment type="line">//RMouseEvent* pressEvent;</comment>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDocumentInterface::IoErrorCode</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDocumentInterface*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

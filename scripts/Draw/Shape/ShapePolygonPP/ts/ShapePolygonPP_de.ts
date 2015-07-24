@@ -54,14 +54,22 @@
         <translation>Ecken:</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation>Polygo&amp;n (zwei Eckpunkte)</translation>
+        <translation type="vanished">Polygo&amp;n (zwei Eckpunkte)</translation>
+    </message>
+    <message>
+        <source>Draw regular polygon from two corner points</source>
+        <translation type="vanished">Reguläres Polygon von zwei Eckpunkten</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonPPInit.js" line="+2"/>
+        <source>Polygo&amp;n (2 Points of Side)</source>
+        <translation>Polygo&amp;n (2 Punkte einer Seite)</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Draw regular polygon from two corner points</source>
-        <translation>Reguläres Polygon von zwei Eckpunkten</translation>
+        <source>Draw regular polygon from end points of one side</source>
+        <translation>Reguläres Polygon von zwei Endpunkten einer Seite</translation>
     </message>
 </context>
 </TS>

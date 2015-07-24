@@ -24,7 +24,7 @@
         <translation>Standards für neue Zeichnungen</translation>
     </message>
     <message>
-        <location line="+93"/>
+        <location line="+102"/>
         <source>Scientific</source>
         <translation>Wissenschaftlich</translation>
     </message>
@@ -49,7 +49,7 @@
         <translation>Bruchdarstellung</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+32"/>
         <source>Decimal Degrees</source>
         <translation>Dezimal Grad</translation>
     </message>
@@ -74,7 +74,7 @@
         <translation>Vermessung</translation>
     </message>
     <message>
-        <location line="+206"/>
+        <location line="+194"/>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
         <translation>Die Zeichnungseinheit muss &apos;Inch&apos; oder &apos;Foot&apos; sein, damit Bemassungsbeschriftungen in den Formaten &apos;Architektur&apos; oder &apos;Technisch&apos; angezeigt werden können. Format zurückgesetzt auf &apos;Dezimal&apos;.</translation>
     </message>

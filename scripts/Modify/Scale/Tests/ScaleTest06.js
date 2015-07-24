@@ -32,9 +32,9 @@ ScaleTest06.prototype = new TdbTest();
 ScaleTest06.prototype.test00 = function() {
     qDebug('running ScaleTest06.test00()...');
     this.setUp();
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(28, 418), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(28, 418), Qt.LeftButton, 0, 0);
     this.importFile('scripts/Modify/Scale/Tests/data/text.dxf');
     this.setZoom(4.910179640718563, new RVector(0.0256098, -7.71341, 0) );

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -22,6 +22,7 @@
 
 RPropertyTypeId RSolidEntity::PropertyCustom;
 RPropertyTypeId RSolidEntity::PropertyHandle;
+RPropertyTypeId RSolidEntity::PropertyProtected;
 RPropertyTypeId RSolidEntity::PropertyType;
 RPropertyTypeId RSolidEntity::PropertyBlock;
 RPropertyTypeId RSolidEntity::PropertyLayer;
@@ -29,6 +30,7 @@ RPropertyTypeId RSolidEntity::PropertyLinetype;
 RPropertyTypeId RSolidEntity::PropertyLinetypeScale;
 RPropertyTypeId RSolidEntity::PropertyLineweight;
 RPropertyTypeId RSolidEntity::PropertyColor;
+RPropertyTypeId RSolidEntity::PropertyDisplayedColor;
 RPropertyTypeId RSolidEntity::PropertyDrawOrder;
 
 RPropertyTypeId RSolidEntity::PropertyPoint1X;
@@ -58,6 +60,7 @@ RSolidEntity::~RSolidEntity() {
 void RSolidEntity::init() {
     RSolidEntity::PropertyCustom.generateId(typeid(RSolidEntity), RObject::PropertyCustom);
     RSolidEntity::PropertyHandle.generateId(typeid(RSolidEntity), RObject::PropertyHandle);
+    RSolidEntity::PropertyProtected.generateId(typeid(RSolidEntity), RObject::PropertyProtected);
     RSolidEntity::PropertyType.generateId(typeid(RSolidEntity), REntity::PropertyType);
     RSolidEntity::PropertyBlock.generateId(typeid(RSolidEntity), REntity::PropertyBlock);
     RSolidEntity::PropertyLayer.generateId(typeid(RSolidEntity), REntity::PropertyLayer);
@@ -65,6 +68,7 @@ void RSolidEntity::init() {
     RSolidEntity::PropertyLinetypeScale.generateId(typeid(RSolidEntity), REntity::PropertyLinetypeScale);
     RSolidEntity::PropertyLineweight.generateId(typeid(RSolidEntity), REntity::PropertyLineweight);
     RSolidEntity::PropertyColor.generateId(typeid(RSolidEntity), REntity::PropertyColor);
+    RSolidEntity::PropertyDisplayedColor.generateId(typeid(RSolidEntity), REntity::PropertyDisplayedColor);
     RSolidEntity::PropertyDrawOrder.generateId(typeid(RSolidEntity), REntity::PropertyDrawOrder);
 
     RSolidEntity::PropertyPoint1X.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "X"));

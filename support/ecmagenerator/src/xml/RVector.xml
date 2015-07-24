@@ -19,7 +19,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="vz"
         hasDefault="true" default="0.0" isConst="false" />
         <arg type="bool" typeName="bool" name="valid_in"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </constructor>
     <method name="set" cppName="set" specifier="public"
@@ -41,6 +41,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="angle"
         isConst="false" />
       </variant>
+    </method>
+    <method name="get2D" cppName="get2D" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
     </method>
     <method name="isValid" cppName="isValid" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -347,6 +351,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getClosest2d" cppName="getClosest2d"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="list"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getClosestDistance" cppName="getClosestDistance"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -359,6 +372,17 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="getClosestIndex" cppName="getClosestIndex"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="list"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="ignoreZ"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
+    <method name="getClosestIndex2d" cppName="getClosestIndex2d"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false">
@@ -470,6 +494,20 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
+    <method name="containsFuzzy" cppName="containsFuzzy"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="vectors"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+        <arg type="double" typeName="double" name="tol"
+        hasDefault="true" default="RS :: PointTolerance"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getMinimum" cppName="getMinimum"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
@@ -543,6 +581,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="v1"
         isConst="true" />
         <arg type="RVector &amp;" typeName="RVector" name="v2"
+        isConst="true" />
+      </variant>
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="vectors"
         isConst="true" />
       </variant>
     </method>
@@ -650,6 +693,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="QList &lt; RVector &gt;" name="list"
         isConst="true" />
         <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getSortedLeftRightTopBottom"
+    cppName="getSortedLeftRightTopBottom" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="list"
         isConst="true" />
       </variant>
     </method>

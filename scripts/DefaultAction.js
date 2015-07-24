@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -161,7 +161,9 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
         } else {
             range = view.mapDistanceFromView(this.pickRangePixels);
             var strictRange = view.mapDistanceFromView(10);
+            RMouseEvent.setOriginalMousePos(event.globalPos());
             entityId = this.di.getClosestEntity(event.getModelPosition(), range, strictRange, false);
+            RMouseEvent.resetOriginalMousePos();
             if (entityId !== RObject.INVALID_ID && this.document.isEntityEditable(entityId)) {
                 this.highlightEntity(entityId);
             }
@@ -195,19 +197,19 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
                             var block = doc.queryBlock(blockId);
                             if (!isNull(block)) {
                                 range = view.mapDistanceFromView(this.pickRangePixels);
+                                if (Math.abs(entity.getScaleFactors().x)>0) {
+                                    range /= Math.abs(entity.getScaleFactors().x);
+                                }
                                 // cursor, mapped to block coordinates:
                                 var pBlock = entity.mapToBlock(this.d1Model);
-                                var box = new RBox(
-                                    pBlock.operator_subtract(new RVector(range,range)),
-                                    pBlock.operator_add(new RVector(range,range))
-                                );
-                                var res = doc.queryIntersectedEntitiesXY(box, true, false, blockId);
+                                var box = new RBox(pBlock, range);
+                                var candidateIds = doc.queryIntersectedEntitiesXY(box, true, false, blockId);
                                 var entityInBlockId;
-                                if (res.length===1) {
-                                    entityInBlockId = res[0];
+                                if (candidateIds.length===1) {
+                                    entityInBlockId = candidateIds[0];
                                 }
                                 else {
-                                    entityInBlockId = doc.queryClosestXY(res, pBlock, range*2, false);
+                                    entityInBlockId = doc.queryClosestXY(candidateIds, pBlock, range*2, false, range/2);
                                 }
                                 var entityInBlock = doc.queryEntityDirect(entityInBlockId);
                                 if (!isNull(entityInBlock) && getInBlockEasyDragAndDrop(entityInBlock)) {
@@ -271,6 +273,18 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
     }
 };
 
+DefaultAction.prototype.getEntityIdUnderCursor = function(event, range) {
+    var view = event.getGraphicsView();
+    if (isNull(range)) {
+        range = this.pickRangePixels;
+    }
+
+    range = view.mapDistanceFromView(range);
+
+    var strictRange = view.mapDistanceFromView(10);
+    return this.di.getClosestEntity(event.getModelPosition(), range, strictRange, false);
+};
+
 DefaultAction.prototype.mouseReleaseEvent = function(event) {
     var persistentSelection = RSettings.getBoolValue("GraphicsView/PersistentSelection", false);
     var view, range, strictRange, entityId;
@@ -286,13 +300,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
     if (event.button() === Qt.LeftButton) {
         switch (this.state) {
         case DefaultAction.State.Dragging:
-
-            view = event.getGraphicsView();
-            range = view.mapDistanceFromView(this.pickRangePixels);
-            //range = view.mapDistanceFromView(10);
-            strictRange = view.mapDistanceFromView(10);
-
-            entityId = this.di.getClosestEntity(event.getModelPosition(), range, strictRange, false);
+            entityId = this.getEntityIdUnderCursor(event);
             //qDebug("entity id: ", entityId);
             if (entityId !== -1) {
                 if (add && this.document.isSelected(entityId)) {
@@ -340,39 +348,51 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
             break;
         }
     } else if (event.button() == Qt.RightButton) {
+        var handled = false;
+
         if (this.state!==DefaultAction.State.Neutral && this.state!==DefaultAction.State.MovingEntityInBlock) {
             this.di.clearPreview();
             this.di.repaintViews();
             this.setState(DefaultAction.State.Neutral);
+            handled = true;
         }
 
-        // use right-click into empty area to deselect everything:
-        else if (this.state===DefaultAction.State.Neutral &&
-            RSettings.getBoolValue("GraphicsView/RightClickToDeselect", false)) {
-
+        else if (this.state===DefaultAction.State.Neutral) {
             var rightClickRange = RSettings.getIntValue("GraphicsView/RightClickRange", 10);
-            view = event.getGraphicsView();
-            range = view.mapDistanceFromView(rightClickRange);
-            strictRange = view.mapDistanceFromView(10);
+            entityId = this.getEntityIdUnderCursor(event, rightClickRange);
 
-            entityId = this.di.getClosestEntity(event.getModelPosition(), range, strictRange, false);
+            var rightClickToDeselect = RSettings.getBoolValue("GraphicsView/RightClickToDeselect", false);
+            var rightClickEntityContextMenu = RSettings.getBoolValue("GraphicsView/RightClickEntityContextMenu", false);
+
+            // right-click on entity can be used to show context menu:
             if (entityId!==-1) {
-                this.selectEntity(entityId, add);
-                // TODO: show entity context menu?
-                CadToolBar.back();
+                // show entity context menu:
+                if (rightClickEntityContextMenu) {
+                    var appWin = EAction.getMainWindow();
+                    appWin.showContextMenu(entityId);
+                    handled = true;
+                }
+
+                // use right-click on entity to select entity:
+                if (rightClickToDeselect) {
+                    this.selectEntity(entityId, add);
+                    handled = true;
+                }
             }
             else {
-                if (this.di.hasSelection()) {
-                    this.di.clearSelection();
-                    this.di.clearPreview();
-                    this.di.repaintViews();
-                }
-                else {
-                    CadToolBar.back();
+                // use right-click into empty area to deselect everything:
+                if (rightClickToDeselect) {
+                    if (this.di.hasSelection()) {
+                        this.di.clearSelection();
+                        this.di.clearPreview();
+                        this.di.repaintViews();
+                        handled = true;
+                    }
                 }
             }
         }
-        else {
+
+        if (!handled) {
             CadToolBar.back();
         }
     }
@@ -391,7 +411,7 @@ DefaultAction.prototype.mousePressEvent = function(event) {
 };
 
 DefaultAction.prototype.mouseDoubleClickEvent = function(event) {
-    if (event.button() == Qt.LeftButton && this.state==DefaultAction.State.Neutral) {
+    if (event.button() == Qt.LeftButton && this.state===DefaultAction.State.Neutral) {
         var view = event.getGraphicsView();
         var range = view.mapDistanceFromView(this.pickRangePixels);
         var strictRange = view.mapDistanceFromView(10);
@@ -402,6 +422,7 @@ DefaultAction.prototype.mouseDoubleClickEvent = function(event) {
 
         this.entityDoubleClicked(entityId, event);
     }
+    EAction.prototype.mouseDoubleClickEvent.call(this, event);
 };
 
 DefaultAction.prototype.escapeEvent = function(event) {

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -136,12 +136,16 @@ InfoDistancePP.prototype.pickCoordinate = function(event, preview) {
             if (preview) {
                 di.previewOperation(op);
             }
+            else {
+                op.destroy();
+            }
         }
     }
 };
 
 InfoDistancePP.prototype.getOperation = function(preview) {
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
     this.addInfoLine(op, this.point1, this.point2, preview);
     return op;
 };

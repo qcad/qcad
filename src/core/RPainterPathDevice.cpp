@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -56,8 +56,12 @@ int RPainterPathDevice::metric(PaintDeviceMetric metric) const {
         return 72;
     case QPaintDevice::PdmPhysicalDpiY:
         return 72;
+#if QT_VERSION >= 0x050000
+    case QPaintDevice::PdmDevicePixelRatio:
+        return 1;
+#endif
     default:
-        qWarning("QSvgGenerator::metric(), unhandled metric %d\n", metric);
+        qWarning("RPainterPathDevice::metric(), unhandled metric %d\n", metric);
         break;
     }
     return 0;

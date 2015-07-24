@@ -25,19 +25,23 @@
     </message>
     <message>
         <location line="+134"/>
-        <location line="+47"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Ei ratkaisua</translation>
     </message>
     <message>
-        <location filename="../CircleT2PInit.js" line="+2"/>
         <source>2 Poin&amp;ts and Tangent</source>
-        <translation>2 Pistettä ja Tangentti</translation>
+        <translation type="vanished">2 Pistettä ja Tangentti</translation>
+    </message>
+    <message>
+        <location filename="../CircleT2PInit.js" line="+2"/>
+        <source>&amp;Tangent and 2 Points</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle through two points and tangential to one entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä samankeskinen ympyrä kahden pisteen kautta ja yhteen kohteeseen tangentiaalisesti</translation>
     </message>
 </context>
 </TS>

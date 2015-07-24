@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -137,6 +137,14 @@ public:
         return RGraphicsView::getHairlineMode();
     }
 
+    void setAntialiasing(bool on) {
+        RGraphicsView::setAntialiasing(on);
+    }
+
+    bool getAntialiasing() const {
+        return RGraphicsView::getAntialiasing();
+    }
+
     RGraphicsScene* getScene() {
         return RGraphicsView::getScene();
     }
@@ -197,6 +205,10 @@ public:
     virtual void repaintView();
     virtual void updateImage();
 
+    virtual void giveFocus() {
+        return;
+    }
+
     virtual bool hasFocus() {
         return true;
     }
@@ -222,9 +234,6 @@ public:
     //virtual void paintCursorLine(const RLine& ucsPosition);
 
     void setPaintOrigin(bool val);
-
-    void setAntialiasing(bool val);
-    bool getAntialiasing();
 
     void setPanOptimization(bool on);
     bool getPanOptimization();
@@ -257,6 +266,13 @@ public:
         return colorCorrectionOverride;
     }
 
+    void setPaintOffset(const RVector& offset) {
+        paintOffset = offset;
+    }
+
+    RVector getPaintOffset() const {
+        return paintOffset;
+    }
 
 protected:
     double getPointSize(double pSize);
@@ -306,7 +322,6 @@ protected:
 
     QPainter* gridPainter;
     bool doPaintOrigin;
-    bool antialiasing;
 
     bool isSelected;
     QSet<RObject::Id> selectedIds;
@@ -326,6 +341,7 @@ protected:
     double backgroundFactor;
     RVector backgroundOffset;
     RBox clipBox;
+    RVector paintOffset;
 };
 
 Q_DECLARE_METATYPE(RGraphicsViewImage*)

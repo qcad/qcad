@@ -16,7 +16,7 @@
     <message>
         <location line="+34"/>
         <source>Vertical/Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>垂直/水平</translation>
     </message>
     <message>
         <source>Toggle Title Bar</source>

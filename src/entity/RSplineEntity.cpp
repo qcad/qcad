@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -23,6 +23,7 @@
 
 RPropertyTypeId RSplineEntity::PropertyCustom;
 RPropertyTypeId RSplineEntity::PropertyHandle;
+RPropertyTypeId RSplineEntity::PropertyProtected;
 RPropertyTypeId RSplineEntity::PropertyType;
 RPropertyTypeId RSplineEntity::PropertyBlock;
 RPropertyTypeId RSplineEntity::PropertyLayer;
@@ -30,6 +31,7 @@ RPropertyTypeId RSplineEntity::PropertyLinetype;
 RPropertyTypeId RSplineEntity::PropertyLinetypeScale;
 RPropertyTypeId RSplineEntity::PropertyLineweight;
 RPropertyTypeId RSplineEntity::PropertyColor;
+RPropertyTypeId RSplineEntity::PropertyDisplayedColor;
 RPropertyTypeId RSplineEntity::PropertyDrawOrder;
 RPropertyTypeId RSplineEntity::PropertyControlPointNX;
 RPropertyTypeId RSplineEntity::PropertyControlPointNY;
@@ -45,14 +47,22 @@ RPropertyTypeId RSplineEntity::PropertyLength;
 RSplineEntity::RSplineEntity(RDocument* document, const RSplineData& data,
         RObject::Id objectId) :
     REntity(document, objectId), data(document, data) {
+    RDebug::incCounter("RSplineEntity");
+}
+
+RSplineEntity::RSplineEntity(const RSplineEntity& other) : REntity(other) {
+    RDebug::incCounter("RSplineEntity");
+    data = other.data;
 }
 
 RSplineEntity::~RSplineEntity() {
+    RDebug::decCounter("RSplineEntity");
 }
 
 void RSplineEntity::init() {
     RSplineEntity::PropertyCustom.generateId(typeid(RSplineEntity), RObject::PropertyCustom);
     RSplineEntity::PropertyHandle.generateId(typeid(RSplineEntity), RObject::PropertyHandle);
+    RSplineEntity::PropertyProtected.generateId(typeid(RSplineEntity), RObject::PropertyProtected);
     RSplineEntity::PropertyType.generateId(typeid(RSplineEntity), REntity::PropertyType);
     RSplineEntity::PropertyBlock.generateId(typeid(RSplineEntity), REntity::PropertyBlock);
     RSplineEntity::PropertyLayer.generateId(typeid(RSplineEntity), REntity::PropertyLayer);
@@ -60,6 +70,7 @@ void RSplineEntity::init() {
     RSplineEntity::PropertyLinetypeScale.generateId(typeid(RSplineEntity), REntity::PropertyLinetypeScale);
     RSplineEntity::PropertyLineweight.generateId(typeid(RSplineEntity), REntity::PropertyLineweight);
     RSplineEntity::PropertyColor.generateId(typeid(RSplineEntity), REntity::PropertyColor);
+    RSplineEntity::PropertyDisplayedColor.generateId(typeid(RSplineEntity), REntity::PropertyDisplayedColor);
     RSplineEntity::PropertyDrawOrder.generateId(typeid(RSplineEntity), REntity::PropertyDrawOrder);
     RSplineEntity::PropertyPeriodic.generateId(typeid(RSplineEntity), "", QT_TRANSLATE_NOOP("REntity", "Closed Periodic"));
     RSplineEntity::PropertyDegree.generateId(typeid(RSplineEntity), "", QT_TRANSLATE_NOOP("REntity", "Degree"));

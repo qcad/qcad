@@ -10,7 +10,7 @@
     <message>
         <location filename="../ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show All Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>すべて表示(&amp;S)</translation>
     </message>
 </context>
 </TS>

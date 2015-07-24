@@ -16,7 +16,7 @@
     <message>
         <location filename="../LineFreehandInit.js" line="+2"/>
         <source>&amp;Freehand Line</source>
-        <translation>Vapaamuotoinen Viiva</translation>
+        <translation>&amp;Vapaamuotoinen viiva</translation>
     </message>
     <message>
         <location line="+4"/>

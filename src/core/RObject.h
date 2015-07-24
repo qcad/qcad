@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -56,6 +56,7 @@ public:
     const static Handle INVALID_HANDLE;
 
     static RPropertyTypeId PropertyCustom;
+    static RPropertyTypeId PropertyType;
     static RPropertyTypeId PropertyHandle;
     static RPropertyTypeId PropertyProtected;
 
@@ -119,6 +120,10 @@ public:
         return handle;
     }
 
+    virtual RS::EntityType getType() const {
+        return RS::ObjectUnknown;
+    }
+
     bool isProtected() const {
         return protect;
     }
@@ -171,7 +176,9 @@ public:
      */
     virtual bool isSelectedForPropertyEditing() = 0;
 
+    bool hasCustomProperty(const QString& title, const QString& key);
     QVariant getCustomProperty(const QString& title, const QString& key, const QVariant& defaultValue = RDEFAULT_QVARIANT);
+    bool getCustomBoolProperty(const QString& title, const QString& key, bool defaultValue);
     void setCustomProperty(const QString& title, const QString& key, const QVariant& value);
     void removeCustomProperty(const QString& title, const QString& key);
     QStringList getCustomPropertyTitles() const;
@@ -186,34 +193,9 @@ public:
         return 0;
     }
 
-    /**
-     * \return The ID of the given property.
-     */
-    //    RPropertyTypeId getPropertyId(const QString& propertyGroupTitle, const QString& propertyTitle) {
-    //        if (propertyTypeIdMap.count(propertyGroupTitle)==0 ||
-    //            propertyTypeIdMap[propertyGroupTitle].count(propertyTitle)==0) {
-    //
-    //            return -1;
-    //        }
-    //        else {
-    //            return propertyTypeIdMap[propertyGroupTitle][propertyTitle];
-    //        }
-    //    }
-
-    /**
-     * \return Property ID of the first registered property with
-     *      the given group title and property title or -1.
-     */
-    //    static RPropertyTypeId getPropertyTypeId(const QString& propertyGroupTitle, const QString& propertyTitle) {
-    //        if (propertyTypeIdMap.count(propertyGroupTitle)==0) {
-    //            return -1;
-    //        }
-    //        if (propertyTypeIdMap[propertyGroupTitle].count(propertyTitle)==0) {
-    //            return -1;
-    //        }
-    //
-    //        return propertyTypeIdMap[propertyGroupTitle][propertyTitle];
-    //    }
+    void dump() {
+        qDebug() << *this;
+    }
 
     /**
      * \nonscriptable
@@ -237,49 +219,40 @@ protected:
     /**
      * \nonscriptable
      */
-    static bool setMember(QString& variable, const QVariant& value,
-            bool condition = true);
+    static bool setMember(QString& variable, const QVariant& value, bool condition = true);
     /**
      * \nonscriptable
      */
-    static bool setMember(double& variable, const QVariant& value,
-            bool condition = true);
+    static bool setMember(double& variable, const QVariant& value, bool condition = true);
     /**
      * \nonscriptable
      */
-    static bool setMember(int& variable, const QVariant& value,
-            bool condition = true);
+    static bool setMember(int& variable, const QVariant& value, bool condition = true);
     /**
      * \nonscriptable
      */
-    static bool setMember(bool& variable, const QVariant& value,
-            bool condition = true);
+    static bool setMember(bool& variable, const QVariant& value, bool condition = true);
     /**
      * \nonscriptable
      */
-    static bool setMember(QList<double>& variable, const QVariant& value,
-           bool condition);
+    static bool setMember(QList<double>& variable, const QVariant& value, bool condition);
     /**
      * \nonscriptable
      */
-    static bool setMemberX(QList<RVector>& variable, const QVariant& value,
-                          bool condition = true);
+    static bool setMemberX(QList<RVector>& variable, const QVariant& value, bool condition = true);
     /**
      * \nonscriptable
      */
-    static bool setMemberY(QList<RVector>& variable, const QVariant& value,
-                           bool condition = true);
+    static bool setMemberY(QList<RVector>& variable, const QVariant& value, bool condition = true);
     /**
      * \nonscriptable
      */
-    static bool setMemberZ(QList<RVector>& variable, const QVariant& value,
-                           bool condition = true);
+    static bool setMemberZ(QList<RVector>& variable, const QVariant& value, bool condition = true);
 
     /**
      * \nonscriptable
      */
-    static bool setMemberVector(QList<RVector>& variable, const QVariant& value,
-                             RObject::XYZ xyz);
+    static bool setMemberVector(QList<RVector>& variable, const QVariant& value, RObject::XYZ xyz);
 
 private:
     RDocument* document;
@@ -309,6 +282,7 @@ private:
     QMap<QString, QVariantMap> customProperties;
 };
 
+Q_DECLARE_METATYPE(RObject::Id)
 Q_DECLARE_METATYPE(RObject::XYZ)
 Q_DECLARE_METATYPE(RObject::XYZ*)
 Q_DECLARE_METATYPE(QList<QSharedPointer<RObject> >)

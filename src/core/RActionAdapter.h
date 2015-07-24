@@ -38,6 +38,7 @@ class RWheelEvent;
 class RGuiAction;
 class RStorage;
 class RTabletEvent;
+class ROperation;
 
 /**
  * \brief Abstract base class for all action classes.
@@ -51,7 +52,12 @@ class RTabletEvent;
  */
 class QCADCORE_EXPORT RActionAdapter : public RAction {
 public:
-    RActionAdapter(RGuiAction* guiAction=NULL) : RAction(guiAction) {}
+    RActionAdapter(RGuiAction* guiAction=NULL) : RAction(guiAction) {
+//        qDebug() << "RActionAdapter " << QString("0x%1").arg((int)this, 0, 16);
+    }
+    virtual ~RActionAdapter() {
+//        qDebug() << "~RActionAdapter " << QString("0x%1").arg((int)this, 0, 16);
+    }
     virtual void beginEvent() {}
     virtual void setGraphicsView(RGraphicsView* /*view*/) {}
     virtual void finishEvent() {}
@@ -76,6 +82,10 @@ public:
     virtual void entityPickEvent(REntityPickEvent& /*event*/) {}
     virtual void entityPickEventPreview(REntityPickEvent& /*event)*/) {}
     virtual void propertyChangeEvent(RPropertyEvent& /*event*/) {}
+    //virtual void setMultiSnapPoints(const QList<RVector>& /*points*/) {}
+    //virtual void setMultiSnapAngles(const QList<double>& /*angles*/) {}
+    virtual void updatePreview() {}
+    virtual void applyOperation() {}
 };
 
 Q_DECLARE_METATYPE(RActionAdapter*)

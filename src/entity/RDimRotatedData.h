@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -30,6 +30,7 @@
  * Rotated dimension entity data class.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RDimRotatedData: public RDimLinearData {
@@ -45,6 +46,8 @@ public:
                     const RVector& extensionPoint2,
                     double rotation);
 
+    virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
+
     virtual bool isValid() const;
 
     void setRotation(double r) {
@@ -58,8 +61,16 @@ public:
     virtual QList<RVector> getReferencePoints(
         RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 
-//    virtual bool moveReferencePoint(const RVector& referencePoint,
-//        const RVector& targetPoint);
+    virtual bool moveReferencePoint(const RVector& referencePoint,
+        const RVector& targetPoint);
+
+    virtual QList<RVector> getDimPoints() const;
+
+    virtual void recomputeDefinitionPoint(
+        const RVector& oldExtPoint1, const RVector& oldExtPoint2,
+        const RVector& newExtPoint1, const RVector& newExtPoint2);
+
+    //virtual void recomputeDefinitionPoint(const RVector& oldDimLineGrip, const RVector& newDimLineGrip);
 
     virtual bool rotate(double rotation, const RVector& center);
     virtual bool mirror(const RLine& axis);
@@ -73,6 +84,7 @@ private:
     double rotation;
 };
 
+Q_DECLARE_METATYPE(RDimRotatedData)
 Q_DECLARE_METATYPE(RDimRotatedData*)
 Q_DECLARE_METATYPE(const RDimRotatedData*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimRotatedData>)

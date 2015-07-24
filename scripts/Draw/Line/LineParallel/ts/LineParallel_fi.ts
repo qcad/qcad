@@ -4,14 +4,13 @@
 <context>
     <name>LineParallel</name>
     <message>
-        <location filename="../LineParallel.js" line="+68"/>
         <source>Choose line, arc or circle</source>
-        <translation>Valitse viiva, kaari tai ympyrä</translation>
+        <translation type="vanished">Valitse viiva, kaari tai ympyrä</translation>
     </message>
     <message>
         <location filename="../LineParallel.ui" line="+17"/>
         <source>&amp;Distance:</source>
-        <translation>Etäisyys:</translation>
+        <translation>&amp;Etäisyys:</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -21,12 +20,12 @@
     <message>
         <location filename="../LineParallelInit.js" line="+2"/>
         <source>Para&amp;llel (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>Yhdensuuntainen (etäisyyden kanssa)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel to existing line or concentric arc, circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä samansuuntaisena olemassa olevan viivan tai samankeskisen kaaren tai ympyrän kanssa</translation>
     </message>
 </context>
 </TS>

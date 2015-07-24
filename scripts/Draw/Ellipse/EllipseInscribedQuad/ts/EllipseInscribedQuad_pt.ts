@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>EllipseInscribedQuad</name>
     <message>
@@ -26,12 +26,12 @@
     <message>
         <location filename="../EllipseInscribedQuadInit.js" line="+2"/>
         <source>Inscribed in Quadrilateral</source>
-        <translation>Inscrita no quadrilátero</translation>
+        <translation>Inscrita em um Quadrilátero</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation>Desenhe uma elipse inscrita num quadrilátero</translation>
+        <translation>Desenhe uma elipse inscrita em um quadrilátero</translation>
     </message>
 </context>
 </TS>

@@ -19,7 +19,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Graphics View</source>
-        <translation type="unfinished">Videz grafike</translation>
+        <translation>Videz grafike</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -29,7 +29,7 @@
     <message>
         <location line="+33"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Kurzor</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -39,124 +39,124 @@
     <message>
         <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation>Neaktivni kazalni križec:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Izhodišče</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Relative zero:</source>
-        <translation type="unfinished"></translation>
+        <translation>Relativna ničla:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Mreža</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>Meta grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tabelarična mreža:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Izbor</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Primary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Primarna barva izbora:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use secondary selection color</source>
-        <translation type="unfinished"></translation>
+        <translation>Uporabi sekundarno barvo izbora</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Secondary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sekundarna barva izbora:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Premična referenčna točka:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Selection box border:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rob okvirja izbire:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation>Polnilo okvirja izbire:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation>Polnilo navzkrižne izbire:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Snap Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodja lepljenja</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Snap label:</source>
-        <translation type="unfinished"></translation>
+        <translation>Napis lepljenja:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Info Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodja informacij</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mere in napisi:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodja risanja</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pomožne oblike:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Zoom Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodja povečave</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Zoom box border:</source>
-        <translation type="unfinished"></translation>
+        <translation>Okvir povečave:</translation>
     </message>
     <message>
         <source>Inactive Crosshairs:</source>
-        <translation type="vanished">Neaktivni kazalni križec:</translation>
+        <translation type="obsolete">Neaktivni kazalni križec:</translation>
     </message>
     <message>
-        <location line="-538"/>
+        <location line="-535"/>
         <source>Origin:</source>
         <translation>Izhodišče:</translation>
     </message>
     <message>
         <source>Relative Zero:</source>
-        <translation type="vanished">Relativna ničla:</translation>
+        <translation type="obsolete">Relativna ničla:</translation>
     </message>
     <message>
         <source>Reference Point:</source>
-        <translation type="vanished">Referenčna točka:</translation>
+        <translation type="obsolete">Referenčna točka:</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -165,43 +165,43 @@
     </message>
     <message>
         <source>Meta Grid:</source>
-        <translation type="vanished">Tabelarična mreža:</translation>
+        <translation type="obsolete">Tabelarična mreža:</translation>
     </message>
     <message>
         <source>Zoom Box:</source>
-        <translation type="vanished">Polje za povečavo:</translation>
+        <translation type="obsolete">Polje za povečavo:</translation>
     </message>
     <message>
         <source>Selection:</source>
-        <translation type="vanished">Izbor:</translation>
+        <translation type="obsolete">Izbor:</translation>
     </message>
     <message>
         <source>Selection Box Border:</source>
-        <translation type="vanished">Rob okvirja izbire:</translation>
+        <translation type="obsolete">Rob okvirja izbire:</translation>
     </message>
     <message>
         <source>Selection Box:</source>
-        <translation type="vanished">Okvir izbire:</translation>
+        <translation type="obsolete">Okvir izbire:</translation>
     </message>
     <message>
         <source>Cross Selection Box:</source>
-        <translation type="vanished">Navzkrižni okvir izbire:</translation>
+        <translation type="obsolete">Navzkrižni okvir izbire:</translation>
     </message>
     <message>
         <source>Auxiliary Shapes:</source>
-        <translation type="vanished">Pomožne oblike:</translation>
+        <translation type="obsolete">Pomožne oblike:</translation>
     </message>
     <message>
         <source>Info Label Background:</source>
-        <translation type="vanished">Ozadje informacijskih napisov:</translation>
+        <translation type="obsolete">Ozadje informacijskih napisov:</translation>
     </message>
     <message>
         <source>Info Label Font:</source>
-        <translation type="vanished">Pisava informacijskih napisov:</translation>
+        <translation type="obsolete">Pisava informacijskih napisov:</translation>
     </message>
     <message>
         <source>Measurement Tools:</source>
-        <translation type="vanished">Merilna orodja:</translation>
+        <translation type="obsolete">Merilna orodja:</translation>
     </message>
 </context>
 </TS>

@@ -125,6 +125,10 @@
                 qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyHandle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyProtected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -151,6 +155,10 @@
             
             ctor.setProperty("PropertyColor",
                 qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyDisplayedColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyDrawOrder",
@@ -187,6 +195,10 @@
             
             ctor.setProperty("PropertyLinearFactor",
                 qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyLinearFactor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimScale",
+                qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyDimScale),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyAutoTextPos",
@@ -319,7 +331,7 @@
                         return REcmaHelper::throwError("RDimRotatedEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimRotatedData*
                     ap1 =
                     qscriptvalue_cast<
@@ -329,11 +341,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimRotatedEntity: Argument 1 is not of type RDimRotatedData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimRotatedEntity: Argument 1 is not of type RDimRotatedData.",
                                context);                    
                     }
-                    RDimRotatedData& a1 = *ap1;
+                    RDimRotatedData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -414,7 +428,7 @@
                         return REcmaHelper::throwError("RDimRotatedEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimRotatedData*
                     ap1 =
                     qscriptvalue_cast<
@@ -424,11 +438,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimRotatedEntity: Argument 1 is not of type RDimRotatedData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimRotatedEntity: Argument 1 is not of type RDimRotatedData.",
                                context);                    
                     }
-                    RDimRotatedData& a1 = *ap1;
+                    RDimRotatedData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id
@@ -1234,7 +1250,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimRotatedData*
                     ap0 =
                     qscriptvalue_cast<
@@ -1244,11 +1260,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimRotatedEntity: Argument 0 is not of type RDimRotatedData*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimRotatedEntity: Argument 0 is not of type RDimRotatedData.",
                                context);                    
                     }
-                    RDimRotatedData& a0 = *ap0;
+                    RDimRotatedData 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 

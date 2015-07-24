@@ -133,6 +133,10 @@
                 qScriptValueFromValue(&engine, RDimAngularEntity::PropertyHandle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RDimAngularEntity::PropertyProtected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RDimAngularEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -159,6 +163,10 @@
             
             ctor.setProperty("PropertyColor",
                 qScriptValueFromValue(&engine, RDimAngularEntity::PropertyColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RDimAngularEntity::PropertyDisplayedColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyDrawOrder",
@@ -339,7 +347,7 @@
                         return REcmaHelper::throwError("RDimAngularEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimAngularData*
                     ap1 =
                     qscriptvalue_cast<
@@ -349,11 +357,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimAngularEntity: Argument 1 is not of type RDimAngularData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimAngularEntity: Argument 1 is not of type RDimAngularData.",
                                context);                    
                     }
-                    RDimAngularData& a1 = *ap1;
+                    RDimAngularData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -434,7 +444,7 @@
                         return REcmaHelper::throwError("RDimAngularEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimAngularData*
                     ap1 =
                     qscriptvalue_cast<
@@ -444,11 +454,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimAngularEntity: Argument 1 is not of type RDimAngularData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimAngularEntity: Argument 1 is not of type RDimAngularData.",
                                context);                    
                     }
-                    RDimAngularData& a1 = *ap1;
+                    RDimAngularData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id
@@ -1254,7 +1266,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimAngularData*
                     ap0 =
                     qscriptvalue_cast<
@@ -1264,11 +1276,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimAngularEntity: Argument 0 is not of type RDimAngularData*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimAngularEntity: Argument 0 is not of type RDimAngularData.",
                                context);                    
                     }
-                    RDimAngularData& a0 = *ap0;
+                    RDimAngularData 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 

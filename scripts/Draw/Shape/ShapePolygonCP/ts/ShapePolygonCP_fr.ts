@@ -51,8 +51,12 @@
         <translation>Points d&apos;angle :</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Point)</source>
+        <translation type="vanished">Pol&amp;ygone (centre, point)</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonCPInit.js" line="+2"/>
+        <source>Pol&amp;ygon (Center, Corner)</source>
         <translation>Pol&amp;ygone (centre, point)</translation>
     </message>
     <message>

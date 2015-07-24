@@ -6,17 +6,17 @@
     <message>
         <location filename="../MiscBlock.js" line="+51"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Razno</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+9"/>
         <source>Misc Block Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Razna blokovna orodja</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show misc block tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži razna blokovna orodja</translation>
     </message>
     <message>
         <location line="+17"/>

@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaGraphicsViewQt {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaGraphicsViewQt {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -108,6 +111,12 @@
         getHairlineMode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setAntialiasing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAntialiasing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getScene
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -130,9 +139,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setPrintPointSize
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        simulateMouseMoveEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setTextHeightThresholdOverride
@@ -189,12 +195,6 @@
         setPaintOrigin
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setAntialiasing
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getAntialiasing
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         setPanOptimization
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -233,6 +233,12 @@
         ;static  QScriptValue
         getColorCorrectionOverride
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPaintOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPaintOffset
+        (QScriptContext* context, QScriptEngine* engine) 
         ;
 
     // properties:
@@ -249,6 +255,9 @@
         repaintNow
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        giveFocus
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasFocus
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -259,6 +268,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getHeight
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getRect
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getCursor
@@ -277,6 +289,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         emitUpdateTextLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        simulateMouseMoveEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDevicePixelRatio
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

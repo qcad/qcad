@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -73,6 +73,7 @@ public:
     bool intersectsWith(const RShape& shape, bool limited = true) const;
 
     void growToInclude(const RBox& other);
+    void growToIncludeBoxes(const QList<RBox>& others);
     void growToIncludeBox(const RBox& other) {
         growToInclude(other);
     }

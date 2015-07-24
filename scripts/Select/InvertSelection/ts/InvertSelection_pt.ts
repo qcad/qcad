@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>InvertSelection</name>
     <message>
@@ -9,13 +9,13 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Inverte Seleção</translatorcomment>
-        <translation>&amp;Inverte seleção</translation>
+        <translation>&amp;Inverta a Seleção</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Invert the current selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Inverter a seleção atual</translation>
+        <translation>Inverta a seleção atual</translation>
     </message>
 </context>
 </TS>

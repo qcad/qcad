@@ -20,7 +20,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSharedPointerPolylineEntity {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSharedPointerPolylineEntity {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -139,7 +142,10 @@
         isClosed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        isLogicallyClosed
+        isGeometricallyClosed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getExploded

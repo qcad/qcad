@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaCoordinateEvent {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaCoordinateEvent {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

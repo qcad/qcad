@@ -33,9 +33,13 @@
         <translation>Nom du calque :</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>Pen</source>
-        <translation>Stylo</translation>
+        <translation type="vanished">Stylo</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Attributes</source>
+        <translation>Attributs</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -56,7 +60,7 @@
         <translation>Type de ligne :</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="+142"/>
+        <location filename="../LayerDialog.js" line="+144"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espaces avant ou après.</translation>
     </message>

@@ -24,18 +24,22 @@
         <translation>选择解决方案</translation>
     </message>
     <message>
-        <location line="+135"/>
-        <location line="+44"/>
+        <location line="+136"/>
+        <location line="+45"/>
         <source>No solution</source>
         <translation>没有解决方案</translation>
     </message>
     <message>
-        <location filename="../Circle2TPInit.js" line="+2"/>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation>点、两个切线(&amp;g)</translation>
+        <translation type="vanished">点、两个切线(&amp;g)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location filename="../Circle2TPInit.js" line="+2"/>
+        <source>2 Tan&amp;gents and Point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>按点向2个实体画圆弧切线</translation>
     </message>

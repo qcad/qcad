@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -109,7 +109,7 @@ LineBisector.prototype.pick = function(event, preview) {
         return;
     }
 
-    var shape = entity.getClosestShape(pos);
+    var shape = entity.getClosestSimpleShape(pos);
 
     if (!isLineBasedShape(shape)) {
         if (!preview) {

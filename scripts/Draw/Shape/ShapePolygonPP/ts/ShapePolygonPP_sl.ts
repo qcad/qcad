@@ -36,32 +36,40 @@
     <message>
         <location filename="../ShapePolygonPP.js" line="+58"/>
         <source>First corner</source>
-        <translation type="unfinished">Prvi vogel</translation>
+        <translation>Prvi vogel</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Corner point</source>
-        <translation type="unfinished">Točka vogala</translation>
+        <translation>Točka vogala</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Končano</translation>
+        <translation>Končano</translation>
     </message>
     <message>
         <location filename="../ShapePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished">Vogal:</translation>
+        <translation>Vogal:</translation>
+    </message>
+    <message>
+        <source>Polygo&amp;n (Two Corners)</source>
+        <translation type="vanished">Poligo&amp;n (dva vogala)</translation>
+    </message>
+    <message>
+        <source>Draw regular polygon from two corner points</source>
+        <translation type="vanished">Nariši navadni poligon iz dveh vogalnih točk</translation>
     </message>
     <message>
         <location filename="../ShapePolygonPPInit.js" line="+2"/>
-        <source>Polygo&amp;n (Two Corners)</source>
-        <translation type="unfinished">Poligo&amp;n (dva vogala)</translation>
+        <source>Polygo&amp;n (2 Points of Side)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Draw regular polygon from two corner points</source>
-        <translation type="unfinished">Nariši navadni poligon iz dveh vogalnih točk</translation>
+        <source>Draw regular polygon from end points of one side</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

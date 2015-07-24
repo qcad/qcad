@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -30,6 +30,7 @@
  * Radial dimension entity data class.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RDimRadialData: public RDimensionData {
@@ -81,6 +82,7 @@ private:
     RVector chordPoint;
 };
 
+Q_DECLARE_METATYPE(RDimRadialData)
 Q_DECLARE_METATYPE(RDimRadialData*)
 Q_DECLARE_METATYPE(const RDimRadialData*)
 Q_DECLARE_METATYPE(QSharedPointer<RDimRadialData>)

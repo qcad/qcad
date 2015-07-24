@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaDocumentInterface {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaDocumentInterface {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -217,6 +220,9 @@
         flushTransactions
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        flushRedo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setSnap
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -412,6 +418,9 @@
         getClipboard
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        deleteClipboard
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isClipboard
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -419,6 +428,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setNotifyListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        eval
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

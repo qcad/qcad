@@ -14,12 +14,12 @@
         <translation>Préférences de dessin</translation>
     </message>
     <message>
-        <location line="+247"/>
+        <location line="+300"/>
         <source>Restart required</source>
         <translation>Redémarrage nécessaire</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
         <translation>S&apos;il vous plaît redémarrer QCAD

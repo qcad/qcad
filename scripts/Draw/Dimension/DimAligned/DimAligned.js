@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -159,7 +159,12 @@ DimAligned.prototype.getOperation = function(preview) {
     }
 
     var doc = this.getDocument();
-    var entity = new RDimAlignedEntity(doc, this.data);
+    var scale = this.parseScale(this.getScaleString());
+    var scaled_data = this.data;
+
+    scaled_data.setLinearFactor(1/scale);
+
+    var entity = new RDimAlignedEntity(doc, scaled_data);
     if (!isEntity(entity)) {
         return undefined;
     }

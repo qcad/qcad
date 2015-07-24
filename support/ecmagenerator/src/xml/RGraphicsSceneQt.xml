@@ -100,7 +100,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RPolyline &amp;" typeName="RPolyline"
         name="polyline" isConst="true" />
         <arg type="bool" typeName="bool" name="polylineGen"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="double" typeName="double" name="offset"
         hasDefault="true" default="RNANDOUBLE" isConst="false" />
       </variant>
@@ -130,7 +130,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RArc &amp;" typeName="RArc" name="arc"
         isConst="true" />
         <arg type="bool" typeName="bool" name="allowForZeroLength"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="exportLineSegment" cppName="exportLineSegment"

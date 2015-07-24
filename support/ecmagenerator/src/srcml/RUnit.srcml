@@ -1,1023 +1,114 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RUnit.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RUNIT_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RUNIT_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RS.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RVector.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RDocument</name>;</class_decl>
-  <comment type="block">/** * Conversion methods for units * *
-  \scriptable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RUnit</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <comment type="line">//static RS::Unit stringToUnit(const
-  QString&amp; u);</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>formatLinear</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>length</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>Unit</name></name>
-      </type>
-      <name>unit</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>LinearFormat</name></name>
-      </type>
-      <name>format</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>prec</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showUnit</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showLeadingZeroes</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showTrailingZeroes</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>onlyPreciseResult</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>formatScientific</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>length</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>Unit</name></name>
-      </type>
-      <name>unit</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>prec</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showUnit</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showLeadingZeroes</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showTrailingZeroes</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>onlyPreciseResult</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>formatDecimal</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>length</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>Unit</name></name>
-      </type>
-      <name>unit</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>prec</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showUnit</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showLeadingZeroes</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showTrailingZeroes</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>onlyPreciseResult</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>formatEngineering</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>length</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>Unit</name></name>
-      </type>
-      <name>unit</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>prec</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showUnit</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showLeadingZeroes</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showTrailingZeroes</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>onlyPreciseResult</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>formatArchitectural</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>length</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>Unit</name></name>
-      </type>
-      <name>unit</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>prec</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showUnit</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showLeadingZeroes</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showTrailingZeroes</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>onlyPreciseResult</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>formatFractional</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>length</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>Unit</name></name>
-      </type>
-      <name>unit</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>prec</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showUnit</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showLeadingZeroes</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showTrailingZeroes</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>onlyPreciseResult</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>trimTrailingZeroes</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>s</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>formatAngle</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>angle</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>AngleFormat</name></name>
-      </type>
-      <name>format</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>prec</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showLeadingZeroes</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showTrailingZeroes</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/* static RVector
-  paperFormatToSize(RS::PaperFormat p); static RS::PaperFormat
-  paperSizeToFormat(const RVector s); static QString
-  paperFormatToString(RS::PaperFormat p); static RS::PaperFormat
-  stringToPaperFormat(const QString&amp; p); */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>isMetric</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>Unit</name></name>
-      </type>
-      <name>unit</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>double</name>
-  </type>
-  <name>convert</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>Unit</name></name>
-      </type>
-      <name>source</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>Unit</name></name>
-      </type>
-      <name>dest</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RVector</name>
-  </type>
-  <name>convert</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>Unit</name></name>
-      </type>
-      <name>source</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>Unit</name></name>
-      </type>
-      <name>dest</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>double</name>
-  </type>
-  <name>getFactorToM</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>Unit</name></name>
-      </type>
-      <name>unit</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>
-    <name>RS</name>::
-    <name>Unit</name></name>
-  </type>
-  <name>parseUnit</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>str</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>unitToSymbol</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>Unit</name></name>
-      </type>
-      <name>unit</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>unitToName</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>Unit</name></name>
-      </type>
-      <name>unit</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>tr</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>getLabel</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>v</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>document</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>maxPrecision</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>forceSuppressTrailingZeroes</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>onlyPreciseResult</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>doubleToString</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>prec</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showLeadingZeroes</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showTrailingZeroes</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>doubleToString</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>prec</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showLeadingZeroes</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showTrailingZeroes</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">// workaround: make the second version also
-  accesible by scripts:</comment>
-  <function>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>doubleToStringDec</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>value</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>int</name>
-        </type>
-        <name>prec</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>showLeadingZeroes</name>=
-      <init>
-        <expr>
-          <name>true</name>
-        </expr>
-      </init></decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>showTrailingZeroes</name>=
-      <init>
-        <expr>
-          <name>false</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>doubleToString</name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <name>value</name>
-          </expr>
-        </argument>, 
-        <argument>
-          <expr>
-            <name>prec</name>
-          </expr>
-        </argument>, 
-        <argument>
-          <expr>
-            <name>showLeadingZeroes</name>
-          </expr>
-        </argument>, 
-        <argument>
-          <expr>
-            <name>showTrailingZeroes</name>
-          </expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function></public>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RUnit*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RUnit.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RUNIT_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RUNIT_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RS.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RDocument</name>;</class_decl>
+
+<comment type="block">/**
+ * Conversion methods for units
+ *
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RUnit</name> <block>{<private type="default">
+</private><public>public:
+    <comment type="line">//static RS::Unit stringToUnit(const QString&amp; u);</comment>
+
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>formatLinear</name><parameter_list>(<param><decl><type><name>double</name></type> <name>length</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>,
+                                  <param><decl><type><name><name>RS</name>::<name>LinearFormat</name></name></type> <name>format</name></decl></param>,
+                                  <param><decl><type><name>int</name></type> <name>prec</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showUnit</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                                  <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>, 
+                                  <param><decl><type><name>bool</name></type> <name>showTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                                  <param><decl><type><name>bool</name></type> <name>onlyPreciseResult</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>formatScientific</name><parameter_list>(<param><decl><type><name>double</name></type> <name>length</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>,
+                                  <param><decl><type><name>int</name></type> <name>prec</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showUnit</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                                  <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>, 
+                                  <param><decl><type><name>bool</name></type> <name>showTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                                  <param><decl><type><name>bool</name></type> <name>onlyPreciseResult</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>formatDecimal</name><parameter_list>(<param><decl><type><name>double</name></type> <name>length</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>,
+                                  <param><decl><type><name>int</name></type> <name>prec</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showUnit</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                                  <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>, 
+                                  <param><decl><type><name>bool</name></type> <name>showTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                                  <param><decl><type><name>bool</name></type> <name>onlyPreciseResult</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>formatEngineering</name><parameter_list>(<param><decl><type><name>double</name></type> <name>length</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>,
+                                  <param><decl><type><name>int</name></type> <name>prec</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showUnit</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                                  <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>, 
+                                  <param><decl><type><name>bool</name></type> <name>showTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                                  <param><decl><type><name>bool</name></type> <name>onlyPreciseResult</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>formatArchitectural</name><parameter_list>(<param><decl><type><name>double</name></type> <name>length</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>,
+                                  <param><decl><type><name>int</name></type> <name>prec</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showUnit</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                                  <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>, 
+                                  <param><decl><type><name>bool</name></type> <name>showTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                                  <param><decl><type><name>bool</name></type> <name>onlyPreciseResult</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>formatFractional</name><parameter_list>(<param><decl><type><name>double</name></type> <name>length</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>,
+                                  <param><decl><type><name>int</name></type> <name>prec</name></decl></param>, <param><decl><type><name>bool</name></type> <name>showUnit</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                                  <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>, 
+                                  <param><decl><type><name>bool</name></type> <name>showTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                                  <param><decl><type><name>bool</name></type> <name>onlyPreciseResult</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>trimTrailingZeroes</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>s</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>formatAngle</name><parameter_list>(<param><decl><type><name>double</name></type> <name>angle</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>AngleFormat</name></name></type> <name>format</name></decl></param>,
+                                 <param><decl><type><name>int</name></type> <name>prec</name></decl></param>,
+                                 <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>,
+                                 <param><decl><type><name>bool</name></type> <name>showTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/*
+    static RVector paperFormatToSize(RS::PaperFormat p);
+    static RS::PaperFormat paperSizeToFormat(const RVector s);
+    
+    static QString paperFormatToString(RS::PaperFormat p);
+    static RS::PaperFormat stringToPaperFormat(const QString&amp; p);
+    */</comment>
+
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>isMetric</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>double</name></type> <name>convert</name><parameter_list>(<param><decl><type><name>double</name></type> <name>value</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>source</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>dest</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RVector</name></type> <name>convert</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>source</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>dest</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>double</name></type> <name>getFactorToM</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name><name>RS</name>::<name>Unit</name></name></type> <name>parseUnit</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>str</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>unitToSymbol</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>unitToName</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>, <param><decl><type><name>bool</name></type> <name>tr</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>getLabel</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>, <param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>,
+                            <param><decl><type><name>bool</name></type> <name>maxPrecision</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                            <param><decl><type><name>bool</name></type> <name>forceSuppressTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>,
+                            <param><decl><type><name>bool</name></type> <name>onlyPreciseResult</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>doubleToString</name><parameter_list>(<param><decl><type><name>double</name></type> <name>value</name></decl></param>, <param><decl><type><name>double</name></type> <name>prec</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>doubleToString</name><parameter_list>(<param><decl><type><name>double</name></type> <name>value</name></decl></param>, <param><decl><type><name>int</name></type> <name>prec</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="line">// workaround: make the second version also accessible by scripts:</comment>
+    <function><type><name>static</name> <name>QString</name></type> <name>doubleToStringDec</name><parameter_list>(<param><decl><type><name>double</name></type> <name>value</name></decl></param>, <param><decl><type><name>int</name></type> <name>prec</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>showLeadingZeroes</name>=<init><expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>showTrailingZeroes</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <block>{
+
+        <return>return <expr><call><name>doubleToString</name><argument_list>(<argument><expr><name>value</name></expr></argument>, <argument><expr><name>prec</name></expr></argument>, <argument><expr><name>showLeadingZeroes</name></expr></argument>, <argument><expr><name>showTrailingZeroes</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+</public>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RUnit*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

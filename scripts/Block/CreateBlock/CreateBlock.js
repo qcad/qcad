@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -68,38 +68,35 @@ CreateBlock.prototype.coordinateEvent = function(event) {
         return;
     }
 
-    //block.setOrigin(pos);
-
     var di = this.getDocumentInterface();
     var document = this.getDocument();
     var storage = document.getStorage();
     var ids = document.querySelectedEntities();
 
-    var op = new RMixedOperation();
+    var op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());
     op.addObject(block);
     var blockId = storage.getMaxObjectId();
 
     for (var i=0; i<ids.length; i++) {
         var id = ids[i];
+
+        // deselect original entity:
+        di.deselectEntity(id);
+
         var entity = document.queryEntity(id);
         if (isNull(entity)) {
             debugger;
         }
 
-        //var e = entity.clone();
-        //storage.setObjectId(e, RObject.INVALID_ID);
-        //e.setBlockId(blockId);
-
         // move entity to new block:
+        // note that the original entity is moved to the new block (same id)
         entity.setBlockId(blockId);
-        di.deselectEntity(id);
-        //entity.setSelected(false);
+
+        // deselect entity which is part of the new block (avoid selected entities inside blocks):
         entity.move(pos.getNegated());
 
         op.addObject(entity, false);
-        //op.addObject(e);
-        //op.deleteObject(entity);
     }
 
     var blockReference = new RBlockReferenceEntity(document, new RBlockReferenceData(blockId, pos, new RVector(1,1,1), 0.0));

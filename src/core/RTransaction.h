@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -235,6 +235,8 @@ public:
     QMap<RObject::Id, QList<RPropertyChange> > getPropertyChanges() const {
         return propertyChanges;
     }
+
+    QList<RPropertyChange> getPropertyChanges(RObject::Id id) const;
 
     bool hasOnlyChanges() const {
         return onlyChanges;

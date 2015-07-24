@@ -71,6 +71,10 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, setOffsets, "setOffsets");
+            
+            REcmaHelper::registerFunction(&engine, proto, setRotations, "setRotations");
+            
             REcmaHelper::registerFunction(&engine, proto, setOffset, "setOffset");
             
             REcmaHelper::registerFunction(&engine, proto, getOffset, "getOffset");
@@ -286,6 +290,118 @@
 
     // public methods:
      QScriptValue
+        REcmaPasteOperation::setOffsets
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPasteOperation::setOffsets", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::setOffsets";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPasteOperation* self = 
+                        getSelf("setOffsets", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setOffsets(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.setOffsets().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPasteOperation::setOffsets", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPasteOperation::setRotations
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPasteOperation::setRotations", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::setRotations";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPasteOperation* self = 
+                        getSelf("setRotations", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < double > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < double >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setRotations(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.setRotations().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPasteOperation::setRotations", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPasteOperation::setOffset
         (QScriptContext* context, QScriptEngine* engine) 
         

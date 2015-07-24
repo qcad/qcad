@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSpline {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSpline {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -156,6 +159,9 @@
         isClosed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isGeometricallyClosed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isPeriodic
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -271,6 +277,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getExploded
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getExplodedBezier
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getExplodedWithSegmentLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getBezierSegments

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -30,6 +30,7 @@ RPropertyTypeId RViewportEntity::PropertyLinetype;
 RPropertyTypeId RViewportEntity::PropertyLinetypeScale;
 RPropertyTypeId RViewportEntity::PropertyLineweight;
 RPropertyTypeId RViewportEntity::PropertyColor;
+RPropertyTypeId RViewportEntity::PropertyDisplayedColor;
 RPropertyTypeId RViewportEntity::PropertyDrawOrder;
 
 RPropertyTypeId RViewportEntity::PropertyCenterX;
@@ -58,6 +59,7 @@ void RViewportEntity::init() {
     RViewportEntity::PropertyLinetypeScale.generateId(typeid(RViewportEntity), REntity::PropertyLinetypeScale);
     RViewportEntity::PropertyLineweight.generateId(typeid(RViewportEntity), REntity::PropertyLineweight);
     RViewportEntity::PropertyColor.generateId(typeid(RViewportEntity), REntity::PropertyColor);
+    RViewportEntity::PropertyDisplayedColor.generateId(typeid(RViewportEntity), REntity::PropertyDisplayedColor);
     RViewportEntity::PropertyDrawOrder.generateId(typeid(RViewportEntity), REntity::PropertyDrawOrder);
 
     RViewportEntity::PropertyCenterX.generateId(typeid(RViewportEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "X"));

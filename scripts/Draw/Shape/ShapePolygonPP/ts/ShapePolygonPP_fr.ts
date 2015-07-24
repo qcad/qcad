@@ -54,13 +54,21 @@
         <translation>Points d&apos;angle :</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Two Corners)</source>
+        <translation type="vanished">Polygo&amp;ne (deux points d&apos;angle)</translation>
+    </message>
+    <message>
+        <source>Draw regular polygon from two corner points</source>
+        <translation type="vanished">Dessiner un polygone régulier à partir de deux points d&apos;angles</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonPPInit.js" line="+2"/>
+        <source>Polygo&amp;n (2 Points of Side)</source>
         <translation>Polygo&amp;ne (deux points d&apos;angle)</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Draw regular polygon from two corner points</source>
+        <source>Draw regular polygon from end points of one side</source>
         <translation>Dessiner un polygone régulier à partir de deux points d&apos;angles</translation>
     </message>
 </context>

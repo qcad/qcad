@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaCopyOperation {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaCopyOperation {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -53,6 +56,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         preview
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setClear
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

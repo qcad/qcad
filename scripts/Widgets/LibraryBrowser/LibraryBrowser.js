@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -23,6 +23,7 @@ include("FileIconProvider.js");
 include("Rdf.js");
 include("scripts/Block/InsertScriptItem/InsertScriptItem.js");
 include("scripts/Block/InsertBlockItem/InsertBlockItem.js");
+include("scripts/AddOn.js");
 
 include("db/ItemPeer.js");
 include("db/ItemTagPeer.js");
@@ -151,27 +152,57 @@ LibraryBrowser.getDbFileName = function() {
  * \return Source paths (root paths for library items).
  */
 LibraryBrowser.getSourceList = function() {
+    var i;
+
     // get list of sources (root paths) from ini file:
     var sourceList = RSettings.getValue("LibraryBrowser/SourceList");
     if (isNull(sourceList)) {
         sourceList = [];
     }
-
-    // no configuration: add libraries vailable in libraries subdir:
-    if (sourceList.length === 0) {
-        var librariesDir = new QDir("libraries");
-        var filters = new QDir.Filters(QDir.AllDirs, QDir.NoDotAndDotDot, QDir.Readable);
-        var sortFlags = new QDir.SortFlags(QDir.Name, QDir.IgnoreCase);
-        var libs = librariesDir.entryList([], filters, sortFlags);
-        for (var i=0; i<libs.length; i++) {
-            sourceList.push(new QDir("libraries/%1".arg(libs[i])).absolutePath());
+    else {
+        for (i=0; i<sourceList.length; i++) {
+            sourceList[i] = QDir.fromNativeSeparators(sourceList[i]);
         }
-        //RSettings.setValue("LibraryBrowser/SourceList", sourceList);
     }
-    //LibraryBrowser.sources = [];
-    //for (var i = 0; i < sourceList.length; ++i) {
-        //LibraryBrowser.sources.push(new Directory(sourceList[i]));
-    //}
+
+    var noSourcesConfigured = sourceList.length===0;
+
+    var filters = new QDir.Filters(QDir.AllDirs, QDir.NoDotAndDotDot, QDir.Readable);
+    var sortFlags = new QDir.SortFlags(QDir.Name, QDir.IgnoreCase);
+    var librariesDir;
+    var libs;
+
+    // no configuration: add all libraries available in libraries subdir:
+    librariesDir = new QDir("libraries");
+    libs = librariesDir.entryList([], filters, sortFlags);
+    for (i=0; i<libs.length; i++) {
+        // always add default library if available:
+        if (libs[i]==="default" || noSourcesConfigured) {
+            sourceList.push(QDir.fromNativeSeparators(new QDir("libraries/%1".arg(libs[i])).absolutePath()));
+        }
+    }
+
+    // always add libraries of installed add-ons:
+    var localAddOns = AddOn.getLocalAddOns();
+    for (var k=0; k<localAddOns.length; k++) {
+        var localAddOnDir = RSettings.getDataLocation() + "/" + localAddOns[k];
+        var fi = new QFileInfo(localAddOnDir);
+        if (fi.exists()) {
+            //sourceList.push(new QDir(fi.absoluteFilePath() + "/libraries/%1".arg(libs[i])).absolutePath());
+            librariesDir = new QDir(fi.absoluteFilePath() + "/libraries");
+            libs = librariesDir.entryList([], filters, sortFlags);
+            for (i=0; i<libs.length; i++) {
+                var path = new QDir(fi.absoluteFilePath() + "/libraries/%1".arg(libs[i])).absolutePath();
+                path = QDir.fromNativeSeparators(path);
+                qDebug("adding libraries dir of add-on: ", path);
+                sourceList.push(path);
+            }
+        }
+    }
+
+    sourceList = sourceList.unique();
+    qDebug("sourceList: ", sourceList);
+
     return sourceList;
 };
 
@@ -932,7 +963,7 @@ LibraryBrowser.directoryChanged = function(selected, deselected) {
 //    }
 
     //qDebug("LibraryBrowser.directoryChanged: dirPath: ", dirPath);
-    setOverrideCursor(new QCursor(Qt.WaitCursor));
+    setOverrideWaitCursor();
     LibraryBrowser.updateFsView(dirPath, model);
     restoreOverrideCursor();
 };
@@ -1255,24 +1286,15 @@ LibraryBrowser.syncAll = function(progressDialog, startUp) {
     var sourceListDb = ItemPeer.getSourceItems(["id", "name"]);
     var sourceList = LibraryBrowser.getSourceList();
     for (i=0; i<sourceListDb.length; i++) {
-        var sourceDb = sourceListDb[i].name;
+        var sourceDb = QDir.fromNativeSeparators(sourceListDb[i].name);
         if (!sourceList.contains(sourceDb)) {
             // source deleted: drop entire DB:
-            //var con = new DbConnection(Table.connectionName);
-            //con.db.close();
-            //if (con.db.isOpen()) {
-            //    qWarning("DB still open");
-            //}
-            //QSqlDatabase.removeDatabase(Table.connectionName);
-            //if (!QFile.remove(LibraryBrowser.getDbFileName())) {
-            //    debugger;
-            //    qWarning("Cannot delete DB");
-            //}
+            EAction.handleUserWarning(qsTr("Source removed from part library: %1").arg(sourceListDb[i].name));
+            EAction.handleUserWarning(qsTr("Force database update."));
             LibraryBrowser.initDb(true);
             force = true;
             qDebug("Rebuilding DB...");
             break;
-            //ItemPeer.doDeleteById(sourceListDb[i].id, progressDialog);
         }
     }
 

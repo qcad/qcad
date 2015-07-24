@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -29,12 +29,12 @@ void RLinetypeList::init(bool metric, RResourceList<RLinetypePattern>& res) {
     linetypeFileList = linetypeFileList.toSet().toList();
 
     for (int i=0; i<linetypeFileList.size(); i++) {
-        QString fileName = linetypeFileList.at(i);
+        QString fileName = linetypeFileList[i];
         QFileInfo fi(fileName);
 
         QList<QPair<QString, RLinetypePattern*> > linetypes = RLinetypePattern::loadAllFrom(metric, fi.absoluteFilePath());
-        for (int i=0; i<linetypes.size(); i++) {
-            res.resMap.insert(linetypes[i].first, linetypes[i].second);
+        for (int k=0; k<linetypes.size(); k++) {
+            res.resMap.insert(linetypes[k].first, linetypes[k].second);
         }
     }
 

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * Function stringToDirectDistanceEntry added 2013 by Robert S.
  *
@@ -36,10 +36,19 @@ if (typeof(global)==="undefined") {
  * \return Absolute path of given file.
  */
 function getAbsolutePathForArg(file) {
+    // detect URL (TODO: breaks under win):
+//    var url = new QUrl(file);
+//    if (url.isValid() && url.scheme().length!==0 && !url.isLocalFile()) {
+//        return file;
+//    }
+
+    // detect absolute path:
     var fi = new QFileInfo(file);
     if (fi.isAbsolute() || file.startsWith(":")){
         return file;
     }
+
+    // relative path (prepend application dir):
     return RSettings.getLaunchPath() + QDir.separator + file;
 }
 
@@ -134,6 +143,14 @@ function isNumber(obj) {
     return (typeof(obj)==="number" && !isNaN(obj) && isFinite(obj));
 }
 
+function isNumberGreaterEqualZero(n) {
+    return !isNaN(n) && n>=0;
+};
+
+function isNumberGreaterZero(n) {
+    return !isNaN(n) && n>0;
+};
+
 /**
  * Checks if the given object is a string.
  *
@@ -158,7 +175,7 @@ function isVector(obj) {
  * \return true if the given object is a valid RVector object.
  */
 function isValidVector(obj) {
-    return (isVector(obj) && obj.isValid());
+    return (isVector(obj) && obj.isValid() && isNumber(obj.x) && isNumber(obj.y));
 }
 
 /**
@@ -195,6 +212,22 @@ function isQObject(obj) {
  */
 function isQWidget(obj) {
     return (isQObject(obj) && typeof(obj.show)==="function");
+}
+
+/**
+ * \return true if the given object is a separator (a frame of type vertical line).
+ */
+function isSeparator(obj) {
+    return isOfType(obj, QFrame) && obj.frameShape==QFrame.VLine;
+}
+
+/**
+ * Checks if the given object is a layer.
+ *
+ * \return true if the given object is a layer.
+ */
+function isLayer(obj) {
+    return isOfType(obj, RLayer) || isOfType(obj, RLayerPointer);
 }
 
 /**
@@ -675,8 +708,21 @@ function entityTypeToString(type, plural) {
     }
 
     switch (type) {
+    case RS.ObjectAll:
+        return plural ? qsTr("Objects") : qsTr("Object");
+    case RS.ObjectUnknown:
+        return plural ? qsTr("Unknown Objects") : qsTr("Unknown Object");
+    case RS.ObjectBlock:
+        return plural ? qsTr("Blocks") : qsTr("Block");
+    case RS.ObjectLayer:
+        return plural ? qsTr("Layers") : qsTr("Layer");
+    case RS.ObjectLinetype:
+        return plural ? qsTr("Linetypes") : qsTr("Linetype");
+    case RS.ObjectView:
+        return plural ? qsTr("Views") : qsTr("View");
+
     case RS.EntityAll:
-        return plural ? qsTr("Entity") : qsTr("Entities");
+        return plural ? qsTr("Entities") : qsTr("Entity");
     case RS.Entity3dFace:
         return plural ? qsTr("3dFaces") : qsTr("3dFace");
     case RS.EntityBlockRef:
@@ -741,69 +787,69 @@ function entityTypeToString(type, plural) {
     }
 }
 
-function getEntityTypeProperties(type) {
-    switch (type) {
-    case RS.EntityAll:
-        return REntity.getStaticPropertyTypeIds();
-    case RS.EntityBlockReferenceEntity:
-        return RBlockReferenceEntity.getStaticPropertyTypeIds();
-    case RS.EntityArc:
-        return RArcEntity.getStaticPropertyTypeIds();
-    case RS.EntityAttribute:
-        return RAttributeEntity.getStaticPropertyTypeIds();
-    case RS.EntityAttributeDefinition:
-        return RAttributeDefinitionEntity.getStaticPropertyTypeIds();
-    case RS.EntityCircle:
-        return RCircleEntity.getStaticPropertyTypeIds();
-    case RS.EntityDimension:
-        return RDimensionEntity.getStaticPropertyTypeIds();
-    case RS.EntityDimAligned:
-        return RDimAlignedEntity.getStaticPropertyTypeIds();
-    case RS.EntityDimAngular:
-        return RDimAngularEntity.getStaticPropertyTypeIds();
-    case RS.EntityDimDiametric:
-        return RDimDiametricEntity.getStaticPropertyTypeIds();
-    case RS.EntityDimOrdinate:
-        return RDimOrdinateEntity.getStaticPropertyTypeIds();
-    case RS.EntityDimRotated:
-        return RDimRotatedEntity.getStaticPropertyTypeIds();
-    case RS.EntityDimRadial:
-        return RDimRadialEntity.getStaticPropertyTypeIds();
-    case RS.EntityEllipse:
-        return REllipseEntity.getStaticPropertyTypeIds();
-    case RS.EntityHatch:
-        return RHatchEntity.getStaticPropertyTypeIds();
-    case RS.EntityImage:
-        return RImageEntity.getStaticPropertyTypeIds();
-    case RS.EntityLeader:
-        return RLeaderEntity.getStaticPropertyTypeIds();
-    case RS.EntityLine:
-        return RLineEntity.getStaticPropertyTypeIds();
-    case RS.EntityPoint:
-        return RPointEntity.getStaticPropertyTypeIds();
-    case RS.EntityPolyline:
-        return RPolylineEntity.getStaticPropertyTypeIds();
-    case RS.EntitySolid:
-        return RSolidEntity.getStaticPropertyTypeIds();
-    case RS.EntityTrace:
-        return RTraceEntity.getStaticPropertyTypeIds();
-    case RS.EntityViewport:
-        return RViewportEntity.getStaticPropertyTypeIds();
-    case RS.EntityRay:
-        return RRayEntity.getStaticPropertyTypeIds();
-    case RS.EntityXLine:
-        return RXLineEntity.getStaticPropertyTypeIds();
-    case RS.EntitySpline:
-        return RSplineEntity.getStaticPropertyTypeIds();
-    case RS.EntityTextBased:
-        return RTextBasedEntity.getStaticPropertyTypeIds();
-    case RS.EntityText:
-        return RTextEntity.getStaticPropertyTypeIds();
-    case RS.EntityUnknown:
-    default:
-        return [];
-    }
-}
+//function getEntityTypeProperties(type) {
+//    switch (type) {
+//    case RS.EntityAll:
+//        return REntity.getStaticPropertyTypeIds();
+//    case RS.EntityBlockReferenceEntity:
+//        return RBlockReferenceEntity.getStaticPropertyTypeIds();
+//    case RS.EntityArc:
+//        return RArcEntity.getStaticPropertyTypeIds();
+//    case RS.EntityAttribute:
+//        return RAttributeEntity.getStaticPropertyTypeIds();
+//    case RS.EntityAttributeDefinition:
+//        return RAttributeDefinitionEntity.getStaticPropertyTypeIds();
+//    case RS.EntityCircle:
+//        return RCircleEntity.getStaticPropertyTypeIds();
+//    case RS.EntityDimension:
+//        return RDimensionEntity.getStaticPropertyTypeIds();
+//    case RS.EntityDimAligned:
+//        return RDimAlignedEntity.getStaticPropertyTypeIds();
+//    case RS.EntityDimAngular:
+//        return RDimAngularEntity.getStaticPropertyTypeIds();
+//    case RS.EntityDimDiametric:
+//        return RDimDiametricEntity.getStaticPropertyTypeIds();
+//    case RS.EntityDimOrdinate:
+//        return RDimOrdinateEntity.getStaticPropertyTypeIds();
+//    case RS.EntityDimRotated:
+//        return RDimRotatedEntity.getStaticPropertyTypeIds();
+//    case RS.EntityDimRadial:
+//        return RDimRadialEntity.getStaticPropertyTypeIds();
+//    case RS.EntityEllipse:
+//        return REllipseEntity.getStaticPropertyTypeIds();
+//    case RS.EntityHatch:
+//        return RHatchEntity.getStaticPropertyTypeIds();
+//    case RS.EntityImage:
+//        return RImageEntity.getStaticPropertyTypeIds();
+//    case RS.EntityLeader:
+//        return RLeaderEntity.getStaticPropertyTypeIds();
+//    case RS.EntityLine:
+//        return RLineEntity.getStaticPropertyTypeIds();
+//    case RS.EntityPoint:
+//        return RPointEntity.getStaticPropertyTypeIds();
+//    case RS.EntityPolyline:
+//        return RPolylineEntity.getStaticPropertyTypeIds();
+//    case RS.EntitySolid:
+//        return RSolidEntity.getStaticPropertyTypeIds();
+//    case RS.EntityTrace:
+//        return RTraceEntity.getStaticPropertyTypeIds();
+//    case RS.EntityViewport:
+//        return RViewportEntity.getStaticPropertyTypeIds();
+//    case RS.EntityRay:
+//        return RRayEntity.getStaticPropertyTypeIds();
+//    case RS.EntityXLine:
+//        return RXLineEntity.getStaticPropertyTypeIds();
+//    case RS.EntitySpline:
+//        return RSplineEntity.getStaticPropertyTypeIds();
+//    case RS.EntityTextBased:
+//        return RTextBasedEntity.getStaticPropertyTypeIds();
+//    case RS.EntityText:
+//        return RTextEntity.getStaticPropertyTypeIds();
+//    case RS.EntityUnknown:
+//    default:
+//        return [];
+//    }
+//}
 
 /**
  * Checks the type of the given object.
@@ -827,18 +873,10 @@ function isComboBox(obj) {
  * \param widget the widget [optional, used for the recursive call], obsolete
  * \return Object or undefined
  */
-function objectFromPath(path /*, widget*/) {
-    //if (widget != undefined) {
-    //    return widget;
-    //}
+function objectFromPath(path) {
     var child = getMainWindow();
     var children = path.split("::");
-    for (i = 1; i < children.length; ++i) {
-//      var ch = child.findChild(children[i]);
-//      if (ch.toString() == "QDialog" && ch.visible == false) {
-//          qDebug("library.js:", "objectFromPath(): ch:", ch);
-//          continue;
-//      }
+    for (var i = 1; i < children.length; ++i) {
         if (typeof(child)==="undefined") {
             return undefined;
         }
@@ -1088,11 +1126,18 @@ function deepCopy(obj) {
 /**
  * \return A new array which contains every unique item of this array only once.
  */
-Array.prototype.unique = function() {
+Array.prototype.unique = function(method) {
     var a = [], i, l = this.length;
     for (i = 0; i < l; i++) {
-        if (a.indexOf(this[i], 0) < 0) {
-            a.push(this[i]);
+        if (isNull(method)) {
+            if (a.indexOf(this[i], 0) < 0) {
+                a.push(this[i]);
+            }
+        }
+        else {
+            if (!a.contains(this[i], method)) {
+                a.push(this[i]);
+            }
         }
     }
     return a;
@@ -1217,12 +1262,48 @@ Array.prototype.sortNumerical = function() {
     Array.prototype.sort.call(this, function(a,b) { return a - b });
 }
 
+/* Finds the intersection of two sorted arrays.
+ *
+ * \param a first array, must already be sorted
+ * \param b second array, must already be sorted
+ *
+ * Items must be sorted NUMERICALLY (sortNumerical) if arrays contain numbers or
+ * ALPHABETICALLY (sort) if arrays contain strings.
+ *
+ * Should have O(n) operations, where n is
+ * n = MIN(a.length(), b.length())
+ */
+Array.intersectSafe = function(a, b) {
+    var ai=0;
+    var bi=0;
+    var result = [];
+
+    while (ai < a.length && bi < b.length) {
+        if (a[ai] < b[bi]) {
+            ai++;
+        }
+        else if (a[ai] > b[bi]) {
+            bi++;
+        }
+        else {
+            result.push(a[ai]);
+            ai++;
+            bi++;
+        }
+    }
+
+    return result;
+};
+
 /**
  * Destructively finds the intersection of
  * two arrays.
  *
  * \param a first array, must already be sorted
  * \param b second array, must already be sorted
+ *
+ * Items must be sorted NUMERICALLY (sortNumerical) if arrays contain numbers or
+ * ALPHABETICALLY (sort) if arrays contain strings.
  *
  * State of input arrays is undefined when
  * the function returns.
@@ -1243,14 +1324,14 @@ Array.intersect = function(a, b) {
   }
 
   return result;
-}
+};
 
 /**
  * Escapes a string for use as literlal match in regular expression.
  */
 RegExp.escape = function(s) {
     return s.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, "\\$&");
-}
+};
 
 /**
  * Checks the type of the given object.
@@ -1291,7 +1372,9 @@ String.prototype.trim = function() {
  * \return New string shortened to the given number of pixels using ellipsis (...).
  */
 String.prototype.elidedText = function(font, pixel) {
-    var t = new QFontMetrics(font).elidedText(this, Qt.ElideMiddle, pixel);
+    var fm = new QFontMetrics(font);
+    var t = fm.elidedText(this, Qt.ElideMiddle, pixel);
+    fm.destroy();
     // replace HORIZONTAL ELLIPSIS (not every GUI font has those):
     t = t.replace(/\u2026/g, '...');
     return t;
@@ -1425,6 +1508,29 @@ String.prototype.wordWrap = function(m, c, b){
     return r.join("\n");
 };
 
+String.prototype.regexIndexOf = function(regex, startpos) {
+    var indexOf = this.substring(startpos || 0).search(regex);
+    return (indexOf >= 0) ? (indexOf + (startpos || 0)) : indexOf;
+}
+
+String.prototype.regexLastIndexOf = function(regex, startpos) {
+    regex = (regex.global) ? regex : new RegExp(regex.source, "g" + (regex.ignoreCase ? "i" : "") + (regex.multiLine ? "m" : ""));
+    if(typeof (startpos) == "undefined") {
+        startpos = this.length;
+    } else if(startpos < 0) {
+        startpos = 0;
+    }
+    var stringToWorkWith = this.substring(0, startpos + 1);
+    var lastIndexOf = -1;
+    var nextStop = 0;
+    while((result = regex.exec(stringToWorkWith)) != null) {
+        lastIndexOf = result.index;
+        regex.lastIndex = ++nextStop;
+    }
+    return lastIndexOf;
+}
+
+
 /**
  * Modulo which works also for negative numbers (workaround for
  * ECMAScript modulo bug).
@@ -1447,22 +1553,44 @@ function numberToString(num, decimals) {
     return ret;
 }
 
+function angleToString(num, decimals) {
+    var formatString = "%." + decimals + "f";
+    var ret = sprintf(formatString, num);
+    var decimalPoint = RSettings.getStringValue("Input/DecimalPoint", ".");
+    if (decimalPoint!==".") {
+        ret = ret.replace(".", decimalPoint);
+    }
+    return ret;
+}
+
 /**
  * Formats the given coordinate (RVector) into a locale aware string.
  */
-function coordinateToString(coordinate, decimals, relative, polar) {
+function coordinateToString(coordinate, decimals, relative, polar, doc) {
     var first;
     var second;
     var sep;
     if (polar) {
         sep = RSettings.getStringValue("Input/PolarCoordinateSeparator", "<");
-        first = coordinate.getMagnitude();
-        second = coordinate.getAngle() / (2 * Math.PI) * 360;
+        if (!isNull(doc)) {
+            first = doc.formatLinear(coordinate.getMagnitude());
+            second = doc.formatAngle(coordinate.getAngle());
+        }
+        else {
+            first = numberToString(coordinate.getMagnitude(), decimals);
+            second = angleToString(coordinate.getAngle() / (2 * Math.PI) * 360);
+        }
     }
     else {
         sep = RSettings.getStringValue("Input/CartesianCoordinateSeparator", ",");
-        first = coordinate.x;
-        second = coordinate.y;
+        if (!isNull(doc)) {
+            first = doc.formatLinear(coordinate.x);
+            second = doc.formatLinear(coordinate.y);
+        }
+        else {
+            first = numberToString(coordinate.x, decimals);
+            second = numberToString(coordinate.y, decimals);
+        }
     }
 
     var prefix;
@@ -1476,10 +1604,7 @@ function coordinateToString(coordinate, decimals, relative, polar) {
         prefix = "";
     }
 
-    return prefix +
-            numberToString(first, decimals) +
-            sep +
-            numberToString(second, decimals);
+    return prefix + first + sep + second;
 }
 
 /**
@@ -1506,6 +1631,12 @@ function stringToCoordinate(relativeZero, str) {
 
     if (str.count(cartCoordSep)!==1 && str.count(polCoordSep)!==1) {
         // not a coordinate (not an error):
+        return undefined;
+    }
+
+    str = str.trim();
+
+    if (str.length===0) {
         return undefined;
     }
 
@@ -1647,6 +1778,10 @@ function shapeToEntity(document, shape) {
     return undefined;
 }
 
+function getClosestSimpleShape(entity, pos) {
+    return entity.getClosestSimpleShape(pos);
+}
+
 function trimStartPoint(shape, p) {
     shape.trimStartPoint(p);
     if (isXLineShape(shape)) {
@@ -1694,6 +1829,7 @@ function modifyEntity(op, entity, shape) {
     }
 
     entity.setShape(shape);
+
     op.addObject(entity, false);
 };
 
@@ -1824,7 +1960,18 @@ function getInBlockTextEdit(entity) {
     return entity.getCustomProperty("QCAD", "InBlockTextEdit", "0")==="1";
 }
 
+function setOverrideWaitCursor() {
+    if (!RSettings.isGuiEnabled()) {
+        return;
+    }
+    setOverrideCursor(new QCursor(Qt.WaitCursor));
+}
+
 function setOverrideCursor(cursor) {
+    if (!RSettings.isGuiEnabled()) {
+        return;
+    }
+
     if (RSettings.isQt(5)) {
         QGuiApplication.setOverrideCursor(cursor);
     }
@@ -1834,6 +1981,10 @@ function setOverrideCursor(cursor) {
 }
 
 function restoreOverrideCursor() {
+    if (!RSettings.isGuiEnabled()) {
+        return;
+    }
+
     if (RSettings.isQt(5)) {
         QGuiApplication.restoreOverrideCursor();
     }
@@ -1885,8 +2036,31 @@ function addActionsToWidgets() {
             }
             var w = RMainWindowQt.getMainWindow().findChild(wn);
             if (!isNull(w)) {
+
+                // workaround for QTBUG-38256 (action not triggered for letter based shortcuts in sub menus)
+                if (RSettings.isQt(5)) {
+                    if (isOfType(w.parentWidget(), QMenu)) {
+                        new QShortcut(a.shortcut, a.parentWidget(), 0, 0,  Qt.WindowShortcut).activated.connect(a, "trigger");
+
+                        // avoid 'Ambiguous shortcut overload' when tool buttons visible:
+                        var sc = a.shortcut.toString();
+                        if (sc.length>0) {
+                            a.setShortcutText(" (" + sc + ")");
+                        }
+                        a.setDefaultShortcuts([]);
+                    }
+                }
+
                 if (visibility) {
                     RGuiAction.addToWidget(a, w);
+
+                    if (isFunction(w.widgetForAction)) {
+                        // if action was added to tool bar: set object name of tool button:
+                        var tb = w.widgetForAction(a);
+                        if (!isNull(tb)) {
+                            tb.objectName = "ToolButton" + a.objectName.replace(/Action$/, "");
+                        }
+                    }
                 }
                 else {
                     // action not visible in this widget:
@@ -1900,9 +2074,51 @@ function addActionsToWidgets() {
     }
 }
 
+/**
+ * \return Array of QUrl objects with all URLs extracted from
+ * the mime data (usually from drag and drop).
+ */
+function getUrlsFromMimeData(mimeData) {
+    var urls = [];
+
+    if (mimeData.hasFormat("text/uri-list")) {
+        urls = mimeData.urls();
+    }
+
+    else if (mimeData.hasFormat("text/plain")) {
+        var text = mimeData.text();
+        var url = new QUrl(text);
+        if (!url.isValid()) {
+            return [];
+        }
+        if (!isUrl(url)) {
+            return [];
+        }
+        urls = [url];
+    }
+
+    return urls;
+}
+
+/**
+ * \return True if the urlString is a URL that can be loaded.
+ */
+function isUrl(urlString) {
+    var url = new QUrl(urlString);
+    var scheme = url.scheme();
+    return scheme==="file" || scheme==="http" || scheme==="ftp";
+}
+
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {
         return this.plainText;
+    }
+}
+
+// add isLocalFile to API for Qt 4.7:
+if (!isFunction(QUrl.prototype.isLocalFile)) {
+    QUrl.prototype.isLocalFile = function() {
+        return this.scheme().toLowerCase()==="file";
     }
 }

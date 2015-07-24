@@ -13,6 +13,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="getDevicePixelRatio"
+    cppName="getDevicePixelRatio" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
     <method name="getLocale" cppName="getLocale" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
@@ -60,6 +65,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="getPluginPaths" cppName="getPluginPaths"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false" />
+    </method>
     <method name="getPluginPath" cppName="getPluginPath"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
@@ -73,6 +83,11 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="getCacheLocation" cppName="getCacheLocation"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="getDataLocation" cppName="getDataLocation"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
@@ -175,6 +190,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QFont" isPureVirtual="false" />
     </method>
+    <method name="getSelectionColor" cppName="getSelectionColor"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false" />
+    </method>
+    <method name="getHighResolutionGraphicsView"
+    cppName="getHighResolutionGraphicsView" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getAutoScaleGrid" cppName="getAutoScaleGrid"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
@@ -209,6 +234,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="getArcAngleLengthThreshold" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getMinArcAngleStep" cppName="getMinArcAngleStep"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getDashThreshold" cppName="getDashThreshold"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
     </method>
     <method name="getQtVersion" cppName="getQtVersion"
     specifier="public" isStatic="true" isVirtual="false"
@@ -407,6 +442,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         default="RDEFAULT_QVARIANT" isConst="true" />
       </variant>
     </method>
+    <method name="getColorValue" cppName="getColorValue"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="key"
+        isConst="true" />
+        <arg type="RColor &amp;" typeName="RColor"
+        name="defaultValue" isConst="true" />
+      </variant>
+    </method>
     <method name="getBoolValue" cppName="getBoolValue"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
@@ -447,6 +492,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="defaultValue" isConst="true" />
       </variant>
     </method>
+    <method name="getStringListValue" cppName="getStringListValue"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="key"
+        isConst="true" />
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="defaultValue" isConst="true" />
+      </variant>
+    </method>
     <method name="setValue" cppName="setValue" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -455,7 +510,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QVariant &amp;" typeName="QVariant" name="value"
         isConst="true" />
         <arg type="bool" typeName="bool" name="overwrite"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="removeValue" cppName="removeValue"
@@ -505,6 +560,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="setNextVersionEnabled"
+    cppName="setNextVersionEnabled" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isNextVersionEnabled"
+    cppName="isNextVersionEnabled" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getAutoScaleLinetypePatterns"
     cppName="getAutoScaleLinetypePatterns" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
@@ -517,6 +585,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="getUseSolidLineSelection"
     cppName="getUseSolidLineSelection" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getMouseThreshold" cppName="getMouseThreshold"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getPositionByMousePress"
+    cppName="getPositionByMousePress" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>

@@ -1,2086 +1,319 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core/math" filename="RVector.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RVECTOR_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RVECTOR_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"../core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QTransform&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RGlobal.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RMatrix</name>;</class_decl>
-  <class_decl>class 
-  <name>RBox</name>;</class_decl>
-  <class_decl>class 
-  <name>RLine</name>;</class_decl>
-  <class_decl>class 
-  <name>RPolyline</name>;</class_decl>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RDEFAULT_RVECTOR</name>
-  <name>RVector</name>()</cpp:define>
-  <comment type="block">/** * Represents a 3d vector (x/y/z). * *
-  \ingroup math * \scriptable * \copyable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RVector</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <comment type="block">/** * Constructor for a valid vector
-  (0/0/0). */</comment>
-  <constructor>
-    <specifier>inline</specifier>
-    <name>RVector</name>
-    <parameter_list>()</parameter_list>
-    <member_list>: 
-    <call>
-      <name>x</name>
-      <argument_list>(
-      <argument>
-        <expr>0.0</expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>y</name>
-      <argument_list>(
-      <argument>
-        <expr>0.0</expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>z</name>
-      <argument_list>(
-      <argument>
-        <expr>0.0</expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>valid</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>true</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{ }</block>
-  </constructor>
-  <comment type="block">/** * Constructor for a point with given
-  valid flag. * * \param v true: a valid vector with default
-  coordinates is created. * false: an invalid vector is created
-  */</comment>
-  <comment type="line">// inline explicit RVector(bool v)
-  :</comment>
-  <comment type="line">// x(0.0), y(0.0), z(0.0), valid(v)
-  {</comment>
-  <comment type="line">// }</comment>
-  <comment type="block">/** * Constructor for a point with given
-  coordinates. */</comment>
-  <constructor_decl>
-  <name>RVector</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>vx</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>vy</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>vz</name>=
-    <init>
-      <expr>0.0</expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>valid_in</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <comment type="block">/** * Sets new values for the vector and
-  makes the vector valid. */</comment>
-  <function>
-    <type>
-      <name>inline</name>
-      <name>void</name>
-    </type>
-    <name>set</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>vx</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>vy</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>vz</name>=
-      <init>
-        <expr>0.0</expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>x</name>= 
-    <name>vx</name></expr>;</expr_stmt>
-    <expr_stmt>
-    <expr>
-    <name>y</name>= 
-    <name>vy</name></expr>;</expr_stmt>
-    <expr_stmt>
-    <expr>
-    <name>z</name>= 
-    <name>vz</name></expr>;</expr_stmt>
-    <expr_stmt>
-    <expr>
-    <name>valid</name>= 
-    <name>true</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setPolar</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>radius</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>angle</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isValid</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isInside</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RBox</name>&amp;</type>
-      <name>b</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>equalsFuzzy</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>tol</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RS</name>::
-        <name>PointTolerance</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getDistanceTo</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getDistanceTo2d</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setAngle</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>a</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getAngle</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getAngleToPlaneXY</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getAngleTo</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setMagnitude2d</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>m</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getMagnitude</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getSquaredMagnitude</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getMagnitude2d</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getLerp</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>t</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getUnitVector</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setX</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>x</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getX</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setY</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>y</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getY</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setZ</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>z</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getZ</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isInWindow</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>firstCorner</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>secondCorner</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>move</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>offset</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>moveList</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>list</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>offset</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>rotate</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>rotation</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>rotate</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>rotation</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>center</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>rotate3d</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RLine</name>&amp;</type>
-      <name>axis</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>rotation</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>rotate3d</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QQuaternion</name>&amp;</type>
-      <name>quaternion</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>rotateList</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>list</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>rotation</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>rotateList</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>list</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>rotation</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>center</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>scale</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>factor</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RVector</name>&amp;</type>
-    <name>center</name>=
-    <init>
-      <expr>
-        <name>nullVector</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>scale</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>factors</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RVector</name>&amp;</type>
-    <name>center</name>=
-    <init>
-      <expr>
-        <name>nullVector</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>scaleList</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>list</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>factor</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RVector</name>&amp;</type>
-    <name>center</name>=
-    <init>
-      <expr>
-        <name>nullVector</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>scaleList</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>list</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>factors</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>RVector</name>&amp;</type>
-    <name>center</name>=
-    <init>
-      <expr>
-        <name>nullVector</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>mirror</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RLine</name>&amp;</type>
-      <name>axis</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>mirror</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>axis1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>axis2</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>flipHorizontal</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>flipVertical</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>stretch</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RPolyline</name>&amp;</type>
-      <name>area</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>offset</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>isoProject</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>IsoProjectionType</name></name>
-      </type>
-      <name>type</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>trueScale</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>transform</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RMatrix</name>&amp;</type>
-      <name>m</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>transform2dM</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RMatrix</name>&amp;</type>
-      <name>m</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>transform2d</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QTransform</name>&amp;</type>
-      <name>t</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getTransformed</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RMatrix</name>&amp;</type>
-      <name>m</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getTransformed2dM</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RMatrix</name>&amp;</type>
-      <name>m</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getTransformed2d</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QTransform</name>&amp;</type>
-      <name>t</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getDividedComponents</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getMultipliedComponents</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getClosest</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>list</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>double</name>
-  </type>
-  <name>getClosestDistance</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>list</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>counts</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>int</name>
-  </type>
-  <name>getClosestIndex</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>list</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>operator +</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>operator -</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>operator *</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>s</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>operator /</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>s</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>operator -</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getNegated</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>normalize</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getNormalized</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>operator +=</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>operator -=</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>operator *=</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>s</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>operator /=</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>s</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>operator ==</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>operator !=</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>v</name>
-      </decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>!operator==(
-    <name>v</name>)</expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getFloor</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getCeil</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RVector</name>
-  </type>
-  <name>getMinimum</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>vectors</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RVector</name>
-  </type>
-  <name>getMaximum</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>vectors</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RVector</name>
-  </type>
-  <name>getMinimumX</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>vectors</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RVector</name>
-  </type>
-  <name>getMaximumX</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>vectors</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RVector</name>
-  </type>
-  <name>getMinimumY</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>vectors</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RVector</name>
-  </type>
-  <name>getMaximumY</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>vectors</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RVector</name>
-  </type>
-  <name>getMinimum</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v2</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RVector</name>
-  </type>
-  <name>getMaximum</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v2</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RVector</name>
-  </type>
-  <name>getAverage</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v2</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>double</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getXList</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>vectors</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>double</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getYList</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>vectors</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>double</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getZList</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>vectors</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RVector</name>
-  </type>
-  <name>getCrossProduct</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v2</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>double</name>
-  </type>
-  <name>getDotProduct</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v2</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>static</name>
-      <name>RVector</name>
-    </type>
-    <name>createPolar</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>radius</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>angle</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <decl_stmt>
-    <decl>
-      <type>
-        <name>RVector</name>
-      </type>
-      <name>ret</name>
-    </decl>;</decl_stmt>
-    <expr_stmt>
-    <expr>
-    <name>ret</name>.
-    <call>
-      <name>setPolar</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>radius</name>
-        </expr>
-      </argument>, 
-      <argument>
-        <expr>
-          <name>angle</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>
-    <return>return 
-    <expr>
-      <name>ret</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>static</name>
-      <name>bool</name>
-    </type>
-    <name>lessThanX</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>v1</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>v2</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>v1</name>.
-    <name>x</name>&lt; 
-    <name>v2</name>.
-    <name>x</name></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>static</name>
-      <name>bool</name>
-    </type>
-    <name>greaterThanX</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>v1</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>v2</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>v1</name>.
-    <name>x</name>&gt; 
-    <name>v2</name>.
-    <name>x</name></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>static</name>
-      <name>bool</name>
-    </type>
-    <name>lessThanY</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>v1</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>v2</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>v1</name>.
-    <name>y</name>&lt; 
-    <name>v2</name>.
-    <name>y</name></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>static</name>
-      <name>bool</name>
-    </type>
-    <name>greaterThanY</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>v1</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RVector</name>&amp;</type>
-        <name>v2</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>v1</name>.
-    <name>y</name>&gt; 
-    <name>v2</name>.
-    <name>y</name></expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getSortedByDistance</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>list</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <class>class 
-  <name>RVectorDistanceSort</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>lessThan</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v2</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RVector</name>
-    </type>
-    <name>v</name>
-  </decl>;</decl_stmt></public>}</block>;</class>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getSortedByAngle</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>list</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>center</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>angle</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <class>class 
-  <name>RVectorAngleSort</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>lessThan</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v1</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v2</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RVector</name>
-    </type>
-    <name>center</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>double</name>
-    </type>
-    <name>angle</name>
-  </decl>;</decl_stmt></public>}</block>;</class></public>
-  <public>public: 
-  <comment type="block">/** * \getter{getX} * \setter{setX}
-  */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>x</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * \getter{getY} * \setter{setY}
-  */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>y</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * \getter{getZ} * \setter{setZ}
-  */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>z</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * \getter{isValid} */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>valid</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * invalid vector */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>const</name>
-      <name>RVector</name>
-    </type>
-    <name>invalid</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * null vector */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>const</name>
-      <name>RVector</name>
-    </type>
-    <name>nullVector</name>
-  </decl>;</decl_stmt></public>}</block>;</class>
-  <function_decl>
-  <type>
-    <name>QCADCORE_EXPORT</name>
-    <name>RVector</name>
-  </type>
-  <name>operator*</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>s</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QCADCORE_EXPORT</name>
-    <name>QDebug</name>
-  </type>
-  <name>operator&lt;&lt;</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>QDebug</name>
-      </type>
-      <name>dbg</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** *\nonscriptable */</comment>
-  <function_decl>
-  <type>
-  <name>QCADCORE_EXPORT</name>
-  <name>QDataStream</name>&amp;</type>
-  <name>operator&lt;&lt;</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QDataStream</name>&amp;</type>
-      <name>stream</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>vector</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** *\nonscriptable */</comment>
-  <function_decl>
-  <type>
-  <name>QCADCORE_EXPORT</name>
-  <name>QDataStream</name>&amp;</type>
-  <name>operator&gt;&gt;</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QDataStream</name>&amp;</type>
-      <name>stream</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RVector</name>&amp;</type>
-      <name>vector</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>QList&lt;RVector&gt;</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>QList&lt;RVector&gt;*</argument>)</argument_list>
-  </macro>
-  <typedef>typedef 
-  <type>
-    <name>QMultiMap
-    <argument_list>&lt;
-    <argument>
-      <name>int</name>
-    </argument>, 
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>_RMapIntVector</name>;</typedef>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>_RMapIntVector*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RVector</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RVector*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>const RVector*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core/math" filename="RVector.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RVECTOR_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RVECTOR_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTransform&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGlobal.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RMatrix</name>;</class_decl>
+<class_decl>class <name>RBox</name>;</class_decl>
+<class_decl>class <name>RLine</name>;</class_decl>
+<class_decl>class <name>RPolyline</name>;</class_decl>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_RVECTOR</name> <name>RVector</name>()</cpp:define>
+
+<comment type="block">/**
+ * Represents a 3d vector (x/y/z).
+ *
+ * \ingroup math
+ * \scriptable
+ * \copyable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RVector</name> <block>{<private type="default">
+</private><public>public:
+    <comment type="block">/**
+     * Constructor for a valid vector (0/0/0).
+     */</comment>
+    <constructor><specifier>inline</specifier> <name>RVector</name><parameter_list>()</parameter_list> <member_list>:
+        <call><name>x</name><argument_list>(<argument><expr>0.0</expr></argument>)</argument_list></call>, <call><name>y</name><argument_list>(<argument><expr>0.0</expr></argument>)</argument_list></call>, <call><name>z</name><argument_list>(<argument><expr>0.0</expr></argument>)</argument_list></call>, <call><name>valid</name><argument_list>(<argument><expr><name>true</name></expr></argument>)</argument_list></call> </member_list><block>{
+    }</block></constructor>
+
+    <comment type="block">/**
+     * Constructor for a point with given valid flag.
+     *
+     * \param v true: a valid vector with default coordinates is created.
+     *              false: an invalid vector is created
+     */</comment>
+    <comment type="line">//  inline explicit RVector(bool v) :</comment>
+    <comment type="line">//      x(0.0), y(0.0), z(0.0), valid(v) {</comment>
+    <comment type="line">//  }</comment>
+
+    <comment type="block">/**
+     * Constructor for a point with given coordinates.
+     */</comment>
+    <constructor_decl><name>RVector</name><parameter_list>(<param><decl><type><name>double</name></type> <name>vx</name></decl></param>, <param><decl><type><name>double</name></type> <name>vy</name></decl></param>, <param><decl><type><name>double</name></type> <name>vz</name> =<init> <expr>0.0</expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>valid_in</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+
+    <comment type="block">/**
+     * Sets new values for the vector and makes the vector valid.
+     */</comment>
+    <function><type><name>inline</name> <name>void</name></type> <name>set</name><parameter_list>(<param><decl><type><name>double</name></type> <name>vx</name></decl></param>, <param><decl><type><name>double</name></type> <name>vy</name></decl></param>, <param><decl><type><name>double</name></type> <name>vz</name> =<init> <expr>0.0</expr></init></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>x</name> = <name>vx</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>y</name> = <name>vy</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>z</name> = <name>vz</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>valid</name> = <name>true</name></expr>;</expr_stmt>
+    }</block></function>
+    <function_decl><type><name>void</name></type> <name>setPolar</name><parameter_list>(<param><decl><type><name>double</name></type> <name>radius</name></decl></param>, <param><decl><type><name>double</name></type> <name>angle</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>RVector</name></type> <name>get2D</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>RVector</name><argument_list>(<argument><expr><name>x</name></expr></argument>,<argument><expr><name>y</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>bool</name></type> <name>isInside</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>b</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>bool</name></type> <name>equalsFuzzy</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>, <param><decl><type><name>double</name></type> <name>tol</name> =<init> <expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getDistanceTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getDistanceTo2d</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setAngle</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getAngle</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getAngleToPlaneXY</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getAngleTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setMagnitude2d</name><parameter_list>(<param><decl><type><name>double</name></type> <name>m</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getMagnitude</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getSquaredMagnitude</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getMagnitude2d</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getLerp</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>, <param><decl><type><name>double</name></type> <name>t</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getUnitVector</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setX</name><parameter_list>(<param><decl><type><name>double</name></type> <name>x</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getX</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setY</name><parameter_list>(<param><decl><type><name>double</name></type> <name>y</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getY</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setZ</name><parameter_list>(<param><decl><type><name>double</name></type> <name>z</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getZ</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>bool</name></type> <name>isInWindow</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>firstCorner</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>secondCorner</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>RVector</name></type> <name>move</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>moveList</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>RVector</name></type> <name>rotate</name><parameter_list>(<param><decl><type><name>double</name></type> <name>rotation</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>rotate</name><parameter_list>(<param><decl><type><name>double</name></type> <name>rotation</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>rotate3d</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>axis</name></decl></param>, <param><decl><type><name>double</name></type> <name>rotation</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>rotate3d</name><parameter_list>(<param><decl><type><name>const</name> <name>QQuaternion</name>&amp;</type> <name>quaternion</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>rotateList</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>, <param><decl><type><name>double</name></type> <name>rotation</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>rotateList</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>, <param><decl><type><name>double</name></type> <name>rotation</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>RVector</name></type> <name>scale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>factor</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name>=<init><expr><name>nullVector</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>scale</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>factors</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name>=<init><expr><name>nullVector</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>scaleList</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>, <param><decl><type><name>double</name></type> <name>factor</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name>=<init><expr><name>nullVector</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>scaleList</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>factors</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name>=<init><expr><name>nullVector</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>RVector</name></type> <name>mirror</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>axis</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>mirror</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>axis1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>axis2</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>flipHorizontal</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>flipVertical</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>stretch</name><parameter_list>(<param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>area</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>isoProject</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>IsoProjectionType</name></name></type> <name>type</name></decl></param>, <param><decl><type><name>bool</name></type> <name>trueScale</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>transform</name><parameter_list>(<param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>m</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>transform2dM</name><parameter_list>(<param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>m</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>transform2d</name><parameter_list>(<param><decl><type><name>const</name> <name>QTransform</name>&amp;</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>RVector</name></type> <name>getTransformed</name><parameter_list>(<param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>m</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getTransformed2dM</name><parameter_list>(<param><decl><type><name>const</name> <name>RMatrix</name>&amp;</type> <name>m</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getTransformed2d</name><parameter_list>(<param><decl><type><name>const</name> <name>QTransform</name>&amp;</type> <name>t</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>RVector</name></type> <name>getDividedComponents</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getMultipliedComponents</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>RVector</name></type> <name>getClosest</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getClosest2d</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getClosestDistance</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>, <param><decl><type><name>int</name></type> <name>counts</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>getClosestIndex</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>, <param><decl><type><name>bool</name></type> <name>ignoreZ</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function><type><name>int</name></type> <name>getClosestIndex2d</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getClosestIndex</name><argument_list>(<argument><expr><name>list</name></expr></argument>, <argument><expr><name>true</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>RVector</name></type> <name>operator +</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>operator -</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>operator *</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>operator /</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>operator -</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getNegated</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>RVector</name></type> <name>normalize</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getNormalized</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>operator +=</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>operator -=</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>operator *=</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>operator /=</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>bool</name></type> <name>operator ==</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function><type><name>bool</name></type> <name>operator !=</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>!operator==(<name>v</name>)</expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>RVector</name></type> <name>getFloor</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getCeil</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>containsFuzzy</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>vectors</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>, <param><decl><type><name>double</name></type> <name>tol</name> =<init> <expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>RVector</name></type> <name>getMinimum</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>vectors</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RVector</name></type> <name>getMaximum</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>vectors</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>RVector</name></type> <name>getMinimumX</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>vectors</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RVector</name></type> <name>getMaximumX</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>vectors</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RVector</name></type> <name>getMinimumY</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>vectors</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RVector</name></type> <name>getMaximumY</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>vectors</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>RVector</name></type> <name>getMinimum</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v2</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RVector</name></type> <name>getMaximum</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v2</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>RVector</name></type> <name>getAverage</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v2</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RVector</name></type> <name>getAverage</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>vectors</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>getXList</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>vectors</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>getYList</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>vectors</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>getZList</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>vectors</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>RVector</name></type> <name>getCrossProduct</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v2</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>double</name></type> <name>getDotProduct</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v2</name></decl></param>)</parameter_list>;</function_decl>
+    <function><type><name>static</name> <name>RVector</name></type> <name>createPolar</name><parameter_list>(<param><decl><type><name>double</name></type> <name>radius</name></decl></param>, <param><decl><type><name>double</name></type> <name>angle</name></decl></param>)</parameter_list> <block>{
+        <decl_stmt><decl><type><name>RVector</name></type> <name>ret</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name>ret</name>.<call><name>setPolar</name><argument_list>(<argument><expr><name>radius</name></expr></argument>, <argument><expr><name>angle</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <return>return <expr><name>ret</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>bool</name></type> <name>lessThanX</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v2</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><name>v1</name>.<name>x</name> &lt; <name>v2</name>.<name>x</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>bool</name></type> <name>greaterThanX</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v2</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><name>v1</name>.<name>x</name> &gt; <name>v2</name>.<name>x</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>bool</name></type> <name>lessThanY</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v2</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><name>v1</name>.<name>y</name> &lt; <name>v2</name>.<name>y</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>bool</name></type> <name>greaterThanY</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v2</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><name>v1</name>.<name>y</name> &gt; <name>v2</name>.<name>y</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getSortedByDistance</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <class>class <name>RVectorDistanceSort</name> <block>{<private type="default">
+    </private><public>public:
+        <function_decl><type><name>static</name> <name>bool</name></type> <name>lessThan</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v2</name></decl></param>)</parameter_list>;</function_decl>
+        <decl_stmt><decl><type><name>static</name> <name>RVector</name></type> <name>v</name></decl>;</decl_stmt>
+    </public>}</block>;</class>
+
+    <function_decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getSortedLeftRightTopBottom</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>)</parameter_list>;</function_decl>
+    <class>class <name>RVectorLeftRightTopBottomSort</name> <block>{<private type="default">
+    </private><public>public:
+        <function_decl><type><name>static</name> <name>bool</name></type> <name>lessThan</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v2</name></decl></param>)</parameter_list>;</function_decl>
+    </public>}</block>;</class>
+
+    <function_decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getSortedByAngle</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name></decl></param>, <param><decl><type><name>double</name></type> <name>angle</name></decl></param>)</parameter_list>;</function_decl>
+    <class>class <name>RVectorAngleSort</name> <block>{<private type="default">
+    </private><public>public:
+        <function_decl><type><name>static</name> <name>bool</name></type> <name>lessThan</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v2</name></decl></param>)</parameter_list>;</function_decl>
+        <decl_stmt><decl><type><name>static</name> <name>RVector</name></type> <name>center</name></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>static</name> <name>double</name></type> <name>angle</name></decl>;</decl_stmt>
+    </public>}</block>;</class>
+
+</public><public>public:
+    <comment type="block">/**
+     * \getter{getX}
+     * \setter{setX}
+     */</comment>
+    <decl_stmt><decl><type><name>double</name></type> <name>x</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * \getter{getY}
+     * \setter{setY}
+     */</comment>
+    <decl_stmt><decl><type><name>double</name></type> <name>y</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * \getter{getZ}
+     * \setter{setZ}
+     */</comment>
+    <decl_stmt><decl><type><name>double</name></type> <name>z</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * \getter{isValid}
+     */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>valid</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * invalid vector
+     */</comment>
+    <decl_stmt><decl><type><name>static</name> <name>const</name> <name>RVector</name></type> <name>invalid</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * null vector
+     */</comment>
+    <decl_stmt><decl><type><name>static</name> <name>const</name> <name>RVector</name></type> <name>nullVector</name></decl>;</decl_stmt>
+</public>}</block>;</class>
+
+<function_decl><type><name>QCADCORE_EXPORT</name> <name>RVector</name></type> <name>operator*</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+
+<function_decl><type><name>QCADCORE_EXPORT</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+
+<comment type="block">/**
+ *\nonscriptable
+ */</comment>
+<function_decl><type><name>QCADCORE_EXPORT</name> <name>QDataStream</name>&amp;</type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDataStream</name>&amp;</type> <name>stream</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>vector</name></decl></param>)</parameter_list>;</function_decl>
+
+<comment type="block">/**
+ *\nonscriptable
+ */</comment>
+<function_decl><type><name>QCADCORE_EXPORT</name> <name>QDataStream</name>&amp;</type> <name>operator&gt;&gt;</name><parameter_list>(<param><decl><type><name>QDataStream</name>&amp;</type> <name>stream</name></decl></param>, <param><decl><type><name>RVector</name>&amp;</type> <name>vector</name></decl></param>)</parameter_list>;</function_decl>
+
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt;RVector&gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt;RVector&gt;*</argument>)</argument_list></macro>
+<typedef>typedef <type><name>QMultiMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>_RMapIntVector</name>;</typedef>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>_RMapIntVector*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RVector</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RVector*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>const RVector*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

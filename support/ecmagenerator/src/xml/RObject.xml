@@ -15,7 +15,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant>
         <arg type="RDocument *" typeName="RDocument *"
-        name="document" hasDefault="true" default=" NULL"
+        name="document" hasDefault="true" default="NULL"
         isConst="false" />
         <arg type="Id" typeName="Id" name="id" hasDefault="true"
         default="INVALID_ID" isConst="false" />
@@ -52,6 +52,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RObject::Handle"
       isPureVirtual="false" />
+    </method>
+    <method name="getType" cppName="getType" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RS::EntityType" isPureVirtual="false" />
     </method>
     <method name="isProtected" cppName="isProtected"
     specifier="public" isStatic="false" isVirtual="false"
@@ -98,9 +102,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RPropertyTypeId" name="propertyTypeId"
         isConst="false" />
         <arg type="bool" typeName="bool" name="humanReadable"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="noAttributes"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="setProperty" cppName="setProperty"
@@ -112,7 +116,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QVariant &amp;" typeName="QVariant" name="value"
         isConst="true" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>
@@ -129,6 +133,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="true" />
     </method>
+    <method name="hasCustomProperty" cppName="hasCustomProperty"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="key"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getCustomProperty" cppName="getCustomProperty"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -140,6 +154,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QVariant &amp;" typeName="QVariant"
         name="defaultValue" hasDefault="true"
         default="RDEFAULT_QVARIANT" isConst="true" />
+      </variant>
+    </method>
+    <method name="getCustomBoolProperty"
+    cppName="getCustomBoolProperty" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="title"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="key"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="defaultValue"
+        isConst="false" />
       </variant>
     </method>
     <method name="setCustomProperty" cppName="setCustomProperty"
@@ -182,6 +208,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
     </method>
+    <method name="dump" cppName="dump" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -209,6 +239,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="INVALID_HANDLE" type="Handle" isConst="true"
     isStatic="true" />
     <property name="PropertyCustom" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyType" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyHandle" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

@@ -4,17 +4,16 @@
 <context>
     <name>OpenFile</name>
     <message>
-        <location filename="../OpenFile.js" line="+43"/>
         <source>No import filters</source>
-        <translation>Ni filtrov za uvoz</translation>
+        <translation type="vanished">Ni filtrov za uvoz</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location filename="../OpenFile.js" line="+46"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Ni najden noben filter za uvoz. Prekinjam...</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+28"/>
         <source>Open Drawing</source>
         <translation>Odpri risbo</translation>
     </message>

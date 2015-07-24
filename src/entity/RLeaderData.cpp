@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -43,6 +43,9 @@ double RLeaderData::getDimasz() const {
     if (document!=NULL) {
         dimasz = document->getKnownVariable(RS::DIMASZ, dimasz).toDouble();
     }
+    else {
+        qWarning() << "RLeaderData::getDimasz: no document set";
+    }
 
     return dimasz * getDimscale();
 }
@@ -53,8 +56,37 @@ double RLeaderData::getDimscale() const {
     if (document!=NULL) {
         dimscale = document->getKnownVariable(RS::DIMSCALE, dimscale).toDouble();
     }
+    else {
+        qWarning() << "RLeaderData::getDimscale: no document set";
+    }
 
     return dimscale;
+}
+
+void RLeaderData::setArrowHead(bool on) {
+    arrowHead = on;
+    updateArrowHead();
+}
+
+/**
+ * \return true if this leader can have an arrow head (i.e. first
+ * segment is >= DIMASZ * DIMSCALE * 2.
+ */
+bool RLeaderData::canHaveArrowHead() const {
+    if (countSegments()==0) {
+        return false;
+    }
+
+    QSharedPointer<RShape> firstSegment = getSegmentAt(0);
+    if (firstSegment.isNull()) {
+        return false;
+    }
+
+    if (firstSegment->getLength() < getDimasz() * 2) {
+        return false;
+    }
+
+    return true;
 }
 
 QList<RVector> RLeaderData::getReferencePoints(
@@ -78,6 +110,20 @@ bool RLeaderData::moveReferencePoint(const RVector& referencePoint,
         }
     }
 
+    ret |= updateArrowHead();
+
+    return ret;
+}
+
+bool RLeaderData::scale(const RVector& scaleFactors, const RVector& center) {
+    bool ret = RPolyline::scale(scaleFactors, center);
+    ret |= updateArrowHead();
+    return ret;
+}
+
+bool RLeaderData::stretch(const RPolyline &area, const RVector &offset) {
+    bool ret = RPolyline::stretch(area, offset);
+    ret |= updateArrowHead();
     return ret;
 }
 
@@ -86,4 +132,13 @@ RTriangle RLeaderData::getArrowShape() const {
     double direction = getDirection1() + M_PI;
     double dimasz = getDimasz();
     return RTriangle::createArrow(p, direction, dimasz);
+}
+
+bool RLeaderData::updateArrowHead() {
+    if (arrowHead && !canHaveArrowHead()) {
+        arrowHead = false;
+        return true;
+    }
+
+    return false;
 }

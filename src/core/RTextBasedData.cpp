@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include <QFont>
-#include <QFontMetricsF>
 #include <QTextBlock>
 #include <QTextDocument>
 
@@ -181,7 +180,6 @@ double RTextBasedData::getDistanceTo(const RVector& point, bool limited, double 
     Q_UNUSED(range)
     
     if (!getBoundingBox().grow(strictRange).contains(point)) {
-        //qDebug() << "RTextBasedData::getDistanceTo: bounding box not in range: " << getBoundingBox();
         return RNANDOUBLE;
     }
 
@@ -351,8 +349,8 @@ bool RTextBasedData::mirror(const RLine& axis) {
         }
     } else {
         if (verticalAlignment==RS::VAlignTop) {
-            verticalAlignment=RS::VAlignBottom;
-        } else if (verticalAlignment==RS::VAlignBottom) {
+            verticalAlignment=RS::VAlignBase;
+        } else if (verticalAlignment==RS::VAlignBase) {
             verticalAlignment=RS::VAlignTop;
         }
     }

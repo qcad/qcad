@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -17,15 +17,14 @@
  * along with QCAD.
  */
 
-include("../../WidgetFactory.js");
+include("scripts/WidgetFactory.js");
 
 function PenToolBar() {
 }
 
 PenToolBar.init = function(basePath) {
     var penToolBar = EAction.getToolBar(qsTr("Pen"), "Pen");
-    var w = WidgetFactory.createWidget(
-        includeBasePath, "PenToolBar.ui", RMainWindowQt.getMainWindow());
+    var w = WidgetFactory.createWidget(includeBasePath, "PenToolBar.ui", RMainWindowQt.getMainWindow());
     WidgetFactory.moveChildren(w, penToolBar, w.objectName);
     w.destroy();
     //penToolBar.addWidget(w);

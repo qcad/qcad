@@ -16,17 +16,17 @@
     <message>
         <location line="+8"/>
         <source>Dimension arc location</source>
-        <translation type="unfinished"></translation>
+        <translation>Mittakaaren sijainti</translation>
     </message>
     <message>
         <location filename="../DimAngularInit.js" line="+2"/>
         <source>&amp;Angular</source>
-        <translation type="unfinished">Vino</translation>
+        <translation>&amp;Vinous</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw angular dimension</source>
-        <translation type="unfinished">Piirrä vinomitoitus</translation>
+        <translation>Piirrä vinomitoitus</translation>
     </message>
 </context>
 </TS>

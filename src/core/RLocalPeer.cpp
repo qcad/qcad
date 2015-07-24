@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include <QCoreApplication>
+#include <QDataStream>
 #include <QTime>
 
 #include "RLocalPeer.h"

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -34,24 +34,24 @@ AbstractPreferences.prototype = new Edit();
 AbstractPreferences.prototype.beginEvent = function() {
     Edit.prototype.beginEvent.call(this);
     
-    this.formWidget = this.createWidget("scripts/Edit/AbstractPreferences.ui");
+    this.dialog = this.createWidget("scripts/Edit/AbstractPreferences.ui");
     // TODO: Qt 5: add this flag (?)
     //var flags = new Qt.WindowFlags(Qt.WindowTitleHint);
-    //this.formWidget.setWindowFlags(flags);
-    this.treeWidget = this.formWidget.findChild("twCategory");
+    //this.dialog.setWindowFlags(flags);
+    this.treeWidget = this.dialog.findChild("twCategory");
     var title;
     if (this.appPreferences) {
         title = qsTr("Application Preferences");
     } else {
         title = qsTr("Drawing Preferences");
     }
-    this.formWidget.setWindowTitle(title);
+    this.dialog.setWindowTitle(title);
     this.treeWidget.setHeaderLabel(title);
-    this.pageWidget = this.formWidget.findChild("stwPage");
-    this.filterWidget = this.formWidget.findChild("leFilter");
-    this.titleWidget = this.formWidget.findChild("lbTitle");
+    this.pageWidget = this.dialog.findChild("stwPage");
+    this.filterWidget = this.dialog.findChild("leFilter");
+    this.titleWidget = this.dialog.findChild("lbTitle");
     
-    var splitter = this.formWidget.findChild("splitter");
+    var splitter = this.dialog.findChild("splitter");
     splitter.setStretchFactor(0, 1);
     splitter.setStretchFactor(1, 4);
     
@@ -59,7 +59,7 @@ AbstractPreferences.prototype.beginEvent = function() {
     this.treeWidget.itemSelectionChanged.connect(this, "showPage");
     this.filterWidget.textChanged.connect(this, "filterTree");    
 
-    var btApply = this.formWidget.findChild("buttonBox").button(QDialogButtonBox.Apply);
+    var btApply = this.dialog.findChild("buttonBox").button(QDialogButtonBox.Apply);
     btApply.clicked.connect(this, "apply");
 
     this.addOns = AddOn.getAddOns();
@@ -67,11 +67,13 @@ AbstractPreferences.prototype.beginEvent = function() {
     AbstractPreferences.fillTreeWidget(this.addOns, this.treeWidget, this.appPreferences);
     this.treeWidget.expandAll();
 
-    if (this.formWidget.exec() === QDialog.Accepted.valueOf()) {
+    if (this.dialog.exec() === QDialog.Accepted.valueOf()) {
         // apply calls save and apply:
         this.apply();
     }
-    this.formWidget.destroy();
+    this.uninit();
+    this.dialog.destroy();
+    EAction.activateMainWindow();
     this.terminate();
 };
 
@@ -230,6 +232,56 @@ AbstractPreferences.prototype.apply = function() {
 };
 
 /**
+ * Cleans up settings of all preference pages by calling
+ * 'uninitPreferences' for every add-on class.
+ */
+AbstractPreferences.prototype.uninit = function() {
+    var mdiChild, document;
+
+    for (var i = 0; i < this.addOns.length; ++i) {
+        var addOn = this.addOns[i];
+        var className = addOn.getClassName();
+
+        var widget = addOn.getPreferenceWidget();
+        if (isNull(widget) || widget.hasChanged !== true) {
+            continue;
+        }
+
+        try {
+            // include normally not needed
+            var doInclude = false;
+            if (isNull(global[className])) {
+                doInclude = true;
+            }
+            if (doInclude) {
+                include(addOn.getFilePath());
+            }
+
+            // uninit application settings globally:
+            if (this.appPreferences) {
+                if (!isNull(global[className]) && isFunction(global[className].uninitPreferences)) {
+                    global[className].uninitPreferences(undefined, undefined, widget);
+                }
+            }
+
+            // uninit document specific settings to current document:
+            else {
+                mdiChild = EAction.getMdiChild();
+                document = EAction.getDocument();
+                if (!isNull(global[className]) && isFunction(global[className].uninitPreferences)) {
+                    global[className].uninitPreferences(document, mdiChild, widget);
+                }
+            }
+        } catch (e) {
+            qWarning("AbstractPreferences.js:",
+                     "uninit(): Exception: %1; %2; %3"
+                     .arg(e.message).arg(e.fileName).arg(e.lineNumber));
+            continue;
+        }
+    }
+};
+
+/**
  * Loads the preference page of the given add-on.
  * Called by 'showPage'.
  */
@@ -289,12 +341,11 @@ AbstractPreferences.prototype.save = function() {
     // check if preference changes require application restart and show
     // message if appropriate:
     if (WidgetFactory.requiresRestart===true && this.restartWarningShown === false) {
-        var dlg = new QMessageBox(QMessageBox.Warning,
+        var appWin = EAction.getMainWindow();
+        QMessageBox.warning(appWin,
                 qsTr("Restart required"),
-                "",
-                QMessageBox.OK);
-        dlg.text = qsTr("Please restart QCAD for\nthe preference changes to take effect.");
-        dlg.exec();
+                qsTr("Please restart QCAD for\nthe preference changes to take effect.")
+        );
         this.restartWarningShown = true;
     }
 
@@ -365,17 +416,17 @@ AbstractPreferences.prototype.filterTree = function(text) {
  */
 AbstractPreferences.prototype.showPage = function() {
     var items = this.treeWidget.selectedItems();
-    if (items.length != 1) {
+    if (items.length!==1) {
         return;
     }
     var item = items[0];
-    if (item == undefined) {
+    if (isNull(item)) {
         return;
     }
 
     var parent = item.parent();
     var pText = "";
-    while(parent != undefined) {
+    while (!isNull(parent)) {
         pText += parent.text(0) + ": " + pText;
         parent = parent.parent();
     }
@@ -386,10 +437,10 @@ AbstractPreferences.prototype.showPage = function() {
     }
     var i = item.data(0, Qt.UserRole);
     var widget;
-    if (typeof(i) != "undefined") {
+    if (!isNull(i)) {
         var addOn = this.addOns[i];
         widget = addOn.getPreferenceWidget();
-        if (typeof(widget) == "undefined") {
+        if (isNull(widget)) {
             var prefFile = addOn.getPreferenceFile();
             widget = this.createWidget(prefFile);
             this.pageWidget.addWidget(widget);
@@ -401,7 +452,7 @@ AbstractPreferences.prototype.showPage = function() {
                 font.setBold(true);
                 treeWidget.currentItem().setFont(0, font);
             };
-            var btReset = this.formWidget.findChild("ResetToDefaults");
+            var btReset = this.dialog.findChild("ResetToDefaults");
             try {
                 btReset.clicked.disconnect(this, "reset");
             } catch (e) {

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -40,7 +40,7 @@ Spline.includeBasePath = includeBasePath;
 Spline.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="SplineMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="SplineToolsPanelAction") {
         EAction.showCadToolBarPanel("SplineToolsPanel");
         this.terminate();
     }
@@ -67,7 +67,7 @@ Spline.getToolBar = function() {
 
 Spline.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "SplineMenu";
+    var actionName = "SplineToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Spline Tools"), mtb);
         action.setScriptFile(Spline.includeBasePath + "/Spline.js");

@@ -51,8 +51,12 @@
         <translation>Puntos de esquina:</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Point)</source>
+        <translation type="vanished">Polí&amp;gono (centro, punto)</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonCPInit.js" line="+2"/>
+        <source>Pol&amp;ygon (Center, Corner)</source>
         <translation>Polí&amp;gono (centro, punto)</translation>
     </message>
     <message>

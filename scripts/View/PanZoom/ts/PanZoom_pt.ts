@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>PanZoom</name>
     <message>
@@ -9,7 +9,7 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 Close com &amp;Garimpagem</translatorcomment>
-        <translation>Close com &amp;garimpagem</translation>
+        <translation>Zoom com &amp;deslocamento</translation>
     </message>
 </context>
 </TS>

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -36,7 +36,11 @@
 class QCADCORE_EXPORT RTransactionEvent : public QEvent {
 public:
     RTransactionEvent(RTransaction& t, bool onlyChanges=false, RS::EntityType entityTypeFilter = RS::EntityAll) :
-        QEvent(QEvent::User), transaction(t), onlyChanges(onlyChanges), entityTypeFilter(entityTypeFilter) {}
+        QEvent((QEvent::Type)(QEvent::User+300)),
+        transaction(t),
+        onlyChanges(onlyChanges),
+        entityTypeFilter(entityTypeFilter) {}
+
     virtual ~RTransactionEvent() {}
 
     bool hasOnlyChanges() {

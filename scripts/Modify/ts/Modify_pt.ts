@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Modify</name>
     <message>
-        <location filename="../Modify.js" line="+100"/>
+        <location filename="../Modify.js" line="+99"/>
         <source>Modification Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ferramentas de modificação</translation>
+        <translation>Ferramentas de Modificação</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show modification tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mostrar ferramentas de modificação</translation>
+        <translation>Exiba as ferramentas de modificação</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -27,22 +27,32 @@
 <context>
     <name>ModifyCorner</name>
     <message>
-        <location filename="../ModifyCorner.js" line="+69"/>
+        <location filename="../ModifyCorner.js" line="+78"/>
         <source>Choose first entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Escolha entidade primeira</translation>
+        <translation>Escolha a primeira entidade</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Choose second entity</source>
+        <translatorcomment>--google--</translatorcomment>
+        <translation>Escolha a segunda entidade</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Choose second entity</source>
-        <translatorcomment>--google--</translatorcomment>
-        <translation>Escolha entidade segunda</translation>
+        <source>Set point</source>
+        <translation>Selecione o ponto</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Choose solution</source>
+        <translation>Escolha a solução</translation>
     </message>
 </context>
 <context>
     <name>Transform</name>
     <message>
-        <location filename="../Transform.js" line="+38"/>
+        <location filename="../Transform.js" line="+47"/>
         <source>This tool requires a selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Esta ferramenta requer uma seleção</translation>

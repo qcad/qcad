@@ -25,7 +25,7 @@
     </message>
     <message>
         <location filename="../ShapePolygonCPInit.js" line="+2"/>
-        <source>Pol&amp;ygon (Center, Point)</source>
+        <source>Pol&amp;ygon (Center, Corner)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

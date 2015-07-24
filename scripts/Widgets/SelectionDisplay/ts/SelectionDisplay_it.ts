@@ -4,9 +4,13 @@
 <context>
     <name>SelectionDisplay</name>
     <message>
-        <location filename="../SelectionDisplay.js" line="+57"/>
         <source>No selected entities.</source>
         <translatorcomment>--google--</translatorcomment>
+        <translation type="vanished">Nessun entità selezionate.</translation>
+    </message>
+    <message>
+        <location filename="../SelectionDisplay.js" line="+58"/>
+        <source>No entities selected.</source>
         <translation>Nessun entità selezionate.</translation>
     </message>
     <message>
@@ -69,6 +73,11 @@ Conversione non riuscita per il layer &apos;%1&apos;</translatorcomment>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entità selezionate:
 %1</translation>
+    </message>
+    <message>
+        <location filename="../SelectionDisplay.ui" line="+26"/>
+        <source>Form</source>
+        <translation>Form</translation>
     </message>
 </context>
 </TS>

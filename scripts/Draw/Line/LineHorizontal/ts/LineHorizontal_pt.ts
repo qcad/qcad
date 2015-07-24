@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>LineHorizontal</name>
     <message>
@@ -39,7 +39,7 @@ Desenhe linhas horizontais</translatorcomment>
     <message>
         <location line="+5"/>
         <source>End</source>
-        <translation>Fim</translation>
+        <translation>Final</translation>
     </message>
 </context>
 </TS>

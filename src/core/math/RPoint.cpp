@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -32,6 +32,10 @@ RPoint::RPoint() {
 //RPoint::RPoint(const RPoint& other) : RShape() {
 //    this->position = other.position;
 //}
+
+RPoint::RPoint(double x, double y) :
+    position(x, y) {
+}
 
 /**
  * Creates a point object with the given position.
@@ -84,8 +88,9 @@ QList<RVector> RPoint::getPointsWithDistanceToEnd(double distance, RS::From from
     return ret;
 }
 
-double RPoint::getAngleAt(double distance) const {
+double RPoint::getAngleAt(double distance, RS::From from) const {
     Q_UNUSED(distance)
+    Q_UNUSED(from)
     return RNANDOUBLE;
 }
 

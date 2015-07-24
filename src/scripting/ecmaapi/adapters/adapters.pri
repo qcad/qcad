@@ -9,6 +9,7 @@ HEADERS += \
     $$PWD/RFontDatabase.h \
     $$PWD/RExportListenerAdapter.h \
     $$PWD/RImportListenerAdapter.h \
+    $$PWD/RNewDocumentListenerAdapter.h \
     $$PWD/RInterTransactionListenerAdapter.h \
     $$PWD/RLayerListenerAdapter.h \
     $$PWD/RPenListenerAdapter.h \

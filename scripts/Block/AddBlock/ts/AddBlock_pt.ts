@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>AddBlock</name>
     <message>
@@ -13,13 +13,13 @@
     <message>
         <location filename="../AddBlockInit.js" line="+2"/>
         <source>&amp;Add Empty Block</source>
-        <translation>&amp;Adicione Bloco</translation>
+        <translation>&amp;Adicione um Bloco Vazio</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Add new empty block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Adicionar novo bloco vazio</translation>
+        <translation>Adicione um novo Bloco vazio</translation>
     </message>
 </context>
 </TS>

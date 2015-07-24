@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Print</name>
     <message>
@@ -16,7 +16,7 @@
         <location line="+6"/>
         <source>Print current drawing</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Imprimir desenho atual</translation>
+        <translation>Imprima o desenho atual</translation>
     </message>
 </context>
 </TS>

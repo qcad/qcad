@@ -4,4 +4,7 @@ SUBDIRS = \
     ts \
     ExDumpPolyline \
     ExRegisterFileExporter \
-    ExRegisterFileImporter
+    ExRegisterFileImporter \
+    ExXmlImport \
+    ExXmlExport
+

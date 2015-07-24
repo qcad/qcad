@@ -40,6 +40,14 @@ Configurar...</translatorcomment>
     </message>
 </context>
 <context>
+    <name>RMathLineEdit</name>
+    <message>
+        <location filename="../src/gui/RMathLineEdit.cpp" line="+156"/>
+        <source>Invalid</source>
+        <translation>Inválido</translation>
+    </message>
+</context>
+<context>
     <name>RSingleApplication</name>
     <message>
         <source>This software is not intended for production use.</source>

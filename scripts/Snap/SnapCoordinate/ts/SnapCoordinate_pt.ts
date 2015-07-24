@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>SnapCoordinate</name>
     <message>
-        <location filename="../SnapCoordinate.js" line="+82"/>
+        <location filename="../SnapCoordinate.js" line="+87"/>
         <source>Set coordinate</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Conjunto de coordenadas</translation>
+        <translation>Defina as coordenadas</translation>
     </message>
     <message>
         <location filename="../SnapCoordinateInit.js" line="+2"/>
@@ -15,7 +15,7 @@
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 &amp;Coordenadas</translatorcomment>
-        <translation>&amp;Coordenadas</translation>
+        <translation>&amp;Coordenada</translation>
     </message>
     <message>
         <location filename="../SnapCoordinate.ui" line="+17"/>
@@ -55,13 +55,13 @@ Coordenada Y da origem da grelha</translatorcomment>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Coordenar relativa</translation>
+        <translation>Marque para Coordenadas Relativas</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Relati&amp;ve</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Relati&amp;vo</translation>
+        <translation>Relati&amp;vas</translation>
     </message>
     <message>
         <source>Return</source>

@@ -6,22 +6,22 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Decimal Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Desimaalipilkku:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cartesian Coordinate Separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Suorakulmaisen koordinaatiston erotin:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Polar Coordinate Separator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Napakoordinaatiston erotin:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Relative Coordinate Prefix:</source>
-        <translation type="unfinished"></translation>
+        <translation>Suhteellisen koordinaatiston etuliite:</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -31,22 +31,22 @@
     <message>
         <location line="+6"/>
         <source>Absolute Cartesian Coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Absoluuttinen suorakulmainen koordinaatisto:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Absolute Polar Coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Absoluuttinen napakoordinaatisto:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative Cartesian Coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Suhteellinen suorakulmainen koordinaatisto:</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Polar Coordinate:</source>
-        <translation type="unfinished"></translation>
+        <translation>Suhteellinen napakoordinaatisto:</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../InputPreferences.js" line="+32"/>
         <source>General</source>
-        <translation>Yleiset</translation>
+        <translation>Yleistä</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -83,12 +83,12 @@
     <message>
         <location line="+5"/>
         <source>Less Than</source>
-        <translation>Vähemmän Kuin</translation>
+        <translation>Vähemmän kuin</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation type="unfinished"></translation>
+        <translation>Ät</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -103,7 +103,7 @@
     <message>
         <location line="+1"/>
         <source>Hash</source>
-        <translation>Hash</translation>
+        <translation>Risuaita</translation>
     </message>
     <message>
         <location line="+12"/>

@@ -19,13 +19,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="prec"
         isConst="false" />
         <arg type="bool" typeName="bool" name="showUnit"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="showLeadingZeroes"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="showTrailingZeroes"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="onlyPreciseResult"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="formatScientific" cppName="formatScientific"
@@ -39,13 +39,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="prec"
         isConst="false" />
         <arg type="bool" typeName="bool" name="showUnit"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="showLeadingZeroes"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="showTrailingZeroes"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="onlyPreciseResult"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="formatDecimal" cppName="formatDecimal"
@@ -59,13 +59,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="prec"
         isConst="false" />
         <arg type="bool" typeName="bool" name="showUnit"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="showLeadingZeroes"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="showTrailingZeroes"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="onlyPreciseResult"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="formatEngineering" cppName="formatEngineering"
@@ -79,13 +79,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="prec"
         isConst="false" />
         <arg type="bool" typeName="bool" name="showUnit"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="showLeadingZeroes"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="showTrailingZeroes"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="onlyPreciseResult"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="formatArchitectural"
@@ -99,13 +99,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="prec"
         isConst="false" />
         <arg type="bool" typeName="bool" name="showUnit"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="showLeadingZeroes"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="showTrailingZeroes"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="onlyPreciseResult"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="formatFractional" cppName="formatFractional"
@@ -119,13 +119,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="prec"
         isConst="false" />
         <arg type="bool" typeName="bool" name="showUnit"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="showLeadingZeroes"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="showTrailingZeroes"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="onlyPreciseResult"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="trimTrailingZeroes" cppName="trimTrailingZeroes"
@@ -147,9 +147,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="prec"
         isConst="false" />
         <arg type="bool" typeName="bool" name="showLeadingZeroes"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="showTrailingZeroes"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="isMetric" cppName="isMetric" specifier="public"
@@ -208,7 +208,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RS::Unit" typeName="RS::Unit" name="unit"
         isConst="false" />
         <arg type="bool" typeName="bool" name="tr"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getLabel" cppName="getLabel" specifier="public"
@@ -219,12 +219,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocument &amp;" typeName="RDocument"
         name="document" isConst="false" />
         <arg type="bool" typeName="bool" name="maxPrecision"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool"
         name="forceSuppressTrailingZeroes" hasDefault="true"
-        default=" false" isConst="false" />
+        default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="onlyPreciseResult"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="doubleToString" cppName="doubleToString"
@@ -236,9 +236,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="prec"
         isConst="false" />
         <arg type="bool" typeName="bool" name="showLeadingZeroes"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="showTrailingZeroes"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant returnType="QString" isPureVirtual="false">
         <arg type="double" typeName="double" name="value"
@@ -246,9 +246,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="prec"
         isConst="false" />
         <arg type="bool" typeName="bool" name="showLeadingZeroes"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="showTrailingZeroes"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="doubleToStringDec" cppName="doubleToStringDec"
@@ -260,9 +260,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="prec"
         isConst="false" />
         <arg type="bool" typeName="bool" name="showLeadingZeroes"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="showTrailingZeroes"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
   </class>

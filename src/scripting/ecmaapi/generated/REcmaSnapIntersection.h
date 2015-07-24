@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSnapIntersection {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSnapIntersection {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

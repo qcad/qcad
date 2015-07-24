@@ -1,88 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./scripting/ecmaapi/adapters" filename="RFontDatabase.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RFONTDATABASE_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RFONTDATABASE_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QFontDatabase&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-  <comment type="block">/** * \scriptable * \ingroup ecma
-  */</comment>
-  <class>class 
-  <name>RFontDatabase</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>QFontDatabase</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor>
-    <name>RFontDatabase</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </constructor>
-  <function>
-    <type>
-      <name>QStringList</name>
-    </type>
-    <name>families</name>
-    <parameter_list>(
-    <param>
-      <decl>
-      <type>
-        <name>
-        <name>QFontDatabase</name>::
-        <name>WritingSystem</name></name>
-      </type>
-      <name>writingSystem</name>=
-      <init>
-        <expr>
-          <name>Any</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>QFontDatabase</name>::
-        <name>families</name></name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <name>writingSystem</name>
-          </expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function></public>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RFontDatabase*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./scripting/ecmaapi/adapters" filename="RFontDatabase.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RFONTDATABASE_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RFONTDATABASE_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFontDatabase&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * \scriptable
+ * \ingroup ecma
+ */</comment>
+<class>class <name>RFontDatabase</name> <super>: <specifier>public</specifier> <name>QFontDatabase</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor><name>RFontDatabase</name><parameter_list>()</parameter_list> <block>{}</block></constructor>
+    <function><type><name>QStringList</name></type> <name>families</name><parameter_list>(<param><decl><type><name><name>QFontDatabase</name>::<name>WritingSystem</name></name></type> <name>writingSystem</name> =<init> <expr><name>Any</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>QFontDatabase</name>::<name>families</name></name><argument_list>(<argument><expr><name>writingSystem</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+</public>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RFontDatabase*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -58,8 +58,9 @@ function usage() {
           + "-config [path]                   Reads and stores settings to QCAD3.ini at the given\n"
           + "                                 location instead of the default location.\n"
           + "-enable-script-debugger          Enables the script debugger.\n"
-          + "                                 NOT recommended as this may cause unexpected \n"
+          + "                                 NOT recommended as this may cause unexpected\n"
           + "                                 behavior when using QCAD.\n"
+          + "-debug-action-order              Print action oder information in menus\n"
           + "-exec [script file] [options]    Executes the given script file directly\n"
           + "                                 after staring QCAD. Options after the script\n"
           + "                                 file are passed on to the script.\n"
@@ -119,6 +120,9 @@ function openFiles(args, createNew) {
             continue;
         }
 
+        if (isNull(args[i])) {
+            continue;
+        }
 
         // all arguments after -exec are script files or script arguments:
         if (args[i] === "-exec") {
@@ -133,39 +137,62 @@ function openFiles(args, createNew) {
             continue;
         }
 
+
         // skip other arguments without parameter:
         if (args[i][0] === "-") {
             continue;
         }
 
         foundFile = true;
-
-        // if the file is already open, activate that appropriate sub window instead
-        // of opening the file again:
-        var document = undefined;
-        var fileName = undefined;
-        var fileInfo = undefined;
-        var argFileInfo = undefined;
         var foundExisting = false;
-        for (var k=0; k<mdiChildren.length; k++) {
-            document = mdiChildren[k].getDocument();
-            fileName = document.getFileName();
-            fileInfo = new QFileInfo(fileName);
-            argFileInfo = new QFileInfo(getAbsolutePathForArg(args[i]));
 
-            if (fileInfo.equals(argFileInfo)) {
-                mdiArea.setActiveSubWindow(mdiChildren[k]);
-                foundExisting = true;
-                break;
+        var arg = args[i];
+        var isLocalFile = true;
+
+        if (isUrl(arg)) {
+            var url = new QUrl(arg);
+            if (url.isLocalFile()) {
+                // arg is now a path:
+                arg = url.toLocalFile();
+            }
+            else {
+                isLocalFile = false;
+            }
+        }
+
+        if (isLocalFile) {
+            // if the file is already open, activate that appropriate sub window instead
+            // of opening the file again:
+            var document = undefined;
+            var fileName = undefined;
+            var fileInfo = undefined;
+            var argFileInfo = undefined;
+            for (var k=0; k<mdiChildren.length; k++) {
+                document = mdiChildren[k].getDocument();
+                fileName = document.getFileName();
+                fileInfo = new QFileInfo(fileName);
+                argFileInfo = new QFileInfo(getAbsolutePathForArg(arg));
+
+                if (fileInfo.absoluteFilePath()===argFileInfo.absoluteFilePath()) {
+                    mdiArea.setActiveSubWindow(mdiChildren[k]);
+                    foundExisting = true;
+                    break;
+                }
             }
         }
 
         // open the file if it is not already open:
         if (!foundExisting) {
-            NewFile.createMdiChild(getAbsolutePathForArg(args[i]), filter);
+            if (isLocalFile) {
+                NewFile.createMdiChild(getAbsolutePathForArg(arg), filter);
+            }
+            else {
+                NewFile.createMdiChild(arg, filter);
+            }
         }
     }
 
+    // create new document if no files were loaded:
     if (!foundFile && createNew===true) {
         var fileNewAction = RGuiAction.getByScriptFile("scripts/File/NewFile/NewFile.js");
         if (!isNull(fileNewAction)) {
@@ -252,26 +279,24 @@ function loadStyleSheets(args) {
  */
 function setUpDragAndDrop(appWin) {
     appWin.dragEnter.connect(function(event) {
-        qDebug("event.mimeData(): ", event.mimeData());
-        if (event.mimeData().hasUrls()) {
-            event.acceptProposedAction();
-        }
+        event.acceptProposedAction();
     });
 
     appWin.drop.connect(function(evt) {
-        var urls = evt.mimeData().urls();
-        var files = [];
-        for (var i = 0; i < urls.length; ++i) {
-            var file = new QUrl(urls[i]).toLocalFile();
-            include("scripts/Block/InsertScriptItem/InsertScriptItem.js");
-            if (InsertScriptItem.isScriptFile(file)) {
-                qWarning("autostart.js:", "main(): cannot open script file:", file);
-                return;
-            }
-            files.push(file);
+        var appWin = RMainWindowQt.getMainWindow();
+        if (!isNull(appWin)) {
+            appWin.activateWindow();
+            appWin.raise();
+            appWin.setFocus(Qt.OtherFocusReason);
         }
 
-        openFiles(files, false);
+        var urls = getUrlsFromMimeData(evt.mimeData());
+        var urlStrings = [];
+        for (var i = 0; i < urls.length; ++i) {
+            urlStrings.push(urls[i].toString());
+        }
+
+        openFiles(urlStrings, false);
     });
 }
 
@@ -393,19 +418,23 @@ function postInitAddOns(addOns, splash) {
     }
 }
 
+function uninitAddOns(addOns) {
+    var addOn;
+    var i;
+
+    for (i=0; i<addOns.length; ++i) {
+        addOn = addOns[i];
+        addOn.uninit();
+    }
+}
+
 /**
  * Loads the add-ons and starts QCAD.
  */
 function main() {
-    qApp.organizationName = "QCAD";
-    qApp.organizationDomain = "QCAD.org";
     if (!isNull(qApp.applicationNameOverride)) {
         qApp.applicationName = qApp.applicationNameOverride;
     }
-    else {
-        qApp.applicationName = "QCAD";
-    }
-    qApp.applicationVersion = RSettings.getVersionString();
 
     var i;
     var filesToOpen = [];
@@ -538,6 +567,7 @@ function main() {
     RPluginLoader.postInitPlugins(RPluginInterface.GotSplashWindow);
 
     // mark config file with current version number:
+    var previousVersion = RSettings.getStringValue("Application/Version", "");
     RSettings.setValue("Application/Version", RSettings.getNumericalVersionString());
 
     // scan for script add-ons (forced for first start, first start after
@@ -578,6 +608,12 @@ function main() {
     appWin.objectName = "MainWindow";
     appWin.windowTitle = qApp.applicationName;
 
+    // save first start information:
+    appWin.setProperty("FirstStart", isFirstStart);
+    // save new version information:
+    appWin.setProperty("NewVersion", newVersion);
+    appWin.setProperty("PreviousVersion", previousVersion);
+
     // save locale
     appWin.setProperty("Locale", RSettings.getLocale());
     
@@ -599,8 +635,6 @@ function main() {
     for (i=0; i<files.length; i++) {
         include(files[i]);
     }
-
-    //RMainWindow* appWin = RMainWindow::getMainWindow();
 
     RPluginLoader.postInitPlugins(RPluginInterface.AddOnsInitialized);
 
@@ -626,6 +660,8 @@ function main() {
         appWin.readSettings();
     }
 
+    RPluginLoader.postInitPlugins(RPluginInterface.GotMainWindowBeforeShow);
+
     if (!QCoreApplication.arguments().contains("-no-show")) {
         appWin.show();
     }
@@ -643,16 +679,20 @@ function main() {
     if (isFirstStart) {
         var propertyEditorDock = appWin.findChild("PropertyEditorDock");
         if (!isNull(propertyEditorDock)) {
-            propertyEditorDock.floating = true;
-            propertyEditorDock.move(appWin.x + appWin.width + 20, appWin.y);
-            propertyEditorDock.resize(300, appWin.height/3*2);
+            if (propertyEditorDock["Initialized"]!==true) {
+                propertyEditorDock.floating = true;
+                propertyEditorDock.move(appWin.x + appWin.width + 20, appWin.y);
+                propertyEditorDock.resize(300, appWin.height/3*2);
+            }
         }
 
         var libraryBrowserDock = appWin.findChild("LibraryBrowserDock");
         if (!isNull(libraryBrowserDock)) {
-            libraryBrowserDock.floating = true;
-            libraryBrowserDock.move(appWin.x + appWin.width + 20, appWin.y + appWin.height/3*2+20);
-            libraryBrowserDock.resize(300, appWin.height/3-20);
+            if (libraryBrowserDock["Initialized"]!==true) {
+                libraryBrowserDock.floating = true;
+                libraryBrowserDock.move(appWin.x + appWin.width + 20, appWin.y + appWin.height/3*2+20);
+                libraryBrowserDock.resize(300, appWin.height/3-20);
+            }
         }
     }
 
@@ -671,21 +711,26 @@ function main() {
 
     RPluginLoader.postInitPlugins(RPluginInterface.LoadedFiles);
 
+
     // execute scripts given on command line:
     execScripts(args);
 
     RPluginLoader.postInitPlugins(RPluginInterface.ScriptsExecuted);
 
-    var statusBar = appWin.statusBar();
-    var action = RGuiAction.getByScriptFile("scripts/View/ToggleStatusBar/ToggleStatusBar.js");
-    action.setChecked(statusBar.visible);
+    //var statusBar = appWin.statusBar();
+    //var action = RGuiAction.getByScriptFile("scripts/View/ToggleStatusBar/ToggleStatusBar.js");
+    //action.setChecked(statusBar.visible);
 
     RPluginLoader.postInitPlugins(RPluginInterface.AllDone);
+
+    appWin.setFocus();
 
     if (!RSettings.hasQuitFlag()) {
         // start and enter the main application loop:
         QCoreApplication.exec();
     }
+
+    uninitAddOns(addOns);
 
     // don't use RSettings below this point
 

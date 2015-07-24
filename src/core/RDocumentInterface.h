@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -195,7 +195,8 @@ public:
 
     void setCursor(const QCursor& cursor, bool global = true);
 
-    RDocumentInterface::IoErrorCode importUrl(const QUrl& url, bool notify = true);
+    RDocumentInterface::IoErrorCode importUrl(
+        const QUrl& url, const QString& nameFilter = "", bool notify = true);
     RDocumentInterface::IoErrorCode importFile(
         const QString& fileName, const QString& nameFilter = "", bool notify = true);
 
@@ -205,6 +206,7 @@ public:
     void undo();
     void redo();
     void flushTransactions();
+    void flushRedo();
 
     void setSnap(RSnap* snap);
     RSnap* getSnap();
@@ -212,15 +214,17 @@ public:
     void setSnapRestriction(RSnapRestriction* snapRestriction);
     RSnapRestriction* getSnapRestriction();
 
-    RVector snap(RMouseEvent& event);
+    RVector snap(RMouseEvent& event, bool preview = false);
 
     REntity::Id getClosestEntity(RMouseEvent& event);
-    REntity::Id getClosestEntity(const RVector& position, double range, double strictRange = RMAXDOUBLE, bool includeLockedLayers = true);
+    REntity::Id getClosestEntity(const RVector& position,
+        double range, double strictRange = RMAXDOUBLE,
+        bool includeLockedLayers = true);
     void highlightEntity(REntity::Id entityId);
     void highlightReferencePoint(const RVector& position);
     void selectEntities(const QSet<REntity::Id>& entityIds, bool add = false);
     void selectEntity(REntity::Id entityId, bool add = false);
-    void deselectEntities(const QSet<REntity::Id>& entityIds);
+    bool deselectEntities(const QSet<REntity::Id>& entityIds);
     void deselectEntity(REntity::Id entityId);
     void selectBoxXY(const RBox& box, bool add = false);
     void selectAll();
@@ -298,6 +302,7 @@ public:
     void setLastKnownViewWithFocus(RGraphicsView* view);
 
     static RDocumentInterface& getClipboard();
+    static void deleteClipboard();
     bool isClipboard() {
         return this==clipboard;
     }
@@ -307,6 +312,8 @@ public:
     void setNotifyListeners(bool on) {
         notifyListeners = on;
     }
+
+    QVariant eval(const QString& ext, const QString& script);
 
 private:
     void handleClickEvent(RAction& action, RMouseEvent& event);
@@ -346,6 +353,9 @@ private:
 
     bool keepPreviewOnce;
     bool mouseTrackingEnabled;
+
+    // used to use mouse button press (not release) to define points
+    //RMouseEvent* pressEvent;
 };
 
 Q_DECLARE_METATYPE(RDocumentInterface::IoErrorCode)

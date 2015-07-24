@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -33,6 +33,7 @@ class RDocument;
  * Defines the geometry and appearance of a block reference entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup core
  */
 class QCADCORE_EXPORT RBlockReferenceData: public REntityData {
@@ -46,8 +47,12 @@ protected:
 public:
     RBlockReferenceData();
     RBlockReferenceData(RBlock::Id referencedBlockId,
-            const RVector& position, const RVector& scaleFactors, double angle);
+            const RVector& position, const RVector& scaleFactors,
+            double angle,
+            int columnCount=1, int rowCount=1,
+            double columnSpacing=0, double rowSpacing=0);
 
+    virtual QList<RBox> getBoundingBoxes(bool ignoreEmpty=false) const;
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
     virtual QList<RVector> getInternalReferencePoints(
@@ -71,9 +76,7 @@ public:
     virtual bool scale(const RVector& scaleFactors,
                        const RVector& center = RDEFAULT_RVECTOR);
 
-    void setReferencedBlockId(RBlock::Id blockId) {
-        referencedBlockId = blockId;
-    }
+    void setReferencedBlockId(RBlock::Id blockId);
 
     void groundReferencedBlockId() const {
         referencedBlockId = RBlock::INVALID_ID;
@@ -89,34 +92,44 @@ public:
     RVector getPosition() const {
         return position;
     }
-
-    void setPosition(const RVector& p) {
-        position = p;
-    }
+    void setPosition(const RVector& p);
 
     RVector getScaleFactors() const {
         return scaleFactors;
     }
-
-    void setScaleFactors(const RVector& sf) {
-        scaleFactors = sf;
-        if (fabs(scaleFactors.x) < RS::PointTolerance) {
-            scaleFactors.x = 1.0;
-        }
-        if (fabs(scaleFactors.y) < RS::PointTolerance) {
-            scaleFactors.y = 1.0;
-        }
-        if (fabs(scaleFactors.z) < RS::PointTolerance) {
-            scaleFactors.z = 1.0;
-        }
-    }
+    void setScaleFactors(const RVector& sf);
 
     double getRotation() const {
         return rotation;
     }
+    void setRotation(double r);
 
-    void setRotation(double r) {
-        rotation = r;
+    int getColumnCount() const {
+        return columnCount;
+    }
+    void setColumnCount(int c) {
+        columnCount = c;
+    }
+
+    int getRowCount() const {
+        return rowCount;
+    }
+    void setRowCount(int c) {
+        rowCount = c;
+    }
+
+    double getColumnSpacing() const {
+        return columnSpacing;
+    }
+    void setColumnSpacing(double s) {
+        columnSpacing = s;
+    }
+
+    double getRowSpacing() const {
+        return rowSpacing;
+    }
+    void setRowSpacing(double s) {
+        rowSpacing = s;
     }
 
     virtual void update() const;
@@ -124,17 +137,25 @@ public:
 
     QSharedPointer<REntity> queryEntity(REntity::Id entityId) const;
     bool applyTransformationTo(REntity& entity) const;
+    RVector getColumnRowOffset(int col, int row) const;
+    void applyColumnRowOffsetTo(REntity& entity, int col, int row) const;
     RVector mapToBlock(const RVector& v) const;
+
 
 private:
     mutable RBlock::Id referencedBlockId;
     RVector position;
     RVector scaleFactors;
     double rotation;
-    mutable RBox boundingBox;
+    int columnCount;
+    int rowCount;
+    double columnSpacing;
+    double rowSpacing;
+    mutable QList<RBox> boundingBoxes;
     mutable QMap<REntity::Id, QSharedPointer<REntity> > cache;
 };
 
+Q_DECLARE_METATYPE(RBlockReferenceData)
 Q_DECLARE_METATYPE(RBlockReferenceData*)
 Q_DECLARE_METATYPE(const RBlockReferenceData*)
 Q_DECLARE_METATYPE(QSharedPointer<RBlockReferenceData>)

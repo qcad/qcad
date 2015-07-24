@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -155,6 +155,7 @@ Rotate2.prototype.showDialog = function() {
 
     if (!dialog.exec()) {
         dialog.destroy();
+        EAction.activateMainWindow();
         return false;
     }
 
@@ -176,6 +177,7 @@ Rotate2.prototype.showDialog = function() {
     WidgetFactory.saveState(dialog);
 
     dialog.destroy();
+    EAction.activateMainWindow();
     return true;
 };
 

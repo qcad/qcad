@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -27,7 +27,6 @@
 RPasteOperation::RPasteOperation(RDocument& sourceDocument)
     : sourceDocument(sourceDocument),
     scale(1.0),
-    rotation(0.0),
     flipHorizontal(false),
     flipVertical(false),
     toCurrentLayer(false),
@@ -39,20 +38,33 @@ RTransaction RPasteOperation::apply(RDocument& document, bool preview) const {
     RTransaction transaction(document.getStorage(), text, undoable);
     transaction.setGroup(transactionGroup);
 
-    copy(
-        sourceDocument, document,
-        offset, scale, rotation, 
-        flipHorizontal, flipVertical,
-        toCurrentLayer, /*toCurrentBlock=*/ true,
-        overwriteLayers, overwriteBlocks,
-        blockName,
-        layerName,
-        transaction,
-        false, false,
-        false,           // toModelSpace (paste to current block, not model space)
-        preview,
-        attributes
-    );
+    int iMax = offsets.length();
+    if (preview && iMax>10) {
+        iMax = 10;
+    }
+
+    double rotation = 0.0;
+    if (rotations.length()==1) {
+        // same rotation for all pasted instances:
+        rotation = rotations[0];
+    }
+
+    for (int i=0; i<iMax; i++) {
+        copy(
+            sourceDocument, document,
+            offsets[i], scale, i < rotations.length() ? rotations[i] : rotation,
+            flipHorizontal, flipVertical,
+            toCurrentLayer, /*toCurrentBlock=*/ true,
+            overwriteLayers && i==0, overwriteBlocks && i==0,
+            blockName,
+            layerName,
+            transaction,
+            false, false,
+            false,           // toModelSpace (paste to current block, not model space)
+            preview,
+            attributes
+        );
+    }
 
     transaction.end();
 
@@ -69,7 +81,7 @@ RPolyline RPasteOperation::getBoundary(double unitFactor) {
         polyline.flipVertical();
     }
     polyline.scale(scale * unitFactor);
-    polyline.rotate(rotation);
-    polyline.move(offset);
+    polyline.rotate(getRotation());
+    polyline.move(getOffset());
     return polyline;
 }

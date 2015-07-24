@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaGraphicsView {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaGraphicsView {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -128,6 +131,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         handlePinchGestureEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        giveFocus
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasFocus
@@ -308,6 +314,15 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isPathVisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setAntialiasing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAntialiasing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDevicePixelRatio
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

@@ -21,7 +21,7 @@
     <message>
         <location filename="../HatchInit.js" line="+2"/>
         <source>&amp;Hatch</source>
-        <translation>Kuviotäyttö</translation>
+        <translation>&amp;Kuviotäyttö</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -69,7 +69,7 @@
     <message>
         <location line="+7"/>
         <source>Scale:</source>
-        <translation>Skaala:</translation>
+        <translation>Mittakaava:</translation>
     </message>
 </context>
 </TS>

@@ -19,7 +19,7 @@
         <translation>Končano</translation>
     </message>
     <message>
-        <location line="+73"/>
+        <location line="+79"/>
         <source>Distance:</source>
         <translation>Razdalja:</translation>
     </message>

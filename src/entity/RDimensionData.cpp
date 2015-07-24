@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -32,6 +32,7 @@ RDimensionData::RDimensionData(RDocument* document) :
     defaultAngle(RNANDOUBLE),
     textAngle(0.0),
     linearFactor(1.0),
+    dimScale(1.0),
     dirty(true),
     dimLineLength(0.0),
     autoTextPos(true) {
@@ -82,6 +83,7 @@ RDimensionData::RDimensionData(const RVector& definitionPoint,
       defaultAngle(RNANDOUBLE),
       textAngle(angle),
       linearFactor(1.0),
+      dimScale(1.0),
       dirty(true),
       dimLineLength(0.0),
       autoTextPos(true) {
@@ -139,40 +141,29 @@ QList<RVector> RDimensionData::getReferencePoints(
 bool RDimensionData::moveReferencePoint(const RVector& referencePoint,
         const RVector& targetPoint) {
 
-    bool ret = false;
-
-//    qDebug() << "RDimensionData::moveReferencePoint";
-//    qDebug() << "    textPosition: " << textPositionCenter;
-//    qDebug() << "    referencePoint: " << referencePoint;
-
     if (referencePoint.equalsFuzzy(definitionPoint)) {
         definitionPoint = targetPoint;
         autoTextPos = true;
-        ret = true;
-    }
-    else {
-        if (textPositionSide.isValid()) {
-            if (referencePoint.equalsFuzzy(textPositionSide)) {
-                textPositionCenter = targetPoint;
-                textPositionSide = RVector::invalid;
-                autoTextPos = false;
-                ret = true;
-            }
-        }
-        else {
-            if (referencePoint.equalsFuzzy(textPositionCenter)) {
-                textPositionCenter = targetPoint;
-                autoTextPos = false;
-                ret = true;
-            }
-        }
-    }
-
-    if (ret) {
         update();
+        return true;
+    }
+    if (textPositionSide.isValid()) {
+        if (referencePoint.equalsFuzzy(textPositionSide)) {
+            textPositionCenter = targetPoint;
+            textPositionSide = RVector::invalid;
+            autoTextPos = false;
+            update();
+            return true;
+        }
+    }
+    if (referencePoint.equalsFuzzy(textPositionCenter)) {
+        textPositionCenter = targetPoint;
+        autoTextPos = false;
+        update();
+        return true;
     }
 
-    return ret;
+    return false;
 }
 
 bool RDimensionData::move(const RVector& offset) {
@@ -216,14 +207,14 @@ bool RDimensionData::mirror(const RLine& axis) {
     return true;
 }
 
-double RDimensionData::getDimscale() const {
-    double dimscale = 1.0;
+double RDimensionData::getDimScale() const {
+    double ret = dimScale;
 
-    if (document!=NULL) {
-        dimscale = document->getKnownVariable(RS::DIMSCALE, dimscale).toDouble();
+    if (document!=NULL && RMath::fuzzyCompare(ret, 1.0)) {
+        ret = document->getKnownVariable(RS::DIMSCALE, 1.0).toDouble();
     }
 
-    return dimscale;
+    return ret;
 }
 
 double RDimensionData::getDimexo() const {
@@ -232,8 +223,11 @@ double RDimensionData::getDimexo() const {
     if (document!=NULL) {
         dimexo = document->getKnownVariable(RS::DIMEXO, dimexo).toDouble();
     }
+    else {
+        qWarning() << "RDimensionData::getDimexo: no document";
+    }
 
-    return dimexo * getDimscale();
+    return dimexo * getDimScale();
 }
 
 double RDimensionData::getDimexe() const {
@@ -242,8 +236,11 @@ double RDimensionData::getDimexe() const {
     if (document!=NULL) {
         dimexe = document->getKnownVariable(RS::DIMEXE, dimexe).toDouble();
     }
+    else {
+        qWarning() << "RDimensionData::getDimexe: no document";
+    }
 
-   return dimexe * getDimscale();
+    return dimexe * getDimScale();
 }
 
 double RDimensionData::getDimasz() const {
@@ -252,8 +249,11 @@ double RDimensionData::getDimasz() const {
     if (document!=NULL) {
         dimasz = document->getKnownVariable(RS::DIMASZ, dimasz).toDouble();
     }
+    else {
+        qWarning() << "RDimensionData::getDimasz: no document";
+    }
 
-    return dimasz * getDimscale();
+    return dimasz * getDimScale();
 }
 
 double RDimensionData::getDimgap() const {
@@ -262,8 +262,11 @@ double RDimensionData::getDimgap() const {
     if (document!=NULL) {
         dimgap = document->getKnownVariable(RS::DIMGAP, dimgap).toDouble();
     }
+    else {
+        qWarning() << "RDimensionData::getDimgap: no document";
+    }
 
-    return dimgap * getDimscale();
+    return dimgap * getDimScale();
 }
 
 double RDimensionData::getDimtxt() const {
@@ -272,8 +275,11 @@ double RDimensionData::getDimtxt() const {
     if (document!=NULL) {
         dimtxt = document->getKnownVariable(RS::DIMTXT, dimtxt).toDouble();
     }
+    else {
+        qWarning() << "RDimensionData::getDimtxt: no document";
+    }
 
-    return dimtxt * getDimscale();
+    return dimtxt * getDimScale();
 }
 
 bool RDimensionData::useArchTick() const {
@@ -282,6 +288,9 @@ bool RDimensionData::useArchTick() const {
     if (document!=NULL) {
         ret = document->getKnownVariable(RS::DIMBLK, "").toString().toLower()=="archtick" ||
               document->getKnownVariable(RS::DIMTSZ, 0.0).toDouble() > RS::PointTolerance;
+    }
+    else {
+        qWarning() << "RDimensionData::useArchTick: no document";
     }
 
     return ret;
@@ -376,11 +385,11 @@ QList<QSharedPointer<RShape> > RDimensionData::getArrow(
     const RVector& position, double direction) const {
 
     QList<QSharedPointer<RShape> > ret;
-    double arrowSize = getDimasz();
+    double dimasz = getDimasz();
 
     // architecture tick:
     if (useArchTick()) {
-        RVector p1(arrowSize/2, arrowSize/2);
+        RVector p1(dimasz/2, dimasz/2);
 
         RLine line(p1, -p1);
         line.rotate(direction, RVector(0,0));
@@ -390,7 +399,7 @@ QList<QSharedPointer<RShape> > RDimensionData::getArrow(
 
     // standard arrow:
     else {
-        RTriangle arrow = RTriangle::createArrow(position, direction, arrowSize);
+        RTriangle arrow = RTriangle::createArrow(position, direction, dimasz);
         ret.append(QSharedPointer<RTriangle>(new RTriangle(arrow)));
     }
 

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -197,6 +197,7 @@ function PropertyEditorImpl(basePath) {
     this.widget.findChild("LabelLinetypeScale").text = RSettings.translate("REntity", "Linetype Scale") + this.colon;
     this.widget.findChild("LabelDrawOrder").text = RSettings.translate("REntity", "Draw Order") + this.colon;
     this.widget.findChild("LabelHandle").text = RSettings.translate("REntity", "Handle") + this.colon;
+    this.widget.findChild("LabelProtected").text = RSettings.translate("REntity", "Protected") + this.colon;
 
     var selectionCombo = this.widget.findChild("Selection");
     selectionCombo["activated(int)"].connect(this, "filterChanged");
@@ -339,26 +340,36 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
     var drawOrderEdit = this.widget.findChild("DrawOrder");
     var handleEdit = this.widget.findChild("Handle");
     this.makeReadOnly(handleEdit);
+    var protectedLabel = this.widget.findChild("LabelProtected");
+    var protectedCombo = this.widget.findChild("Protected");
+    this.makeReadOnly(protectedCombo);
+
+    // comment out to to inspect protected property (debugging):
+    protectedLabel.visible = false;
+    protectedCombo.visible = false;
 
     var scrollArea = this.widget.findChild("ScrollArea");
     var layout = scrollArea.layout();
 
     if (!onlyChanges) {
         selectionCombo.clear();
+        // TODO: add 'no selection' item to choose current pen:
+        //selectionCombo.addItem(qsTr("No Selection"), -2);
     }
 
     var groups = this.getGroupTitles();
 
-    // no properties to show:
-    if (groups.length===0) {
-        layerCombo.clear();
+    // no properties to show or 'No Selection' chosen:
+    if (groups.length===0 /*|| selectionCombo.currentIndex===0*/) {
         selectionCombo.insertItem(0, qsTr("No Selection"));
+        layerCombo.clear();
         colorCombo.currentIndex = 0;
         lineweightCombo.currentIndex = 0;
         linetypeCombo.currentIndex = 0;
         linetypeScaleEdit.text = "";
         drawOrderEdit.text = "";
         handleEdit.text = "";
+        protectedCombo.clear();
         generalGroup.enabled = false;
         this.widget.updatesEnabled = true;
         return;
@@ -370,7 +381,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
 
     if (!onlyChanges) {
         // create geometry group box with grid layout:
-        this.geometryGroup = new QGroupBox(qsTr("Geometry"), this.widget);
+        this.geometryGroup = new QGroupBox(qsTr("Specific Properties"), this.widget);
         layout.insertWidget(2, this.geometryGroup);
 
         // grid layout with three columns and N rows for N property controls:
@@ -428,6 +439,9 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
     }
 
     var firstEntry = true;
+    var gotLayerProperty = false;
+    var gotLinetypeScaleProperty = false;
+    var gotDrawOrderProperty = false;
 
     // for all property groups:
     for (var gi=0; gi<groups.length; ++gi) {
@@ -478,6 +492,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
             // layer:
             else if (propertyTypeId.getId()===REntity.PropertyLayer.getId()) {
                 this.initControls(propertyTypeId, onlyChanges, layerCombo);
+                gotLayerProperty = true;
             }
 
             // color:
@@ -498,16 +513,23 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
             // linetype scale:
             else if (propertyTypeId.getId()===REntity.PropertyLinetypeScale.getId()) {
                 this.initControls(propertyTypeId, onlyChanges, linetypeScaleEdit);
+                gotLinetypeScaleProperty = true;
             }
 
             // draw order:
             else if (propertyTypeId.getId()===REntity.PropertyDrawOrder.getId()) {
                 this.initControls(propertyTypeId, onlyChanges, drawOrderEdit);
+                gotDrawOrderProperty = true;
             }
 
             // handle:
             else if (propertyTypeId.getId()===RObject.PropertyHandle.getId()) {
                 this.initControls(propertyTypeId, onlyChanges, handleEdit);
+            }
+
+            // protected:
+            else if (propertyTypeId.getId()===RObject.PropertyProtected.getId()) {
+                this.initControls(propertyTypeId, onlyChanges, protectedCombo);
             }
 
             // other properties:
@@ -631,6 +653,15 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
         }
     }
 
+    // enable / disable used / unused fixed controls
+    this.widget.findChild("LabelLayer").visible = gotLayerProperty;
+    this.widget.findChild("Layer").visible = gotLayerProperty;
+    this.widget.findChild("MoveToNewLayer").visible = gotLayerProperty;
+    this.widget.findChild("LabelLinetypeScale").visible = gotLinetypeScaleProperty;
+    this.widget.findChild("LinetypeScale").visible = gotLinetypeScaleProperty;
+    this.widget.findChild("LabelDrawOrder").visible = gotDrawOrderProperty;
+    this.widget.findChild("DrawOrder").visible = gotDrawOrderProperty;
+
     // update selection combo box at the top for entity filters:
     if (!onlyChanges) {
         var types = this.getTypes();
@@ -644,11 +675,13 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
             selectionCombo.addItem(entityTypeToString(type) + " (" + typeCount + ")", type);
         }
         if (types.length!==1) {
+            // TODO: add at 0 if 'no selection' item present at 0:
             selectionCombo.insertItem(0, qsTr("All") + " (" + totalCount + ")", RS.EntityAllManual);
         }
 
         var index = selectionCombo.findData(this.entityTypeFilter);
         if (index===-1) {
+            // TODO: change to 1 if 'no selection' item present at 0:
             selectionCombo.currentIndex = 0;
         }
         else {
@@ -954,12 +987,15 @@ PropertyEditorImpl.prototype.initBooleanControls = function(objectName, property
     if (isNull(control)) {
         control = new QComboBox(this.geometryGroup);
         control.objectName = objectName;
-        control.addItem(qsTr("Yes"), true);
-        control.addItem(qsTr("No"), false);
         control.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
         control.focusPolicy = Qt.ClickFocus;
         control.minimumWidth = 50;
         control.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Preferred);
+    }
+
+    if (control.count<2) {
+        control.addItem(qsTr("Yes"), true);
+        control.addItem(qsTr("No"), false);
     }
 
     if (attributes.isMixed()) {
@@ -1242,6 +1278,7 @@ PropertyEditorImpl.prototype.addCustomProperty = function() {
 
     if (!dialog.exec()) {
         dialog.destroy();
+        EAction.activateMainWindow();
         return;
     }
 
@@ -1253,6 +1290,7 @@ PropertyEditorImpl.prototype.addCustomProperty = function() {
     this.onlyChangesOverride = false;
 
     dialog.destroy();
+    EAction.activateMainWindow();
 };
 
 
@@ -1283,8 +1321,8 @@ PropertyEditor.prototype.beginEvent = function() {
     if (!QCoreApplication.arguments().contains("-no-show")) {
         dock.visible = !dock.visible;
     }
-    var linetypeCombo = this.widget.findChild("Linetype");
-    linetypeCombo.init();
+    var linetypeCombo = dock.findChild("Linetype");
+    linetypeCombo.init(EAction.getDocument());
 
 };
 

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -514,11 +514,10 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
 
     painterPaths.clear();
 
-    getBoundaryPath();
-
     // for solids, return boundary path, which can be filled:
     // in draft mode, return boundary path to be shown without fill:
     if (isSolid() || draft) {
+        getBoundaryPath();
         if (draft) {
             boundaryPath.setPen(QPen(Qt::SolidLine));
             boundaryPath.setBrush(QBrush(Qt::NoBrush));
@@ -558,6 +557,8 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
         return painterPaths;
     }
 
+    getBoundaryPath();
+
     RPattern pattern = *p;
 
     //qDebug() << "pattern: " << pattern;
@@ -579,6 +580,7 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
 
     QTime timer;
     timer.start();
+    int timeOut = -1;
 
     QList<RPatternLine> patternLines = pattern.getPatternLines();
     for (int i=0; i<patternLines.length(); i++) {
@@ -752,8 +754,10 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
                 }
             }
 
-            if (timer.elapsed()>2000) {
-                int timeOut = RSettings::getIntValue("GraphicsView/MaxHatchTime", 5000);
+            if (timer.elapsed()>500) {
+                if (timeOut==-1) {
+                    timeOut = RSettings::getIntValue("GraphicsView/MaxHatchTime", 2000);
+                }
                 if (timer.elapsed()>timeOut) {
                     qWarning() << "RHatchData::getPainterPaths: hatch pattern too dense. hatch pattern generation aborted (timeout set to " << timeOut << ")...";
                     painterPaths.clear();

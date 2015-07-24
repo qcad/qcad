@@ -22,19 +22,19 @@
     <message>
         <location filename="../NewFile.js" line="+114"/>
         <source>Opening drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>オープンされた図面:</translation>
     </message>
     <message>
         <source>Loading...</source>
         <translation type="vanished">読込中...</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+23"/>
         <source>Import Error</source>
         <translation>インポートエラー</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Cannot open file</source>
         <translation>ファイルを開けません</translation>
     </message>
@@ -54,9 +54,9 @@
         <translation>ファイルは空です。</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>Drawing loaded successfully:</source>
-        <translation type="unfinished"></translation>
+        <translation>ロード済み:</translation>
     </message>
     <message>
         <source>Opened drawing:</source>
@@ -68,7 +68,7 @@
         <translation>フォーマット:</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+115"/>
         <source>Untitled %1</source>
         <translation>無題%1</translation>
     </message>
@@ -78,7 +78,7 @@
         <translation>読み込み専用</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+54"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>このドキュメントへの変更を保存しますか？&lt;br&gt;&apos;%1&apos;</translation>
     </message>

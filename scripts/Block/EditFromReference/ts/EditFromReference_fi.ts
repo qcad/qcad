@@ -11,12 +11,12 @@
     <message>
         <location filename="../EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaa lohkoa viitteestä</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit block based on chosen block reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaa lohkoa, joka perustuu valittuun lohkoviitteeseen</translation>
     </message>
 </context>
 </TS>

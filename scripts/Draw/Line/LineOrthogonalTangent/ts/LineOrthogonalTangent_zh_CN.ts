@@ -21,12 +21,12 @@
     <message>
         <location filename="../LineOrthogonalTangentInit.js" line="+2"/>
         <source>Orthogonal / Tange&amp;nt</source>
-        <translation type="unfinished"></translation>
+        <translation>垂直/相切(&amp;n)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>绘制与直线垂直并与圆、弧或椭圆相切的直线</translation>
     </message>
 </context>
 </TS>

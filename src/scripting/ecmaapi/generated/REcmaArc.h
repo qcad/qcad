@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaArc {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaArc {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -228,6 +231,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         approximateWithLines
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        approximateWithLinesTan
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

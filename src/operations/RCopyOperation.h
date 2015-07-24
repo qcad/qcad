@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -44,7 +44,12 @@ public:
     virtual RTransaction apply(RDocument& document, bool preview = false) const;
     virtual void preview(RDocument& document, RExporter& exporter) const;
 
+    void setClear(bool on) {
+        clear = on;
+    }
+
 private:
+    bool clear;
     RVector offset;
     RDocument& src;
 };

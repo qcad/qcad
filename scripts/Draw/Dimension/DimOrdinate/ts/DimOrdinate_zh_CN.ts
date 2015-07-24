@@ -21,7 +21,7 @@
     <message>
         <location line="+5"/>
         <source>Draw ordinate dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>绘制纵坐标标注</translation>
     </message>
 </context>
 </TS>

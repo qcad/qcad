@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSnapEntityBase {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSnapEntityBase {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

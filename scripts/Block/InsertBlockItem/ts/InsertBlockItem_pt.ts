@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>InsertBlockItem</name>
     <message>
@@ -24,7 +24,7 @@ _Rotação</translatorcomment>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Girar entidades colado&lt;br&gt;por este ângulo</translation>
+        <translation>Rotacione as entidades coladas &lt;br&gt;por este ângulo</translation>
     </message>
     <message>
         <location line="+90"/>
@@ -33,25 +33,25 @@ _Rotação</translatorcomment>
 --file: pt.po--
 Ampliar
 Escala da Superfície</translatorcomment>
-        <translation>Ampliar:</translation>
+        <translation>Escalone:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Escala entidades colado&lt;br&gt;por este factor</translation>
+        <translation>Escalone as entidades coladas&lt;br&gt;por este fator</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Inverter entidades colada&lt;br&gt;horizontalmente</translation>
+        <translation>Inverta as entidades coladas&lt;br&gt;horizontalmente</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Inverter entidades colada&lt;br&gt;verticalmente</translation>
+        <translation>Inverta as entidades coladas&lt;br&gt;verticalmente</translation>
     </message>
     <message>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
@@ -70,30 +70,35 @@ Utilize a camada atual</translatorcomment>
         <location line="+14"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Substituir camadas&lt;br&gt;existentes no desenho com&lt;br&gt;camadas da área de transferência</translation>
+        <translation>Substitua camadas existentes&lt;br&gt;no desenho por&lt;br&gt;camadas da área de transferência</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Substituir camadas</translation>
+        <translation>Substitua camadas</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Sobrescrever blocos existentes&lt;br&gt;no desenho com blocos&lt;br&gt;da área de transferência</translation>
+        <translation>Substitua Blocos existentes&lt;br&gt;no desenho por Blocos&lt;br&gt;da área de transferência</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Sobrescrever blocos</translation>
+        <translation>Substitua Blocos</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="+88"/>
+        <location filename="../InsertBlockItem.js" line="+82"/>
+        <source>Cannot import file from URL: </source>
+        <translation>Não consigo importar arquivo da URL: </translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation>Ajustado nome do bloco inválido &apos;%1&apos;</translation>
+        <translation>Ajustado o nome do Bloco inválido para &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+55"/>
@@ -106,7 +111,7 @@ Utilize a camada atual</translatorcomment>
         <translatorcomment>--exact match--
 --file: Insert_pt.ts--
 &amp;Insira bloco</translatorcomment>
-        <translation>&amp;Insira bloco</translation>
+        <translation>&amp;Insira um Bloco</translation>
     </message>
 </context>
 </TS>

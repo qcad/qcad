@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -38,7 +38,9 @@ class RPolyline;
 class RSpline;
 class RTriangle;
 
+#ifndef RDEFAULT_TOLERANCE_1E_MIN4
 #define RDEFAULT_TOLERANCE_1E_MIN4 1.0e-4
+#endif
 
 /**
  * Interface for geometrical shape classes.
@@ -89,7 +91,7 @@ public:
      *
      * \param point the given point
      *
-     * \param limited If false, the shape is treaded as an unlimited
+     * \param limited If false, the shape is treated as an unlimited
      *      shape that extends in a logical way. For example an
      *      unlimited line for a line, full circle for an arc or
      *      a plane for a triangle.
@@ -130,8 +132,9 @@ public:
     /**
      * \return Angle on the entity at the given distance from the start point.
      */
-    virtual double getAngleAt(double distance) const {
+    virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const {
         Q_UNUSED(distance)
+        Q_UNUSED(from)
         return RNANDOUBLE;
     }
 

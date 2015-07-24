@@ -131,6 +131,10 @@
                 qScriptValueFromValue(&engine, RTraceEntity::PropertyHandle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RTraceEntity::PropertyProtected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RTraceEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -157,6 +161,10 @@
             
             ctor.setProperty("PropertyColor",
                 qScriptValueFromValue(&engine, RTraceEntity::PropertyColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RTraceEntity::PropertyDisplayedColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyDrawOrder",
@@ -297,7 +305,7 @@
                         return REcmaHelper::throwError("RTraceEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RTraceData*
                     ap1 =
                     qscriptvalue_cast<
@@ -307,11 +315,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RTraceEntity: Argument 1 is not of type RTraceData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RTraceEntity: Argument 1 is not of type RTraceData.",
                                context);                    
                     }
-                    RTraceData& a1 = *ap1;
+                    RTraceData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -392,7 +402,7 @@
                         return REcmaHelper::throwError("RTraceEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RTraceData*
                     ap1 =
                     qscriptvalue_cast<
@@ -402,11 +412,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RTraceEntity: Argument 1 is not of type RTraceData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RTraceEntity: Argument 1 is not of type RTraceData.",
                                context);                    
                     }
-                    RTraceData& a1 = *ap1;
+                    RTraceData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id

@@ -4,7 +4,7 @@
 <context>
     <name>SvgImport</name>
     <message>
-        <location filename="../SvgImport.js" line="+61"/>
+        <location filename="../SvgImport.js" line="+59"/>
         <source>Import SVG</source>
         <translation>SVG Import</translation>
     </message>

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -22,6 +22,7 @@
 
 RPropertyTypeId RCircleEntity::PropertyCustom;
 RPropertyTypeId RCircleEntity::PropertyHandle;
+RPropertyTypeId RCircleEntity::PropertyProtected;
 RPropertyTypeId RCircleEntity::PropertyType;
 RPropertyTypeId RCircleEntity::PropertyBlock;
 RPropertyTypeId RCircleEntity::PropertyLayer;
@@ -29,6 +30,7 @@ RPropertyTypeId RCircleEntity::PropertyLinetype;
 RPropertyTypeId RCircleEntity::PropertyLinetypeScale;
 RPropertyTypeId RCircleEntity::PropertyLineweight;
 RPropertyTypeId RCircleEntity::PropertyColor;
+RPropertyTypeId RCircleEntity::PropertyDisplayedColor;
 RPropertyTypeId RCircleEntity::PropertyDrawOrder;
 
 RPropertyTypeId RCircleEntity::PropertyCenterX;
@@ -45,14 +47,23 @@ RPropertyTypeId RCircleEntity::PropertyArea;
 RCircleEntity::RCircleEntity(RDocument* document, const RCircleData& data,
         RObject::Id objectId) :
     REntity(document, objectId), data(document, data) {
+
+    RDebug::incCounter("RCircleEntity");
+}
+
+RCircleEntity::RCircleEntity(const RCircleEntity& other) : REntity(other) {
+    RDebug::incCounter("RCircleEntity");
+    data = other.data;
 }
 
 RCircleEntity::~RCircleEntity() {
+    RDebug::decCounter("RCircleEntity");
 }
 
 void RCircleEntity::init() {
     RCircleEntity::PropertyCustom.generateId(typeid(RCircleEntity), RObject::PropertyCustom);
     RCircleEntity::PropertyHandle.generateId(typeid(RCircleEntity), RObject::PropertyHandle);
+    RCircleEntity::PropertyProtected.generateId(typeid(RCircleEntity), RObject::PropertyProtected);
     RCircleEntity::PropertyType.generateId(typeid(RCircleEntity), REntity::PropertyType);
     RCircleEntity::PropertyBlock.generateId(typeid(RCircleEntity), REntity::PropertyBlock);
     RCircleEntity::PropertyLayer.generateId(typeid(RCircleEntity), REntity::PropertyLayer);
@@ -60,6 +71,7 @@ void RCircleEntity::init() {
     RCircleEntity::PropertyLinetypeScale.generateId(typeid(RCircleEntity), REntity::PropertyLinetypeScale);
     RCircleEntity::PropertyLineweight.generateId(typeid(RCircleEntity), REntity::PropertyLineweight);
     RCircleEntity::PropertyColor.generateId(typeid(RCircleEntity), REntity::PropertyColor);
+    RCircleEntity::PropertyDisplayedColor.generateId(typeid(RCircleEntity), REntity::PropertyDisplayedColor);
     RCircleEntity::PropertyDrawOrder.generateId(typeid(RCircleEntity), REntity::PropertyDrawOrder);
     RCircleEntity::PropertyCenterX.generateId(typeid(RCircleEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"));
     RCircleEntity::PropertyCenterY.generateId(typeid(RCircleEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "Y"));

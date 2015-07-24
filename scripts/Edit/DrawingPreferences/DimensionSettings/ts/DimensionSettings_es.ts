@@ -24,7 +24,7 @@
         <translation>Unidad en dibujos nuevos</translation>
     </message>
     <message>
-        <location line="+93"/>
+        <location line="+102"/>
         <source>Scientific</source>
         <translation>Científico</translation>
     </message>
@@ -49,7 +49,7 @@
         <translation>Fraccional</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+32"/>
         <source>Decimal Degrees</source>
         <translation>Grados decimales</translation>
     </message>
@@ -74,7 +74,7 @@
         <translation>Unidades de medición</translation>
     </message>
     <message>
-        <location line="+205"/>
+        <location line="+193"/>
         <source>Unit / Format</source>
         <translation>Unidades / formato</translation>
     </message>

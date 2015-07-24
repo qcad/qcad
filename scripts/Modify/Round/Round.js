@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -43,6 +43,7 @@ Round.prototype.getOperation = function(preview) {
     }
 
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
 
     var success = Round.round(
             op,
@@ -64,11 +65,11 @@ Round.prototype.getOperation = function(preview) {
  * entity2 and the limitingShape.
  *
  * \param op Operation to use to add new objects and modify objects.
- * \param entity1 First entity which will be bevelled.
+ * \param entity1 First entity which will be rounded.
  * \param pos1 Coordinate that was clicked when the user selected entity1.
- * \param entity2 Second entity which will be bevelled.
+ * \param entity2 Second entity which will be rounded.
  * \param pos2 Coordinate that was clicked when the user selected entity2.
- * \param trim true: Trim both entities to bevel line.
+ * \param trim true: Trim both entities to rounding arc.
  * \param radius Radius of rounding.
  * \param preview Operation is used for preview.
  */
@@ -167,8 +168,8 @@ Round.round = function(op, entity1, pos1, entity2, pos2, trim, radius, preview) 
     par1 = par1[0];
     par2 = par2[0];
 
-    this.par1 = par1.clone();
-    this.par2 = par2.clone();
+    //this.par1 = par1.clone();
+    //this.par2 = par2.clone();
 
     var sol2 = shape1.getIntersectionPoints(shape2, false);
     var sol =  par1.getIntersectionPoints(par2, false);
@@ -203,11 +204,9 @@ Round.round = function(op, entity1, pos1, entity2, pos2, trim, radius, preview) 
         ending1 = trimmed1.getTrimEnd(pos1, is2);
         switch (ending1) {
         case RS.EndingStart:
-            //trimmed1.trimStartPoint(p1);
             trimmed1 = trimStartPoint(trimmed1, p1);
             break;
         case RS.EndingEnd:
-            //trimmed1.trimEndPoint(p1);
             trimmed1 = trimEndPoint(trimmed1, p1);
             break;
         default:
@@ -218,11 +217,9 @@ Round.round = function(op, entity1, pos1, entity2, pos2, trim, radius, preview) 
         ending2 = trimmed2.getTrimEnd(pos2, is2);
         switch (ending2) {
         case RS.EndingStart:
-            //trimmed2.trimStartPoint(p2);
             trimmed2 = trimStartPoint(trimmed2, p2);
             break;
         case RS.EndingEnd:
-            //trimmed2.trimEndPoint(p2);
             trimmed2 = trimEndPoint(trimmed2, p2);
             break;
         default:

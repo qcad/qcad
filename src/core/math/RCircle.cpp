@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -27,6 +27,10 @@
  */
 RCircle::RCircle() :
     center(RVector::invalid), radius(0.0) {
+}
+
+RCircle::RCircle(double cx, double cy, const double radius) :
+    center(cx, cy), radius(radius) {
 }
 
 RCircle::RCircle(const RVector& center, const double radius) :
@@ -163,8 +167,9 @@ QList<RVector> RCircle::getPointsWithDistanceToEnd(double distance, RS::From fro
     return ret;
 }
 
-double RCircle::getAngleAt(double distance) const {
+double RCircle::getAngleAt(double distance, RS::From from) const {
     Q_UNUSED(distance)
+    Q_UNUSED(from)
 
     return RNANDOUBLE;
 }

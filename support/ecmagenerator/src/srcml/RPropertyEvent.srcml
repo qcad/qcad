@@ -1,216 +1,90 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RPropertyEvent.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RPROPERTYEVENT_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RPROPERTYEVENT_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPropertyAttributes.h"</cpp:file></cpp:include>
-  <comment type="block">/** * \brief A property change event is
-  fired whenever a user interface * component was used to change
-  the value of a property. * * \ingroup core * \scriptable *
-  \copyable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RPropertyEvent</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor>
-    <name>RPropertyEvent</name>
-    <parameter_list>()</parameter_list>
-    <member_list>: 
-    <call>
-      <name>propertyTypeId</name>
-      <argument_list>(
-      <argument>
-        <expr>-1</expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{ }</block>
-  </constructor>
-  <comment type="block">/** * \param propertyTypeId ID of the
-  property that was changed. * \param value New value of the
-  property. */</comment>
-  <constructor>
-    <name>RPropertyEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>RPropertyTypeId</name>
-        </type>
-        <name>propertyTypeId</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QVariant</name>&amp;</type>
-        <name>value</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>EntityType</name></name>
-      </type>
-      <name>entityTypeFilter</name>=
-      <init>
-        <expr>
-          <name>
-          <name>RS</name>::
-          <name>EntityAll</name></name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <member_list>: 
-    <call>
-      <name>propertyTypeId</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>propertyTypeId</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>value</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>value</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>entityTypeFilter</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>entityTypeFilter</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{ }</block>
-  </constructor>
-  <comment type="block">/** * \return The position of the event in
-  real graphic measures. */</comment>
-  <function>
-    <type>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>getPropertyTypeId</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>propertyTypeId</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return true If the position of the
-  coordinate event is valid. */</comment>
-  <function>
-    <type>
-      <name>QVariant</name>
-    </type>
-    <name>getValue</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>value</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return Entity type filter to use for
-  this event. */</comment>
-  <function>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>EntityType</name></name>
-    </type>
-    <name>getEntityTypeFilter</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>entityTypeFilter</name>
-    </expr>;</return>}</block>
-  </function></public>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>propertyTypeId</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QVariant</name>
-    </type>
-    <name>value</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>
-      <name>RS</name>::
-      <name>EntityType</name></name>
-    </type>
-    <name>entityTypeFilter</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RPropertyEvent</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RPropertyEvent*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>const RPropertyEvent*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RPropertyEvent.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RPROPERTYEVENT_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RPROPERTYEVENT_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyAttributes.h"</cpp:file></cpp:include>
+
+
+
+<comment type="block">/**
+ * \brief A property change event is fired whenever a user interface
+ * component was used to change the value of a property.
+ *
+ * \ingroup core
+ * \scriptable
+ * \copyable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPropertyEvent</name> <block>{<private type="default">
+</private><public>public:
+    <constructor><name>RPropertyEvent</name><parameter_list>()</parameter_list> <member_list>:
+        <call><name>propertyTypeId</name><argument_list>(<argument><expr>-1</expr></argument>)</argument_list></call> </member_list><block>{
+    }</block></constructor>
+
+    <comment type="block">/**
+     * \param propertyTypeId ID of the property that was changed.
+     * \param value New value of the property.
+     */</comment>
+    <constructor><name>RPropertyEvent</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>,
+                   <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>)</parameter_list>
+        <member_list>: <call><name>propertyTypeId</name><argument_list>(<argument><expr><name>propertyTypeId</name></expr></argument>)</argument_list></call>,
+          <call><name>value</name><argument_list>(<argument><expr><name>value</name></expr></argument>)</argument_list></call>,
+          <call><name>entityTypeFilter</name><argument_list>(<argument><expr><name>entityTypeFilter</name></expr></argument>)</argument_list></call> </member_list><block>{
+    }</block></constructor>
+
+    <comment type="block">/**
+     * \return The position of the event in real graphic measures.
+     */</comment>
+    <function><type><name>RPropertyTypeId</name></type> <name>getPropertyTypeId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>propertyTypeId</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return true If the position of the coordinate event is valid.
+     */</comment>
+    <function><type><name>QVariant</name></type> <name>getValue</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>value</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return Entity type filter to use for this event.
+     */</comment>
+    <function><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>getEntityTypeFilter</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>entityTypeFilter</name></expr>;</return>
+    }</block></function>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QVariant</name></type> <name>value</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RPropertyEvent</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RPropertyEvent*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>const RPropertyEvent*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

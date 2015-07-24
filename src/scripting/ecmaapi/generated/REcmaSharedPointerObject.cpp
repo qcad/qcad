@@ -67,6 +67,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getHandle, "getHandle");
             
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, isProtected, "isProtected");
             
             REcmaHelper::registerFunction(&engine, proto, setProtected, "setProtected");
@@ -87,7 +89,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, isSelectedForPropertyEditing, "isSelectedForPropertyEditing");
             
+            REcmaHelper::registerFunction(&engine, proto, hasCustomProperty, "hasCustomProperty");
+            
             REcmaHelper::registerFunction(&engine, proto, getCustomProperty, "getCustomProperty");
+            
+            REcmaHelper::registerFunction(&engine, proto, getCustomBoolProperty, "getCustomBoolProperty");
             
             REcmaHelper::registerFunction(&engine, proto, setCustomProperty, "setCustomProperty");
             
@@ -98,6 +104,8 @@
             REcmaHelper::registerFunction(&engine, proto, getCustomPropertyKeys, "getCustomPropertyKeys");
             
             REcmaHelper::registerFunction(&engine, proto, getComplexity, "getComplexity");
+            
+            REcmaHelper::registerFunction(&engine, proto, dump, "dump");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RObjectPointer>(), *proto);
@@ -123,6 +131,10 @@
             
             ctor.setProperty("PropertyCustom",
                 qScriptValueFromValue(&engine, RObject::PropertyCustom),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyType",
+                qScriptValueFromValue(&engine, RObject::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyHandle",
@@ -516,6 +528,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerObject::getHandle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerObject::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerObject::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        
+               self->getType();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -1377,6 +1438,79 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerObject::hasCustomProperty
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerObject::hasCustomProperty", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::hasCustomProperty";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("hasCustomProperty", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasCustomProperty(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.hasCustomProperty().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerObject::hasCustomProperty", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerObject::getCustomProperty
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1515,6 +1649,92 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerObject::getCustomProperty", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerObject::getCustomBoolProperty
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerObject::getCustomBoolProperty", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getCustomBoolProperty";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("getCustomBoolProperty", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getCustomBoolProperty(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getCustomBoolProperty().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getCustomBoolProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1832,6 +2052,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerObject::getComplexity", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerObject::dump
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerObject::dump", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::dump";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("dump", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->dump();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.dump().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerObject::dump", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerObject::toString

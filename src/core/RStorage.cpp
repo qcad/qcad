@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -38,10 +38,17 @@ RStorage::RStorage() :
 }
 
 void RStorage::clear() {
+    modified = false;
     maxDrawOrder = 0;
     idCounter = 0;
     handleCounter = 0;
-    modified = false;
+    currentColor = RColor::ByLayer;
+    currentLineweight = RLineweight::WeightByLayer,
+    currentLinetypeId = RLinetype::INVALID_ID;
+    currentViewId = RView::INVALID_ID;
+    currentBlockId = RBlock::INVALID_ID;
+    lastTransactionId = -1;
+    lastTransactionGroup = 1;
 }
 
 void RStorage::setObjectId(RObject& object, RObject::Id objectId) {
@@ -192,7 +199,8 @@ bool RStorage::hasBlock(const QString& blockName) const {
 }
 
 bool RStorage::hasLinetype(const QString& linetypeName) const {
-    return getLinetypeNames().contains(linetypeName);
+    QStringList sl = getLinetypeNames().toList();
+    return sl.contains(linetypeName, Qt::CaseInsensitive);
 }
 
 QList<REntity::Id> RStorage::orderBackToFront(const QSet<REntity::Id>& entityIds) const {

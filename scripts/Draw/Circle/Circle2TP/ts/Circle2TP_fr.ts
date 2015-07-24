@@ -24,18 +24,22 @@
         <translation>Choisir solution</translation>
     </message>
     <message>
-        <location line="+135"/>
-        <location line="+44"/>
+        <location line="+136"/>
+        <location line="+45"/>
         <source>No solution</source>
         <translation>Aucune solution</translation>
     </message>
     <message>
-        <location filename="../Circle2TPInit.js" line="+2"/>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation>Point, 2 tan&amp;gentes</translation>
+        <translation type="vanished">Point, 2 tan&amp;gentes</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location filename="../Circle2TPInit.js" line="+2"/>
+        <source>2 Tan&amp;gents and Point</source>
+        <translation>2 tan&amp;gentes et point</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Tracez un cercle tangent à deux entités et par un point</translation>
     </message>

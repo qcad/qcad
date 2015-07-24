@@ -5,13 +5,13 @@
     <name>EllipseCPP</name>
     <message>
         <location filename="../EllipseCPPInit.js" line="+2"/>
-        <source>&amp;Full Ellipse</source>
-        <translation type="unfinished"></translation>
+        <source>&amp;Full Ellipse with Center, Point, Ratio</source>
+        <translation>&amp;Ellips van centrum, punt, verhouding van assen</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw full ellipse from center, major point and ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Ellips van centrum, punt, verhouding van assen</translation>
     </message>
 </context>
 </TS>

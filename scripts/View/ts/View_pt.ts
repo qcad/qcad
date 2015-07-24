@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Form</name>
     <message>
@@ -20,12 +20,12 @@
     <message>
         <location filename="../View.js" line="+65"/>
         <source>View Tools</source>
-        <translation>Ferramentas de visualização</translation>
+        <translation>Ferramentas de Visualização</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show view tools</source>
-        <translation>Mostrar ferramentas de visualização</translation>
+        <translation>Exiba as ferramentas de visualização</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -34,7 +34,7 @@
 --file: qcad_pt.ts--
 &amp;Exiba
 &amp;Prévia de impressão</translatorcomment>
-        <translation>&amp;Ver</translation>
+        <translation>&amp;Visualização</translation>
     </message>
 </context>
 <context>

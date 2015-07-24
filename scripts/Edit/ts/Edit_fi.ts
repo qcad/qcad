@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>AbstractPreferences</name>
     <message>
         <location filename="../AbstractPreferences.js" line="+44"/>
         <source>Application Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Sovelluksen omat asetukset</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirroksen asetukset</translation>
     </message>
     <message>
-        <location line="+247"/>
+        <location line="+300"/>
         <source>Restart required</source>
-        <translation type="unfinished"></translation>
+        <translation>Uudelleenkäynnistys tarvitaan</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Käynnistä uudelleen QCAD, jotta
+asetuksien muutokset astuvat voimaan.</translation>
     </message>
 </context>
 <context>
@@ -30,7 +31,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../ClipboardOperation.js" line="+41"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Viitepiste</translation>
     </message>
 </context>
 <context>
@@ -38,17 +39,17 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Muokkaustyökalut</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show edit tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä muokkaustyökalut</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Muokkaa</translation>
     </message>
 </context>
 <context>
@@ -58,32 +59,32 @@ the preference changes to take effect.</source>
         <location line="+85"/>
         <location line="+21"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset</translation>
     </message>
     <message>
         <location line="-88"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Suodatin</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Clear Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Tyhjennä haku</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Expand Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>Laajenna puu</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>Supista puu</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Restore to Default Values</source>
-        <translation type="unfinished"></translation>
+        <translation>Palauta oletusarvoihin</translation>
     </message>
 </context>
 </TS>

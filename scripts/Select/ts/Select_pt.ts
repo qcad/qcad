@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Select</name>
     <message>
@@ -8,7 +8,7 @@
         <source>Selection Tools</source>
         <translatorcomment>--google--
 Exibe o menu &quot;Seleção&quot;</translatorcomment>
-        <translation>Ferramentas de seleção</translation>
+        <translation>Ferramentas de Seleção</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -16,12 +16,12 @@ Exibe o menu &quot;Seleção&quot;</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Exibe o menu &quot;Seleção&quot;</translatorcomment>
-        <translation>Exibe o menu &quot;Seleção&quot;</translation>
+        <translation>Exiba as ferramentas de seleção</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Selection Tools Panel</source>
-        <translation>Ferramentas de seleção</translation>
+        <translation>Painel de Ferramentas de Seleção</translation>
     </message>
     <message>
         <source>Select Tools Panel</source>

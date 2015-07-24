@@ -110,6 +110,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isClosed, "isClosed");
             
+            REcmaHelper::registerFunction(&engine, proto, isGeometricallyClosed, "isGeometricallyClosed");
+            
             REcmaHelper::registerFunction(&engine, proto, isPeriodic, "isPeriodic");
             
             REcmaHelper::registerFunction(&engine, proto, appendControlPoint, "appendControlPoint");
@@ -137,6 +139,10 @@
             REcmaHelper::registerFunction(&engine, proto, getStartPoint, "getStartPoint");
             
             REcmaHelper::registerFunction(&engine, proto, getEndPoint, "getEndPoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, setStartPoint, "setStartPoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, setEndPoint, "setEndPoint");
             
             REcmaHelper::registerFunction(&engine, proto, reverse, "reverse");
             
@@ -168,6 +174,10 @@
                 qScriptValueFromValue(&engine, RSplineEntity::PropertyHandle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RSplineEntity::PropertyProtected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RSplineEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -194,6 +204,10 @@
             
             ctor.setProperty("PropertyColor",
                 qScriptValueFromValue(&engine, RSplineEntity::PropertyColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RSplineEntity::PropertyDisplayedColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyDrawOrder",
@@ -322,7 +336,7 @@
                         return REcmaHelper::throwError("RSplineEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RSplineData*
                     ap1 =
                     qscriptvalue_cast<
@@ -332,11 +346,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSplineEntity: Argument 1 is not of type RSplineData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RSplineEntity: Argument 1 is not of type RSplineData.",
                                context);                    
                     }
-                    RSplineData& a1 = *ap1;
+                    RSplineData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -417,7 +433,7 @@
                         return REcmaHelper::throwError("RSplineEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RSplineData*
                     ap1 =
                     qscriptvalue_cast<
@@ -427,11 +443,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RSplineEntity: Argument 1 is not of type RSplineData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RSplineEntity: Argument 1 is not of type RSplineData.",
                                context);                    
                     }
-                    RSplineData& a1 = *ap1;
+                    RSplineData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id
@@ -456,6 +474,62 @@
     a1
         ,
     a2
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+    } else 
+
+    if( context->argumentCount() ==
+        1
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RSplineEntity */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RSplineEntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RSplineEntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RSplineEntity: Argument 0 is not of type RSplineEntity*.",
+                               context);                    
+                    }
+                    RSplineEntity& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RSplineEntity
+                    * cppResult =
+                    new
+                    RSplineEntity
+                    (
+                    a0
                     );
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
@@ -2069,6 +2143,55 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerSplineEntity::isGeometricallyClosed
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSplineEntity::isGeometricallyClosed", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSplineEntity::isGeometricallyClosed";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSplineEntity* self = 
+                        getSelf("isGeometricallyClosed", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isGeometricallyClosed();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSplineEntity.isGeometricallyClosed().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSplineEntity::isGeometricallyClosed", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerSplineEntity::isPeriodic
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2776,6 +2899,140 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerSplineEntity::getEndPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerSplineEntity::setStartPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSplineEntity::setStartPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSplineEntity::setStartPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSplineEntity* self = 
+                        getSelf("setStartPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSplineEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setStartPoint(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSplineEntity.setStartPoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSplineEntity::setStartPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerSplineEntity::setEndPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSplineEntity::setEndPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSplineEntity::setEndPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSplineEntity* self = 
+                        getSelf("setEndPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSplineEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setEndPoint(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSplineEntity.setEndPoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSplineEntity::setEndPoint", context, engine);
             return result;
         }
          QScriptValue

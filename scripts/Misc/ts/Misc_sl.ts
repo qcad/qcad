@@ -6,12 +6,12 @@
     <message>
         <location filename="../Misc.js" line="+60"/>
         <source>Misc Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Razna orodja</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show misc tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži razna orodja</translation>
     </message>
     <message>
         <location line="+17"/>

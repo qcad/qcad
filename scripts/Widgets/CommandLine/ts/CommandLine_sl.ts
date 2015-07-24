@@ -4,7 +4,7 @@
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../CommandLine.js" line="+29"/>
+        <location filename="../CommandLine.js" line="+30"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -21,7 +21,7 @@
         <translation>&amp;Ukazna vrstica</translation>
     </message>
     <message>
-        <location line="+143"/>
+        <location line="+144"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation>Neveljavna koordinata ali razdalja &apos;%1&apos;.</translation>
     </message>
@@ -61,7 +61,7 @@
         <translation>Info</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+15"/>
         <source>Coordinate</source>
         <translation>Koordinate</translation>
     </message>

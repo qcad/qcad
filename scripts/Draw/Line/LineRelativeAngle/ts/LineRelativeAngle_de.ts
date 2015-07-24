@@ -33,7 +33,7 @@
         <translation>Basisobjekt wählen</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
         <source>Set position</source>
         <translation>Position setzen</translation>
     </message>

@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaPolyline {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaPolyline {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -74,6 +77,9 @@
         normalize
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        prependShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         appendShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -104,6 +110,9 @@
         getVertexAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getVertexIndex
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLastVertex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -131,7 +140,10 @@
         isClosed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        isLogicallyClosed
+        isGeometricallyClosed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getOrientation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         contains

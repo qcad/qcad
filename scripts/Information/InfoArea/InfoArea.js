@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -120,6 +120,7 @@ InfoArea.prototype.getOperation = function(preview) {
 
     var di = this.getDocumentInterface();
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
     this.addShape(op, this.polyline, preview);
 
     var view = di.getLastKnownViewWithFocus();

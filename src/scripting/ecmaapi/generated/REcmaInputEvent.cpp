@@ -55,6 +55,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setModelPosition, "setModelPosition");
             
+            REcmaHelper::registerFunction(&engine, proto, setScreenPosition, "setScreenPosition");
+            
             REcmaHelper::registerFunction(&engine, proto, getScreenPosition, "getScreenPosition");
             
             REcmaHelper::registerFunction(&engine, proto, getGraphicsView, "getGraphicsView");
@@ -234,6 +236,151 @@
                 
     } else 
 
+    if( context->argumentCount() ==
+        4
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RVector */
+            
+                && (
+                
+                        context->argument(
+                        1
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        1
+                        ).isNull()
+                ) /* type: RGraphicsScene */
+            
+                && (
+                
+                        context->argument(
+                        2
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        2
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        2
+                        ).isNull()
+                ) /* type: RGraphicsView */
+            
+                && (
+                
+                        context->argument(
+                        3
+                        ).isNumber()
+                ) /* type: qreal */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RInputEvent: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument is reference
+                    RGraphicsScene*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RGraphicsScene*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RInputEvent: Argument 1 is not of type RGraphicsScene*.",
+                               context);                    
+                    }
+                    RGraphicsScene& a1 = *ap1;
+                
+                    // argument is reference
+                    RGraphicsView*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RGraphicsView*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if( ap2 == NULL ){
+                           return REcmaHelper::throwError("RInputEvent: Argument 2 is not of type RGraphicsView*.",
+                               context);                    
+                    }
+                    RGraphicsView& a2 = *ap2;
+                
+                    // argument isStandardType
+                    qreal
+                    a3 =
+                    (qreal)
+                    
+                    context->argument( 3 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RInputEvent
+                    * cppResult =
+                    new
+                    RInputEvent
+                    (
+                    a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+    } else 
+
     {
        return REcmaHelper::throwError(
        QString::fromLatin1("RInputEvent(): no matching constructor found."),
@@ -384,6 +531,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaInputEvent::setModelPosition", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaInputEvent::setScreenPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaInputEvent::setScreenPosition", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaInputEvent::setScreenPosition";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RInputEvent* self = 
+                        getSelf("setScreenPosition", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RInputEvent: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setScreenPosition(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RInputEvent.setScreenPosition().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaInputEvent::setScreenPosition", context, engine);
             return result;
         }
          QScriptValue

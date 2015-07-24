@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -78,7 +78,7 @@ CadToolBar.prototype.contextMenuEvent = function(event) {
     else {
         var tb = appWin.findChild("CadQToolBar");
 
-        if (tb.floating) {
+        if (tb.floating && !RSettings.isQt(5)) {
             var menu = new QMenu(this);
             menu.objectName = "ContextMenu";
             // force tool bar to be vertical:
@@ -207,28 +207,76 @@ CadToolBar.prototype.updateIconSize = function() {
     var iconSize = RSettings.getIntValue("CadToolBar/IconSize", 32);
     var buttonSize = iconSize * 1.25;
 
-    var toolBar = this.parentWidget();
+    //qDebug("conf iconSize:", iconSize);
 
-    toolBar.iconSize = new QSize(columns*iconSize, columns*iconSize);
+    var toolBar = this.parentWidget();
+    //qDebug("toolBar:", toolBar.objectName);
+    //qDebug("icon size before:", toolBar.iconSize);
+    //toolBar.iconSize = new QSize(columns*iconSize, columns*iconSize);
+    //toolBar.iconSize = new QSize(iconSize, iconSize);
+    //this.minimumWidth = buttonSize;
+    //this.minimumHeight = buttonSize;
+    //qDebug("icon size after:", toolBar.iconSize);
+
+    //CadToolBar.setIconSize(this, iconSize);
 
     // workaround for QToolBar bug (not resizing when layout changes):
     if (toolBar.floating) {
         toolBar.resize(toolBar.sizeHint.width(), toolBar.sizeHint.height());
     }
+
+//    toolBar.update();
 };
+
+//CadToolBar.setIconSize = function(widget, iconSize) {
+//    if (isNull(widget)) {
+//        return;
+//    }
+//    if (!isQWidget(widget) || !isFunction(widget.children)) {
+//        return;
+//    }
+
+//    var children = widget.children();
+//    for (var i = 0; i < children.length; ++i) {
+//        var c = children[i];
+
+//        if (!c || isDeleted(c)) {
+//            break;
+//        }
+
+//        if (isOfType(c, QToolButton)) {
+//            c.iconSize = iconSize;
+//            continue;
+//        }
+
+//        CadToolBar.setIconSize(c);
+//    }
+//};
 
 CadToolBar.init = function() {
     var appWin = EAction.getMainWindow();
-//    var toolBar = new QToolBar(qsTr("CAD Tools"), appWin);
-//    toolBar.objectName = "CadQToolBar";
-//    cadToolBar = new CadToolBar(toolBar);
-//    toolBar.addWidget(cadToolBar);
-//    cadToolBar.updateIconSize();
 
     var toolBar = appWin.findChild("CadQToolBar");
     if (isNull(toolBar)) {
         return;
     }
+
+    if (RSettings.isQt(5)) {
+        // tool bar buttons under Qt 5 have no border:
+        toolBar.styleSheet =
+              "QToolButton {"
+            + "  border: 1px solid #969696;"
+            //+ "  border-radius: 6px; "
+            + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #f8f8f8, stop: 0.2 #e3e3e3, stop: 1 #f9f9f9);"
+            + "}"
+            + "QToolButton:checked {"
+            + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #b7b7b7, stop: 0.8 #cfcfcf, stop: 1 #d1d1d1);"
+            + "}"
+            + "QToolButton:pressed {"
+            + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #a4a4a4, stop: 0.8 #b3b3b3, stop: 1 #b5b5b5);"
+            + "}";
+    }
+
     if (RSettings.getStringValue("CadToolBar/Location", "left")==="top") {
         appWin.addToolBarBreak();
         appWin.addToolBar(Qt.TopToolBarArea, toolBar);
@@ -236,14 +284,6 @@ CadToolBar.init = function() {
     else {
         appWin.addToolBar(Qt.LeftToolBarArea, toolBar);
     }
-
-//    toolBar.topLevelChanged.connect(function(onOff) {
-////        RSettings.setValue("CadToolBar/VerticalWhenFloating", false);
-//    });
-//    toolBar.orientationChanged.connect(function(orientation) {
-////        RSettings.setValue("CadToolBar/VerticalWhenFloating", false);
-//        var chs = toolBar.getChildren();
-//    });
 };
 
 CadToolBar.postInit = function() {

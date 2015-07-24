@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -27,6 +27,7 @@
 
 #include "RCloseCurrentEvent.h"
 #include "RMainWindow.h"
+#include "RObject.h"
 
 class QMdiArea;
 class QMdiSubWindow;
@@ -61,6 +62,7 @@ Q_OBJECT
 
 public:
     RMainWindowQt(QWidget* parent = 0, bool hasMdiArea = true);
+    virtual ~RMainWindowQt();
     static RMainWindowQt* getMainWindow();
     virtual int getWidth();
     virtual int getHeight();
@@ -97,6 +99,7 @@ public:
     virtual void setLeftMouseTip(const QString& text = "");
     virtual void setRightMouseTip(const QString& text = "");
 
+    virtual void showContextMenu(RObject::Id entityId);
     virtual void escapeEvent();
 
     virtual void setGraphicsViewCursor(const QCursor& cursor);
@@ -132,10 +135,16 @@ signals:
     void progressEnd();
     void progressText(const QString& label);
     void progressCanceled();
+
     void userMessage(const QString& message);
     void userInfo(const QString& message);
     void userWarning(const QString& message, bool messageBox);
     void userCommand(const QString& message);
+
+    /**
+     * Emitted when a context menu is requested on top of the given entity.
+     */
+    void contextMenu(int entityId);
     void escape();
     void drop(QDropEvent* event);
     void dragEnter(QDragEnterEvent* event);

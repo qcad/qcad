@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Point1P</name>
     <message>
-        <location filename="../Point1P.js" line="+50"/>
+        <location filename="../Point1P.js" line="+51"/>
         <source>Position</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -17,13 +17,13 @@ Indique a posição [ângulo/comprimento]</translatorcomment>
         <location filename="../Point1PInit.js" line="+2"/>
         <source>Single &amp;Point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Ponto</translation>
+        <translation>&amp;Ponto Singular</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw single point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar um único ponto</translation>
+        <translation>Desenhe um único ponto</translation>
     </message>
 </context>
 </TS>

@@ -4,7 +4,7 @@
 <context>
     <name>Bevel</name>
     <message>
-        <location filename="../Bevel.js" line="+54"/>
+        <location filename="../Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Te dwa podmioty nie mogą być frezowane.</translation>

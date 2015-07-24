@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaBlockReferenceEntity {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaBlockReferenceEntity {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -87,6 +90,33 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getColumnCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setColumnCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getRowCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setRowCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getColumnSpacing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setColumnSpacing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getRowSpacing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setRowSpacing
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setReferencedBlockId

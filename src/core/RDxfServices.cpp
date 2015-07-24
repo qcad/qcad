@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -47,7 +47,7 @@ void RDxfServices::fixQCad2String(QString& str) const {
     str.replace(rx, "\\S\\1^\\2;");
 }
 
-void RDxfServices::fixDimensionLabel(QString& text, QString& uTol, QString& lTol) {
+void RDxfServices::fixDimensionLabel(QString& text, QString& uTol, QString& lTol) const {
     // strip away initial vertical alignment, e.g. '\A1;'
     QRegExp rxAlignment("^\\\\A(\\d+);");
     text.replace(rxAlignment, "");

@@ -10,7 +10,7 @@
     <message>
         <location filename="../LineSimilarityAxesInit.js" line="+2"/>
         <source>Similarity Axes of 3 Circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Simetralna os 3-eh krogov</translation>
     </message>
 </context>
 </TS>

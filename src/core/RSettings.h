@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -22,7 +22,6 @@
 
 #include "core_global.h"
 
-#include <QColor>
 #include <QDir>
 #include <QSettings>
 #include <QFont>
@@ -52,6 +51,8 @@ public:
 
     static QString getAppId();
 
+    static double getDevicePixelRatio();
+
     static QString getLocale();
     static void loadTranslations(const QString& module, const QStringList& dirs = RDEFAULT_QSTRINGLIST);
     static QString translate(const QString& context, const QString& str);
@@ -61,10 +62,12 @@ public:
 
     static bool isDeployed();
     static QString getApplicationPath();
+    static QStringList getPluginPaths();
     static QString getPluginPath();
 
     static QString getStandardLocation(int sl);
     static QString getCacheLocation();
+    static QString getDataLocation();
     static QString getDesktopLocation();
     static QString getDocumentsLocation();
     static QString getHomeLocation();
@@ -91,6 +94,9 @@ public:
     static QFont getInfoLabelFont();
     static QFont getStatusBarFont();
 
+    static RColor getSelectionColor();
+
+    static bool getHighResolutionGraphicsView();
     static bool getAutoScaleGrid();
     static bool getAutoScaleMetaGrid();
     static bool getAutoScalePatterns();
@@ -98,6 +104,8 @@ public:
     static int getColorThreshold();
     static int getTextHeightThreshold();
     static double getArcAngleLengthThreshold();
+    static double getMinArcAngleStep();
+    static int getDashThreshold();
     static QString getQtVersion();
     static bool isQt(int majorVersion);
     static QString getCompilerVersion();
@@ -134,10 +142,12 @@ public:
 
     static bool hasValue(const QString& key);
     static QVariant getValue(const QString& key, const QVariant& defaultValue=RDEFAULT_QVARIANT);
+    static RColor getColorValue(const QString& key, const RColor& defaultValue);
     static bool getBoolValue(const QString& key, bool defaultValue);
     static double getDoubleValue(const QString& key, double defaultValue);
     static int getIntValue(const QString& key, int defaultValue);
     static QString getStringValue(const QString& key, const QString& defaultValue);
+    static QStringList getStringListValue(const QString& key, const QStringList& defaultValue);
 
     static void setValue(const QString& key, const QVariant& value, bool overwrite=true);
     static void removeValue(const QString& key);
@@ -153,9 +163,15 @@ public:
     static void setXDataEnabled(bool on);
     static bool isXDataEnabled();
 
+    static void setNextVersionEnabled(bool on);
+    static bool isNextVersionEnabled();
+
     static bool getAutoScaleLinetypePatterns();
     static bool getUseSecondarySelectionColor();
     static bool getUseSolidLineSelection();
+
+    static int getMouseThreshold();
+    static bool getPositionByMousePress();
 
 private:
     static bool isInitialized();
@@ -170,6 +186,7 @@ private:
     static QFont* snapLabelFont;
     static QFont* infoLabelFont;
     static QFont* statusBarFont;
+    static RColor* selectionColor;
     static int snapRange;
     static int pickRange;
     static int zeroWeightWeight;
@@ -177,12 +194,17 @@ private:
     static int showLargeCrosshair;
     static int showLargeOriginAxis;
     static int concurrentDrawing;
+    static int highResolutionGraphicsView;
     static int previewEntities;
     static int limitZoomAndScroll;
     static int autoScaleLinetypePattern;
     static int useSolidLineSelection;
     static int useSecondarySelectionColor;
+    static int mouseThreshold;
+    static int positionByMousePress;
     static double arcAngleLengthThreshold;
+    static double minArcAngleStep;
+    static int dashThreshold;
     static QStringList recentFiles;
     static QLocale* numberLocale;
 
@@ -197,6 +219,7 @@ private:
     static bool quitFlag;
 
     static bool xDataEnabled;
+    static bool nextVersionEnabled;
 };
 
 Q_DECLARE_METATYPE(RSettings*)

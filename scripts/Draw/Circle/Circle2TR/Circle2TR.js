@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -107,7 +107,7 @@ Circle2TR.prototype.pickEntity = function(event, preview) {
 
     var shape = undefined;
     if (!isNull(entity)) {
-        shape = entity.getClosestShape(pos);
+        shape = entity.getClosestSimpleShape(pos);
 
         if (!isLineBasedShape(shape) &&
             !isArcShape(shape) &&

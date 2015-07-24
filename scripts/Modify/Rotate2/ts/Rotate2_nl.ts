@@ -18,6 +18,21 @@
         <source>Rotate T&amp;wo</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../Rotate2.ui" line="+17"/>
+        <source>Primary Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Secondary Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Copies:</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Rotate2Options</name>
@@ -59,24 +74,6 @@
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>TranslateRotate</name>
-    <message>
-        <location filename="../Rotate2.ui" line="+17"/>
-        <source>Primary Angle:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+20"/>
-        <source>Secondary Angle:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+17"/>
-        <source>Copies:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

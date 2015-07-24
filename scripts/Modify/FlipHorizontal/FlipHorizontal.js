@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -42,10 +42,10 @@ FlipHorizontal.flip = function(di, horizontally) {
     var center = box.getCenter();
     var axis;
     if (horizontally) {
-        axis = new RLine(center, center.operator_add(new RVector(1,0)));
+        axis = new RLine(center, center.operator_add(new RVector(0,1)));
     }
     else {
-        axis = new RLine(center, center.operator_add(new RVector(0,1)));
+        axis = new RLine(center, center.operator_add(new RVector(1,0)));
     }
 
     var ids = document.querySelectedEntities();

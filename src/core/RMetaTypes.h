@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -47,6 +47,7 @@
 #include <QFocusEvent>
 #include <QFocusFrame>
 #include <QFont>
+#include <QFontMetrics>
 #include <QFontDatabase>
 #include <QFile>
 #include <QFileIconProvider>
@@ -86,9 +87,12 @@
 #include <QPainterPath>
 #include <QPair>
 #include <QPinchGesture>
+#include <QPixmap>
 #include <QPlainTextEdit>
+#include <QPoint>
 #include <QPointF>
 #include <QPrinter>
+#include <QPrintDialog>
 #include <QProcess>
 #include <QProgressBar>
 #include <QQuaternion>
@@ -109,6 +113,7 @@
 #include <QTextCodec>
 #include <QTextEdit>
 #include <QThread>
+#include <QTimer>
 #include <QToolBar>
 #include <QToolButton>
 #include <QTreeWidget>
@@ -122,6 +127,7 @@
 #endif
 #include <QWheelEvent>
 #include <QWidget>
+#include <QXmlContentHandler>
 #include <QXmlResultItems>
 #include <QXmlStreamWriter>
 #include <QXmlQuery>
@@ -179,6 +185,7 @@ Q_DECLARE_METATYPE(QFileSystemModel*)
 Q_DECLARE_METATYPE(QFocusEvent*)
 Q_DECLARE_METATYPE(QFocusFrame*)
 Q_DECLARE_METATYPE(QFont*)
+Q_DECLARE_METATYPE(QFontMetrics*)
 Q_DECLARE_METATYPE(QFontDatabase*)
 Q_DECLARE_METATYPE(QFrame*)
 Q_DECLARE_METATYPE(QGestureEvent*)
@@ -223,10 +230,13 @@ Q_DECLARE_METATYPE(QPaintEvent*)
 Q_DECLARE_METATYPE(QPanGesture*)
 Q_DECLARE_METATYPE(QPen*)
 Q_DECLARE_METATYPE(QPinchGesture*)
+Q_DECLARE_METATYPE(QPixmap*)
 Q_DECLARE_METATYPE(QPlainTextEdit*)
+Q_DECLARE_METATYPE(QPoint*)
 Q_DECLARE_METATYPE(QPointF*)
 #if !defined(Q_OS_IOS)
 Q_DECLARE_METATYPE(QPrinter*)
+Q_DECLARE_METATYPE(QPrintDialog*)
 #endif
 Q_DECLARE_METATYPE(QProgressBar*)
 Q_DECLARE_METATYPE(QProcess::ProcessError*)
@@ -256,6 +266,7 @@ Q_DECLARE_METATYPE(QTextBrowser*)
 Q_DECLARE_METATYPE(QTextCodec*)
 Q_DECLARE_METATYPE(QTextEdit*)
 Q_DECLARE_METATYPE(QThread*)
+Q_DECLARE_METATYPE(QTimer*)
 Q_DECLARE_METATYPE(QToolBar*)
 Q_DECLARE_METATYPE(QToolButton*)
 Q_DECLARE_METATYPE(QTransform*)
@@ -274,6 +285,7 @@ Q_DECLARE_METATYPE(QWidget*)
 Q_DECLARE_METATYPE(QXmlQuery)
 Q_DECLARE_METATYPE(QXmlQuery*)
 Q_DECLARE_METATYPE(QXmlStreamWriter*)
+Q_DECLARE_METATYPE(QXmlContentHandler*)
 Q_DECLARE_METATYPE(QXmlResultItems*)
 
 Q_DECLARE_METATYPE(QFlags<Qt::MouseButton>)

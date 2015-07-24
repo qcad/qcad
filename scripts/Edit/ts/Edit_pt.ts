@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>AbstractPreferences</name>
     <message>
@@ -11,7 +11,7 @@
 Preferências do &amp;Aplicativo
 Preferências do aplicativo
 Preferências Gerais do Aplicativo</translatorcomment>
-        <translation>Preferências do aplicativo</translation>
+        <translation>Preferências do Aplicativo</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -21,21 +21,21 @@ Preferências Gerais do Aplicativo</translatorcomment>
 &amp;Preferências do Desenho Atual...
 &amp;Preferências do Desenho Atual
 Preferências do Desenho Atual...</translatorcomment>
-        <translation>Preferências de desenho</translation>
+        <translation>Preferências de Desenho</translation>
     </message>
     <message>
-        <location line="+247"/>
+        <location line="+300"/>
         <source>Restart required</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>É necessário reiniciar</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Por favor, reinicie QCAD
-para as mudanças de preferências entrem em vigor.</translation>
+        <translation>Por favor, reinicie o QCAD
+para que as mudanças de preferências entrem em vigor</translation>
     </message>
 </context>
 <context>
@@ -55,12 +55,12 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
     <message>
         <location filename="../Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation>Ferramentas de edição</translation>
+        <translation>Ferramentas de Edição</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show edit tools</source>
-        <translation>Mostrar ferramentas de edição</translation>
+        <translation>Exiba as ferramentas de edição</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -100,25 +100,25 @@ Administrar efeitos de filtro SVG</translatorcomment>
         <location line="+7"/>
         <source>Clear Search</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Limpar a pesquisa</translation>
+        <translation>Limpe a Pesquisa</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Expand Tree</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Expandir árvore</translation>
+        <translation>Expanda a  Árvore</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Recolher a navegação</translation>
+        <translation>Recolha a Árvore</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Restore to Default Values</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Restaurar os valores padrão</translation>
+        <translation>Restaure para Valores Padrão</translation>
     </message>
 </context>
 </TS>

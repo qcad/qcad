@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
         <location filename="../AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Adicionar propriedade personalizada</translation>
+        <translation>Adicione Propriedades Personalizadas</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -35,7 +35,7 @@ Tipo de linha:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+186"/>
+        <location filename="../PropertyEditor.js" line="+187"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -50,24 +50,28 @@ Documento carregado: %1</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+173"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Não seleção</translation>
+        <translation>Nenhuma Seleção</translation>
     </message>
     <message>
-        <location line="+18"/>
         <source>Geometry</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Modifique propriedades e geometria de entidade
 Geometria</translatorcomment>
-        <translation>Geometria</translation>
+        <translation type="vanished">Geometria</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Specific Properties</source>
+        <translation>Propriedades específicas</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Dependent Entities</source>
-        <translation>Entidades dependentes</translation>
+        <translation>Entidades Dependentes</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -80,7 +84,7 @@ Não entidades de dimensão com posições etiqueta personalizada selecionada.</
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+164"/>
         <source>Index</source>
         <translatorcomment>--google--
 Indentar nó
@@ -90,10 +94,10 @@ Trocar para a próxima camada</translatorcomment>
     <message>
         <location line="+59"/>
         <source>Remove this property from selected objects</source>
-        <translation>Remover esta propriedade a partir de objetos selecionados</translation>
+        <translation>Remova esta propriedade dos objetos selecionados</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+41"/>
         <source>All</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -103,7 +107,7 @@ Fecha todas as janelas</translatorcomment>
         <translation>Todos</translation>
     </message>
     <message>
-        <location line="+620"/>
+        <location line="+626"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -113,9 +117,9 @@ Fecha todas as janelas</translatorcomment>
         <translation type="obsolete">Adicionar propriedade personalizada</translation>
     </message>
     <message>
-        <location line="-599"/>
+        <location line="-604"/>
         <source>Add custom property to selected objects</source>
-        <translation>Adicionar uma propriedade personalizada para os objetos selecionados</translation>
+        <translation>Adicione uma propriedade personalizada aos objetos selecionados</translation>
     </message>
     <message>
         <source>Left</source>
@@ -203,7 +207,7 @@ Centro abaixo</translatorcomment>
 &amp;Auto
 Auto
 Salta automaticamente</translatorcomment>
-        <translation>Auto</translation>
+        <translation>Automático</translation>
     </message>
     <message>
         <location line="+121"/>
@@ -212,7 +216,7 @@ Salta automaticamente</translatorcomment>
         <translation>Use medição automática</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+39"/>
         <source>Yes</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -237,14 +241,14 @@ Por favor verifique as permissões.</translatorcomment>
         <translation>Não</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+307"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
 Editor de Propriedades</translatorcomment>
-        <translation>Editor de propriedades</translation>
+        <translation>Editor de Propriedades</translation>
     </message>
     <message>
         <location filename="../PropertyEditor.ui" line="+40"/>
@@ -252,39 +256,48 @@ Editor de Propriedades</translatorcomment>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Selecção:</translatorcomment>
-        <translation>Selecção:</translation>
+        <translation>Seleção:</translation>
     </message>
     <message>
-        <location line="+31"/>
         <source>General</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Preferências Gerais do Aplicativo
 [2000-206F] Pontuação Geral</translatorcomment>
-        <translation>Geral</translation>
+        <translation type="vanished">Geral</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+31"/>
+        <source>General Properties</source>
+        <translation>Propriedades gerais</translation>
+    </message>
+    <message>
+        <location line="+106"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Move a seleção para uma nova camada</translation>
+        <translation>Mova a Seleção para uma Nova Camada</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+62"/>
         <source>Linetype Scale:</source>
-        <translation>Escala de tipo de linha:</translation>
+        <translation>Escala do Tipo de Linha:</translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="+49"/>
+        <source>Protected:</source>
+        <translation>Protegido:</translation>
+    </message>
+    <message>
+        <location line="-182"/>
         <source>Handle:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--</translatorcomment>
-        <translation>Punho:</translation>
+        <translation>Manipulador:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation>Mostrar coordenadas z</translation>
+        <translation>Exiba coordenadas Z</translation>
     </message>
 </context>
 </TS>

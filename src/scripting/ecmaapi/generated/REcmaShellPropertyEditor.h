@@ -41,14 +41,14 @@
       void updateFromDocument(
                 RDocument * document, bool onlyChanges, RS::EntityType entityTypeFilter
         = RS :: EntityAll, bool manual
-        =  false
+        = false
             );
         
     
     
       void updateFromObject(
                 RObject * object, RDocument * document
-        =  NULL
+        = NULL
             );
         
     
@@ -126,14 +126,14 @@
     
       void updateEditor(
                 RObject & object, bool doUpdateGui, RDocument * document
-        =  NULL
+        = NULL
             );
         
     
     
       void updateGui(
                 bool onlyChanges
-        =  false, RS::EntityType entityTypeFilter
+        = false, RS::EntityType entityTypeFilter
         = RS :: EntityAll
             );
         
@@ -147,7 +147,7 @@
     
       void removeAllButThese(
                 const QMultiMap < QString , QString > & propertyTitles, bool customOnly
-        =  false
+        = false
             );
         
     

@@ -846,6 +846,56 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RRuler */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: qreal */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RRuler*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RRuler*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("ROrthoGrid: Argument 0 is not of type RRuler*.",
+                               context);                    
+                    }
+                    RRuler& a0 = *ap0;
+                
+                    // argument isStandardType
+                    qreal
+                    a1 =
+                    (qreal)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->paintRuler(a0
+        ,
+    a1);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.paintRuler().",
                    context);

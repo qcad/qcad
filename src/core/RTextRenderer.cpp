@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -127,6 +127,10 @@ void RTextRenderer::renderSimple() {
     boundingBox = RBox();
     painterPaths.clear();
     richText = "";
+
+    if (textData.getText().isEmpty()) {
+        return;
+    }
 
     RVector pos = textData.getAlignmentPoint();
     if (textData.getHAlign()==RS::HAlignFit) {

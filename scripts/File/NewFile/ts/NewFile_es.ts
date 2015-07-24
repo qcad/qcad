@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.1" language="es_ES">
 <context>
     <name>CloseDialog</name>
     <message>
@@ -30,15 +30,15 @@
     </message>
     <message>
         <source>Loading...</source>
-        <translation>Cargando...</translation>
+        <translation type="vanished">Cargando...</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+23"/>
         <source>Import Error</source>
         <translation>Error de importación</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Cannot open file</source>
         <translation>No se puede abrir el archivo</translation>
     </message>
@@ -58,13 +58,13 @@
         <translation>El archivo está vacío.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>Drawing loaded successfully:</source>
         <translation>Dibujo cargó correctamente:</translation>
     </message>
     <message>
         <source>Opened drawing:</source>
-        <translation>Dibujo Abierto:</translation>
+        <translation type="vanished">Dibujo Abierto:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -72,7 +72,7 @@
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+115"/>
         <source>Untitled %1</source>
         <translation>Sin título %1</translation>
     </message>
@@ -82,7 +82,7 @@
         <translation>Sólo lectura</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+54"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>¿Desea guardar los cambios realizados en el&lt;br&gt;documento &apos;%1&apos;?</translation>
     </message>

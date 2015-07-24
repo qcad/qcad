@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Mirror</name>
     <message>
@@ -23,7 +23,7 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Espelhe</translatorcomment>
-        <translation>&amp;Espelhar</translation>
+        <translation>&amp;Espelhe</translation>
     </message>
 </context>
 <context>
@@ -68,17 +68,17 @@ Entre o número de cópias</translatorcomment>
     <message>
         <location filename="../MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation>Opções espelho</translation>
+        <translation>Opções de Espelhamento</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Número de cópias</translation>
+        <translation>Número de Cópias</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;Apague o original</translation>
+        <translation>&amp;Elimine o original</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -88,7 +88,7 @@ Entre o número de cópias</translatorcomment>
     <message>
         <location line="+95"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Use camada e &amp;atributos atual</translation>
+        <translation>Use a camada e os &amp;atributos atuais</translation>
     </message>
 </context>
 </TS>

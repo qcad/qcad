@@ -1,137 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru_RU">
+<TS version="2.1" language="ru">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
         <location filename="../AddCustomPropertyDialog.ui" line="+14"/>
         <source>Add Custom Property</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить пользовательское свойство</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Имя:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Значение:</translation>
     </message>
 </context>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+186"/>
+        <location filename="../PropertyEditor.js" line="+187"/>
         <source>*VARIES*</source>
-        <translation type="unfinished"></translation>
+        <translation>*РАЗНЫЕ*</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>:</source>
-        <translation type="unfinished"></translation>
+        <translation>:</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+173"/>
         <source>No Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Ничего не выбрано</translation>
     </message>
     <message>
-        <location line="+18"/>
-        <source>Geometry</source>
-        <translation type="unfinished"></translation>
+        <location line="+20"/>
+        <source>Specific Properties</source>
+        <translation>Специфичные свойства</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Dependent Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Зависимые объекты</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Пользовательский</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+164"/>
         <source>Index</source>
-        <translation type="unfinished"></translation>
+        <translation>Индекс</translation>
     </message>
     <message>
         <location line="+59"/>
         <source>Remove this property from selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить это свойство из выделенных объектов</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+41"/>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation>Все</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+22"/>
         <source>Add custom property to selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить пользовательское свойство к выделенным объектам</translation>
     </message>
     <message>
         <location line="+136"/>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>Автоматический</translation>
     </message>
     <message>
         <location line="+121"/>
         <source>Use auto measurement</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать автоматическое измерение</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+39"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Да</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+307"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактор Свойств</translation>
     </message>
     <message>
         <location line="-46"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Виджеты</translation>
     </message>
     <message>
         <location filename="../PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation type="unfinished"></translation>
+        <translation>Выделение:</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>General</source>
-        <translation type="unfinished"></translation>
+        <source>General Properties</source>
+        <translation>Общие свойства</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+106"/>
         <source>Move Selection to a New Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Перенос выделения на новый слой</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+62"/>
         <source>Linetype Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Масштаб типа линии:</translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="+49"/>
+        <source>Protected:</source>
+        <translation>Защищённый:</translation>
+    </message>
+    <message>
+        <location line="-182"/>
         <source>Handle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Рычаг:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
-        <translation type="unfinished"></translation>
+        <translation>Отобразить координаты Z</translation>
     </message>
 </context>
 </TS>

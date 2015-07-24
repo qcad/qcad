@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>ToolBar</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Icon Size:</source>
-        <translation>Tamanho ícone:</translation>
+        <translation>Tamanho do Ícone:</translation>
     </message>
     <message>
         <location line="+72"/>
@@ -21,12 +21,12 @@
     <message>
         <location line="+22"/>
         <source>Options Toolbar</source>
-        <translation>Barra de ferramentas opções</translation>
+        <translation>Barra de Ferramentas de Opções</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Shortcut Prefix Character:</source>
-        <translation>Tecla de prefixo atalho:</translation>
+        <translation>Caracter da Tecla de Atalho:</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location line="+0"/>
         <source>Toolbars</source>
-        <translation>Barras de ferramentas</translation>
+        <translation>Barras de Ferramentas</translation>
     </message>
 </context>
 </TS>

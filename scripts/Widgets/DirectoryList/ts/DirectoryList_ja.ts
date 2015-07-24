@@ -13,7 +13,7 @@ is already in the list.</source>
 は、既にリストに存在します。</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Folder not added</source>
         <translation>フォルダは追加されませんでした</translation>
     </message>

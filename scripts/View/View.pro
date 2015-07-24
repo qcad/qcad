@@ -1,6 +1,7 @@
 TEMPLATE = subdirs
 SUBDIRS = \
     ts \
+    AntialiasingMode \
     AutoZoom \
     CommandLineFocus \
     DisplayDistanceAngle \
@@ -11,7 +12,6 @@ SUBDIRS = \
     PanZoom \
     PreviousView \
     ToggleGrid \
-    ToggleStatusBar \
     ViewToolBars \
     WindowZoom \
     ZoomIn \

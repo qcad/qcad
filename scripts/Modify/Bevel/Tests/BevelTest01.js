@@ -33,8 +33,8 @@ BevelTest01.prototype.test00 = function() {
     qDebug('running BevelTest01.test00()...');
     this.setUp();
     this.importFile('scripts/Modify/Bevel/Tests/data/2lines.dxf');
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel::ModifyMenuButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::ModifyToolsPanel::BevelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::BevelButton');
     this.setToolOption('Bevel/Trim', 'true');
     this.setToolOption('Bevel/Length1',  [ 5, 0 ] );
     this.setToolOption('Bevel/Length2',  [ 18, 0 ] );

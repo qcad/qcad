@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -66,14 +66,24 @@ InsertBlockItem.prototype.beginEvent = function() {
     BlockInsert.prototype.beginEvent.call(this);
 
     var url = this.guiAction.data();
-    this.diItem.importUrl(url, false);
 
-    if (RSettings.isQt(5)) {
-        this.blockName = new QFileInfo(url.toLocalFile()).completeBaseName();
+    var path;
+    var err;
+    if (url.isLocalFile()) {
+        path = url.toLocalFile();
+        err = this.diItem.importFile(path, "", false);
     }
     else {
-        this.blockName = new QFileInfo(url.path()).completeBaseName();
+        path = QUrl.fromPercentEncoding(url.encodedPath());
+        err = this.diItem.importUrl(url, "", false);
     }
+
+    if (err!==RDocumentInterface.IoErrorNoError) {
+        EAction.handleUserWarning(qsTr("Cannot import file from URL: ") + url.toString());
+        this.terminate();
+    }
+
+    this.blockName = new QFileInfo(path).completeBaseName();
 
     // fix block name if necessary:
     this.blockName = fixSymbolTableName(this.blockName);

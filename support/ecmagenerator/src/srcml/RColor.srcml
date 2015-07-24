@@ -1,822 +1,146 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RColor.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RCOLOR_H_</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RCOLOR_H_</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QCoreApplication&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QObject&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QColor&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QIcon&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RDEFAULT_QSIZE_ICON</name>
-  <name>QSize</name>(32,10)</cpp:define>
-  <comment type="block">/** * Color. Fixed RGBA or ByLayer or
-  ByBlock. * * \ingroup core * \scriptable * \copyable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RColor</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>QColor</name></super>
-  <block>{
-  <private type="default">
-    <constructor_decl>
-    <name>Q_DECLARE_TR_FUNCTIONS</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>RColor</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-  </private>
-  <public>public: 
-  <function_decl>
-  <type>
-  <name>friend</name>
-  <name>QCADCORE_EXPORT</name>
-  <name>QDataStream</name>&amp;</type>
-  <name>operator&lt;&lt;</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QDataStream</name>&amp;</type>
-      <name>stream</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RColor</name>&amp;</type>
-      <name>color</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>friend</name>
-  <name>QCADCORE_EXPORT</name>
-  <name>QDataStream</name>&amp;</type>
-  <name>operator&gt;&gt;</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QDataStream</name>&amp;</type>
-      <name>stream</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RColor</name>&amp;</type>
-      <name>color</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <enum>enum 
-  <name>Mode</name>
-  <block>{ 
-  <expr>
-    <name>ByLayer</name>
-  </expr>, 
-  <expr>
-    <name>ByBlock</name>
-  </expr>, 
-  <expr>
-    <name>Fixed</name>
-  </expr>}</block>;</enum></public>
-  <public>public: 
-  <constructor_decl>
-  <name>RColor</name>
-  <parameter_list>()</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RColor</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>r</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>g</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>b</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>a</name>=
-    <init>
-      <expr>255</expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RColor</name>::
-      <name>Mode</name></name>
-    </type>
-    <name>mode</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RColor</name>::
-        <name>Fixed</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RColor</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RColor</name>::
-        <name>Mode</name></name>
-      </type>
-      <name>mode</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RColor</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>name</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RColor</name>::
-      <name>Mode</name></name>
-    </type>
-    <name>mode</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RColor</name>::
-        <name>Fixed</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <constructor_decl>
-  <name>RColor</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>Qt</name>::
-        <name>GlobalColor</name></name>
-      </type>
-      <name>color</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RColor</name>::
-      <name>Mode</name></name>
-    </type>
-    <name>mode</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RColor</name>::
-        <name>Fixed</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <constructor_decl>
-  <name>RColor</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QColor</name>&amp;</type>
-      <name>color</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>RColor</name>::
-      <name>Mode</name></name>
-    </type>
-    <name>mode</name>=
-    <init>
-      <expr>
-        <name>
-        <name>RColor</name>::
-        <name>Fixed</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <function_decl>
-  <type>
-    <name>int</name>
-  </type>
-  <name>getCustomColorCode</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>int</name>
-  </type>
-  <name>getColorIndex</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>static</name>
-      <name>RColor</name>
-    </type>
-    <name>createFromCadIndex</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>code</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>createFromCadIndex</name>
-        <argument_list>(
-        <argument>
-          <expr>
-          <name>code</name>.
-          <call>
-            <name>toInt</name>
-            <argument_list>()</argument_list>
-          </call></expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RColor</name>
-  </type>
-  <name>createFromCadIndex</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>code</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>static</name>
-      <name>RColor</name>
-    </type>
-    <name>createFromCadCustom</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>code</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>createFromCadCustom</name>
-        <argument_list>(
-        <argument>
-          <expr>
-          <name>code</name>.
-          <call>
-            <name>toInt</name>
-            <argument_list>()</argument_list>
-          </call></expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RColor</name>
-  </type>
-  <name>createFromCadCustom</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>code</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RColor</name>
-  </type>
-  <name>createFromName</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>name</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>QPair
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-        <name>RColor</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getList</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>onlyFixed</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QIcon</name>
-  </type>
-  <name>getIcon</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RColor</name>&amp;</type>
-      <name>color</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>QSize</name>&amp;</type>
-    <name>size</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_QSIZE_ICON</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>unsigned</name>
-    <name>long</name>
-    <name>long</name>
-  </type>
-  <name>getHash</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isValid</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QString</name>
-  </type>
-  <name>getName</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isByLayer</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isByBlock</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isFixed</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QColor</name>
-  </type>
-  <name>toCompat</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>RColor</name>
-  </type>
-  <name>getHighlighted</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RColor</name>&amp;</type>
-      <name>color</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QColor</name>&amp;</type>
-      <name>bgColor</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">//bool equalsCorrected(const RColor &amp;
-  color) const;</comment>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>operator==</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RColor</name>&amp;</type>
-      <name>color</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>operator!=</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RColor</name>&amp;</type>
-      <name>color</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>operator&lt;</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RColor</name>&amp;</type>
-      <name>color</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl></public>
-  <public>public: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QColor</name>
-    </type>
-    <name>CompatByLayer</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QColor</name>
-    </type>
-    <name>CompatByBlock</name>
-  </decl>;</decl_stmt></public>
-  <private>private: 
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>init</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>init</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>cn</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RColor</name>&amp;</type>
-      <name>c</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></private>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>bool</name>
-    </type>
-    <name>isInitialized</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>QPair
-        <argument_list>&lt;
-        <argument>
-          <name>QString</name>
-        </argument>, 
-        <argument>
-          <name>RColor</name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>list</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QPair
-        <argument_list>&lt;
-        <argument>
-          <name>RColor</name>
-        </argument>, 
-        <argument>
-          <name>QPair
-          <argument_list>&lt;
-          <argument>
-            <name>int</name>
-          </argument>, 
-          <argument>
-            <name>int</name>
-          </argument>&gt;</argument_list></name>
-        </argument>&gt;</argument_list></name>
-      </argument>, 
-      <argument>
-        <name>QIcon</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>iconMap</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//static QVector&lt;RColor&gt;
-  cadColors;</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>Mode</name>
-    </type>
-    <name>mode</name>
-  </decl>;</decl_stmt></private>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>const</name>
-      <name>double</name>
-    </type>
-    <name>
-      <name>cadColors</name>
-      <index>[]</index>
-      <index>[
-      <expr>3</expr>]</index>
-    </name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <comment type="block">/** *\nonscriptable */</comment>
-  <function_decl>
-  <type>
-  <name>QCADCORE_EXPORT</name>
-  <name>QDataStream</name>&amp;</type>
-  <name>operator&lt;&lt;</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QDataStream</name>&amp;</type>
-      <name>stream</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RColor</name>&amp;</type>
-      <name>color</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** *\nonscriptable */</comment>
-  <function_decl>
-  <type>
-  <name>QCADCORE_EXPORT</name>
-  <name>QDataStream</name>&amp;</type>
-  <name>operator&gt;&gt;</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QDataStream</name>&amp;</type>
-      <name>stream</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RColor</name>&amp;</type>
-      <name>color</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QCADCORE_EXPORT</name>
-    <name>QDebug</name>
-  </type>
-  <name>operator&lt;&lt;</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>QDebug</name>
-      </type>
-      <name>dbg</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RColor</name>&amp;</type>
-      <name>c</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RColor</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RColor*</argument>)</argument_list>
-  </macro>
-  <typedef>typedef 
-  <type>
-    <name>QPair
-    <argument_list>&lt;
-    <argument>
-      <name>QString</name>
-    </argument>, 
-    <argument>
-      <name>RColor</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>_RPairStringRColor</name>;</typedef>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>_RPairStringRColor</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>QList&lt; _RPairStringRColor
-    &gt;</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RColor::Mode</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
-  <comment type="block">/* RCOLOR_H_ */</comment>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RColor.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RCOLOR_H_</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RCOLOR_H_</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QCoreApplication&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QObject&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QColor&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QIcon&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QSIZE_ICON</name> <name>QSize</name>(32,10)</cpp:define>
+
+<comment type="block">/**
+ * Color. Fixed RGBA or ByLayer or ByBlock.
+ *
+ * \ingroup core
+ * \scriptable
+ * \copyable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RColor</name><super>: <specifier>public</specifier> <name>QColor</name></super> <block>{<private type="default">
+
+    <constructor_decl><name>Q_DECLARE_TR_FUNCTIONS</name><parameter_list>(<param><decl><type><name>RColor</name></type></decl></param>)</parameter_list>;</constructor_decl>
+
+
+</private><public>public:
+    <function_decl><type><name>friend</name> <name>QCADCORE_EXPORT</name> <name>QDataStream</name>&amp;</type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDataStream</name>&amp;</type> <name>stream</name></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>color</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>friend</name> <name>QCADCORE_EXPORT</name> <name>QDataStream</name>&amp;</type> <name>operator&gt;&gt;</name><parameter_list>(<param><decl><type><name>QDataStream</name>&amp;</type> <name>stream</name></decl></param>, <param><decl><type><name>RColor</name>&amp;</type> <name>color</name></decl></param>)</parameter_list>;</function_decl>
+
+    <enum>enum <name>Mode</name> <block>{
+        <expr><name>ByLayer</name></expr>, <expr><name>ByBlock</name></expr>, <expr><name>Fixed</name></expr>
+    }</block>;</enum>
+
+</public><public>public:
+    <constructor_decl><name>RColor</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RColor</name><parameter_list>(<param><decl><type><name>int</name></type> <name>r</name></decl></param>, <param><decl><type><name>int</name></type> <name>g</name></decl></param>, <param><decl><type><name>int</name></type> <name>b</name></decl></param>, <param><decl><type><name>int</name></type> <name>a</name> =<init> <expr>255</expr></init></decl></param>, <param><decl><type><name><name>RColor</name>::<name>Mode</name></name></type> <name>mode</name> =<init> <expr><name><name>RColor</name>::<name>Fixed</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RColor</name><parameter_list>(<param><decl><type><name><name>RColor</name>::<name>Mode</name></name></type> <name>mode</name></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RColor</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name> &amp;</type> <name>name</name></decl></param>, <param><decl><type><name><name>RColor</name>::<name>Mode</name></name></type> <name>mode</name> =<init> <expr><name><name>RColor</name>::<name>Fixed</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <constructor_decl><name>RColor</name><parameter_list>(<param><decl><type><name><name>Qt</name>::<name>GlobalColor</name></name></type> <name>color</name></decl></param>, <param><decl><type><name><name>RColor</name>::<name>Mode</name></name></type> <name>mode</name> =<init> <expr><name><name>RColor</name>::<name>Fixed</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <constructor_decl><name>RColor</name><parameter_list>(<param><decl><type><name>const</name> <name>QColor</name>&amp;</type> <name>color</name></decl></param>, <param><decl><type><name><name>RColor</name>::<name>Mode</name></name></type> <name>mode</name> =<init> <expr><name><name>RColor</name>::<name>Fixed</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+
+    <function_decl><type><name>int</name></type> <name>getCustomColorCode</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>getColorIndex</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>void</name></type> <name>removeColor</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>cn</name></decl></param>)</parameter_list>;</function_decl>
+    <function><type><name>static</name> <name>RColor</name></type> <name>createFromCadIndex</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>code</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name>createFromCadIndex</name><argument_list>(<argument><expr><name>code</name>.<call><name>toInt</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+    <function_decl><type><name>static</name> <name>RColor</name></type> <name>createFromCadIndex</name><parameter_list>(<param><decl><type><name>int</name></type> <name>code</name></decl></param>)</parameter_list>;</function_decl>
+    <function><type><name>static</name> <name>RColor</name></type> <name>createFromCadCustom</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>code</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name>createFromCadCustom</name><argument_list>(<argument><expr><name>code</name>.<call><name>toInt</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+    <function_decl><type><name>static</name> <name>RColor</name></type> <name>createFromCadCustom</name><parameter_list>(<param><decl><type><name>int</name></type> <name>code</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RColor</name></type> <name>createFromName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>QPair<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>RColor</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getList</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>onlyFixed</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QIcon</name></type> <name>getIcon</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>color</name></decl></param>, <param><decl><type><name>const</name> <name>QSize</name>&amp;</type> <name>size</name> =<init> <expr><name>RDEFAULT_QSIZE_ICON</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>unsigned</name> <name>long</name> <name>long</name></type> <name>getHash</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getName</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isByLayer</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isByBlock</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isFixed</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>QColor</name></type> <name>toCompat</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>RColor</name></type> <name>getHighlighted</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>color</name></decl></param>, <param><decl><type><name>const</name> <name>QColor</name>&amp;</type> <name>bgColor</name></decl></param>, <param><decl><type><name>int</name></type> <name>minDist</name> =<init> <expr>75</expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="line">//bool equalsCorrected(const RColor &amp; color) const;</comment>
+
+    <function_decl><type><name>bool</name></type> <name>operator==</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name> &amp;</type> <name>color</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>operator!=</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name> &amp;</type> <name>color</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>operator&lt;</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name> &amp;</type> <name>color</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+</public><public>public:
+    <decl_stmt><decl><type><name>static</name> <name>QColor</name></type> <name>CompatByLayer</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QColor</name></type> <name>CompatByBlock</name></decl>;</decl_stmt>
+
+</public><private>private:
+    <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>cn</name></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>c</name></decl></param>)</parameter_list>;</function_decl>
+
+</private><private>private:
+    <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>isInitialized</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>QPair<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>RColor</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>list</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>QPair<argument_list>&lt;<argument><name>RColor</name></argument>, <argument><name>QPair<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>int</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></argument>, <argument><name>QIcon</name></argument>&gt;</argument_list></name></type> <name>iconMap</name></decl>;</decl_stmt>
+    <comment type="line">//static QVector&lt;RColor&gt; cadColors;</comment>
+    <decl_stmt><decl><type><name>Mode</name></type> <name>mode</name></decl>;</decl_stmt>
+
+</private><private>private:
+    <decl_stmt><decl><type><name>static</name> <name>const</name> <name>double</name></type> <name><name>cadColors</name><index>[]</index><index>[<expr>3</expr>]</index></name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<comment type="block">/**
+ *\nonscriptable
+ */</comment>
+<function_decl><type><name>QCADCORE_EXPORT</name> <name>QDataStream</name>&amp;</type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDataStream</name>&amp;</type> <name>stream</name></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>color</name></decl></param>)</parameter_list>;</function_decl>
+
+<comment type="block">/**
+ *\nonscriptable
+ */</comment>
+<function_decl><type><name>QCADCORE_EXPORT</name> <name>QDataStream</name>&amp;</type> <name>operator&gt;&gt;</name><parameter_list>(<param><decl><type><name>QDataStream</name>&amp;</type> <name>stream</name></decl></param>, <param><decl><type><name>RColor</name>&amp;</type> <name>color</name></decl></param>)</parameter_list>;</function_decl>
+
+<function_decl><type><name>QCADCORE_EXPORT</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>c</name></decl></param>)</parameter_list>;</function_decl>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RColor</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RColor*</argument>)</argument_list></macro>
+<typedef>typedef <type><name>QPair<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>RColor</name></argument>&gt;</argument_list></name></type> <name>_RPairStringRColor</name>;</typedef>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>_RPairStringRColor</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt; _RPairStringRColor &gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RColor::Mode</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif> <comment type="block">/* RCOLOR_H_ */</comment>
 </unit>

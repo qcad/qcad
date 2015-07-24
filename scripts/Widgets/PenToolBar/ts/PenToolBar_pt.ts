@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>PenToolBar</name>
     <message>
@@ -14,10 +14,10 @@ Abertura abortada</translatorcomment>
         <translation>Caneta</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+64"/>
         <source>Reset to Defaults</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Redefinição para os padrões</translation>
+        <translation>Resete para os Padrões</translation>
     </message>
 </context>
 </TS>

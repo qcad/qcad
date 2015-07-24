@@ -20,7 +20,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSharedPointerLayer {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSharedPointerLayer {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -48,6 +51,9 @@
     // public methods:
     static  QScriptValue
         init
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         clone

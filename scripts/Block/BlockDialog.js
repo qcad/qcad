@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -39,22 +39,22 @@ BlockDialog.includeBasePath = includeBasePath;
 BlockDialog.prototype.show = function() {
     var lt;
     
-    this.dialog = WidgetFactory.createDialog(BlockDialog.includeBasePath, "BlockDialog.ui");
+    this.dialog = WidgetFactory.createDialog(BlockDialog.includeBasePath, "BlockDialog.ui", EAction.getMainWindow());
     //this.dialog.windowIcon = new QIcon(BlockDialog.includeBasePath + "/EditBlock/EditBlock.svg");
 
     var widgets = getWidgets(this.dialog);
-    var blockName = widgets["BlockName"];
-    blockName.selectAll();
+    var leBlockName = widgets["BlockName"];
+    leBlockName.selectAll();
     var rx = new RegExp("[^<>/\\\\\":;\?\*|,=`]{1,255}");
-    this.validator = new QRegExpValidator(rx, blockName);
-    blockName.setValidator(this.validator);
-    blockName.textChanged.connect(this, "validate");
+    this.validator = new QRegExpValidator(rx, leBlockName);
+    leBlockName.setValidator(this.validator);
+    leBlockName.textChanged.connect(this, "validate");
 
     // init dialog to show attributes of given block:
     if (!isNull(this.block)) {
-        blockName.text = this.block.getName();
-        if (blockName.text.startsWith("*")) {
-            blockName.enabled = false;
+        leBlockName.text = this.block.getName();
+        if (leBlockName.text.startsWith("*")) {
+            leBlockName.enabled = false;
         }
     }
 
@@ -64,24 +64,28 @@ BlockDialog.prototype.show = function() {
         var c = 0;
         while (!this.validate()) {
             ++c;
-            blockName.text = "block " + c;
+            leBlockName.text = "block " + c;
         }
     }
 
     if (!this.dialog.exec()) {
         this.dialog.destroy();
+        EAction.activateMainWindow();
         return undefined;
     }
 
-    var text = blockName.text.trim();
+    var text = leBlockName.text.trim();
     if (!isNull(this.block)) {
+        this.dialog.destroy();
+        EAction.activateMainWindow();
         this.block.setName(text);
         return this.block;
     }
-    this.dialog.setAttribute(Qt.WA_DeleteOnClose);
-    this.dialog.close();
+    //this.dialog.setAttribute(Qt.WA_DeleteOnClose);
+    //this.dialog.close();
     var block = new RBlock(this.document, text, new RVector(0,0));
     this.dialog.destroy();
+    EAction.activateMainWindow();
     return block;
 };
 

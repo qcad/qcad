@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ProgressBarForm</class>
- <widget class="QWidget" name="ProgressBarForm">
+ <class>ProgressDisplay</class>
+ <widget class="QWidget" name="ProgressDisplay">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>127</width>
-    <height>32</height>
+    <height>40</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="minimumSize">
    <size>
     <width>127</width>
-    <height>0</height>
+    <height>40</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>127</width>
-    <height>16777215</height>
+    <width>16777215</width>
+    <height>40</height>
    </size>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">

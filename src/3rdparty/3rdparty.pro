@@ -2,7 +2,8 @@ include (../../shared.pri)
 TEMPLATE = subdirs
 SUBDIRS = \
     spatialindexnavel \
-    stemmer
+    stemmer \
+    quazip
 
 !r_no_opennurbs {
     SUBDIRS += opennurbs

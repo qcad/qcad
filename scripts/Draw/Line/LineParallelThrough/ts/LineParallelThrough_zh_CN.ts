@@ -4,29 +4,19 @@
 <context>
     <name>LineParallelThrough</name>
     <message>
-        <location filename="../LineParallelThrough.js" line="+62"/>
-        <source>Choose line, arc or circle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+6"/>
-        <source>Specify point</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../LineParallelThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>编号：</translation>
     </message>
     <message>
         <location filename="../LineParallelThroughInit.js" line="+2"/>
         <source>Par&amp;allel (through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>平行（过点）(&amp;a)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw parallel line or concentric arc or circle through a given point</source>
-        <translation type="unfinished"></translation>
+        <translation>绘制通过给定点的平行线或同轴弧、圆</translation>
     </message>
 </context>
 </TS>

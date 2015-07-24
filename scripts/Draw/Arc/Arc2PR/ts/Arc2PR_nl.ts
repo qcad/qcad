@@ -6,17 +6,17 @@
     <message>
         <location filename="../Arc2PR.js" line="+67"/>
         <source>Start point</source>
-        <translation type="unfinished"></translation>
+        <translation>Startpunt</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation type="unfinished"></translation>
+        <translation>Eindpunt</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Invalid radius</source>
-        <translation>Ongeldig radius</translation>
+        <translation>Ongeldig straal</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../Arc2PR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Radius:</translation>
+        <translation>Straal:</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -36,18 +36,18 @@
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tegen de klok in (positief)</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+17"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Richting</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation>Met de klok mee (Negatieve)</translation>
+        <translation>Met de klok mee (negatief)</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -73,12 +73,12 @@
     <message>
         <location filename="../Arc2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation>&amp;2 punten en radius</translation>
+        <translation>&amp;2 punten en straal</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and radius</source>
-        <translation>Teken boog van 2 punten en radius</translation>
+        <translation>Teken boog van 2 punten en straal</translation>
     </message>
 </context>
 </TS>

@@ -134,6 +134,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, handlePinchGestureEvent, "handlePinchGestureEvent");
             
+            REcmaHelper::registerFunction(&engine, proto, giveFocus, "giveFocus");
+            
             REcmaHelper::registerFunction(&engine, proto, hasFocus, "hasFocus");
             
             REcmaHelper::registerFunction(&engine, proto, removeFocus, "removeFocus");
@@ -253,6 +255,12 @@
             REcmaHelper::registerFunction(&engine, proto, updateTextHeightThreshold, "updateTextHeightThreshold");
             
             REcmaHelper::registerFunction(&engine, proto, isPathVisible, "isPathVisible");
+            
+            REcmaHelper::registerFunction(&engine, proto, setAntialiasing, "setAntialiasing");
+            
+            REcmaHelper::registerFunction(&engine, proto, getAntialiasing, "getAntialiasing");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDevicePixelRatio, "getDevicePixelRatio");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RGraphicsView*>(), *proto);
@@ -2177,6 +2185,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsView::handlePinchGestureEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::giveFocus
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::giveFocus", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::giveFocus";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("giveFocus", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->giveFocus();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.giveFocus().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::giveFocus", context, engine);
             return result;
         }
          QScriptValue
@@ -6082,6 +6134,159 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsView::isPathVisible", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::setAntialiasing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::setAntialiasing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::setAntialiasing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("setAntialiasing", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAntialiasing(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.setAntialiasing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::setAntialiasing", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::getAntialiasing
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::getAntialiasing", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::getAntialiasing";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("getAntialiasing", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getAntialiasing();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.getAntialiasing().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::getAntialiasing", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::getDevicePixelRatio
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::getDevicePixelRatio", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::getDevicePixelRatio";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("getDevicePixelRatio", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDevicePixelRatio();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.getDevicePixelRatio().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::getDevicePixelRatio", context, engine);
             return result;
         }
          QScriptValue REcmaGraphicsView::toString

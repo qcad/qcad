@@ -4,20 +4,19 @@
 <context>
     <name>Snap</name>
     <message>
-        <location filename="../Snap.js" line="+42"/>
-        <location line="+20"/>
+        <location filename="../Snap.js" line="+57"/>
         <source>Snap Tools</source>
-        <translation>Tartuntatyökalut</translation>
+        <translation>Poimintatyökalut</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show snap tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä poimintatyökalut</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>&amp;Snap</source>
-        <translation>Tartunta</translation>
+        <translation>&amp;Poiminta</translation>
     </message>
 </context>
 </TS>

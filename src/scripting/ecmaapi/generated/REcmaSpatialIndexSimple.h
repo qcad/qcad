@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSpatialIndexSimple {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSpatialIndexSimple {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

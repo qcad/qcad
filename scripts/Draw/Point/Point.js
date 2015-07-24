@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -40,7 +40,7 @@ Point.includeBasePath = includeBasePath;
 Point.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="PointMenu") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="PointToolsPanelAction") {
         EAction.showCadToolBarPanel("PointToolsPanel");
         this.terminate();
     }
@@ -66,7 +66,7 @@ Point.getToolBar = function() {
 
 Point.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "PointMenu";
+    var actionName = "PointToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Point Tools"), mtb);
         action.setScriptFile(Point.includeBasePath + "/Point.js");
@@ -101,12 +101,10 @@ Point.prototype.getTitle = function() {
 Point.addPointsOnLine = function(doc, op, startPoint, endPoint, numberOfPoints) {
     var point = new RPointEntity(doc, new RPointData(startPoint));
     op.addObject(point);
-    var dv = startPoint.operator_subtract(endPoint).operator_divide(
-            numberOfPoints - 1);
+    var dv = startPoint.operator_subtract(endPoint).operator_divide(numberOfPoints - 1);
     var v = startPoint;
     for ( var i = 1; i < numberOfPoints - 1; ++i) {
-        point = new RPointEntity(doc, new RPointData(v.operator_subtract(dv
-                .operator_multiply(i))));
+        point = new RPointEntity(doc, new RPointData(v.operator_subtract(dv.operator_multiply(i))));
         op.addObject(point);
     }
     point = new RPointEntity(doc, new RPointData(endPoint));

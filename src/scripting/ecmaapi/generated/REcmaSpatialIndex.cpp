@@ -67,6 +67,10 @@
     
             REcmaHelper::registerFunction(&engine, proto, clear, "clear");
             
+            REcmaHelper::registerFunction(&engine, proto, bulkLoad, "bulkLoad");
+            
+            REcmaHelper::registerFunction(&engine, proto, bulkLoadSimple, "bulkLoadSimple");
+            
             REcmaHelper::registerFunction(&engine, proto, addToIndex, "addToIndex");
             
             REcmaHelper::registerFunction(&engine, proto, removeFromIndex, "removeFromIndex");
@@ -382,6 +386,146 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpatialIndex::clear", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpatialIndex::bulkLoad
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpatialIndex::bulkLoad", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndex::bulkLoad";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpatialIndex* self = 
+                        getSelf("bulkLoad", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isArray()
+        ) /* type: QList < int > */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QList < QList < RBox > > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < int >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isArray
+                    QList < QList < RBox > >
+                    a1;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(1),
+                        a1
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->bulkLoad(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndex.bulkLoad().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpatialIndex::bulkLoad", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpatialIndex::bulkLoadSimple
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpatialIndex::bulkLoadSimple", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndex::bulkLoadSimple";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpatialIndex* self = 
+                        getSelf("bulkLoadSimple", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isArray()
+        ) /* type: QList < int > */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QList < RBox > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < int >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isArray
+                    QList < RBox >
+                    a1;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(1),
+                        a1
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->bulkLoadSimple(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndex.bulkLoadSimple().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpatialIndex::bulkLoadSimple", context, engine);
             return result;
         }
          QScriptValue

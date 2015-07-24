@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaGraphicsViewImage {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaGraphicsViewImage {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -105,6 +108,12 @@
         getHairlineMode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setAntialiasing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAntialiasing
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getScene
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -159,6 +168,9 @@
         updateImage
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        giveFocus
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasFocus
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -199,12 +211,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setPaintOrigin
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setAntialiasing
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getAntialiasing
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setPanOptimization
@@ -250,6 +256,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getColorCorrectionOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPaintOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPaintOffset
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

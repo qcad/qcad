@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSettings {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSettings {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -49,6 +52,9 @@
         getAppId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDevicePixelRatio
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLocale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -70,6 +76,9 @@
         getApplicationPath
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPluginPaths
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPluginPath
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -77,6 +86,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getCacheLocation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDataLocation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDesktopLocation
@@ -133,6 +145,12 @@
         getStatusBarFont
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSelectionColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getHighResolutionGraphicsView
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getAutoScaleGrid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -152,6 +170,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getArcAngleLengthThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMinArcAngleStep
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDashThreshold
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getQtVersion
@@ -253,6 +277,9 @@
         getValue
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getColorValue
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBoolValue
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -263,6 +290,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getStringValue
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getStringListValue
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setValue
@@ -289,6 +319,12 @@
         isXDataEnabled
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setNextVersionEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isNextVersionEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getAutoScaleLinetypePatterns
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -296,6 +332,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getUseSolidLineSelection
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMouseThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPositionByMousePress
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

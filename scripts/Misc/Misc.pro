@@ -2,6 +2,7 @@ TEMPLATE = subdirs
 SUBDIRS = \
     Examples \
     MiscBlock \
+    MiscDevelopment \
     MiscDraw \
     MiscIO \
     MiscModify \

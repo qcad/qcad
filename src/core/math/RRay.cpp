@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -64,7 +64,15 @@ bool RRay::reverse() {
 
 RLine RRay::getClippedLine(const RBox& box) const {
     RLine ret = RXLine::getClippedLine(box);
-    ret.setStartPoint(getBasePoint());
+
+    if (box.contains(getBasePoint())) {
+        ret.setStartPoint(getBasePoint());
+    }
+
+    if (!RMath::isSameDirection(getDirection1(), getBasePoint().getAngleTo(ret.getEndPoint()), 0.1)) {
+        ret = getLineShape();
+    }
+
     return ret;
 }
 
@@ -80,7 +88,7 @@ QList<RVector> RRay::getPointsWithDistanceToEnd(double distance, RS::From from) 
     RVector dv;
     dv.setPolar(distance, a1);
 
-    if (from==RS::FromStart || from==RS::FromAny) {
+    if (from&RS::FromStart) {
         ret.append(basePoint + dv);
     }
 

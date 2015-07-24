@@ -33,11 +33,26 @@
         <source>Move entity to desired location</source>
         <translation>Premakni entiteto na željeno lokacijo</translation>
     </message>
+    <message>
+        <location line="+332"/>
+        <source>Move Reference Point</source>
+        <translation>Premakni referenčno točko</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Selection</source>
+        <translation>Premakni izbor</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Entity</source>
+        <translation>Premakni entiteto</translation>
+    </message>
 </context>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+57"/>
+        <location filename="../EAction.js" line="+58"/>
         <source>Back</source>
         <translation>Nazaj</translation>
     </message>
@@ -47,7 +62,7 @@
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="+267"/>
+        <location line="+285"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktivno orodje:</translation>
@@ -58,7 +73,7 @@
         <translation>Brez</translation>
     </message>
     <message>
-        <location line="+420"/>
+        <location line="+445"/>
         <source>Options</source>
         <translation>Nastavitve</translation>
     </message>
@@ -78,12 +93,12 @@
         <translation>CAD orodja</translation>
     </message>
     <message>
-        <location line="+692"/>
+        <location line="+659"/>
         <source>Entity is on a locked layer.</source>
         <translation>Entiteta je na zaklenjeni plasti.</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+86"/>
         <source>Entity is not a block reference.</source>
         <translation>Entiteta ni blokovna referenca.</translation>
     </message>
@@ -91,6 +106,11 @@
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
         <translation>Entiteta ni črta ali lok.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc or polyline.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
@@ -119,11 +139,21 @@
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
         <translation>Entiteta ni črta, lok, krog, elipsa ali krivulja.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
+        <translation>Entiteta ni črta, lok, krog, elipsa, krivulja ali lomljenka.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translation>Entiteta ni lomljenka.</translation>
     </message>
@@ -131,7 +161,7 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+307"/>
+        <location filename="../ShapeAlgorithms.js" line="+335"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translation>Radius je padel pod 0.0 po %1 kocentričnih krogih.</translation>
     </message>
@@ -141,7 +171,7 @@
         <translation>Radius je padel pod 0.0 po %1 kocentričnih lokih.</translation>
     </message>
     <message>
-        <location line="+463"/>
+        <location line="+560"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vsaj dve točki sta identični.</translation>
@@ -170,7 +200,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+949"/>
+        <location filename="../WidgetFactory.js" line="+966"/>
         <source>Restore defaults</source>
         <translation>Obnovi privzeto</translation>
     </message>
@@ -240,7 +270,7 @@
         <translation>Izmerjena vrednost</translation>
     </message>
     <message>
-        <location line="+93"/>
+        <location line="+110"/>
         <source>Left</source>
         <translation>Levo</translation>
     </message>
@@ -289,7 +319,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+303"/>
+        <location filename="../autostart.js" line="+328"/>
         <source>Loading add-on translations...</source>
         <translation>Nalagam prevode dodatkov...</translation>
     </message>
@@ -317,7 +347,67 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+679"/>
+        <location filename="../library.js" line="+712"/>
+        <source>Objects</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Object</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Unknown Objects</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Unknown Object</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Linetypes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Linetype</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Views</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity</source>
         <translation>Entiteta</translation>
     </message>
@@ -569,12 +659,12 @@
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation type="unfinished"></translation>
+        <translation>Sledi</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation type="unfinished"></translation>
+        <translation>Sled</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -604,12 +694,12 @@
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation type="unfinished"></translation>
+        <translation>Izzseki </translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation type="unfinished"></translation>
+        <translation>Izzsek</translation>
     </message>
     <message>
         <location line="+3"/>

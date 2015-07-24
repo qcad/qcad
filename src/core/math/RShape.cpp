@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -199,15 +199,15 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
             if (spline2 != NULL) {
                 return getIntersectionPointsLS(*line1, *spline2, limited);
             }
-            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
-            if (xline2 != NULL) {
-                return getIntersectionPointsLL(*line1, xline2->getLineShape(), limited, false);
-            }
             const RRay* ray2 = dynamic_cast<const RRay*> (&shape2);
             if (ray2 != NULL) {
                 QList<RVector> ret = getIntersectionPointsLL(*line1, ray2->getLineShape(), limited, false);
                 if (limited) ret = ray2->filterOnShape(ret, true);
                 return ret;
+            }
+            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
+            if (xline2 != NULL) {
+                return getIntersectionPointsLL(*line1, xline2->getLineShape(), limited, false);
             }
 
             // spline, polyline, ...:
@@ -263,15 +263,15 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
             if (spline2 != NULL) {
                 return getIntersectionPointsLS(line1, *spline2, false);
             }
-            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
-            if (xline2 != NULL) {
-                return getIntersectionPointsLL(line1, xline2->getLineShape(), false);
-            }
             const RRay* ray2 = dynamic_cast<const RRay*> (&shape2);
             if (ray2 != NULL) {
                 QList<RVector> ret = getIntersectionPointsLL(line1, ray2->getLineShape(), false);
                 if (limited) ret = ray2->filterOnShape(ret, true);
                 return ret;
+            }
+            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
+            if (xline2 != NULL) {
+                return getIntersectionPointsLL(line1, xline2->getLineShape(), false);
             }
 
             // spline, polyline, ...:
@@ -312,15 +312,15 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
             if (spline2 != NULL) {
                 return getIntersectionPointsAS(*arc1, *spline2, limited);
             }
-            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
-            if (xline2 != NULL) {
-                return getIntersectionPointsLA(xline2->getLineShape(), *arc1, false, limited);
-            }
             const RRay* ray2 = dynamic_cast<const RRay*> (&shape2);
             if (ray2 != NULL) {
                 QList<RVector> ret = getIntersectionPointsLA(ray2->getLineShape(), *arc1, false, limited);
                 if (limited) ret = ray2->filterOnShape(ret, true);
                 return ret;
+            }
+            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
+            if (xline2 != NULL) {
+                return getIntersectionPointsLA(xline2->getLineShape(), *arc1, false, limited);
             }
 
             // polyline, ...:
@@ -357,15 +357,15 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
             if (spline2 != NULL) {
                 return getIntersectionPointsCS(*circle1, *spline2);
             }
-            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
-            if (xline2 != NULL) {
-                return getIntersectionPointsLC(xline2->getLineShape(), *circle1, false);
-            }
             const RRay* ray2 = dynamic_cast<const RRay*> (&shape2);
             if (ray2 != NULL) {
                 QList<RVector> ret = getIntersectionPointsLC(ray2->getLineShape(), *circle1, false);
                 if (limited) ret = ray2->filterOnShape(ret, true);
                 return ret;
+            }
+            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
+            if (xline2 != NULL) {
+                return getIntersectionPointsLC(xline2->getLineShape(), *circle1, false);
             }
 
             // spline, polyline, ...:
@@ -402,15 +402,15 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
             if (spline2 != NULL) {
                 return getIntersectionPointsES(*ellipse1, *spline2, limited);
             }
-            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
-            if (xline2 != NULL) {
-                return getIntersectionPointsLE(xline2->getLineShape(), *ellipse1, false, limited);
-            }
             const RRay* ray2 = dynamic_cast<const RRay*> (&shape2);
             if (ray2 != NULL) {
                 QList<RVector> ret = getIntersectionPointsLE(ray2->getLineShape(), *ellipse1, false, limited);
                 if (limited) ret = ray2->filterOnShape(ret, true);
                 return ret;
+            }
+            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
+            if (xline2 != NULL) {
+                return getIntersectionPointsLE(xline2->getLineShape(), *ellipse1, false, limited);
             }
 
             // spline, polyline, ...:
@@ -435,15 +435,15 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
             if (arc2 != NULL) {
                 return getIntersectionPointsAT(*arc2, *triangle1, limited);
             }
-            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
-            if (xline2 != NULL) {
-                return getIntersectionPointsLT(xline2->getLineShape(), *triangle1, false, limited);
-            }
             const RRay* ray2 = dynamic_cast<const RRay*> (&shape2);
             if (ray2 != NULL) {
                 QList<RVector> ret = getIntersectionPointsLT(ray2->getLineShape(), *triangle1, false, limited);
                 if (limited) ret = ray2->filterOnShape(ret, true);
                 return ret;
+            }
+            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
+            if (xline2 != NULL) {
+                return getIntersectionPointsLT(xline2->getLineShape(), *triangle1, false, limited);
             }
         }
     }
@@ -467,15 +467,15 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
             if (ellipse2 != NULL) {
                 return getIntersectionPointsES(*ellipse2, *spline1, limited);
             }
-            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
-            if (xline2 != NULL) {
-                return getIntersectionPointsLS(xline2->getLineShape(), *spline1, false);
-            }
             const RRay* ray2 = dynamic_cast<const RRay*> (&shape2);
             if (ray2 != NULL) {
                 QList<RVector> ret = getIntersectionPointsLS(ray2->getLineShape(), *spline1, false);
                 if (limited) ret = ray2->filterOnShape(ret, true);
                 return ret;
+            }
+            const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
+            if (xline2 != NULL) {
+                return getIntersectionPointsLS(xline2->getLineShape(), *spline1, false);
             }
         }
     }
@@ -496,15 +496,15 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
                 if (ellipse2 != NULL) {
                     return getIntersectionPointsEX(*ellipse2, *explodable1, limited);
                 }
-                const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
-                if (xline2 != NULL) {
-                    return getIntersectionPointsLX(xline2->getLineShape(), *explodable1, false);
-                }
                 const RRay* ray2 = dynamic_cast<const RRay*> (&shape2);
                 if (ray2 != NULL) {
                     QList<RVector> ret = getIntersectionPointsLX(ray2->getLineShape(), *explodable1, false);
                     if (limited) ret = ray2->filterOnShape(ret, true);
                     return ret;
+                }
+                const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
+                if (xline2 != NULL) {
+                    return getIntersectionPointsLX(xline2->getLineShape(), *explodable1, false);
                 }
             }
 
@@ -593,8 +593,8 @@ QList<RVector> RShape::getIntersectionPointsLC(const RLine& line1,
     RVector vLineCenter = line1.getVectorTo(circle2.getCenter(), false);
     double dist = vLineCenter.getMagnitude();
 
-    // special case: arc touches line (tangent):
-    if (fabs(dist - circle2.getRadius()) < 1.0e-4) {
+    // special case: arc almost touches line (tangent with tiny gap):
+    if (dist >= circle2.getRadius() && dist < circle2.getRadius()+1.0e-4) {
         res.append(circle2.getCenter() - vLineCenter);
         // ret.setTangent(true);
         return res;
@@ -645,15 +645,20 @@ QList<RVector> RShape::getIntersectionPointsLC(const RLine& line1,
         sol2 = p + d * t2;
     }
 
-    if (!limited || line1.isOnShape(sol1)) {
+    if (!limited || line1.isOnShape(sol1, true, 1.0e-6)) {
         res.append(sol1);
     }
     if (sol2.isValid()) {
-        if (!limited || line1.isOnShape(sol2)) {
+        if (!limited || line1.isOnShape(sol2, true, 1.0e-6)) {
             res.append(sol2);
         }
     }
     // ret.setTangent(tangent);
+
+    // tangent with two intersections very close to each other:
+    if (res.length()==2 && res[0].equalsFuzzy(res[1])) {
+        res.removeLast();
+    }
 
     return res;
 }
@@ -1100,6 +1105,9 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
     return ret;
 }
 
+/**
+ * Based on "Hughes and Chraibi (2011-2012), Calculating Ellipse Overlap Areas"
+ */
 QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const REllipse& ellipse2) {
     QList<RVector> ret;
 
@@ -1190,7 +1198,6 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
 
         return ret;
     }
-
 
     // transform ellipse2 to coordinate system of ellipse1:
     RVector centerOffset = -ellipse1Copy.getCenter();
@@ -1382,7 +1389,7 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
 //        for (i = 0; i < 5; i++) {
 //            qDebug() << "py[" << i << "]: " << py[i];
 //        }
-        RMath::getBiQuadRoots (py, r);
+        RMath::getBiQuadRoots(py, r);
         nroots = 4;
     }
     else if (fabs (cy[3]) > 0.0) {
@@ -1392,7 +1399,7 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
             py[3-i] = cy[i]/cy[3];
         }
         py[0] = 1.0;
-        RMath::getCubicRoots (py, r);
+        RMath::getCubicRoots(py, r);
         nroots = 3;
     }
     else if (fabs (cy[2]) > 0.0) {

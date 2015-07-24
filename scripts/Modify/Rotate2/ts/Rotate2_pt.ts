@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Rotate2</name>
     <message>
@@ -22,6 +22,21 @@
 --file: qcadactions_pt.ts--
 Rotacione &amp;Duas</translatorcomment>
         <translation>Rotacione &amp;duas</translation>
+    </message>
+    <message>
+        <location filename="../Rotate2.ui" line="+17"/>
+        <source>Primary Angle:</source>
+        <translation>Ângulo Primário:</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Secondary Angle:</source>
+        <translation>Ângulo Secundário:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Copies:</source>
+        <translation>Cópias:</translation>
     </message>
 </context>
 <context>
@@ -91,17 +106,17 @@ Use camada e &amp;atributos atual</translatorcomment>
     <message>
         <location filename="../Rotate2Dialog.ui" line="+14"/>
         <source>Rotate Two Options</source>
-        <translation>Opciones para rotacione duas</translation>
+        <translation>Rotacione Duas Opções</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation>Número de cópias</translation>
+        <translation>Número de Cópias</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation>&amp;Apague o original</translation>
+        <translation>&amp;Elimine o original</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -126,31 +141,28 @@ Use camada e &amp;atributos atual</translatorcomment>
     <message>
         <location line="+22"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation>Use camada e &amp;atributos atual</translation>
+        <translation>Use a camada e os &amp;atributos atuais</translation>
     </message>
 </context>
 <context>
     <name>TranslateRotate</name>
     <message>
-        <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ângulo primário:</translation>
+        <translation type="vanished">Ângulo Primário:</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Secondary Angle:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ângulo secundário:</translation>
+        <translation type="vanished">Ângulo Secundário:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Copies:</source>
         <translatorcomment>--ignored colon--
 --file: qt_pt.ts--
 Número de cópias:
 Espaço entre cópias:</translatorcomment>
-        <translation>Cópias:</translation>
+        <translation type="vanished">Cópias:</translation>
     </message>
 </context>
 </TS>

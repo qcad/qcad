@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -41,7 +41,7 @@ Misc.includeBasePath = includeBasePath;
 Misc.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="MiscToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="MiscToolsPanelAction") {
         EAction.showCadToolBarPanel("MiscToolsPanel");
         this.terminate();
     }
@@ -55,7 +55,7 @@ Misc.getMenu = function() {
 
 Misc.getCadToolBarPanel = function() {
     var mtb = EAction.getMainCadToolBarPanel();
-    var actionName = "MiscToolsPanelButton";
+    var actionName = "MiscToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Misc Tools"), mtb);
         action.setScriptFile(Misc.includeBasePath + "/Misc.js");

@@ -1,442 +1,160 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RFont.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RFONT_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RFONT_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QChar&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QPainterPath&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
-  <comment type="block">/** * Represents a CXF font. * * \ingroup
-  core * \scriptable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RFont</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor_decl>
-  <name>RFont</name>
-  <parameter_list>()</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RFont</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>fileName</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <name>~RFont</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isValid</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>!
-    <name>fileName</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <comment type="block">/** \return the fileName of this font.
-  */</comment>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getFileName</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>fileName</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** \return the encoding of this font.
-  */</comment>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getEncoding</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>encoding</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** \return the alternative names of this
-  font. */</comment>
-  <function>
-    <type>
-      <name>const</name>
-      <name>QStringList</name>
-    </type>
-    <name>getNames</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>names</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** \return the author(s) of this font.
-  */</comment>
-  <function>
-    <type>
-      <name>const</name>
-      <name>QStringList</name>
-    </type>
-    <name>getAuthors</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>authors</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** \return Default letter spacing for this
-  font */</comment>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getLetterSpacing</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>letterSpacing</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** \return Default word spacing for this
-  font */</comment>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getWordSpacing</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>wordSpacing</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** \return Default line spacing factor for
-  this font */</comment>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getLineSpacingFactor</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>lineSpacingFactor</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>load</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <comment type="block">/** * \return True if this font is already
-  loaded. */</comment>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isLoaded</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>loaded</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function>
-    <type>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QChar</name>
-      </argument>, 
-      <argument>
-        <name>QPainterPath</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>getGlyphMap</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>glyphMap</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>QPainterPath</name>
-  </type>
-  <name>getGlyph</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QChar</name>&amp;</type>
-      <name>ch</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>draft</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>QPainterPath</name>
-  </type>
-  <name>getShape</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>name</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>QString</name>
-  </type>
-  <name>getShapeName</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QChar</name>&amp;</type>
-      <name>ch</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="line">//int countGlyphs() {</comment>
-  <comment type="line">// return glyphMap.count();</comment>
-  <comment type="line">//}</comment>
-  <comment type="line">//QPainterPath glyphAt(int i) {</comment>
-  <comment type="line">// return glyphMap.values()</comment>
-  <comment type="line">//}</comment></public>
-  <private>private: 
-  <comment type="line">//! list of glyphs as painter paths
-  (letters)</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QChar</name>
-      </argument>, 
-      <argument>
-        <name>QPainterPath</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>glyphMap</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-        <name>QPainterPath</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>shapeMap</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QChar</name>
-      </argument>, 
-      <argument>
-        <name>QString</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>numNameMap</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QChar</name>
-      </argument>, 
-      <argument>
-        <name>QPainterPath</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>glyphDraftMap</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//! Font file name</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>fileName</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//! Font encoding (see docu for
-  QTextCodec)</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>encoding</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//! Font names</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QStringList</name>
-    </type>
-    <name>names</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//! Authors</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QStringList</name>
-    </type>
-    <name>authors</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//! Is this font currently loaded into
-  memory?</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>loaded</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//! Default letter spacing for this
-  font</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>letterSpacing</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//! Default word spacing for this
-  font</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>wordSpacing</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//! Default line spacing factor for this
-  font</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>lineSpacingFactor</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RFont</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RFont*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RFont.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RFONT_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RFONT_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QChar&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPainterPath&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
+
+
+<comment type="block">/**
+ * Represents a CXF font.
+ *
+ * \ingroup core
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RFont</name> <block>{<private type="default">
+</private><public>public:
+    <constructor_decl><name>RFont</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RFont</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><name>~RFont</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>!<name>fileName</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/** \return the fileName of this font. */</comment>
+    <function><type><name>QString</name></type> <name>getFileName</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>fileName</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/** \return the encoding of this font. */</comment>
+    <function><type><name>QString</name></type> <name>getEncoding</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>encoding</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/** \return the alternative names of this font. */</comment>
+    <function><type><name>const</name> <name>QStringList</name></type> <name>getNames</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>names</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/** \return the author(s) of this font. */</comment>
+    <function><type><name>const</name> <name>QStringList</name></type> <name>getAuthors</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>authors</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/** \return Default letter spacing for this font */</comment>
+    <function><type><name>double</name></type> <name>getLetterSpacing</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>letterSpacing</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/** \return Default word spacing for this font */</comment>
+    <function><type><name>double</name></type> <name>getWordSpacing</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>wordSpacing</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/** \return Default line spacing factor for this font */</comment>
+    <function><type><name>double</name></type> <name>getLineSpacingFactor</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>lineSpacingFactor</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>bool</name></type> <name>load</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \return True if this font is already loaded.
+     */</comment>
+    <function><type><name>bool</name></type> <name>isLoaded</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>loaded</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>QMap<argument_list>&lt;<argument><name>QChar</name></argument>, <argument><name>QPainterPath</name></argument>&gt;</argument_list></name></type> <name>getGlyphMap</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>glyphMap</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>QPainterPath</name></type> <name>getGlyph</name><parameter_list>(<param><decl><type><name>const</name> <name>QChar</name>&amp;</type> <name>ch</name></decl></param>, <param><decl><type><name>bool</name></type> <name>draft</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>QPainterPath</name></type> <name>getShape</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>QString</name></type> <name>getShapeName</name><parameter_list>(<param><decl><type><name>const</name> <name>QChar</name>&amp;</type> <name>ch</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="line">//int countGlyphs() {</comment>
+    <comment type="line">//    return glyphMap.count();</comment>
+    <comment type="line">//}</comment>
+
+    <comment type="line">//QPainterPath glyphAt(int i) {</comment>
+    <comment type="line">//    return glyphMap.values()</comment>
+    <comment type="line">//}</comment>
+
+</public><private>private:
+    <comment type="line">//! list of glyphs as painter paths (letters)</comment>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QChar</name></argument>, <argument><name>QPainterPath</name></argument>&gt;</argument_list></name></type> <name>glyphMap</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QPainterPath</name></argument>&gt;</argument_list></name></type> <name>shapeMap</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QChar</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>numNameMap</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QChar</name></argument>, <argument><name>QPainterPath</name></argument>&gt;</argument_list></name></type> <name>glyphDraftMap</name></decl>;</decl_stmt>
+
+    <comment type="line">//! Font file name</comment>
+    <decl_stmt><decl><type><name>QString</name></type> <name>fileName</name></decl>;</decl_stmt>
+
+    <comment type="line">//! Font encoding (see docu for QTextCodec)</comment>
+    <decl_stmt><decl><type><name>QString</name></type> <name>encoding</name></decl>;</decl_stmt>
+
+    <comment type="line">//! Font names</comment>
+    <decl_stmt><decl><type><name>QStringList</name></type> <name>names</name></decl>;</decl_stmt>
+
+    <comment type="line">//! Authors</comment>
+    <decl_stmt><decl><type><name>QStringList</name></type> <name>authors</name></decl>;</decl_stmt>
+
+    <comment type="line">//! Is this font currently loaded into memory?</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>loaded</name></decl>;</decl_stmt>
+
+    <comment type="line">//! Default letter spacing for this font</comment>
+    <decl_stmt><decl><type><name>double</name></type> <name>letterSpacing</name></decl>;</decl_stmt>
+
+    <comment type="line">//! Default word spacing for this font</comment>
+    <decl_stmt><decl><type><name>double</name></type> <name>wordSpacing</name></decl>;</decl_stmt>
+
+    <comment type="line">//! Default line spacing factor for this font</comment>
+    <decl_stmt><decl><type><name>double</name></type> <name>lineSpacingFactor</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RFont</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RFont*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

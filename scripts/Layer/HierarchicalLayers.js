@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -22,13 +22,24 @@ function HierarchicalLayers() {
 
 HierarchicalLayers.separator = " ... ";
 
-HierarchicalLayers.getChildLayerNames = function(doc, layerName) {
+HierarchicalLayers.hasChildLayers = function(doc, layerName) {
+    return HierarchicalLayers.getChildLayerNames(doc, layerName).length!==0;
+};
+
+HierarchicalLayers.getChildLayerNames = function(doc, layerName, recursive) {
+    if (isNull(recursive)) {
+        recursive = true;
+    }
+
     var ret = [];
     var names = doc.getLayerNames();
     for (var i=0; i<names.length; i++) {
         var name = names[i];
-        if (name.startsWith(layerName + HierarchicalLayers.separator)) {
-            ret.push(name);
+        var prefix = layerName + HierarchicalLayers.separator;
+        if (name.startsWith(prefix)) {
+            if (recursive || !name.substring(prefix.length).contains(HierarchicalLayers.separator)) {
+                ret.push(name);
+            }
         }
     }
     return ret;
@@ -47,6 +58,10 @@ HierarchicalLayers.getParentLayerName = function(layerName) {
 };
 
 HierarchicalLayers.getShortLayerName = function(layerName) {
-    var a = layerName.split(HierarchicalLayers.separator);
+    var a = HierarchicalLayers.getLayerNameHierarchy(layerName);
     return a[a.length-1];
+};
+
+HierarchicalLayers.getLayerNameHierarchy = function(layerName) {
+    return layerName.split(HierarchicalLayers.separator);
 };

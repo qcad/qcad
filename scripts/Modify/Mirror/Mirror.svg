@@ -1,10 +1,83 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs/>
-<g color="#000">
-<g fill="none" stroke-linecap="square" stroke-width="16">
-<path stroke="#000" d="m200,56 0,384-144,0z"/>
-<path stroke="#f00" d="m328,56 0,384 144,0z"/>
-</g>
-<path stroke-dasharray="40,40" fill="#fff" stroke="#00f" stroke-width="10" d="m264,40 0,432"/>
-</g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="Mirror.svg">
+  <metadata
+     id="metadata18">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1957"
+     inkscape:window-height="1108"
+     id="namedview16"
+     showgrid="true"
+     inkscape:zoom="1.3037281"
+     inkscape:cx="256"
+     inkscape:cy="256"
+     inkscape:window-x="483"
+     inkscape:window-y="116"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2995"
+       empspacing="8"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       spacingx="8px"
+       spacingy="8px" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4" />
+  <g
+     id="g6"
+     transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,297.60808,-158.96046)"
+     style="color:#000000">
+    <g
+       id="g8"
+       style="fill:none;stroke-width:16;stroke-linecap:square">
+      <path
+         d="M 200,56 200,440 56,440 z"
+         id="path10"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000" />
+      <path
+         d="M 328,56 328,440 472,440 z"
+         id="path12"
+         inkscape:connector-curvature="0"
+         style="stroke:#ff0000" />
+    </g>
+    <path
+       d="M 264,40 264,472"
+       id="path14"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke:#0000ff;stroke-width:10;stroke-dasharray:40, 40" />
+  </g>
 </svg>

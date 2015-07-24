@@ -170,6 +170,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, transform, "transform");
             
+            REcmaHelper::registerFunction(&engine, proto, move, "move");
+            
             REcmaHelper::registerFunction(&engine, proto, rotate, "rotate");
             
             REcmaHelper::registerFunction(&engine, proto, scale, "scale");
@@ -3621,6 +3623,73 @@
             return result;
         }
          QScriptValue
+        REcmaPainterPath::move
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::move", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::move";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("move", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->move(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.move().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::move", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPainterPath::rotate
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4063,7 +4132,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < RShape >(o0->clone());
+                        
+                          // always clone shape if we expect a shared pointer (might be a simple object on stack):
+                          QSharedPointer < RShape >(o0->clone());
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -69,6 +69,10 @@ DefaultNavigation.prototype.finishEvent = function() {
 
 DefaultNavigation.prototype.keyPressEvent = function(event) {
     var v = undefined;
+
+    if (event.isAccepted()) {
+        return;
+    }
 
     if (event.key()===Qt.Key_Left.valueOf()) {
         v = new RVector(50, 0);

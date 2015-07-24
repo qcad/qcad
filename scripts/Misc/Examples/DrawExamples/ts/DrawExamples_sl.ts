@@ -10,7 +10,7 @@
     <message>
         <location filename="../DrawExamples.js" line="+45"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Riši</translation>
     </message>
 </context>
 </TS>

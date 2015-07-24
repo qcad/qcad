@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -40,7 +40,7 @@ Circle.includeBasePath = includeBasePath;
 Circle.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="CircleToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="CircleToolsPanelAction") {
         EAction.showCadToolBarPanel("CircleToolsPanel");
         this.terminate();
     }
@@ -66,7 +66,7 @@ Circle.getToolBar = function() {
 
 Circle.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "CircleToolsPanelButton";
+    var actionName = "CircleToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Circle Tools"), mtb);
         action.setScriptFile(Circle.includeBasePath + "/Circle.js");

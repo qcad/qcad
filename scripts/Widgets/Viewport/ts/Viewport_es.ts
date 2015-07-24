@@ -150,7 +150,22 @@ Selecciona entidades solas</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+331"/>
+        <location filename="../Viewport.js" line="+244"/>
+        <source>Dropped data not supported</source>
+        <translation>Datos insertados no compatibles</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Importing file: </source>
+        <translation>Importación de archivo: </translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Importing URL: </source>
+        <translation>Importación de URL: </translation>
+    </message>
+    <message>
+        <location line="+65"/>
         <source>Grid</source>
         <translation>Rejilla</translation>
     </message>

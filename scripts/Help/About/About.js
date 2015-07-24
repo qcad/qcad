@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -30,7 +30,7 @@ About.prototype = new Help();
 About.prototype.beginEvent = function() {
     Help.prototype.beginEvent.call(this);
 
-    var formWidget = this.createWidget("AboutDialog.ui");
+    var dialog = this.createWidget("AboutDialog.ui");
 
     this.head = "<head>\n"
          + "<style type='text/css'>\n"
@@ -44,33 +44,35 @@ About.prototype.beginEvent = function() {
     this.applicationName = qApp.applicationName;
 
     // init plugin view:
-    var webView = formWidget.findChild("PluginsText");
+    var webView = dialog.findChild("PluginsText");
     WidgetFactory.initWebView(webView, this, "openUrl");
     var webPage = webView.page();
     webPage.linkDelegationPolicy = QWebPage.DelegateAllLinks;
     this.initAboutPlugins(webView);
 
-    formWidget.windowTitle = qsTr("About %1").arg(this.applicationName);
+    dialog.windowTitle = qsTr("About %1").arg(this.applicationName);
 
     // init about view:
-    webView = formWidget.findChild("AppText");
+    webView = dialog.findChild("AppText");
     WidgetFactory.initWebView(webView, this, "openUrl");
     this.initAboutApp(webView);
 
     // init scripts view:
-    webView = formWidget.findChild("ScriptsText");
+    webView = dialog.findChild("ScriptsText");
     WidgetFactory.initWebView(webView, this, "openUrl");
     this.initAboutScripts(webView);
 
-    webView = formWidget.findChild("CreditsText");
+    webView = dialog.findChild("CreditsText");
     WidgetFactory.initWebView(webView, this, "openUrl");
     this.initCredits(webView);
 
     // init system view:
-    var textEdit = formWidget.findChild("SystemText");
+    var textEdit = dialog.findChild("SystemText");
     this.initAboutSystem(textEdit);
 
-    formWidget.exec();
+    dialog.exec();
+    dialog.destroy();
+    EAction.activateMainWindow();
 };
 
 About.prototype.initAboutApp = function(webView) {
@@ -98,7 +100,7 @@ About.prototype.initAboutApp = function(webView) {
             + "<p/>"
             + "<p>%1 is free (open source) software.<br/>".arg(qApp.applicationName)
             + "This means that everyone can <a href='http://www.qcad.org/contribute'>get involved!</a></p>"
-            + "<p>Plugins and script add-ons are subject to their respective license (see 'About Plugins' tab).</p>"
+            + "<p>Plugins and script add-ons are subject to their respective license (see 'Plugins' tab).</p>"
             + "<p/>"
             + "<p>Internet: <a href='http://%1'>%1</a></p>".arg(qApp.organizationDomain)
             + "<p/>"
@@ -126,6 +128,9 @@ About.prototype.initAboutPlugins = function(webView) {
         html += "No plugins found.";
     }
     else {
+        var namePostfixesSlash = [];
+        var namePostfixesSpace = [];
+        var nameOverrides = [];
         for (var i=0; i<numPlugins; i++) {
             html += "<table border='0' width='100%'>";
             html += "<col width='25%'/>";
@@ -137,15 +142,28 @@ About.prototype.initAboutPlugins = function(webView) {
 
             // plugin about info:
             text = pluginInfo.get("Name", qsTr("No information available"));
-            if (text==="Pro Tools") {
-                if (isNull(pluginInfo.get("TrialExpired"))) {
-                    this.applicationName = qApp.applicationName + " Professional";
+            html += this.getTableRow(qsTr("Plugin:"), "<b>" + Qt.escape(text) + "</b>", false);
+
+            text = pluginInfo.get("NamePostfix");
+            if (!isNull(text)) {
+                if (text.startsWith("/")) {
+                    namePostfixesSlash.push(text);
                 }
                 else {
-                    this.applicationName = qApp.applicationName + " Professional Trial";
+                    namePostfixesSpace.push(text);
                 }
             }
-            html += this.getTableRow(qsTr("Plugin:"), "<b>" + Qt.escape(text) + "</b>", false);
+
+            text = pluginInfo.get("NameOverride");
+            if (!isNull(text)) {
+                nameOverrides.push(text);
+            }
+
+            // ID:
+            text = pluginInfo.get("ID");
+            if (!isNull(text)) {
+                html += this.getTableRow(qsTr("ID:"), text, false);
+            }
 
             // description:
             text = pluginInfo.get("Description");
@@ -223,6 +241,21 @@ About.prototype.initAboutPlugins = function(webView) {
             }
             html += "</table>";
             html += "<hr/>";
+        }
+
+        // name override:
+        if (nameOverrides.length!==0) {
+            var a = nameOverrides.sort( function (a, b) { return b.length - a.length; });
+            this.applicationName = a[0];
+        }
+        else {
+            // add name postfixes:
+
+            // e.g. "/XYZ" for "MyApp/XYZ":
+            namePostfixesSlash.sort();
+            // e.g. "Incredible Edition" for "MyApp Incredible Edition":
+            namePostfixesSpace.sort();
+            this.applicationName = qApp.applicationName + namePostfixesSlash.join("") + namePostfixesSpace.join("");
         }
     }
 

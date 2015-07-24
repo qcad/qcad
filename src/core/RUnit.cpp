@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -649,10 +649,6 @@ QString RUnit::formatFractional(double length, RS::Unit /*unit*/,
     return ret;
 }
 
-
-
-
-
 /**
  * Formats the given angle with the given format.
  *
@@ -853,6 +849,10 @@ QString RUnit::doubleToString(double value, int prec,
                 ret.truncate(ret.length()-1);
             }
         }
+    }
+
+    if (ret=="-0") {
+        ret = "0";
     }
 
     return ret;

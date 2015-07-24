@@ -70,11 +70,15 @@
     
             REcmaHelper::registerFunction(&engine, proto, clear, "clear");
             
+            REcmaHelper::registerFunction(&engine, proto, bulkLoad, "bulkLoad");
+            
             REcmaHelper::registerFunction(&engine, proto, addToIndex, "addToIndex");
             
             REcmaHelper::registerFunction(&engine, proto, removeFromIndex, "removeFromIndex");
             
             REcmaHelper::registerFunction(&engine, proto, queryIntersected, "queryIntersected");
+            
+            REcmaHelper::registerFunction(&engine, proto, queryIntersectedSimple, "queryIntersectedSimple");
             
             REcmaHelper::registerFunction(&engine, proto, queryContained, "queryContained");
             
@@ -244,6 +248,76 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpatialIndexNavel::clear", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpatialIndexNavel::bulkLoad
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpatialIndexNavel::bulkLoad", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndexNavel::bulkLoad";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpatialIndexNavel* self = 
+                        getSelf("bulkLoad", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isArray()
+        ) /* type: QList < int > */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QList < QList < RBox > > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < int >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isArray
+                    QList < QList < RBox > >
+                    a1;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(1),
+                        a1
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->bulkLoad(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndexNavel.bulkLoad().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpatialIndexNavel::bulkLoad", context, engine);
             return result;
         }
          QScriptValue
@@ -964,6 +1038,78 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpatialIndexNavel::queryIntersected", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpatialIndexNavel::queryIntersectedSimple
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpatialIndexNavel::queryIntersectedSimple", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndexNavel::queryIntersectedSimple";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpatialIndexNavel* self = 
+                        getSelf("queryIntersectedSimple", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RBox */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSpatialIndexNavel: Argument 0 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < int >'
+    QList < int > cppResult =
+        
+               self->queryIntersectedSimple(a0);
+        // return type: QList < int >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndexNavel.queryIntersectedSimple().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpatialIndexNavel::queryIntersectedSimple", context, engine);
             return result;
         }
          QScriptValue

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -17,7 +17,8 @@
  * along with QCAD.
  */
 
-include("../../WidgetFactory.js");
+include("scripts/WidgetFactory.js");
+include("scripts/Widgets/StatusBar/StatusBar.js");
 
 function ProgressBar() {
     ProgressBar.progressBar = undefined;
@@ -27,9 +28,9 @@ function ProgressBar() {
 /**
  * Progress bar widget in status bar.
  */
-ProgressBar.init = function(basePath) {
-    var formWidget = WidgetFactory.createWidget(basePath, "ProgressBar.ui");
-    EAction.addToStatusBar(formWidget, 1000);
+ProgressBar.postInit = function(basePath) {
+    var widget = WidgetFactory.createWidget(basePath, "ProgressBar.ui");
+    StatusBar.addWidget(widget, 1000, RSettings.getBoolValue("StatusBar/ProgressDisplay", true));
 
     ProgressBar.prepare();
 
@@ -45,7 +46,7 @@ ProgressBar.init = function(basePath) {
 
 ProgressBar.prepare = function() {
     var appWin = EAction.getMainWindow();
-    var statusBar = appWin.statusBar();
+    var statusBar = appWin.findChild("StatusBar");
     ProgressBar.progressLabel = statusBar.findChild("ProgressText");
     ProgressBar.progressBar = statusBar.findChild("ProgressBar");
     ProgressBar.progressDialog = appWin.findChild("ProgressDialog");

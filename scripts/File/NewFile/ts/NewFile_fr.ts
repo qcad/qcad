@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fr_FR">
+<TS version="2.1" language="fr_FR">
 <context>
     <name>CloseDialog</name>
     <message>
@@ -30,15 +30,15 @@
     </message>
     <message>
         <source>Loading...</source>
-        <translation>Chargement...</translation>
+        <translation type="vanished">Chargement...</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+23"/>
         <source>Import Error</source>
         <translation>Erreur d&apos;importation</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Cannot open file</source>
         <translation>Impossible d&apos;ouvrir le fichier</translation>
     </message>
@@ -58,13 +58,13 @@
         <translation>Le fichier est vide.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>Drawing loaded successfully:</source>
         <translation>Dessin chargé avec succès :</translation>
     </message>
     <message>
         <source>Opened drawing:</source>
-        <translation>Dessin ouvert :</translation>
+        <translation type="vanished">Dessin ouvert :</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -72,7 +72,7 @@
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+115"/>
         <source>Untitled %1</source>
         <translation>Sans titre %1</translation>
     </message>
@@ -82,7 +82,7 @@
         <translation>Lecture seule</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+54"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>Voulez-vous enregistrer les modifications que vous avez faites&lt;br&gt;dans le document &apos;%1&apos;?</translation>
     </message>

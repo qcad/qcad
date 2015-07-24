@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -57,6 +57,7 @@ RGraphicsViewQt::RGraphicsViewQt(QWidget* parent, bool showFocus)
 
     grabGesture(Qt::PanGesture);
     grabGesture(Qt::PinchGesture);
+    setContextMenuPolicy(Qt::PreventContextMenu);
 }
 
 
@@ -68,7 +69,12 @@ RGraphicsViewQt::~RGraphicsViewQt() {
  * Triggers a paintEvent based on a buffered offscreen bitmap (very fast).
  */
 void RGraphicsViewQt::repaintView() {
+#if QT_VERSION < 0x040800
+    // 20150717: experimental: update is unreliable
+    QWidget::repaint();
+#else
     update();
+#endif
 }
 
 void RGraphicsViewQt::repaintNow() {
@@ -93,7 +99,11 @@ void RGraphicsViewQt::paintEvent(QPaintEvent* e) {
     RDocumentInterface* di = getDocumentInterface();
     if (di!=NULL && di->isSuspended()) {
         QPainter wPainter(this);
-        wPainter.drawImage(0, 0, graphicsBuffer);
+        //wPainter.drawImage(0, 0, graphicsBuffer);
+        wPainter.drawImage(getRect(), graphicsBuffer);
+        //QPixmap pm;
+        //pm.convertFromImage(graphicsBuffer);
+        //wPainter.drawPixmap(this->rect(), pm);
         wPainter.end();
         return;
     }
@@ -103,7 +113,11 @@ void RGraphicsViewQt::paintEvent(QPaintEvent* e) {
     // event is NULL for fake paint events (testing):
     if (e!=NULL) {
         QPainter wPainter(this);
-        wPainter.drawImage(0, 0, graphicsBufferWithPreview);
+        //wPainter.drawImage(0, 0, graphicsBufferWithPreview);
+        wPainter.drawImage(getRect(), graphicsBufferWithPreview);
+        //QPixmap pm;
+        //pm.convertFromImage(graphicsBufferWithPreview);
+        //wPainter.drawPixmap(this->rect(), pm);
         wPainter.end();
     }
 
@@ -167,7 +181,7 @@ void RGraphicsViewQt::mouseMoveEvent(QMouseEvent* event) {
         return;
     }
 
-    RMouseEvent e(*event, *scene, *this);
+    RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
     RGraphicsView::handleMouseMoveEvent(e);
 
  #if (QT_VERSION < QT_VERSION_CHECK(4, 8, 0))
@@ -223,17 +237,32 @@ void RGraphicsViewQt::mousePressEvent(QMouseEvent* event) {
     if (event==NULL || scene==NULL) {
         return;
     }
-    RMouseEvent e(*event, *scene, *this);
+    RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
+    mousePressScreenPosition = e.getScreenPosition();
+    mousePressModelPosition = e.getModelPosition();
+    mouseClickTimer.start();
     RGraphicsView::handleMousePressEvent(e);
     lastButtonState = event->buttons();
     event->accept();
 }
 
 void RGraphicsViewQt::mouseReleaseEvent(QMouseEvent* event) {
+    static int ignoreTimeThreshold = RSettings::getIntValue("GraphicsView/IgnoreTimeThreshold", 150);
+    static int ignoreDeltaThreshold = RSettings::getIntValue("GraphicsView/IgnoreDeltaThreshold", 100);
+
     if (event==NULL || scene==NULL) {
         return;
     }
-    RMouseEvent e(*event, *scene, *this);
+    RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
+
+    // if mouse press and mouse release happend within a short time span and the
+    // mouse movement was small, use the mouse press location
+    // otherwise use mouse release location to define point:
+    if (mouseClickTimer.elapsed()<ignoreTimeThreshold &&
+        e.getScreenPosition().getDistanceTo(mousePressScreenPosition) < ignoreDeltaThreshold) {
+        e.setScreenPosition(mousePressScreenPosition);
+        e.setModelPosition(mousePressModelPosition);
+    }
     RGraphicsView::handleMouseReleaseEvent(e);
     lastButtonState = event->buttons();
     event->accept();
@@ -243,7 +272,7 @@ void RGraphicsViewQt::mouseDoubleClickEvent(QMouseEvent* event) {
     if (event==NULL || scene==NULL) {
         return;
     }
-    RMouseEvent e(*event, *scene, *this);
+    RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
     RGraphicsView::handleMouseDoubleClickEvent(e);
     lastButtonState = event->buttons();
     event->accept();
@@ -289,11 +318,15 @@ void RGraphicsViewQt::resizeEvent(QResizeEvent* ) {
 }
 
 int RGraphicsViewQt::getWidth() const {
-    return width();
+    return width() * getDevicePixelRatio();
 }
 
 int RGraphicsViewQt::getHeight() const {
-    return height();
+    return height() * getDevicePixelRatio();
+}
+
+QRect RGraphicsViewQt::getRect() const {
+    return QRect(0,0,getWidth(),getHeight());
 }
 
 QCursor RGraphicsViewQt::getCursor() {
@@ -358,6 +391,10 @@ void RGraphicsViewQt::focusOutEvent(QFocusEvent* event) {
     QWidget::focusOutEvent(event);
 }
 
+void RGraphicsViewQt::giveFocus() {
+    QWidget::setFocus(Qt::OtherFocusReason);
+}
+
 bool RGraphicsViewQt::hasFocus() {
     return QWidget::hasFocus();
 }
@@ -386,5 +423,30 @@ void RGraphicsViewQt::emitUpdateTextLabel(const RTextLabel& textLabel) {
         QPainter gbPainter(&graphicsBufferWithPreview);
         emit(updateTextLabel(&gbPainter, textLabel));
         gbPainter.end();
+    }
+}
+
+void RGraphicsViewQt::simulateMouseMoveEvent() {
+    if (!lastKnownScreenPosition.isValid() && isVisible()) {
+        QPoint p = mapFromGlobal(QCursor::pos());
+        if (p.x()>width() || p.x()<0 || p.y()<0 || p.y()>height()) {
+            p = QPoint(width()/2, height()/2);
+        }
+        lastKnownScreenPosition = RVector(p.x(), p.y());
+        lastKnownModelPosition = mapFromView(lastKnownScreenPosition);
+    }
+    RGraphicsView::simulateMouseMoveEvent();
+}
+
+double RGraphicsViewQt::getDevicePixelRatio() const {
+    if (RSettings::getHighResolutionGraphicsView()) {
+#if QT_VERSION >= 0x050000
+        return devicePixelRatio();
+#else
+        return 1;
+#endif
+    }
+    else {
+        return 1;
     }
 }

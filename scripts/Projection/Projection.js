@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -65,7 +65,7 @@ Projection.getToolBar = function() {
 
 Projection.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "ProjectionMenu";
+    var actionName = "ProjectionToolsPanelAction";
     if (!isNull(mtb) && isNull(mtb.findChild(actionName))) {
         var action = new RGuiAction(qsTr("Projection Tools"), mtb);
         action.setScriptFile(Projection.includeBasePath + "/Projection.js");
@@ -101,8 +101,8 @@ Projection.init = function() {
 Projection.prototype.beginEvent = function() {
     Transform.prototype.beginEvent.call(this);
 
-    // open menu:
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ProjectionMenu") {
+    // show projection tools panel:
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ProjectionToolsPanelAction") {
         EAction.showCadToolBarPanel("ProjectionToolsPanel");
         this.terminate();
         return;
@@ -110,6 +110,7 @@ Projection.prototype.beginEvent = function() {
 
     // start tool:
     if (!this.verifySelection()) {
+        this.terminate();
         return;
     }
 
@@ -150,7 +151,6 @@ Projection.prototype.escapeEvent = function() {
         break;
 
     case Projection.State.SettingTargetPoint:
-        //this.setState(Projection.State.SettingReferencePoint);
         this.setState(Projection.State.SettingReferencePoint);
         break;
     }
@@ -441,12 +441,13 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
         var segmentation = this.segmentation;
         this.segmentation = false;
         var segments = preview ? 4 : -1;
-        var shapes = shape.getExploded(segments);
-        var pls = new RPolyline();
-        for (i=0; i<shapes.length; i++) {
-            s = shapes[i].data();
-            pls.appendShape(s);
-        }
+        var pls = shape.toPolyline(segments);
+//        var shapes = shape.getExploded(segments);
+//        var pls = new RPolyline();
+//        for (i=0; i<shapes.length; i++) {
+//            s = shapes[i].data();
+//            pls.appendShape(s);
+//        }
         ret = this.projectShape(pls, preview, trim);
         this.segmentation = segmentation;
         return ret;
@@ -472,7 +473,7 @@ Projection.prototype.projectShape = function(shape, preview, trim) {
                 var gotGap = pl.countVertices()>0 &&
                     !pl.getEndPoint().equalsFuzzy(seg.getStartPoint());
 
-                // s is a line or polyline that connets to the poyline we have:
+                // s is a line or polyline that connets to the polyline we have:
                 if (!gotGap && (isLineShape(seg) || isPolylineShape(seg))) {
                     if (seg.getLength()>RS.PointTolerance) {
                         pl.appendShape(seg);

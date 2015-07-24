@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -56,7 +56,8 @@
 RDxfExporter::RDxfExporter(RDocument& document,
     RMessageHandler* messageHandler,
     RProgressHandler* progressHandler)
-    : RFileExporter(document, messageHandler, progressHandler) {
+    : RFileExporter(document, messageHandler, progressHandler),
+    minimalistic(false) {
 
 }
 
@@ -74,14 +75,21 @@ QString RDxfExporter::getCorrectedFileName(const QString& fileName, const QStrin
 bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter, bool setFileName) {
     qDebug() << "RDxfExporter::exportFile";
 
+    if (nameFilter.contains("min")) {
+        minimalistic = true;
+    }
+
     // set version for DXF filter:
     DL_Codes::version exportVersion;
-    if (nameFilter.contains("R12")) {
+    if (minimalistic) {
+        exportVersion = DL_Codes::AC1009_MIN;
+    } else if (nameFilter.contains("R12")) {
         exportVersion = DL_Codes::AC1009;
     } else {
         // TODO: drop support for DXF 2000 (not maintainable):
         exportVersion = DL_Codes::AC1015;
     }
+
 
     textStyleCounter = 0;
     imageHandles.clear();
@@ -98,56 +106,70 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
         document->setFileName(fileName);
     }
 
-    // Header
-    qDebug() << "RDxfExporter::exportFile: header";
-    dxf.writeHeader(*dw);
+    if (!minimalistic) {
+        // Header
+        qDebug() << "RDxfExporter::exportFile: header";
+        dxf.writeHeader(*dw);
 
-    // Variables
-    qDebug() << "RDxfExporter::exportFile: variables";
-    writeVariables();
+        // Variables
+        qDebug() << "RDxfExporter::exportFile: variables";
+        writeVariables();
 
-    // end header
-    dw->sectionEnd();
+        // end header
+        dw->sectionEnd();
+    }
 
     // Section TABLES
     qDebug() << "RDxfExporter::exportFile: tables";
     dw->sectionTables();
 
     // VPORT:
-    qDebug() << "RDxfExporter::exportFile: vport";
-    dxf.writeVPort(*dw);
+    if (!minimalistic) {
+        qDebug() << "RDxfExporter::exportFile: vport";
+        dxf.writeVPort(*dw);
+    }
 
     // Line types:
     qDebug() << "RDxfExporter::exportFile: linetypes";
-    QStringList lts = document->getLinetypeNames().toList();
-    qDebug() << "RDxfExporter::exportFile: linetypes table";
-    dw->tableLinetypes(lts.size());
-    // continuous must always be the first LTYPE:
-    QSharedPointer<RLinetype> lt = document->queryLinetype("CONTINUOUS");
-    if (!lt.isNull()) {
-        writeLinetype(lt->getPattern());
-    }
-    qDebug() << "RDxfExporter::exportFile: linetypes loop";
-    for (int i=0; i<lts.size(); i++) {
-        if (lts[i].toUpper()=="CONTINUOUS") {
-            continue;
-        }
-        QSharedPointer<RLinetype> lt = document->queryLinetype(lts[i]);
+    if (minimalistic) {
+        QSharedPointer<RLinetype> lt = document->queryLinetype("CONTINUOUS");
         if (!lt.isNull()) {
+            dw->tableLinetypes(1);
             writeLinetype(lt->getPattern());
         }
     }
-//    for (int t=(int)RS2::LineByBlock; t<=(int)RS2::BorderLineX2; ++t) {
-//        if ((RS2::Linetype)t!=RS2::NoPen) {
-//            writeLinetype((RS2::Linetype)t);
-//        }
-//    }
+    else {
+        QStringList lts = document->getLinetypeNames().toList();
+        qDebug() << "RDxfExporter::exportFile: linetypes table";
+        dw->tableLinetypes(lts.size());
+        // continuous must always be the first LTYPE:
+        QSharedPointer<RLinetype> lt = document->queryLinetype("CONTINUOUS");
+        if (!lt.isNull()) {
+            writeLinetype(lt->getPattern());
+        }
+        qDebug() << "RDxfExporter::exportFile: linetypes loop";
+        for (int i=0; i<lts.size(); i++) {
+            if (lts[i].toUpper()=="CONTINUOUS") {
+                continue;
+            }
+            QSharedPointer<RLinetype> lt = document->queryLinetype(lts[i]);
+            if (!lt.isNull()) {
+                writeLinetype(lt->getPattern());
+            }
+        }
+    }
     qDebug() << "RDxfExporter::exportFile: linetypes table end";
     dw->tableEnd();
 
     // Layers:
     qDebug() << "RDxfExporter::exportFile: layers";
-    QStringList layerNames = document->getLayerNames().toList();
+    QStringList layerNames;
+    if (minimalistic) {
+        layerNames.append("0");
+    }
+    else {
+        layerNames = document->getLayerNames().toList();
+    }
     dw->tableLayers(layerNames.size());
     for (int i=0; i<layerNames.size(); ++i) {
         QSharedPointer<RLayer> layer = document->queryLayer(layerNames[i]);
@@ -158,90 +180,100 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     }
     dw->tableEnd();
 
-    // STYLE:
-    qDebug() << "writing styles...";
-    QList<DL_StyleData> uniqueTextStyles;
+    if (!minimalistic) {
+        // STYLE:
+        qDebug() << "writing styles...";
+        QList<DL_StyleData> uniqueTextStyles;
 
-    QString dimFont;
-    //dimFont = document->getDimensionFont();
-    //if (dimFont.toLower()=="standard") {
-        dimFont = "txt";
-    //}
+        QString dimFont;
+        //dimFont = document->getDimensionFont();
+        //if (dimFont.toLower()=="standard") {
+            dimFont = "txt";
+        //}
 
-    // add text style for dimensions:
-    DL_StyleData style("Standard",
-                       0,    // flags
-                       0.0,  // fixed height (not fixed)
-                       1.0,  // width factor
-                       0.0,  // oblique angle
-                       0,    // text generation flags
-                       2.5,  // last height used
-                       (const char*)dimFont.toLocal8Bit(), //"txt", // primary font file
-                       ""    // big font file
-                       );
-    style.bold = false;
-    style.italic = false;
-    uniqueTextStyles.append(style);
-
-    // write one text style for each new, unique combination of font, size, etc:
-    QList<REntity::Id> entityIds = document->queryAllEntities(false, true).toList();
-    for (int i=0; i<entityIds.size(); i++) {
-        REntity::Id id = entityIds[i];
-        QSharedPointer<REntity> entity = document->queryEntityDirect(id);
-        QSharedPointer<RTextBasedEntity> textEntity = entity.dynamicCast<RTextBasedEntity>();
-        if (textEntity.isNull()) {
-            continue;
-        }
-
-        // getStyle assignes a new, unique name for the style:
-        DL_StyleData style = getStyle(*textEntity);
-        style.bold = textEntity->isBold();
-        style.italic = textEntity->isItalic();
-        if (uniqueTextStyles.contains(style)) {
-            textStyleCounter--;
-            continue;
-        }
-
-        textStyles.insert(id, style.name.c_str());
-
+        // add text style for dimensions:
+        DL_StyleData style("Standard",
+                           0,    // flags
+                           0.0,  // fixed height (not fixed)
+                           1.0,  // width factor
+                           0.0,  // oblique angle
+                           0,    // text generation flags
+                           2.5,  // last height used
+                           (const char*)dimFont.toLocal8Bit(), //"txt", // primary font file
+                           ""    // big font file
+                           );
+        style.bold = false;
+        style.italic = false;
         uniqueTextStyles.append(style);
-    }
 
-    dw->tableStyle(uniqueTextStyles.size());
-    for (int i=0; i<uniqueTextStyles.size(); i++) {
-        DL_StyleData style = uniqueTextStyles[i];
-        dxf.writeStyle(*dw, style);
+        // write one text style for each new, unique combination of font, size, etc:
+        QList<REntity::Id> entityIds = document->queryAllEntities(false, true).toList();
+        for (int i=0; i<entityIds.size(); i++) {
+            REntity::Id id = entityIds[i];
+            QSharedPointer<REntity> entity = document->queryEntityDirect(id);
+            QSharedPointer<RTextBasedEntity> textEntity = entity.dynamicCast<RTextBasedEntity>();
+            if (textEntity.isNull()) {
+                continue;
+            }
+
+            // getStyle assignes a new, unique name for the style:
+            DL_StyleData style = getStyle(*textEntity);
+            style.bold = textEntity->isBold();
+            style.italic = textEntity->isItalic();
+            if (uniqueTextStyles.contains(style)) {
+                textStyleCounter--;
+                continue;
+            }
+
+            textStyles.insert(id, style.name.c_str());
+
+            uniqueTextStyles.append(style);
+        }
+
+        dw->tableStyle(uniqueTextStyles.size());
+        for (int i=0; i<uniqueTextStyles.size(); i++) {
+            DL_StyleData style = uniqueTextStyles[i];
+            dxf.writeStyle(*dw, style);
+        }
+        dw->tableEnd();
     }
-    dw->tableEnd();
 
     // VIEW:
-    qDebug() << "writing views...";
-    dxf.writeView(*dw);
+    if (!minimalistic) {
+        qDebug() << "writing views...";
+        dxf.writeView(*dw);
+    }
 
     // UCS:
-    qDebug() << "writing ucs...";
-    dxf.writeUcs(*dw);
+    if (!minimalistic) {
+        qDebug() << "writing ucs...";
+        dxf.writeUcs(*dw);
+    }
 
     // Appid:
-    qDebug() << "writing appid...";
-    dw->tableAppid(1);
-    dxf.writeAppid(*dw, "ACAD");
-    dxf.writeAppid(*dw, "QCAD");
-    dw->tableEnd();
+    if (!minimalistic) {
+        qDebug() << "writing appid...";
+        dw->tableAppid(1);
+        dxf.writeAppid(*dw, "ACAD");
+        dxf.writeAppid(*dw, "QCAD");
+        dw->tableEnd();
+    }
 
     // DIMSTYLE:
-    qDebug() << "writing dim styles...";
-    dxf.writeDimStyle(*dw,
-                      document->getKnownVariable(RS::DIMASZ, 2.5).toDouble(),
-                      document->getKnownVariable(RS::DIMEXE, 0.625).toDouble(),
-                      document->getKnownVariable(RS::DIMEXO, 0.625).toDouble(),
-                      document->getKnownVariable(RS::DIMGAP, 0.625).toDouble(),
-                      document->getKnownVariable(RS::DIMTXT, 2.5).toDouble()
-    );
+    if (!minimalistic) {
+        qDebug() << "writing dim styles...";
+        dxf.writeDimStyle(*dw,
+                          document->getKnownVariable(RS::DIMASZ, 2.5).toDouble(),
+                          document->getKnownVariable(RS::DIMEXE, 0.625).toDouble(),
+                          document->getKnownVariable(RS::DIMEXO, 0.625).toDouble(),
+                          document->getKnownVariable(RS::DIMGAP, 0.625).toDouble(),
+                          document->getKnownVariable(RS::DIMTXT, 2.5).toDouble()
+        );
+    }
 
     // BLOCK_RECORD:
     QStringList blockNames = document->getBlockNames().toList();
-    if (exportVersion!=DL_Codes::AC1009) {
+    if (exportVersion!=DL_Codes::AC1009 && exportVersion!=DL_Codes::AC1009_MIN) {
         qDebug() << "writing block records...";
         dxf.writeBlockRecord(*dw);
 
@@ -257,8 +289,8 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
             }
 
             dxf.writeBlockRecord(*dw,
-                std::string((const char*)RDxfExporter::escapeUnicode(blk->getName()))
-            );
+                                 std::string((const char*)RDxfExporter::escapeUnicode(blk->getName()))
+                                 );
         }
         dw->tableEnd();
     }
@@ -271,7 +303,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     qDebug() << "writing blocks...";
     dw->sectionBlocks();
 
-    if (exportVersion!=DL_Codes::AC1009) {
+    if (exportVersion!=DL_Codes::AC1009 && exportVersion!=DL_Codes::AC1009_MIN) {
         RBlock b1(document, "*Model_Space", RVector(0.0,0.0));
         writeBlock(b1);
         RBlock b2(document, "*Paper_Space", RVector(0.0,0.0));
@@ -280,17 +312,20 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
         writeBlock(b3);
     }
 
-    for (int i=0; i<blockNames.size(); ++i) {
-        qDebug() << "writing block: " << blockNames[i];
-        if (blockNames[i].startsWith("*") && !blockNames[i].startsWith("*X")) {
-            continue;
+    //if (!minimalistic) {
+        for (int i=0; i<blockNames.size(); ++i) {
+            qDebug() << "writing block: " << blockNames[i];
+            if (blockNames[i].startsWith("*") && !blockNames[i].startsWith("*X")) {
+                continue;
+            }
+            QSharedPointer<RBlock> block = document->queryBlock(blockNames[i]);
+            if (block.isNull()) {
+                continue;
+            }
+            writeBlock(*block);
         }
-        QSharedPointer<RBlock> block = document->queryBlock(blockNames[i]);
-        if (block.isNull()) {
-            continue;
-        }
-        writeBlock(*block);
-    }
+    //}
+
     dw->sectionEnd();
 
     // Section ENTITIES:
@@ -308,54 +343,56 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     qDebug() << "writing end of section ENTITIES...";
     dw->sectionEnd();
 
-    if (exportVersion!=DL_Codes::AC1009) {
+    if (exportVersion!=DL_Codes::AC1009 && exportVersion!=DL_Codes::AC1009_MIN) {
         qDebug() << "writing section OBJECTS...";
         dxf.writeObjects(*dw, "QCAD_OBJECTS");
 
-        // XRecords:
-        dxf.writeAppDictionary(*dw);
-        QMap<QString, int> handles;
+        if (!minimalistic) {
+            // XRecords:
+            dxf.writeAppDictionary(*dw);
+            QMap<QString, int> handles;
 
-        // export all QCAD specific document variables:
-        QStringList variables = document->getVariables();
-        variables.sort();
-        for (int i=0; i<variables.size(); i++) {
-            QString key = variables[i];
-            handles.insert(key, dxf.writeDictionaryEntry(*dw, std::string((const char*)RDxfExporter::escapeUnicode(key))));
-        }
-        for (int i=0; i<variables.size(); i++) {
-            QString key = variables[i];
-            QVariant value = document->getVariable(key);
-            if (handles.contains(key)) {
-                switch (value.type()) {
-                case QVariant::Int:
-                    dxf.writeXRecord(*dw, handles.value(key), value.toInt());
-                    break;
-                case QVariant::Double:
-                    dxf.writeXRecord(*dw, handles.value(key), value.toDouble());
-                    break;
-                case QVariant::Bool:
-                    dxf.writeXRecord(*dw, handles.value(key), value.toBool());
-                    break;
-                case QVariant::String:
-                    dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)RDxfExporter::escapeUnicode(value.toString())));
-                    break;
-                case QVariant::Font:
-                    if (value.canConvert<QFont>()) {
-                        QFont f = value.value<QFont>();
-                        dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)RDxfExporter::escapeUnicode(f.toString())));
+            // export all QCAD specific document variables:
+            QStringList variables = document->getVariables();
+            variables.sort();
+            for (int i=0; i<variables.size(); i++) {
+                QString key = variables[i];
+                handles.insert(key, dxf.writeDictionaryEntry(*dw, std::string((const char*)RDxfExporter::escapeUnicode(key))));
+            }
+            for (int i=0; i<variables.size(); i++) {
+                QString key = variables[i];
+                QVariant value = document->getVariable(key);
+                if (handles.contains(key)) {
+                    switch (value.type()) {
+                    case QVariant::Int:
+                        dxf.writeXRecord(*dw, handles.value(key), value.toInt());
+                        break;
+                    case QVariant::Double:
+                        dxf.writeXRecord(*dw, handles.value(key), value.toDouble());
+                        break;
+                    case QVariant::Bool:
+                        dxf.writeXRecord(*dw, handles.value(key), value.toBool());
+                        break;
+                    case QVariant::String:
+                        dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)RDxfExporter::escapeUnicode(value.toString())));
+                        break;
+                    case QVariant::Font:
+                        if (value.canConvert<QFont>()) {
+                            QFont f = value.value<QFont>();
+                            dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)RDxfExporter::escapeUnicode(f.toString())));
+                        }
+                        break;
+                    case QVariant::UserType:
+                        if (value.canConvert<RColor>()) {
+                            RColor c = value.value<RColor>();
+                            dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)RDxfExporter::escapeUnicode(c.getName())));
+                        }
+                        break;
+                    default:
+                        qWarning() << "RDxfExporter::exportFile: unsupported extension data type: " << value.type();
+                        Q_ASSERT(false);
+                        break;
                     }
-                    break;
-                case QVariant::UserType:
-                    if (value.canConvert<RColor>()) {
-                        RColor c = value.value<RColor>();
-                        dxf.writeXRecord(*dw, handles.value(key), std::string((const char*)RDxfExporter::escapeUnicode(c.getName())));
-                    }
-                    break;
-                default:
-                    qWarning() << "RDxfExporter::exportFile: unsupported extension data type: " << value.type();
-                    Q_ASSERT(false);
-                    break;
                 }
             }
         }
@@ -563,7 +600,7 @@ void RDxfExporter::writeBlock(const RBlock& b) {
     QString blockName = b.getName();
 
 
-    if (dxf.getVersion()==DL_Codes::AC1009) {
+    if (dxf.getVersion()==DL_Codes::AC1009 || dxf.getVersion()==DL_Codes::AC1009_MIN) {
         if (blockName.at(0)=='*') {
             blockName[0] = '_';
         }
@@ -849,7 +886,7 @@ void RDxfExporter::writePolyline(const RPolyline& pl, bool plineGen) {
 void RDxfExporter::writeSpline(const RSplineEntity& sp) {
 
     // write spline as polyline for DXF R12:
-    if (dxf.getVersion()==DL_Codes::AC1009) {
+    if (dxf.getVersion()==DL_Codes::AC1009 || dxf.getVersion()==DL_Codes::AC1009_MIN) {
         int seg = RSettings::getIntValue("Explode/SplineSegments", 64);
         writePolyline(sp.getData().toPolyline(seg), false);
         return;
@@ -1099,7 +1136,7 @@ void RDxfExporter::writeMText(const RTextEntity& t) {
  */
 void RDxfExporter::writeDimension(const RDimensionEntity& d) {
     // split dimension into simple entities:
-    if (dxf.getVersion()==DL_Codes::AC1009) {
+    if (dxf.getVersion()==DL_Codes::AC1009 || dxf.getVersion()==DL_Codes::AC1009_MIN) {
         // TODO:
         //writeAtomicEntities(d, RS2::ResolveNone);
         return;
@@ -1170,7 +1207,8 @@ void RDxfExporter::writeDimension(const RDimensionEntity& d) {
                              // TODO: dim style:
                              (const char*)RDxfExporter::escapeUnicode(d.getFontName()),
                              d.getTextAngle(),
-                             d.getLinearFactor());
+                             d.getLinearFactor(),
+                             d.getDimScale());
 
     switch (d.getType()) {
     case RS::EntityDimAligned: {
@@ -1317,7 +1355,7 @@ void RDxfExporter::writeLeader(const RLeaderEntity& l) {
  */
 void RDxfExporter::writeHatch(const RHatchEntity& h) {
     // split hatch into simple entities:
-    if (dxf.getVersion()==DL_Codes::AC1009) {
+    if (dxf.getVersion()==DL_Codes::AC1009 || dxf.getVersion()==DL_Codes::AC1009_MIN) {
         //writeAtomicEntities(h, RS2::ResolveAll);
         return;
     }
@@ -1587,7 +1625,7 @@ void RDxfExporter::writeImageDef(const RImageEntity& img) {
  */
 void RDxfExporter::writeBlockReference(const RBlockReferenceEntity& br) {
     QString blockName = br.getReferencedBlockName();
-    if (dxf.getVersion()==DL_Codes::AC1009) {
+    if (dxf.getVersion()==DL_Codes::AC1009 || dxf.getVersion()==DL_Codes::AC1009_MIN) {
         if (blockName.at(0)=='*') {
             blockName[0] = '_';
         }
@@ -1595,17 +1633,20 @@ void RDxfExporter::writeBlockReference(const RBlockReferenceEntity& br) {
 
     dxf.writeInsert(
         *dw,
-        DL_InsertData((const char*)RDxfExporter::escapeUnicode(blockName),
-                      br.getPosition().x,
-                      br.getPosition().y,
-                      0.0,
-                      br.getScaleFactors().x,
-                      br.getScaleFactors().y,
-                      0.0,
-                      RMath::rad2deg(br.getRotation()),
-                      1, 1,         // array col, row
-                      0.0, 0.0),    // col, row spacing
-        attributes);
+        DL_InsertData(
+            (const char*)RDxfExporter::escapeUnicode(blockName),
+            br.getPosition().x,
+            br.getPosition().y,
+            0.0,
+            br.getScaleFactors().x,
+            br.getScaleFactors().y,
+            0.0,
+            RMath::rad2deg(br.getRotation()),
+            br.getColumnCount(), br.getRowCount(),
+            br.getColumnSpacing(), br.getRowSpacing()
+        ),
+        attributes
+    );
 }
 
 //void RDxfExporter::writeExplodedEntities(const REntity& entity) {
@@ -1632,6 +1673,9 @@ void RDxfExporter::writeBlockReference(const RBlockReferenceEntity& br) {
 DL_Attributes RDxfExporter::getEntityAttributes(const REntity& entity) {
     // Layer:
     QString layerName = entity.getLayerName();
+    if (minimalistic) {
+        layerName = "0";
+    }
 
     // Color:
     int color = RDxfServices::colorToNumber(entity.getColor(), dxfColors);
@@ -1639,6 +1683,9 @@ DL_Attributes RDxfExporter::getEntityAttributes(const REntity& entity) {
 
     // Linetype:
     QString linetype = document->getLinetypeName(entity.getLinetypeId());
+    if (minimalistic) {
+        linetype = "CONTINUOUS";
+    }
 
     // Width:
     int width = RDxfServices::widthToNumber(entity.getLineweight());

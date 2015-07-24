@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -141,7 +141,7 @@ double REllipse::getRadiusAt(double angle) const {
  */
 RVector REllipse::getPointAt(double angle) const {
     RVector v(cos(angle)*getMajorRadius(),
-                   sin(angle)*getMinorRadius());
+              sin(angle)*getMinorRadius());
     v.rotate(getAngle());
     v.move(center);
     return v;
@@ -405,6 +405,10 @@ double REllipse::getLength() const {
         a2 = t;
     }
 
+    if (RMath::fuzzyCompare(a2, 0.0)) {
+        a2 = 2*M_PI;
+    }
+
     if (fabs(a1-a2)<RS::AngleTolerance) {
         return 0.0;
     }
@@ -465,6 +469,27 @@ double REllipse::getSimpsonLength(double a1, double a2) const {
 
     return (df / 3.0) * sum;
 }
+
+// depends on implementation of getPointsWithDistanceToEnd:
+//double REllipse::getAngleAt(double distance, RS::From from) const {
+//    REllipse normal = *this;
+//    normal.rotate(-getAngle());
+
+//    QList<RVector> points = normal.getPointsWithDistanceToEnd(distance, from);
+//    if (points.length()!=1) {
+//        return RNANDOUBLE;
+//    }
+
+//    RVector p = points[0];
+
+//    double minR = normal.getMinorRadius();
+//    double majR = normal.getMajorRadius();
+
+//    double ret = - ((minR*minR*p.x) / (majR*majR*p.y));
+//    ret+=getAngle();
+//    return ret;
+//}
+
 
 bool REllipse::isReversed() const {
     return reversed;

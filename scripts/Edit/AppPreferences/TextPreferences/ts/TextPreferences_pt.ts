@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Text</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Show font preview in font controls</source>
-        <translation>Mostrar visualização da fonte em controles de fonte</translation>
+        <translation>Exiba a previsão da fonte nos controles de fonte</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Use reduced selection of fonts:</source>
-        <translation>Use reduzida seleção de fontes:</translation>
+        <translation>Use seleção reduzida de fontes:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Uncheck all</source>
-        <translation>Desmarcar todos</translation>
+        <translation>Desmarque todos</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Check all</source>
-        <translation>Marcar todos</translation>
+        <translation>Marque todos</translation>
     </message>
 </context>
 <context>

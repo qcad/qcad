@@ -10,7 +10,7 @@
     <message>
         <location filename="../HideAllLayersInit.js" line="+2"/>
         <source>&amp;Hide All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Skrij vse plasti</translation>
     </message>
 </context>
 </TS>

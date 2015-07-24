@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -42,6 +42,7 @@ function EAction(guiAction) {
         this.includeBasePath = includeBasePath;
     }
 
+    this.delegate = undefined;
     this.state = undefined;
     this.settingsGroup = undefined;
     this.uiFile = undefined;
@@ -69,6 +70,10 @@ EAction.noRelativeZeroResume = false;
  * Viewer if available.
  */
 EAction.prototype.beginEvent = function() {
+    if (this.delegate) {
+        this.delegate.beginEvent();
+    }
+
     if (this.hasNoState()) {
         return;
     }
@@ -171,6 +176,19 @@ EAction.prototype.mousePressEvent = function(event) {
 EAction.prototype.mouseReleaseEvent = function(event) {
     if (event.button() === Qt.RightButton) {
         this.escapeEvent();
+    }
+};
+
+EAction.prototype.mouseDoubleClickEvent = function(event) {
+    if (event.button() == Qt.RightButton) {
+        // right double-click to reset:
+        if (RSettings.getBoolValue("GraphicsView/RightDoubleClickToReset", false)) {
+            var di = this.getDocumentInterface();
+            if (!isNull(di)) {
+                di.killAllActions();
+            }
+            EAction.showMainTools();
+        }
     }
 };
 
@@ -314,17 +332,17 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
 
     this.optionWidgetActions = [];
 
-    if (!isNull(this.getGuiAction()) &&
-        this.getGuiAction().getGroup() !== "snaps" &&
-        this.getGuiAction().getGroup() !== "snaprestrictions") {
+    var guiAction = this.getGuiAction();
+    if (!isNull(guiAction) &&
+        guiAction.getGroup() !== "snaps" &&
+        guiAction.getGroup() !== "snaprestrictions") {
 
         // automatically add icon of current action to toolbar:
-        if (!this.getGuiAction().icon.isNull()) {
+        if (!guiAction.icon.isNull() && !guiAction.isOverride()) {
             var iconLabel = optionsToolBar.findChild("Icon");
             if (!isNull(iconLabel)) {
-                iconLabel.toolTip = qsTr("Active Tool:") + " " + this.getGuiAction().text.replace("&", "");
-                iconLabel.pixmap = this.getGuiAction().icon.pixmap(
-                    EAction.getOptionsToolBar().iconSize);
+                iconLabel.toolTip = qsTr("Active Tool:") + " " + guiAction.text.replace("&", "");
+                iconLabel.pixmap = guiAction.icon.pixmap(EAction.getOptionsToolBar().iconSize);
                 iconLabel.setFixedWidth(iconLabel.height + 12);
             }
         }
@@ -422,7 +440,8 @@ EAction.prototype.initUiOptions = function(resume, optionsToolBar) {
  * Hides the UI options of this action.
  * 
  * Usually this function does not need to be called directly by implementing
- * actions. \param saveToSettings if true, the state is saved to settings
+ * actions.
+ * \param saveToSettings if true, the state is saved to settings
  */
 EAction.prototype.hideUiOptions = function(saveToSettings) {
     if (isNull(saveToSettings)) {
@@ -469,7 +488,6 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
         }
         a.destroy();
     }
-
 
     // delete additional toolbars of this tool if available:
     if (!isNull(this.additionalOptionsToolBars)) {
@@ -640,6 +658,26 @@ EAction.getMainWindow = function() {
     }
 
     return RMainWindowQt.getMainWindow();
+};
+
+/**
+ * Reactivates the main window after showing a dialog.
+ * This is necessary with Qt>=5.
+ */
+EAction.activateMainWindow = function() {
+    if (RSettings.isQt(5)) {
+        var appWin = EAction.getMainWindow();
+        if (isNull(appWin)) {
+            return;
+        }
+        appWin.activateWindow();
+
+        var view = EAction.getGraphicsView();
+        if (!isNull(view)) {
+            // view loses focus because of dialogs:
+            view.giveFocus();
+        }
+    }
 };
 
 /**
@@ -942,13 +980,6 @@ EAction.getCadToolBarPanel = function(title, objectName, hasBackButton) {
         cadToolBar = new CadToolBar(toolBar);
         toolBar.addWidget(cadToolBar);
         cadToolBar.updateIconSize();
-//        if (RSettings.getStringValue("CadToolBar/Location", "left")==="top") {
-//            appWin.addToolBarBreak();
-//            appWin.addToolBar(Qt.TopToolBarArea, toolBar);
-//        }
-//        else {
-//            appWin.addToolBar(Qt.LeftToolBarArea, toolBar);
-//        }
 
         toolBar.topLevelChanged.connect(function(onOff) {
             RSettings.setValue("CadToolBar/VerticalWhenFloating", false);
@@ -1140,15 +1171,6 @@ EAction.addGuiActionTo = function(action, iface, addToMenu, addToToolBar,
                     separator.addToMenu(menu);
                 }
                 action.addToMenu(menu);
-
-                // workaround for QTBUG-38256 (action not triggered for letter based shortcuts in sub menus)
-                if (RSettings.isQt(5)) {
-                    if (isOfType(menu.parentWidget(), QMenu)) {
-                        new QShortcut(action.shortcut, action.parentWidget(), 0, 0,  Qt.WindowShortcut).activated.connect(action, "trigger");
-                        // avoid 'Ambiguous shortcut overload' when tool buttons visible:
-                        action.setDefaultShortcuts([]);
-                    }
-                }
             }
         }
     }
@@ -1321,52 +1343,12 @@ EAction.getValue = function(varName, defaultValue, document) {
 };
 
 /**
- * Adds the given widgets to the status bar of the application. \param sortOrder
- * Defines the sort order of widgets in the status bar.
+ * Adds the given widgets to the status bar of the application.
+ * \param sortOrder Defines the sort order of widgets in the status bar.
  */
 EAction.addToStatusBar = function(widget, sortOrder) {
-    widget.setProperty("SortOrder", sortOrder);
-    var appWin = EAction.getMainWindow();
-    var statusBar = appWin.statusBar();
-    var list = statusBar.children();
-    var maxSortOrder = 0;
-    var index = 0;
-    var maxIndex = 0;
-
-    for ( var i = 0; i < list.length; ++i) {
-        var w = list[i];
-        var wSortOrder = w.property("SortOrder");
-        if (typeof (wSortOrder) == "number") {
-            if (wSortOrder > maxSortOrder
-                    && wSortOrder < widget.property("SortOrder")) {
-                maxSortOrder = wSortOrder;
-                index = i;
-            }
-            ++maxIndex;
-        }
-    }
-
-    var separator;
-    if (RS.getSystemId() === "osx") {
-        separator = new QFrame();
-        separator.frameShape = QFrame.VLine;
-        separator.frameShadow = QFrame.Sunken;
-        separator.setProperty("SortOrder", sortOrder + 1);
-        separator.objectName = widget.objectName + "Separator";
-        separator.visible = widget.visible;
-    }
-
-    if (index >= maxIndex) {
-        statusBar.addWidget(widget);
-        if (separator) {
-            statusBar.addWidget(separator);
-        }
-    } else {
-        statusBar.insertWidget(index, widget);
-        if (separator) {
-            statusBar.insertWidget(index + 1, separator);
-        }
-    }
+    include("scripts/Widgets/StatusBar/StatusBar.js");
+    StatusBar.addWidget(widget, sortOrder);
 };
 
 EAction.prototype.getScales = function() {
@@ -1438,6 +1420,13 @@ EAction.prototype.getHighlightedEntities = function() {
 };
 
 /**
+ * Called by updatePreview. Implementations must handle errors during preview.
+ */
+EAction.prototype.handlePreviewError = function() {
+    return;
+};
+
+/**
  * Updates the preview based on the operation returned by getOperation and the
  * auxiliary construction returned be getAuxPreview.
  * 
@@ -1451,12 +1440,19 @@ EAction.prototype.updatePreview = function(clear) {
     }
 
     var di = this.getDocumentInterface();
+    if (isNull(di)) {
+        return;
+    }
+
     if (clear === true) {
         di.clearPreview();
     }
     var op = this.getOperation(true);
     if (!isNull(op)) {
         di.previewOperation(op);
+    }
+    else {
+        this.handlePreviewError();
     }
 
     var i;
@@ -1575,6 +1571,9 @@ EAction.prototype.simulateMouseMoveEvent = function() {
 };
 
 EAction.handleUserWarning = function(message) {
+    if (isNull(message)) {
+        return;
+    }
     var appWin = EAction.getMainWindow();
     if (isNull(appWin)) {
         return;
@@ -1583,6 +1582,9 @@ EAction.handleUserWarning = function(message) {
 };
 
 EAction.handleUserMessage = function(message) {
+    if (isNull(message)) {
+        return;
+    }
     var appWin = EAction.getMainWindow();
     if (isNull(appWin)) {
         return;
@@ -1591,6 +1593,9 @@ EAction.handleUserMessage = function(message) {
 };
 
 EAction.handleUserCommand = function(message) {
+    if (isNull(message)) {
+        return;
+    }
     var appWin = EAction.getMainWindow();
     if (isNull(appWin)) {
         return;
@@ -1643,6 +1648,7 @@ EAction.assertEditable = function(entity, quiet) {
  * drawing lines).
  */
 EAction.prototype.propertyChangeEvent = function(event) {
+    qDebug("EAction.prototype.propertyChangeEvent");
     var di = this.getDocumentInterface();
     if (isNull(di)) {
         return;
@@ -1700,7 +1706,7 @@ EAction.enableCoordinateWidget = function(enable) {
     if (isNull(appWin)) {
         return;
     }
-    var statusBar = appWin.statusBar();
+    var statusBar = appWin.findChild("StatusBar");
     if (isNull(statusBar)) {
         return;
     }
@@ -1719,6 +1725,10 @@ EAction.warnNotBlockReference = function() {
 
 EAction.warnNotLineArc = function() {
     EAction.handleUserWarning(qsTr("Entity is not a line or arc."))
+};
+
+EAction.warnNotLineArcPolyline = function() {
+    EAction.handleUserWarning(qsTr("Entity is not a line, arc or polyline."))
 };
 
 EAction.warnNotLine = function() {
@@ -1741,10 +1751,17 @@ EAction.warnNotLineArcCircleEllipse = function() {
     EAction.handleUserWarning(qsTr("Entity is not a line, arc, circle or ellipse."));
 };
 
+EAction.warnNotLineArcCircleEllipsePolyline = function() {
+    EAction.handleUserWarning(qsTr("Entity is not a line, arc, circle, ellipse or polyline."));
+};
+
 EAction.warnNotLineArcCircleEllipseSpline = function() {
     EAction.handleUserWarning(qsTr("Entity is not a line, arc, circle, ellipse or spline."));
 };
 
+EAction.warnNotLineArcCircleEllipseSplinePolyline = function() {
+    EAction.handleUserWarning(qsTr("Entity is not a line, arc, circle, ellipse, spline or polyline."));
+};
 
 EAction.warnNotPolyline = function() {
     EAction.handleUserWarning(qsTr("Entity is not a polyline."));

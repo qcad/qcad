@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -33,34 +33,6 @@
 class RDocument;
 class RTransaction;
 
-//class QCADCORE_EXPORT RAttributeDefinition : public RText {
-//public:
-//    RAttributeDefinition(const QString& tag, const QString& prompt, const QString& value)
-//        : tag(tag), prompt(prompt), value(value) {}
-
-//    int getId() {
-//        return id;
-//    }
-
-//    QString getTag() {
-//        return tag;
-//    }
-
-//    QString getPrompt() {
-//        return prompt;
-//    }
-
-//    QString getValue() {
-//        return value;
-//    }
-
-//private:
-//    int id;
-//    QString tag;
-//    QString prompt;
-//    QString value;
-//};
-
 /**
  * Represents a block definition in a drawing.
  *
@@ -81,6 +53,10 @@ public:
     virtual ~RBlock();
 
     static void init();
+
+    virtual RS::EntityType getType() const {
+        return RS::ObjectBlock;
+    }
 
     virtual RBlock* clone() const;
 
@@ -125,8 +101,6 @@ public:
 
     virtual bool isSelectedForPropertyEditing();
 
-    //void setAttributeDefinition(const RAttributeDefinition& attDef);
-
 public:
     static const QString modelSpaceName;
 
@@ -141,8 +115,6 @@ private:
     bool frozen;
     bool anonymous;
     RVector origin;
-
-    //QList<RAttributeDefinition> attributeDefinitions;
 };
 
 

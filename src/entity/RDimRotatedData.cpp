@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -46,21 +46,111 @@ RDimRotatedData::RDimRotatedData(const RDimensionData& dimData,
 
 }
 
+RBox RDimRotatedData::getBoundingBox(bool ignoreEmpty) const {
+    boundingBox = RDimensionData::getBoundingBox(ignoreEmpty);
+    boundingBox.growToInclude(extensionPoint1);
+    boundingBox.growToInclude(extensionPoint2);
+    return boundingBox;
+}
+
 bool RDimRotatedData::isValid() const {
     return RDimLinearData::isValid() && RMath::isNormal(rotation);
 }
 
-QList<RVector> RDimRotatedData::getReferencePoints(
-    RS::ProjectionRenderingHint hint) const {
+QList<RVector> RDimRotatedData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
 
     QList<RVector> ret = RDimLinearData::getReferencePoints(hint);
 
-    //ret.append(middleOfText);
     ret.append(extensionPoint1);
     ret.append(extensionPoint2);
 
     return ret;
 }
+
+bool RDimRotatedData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint) {
+    // if definition point and extension points are on one line,
+    // move the extension points together with the definition point:
+    bool moveExtensionPoints = false;
+    if (referencePoint.equalsFuzzy(definitionPoint)) {
+        if (RLine(extensionPoint1, extensionPoint2).isOnShape(definitionPoint, false)) {
+            moveExtensionPoints = true;
+        }
+    }
+
+    bool ret = RDimLinearData::moveReferencePoint(referencePoint, targetPoint);
+
+    if (moveExtensionPoints) {
+        // move extension points with definition point:
+        RVector dir = RVector::createPolar(1.0, rotation);
+        RLine dimLine = RLine(targetPoint, targetPoint + dir);
+        extensionPoint1 = dimLine.getClosestPointOnShape(extensionPoint1, false);
+        extensionPoint2 = dimLine.getClosestPointOnShape(extensionPoint2, false);
+        definitionPoint = RVector::getAverage(extensionPoint1, extensionPoint2);
+        //recomputeDefinitionPoint(referencePoint, targetPoint);
+    }
+
+    return ret;
+}
+
+QList<RVector> RDimRotatedData::getDimPoints() const {
+    QList<RVector> ret;
+
+    RVector dirDim = RVector::createPolar(1.0, rotation);
+
+    // construction line for dimension line
+    RLine dimLine(definitionPoint, definitionPoint + dirDim);
+    ret.append(dimLine.getClosestPointOnShape(extensionPoint1, false));
+    ret.append(dimLine.getClosestPointOnShape(extensionPoint2, false));
+
+    return ret;
+}
+
+/**
+ * Recompute definition point if extension point(s) have changed.
+ */
+void RDimRotatedData::recomputeDefinitionPoint(
+    const RVector& oldExtPoint1, const RVector& oldExtPoint2,
+    const RVector& newExtPoint1, const RVector& newExtPoint2) {
+
+    Q_UNUSED(oldExtPoint1)
+    Q_UNUSED(oldExtPoint2)
+    Q_UNUSED(newExtPoint2)
+
+    RVector dirDim = RVector::createPolar(1.0, rotation);
+
+    // construction line for dimension line
+    RLine dimLine(definitionPoint, definitionPoint + dirDim);
+
+    RVector dimP1 = dimLine.getClosestPointOnShape(newExtPoint1, false);
+    RVector dimP2 = dimLine.getClosestPointOnShape(newExtPoint2, false);
+
+    // make sure the dimension line is movable if dimension point == extension point
+    if (dimP1.equalsFuzzy(newExtPoint1) || dimP1.equalsFuzzy(newExtPoint2)) {
+        dimP1 = RVector::getAverage(dimP1, dimP2);
+    }
+
+    if (dimP1.isValid()) {
+        definitionPoint = dimP1;
+    }
+}
+
+/**
+ * Recompute definition point if
+ */
+//void RDimRotatedData::recomputeDefinitionPoint(const RVector& oldDimLineGrip, const RVector& newDimLineGrip) {
+//    Q_UNUSED(oldDimLineGrip)
+
+//    RVector extDir = RVector::createPolar(1.0, rotation);
+
+//    // construction line for dimension line
+//    RLine extLine1(extensionPoint1, extensionPoint1 + extDir);
+
+//    RVector dimP1 = extLine1.getClosestPointOnShape(newDimLineGrip, false);
+
+//    if (dimP1.isValid()) {
+//        definitionPoint = dimP1;
+//    }
+//}
 
 bool RDimRotatedData::rotate(double rotation, const RVector& center) {
     RDimLinearData::rotate(rotation, center);
@@ -91,71 +181,35 @@ QList<QSharedPointer<RShape> > RDimRotatedData::getShapes(const RBox& queryBox, 
 
     QList<QSharedPointer<RShape> > ret;
 
-    if (ignoreComplex) {
-        return ret;
-    }
-
     double dimexo = getDimexo();
     double dimexe = getDimexe();
-    //double dimasz = getDimasz();
-    //double dimgap = getDimgap();
-    //double dimtxt = getDimtxt();
 
-    double extAngle = rotation + (M_PI/2.0);
-
-    RLine extensionLine(extensionPoint1, extensionPoint2);
-
-    // angle from extension endpoints towards dimension line
-    //double extAngle = extensionPoint1.getAngleTo(extensionPoint2);
-    // direction of dimension line
-    RVector dirDim = RVector::createPolar(1.0, rotation);
-    // direction of extension lines
-    //RVector dirExt = RVector::createPolar(1.0, extAngle);
-
-    // construction line for dimension line
-    RLine dimLine(definitionPoint, definitionPoint + dirDim);
-    RVector dimP1 = dimLine.getClosestPointOnShape(extensionPoint1, false);
-    RVector dimP2 = dimLine.getClosestPointOnShape(extensionPoint2, false);
+    QList<RVector> l = getDimPoints();
+    RVector dimP1 = l.at(0);
+    RVector dimP2 = l.at(1);
 
     // definitive dimension line:
     ret += getDimensionLineShapes(dimP1, dimP2, true, true);
 
-    RVector vDimexo1, vDimexe1, vDimexo2, vDimexe2;
-    vDimexe1.setPolar(dimexe, extensionPoint1.getAngleTo(dimP1));
-    vDimexo1.setPolar(dimexo, extensionPoint1.getAngleTo(dimP1));
-
-    vDimexe2.setPolar(dimexe, extensionPoint2.getAngleTo(dimP2));
-    vDimexo2.setPolar(dimexo, extensionPoint2.getAngleTo(dimP2));
-
-    if ((extensionPoint1-dimP1).getMagnitude()<RS::PointTolerance) {
-        vDimexe1.setPolar(dimexe,
-                          definitionPoint.getAngleTo(dimP1)-M_PI/2.0);
-        vDimexo1.setPolar(dimexo,
-                          definitionPoint.getAngleTo(dimP1)-M_PI/2.0);
-    }
-    if ((extensionPoint2-dimP2).getMagnitude()<RS::PointTolerance) {
-        vDimexe2.setPolar(dimexe,
-                          definitionPoint.getAngleTo(dimP2)-M_PI/2.0);
-        vDimexo2.setPolar(dimexo,
-                          definitionPoint.getAngleTo(dimP2)-M_PI/2.0);
-    }
-
-
-
-    RS::Side side = extensionLine.getSideOfPoint(definitionPoint);
-    if (side==RS::RightHand) {
-        extAngle -= M_PI/2.0;
-    }
-    else {
-        extAngle += M_PI/2.0;
-    }
-
     // extension lines:
-    RLine line;
-    line = RLine(extensionPoint1+vDimexo1, dimP1+vDimexe1);
-    ret.append(QSharedPointer<RLine>(new RLine(line)));
-    line = RLine(extensionPoint2+vDimexo2, dimP2+vDimexe2);
-    ret.append(QSharedPointer<RLine>(new RLine(line)));
+    RVector vDimexo1, vDimexe1, vDimexo2, vDimexe2;
+    if (!extensionPoint1.equalsFuzzy(dimP1)) {
+        double a1 = extensionPoint1.getAngleTo(dimP1);
+        vDimexe1.setPolar(dimexe, a1);
+        vDimexo1.setPolar(dimexo, a1);
+
+        RLine line(extensionPoint1+vDimexo1, dimP1+vDimexe1);
+        ret.append(QSharedPointer<RLine>(new RLine(line)));
+    }
+
+    if (!extensionPoint2.equalsFuzzy(dimP2)) {
+        double a2 = extensionPoint2.getAngleTo(dimP2);
+        vDimexe2.setPolar(dimexe, a2);
+        vDimexo2.setPolar(dimexo, a2);
+
+        RLine line(extensionPoint2+vDimexo2, dimP2+vDimexe2);
+        ret.append(QSharedPointer<RLine>(new RLine(line)));
+    }
 
     return ret;
 }

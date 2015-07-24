@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -83,6 +83,13 @@ Image.prototype.beginEvent = function() {
     heightEdit.setValue(this.height);
 
     this.setState(Image.State.SettingPosition);
+};
+
+Image.prototype.finishEvent = function() {
+    Draw.prototype.finishEvent.call(this);
+    if (!isNull(this.image)) {
+        this.image.destroy();
+    }
 };
 
 Image.prototype.getFileName = function() {
@@ -197,8 +204,7 @@ Image.prototype.pickCoordinate = function(event, preview) {
     this.image.setHeight(this.height);
     this.image.setAngle(this.angle);
 
-    var op = new RAddObjectOperation(this.image);
-    op.setText(this.getToolTitle());
+    var op = new RAddObjectOperation(this.image.clone(), this.getToolTitle());
     if (preview) {
         this.getDocumentInterface().previewOperation(op);
     }

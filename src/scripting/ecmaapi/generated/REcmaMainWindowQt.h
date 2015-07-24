@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaMainWindowQt {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaMainWindowQt {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -217,6 +220,9 @@
         ;static  QScriptValue
         ucsSetEvent
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        eval
+        (QScriptContext* context, QScriptEngine* engine) 
         ;
 
     // properties:
@@ -300,6 +306,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setRightMouseTip
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        showContextMenu
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         escapeEvent

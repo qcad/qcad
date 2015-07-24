@@ -4,7 +4,7 @@
 <context>
     <name>LineAngle</name>
     <message>
-        <location filename="../LineAngle.js" line="+64"/>
+        <location filename="../LineAngle.js" line="+65"/>
         <source>Position</source>
         <translation type="unfinished"></translation>
     </message>
@@ -46,12 +46,12 @@
     <message>
         <location filename="../LineAngleInit.js" line="+2"/>
         <source>Line from &amp;Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>角度画线(&amp;A)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line at a given absolute angle</source>
-        <translation type="unfinished"></translation>
+        <translation>以给定角度画线</translation>
     </message>
 </context>
 </TS>

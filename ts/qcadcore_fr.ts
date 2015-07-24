@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fr_FR">
+<TS version="2.1" language="fr_FR">
 <context>
     <name>QObject</name>
     <message>
@@ -181,7 +181,7 @@ Parsec</translatorcomment>
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="+411"/>
+        <location filename="../src/core/RColor.cpp" line="+298"/>
         <source>By Layer</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
@@ -251,6 +251,11 @@ Magenta</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <source>Orange</source>
+        <translation>Orange</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Dark Red</source>
         <translation>Rouge foncé</translation>
     </message>
@@ -326,7 +331,7 @@ Autres...</translatorcomment>
 <context>
     <name>RDocumentVariables</name>
     <message>
-        <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+44"/>
         <source>Current Layer ID</source>
         <translation>ID de la couche actuelle</translation>
     </message>
@@ -349,7 +354,7 @@ Autres...</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+77"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+92"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_fr.ts--
@@ -366,8 +371,8 @@ Liste des blocs</translatorcomment>
     <message>
         <location line="+1"/>
         <location line="+3"/>
-        <location filename="../src/core/RTextBasedEntity.cpp" line="+70"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+65"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -440,7 +445,27 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Angle</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+69"/>
+        <location line="+1"/>
+        <source>Columns</source>
+        <translation>Colonnes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rows</source>
+        <translation>Lignes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Column Spacing</source>
+        <translation>Espacement des colonnes</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Row Spacing</source>
+        <translation>Espacement des lignes</translation>
+    </message>
+    <message>
+        <location filename="../src/core/REntity.cpp" line="+76"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -494,6 +519,11 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <source>Displayed Color</source>
+        <translation>Couleur affichée</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Draw Order</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ordre de dessin</translation>
@@ -527,17 +557,25 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <translation>En haut</translation>
     </message>
     <message>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
         <translation>Personnalisé</translation>
     </message>
     <message>
+        <location filename="../src/core/REntity.cpp" line="+2"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
         <translation>Largeur</translation>
     </message>
     <message>
+        <location line="+0"/>
         <location line="+1"/>
+        <source>Size</source>
+        <translation>Taille</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
         <translation>Hauteur</translation>
     </message>
@@ -618,7 +656,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+169"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+181"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Nécessite une sélection</translation>
@@ -627,13 +665,17 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+52"/>
+        <location filename="../src/core/RLayer.cpp" line="+73"/>
         <source>Name</source>
         <translation>Nom</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Frozen</source>
+        <translation type="vanished">Caché</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hidden</source>
         <translation>Caché</translation>
     </message>
     <message>
@@ -664,21 +706,21 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Par calque</translatorcomment>
-        <translation>Par calque</translation>
+        <translation type="vanished">Par calque</translation>
     </message>
     <message>
         <source>By Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Par bloc</translatorcomment>
-        <translation>Par bloc</translation>
+        <translation type="vanished">Par bloc</translation>
     </message>
     <message>
         <source>Continuous</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Continu</translatorcomment>
-        <translation>Continu</translation>
+        <translation type="vanished">Continu</translation>
     </message>
     <message>
         <source>Dot</source>
@@ -687,7 +729,7 @@ Continu</translatorcomment>
 Points de la g&amp;rille :
 Points de la g&amp;rille
 Points de la grille :</translatorcomment>
-        <translation>Point</translation>
+        <translation type="vanished">Point</translation>
     </message>
     <message>
         <source>Dot (small)</source>
@@ -695,7 +737,7 @@ Points de la grille :</translatorcomment>
 --file: qcadguiqt_fr.ts--
 Point (petit)
 Tiret-point (petit)</translatorcomment>
-        <translation>Point (petit)</translation>
+        <translation type="vanished">Point (petit)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
@@ -703,7 +745,7 @@ Tiret-point (petit)</translatorcomment>
 --file: qcadguiqt_fr.ts--
 Point (grand)
 Tiret-point (grand)</translatorcomment>
-        <translation>Point (grand)</translation>
+        <translation type="vanished">Point (grand)</translation>
     </message>
     <message>
         <source>Dash</source>
@@ -711,21 +753,21 @@ Tiret-point (grand)</translatorcomment>
 --file: qcadguiqt_fr.ts--
 Tiret
 Tiret (petit)</translatorcomment>
-        <translation>Tiret</translation>
+        <translation type="vanished">Tiret</translation>
     </message>
     <message>
         <source>Dash (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Tiret (petit)</translatorcomment>
-        <translation>Tiret (petit)</translation>
+        <translation type="vanished">Tiret (petit)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Tiret (grand)</translatorcomment>
-        <translation>Tiret (grand)</translation>
+        <translation type="vanished">Tiret (grand)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
@@ -733,21 +775,21 @@ Tiret (grand)</translatorcomment>
 --file: qcadguiqt_fr.ts--
 Tiret-point
 Tiret-point (petit)</translatorcomment>
-        <translation>Tiret-point</translation>
+        <translation type="vanished">Tiret-point</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Tiret-point (petit)</translatorcomment>
-        <translation>Tiret-point (petit)</translation>
+        <translation type="vanished">Tiret-point (petit)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Tiret-point (grand)</translatorcomment>
-        <translation>Tiret-point (grand)</translation>
+        <translation type="vanished">Tiret-point (grand)</translation>
     </message>
     <message>
         <source>Divide</source>
@@ -756,21 +798,21 @@ Tiret-point (grand)</translatorcomment>
 &amp;Division
 Division
 Divise les entités</translatorcomment>
-        <translation>Division</translation>
+        <translation type="vanished">Division</translation>
     </message>
     <message>
         <source>Divide (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Division (petite)</translatorcomment>
-        <translation>Division (petite)</translation>
+        <translation type="vanished">Division (petite)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Division (grande)</translatorcomment>
-        <translation>Division (grande)</translation>
+        <translation type="vanished">Division (grande)</translation>
     </message>
     <message>
         <source>Center</source>
@@ -779,21 +821,21 @@ Division (grande)</translatorcomment>
 &amp;Centre, point, angles
 Centre, point, angles
 Indiquer le centre</translatorcomment>
-        <translation>Centré</translation>
+        <translation type="vanished">Centré</translation>
     </message>
     <message>
         <source>Center (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Centre (petit)</translatorcomment>
-        <translation>Centre (petit)</translation>
+        <translation type="vanished">Centre (petit)</translation>
     </message>
     <message>
         <source>Center (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Centre (grand)</translatorcomment>
-        <translation>Centre (grand)</translation>
+        <translation type="vanished">Centre (grand)</translation>
     </message>
     <message>
         <source>Border</source>
@@ -801,21 +843,21 @@ Centre (grand)</translatorcomment>
 --file: qcadguiqt_fr.ts--
 Bordure
 Bordure (petite)</translatorcomment>
-        <translation>Bordure</translation>
+        <translation type="vanished">Bordure</translation>
     </message>
     <message>
         <source>Border (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Bordure (petite)</translatorcomment>
-        <translation>Bordure (petite)</translation>
+        <translation type="vanished">Bordure (petite)</translation>
     </message>
     <message>
         <source>Border (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_fr.ts--
 Bordure (grande)</translatorcomment>
-        <translation>Bordure (grande)</translation>
+        <translation type="vanished">Bordure (grande)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
@@ -841,7 +883,7 @@ Bordure (grande)</translatorcomment>
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+629"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+845"/>
         <source>By Layer</source>
         <translation>Par calque</translation>
     </message>
@@ -859,7 +901,7 @@ Bordure (grande)</translatorcomment>
     </message>
     <message>
         <source>Border (2x)</source>
-        <translation>Bordure (2x)</translation>
+        <translation type="vanished">Bordure (2x)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -870,7 +912,7 @@ Bordure (grande)</translatorcomment>
     </message>
     <message>
         <source>Center (2x)</source>
-        <translation>Centre (2x)</translation>
+        <translation type="vanished">Centre (2x)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1031,8 +1073,12 @@ Bordure (grande)</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <source>Drainage Reverse</source>
+        <source>Drainage Reversed</source>
         <translation>Drainage inverse</translation>
+    </message>
+    <message>
+        <source>Drainage Reverse</source>
+        <translation type="vanished">Drainage inverse</translation>
     </message>
 </context>
 <context>
@@ -1259,7 +1305,7 @@ Valeurs par &amp;défaut</translatorcomment>
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+36"/>
+        <location filename="../src/core/RObject.cpp" line="+37"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -1267,6 +1313,11 @@ Aucun objets de dimension sélectionné avec une position de texte personnalisé
 Aucun objets de dimension sélectionné avec une position de texte personnalisé
 Personnalisé</translatorcomment>
         <translation>Personnalisé</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type</source>
+        <translation>Type</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaMoveSelectionOperation {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaMoveSelectionOperation {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

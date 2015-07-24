@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaDocument {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaDocument {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -96,6 +99,9 @@
         queryBlockEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryLayerBlockEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryChildEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -124,6 +130,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         querySelectedEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryPropertyEditorObjects
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryDocumentVariables
@@ -166,6 +175,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryLinetype
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        countSelectedEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         clearSelection
@@ -427,6 +439,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLinetypeScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        formatLinear
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        formatAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLinearFormat

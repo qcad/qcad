@@ -61,6 +61,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getAppId, "getAppId");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getDevicePixelRatio, "getDevicePixelRatio");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getLocale, "getLocale");
             
             REcmaHelper::registerFunction(&engine, &ctor, loadTranslations, "loadTranslations");
@@ -75,11 +77,15 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getApplicationPath, "getApplicationPath");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getPluginPaths, "getPluginPaths");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getPluginPath, "getPluginPath");
             
             REcmaHelper::registerFunction(&engine, &ctor, getStandardLocation, "getStandardLocation");
             
             REcmaHelper::registerFunction(&engine, &ctor, getCacheLocation, "getCacheLocation");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getDataLocation, "getDataLocation");
             
             REcmaHelper::registerFunction(&engine, &ctor, getDesktopLocation, "getDesktopLocation");
             
@@ -117,6 +123,10 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getStatusBarFont, "getStatusBarFont");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getSelectionColor, "getSelectionColor");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getHighResolutionGraphicsView, "getHighResolutionGraphicsView");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getAutoScaleGrid, "getAutoScaleGrid");
             
             REcmaHelper::registerFunction(&engine, &ctor, getAutoScaleMetaGrid, "getAutoScaleMetaGrid");
@@ -130,6 +140,10 @@
             REcmaHelper::registerFunction(&engine, &ctor, getTextHeightThreshold, "getTextHeightThreshold");
             
             REcmaHelper::registerFunction(&engine, &ctor, getArcAngleLengthThreshold, "getArcAngleLengthThreshold");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getMinArcAngleStep, "getMinArcAngleStep");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getDashThreshold, "getDashThreshold");
             
             REcmaHelper::registerFunction(&engine, &ctor, getQtVersion, "getQtVersion");
             
@@ -197,6 +211,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getValue, "getValue");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getColorValue, "getColorValue");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getBoolValue, "getBoolValue");
             
             REcmaHelper::registerFunction(&engine, &ctor, getDoubleValue, "getDoubleValue");
@@ -204,6 +220,8 @@
             REcmaHelper::registerFunction(&engine, &ctor, getIntValue, "getIntValue");
             
             REcmaHelper::registerFunction(&engine, &ctor, getStringValue, "getStringValue");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getStringListValue, "getStringListValue");
             
             REcmaHelper::registerFunction(&engine, &ctor, setValue, "setValue");
             
@@ -221,11 +239,19 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, isXDataEnabled, "isXDataEnabled");
             
+            REcmaHelper::registerFunction(&engine, &ctor, setNextVersionEnabled, "setNextVersionEnabled");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isNextVersionEnabled, "isNextVersionEnabled");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getAutoScaleLinetypePatterns, "getAutoScaleLinetypePatterns");
             
             REcmaHelper::registerFunction(&engine, &ctor, getUseSecondarySelectionColor, "getUseSecondarySelectionColor");
             
             REcmaHelper::registerFunction(&engine, &ctor, getUseSolidLineSelection, "getUseSolidLineSelection");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getMouseThreshold, "getMouseThreshold");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getPositionByMousePress, "getPositionByMousePress");
             
 
     // static properties:
@@ -388,6 +414,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getAppId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getDevicePixelRatio
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getDevicePixelRatio", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getDevicePixelRatio";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        RSettings::
+       getDevicePixelRatio();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getDevicePixelRatio().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getDevicePixelRatio", context, engine);
             return result;
         }
          QScriptValue
@@ -742,6 +807,45 @@
             return result;
         }
          QScriptValue
+        REcmaSettings::getPluginPaths
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getPluginPaths", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getPluginPaths";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        RSettings::
+       getPluginPaths();
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getPluginPaths().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getPluginPaths", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSettings::getPluginPath
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -867,6 +971,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getCacheLocation", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getDataLocation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getDataLocation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getDataLocation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getDataLocation();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getDataLocation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getDataLocation", context, engine);
             return result;
         }
          QScriptValue
@@ -1605,6 +1748,84 @@
             return result;
         }
          QScriptValue
+        REcmaSettings::getSelectionColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getSelectionColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getSelectionColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        RSettings::
+       getSelectionColor();
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getSelectionColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getSelectionColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getHighResolutionGraphicsView
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getHighResolutionGraphicsView", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getHighResolutionGraphicsView";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getHighResolutionGraphicsView();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getHighResolutionGraphicsView().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getHighResolutionGraphicsView", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSettings::getAutoScaleGrid
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1875,6 +2096,84 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getArcAngleLengthThreshold", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getMinArcAngleStep
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getMinArcAngleStep", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getMinArcAngleStep";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        RSettings::
+       getMinArcAngleStep();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getMinArcAngleStep().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getMinArcAngleStep", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getDashThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getDashThreshold", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getDashThreshold";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RSettings::
+       getDashThreshold();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getDashThreshold().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getDashThreshold", context, engine);
             return result;
         }
          QScriptValue
@@ -3347,6 +3646,81 @@
             return result;
         }
          QScriptValue
+        REcmaSettings::getColorValue
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getColorValue", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getColorValue";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RColor */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RColor*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RColor*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RSettings: Argument 1 is not of type RColor.",
+                               context);                    
+                    }
+                    RColor 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        RSettings::
+       getColorValue(a0
+        ,
+    a1);
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getColorValue().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getColorValue", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSettings::getBoolValue
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -3596,6 +3970,70 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getStringValue", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getStringListValue
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getStringListValue", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getStringListValue";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QStringList */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isArray
+                    QStringList
+                    a1;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(1),
+                        a1
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        RSettings::
+       getStringListValue(a0
+        ,
+    a1);
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getStringListValue().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getStringListValue", context, engine);
             return result;
         }
          QScriptValue
@@ -4027,6 +4465,90 @@
             return result;
         }
          QScriptValue
+        REcmaSettings::setNextVersionEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::setNextVersionEnabled", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::setNextVersionEnabled";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       setNextVersionEnabled(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.setNextVersionEnabled().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::setNextVersionEnabled", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::isNextVersionEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::isNextVersionEnabled", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::isNextVersionEnabled";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       isNextVersionEnabled();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.isNextVersionEnabled().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::isNextVersionEnabled", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSettings::getAutoScaleLinetypePatterns
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4141,6 +4663,84 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getUseSolidLineSelection", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getMouseThreshold
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getMouseThreshold", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getMouseThreshold";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RSettings::
+       getMouseThreshold();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getMouseThreshold().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getMouseThreshold", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getPositionByMousePress
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getPositionByMousePress", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getPositionByMousePress";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getPositionByMousePress();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getPositionByMousePress().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getPositionByMousePress", context, engine);
             return result;
         }
          QScriptValue REcmaSettings::toString

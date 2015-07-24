@@ -1,137 +1,55 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RWidget.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RWIDGET_H_</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RWIDGET_H_</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QWidget&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-  <comment type="block">/** * Widget with some additional
-  functionality for scripts * * \ingroup gui * \scriptable *
-  \generateScriptShell */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RWidget</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>QWidget</name></super>
-  <block>{
-  <private type="default">
-    <macro>
-      <name>Q_OBJECT</name>
-    </macro>
-  </private>
-  <public>public: 
-  <constructor_decl>
-  <name>RWidget</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>QWidget</name>*</type>
-    <name>parent</name>=
-    <init>
-      <expr>0</expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <specifier>virtual</specifier>
-  <name>~RWidget</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>removeAction</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QAction</name>*</type>
-      <name>action</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>addAction</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QAction</name>*</type>
-      <name>action</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>insertAction</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QAction</name>*</type>
-      <name>before</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QAction</name>*</type>
-      <name>action</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <label>
-  <name>signals</name>:</label>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>actionAdded</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QAction</name>*</type>
-      <name>action</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RWidget*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RWidget.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RWIDGET_H_</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RWIDGET_H_</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QWidget&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * Widget with some additional functionality for scripts
+ *
+ * \ingroup gui
+ * \scriptable
+ * \generateScriptShell
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RWidget</name><super>: <specifier>public</specifier> <name>QWidget</name></super> <block>{<private type="default">
+
+    <macro><name>Q_OBJECT</name></macro>
+
+</private><public>public:
+    <constructor_decl><name>RWidget</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>parent</name>=<init><expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RWidget</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>removeAction</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>action</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>addAction</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>action</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>insertAction</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>before</name></decl></param>, <param><decl><type><name>QAction</name>*</type> <name>action</name></decl></param>)</parameter_list>;</function_decl>
+
+<label><name>signals</name>:</label>
+    <function_decl><type><name>void</name></type> <name>actionAdded</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>action</name></decl></param>)</parameter_list>;</function_decl>
+</public>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RWidget*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

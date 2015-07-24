@@ -4,7 +4,7 @@
 <context>
     <name>LibraryBrowser</name>
     <message>
-        <location filename="../LibraryBrowser.js" line="+70"/>
+        <location filename="../LibraryBrowser.js" line="+71"/>
         <source>audience</source>
         <translation>支持者</translation>
     </message>
@@ -60,13 +60,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1108"/>
+        <location line="+1138"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>ライブラリブラウザ</translation>
     </message>
     <message>
-        <location line="-1100"/>
+        <location line="-1130"/>
         <source>Icon</source>
         <translation>アイコン</translation>
     </message>
@@ -81,7 +81,7 @@
         <translation>ソースフォルダを選択</translation>
     </message>
     <message>
-        <location line="+654"/>
+        <location line="+684"/>
         <source>Page %1 of %2</source>
         <translation>ページ %1 / %2</translation>
     </message>
@@ -145,7 +145,17 @@ Database file: %3
 ライブラリブラウザは利用できません。</translation>
     </message>
     <message>
-        <location line="+446"/>
+        <location line="+43"/>
+        <source>Source removed from part library: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Force database update.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+393"/>
         <source>&amp;Insert</source>
         <translation>&amp;I 挿入</translation>
     </message>
@@ -270,12 +280,12 @@ shown in search results:</source>
         <translation>ファイルシステム</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+60"/>
         <source>Tags</source>
         <translation>タグ</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+23"/>
         <source>Look for:</source>
         <translation>探す:</translation>
     </message>
@@ -305,7 +315,12 @@ shown in search results:</source>
         <translation>お気に入り</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+36"/>
+        <source>Insert selected item into drawing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Update DB from file system</source>
         <translation>ファイルシステムからDBをアップデート</translation>
     </message>

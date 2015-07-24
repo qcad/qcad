@@ -13,7 +13,7 @@ is already in the list.</source>
 je že na seznamu.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Folder not added</source>
         <translation>Mapa ni bila dodana</translation>
     </message>

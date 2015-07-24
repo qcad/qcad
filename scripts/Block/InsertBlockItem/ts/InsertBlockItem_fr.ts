@@ -66,7 +66,12 @@
         <translation>Ecraser les blocs</translation>
     </message>
     <message>
-        <location filename="../InsertBlockItem.js" line="+88"/>
+        <location filename="../InsertBlockItem.js" line="+82"/>
+        <source>Cannot import file from URL: </source>
+        <translation>Ne peux pas importer le fichier depuis l&apos;URL : </translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
         <translation>Ajusté nom de bloc invalide &apos;%1&apos;</translation>
     </message>

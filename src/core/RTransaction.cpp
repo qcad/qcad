@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -637,8 +637,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         // as part of this transaction:
         oldObject = storage->queryObjectDirect(object->getId());
         if (oldObject.isNull()) {
-            qWarning("RTransaction::addObject: "
-                "original object not found in storage");
+            qWarning() << "RTransaction::addObject: original object not found in storage for " << *object;
             fail();
             return false;
         }
@@ -701,6 +700,13 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
                 object->getProperty(pid);
             QPair<QVariant, RPropertyAttributes> oldProperty =
                 oldObject->getProperty(pid);
+
+//            RPropertyChange pc(*it, oldProperty.first, newProperty.first);
+//            if (pid==RObject::PropertyProtected) {
+//                qDebug() << "pid: " << pid;
+//                qDebug() << "old property: " << oldProperty.first;
+//                qDebug() << "new property: " << newProperty.first;
+//            }
 
             // don't record changes in redundant properties (e.g. angle for lines):
             if (newProperty.second.isRedundant()) {
@@ -904,6 +910,7 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object) {
     RObject::Id objectId = object->getId();
 
     if (object->isProtected()) {
+        qWarning() << "RTransaction::deleteObject: trying to delete protected object";
         return;
     }
 
@@ -1005,13 +1012,24 @@ bool RTransaction::isPreview() const {
     return (ls!=NULL);
 }
 
+
+/**
+ * \return List of property changes by this transaction for the given object.
+ */
+QList<RPropertyChange> RTransaction::getPropertyChanges(RObject::Id id) const {
+    if (!propertyChanges.contains(id)) {
+        return QList<RPropertyChange>();
+    }
+    return propertyChanges[id];
+}
+
 /**
  * Stream operator for QDebug
  */
 QDebug operator<<(QDebug dbg, RTransaction& t) {
-    dbg.nospace() << "RTransaction(";
+    dbg.nospace() << "RTransaction(" << QString("%1").arg((long)&t, 0, 16);
 
-    dbg.nospace() << "id: " << t.getId();
+    dbg.nospace() << ", id: " << t.getId();
     dbg.nospace() << ", group: " << t.getGroup();
     dbg.nospace() << ", text: " << t.getText();
 

@@ -26,7 +26,7 @@
     <message>
         <location line="+4"/>
         <source>Draw line orthogonal to line and tangent to circle, arc or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä viiva kohtisuoraan linjasta ja sivua ympyrää, kaarta tai ellipsiä</translation>
     </message>
 </context>
 </TS>

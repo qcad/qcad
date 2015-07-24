@@ -32,7 +32,7 @@ LineBisectorTest00.prototype = new TdbTest();
 LineBisectorTest00.prototype.test00 = function() {
     qDebug('running LineBisectorTest00.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.zoomTo(-36.41799999999999, -20.369999999999997, 46.958, 41.406);
     var p = new RVector(-5.745999999999994, 15.918000000000001);
@@ -56,7 +56,7 @@ LineBisectorTest00.prototype.test00 = function() {
     this.sendMouseEventToGv(QEvent.MouseButtonRelease, new QPoint(322, 341), Qt.RightButton, 0, 0);
     this.sendMouseEventToGv(QEvent.MouseButtonPress, new QPoint(155, 321), Qt.RightButton, 2, 0);
     this.sendMouseEventToGv(QEvent.MouseButtonRelease, new QPoint(155, 321), Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::LineBisectorButton');
     this.setToolOption('LineBisector/Length',  [ 15, 0 ] );
     this.setToolOption('LineBisector/Number', '6');

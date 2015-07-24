@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>File</name>
     <message>
         <location filename="../File.js" line="+65"/>
         <source>File Tools</source>
-        <translation>Ferramentas de arquivo</translation>
+        <translation>Ferramentas de Arquivo</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show file tools</source>
-        <translation>Ferramentas de arquivo</translation>
+        <translation>Exiba ferramentas de arquivo</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -39,7 +39,7 @@ Substituir arquivo?
 Arquivo existe:
 &apos;%1&apos;
 Substituir arquivo?</translatorcomment>
-        <translation>Substituir arquivo?</translation>
+        <translation>Substitua o Arquivo?</translation>
     </message>
     <message>
         <location line="+1"/>

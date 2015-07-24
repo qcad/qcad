@@ -92,6 +92,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setPolar, "setPolar");
             
+            REcmaHelper::registerFunction(&engine, proto, get2D, "get2D");
+            
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
             REcmaHelper::registerFunction(&engine, proto, isInside, "isInside");
@@ -172,9 +174,13 @@
             
             REcmaHelper::registerFunction(&engine, proto, getClosest, "getClosest");
             
+            REcmaHelper::registerFunction(&engine, proto, getClosest2d, "getClosest2d");
+            
             REcmaHelper::registerFunction(&engine, proto, getClosestDistance, "getClosestDistance");
             
             REcmaHelper::registerFunction(&engine, proto, getClosestIndex, "getClosestIndex");
+            
+            REcmaHelper::registerFunction(&engine, proto, getClosestIndex2d, "getClosestIndex2d");
             
             REcmaHelper::registerFunction(&engine, proto, operator_add, "operator_add");
             
@@ -220,6 +226,8 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, containsFuzzy, "containsFuzzy");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getMinimum, "getMinimum");
             
             REcmaHelper::registerFunction(&engine, &ctor, getMaximum, "getMaximum");
@@ -255,6 +263,8 @@
             REcmaHelper::registerFunction(&engine, &ctor, greaterThanY, "greaterThanY");
             
             REcmaHelper::registerFunction(&engine, &ctor, getSortedByDistance, "getSortedByDistance");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getSortedLeftRightTopBottom, "getSortedLeftRightTopBottom");
             
             REcmaHelper::registerFunction(&engine, &ctor, getSortedByAngle, "getSortedByAngle");
             
@@ -866,6 +876,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaVector::setPolar", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::get2D
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::get2D", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::get2D";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RVector* self = 
+                        getSelf("get2D", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->get2D();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.get2D().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::get2D", context, engine);
             return result;
         }
          QScriptValue
@@ -3821,6 +3880,67 @@
             return result;
         }
          QScriptValue
+        REcmaVector::getClosest2d
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::getClosest2d", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getClosest2d";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RVector* self = 
+                        getSelf("getClosest2d", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getClosest2d(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getClosest2d().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::getClosest2d", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaVector::getClosestDistance
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -3948,11 +4068,118 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getClosestIndex(a0
+        ,
+    a1);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getClosestIndex().",
                    context);
             }
             //REcmaHelper::functionEnd("REcmaVector::getClosestIndex", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::getClosestIndex2d
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::getClosestIndex2d", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getClosestIndex2d";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RVector* self = 
+                        getSelf("getClosestIndex2d", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getClosestIndex2d(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getClosestIndex2d().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::getClosestIndex2d", context, engine);
             return result;
         }
          QScriptValue
@@ -4874,6 +5101,153 @@
             return result;
         }
          QScriptValue
+        REcmaVector::containsFuzzy
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::containsFuzzy", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::containsFuzzy";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RVector: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RVector::
+       containsFuzzy(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RVector: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isStandardType
+                    double
+                    a2 =
+                    (double)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RVector::
+       containsFuzzy(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.containsFuzzy().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::containsFuzzy", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaVector::getMinimum
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -5389,6 +5763,39 @@
        getAverage(a0
         ,
     a1);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        RVector::
+       getAverage(a0);
         // return type: RVector
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
@@ -6216,6 +6623,57 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaVector::getSortedByDistance", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::getSortedLeftRightTopBottom
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::getSortedLeftRightTopBottom", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::getSortedLeftRightTopBottom";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        RVector::
+       getSortedLeftRightTopBottom(a0);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getSortedLeftRightTopBottom().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::getSortedLeftRightTopBottom", context, engine);
             return result;
         }
          QScriptValue

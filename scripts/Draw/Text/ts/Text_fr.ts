@@ -50,7 +50,7 @@
         <translation>Valeur par défaut :</translation>
     </message>
     <message>
-        <location line="+255"/>
+        <location line="+258"/>
         <source>&amp;Undo</source>
         <translation>&amp;Annuler</translation>
     </message>

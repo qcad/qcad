@@ -6,12 +6,12 @@
     <message>
         <location filename="../DimVerticalInit.js" line="+2"/>
         <source>&amp;Vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>垂直(&amp;V)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw vertical dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>绘制垂直标注</translation>
     </message>
 </context>
 </TS>

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -34,6 +34,7 @@
  * appearance of an arc entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RArcData: public REntityData, protected RArc {
@@ -121,6 +122,7 @@ public:
     }
 };
 
+Q_DECLARE_METATYPE(RArcData)
 Q_DECLARE_METATYPE(RArcData*)
 Q_DECLARE_METATYPE(const RArcData*)
 Q_DECLARE_METATYPE(QSharedPointer<RArcData>)

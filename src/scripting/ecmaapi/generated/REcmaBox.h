@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaBox {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaBox {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -90,6 +93,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         growToInclude
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        growToIncludeBoxes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         growToIncludeBox

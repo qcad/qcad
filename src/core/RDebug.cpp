@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -19,6 +19,7 @@
 #include <stdlib.h>
 
 #include <QDebug>
+#include <QStringList>
 
 #include "RDebug.h"
 
@@ -29,6 +30,8 @@ QMap<int, uint64_t> RDebug::timerMac;
 #else
 QMap<int, QTime> RDebug::timer;
 #endif
+QMap<QString, int> RDebug::counter;
+QString RDebug::prefix;
 
 void RDebug::printBacktrace(const QString& prefix) {
 #if !defined(Q_OS_WIN) && !defined(Q_OS_ANDROID)
@@ -61,26 +64,22 @@ void RDebug::startTimer(int id) {
 }
 
 
-int RDebug::stopTimer(int id, const QString& msg) {
+int RDebug::stopTimer(int id, const QString& msg, int msThreshold) {
 #if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
     Nanoseconds elapsedNano;
     uint64_t end = mach_absolute_time();
     uint64_t elapsed = end - timerMac[id];
     elapsedNano = AbsoluteToNanoseconds( *(AbsoluteTime *) &elapsed );
-    int t = (unsigned int)((* (uint64_t *) &elapsedNano) / 1000000);
+    uint64_t t = (* (uint64_t *) &elapsedNano);
     timerMac.remove(id);
 #else
-    int t = timer[id].elapsed();
+    int t = timer[id].elapsed() * 1000000;
     timer.remove(id);
 #endif
-    /*
-    va_list varg;
-    va_start(varg, format);
-    fprintf(stream, "TIMER: %d ms ", t);
-    printV(format, varg);
-    va_end(varg);
-    */
-    qDebug() << "TIMER: " << t << "ms - " << msg;
+
+    if (t/1000000>=msThreshold) {
+        qDebug() << "TIMER: " << t << "ns (" << t/1000000 << "ms )" << " - " << msg;
+    }
     return t;
 }
 
@@ -92,5 +91,42 @@ void RDebug::hexDump(const QString& str) {
     QByteArray ba = str.toUtf8();
     for (int i=0; i<ba.length(); i++) {
         qDebug() << QString("0x%1 (%2)").arg((int)ba.at(i), 0, 16).arg(ba.at(i));
+    }
+}
+
+void RDebug::incCounter(const QString& id) {
+    if (!counter.contains(id)) {
+        counter[id] = 0;
+    }
+    //qDebug() << id << "+";
+    counter[id]++;
+}
+
+void RDebug::decCounter(const QString& id) {
+    if (!counter.contains(id)) {
+        counter[id] = 0;
+    }
+    //qDebug() << id << "-";
+    counter[id]--;
+}
+
+int RDebug::getCounter(const QString& id) {
+    if (!counter.contains(id)) {
+        return 0;
+    }
+    return counter[id];
+}
+
+void RDebug::printCounter(const QString& id) {
+    if (!counter.contains(id)) {
+        return;
+    }
+    qDebug() << "counter: " << id << ": " << counter[id];
+}
+
+void RDebug::printCounters() {
+    QStringList keys = counter.keys();
+    for (int i=0; i<keys.length(); i++) {
+        qDebug() << "counter: " << keys[i] << ": " << counter[keys[i]];
     }
 }

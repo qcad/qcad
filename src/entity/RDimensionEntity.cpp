@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -22,6 +22,7 @@
 
 RPropertyTypeId RDimensionEntity::PropertyCustom;
 RPropertyTypeId RDimensionEntity::PropertyHandle;
+RPropertyTypeId RDimensionEntity::PropertyProtected;
 RPropertyTypeId RDimensionEntity::PropertyType;
 RPropertyTypeId RDimensionEntity::PropertyBlock;
 RPropertyTypeId RDimensionEntity::PropertyLayer;
@@ -29,6 +30,7 @@ RPropertyTypeId RDimensionEntity::PropertyLinetype;
 RPropertyTypeId RDimensionEntity::PropertyLinetypeScale;
 RPropertyTypeId RDimensionEntity::PropertyLineweight;
 RPropertyTypeId RDimensionEntity::PropertyColor;
+RPropertyTypeId RDimensionEntity::PropertyDisplayedColor;
 RPropertyTypeId RDimensionEntity::PropertyDrawOrder;
 
 RPropertyTypeId RDimensionEntity::PropertyDefinitionPointX;
@@ -41,6 +43,7 @@ RPropertyTypeId RDimensionEntity::PropertyText;
 RPropertyTypeId RDimensionEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimensionEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimensionEntity::PropertyLinearFactor;
+RPropertyTypeId RDimensionEntity::PropertyDimScale;
 RPropertyTypeId RDimensionEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimensionEntity::PropertyFontName;
 //RPropertyTypeId RDimensionEntity::PropertyHeight;
@@ -63,6 +66,7 @@ RDimensionEntity::~RDimensionEntity() {
 void RDimensionEntity::init() {
     RDimensionEntity::PropertyCustom.generateId(typeid(RDimensionEntity), RObject::PropertyCustom);
     RDimensionEntity::PropertyHandle.generateId(typeid(RDimensionEntity), RObject::PropertyHandle);
+    RDimensionEntity::PropertyProtected.generateId(typeid(RDimensionEntity), RObject::PropertyProtected);
     RDimensionEntity::PropertyType.generateId(typeid(RDimensionEntity), REntity::PropertyType);
     RDimensionEntity::PropertyBlock.generateId(typeid(RDimensionEntity), REntity::PropertyBlock);
     RDimensionEntity::PropertyLayer.generateId(typeid(RDimensionEntity), REntity::PropertyLayer);
@@ -70,6 +74,7 @@ void RDimensionEntity::init() {
     RDimensionEntity::PropertyLinetypeScale.generateId(typeid(RDimensionEntity), REntity::PropertyLinetypeScale);
     RDimensionEntity::PropertyLineweight.generateId(typeid(RDimensionEntity), REntity::PropertyLineweight);
     RDimensionEntity::PropertyColor.generateId(typeid(RDimensionEntity), REntity::PropertyColor);
+    RDimensionEntity::PropertyDisplayedColor.generateId(typeid(RDimensionEntity), REntity::PropertyDisplayedColor);
     RDimensionEntity::PropertyDrawOrder.generateId(typeid(RDimensionEntity), REntity::PropertyDrawOrder);
 
     RDimensionEntity::PropertyText.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Label"));
@@ -91,6 +96,7 @@ void RDimensionEntity::init() {
     RDimensionEntity::PropertyAutoLabel.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Auto Label"));
     RDimensionEntity::PropertyMeasuredValue.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Measured Value"));
     RDimensionEntity::PropertyLinearFactor.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Linear Factor"));
+    RDimensionEntity::PropertyDimScale.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
     RDimensionEntity::PropertyAutoTextPos.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Auto Label Position"));
 }
 
@@ -123,6 +129,7 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(getData().upperTolerance, value, PropertyUpperTolerance == propertyTypeId);
     ret = ret || RObject::setMember(getData().lowerTolerance, value, PropertyLowerTolerance == propertyTypeId);
     ret = ret || RObject::setMember(getData().linearFactor, value, PropertyLinearFactor == propertyTypeId);
+    ret = ret || RObject::setMember(getData().dimScale, value, PropertyDimScale == propertyTypeId);
     ret = ret || RObject::setMember(getData().autoTextPos, value, PropertyAutoTextPos == propertyTypeId);
 //    if (RPluginLoader::hasPlugin("DWG")) {
 //        ret = ret || RObject::setMember(getData().fontName, value, PropertyFontName == propertyTypeId);
@@ -198,6 +205,8 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
         }
     } else if (propertyTypeId == PropertyLinearFactor) {
         return qMakePair(QVariant(getData().linearFactor), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyDimScale) {
+        return qMakePair(QVariant(getData().dimScale), RPropertyAttributes());
     } else if (propertyTypeId == PropertyAutoTextPos) {
         return qMakePair(QVariant(getData().autoTextPos), RPropertyAttributes(RPropertyAttributes::Invisible));
     }
@@ -276,5 +285,6 @@ void RDimensionEntity::print(QDebug dbg) const {
                   << ", lower tolerance: " << getData().lowerTolerance
                   << ", measurement (label): " << getData().getMeasurement(true)
                   << ", measurement (stored): " << getData().getMeasurement(false)
+                  << ", dimscale: " << getData().getDimScale()
                   << ")";
 }

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -41,11 +41,28 @@ public:
     virtual ~RPasteOperation() {
     }
 
+    void setOffsets(const QList<RVector>& offsets) {
+        this->offsets = offsets;
+    }
+    void setRotations(const QList<double>& rotations) {
+        this->rotations = rotations;
+    }
+
     void setOffset(const RVector& offset) {
-        this->offset = offset;
+        if (this->offsets.isEmpty()) {
+            this->offsets << offset;
+        }
+        else {
+            this->offsets[0] = offset;
+        }
     }
     RVector getOffset() {
-        return this->offset;
+        if (this->offsets.isEmpty()) {
+            return RVector::invalid;
+        }
+        else {
+            return this->offsets[0];
+        }
     }
     void setScale(double scale) {
         this->scale = scale;
@@ -54,10 +71,20 @@ public:
         return this->scale;
     }
     void setRotation(double rotation) {
-        this->rotation = rotation;
+        if (this->rotations.isEmpty()) {
+            this->rotations << rotation;
+        }
+        else {
+            this->rotations[0] = rotation;
+        }
     }
     double getRotation() {
-        return this->rotation;
+        if (this->rotations.isEmpty()) {
+            return 0.0;
+        }
+        else {
+            return this->rotations[0];
+        }
     }
     void setFlipHorizontal(bool flipHorizontal) {
         this->flipHorizontal = flipHorizontal;
@@ -111,9 +138,9 @@ public:
 
 private:
     RDocument& sourceDocument;
-    RVector offset;
+    QList<RVector> offsets;
     double scale;
-    double rotation;
+    QList<double> rotations;
     bool flipHorizontal;
     bool flipVertical;
     bool toCurrentLayer;

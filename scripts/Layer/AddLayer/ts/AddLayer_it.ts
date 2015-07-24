@@ -19,4 +19,12 @@
         <translation>Aggiungi Layer</translation>
     </message>
 </context>
+<context>
+    <name>Layer</name>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+19"/>
+        <source>Default lineweight for new layers:</source>
+        <translation>Spessore di linea predefinito per nuovi layer:</translation>
+    </message>
+</context>
 </TS>

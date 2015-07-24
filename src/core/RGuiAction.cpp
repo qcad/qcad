@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -20,13 +20,14 @@
 #include <QFileInfo>
 #include <QList>
 #include <QMenu>
+#include <QPainter>
+#include <QSvgRenderer>
 #include <QToolBar>
 #include <QVectorIterator>
 
 #include "RDebug.h"
 #include "RGuiAction.h"
 #include "RScriptHandler.h"
-#include "RSettings.h"
 #include "RSingleApplication.h"
 #include "RWidget.h"
 
@@ -44,6 +45,7 @@ QList<RGuiAction*> RGuiAction::actions;
 RGuiAction::RGuiAction(const QString& text, QObject* parent)
   : QAction(text, parent),
     factory(NULL),
+    oriText(text),
     groupDefault(false),
     requiresDocument(true), 
     requiresSelection(false),
@@ -105,29 +107,40 @@ RDocumentInterface* RGuiAction::getDocumentInterface() {
     return documentInterface;
 }
 
+void RGuiAction::setText(const QString& text) {
+    this->oriText = text;
+    initTexts();
+}
+
 
 void RGuiAction::initTexts() {
-    QString textAndKeycode = text();
-    QString textOnly = textAndKeycode;
+    QString textOnly = oriText;
     textOnly.replace('&', "");
 
-#ifndef Q_OS_MACX
-    // Override shortcut text (does not work for Mac OS X):
+    QString textAndKeycode = oriText;
+
+    // Override shortcut text:
     if (!shortcutText.isEmpty()) {
+#ifdef Q_OS_MACX
+        if (!textAndKeycode.endsWith(shortcutText)) {
+            textAndKeycode += shortcutText;
+        }
+#else
+        // tab does not work for Mac OS X:
         if (textAndKeycode.indexOf(QLatin1Char('\t'))!=-1) {
             textAndKeycode = textAndKeycode.left(textAndKeycode.indexOf('\t'));
         }
         textAndKeycode += QLatin1Char('\t');
         textAndKeycode += shortcutText;
-    }
 #endif
+    }
 
     // for sort order debugging:
 //    if (getSortOrder()!=-1 && textAndKeycode.indexOf('{')==-1) {
 //        textAndKeycode += QString(" {%1,%2}").arg(getGroupSortOrder()).arg(getSortOrder());
 //    }
 
-    setText(textAndKeycode);
+    QAction::setText(textAndKeycode);
 
     QString tip = toolTip;
     if (tip.isNull()) {
@@ -186,11 +199,30 @@ void RGuiAction::setIcon(const QString& iconFile) {
         QAction::setIcon(QIcon());
     }
     else {
-        QAction::setIcon(QIcon(iconFile));
+        if (QFileInfo(iconFile).suffix().toLower()=="svg") {
+            int iconSize = RSettings::getIntValue("CadToolBar/IconSize", 32);
+
+            // retina icons:
+            if (RSettings::getDevicePixelRatio()>1) {
+                iconSize*=RSettings::getDevicePixelRatio();
+            }
+
+            QPixmap pm(iconSize,iconSize);
+            pm.fill(Qt::transparent);
+            QPainter p;
+            p.begin(&pm);
+            QSvgRenderer renderer(iconFile);
+            renderer.render(&p, QRectF(0, 0, iconSize, iconSize));
+            p.end();
+
+            QIcon icon(pm);
+            QAction::setIcon(icon);
+        }
+        else {
+            QAction::setIcon(QIcon(iconFile));
+        }
     }
 }
-
-
 
 void RGuiAction::disableIcon() {
     iconDisabled = true;

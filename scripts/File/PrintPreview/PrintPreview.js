@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -43,6 +43,9 @@ function PrintPreview(guiAction) {
     var mask = new QBitmap(PrintPreview.includeBasePath + "/PrintPreviewOffsetCursorMask.png", "PNG");
     this.cursor = new QCursor(bitmap, mask, 15, 13);
     this.view = undefined;
+    this.saveView = false;
+    this.savedScale = undefined;
+    this.savedOffset = undefined;
 }
 
 PrintPreview.prototype = new DefaultAction();
@@ -80,10 +83,16 @@ PrintPreview.prototype.beginEvent = function() {
         return;
     }
 
+    if (this.saveView===true) {
+        this.savedScale = Print.getScale(this.getDocument());
+        this.savedOffset = Print.getOffset(this.getDocument());
+    }
+
     if (!isNull(this.guiAction)) {
         this.guiAction.setChecked(true);
     }
 
+    // globals:
     printPreviewRunning = true;
     printPreviewInstance = this;
 
@@ -145,7 +154,7 @@ PrintPreview.prototype.beginEvent = function() {
 PrintPreview.prototype.setState = function(state) {
     DefaultAction.prototype.setState.call(this, state);
 
-    if (this.state == PrintPreview.State.SettingOffset) {
+    if (this.state === PrintPreview.State.SettingOffset) {
         EAction.getDocumentInterface().setClickMode(RAction.PickingDisabled);
         this.setCursor(this.cursor, "PrintPreviewOffsetCursor");
         EAction.showMainTools();
@@ -191,13 +200,22 @@ PrintPreview.prototype.finishEvent = function() {
 
     printPreviewRunning = false;
     printPreviewInstance = undefined;
+
+    if (this.saveView===true) {
+        if (!isNull(this.savedScale)) {
+            Print.setScale(this.getDocument(), this.savedScale);
+        }
+        if (!isNull(this.savedOffset)) {
+            Print.setOffset(this.getDocument(), this.savedOffset);
+        }
+    }
 };
 
 /**
  * Implements moving of paper (offset).
  */
 PrintPreview.prototype.mousePressEvent = function(event) {
-    if (this.state == PrintPreview.State.SettingOffset) {
+    if (this.state === PrintPreview.State.SettingOffset) {
         if (event.button() == Qt.LeftButton &&
             event.modifiers().valueOf() != Qt.ControlModifier.valueOf()) {
 
@@ -231,7 +249,7 @@ PrintPreview.prototype.mousePressEvent = function(event) {
  * Implements moving of paper (offset).
  */
 PrintPreview.prototype.mouseMoveEvent = function(event) {
-    if (this.state != PrintPreview.State.SettingOffset) {
+    if (this.state !== PrintPreview.State.SettingOffset) {
         DefaultAction.prototype.mouseMoveEvent.call(this, event);
         return;
     }

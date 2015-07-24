@@ -1,290 +1,73 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RPainterPathExporter.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RPAINTERPATHEXPORTER_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RPAINTERPATHEXPORTER_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RArc.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RExporter.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RRay.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RXLine.h"</cpp:file></cpp:include>
-  <comment type="block">/** * Exports all exported geometry into
-  one painter path. */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RPainterPathExporter</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RExporter</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor>
-    <name>RPainterPathExporter</name>
-    <parameter_list>()</parameter_list>
-    <member_list>: 
-    <call>
-      <name>RExporter</name>
-      <argument_list>()</argument_list>
-    </call>, 
-    <call>
-      <name>exportZeroLinesAsPoints</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>true</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{ }</block>
-  </constructor>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>exportLineSegment</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RLine</name>&amp;</type>
-      <name>line</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>angle</name>=
-    <init>
-      <expr>
-        <name>RNANDOUBLE</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>exportPainterPaths</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RPainterPath</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>paths</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>exportXLine</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RXLine</name>&amp;</type>
-        <name>xLine</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>xLine</argument>)</argument_list>
-    </macro>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>exportRay</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RRay</name>&amp;</type>
-        <name>ray</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>ray</argument>)</argument_list>
-    </macro>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>exportPoint</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RPoint</name>&amp;</type>
-        <name>point</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>point</argument>)</argument_list>
-    </macro>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>exportArcSegment</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RArc</name>&amp;</type>
-        <name>arc</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>allowForZeroLength</name>=
-      <init>
-        <expr>
-          <name>false</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>arc</argument>)</argument_list>
-    </macro>
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>allowForZeroLength</argument>)</argument_list>
-    </macro>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>exportTriangle</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RTriangle</name>&amp;</type>
-        <name>triangle</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>triangle</argument>)</argument_list>
-    </macro>}</block>
-  </function>
-  <comment type="line">//void clear();</comment>
-  <function_decl>
-  <type>
-    <name>RPainterPath</name>
-  </type>
-  <name>getPainterPath</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setExportZeroLinesAsPoints</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>exportZeroLinesAsPoints</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function></public>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RPainterPath</name>
-    </type>
-    <name>path</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>exportZeroLinesAsPoints</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RPainterPathExporter.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RPAINTERPATHEXPORTER_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RPAINTERPATHEXPORTER_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RArc.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RExporter.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RRay.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RXLine.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * Exports all exported geometry into one painter path.
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPainterPathExporter</name> <super>: <specifier>public</specifier> <name>RExporter</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor><name>RPainterPathExporter</name><parameter_list>()</parameter_list> <member_list>: <call><name>RExporter</name><argument_list>()</argument_list></call>, <call><name>exportZeroLinesAsPoints</name><argument_list>(<argument><expr><name>true</name></expr></argument>)</argument_list></call> </member_list><block>{ }</block></constructor>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportLineSegment</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>line</name></decl></param>, <param><decl><type><name>double</name></type> <name>angle</name> =<init> <expr><name>RNANDOUBLE</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportPainterPaths</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name>&amp;</type> <name>paths</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>exportXLine</name><parameter_list>(<param><decl><type><name>const</name> <name>RXLine</name>&amp;</type> <name>xLine</name></decl></param>)</parameter_list> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>xLine</argument>)</argument_list></macro>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>exportRay</name><parameter_list>(<param><decl><type><name>const</name> <name>RRay</name>&amp;</type> <name>ray</name></decl></param>)</parameter_list> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>ray</argument>)</argument_list></macro>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>exportPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RPoint</name>&amp;</type> <name>point</name></decl></param>)</parameter_list> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>point</argument>)</argument_list></macro>
+    }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>exportArcSegment</name><parameter_list>(<param><decl><type><name>const</name> <name>RArc</name>&amp;</type> <name>arc</name></decl></param>, <param><decl><type><name>bool</name></type> <name>allowForZeroLength</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>arc</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>allowForZeroLength</argument>)</argument_list></macro>
+    }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>exportTriangle</name><parameter_list>(<param><decl><type><name>const</name> <name>RTriangle</name>&amp;</type> <name>triangle</name></decl></param>)</parameter_list> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>triangle</argument>)</argument_list></macro>
+    }</block></function>
+
+    <comment type="line">//void clear();</comment>
+    <function_decl><type><name>RPainterPath</name></type> <name>getPainterPath</name><parameter_list>()</parameter_list>;</function_decl>
+    <function><type><name>void</name></type> <name>setExportZeroLinesAsPoints</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>exportZeroLinesAsPoints</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>RPainterPath</name></type> <name>path</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>exportZeroLinesAsPoints</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

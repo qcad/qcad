@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -202,11 +202,11 @@ QString RPluginLoader::getPluginsPath() {
     return pluginsDir.absolutePath();
 }
 
-bool RPluginLoader::hasPlugin(const QString& name) {
+bool RPluginLoader::hasPlugin(const QString& id) {
     for (int i=0; i<countPlugins(); i++) {
         RPluginInfo pluginInfo = getPluginInfo(i);
-        QString n = pluginInfo.get("Name", "").toString();
-        if (n==name) {
+        QString d = pluginInfo.get("ID", "").toString();
+        if (d==id) {
             return true;
         }
     }

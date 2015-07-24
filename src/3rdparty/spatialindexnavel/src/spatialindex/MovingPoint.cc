@@ -1,27 +1,35 @@
-// Spatial Index Library
-//
-// Copyright (C) 2002 Navel Ltd.
-//
-// This library is free software; you can redistribute it and/or
-// modify it under the terms of the GNU Lesser General Public
-// License as published by the Free Software Foundation; either
-// version 2.1 of the License, or (at your option) any later version.
-//
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-// Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public
-// License along with this library; if not, write to the Free Software
-// Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-//
-//  Email:
-//    mhadji@gmail.com
+/******************************************************************************
+ * Project:  libspatialindex - A C++ library for spatial indexing
+ * Author:   Marios Hadjieleftheriou, mhadji@gmail.com
+ ******************************************************************************
+ * Copyright (c) 2002, Marios Hadjieleftheriou
+ *
+ * All rights reserved.
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ * copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included
+ * in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ * DEALINGS IN THE SOFTWARE.
+******************************************************************************/
 
 #include <cstring>
+#include <cmath>
+#include <limits>
 
-#include "../../include/SpatialIndex.h"
+#include <spatialindex/SpatialIndex.h>
 
 using namespace SpatialIndex;
 
@@ -29,28 +37,51 @@ MovingPoint::MovingPoint()
 {
 }
 
-MovingPoint::MovingPoint(const double* pCoords, const double* pVCoords, const IInterval& ti, size_t dimension)
+MovingPoint::MovingPoint(	const double* pCoords, 
+							const double* pVCoords, 
+							const IInterval& ti, 
+							uint32_t dimension)
 {
-	initialize(pCoords, pVCoords, ti.getLowerBound(), ti.getUpperBound(), dimension);
+	initialize(	pCoords, 
+				pVCoords, 
+				ti.getLowerBound(), 
+				ti.getUpperBound(), 
+				dimension);
 }
 
-MovingPoint::MovingPoint(const double* pCoords, const double* pVCoords, double tStart, double tEnd, size_t dimension)
+MovingPoint::MovingPoint(	const double* pCoords, 
+							const double* pVCoords, 
+							double tStart, 
+							double tEnd, 
+							uint32_t dimension)
 {
 	initialize(pCoords, pVCoords, tStart, tEnd, dimension);
 }
 
-MovingPoint::MovingPoint(const Point& p, const Point& vp, const IInterval& ti)
+MovingPoint::MovingPoint(	const Point& p, 
+							const Point& vp, 
+							const IInterval& ti)
 {
-	if (p.m_dimension != vp.m_dimension) throw Tools::IllegalArgumentException("MovingPoint: Points have different number of dimensions.");
+	if (p.m_dimension != vp.m_dimension) 
+		throw Tools::IllegalArgumentException("MovingPoint: Points have different number of dimensions.");
 
-	initialize(p.m_pCoords, vp.m_pCoords, ti.getLowerBound(), ti.getUpperBound(), p.m_dimension);
+	initialize(	p.m_pCoords, 
+				vp.m_pCoords, 
+				ti.getLowerBound(), 
+				ti.getUpperBound(), 
+				p.m_dimension);
 }
 
 MovingPoint::MovingPoint(const Point& p, const Point& vp, double tStart, double tEnd)
 {
-	if (p.m_dimension != vp.m_dimension) throw Tools::IllegalArgumentException("MovingPoint: Points have different number of dimensions.");
+	if (p.m_dimension != vp.m_dimension) 
+		throw Tools::IllegalArgumentException("MovingPoint: Points have different number of dimensions.");
 
-	initialize(p.m_pCoords, vp.m_pCoords, tStart, tEnd, p.m_dimension);
+	initialize(	p.m_pCoords, 
+				vp.m_pCoords, 
+				tStart, 
+				tEnd, 
+				p.m_dimension);
 }
 
 MovingPoint::MovingPoint(const MovingPoint& p)
@@ -83,14 +114,15 @@ MovingPoint::~MovingPoint()
 
 void MovingPoint::initialize(
 	const double* pCoords, const double* pVCoords,
-	double tStart, double tEnd, size_t dimension)
+	double tStart, double tEnd, uint32_t dimension)
 {
 	m_dimension = dimension;
 	m_startTime = tStart;
 	m_endTime = tEnd;
 	m_pCoords = 0;
 
-	if (m_endTime <= m_startTime) throw Tools::IllegalArgumentException("MovingPoint: Cannot support degenerate time intervals.");
+	if (m_endTime <= m_startTime) 
+		throw Tools::IllegalArgumentException("MovingPoint: Cannot support degenerate time intervals.");
 
 	try
 	{
@@ -132,7 +164,7 @@ bool MovingPoint::operator==(const MovingPoint& p) const
 		m_endTime > p.m_endTime + std::numeric_limits<double>::epsilon())
 		return false;
 
-	for (size_t cDim = 0; cDim < 2 * m_dimension; cDim++)
+	for (uint32_t cDim = 0; cDim < 2 * m_dimension; ++cDim)
 	{
 		if (
 			m_pCoords[cDim] < p.m_pCoords[cDim] - std::numeric_limits<double>::epsilon() ||
@@ -145,25 +177,25 @@ bool MovingPoint::operator==(const MovingPoint& p) const
 	return true;
 }
 
-double MovingPoint::getCoord(size_t d, double t) const
+double MovingPoint::getCoord(uint32_t d, double t) const
 {
-	if (d < 0 && d >= m_dimension) throw Tools::IndexOutOfBoundsException(d);
+	if (d >= m_dimension) throw Tools::IndexOutOfBoundsException(d);
 
 	if (t >= m_endTime) return m_pCoords[d] + m_pVCoords[d] * (m_endTime - m_startTime);
 	else if (t <= m_startTime) return m_pCoords[d] + m_pVCoords[d] * m_startTime;
 	else return m_pCoords[d] + m_pVCoords[d] * (t - m_startTime);
 }
 
-double MovingPoint::getProjectedCoord(size_t d, double t) const
+double MovingPoint::getProjectedCoord(uint32_t d, double t) const
 {
-	if (d < 0 && d >= m_dimension) throw Tools::IndexOutOfBoundsException(d);
+	if (d >= m_dimension) throw Tools::IndexOutOfBoundsException(d);
 
 	return m_pCoords[d] + m_pVCoords[d] * (t - m_startTime);
 }
 
-double MovingPoint::getVCoord(size_t d) const
+double MovingPoint::getVCoord(uint32_t d) const
 {
-	if (d < 0 && d >= m_dimension) throw Tools::IndexOutOfBoundsException(d);
+	if (d >= m_dimension) throw Tools::IndexOutOfBoundsException(d);
 
 	return m_pVCoords[d];
 }
@@ -171,7 +203,7 @@ double MovingPoint::getVCoord(size_t d) const
 void MovingPoint::getPointAtTime(double t, Point& out) const
 {
 	out.makeDimension(m_dimension);
-	for (size_t cDim = 0; cDim < m_dimension; cDim++)
+	for (uint32_t cDim = 0; cDim < m_dimension; ++cDim)
 	{
 		out.m_pCoords[cDim] = getCoord(cDim, t);
 	}
@@ -188,16 +220,16 @@ MovingPoint* MovingPoint::clone()
 //
 // ISerializable interface
 //
-size_t MovingPoint::getByteArraySize()
+uint32_t MovingPoint::getByteArraySize()
 {
-	return (sizeof(size_t) + 2 * sizeof(double) + 2 * m_dimension * sizeof(double));
+	return (sizeof(uint32_t) + 2 * sizeof(double) + 2 * m_dimension * sizeof(double));
 }
 
 void MovingPoint::loadFromByteArray(const byte* ptr)
 {
-	size_t dimension;
-	memcpy(&dimension, ptr, sizeof(size_t));
-	ptr += sizeof(size_t);
+	uint32_t dimension;
+	memcpy(&dimension, ptr, sizeof(uint32_t));
+	ptr += sizeof(uint32_t);
 	memcpy(&m_startTime, ptr, sizeof(double));
 	ptr += sizeof(double);
 	memcpy(&m_endTime, ptr, sizeof(double));
@@ -210,14 +242,14 @@ void MovingPoint::loadFromByteArray(const byte* ptr)
 	//ptr += m_dimension * sizeof(double);
 }
 
-void MovingPoint::storeToByteArray(byte** data, size_t& len)
+void MovingPoint::storeToByteArray(byte** data, uint32_t& len)
 {
 	len = getByteArraySize();
 	*data = new byte[len];
 	byte* ptr = *data;
 
-	memcpy(ptr, &m_dimension, sizeof(size_t));
-	ptr += sizeof(size_t);
+	memcpy(ptr, &m_dimension, sizeof(uint32_t));
+	ptr += sizeof(uint32_t);
 	memcpy(ptr, &m_startTime, sizeof(double));
 	ptr += sizeof(double);
 	memcpy(ptr, &m_endTime, sizeof(double));
@@ -241,17 +273,17 @@ void MovingPoint::getVMBR(Region& out) const
 void MovingPoint::getMBRAtTime(double t, Region& out) const
 {
 	out.makeDimension(m_dimension);
-	for (size_t cDim = 0; cDim < m_dimension; cDim++)
+	for (uint32_t cDim = 0; cDim < m_dimension; ++cDim)
 	{
 		out.m_pLow[cDim] = getCoord(cDim, t);
 		out.m_pHigh[cDim] = getCoord(cDim, t);
 	}
 }
 
-void MovingPoint::makeInfinite(size_t dimension)
+void MovingPoint::makeInfinite(uint32_t dimension)
 {
 	makeDimension(dimension);
-	for (size_t cIndex = 0; cIndex < m_dimension; cIndex++)
+	for (uint32_t cIndex = 0; cIndex < m_dimension; ++cIndex)
 	{
 		m_pCoords[cIndex] = std::numeric_limits<double>::max();
 		m_pVCoords[cIndex] = -std::numeric_limits<double>::max();
@@ -261,7 +293,7 @@ void MovingPoint::makeInfinite(size_t dimension)
 	m_endTime = -std::numeric_limits<double>::max();
 }
 
-void MovingPoint::makeDimension(size_t dimension)
+void MovingPoint::makeDimension(uint32_t dimension)
 {
 	if (m_dimension != dimension)
 	{
@@ -277,16 +309,16 @@ void MovingPoint::makeDimension(size_t dimension)
 
 std::ostream& SpatialIndex::operator<<(std::ostream& os, const MovingPoint& pt)
 {
-	size_t i;
+	uint32_t i;
 
 	os << "Coords: ";
-	for (i = 0; i < pt.m_dimension; i++)
+	for (i = 0; i < pt.m_dimension; ++i)
 	{
 		os << pt.m_pCoords[i] << " ";
 	}
 
 	os << "VCoords: ";
-	for (i = 0; i < pt.m_dimension; i++)
+	for (i = 0; i < pt.m_dimension; ++i)
 	{
 		os << pt.m_pVCoords[i] << " ";
 	}

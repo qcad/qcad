@@ -225,7 +225,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="RPainterPath::Mode" name="mode"
         isConst="false" />
         <arg type="bool" typeName="bool" name="on"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getMode" cppName="getMode" specifier="public"
@@ -389,6 +389,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QTransform &amp;" typeName="QTransform" name="t"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="move" cppName="move" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="offset"
         isConst="true" />
       </variant>
     </method>

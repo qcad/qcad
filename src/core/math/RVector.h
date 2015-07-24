@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -77,6 +77,10 @@ public:
         valid = true;
     }
     void setPolar(double radius, double angle);
+
+    RVector get2D() const {
+        return RVector(x,y);
+    }
 
     bool isValid() const;
 
@@ -157,8 +161,12 @@ public:
     RVector getMultipliedComponents(const RVector& v) const;
 
     RVector getClosest(const QList<RVector>& list) const;
+    RVector getClosest2d(const QList<RVector>& list) const;
     double getClosestDistance(const QList<RVector>& list, int counts);
-    int getClosestIndex(const QList<RVector>& list) const;
+    int getClosestIndex(const QList<RVector>& list, bool ignoreZ = false) const;
+    int getClosestIndex2d(const QList<RVector>& list) const {
+        return getClosestIndex(list, true);
+    }
 
     RVector operator +(const RVector& v) const;
     RVector operator -(const RVector& v) const;
@@ -183,6 +191,8 @@ public:
     RVector getFloor() const;
     RVector getCeil() const;
 
+    static bool containsFuzzy(const QList<RVector>& vectors, const RVector& v, double tol = RS::PointTolerance);
+
     static RVector getMinimum(const QList<RVector>& vectors);
     static RVector getMaximum(const QList<RVector>& vectors);
 
@@ -195,6 +205,7 @@ public:
     static RVector getMaximum(const RVector& v1, const RVector& v2);
 
     static RVector getAverage(const RVector& v1, const RVector& v2);
+    static RVector getAverage(const QList<RVector>& vectors);
 
     static QList<double> getXList(const QList<RVector>& vectors);
     static QList<double> getYList(const QList<RVector>& vectors);
@@ -229,6 +240,12 @@ public:
     public:
         static bool lessThan(const RVector& v1, const RVector& v2);
         static RVector v;
+    };
+
+    static QList<RVector> getSortedLeftRightTopBottom(const QList<RVector>& list);
+    class RVectorLeftRightTopBottomSort {
+    public:
+        static bool lessThan(const RVector& v1, const RVector& v2);
     };
 
     static QList<RVector> getSortedByAngle(const QList<RVector>& list, const RVector& center, double angle);

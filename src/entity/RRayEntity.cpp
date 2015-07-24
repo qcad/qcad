@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -22,6 +22,7 @@
 
 RPropertyTypeId RRayEntity::PropertyCustom;
 RPropertyTypeId RRayEntity::PropertyHandle;
+RPropertyTypeId RRayEntity::PropertyProtected;
 RPropertyTypeId RRayEntity::PropertyType;
 RPropertyTypeId RRayEntity::PropertyBlock;
 RPropertyTypeId RRayEntity::PropertyLayer;
@@ -29,6 +30,7 @@ RPropertyTypeId RRayEntity::PropertyLinetype;
 RPropertyTypeId RRayEntity::PropertyLinetypeScale;
 RPropertyTypeId RRayEntity::PropertyLineweight;
 RPropertyTypeId RRayEntity::PropertyColor;
+RPropertyTypeId RRayEntity::PropertyDisplayedColor;
 RPropertyTypeId RRayEntity::PropertyDrawOrder;
 
 RPropertyTypeId RRayEntity::PropertyBasePointX;
@@ -43,6 +45,7 @@ RPropertyTypeId RRayEntity::PropertyDirectionY;
 RPropertyTypeId RRayEntity::PropertyDirectionZ;
 
 RPropertyTypeId RRayEntity::PropertyAngle;
+RPropertyTypeId RRayEntity::PropertyFixedAngle;
 
 
 RRayEntity::RRayEntity(RDocument* document, const RRayData& data,
@@ -61,6 +64,7 @@ void RRayEntity::setShape(const RRay& r) {
 void RRayEntity::init() {
     RRayEntity::PropertyCustom.generateId(typeid(RRayEntity), RObject::PropertyCustom);
     RRayEntity::PropertyHandle.generateId(typeid(RRayEntity), RObject::PropertyHandle);
+    RRayEntity::PropertyProtected.generateId(typeid(RRayEntity), RObject::PropertyProtected);
     RRayEntity::PropertyType.generateId(typeid(RRayEntity), REntity::PropertyType);
     RRayEntity::PropertyBlock.generateId(typeid(RRayEntity), REntity::PropertyBlock);
     RRayEntity::PropertyLayer.generateId(typeid(RRayEntity), REntity::PropertyLayer);
@@ -68,6 +72,7 @@ void RRayEntity::init() {
     RRayEntity::PropertyLinetypeScale.generateId(typeid(RRayEntity), REntity::PropertyLinetypeScale);
     RRayEntity::PropertyLineweight.generateId(typeid(RRayEntity), REntity::PropertyLineweight);
     RRayEntity::PropertyColor.generateId(typeid(RRayEntity), REntity::PropertyColor);
+    RRayEntity::PropertyDisplayedColor.generateId(typeid(RRayEntity), REntity::PropertyDisplayedColor);
     RRayEntity::PropertyDrawOrder.generateId(typeid(RRayEntity), REntity::PropertyDrawOrder);
 
     RRayEntity::PropertyBasePointX.generateId(typeid(RRayEntity), QT_TRANSLATE_NOOP("REntity", "Base Point"), QT_TRANSLATE_NOOP("REntity", "X"));
@@ -82,6 +87,7 @@ void RRayEntity::init() {
     RRayEntity::PropertyDirectionZ.generateId(typeid(RRayEntity), QT_TRANSLATE_NOOP("REntity", "Direction Vector"), QT_TRANSLATE_NOOP("REntity", "Z"));
 
     RRayEntity::PropertyAngle.generateId(typeid(RRayEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
+    RRayEntity::PropertyFixedAngle.generateId(typeid(RRayEntity), "", QT_TRANSLATE_NOOP("REntity", "Fixed Angle"));
 }
 
 bool RRayEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -117,6 +123,10 @@ bool RRayEntity::setProperty(RPropertyTypeId propertyTypeId,
         data.setAngle(value.toDouble());
         ret = true;
     }
+    else if (propertyTypeId==PropertyFixedAngle) {
+        data.setFixedAngle(value.toBool());
+        ret = true;
+    }
 
     return ret;
 }
@@ -124,6 +134,10 @@ bool RRayEntity::setProperty(RPropertyTypeId propertyTypeId,
 QPair<QVariant, RPropertyAttributes> RRayEntity::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable,
         bool noAttributes) {
+
+    RPropertyAttributes attFixedAngle;
+    attFixedAngle.setReadOnly(data.fixedAngle);
+
     if (propertyTypeId == PropertyBasePointX) {
         return qMakePair(QVariant(data.basePoint.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyBasePointY) {
@@ -133,23 +147,29 @@ QPair<QVariant, RPropertyAttributes> RRayEntity::getProperty(
     }
 
     else if (propertyTypeId == PropertyDirectionX) {
-        return qMakePair(QVariant(data.directionVector.x), RPropertyAttributes());
+        return qMakePair(QVariant(data.directionVector.x), attFixedAngle);
     } else if (propertyTypeId == PropertyDirectionY) {
-        return qMakePair(QVariant(data.directionVector.y), RPropertyAttributes());
+        return qMakePair(QVariant(data.directionVector.y), attFixedAngle);
     } else if (propertyTypeId == PropertyDirectionZ) {
-        return qMakePair(QVariant(data.directionVector.z), RPropertyAttributes());
+        return qMakePair(QVariant(data.directionVector.z), attFixedAngle);
     }
 
     else if (propertyTypeId == PropertySecondPointX) {
-        return qMakePair(QVariant(data.getSecondPoint().x), RPropertyAttributes(RPropertyAttributes::Redundant));
+        attFixedAngle.setRedundant(true);
+        return qMakePair(QVariant(data.getSecondPoint().x), attFixedAngle);
     } else if (propertyTypeId == PropertySecondPointY) {
-        return qMakePair(QVariant(data.getSecondPoint().y), RPropertyAttributes(RPropertyAttributes::Redundant));
+        attFixedAngle.setRedundant(true);
+        return qMakePair(QVariant(data.getSecondPoint().y), attFixedAngle);
     } else if (propertyTypeId == PropertySecondPointZ) {
-        return qMakePair(QVariant(data.getSecondPoint().z), RPropertyAttributes(RPropertyAttributes::Redundant));
+        attFixedAngle.setRedundant(true);
+        return qMakePair(QVariant(data.getSecondPoint().z), attFixedAngle);
     }
 
-    if (propertyTypeId==PropertyAngle) {
+    else if (propertyTypeId==PropertyAngle) {
         return qMakePair(QVariant(data.getAngle()), RPropertyAttributes(RPropertyAttributes::Angle|RPropertyAttributes::Redundant));
+    }
+    else if (propertyTypeId==PropertyFixedAngle) {
+        return qMakePair(QVariant(data.fixedAngle), RPropertyAttributes());
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);

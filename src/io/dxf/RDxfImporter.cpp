@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -68,6 +68,8 @@
 
 RDxfImporter::RDxfImporter(RDocument& document, RMessageHandler* messageHandler, RProgressHandler* progressHandler)
     : RFileImporter(document, messageHandler, progressHandler),
+      polylinePlineGen(false),
+      leaderArrowHead(false),
       inDict(false) {
 }
 
@@ -644,7 +646,9 @@ void RDxfImporter::addInsert(const DL_InsertData& data) {
                             blockId,
                             insertionPoint,
                             scale,
-                            RMath::deg2rad(data.angle)
+                            RMath::deg2rad(data.angle),
+                            data.cols, data.rows,
+                            data.colSp, data.rowSp
                     )
             )
     );
@@ -1014,6 +1018,13 @@ RDimensionData RDxfImporter::convDimensionData(const DL_DimensionData& data) {
                     ret.setLinearFactor(tuple.second.toDouble());
                 }
             }
+            // dimension scale (DIMSCALE):
+            if (tuple.first==1070 && tuple.second==40 && i<list.size()-1) {
+                tuple = list[i+1];
+                if (tuple.first==1040) {
+                    ret.setDimScale(tuple.second.toDouble());
+                }
+            }
         }
     }
 
@@ -1116,12 +1127,14 @@ void RDxfImporter::addDimOrdinate(const DL_DimensionData& data,
 
 void RDxfImporter::addLeader(const DL_LeaderData& data) {
     leader = RLeaderData();
-    leader.setArrowHead(data.arrowHeadFlag==1);
+    leader.setDocument(document);
+    leaderArrowHead = data.arrowHeadFlag==1;
 }
 
 void RDxfImporter::addLeaderVertex(const DL_LeaderVertexData& data) {
     RVector v(data.x, data.y);
     leader.appendVertex(v);
+    leader.setArrowHead(leaderArrowHead);
 }
 
 void RDxfImporter::addHatch(const DL_HatchData& data) {
@@ -1270,8 +1283,12 @@ void RDxfImporter::addHatchEdge(const DL_HatchEdgeData& data) {
         }
         else {
             s->setControlPoints(controlPoints);
-            knots.removeFirst();
-            knots.removeLast();
+            if (!knots.isEmpty()) {
+                knots.removeFirst();
+            }
+            if (!knots.isEmpty()) {
+                knots.removeLast();
+            }
             s->setKnotVector(knots);
         }
 

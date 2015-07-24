@@ -1,1331 +1,297 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RObject.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>ROBJECT_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>ROBJECT_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPropertyAttributes.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RDocument</name>;</class_decl>
-  <class_decl>class 
-  <name>RTransaction</name>;</class_decl>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RDEFAULT_QVARIANT</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RDEFAULT_QVARIANT</name>
-  <name>QVariant</name>()</cpp:define>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
-  <comment type="block">/** * Abstract base class for all objects.
-  Objects have * an unique ID. Object types may register property
-  types. * Objects manage their own set of properties. * Example
-  objects are entities, layers, user coordinate systems. * * \sa
-  RPropertyTypeId * * \ingroup core * \scriptable *
-  \sharedPointerSupport */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RObject</name>
-  <block>{
-  <private type="default">
-    <decl_stmt>
-    <decl>
-      <type>
-      <name>friend</name>class</type>
-      <name>RStorage</name>
-    </decl>;</decl_stmt>
-  </private>
-  <public>public: 
-  <typedef>typedef 
-  <type>
-    <name>int</name>
-  </type>
-  <name>Id</name>;</typedef>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>const</name>
-      <name>static</name>
-      <name>Id</name>
-    </type>
-    <name>INVALID_ID</name>
-  </decl>;</decl_stmt>
-  <typedef>typedef 
-  <type>
-    <name>int</name>
-  </type>
-  <name>Handle</name>;</typedef>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>const</name>
-      <name>static</name>
-      <name>Handle</name>
-    </type>
-    <name>INVALID_HANDLE</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyCustom</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyHandle</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>RPropertyTypeId</name>
-    </type>
-    <name>PropertyProtected</name>
-  </decl>;</decl_stmt>
-  <enum>enum 
-  <name>XYZ</name>
-  <block>{ 
-  <expr>
-    <name>X</name>
-  </expr>, 
-  <expr>
-    <name>Y</name>
-  </expr>, 
-  <expr>
-    <name>Z</name>
-  </expr>}</block>;</enum></public>
-  <public>public: 
-  <constructor>
-    <name>RObject</name>
-    <parameter_list>(
-    <param>
-      <decl>
-      <type>
-      <name>RDocument</name>*</type>
-      <name>document</name>=
-      <init>
-        <expr>
-          <name>NULL</name>
-        </expr>
-      </init></decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>Id</name>
-      </type>
-      <name>id</name>=
-      <init>
-        <expr>
-          <name>INVALID_ID</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <member_list>: 
-    <call>
-      <name>document</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>document</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>objectId</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>id</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>handle</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>INVALID_HANDLE</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>undone</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>false</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>, 
-    <call>
-      <name>protect</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>false</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{ }</block>
-  </constructor>
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RObject</name>
-    <parameter_list>()</parameter_list>
-    <block>{ }</block>
-  </destructor>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>init</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>virtual</name>
-  <name>RObject</name>*</type>
-  <name>clone</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>
-  <specifier>= 0</specifier>;</function_decl>
-  <function>
-    <type>
-    <name>RDocument</name>*</type>
-    <name>getDocument</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>document</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-    <name>const</name>
-    <name>RDocument</name>*</type>
-    <name>getDocument</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>document</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setDocument</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RDocument</name>*</type>
-        <name>document</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>this</name>-&gt;
-    <name>document</name>= 
-    <name>document</name></expr>;</expr_stmt>}</block>
-  </function>
-  <comment type="line">// static double variantToDouble(const
-  QVariant&amp; v, double defaultValue,</comment>
-  <comment type="line">// bool ignoreError = true);</comment>
-  <comment type="line">// static int variantToInt(const
-  QVariant&amp; v, int defaultValue,</comment>
-  <comment type="line">// bool ignoreError = true);</comment>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <template>template
-  <parameter_list>&lt;
-  <param>
-    <type>class</type>
-    <name>T</name>
-  </param>&gt;</parameter_list>
-  <function>
-    <type>
-      <name>static</name>
-      <name>bool</name>
-    </type>
-    <name>setMember</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>T</name>&amp;</type>
-        <name>variable</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QVariant</name>&amp;</type>
-        <name>value</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>condition</name>=
-      <init>
-        <expr>
-          <name>true</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>!
-    <name>condition</name></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-        <name>false</name>
-      </expr>;</return>}</block>
-    </then></if>
-    <expr_stmt>
-    <expr>
-    <name>variable</name>= 
-    <name>value</name>.
-    <call>
-      <name>value
-      <argument_list>&lt;
-      <argument>
-        <name>T</name>
-      </argument>&gt;</argument_list></name>
-      <argument_list>()</argument_list>
-    </call></expr>;</expr_stmt>
-    <return>return 
-    <expr>
-      <name>true</name>
-    </expr>;</return>}</block>
-  </function></template>
-  <comment type="block">/** * \return The ID of the object or -1 if
-  the object has no ID. * An object without ID is not stored in the
-  DB and not part of * a document. */</comment>
-  <function>
-    <type>
-      <name>
-      <name>RObject</name>::
-      <name>Id</name></name>
-    </type>
-    <name>getId</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>objectId</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>
-      <name>RObject</name>::
-      <name>Handle</name></name>
-    </type>
-    <name>getHandle</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>handle</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isProtected</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>protect</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setProtected</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>protect</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isUndone</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>undone</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setUndone</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>on</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>RPropertyTypeId</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getPropertyTypeIds</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>RPropertyTypeId</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getCustomPropertyTypeIds</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="block">/** * \return The value and attributes of
-  the given property or an invalid * property if this property
-  owner has no property with the given ID. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QPair
-    <argument_list>&lt;
-    <argument>
-      <name>QVariant</name>
-    </argument>, 
-    <argument>
-      <name>RPropertyAttributes</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getProperty</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RPropertyTypeId</name>&amp;</type>
-      <name>propertyTypeId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>humanReadable</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>noAttributes</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * Sets the given property to the given
-  value. If this property owner * does not know a property with
-  that ID, it is up to the property owner * what happens. The
-  property might be added into a list of dynamic properties * or
-  dropped. * * \return True if the property owner was modified in
-  any way, false otherwise. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>setProperty</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>RPropertyTypeId</name>
-      </type>
-      <name>propertyTypeId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QVariant</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RTransaction</name>*</type>
-    <name>transaction</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \return True if this property owner
-  has a property with the given ID, * false otherwise. */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>bool</name>
-    </type>
-    <name>hasPropertyType</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>RPropertyTypeId</name>
-        </type>
-        <name>propertyTypeId</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>RPropertyTypeId</name>::
-        <name>hasPropertyType</name></name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <call>
-              <name>typeid</name>
-              <argument_list>(
-              <argument>
-                <expr>*
-                <name>this</name></expr>
-              </argument>)</argument_list>
-            </call>
-          </expr>
-        </argument>, 
-        <argument>
-          <expr>
-            <name>propertyTypeId</name>
-          </expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return True if this object is
-  selected for editing. This means * that the properties of this
-  object should for example * be shown in a property editor.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>isSelectedForPropertyEditing</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QVariant</name>
-  </type>
-  <name>getCustomProperty</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>title</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>key</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>QVariant</name>&amp;</type>
-    <name>defaultValue</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_QVARIANT</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCustomProperty</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>title</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>key</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QVariant</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>removeCustomProperty</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>title</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>key</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QStringList</name>
-  </type>
-  <name>getCustomPropertyTitles</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QStringList</name>
-  </type>
-  <name>getCustomPropertyKeys</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>title</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>QMap
-    <argument_list>&lt;
-    <argument>
-      <name>QString</name>
-    </argument>, 
-    <argument>
-      <name>QVariantMap</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getCustomProperties</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>int</name>
-    </type>
-    <name>getComplexity</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>0</expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return The ID of the given property.
-  */</comment>
-  <comment type="line">// RPropertyTypeId getPropertyId(const
-  QString&amp; propertyGroupTitle, const QString&amp;
-  propertyTitle) {</comment>
-  <comment type="line">// if
-  (propertyTypeIdMap.count(propertyGroupTitle)==0 ||</comment>
-  <comment type="line">//
-  propertyTypeIdMap[propertyGroupTitle].count(propertyTitle)==0)
-  {</comment>
-  <comment type="line">//</comment>
-  <comment type="line">// return -1;</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">// else {</comment>
-  <comment type="line">// return
-  propertyTypeIdMap[propertyGroupTitle][propertyTitle];</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">// }</comment>
-  <comment type="block">/** * \return Property ID of the first
-  registered property with * the given group title and property
-  title or -1. */</comment>
-  <comment type="line">// static RPropertyTypeId
-  getPropertyTypeId(const QString&amp; propertyGroupTitle, const
-  QString&amp; propertyTitle) {</comment>
-  <comment type="line">// if
-  (propertyTypeIdMap.count(propertyGroupTitle)==0) {</comment>
-  <comment type="line">// return -1;</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">// if
-  (propertyTypeIdMap[propertyGroupTitle].count(propertyTitle)==0)
-  {</comment>
-  <comment type="line">// return -1;</comment>
-  <comment type="line">// }</comment>
-  <comment type="line">//</comment>
-  <comment type="line">// return
-  propertyTypeIdMap[propertyGroupTitle][propertyTitle];</comment>
-  <comment type="line">// }</comment>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function>
-    <type>
-      <name>friend</name>
-      <name>QDebug</name>
-    </type>
-    <name>operator&lt;&lt;</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>QDebug</name>
-        </type>
-        <name>dbg</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>RObject</name>&amp;</type>
-        <name>o</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>o</name>.
-    <call>
-      <name>print</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>dbg</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>
-    <return>return 
-    <expr>
-      <name>dbg</name>
-    </expr>;</return>}</block>
-  </function></public>
-  <protected>protected: 
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>print</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>QDebug</name>
-      </type>
-      <name>dbg</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setId</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RObject</name>::
-          <name>Id</name></name>
-        </type>
-        <name>id</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>objectId</name>= 
-    <name>id</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setHandle</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RObject</name>::
-          <name>Handle</name></name>
-        </type>
-        <name>h</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>handle</name>= 
-    <name>h</name></expr>;</expr_stmt>}</block>
-  </function>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>setMember</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QString</name>&amp;</type>
-      <name>variable</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QVariant</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>condition</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>setMember</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>double</name>&amp;</type>
-      <name>variable</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QVariant</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>condition</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>setMember</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>int</name>&amp;</type>
-      <name>variable</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QVariant</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>condition</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>setMember</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>bool</name>&amp;</type>
-      <name>variable</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QVariant</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>condition</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>setMember</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>double</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>variable</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QVariant</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>condition</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>setMemberX</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>variable</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QVariant</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>condition</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>setMemberY</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>variable</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QVariant</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>condition</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>setMemberZ</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>variable</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QVariant</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>condition</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>setMemberVector</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RVector</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>variable</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QVariant</name>&amp;</type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RObject</name>::
-        <name>XYZ</name></name>
-      </type>
-      <name>xyz</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></protected>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RDocument</name>*</type>
-    <name>document</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * Unique ID of this object.
-  */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>Id</name>
-    </type>
-    <name>objectId</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * Handle of this object (from DXF /
-  DWG). */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>Handle</name>
-    </type>
-    <name>handle</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * True if this object has been undone
-  (deleted). */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>undone</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * True if this object is protected
-  (undeletable). */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>protect</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * AppID -&gt; key -&gt; value * e.g.
-  'QCAD' -&gt; 'wall thickness' -&gt; 12.0; * or 'SomeApplication'
-  -&gt; '00001_1000' -&gt; 'SomeString' * where '00001' is the
-  position in the list of values and 1000 is the * original DXF
-  code from the file. */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-        <name>QVariantMap</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>customProperties</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RObject::XYZ</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RObject::XYZ*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>QList&lt;QSharedPointer&lt;RObject&gt;
-    &gt;</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    QSharedPointer&lt;RObject&gt;</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    QSharedPointer&lt;RObject&gt;*</argument>)</argument_list>
-  </macro>
-  <typedef>typedef 
-  <type>
-    <name>QMap
-    <argument_list>&lt;
-    <argument>
-      <name>int</name>
-    </argument>, 
-    <argument>
-      <name>QSharedPointer
-      <argument_list>&lt;
-      <argument>
-        <name>RObject</name>
-      </argument>&gt;</argument_list></name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>_RMapIntObjectPointer</name>;</typedef>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>_RMapIntObjectPointer</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RObject*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RObject.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>ROBJECT_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>ROBJECT_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyAttributes.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RTransaction</name>;</class_decl>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_QVARIANT</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QVARIANT</name> <name>QVariant</name>()</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+
+<comment type="block">/**
+ * Abstract base class for all objects. Objects have
+ * an unique ID. Object types may register property types.
+ * Objects manage their own set of properties.
+ * Example objects are entities, layers, user coordinate systems.
+ *
+ * \sa RPropertyTypeId
+ *
+ * \ingroup core
+ * \scriptable
+ * \sharedPointerSupport
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RObject</name> <block>{<private type="default">
+
+    <decl_stmt><decl><type><name>friend</name> class</type> <name>RStorage</name></decl>;</decl_stmt>
+
+</private><public>public:
+    <typedef>typedef <type><name>int</name></type> <name>Id</name>;</typedef>
+    <decl_stmt><decl><type><name>const</name> <name>static</name> <name>Id</name></type> <name>INVALID_ID</name></decl>;</decl_stmt>
+    <typedef>typedef <type><name>int</name></type> <name>Handle</name>;</typedef>
+    <decl_stmt><decl><type><name>const</name> <name>static</name> <name>Handle</name></type> <name>INVALID_HANDLE</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyCustom</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyType</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyHandle</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyProtected</name></decl>;</decl_stmt>
+
+    <enum>enum <name>XYZ</name> <block>{
+        <expr><name>X</name></expr>, <expr><name>Y</name></expr>, <expr><name>Z</name></expr>
+    }</block>;</enum>
+
+</public><public>public:
+
+    <constructor><name>RObject</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name>=<init><expr><name>NULL</name></expr></init></decl></param>, <param><decl><type><name>Id</name></type> <name>id</name> =<init> <expr><name>INVALID_ID</name></expr></init></decl></param>)</parameter_list> <member_list>:
+        <call><name>document</name><argument_list>(<argument><expr><name>document</name></expr></argument>)</argument_list></call>, <call><name>objectId</name><argument_list>(<argument><expr><name>id</name></expr></argument>)</argument_list></call>, <call><name>handle</name><argument_list>(<argument><expr><name>INVALID_HANDLE</name></expr></argument>)</argument_list></call>, <call><name>undone</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>, <call><name>protect</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call> </member_list><block>{
+    }</block></constructor>
+    <destructor><specifier>virtual</specifier> <name>~RObject</name><parameter_list>()</parameter_list> <block>{
+    }</block></destructor>
+
+    <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>RObject</name>*</type> <name>clone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <function><type><name>RDocument</name>*</type> <name>getDocument</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>document</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>const</name> <name>RDocument</name>*</type> <name>getDocument</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>document</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setDocument</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>document</name> = <name>document</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="line">//  static double variantToDouble(const QVariant&amp; v, double defaultValue,</comment>
+    <comment type="line">//          bool ignoreError = true);</comment>
+    <comment type="line">//  static int variantToInt(const QVariant&amp; v, int defaultValue,</comment>
+    <comment type="line">//          bool ignoreError = true);</comment>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <template>template<parameter_list>&lt;<param><type>class</type> <name>T</name></param>&gt;</parameter_list>
+    <function><type><name>static</name> <name>bool</name></type> <name>setMember</name><parameter_list>(<param><decl><type><name>T</name>&amp;</type> <name>variable</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>,
+        <param><decl><type><name>bool</name></type> <name>condition</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
+
+        <if>if <condition>(<expr>!<name>condition</name></expr>)</condition><then> <block>{
+            <return>return <expr><name>false</name></expr>;</return>
+        }</block></then></if>
+        <expr_stmt><expr><name>variable</name> = <name>value</name>.<call><name>value<argument_list>&lt;<argument><name>T</name></argument>&gt;</argument_list></name> <argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <return>return <expr><name>true</name></expr>;</return>
+    }</block></function></template>
+
+    <comment type="block">/**
+     * \return The ID of the object or -1 if the object has no ID.
+     * An object without ID is not stored in the DB and not part of
+     * a document.
+     */</comment>
+    <function><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>objectId</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name><name>RObject</name>::<name>Handle</name></name></type> <name>getHandle</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>handle</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name><name>RS</name>::<name>EntityType</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name><name>RS</name>::<name>ObjectUnknown</name></name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isProtected</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>protect</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setProtected</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>protect</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isUndone</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>undone</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setUndone</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getPropertyTypeIds</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getCustomPropertyTypeIds</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return The value and attributes of the given property or an invalid
+     *      property if this property owner has no property with the given ID.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QPair<argument_list>&lt;<argument><name>QVariant</name></argument>, <argument><name>RPropertyAttributes</name></argument>&gt;</argument_list></name></type>
+            <name>getProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>,
+                    <param><decl><type><name>bool</name></type> <name>humanReadable</name> =<init> <expr><name>false</name></expr></init></decl></param>,
+                    <param><decl><type><name>bool</name></type> <name>noAttributes</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Sets the given property to the given value. If this property owner
+     * does not know a property with that ID, it is up to the property owner
+     * what happens. The property might be added into a list of dynamic properties
+     * or dropped.
+     *
+     * \return True if the property owner was modified in any way, false otherwise.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>setProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \return True if this property owner has a property with the given ID,
+     *      false otherwise.
+     */</comment>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>hasPropertyType</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name><name>RPropertyTypeId</name>::<name>hasPropertyType</name></name><argument_list>(<argument><expr><call><name>typeid</name><argument_list>(<argument><expr>*<name>this</name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><name>propertyTypeId</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return True if this object is selected for editing. This means
+     *      that the properties of this object should for example
+     *      be shown in a property editor.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isSelectedForPropertyEditing</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>bool</name></type> <name>hasCustomProperty</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QVariant</name></type> <name>getCustomProperty</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>defaultValue</name> =<init> <expr><name>RDEFAULT_QVARIANT</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>getCustomBoolProperty</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>, <param><decl><type><name>bool</name></type> <name>defaultValue</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCustomProperty</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>removeCustomProperty</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QStringList</name></type> <name>getCustomPropertyTitles</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QStringList</name></type> <name>getCustomPropertyKeys</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QVariantMap</name></argument>&gt;</argument_list></name></type> <name>getCustomProperties</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function><type><name>virtual</name> <name>int</name></type> <name>getComplexity</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>0</expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>dump</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><call><name>qDebug</name><argument_list>()</argument_list></call> &lt;&lt; *<name>this</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>friend</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>const</name> <name>RObject</name>&amp;</type> <name>o</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>o</name>.<call><name>print</name><argument_list>(<argument><expr><name>dbg</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <return>return <expr><name>dbg</name></expr>;</return>
+    }</block></function>
+
+</public><protected>protected:
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>print</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function><type><name>void</name></type> <name>setId</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>objectId</name> = <name>id</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setHandle</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Handle</name></name></type> <name>h</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>handle</name> = <name>h</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>setMember</name><parameter_list>(<param><decl><type><name>QString</name>&amp;</type> <name>variable</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>bool</name></type> <name>condition</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>setMember</name><parameter_list>(<param><decl><type><name>double</name>&amp;</type> <name>variable</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>bool</name></type> <name>condition</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>setMember</name><parameter_list>(<param><decl><type><name>int</name>&amp;</type> <name>variable</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>bool</name></type> <name>condition</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>setMember</name><parameter_list>(<param><decl><type><name>bool</name>&amp;</type> <name>variable</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>bool</name></type> <name>condition</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>setMember</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name>&amp;</type> <name>variable</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>bool</name></type> <name>condition</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>setMemberX</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>variable</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>bool</name></type> <name>condition</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>setMemberY</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>variable</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>bool</name></type> <name>condition</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>setMemberZ</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>variable</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>bool</name></type> <name>condition</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>setMemberVector</name><parameter_list>(<param><decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>variable</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>XYZ</name></name></type> <name>xyz</name></decl></param>)</parameter_list>;</function_decl>
+
+</protected><private>private:
+    <decl_stmt><decl><type><name>RDocument</name>*</type> <name>document</name></decl>;</decl_stmt>
+    <comment type="block">/**
+     * Unique ID of this object.
+     */</comment>
+    <decl_stmt><decl><type><name>Id</name></type> <name>objectId</name></decl>;</decl_stmt>
+    <comment type="block">/**
+     * Handle of this object (from DXF / DWG).
+     */</comment>
+    <decl_stmt><decl><type><name>Handle</name></type> <name>handle</name></decl>;</decl_stmt>
+    <comment type="block">/**
+     * True if this object has been undone (deleted).
+     */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>undone</name></decl>;</decl_stmt>
+    <comment type="block">/**
+     * True if this object is protected (undeletable).
+     */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>protect</name></decl>;</decl_stmt>
+    <comment type="block">/**
+     * AppID -&gt; key -&gt; value
+     * e.g. 'QCAD' -&gt; 'wall thickness' -&gt; 12.0;
+     * or   'SomeApplication' -&gt; '00001_1000' -&gt; 'SomeString'
+     * where '00001' is the position in the list of values and 1000 is the
+     * original DXF code from the file.
+     */</comment>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QVariantMap</name></argument>&gt;</argument_list></name></type> <name>customProperties</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RObject::Id</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RObject::XYZ</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RObject::XYZ*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt;QSharedPointer&lt;RObject&gt; &gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RObject&gt;</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RObject&gt;*</argument>)</argument_list></macro>
+<typedef>typedef <type><name>QMap<argument_list>&lt;<argument><name>int</name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>_RMapIntObjectPointer</name>;</typedef>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>_RMapIntObjectPointer</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RObject*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

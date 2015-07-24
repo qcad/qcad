@@ -14,12 +14,12 @@
         <translation>Nastavitve risbe</translation>
     </message>
     <message>
-        <location line="+247"/>
+        <location line="+300"/>
         <source>Restart required</source>
         <translation>Potreben je ponovni zagon</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
         <translation>QCAD je potrebno ponovno zagnat,
@@ -39,12 +39,12 @@ da bodo spremembe začele delovat.</translation>
     <message>
         <location filename="../Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Orodja urejanja</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show edit tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži orodja urejanja</translation>
     </message>
     <message>
         <location line="+18"/>

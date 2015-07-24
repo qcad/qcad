@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -47,19 +47,23 @@ RGraphicsView::RGraphicsView(RGraphicsScene* scene) :
       textHeightThresholdOverride(-1),
       textHeightThreshold(3),
       viewportNumber(-1),
+      antialiasing(false),
       gridVisible(-1) {
 
     setScene(scene, false);
 
     lastKnownModelPosition = RVector::invalid;
-    lastKnownViewPosition = RVector::invalid;
+    lastKnownScreenPosition = RVector::invalid;
 
     autoScalePatterns = RSettings::getAutoScalePatterns();
+
+    RDebug::incCounter("RGraphicsView");
 }
 
 
 
 RGraphicsView::~RGraphicsView() {
+    RDebug::decCounter("RGraphicsView");
     if (navigationAction!=NULL) {
         delete navigationAction;
     }
@@ -203,7 +207,7 @@ bool RGraphicsView::zoomToSelection() {
         return false;
     }
     RBox selectionBox = document->getSelectionBox();
-    if (selectionBox.isValid() && selectionBox.getWidth()>RS::PointTolerance && selectionBox.getHeight()>RS::PointTolerance) {
+    if (selectionBox.isValid() && (selectionBox.getWidth()>RS::PointTolerance || selectionBox.getHeight()>RS::PointTolerance)) {
         zoomTo(selectionBox, getMargin());
         return true;
     }
@@ -280,12 +284,16 @@ void RGraphicsView::zoomTo(const RBox& window, int margin) {
 
     saveViewport();
 
-    RVector f;
+    RVector f(RMAXDOUBLE, RMAXDOUBLE);
     double w = window.getWidth();
     double h = window.getHeight();
 
-    f.x = (getWidth() - 2 * margin) / w;
-    f.y = (getHeight() - 2 * margin) / h;
+    if (w>1.0e-6) {
+        f.x = (getWidth() - 2 * margin) / w;
+    }
+    if (h>1.0e-6) {
+        f.y = (getHeight() - 2 * margin) / h;
+    }
 
     f.x = f.y = qMin(f.x, f.y);
 
@@ -527,8 +535,11 @@ void RGraphicsView::handleKeyReleaseEvent(QKeyEvent& event) {
 
 
 void RGraphicsView::simulateMouseMoveEvent() {
-    if (lastKnownViewPosition.isValid()) {
-        RMouseEvent e(QEvent::MouseMove, lastKnownViewPosition, Qt::NoButton, Qt::NoButton, Qt::NoModifier, *getScene(), *this);
+    if (lastKnownScreenPosition.isValid()) {
+        RMouseEvent e(QEvent::MouseMove, lastKnownScreenPosition, Qt::NoButton, Qt::NoButton, Qt::NoModifier, *getScene(), *this);
+        if (lastKnownModelPosition.isValid()) {
+            e.setModelPosition(lastKnownModelPosition);
+        }
         handleMouseMoveEvent(e);
     }
 }
@@ -540,7 +551,7 @@ void RGraphicsView::simulateMouseMoveEvent() {
  */
 void RGraphicsView::handleMouseMoveEvent(RMouseEvent& event) {
     lastKnownModelPosition = event.getModelPosition();
-    lastKnownViewPosition = event.getScreenPosition();
+    lastKnownScreenPosition = event.getScreenPosition();
     if (scene != NULL) {
         scene->handleMouseMoveEvent(event);
     }
@@ -557,6 +568,8 @@ void RGraphicsView::handleMouseMoveEvent(RMouseEvent& event) {
  * that is attached to this view.
  */
 void RGraphicsView::handleMousePressEvent(RMouseEvent& event) {
+    lastKnownModelPosition = event.getModelPosition();
+    lastKnownScreenPosition = event.getScreenPosition();
     if (scene == NULL) {
         return;
     }
@@ -564,6 +577,10 @@ void RGraphicsView::handleMousePressEvent(RMouseEvent& event) {
     if (navigationAction!=NULL) {
         navigationAction->mousePressEvent(event);
     }
+
+    // remember mouse press position to use for mouse release:
+    //mousePressScreenPosition = event.getScreenPosition();
+    //mousePressModelPosition = event.getModelPosition();
 }
 
 
@@ -574,6 +591,18 @@ void RGraphicsView::handleMousePressEvent(RMouseEvent& event) {
  * that is attached to this view.
  */
 void RGraphicsView::handleMouseReleaseEvent(RMouseEvent& event) {
+    // use mouse press position for release and final posisiton:
+//    if (mousePressModelPosition.isValid()) {
+//        event.setModelPosition(mousePressModelPosition);
+//        mousePressModelPosition = RVector::invalid;
+//    }
+//    if (mousePressScreenPosition.isValid()) {
+//        event.setScreenPosition(mousePressScreenPosition);
+//        mousePressScreenPosition = RVector::invalid;
+//    }
+
+    lastKnownModelPosition = event.getModelPosition();
+    lastKnownScreenPosition = event.getScreenPosition();
     if (scene == NULL) {
         return;
     }
@@ -589,6 +618,8 @@ void RGraphicsView::handleMouseReleaseEvent(RMouseEvent& event) {
  * that is attached to this view.
  */
 void RGraphicsView::handleMouseDoubleClickEvent(RMouseEvent& event) {
+    lastKnownModelPosition = event.getModelPosition();
+    lastKnownScreenPosition = event.getScreenPosition();
     if (scene == NULL) {
         return;
     }
@@ -928,4 +959,12 @@ void RGraphicsView::updateTextHeightThreshold() {
     else {
         textHeightThreshold = RSettings::getTextHeightThreshold();
     }
+}
+
+void RGraphicsView::setAntialiasing(bool val) {
+    antialiasing = val;
+}
+
+bool RGraphicsView::getAntialiasing() const {
+    return antialiasing;
 }

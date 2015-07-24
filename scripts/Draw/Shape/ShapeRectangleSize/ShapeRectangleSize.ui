@@ -19,12 +19,18 @@
      <property name="buddy">
       <cstring>Width</cstring>
      </property>
+     <property name="MoveToDialog" stdset="0">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
    <item>
     <widget class="RMathLineEdit" name="Width">
      <property name="text">
       <string notr="true">100</string>
+     </property>
+     <property name="MoveToDialog" stdset="0">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -36,12 +42,18 @@
      <property name="buddy">
       <cstring>Height</cstring>
      </property>
+     <property name="MoveToDialog" stdset="0">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
    <item>
     <widget class="RMathLineEdit" name="Height">
      <property name="text">
       <string notr="true">50</string>
+     </property>
+     <property name="MoveToDialog" stdset="0">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -57,6 +69,9 @@
      <property name="text">
       <string>Angle:</string>
      </property>
+     <property name="MoveToDialog" stdset="0">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
    <item>
@@ -71,6 +86,9 @@
       <string notr="true">0</string>
      </property>
      <property name="angle" stdset="0">
+      <bool>true</bool>
+     </property>
+     <property name="MoveToDialog" stdset="0">
       <bool>true</bool>
      </property>
     </widget>

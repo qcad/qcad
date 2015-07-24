@@ -14,7 +14,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QStringList" isPureVirtual="false">
         <arg type="QFontDatabase::WritingSystem"
         typeName="QFontDatabase::WritingSystem"
-        name="writingSystem" hasDefault="true" default=" Any"
+        name="writingSystem" hasDefault="true" default="Any"
         isConst="false" />
       </variant>
     </method>

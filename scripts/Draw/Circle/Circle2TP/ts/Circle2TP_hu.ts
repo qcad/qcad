@@ -24,18 +24,22 @@
         <translation>Válasszon megoldást</translation>
     </message>
     <message>
-        <location line="+135"/>
-        <location line="+44"/>
+        <location line="+136"/>
+        <location line="+45"/>
         <source>No solution</source>
         <translation>Nincs megoldás</translation>
     </message>
     <message>
-        <location filename="../Circle2TPInit.js" line="+2"/>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation>Pont, 2 érintő</translation>
+        <translation type="vanished">Pont, 2 érintő</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location filename="../Circle2TPInit.js" line="+2"/>
+        <source>2 Tan&amp;gents and Point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities, through point</source>
         <translation>Két elemet érintő ponton átmenő kör szerkesztése</translation>
     </message>

@@ -13,5 +13,10 @@
         <source>Import Points</source>
         <translation>Punkte importieren</translation>
     </message>
+    <message>
+        <location line="+60"/>
+        <source>&amp;Import Points</source>
+        <translation>Punkte &amp;importieren</translation>
+    </message>
 </context>
 </TS>

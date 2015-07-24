@@ -1,127 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru_RU">
+<TS version="2.1" language="ru">
 <context>
     <name>GraphicsView</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Исходное</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать большие оси начала координат</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Rulers and Scrollbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Линейки и полосы прокрутки</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show rulers</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать линейки</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show scrollbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать полосы прокрутки</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Курсор</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show crosshairs</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать визирные линии</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show large crosshairs</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать большие визирные линии</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Auto Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать все</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Margin (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>Край (пикс):</translation>
     </message>
     <message>
         <location line="+57"/>
         <source>Color Adjustment</source>
-        <translation type="unfinished"></translation>
+        <translation>Регулировка цвета</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Prevent white on white / black on black display</source>
-        <translation type="unfinished"></translation>
+        <translation>Предотвратить белый на белом/чёрный на чёрном дисплее</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Color lightness threshold:</source>
-        <translation type="unfinished"></translation>
+        <translation>Порог светлоты цвета:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Linetypes</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип линии</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation>Автоматически переключиться на экран на основе типов линий в просмотре моделей</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation type="unfinished"></translation>
+        <translation>Масштабировать шаблоны типов линий по весу линии</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation type="unfinished"></translation>
+        <translation>Шаблон масштаба для толщины линии в 0.00 мм:</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="+36"/>
+        <source>Display and Performance</source>
+        <translation>Дисплей и производительность</translation>
+    </message>
+    <message>
+        <location line="+146"/>
+        <source>Display entities with more than N dashes as continuous:</source>
+        <translation>Отображать объекты с более чем N тире как непрерывный:</translation>
+    </message>
+    <message>
+        <location line="+124"/>
+        <source>Anti-aliasing on by default</source>
+        <translation>Сглаживание по умолчанию</translation>
+    </message>
+    <message>
+        <location line="-342"/>
         <source>Automatically use screen based linetypes in model view</source>
-        <translation type="unfinished"></translation>
+        <translation>Автоматически использовать экран на основе типов линий в просмотре моделей</translation>
     </message>
     <message>
-        <location line="+72"/>
-        <source>Performance</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+9"/>
+        <location line="+78"/>
         <source>Number of preview entities:</source>
-        <translation type="unfinished"></translation>
+        <translation>Количество объектов при предпросмотре:</translation>
     </message>
     <message>
         <location line="+58"/>
         <source>Text height display threshold (px):</source>
-        <translation type="unfinished"></translation>
+        <translation>Порог отображения высоты текста (пикс):</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Display arcs as lines below this angle (degrees):</source>
-        <translation type="unfinished"></translation>
+        <translation>Отображать дуги как линии под этим углом (в градусах):</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+111"/>
+        <source>Minimum angle step for rendering arcs (degrees):</source>
+        <translation>Минимальный шаг угля для рендеринга дуги (в градусах):</translation>
+    </message>
+    <message>
+        <location line="+89"/>
+        <source>Timeout for hatch rendering:</source>
+        <translation>Время ожидания для рендеринга штриховки:</translation>
+    </message>
+    <message>
+        <location line="+65"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбор</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Persistent Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Постоянное выделение</translation>
     </message>
 </context>
 <context>
@@ -129,12 +149,12 @@
     <message>
         <location filename="../GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Графический вид</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Внешний вид</translation>
     </message>
 </context>
 </TS>

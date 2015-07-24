@@ -27,5 +27,10 @@
         <source>Open &amp;Recent</source>
         <translation>Abrir &amp;reciente</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Recent files history size:</source>
+        <translation>Número de archivos recientes:</translation>
+    </message>
 </context>
 </TS>

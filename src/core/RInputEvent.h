@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -40,11 +40,12 @@ class RGraphicsView;
  */
 class QCADCORE_EXPORT RInputEvent {
 public:
-    RInputEvent(const RVector& position, RGraphicsScene& s, RGraphicsView& v);
+    RInputEvent(const RVector& position, RGraphicsScene& s, RGraphicsView& v, qreal devicePixelRatio=1.0);
     virtual ~RInputEvent();
 
     RVector getModelPosition() const;
     void setModelPosition(const RVector& v);
+    void setScreenPosition(const RVector& v);
 //  RVector getUcsPosition() const;
     RVector getScreenPosition() const;
 

@@ -1,27 +1,34 @@
-// Spatial Index Library
-//
-// Copyright (C) 2002 Navel Ltd.
-//
-// This library is free software; you can redistribute it and/or
-// modify it under the terms of the GNU Lesser General Public
-// License as published by the Free Software Foundation; either
-// version 2.1 of the License, or (at your option) any later version.
-//
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-// Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public
-// License along with this library; if not, write to the Free Software
-// Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-//
-//  Email:
-//    mhadji@gmail.com
+/******************************************************************************
+ * Project:  libspatialindex - A C++ library for spatial indexing
+ * Author:   Marios Hadjieleftheriou, mhadji@gmail.com
+ ******************************************************************************
+ * Copyright (c) 2002, Marios Hadjieleftheriou
+ *
+ * All rights reserved.
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ * copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included
+ * in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ * DEALINGS IN THE SOFTWARE.
+******************************************************************************/
 
 #include <cstring>
+#include <limits>
 
-#include "../../include/SpatialIndex.h"
+#include <spatialindex/SpatialIndex.h>
 
 using namespace SpatialIndex;
 
@@ -30,12 +37,12 @@ TimePoint::TimePoint()
 {
 }
 
-TimePoint::TimePoint(const double* pCoords, const IInterval& ti, size_t dimension)
+TimePoint::TimePoint(const double* pCoords, const IInterval& ti, uint32_t dimension)
 	: Point(pCoords, dimension), m_startTime(ti.getLowerBound()), m_endTime(ti.getUpperBound())
 {
 }
 
-TimePoint::TimePoint(const double* pCoords, double tStart, double tEnd, size_t dimension)
+TimePoint::TimePoint(const double* pCoords, double tStart, double tEnd, uint32_t dimension)
 	: Point(pCoords, dimension), m_startTime(tStart), m_endTime(tEnd)
 {
 }
@@ -85,7 +92,7 @@ bool TimePoint::operator==(const TimePoint& p) const
 		m_endTime > p.m_endTime + std::numeric_limits<double>::epsilon())
 		return false;
 
-	for (size_t cDim = 0; cDim < m_dimension; cDim++)
+	for (uint32_t cDim = 0; cDim < m_dimension; ++cDim)
 	{
 		if (
 			m_pCoords[cDim] < p.m_pCoords[cDim] - std::numeric_limits<double>::epsilon() ||
@@ -107,16 +114,16 @@ TimePoint* TimePoint::clone()
 //
 // ISerializable interface
 //
-size_t TimePoint::getByteArraySize()
+uint32_t TimePoint::getByteArraySize()
 {
-	return (sizeof(size_t) + 2 * sizeof(double) + m_dimension * sizeof(double));
+	return (sizeof(uint32_t) + 2 * sizeof(double) + m_dimension * sizeof(double));
 }
 
 void TimePoint::loadFromByteArray(const byte* ptr)
 {
-	size_t dimension;
-	memcpy(&dimension, ptr, sizeof(size_t));
-	ptr += sizeof(size_t);
+	uint32_t dimension;
+	memcpy(&dimension, ptr, sizeof(uint32_t));
+	ptr += sizeof(uint32_t);
 	memcpy(&m_startTime, ptr, sizeof(double));
 	ptr += sizeof(double);
 	memcpy(&m_endTime, ptr, sizeof(double));
@@ -127,14 +134,14 @@ void TimePoint::loadFromByteArray(const byte* ptr)
 	//ptr += m_dimension * sizeof(double);
 }
 
-void TimePoint::storeToByteArray(byte** data, size_t& len)
+void TimePoint::storeToByteArray(byte** data, uint32_t& len)
 {
 	len = getByteArraySize();
 	*data = new byte[len];
 	byte* ptr = *data;
 
-	memcpy(ptr, &m_dimension, sizeof(size_t));
-	ptr += sizeof(size_t);
+	memcpy(ptr, &m_dimension, sizeof(uint32_t));
+	ptr += sizeof(uint32_t);
 	memcpy(ptr, &m_startTime, sizeof(double));
 	ptr += sizeof(double);
 	memcpy(ptr, &m_endTime, sizeof(double));
@@ -154,27 +161,27 @@ bool TimePoint::intersectsShapeInTime(const ITimeShape& in) const
 	throw Tools::IllegalStateException("intersectsShapeInTime: Not implemented yet!");
 }
 
-bool TimePoint::intersectsShapeInTime(const IInterval& ivI, const ITimeShape& in) const
+bool TimePoint::intersectsShapeInTime(const IInterval&, const ITimeShape&) const
 {
 	throw Tools::IllegalStateException("intersectsShapeInTime: Not implemented yet!");
 }
 
-bool TimePoint::containsShapeInTime(const ITimeShape& in) const
+bool TimePoint::containsShapeInTime(const ITimeShape&) const
 {
 	return false;
 }
 
-bool TimePoint::containsShapeInTime(const IInterval& ivI, const ITimeShape& in) const
+bool TimePoint::containsShapeInTime(const IInterval&, const ITimeShape&) const
 {
 	return false;
 }
 
-bool TimePoint::touchesShapeInTime(const ITimeShape& in) const
+bool TimePoint::touchesShapeInTime(const ITimeShape&) const
 {
 	throw Tools::IllegalStateException("touchesShapeInTime: Not implemented yet!");
 }
 
-bool TimePoint::touchesShapeInTime(const IInterval& ivI, const ITimeShape& in) const
+bool TimePoint::touchesShapeInTime(const IInterval&, const ITimeShape&) const
 {
 	throw Tools::IllegalStateException("touchesShapeInTime: Not implemented yet!");
 }
@@ -184,17 +191,17 @@ double TimePoint::getAreaInTime() const
 	return 0.0;
 }
 
-double TimePoint::getAreaInTime(const IInterval& ivI) const
+double TimePoint::getAreaInTime(const IInterval&) const
 {
 	return 0.0;
 }
 
-double TimePoint::getIntersectingAreaInTime(const ITimeShape& r) const
+double TimePoint::getIntersectingAreaInTime(const ITimeShape&) const
 {
 	return 0.0;
 }
 
-double TimePoint::getIntersectingAreaInTime(const IInterval& ivI, const ITimeShape& r) const
+double TimePoint::getIntersectingAreaInTime(const IInterval&, const ITimeShape&) const
 {
 	return 0.0;
 }
@@ -236,7 +243,7 @@ bool TimePoint::intersectsInterval(const IInterval& ti) const
 	return intersectsInterval(ti.getIntervalType(), ti.getLowerBound(), ti.getUpperBound());
 }
 
-bool TimePoint::intersectsInterval(Tools::IntervalType t, const double start, const double end) const
+bool TimePoint::intersectsInterval(Tools::IntervalType, const double start, const double end) const
 {
 	//if (m_startTime != start &&
 	//		(m_startTime >= end || m_endTime <= start)) return false;
@@ -256,10 +263,10 @@ Tools::IntervalType TimePoint::getIntervalType() const
 	return Tools::IT_RIGHTOPEN;
 }
 
-void TimePoint::makeInfinite(size_t dimension)
+void TimePoint::makeInfinite(uint32_t dimension)
 {
 	makeDimension(dimension);
-	for (size_t cIndex = 0; cIndex < m_dimension; cIndex++)
+	for (uint32_t cIndex = 0; cIndex < m_dimension; ++cIndex)
 	{
 		m_pCoords[cIndex] = std::numeric_limits<double>::max();
 	}
@@ -268,7 +275,7 @@ void TimePoint::makeInfinite(size_t dimension)
 	m_endTime = -std::numeric_limits<double>::max();
 }
 
-void TimePoint::makeDimension(size_t dimension)
+void TimePoint::makeDimension(uint32_t dimension)
 {
 	if (m_dimension != dimension)
 	{
@@ -283,9 +290,9 @@ void TimePoint::makeDimension(size_t dimension)
 
 std::ostream& SpatialIndex::operator<<(std::ostream& os, const TimePoint& pt)
 {
-	size_t i;
+	uint32_t i;
 
-	for (i = 0; i < pt.m_dimension; i++)
+	for (i = 0; i < pt.m_dimension; ++i)
 	{
 		os << pt.m_pCoords[i] << " ";
 	}

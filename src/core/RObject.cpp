@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -29,11 +29,13 @@ const RObject::Id RObject::INVALID_ID = -1;
 const RObject::Handle RObject::INVALID_HANDLE = -1;
 
 RPropertyTypeId RObject::PropertyCustom;
+RPropertyTypeId RObject::PropertyType;
 RPropertyTypeId RObject::PropertyHandle;
 RPropertyTypeId RObject::PropertyProtected;
 
 void RObject::init() {
     RObject::PropertyCustom.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("RObject", "Custom"));
+    RObject::PropertyType.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("RObject", "Type"));
     RObject::PropertyHandle.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("RObject", "Handle"));
     RObject::PropertyProtected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("RObject", "Protected"));
 }
@@ -70,11 +72,15 @@ QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& prope
     Q_UNUSED(humanReadable)
     Q_UNUSED(noAttributes)
 
+    if (propertyTypeId == PropertyType) {
+        return qMakePair(QVariant(getType()), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    }
     if (propertyTypeId == PropertyHandle) {
         return qMakePair(QVariant(handle), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
     if (propertyTypeId == PropertyProtected) {
-        return qMakePair(QVariant(protect), RPropertyAttributes(RPropertyAttributes::Invisible));
+        //return qMakePair(QVariant(protect), RPropertyAttributes(RPropertyAttributes::Invisible));
+        return qMakePair(QVariant(protect), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
     if (propertyTypeId.isCustom()) {
         QString appId = propertyTypeId.getCustomPropertyTitle();
@@ -99,6 +105,8 @@ QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& prope
 
 bool RObject::setProperty(RPropertyTypeId propertyTypeId,
     const QVariant& value, RTransaction* transaction) {
+
+    Q_UNUSED(transaction)
 
     bool ret = false;
 
@@ -241,13 +249,9 @@ bool RObject::setMemberZ(QList<RVector>& variable, const QVariant& value,
  * \param value A QList of QPairs of int and double where the int is the index and
  *      the double the value.
  */
-bool RObject::setMemberVector(QList<RVector>& variable, const QVariant& value,
-                         RObject::XYZ xyz) {
-
+bool RObject::setMemberVector(QList<RVector>& variable, const QVariant& value, RObject::XYZ xyz) {
     if (!value.canConvert<QList<QPair<int, double> > >()) {
-        qWarning() <<
-                      QString("RObject::setMemberVector: '%1' is not a QList<QPair<int, double> >").arg(
-                          value.toString());
+        qWarning() << QString("RObject::setMemberVector: '%1' is not a QList<QPair<int, double> >").arg(value.toString());
         return false;
     }
 
@@ -305,9 +309,7 @@ bool RObject::setMemberVector(QList<RVector>& variable, const QVariant& value,
 /**
  * \param value A list for int / double pairs: QList<QPair<int, double> >
  */
-bool RObject::setMember(QList<double>& variable, const QVariant& value,
-                         bool condition) {
-
+bool RObject::setMember(QList<double>& variable, const QVariant& value, bool condition) {
     if (!condition) {
         return false;
     }
@@ -320,13 +322,16 @@ bool RObject::setMember(QList<double>& variable, const QVariant& value,
 
     QList<QPair<int, double> > pairList = value.value<QList<QPair<int, double> > >();
     QList<QPair<int, double> >::iterator it;
+
+    int offset = 0;
     for (it=pairList.begin(); it!=pairList.end(); ++it) {
         int i = (*it).first;
         double v = (*it).second;
 
         // entry was removed:
-        if (RMath::isNaN(v) && i<variable.size()) {
+        if (RMath::isNaN(v) && i-offset<variable.size()) {
             variable.removeLast();
+            offset++;
         }
 
         // entry was added:
@@ -380,6 +385,13 @@ QSet<RPropertyTypeId> RObject::getCustomPropertyTypeIds() const {
     return ret;
 }
 
+bool RObject::hasCustomProperty(const QString& title, const QString& key) {
+    if (!customProperties.contains(title)) {
+        return false;
+    }
+    return customProperties.value(title).contains(key);
+}
+
 /**
  * \return Value of given custom property.
  */
@@ -389,6 +401,18 @@ QVariant RObject::getCustomProperty(const QString& title, const QString& key, co
     }
     QVariantMap vm = customProperties.value(title);
     return vm.value(key, defaultValue);
+}
+
+bool RObject::getCustomBoolProperty(const QString& title, const QString& key, bool defaultValue) {
+    QVariant ret = getCustomProperty(title, key, defaultValue);
+    if (ret.type()==QVariant::Bool) {
+        return ret.toBool();
+    }
+    if (ret.type()==QVariant::String) {
+        QString s = ret.toString().toLower();
+        return s=="true" || s=="1";
+    }
+    return defaultValue;
 }
 
 /**

@@ -4,7 +4,7 @@
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../Dimension.js" line="+65"/>
+        <location filename="../Dimension.js" line="+63"/>
         <source>No prefix</source>
         <translation>Sin prefijo</translation>
     </message>
@@ -53,7 +53,7 @@
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+58"/>
         <source>Dimension Tools</source>
         <translation>Herramientas dimensión</translation>
     </message>
@@ -91,6 +91,16 @@
         <location line="+44"/>
         <source>Lower tolerance</source>
         <translation>Tolerancia mínima</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Scale</source>
+        <translation>Escala</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Drawing Scale</source>
+        <translation>Dibujo a escala</translation>
     </message>
 </context>
 </TS>

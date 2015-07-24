@@ -1,250 +1,70 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./gui" filename="RColorCombo.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RCOLORCOMBO_H_</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RCOLORCOMBO_H_</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"gui_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QComboBox&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RColor.h"</cpp:file></cpp:include>
-  <comment type="block">/** * \scriptable * \ingroup gui
-  */</comment>
-  <class>class 
-  <macro>
-    <name>QCADGUI_EXPORT</name>
-  </macro>
-  <name>RColorCombo</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>QComboBox</name></super>
-  <block>{
-  <private type="default">
-    <function_decl>
-    <type>
-      <name>Q_OBJECT</name>
-    </type>
-    <name>Q_PROPERTY</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-          <name>onlyFixed</name>
-          <name>READ</name>
-          <name>getOnlyFixed</name>
-          <name>WRITE</name>
-        </type>
-        <name>setOnlyFixed</name>
-      </decl>
-    </param>)</parameter_list>;</function_decl>
-    <constructor_decl>
-    <name>Q_PROPERTY</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-          <name>showAlphaChannel</name>
-          <name>READ</name>
-          <name>getShowAlphaChannel</name>
-          <name>WRITE</name>
-        </type>
-        <name>setShowAlphaChannel</name>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-    <constructor_decl>
-    <name>Q_PROPERTY</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>QColor</name>
-          <name>color</name>
-          <name>READ</name>
-          <name>getColor</name>
-          <name>WRITE</name>
-        </type>
-        <name>setColor</name>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-  </private>
-  <public>public: 
-  <constructor_decl>
-  <name>RColorCombo</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>QWidget</name>*</type>
-    <name>parent</name>=
-    <init>
-      <expr>0</expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <function_decl>
-  <type>
-    <name>RColor</name>
-  </type>
-  <name>getColor</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setColor</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RColor</name>&amp;</type>
-      <name>col</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>init</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>getOnlyFixed</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setOnlyFixed</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>onlyFixed</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">//bool isBlackWhite();</comment>
-  <comment type="line">//void setBlackWhite(bool
-  blackWhite);</comment>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>getShowAlphaChannel</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setShowAlphaChannel</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>showAlphaChannel</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <label>
-  <name>signals</name>:</label>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>valueChanged</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RColor</name>&amp;</type>
-      <name>color</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>dialogRunning</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>isRunning</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <public>public slots: 
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>colorChanged</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>index</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RColor</name>
-    </type>
-    <name>currentColor</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>onlyFixed</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>showAlphaChannel</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RColorCombo*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
-  <comment type="block">/* RCOLORCOMBO_H_ */</comment>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./gui" filename="RColorCombo.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RCOLORCOMBO_H_</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RCOLORCOMBO_H_</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QComboBox&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RColor.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * \scriptable
+ * \ingroup gui
+ */</comment>
+<class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RColorCombo</name><super>: <specifier>public</specifier> <name>QComboBox</name></super> <block>{<private type="default">
+
+<function_decl><type><name>Q_OBJECT</name></type>
+<name>Q_PROPERTY</name><parameter_list>(<param><decl><type><name>bool</name> <name>onlyFixed</name> <name>READ</name> <name>getOnlyFixed</name> <name>WRITE</name></type> <name>setOnlyFixed</name></decl></param>)</parameter_list>;</function_decl>
+<constructor_decl><name>Q_PROPERTY</name><parameter_list>(<param><decl><type><name>bool</name> <name>showAlphaChannel</name> <name>READ</name> <name>getShowAlphaChannel</name> <name>WRITE</name></type> <name>setShowAlphaChannel</name></decl></param>)</parameter_list>;</constructor_decl>
+<constructor_decl><name>Q_PROPERTY</name><parameter_list>(<param><decl><type><name>QColor</name> <name>color</name> <name>READ</name> <name>getColor</name> <name>WRITE</name></type> <name>setColor</name></decl></param>)</parameter_list>;</constructor_decl>
+
+</private><public>public:
+    <constructor_decl><name>RColorCombo</name><parameter_list>(<param><decl><type><name>QWidget</name> *</type><name>parent</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
+
+    <function_decl><type><name>RColor</name></type> <name>getColor</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setColor</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>col</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>getOnlyFixed</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setOnlyFixed</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>onlyFixed</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="line">//bool isBlackWhite();</comment>
+    <comment type="line">//void setBlackWhite(bool blackWhite);</comment>
+    <function_decl><type><name>bool</name></type> <name>getShowAlphaChannel</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setShowAlphaChannel</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>showAlphaChannel</name></decl></param>)</parameter_list>;</function_decl>
+
+<label><name>signals</name>:</label>
+    <function_decl><type><name>void</name></type> <name>valueChanged</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>color</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>dialogRunning</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>isRunning</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><public>public slots:
+    <function_decl><type><name>void</name></type> <name>colorChanged</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>RColor</name></type> <name>currentColor</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>onlyFixed</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>showAlphaChannel</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RColorCombo*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif> <comment type="block">/* RCOLORCOMBO_H_ */</comment>
 </unit>

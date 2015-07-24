@@ -5,12 +5,12 @@
     <name>HideAllBlocks</name>
     <message>
         <source>&amp;Hide All</source>
-        <translation type="vanished">Piilota kaikki</translation>
+        <translation type="vanished">&amp;Piilota kaikki</translation>
     </message>
     <message>
         <location filename="../HideAllBlocksInit.js" line="+2"/>
         <source>&amp;Hide All Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Piilota kaikki lohkot</translation>
     </message>
 </context>
 </TS>

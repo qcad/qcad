@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -230,6 +230,12 @@ bool RBox::intersectsWith(const RShape& shape, bool limited) const {
     }
 
     return false;
+}
+
+void RBox::growToIncludeBoxes(const QList<RBox>& others) {
+    for (int i=0; i<others.length(); i++) {
+        growToInclude(others[i]);
+    }
 }
 
 /**

@@ -20,7 +20,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSharedPointerEntityData {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSharedPointerEntityData {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -64,6 +67,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getBoundingBoxes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getHull
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isSelected

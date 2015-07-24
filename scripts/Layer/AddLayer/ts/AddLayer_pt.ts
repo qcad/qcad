@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>AddLayer</name>
     <message>
@@ -9,7 +9,7 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Adicione Camada</translatorcomment>
-        <translation>&amp;Adicione camada</translation>
+        <translation>&amp;Adicione uma Camada</translation>
     </message>
     <message>
         <location filename="../AddLayer.js" line="+35"/>
@@ -19,7 +19,15 @@
     <message>
         <location line="+0"/>
         <source>Add Layer</source>
-        <translation>Adicione camada</translation>
+        <translation>Adicione uma Camada</translation>
+    </message>
+</context>
+<context>
+    <name>Layer</name>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+19"/>
+        <source>Default lineweight for new layers:</source>
+        <translation>Espessura de linha padrão para novas camadas:</translation>
     </message>
 </context>
 </TS>

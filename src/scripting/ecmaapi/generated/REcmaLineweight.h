@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaLineweight {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaLineweight {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

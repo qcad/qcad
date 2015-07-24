@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -77,6 +77,9 @@ RSingleApplication::RSingleApplication(Display* dpy, const QString &appId, int a
     sysInit(appId);
 }
 #endif
+
+RSingleApplication::~RSingleApplication() {
+}
 
 RSingleApplication* RSingleApplication::getInstance() {
     return instance;

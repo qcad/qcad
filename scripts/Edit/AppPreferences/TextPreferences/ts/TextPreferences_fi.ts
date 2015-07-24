@@ -6,12 +6,12 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Show font preview in font controls</source>
-        <translation type="unfinished">Näytä fontin esikatselu fonttikontrollissa</translation>
+        <translation>Näytä kirjasimien esikatselu niiden ohjauksessa</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Use reduced selection of fonts:</source>
-        <translation>Käytä rajattua fonttivalintaa:</translation>
+        <translation>Käytä rajattua kirjasinvalintaa:</translation>
     </message>
     <message>
         <location line="+14"/>

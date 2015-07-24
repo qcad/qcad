@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -54,9 +54,7 @@ SvgImport.prototype.beginEvent = function() {
     }
     
     if (isNull(fileName)) {
-        var lastDir = RSettings.getStringValue(
-                "SvgImport/Path",
-                RSettings.getDocumentsLocation());
+        var lastDir = RSettings.getStringValue( "SvgImport/Path", RSettings.getDocumentsLocation());
         fileName = QFileDialog.getOpenFileName(
             this, qsTr("Import SVG"), lastDir,
             qsTr("SVG Files") + " (*.svg);;" + qsTr("All Files") + " (*)");
@@ -73,6 +71,7 @@ SvgImport.prototype.beginEvent = function() {
 
     if (!dialog.exec()) {
         dialog.destroy();
+        EAction.activateMainWindow();
         this.terminate();
         return;
     }
@@ -96,5 +95,6 @@ SvgImport.prototype.beginEvent = function() {
     }
     
     dialog.destroy();
+    EAction.activateMainWindow();
     this.terminate();
 };

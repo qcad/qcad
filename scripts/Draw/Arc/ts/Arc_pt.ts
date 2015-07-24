@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Arc</name>
     <message>
@@ -8,7 +8,7 @@
         <source>Arc Tools</source>
         <translatorcomment>--google--
 Exibe o menu &quot;Arco&quot;</translatorcomment>
-        <translation>Ferramentas Arco</translation>
+        <translation>Ferramentas de Arco</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -16,7 +16,7 @@ Exibe o menu &quot;Arco&quot;</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Exibe o menu &quot;Arco&quot;</translatorcomment>
-        <translation>Exibe o menu &quot;Arco&quot;</translation>
+        <translation>Exiba as ferramentas de arco</translation>
     </message>
     <message>
         <location line="+14"/>

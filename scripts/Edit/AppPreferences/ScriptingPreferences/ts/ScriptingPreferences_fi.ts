@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Rescan scripts folder on startup</source>
-        <translation>Uudelleenskannaa kansion skriptit käynnistyksessä</translation>
+        <translation>Skannaa uudelleen spkrptit-kansio käynnistyksessä</translation>
     </message>
 </context>
 <context>

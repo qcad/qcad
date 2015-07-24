@@ -4,7 +4,7 @@
 <context>
     <name>Modify</name>
     <message>
-        <location filename="../Modify.js" line="+100"/>
+        <location filename="../Modify.js" line="+99"/>
         <source>Modification Tools</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22,20 +22,30 @@
 <context>
     <name>ModifyCorner</name>
     <message>
-        <location filename="../ModifyCorner.js" line="+69"/>
+        <location filename="../ModifyCorner.js" line="+78"/>
         <source>Choose first entity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+11"/>
         <source>Choose second entity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Set point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>Choose solution</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Transform</name>
     <message>
-        <location filename="../Transform.js" line="+38"/>
+        <location filename="../Transform.js" line="+47"/>
         <source>This tool requires a selection</source>
         <translation type="unfinished"></translation>
     </message>

@@ -1,517 +1,145 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RScriptHandler.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RSCRIPTHANDLER_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RSCRIPTHANDLER_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RNonCopyable.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDocumentInterface.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RAction.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RGuiAction.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RScriptAction.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RMainWindow.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RFileImporterAdapter</name>;</class_decl>
-  <comment type="block">/** * Abstract base class for all script
-  handlers. * * \ingroup core */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RScriptHandler</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor>
-    <name>RScriptHandler</name>
-    <parameter_list>()</parameter_list>
-    <block>{ }</block>
-  </constructor>; 
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RScriptHandler</name>
-    <parameter_list>()</parameter_list>
-    <block>{ }</block>
-  </destructor>; 
-  <comment type="block">/** * \return The file extensions of script
-  files that are supported by * this script handler. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>QString</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getSupportedFileExtensions</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>init</name>
-    <argument_list>(
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QString</name>&amp; 
-      <name>autostartFile</name>= 
-      <name>
-      <name>QString</name>::
-      <name>null</name></name></expr>
-    </argument>, 
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QStringList</name>&amp; 
-      <name>arguments</name>= 
-      <call>
-        <name>QStringList</name>
-        <argument_list>()</argument_list>
-      </call></expr>
-    </argument>)</argument_list>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * Runs the given script file.
-  */</comment>
-  <decl_stmt>
-  <decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>doScript</name>
-  <argument_list>(
-  <argument>
-    <expr>
-    <name>const</name>
-    <name>QString</name>&amp; 
-    <name>scriptFile</name></expr>
-  </argument>, 
-  <argument>
-    <expr>
-    <name>const</name>
-    <name>QStringList</name>&amp; 
-    <name>arguments</name>= 
-    <call>
-      <name>QStringList</name>
-      <argument_list>()</argument_list>
-    </call></expr>
-  </argument>)</argument_list>=
-  <init>
-    <expr>0</expr>
-  </init></decl>;</decl_stmt>
-  <comment type="block">/** * Evaluates the given script code.
-  */</comment>
-  <decl_stmt>
-  <decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>eval</name>
-  <argument_list>(
-  <argument>
-    <expr>
-    <name>const</name>
-    <name>QString</name>&amp; 
-    <name>script</name></expr>
-  </argument>, 
-  <argument>
-    <expr>
-    <name>const</name>
-    <name>QString</name>&amp; 
-    <name>fileName</name>= 
-    <call>
-      <name>QString</name>
-      <argument_list>()</argument_list>
-    </call></expr>
-  </argument>)</argument_list>=
-  <init>
-    <expr>0</expr>
-  </init></decl>;</decl_stmt>
-  <comment type="block">/** * Creates a file importer from the
-  given class name and for the given document. */</comment>
-  <function_decl>
-  <type>
-  <name>virtual</name>
-  <name>RFileImporterAdapter</name>*</type>
-  <name>createFileImporter</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>className</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>&amp;</type>
-      <name>document</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \return true if the script handle
-  currently is running a script, * false otherwise. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>isRunning</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>abort</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>hasUncaughtExceptions</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>triggerActionApplicationLevel</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>scriptFile</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RGuiAction</name>*</type>
-    <name>guiAction</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * Creates a script based action for
-  this script handler. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>createActionDocumentLevel</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>scriptFile</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RGuiAction</name>*</type>
-      <name>guiAction</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RDocumentInterface</name>*</type>
-    <name>documentInterface</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>createActionApplicationLevel</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>scriptFile</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RGuiAction</name>*</type>
-      <name>guiAction</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Creates a new document level action
-  by instantiating class T and attaching the * action to the
-  document interface of the currently active document. * Document
-  level actions typically effect only the current document. *
-  Document level actions stay active until they are explicitly
-  finished. */</comment>
-  <template>template
-  <parameter_list>&lt;
-  <param>
-    <type>class</type>
-    <name>T</name>
-  </param>&gt;</parameter_list>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>createActionDocumentLevelT</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>scriptFile</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>RGuiAction</name>*</type>
-        <name>guiAction</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>RDocumentInterface</name>*</type>
-        <name>documentInterface</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>
-    <name>documentInterface</name>== 
-    <name>NULL</name></expr>)</condition>
-    <then>
-      <block>{ 
-      <expr_stmt>
-      <expr>
-      <name>documentInterface</name>= 
-      <call>
-        <name>
-        <name>RMainWindow</name>::
-        <name>getDocumentInterfaceStatic</name></name>
-        <argument_list>()</argument_list>
-      </call></expr>;</expr_stmt>
-      <if>if 
-      <condition>(
-      <expr>
-      <name>documentInterface</name>== 
-      <name>NULL</name></expr>)</condition>
-      <then>
-        <block>{ 
-        <expr_stmt>
-        <expr>
-          <call>
-            <name>qWarning</name>
-            <argument_list>(
-            <argument>
-              <expr>"RScriptHandler::createActionDocumentLevelT():
-              No document interface given or found."</expr>
-            </argument>)</argument_list>
-          </call>
-        </expr>;</expr_stmt>
-        <return>return;</return>}</block>
-      </then></if>}</block>
-    </then></if>
-    <decl_stmt>
-    <decl>
-    <type>
-    <name>RScriptAction</name>*</type>
-    <name>a</name>=
-    <init>
-      <expr>new 
-      <call>
-        <name>T</name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <name>scriptFile</name>
-          </expr>
-        </argument>, 
-        <argument>
-          <expr>
-            <name>guiAction</name>
-          </expr>
-        </argument>)</argument_list>
-      </call></expr>
-    </init></decl>;</decl_stmt>
-    <expr_stmt>
-    <expr>
-    <name>a</name>-&gt;
-    <call>
-      <name>setDocumentInterface</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>documentInterface</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>
-    <expr_stmt>
-    <expr>
-    <name>documentInterface</name>-&gt;
-    <call>
-      <name>setCurrentAction</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>a</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function></template>
-  <comment type="block">/** * Creates a new application level
-  action by instantiating class T. Application level * actions
-  typically do not effect any documents. Application level actions
-  cannot * be attached to a document interface or anywhere else, so
-  the action is instantiated, * \ref beginEvent is called and then
-  the action is terminated immediately * (\ref finishEvent is
-  called). */</comment>
-  <template>template
-  <parameter_list>&lt;
-  <param>
-    <type>class</type>
-    <name>T</name>
-  </param>&gt;</parameter_list>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>createActionApplicationLevelT</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>scriptFile</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>RGuiAction</name>*</type>
-        <name>guiAction</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <function_decl>
-    <type>
-      <name>T</name>
-    </type>
-    <name>action</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>scriptFile</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>guiAction</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</function_decl>
-    <expr_stmt>
-    <expr>
-    <name>action</name>.
-    <call>
-      <name>beginEvent</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</expr_stmt>
-    <expr_stmt>
-    <expr>
-    <name>action</name>.
-    <call>
-      <name>finishEvent</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function></template></public>
-  <protected>protected: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>autostartScriptName</name>
-  </decl>;</decl_stmt></protected>}</block>;</class>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RScriptHandler.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RSCRIPTHANDLER_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RSCRIPTHANDLER_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RNonCopyable.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocumentInterface.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RAction.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGuiAction.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RScriptAction.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMainWindow.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RFileImporterAdapter</name>;</class_decl>
+
+
+<comment type="block">/**
+ * Abstract base class for all script handlers.
+ *
+ * \ingroup core
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RScriptHandler</name> <block>{<private type="default">
+
+</private><public>public:
+
+    <constructor><name>RScriptHandler</name><parameter_list>()</parameter_list> <block>{ }</block></constructor>
+
+    <destructor><specifier>virtual</specifier> <name>~RScriptHandler</name><parameter_list>()</parameter_list> <block>{ }</block></destructor>
+
+    <comment type="block">/**
+     * \return The file extensions of script files that are supported by
+     *      this script handler.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>getSupportedFileExtensions</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <decl_stmt><decl><type><name>virtual</name> <name>void</name></type> <name>init</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>autostartFile</name> = <name><name>QString</name>::<name>null</name></name></expr></argument>, <argument><expr><name>const</name> <name>QStringList</name>&amp; <name>arguments</name> = <call><name>QStringList</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * Runs the given script file.
+     */</comment>
+    <decl_stmt><decl><type><name>virtual</name> <name>void</name></type> <name>doScript</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>scriptFile</name></expr></argument>, <argument><expr><name>const</name> <name>QStringList</name>&amp; <name>arguments</name> = <call><name>QStringList</name><argument_list>()</argument_list></call></expr></argument>)</argument_list> =<init> <expr>0</expr></init></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * Evaluates the given script code.
+     */</comment>
+    <decl_stmt><decl><type><name>virtual</name> <name>QVariant</name></type> <name>eval</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>script</name></expr></argument>, <argument><expr><name>const</name> <name>QString</name>&amp; <name>fileName</name> = <call><name>QString</name><argument_list>()</argument_list></call></expr></argument>)</argument_list> =<init> <expr>0</expr></init></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * Evaluates the given script code in a global context.
+     */</comment>
+    <decl_stmt><decl><type><name>virtual</name> <name>QVariant</name></type> <name>evalGlobal</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>script</name></expr></argument>, <argument><expr><name>const</name> <name>QString</name>&amp; <name>fileName</name> = <call><name>QString</name><argument_list>()</argument_list></call></expr></argument>)</argument_list> =<init> <expr>0</expr></init></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * Creates a file importer from the given class name and for the given document.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>RFileImporterAdapter</name>*</type> <name>createFileImporter</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>className</name></decl></param>, <param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return true if the script handle currently is running a script,
+     *      false otherwise.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isRunning</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>abort</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasUncaughtExceptions</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>void</name></type> <name>triggerActionApplicationLevel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>,
+            <param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Creates a script based action for this script handler.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type>
+            <name>createActionDocumentLevel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>,
+                    <param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name></decl></param>,
+                    <param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>createActionApplicationLevel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>,
+            <param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Creates a new document level action by instantiating class T and attaching the
+     * action to the document interface of the currently active document.
+     * Document level actions typically effect only the current document.
+     * Document level actions stay active until they are explicitly finished.
+     */</comment>
+    <template>template<parameter_list>&lt;<param><type>class</type> <name>T</name></param>&gt;</parameter_list>
+    <function><type><name>void</name></type> <name>createActionDocumentLevelT</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>,
+            <param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name></decl></param>, <param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>documentInterface</name> == <name>NULL</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>documentInterface</name> = <call><name><name>RMainWindow</name>::<name>getDocumentInterfaceStatic</name></name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+            <if>if <condition>(<expr><name>documentInterface</name> == <name>NULL</name></expr>)</condition><then> <block>{
+                <expr_stmt><expr><call><name>qWarning</name><argument_list>(<argument><expr>"RScriptHandler::createActionDocumentLevelT(): No document interface given or found."</expr></argument>)</argument_list></call></expr>;</expr_stmt>
+                <return>return;</return>
+            }</block></then></if>
+        }</block></then></if>
+
+        <decl_stmt><decl><type><name>RScriptAction</name>*</type> <name>a</name> =<init> <expr>new <call><name>T</name><argument_list>(<argument><expr><name>scriptFile</name></expr></argument>, <argument><expr><name>guiAction</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+        <expr_stmt><expr><name>a</name>-&gt;<call><name>setDocumentInterface</name><argument_list>(<argument><expr><name>documentInterface</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>documentInterface</name>-&gt;<call><name>setCurrentAction</name><argument_list>(<argument><expr><name>a</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function></template>
+
+    <comment type="block">/**
+     * Creates a new application level action by instantiating class T. Application level
+     * actions typically do not effect any documents. Application level actions cannot
+     * be attached to a document interface or anywhere else, so the action is instantiated,
+     * \ref beginEvent is called and then the action is terminated immediately
+     * (\ref finishEvent is called).
+     */</comment>
+    <template>template<parameter_list>&lt;<param><type>class</type> <name>T</name></param>&gt;</parameter_list>
+    <function><type><name>void</name></type> <name>createActionApplicationLevelT</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>, <param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name></decl></param>)</parameter_list> <block>{
+        <function_decl><type><name>T</name></type> <name>action</name><parameter_list>(<param><decl><type><name>scriptFile</name></type></decl></param>, <param><decl><type><name>guiAction</name></type></decl></param>)</parameter_list>;</function_decl>
+        <expr_stmt><expr><name>action</name>.<call><name>beginEvent</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>action</name>.<call><name>finishEvent</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    }</block></function></template>
+
+</public><protected>protected:
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>autostartScriptName</name></decl>;</decl_stmt>
+</protected>}</block>;</class>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

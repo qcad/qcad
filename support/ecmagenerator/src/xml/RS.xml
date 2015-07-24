@@ -15,6 +15,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Command" />
     </enum>
     <enum name="EntityType">
+      <value name="ObjectAll" />
+      <value name="ObjectUnknown" />
+      <value name="ObjectBlock" />
+      <value name="ObjectLayer" />
+      <value name="ObjectLinetype" />
+      <value name="ObjectView" />
       <value name="EntityAll" />
       <value name="EntityUnknown" />
       <value name="EntityAttribute" />
@@ -93,6 +99,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="FromStart" />
       <value name="FromEnd" />
       <value name="FromAny" />
+      <value name="AlongPolyline" />
     </enum>
     <enum name="IsoProjectionType">
       <value name="IsoTop" />
@@ -324,6 +331,19 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Any" />
       <value name="CW" />
       <value name="CCW" />
+    </enum>
+    <enum name="JoinType">
+      <value name="JoinBevel" />
+      <value name="JoinRound" />
+      <value name="JoinMiter" />
+    </enum>
+    <enum name="EndType">
+      <value name="EndClosedPolygon" />
+      <value name="EndClosedLine" />
+      <value name="EndOpenButt" />
+      <value name="EndOpenSquare" />
+      <value name="EndOpenRound" />
+      <value name="EndOpenSingle" />
     </enum>
     <method name="compare" cppName="compare" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

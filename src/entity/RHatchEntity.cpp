@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -28,6 +28,7 @@
 
 RPropertyTypeId RHatchEntity::PropertyCustom;
 RPropertyTypeId RHatchEntity::PropertyHandle;
+RPropertyTypeId RHatchEntity::PropertyProtected;
 RPropertyTypeId RHatchEntity::PropertyType;
 RPropertyTypeId RHatchEntity::PropertyBlock;
 RPropertyTypeId RHatchEntity::PropertyLayer;
@@ -35,6 +36,7 @@ RPropertyTypeId RHatchEntity::PropertyLinetype;
 RPropertyTypeId RHatchEntity::PropertyLinetypeScale;
 RPropertyTypeId RHatchEntity::PropertyLineweight;
 RPropertyTypeId RHatchEntity::PropertyColor;
+RPropertyTypeId RHatchEntity::PropertyDisplayedColor;
 RPropertyTypeId RHatchEntity::PropertyDrawOrder;
 
 RPropertyTypeId RHatchEntity::PropertySolid;
@@ -66,6 +68,7 @@ RHatchEntity* RHatchEntity::clone() const {
 void RHatchEntity::init() {
     RHatchEntity::PropertyCustom.generateId(typeid(RHatchEntity), RObject::PropertyCustom);
     RHatchEntity::PropertyHandle.generateId(typeid(RHatchEntity), RObject::PropertyHandle);
+    RHatchEntity::PropertyProtected.generateId(typeid(RHatchEntity), RObject::PropertyProtected);
     RHatchEntity::PropertyType.generateId(typeid(RHatchEntity), REntity::PropertyType);
     RHatchEntity::PropertyBlock.generateId(typeid(RHatchEntity), REntity::PropertyBlock);
     RHatchEntity::PropertyLayer.generateId(typeid(RHatchEntity), REntity::PropertyLayer);
@@ -73,6 +76,7 @@ void RHatchEntity::init() {
     RHatchEntity::PropertyLinetypeScale.generateId(typeid(RHatchEntity), REntity::PropertyLinetypeScale);
     RHatchEntity::PropertyLineweight.generateId(typeid(RHatchEntity), REntity::PropertyLineweight);
     RHatchEntity::PropertyColor.generateId(typeid(RHatchEntity), REntity::PropertyColor);
+    RHatchEntity::PropertyDisplayedColor.generateId(typeid(RHatchEntity), REntity::PropertyDisplayedColor);
     RHatchEntity::PropertyDrawOrder.generateId(typeid(RHatchEntity), REntity::PropertyDrawOrder);
 
     RHatchEntity::PropertySolid.generateId(typeid(RHatchEntity), "", QT_TRANSLATE_NOOP("REntity", "Solid"));

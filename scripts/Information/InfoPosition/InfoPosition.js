@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -75,7 +75,7 @@ InfoPosition.prototype.getDisplayedLabel = function(p, prec) {
         prec = 4;
     }
 
-    return coordinateToString(p, prec, false, false);
+    return coordinateToString(p, prec, false, false, this.getDocument());
 };
 
 InfoPosition.prototype.pickCoordinate = function(event, preview) {
@@ -93,8 +93,13 @@ InfoPosition.prototype.pickCoordinate = function(event, preview) {
 
         if (!preview) {
             appWin.handleUserInfo(this.getDisplayedLabel(this.pos, 8));
-            if (!isNull(op) && this.addToDrawing) {
-                di.applyOperation(op);
+            if (!isNull(op)) {
+                if (this.addToDrawing) {
+                    di.applyOperation(op);
+                }
+                else {
+                    op.destroy();
+                }
             }
         }
         else {
@@ -111,6 +116,7 @@ InfoPosition.prototype.getOperation = function(preview) {
     }
 
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
 
     var di = this.getDocumentInterface();
     var view = di.getLastKnownViewWithFocus();

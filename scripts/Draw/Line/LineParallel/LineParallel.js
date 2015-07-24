@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -18,6 +18,7 @@
  */
 
 include("../Line.js");
+include("scripts/Modify/Offset/Offset.js");
 include("scripts/ShapeAlgorithms.js");
 
 /**
@@ -26,160 +27,28 @@ include("scripts/ShapeAlgorithms.js");
  * \ingroup ecma_draw_line
  */
 function LineParallel(guiAction) {
-    Line.call(this, guiAction);
-
-    this.distance = undefined;
-    this.number = undefined;
-    this.entity = undefined;
-    this.shape = undefined;
-    this.pos = undefined;
+    Offset.call(this, guiAction);
 
     if (!isNull(guiAction)) {
-        this.setUiOptions(["../Line.ui", "LineParallel.ui"]);
+        this.setUiOptions([LineParallel.includeBasePath + "/../Line.ui", LineParallel.includeBasePath + "/LineParallel.ui"]);
     }
 }
 
-LineParallel.prototype = new Line();
+LineParallel.prototype = new Offset();
+LineParallel.includeBasePath = includeBasePath;
 
-LineParallel.State = {
-    ChoosingEntity : 0
+LineParallel.prototype.slotTypeAutoChanged = function(checked) {
+    Line.slotTypeAutoChanged(this, checked);
 };
 
-LineParallel.prototype.beginEvent = function() {
-    Line.prototype.beginEvent.call(this);
-
-    this.setState(LineParallel.State.ChoosingEntity);
-
-    var ot = EAction.getOptionsToolBar();
-    var l = ot.findChild("label");
-    var w = ot.findChild("Distance");
-    l.setBuddy(w);
+LineParallel.prototype.slotTypeSegmentChanged = function(checked) {
+    Line.slotTypeSegmentChanged(this, checked);
 };
 
-LineParallel.prototype.initState = function() {
-    Line.prototype.initState.call(this);
-
-    this.getDocumentInterface().setClickMode(RAction.PickEntity);
-    this.setCrosshairCursor();
-
-    var appWin = RMainWindowQt.getMainWindow();
-    switch (this.state) {
-    case LineParallel.State.ChoosingEntity:
-        this.setLeftMouseTip(qsTr("Choose line, arc or circle"));
-        break;
-    }
-
-    this.setRightMouseTip(EAction.trCancel);
+LineParallel.prototype.slotTypeRayChanged = function(checked) {
+    Line.slotTypeRayChanged(this, checked);
 };
 
-LineParallel.prototype.escapeEvent = function() {
-    switch (this.state) {
-    case LineParallel.State.ChoosingEntity:
-        EAction.prototype.escapeEvent.call(this);
-        break;
-    }
+LineParallel.prototype.slotTypeXLineChanged = function(checked) {
+    Line.slotTypeXLineChanged(this, checked);
 };
-
-LineParallel.prototype.pickEntity = function(event, preview) {
-    var di = this.getDocumentInterface();
-    var doc = this.getDocument();
-    var entityId = event.getEntityId();
-    var entity = doc.queryEntity(entityId);
-    var pos = event.getModelPosition();
-
-    if (isNull(entity)) {
-        this.entity = undefined;
-        return;
-    }
-
-    //if (preview) {
-    //    di.highlightEntity(entityId);
-    //}
-
-    switch (this.state) {
-    case LineParallel.State.ChoosingEntity:
-        var shape = entity.getClosestShape(pos);
-
-        if (isLineBasedShape(shape) ||
-            isArcShape(shape) ||
-            isCircleShape(shape)) {
-
-            this.entity = entity;
-            this.shape = shape;
-            this.pos = pos;
-        }
-        else {
-            if (!preview) {
-                EAction.warnNotLineArcCircle();
-                break;
-            }
-        }
-
-        if (preview) {
-            this.updatePreview();
-        }
-        else {
-            var op = this.getOperation(false);
-            if (!isNull(op)) {
-                di.applyOperation(op);
-                if (!isNull(this.error)) {
-                    EAction.handleUserWarning(this.error);
-                }
-            }
-        }
-        break;
-    }
-};
-
-LineParallel.prototype.getOperation = function(preview) {
-    if (isNull(this.pos) || isNull(this.entity) ||
-        !isNumber(this.distance) || !isNumber(this.number) ||
-        !isShape(this.shape)) {
-
-        return undefined;
-    }
-
-    var parallels = ShapeAlgorithms.getOffsetShapes(this.shape, this.distance, this.number, this.pos);
-    if (!preview) {
-        this.error = ShapeAlgorithms.error;
-    }
-
-    if (isNull(parallels)) {
-        return undefined;
-    }
-
-    var doc = this.getDocument();
-    var e;
-    var op = new RAddObjectsOperation();
-    op.setText(this.getToolTitle());
-    for (var i=0; i<parallels.length; ++i) {
-        if (isLineBasedShape(parallels[i])) {
-            e = this.createLineEntity(doc, parallels[i].getStartPoint(), parallels[i].getEndPoint());
-        }
-        else {
-            e = shapeToEntity(doc, parallels[i]);
-        }
-
-        op.addObject(e);
-    }
-    return op;
-};
-
-LineParallel.prototype.getHighlightedEntities = function() {
-    var ret = [];
-    if (isEntity(this.entity)) {
-        ret.push(this.entity.getId());
-    }
-    return ret;
-};
-
-LineParallel.prototype.slotDistanceChanged = function(value) {
-    this.distance = value;
-    this.updatePreview(true);
-};
-
-LineParallel.prototype.slotNumberChanged  = function(value) {
-    this.number = value;
-    this.updatePreview(true);
-};
-

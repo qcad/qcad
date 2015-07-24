@@ -25,7 +25,7 @@
     </message>
     <message>
         <location line="+112"/>
-        <location line="+59"/>
+        <location line="+60"/>
         <source>No solution</source>
         <translation>Ei ratkaisua</translation>
     </message>
@@ -37,7 +37,7 @@
     <message>
         <location line="+5"/>
         <source>Draw circle tangential to three entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä ympyrä tangentiaalisesti kolmeen kohteeseen</translation>
     </message>
 </context>
 </TS>

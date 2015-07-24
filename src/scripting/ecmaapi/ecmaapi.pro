@@ -24,4 +24,6 @@ LIBS += \
     -lqcadoperations \
     -lqcadsnap \
     -lqcadspatialindex \
-    -lqcadstemmer
+    -lqcadstemmer \
+    -lqcadzip \
+    -lquazip

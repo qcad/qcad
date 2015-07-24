@@ -11,7 +11,7 @@
 <context>
     <name>LibraryBrowser</name>
     <message>
-        <location filename="../LibraryBrowser.js" line="+70"/>
+        <location filename="../LibraryBrowser.js" line="+71"/>
         <source>audience</source>
         <translation>Cible</translation>
     </message>
@@ -67,13 +67,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1108"/>
+        <location line="+1138"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>Explorateur de la bibliothèque</translation>
     </message>
     <message>
-        <location line="-1100"/>
+        <location line="-1130"/>
         <source>Icon</source>
         <translation>Icône</translation>
     </message>
@@ -88,7 +88,7 @@
         <translation>Choisissez le dossier source</translation>
     </message>
     <message>
-        <location line="+654"/>
+        <location line="+684"/>
         <source>Page %1 of %2</source>
         <translation>Page %1 de %2</translation>
     </message>
@@ -160,7 +160,17 @@ Database file: %3
 Library browser will not be available.</translation>
     </message>
     <message>
-        <location line="+446"/>
+        <location line="+43"/>
+        <source>Source removed from part library: %1</source>
+        <translation>Source retiré de la bibliothèque : %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Force database update.</source>
+        <translation>Mise à jour de la base de données forcé.</translation>
+    </message>
+    <message>
+        <location line="+393"/>
         <source>&amp;Insert</source>
         <translation>&amp;Insérer</translation>
     </message>
@@ -293,17 +303,17 @@ dans les résultats de recherche :</translation>
         <translation>Système de fichiers</translation>
     </message>
     <message>
-        <location line="+252"/>
+        <location line="+270"/>
         <source>Favorites</source>
         <translation>Favoris</translation>
     </message>
     <message>
-        <location line="-201"/>
+        <location line="-210"/>
         <source>Tags</source>
         <translation>Tags</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+23"/>
         <source>Look for:</source>
         <translation>Rechercher :</translation>
     </message>
@@ -328,7 +338,12 @@ dans les résultats de recherche :</translation>
         <translation>about:blank</translation>
     </message>
     <message>
-        <location line="+157"/>
+        <location line="+142"/>
+        <source>Insert selected item into drawing</source>
+        <translation>Insérez élément sélectionné dans le dessin</translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Update DB from file system</source>
         <translation>Actualiser</translation>
     </message>

@@ -1,1799 +1,375 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RGuiAction.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RGUIACTION_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RGUIACTION_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QFileInfo&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QAction&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RTransactionListener.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RFocusListener.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RSelectionListener.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>QToolBar</name>;</class_decl>
-  <class_decl>class 
-  <name>RDocument</name>;</class_decl>
-  <class_decl>class 
-  <name>RDocumentInterface</name>;</class_decl>
-  <comment type="block">/** * \brief Abstract base class for GUI
-  action classes. * * Such classes represent a GUI action that can
-  be used to start a tool. * One GUI action class may be assigned
-  to multiple GUI elements, for * example a menu, a toolbutton and
-  a context menu. * * Each GUI action can have multiple commands
-  assigned to it. These commands * can be used to trigger the
-  action from a command line. * * Each GUI action can have multiple
-  shortcuts assigned to it. Shortcuts * are 'traditional' key
-  combinations that can be used to trigger the action. * e.g. Ctrl
-  + Z, Ctrl + N, ... * * \ingroup core * * \scriptable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RGuiAction</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>QAction</name>, 
-  <specifier>public</specifier>
-  <name>RFocusListener</name>, 
-  <specifier>public</specifier>
-  <name>RTransactionListener</name>, 
-  <specifier>public</specifier>
-  <name>RSelectionListener</name></super>
-  <block>{
-  <private type="default">
-    <macro>
-      <name>Q_OBJECT</name>
-    </macro>
-  </private>
-  <public>public: 
-  <typedef>typedef 
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>(*
-  <name>FactoryFunction</name>)
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RGuiAction</name>*</type>
-    </decl>
-  </param>)</parameter_list>;</function_decl></typedef></public>
-  <public>public: 
-  <constructor_decl>
-  <name>RGuiAction</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>text</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>QObject</name>*</type>
-    <name>parent</name>=
-    <init>
-      <expr>0</expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <specifier>virtual</specifier>
-  <name>~RGuiAction</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <comment type="block">/** * Initializes the GUI action texts (for
-  menus, tooltips, ...). * This function is called whenever the
-  text of the action changes. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>initTexts</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>init</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>formatToolTip</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>text</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>shortcut</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QString</name>
-  </type>
-  <name>getToolTip</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>text</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>shortcut</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setDocumentInterface</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocumentInterface</name>*</type>
-      <name>di</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>RDocumentInterface</name>*</type>
-  <name>getDocumentInterface</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <comment type="block">/** * Sets the shortcut(s) for this action.
-  * * \param shortcut Comma separated list of shortcuts (e.g.
-  "Ctrl-Shift-Z,Ctrl-Y"). */</comment>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setShortcut</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QKeySequence</name>&amp;</type>
-      <name>shortcut</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setDefaultShortcut</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QKeySequence</name>&amp;</type>
-      <name>shortcut</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setShortcuts</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>QKeySequence</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>shortcuts</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setDefaultShortcuts</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>QKeySequence</name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>shortcuts</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>QKeySequence</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getDefaultShortcuts</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setShortcutText</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>text</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QString</name>
-  </type>
-  <name>getShortcutText</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>setGroupSortOrderStatic</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QAction</name>*</type>
-      <name>a</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>sortOrder</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>setGroupSortOrderOverrideStatic</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QAction</name>*</type>
-      <name>a</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>widgetName</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>sortOrder</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>int</name>
-  </type>
-  <name>getGroupSortOrderStatic</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QAction</name>*</type>
-      <name>a</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>QWidget</name>*</type>
-    <name>w</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>setSortOrderStatic</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QAction</name>*</type>
-      <name>a</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>sortOrder</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>setSortOrderOverrideStatic</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QAction</name>*</type>
-      <name>a</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>widgetName</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>sortOrder</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>int</name>
-  </type>
-  <name>getSortOrderStatic</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QAction</name>*</type>
-      <name>a</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>QWidget</name>*</type>
-    <name>w</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setGroupSortOrder</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>sortOrder</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setGroupSortOrderOverride</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>widgetName</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>sortOrder</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>int</name>
-  </type>
-  <name>getGroupSortOrder</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>QWidget</name>*</type>
-    <name>w</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setSortOrder</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>sortOrder</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setSortOrderOverride</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>widgetName</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>sortOrder</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>int</name>
-  </type>
-  <name>getSortOrder</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>QWidget</name>*</type>
-    <name>w</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>addToMenu</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QMenu</name>*</type>
-      <name>menu</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>addToToolBar</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QToolBar</name>*</type>
-      <name>tb</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>fixSeparators</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QWidget</name>*</type>
-      <name>w</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>addSeparatorToWidget</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QAction</name>*</type>
-      <name>a</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QWidget</name>*</type>
-      <name>w</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>addToWidget</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QAction</name>*</type>
-      <name>a</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QWidget</name>*</type>
-      <name>w</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>removeFromWidget</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QAction</name>*</type>
-      <name>a</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QWidget</name>*</type>
-      <name>w</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * Sets the action icon to the given
-  icon file. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setIcon</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>iconFile</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>disableIcon</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isIconDisabled</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <comment type="block">/** * Sets the tooltip for this action.
-  Tooltips are shown when the mouse cursor * hovers over a GUI
-  element for some time. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setToolTip</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>tip</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * Sets the status tip of this action.
-  The status tip is shown in the status bar * of the application
-  when the mouse cursor hovers of a menu entry. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setStatusTip</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>tip</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * Enables or disables the action.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setEnabled</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>on</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * Enables or disables the action.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setEnabledOverride</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>on</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>override</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * Checks or unchecks this action.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setChecked</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>on</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>triggerGroupDefault</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>group</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>triggerGroupDefaults</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <comment type="block">/** * \return True if this action is
-  checked. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>isChecked</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <comment type="block">/** * If \c on is true, this action
-  requires a document to be open. The GUI element(s) * can for
-  example be grayed out if no document is open. */</comment>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setRequiresDocument</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>requiresDocument</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
-  <comment type="block">/** * \retval true This action requires an
-  open document to be started. * \retval false This action does not
-  require an open document to be started. */</comment>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getRequiresDocument</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>requiresDocument</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * If \c on is true, this action
-  requires a selection to operate on. The GUI element(s) * can for
-  example be grayed out if no selection is present. */</comment>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setRequiresSelection</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>on</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \retval true This action requires an
-  selection to be started. * \retval false This action does not
-  require a selection to be started. */</comment>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getRequiresSelection</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>requiresSelection</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setRequiresUndoableTransaction</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>requiresUndoableTransaction</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getRequiresUndoableTransaction</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>requiresUndoableTransaction</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setRequiresRedoableTransaction</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>requiresRedoableTransaction</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getRequiresRedoableTransaction</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>requiresRedoableTransaction</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setOverride</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>override</name>= 
-    <name>true</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isOverride</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>override</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setNoState</name>
-    <parameter_list>(
-    <param>
-      <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>checkable</name>=
-      <init>
-        <expr>
-          <name>false</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>noState</name>= 
-    <name>true</name></expr>;</expr_stmt>
-    <constructor_decl>
-    <name>setCheckable</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>checkable</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>hasNoState</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>noState</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setUniqueGroup</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>ug</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>uniqueGroup</name>= 
-    <name>ug</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getUniqueGroup</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>uniqueGroup</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return The main command used to
-  trigger this action. This is typically the * full command (e.g.
-  "line") rather than one of the abbreviated commands * such as
-  "ln". */</comment>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getMainCommand</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>mainCommand</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return Complete list of commands
-  that may be used to trigger this action. */</comment>
-  <function>
-    <type>
-      <name>QStringList</name>
-    </type>
-    <name>getCommands</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>commandList</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QStringList</name>
-    </type>
-    <name>getDefaultCommands</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>defaultCommandList</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setDefaultCommands</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QStringList</name>&amp;</type>
-      <name>cmds</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setCommands</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QStringList</name>&amp;</type>
-      <name>cmds</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setFactory</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>FactoryFunction</name>
-      </type>
-      <name>f</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * Sets the script file to be used for
-  this action. This is only used for * script based actions.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setScriptFile</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>sf</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isSecondary</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \return Script file on which this
-  action is based on. */</comment>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getScriptFile</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>scriptFile</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getScriptClass</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <call>
-      <name>QFileInfo</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>scriptFile</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>.
-    <call>
-      <name>baseName</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setGroup</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>title</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QString</name>
-  </type>
-  <name>getGroup</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setGroupDefault</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>on</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isGroupDefault</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <comment type="line">// void setSeparatorGroup(const QString&amp;
-  title);</comment>
-  <comment type="line">// QString getSeparatorGroup();</comment>
-  <comment type="block">/** * \return List of all instantiated
-  actions. */</comment>
-  <function>
-    <type>
-      <name>static</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-      <name>
-      RGuiAction</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>getActions</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>actions</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>triggerByCommand</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>cmd</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>static</name>
-  <name>RGuiAction</name>*</type>
-  <name>getByScriptFile</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>scriptFile</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>static</name>
-  <name>RGuiAction</name>*</type>
-  <name>getByClassName</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>className</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>triggerByScriptFile</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>scriptFile</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QStringList</name>
-  </type>
-  <name>getAvailableCommands</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>primaryOnly</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QStringList</name>
-  </type>
-  <name>getAvailableCommands</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>start</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>primaryOnly</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>clear</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>updateTransactionListener</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocument</name>*</type>
-      <name>document</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>RTransaction</name>*</type>
-    <name>transaction</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>updateSelectionListener</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocumentInterface</name>*</type>
-      <name>documentInterface</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>updateFocus</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RDocumentInterface</name>*</type>
-      <name>documentInterface</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>addArgument</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>arg</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QStringList</name>
-  </type>
-  <name>getArguments</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>clearArguments</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>setWidgetNamesStatic</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QAction</name>*</type>
-      <name>a</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QStringList</name>&amp;</type>
-      <name>widgetNames</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QStringList</name>
-  </type>
-  <name>getWidgetNamesStatic</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QAction</name>*</type>
-      <name>a</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setWidgetNames</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QStringList</name>&amp;</type>
-      <name>widgetNames</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QStringList</name>
-  </type>
-  <name>getWidgetNames</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl></public>
-  <public>public slots: 
-  <comment type="block">/** * Called when the action is triggered
-  (e.g. a button is pressed or a menu chosen). */</comment>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>slotTrigger</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>QString</name>&amp;</type>
-    <name>command</name>=
-    <init>
-      <expr>
-        <name>
-        <name>QString</name>::
-        <name>null</name></name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <label>
-  <name>signals</name>:</label>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>postTriggered</name>
-  <parameter_list>()</parameter_list>;</function_decl></public>
-  <protected>protected: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-      <name>
-      RGuiAction</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>actionsByCommand</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-      <name>
-      RGuiAction</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>actionsByPrimaryCommand</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-      <name>
-      RGuiAction</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>actionsByScriptFile</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QMultiMap
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>, 
-      <argument>
-      <name>
-      RGuiAction</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>actionsByGroup</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-      <name>
-      RGuiAction</name>*</argument>&gt;</argument_list></name>
-    </type>
-    <name>actions</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>FactoryFunction</name>
-    </type>
-    <name>factory</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>scriptFile</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>mainCommand</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QStringList</name>
-    </type>
-    <name>commandList</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QStringList</name>
-    </type>
-    <name>defaultCommandList</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>group</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>groupDefault</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>requiresDocument</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>requiresSelection</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>requiresUndoableTransaction</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>requiresRedoableTransaction</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>override</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>noState</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>uniqueGroup</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QStringList</name>
-    </type>
-    <name>arguments</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>QKeySequence</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>defaultShortcuts</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>shortcutText</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>toolTip</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>iconDisabled</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>enabledOverride</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RDocumentInterface</name>*</type>
-    <name>documentInterface</name>
-  </decl>;</decl_stmt></protected>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RGuiAction*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>QList&lt;RGuiAction*&gt;</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RGuiAction.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RGUIACTION_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RGUIACTION_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFileInfo&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QAction&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTransactionListener.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RFocusListener.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSelectionListener.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>QToolBar</name>;</class_decl>
+
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>RDocumentInterface</name>;</class_decl>
+
+<comment type="block">/**
+ * \brief Abstract base class for GUI action classes. 
+ *
+ * Such classes represent a GUI action that can be used to start a tool.
+ * One GUI action class may be assigned to multiple GUI elements, for 
+ * example a menu, a toolbutton and a context menu.
+ *
+ * Each GUI action can have multiple commands assigned to it. These commands
+ * can be used to trigger the action from a command line.
+ *
+ * Each GUI action can have multiple shortcuts assigned to it. Shortcuts
+ * are 'traditional' key combinations that can be used to trigger the action.
+ * e.g. Ctrl + Z, Ctrl + N, ...
+ * 
+ * \ingroup core
+ * 
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RGuiAction</name><super>:
+    <specifier>public</specifier> <name>QAction</name>,
+    <specifier>public</specifier> <name>RFocusListener</name>,
+    <specifier>public</specifier> <name>RTransactionListener</name>,
+    <specifier>public</specifier> <name>RSelectionListener</name></super> <block>{<private type="default">
+
+<macro><name>Q_OBJECT</name></macro>
+
+</private><public>public:
+    <typedef>typedef <function_decl><type><name>void</name></type> (*<name>FactoryFunction</name>)<parameter_list>(<param><decl><type><name>RGuiAction</name>*</type></decl></param>)</parameter_list>;</function_decl></typedef>
+
+</public><public>public:
+    <constructor_decl><name>RGuiAction</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>oriText</name></decl></param>, <param><decl><type><name>QObject</name>*</type> <name>parent</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RGuiAction</name><parameter_list>()</parameter_list>;</destructor_decl>
+    
+    <function_decl><type><name>void</name></type> <name>setText</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>oriText</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Initializes the GUI action texts (for menus, tooltips, ...).
+     * This function is called whenever the text of the action changes.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>initTexts</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>formatToolTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>oriText</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>shortcut</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getToolTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>oriText</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>shortcut</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setDocumentInterface</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>di</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RDocumentInterface</name>*</type> <name>getDocumentInterface</name><parameter_list>()</parameter_list>;</function_decl>
+
+
+    <comment type="block">/**
+     * Sets the shortcut(s) for this action.
+     *
+     * \param shortcut Comma separated list of shortcuts (e.g. "Ctrl-Shift-Z,Ctrl-Y").
+     */</comment>
+    <function_decl><type><name>void</name></type> <name>setShortcut</name><parameter_list>(<param><decl><type><name>const</name> <name>QKeySequence</name>&amp;</type> <name>shortcut</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDefaultShortcut</name><parameter_list>(<param><decl><type><name>const</name> <name>QKeySequence</name>&amp;</type> <name>shortcut</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setShortcuts</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QKeySequence</name></argument>&gt;</argument_list></name>&amp;</type> <name>shortcuts</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDefaultShortcuts</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QKeySequence</name></argument>&gt;</argument_list></name>&amp;</type> <name>shortcuts</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>QKeySequence</name></argument>&gt;</argument_list></name></type> <name>getDefaultShortcuts</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setShortcutText</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>oriText</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getShortcutText</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>void</name></type> <name>setGroupSortOrderStatic</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>a</name></decl></param>, <param><decl><type><name>int</name></type> <name>sortOrder</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>setGroupSortOrderOverrideStatic</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>a</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>widgetName</name></decl></param>, <param><decl><type><name>int</name></type> <name>sortOrder</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>int</name></type> <name>getGroupSortOrderStatic</name><parameter_list>(<param><decl><type><name>const</name> <name>QAction</name>*</type> <name>a</name></decl></param>, <param><decl><type><name>const</name> <name>QWidget</name>*</type> <name>w</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>void</name></type> <name>setSortOrderStatic</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>a</name></decl></param>, <param><decl><type><name>int</name></type> <name>sortOrder</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>setSortOrderOverrideStatic</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>a</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>widgetName</name></decl></param>, <param><decl><type><name>int</name></type> <name>sortOrder</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>int</name></type> <name>getSortOrderStatic</name><parameter_list>(<param><decl><type><name>const</name> <name>QAction</name>*</type> <name>a</name></decl></param>, <param><decl><type><name>const</name> <name>QWidget</name>*</type> <name>w</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setGroupSortOrder</name><parameter_list>(<param><decl><type><name>int</name></type> <name>sortOrder</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setGroupSortOrderOverride</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>widgetName</name></decl></param>, <param><decl><type><name>int</name></type> <name>sortOrder</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>getGroupSortOrder</name><parameter_list>(<param><decl><type><name>const</name> <name>QWidget</name>*</type> <name>w</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setSortOrder</name><parameter_list>(<param><decl><type><name>int</name></type> <name>sortOrder</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setSortOrderOverride</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>widgetName</name></decl></param>, <param><decl><type><name>int</name></type> <name>sortOrder</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>getSortOrder</name><parameter_list>(<param><decl><type><name>const</name> <name>QWidget</name>*</type> <name>w</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>addToMenu</name><parameter_list>(<param><decl><type><name>QMenu</name>*</type> <name>menu</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>addToToolBar</name><parameter_list>(<param><decl><type><name>QToolBar</name>*</type> <name>tb</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>void</name></type> <name>fixSeparators</name><parameter_list>(<param><decl><type><name>const</name> <name>QWidget</name>*</type> <name>w</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>addSeparatorToWidget</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>a</name></decl></param>, <param><decl><type><name>QWidget</name>*</type> <name>w</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>addToWidget</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>a</name></decl></param>, <param><decl><type><name>QWidget</name>*</type> <name>w</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>removeFromWidget</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>a</name></decl></param>, <param><decl><type><name>QWidget</name>*</type> <name>w</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Sets the action icon to the given icon file.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setIcon</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>iconFile</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>disableIcon</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isIconDisabled</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Sets the tooltip for this action. Tooltips are shown when the mouse cursor
+     * hovers over a GUI element for some time.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setToolTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>tip</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Sets the status tip of this action. The status tip is shown in the status bar
+     * of the application when the mouse cursor hovers of a menu entry.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setStatusTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>tip</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Enables or disables the action.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setEnabled</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+    
+    <comment type="block">/**
+     * Enables or disables the action.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setEnabledOverride</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>, <param><decl><type><name>int</name></type> <name>override</name></decl></param>)</parameter_list>;</function_decl>
+    
+    <comment type="block">/**
+     * Checks or unchecks this action.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setChecked</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>void</name></type> <name>triggerGroupDefault</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>group</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>triggerGroupDefaults</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \return True if this action is checked.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isChecked</name><parameter_list>()</parameter_list>;</function_decl>
+    
+    <comment type="block">/**
+     * If \c on is true, this action requires a document to be open. The GUI element(s)
+     * can for example be grayed out if no document is open.
+     */</comment>
+    <function><type><name>void</name></type> <name>setRequiresDocument</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>requiresDocument</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * \retval true This action requires an open document to be started.
+     * \retval false This action does not require an open document to be started.
+     */</comment>
+    <function><type><name>bool</name></type> <name>getRequiresDocument</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>requiresDocument</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * If \c on is true, this action requires a selection to operate on. The GUI element(s)
+     * can for example be grayed out if no selection is present.
+     */</comment>
+    <function_decl><type><name>void</name></type> <name>setRequiresSelection</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \retval true This action requires an selection to be started.
+     * \retval false This action does not require a selection to be started.
+     */</comment>
+    <function><type><name>bool</name></type> <name>getRequiresSelection</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>requiresSelection</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setRequiresUndoableTransaction</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>requiresUndoableTransaction</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getRequiresUndoableTransaction</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>requiresUndoableTransaction</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setRequiresRedoableTransaction</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>requiresRedoableTransaction</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getRequiresRedoableTransaction</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>requiresRedoableTransaction</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setOverride</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>override</name> = <name>true</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isOverride</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>override</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setNoState</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>checkable</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>noState</name> = <name>true</name></expr>;</expr_stmt>
+        <constructor_decl><name>setCheckable</name><parameter_list>(<param><decl><type><name>checkable</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>hasNoState</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>noState</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setUniqueGroup</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>ug</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>uniqueGroup</name> = <name>ug</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>QString</name></type> <name>getUniqueGroup</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>uniqueGroup</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return The main command used to trigger this action. This is typically the
+     *      full command (e.g. "line") rather than one of the abbreviated commands
+     *      such as "ln".
+     */</comment>
+    <function><type><name>QString</name></type> <name>getMainCommand</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>mainCommand</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return Complete list of commands that may be used to trigger this action.
+     */</comment>
+    <function><type><name>QStringList</name></type> <name>getCommands</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>commandList</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>QStringList</name></type> <name>getDefaultCommands</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>defaultCommandList</name></expr>;</return>
+    }</block></function>
+    
+    <function_decl><type><name>void</name></type> <name>setDefaultCommands</name><parameter_list>(<param><decl><type><name>const</name> <name>QStringList</name>&amp;</type> <name>cmds</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setCommands</name><parameter_list>(<param><decl><type><name>const</name> <name>QStringList</name>&amp;</type> <name>cmds</name></decl></param>)</parameter_list>;</function_decl>
+    
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>void</name></type> <name>setFactory</name><parameter_list>(<param><decl><type><name>FactoryFunction</name></type> <name>f</name></decl></param>)</parameter_list>;</function_decl>
+    
+    <comment type="block">/**
+     * Sets the script file to be used for this action. This is only used for
+     * script based actions.
+     */</comment>
+    <function_decl><type><name>void</name></type> <name>setScriptFile</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>sf</name></decl></param>, <param><decl><type><name>bool</name></type> <name>isSecondary</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \return Script file on which this action is based on.
+     */</comment>
+    <function><type><name>QString</name></type> <name>getScriptFile</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>scriptFile</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>QString</name></type> <name>getScriptClass</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>QFileInfo</name><argument_list>(<argument><expr><name>scriptFile</name></expr></argument>)</argument_list></call>.<call><name>baseName</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setGroup</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getGroup</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setGroupDefault</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isGroupDefault</name><parameter_list>()</parameter_list>;</function_decl>
+
+<comment type="line">//    void setSeparatorGroup(const QString&amp; title);</comment>
+<comment type="line">//    QString getSeparatorGroup();</comment>
+
+    <comment type="block">/**
+     * \return List of all instantiated actions.
+     */</comment>
+    <function><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>RGuiAction</name>*</argument>&gt;</argument_list></name></type> <name>getActions</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>actions</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>triggerByCommand</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>cmd</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RGuiAction</name>*</type> <name>getByScriptFile</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RGuiAction</name>*</type> <name>getByClassName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>className</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>triggerByScriptFile</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>scriptFile</name></decl></param>)</parameter_list>;</function_decl>
+    
+    <function_decl><type><name>static</name> <name>QStringList</name></type> <name>getAvailableCommands</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>primaryOnly</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QStringList</name></type> <name>getAvailableCommands</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>start</name></decl></param>, <param><decl><type><name>bool</name></type> <name>primaryOnly</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>void</name></type> <name>clear</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateTransactionListener</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateSelectionListener</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateFocus</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>addArgument</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>arg</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QStringList</name></type> <name>getArguments</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>clearArguments</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>void</name></type> <name>setWidgetNamesStatic</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>a</name></decl></param>, <param><decl><type><name>const</name> <name>QStringList</name>&amp;</type> <name>widgetNames</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QStringList</name></type> <name>getWidgetNamesStatic</name><parameter_list>(<param><decl><type><name>const</name> <name>QAction</name> *</type><name>a</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setWidgetNames</name><parameter_list>(<param><decl><type><name>const</name> <name>QStringList</name>&amp;</type> <name>widgetNames</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QStringList</name></type> <name>getWidgetNames</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+</public><public>public slots:
+    <comment type="block">/**
+     * Called when the action is triggered (e.g. a button is pressed or a menu chosen).
+     */</comment>
+    <function_decl><type><name>bool</name></type> <name>slotTrigger</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>command</name> =<init> <expr><name><name>QString</name>::<name>null</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+<label><name>signals</name>:</label>
+    <function_decl><type><name>void</name></type> <name>postTriggered</name><parameter_list>()</parameter_list>;</function_decl>
+
+</public><protected>protected:
+    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>RGuiAction</name>*</argument>&gt;</argument_list></name></type> <name>actionsByCommand</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>RGuiAction</name>*</argument>&gt;</argument_list></name></type> <name>actionsByPrimaryCommand</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>RGuiAction</name>*</argument>&gt;</argument_list></name></type> <name>actionsByScriptFile</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QMultiMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>RGuiAction</name>*</argument>&gt;</argument_list></name></type> <name>actionsByGroup</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>RGuiAction</name>*</argument>&gt;</argument_list></name></type> <name>actions</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>FactoryFunction</name></type> <name>factory</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>oriText</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>scriptFile</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>mainCommand</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QStringList</name></type> <name>commandList</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QStringList</name></type> <name>defaultCommandList</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>group</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>groupDefault</name></decl>;</decl_stmt>
+    
+    <decl_stmt><decl><type><name>bool</name></type> <name>requiresDocument</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>requiresSelection</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>requiresUndoableTransaction</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>requiresRedoableTransaction</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>override</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>noState</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>uniqueGroup</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QStringList</name></type> <name>arguments</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QKeySequence</name></argument>&gt;</argument_list></name></type> <name>defaultShortcuts</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>shortcutText</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>toolTip</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>iconDisabled</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>enabledOverride</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl>;</decl_stmt>
+</protected>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGuiAction*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt;RGuiAction*&gt;</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

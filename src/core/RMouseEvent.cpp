@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -22,6 +22,8 @@
 #include "RMouseEvent.h"
 #include "RUcs.h"
 
+QPoint RMouseEvent::oriCursor;
+
 RMouseEvent::RMouseEvent(Type type, const RVector& position,
         Qt::MouseButton button, Qt::MouseButtons buttons,
         Qt::KeyboardModifiers modifiers, RGraphicsScene& s, RGraphicsView& v)
@@ -32,11 +34,25 @@ RMouseEvent::RMouseEvent(Type type, const RVector& position,
 }
 
 RMouseEvent::RMouseEvent(const QMouseEvent& mouseEvent, RGraphicsScene& s,
-        RGraphicsView& v) :
+        RGraphicsView& v, qreal devicePixelRatio) :
     QMouseEvent(mouseEvent),
-    RInputEvent(RVector(mouseEvent.posF().x(), mouseEvent.posF().y()), s, v) {
+    RInputEvent(RVector(mouseEvent.posF().x(), mouseEvent.posF().y()), s, v, devicePixelRatio) {
 }
 
 RMouseEvent::~RMouseEvent() {
 }
 
+bool RMouseEvent::hasMouseMoved() {
+    return (
+        !oriCursor.isNull() &&
+        (oriCursor - QCursor::pos()).manhattanLength()>RSettings::getMouseThreshold()
+    );
+}
+
+void RMouseEvent::resetOriginalMousePos() {
+    oriCursor = QPoint();
+}
+
+void RMouseEvent::setOriginalMousePos(const QPoint& p) {
+    oriCursor = p;
+}

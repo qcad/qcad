@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -60,9 +60,10 @@ void RTreeWidget::mousePressEvent(QMouseEvent* e) {
 
     if (item!=NULL) {
         itemPressedData = item->data(0, Qt::UserRole);
-        if (index==0) {
-            emit itemColumnClicked(item, index);
-        }
+//        if (index==0) {
+//            qDebug() << "emit 1";
+//            emit itemColumnClicked(item, index);
+//        }
     }
     indexPressed = index;
 

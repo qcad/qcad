@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -129,9 +129,9 @@ AddOn.prototype.postInitAddOn = function(splash, text) {
     var bak = includeBasePath;
     includeBasePath = path;
 
-    var initFilePath = this.getPostInitFilePath();
-    if (new QFileInfo(initFilePath).exists()) {
-        include(initFilePath);
+    var postInitFilePath = this.getPostInitFilePath();
+    if (new QFileInfo(postInitFilePath).exists()) {
+        include(postInitFilePath);
         postInit(includeBasePath);
     }
     else {
@@ -144,8 +144,26 @@ AddOn.prototype.postInitAddOn = function(splash, text) {
 };
 
 AddOn.prototype.uninit = function() {
+    //var className = this.getClassName();
+    //global[className] = undefined;
     var className = this.getClassName();
-    global[className] = undefined;
+    var path = this.getPath();
+
+    //var bak = includeBasePath;
+    //includeBasePath = path;
+
+    var uninitFilePath = this.getUninitFilePath();
+    if (new QFileInfo(uninitFilePath).exists()) {
+        include(uninitFilePath, className);
+        uninit();
+    }
+    else {
+        if (typeof(global[className])!=='undefined' && isFunction(global[className].uninit)) {
+            global[className].uninit();
+        }
+    }
+
+    //includeBasePath = bak;
 };
 
 /**
@@ -373,6 +391,10 @@ AddOn.prototype.getPostInitFilePath = function() {
     return this.fileInfo.absolutePath() + QDir.separator + this.fileInfo.completeBaseName() + "PostInit.js";
 };
 
+AddOn.prototype.getUninitFilePath = function() {
+    return this.fileInfo.absolutePath() + QDir.separator + this.fileInfo.completeBaseName() + "Uninit.js";
+};
+
 AddOn.prototype.getBaseName = function() {
     return this.fileInfo.completeBaseName();
 };
@@ -417,13 +439,13 @@ AddOn.getParentAddOn = function(addOns, addOn) {
 
 /**
  * \return Array of all AddOn objects found.
- * \param rec True for recursive calls
+ * \param dir Used internally for recursive calls
  */
 AddOn.getAddOns = function(dir) {
     var topCall = isNull(dir);
     if (topCall && !isNull(AddOn.addOns)) {
-        // return cached list (TODO: breaks app preferences on second call):
-        //return AddOn.addOns;
+        // return cached list:
+        return AddOn.addOns;
     }
 
     var fileMenuList, i, k;
@@ -458,9 +480,25 @@ AddOn.getAddOns = function(dir) {
                 new QFileInfo("scripts/Widgets"),
                 new QFileInfo("scripts/Misc"),
                 new QFileInfo("scripts/Local"),
-                new QFileInfo(":scripts"),       // scripts wrapped in plugins
-                new QFileInfo("scripts/Help")
+                // scripts compiled as resources in plugins:
+                new QFileInfo(":scripts"),
+                // local scripts:
+                new QFileInfo(RSettings.getDataLocation() + "/scripts"),
             ];
+
+        // local scripts from installed add-ons:
+        var localAddOns = AddOn.getLocalAddOns();
+
+        for (i=0; i<localAddOns.length; i++) {
+            var localAddOnDir = RSettings.getDataLocation() + "/" + localAddOns[i] + "/scripts";
+            qDebug("adding scripts dir of add-on: ", localAddOnDir);
+            var fi = new QFileInfo(localAddOnDir);
+            if (fi.exists()) {
+                fileMenuList.push(fi);
+            }
+        }
+
+        fileMenuList.push(new QFileInfo("scripts/Help"));
                 
         // append directories not in the list above:
         var menuList = new QDir(dir).entryInfoList(dirFilter, sortFlags);
@@ -507,6 +545,13 @@ AddOn.getAddOns = function(dir) {
     }
 
     return addOns;
+};
+
+AddOn.getLocalAddOns = function() {
+    var dataDir = new QDir(RSettings.getDataLocation());
+    var fs = new QDir.Filters(QDir.NoDotAndDotDot, QDir.Readable, QDir.Dirs, QDir.Executable);
+    var sf = new QDir.SortFlags(QDir.Name);
+    return dataDir.entryList([], fs, sf);
 };
 
 AddOn.isIgnored = function(path) {

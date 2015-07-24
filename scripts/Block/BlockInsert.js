@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -45,6 +45,10 @@ BlockInsert.prototype.showAttributeControls = function(show) {
     var optionsToolBar = EAction.getOptionsToolBar();
     optionsToolBar.findChild("AttributeLabelAction").visible = show;
     optionsToolBar.findChild("AttributeTagAction").visible = show;
+    var w = optionsToolBar.findChild("AttributeEqualLabelAction");
+    if (!isNull(w)) {
+        w.visible = show;
+    }
     optionsToolBar.findChild("AttributeValueAction").visible = show;
     optionsToolBar.findChild("AttributeSeparatorAction").visible = show;
 };

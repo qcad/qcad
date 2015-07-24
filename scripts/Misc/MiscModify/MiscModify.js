@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -49,7 +49,7 @@ MiscModify.getToolBar = function() {
 
 MiscModify.getCadToolBarPanel = function() {
     var mtb = Misc.getCadToolBarPanel();
-    var actionName = "MiscModifyToolsPanelButton";
+    var actionName = "MiscModifyToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Misc Modification Tools"), mtb);
         action.setScriptFile(MiscModify.includeBasePath + "/MiscModify.js");

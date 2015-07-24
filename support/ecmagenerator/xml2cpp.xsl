@@ -21,6 +21,7 @@
 <xsl:output method="text" />
 <xsl:param name="scope"/>
 <xsl:param name="mode"/>
+<xsl:param name="cwd"/>
 <xsl:param name="sharedPointerSupport" select="false()"/>
 <xsl:param name="spsSuffix">
     <xsl:choose>
@@ -87,6 +88,19 @@
 </xsl:param>
 <xsl:param name="isShell">
     <xsl:value-of select="'false'"/>
+</xsl:param>
+<xsl:param name="ownership">
+    <xsl:choose>
+    <xsl:when test="$name='RMainWindowQt'">
+      <xsl:text>QScriptEngine::QtOwnership</xsl:text>
+    </xsl:when>
+    <xsl:otherwise>
+      <!--
+      <xsl:text>QScriptEngine::AutoOwnership</xsl:text>
+      -->
+      <xsl:text>QScriptEngine::QtOwnership</xsl:text>
+    </xsl:otherwise>
+    </xsl:choose>
 </xsl:param>
 
 
@@ -180,7 +194,11 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT <xsl:value-of select="$ecmaName" /> {
+        class
+        <xsl:if test="$scope='src'">
+        QCADECMAAPI_EXPORT
+        </xsl:if>
+        <xsl:value-of select="$ecmaName" /> {
 
         public:
       </xsl:when>
@@ -1044,7 +1062,7 @@
             </xsl:choose>
             <xsl:choose>
                 <xsl:when test="$isQObject">
-                    result = engine-&gt;newQObject(context-&gt;thisObject(), cppResult);
+                    result = engine-&gt;newQObject(context-&gt;thisObject(), cppResult, <xsl:value-of select="$ownership"/>);
                 </xsl:when>
                 <xsl:otherwise>
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
@@ -1182,7 +1200,7 @@
             </xsl:when>
             <xsl:when test="rs:isQObject(rs:stripReferenceOrPointer($returnType))">
                 // QObject
-                result = engine-&gt;newQObject(cppResult);
+                result = engine-&gt;newQObject(cppResult, <xsl:value-of select="$ownership"/>);
             </xsl:when>
             <xsl:when test="rs:isPointer($returnType) and rs:isCopyable(rs:stripReferenceOrPointer($returnType))">
                 // pointer, copyable 
@@ -1241,6 +1259,10 @@
             <xsl:when test="starts-with($returnType, 'QList')">
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);
+            </xsl:when>
+            <xsl:when test="starts-with($returnType, 'QVector')">
+                // Vector of ...:
+                result = REcmaHelper::vectorToScriptValue(engine, cppResult);
             </xsl:when>
             <xsl:when test="$returnType='QVariant'">
                 // QVariant:
@@ -1383,7 +1405,16 @@
 
                     if (o<xsl:value-of select="$index" />!=NULL) {
                         a<xsl:value-of select="$index" /> =
-                        <xsl:value-of select="$typeName"/>(o<xsl:value-of select="$index" />-&gt;clone());
+                        <xsl:choose>
+                        <xsl:when test="contains($typeName, 'RShape')">
+                          // always clone shape if we expect a shared pointer (might be a simple object on stack):
+                          <xsl:value-of select="$typeName"/>(o<xsl:value-of select="$index" />-&gt;clone());
+                        </xsl:when>
+                        <xsl:otherwise>
+                          // never clone RObject based object:
+                          <xsl:value-of select="$typeName"/>(o<xsl:value-of select="$index" />);
+                        </xsl:otherwise>
+                        </xsl:choose>
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer&lt;BaseClass&gt; does not work
@@ -1599,7 +1630,7 @@
         <xsl:value-of select="$static"/> QScriptValue toScriptValue(QScriptEngine *engine,
         <xsl:value-of select="$name" />*
         const &amp;in){
-            QScriptValue s = engine-&gt;newQObject(in, QScriptEngine::QtOwnership,
+            QScriptValue s = engine-&gt;newQObject(in, <xsl:value-of select="$ownership"/>,
             QScriptEngine::PreferExistingWrapperObject);
             /*
             if(s.isNull()){
@@ -2150,8 +2181,14 @@
         <xsl:when test="rs:isSimpleRType($type) and document(concat('src/xml/',$type,'.xml'))">
             <func:result select="concat('src/xml/',$type,'.xml')"/>
         </xsl:when>
-        <xsl:when test="rs:isSimpleRType($type) and document(concat('testing/xml/',$type,'.xml'))">
-            <func:result select="concat('testing/xml/',$type,'.xml')"/>
+        <xsl:when test="rs:isSimpleRType($type) and document(concat('tmp/xml/',$type,'.xml'))">
+            <func:result select="concat('tmp/xml/',$type,'.xml')"/>
+        </xsl:when>
+        <xsl:when test="rs:isSimpleRType($type) and document(concat($cwd, '/src/xml/',$type,'.xml'))">
+            <func:result select="concat($cwd, '/src/xml/',$type,'.xml')"/>
+        </xsl:when>
+        <xsl:when test="rs:isSimpleRType($type) and document(concat($cwd, '/testing/xml/',$type,'.xml'))">
+            <func:result select="concat($cwd, '/testing/xml/',$type,'.xml')"/>
         </xsl:when>        
         <xsl:otherwise>
            <func:result select="''"/>

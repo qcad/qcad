@@ -33,7 +33,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="p"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="double" typeName="double" name="strictRange"
         hasDefault="true" default="RMAXDOUBLE" isConst="false" />
       </variant>
@@ -58,7 +58,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="point"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="double" typeName="double" name="strictRange"
         hasDefault="true" default="RMAXDOUBLE" isConst="false" />
       </variant>
@@ -70,7 +70,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="point"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="double" typeName="double" name="strictRange"
         hasDefault="true" default="RMAXDOUBLE" isConst="false" />
       </variant>
@@ -81,7 +81,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="point"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="double" typeName="double" name="tolerance"
         hasDefault="true" default="RDEFAULT_TOLERANCE_1E_MIN4"
         isConst="false" />
@@ -96,7 +96,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="QList &lt; RVector &gt;" name="pointList"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="double" typeName="double" name="tolerance"
         hasDefault="true" default="RDEFAULT_TOLERANCE_1E_MIN4"
         isConst="false" />
@@ -146,6 +146,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="double" isPureVirtual="false">
         <arg type="double" typeName="double" name="distance"
         isConst="false" />
+        <arg type="RS::From" typeName="RS::From" name="from"
+        hasDefault="true" default="RS :: FromStart"
+        isConst="false" />
       </variant>
     </method>
     <method name="getPointAtPercent" cppName="getPointAtPercent"
@@ -163,7 +166,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RShape &amp;" typeName="RShape" name="other"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPoints"
@@ -174,11 +177,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RShape &amp;" typeName="RShape" name="other"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="same"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="force"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant returnType="QList &lt; RVector &gt;"
       isPureVirtual="false">
@@ -187,11 +190,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RShape &amp;" typeName="RShape" name="shape2"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="same"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="force"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="move" cppName="move" specifier="public"
@@ -270,7 +273,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RLine &amp;" typeName="RLine" name="line2"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
       <variant returnType="QList &lt; RVector &gt;"
       isPureVirtual="false">
@@ -294,7 +297,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RArc &amp;" typeName="RArc" name="arc2"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
       <variant returnType="QList &lt; RVector &gt;"
       isPureVirtual="false">
@@ -318,7 +321,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RCircle &amp;" typeName="RCircle" name="circle2"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPointsLE"
@@ -331,7 +334,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="REllipse &amp;" typeName="REllipse"
         name="ellipse2" isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
       <variant returnType="QList &lt; RVector &gt;"
       isPureVirtual="false">
@@ -355,7 +358,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RTriangle &amp;" typeName="RTriangle"
         name="triangle2" isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
       <variant returnType="QList &lt; RVector &gt;"
       isPureVirtual="false">
@@ -379,7 +382,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RSpline &amp;" typeName="RSpline" name="spline2"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPointsLX"
@@ -392,7 +395,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RExplodable &amp;" typeName="RExplodable"
         name="explodable2" isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPointsAA"
@@ -405,7 +408,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RArc &amp;" typeName="RArc" name="arc2"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPointsAC"
@@ -418,7 +421,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RCircle &amp;" typeName="RCircle" name="circle2"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPointsAE"
@@ -431,7 +434,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="REllipse &amp;" typeName="REllipse"
         name="ellipse2" isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPointsAT"
@@ -444,7 +447,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RTriangle &amp;" typeName="RTriangle"
         name="triangle2" isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPointsAS"
@@ -457,7 +460,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RSpline &amp;" typeName="RSpline" name="spline2"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPointsAX"
@@ -470,7 +473,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RExplodable &amp;" typeName="RExplodable"
         name="explodable2" isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPointsCC"
@@ -505,7 +508,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RSpline &amp;" typeName="RSpline" name="spline2"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPointsCX"
@@ -518,7 +521,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RExplodable &amp;" typeName="RExplodable"
         name="explodable2" isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPointsEE"
@@ -551,7 +554,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RSpline &amp;" typeName="RSpline" name="spline2"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPointsEX"
@@ -564,7 +567,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RExplodable &amp;" typeName="RExplodable"
         name="explodable2" isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="getIntersectionPointsXX"
@@ -577,9 +580,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RExplodable &amp;" typeName="RExplodable"
         name="explodable2" isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="same"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="castToExplodable" cppName="castToExplodable"

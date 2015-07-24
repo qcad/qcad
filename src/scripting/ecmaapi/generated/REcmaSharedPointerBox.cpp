@@ -104,6 +104,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, growToInclude, "growToInclude");
             
+            REcmaHelper::registerFunction(&engine, proto, growToIncludeBoxes, "growToIncludeBoxes");
+            
             REcmaHelper::registerFunction(&engine, proto, growToIncludeBox, "growToIncludeBox");
             
             REcmaHelper::registerFunction(&engine, proto, growToIncludePoint, "growToIncludePoint");
@@ -1589,6 +1591,62 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerBox::growToInclude", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBox::growToIncludeBoxes
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBox::growToIncludeBoxes", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBox::growToIncludeBoxes";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBox* self = 
+                        getSelf("growToIncludeBoxes", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RBox > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RBox >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->growToIncludeBoxes(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBox.growToIncludeBoxes().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBox::growToIncludeBoxes", context, engine);
             return result;
         }
          QScriptValue

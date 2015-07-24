@@ -32,7 +32,7 @@ Point1PTest00.prototype = new TdbTest();
 Point1PTest00.prototype.test00 = function() {
     qDebug('running Point1PTest00.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::PointMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::PointToolsPanelButton');
     this.clickOnWidget('MainWindow::PointToolsPanel::Point1PButton');
     this.zoomTo(-28.95, -21.750000000000004, 28.950000000000003, 21.75);
     var p = new RVector(-20, 20);

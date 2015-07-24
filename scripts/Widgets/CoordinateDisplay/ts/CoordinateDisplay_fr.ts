@@ -4,28 +4,28 @@
 <context>
     <name>CoordinateDisplay</name>
     <message>
-        <location filename="../CoordinateDisplay.ui" line="+69"/>
+        <location filename="../CoordinateDisplay.ui" line="+72"/>
         <source>Absolute Cartesian Coordinate</source>
         <translatorcomment>--google--
 Coordonnées cartésiennes absolues</translatorcomment>
         <translation>Coordonnée absolue cartésienne</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+21"/>
         <source>Absolute Polar Coordinate</source>
         <translatorcomment>--google--
 Coordonnées polaires absolues</translatorcomment>
         <translation>Coordonnée absolue polaire</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+21"/>
         <source>Relative Cartesian Coordinate</source>
         <translatorcomment>--google--
 Coordonnées cartésiennes relatives</translatorcomment>
         <translation>Coordonnée relative cartésienne</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+21"/>
         <source>Relative Polar Coordinate</source>
         <translatorcomment>--google--
 Coordonnées polaires relatives</translatorcomment>

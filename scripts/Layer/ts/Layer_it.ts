@@ -32,9 +32,13 @@
         <translation>Nome del Layer:</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>Pen</source>
-        <translation>Penna</translation>
+        <translation type="vanished">Penna</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Attributes</source>
+        <translation>Attributi</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -52,7 +56,7 @@
         <translation>Tipo di linea:</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="+142"/>
+        <location filename="../LayerDialog.js" line="+144"/>
         <source>Leading or trailing spaces.</source>
         <translation>Spazi iniziali o finali.</translation>
     </message>

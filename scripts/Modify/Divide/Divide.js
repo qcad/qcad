@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -69,7 +69,6 @@ Divide.prototype.setState = function(state) {
             this.setLeftMouseTip(qsTr("Choose line, arc, circle or ellipse"));
         }
         this.setRightMouseTip(EAction.trCancel);
-        EAction.showModificationTools();
         break;
     case Divide.State.SettingPos:
         this.pos = undefined;
@@ -195,10 +194,12 @@ Divide.prototype.pickCoordinate = function(event, preview) {
 };
 
 Divide.prototype.getOperation = function(preview) {
-    var op = new RMixedOperation();
+    var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
 
     var cutPositions = Divide.divide(op, this.pos, this.pos2, this.entity);
     if (cutPositions.length===0) {
+        op.destroy();
         return undefined;
     }
     this.cutPos = cutPositions[0];
@@ -218,7 +219,7 @@ Divide.divide = function(op, pos, pos2, entity) {
     }
 
     entity = entity.clone();
-    var shape = entity.getClosestShape(pos);
+    var shape = entity.getClosestSimpleShape(pos);
 
     if (isNull(pos2)) {
         if (isCircleShape(shape) || (isEllipseShape(shape) && shape.isFullEllipse())) {
@@ -261,7 +262,7 @@ Divide.divide = function(op, pos, pos2, entity) {
                     angle,
                     false);
         e = new RArcEntity(entity.getDocument(), new RArcData(arc2));
-        e.copyAttributesFrom(entity.data());
+        e.copyAttributesFrom(entity);
         op.addObject(e, false);
     }
     else if (isEllipseShape(shape) && shape.isFullEllipse()) {
@@ -279,7 +280,7 @@ Divide.divide = function(op, pos, pos2, entity) {
         ellipse.setStartParam(ellipse.angleToParam(angle));
         ellipse.setEndParam(ellipse.angleToParam(angle2));
         e = new REllipseEntity(entity.getDocument(), new REllipseData(ellipse));
-        e.copyAttributesFrom(entity.data());
+        e.copyAttributesFrom(entity);
         op.addObject(e, false);
 
         var ellipse2 = shape.clone();
@@ -288,6 +289,9 @@ Divide.divide = function(op, pos, pos2, entity) {
         e = new REllipseEntity(entity.getDocument(), new REllipseData(ellipse2));
         e.copyAttributesFrom(entity);
         op.addObject(e, false);
+    }
+    else if (isPolylineShape(shape)) {
+        // TODO
     }
     else {
         var shape1 = shape.clone();

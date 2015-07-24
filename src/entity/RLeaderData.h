@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -31,6 +31,7 @@
  * Leader entity data class.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RLeaderData: public REntityData, protected RPolyline {
@@ -50,13 +51,13 @@ public:
     double getDimasz() const;
     double getDimscale() const;
 
-    void setArrowHead(bool on) {
-        arrowHead = on;
-    }
-
+    void setArrowHead(bool on);
     bool hasArrowHead() const {
         return arrowHead;
     }
+
+    bool canHaveArrowHead() const;
+    bool updateArrowHead();
 
 //    void setPolyline(const RPolyline& polyline) {
 //        *((RPolyline*)this) = polyline;
@@ -92,6 +93,9 @@ public:
         return RPolyline::getExploded(segments);
     }
 
+    virtual bool scale(const RVector& scaleFactors, const RVector& center);
+    virtual bool stretch(const RPolyline& area, const RVector& offset);
+
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const {
         Q_UNUSED(queryBox)
         Q_UNUSED(ignoreComplex)
@@ -111,6 +115,7 @@ private:
     bool arrowHead;
 };
 
+Q_DECLARE_METATYPE(RLeaderData)
 Q_DECLARE_METATYPE(RLeaderData*)
 Q_DECLARE_METATYPE(const RLeaderData*)
 Q_DECLARE_METATYPE(QSharedPointer<RLeaderData>)

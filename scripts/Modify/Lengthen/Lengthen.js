@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -150,7 +150,7 @@ Lengthen.prototype.getOperation = function(preview) {
         this.entity.trimEndPoint(is);
     }
 
-    return new RAddObjectOperation(this.entity, false);
+    return new RAddObjectOperation(this.entity, this.getToolTitle(), false);
 };
 
 Lengthen.prototype.getHighlightedEntities = function() {

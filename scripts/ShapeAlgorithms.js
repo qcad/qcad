@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -55,7 +55,7 @@ ShapeAlgorithms.getClosestShape = function(shapes, position) {
     for (var i=0; i<shapes.length; i++) {
         var s = shapes[i];
         var dist = s.getDistanceTo(position);
-        if (isNull(minDist) || dist<minDist) {
+        if (isNumber(dist) && (isNull(minDist) || dist<minDist)) {
             minDist = dist;
             ret = s;
         }
@@ -228,95 +228,206 @@ ShapeAlgorithms.getOffsetShapes = function(shape, distance, number, sidePosition
     ShapeAlgorithms.error = undefined;
     var ret = [];
     var i, n;
+    var a,b,d,x,y,t,p;
+    var side;
+    var parallel;
+    var center, insides, inside
 
     if (isLineBasedShape(shape)) {
-        var sides = [];
-        if (isVector(sidePosition)) {
-            sides.push(shape.getSideOfPoint(sidePosition));
+        return ShapeAlgorithms.getOffsetLines(shape, distance, number, sidePosition);
+    }
+    else if (isArcShape(shape) || isCircleShape(shape)) {
+        return ShapeAlgorithms.getOffsetArcs(shape, distance, number, sidePosition);
+    }
+    else if (isEllipseShape(shape)) {
+        return ShapeAlgorithms.getOffsetEllipses(shape, distance, number, sidePosition);
+    }
+
+    return ret;
+};
+
+ShapeAlgorithms.getOffsetLines = function(shape, distance, number, sidePosition) {
+    var ret = [];
+    var i, n;
+    var a;
+    var side;
+    var parallel;
+    var sides = [];
+
+    if (isVector(sidePosition)) {
+        sides.push(shape.getSideOfPoint(sidePosition));
+    }
+    else {
+        if (sidePosition===RS.BothSides) {
+            sides.push(RS.LeftHand);
+            sides.push(RS.RightHand);
         }
         else {
-            if (sidePosition===RS.BothSides) {
-                sides.push(RS.LeftHand);
-                sides.push(RS.RightHand);
-            }
-            else {
-                sides.push(sidePosition);
-            }
+            sides.push(sidePosition);
+        }
+    }
+
+    for (i=0; i<sides.length; i++) {
+        side = sides[i];
+
+        if (side===RS.LeftHand) {
+            a = shape.getAngle() + Math.PI/2.0;
+        }
+        else {
+            a = shape.getAngle() - Math.PI/2.0;
         }
 
-        for (i=0; i<sides.length; i++) {
-            var side = sides[i];
+        var distanceV = new RVector();
 
-            var ang;
-            if (side===RS.LeftHand) {
-                ang = shape.getAngle() + Math.PI/2.0;
-            }
-            else {
-                ang = shape.getAngle() - Math.PI/2.0;
-            }
+        for (n=1; n<=number; ++n) {
+            distanceV.setPolar(distance * n, a);
+            parallel = shape.clone();
+            parallel.move(distanceV);
+            ret.push(parallel);
+        }
+    }
+    return ret;
+};
 
-            var distanceV = new RVector();
+ShapeAlgorithms.getOffsetArcs = function(shape, distance, number, sidePosition) {
+    ShapeAlgorithms.error = undefined;
+    var ret = [];
+    var i, n;
+    var d;
+    var center, insides, inside
 
-            for (n=1; n<=number; ++n) {
-                distanceV.setPolar(distance * n, ang);
-                var parallel = shape.clone();
-                parallel.move(distanceV);
-                ret.push(parallel);
+    center = shape.getCenter();
+    insides = [];
+    if (isVector(sidePosition)) {
+        insides.push(center.getDistanceTo(sidePosition) < shape.getRadius());
+    }
+    else {
+        if (sidePosition===RS.BothSides) {
+            insides.push(true);
+            insides.push(false);
+        }
+        else {
+            if (isCircleShape(shape) || !shape.isReversed()) {
+                if (sidePosition===RS.LeftHand) {
+                    insides.push(true);
+                }
+                else {
+                    insides.push(false);
+                }
             }
         }
     }
-    else if (isArcShape(shape) || isCircleShape(shape)) {
-        var center = shape.getCenter();
-        var insides = [];
-        if (isVector(sidePosition)) {
-            insides.push(center.getDistanceTo(sidePosition) < shape.getRadius());
+
+    for (i=0; i<insides.length; i++) {
+        inside = insides[i];
+        d = distance;
+
+        if (inside) {
+            d *= -1;
+        }
+
+        for (n=1; n<=number; ++n) {
+            var concentric = shape.clone();
+            concentric.setRadius(shape.getRadius() + d*n);
+            if (concentric.getRadius()<0.0) {
+                if (isCircleShape(shape)) {
+                    ShapeAlgorithms.error =
+                            qsTr("Radius dropped below 0.0 " +
+                                 "after %1 concentric circle(s).").arg(n-1);
+                }
+                else {
+                    ShapeAlgorithms.error =
+                            qsTr("Radius dropped below 0.0 " +
+                                 "after %1 concentric arc(s).").arg(n-1);
+                }
+
+                break;
+            }
+            ret.push(concentric);
+        }
+    }
+
+    return ret;
+};
+
+ShapeAlgorithms.getOffsetEllipses = function(shape, distance, number, sidePosition) {
+    var ret = [];
+    var i, n;
+    var a,b,d,x,y,t,p;
+    var center, insides, inside
+
+    center = shape.getCenter();
+
+    insides = [];
+    if (isVector(sidePosition)) {
+        a = center.getAngleTo(sidePosition) - shape.getAngle();
+        t = shape.angleToParam(a);
+        p = shape.getPointAt(t);
+        insides.push(center.getDistanceTo(sidePosition) < center.getDistanceTo(p));
+    }
+    else {
+        if (sidePosition===RS.BothSides) {
+            insides.push(true);
+            insides.push(false);
         }
         else {
-            if (sidePosition===RS.BothSides) {
-                insides.push(true);
-                insides.push(false);
-            }
-            else {
-                if (isCircleShape(shape) || !shape.isReversed()) {
-                    if (sidePosition===RS.LeftHand) {
-                        insides.push(true);
-                    }
-                    else {
-                        insides.push(false);
-                    }
+            if (!shape.isReversed()) {
+                if (sidePosition===RS.LeftHand) {
+                    insides.push(true);
+                }
+                else {
+                    insides.push(false);
                 }
             }
         }
+    }
 
-        //var inside = (center.getDistanceTo(sidePosition) < shape.getRadius());
+    a = shape.getMajorRadius();
+    b = shape.getMinorRadius();
 
-        for (i=0; i<insides.length; i++) {
-            var inside = insides[i];
-            var d = distance;
+    for (i=0; i<insides.length; i++) {
+        inside = insides[i];
+        d = distance;
 
-            if (inside) {
-                d *= -1;
+        if (inside) {
+            d *= -1;
+        }
+
+        for (n=1; n<=number; ++n) {
+            var spl;
+            if (RSpline.hasProxy()) {
+                spl = new RSpline();
+            }
+            else {
+                spl = new RPolyline();
             }
 
-            for (n=1; n<=number; ++n) {
-                var concentric = shape.clone();
-                concentric.setRadius(shape.getRadius() + d*n);
-                if (concentric.getRadius()<0.0) {
-                    if (isCircleShape(shape)) {
-                        ShapeAlgorithms.error =
-                                qsTr("Radius dropped below 0.0 " +
-                                     "after %1 concentric circle(s).").arg(n-1);
-                    }
-                    else {
-                        ShapeAlgorithms.error =
-                                qsTr("Radius dropped below 0.0 " +
-                                     "after %1 concentric arc(s).").arg(n-1);
-                    }
+            var endParam = shape.getEndParam();
+            if (RMath.fuzzyCompare(endParam, 0.0)) {
+                endParam = 2*Math.PI;
+            }
 
-                    break;
+            var k = d*n;
+            var root, v;
+            for (t=shape.getStartParam(); t<endParam+0.1; t+=0.1) {
+                if (t>endParam) {
+                    t = endParam;
                 }
-                ret.push(concentric);
+
+                root = Math.sqrt(a*a * Math.pow(Math.sin(t), 2) + b*b * Math.pow(Math.cos(t), 2));
+                x = (a + (b * k) / root) * Math.cos(t);
+                y = (b + (a * k) / root) * Math.sin(t);
+                v = new RVector(x, y)
+                v.rotate(shape.getAngle());
+                v.move(center);
+                if (isSplineShape(spl)) {
+                    spl.appendFitPoint(v);
+                }
+                else {
+                    spl.appendVertex(v);
+                }
             }
+            ret.push(spl);
         }
     }
 
@@ -1349,13 +1460,22 @@ ShapeAlgorithms.createEllipseInscribedFromLines = function(line1, line2, line3, 
  */
 ShapeAlgorithms.createEllipseInscribedFromVertices = function(v1, v2, v3, v4) {
     var scale = undefined;
+    var offset = new RVector(0,0);
 
     var i;
     var quad = [v1, v2, v3, v4];
 
+    var extr = new RBox(RVector.getMinimum(quad), RVector.getMaximum(quad));
+
+    // offset to reduce magnitudes:
+    offset = extr.getCenter().getNegated();
+    v1.move(offset);
+    v2.move(offset);
+    v3.move(offset);
+    v4.move(offset);
+
     // numbers in this algorithm can get extremely large, so we scale down here
     // a bit if appropriate:
-    var extr = new RBox(RVector.getMinimum(quad), RVector.getMaximum(quad));
     if (extr.getWidth()>100.0 || extr.getHeight()>100.0) {
         scale = 100.0/Math.max(extr.getWidth(), extr.getHeight());
         v1.scale(scale);
@@ -1474,6 +1594,7 @@ ShapeAlgorithms.createEllipseInscribedFromVertices = function(v1, v2, v3, v4) {
     if (!isNull(scale)) {
         ellipse.scale(new RVector(1.0/scale,1.0/scale));
     }
+    ellipse.move(offset.getNegated());
 
     return ellipse;
 };

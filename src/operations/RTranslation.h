@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -33,9 +33,16 @@
  */
 class QCADOPERATIONS_EXPORT RTranslation : public RTransformation {
 public:
-    RTranslation(const RVector& offset) : offset(offset) {}
+    RTranslation(const RVector& offset, double rotationAngle = 0.0, double scaleFactor = 1.0, const RVector& center = RVector::nullVector)
+        : offset(offset),
+          rotationAngle(rotationAngle),
+          scaleFactor(scaleFactor),
+          center(center) {}
 
     RVector offset;
+    double rotationAngle;
+    double scaleFactor;
+    RVector center;
 };
 
 Q_DECLARE_METATYPE(RTranslation*)

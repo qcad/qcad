@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -114,6 +114,8 @@ public:
     bool isCircular() const;
     double getLength() const;
     double getSimpsonLength(double f1, double f2) const;
+
+//    virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;
 
     double getParamTo(const RVector& pos) const;
     double getRadiusAt(double angle) const;

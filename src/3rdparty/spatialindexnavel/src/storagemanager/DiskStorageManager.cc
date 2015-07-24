@@ -1,23 +1,29 @@
-// Spatial Index Library
-//
-// Copyright (C) 2002 Navel Ltd.
-//
-// This library is free software; you can redistribute it and/or
-// modify it under the terms of the GNU Lesser General Public
-// License as published by the Free Software Foundation; either
-// version 2.1 of the License, or (at your option) any later version.
-//
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-// Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public
-// License along with this library; if not, write to the Free Software
-// Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-//
-//  Email:
-//    mhadji@gmail.com
+/******************************************************************************
+ * Project:  libspatialindex - A C++ library for spatial indexing
+ * Author:   Marios Hadjieleftheriou, mhadji@gmail.com
+ ******************************************************************************
+ * Copyright (c) 2002, Marios Hadjieleftheriou
+ *
+ * All rights reserved.
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ * copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included
+ * in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ * DEALINGS IN THE SOFTWARE.
+******************************************************************************/
 
 #include <fstream>
 #include <cstring>
@@ -25,8 +31,9 @@
 // For checking if a file exists - hobu
 #include <sys/stat.h>
 
-#include "../spatialindex/SpatialIndexImpl.h"
+#include <spatialindex/SpatialIndex.h>
 #include "DiskStorageManager.h"
+#include <spatialindex/tools/Tools.h>
 
 using namespace SpatialIndex;
 using namespace SpatialIndex::StorageManager;
@@ -34,7 +41,7 @@ using namespace SpatialIndex::StorageManager;
 bool CheckFilesExists(Tools::PropertySet& ps)
 {
 	bool bExists = false;
-	
+
 	std::string filename("");
 	std::string idx("idx");
 	std::string dat("dat");
@@ -50,24 +57,24 @@ bool CheckFilesExists(Tools::PropertySet& ps)
 	if (idx_name.m_varType != Tools::VT_EMPTY) dat = std::string(idx_name.m_val.pcVal);
 	if (dat_name.m_varType != Tools::VT_EMPTY) idx = std::string(dat_name.m_val.pcVal);
 	if (fn.m_varType != Tools::VT_EMPTY) filename = std::string(fn.m_val.pcVal);
-	
+
 	struct stat stats;
-	
+
 	std::ostringstream os;
 	int ret;
 	os << filename <<"."<<dat;
 	std::string data_name = os.str();
 	ret = stat(data_name.c_str(), &stats);
-	
+
 	if (ret == 0) bExists = true;
-	
+
 	os.str("");
 	os << filename <<"."<<idx;
 	std::string index_name = os.str();
 	ret = stat(index_name.c_str(), &stats);
-	
+
 	if ((ret == 0) && (bExists == true)) bExists = true;
-	
+
 	return bExists;
 }
 SpatialIndex::IStorageManager* SpatialIndex::StorageManager::returnDiskStorageManager(Tools::PropertySet& ps)
@@ -76,7 +83,7 @@ SpatialIndex::IStorageManager* SpatialIndex::StorageManager::returnDiskStorageMa
 	return sm;
 }
 
-SpatialIndex::IStorageManager* SpatialIndex::StorageManager::createNewDiskStorageManager(std::string& baseName, size_t pageSize)
+SpatialIndex::IStorageManager* SpatialIndex::StorageManager::createNewDiskStorageManager(std::string& baseName, uint32_t pageSize)
 {
 	Tools::Variant var;
 	Tools::PropertySet ps;
@@ -120,6 +127,9 @@ DiskStorageManager::DiskStorageManager(Tools::PropertySet& ps) : m_pageSize(0), 
 
 	// Open/Create flag.
 	bool bOverwrite = false;
+	bool bFileExists = false;
+	std::streamoff length = 0;
+	
 	var = ps.getProperty("Overwrite");
 
 	if (var.m_varType != Tools::VT_EMPTY)
@@ -134,40 +144,40 @@ DiskStorageManager::DiskStorageManager(Tools::PropertySet& ps) : m_pageSize(0), 
 
 	if (var.m_varType != Tools::VT_EMPTY)
 	{
-		if (var.m_varType != Tools::VT_PCHAR)
-			throw Tools::IllegalArgumentException("SpatialIndex::DiskStorageManager: Property FileName must be Tools::VT_PCHAR");
+		if (!(var.m_varType == Tools::VT_PCHAR ||
+            var.m_varType == Tools::VT_PWCHAR))
+			throw Tools::IllegalArgumentException("SpatialIndex::DiskStorageManager: Property FileName must be Tools::VT_PCHAR or Tools::VT_PWCHAR");
 
-		size_t cLen = strlen(var.m_val.pcVal);
-
-		Tools::Variant idx_name;
-		Tools::Variant dat_name;
-		
 		std::string idx("idx");
 		std::string dat("dat");
-		idx_name = ps.getProperty("FileNameIdx");
+
+		Tools::Variant idx_name = ps.getProperty("FileNameIdx");
 		if (idx_name.m_varType != Tools::VT_EMPTY) idx = std::string(idx_name.m_val.pcVal);
 
-		dat_name = ps.getProperty("FileNameDat");
+		Tools::Variant dat_name = ps.getProperty("FileNameDat");
 		if (dat_name.m_varType != Tools::VT_EMPTY) dat = std::string(dat_name.m_val.pcVal);
+
 		std::string sIndexFile = std::string(var.m_val.pcVal) + "." + idx;
 		std::string sDataFile = std::string(var.m_val.pcVal) + "." + dat;
 
 		// check if file exists.
-		bool bFileExists = CheckFilesExists(ps);
+		bFileExists = CheckFilesExists(ps);
 
 		// check if file can be read/written.
 		if (bFileExists == true && bOverwrite == false)
 		{
-			m_indexFile.open(sIndexFile.c_str(), std::ios::in | std::ios::out | std::ios::binary);
-			m_dataFile.open(sDataFile.c_str(), std::ios::in | std::ios::out | std::ios::binary);
+            std::ios_base::openmode mode = std::ios::in | std::ios::out | std::ios::binary;
+			m_indexFile.open(sIndexFile.c_str(), mode);
+			m_dataFile.open(sDataFile.c_str(), mode);
 
 			if (m_indexFile.fail() || m_dataFile.fail())
 				throw Tools::IllegalArgumentException("SpatialIndex::DiskStorageManager: Index/Data file cannot be read/writen.");
 		}
 		else
 		{
-			m_indexFile.open(sIndexFile.c_str(), std::ios::in | std::ios::out | std::ios::binary | std::ios::trunc);
-			m_dataFile.open(sDataFile.c_str(), std::ios::in | std::ios::out | std::ios::binary | std::ios::trunc);
+            std::ios_base::openmode mode = std::ios::in | std::ios::out | std::ios::binary | std::ios::trunc;
+			m_indexFile.open(sIndexFile.c_str(), mode);
+			m_dataFile.open(sDataFile.c_str(), mode);
 
 			if (m_indexFile.fail() || m_dataFile.fail())
 				throw Tools::IllegalArgumentException("SpatialIndex::DiskStorageManager: Index/Data file cannot be created.");
@@ -179,8 +189,13 @@ DiskStorageManager::DiskStorageManager(Tools::PropertySet& ps) : m_pageSize(0), 
 		throw Tools::IllegalArgumentException("SpatialIndex::DiskStorageManager: Property FileName was not specified.");
 	}
 
+	// get current length of file
+	m_indexFile.seekg (0, m_indexFile.end);
+	length = m_indexFile.tellg();
+	m_indexFile.seekg (0, m_indexFile.beg);
+
 	// find page size.
-	if (bOverwrite == true)
+	if ((bOverwrite == true) || (length == 0) || (bFileExists == false))
 	{
 		var = ps.getProperty("PageSize");
 
@@ -198,7 +213,7 @@ DiskStorageManager::DiskStorageManager(Tools::PropertySet& ps) : m_pageSize(0), 
 	}
 	else
 	{
-		m_indexFile.read(reinterpret_cast<char*>(&m_pageSize), sizeof(size_t));
+		m_indexFile.read(reinterpret_cast<char*>(&m_pageSize), sizeof(uint32_t));
 		if (m_indexFile.fail())
 			throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Failed reading pageSize.");
 
@@ -209,32 +224,32 @@ DiskStorageManager::DiskStorageManager(Tools::PropertySet& ps) : m_pageSize(0), 
 
 	// create buffer.
 	m_buffer = new byte[m_pageSize];
-	bzero(m_buffer, m_pageSize);
+	memset(m_buffer, 0, m_pageSize);
 
-	if (bOverwrite == false)
+	if ((bOverwrite == false) && (length > 0))
 	{
-		size_t count;
+		uint32_t count;
 		id_type page, id;
 
 		// load empty pages in memory.
-		m_indexFile.read(reinterpret_cast<char*>(&count), sizeof(size_t));
+		m_indexFile.read(reinterpret_cast<char*>(&count), sizeof(uint32_t));
 		if (m_indexFile.fail())
 			throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted storage manager index file.");
 
-		for (size_t cCount = 0; cCount < count; ++cCount)
+		for (uint32_t cCount = 0; cCount < count; ++cCount)
 		{
 			m_indexFile.read(reinterpret_cast<char*>(&page), sizeof(id_type));
 			if (m_indexFile.fail())
 				throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted storage manager index file.");
-			m_emptyPages.push(page);
+			m_emptyPages.insert(page);
 		}
 
 		// load index table in memory.
-		m_indexFile.read(reinterpret_cast<char*>(&count), sizeof(size_t));
+		m_indexFile.read(reinterpret_cast<char*>(&count), sizeof(uint32_t));
 		if (m_indexFile.fail())
 			throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted storage manager index file.");
 
-		for (size_t cCount = 0; cCount < count; ++cCount)
+		for (uint32_t cCount = 0; cCount < count; ++cCount)
 		{
 			Entry* e = new Entry();
 
@@ -242,16 +257,16 @@ DiskStorageManager::DiskStorageManager(Tools::PropertySet& ps) : m_pageSize(0), 
 			if (m_indexFile.fail())
 				throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted storage manager index file.");
 
-			m_indexFile.read(reinterpret_cast<char*>(&(e->m_length)), sizeof(size_t));
+			m_indexFile.read(reinterpret_cast<char*>(&(e->m_length)), sizeof(uint32_t));
 			if (m_indexFile.fail())
 				throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted storage manager index file.");
 
-			size_t count2;
-			m_indexFile.read(reinterpret_cast<char*>(&count2), sizeof(size_t));
+			uint32_t count2;
+			m_indexFile.read(reinterpret_cast<char*>(&count2), sizeof(uint32_t));
 			if (m_indexFile.fail())
 				throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted storage manager index file.");
 
-			for (size_t cCount2 = 0; cCount2 < count2; ++cCount2)
+			for (uint32_t cCount2 = 0; cCount2 < count2; ++cCount2)
 			{
 				m_indexFile.read(reinterpret_cast<char*>(&page), sizeof(id_type));
 				if (m_indexFile.fail())
@@ -280,7 +295,7 @@ void DiskStorageManager::flush()
 	if (m_indexFile.fail())
 		throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted storage manager index file.");
 
-	m_indexFile.write(reinterpret_cast<const char*>(&m_pageSize), sizeof(size_t));
+	m_indexFile.write(reinterpret_cast<const char*>(&m_pageSize), sizeof(uint32_t));
 	if (m_indexFile.fail())
 		throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted storage manager index file.");
 
@@ -288,50 +303,41 @@ void DiskStorageManager::flush()
 	if (m_indexFile.fail())
 		throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted storage manager index file.");
 
-	size_t count = m_emptyPages.size();
-	id_type page, id;
-
-	m_indexFile.write(reinterpret_cast<const char*>(&count), sizeof(size_t));
+	uint32_t count = static_cast<uint32_t>(m_emptyPages.size());
+	m_indexFile.write(reinterpret_cast<const char*>(&count), sizeof(uint32_t));
 	if (m_indexFile.fail())
 			throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted storage manager index file.");
 
-	while (! m_emptyPages.empty())
+	for (std::set<id_type>::const_iterator it = m_emptyPages.begin(); it != m_emptyPages.end(); ++it)
 	{
-		page = m_emptyPages.top(); m_emptyPages.pop();
-		m_indexFile.write(reinterpret_cast<const char*>(&page), sizeof(id_type));
+		m_indexFile.write(reinterpret_cast<const char*>(&(*it)), sizeof(id_type));
 		if (m_indexFile.fail())
 			throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted storage manager index file.");
 	}
 
-	count = m_pageIndex.size();
-
-	m_indexFile.write(reinterpret_cast<const char*>(&count), sizeof(size_t));
+	count = static_cast<uint32_t>(m_pageIndex.size());
+	m_indexFile.write(reinterpret_cast<const char*>(&count), sizeof(uint32_t));
 	if (m_indexFile.fail())
 		throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted storage manager index file.");
 
-	std::map<id_type, Entry*>::iterator it;
-
-	for (it = m_pageIndex.begin(); it != m_pageIndex.end(); ++it)
+	for (std::map<id_type, Entry*>::iterator it = m_pageIndex.begin(); it != m_pageIndex.end(); ++it)
 	{
-		id = (*it).first;
-		m_indexFile.write(reinterpret_cast<const char*>(&id), sizeof(id_type));
+		m_indexFile.write(reinterpret_cast<const char*>(&((*it).first)), sizeof(id_type));
 		if (m_indexFile.fail())
 			throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted storage manager index file.");
 
-		size_t length = (*it).second->m_length;
-		m_indexFile.write(reinterpret_cast<const char*>(&length), sizeof(size_t));
+		m_indexFile.write(reinterpret_cast<const char*>(&((*it).second->m_length)), sizeof(uint32_t));
 		if (m_indexFile.fail())
 			throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted storage manager index file.");
 
-		count = (*it).second->m_pages.size();
-		m_indexFile.write(reinterpret_cast<const char*>(&count), sizeof(size_t));
+		count = static_cast<uint32_t>((*it).second->m_pages.size());
+		m_indexFile.write(reinterpret_cast<const char*>(&count), sizeof(uint32_t));
 		if (m_indexFile.fail())
 			throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted storage manager index file.");
 
-		for (size_t cIndex = 0; cIndex < count; ++cIndex)
+		for (uint32_t cIndex = 0; cIndex < count; ++cIndex)
 		{
-			page = (*it).second->m_pages[cIndex];
-			m_indexFile.write(reinterpret_cast<const char*>(&page), sizeof(id_type));
+			m_indexFile.write(reinterpret_cast<const char*>(&((*it).second->m_pages[cIndex])), sizeof(id_type));
 			if (m_indexFile.fail())
 				throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted storage manager index file.");
 		}
@@ -341,7 +347,7 @@ void DiskStorageManager::flush()
 	m_dataFile.flush();
 }
 
-void DiskStorageManager::loadByteArray(const id_type page, size_t& len, byte** data)
+void DiskStorageManager::loadByteArray(const id_type page, uint32_t& len, byte** data)
 {
 	std::map<id_type, Entry*>::iterator it = m_pageIndex.find(page);
 
@@ -349,15 +355,15 @@ void DiskStorageManager::loadByteArray(const id_type page, size_t& len, byte** d
 		throw InvalidPageException(page);
 
 	std::vector<id_type>& pages = (*it).second->m_pages;
-	size_t cNext = 0;
-	size_t cTotal = pages.size();
+	uint32_t cNext = 0;
+	uint32_t cTotal = static_cast<uint32_t>(pages.size());
 
 	len = (*it).second->m_length;
 	*data = new byte[len];
 
 	byte* ptr = *data;
-	size_t cLen;
-	size_t cRem = len;
+	uint32_t cLen;
+	uint32_t cRem = len;
 
 	do
 	{
@@ -379,7 +385,7 @@ void DiskStorageManager::loadByteArray(const id_type page, size_t& len, byte** d
 	while (cNext < cTotal);
 }
 
-void DiskStorageManager::storeByteArray(id_type& page, const size_t len, const byte* const data)
+void DiskStorageManager::storeByteArray(id_type& page, const uint32_t len, const byte* const data)
 {
 	if (page == NewPage)
 	{
@@ -388,14 +394,15 @@ void DiskStorageManager::storeByteArray(id_type& page, const size_t len, const b
 
 		const byte* ptr = data;
 		id_type cPage;
-		size_t cRem = len;
-		size_t cLen;
+		uint32_t cRem = len;
+		uint32_t cLen;
 
 		while (cRem > 0)
 		{
 			if (! m_emptyPages.empty())
 			{
-				cPage = m_emptyPages.top(); m_emptyPages.pop();
+				cPage = *m_emptyPages.begin();
+				m_emptyPages.erase(m_emptyPages.begin());
 			}
 			else
 			{
@@ -409,7 +416,7 @@ void DiskStorageManager::storeByteArray(id_type& page, const size_t len, const b
 			m_dataFile.seekp(cPage * m_pageSize, std::ios_base::beg);
 			if (m_dataFile.fail())
 				throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted data file.");
-			
+
 			m_dataFile.write(reinterpret_cast<const char*>(m_buffer), m_pageSize);
 			if (m_dataFile.fail())
 				throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted data file.");
@@ -440,8 +447,8 @@ void DiskStorageManager::storeByteArray(id_type& page, const size_t len, const b
 
 		const byte* ptr = data;
 		id_type cPage;
-		size_t cRem = len;
-		size_t cLen, cNext = 0;
+		uint32_t cRem = len;
+		uint32_t cLen, cNext = 0;
 
 		while (cRem > 0)
 		{
@@ -452,12 +459,13 @@ void DiskStorageManager::storeByteArray(id_type& page, const size_t len, const b
 			}
 			else if (! m_emptyPages.empty())
 			{
-				cPage = m_emptyPages.top(); m_emptyPages.pop();
+				cPage = *m_emptyPages.begin();
+				m_emptyPages.erase(m_emptyPages.begin());
 			}
 			else
 			{
 				cPage = m_nextPage;
-				m_nextPage++;
+				++m_nextPage;
 			}
 
 			cLen = (cRem > m_pageSize) ? m_pageSize : cRem;
@@ -466,7 +474,7 @@ void DiskStorageManager::storeByteArray(id_type& page, const size_t len, const b
 			m_dataFile.seekp(cPage * m_pageSize, std::ios_base::beg);
 			if (m_dataFile.fail())
 				throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted data file.");
-			
+
 			m_dataFile.write(reinterpret_cast<const char*>(m_buffer), m_pageSize);
 			if (m_dataFile.fail())
 				throw Tools::IllegalStateException("SpatialIndex::DiskStorageManager: Corrupted data file.");
@@ -478,7 +486,7 @@ void DiskStorageManager::storeByteArray(id_type& page, const size_t len, const b
 
 		while (cNext < oldEntry->m_pages.size())
 		{
-			m_emptyPages.push(oldEntry->m_pages[cNext]);
+			m_emptyPages.insert(oldEntry->m_pages[cNext]);
 			++cNext;
 		}
 
@@ -494,9 +502,9 @@ void DiskStorageManager::deleteByteArray(const id_type page)
 	if (it == m_pageIndex.end())
 		throw InvalidPageException(page);
 
-	for (size_t cIndex = 0; cIndex < (*it).second->m_pages.size(); ++cIndex)
+	for (uint32_t cIndex = 0; cIndex < (*it).second->m_pages.size(); ++cIndex)
 	{
-		m_emptyPages.push((*it).second->m_pages[cIndex]);
+		m_emptyPages.insert((*it).second->m_pages[cIndex]);
 	}
 
 	delete (*it).second;

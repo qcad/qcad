@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.1" language="nl">
 <context>
     <name>ShapePolygonPP</name>
     <message>
@@ -25,13 +25,13 @@
     </message>
     <message>
         <location filename="../ShapePolygonPPInit.js" line="+2"/>
-        <source>Polygo&amp;n (Two Corners)</source>
-        <translation type="unfinished"></translation>
+        <source>Polygo&amp;n (2 Points of Side)</source>
+        <translation>Polygo&amp;n (2 punten van zijkant)</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Draw regular polygon from two corner points</source>
-        <translation type="unfinished"></translation>
+        <source>Draw regular polygon from end points of one side</source>
+        <translation>Regelmatige veelhoek van eindpunten van een zijkant</translation>
     </message>
 </context>
 </TS>

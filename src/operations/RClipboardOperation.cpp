@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -120,7 +120,6 @@ void RClipboardOperation::copy(
         refp->scale(scale);
         refp->rotate(rotation);
         refp->move(offset);
-
 
         // create attribute for each attribute definition in block with
         // invalid parent ID (fixed later, when block reference ID is known):
@@ -469,10 +468,12 @@ QSharedPointer<RLayer> RClipboardOperation::copyEntityLayer(
         while (!l.isEmpty()) {
             QString parentLayerName = l.join(" ... ");
             QSharedPointer<RLayer> parentLayer = src.queryLayer(parentLayerName);
-            if (parentLayer.isNull()) {
-                break;
+            if (!parentLayer.isNull()) {
+                copyLayer(parentLayer->getId(), src, dest, overwriteLayers, transaction);
             }
-            copyLayer(parentLayer->getId(), src, dest, overwriteLayers, transaction);
+            else {
+                qWarning() << "parent layer of layer '" << layerName << "' not found: " << parentLayerName;
+            }
             l.removeLast();
         }
     }
@@ -523,7 +524,9 @@ QSharedPointer<RLayer> RClipboardOperation::copyLayer(
         copiedLayers.insert(srcLayerName, destLayer);
     }
 
-    destLayer->setLinetypeId(destLinetype->getId());
+    if (!destLinetype.isNull()) {
+        destLayer->setLinetypeId(destLinetype->getId());
+    }
 
     return destLayer;
 }
@@ -551,7 +554,7 @@ QSharedPointer<RLinetype> RClipboardOperation::copyLinetype(
                  "linetype is NULL.");
         return QSharedPointer<RLinetype>();
     }
-    QString srcLinetypeName = srcLinetype->getName();
+    QString srcLinetypeName = srcLinetype->getName().toLower();
     QSharedPointer<RLinetype> destLinetype;
     if (copiedLinetypes.contains(srcLinetypeName)) {
         destLinetype = copiedLinetypes.value(srcLinetypeName);

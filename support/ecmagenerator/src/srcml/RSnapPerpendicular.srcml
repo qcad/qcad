@@ -1,104 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./snap" filename="RSnapPerpendicular.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RSNAPPERPENDICULAR_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RSNAPPERPENDICULAR_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"snap_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RSnapEntityBase.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RMouseEvent</name>;</class_decl>
-  <comment type="block">/** * \brief On entity snapper
-  implementation. * * \scriptable * * \ingroup snap */</comment>
-  <class>class 
-  <macro>
-    <name>QCADSNAP_EXPORT</name>
-  </macro>
-  <name>RSnapPerpendicular</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RSnapEntityBase</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RSnapPerpendicular</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </destructor></public>
-  <protected>protected: 
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>snapEntity</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>REntity</name>
-        </argument>&gt;</argument_list></name>
-      </type>
-      <name>entity</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>point</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RBox</name>&amp;</type>
-      <name>queryBox</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RGraphicsView</name>&amp;</type>
-      <name>view</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></protected>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RSnapPerpendicular*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./snap" filename="RSnapPerpendicular.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RSNAPPERPENDICULAR_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RSNAPPERPENDICULAR_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"snap_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSnapEntityBase.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RMouseEvent</name>;</class_decl>
+
+<comment type="block">/**
+ * \brief On entity snapper implementation.
+ *
+ * \scriptable
+ *
+ * \ingroup snap
+ */</comment>
+<class>class <macro><name>QCADSNAP_EXPORT</name></macro> <name>RSnapPerpendicular</name> <super>: <specifier>public</specifier> <name>RSnapEntityBase</name></super> <block>{<private type="default">
+</private><public>public:
+    <destructor><specifier>virtual</specifier> <name>~RSnapPerpendicular</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+
+</public><protected>protected:
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>snapEntity</name><parameter_list>(
+            <param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></type> <name>entity</name></decl></param>,
+            <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>,
+            <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>queryBox</name></decl></param>,
+            <param><decl><type><name>RGraphicsView</name>&amp;</type> <name>view</name></decl></param>)</parameter_list>;</function_decl>
+</protected>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RSnapPerpendicular*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

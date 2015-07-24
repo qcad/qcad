@@ -20,7 +20,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSharedPointerRayEntity {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSharedPointerRayEntity {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -95,6 +98,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasFixedAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setFixedAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDirection1

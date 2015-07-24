@@ -22,7 +22,7 @@
         <translation type="unfinished">Projekcja</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+41"/>
         <source>Reference point</source>
         <translatorcomment>--google--
 Wskaż punkt odniesienia

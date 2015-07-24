@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Line2P</name>
     <message>
@@ -35,13 +35,13 @@ lugares:\</translatorcomment>
         <location filename="../Line2PInit.js" line="+2"/>
         <source>Line from &amp;2 Points</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Linha &amp;2 Pontos</translation>
+        <translation>Linha a partir de &amp;2 Pontos</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw single line or sequence of lines</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhe única linha ou seqüência de linhas</translation>
+        <translation>Desenhe uma única linha ou uma seqüência de linhas</translation>
     </message>
     <message>
         <location filename="../Line2P.ui" line="+23"/>
@@ -49,7 +49,7 @@ lugares:\</translatorcomment>
         <translatorcomment>--google--
 Não é possível fechar a seqüência de linhas: Ainda não há suficientes entidades definidas.
 Não é possível fechar a seqüência de linhas: Ainda não há suficientes entidades definidas</translatorcomment>
-        <translation>Fechar a seqüência</translation>
+        <translation>Encerre a Seqüência</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -60,7 +60,7 @@ Não é possível fechar a seqüência de linhas: Ainda não há suficientes ent
         <location line="+20"/>
         <source>Undo Previous Segment</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desfazer segmento anterior</translation>
+        <translation>Desfaça o Segmento Anterior</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -70,7 +70,7 @@ Não é possível fechar a seqüência de linhas: Ainda não há suficientes ent
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation>Refaça segmento anterior</translation>
+        <translation>Refaça o Segmento</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -80,7 +80,7 @@ Não é possível fechar a seqüência de linhas: Ainda não há suficientes ent
     <message>
         <location line="+20"/>
         <source>Restrict length or angle</source>
-        <translation>Restringir comprimento ou ângulo</translation>
+        <translation>Restrinja o comprimento ou o ângulo</translation>
     </message>
 </context>
 </TS>

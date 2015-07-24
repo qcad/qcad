@@ -4,7 +4,7 @@
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../Dimension.js" line="+65"/>
+        <location filename="../Dimension.js" line="+63"/>
         <source>No prefix</source>
         <translation>接頭辞なし</translation>
     </message>
@@ -49,7 +49,7 @@
         <translation>デルタ</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+58"/>
         <source>Dimension Tools</source>
         <translation>寸法ツール</translation>
     </message>
@@ -87,6 +87,16 @@
         <location line="+44"/>
         <source>Lower tolerance</source>
         <translation>許容誤差の下限</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Scale</source>
+        <translation>スケール</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Drawing Scale</source>
+        <translation>図面の縮尺</translation>
     </message>
 </context>
 </TS>

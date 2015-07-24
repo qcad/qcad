@@ -149,6 +149,10 @@
                 qScriptValueFromValue(&engine, RHatchEntity::PropertyHandle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RHatchEntity::PropertyProtected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RHatchEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -175,6 +179,10 @@
             
             ctor.setProperty("PropertyColor",
                 qScriptValueFromValue(&engine, RHatchEntity::PropertyColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RHatchEntity::PropertyDisplayedColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyDrawOrder",
@@ -299,7 +307,7 @@
                         return REcmaHelper::throwError("RHatchEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RHatchData*
                     ap1 =
                     qscriptvalue_cast<
@@ -309,11 +317,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RHatchEntity: Argument 1 is not of type RHatchData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RHatchEntity: Argument 1 is not of type RHatchData.",
                                context);                    
                     }
-                    RHatchData& a1 = *ap1;
+                    RHatchData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -394,7 +404,7 @@
                         return REcmaHelper::throwError("RHatchEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RHatchData*
                     ap1 =
                     qscriptvalue_cast<
@@ -404,11 +414,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RHatchEntity: Argument 1 is not of type RHatchData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RHatchEntity: Argument 1 is not of type RHatchData.",
                                context);                    
                     }
-                    RHatchData& a1 = *ap1;
+                    RHatchData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id
@@ -1779,7 +1791,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < RShape >(o0->clone());
+                        
+                          // always clone shape if we expect a shared pointer (might be a simple object on stack):
+                          QSharedPointer < RShape >(o0->clone());
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work

@@ -3,5 +3,6 @@ TSDIR = .
 include(../../translations.pri)
 SOURCES = \
     ../Draw.js \
-    ../DrawBasedOnRectangle.js \
+    ../DrawBasedOnRectangleSize.js \
+    ../DrawBasedOnRectanglePP.js \
     ../DrawBasedOnThreeCircles.js

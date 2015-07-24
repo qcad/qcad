@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Layer</name>
     <message>
         <location filename="../Layer.js" line="+66"/>
         <source>Layer Tools</source>
-        <translation>Ferramentas de camada</translation>
+        <translation>Ferramentas de Camada</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show layer tools</source>
-        <translation>Mostrar ferramentas de camada</translation>
+        <translation>Exiba as ferramentas de camada</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -26,27 +26,27 @@ Utilize a &amp;camada atual</translatorcomment>
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+142"/>
+        <location filename="../LayerDialog.js" line="+144"/>
         <source>Leading or trailing spaces.</source>
-        <translation>Esquerda ou à direita espaços.</translation>
+        <translation>Espaços à esquerda ou à direita.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Layer name is empty.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Nome da camada está vazia.</translation>
+        <translation>O nome da camada está em branco.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Layer already exists.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Camada já existe.</translation>
+        <translation>Esta camada já existe.</translation>
     </message>
     <message>
         <location filename="../LayerDialog.ui" line="+17"/>
         <source>Layer Data</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Dados da camada</translation>
+        <translation>Dados da Camada</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -58,14 +58,18 @@ Nome da camada:</translatorcomment>
         <translation>Nome da camada:</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>Pen</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 Abrindo o arquivo recente...
 Abrindo o arquivo recente
 Abertura abortada</translatorcomment>
-        <translation>Caneta</translation>
+        <translation type="vanished">Caneta</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Attributes</source>
+        <translation>Atributos</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -81,7 +85,7 @@ Cor da &amp;Meta Grade:</translatorcomment>
         <location line="+35"/>
         <source>Lineweight:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Espessura de linha:</translation>
+        <translation>Espessura da linha:</translation>
     </message>
     <message>
         <location line="+32"/>

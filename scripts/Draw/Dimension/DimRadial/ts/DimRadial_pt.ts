@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>DimRadial</name>
     <message>
         <location filename="../DimRadial.js" line="+57"/>
         <source>Choose arc or circle entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Escolha arco ou círculo</translation>
+        <translation>Escolha uma entidade de arco ou de círculo</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location or angle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Localização linha cota ou ângulo</translation>
+        <translation>Localização ou ângulo da linha de dimensão</translation>
     </message>
     <message>
         <location filename="../DimRadialInit.js" line="+2"/>
@@ -27,7 +27,7 @@
         <location line="+5"/>
         <source>Draw radial dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhe cota radial</translation>
+        <translation>Desenhe uma dimensão radial</translation>
     </message>
 </context>
 </TS>

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -51,7 +51,13 @@ InsertScriptItem.prototype.beginEvent = function() {
     
     Block.prototype.beginEvent.call(this);
 
-    this.file = new QUrl(this.guiAction.data()).toLocalFile();
+    var url = this.guiAction.data();
+    if (isNull(url) || !url.isLocalFile()) {
+        this.terminate();
+        return;
+    }
+
+    this.file = url.toLocalFile();
     include(this.file);
     
     InsertScriptItem.evalInit(this.file);

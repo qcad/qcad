@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -83,7 +83,7 @@ public:
      * Stops the timer with the given ID and prints the given message together 
      * with the time that has elapsed.
      */
-    static int stopTimer(int id, const QString& msg);
+    static int stopTimer(int id, const QString& msg, int msThreshold = 0);
 
     /**
      * Stops the timer with ID 0 and prints the given message together 
@@ -97,12 +97,27 @@ public:
 
     static void hexDump(const QString& str);
 
+    static void incCounter(const QString& id = RDEFAULT_QSTRING);
+    static void decCounter(const QString& id = RDEFAULT_QSTRING);
+    static int getCounter(const QString& id = RDEFAULT_QSTRING);
+    static void printCounter(const QString& id = RDEFAULT_QSTRING);
+    static void printCounters();
+
+    static void setPrefix(const QString& p) {
+        prefix = p;
+    }
+    static QString getPrefix() {
+        return prefix;
+    }
+
 private:
 #if defined(Q_OS_MAC) && !defined(Q_OS_IOS)
     static QMap<int, uint64_t> timerMac;
 #else
     static QMap<int, QTime> timer;
 #endif
+    static QMap<QString, int> counter;
+    static QString prefix;
 };
 
 Q_DECLARE_METATYPE(RDebug*)

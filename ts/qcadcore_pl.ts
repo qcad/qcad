@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pl_PL">
+<TS version="2.1" language="pl_PL">
 <context>
     <name>QObject</name>
     <message>
@@ -112,7 +112,7 @@
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="+411"/>
+        <location filename="../src/core/RColor.cpp" line="+298"/>
         <source>By Layer</source>
         <translation>Według warstwy</translation>
     </message>
@@ -153,6 +153,11 @@
     </message>
     <message>
         <location line="+2"/>
+        <source>Orange</source>
+        <translation>Pomarańczowy</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Dark Red</source>
         <translation>Ciemnoczerwony</translation>
     </message>
@@ -210,14 +215,14 @@
 <context>
     <name>RDocumentVariables</name>
     <message>
-        <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+44"/>
         <source>Current Layer ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktywna warstwa</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Drawing Unit</source>
-        <translation type="unfinished"></translation>
+        <translation>Rysowanie jednostkowe</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -237,10 +242,10 @@
         <translation type="obsolete">Blok</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+78"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+93"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+65"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -249,7 +254,7 @@
     <message>
         <location line="-2"/>
         <location line="+3"/>
-        <location filename="../src/core/RTextBasedEntity.cpp" line="+70"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>X</source>
         <translation>X</translation>
@@ -284,12 +289,32 @@
         <translation>Kąt</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+69"/>
+        <location line="+1"/>
+        <source>Columns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rows</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Column Spacing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Row Spacing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/REntity.cpp" line="+76"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-7"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-11"/>
         <source>Block</source>
         <translation>Blok</translation>
     </message>
@@ -322,6 +347,11 @@
         <location line="+1"/>
         <source>Color</source>
         <translation>Kolor</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Displayed Color</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -358,17 +388,25 @@
         <translation>Góra</translation>
     </message>
     <message>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
         <translation>Niestandardowy</translation>
     </message>
     <message>
+        <location filename="../src/core/REntity.cpp" line="+2"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
         <translation>Szerokość</translation>
     </message>
     <message>
+        <location line="+0"/>
         <location line="+1"/>
+        <source>Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
         <translation>Wysokość</translation>
     </message>
@@ -449,7 +487,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+169"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+181"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Wymaga doboru</translation>
@@ -458,14 +496,18 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+52"/>
+        <location filename="../src/core/RLayer.cpp" line="+73"/>
         <source>Name</source>
         <translation>Nazwa</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Frozen</source>
-        <translation>Mrożony</translation>
+        <translation type="vanished">Mrożony</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hidden</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -492,87 +534,87 @@
     <name>RLinetype</name>
     <message>
         <source>By Layer</source>
-        <translation>Według warstwy</translation>
+        <translation type="vanished">Według warstwy</translation>
     </message>
     <message>
         <source>By Block</source>
-        <translation>Według bloku</translation>
+        <translation type="vanished">Według bloku</translation>
     </message>
     <message>
         <source>Continuous</source>
-        <translation>Ciągła</translation>
+        <translation type="vanished">Ciągła</translation>
     </message>
     <message>
         <source>Dot</source>
-        <translation>Kropka</translation>
+        <translation type="vanished">Kropka</translation>
     </message>
     <message>
         <source>Dot (small)</source>
-        <translation>Kropka (mała)</translation>
+        <translation type="vanished">Kropka (mała)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
-        <translation>Kropka (duża)</translation>
+        <translation type="vanished">Kropka (duża)</translation>
     </message>
     <message>
         <source>Dash</source>
-        <translation>Kreska</translation>
+        <translation type="vanished">Kreska</translation>
     </message>
     <message>
         <source>Dash (small)</source>
-        <translation>Kreska (mała)</translation>
+        <translation type="vanished">Kreska (mała)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
-        <translation>Kreska (duża)</translation>
+        <translation type="vanished">Kreska (duża)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
-        <translation>Kreska kropka</translation>
+        <translation type="vanished">Kreska kropka</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
-        <translation>Kreska kropka (mała)</translation>
+        <translation type="vanished">Kreska kropka (mała)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
-        <translation>Kreska kropka (duża)</translation>
+        <translation type="vanished">Kreska kropka (duża)</translation>
     </message>
     <message>
         <source>Divide</source>
-        <translation>Podzielona</translation>
+        <translation type="vanished">Podzielona</translation>
     </message>
     <message>
         <source>Divide (small)</source>
-        <translation>Podzielona (mała)</translation>
+        <translation type="vanished">Podzielona (mała)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
-        <translation>Podzielona (duża)</translation>
+        <translation type="vanished">Podzielona (duża)</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation>Środek</translation>
+        <translation type="vanished">Środek</translation>
     </message>
     <message>
         <source>Center (small)</source>
-        <translation>Środek (maly)</translation>
+        <translation type="vanished">Środek (maly)</translation>
     </message>
     <message>
         <source>Center (large)</source>
-        <translation>Środek (duży)</translation>
+        <translation type="vanished">Środek (duży)</translation>
     </message>
     <message>
         <source>Border</source>
-        <translation>Obwódka</translation>
+        <translation type="vanished">Obwódka</translation>
     </message>
     <message>
         <source>Border (small)</source>
-        <translation>Obwódka (mała)</translation>
+        <translation type="vanished">Obwódka (mała)</translation>
     </message>
     <message>
         <source>Border (large)</source>
-        <translation>Obwódka (duża)</translation>
+        <translation type="vanished">Obwódka (duża)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
@@ -598,7 +640,7 @@
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+629"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+845"/>
         <source>By Layer</source>
         <translation>Według warstwy</translation>
     </message>
@@ -780,7 +822,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Drainage Reverse</source>
+        <source>Drainage Reversed</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -925,9 +967,14 @@
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+36"/>
+        <location filename="../src/core/RObject.cpp" line="+37"/>
         <source>Custom</source>
         <translation>Niestandardowy</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type</source>
+        <translation type="unfinished">Typ</translation>
     </message>
     <message>
         <location line="+1"/>

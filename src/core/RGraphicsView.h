@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -127,6 +127,7 @@ public:
     virtual void handleSwipeGestureEvent(QSwipeGesture& gesture);
     virtual void handlePanGestureEvent(QPanGesture& gesture);
     virtual void handlePinchGestureEvent(QPinchGesture& gesture);
+    virtual void giveFocus() = 0;
     /**
      * \return True if this view currently has the focus.
      */
@@ -278,6 +279,13 @@ public:
 
     bool isPathVisible(const RPainterPath& path) const;
 
+    void setAntialiasing(bool val);
+    bool getAntialiasing() const;
+
+    virtual double getDevicePixelRatio() const {
+        return 1.0;
+    }
+
 protected:
     bool printing;
     bool printPreview;
@@ -334,7 +342,7 @@ protected:
 
     RVector currentStepOffset;
     RVector lastKnownModelPosition;
-    RVector lastKnownViewPosition;
+    RVector lastKnownScreenPosition;
 
     /**
      * Internal list of text labels that were added to this view.
@@ -347,8 +355,13 @@ protected:
 
     int viewportNumber;
 
+    bool antialiasing;
+
     // grid display flag, cached:
     mutable int gridVisible;
+
+    //RVector mousePressScreenPosition;
+    //RVector mousePressModelPosition;
 };
 
 Q_DECLARE_METATYPE(RGraphicsView::ColorMode)

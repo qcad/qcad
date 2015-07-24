@@ -9,7 +9,7 @@
         <translation>Konzentrisch (&amp;durch Punkt)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw concentric circle through point</source>
         <translation>Konzentrischer Kreis durch Punkt</translation>
     </message>

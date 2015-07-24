@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -48,6 +48,7 @@ class RWheelEvent;
 class RGuiAction;
 class RStorage;
 class RTabletEvent;
+class ROperation;
 
 /**
  * \brief Abstract base class for all action classes.
@@ -246,6 +247,12 @@ public:
      * Called when the value of a property is modified while this action is active.
      */
     virtual void propertyChangeEvent(RPropertyEvent& event) = 0;
+
+    //virtual void setMultiSnapPoints(const QList<RVector>& points) = 0;
+    //virtual void setMultiSnapAngles(const QList<double>& angles) = 0;
+
+    virtual void updatePreview() = 0;
+    virtual void applyOperation() = 0;
 
     RVector snap(RMouseEvent& event);
 

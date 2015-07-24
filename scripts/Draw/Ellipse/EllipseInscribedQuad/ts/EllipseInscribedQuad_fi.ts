@@ -6,32 +6,32 @@
     <message>
         <location filename="../EllipseInscribedQuad.js" line="+82"/>
         <source>First line</source>
-        <translation>Ensimmäinen viiva</translation>
+        <translation>Ensimmäinen rivi</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Second line</source>
-        <translation>Toinen viiva</translation>
+        <translation>Toinen linja</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Third line</source>
-        <translation>Kolmas viiva</translation>
+        <translation>Kolmas linja</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Fourth line</source>
-        <translation>Neljäs viiva</translation>
+        <translation>Neljäs linja</translation>
     </message>
     <message>
         <location filename="../EllipseInscribedQuadInit.js" line="+2"/>
         <source>Inscribed in Quadrilateral</source>
-        <translation type="unfinished"></translation>
+        <translation>Merkitty nelikulmiossa</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä ellipsi merkittynä nelikulmiossa</translation>
     </message>
 </context>
 </TS>

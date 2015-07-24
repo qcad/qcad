@@ -1,219 +1,72 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RPluginInfo.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RPLUGININFO_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RPLUGININFO_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RDEFAULT_QVARIANT</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RDEFAULT_QVARIANT</name>
-  <name>QVariant</name>()</cpp:define>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
-  <comment type="block">/** * Information about a plugin. Ususally
-  shown in an about dialog. * * \ingroup core * \scriptable *
-  \copyable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RPluginInfo</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor>
-    <name>RPluginInfo</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>map</name>.
-    <call>
-      <name>insert</name>
-      <argument_list>(
-      <argument>
-        <expr>"QtVersion"</expr>
-      </argument>, 
-      <argument>
-        <expr>
-          <call>
-            <name>qVersion</name>
-            <argument_list>()</argument_list>
-          </call>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </constructor>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>set</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>key</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QVariant</name>&amp;</type>
-        <name>value</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>map</name>.
-    <call>
-      <name>insert</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>key</name>
-        </expr>
-      </argument>, 
-      <argument>
-        <expr>
-          <name>value</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QVariant</name>
-    </type>
-    <name>get</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>key</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-      <type>
-      <name>const</name>
-      <name>QVariant</name>&amp;</type>
-      <name>def</name>=
-      <init>
-        <expr>
-          <name>RDEFAULT_QVARIANT</name>
-        </expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>
-    <name>map</name>.
-    <call>
-      <name>contains</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>key</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-      <name>map</name>.
-      <call>
-        <name>value</name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <name>key</name>
-          </expr>
-        </argument>)</argument_list>
-      </call></expr>;</return>}</block>
-    </then></if>
-    <return>return 
-    <expr>
-      <name>def</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QStringList</name>
-    </type>
-    <name>getKeys</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>map</name>.
-    <call>
-      <name>keys</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function></public>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QVariantMap</name>
-    </type>
-    <name>map</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RPluginInfo</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RPluginInfo*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RPluginInfo.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RPLUGININFO_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RPLUGININFO_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStringList&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_QVARIANT</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QVARIANT</name> <name>QVariant</name>()</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+<comment type="block">/**
+ * Information about a plugin. Ususally shown in an about dialog.
+ *
+ * \ingroup core
+ * \scriptable
+ * \copyable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPluginInfo</name> <block>{<private type="default">
+</private><public>public:
+    <constructor><name>RPluginInfo</name><parameter_list>()</parameter_list> <block>{
+        <expr_stmt><expr><name>map</name>.<call><name>insert</name><argument_list>(<argument><expr>"QtVersion"</expr></argument>, <argument><expr><call><name>qVersion</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></constructor>
+
+    <function><type><name>void</name></type> <name>set</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>map</name>.<call><name>insert</name><argument_list>(<argument><expr><name>key</name></expr></argument>, <argument><expr><name>value</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>QVariant</name></type> <name>get</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>def</name> =<init> <expr><name>RDEFAULT_QVARIANT</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr><name>map</name>.<call><name>contains</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>map</name>.<call><name>value</name><argument_list>(<argument><expr><name>key</name></expr></argument>)</argument_list></call></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><name>def</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>QStringList</name></type> <name>getKeys</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>map</name>.<call><name>keys</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>QVariantMap</name></type> <name>map</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RPluginInfo</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RPluginInfo*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

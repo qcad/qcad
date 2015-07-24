@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>SnapDistance</name>
     <message>
@@ -16,7 +16,7 @@ Distância de &amp;Entidade a Ponto
         <location filename="../SnapDistance.ui" line="+17"/>
         <source>Snap distance:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Distância ao ponto de término:</translation>
+        <translation>Distância do salto:</translation>
     </message>
 </context>
 </TS>

@@ -10,8 +10,12 @@
     </message>
     <message>
         <location line="+5"/>
-        <source>Show line tools</source>
+        <source>Show shape tools</source>
         <translation>Formwerkzeuge anzeigen</translation>
+    </message>
+    <message>
+        <source>Show line tools</source>
+        <translation type="vanished">Formwerkzeuge anzeigen</translation>
     </message>
     <message>
         <location line="+18"/>

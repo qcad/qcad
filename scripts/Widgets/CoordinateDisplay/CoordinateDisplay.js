@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -17,18 +17,16 @@
  * along with QCAD.
  */
 
-include("../../WidgetFactory.js");
-include("../../EAction.js");
-
+include("scripts/EAction.js");
+include("scripts/WidgetFactory.js");
+include("scripts/Widgets/StatusBar/StatusBar.js");
 
 function CoordinateDisplay() {
 }
 
-CoordinateDisplay.init = function(basePath) {
+CoordinateDisplay.postInit = function(basePath) {
     var widget = WidgetFactory.createWidget(basePath, "CoordinateDisplay.ui");
-
-    widget.visible = RSettings.getBoolValue("StatusBar/CoordinateDisplay", true);
-    EAction.addToStatusBar(widget, 100);
+    StatusBar.addWidget(widget, 100, RSettings.getBoolValue("StatusBar/CoordinateDisplay", true));
 
     var lAbs = widget.findChild("Abs");
     lAbs.font = RSettings.getStatusBarFont();
@@ -46,7 +44,6 @@ CoordinateDisplay.init = function(basePath) {
     var adapter = new RCoordinateListenerAdapter();
     var appWin = EAction.getMainWindow();
     appWin.addCoordinateListener(adapter);
-    var statusBar = appWin.statusBar();
 
     var counter=0;
     var singleShot = undefined;
@@ -68,23 +65,33 @@ CoordinateDisplay.init = function(basePath) {
 
         if (!isNull(singleShot)) {
             if (singleShot.active) {
+                // never mind previous update:
                 singleShot.stop();
             }
+            singleShot.destroy();
+            singleShot = undefined;
         }
 
         singleShot = new QTimer();
         singleShot.singleShot = true;
         singleShot.timeout.connect(function() {
-            statusBar.clearMessage();
+            var doc = EAction.getDocument();
+            StatusBar.clearMessage();
             var absPos = documentInterface.getCursorPosition();
             var relPos = absPos.operator_subtract(documentInterface.getRelativeZero());
 
-            lAbs.setText(coordinateToString(absPos, 4, false, false));
-            lAbsPol.setText(coordinateToString(absPos, 4, false, true));
+            if (absPos.isValid()) {
+                lAbs.setText(coordinateToString(absPos, 4, false, false, doc));
+                lAbsPol.setText(coordinateToString(absPos, 4, false, true, doc));
+            }
+            else {
+                lAbs.setText("-");
+                lAbsPol.setText("-");
+            }
 
             if (relPos.isValid()) {
-                lRel.setText(coordinateToString(relPos, 4, true, false));
-                lRelPol.setText(coordinateToString(relPos, 4, true, true));
+                lRel.setText(coordinateToString(relPos, 4, true, false, doc));
+                lRelPol.setText(coordinateToString(relPos, 4, true, true, doc));
             }
             else {
                 lRel.setText("-");

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>LineTangent1</name>
     <message>
         <location filename="../LineTangent1.js" line="+64"/>
         <source>Choose start point of tangent</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Escolha o punto de inicio da tangente</translation>
+        <translation>Escolha o ponto de início da tangente</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose circle, arc or ellipse</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Escolha círculo, arco ou elipse</translation>
+        <translation>Escolha um círculo, arco ou elipse</translation>
     </message>
     <message>
         <location line="+83"/>
         <source>No tangent possible.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Não tangente possível.</translation>
+        <translation>Nenhuma tangente possível</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+58"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Não pode chamar a tangente do ponto dentro de círculo para círculo</translation>
+        <translation>Não é possível desenhar uma tangente a partir de um ponto interno de um círculo</translation>
     </message>
     <message>
         <source>&amp;Tangent (P,C)</source>
@@ -37,7 +37,7 @@
     <message>
         <location filename="../LineTangent1Init.js" line="+2"/>
         <source>&amp;Tangent (Point, Circle)</source>
-        <translation>&amp;Tangente (P,C)</translation>
+        <translation>&amp;Tangente (Ponto, Círculo)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -45,7 +45,7 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 Desenhe tangente (ponto,círculo)</translatorcomment>
-        <translation>Desenhe tangente (ponto, círculo)</translation>
+        <translation>Desenhe uma tangente (ponto, círculo)</translation>
     </message>
 </context>
 </TS>

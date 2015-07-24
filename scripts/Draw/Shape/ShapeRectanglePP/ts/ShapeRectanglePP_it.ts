@@ -1,55 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="it_IT">
+<TS version="2.1" language="it_IT">
 <context>
     <name>LineRectangle</name>
     <message>
         <source>First corner</source>
-        <translation>Primo punto dell&apos;angolo</translation>
+        <translation type="vanished">Primo punto dell&apos;angolo</translation>
     </message>
     <message>
         <source>&amp;Rectangle</source>
-        <translation>&amp;Rettangolo</translation>
+        <translation type="vanished">&amp;Rettangolo</translation>
     </message>
     <message>
         <source>Second corner</source>
-        <translation>Secondo punto dell&apos;angolo</translation>
+        <translation type="vanished">Secondo punto dell&apos;angolo</translation>
     </message>
     <message>
         <source>Draw rectangle from two corners</source>
-        <translation>Disegnare un rettangolo di due punti d&apos;angolo</translation>
+        <translation type="vanished">Disegnare un rettangolo di due punti d&apos;angolo</translation>
     </message>
 </context>
 <context>
     <name>ShapeRectangle</name>
     <message>
         <source>First corner</source>
-        <translation>Primo punto dell&apos;angolo</translation>
+        <translation type="vanished">Primo punto dell&apos;angolo</translation>
     </message>
     <message>
         <source>Second corner</source>
-        <translation>Secondo punto dell&apos;angolo</translation>
+        <translation type="vanished">Secondo punto dell&apos;angolo</translation>
     </message>
     <message>
         <source>&amp;Rectangle</source>
-        <translation>&amp;Rettangolo</translation>
+        <translation type="vanished">&amp;Rettangolo</translation>
     </message>
     <message>
         <source>Draw rectangle from two corners</source>
-        <translation>Disegnare un rettangolo di due punti d&apos;angolo</translation>
+        <translation type="vanished">Disegnare un rettangolo di due punti d&apos;angolo</translation>
     </message>
 </context>
 <context>
     <name>ShapeRectanglePP</name>
     <message>
-        <location filename="../ShapeRectanglePP.js" line="+58"/>
         <source>First corner</source>
-        <translation>Primo punto dell&apos;angolo</translation>
+        <translation type="vanished">Primo punto dell&apos;angolo</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Second corner</source>
-        <translation>Secondo punto dell&apos;angolo</translation>
+        <translation type="vanished">Secondo punto dell&apos;angolo</translation>
     </message>
     <message>
         <location filename="../ShapeRectanglePPInit.js" line="+2"/>

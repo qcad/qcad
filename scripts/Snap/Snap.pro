@@ -18,6 +18,7 @@ SUBDIRS = \
     SnapOnEntity \
     SnapPerpendicular \
     SnapReference \
+    SnapSelectionCenter \
     SnapXManual \
     SnapYManual \
     RestrictAngleLength \

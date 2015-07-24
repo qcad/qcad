@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>DefaultNavigation</name>
     <message>
@@ -22,13 +22,13 @@ Texto a mostrar</translatorcomment>
         <location line="+5"/>
         <source>Zoom (Wheel Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Zoom (roda do rato)</translation>
+        <translation>Zoom (Roda do Mouse)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Deslocamento (Trackpad, Multi-Touch Mouse)</translation>
+        <translation>Rolagem (Trackpad, Mouse de Múltiplos Botões)</translation>
     </message>
 </context>
 <context>
@@ -37,18 +37,18 @@ Texto a mostrar</translatorcomment>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Roda do mouse / dois simples toque de dedo:</translation>
+        <translation>Roda do mouse / deslocamento de dois dedos:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Enable pan gesture</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Habilitar gesto pan</translation>
+        <translation>Habilite o gesto de deslocamento</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Limit zoom and scroll to prevent overflows</source>
-        <translation>Limitar zoom para evitar transbordamentos</translation>
+        <translation>Limite o zoom e a rolagem para evitar excessos</translation>
     </message>
 </context>
 </TS>

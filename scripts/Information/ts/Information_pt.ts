@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Information</name>
     <message>
-        <location filename="../Information.js" line="+263"/>
+        <location filename="../Information.js" line="+261"/>
         <source>Information Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ferramentas informações</translation>
+        <translation>Ferramentas de Informações</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show information tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mostrar ferramentas de informação</translation>
+        <translation>Exiba as ferramentas de informação</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -26,12 +26,12 @@
     <message>
         <location filename="../Information.ui" line="+17"/>
         <source>Add measurement to drawing</source>
-        <translation>Adicione resultado para desenho</translation>
+        <translation>Adicione medidas para o desenho</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Text Height:</source>
-        <translation>Altura do texto:</translation>
+        <translation>Altura do Texto:</translation>
     </message>
 </context>
 </TS>

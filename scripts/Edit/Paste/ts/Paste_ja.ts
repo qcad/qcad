@@ -4,7 +4,7 @@
 <context>
     <name>Paste</name>
     <message>
-        <location filename="../Paste.js" line="+71"/>
+        <location filename="../Paste.js" line="+77"/>
         <source>Position</source>
         <translation>位置</translation>
     </message>
@@ -19,7 +19,7 @@
         <translation>貼り付けエンティティを回転&lt;br&gt;この角度で</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+97"/>
         <source>Scale:</source>
         <translation>縮尺:</translation>
     </message>
@@ -29,7 +29,7 @@
         <translation>貼り付けエンティティを拡縮&lt;br&gt;この係数で</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>貼り付けエンティティを反転&lt;br&gt;水平</translation>
     </message>
@@ -39,7 +39,7 @@
         <translation>貼り付けエンティティを反転&lt;br&gt;垂直</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translation>オリジナルの画層の代わりに&lt;br&gt;全てのエンティティを現在の画層に&lt;br&gt;貼り付け</translation>
     </message>

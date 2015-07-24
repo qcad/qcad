@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -48,7 +48,7 @@ BitmapExport.prototype.beginEvent = function() {
 
     var appWin = EAction.getMainWindow();
     if (!res[0]) {
-        print("Error: cannot save file: ", fileName);
+        print("Error: cannot save file: ", bmpFileName);
         print("Error: ", res[1]);
         appWin.handleUserWarning(
                 qsTr("Error while generating Bitmap file '%1': %2")
@@ -168,6 +168,7 @@ BitmapExport.prototype.getProperties = function() {
 
     if (!dialog.exec()) {
         dialog.destroy();
+        EAction.activateMainWindow();
         return undefined;
     }
 
@@ -184,6 +185,7 @@ BitmapExport.prototype.getProperties = function() {
     ret["margin"] = RMath.eval(marginCombo.currentText);
 
     dialog.destroy();
+    EAction.activateMainWindow();
     return ret;
 };
 

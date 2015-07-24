@@ -6,7 +6,7 @@
     <message>
         <location filename="../EditBlockInit.js" line="+2"/>
         <source>&amp;Edit Block</source>
-        <translation>Muokkaa Lohkoa</translation>
+        <translation>&amp;Muokkaa Lohkoa</translation>
     </message>
     <message>
         <location line="+1"/>

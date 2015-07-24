@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -19,8 +19,7 @@
 #include "RPropertyChange.h"
 #include "RMetaTypes.h"
 
-RPropertyChange::RPropertyChange(RPropertyTypeId propertyTypeId, QVariant oldValue,
-        QVariant newValue) :
+RPropertyChange::RPropertyChange(RPropertyTypeId propertyTypeId, QVariant oldValue, QVariant newValue) :
     propertyTypeId(propertyTypeId) {
 
     if (oldValue.type()==QVariant::UserType &&

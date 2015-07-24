@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -22,6 +22,7 @@
 
 RPropertyTypeId RTraceEntity::PropertyCustom;
 RPropertyTypeId RTraceEntity::PropertyHandle;
+RPropertyTypeId RTraceEntity::PropertyProtected;
 RPropertyTypeId RTraceEntity::PropertyType;
 RPropertyTypeId RTraceEntity::PropertyBlock;
 RPropertyTypeId RTraceEntity::PropertyLayer;
@@ -29,6 +30,7 @@ RPropertyTypeId RTraceEntity::PropertyLinetype;
 RPropertyTypeId RTraceEntity::PropertyLinetypeScale;
 RPropertyTypeId RTraceEntity::PropertyLineweight;
 RPropertyTypeId RTraceEntity::PropertyColor;
+RPropertyTypeId RTraceEntity::PropertyDisplayedColor;
 RPropertyTypeId RTraceEntity::PropertyDrawOrder;
 
 RPropertyTypeId RTraceEntity::PropertyPoint1X;
@@ -58,6 +60,7 @@ RTraceEntity::~RTraceEntity() {
 void RTraceEntity::init() {
     RTraceEntity::PropertyCustom.generateId(typeid(RTraceEntity), RObject::PropertyCustom);
     RTraceEntity::PropertyHandle.generateId(typeid(RTraceEntity), RObject::PropertyHandle);
+    RTraceEntity::PropertyProtected.generateId(typeid(RTraceEntity), RObject::PropertyProtected);
     RTraceEntity::PropertyType.generateId(typeid(RTraceEntity), REntity::PropertyType);
     RTraceEntity::PropertyBlock.generateId(typeid(RTraceEntity), REntity::PropertyBlock);
     RTraceEntity::PropertyLayer.generateId(typeid(RTraceEntity), REntity::PropertyLayer);
@@ -65,6 +68,7 @@ void RTraceEntity::init() {
     RTraceEntity::PropertyLinetypeScale.generateId(typeid(RTraceEntity), REntity::PropertyLinetypeScale);
     RTraceEntity::PropertyLineweight.generateId(typeid(RTraceEntity), REntity::PropertyLineweight);
     RTraceEntity::PropertyColor.generateId(typeid(RTraceEntity), REntity::PropertyColor);
+    RTraceEntity::PropertyDisplayedColor.generateId(typeid(RTraceEntity), REntity::PropertyDisplayedColor);
     RTraceEntity::PropertyDrawOrder.generateId(typeid(RTraceEntity), REntity::PropertyDrawOrder);
 
     RTraceEntity::PropertyPoint1X.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 1"), QT_TRANSLATE_NOOP("REntity", "X"));

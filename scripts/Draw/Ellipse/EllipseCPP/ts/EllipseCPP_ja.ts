@@ -4,8 +4,12 @@
 <context>
     <name>EllipseCPP</name>
     <message>
-        <location filename="../EllipseCPPInit.js" line="+2"/>
         <source>&amp;Full Ellipse</source>
+        <translation type="vanished">&amp;F 楕円弧</translation>
+    </message>
+    <message>
+        <location filename="../EllipseCPPInit.js" line="+2"/>
+        <source>&amp;Full Ellipse with Center, Point, Ratio</source>
         <translation>&amp;F 楕円弧</translation>
     </message>
     <message>

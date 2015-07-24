@@ -219,6 +219,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, ucsSetEvent, "ucsSetEvent");
             
+            REcmaHelper::registerFunction(&engine, proto, eval, "eval");
+            
 
     // properties:
     
@@ -274,6 +276,8 @@
             REcmaHelper::registerFunction(&engine, proto, setLeftMouseTip, "setLeftMouseTip");
             
             REcmaHelper::registerFunction(&engine, proto, setRightMouseTip, "setRightMouseTip");
+            
+            REcmaHelper::registerFunction(&engine, proto, showContextMenu, "showContextMenu");
             
             REcmaHelper::registerFunction(&engine, proto, escapeEvent, "escapeEvent");
             
@@ -356,7 +360,7 @@
                     RMainWindowQt
                     ();
                 
-                    result = engine->newQObject(context->thisObject(), cppResult);
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
                 
     } else 
 
@@ -401,7 +405,7 @@
                     a0
                     );
                 
-                    result = engine->newQObject(context->thisObject(), cppResult);
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
                 
     } else 
 
@@ -463,7 +467,7 @@
     a1
                     );
                 
-                    result = engine->newQObject(context->thisObject(), cppResult);
+                    result = engine->newQObject(context->thisObject(), cppResult, QScriptEngine::QtOwnership);
                 
     } else 
 
@@ -4262,6 +4266,79 @@
             //REcmaHelper::functionEnd("REcmaMainWindowQt::ucsSetEvent", context, engine);
             return result;
         }
+         QScriptValue
+        REcmaMainWindowQt::eval
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::eval", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::eval";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("eval", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QVariant'
+    QVariant cppResult =
+        
+               self->eval(a0
+        ,
+    a1);
+        // return type: QVariant
+                // QVariant:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.eval().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::eval", context, engine);
+            return result;
+        }
         
 
     // properties:
@@ -4294,7 +4371,7 @@
        getMainWindow();
         // return type: RMainWindowQt *
                 // QObject
-                result = engine->newQObject(cppResult);
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
             
     } else
 
@@ -5305,7 +5382,7 @@
                self->getMdiChild();
         // return type: RMdiChildQt *
                 // QObject
-                result = engine->newQObject(cppResult);
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
             
     } else
 
@@ -5354,7 +5431,7 @@
                self->getTabBar();
         // return type: QTabBar *
                 // QObject
-                result = engine->newQObject(cppResult);
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
             
     } else
 
@@ -5403,7 +5480,7 @@
                self->getMdiArea();
         // return type: RMdiArea *
                 // QObject
-                result = engine->newQObject(cppResult);
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
             
     } else
 
@@ -5844,6 +5921,61 @@
             return result;
         }
          QScriptValue
+        REcmaMainWindowQt::showContextMenu
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::showContextMenu", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::showContextMenu";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("showContextMenu", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RObject::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RObject::Id
+                    a0 =
+                    (RObject::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->showContextMenu(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.showContextMenu().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::showContextMenu", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaMainWindowQt::escapeEvent
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -6092,7 +6224,7 @@
                self->getChildWidget(a0);
         // return type: QWidget *
                 // QObject
-                result = engine->newQObject(cppResult);
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
             
     } else
 

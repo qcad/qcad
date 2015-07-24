@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -33,7 +33,7 @@
  */
 class QCADGUI_EXPORT RCloseCurrentEvent : public QEvent {
 public:
-    RCloseCurrentEvent() : QEvent(QEvent::User) {}
+    RCloseCurrentEvent() : QEvent((QEvent::Type)(QEvent::User+400)) {}
     virtual ~RCloseCurrentEvent() {}
 };
 

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -34,6 +34,7 @@
  * appearance of a viewport entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup core
  */
 class QCADCORE_EXPORT RViewportData: public REntityData {
@@ -135,6 +136,7 @@ private:
     RVector viewTarget;
 };
 
+Q_DECLARE_METATYPE(RViewportData)
 Q_DECLARE_METATYPE(RViewportData*)
 Q_DECLARE_METATYPE(const RViewportData*)
 Q_DECLARE_METATYPE(QSharedPointer<RViewportData>)

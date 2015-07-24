@@ -1,773 +1,281 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RAction.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RACTION_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RACTION_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QKeyEvent&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QObject&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QSwipeGesture&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QPanGesture&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QPinchGesture&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDebug.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"REntity.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RVector.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RPropertyEvent</name>;</class_decl>
-  <class_decl>class 
-  <name>RGraphicsScene</name>;</class_decl>
-  <class_decl>class 
-  <name>RGraphicsView</name>;</class_decl>
-  <class_decl>class 
-  <name>RDocumentInterface</name>;</class_decl>
-  <class_decl>class 
-  <name>RCommandEvent</name>;</class_decl>
-  <class_decl>class 
-  <name>RCoordinateEvent</name>;</class_decl>
-  <class_decl>class 
-  <name>RDocument</name>;</class_decl>
-  <class_decl>class 
-  <name>REntityPickEvent</name>;</class_decl>
-  <class_decl>class 
-  <name>RMouseEvent</name>;</class_decl>
-  <class_decl>class 
-  <name>RWheelEvent</name>;</class_decl>
-  <class_decl>class 
-  <name>RGuiAction</name>;</class_decl>
-  <class_decl>class 
-  <name>RStorage</name>;</class_decl>
-  <class_decl>class 
-  <name>RTabletEvent</name>;</class_decl>
-  <comment type="block">/** * \brief Abstract base class for all
-  action classes. * * Action classes handle user interaction with a
-  document. A menu, * toolbar button or command usually triggers an
-  action. * * \ingroup core * \scriptable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RAction</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <comment type="block">/** * Current mouse click mode.
-  */</comment>
-  <enum>enum 
-  <name>ClickMode</name>
-  <block>{ 
-  <comment type="block">/** * Mouse click will pick a coordinate
-  and trigger \ref coordinateEvent. * This is the default mode.
-  */</comment>
-  <expr>
-    <name>PickCoordinate</name>
-  </expr>, 
-  <comment type="block">/** * Mouse click will pick an entity and
-  trigger \ref entityPickEvent. */</comment>
-  <expr>
-    <name>PickEntity</name>
-  </expr>, 
-  <comment type="block">/** * Mouse click will not trigger any
-  events except for \ref mousePressEvent * and \ref
-  mouseReleaseEvent. */</comment>
-  <expr>
-    <name>PickingDisabled</name>
-  </expr>}</block>;</enum></public>
-  <public>public: 
-  <constructor_decl>
-  <name>RAction</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-    <name>RGuiAction</name>*</type>
-    <name>guiAction</name>=
-    <init>
-      <expr>
-        <name>NULL</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <specifier>virtual</specifier>
-  <name>~RAction</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>terminate</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isTerminated</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setOverride</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isOverride</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setNoState</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>hasNoState</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setUniqueGroup</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>ug</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QString</name>
-  </type>
-  <name>getUniqueGroup</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setOverrideBase</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RAction</name>*</type>
-      <name>base</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>RAction</name>*</type>
-  <name>getOverrideBase</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>virtual</name>
-  <name>RGuiAction</name>*</type>
-  <name>getGuiAction</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setGuiAction</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RGuiAction</name>*</type>
-      <name>guiAction</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-    <name>
-    RGraphicsScene</name>*</argument>&gt;</argument_list></name>
-  </type>
-  <name>getGraphicsScenes</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>RDocument</name>*</type>
-  <name>getDocument</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>RDocumentInterface</name>*</type>
-  <name>getDocumentInterface</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>RStorage</name>*</type>
-  <name>getStorage</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setDocumentInterface</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RDocumentInterface</name>*</type>
-        <name>di</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>documentInterface</name>= 
-    <name>di</name></expr>;</expr_stmt>}</block>
-  </function>
-  <comment type="block">/** * Sets the current click mode. * * \see
-  ClickMode */</comment>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setClickMode</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>RAction</name>::
-          <name>ClickMode</name></name>
-        </type>
-        <name>m</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>clickMode</name>= 
-    <name>m</name></expr>;</expr_stmt>}</block>
-  </function>
-  <comment type="block">/** * \return The current click mode of
-  this action as previously * requested by the action. */</comment>
-  <function>
-    <type>
-      <name>
-      <name>RAction</name>::
-      <name>ClickMode</name></name>
-    </type>
-    <name>getClickMode</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>clickMode</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * Called as soon as the action is
-  created (menu chosen, toolbutton activated, etc). */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>beginEvent</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called if this action is set as a
-  navigation action of a graphics view. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>setGraphicsView</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RGraphicsView</name>*</type>
-      <name>view</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called just before the action is
-  deleted. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>finishEvent</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called with the action is Suspended,
-  for example when another action * becomes active or the mouse
-  cursor leaves the view. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>suspendEvent</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Resumes the action (for example when
-  another action became active and * then terminated or if the
-  mouse cursor enters the view). */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>resumeEvent</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Escape events are triggered if the
-  user clicks the right mouse button or * hits the Escape key. The
-  action is expected to go one step back, to the * last state or
-  terminate itself. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>escapeEvent</name>
-  <parameter_list>()</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>keyPressEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QKeyEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>keyReleaseEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QKeyEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called on mouse press events.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>mousePressEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RMouseEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called on mouse move events.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>mouseMoveEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RMouseEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called on mouse release events.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>mouseReleaseEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RMouseEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called on mouse double click events.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>mouseDoubleClickEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RMouseEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called on mouse wheel events.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>wheelEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RWheelEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called on tablet events. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>tabletEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RTabletEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called on swipe gesture events.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>swipeGestureEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QSwipeGesture</name>&amp;</type>
-      <name>gesture</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called on pan gesture events.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>panGestureEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPanGesture</name>&amp;</type>
-      <name>gesture</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called on pinch gesture events.
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>pinchGestureEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPinchGesture</name>&amp;</type>
-      <name>gesture</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called when a command is entered in
-  the command line. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>commandEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RCommandEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called when a command is being edited
-  in the command line. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>commandEventPreview</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RCommandEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called for every coordinate event. *
-  Coordinate events can be the result of a mouse click or an
-  entered * coordinate from the command line. * These events are
-  fired after mouse click events in mode "PickCoordinate".
-  */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>coordinateEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RCoordinateEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called if the action is in \c
-  PickCoordinate mode and the mouse is moved * around. Typically,
-  some sort of preview is shown to the user to indicate * what
-  would happen if that coordinate would be picked. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>coordinateEventPreview</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RCoordinateEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \override */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>entityPickEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>REntityPickEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * \override */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>entityPickEventPreview</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>REntityPickEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <comment type="block">/** * Called when the value of a property
-  is modified while this action is active. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>propertyChangeEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RPropertyEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>= 0</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>snap</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RMouseEvent</name>&amp;</type>
-      <name>event</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <protected>protected: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>terminated</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>override</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * Indicates whether this action is
-  stateless * (i.e. terminates in beginEvent). */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>noState</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>uniqueGroup</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>
-      <name>RAction</name>::
-      <name>ClickMode</name></name>
-    </type>
-    <name>clickMode</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RGuiAction</name>*</type>
-    <name>guiAction</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RAction</name>*</type>
-    <name>overrideBase</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RDocumentInterface</name>*</type>
-    <name>documentInterface</name>
-  </decl>;</decl_stmt></protected>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RAction*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RAction::ClickMode</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RAction.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RACTION_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RACTION_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QKeyEvent&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QObject&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSwipeGesture&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPanGesture&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPinchGesture&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDebug.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RPropertyEvent</name>;</class_decl>
+<class_decl>class <name>RGraphicsScene</name>;</class_decl>
+<class_decl>class <name>RGraphicsView</name>;</class_decl>
+<class_decl>class <name>RDocumentInterface</name>;</class_decl>
+<class_decl>class <name>RCommandEvent</name>;</class_decl>
+<class_decl>class <name>RCoordinateEvent</name>;</class_decl>
+<class_decl>class <name>RDocument</name>;</class_decl>
+<class_decl>class <name>REntityPickEvent</name>;</class_decl>
+<class_decl>class <name>RMouseEvent</name>;</class_decl>
+<class_decl>class <name>RWheelEvent</name>;</class_decl>
+<class_decl>class <name>RGuiAction</name>;</class_decl>
+<class_decl>class <name>RStorage</name>;</class_decl>
+<class_decl>class <name>RTabletEvent</name>;</class_decl>
+<class_decl>class <name>ROperation</name>;</class_decl>
+
+<comment type="block">/**
+ * \brief Abstract base class for all action classes.
+ *
+ * Action classes handle user interaction with a document. A menu,
+ * toolbar button or command usually triggers an action.
+ *
+ * \ingroup core
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RAction</name> <block>{<private type="default">
+</private><public>public:
+    <comment type="block">/**
+     * Current mouse click mode.
+     */</comment>
+    <enum>enum <name>ClickMode</name> <block>{
+        <comment type="block">/**
+         * Mouse click will pick a coordinate and trigger \ref coordinateEvent.
+         * This is the default mode.
+         */</comment>
+        <expr><name>PickCoordinate</name></expr>,
+        <comment type="block">/**
+         * Mouse click will pick an entity and trigger \ref entityPickEvent.
+         */</comment>
+        <expr><name>PickEntity</name></expr>,
+        <comment type="block">/**
+         * Mouse click will not trigger any events except for \ref mousePressEvent
+         * and \ref mouseReleaseEvent.
+         */</comment>
+        <expr><name>PickingDisabled</name></expr>
+    }</block>;</enum>
+
+</public><public>public:
+    <constructor_decl><name>RAction</name><parameter_list>(<param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RAction</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>void</name></type> <name>terminate</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isTerminated</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setOverride</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isOverride</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setNoState</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>hasNoState</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setUniqueGroup</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>ug</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getUniqueGroup</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setOverrideBase</name><parameter_list>(<param><decl><type><name>RAction</name>*</type> <name>base</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RAction</name>*</type> <name>getOverrideBase</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>RGuiAction</name>*</type> <name>getGuiAction</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setGuiAction</name><parameter_list>(<param><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RGraphicsScene</name>*</argument>&gt;</argument_list></name></type> <name>getGraphicsScenes</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>RDocument</name>*</type> <name>getDocument</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>RDocumentInterface</name>*</type> <name>getDocumentInterface</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>RStorage</name>*</type> <name>getStorage</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function><type><name>void</name></type> <name>setDocumentInterface</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>di</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>documentInterface</name> = <name>di</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * Sets the current click mode.
+     *
+     * \see ClickMode
+     */</comment>
+    <function><type><name>void</name></type> <name>setClickMode</name><parameter_list>(<param><decl><type><name><name>RAction</name>::<name>ClickMode</name></name></type> <name>m</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>clickMode</name> = <name>m</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return The current click mode of this action as previously
+     *      requested by the action.
+     */</comment>
+    <function><type><name><name>RAction</name>::<name>ClickMode</name></name></type> <name>getClickMode</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>clickMode</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * Called as soon as the action is created (menu chosen, toolbutton activated, etc).
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>beginEvent</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <comment type="block">/**
+     * Called if this action is set as a navigation action of a graphics view.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setGraphicsView</name><parameter_list>(<param><decl><type><name>RGraphicsView</name>*</type> <name>view</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <comment type="block">/**
+     * Called just before the action is deleted.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>finishEvent</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <comment type="block">/**
+     * Called with the action is Suspended, for example when another action
+     * becomes active or the mouse cursor leaves the view.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>suspendEvent</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <comment type="block">/**
+     * Resumes the action (for example when another action became active and
+     * then terminated or if the mouse cursor enters the view).
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>resumeEvent</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <comment type="block">/**
+     * Escape events are triggered if the user clicks the right mouse button or
+     * hits the Escape key. The action is expected to go one step back, to the
+     * last state or terminate itself.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>escapeEvent</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>keyPressEvent</name><parameter_list>(<param><decl><type><name>QKeyEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>keyReleaseEvent</name><parameter_list>(<param><decl><type><name>QKeyEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called on mouse press events.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>mousePressEvent</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called on mouse move events.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>mouseMoveEvent</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called on mouse release events.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>mouseReleaseEvent</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called on mouse double click events.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>mouseDoubleClickEvent</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called on mouse wheel events.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>wheelEvent</name><parameter_list>(<param><decl><type><name>RWheelEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called on tablet events.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>tabletEvent</name><parameter_list>(<param><decl><type><name>RTabletEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called on swipe gesture events.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>swipeGestureEvent</name><parameter_list>(<param><decl><type><name>QSwipeGesture</name>&amp;</type> <name>gesture</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called on pan gesture events.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>panGestureEvent</name><parameter_list>(<param><decl><type><name>QPanGesture</name>&amp;</type> <name>gesture</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called on pinch gesture events.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>pinchGestureEvent</name><parameter_list>(<param><decl><type><name>QPinchGesture</name>&amp;</type> <name>gesture</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called when a command is entered in the command line.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>commandEvent</name><parameter_list>(<param><decl><type><name>RCommandEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called when a command is being edited in the command line.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>commandEventPreview</name><parameter_list>(<param><decl><type><name>RCommandEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called for every coordinate event.
+     * Coordinate events can be the result of a mouse click or an entered
+     * coordinate from the command line.
+     * These events are fired after mouse click events in mode "PickCoordinate".
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>coordinateEvent</name><parameter_list>(<param><decl><type><name>RCoordinateEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called if the action is in \c PickCoordinate mode and the mouse is moved
+     * around. Typically, some sort of preview is shown to the user to indicate
+     * what would happen if that coordinate would be picked.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>coordinateEventPreview</name><parameter_list>(<param><decl><type><name>RCoordinateEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \override
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>entityPickEvent</name><parameter_list>(<param><decl><type><name>REntityPickEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \override
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>entityPickEventPreview</name><parameter_list>(<param><decl><type><name>REntityPickEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called when the value of a property is modified while this action is active.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>propertyChangeEvent</name><parameter_list>(<param><decl><type><name>RPropertyEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="line">//virtual void setMultiSnapPoints(const QList&lt;RVector&gt;&amp; points) = 0;</comment>
+    <comment type="line">//virtual void setMultiSnapAngles(const QList&lt;double&gt;&amp; angles) = 0;</comment>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updatePreview</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>applyOperation</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>RVector</name></type> <name>snap</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><protected>protected:
+    <decl_stmt><decl><type><name>bool</name></type> <name>terminated</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>override</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * Indicates whether this action is stateless
+     * (i.e. terminates in beginEvent).
+     */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>noState</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>QString</name></type> <name>uniqueGroup</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RAction</name>::<name>ClickMode</name></name></type> <name>clickMode</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RGuiAction</name>*</type> <name>guiAction</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RAction</name>*</type> <name>overrideBase</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl>;</decl_stmt>
+</protected>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RAction*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RAction::ClickMode</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

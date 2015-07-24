@@ -4,7 +4,17 @@
 <context>
     <name>Translate</name>
     <message>
-        <location filename="../Translate.js" line="+62"/>
+        <location filename="../Translate.js" line="+44"/>
+        <source>Modify</source>
+        <translation>Modificar</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Move/Copy</source>
+        <translation>Mover / copiar</translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Reference point</source>
         <translation>Punto de referencia</translation>
     </message>
@@ -27,6 +37,26 @@ Punto objetivo</translatorcomment>
         <source>Move or copy entities once or multiple times</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Mover o copiar entidades una vez o varias veces</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Use dialog for tool options</source>
+        <translation>Utilice diálogo para opciones de la herramienta</translation>
+    </message>
+    <message>
+        <location filename="../Translate.ui" line="+17"/>
+        <source>Copy</source>
+        <translation>Copiar</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Number of Copies:</source>
+        <translation>Número de copias:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <source>Use current layer and &amp;attributes</source>
+        <translation>Usar capa y los &amp;atributos actual</translation>
     </message>
 </context>
 <context>

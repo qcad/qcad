@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -24,7 +24,8 @@
  * \brief This module contains ECMAScript implementations of
  * block related tools.
  */
-include("../EAction.js");
+include("scripts/EAction.js");
+include("scripts/Widgets/BlockList/BlockList.js");
 
 /**
  * \class Block
@@ -41,7 +42,7 @@ Block.includeBasePath = includeBasePath;
 Block.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="BlockToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="BlockToolsPanelAction") {
         EAction.showCadToolBarPanel("BlockToolsPanel");
         this.terminate();
     }
@@ -61,7 +62,7 @@ Block.getToolBar = function() {
 
 Block.getCadToolBarPanel = function() {
     var mtb = EAction.getMainCadToolBarPanel();
-    var actionName = "BlockToolsPanelButton";
+    var actionName = "BlockToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Block Tools"), mtb);
         action.setScriptFile(Block.includeBasePath + "/Block.js");
@@ -119,7 +120,7 @@ Block.getActiveBlockId = function() {
         return RObject.INVALID_ID;
     }
 
-    var blockId = document.getBlockId(item.text());
+    var blockId = document.getBlockId(item.text(BlockList.colName));
 
     return blockId;
 };

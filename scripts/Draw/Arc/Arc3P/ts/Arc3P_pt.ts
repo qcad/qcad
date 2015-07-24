@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Arc3P</name>
     <message>
@@ -44,7 +44,7 @@ Ponto final (x):</translatorcomment>
         <location line="+4"/>
         <source>Draw arc from 3 points</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar arco de 3 pontos</translation>
+        <translation>Desenhe um arco a partir de 3 pontos</translation>
     </message>
 </context>
 </TS>

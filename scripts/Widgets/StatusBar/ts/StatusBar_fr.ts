@@ -29,7 +29,12 @@
         <translation>Affichage de la sélection</translation>
     </message>
     <message>
-        <location filename="../StatusBar.js" line="+27"/>
+        <location line="+10"/>
+        <source>Progress display</source>
+        <translation>Affichage de l&apos;état d&apos;avancement</translation>
+    </message>
+    <message>
+        <location filename="../StatusBar.js" line="+32"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -37,6 +42,11 @@
         <location line="+0"/>
         <source>Status Bar</source>
         <translation>Barre d&apos;état</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&amp;Status Bar</source>
+        <translation>&amp;Barre d&apos;état</translation>
     </message>
 </context>
 </TS>

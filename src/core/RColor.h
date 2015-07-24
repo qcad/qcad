@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -71,6 +71,7 @@ public:
     int getCustomColorCode() const;
     int getColorIndex() const;
 
+    static void removeColor(const QString& cn);
     static RColor createFromCadIndex(const QString& code) {
         return createFromCadIndex(code.toInt());
     }
@@ -94,7 +95,7 @@ public:
 
     QColor toCompat() const;
 
-    static RColor getHighlighted(const RColor& color, const QColor& bgColor);
+    static RColor getHighlighted(const RColor& color, const QColor& bgColor, int minDist = 75);
 
     //bool equalsCorrected(const RColor & color) const;
 

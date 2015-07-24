@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>AutoSnap</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Auto Snap</source>
-        <translation>Salto auto</translation>
+        <translation>Salto Automático</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -21,7 +21,7 @@
     <message>
         <location line="+10"/>
         <source>Middle points</source>
-        <translation>Pontos médios</translation>
+        <translation>Pontos de meio</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -41,12 +41,12 @@
     <message>
         <location line="+10"/>
         <source>Grid points</source>
-        <translation>Grade</translation>
+        <translation>Pontos de grade</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Points on entity</source>
-        <translation>Pontos em entidade</translation>
+        <translation>Pontos na entidade</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -63,7 +63,7 @@
 --file: qcadactions_pt.ts--
 &amp;Automático
 &amp;Close Automático</translatorcomment>
-        <translation>&amp;Auto</translation>
+        <translation>&amp;Automático</translation>
     </message>
     <message>
         <location filename="../SnapAuto.js" line="+34"/>
@@ -73,7 +73,7 @@
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation>Salto auto</translation>
+        <translation>Salto Automático</translation>
     </message>
 </context>
 </TS>

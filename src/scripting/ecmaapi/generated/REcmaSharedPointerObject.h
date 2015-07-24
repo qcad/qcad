@@ -20,7 +20,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSharedPointerObject {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSharedPointerObject {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -63,6 +66,9 @@
         getHandle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isProtected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -93,7 +99,13 @@
         isSelectedForPropertyEditing
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasCustomProperty
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getCustomProperty
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCustomBoolProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setCustomProperty
@@ -109,6 +121,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getComplexity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        dump
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

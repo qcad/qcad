@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaTextBasedEntity {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaTextBasedEntity {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

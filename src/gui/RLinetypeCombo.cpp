@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -51,6 +51,7 @@ void RLinetypeCombo::init(RDocument* doc) {
 
     if (doc!=NULL) {
         patterns = doc->getLinetypePatterns();
+        qSort(patterns.begin(), patterns.end());
     }
 
     // change delegate if document changes to clear preview cache:

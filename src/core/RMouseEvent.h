@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -47,9 +47,16 @@ public:
             RGraphicsView& v);
 
     RMouseEvent(const QMouseEvent& mouseEvent, RGraphicsScene& s,
-            RGraphicsView& v);
+            RGraphicsView& v, qreal devicePixelRatio = 1.0);
 
     virtual ~RMouseEvent();
+
+    static bool hasMouseMoved();
+    static void resetOriginalMousePos();
+    static void setOriginalMousePos(const QPoint& p);
+
+private:
+    static QPoint oriCursor;
 };
 
 Q_DECLARE_METATYPE(RMouseEvent*)

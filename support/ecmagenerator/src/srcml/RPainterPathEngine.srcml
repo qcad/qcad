@@ -1,212 +1,65 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RPainterPathEngine.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RPAINTERPATHENGINE_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RPAINTERPATHENGINE_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QPaintEngine&gt;</cpp:file></cpp:include>
-  <comment type="line">//#include
-  "private/qtextengine_p.h"</comment>
-  <comment type="line">//#include
-  "private/qfontengine_p.h"</comment>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
-  <comment type="block">/** * Experimental. * * \ingroup core
-  */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RPainterPathEngine</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>QPaintEngine</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor_decl>
-  <name>RPainterPathEngine</name>
-  <parameter_list>()</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <specifier>virtual</specifier>
-  <name>~RPainterPathEngine</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>begin</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QPaintDevice</name>*</type>
-      <name>device</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>end</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>updateState</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QPaintEngineState</name>&amp;</type>
-      <name>state</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">//virtual void drawTextItem(const QPointF
-  &amp;p, const QTextItem &amp;textItem);</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>drawPixmap</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QRectF</name>&amp;</type>
-      <name>r</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QPixmap</name>&amp;</type>
-      <name>pm</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QRectF</name>&amp;</type>
-      <name>sr</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>
-    <name>QPaintEngine</name>::
-    <name>Type</name></name>
-  </type>
-  <name>type</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>drawPath</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QPainterPath</name>&amp;</type>
-      <name>path</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RPainterPath</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getPainterPaths</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>drawPolygon</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QPointF</name>*</type>
-      <name>points</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>pointCount</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>PolygonDrawMode</name>
-      </type>
-      <name>mode</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RPainterPath</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>paths</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QTransform</name>
-    </type>
-    <name>transform</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RPainterPathEngine.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RPAINTERPATHENGINE_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RPAINTERPATHENGINE_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPaintEngine&gt;</cpp:file></cpp:include>
+<comment type="line">//#include "private/qtextengine_p.h"</comment>
+<comment type="line">//#include "private/qfontengine_p.h"</comment>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * Experimental.
+ *
+ * \ingroup core
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPainterPathEngine</name> <super>: <specifier>public</specifier> <name>QPaintEngine</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor_decl><name>RPainterPathEngine</name><parameter_list>()</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RPainterPathEngine</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>begin</name><parameter_list>(<param><decl><type><name>QPaintDevice</name> *</type><name>device</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>end</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateState</name><parameter_list>(<param><decl><type><name>const</name> <name>QPaintEngineState</name> &amp;</type><name>state</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="line">//virtual void drawTextItem(const QPointF &amp;p, const QTextItem &amp;textItem);</comment>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawPixmap</name><parameter_list>(<param><decl><type><name>const</name> <name>QRectF</name> &amp;</type><name>r</name></decl></param>, <param><decl><type><name>const</name> <name>QPixmap</name> &amp;</type><name>pm</name></decl></param>, <param><decl><type><name>const</name> <name>QRectF</name> &amp;</type><name>sr</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name><name>QPaintEngine</name>::<name>Type</name></name></type> <name>type</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawPath</name><parameter_list>(<param><decl><type><name>const</name> <name>QPainterPath</name>&amp;</type> <name>path</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPaths</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>drawPolygon</name><parameter_list>(<param><decl><type><name>const</name> <name>QPointF</name> *</type><name>points</name></decl></param>, <param><decl><type><name>int</name></type> <name>pointCount</name></decl></param>, <param><decl><type><name>PolygonDrawMode</name></type> <name>mode</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>paths</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QTransform</name></type> <name>transform</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

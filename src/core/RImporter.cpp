@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -62,21 +62,17 @@ void RImporter::startImport() {
  * Imports an entity into the document.
  */
 void RImporter::importObjectP(QSharedPointer<RObject> object) {
-    //qDebug() << "importObjectP: " << *object;
-    //RDebug::startTimer();
     transaction.addObject(object, false);
-//    if (RDebug::stopTimer("importObjectP")>10) {
-//        qDebug() << "importObjectP (slow): " << *object;
-//    }
 }
 
 /**
  * Provided for script importers as importObjectP will loose the object ID.
  */
 void RImporter::importObject(RObject* object) {
-    QSharedPointer<RObject> shp = QSharedPointer<RObject>(object->clone());
-    transaction.addObject(shp, false);
-    *object = *shp.data();
+    //QSharedPointer<RObject> pObject = QSharedPointer<RObject>(object->clone());
+    QSharedPointer<RObject> pObject = QSharedPointer<RObject>(object);
+    transaction.addObject(pObject, false);
+    *object = *pObject.data();
 }
 
 /**

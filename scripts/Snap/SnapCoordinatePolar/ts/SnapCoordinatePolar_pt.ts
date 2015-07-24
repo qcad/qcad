@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>SnapCoordinatePolar</name>
     <message>
         <location filename="../SnapCoordinatePolarInit.js" line="+2"/>
         <source>&amp;Polar Coordinate</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Coordenada po&amp;lar</translation>
+        <translation>Coordenada Po&amp;lar</translation>
     </message>
     <message>
         <location filename="../SnapCoordinatePolar.ui" line="+17"/>
@@ -21,7 +21,7 @@
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pt.ts--
 Raio (distância)</translatorcomment>
-        <translation>Raio (distância)</translation>
+        <translation>Raio (Distância)</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -43,13 +43,13 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <location line="+13"/>
         <source>Tick for Relative Coordinate</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Coordenar relativa</translation>
+        <translation>Marque para Coordenadas Relativas</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Relati&amp;ve</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Relati&amp;vo</translation>
+        <translation>Relati&amp;vas</translation>
     </message>
 </context>
 </TS>

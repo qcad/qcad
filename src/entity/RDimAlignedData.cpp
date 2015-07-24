@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -42,6 +42,13 @@ RDimAlignedData::RDimAlignedData(const RDimensionData& dimData,
                                  const RVector& extensionPoint2)
     : RDimLinearData(dimData, extensionPoint1, extensionPoint2) {
 
+}
+
+RBox RDimAlignedData::getBoundingBox(bool ignoreEmpty) const {
+    boundingBox = RDimensionData::getBoundingBox(ignoreEmpty);
+    boundingBox.growToInclude(extensionPoint1);
+    boundingBox.growToInclude(extensionPoint2);
+    return boundingBox;
 }
 
 QList<RVector> RDimAlignedData::getReferencePoints(
@@ -101,7 +108,10 @@ void RDimAlignedData::recomputeDefinitionPoint(
         a-=M_PI/2.0;
     }
     RVector v = RVector::createPolar(d, a);
-    definitionPoint = newExtPoint1 + v;
+    RVector dp = newExtPoint1 + v;
+    if (dp.isValid()) {
+        definitionPoint = dp;
+    }
 }
 
 QList<QSharedPointer<RShape> > RDimAlignedData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
@@ -109,9 +119,9 @@ QList<QSharedPointer<RShape> > RDimAlignedData::getShapes(const RBox& queryBox, 
 
     QList<QSharedPointer<RShape> > ret;
 
-    if (ignoreComplex) {
-        return ret;
-    }
+//    if (ignoreComplex) {
+//        return ret;
+//    }
 
     double dimexo = getDimexo();
     double dimexe = getDimexe();

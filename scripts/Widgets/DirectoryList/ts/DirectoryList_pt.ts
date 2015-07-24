@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>DirectoryList</name>
     <message>
@@ -11,13 +11,13 @@ is already in the list.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>A pasta
 &apos;%1&apos;
-já está na lista.</translation>
+já se encontra na lista.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Folder not added</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Pasta não acrescentou</translation>
+        <translation>A pasta não foi adicionada</translation>
     </message>
 </context>
 </TS>

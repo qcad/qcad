@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -30,6 +30,7 @@
  * appearance of a ray entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RRayData: public REntityData, protected RRay {
@@ -57,6 +58,15 @@ public:
     double getAngle() const {
         return RRay::getAngle();
     }
+
+    bool hasFixedAngle() const {
+        return fixedAngle;
+    }
+
+    void setFixedAngle(bool on) {
+        fixedAngle = on;
+    }
+
     bool reverse() {
         return RRay::reverse();
     }
@@ -91,8 +101,12 @@ public:
         return QList<QSharedPointer<RShape> >() <<
                 QSharedPointer<RShape>(new RRay(*this));
     }
+
+private:
+    bool fixedAngle;
 };
 
+Q_DECLARE_METATYPE(RRayData)
 Q_DECLARE_METATYPE(RRayData*)
 Q_DECLARE_METATYPE(const RRayData*)
 Q_DECLARE_METATYPE(QSharedPointer<RRayData>)

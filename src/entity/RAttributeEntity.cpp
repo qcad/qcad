@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -21,6 +21,7 @@
 
 RPropertyTypeId RAttributeEntity::PropertyCustom;
 RPropertyTypeId RAttributeEntity::PropertyHandle;
+RPropertyTypeId RAttributeEntity::PropertyProtected;
 RPropertyTypeId RAttributeEntity::PropertyType;
 RPropertyTypeId RAttributeEntity::PropertyBlock;
 RPropertyTypeId RAttributeEntity::PropertyLayer;
@@ -28,6 +29,7 @@ RPropertyTypeId RAttributeEntity::PropertyLinetype;
 RPropertyTypeId RAttributeEntity::PropertyLinetypeScale;
 RPropertyTypeId RAttributeEntity::PropertyLineweight;
 RPropertyTypeId RAttributeEntity::PropertyColor;
+RPropertyTypeId RAttributeEntity::PropertyDisplayedColor;
 RPropertyTypeId RAttributeEntity::PropertyDrawOrder;
 
 RPropertyTypeId RAttributeEntity::PropertyPositionX;
@@ -58,6 +60,7 @@ RAttributeEntity::~RAttributeEntity() {
 void RAttributeEntity::init() {
     RAttributeEntity::PropertyCustom.generateId(typeid(RAttributeEntity), RObject::PropertyCustom);
     RAttributeEntity::PropertyHandle.generateId(typeid(RAttributeEntity), RObject::PropertyHandle);
+    RAttributeEntity::PropertyProtected.generateId(typeid(RAttributeEntity), RObject::PropertyProtected);
     RAttributeEntity::PropertyType.generateId(typeid(RAttributeEntity), REntity::PropertyType);
     RAttributeEntity::PropertyBlock.generateId(typeid(RAttributeEntity), REntity::PropertyBlock);
     RAttributeEntity::PropertyLayer.generateId(typeid(RAttributeEntity), REntity::PropertyLayer);
@@ -65,6 +68,7 @@ void RAttributeEntity::init() {
     RAttributeEntity::PropertyLinetypeScale.generateId(typeid(RAttributeEntity), REntity::PropertyLinetypeScale);
     RAttributeEntity::PropertyLineweight.generateId(typeid(RAttributeEntity), REntity::PropertyLineweight);
     RAttributeEntity::PropertyColor.generateId(typeid(RAttributeEntity), REntity::PropertyColor);
+    RAttributeEntity::PropertyDisplayedColor.generateId(typeid(RAttributeEntity), REntity::PropertyDisplayedColor);
     RAttributeEntity::PropertyDrawOrder.generateId(typeid(RAttributeEntity), REntity::PropertyDrawOrder);
 
     RAttributeEntity::PropertyPositionX.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyPositionX);

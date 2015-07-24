@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -21,6 +21,7 @@
 
 RPropertyTypeId RTextEntity::PropertyCustom;
 RPropertyTypeId RTextEntity::PropertyHandle;
+RPropertyTypeId RTextEntity::PropertyProtected;
 RPropertyTypeId RTextEntity::PropertyType;
 RPropertyTypeId RTextEntity::PropertyBlock;
 RPropertyTypeId RTextEntity::PropertyLayer;
@@ -28,6 +29,7 @@ RPropertyTypeId RTextEntity::PropertyLinetype;
 RPropertyTypeId RTextEntity::PropertyLinetypeScale;
 RPropertyTypeId RTextEntity::PropertyLineweight;
 RPropertyTypeId RTextEntity::PropertyColor;
+RPropertyTypeId RTextEntity::PropertyDisplayedColor;
 RPropertyTypeId RTextEntity::PropertyDrawOrder;
 
 RPropertyTypeId RTextEntity::PropertySimple;
@@ -57,6 +59,7 @@ RTextEntity::~RTextEntity() {
 void RTextEntity::init() {
     RTextEntity::PropertyCustom.generateId(typeid(RTextEntity), RObject::PropertyCustom);
     RTextEntity::PropertyHandle.generateId(typeid(RTextEntity), RObject::PropertyHandle);
+    RTextEntity::PropertyProtected.generateId(typeid(RTextEntity), RObject::PropertyProtected);
     RTextEntity::PropertyType.generateId(typeid(RTextEntity), REntity::PropertyType);
     RTextEntity::PropertyBlock.generateId(typeid(RTextEntity), REntity::PropertyBlock);
     RTextEntity::PropertyLayer.generateId(typeid(RTextEntity), REntity::PropertyLayer);
@@ -64,6 +67,7 @@ void RTextEntity::init() {
     RTextEntity::PropertyLinetypeScale.generateId(typeid(RTextEntity), REntity::PropertyLinetypeScale);
     RTextEntity::PropertyLineweight.generateId(typeid(RTextEntity), REntity::PropertyLineweight);
     RTextEntity::PropertyColor.generateId(typeid(RTextEntity), REntity::PropertyColor);
+    RTextEntity::PropertyDisplayedColor.generateId(typeid(RTextEntity), REntity::PropertyDisplayedColor);
     RTextEntity::PropertyDrawOrder.generateId(typeid(RTextEntity), REntity::PropertyDrawOrder);
 
     RTextEntity::PropertySimple.generateId(typeid(RTextEntity), RTextBasedEntity::PropertySimple);

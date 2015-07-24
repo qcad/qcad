@@ -17,7 +17,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+48"/>
         <source>Double-Click</source>
         <translation>Dvoklik</translation>
     </message>
@@ -32,29 +32,34 @@
         <translation>Dvoklik na blokovno referenco odpre blok</translation>
     </message>
     <message>
-        <location line="+13"/>
-        <source>Right-Click</source>
+        <location line="+10"/>
+        <source>Right double-click to reset</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-42"/>
+        <source>Right-Click</source>
+        <translation>Desni klik</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Right-click to deselect entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Desni klik za odizbor entitet</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+46"/>
         <source>Cursor Range</source>
-        <translation type="unfinished"></translation>
+        <translation>Območje kurzorja</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Cursor range for snap:</source>
-        <translation type="unfinished"></translation>
+        <translation>Območje kurzorja za lepljenje:</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Cursor range for picking entities:</source>
-        <translation type="unfinished"></translation>
+        <translation>Območje kurzorja za izbor entitet:</translation>
     </message>
 </context>
 </TS>

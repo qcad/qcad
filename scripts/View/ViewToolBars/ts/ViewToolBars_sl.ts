@@ -6,7 +6,7 @@
     <message>
         <location filename="../ViewToolBarsPostInit.js" line="+5"/>
         <source>&amp;Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Orodne vrstice</translation>
     </message>
 </context>
 </TS>

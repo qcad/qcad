@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -51,10 +51,11 @@ public:
     virtual QSet<RView::Id> queryAllViews(bool undone = false);
     virtual QSet<RLinetype::Id> queryAllLinetypes();
     virtual QSet<REntity::Id> queryInfiniteEntities();
-    virtual QSet<REntity::Id> querySelectedEntities();
+    virtual QSet<REntity::Id> querySelectedEntities() const;
 
     virtual QSet<REntity::Id> queryLayerEntities(RLayer::Id layerId, bool allBlocks = false);
     virtual QSet<REntity::Id> queryBlockEntities(RBlock::Id blockId);
+    virtual QSet<REntity::Id> queryLayerBlockEntities(RLayer::Id layerId, RBlock::Id blockId);
     virtual QSet<REntity::Id> queryChildEntities(REntity::Id parentId, RS::EntityType type = RS::EntityAll);
     virtual bool hasChildEntities(REntity::Id parentId);
     virtual QSet<REntity::Id> queryBlockReferences(RBlock::Id blockId);

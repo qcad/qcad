@@ -13,22 +13,27 @@
         <translation>À propos de %1</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+69"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>No information available</source>
         <translation>Pas d&apos;information disponible</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+1"/>
         <source>Plugin:</source>
         <translation>Plugin :</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+20"/>
+        <source>ID:</source>
+        <translation>ID:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Description:</source>
         <translation>Description :</translation>
     </message>
@@ -86,7 +91,7 @@
         <translation>Erreur :</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+32"/>
         <source>Script Add-Ons</source>
         <translation>Script Add-Ons</translation>
     </message>

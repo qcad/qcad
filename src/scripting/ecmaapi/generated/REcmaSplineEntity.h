@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSplineEntity {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSplineEntity {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -107,6 +110,9 @@
         isClosed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isGeometricallyClosed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isPeriodic
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -147,6 +153,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getEndPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setStartPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setEndPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         reverse

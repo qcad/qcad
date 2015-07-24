@@ -52,7 +52,7 @@
     <message>
         <location line="+5"/>
         <source>Percent</source>
-        <translation type="unfinished"></translation>
+        <translation>Odstotek</translation>
     </message>
     <message>
         <location line="+15"/>

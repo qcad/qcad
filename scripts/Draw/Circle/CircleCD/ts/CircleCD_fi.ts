@@ -4,29 +4,51 @@
 <context>
     <name>CircleCD</name>
     <message>
-        <location filename="../CircleCD.js" line="+56"/>
         <source>Center or radius</source>
-        <translation>Keskipiste tai säde</translation>
+        <translation type="vanished">Keskipiste tai säde</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center</source>
-        <translation>Keskipiste</translation>
+        <translation type="vanished">Keskipiste</translation>
+    </message>
+    <message>
+        <source>Radius:</source>
+        <translation type="vanished">Säde:</translation>
+    </message>
+    <message>
+        <source>Center, &amp;Radius</source>
+        <translation type="vanished">Keskipiste, &amp;Säde</translation>
+    </message>
+    <message>
+        <source>Draw circle from center and radius</source>
+        <translation type="vanished">Piirrä ympyrä keskipisteellä ja säteellä</translation>
     </message>
     <message>
         <location filename="../CircleCD.ui" line="+17"/>
-        <source>Radius:</source>
-        <translation>Säde:</translation>
+        <location filename="../CircleCDDialog.ui" line="+89"/>
+        <source>Diameter:</source>
+        <translation>Halkaisija:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <location filename="../CircleCDDialog.ui" line="-60"/>
+        <source>Angle:</source>
+        <translation>Kulma:</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Reference Point:</source>
+        <translation>Viitepiste:</translation>
     </message>
     <message>
         <location filename="../CircleCDInit.js" line="+2"/>
-        <source>Center, &amp;Radius</source>
-        <translation>Keskipiste, Säde</translation>
+        <source>Center, &amp;Diameter</source>
+        <translation>Keskipiste, &amp;Halkaisija</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Draw circle from center and radius</source>
-        <translation>Piirrä ympyrä keskipisteellä ja säteellä</translation>
+        <location line="+4"/>
+        <source>Draw circle from center and diameter</source>
+        <translation>Piirrä ympyrä keskipisteellä ja halkaisija</translation>
     </message>
 </context>
 </TS>

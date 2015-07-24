@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -72,7 +72,6 @@ LineRelativeAngle.prototype.setState = function(state) {
         this.entity = undefined;
         this.shape = undefined;
         this.pos = undefined;
-        EAction.showLineTools();
         break;
     case LineRelativeAngle.State.SettingPos:
         this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
@@ -107,7 +106,7 @@ LineRelativeAngle.prototype.pickEntity = function(event, preview) {
         return;
     }
 
-    var shape = entity.getClosestShape(pos);
+    var shape = entity.getClosestSimpleShape(pos);
 
     //if (preview) {
     //    di.highlightEntity(entityId);

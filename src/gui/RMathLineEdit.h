@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -36,6 +36,7 @@ class QCADGUI_EXPORT RMathLineEdit: public QLineEdit {
 
 Q_OBJECT
 Q_PROPERTY(bool angle READ isAngle WRITE setAngle);
+Q_PROPERTY(bool integer READ isInteger WRITE setInteger);
 //Q_PROPERTY(double defaultValue READ getDefaultValue WRITE setDefaultValue);
 //Q_PROPERTY(int defaultUnit READ getDefaultUnit WRITE setDefaultUnit);
 //Q_PROPERTY(RS::Unit defaultUnit READ getDefaultUnit WRITE setDefaultUnit);
@@ -83,6 +84,7 @@ public:
 protected:
     virtual void keyPressEvent(QKeyEvent* event);
     virtual void keyReleaseEvent(QKeyEvent* event);
+//    virtual bool eventFilter(QObject* obj, QEvent* event);
 
 public slots:
     void slotTextChanged(const QString& text);
@@ -90,6 +92,8 @@ public slots:
 
 signals:
     void valueChanged(double value, const QString& error);
+    void upKeyPressed();
+    void downKeyPressed();
 
 private:
     QPalette oriPalette;
@@ -100,6 +104,7 @@ private:
     QString error;
     QString originalToolTip;
     bool noEmit;
+    bool noResultInToolTip;
     //double defaultValue;
 //    QLabel* resultTip;
 };

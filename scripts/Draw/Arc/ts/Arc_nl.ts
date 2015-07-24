@@ -6,17 +6,17 @@
     <message>
         <location filename="../Arc.js" line="+71"/>
         <source>Arc Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Boogen gereedschappen</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show arc tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Toon bogen gereedschappen</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>&amp;Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Boog</translation>
     </message>
 </context>
 </TS>

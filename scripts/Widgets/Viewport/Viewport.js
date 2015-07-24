@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -69,7 +69,8 @@ Viewport.initEventHandler = function(viewports) {
 
 Viewport.initializeViewports = function(viewports) {
     for ( var i = 0; i < viewports.length; ++i) {
-        viewports[i].init();
+        var vp = viewports[i];
+        vp.init();
     }
 };
 
@@ -80,12 +81,12 @@ Viewport.updateViewports = function(viewports) {
         vp.getEventHandler().viewportChanged();
         var gv = vp.getGraphicsView();
         gv.autoZoom(-1, true);
+        //gv.setAntialiasing(RSettings.getBoolValue("GraphicsView/Antialiasing", false));
     }
 };
 
 Viewport.initMdiChild = function(mdiChild, uiFileName) {
-    var w = WidgetFactory.createWidget("",
-        Viewport.templateDir + QDir.separator + uiFileName, mdiChild);
+    var w = WidgetFactory.createWidget("", Viewport.templateDir + QDir.separator + uiFileName, mdiChild);
     w.setWindowTitle("");
     mdiChild.setWidget(w);
 };
@@ -140,6 +141,8 @@ Viewport.prototype.init = function() {
     if (isFunction(this.graphicsView.setFocusFrameWidget)) {
         this.graphicsView.setFocusFrameWidget(this.vpWidget);
     }
+
+    this.graphicsView.setAntialiasing(RSettings.getBoolValue("GraphicsView/Antialiasing", false));
 
     var scene = new RGraphicsSceneQt(this.documentInterface);
     // var scene = new RGraphicsSceneGl(this.documentInterface);
@@ -226,9 +229,7 @@ function EventHandler(viewport, documentInterface) {
 }
 
 EventHandler.prototype.dragEnter = function(event) {
-    if (event.mimeData().hasUrls()) {
-        event.acceptProposedAction();
-    }
+    event.acceptProposedAction();
 };
 
 /**
@@ -237,34 +238,46 @@ EventHandler.prototype.dragEnter = function(event) {
  */
 EventHandler.prototype.drop = function(event) {
     var mimeData = event.mimeData();
-    if (mimeData.hasText()) {
-        qDebug(mimeData.text());
+    var urls = getUrlsFromMimeData(mimeData);
+
+    if (urls.length===0) {
+        EAction.handleUserWarning(qsTr("Dropped data not supported"));
+        event.acceptProposedAction();
+        return;
     }
-    if (mimeData.hasFormat("text/uri-list")) {
-        var a = mimeData.data("text/uri-list");
-        var url = new QUrl(mimeData.urls()[0]);
-        var file = url.toLocalFile();
+
+    var appWin = RMainWindowQt.getMainWindow();
+    if (!isNull(appWin)) {
+        appWin.raise();
+        appWin.setFocus(Qt.OtherFocusReason);
+    }
+
+    var action;
+    if (urls[0].isLocalFile()) {
+        var file = urls[0].toLocalFile();
+        EAction.handleUserMessage(qsTr("Importing file: ") + file);
         if (new QFileInfo(file).isFile()) {
-            var appWin = RMainWindowQt.getMainWindow();
-            if (!isNull(appWin)) {
-                appWin.raise();
-                appWin.setFocus(Qt.OtherFocusReason);
-            }
             include("scripts/Block/InsertScriptItem/InsertScriptItem.js");
-            var action;
             if (InsertScriptItem.isScriptFile(file)) {
                 action = RGuiAction.getByScriptFile("scripts/Block/InsertScriptItem/InsertScriptItem.js");
             } else {
                 action = RGuiAction.getByScriptFile("scripts/Block/InsertBlockItem/InsertBlockItem.js");
             }
-            action.setData(url);
-            action.slotTrigger();
-            event.accept();
         }
+    }
+    else {
+        EAction.handleUserMessage(qsTr("Importing URL: ") + urls[0].toString());
+        action = RGuiAction.getByScriptFile("scripts/Block/InsertBlockItem/InsertBlockItem.js");
+    }
+
+    if (isNull(action)) {
+        event.acceptProposedAction();
         return;
     }
 
-    event.acceptProposedAction();
+    action.setData(urls[0]);
+    action.slotTrigger();
+    event.accept();
 };
 
 EventHandler.prototype.updateTextLabel = function(painter, textLabel) {
@@ -274,7 +287,6 @@ EventHandler.prototype.updateTextLabel = function(painter, textLabel) {
 EventHandler.prototype.drawInfoLabel = function(painter, textLabel) {
     var pos = textLabel.getPosition();
     var text = textLabel.getText();
-    //var align = textLabel.getAlignment();
 
     var p = this.graphicsView.mapToView(pos);
     // info labels might have individual colors in future
@@ -287,18 +299,9 @@ EventHandler.prototype.drawInfoLabel = function(painter, textLabel) {
         var fm = new QFontMetrics(font);
         var w = fm.width(text)+10;
         var h = fm.height()+10;
+        fm.destroy();
         var flags = new Qt.Alignment(Qt.AlignHCenter | Qt.AlignVCenter);
-        //qDebug(flags);
         painter.setFont(font);
-
-//        var x, y;
-//        var dx = graphicsView.mapDistanceFromView(10);
-//        var dy = graphicsView.mapDistanceFromView(10);
-
-//        if (align&Qt.AlignRight) {
-
-//        }
-
         painter.drawText(p.x - w - 15, p.y + h + 5, w, h, flags, text, null);
     }
 };
@@ -390,6 +393,7 @@ EventHandler.prototype.drawSnapLabel = function(painter, pos, posRestriction, te
     // display distance/angle:
     var display = RSettings.getIntValue("DisplaySettings/DisplayDistanceAngle", 0);
     if (display === 0) {
+        fm.destroy();
         return;
     }
 
@@ -444,6 +448,8 @@ EventHandler.prototype.drawSnapLabel = function(painter, pos, posRestriction, te
                     new Qt.Alignment(Qt.AlignHCenter | Qt.AlignVCenter),
                     text, null);
     }
+
+    fm.destroy();
 };
 
 /**

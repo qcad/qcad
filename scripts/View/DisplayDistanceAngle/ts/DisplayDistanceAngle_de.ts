@@ -4,9 +4,13 @@
 <context>
     <name>DisplayDistanceAngle</name>
     <message>
-        <location filename="../DisplayDistanceAngleInit.js" line="+2"/>
         <source>Display Distance/Angle</source>
-        <translation>Distanz/Winkel anzeigen</translation>
+        <translation type="vanished">Distanz/Winkel anzeigen</translation>
+    </message>
+    <message>
+        <location filename="../DisplayDistanceAngleInit.js" line="+2"/>
+        <source>Display &amp;Distance/Angle</source>
+        <translation>&amp;Distanz/Winkel anzeigen</translation>
     </message>
 </context>
 </TS>

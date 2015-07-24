@@ -9,7 +9,7 @@
         <translation>Pisalo</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+64"/>
         <source>Reset to Defaults</source>
         <translation>Ponastavi na privzeto</translation>
     </message>

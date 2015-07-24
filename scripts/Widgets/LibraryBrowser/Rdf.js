@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -111,15 +111,16 @@ function Rdf(resource) {
     }
 
     if (!RSettings.isQt(5)) {
-        var file = new QFile(this.fileName);
+        //var file = new QFile(this.fileName);
 
-        var xmlReader = new QXmlSimpleReader();
-        var source = new QXmlInputSource(file);
+        //var xmlReader = new QXmlSimpleReader();
+        //var source = new QXmlInputSource(file);
         var handler = new RdfHandler(this);
-        xmlReader.setContentHandler(handler);
-        var ok = xmlReader.parse(source, false);
+        //xmlReader.setContentHandler(handler);
+        //var ok = xmlReader.parse(source, false);
+        parseXml(this.fileName, handler);
 
-        file.close();
+        //file.close();
     }
 }
 

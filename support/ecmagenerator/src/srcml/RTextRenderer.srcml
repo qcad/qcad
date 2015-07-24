@@ -1,1311 +1,255 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RTextRenderer.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RTEXTRENDERER_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RTEXTRENDERER_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QTextLayout&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDocument.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"REntityData.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPainterPathSource.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RTextBasedData.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RVector.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>QTextDocument</name>;</class_decl>
-  <comment type="block">/** * Renders formatted text into painter
-  paths. * * \scriptable * \ingroup entity */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RTextRenderer</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <enum>enum 
-  <name>Target</name>
-  <block>{ 
-  <expr>
-  <name>PainterPaths</name>= 0x01</expr>, 
-  <expr>
-  <name>RichText</name>= 0x02</expr>}</block>;</enum></public>
-  <public>public: 
-  <constructor_decl>
-  <name>RTextRenderer</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RTextBasedData</name>&amp;</type>
-      <name>textData</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>draft</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RTextRenderer</name>::
-        <name>Target</name></name>
-      </type>
-      <name>target</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>fontHeightFactor</name>=
-    <init>
-      <expr>1.0</expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>renderSimple</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>render</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RPainterPath</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>getPainterPaths</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>painterPaths</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>RBox</name>
-    </type>
-    <name>getBoundingBox</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>boundingBox</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getHeight</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>height</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getWidth</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>width</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getRichText</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>richText</name>
-    </expr>;</return>}</block>
-  </function></public>
-  <private>private: 
-  <function_decl>
-  <type>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RPainterPath</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getPainterPathsForBlock</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>blockText</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>QTextLayout</name>::
-        <name>FormatRange</name></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>formats</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>double</name>&amp;</type>
-      <name>horizontalAdvance</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>double</name>&amp;</type>
-      <name>horizontalAdvanceNoSpacing</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>double</name>&amp;</type>
-      <name>ascent</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>double</name>&amp;</type>
-      <name>descent</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RPainterPath</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getPainterPathsForBlockTtf</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>blockText</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>QTextLayout</name>::
-        <name>FormatRange</name></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>formats</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>double</name>&amp;</type>
-      <name>horizontalAdvance</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>double</name>&amp;</type>
-      <name>horizontalAdvanceNoSpacing</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>double</name>&amp;</type>
-      <name>ascent</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>double</name>&amp;</type>
-      <name>descent</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RPainterPath</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getPainterPathsForBlockCad</name>
-  <parameter_list>( 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>blockText</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>QTextLayout</name>::
-        <name>FormatRange</name></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>formats</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>double</name>&amp;</type>
-      <name>horizontalAdvance</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>double</name>&amp;</type>
-      <name>horizontalAdvanceNoSpacing</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>double</name>&amp;</type>
-      <name>ascent</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>double</name>&amp;</type>
-      <name>descent</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>preparePath</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RPainterPath</name>&amp;</type>
-      <name>path</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RColor</name>&amp;</type>
-      <name>color</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>cursor</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>cxfScale</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QRectF</name>
-  </type>
-  <name>getCharacterRect</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>fontName</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QChar</name>&amp;</type>
-      <name>ch</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QRectF</name>
-  </type>
-  <name>getCharacterRect</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QFont</name>&amp;</type>
-      <name>font</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QChar</name>&amp;</type>
-      <name>ch</name>
-    </decl>
-  </param>)</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QString</name>
-  </type>
-  <name>getRichTextForBlock</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>blockText</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>QTextLayout</name>::
-        <name>FormatRange</name></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>formats</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setBlockFont</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QString</name>&amp;</type>
-        <name>f</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>!
-    <name>blockFont</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <expr_stmt>
-      <expr>
-      <name>blockFont</name>.
-      <call>
-        <name>top</name>
-        <argument_list>()</argument_list>
-      </call>= 
-      <name>f</name></expr>;</expr_stmt>}</block>
-    </then></if>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getBlockFont</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>!
-    <name>blockFont</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-      <name>blockFont</name>.
-      <call>
-        <name>top</name>
-        <argument_list>()</argument_list>
-      </call></expr>;</return>}</block>
-    </then></if>
-    <return>return 
-    <expr>""</expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setUseCadFont</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>!
-    <name>useCadFont</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <expr_stmt>
-      <expr>
-      <name>useCadFont</name>.
-      <call>
-        <name>top</name>
-        <argument_list>()</argument_list>
-      </call>= 
-      <name>on</name></expr>;</expr_stmt>}</block>
-    </then></if>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getUseCadFont</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>!
-    <name>useCadFont</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-      <name>useCadFont</name>.
-      <call>
-        <name>top</name>
-        <argument_list>()</argument_list>
-      </call></expr>;</return>}</block>
-    </then></if>
-    <return>return 
-    <expr>
-      <name>false</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setBlockBold</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>!
-    <name>blockBold</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <expr_stmt>
-      <expr>
-      <name>blockBold</name>.
-      <call>
-        <name>top</name>
-        <argument_list>()</argument_list>
-      </call>= 
-      <name>on</name></expr>;</expr_stmt>}</block>
-    </then></if>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getBlockBold</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>!
-    <name>blockBold</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-      <name>blockBold</name>.
-      <call>
-        <name>top</name>
-        <argument_list>()</argument_list>
-      </call></expr>;</return>}</block>
-    </then></if>
-    <return>return 
-    <expr>
-      <name>false</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setBlockItalic</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>!
-    <name>blockItalic</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <expr_stmt>
-      <expr>
-      <name>blockItalic</name>.
-      <call>
-        <name>top</name>
-        <argument_list>()</argument_list>
-      </call>= 
-      <name>on</name></expr>;</expr_stmt>}</block>
-    </then></if>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>getBlockItalic</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>!
-    <name>blockItalic</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-      <name>blockItalic</name>.
-      <call>
-        <name>top</name>
-        <argument_list>()</argument_list>
-      </call></expr>;</return>}</block>
-    </then></if>
-    <return>return 
-    <expr>
-      <name>false</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setBlockHeight</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>h</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>!
-    <name>blockHeight</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <expr_stmt>
-      <expr>
-      <name>blockHeight</name>.
-      <call>
-        <name>top</name>
-        <argument_list>()</argument_list>
-      </call>= 
-      <name>h</name></expr>;</expr_stmt>}</block>
-    </then></if>}</block>
-  </function>
-  <function>
-    <type>
-      <name>double</name>
-    </type>
-    <name>getBlockHeight</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>!
-    <name>blockHeight</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-      <name>blockHeight</name>.
-      <call>
-        <name>top</name>
-        <argument_list>()</argument_list>
-      </call></expr>;</return>}</block>
-    </then></if>
-    <return>return 
-    <expr>1.0</expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setCurrentFormat</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>QTextCharFormat</name>
-        </type>
-        <name>f</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>!
-    <name>currentFormat</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <expr_stmt>
-      <expr>
-      <name>currentFormat</name>.
-      <call>
-        <name>top</name>
-        <argument_list>()</argument_list>
-      </call>= 
-      <name>f</name></expr>;</expr_stmt>}</block>
-    </then></if>}</block>
-  </function>
-  <function>
-    <type>
-      <name>QTextCharFormat</name>
-    </type>
-    <name>getCurrentFormat</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>!
-    <name>currentFormat</name>.
-    <call>
-      <name>isEmpty</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-      <name>currentFormat</name>.
-      <call>
-        <name>top</name>
-        <argument_list>()</argument_list>
-      </call></expr>;</return>}</block>
-    </then></if>
-    <return>return 
-    <expr>
-      <call>
-        <name>QTextCharFormat</name>
-        <argument_list>()</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function></private>
-  <public>public: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxLineFeed</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxParagraphFeed</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxHeightChange</name>
-  </decl>;</decl_stmt>
-  <comment type="line">//static QString
-  rxRelativeHeightChange;</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxStackedText</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxColorChangeIndex</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxColorChangeCustom</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxNonBreakingSpace</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxOverlineOn</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxOverlineOff</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxUnderlineOn</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxUnderlineOff</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxWidthChange</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxObliqueAngleChange</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxTrackChange</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxAlignmentChange</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxFontChangeCad</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxFontChangeTtf</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxBeginBlock</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxEndBlock</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxBackslash</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxCurlyOpen</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxCurlyClose</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxDegree</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>escDegree</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxPlusMinus</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>escPlusMinus</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxDiameter</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>escDiameter</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxUnderlined</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxUnicode</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QString</name>
-    </type>
-    <name>rxAll</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QChar</name>
-    </type>
-    <name>chDegree</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QChar</name>
-    </type>
-    <name>chPlusMinus</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QChar</name>
-    </type>
-    <name>chDiameter</name>
-  </decl>;</decl_stmt></public>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>const</name>
-    <name>RTextBasedData</name>&amp;</type>
-    <name>textData</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>Target</name>
-    </type>
-    <name>target</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RPainterPath</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>painterPaths</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RBox</name>
-    </type>
-    <name>boundingBox</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>height</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>width</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>draft</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>richText</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>double</name>
-    </type>
-    <name>fontHeightFactor</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QStack
-      <argument_list>&lt;
-      <argument>
-        <name>bool</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>useCadFont</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QStack
-      <argument_list>&lt;
-      <argument>
-        <name>QTextCharFormat</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>currentFormat</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QStack
-      <argument_list>&lt;
-      <argument>
-        <name>double</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>blockHeight</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QStack
-      <argument_list>&lt;
-      <argument>
-        <name>QString</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>blockFont</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QStack
-      <argument_list>&lt;
-      <argument>
-        <name>bool</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>blockBold</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QStack
-      <argument_list>&lt;
-      <argument>
-        <name>bool</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>blockItalic</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QStack
-      <argument_list>&lt;
-      <argument>
-        <name>QStringList</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>openTags</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RTextRenderer*</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RTextRenderer::Target</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RTextRenderer::Target*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RTextRenderer.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RTEXTRENDERER_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RTEXTRENDERER_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTextLayout&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntityData.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPathSource.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextBasedData.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>QTextDocument</name>;</class_decl>
+
+<comment type="block">/**
+ * Renders formatted text into painter paths.
+ *
+ * \scriptable
+ * \ingroup entity
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RTextRenderer</name> <block>{<private type="default">
+</private><public>public:
+    <enum>enum <name>Target</name> <block>{
+        <expr><name>PainterPaths</name> = 0x01</expr>,
+        <expr><name>RichText</name> = 0x02</expr>
+    }</block>;</enum>
+
+</public><public>public:
+    <constructor_decl><name>RTextRenderer</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>textData</name></decl></param>, <param><decl><type><name>bool</name></type> <name>draft</name></decl></param>, <param><decl><type><name><name>RTextRenderer</name>::<name>Target</name></name></type> <name>target</name></decl></param>, <param><decl><type><name>double</name></type> <name>fontHeightFactor</name> =<init> <expr>1.0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
+
+    <function_decl><type><name>void</name></type> <name>renderSimple</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>render</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPaths</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>painterPaths</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RBox</name></type> <name>getBoundingBox</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>boundingBox</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getHeight</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>height</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getWidth</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>width</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>QString</name></type> <name>getRichText</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>richText</name></expr>;</return>
+    }</block></function>
+
+</public><private>private:
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPathsForBlock</name><parameter_list>(
+        <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockText</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>QTextLayout</name>::<name>FormatRange</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>formats</name></decl></param>,
+        <param><decl><type><name>double</name>&amp;</type> <name>horizontalAdvance</name></decl></param>,
+        <param><decl><type><name>double</name>&amp;</type> <name>horizontalAdvanceNoSpacing</name></decl></param>,
+        <param><decl><type><name>double</name>&amp;</type> <name>ascent</name></decl></param>,
+        <param><decl><type><name>double</name>&amp;</type> <name>descent</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPathsForBlockTtf</name><parameter_list>(
+        <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockText</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>QTextLayout</name>::<name>FormatRange</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>formats</name></decl></param>,
+        <param><decl><type><name>double</name>&amp;</type> <name>horizontalAdvance</name></decl></param>,
+        <param><decl><type><name>double</name>&amp;</type> <name>horizontalAdvanceNoSpacing</name></decl></param>,
+        <param><decl><type><name>double</name>&amp;</type> <name>ascent</name></decl></param>,
+        <param><decl><type><name>double</name>&amp;</type> <name>descent</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPathsForBlockCad</name><parameter_list>(
+        <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockText</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>QTextLayout</name>::<name>FormatRange</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>formats</name></decl></param>,
+        <param><decl><type><name>double</name>&amp;</type> <name>horizontalAdvance</name></decl></param>,
+        <param><decl><type><name>double</name>&amp;</type> <name>horizontalAdvanceNoSpacing</name></decl></param>,
+        <param><decl><type><name>double</name>&amp;</type> <name>ascent</name></decl></param>,
+        <param><decl><type><name>double</name>&amp;</type> <name>descent</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>preparePath</name><parameter_list>(<param><decl><type><name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>,
+        <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>color</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>cursor</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>cxfScale</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>QRectF</name></type> <name>getCharacterRect</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fontName</name></decl></param>, <param><decl><type><name>const</name> <name>QChar</name>&amp;</type> <name>ch</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QRectF</name></type> <name>getCharacterRect</name><parameter_list>(<param><decl><type><name>const</name> <name>QFont</name>&amp;</type> <name>font</name></decl></param>, <param><decl><type><name>const</name> <name>QChar</name>&amp;</type> <name>ch</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>QString</name></type> <name>getRichTextForBlock</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockText</name></decl></param>,
+                                <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>QTextLayout</name>::<name>FormatRange</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>formats</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>void</name></type> <name>setBlockFont</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>f</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr>!<name>blockFont</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>blockFont</name>.<call><name>top</name><argument_list>()</argument_list></call> = <name>f</name></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></function>
+
+    <function><type><name>QString</name></type> <name>getBlockFont</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr>!<name>blockFont</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>blockFont</name>.<call><name>top</name><argument_list>()</argument_list></call></expr>;</return>
+        }</block></then></if>
+        <return>return <expr>""</expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setUseCadFont</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr>!<name>useCadFont</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>useCadFont</name>.<call><name>top</name><argument_list>()</argument_list></call> = <name>on</name></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getUseCadFont</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr>!<name>useCadFont</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>useCadFont</name>.<call><name>top</name><argument_list>()</argument_list></call></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><name>false</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setBlockBold</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr>!<name>blockBold</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>blockBold</name>.<call><name>top</name><argument_list>()</argument_list></call> = <name>on</name></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getBlockBold</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr>!<name>blockBold</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>blockBold</name>.<call><name>top</name><argument_list>()</argument_list></call></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><name>false</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setBlockItalic</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr>!<name>blockItalic</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>blockItalic</name>.<call><name>top</name><argument_list>()</argument_list></call> = <name>on</name></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>getBlockItalic</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr>!<name>blockItalic</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>blockItalic</name>.<call><name>top</name><argument_list>()</argument_list></call></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><name>false</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setBlockHeight</name><parameter_list>(<param><decl><type><name>double</name></type> <name>h</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr>!<name>blockHeight</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>blockHeight</name>.<call><name>top</name><argument_list>()</argument_list></call> = <name>h</name></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getBlockHeight</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr>!<name>blockHeight</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>blockHeight</name>.<call><name>top</name><argument_list>()</argument_list></call></expr>;</return>
+        }</block></then></if>
+        <return>return <expr>1.0</expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setCurrentFormat</name><parameter_list>(<param><decl><type><name>QTextCharFormat</name></type> <name>f</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr>!<name>currentFormat</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>currentFormat</name>.<call><name>top</name><argument_list>()</argument_list></call> = <name>f</name></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></function>
+
+    <function><type><name>QTextCharFormat</name></type> <name>getCurrentFormat</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr>!<name>currentFormat</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>currentFormat</name>.<call><name>top</name><argument_list>()</argument_list></call></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><call><name>QTextCharFormat</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+</private><public>public:
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxLineFeed</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxParagraphFeed</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxHeightChange</name></decl>;</decl_stmt>
+    <comment type="line">//static QString rxRelativeHeightChange;</comment>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxStackedText</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxColorChangeIndex</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxColorChangeCustom</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxNonBreakingSpace</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxOverlineOn</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxOverlineOff</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxUnderlineOn</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxUnderlineOff</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxWidthChange</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxObliqueAngleChange</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxTrackChange</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxAlignmentChange</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxFontChangeCad</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxFontChangeTtf</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxBeginBlock</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxEndBlock</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxBackslash</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxCurlyOpen</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxCurlyClose</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxDegree</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>escDegree</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxPlusMinus</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>escPlusMinus</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxDiameter</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>escDiameter</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxUnderlined</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxUnicode</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>rxAll</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>static</name> <name>QChar</name></type> <name>chDegree</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QChar</name></type> <name>chPlusMinus</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QChar</name></type> <name>chDiameter</name></decl>;</decl_stmt>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>textData</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>Target</name></type> <name>target</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>painterPaths</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RBox</name></type> <name>boundingBox</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>height</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>width</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>draft</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>richText</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>fontHeightFactor</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>bool</name></argument>&gt;</argument_list></name></type> <name>useCadFont</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>QTextCharFormat</name></argument>&gt;</argument_list></name></type> <name>currentFormat</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>blockHeight</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>blockFont</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>bool</name></argument>&gt;</argument_list></name></type> <name>blockBold</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>bool</name></argument>&gt;</argument_list></name></type> <name>blockItalic</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>QStringList</name></argument>&gt;</argument_list></name></type> <name>openTags</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTextRenderer*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTextRenderer::Target</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTextRenderer::Target*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

@@ -13,7 +13,8 @@ SOURCES += RAddObjectOperation.cpp \
     RModifyObjectsOperation.cpp \
     RMoveReferencePointOperation.cpp \
     RMoveSelectionOperation.cpp \
-    RPasteOperation.cpp
+    RPasteOperation.cpp \
+    RScaleSelectionOperation.cpp
 HEADERS = RAddObjectOperation.h \
     RAddObjectsOperation.h \
     RChangePropertyOperation.h \
@@ -28,6 +29,7 @@ HEADERS = RAddObjectOperation.h \
     RModifyObjectsOperation.h \
     RMoveReferencePointOperation.h \
     RMoveSelectionOperation.h \
+    RScaleSelectionOperation.h \
     RPasteOperation.h \
     RTransformation.h \
     RTranslation.h

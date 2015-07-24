@@ -3,8 +3,8 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/RestrictAngleLength.js");
     action.setIcon(basePath + "/RestrictAngleLength.svg");
-    action.setDefaultShortcut(new QKeySequence("e,g"));
-    action.setDefaultCommands(["restrictanglelength", "eg"]);
+    action.setDefaultShortcut(new QKeySequence("e,l"));
+    action.setDefaultCommands(["restrictanglelength", "el"]);
     action.setGroup("snaprestrictions");
     action.setNoState(true);
     action.setGroupSortOrder(15600);

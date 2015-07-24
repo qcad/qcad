@@ -20,7 +20,7 @@
         <translation>Dimenzija</translation>
     </message>
     <message>
-        <location line="+91"/>
+        <location line="+100"/>
         <source>Scientific</source>
         <translation>Znanstveno</translation>
     </message>
@@ -45,7 +45,7 @@
         <translation>Frakcijski</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+32"/>
         <source>Decimal Degrees</source>
         <translation>Stopinje v desetiškem</translation>
     </message>
@@ -70,14 +70,14 @@
         <translation>Geodetske enote</translation>
     </message>
     <message>
-        <location line="+205"/>
+        <location line="+193"/>
         <source>Unit / Format</source>
         <translation>Enota / Zapis</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>Enota risbe mora biti v inčih, za prikaz kotiranj ter napisov v arhitekturni ali inžinerski obliki. Zapis spremenljen v desetiški.</translation>
     </message>
     <message>
         <source>The drawing unit must be &apos;Inch&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
@@ -141,12 +141,12 @@
     <message>
         <location line="+23"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Pisava</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Dimension label font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pisava kotiranj:</translation>
     </message>
     <message>
         <location line="+13"/>

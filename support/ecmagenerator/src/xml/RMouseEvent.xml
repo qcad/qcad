@@ -34,7 +34,27 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="s" isConst="false" />
         <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
         name="v" isConst="false" />
+        <arg type="qreal" typeName="qreal" name="devicePixelRatio"
+        hasDefault="true" default="1.0" isConst="false" />
       </variant>
     </constructor>
+    <method name="hasMouseMoved" cppName="hasMouseMoved"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="resetOriginalMousePos"
+    cppName="resetOriginalMousePos" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="setOriginalMousePos"
+    cppName="setOriginalMousePos" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPoint &amp;" typeName="QPoint" name="p"
+        isConst="true" />
+      </variant>
+    </method>
   </class>
 </unit>

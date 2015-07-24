@@ -26,7 +26,7 @@
     <message>
         <location line="+4"/>
         <source>Draw arc from 3 points</source>
-        <translation>Piirra kaari kolmella pisteellä</translation>
+        <translation>Piirra kaari 3:lla pisteellä</translation>
     </message>
 </context>
 </TS>

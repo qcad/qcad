@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>313</width>
-    <height>244</height>
+    <height>248</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -58,9 +58,9 @@
     </layout>
    </item>
    <item>
-    <widget class="QGroupBox" name="groupBox">
+    <widget class="QGroupBox" name="Attributes">
      <property name="title">
-      <string>Pen</string>
+      <string>Attributes</string>
      </property>
      <layout class="QFormLayout" name="formLayout_2">
       <property name="fieldGrowthPolicy">
@@ -192,14 +192,14 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>RColorCombo</class>
-   <extends>QComboBox</extends>
-   <header>RColorCombo.h</header>
-  </customwidget>
-  <customwidget>
    <class>RLineweightCombo</class>
    <extends>QComboBox</extends>
    <header>RLineweightCombo.h</header>
+  </customwidget>
+  <customwidget>
+   <class>RColorCombo</class>
+   <extends>QComboBox</extends>
+   <header>RColorCombo.h</header>
   </customwidget>
   <customwidget>
    <class>RLinetypeCombo</class>

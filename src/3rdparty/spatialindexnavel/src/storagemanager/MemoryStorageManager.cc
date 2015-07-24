@@ -1,28 +1,34 @@
-// Spatial Index Library
-//
-// Copyright (C) 2002 Navel Ltd.
-//
-// This library is free software; you can redistribute it and/or
-// modify it under the terms of the GNU Lesser General Public
-// License as published by the Free Software Foundation; either
-// version 2.1 of the License, or (at your option) any later version.
-//
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-// Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public
-// License along with this library; if not, write to the Free Software
-// Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-//
-//  Email:
-//    mhadji@gmail.com
+/******************************************************************************
+ * Project:  libspatialindex - A C++ library for spatial indexing
+ * Author:   Marios Hadjieleftheriou, mhadji@gmail.com
+ ******************************************************************************
+ * Copyright (c) 2002, Marios Hadjieleftheriou
+ *
+ * All rights reserved.
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ * copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included
+ * in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ * DEALINGS IN THE SOFTWARE.
+******************************************************************************/
 
 #include <stdexcept>
 #include <cstring>
 
-#include "../spatialindex/SpatialIndexImpl.h"
+#include <spatialindex/SpatialIndex.h>
 #include "MemoryStorageManager.h"
 
 using namespace SpatialIndex;
@@ -40,16 +46,20 @@ SpatialIndex::IStorageManager* SpatialIndex::StorageManager::createNewMemoryStor
 	return returnMemoryStorageManager(ps);
 }
 
-MemoryStorageManager::MemoryStorageManager(Tools::PropertySet& ps)
+MemoryStorageManager::MemoryStorageManager(Tools::PropertySet&)
 {
 }
 
 MemoryStorageManager::~MemoryStorageManager()
 {
-	for (std::vector<Entry*>::iterator it = m_buffer.begin(); it != m_buffer.end(); it++) delete *it;
+	for (std::vector<Entry*>::iterator it = m_buffer.begin(); it != m_buffer.end(); ++it) delete *it;
 }
 
-void MemoryStorageManager::loadByteArray(const id_type page, size_t& len, byte** data)
+void MemoryStorageManager::flush()
+{
+}
+
+void MemoryStorageManager::loadByteArray(const id_type page, uint32_t& len, byte** data)
 {
 	Entry* e;
 	try
@@ -68,7 +78,7 @@ void MemoryStorageManager::loadByteArray(const id_type page, size_t& len, byte**
 	memcpy(*data, e->m_pData, len);
 }
 
-void MemoryStorageManager::storeByteArray(id_type& page, const size_t len, const byte* const data)
+void MemoryStorageManager::storeByteArray(id_type& page, const uint32_t len, const byte* const data)
 {
 	if (page == NewPage)
 	{

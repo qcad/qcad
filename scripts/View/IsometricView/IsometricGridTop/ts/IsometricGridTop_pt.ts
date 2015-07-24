@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>IsometricGridTop</name>
     <message>
         <location filename="../IsometricGridTop.js" line="+143"/>
         <source>&amp;Top Projection</source>
-        <translation>Projecção do &amp;topo</translation>
+        <translation>Projeção &amp;superior</translation>
     </message>
 </context>
 </TS>

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -95,6 +95,15 @@ WidgetFactory.createWidget = function(basePath, uiFile, parent) {
     var formWidget = loader.load(buf, parent);
     buf.close();
     loader.destroy();
+
+    if (isNull(formWidget)) {
+        qDebug("WidgetFactory.createWidget: widget is NULL");
+    }
+
+    if (RS.getSystemId()==="osx") {
+        WidgetFactory.installComboBoxEventFilter(formWidget);
+    }
+
     return formWidget;
 };
 
@@ -219,17 +228,17 @@ WidgetFactory.saveState = function(widget, group, document, map) {
         if (isOfType(c, QLineEdit)) {
             value = c.text;
         }
-        if (isOfType(c, QPlainTextEdit)) {
+        else if (isOfType(c, QPlainTextEdit)) {
             value = c.toPlainText();
         }
-        if (isOfType(c, RMathLineEdit)) {
+        else if (isOfType(c, RMathLineEdit)) {
             //value = [c.text, c.getDefaultUnit()];
             value = c.text;
         }
-        if (isOfType(c, QCheckBox)) {
+        else if (isOfType(c, QCheckBox)) {
             value = c.checked;
         }
-        if (isOfType(c, QRadioButton) ||
+        else if (isOfType(c, QRadioButton) ||
             isOfType(c, QToolButton) ||
             isOfType(c, QPushButton)) {
 
@@ -246,12 +255,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
                 }
             }
         }
-        /*
-        if (c.toString() == "QButtonGroup") {
-            value = c.checkedButton().objectName;
-        }
-        */
-        if (isOfType(c, QComboBox) || isOfType(c, QFontComboBox)) {
+        else if (isOfType(c, QComboBox) || isOfType(c, QFontComboBox)) {
             var forceSaveText = false;
             var forceSaveIndex = false;
             if (typeof(c["ForceSaveText"]) != "undefined"
@@ -271,19 +275,19 @@ WidgetFactory.saveState = function(widget, group, document, map) {
                 value = c.itemData(c.currentIndex);
             }
         }
-        if (isOfType(c, RColorCombo)) {
+        else if (isOfType(c, RColorCombo)) {
             value = c.getColor();
         }
-        if (isOfType(c, RLineweightCombo)) {
+        else if (isOfType(c, RLineweightCombo)) {
             value = c.getLineweight();
         }
-        if (isOfType(c, RLinetypeCombo)) {
+        else if (isOfType(c, RLinetypeCombo)) {
             value = c.getLinetypePattern();
         }
-        if (isOfType(c, QSpinBox)) {
+        else if (isOfType(c, QSpinBox) || isOfType(c, QDoubleSpinBox)) {
             value = c.value;
         }
-        if (isOfType(c, QListWidget)) {
+        else if (isOfType(c, QListWidget)) {
             var items = [];
             if (c.count != 0) {
                 for ( var j = 0; j < c.count; ++j) {
@@ -306,7 +310,7 @@ WidgetFactory.saveState = function(widget, group, document, map) {
                 }
             }
         }
-        if (c.toString().startsWith("RFontChooserWidget")) {
+        else if (c.toString().startsWith("RFontChooserWidget")) {
             value = c.getFont();
         }
 
@@ -459,6 +463,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
         if (isNull(value) || isOfType(c, QGroupBox)) {
             // never process internal children of these widgets:
             if (!isOfType(c, QSpinBox) &&
+                !isOfType(c, QDoubleSpinBox) &&
                 !isOfType(c, QComboBox) &&
                 !isOfType(c, QFontComboBox) &&
                 !isOfType(c, QPlainTextEdit) &&
@@ -493,7 +498,7 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
 //        qDebug("restoring: ", c.objectName);
 //        qDebug("  value: ", value);
 
-//        if (c.objectName==="RampOn") {
+//        if (c.objectName==="Positions") {
 //            debugger;
 //        }
 
@@ -712,7 +717,12 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
 
                 // color object given:
                 else {
-                    c.setColor(value);
+                    if (isOfType(value, RColor)) {
+                        c.setColor(value);
+                    }
+                    else {
+                        qWarning("value is not of type RColor:", value);
+                    }
                 }
             }
             continue;
@@ -742,9 +752,16 @@ WidgetFactory.restoreState = function(widget, group, signalReceiver, reset, docu
             }
             continue;
         }
-        if (isOfType(c, QSpinBox)) {
-            WidgetFactory.connect(c["valueChanged(int)"], signalReceiver, c.objectName);
-            c["valueChanged(int)"].connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
+        if (isOfType(c, QSpinBox) || isOfType(c, QDoubleSpinBox)) {
+            if (isOfType(c, QSpinBox)) {
+                WidgetFactory.connect(c["valueChanged(int)"], signalReceiver, c.objectName);
+                c["valueChanged(int)"].connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
+            }
+            else {
+                WidgetFactory.connect(c["valueChanged(double)"], signalReceiver, c.objectName);
+                c["valueChanged(double)"].connect(WidgetFactory.topLevelWidget, "slotSettingChanged");
+            }
+
             if (isNull(c.defaultValue)) {
                 c.defaultValue = c.value;
                 if (signalReceiver!=undefined) {
@@ -907,7 +924,7 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
         w.setProperty("SettingsGroup", settingsGroup);
 
         // add separator:
-        if (isOfType(w, QFrame) && w.frameShape==QFrame.VLine) {
+        if (isSeparator(w)) {
             a = targetWidget.addSeparator();
             a.objectName = w.objectName + "Action";
             ret.push(a);
@@ -935,7 +952,7 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
             // add line edit or math edit with maximum width:
             if (isOfType(w, QLineEdit) || isOfType(w, RMathLineEdit)) {
                 if (w.maximumWidth>=1024) {
-                    w.maximumWidth = 100;
+                    w.maximumWidth = 75;
                 }
             }
             a = targetWidget.addWidget(w);
@@ -1075,6 +1092,23 @@ WidgetFactory.initBlockCombo = function(comboBox, doc, showSpaces) {
     }
 };
 
+WidgetFactory.initList = function(list, groupName) {
+    if (isNull(list)) {
+        return;
+    }
+
+    if (RSettings.getBoolValue(groupName + "/EnableAlternatingRowColor", false)===true) {
+        list.alternatingRowColors = true;
+        var p = list.palette;
+        var col = RSettings.getColorValue(groupName + "/AlternatingRowColor", new RColor(230, 235, 250));
+        p.setColor(QPalette.AlternateBase, new QColor(col.red(), col.green(), col.blue(), col.alpha()));
+        list.palette = p;
+    }
+    else {
+        list.alternatingRowColors = false;
+    }
+};
+
 WidgetFactory.initHAlignCombo = function(comboBox) {
     comboBox.clear();
     comboBox.addItem(qsTr("Left"), RS.HAlignLeft);
@@ -1091,4 +1125,36 @@ WidgetFactory.initVAlignCombo = function(comboBox) {
     comboBox.addItem(qsTr("Middle"), RS.VAlignMiddle);
     comboBox.addItem(qsTr("Base"), RS.VAlignBase);
     comboBox.addItem(qsTr("Bottom"), RS.VAlignBottom);
+};
+
+WidgetFactory.installComboBoxEventFilter = function(widget) {
+    if (isNull(widget)) {
+        return;
+    }
+    if (!isQWidget(widget) || !isFunction(widget.children)) {
+        return;
+    }
+
+    var children = widget.children();
+    for ( var i = 0; i < children.length; ++i) {
+        var c = children[i];
+
+        if (!c || isDeleted(c)) {
+            break;
+        }
+
+        if (isOfType(c, QSpinBox) ||
+            isOfType(c, QComboBox) ||
+            isOfType(c, QFontComboBox) ||
+            isOfType(c, RColorCombo) ||
+            isOfType(c, RLineweightCombo) ||
+            isOfType(c, RLinetypeCombo)) {
+
+            c.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
+            c.focusPolicy = Qt.ClickFocus;
+            continue;
+        }
+
+        WidgetFactory.installComboBoxEventFilter(c);
+    }
 };

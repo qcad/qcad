@@ -109,21 +109,49 @@
         <translation>Scala del modello per lo spessore di linea 0,00mm:</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="+36"/>
+        <source>Display and Performance</source>
+        <translation>Visualizzazione e prestazioni</translation>
+    </message>
+    <message>
+        <location line="+146"/>
+        <source>Display entities with more than N dashes as continuous:</source>
+        <translation>Visualizza entità con più di N trattini come continuo:</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Minimum angle step for rendering arcs (degrees):</source>
+        <translation>Passo angolo minimo per rendere archi (gradi):</translation>
+    </message>
+    <message>
+        <location line="+82"/>
+        <source>Anti-aliasing on by default</source>
+        <translation>Antialiasing di default</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Timeout for hatch rendering:</source>
+        <translation>Timeout per la rappresentazione tratteggio:</translation>
+    </message>
+    <message>
+        <source>Antialiasing on by default</source>
+        <translation type="vanished">Antialiasing di default</translation>
+    </message>
+    <message>
+        <location line="-349"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Utilizzare automaticamente i tipi di linea a base di schermo in vista del modello</translation>
     </message>
     <message>
         <source>Auto switch linetypes</source>
-        <translation type="vanished">Regolare automaticamente i tipi di linea</translation>
+        <translation type="obsolete">Regolare automaticamente i tipi di linea</translation>
     </message>
     <message>
-        <location line="+72"/>
         <source>Performance</source>
-        <translation>Performance</translation>
+        <translation type="vanished">Performance</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+78"/>
         <source>Number of preview entities:</source>
         <translation>Numero di entità in anteprima:</translation>
     </message>
@@ -142,7 +170,7 @@
         <translation type="obsolete">Visualizzare limite per il testo:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+265"/>
         <source>Selection</source>
         <translation>Selezione</translation>
     </message>

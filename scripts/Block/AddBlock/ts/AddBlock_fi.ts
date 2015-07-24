@@ -6,7 +6,7 @@
     <message>
         <location filename="../AddBlockInit.js" line="+2"/>
         <source>&amp;Add Empty Block</source>
-        <translation>Lisää Tyhjä Lohko</translation>
+        <translation>&amp;Lisää tyhjä lohko</translation>
     </message>
     <message>
         <location line="+6"/>

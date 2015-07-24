@@ -67,7 +67,7 @@ Arrière-plan du dessin :</translatorcomment>
         <translation>Grille</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>Meta grid:</source>
         <translation>Métagrille :</translation>
     </message>
@@ -78,7 +78,7 @@ Arrière-plan du dessin :</translatorcomment>
     </message>
     <message>
         <source>First selection color:</source>
-        <translation type="vanished">Première couleur pour la sélection :</translation>
+        <translation type="obsolete">Première couleur pour la sélection :</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -166,13 +166,13 @@ Arrière-plan du dessin :</translatorcomment>
         <translation type="obsolete">Réticule inactif :</translation>
     </message>
     <message>
-        <location line="-619"/>
+        <location line="-616"/>
         <source>Crosshairs:</source>
         <translation>Réticule :</translation>
     </message>
     <message>
         <source>Inactive Crosshairs:</source>
-        <translation type="vanished">Réticule inactif :</translation>
+        <translation type="obsolete">Réticule inactif :</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -183,11 +183,11 @@ Arrière-plan du dessin :</translatorcomment>
     <message>
         <source>Relative Zero:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Zéro relative :</translation>
+        <translation type="obsolete">Zéro relative :</translation>
     </message>
     <message>
         <source>Reference Point:</source>
-        <translation type="vanished">Point de référence :</translation>
+        <translation type="obsolete">Point de référence :</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -200,53 +200,53 @@ Métagrille :
     </message>
     <message>
         <source>Meta Grid:</source>
-        <translation type="vanished">Métagrille :</translation>
+        <translation type="obsolete">Métagrille :</translation>
     </message>
     <message>
         <source>Zoom Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Boîte zoom:</translation>
+        <translation type="obsolete">Boîte zoom:</translation>
     </message>
     <message>
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--</translatorcomment>
-        <translation type="vanished">Sélection :</translation>
+        <translation type="obsolete">Sélection :</translation>
     </message>
     <message>
         <source>Selection Box Border:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Bordure de la zone de sélection :</translation>
+        <translation type="obsolete">Bordure de la zone de sélection :</translation>
     </message>
     <message>
         <source>Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Zone de sélection :</translation>
+        <translation type="obsolete">Zone de sélection :</translation>
     </message>
     <message>
         <source>Cross Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Zone de sélection croisée :</translation>
+        <translation type="obsolete">Zone de sélection croisée :</translation>
     </message>
     <message>
         <source>Auxiliary Shapes:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Formes auxiliaire :</translation>
+        <translation type="obsolete">Formes auxiliaire :</translation>
     </message>
     <message>
         <source>Info Label Background:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Fond de l&apos;étiquette d&apos;info :</translation>
+        <translation type="obsolete">Fond de l&apos;étiquette d&apos;info :</translation>
     </message>
     <message>
         <source>Info Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Police de l&apos;étiquette d&apos;info :</translation>
+        <translation type="obsolete">Police de l&apos;étiquette d&apos;info :</translation>
     </message>
     <message>
         <source>Measurement Tools:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Outils de mesure :</translation>
+        <translation type="obsolete">Outils de mesure :</translation>
     </message>
 </context>
 </TS>

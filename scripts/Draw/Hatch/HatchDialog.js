@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -92,6 +92,7 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
     this.documentInterface.destroy();
     if (!res) {
         this.dialog.destroy();
+        EAction.activateMainWindow();
         return undefined;
     }
 
@@ -105,6 +106,7 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
     hatchDataOut.setPatternName(radioSolid.checked ? "SOLID" : comboPattern.currentText);
 
     this.dialog.destroy();
+    EAction.activateMainWindow();
     return hatchDataOut;
 };
 

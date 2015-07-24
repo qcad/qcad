@@ -12,6 +12,20 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant />
       <variant>
+        <arg type="double" typeName="double" name="cx"
+        isConst="false" />
+        <arg type="double" typeName="double" name="cy"
+        isConst="false" />
+        <arg type="double" typeName="double" name="radius"
+        isConst="false" />
+        <arg type="double" typeName="double" name="startAngle"
+        isConst="false" />
+        <arg type="double" typeName="double" name="endAngle"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="reversed"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+      <variant>
         <arg type="RVector &amp;" typeName="RVector" name="center"
         isConst="true" />
         <arg type="double" typeName="double" name="radius"
@@ -21,7 +35,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="endAngle"
         isConst="false" />
         <arg type="bool" typeName="bool" name="reversed"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </constructor>
     <method name="clone" cppName="clone" specifier="public"
@@ -121,7 +135,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="point"
         isConst="true" />
         <arg type="bool" typeName="bool" name="limited"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="double" typeName="double" name="strictRange"
         hasDefault="true" default="RMAXDOUBLE" isConst="false" />
       </variant>
@@ -192,7 +206,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="allowForZeroLength"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="isAngleWithinArc" cppName="isAngleWithinArc"
@@ -290,6 +304,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">
         <arg type="double" typeName="double" name="distance"
+        isConst="false" />
+        <arg type="RS::From" typeName="RS::From" name="from"
+        hasDefault="true" default="RS :: FromStart"
         isConst="false" />
       </variant>
     </method>
@@ -410,6 +427,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="approximateWithLines"
     cppName="approximateWithLines" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RPolyline" isPureVirtual="false">
+        <arg type="double" typeName="double" name="segmentLength"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="approximateWithLinesTan"
+    cppName="approximateWithLinesTan" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RPolyline" isPureVirtual="false">
         <arg type="double" typeName="double" name="segmentLength"

@@ -34,8 +34,8 @@ ExplodeTest01.prototype.test00 = function() {
     this.setUp();
     this.importFile('scripts/Modify/Explode/Tests/data/block.dxf');
     this.selectAll();
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel::ModifyMenuButton');
-    TdbTest.clickOnWidget('MainWindow::CadToolsDock::CadToolBar::ModifyToolsPanel::ExplodeButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::MainToolsPanel::ModifyToolsPanelButton');
+    TdbTest.clickOnWidget('MainWindow::CadToolBar::ModifyToolsPanel::ExplodeButton');
     this.verifyDrawing('ExplodeTest01_000.dxf');
     this.tearDown();
     qDebug('finished ExplodeTest01.test00()');

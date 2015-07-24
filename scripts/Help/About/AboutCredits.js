@@ -17,19 +17,28 @@ var credits =
                               "Edit > Drawing Preferences > General > Point Display<br>" +
                               "Modify > Break out Manual<br>" +
                               "View > Display Distance/Angle<br>" +
+                              "Draw > Shape > Polygon (Center, Side)<br>" +
+                              "Draw > Shape > Polygon (Side, Side)<br>" +
                               "<i>Significant contributions to:</i><br>" +
                               "Draw > Line > Line from 2 Points<br>" +
                               "Draw > Polyline > Draw Polyline<br>" +
+                              "Info > Arc/Circle/Ellipse Area<br>" +
                               "Custom linetype support, loading .lin files<br>"
                               ],
         [ "Tamas Tevesz",     "Port to FreeBSD,<br>" +
-                              "various improvements and fixes." ],
+                              "various improvements and fixes."
+                              ],
+        [ "Weston Schmidt",   "Draw > Dimension > Per-dimension scaling."
+                              ],
     ],
     [
         "Translations",
+        //[ "Wang Zhen Zhe",     "Chinese (zh_CN) translation." ],
+        [ "Timo Seppola",      "Finnish (fi) translation." ],
         [ "Tanaka Hidemune",   "Japanese (ja) translation and user reference manual." ],
+        [ "Ján Jamriška",      "Slovak (sk) translation." ],
         [ "Miha ('miharix')",  "Slovenian (sl) translation." ],
-        [ "Wang Zhen Zhe",     "Chinese (zh_CN) translation." ],
+        [ "Eduardo Passeto",   "Portuguese (pt) translation." ],
     ],
     [
         "Icons",

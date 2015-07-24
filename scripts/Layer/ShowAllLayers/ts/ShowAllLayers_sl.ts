@@ -10,7 +10,7 @@
     <message>
         <location filename="../ShowAllLayersInit.js" line="+2"/>
         <source>&amp;Show All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Prikaži vse plasti</translation>
     </message>
 </context>
 </TS>

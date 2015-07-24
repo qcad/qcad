@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -147,7 +147,7 @@ Circle2TP.prototype.pickEntity = function(event, preview) {
 
     if (this.state!==Circle2TP.State.ChoosingSolution) {
         if (!isNull(entity)) {
-            shape = entity.getClosestShape(pos);
+            shape = entity.getClosestSimpleShape(pos);
 
             if (!isLineBasedShape(shape) &&
                 !isArcShape(shape) &&
@@ -235,6 +235,7 @@ Circle2TP.prototype.pickCoordinate = function(event, preview) {
                 }
                 // multiple solutions:
                 else {
+                    op.destroy();
                     this.setState(Circle2TP.State.ChoosingSolution);
                 }
             }

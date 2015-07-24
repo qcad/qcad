@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSelectionChangedEvent {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSelectionChangedEvent {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

@@ -2,11 +2,11 @@
 
 echo "xml to shell..."
 
-scope="src"
+maxThreads=128
 if [ -z $1 ]; then
-    maxThreads=128
+    scope="src"
 else
-    maxThreads=$1
+    scope="tmp"
 fi
 
 hasNoIndent=0
@@ -21,7 +21,12 @@ do
         xmlfile=${f##*/}
         file=${xmlfile%%.*}
         ecmafile=$(echo $file|sed s/^R/REcmaSharedPointer/).$mode
-        ecmapath=../../$scope/scripting/ecmaapi/generated/$ecmafile
+        if [ $scope == "src" ]
+        then
+            ecmapath=../../$scope/scripting/ecmaapi/generated/$ecmafile
+        else
+            ecmapath=$1/$ecmafile
+        fi
         grep "sharedPointerSupport=\"true\"" $f >/dev/null
         sharedPointerSupport=$?
 

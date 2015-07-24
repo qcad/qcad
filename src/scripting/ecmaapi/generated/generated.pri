@@ -143,6 +143,7 @@ HEADERS += \
     $$PWD/REcmaMoveSelectionOperation.h \
     $$PWD/REcmaNavigationAction.h \
     $$PWD/REcmaNewDocumentListener.h \
+    $$PWD/REcmaNewDocumentListenerAdapter.h \
     $$PWD/REcmaObject.h \
     $$PWD/REcmaOperation.h \
     $$PWD/REcmaOrthoGrid.h \
@@ -168,6 +169,7 @@ HEADERS += \
     $$PWD/REcmaPolylineEntity.h \
     $$PWD/REcmaProgressHandler.h \
     $$PWD/REcmaPropertyAttributes.h \
+    $$PWD/REcmaPropertyChange.h \
     $$PWD/REcmaPropertyEditor.h \
     $$PWD/REcmaPropertyEvent.h \
     $$PWD/REcmaPropertyListener.h \
@@ -184,6 +186,7 @@ HEADERS += \
     $$PWD/REcmaRulerQt.h \
     $$PWD/REcmaRunner.h \
     $$PWD/REcmaS.h \
+    $$PWD/REcmaScaleSelectionOperation.h \
     $$PWD/REcmaScriptAction.h \
     $$PWD/REcmaSelectionChangedEvent.h \
     $$PWD/REcmaSelectionListener.h \
@@ -331,7 +334,8 @@ HEADERS += \
     $$PWD/REcmaWidget.h \
     $$PWD/REcmaXLine.h \
     $$PWD/REcmaXLineData.h \
-    $$PWD/REcmaXLineEntity.h
+    $$PWD/REcmaXLineEntity.h \
+    $$PWD/REcmaZip.h
 SOURCES += \
     $$PWD/REcmaAction.cpp \
     $$PWD/REcmaActionAdapter.cpp \
@@ -477,6 +481,7 @@ SOURCES += \
     $$PWD/REcmaMoveSelectionOperation.cpp \
     $$PWD/REcmaNavigationAction.cpp \
     $$PWD/REcmaNewDocumentListener.cpp \
+    $$PWD/REcmaNewDocumentListenerAdapter.cpp \
     $$PWD/REcmaObject.cpp \
     $$PWD/REcmaOperation.cpp \
     $$PWD/REcmaOrthoGrid.cpp \
@@ -502,6 +507,7 @@ SOURCES += \
     $$PWD/REcmaPolylineEntity.cpp \
     $$PWD/REcmaProgressHandler.cpp \
     $$PWD/REcmaPropertyAttributes.cpp \
+    $$PWD/REcmaPropertyChange.cpp \
     $$PWD/REcmaPropertyEditor.cpp \
     $$PWD/REcmaPropertyEvent.cpp \
     $$PWD/REcmaPropertyListener.cpp \
@@ -518,6 +524,7 @@ SOURCES += \
     $$PWD/REcmaRulerQt.cpp \
     $$PWD/REcmaRunner.cpp \
     $$PWD/REcmaS.cpp \
+    $$PWD/REcmaScaleSelectionOperation.cpp \
     $$PWD/REcmaScriptAction.cpp \
     $$PWD/REcmaSelectionChangedEvent.cpp \
     $$PWD/REcmaSelectionListener.cpp \
@@ -665,7 +672,9 @@ SOURCES += \
     $$PWD/REcmaWidget.cpp \
     $$PWD/REcmaXLine.cpp \
     $$PWD/REcmaXLineData.cpp \
-    $$PWD/REcmaXLineEntity.cpp
+    $$PWD/REcmaXLineEntity.cpp \
+    $$PWD/REcmaZip.cpp
+
 !r_mobile {
     HEADERS += $$PWD/REcmaWebView.h
     SOURCES += $$PWD/REcmaWebView.cpp

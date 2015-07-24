@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -135,7 +135,7 @@ DimAngular.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case DimAngular.State.SettingFirstEntity:
-        shape = entity.getClosestShape(pos);
+        shape = entity.getClosestSimpleShape(pos);
 
         if (isLineBasedShape(shape)) {
             this.firstEntity = entity;
@@ -165,7 +165,7 @@ DimAngular.prototype.pickEntity = function(event, preview) {
         break;
 
     case DimAngular.State.SettingSecondEntity:
-        shape = entity.getClosestShape(pos);
+        shape = entity.getClosestSimpleShape(pos);
 
         if (isLineBasedShape(shape)) {
             this.secondEntity = entity;

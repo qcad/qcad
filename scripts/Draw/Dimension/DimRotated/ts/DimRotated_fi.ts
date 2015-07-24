@@ -6,12 +6,12 @@
     <message>
         <location filename="../DimRotated.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensimmäisen laajennuslinjan alkuperä</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Toisen laajennuslinjan alkuperä</translation>
     </message>
     <message>
         <location line="+8"/>

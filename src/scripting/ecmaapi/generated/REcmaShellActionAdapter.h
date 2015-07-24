@@ -34,7 +34,7 @@
     
       REcmaShellActionAdapter(
                 RGuiAction * guiAction
-        =  NULL
+        = NULL
             );
         
     
@@ -179,6 +179,18 @@
     
       void propertyChangeEvent(
                 RPropertyEvent & arg1
+            );
+        
+    
+    
+      void updatePreview(
+                
+            );
+        
+    
+    
+      void applyOperation(
+                
             );
         
     

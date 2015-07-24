@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -75,6 +75,9 @@ RMainWindowQt::RMainWindowQt(QWidget* parent, bool hasMdiArea) :
     if (singleApp!=NULL) {
         singleApp->setActivationWindow(this);
     }
+}
+
+RMainWindowQt::~RMainWindowQt() {
 }
 
 /**
@@ -428,6 +431,10 @@ void RMainWindowQt::setLeftMouseTip(const QString& text) {
 
 void RMainWindowQt::escapeEvent() {
     emit escape();
+}
+
+void RMainWindowQt::showContextMenu(RObject::Id entityId) {
+    emit contextMenu((int)entityId);
 }
 
 void RMainWindowQt::setGraphicsViewCursor(const QCursor& cursor) {

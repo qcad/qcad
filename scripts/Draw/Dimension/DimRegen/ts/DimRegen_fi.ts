@@ -4,19 +4,19 @@
 <context>
     <name>DimRegen</name>
     <message>
-        <location filename="../DimRegen.js" line="+63"/>
+        <location filename="../DimRegen.js" line="+64"/>
         <source>No dimension entities with custom label positions selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei ole valittu mittatietoja mukautetun selitteen sijainnille.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Reset label position of %1 dimension(s).</source>
-        <translation type="unfinished">Nollaa tu</translation>
+        <translation>Nollaa selitteen sijainti %1 mittasuhteesta(-suhteista).</translation>
     </message>
     <message>
         <location filename="../DimRegenInit.js" line="+2"/>
         <source>&amp;Reset Label Position</source>
-        <translation type="unfinished">Nollaa Sijainti</translation>
+        <translation>&amp;Nollaa selitteen sijainti</translation>
     </message>
 </context>
 </TS>

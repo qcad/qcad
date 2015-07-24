@@ -151,6 +151,10 @@
                 qScriptValueFromValue(&engine, RArcEntity::PropertyHandle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RArcEntity::PropertyProtected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RArcEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -177,6 +181,10 @@
             
             ctor.setProperty("PropertyColor",
                 qScriptValueFromValue(&engine, RArcEntity::PropertyColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RArcEntity::PropertyDisplayedColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyDrawOrder",
@@ -309,7 +317,7 @@
                         return REcmaHelper::throwError("RArcEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArcData*
                     ap1 =
                     qscriptvalue_cast<
@@ -319,11 +327,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RArcEntity: Argument 1 is not of type RArcData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RArcEntity: Argument 1 is not of type RArcData.",
                                context);                    
                     }
-                    RArcData& a1 = *ap1;
+                    RArcData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -404,7 +414,7 @@
                         return REcmaHelper::throwError("RArcEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RArcData*
                     ap1 =
                     qscriptvalue_cast<
@@ -414,11 +424,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RArcEntity: Argument 1 is not of type RArcData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RArcEntity: Argument 1 is not of type RArcData.",
                                context);                    
                     }
-                    RArcData& a1 = *ap1;
+                    RArcData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id
@@ -443,6 +455,62 @@
     a1
         ,
     a2
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+    } else 
+
+    if( context->argumentCount() ==
+        1
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RArcEntity */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RArcEntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RArcEntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RArcEntity: Argument 0 is not of type RArcEntity*.",
+                               context);                    
+                    }
+                    RArcEntity& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RArcEntity
+                    * cppResult =
+                    new
+                    RArcEntity
+                    (
+                    a0
                     );
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:

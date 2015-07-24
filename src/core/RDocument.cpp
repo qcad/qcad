@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -26,6 +26,7 @@
 #include "RMainWindow.h"
 #include "RMath.h"
 #include "RMemoryStorage.h"
+#include "RMouseEvent.h"
 #include "RSettings.h"
 #include "RSpatialIndexSimple.h"
 #include "RStorage.h"
@@ -52,6 +53,7 @@ RDocument::RDocument(
 
     storage.setDocument(this);
     init();
+    RDebug::incCounter("RDocument");
 }
 
 //void RDocument::addLinetype(QString name) {
@@ -200,6 +202,13 @@ void RDocument::init() {
         setVariable("MultiPageSettings/GlueMarginsBottom", RSettings::getDoubleValue("MultiPageSettings/GlueMarginsBottom", 0));
         setVariable("MultiPageSettings/PrintCropMarks", RSettings::getBoolValue("MultiPageSettings/PrintCropMarks", false));
 
+        // color printing settings:
+        setVariable("ColorSettings/ColorMode", RSettings::getStringValue("ColorSettings/ColorMode", "FullColor"));
+        RColor col = RSettings::getColorValue("ColorSettings/BackgroundColor", RColor(QString("white")));
+        QVariant v;
+        v.setValue<RColor>(col);
+        setVariable("ColorSettings/BackgroundColor", v);
+
         // printer page settings:
         QString vs;
         double vd;
@@ -295,15 +304,15 @@ QList<QSharedPointer<RObject> > RDocument::getDefaultLinetypes() {
     QList<QSharedPointer<RObject> > ret;
 
     // read patterns from file system and add to doc:
-    QStringList patlist;
+    QStringList patternList;
     if (RUnit::isMetric(getUnit())) {
-        patlist = RLinetypeListMetric::getNames();
+        patternList = RLinetypeListMetric::getNames();
     }
     else {
-        patlist = RLinetypeListImperial::getNames();
+        patternList = RLinetypeListImperial::getNames();
     }
-    for (int i = 0; i < patlist.length(); i++) {
-        QString name = patlist[i];
+    for (int i = 0; i < patternList.length(); i++) {
+        QString name = patternList[i];
 
         RLinetypePattern* pattern = NULL;
         if (RUnit::isMetric(getUnit())) {
@@ -342,6 +351,8 @@ void RDocument::clear() {
     storage.clear();
     spatialIndex.clear();
     transactionStack.reset();
+
+    // TODO: check if needed (doc vars are reset in init):
     QSharedPointer<RDocumentVariables> docVars = queryDocumentVariablesDirect();
     if (!docVars.isNull()) {
         //docVars.clear();
@@ -354,6 +365,7 @@ void RDocument::clear() {
 
 
 RDocument::~RDocument() {
+    RDebug::decCounter("RDocument");
     storage.doDelete();
     spatialIndex.doDelete();
 }
@@ -392,6 +404,29 @@ void RDocument::setLinetypeScale(double v, RTransaction* transaction) {
 
 double RDocument::getLinetypeScale() const {
     return storage.getLinetypeScale();
+}
+
+QString RDocument::formatLinear(double value) {
+    return RUnit::formatLinear(
+        value,
+        getUnit(),
+        getLinearFormat(),
+        getLinearPrecision(),
+        false,
+        showLeadingZeroes(),
+        showTrailingZeroes(),
+        false
+    );
+}
+
+QString RDocument::formatAngle(double value) {
+    return RUnit::formatAngle(
+        value,
+        getAngleFormat(),
+        getAnglePrecision(),
+        showLeadingZeroesAngle(),
+        showTrailingZeroesAngle()
+    );
 }
 
 /**
@@ -885,6 +920,10 @@ QSet<REntity::Id> RDocument::queryBlockEntities(RBlock::Id blockId) const {
     return storage.queryBlockEntities(blockId);
 }
 
+QSet<REntity::Id> RDocument::queryLayerBlockEntities(RLayer::Id layerId, RBlock::Id blockId) const {
+    return storage.queryLayerBlockEntities(layerId, blockId);
+}
+
 bool RDocument::hasChildEntities(REntity::Id parentId) const {
     return storage.hasChildEntities(parentId);
 }
@@ -960,10 +999,13 @@ REntity::Id RDocument::queryClosestXY(
     double strictRange) {
 
     double minDist = RMAXDOUBLE;
-    REntity::Id ret = -1;
+    REntity::Id ret = REntity::INVALID_ID;
 
     QSet<REntity::Id>::iterator it;
     for (it=candidates.begin(); it!=candidates.end(); it++) {
+        if (RMouseEvent::hasMouseMoved()) {
+            return REntity::INVALID_ID;
+        }
         QSharedPointer<REntity> e = queryEntityDirect(*it);
         if (e.isNull()) {
             continue;
@@ -1064,41 +1106,38 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
     // filter out entities that don't intersect with the given box
     // or are not on the current block or are on a frozen layer:
     QMap<REntity::Id, QSet<int> > res;
-    //QSet<REntity::Id> outsiders;
     QMap<REntity::Id, QSet<int> >::iterator it;
     for (it=candidates.begin(); it!=candidates.end(); ++it) {
+        if (RMouseEvent::hasMouseMoved()) {
+            return QMap<REntity::Id, QSet<int> >();
+        }
         QSharedPointer<REntity> entity = queryEntityDirect(it.key());
         if (entity.isNull()) {
-            //outsiders.insert(*it);
             continue;
         }
 
         // undone:
         if (entity->isUndone()) {
-            //outsiders.insert(*it);
             continue;
         }
 
         // not on current or given block:
         if (entity->getBlockId() != blockId) {
-            //outsiders.insert(*it);
             continue;
         }
 
         // layer is off:
         if (isLayerFrozen(entity->getLayerId())) {
-            //outsiders.insert(*it);
             continue;
         }
 
         // referenced block is off:
         QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
         if (!blockRef.isNull()) {
-            RBlock::Id blockId = blockRef->getReferencedBlockId();
-            if (blockId!=RBlock::INVALID_ID) {
-                QSharedPointer<RBlock> block = queryBlockDirect(blockId);
+            RBlock::Id referencedBlockId = blockRef->getReferencedBlockId();
+            if (referencedBlockId!=RBlock::INVALID_ID) {
+                QSharedPointer<RBlock> block = queryBlockDirect(referencedBlockId);
                 if (!block.isNull() && block->isFrozen()) {
-                    //outsiders.insert(*it);
                     continue;
                 }
             }
@@ -1107,14 +1146,12 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         // layer is locked:
         if (!includeLockedLayers) {
             if (isLayerLocked(entity->getLayerId())) {
-                //outsiders.insert(*it);
                 continue;
             }
         }
 
         // apply filter:
         if (filter.contains(entity->getType())) {
-            //outsiders.insert(*it);
             continue;
         }
 
@@ -1125,7 +1162,6 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
 
         if (!checkBoundingBoxOnly &&
             !entity->intersectsWith(pl)) {
-            //outsiders.insert(*it);
             continue;
         }
 
@@ -1133,7 +1169,6 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
     }
 
     return res;
-    //return candidates - outsiders;
 }
 
 
@@ -1229,6 +1264,24 @@ QSet<REntity::Id> RDocument::queryEntitiesContainedXYIntersectedZ(const RBox& bo
  */
 QSet<REntity::Id> RDocument::querySelectedEntities() {
     return storage.querySelectedEntities();
+}
+
+QSet<RObject::Id> RDocument::queryPropertyEditorObjects() {
+    QSet<RObject::Id> objectIds = querySelectedEntities();
+
+    if (RSettings::isNextVersionEnabled()) {
+        // no entities selected:
+        if (objectIds.isEmpty()) {
+            // expose properties of current layer:
+            objectIds.insert(getCurrentLayerId());
+
+            // expose properties of selected block:
+            RBlock::Id blockId = getCurrentBlockId();
+            objectIds.insert(blockId);
+        }
+    }
+
+    return objectIds;
 }
 
 QSharedPointer<RDocumentVariables> RDocument::queryDocumentVariables() const {
@@ -1404,6 +1457,10 @@ bool RDocument::isEntityLayerFrozen(REntity::Id entityId) const {
     return storage.isLayerFrozen(entity->getLayerId());
 }
 
+int RDocument::countSelectedEntities() const {
+    return storage.countSelectedEntities();
+}
+
 /**
  * \todo refactoring to operation
  *
@@ -1463,11 +1520,11 @@ void RDocument::selectEntities(
  * \copydoc RStorage::deselectEntities
  *
  */
-void RDocument::deselectEntities(
+bool RDocument::deselectEntities(
     const QSet<REntity::Id>& entityIds,
     QSet<REntity::Id>* affectedEntities) {
 
-    storage.deselectEntities(entityIds, affectedEntities);
+    return storage.deselectEntities(entityIds, affectedEntities);
 }
 
 bool RDocument::hasSelection() const {
@@ -1494,6 +1551,9 @@ void RDocument::rebuildSpatialIndex() {
 
     QSet<REntity::Id> result = storage.queryAllEntities(false, true);
 
+    QList<int> allIds;
+    QList<QList<RBox> > allBbs;
+
     QSetIterator<REntity::Id> i(result);
     while (i.hasNext()) {
         QSharedPointer<REntity> entity = storage.queryEntityDirect(i.next());
@@ -1508,11 +1568,11 @@ void RDocument::rebuildSpatialIndex() {
 
         QList<RBox> bbs = entity->getBoundingBoxes();
 
-        spatialIndex.addToIndex(
-            entity->getId(),
-            bbs
-        );
+        allIds.append(entity->getId());
+        allBbs.append(bbs);
     }
+
+    spatialIndex.bulkLoad(allIds, allBbs);
 
     // clear cached bounding box:
     storage.update();
@@ -1667,14 +1727,20 @@ void RDocument::setModified(bool m) {
 }
 
 void RDocument::copyVariablesFrom(const RDocument& other) {
-    RTransaction transaction(storage, "Copy variables from other document", false);
+    RTransaction* transaction = new RTransaction(storage, "Copy variables from other document", false);
+
+    bool useLocalTransaction;
+    QSharedPointer<RDocumentVariables> docVars = storage.startDocumentVariablesTransaction(transaction, useLocalTransaction);
 
     for (RS::KnownVariable kv=RS::ANGBASE; kv<=RS::MaxKnownVariable; kv=(RS::KnownVariable)(kv+1)) {
         QVariant otherKV = other.getKnownVariable(kv);
         if (otherKV.isValid()) {
-            setKnownVariable(kv, otherKV, &transaction);
+            docVars->setKnownVariable(kv, otherKV);
+            //setKnownVariable(kv, otherKV, &transaction);
         }
     }
+
+    storage.endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 
     QStringList keys = other.getVariables();
     for (int i=0; i<keys.length(); i++) {
@@ -1685,9 +1751,10 @@ void RDocument::copyVariablesFrom(const RDocument& other) {
         }
     }
 
-    setDimensionFont(other.getDimensionFont(), &transaction);
+    setDimensionFont(other.getDimensionFont(), transaction);
 
-    transaction.end();
+    transaction->end();
+    delete transaction;
 }
 
 RDocument& RDocument::getClipboard() {

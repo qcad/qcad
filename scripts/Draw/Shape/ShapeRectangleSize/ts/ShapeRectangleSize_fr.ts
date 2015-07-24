@@ -52,72 +52,59 @@
         <translation type="vanished">Dessine un rectangle avec la position et la taille</translation>
     </message>
     <message>
-        <location filename="../ShapeRectangleSize.ui" line="+17"/>
         <source>&amp;Width:</source>
-        <translation>&amp;Largeur :</translation>
+        <translation type="vanished">&amp;Largeur :</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>&amp;Height:</source>
-        <translation>&amp;Hauteur :</translation>
+        <translation type="vanished">&amp;Hauteur :</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Reference Point:</source>
-        <translation>Point de référence :</translation>
+        <translation type="vanished">Point de référence :</translation>
     </message>
 </context>
 <context>
     <name>ShapeRectangleSize</name>
     <message>
-        <location filename="../ShapeRectangleSize.js" line="+44"/>
         <source>Top Left</source>
-        <translation>En haut à gauche</translation>
+        <translation type="vanished">En haut à gauche</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Top</source>
-        <translation>En haut</translation>
+        <translation type="vanished">En haut</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Top Right</source>
-        <translation>En haut à droite</translation>
+        <translation type="vanished">En haut à droite</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Left</source>
-        <translation>Gauche</translation>
+        <translation type="vanished">Gauche</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Middle</source>
-        <translation>Milieu</translation>
+        <translation type="vanished">Milieu</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Right</source>
-        <translation>Droite</translation>
+        <translation type="vanished">Droite</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom Left</source>
-        <translation>En bas à gauche</translation>
+        <translation type="vanished">En bas à gauche</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom</source>
-        <translation>En bas</translation>
+        <translation type="vanished">En bas</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom Right</source>
-        <translation>En bas à droite</translation>
+        <translation type="vanished">En bas à droite</translation>
     </message>
     <message>
-        <location line="+30"/>
         <source>Position</source>
-        <translation>Position</translation>
+        <translation type="vanished">Position</translation>
     </message>
     <message>
         <location filename="../ShapeRectangleSizeInit.js" line="+2"/>
@@ -128,6 +115,34 @@
         <location line="+5"/>
         <source>Draw rectangle with position and size</source>
         <translation>Dessine un rectangle avec la position et la taille</translation>
+    </message>
+    <message>
+        <location filename="../ShapeRectangleSize.ui" line="+17"/>
+        <location filename="../ShapeRectangleSizeDialog.ui" line="+19"/>
+        <source>&amp;Width:</source>
+        <translation>&amp;Largeur :</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <location filename="../ShapeRectangleSizeDialog.ui" line="+30"/>
+        <source>&amp;Height:</source>
+        <translation>&amp;Hauteur :</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <location filename="../ShapeRectangleSizeDialog.ui" line="-10"/>
+        <source>Angle:</source>
+        <translation>Angle :</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Reference Point:</source>
+        <translation>Point de référence :</translation>
+    </message>
+    <message>
+        <location filename="../ShapeRectangleSizeDialog.ui" line="+101"/>
+        <source>Create Polyline</source>
+        <translation>Créer polyligne</translation>
     </message>
 </context>
 </TS>

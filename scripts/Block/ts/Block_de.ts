@@ -4,7 +4,7 @@
 <context>
     <name>Block</name>
     <message>
-        <location filename="../Block.js" line="+66"/>
+        <location filename="../Block.js" line="+67"/>
         <source>Block Tools</source>
         <translation>Blockwerkzeuge</translation>
     </message>
@@ -22,7 +22,7 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="+101"/>
+        <location filename="../BlockDialog.js" line="+105"/>
         <source>Leading or trailing spaces.</source>
         <translation>Führende oder nachfolgende Leerzeichen.</translation>
     </message>

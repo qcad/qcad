@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -18,6 +18,7 @@
  */
 
 include("../Block.js");
+include("scripts/Widgets/BlockList/BlockList.js");
 
 /**
  * \class DeselectBlockReferences
@@ -48,7 +49,7 @@ DeselectBlockReferences.prototype.beginEvent = function() {
         return;
     }
 
-    var blockId = doc.getBlockId(item.text());
+    var blockId = doc.getBlockId(item.text(BlockList.colName));
     if (blockId===RObject.INVALID_ID) {
         this.terminate();
         return;

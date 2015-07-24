@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -22,10 +22,10 @@
 #include "RGraphicsView.h"
 #include "RUcs.h"
 
-RInputEvent::RInputEvent(const RVector& position, RGraphicsScene& s, RGraphicsView& v)
-    : screenPosition(position), scene(s), view(v) {
+RInputEvent::RInputEvent(const RVector& position, RGraphicsScene& s, RGraphicsView& v, qreal devicePixelRatio)
+    : screenPosition(position*devicePixelRatio), scene(s), view(v) {
 
-    modelPosition = view.mapFromView(position);
+    modelPosition = view.mapFromView(screenPosition);
 
 //  RDocumentInterface& documentInterface = scene.getDocumentInterface();
 //  RUcs ucs = documentInterface.getCurrentUcs();
@@ -42,6 +42,10 @@ RVector RInputEvent::getModelPosition() const {
 // used for testing
 void RInputEvent::setModelPosition(const RVector& v) {
     modelPosition = v;
+}
+
+void RInputEvent::setScreenPosition(const RVector& v) {
+    screenPosition = v;
 }
 
 //RVector RInputEvent::getUcsPosition() const {

@@ -21,7 +21,7 @@
     <message>
         <location line="+4"/>
         <source>Draw freehand line</source>
-        <translation type="unfinished"></translation>
+        <translation>绘制手绘线</translation>
     </message>
 </context>
 </TS>

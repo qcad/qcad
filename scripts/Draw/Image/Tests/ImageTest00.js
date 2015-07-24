@@ -34,9 +34,9 @@ ImageTest00.prototype.test00 = function() {
     
     qDebug('running ImageTest00.test00()...');
     this.setUp();
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(35, 418), Qt.LeftButton, 0, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(35, 418), Qt.LeftButton, 1, 0);
     this.triggerCommand('bitmap');
     this.setToolOption('Image/Width',  [ 262, 0 ] );

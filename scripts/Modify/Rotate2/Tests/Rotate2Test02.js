@@ -33,9 +33,9 @@ Rotate2Test02.prototype.test00 = function() {
     qDebug('running Rotate2Test02.test00()...');
     this.setUp();
     this.importFile('scripts/Modify/Rotate2/Tests/data/arc.dxf');
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(49, 429), Qt.LeftButton, 1, 0);
-    var w = objectFromPath('MainWindow::CadToolsDock::CadToolBar::MainToolsPanel');
+    var w = objectFromPath('MainWindow::CadToolBar::MainToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(49, 429), Qt.LeftButton, 0, 0);
     var p = new RVector(269.560238, 74.192103);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.MidButton, 4, 0);

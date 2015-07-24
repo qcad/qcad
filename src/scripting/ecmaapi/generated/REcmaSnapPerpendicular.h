@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSnapPerpendicular {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSnapPerpendicular {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

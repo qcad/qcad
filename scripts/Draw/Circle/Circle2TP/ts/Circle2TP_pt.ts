@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Circle2TP</name>
     <message>
         <location filename="../Circle2TP.js" line="+76"/>
         <source>First line, arc or circle</source>
-        <translation>Primeira linha, arco, circulo</translation>
+        <translation>Primeira linha, arco ou circulo</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second line, arc or circle</source>
-        <translation>Segunda linha, arco, circulo</translation>
+        <translation>Segunda linha, arco ou circulo</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Point on circle line</source>
-        <translation>Ponto</translation>
+        <translation>Ponto na circunferência</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation>Escolher solução</translation>
+        <translation>Escolha uma solução</translation>
     </message>
     <message>
-        <location line="+135"/>
-        <location line="+44"/>
+        <location line="+136"/>
+        <location line="+45"/>
         <source>No solution</source>
         <translation>Nenhuma solução</translation>
     </message>
     <message>
-        <location filename="../Circle2TPInit.js" line="+2"/>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation>Ponto, 2 tan&amp;gentes</translation>
+        <translation type="vanished">Ponto, 2 Tan&amp;gentes</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location filename="../Circle2TPInit.js" line="+2"/>
+        <source>2 Tan&amp;gents and Point</source>
+        <translation>2 Tan&amp;gentes e Ponto</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation>Desenhe um círculo tangente a duas entidades e através de um ponto</translation>
+        <translation>Desenhe um círculo tangente a duas entidades, passando por um ponto</translation>
     </message>
 </context>
 </TS>

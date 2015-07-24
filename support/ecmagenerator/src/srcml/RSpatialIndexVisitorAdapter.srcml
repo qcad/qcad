@@ -1,264 +1,86 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./scripting/ecmaapi/adapters"
-filename="RSpatialIndexVisitorAdapter.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RSPATIALINDEXVISITORADAPTER_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RSPATIALINDEXVISITORADAPTER_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RDebug.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RSpatialIndexVisitor.h"</cpp:file></cpp:include>
-  <comment type="block">/** * \brief Base class for classes that
-  are interested in * the data of spatial index items. Not
-  abstract, so it * can be used in script environments with
-  prototype based * OOP as base class. * * \ingroup ecma *
-  \scriptable * \generateScriptShell */</comment>
-  <class>class 
-  <name>RSpatialIndexVisitorAdapter</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RSpatialIndexVisitor</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RSpatialIndexVisitorAdapter</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </destructor>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>visitData</name>
-    <parameter_list>( 
-    <param>
-      <decl>
-        <type>
-          <name>int</name>
-        </type>
-        <name>id</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>int</name>
-        </type>
-        <name>pos</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>x1</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>y1</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>z1</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>x2</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>y2</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>z2</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>id</argument>)</argument_list>
-    </macro>
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>x1</argument>)</argument_list>
-    </macro>
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>y1</argument>)</argument_list>
-    </macro>
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>z1</argument>)</argument_list>
-    </macro>
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>x2</argument>)</argument_list>
-    </macro>
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>y2</argument>)</argument_list>
-    </macro>
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>z2</argument>)</argument_list>
-    </macro>}</block>
-  </function>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <comment type="line">// virtual void visitData(</comment>
-  <comment type="line">// int id, int pos,</comment>
-  <comment type="line">// double x1, double y1, double
-  z1,</comment>
-  <comment type="line">// double x2, double y2, double z2</comment>
-  <comment type="line">// ) {</comment>
-  <comment type="line">// //Q_UNUSED(size)</comment>
-  <comment type="line">// //Q_UNUSED(data)</comment>
-  <comment type="line">// visitData(id, pos, x1,y1,z1,
-  x2,y2,z2);</comment>
-  <comment type="line">// }</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>visitNode</name>
-    <parameter_list>( 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>x1</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>y1</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>z1</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>x2</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>y2</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>double</name>
-        </type>
-        <name>z2</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>x1</argument>)</argument_list>
-    </macro>
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>y1</argument>)</argument_list>
-    </macro>
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>z1</argument>)</argument_list>
-    </macro>
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>x2</argument>)</argument_list>
-    </macro>
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>y2</argument>)</argument_list>
-    </macro>
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>z2</argument>)</argument_list>
-    </macro>}</block>
-  </function></public>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    RSpatialIndexVisitorAdapter*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./scripting/ecmaapi/adapters" filename="RSpatialIndexVisitorAdapter.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RSPATIALINDEXVISITORADAPTER_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RSPATIALINDEXVISITORADAPTER_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDebug.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSpatialIndexVisitor.h"</cpp:file></cpp:include>
+
+
+<comment type="block">/**
+ * \brief Base class for classes that are interested in
+ * the data of spatial index items. Not abstract, so it
+ * can be used in script environments with prototype based
+ * OOP as base class.
+ *
+ * \ingroup ecma
+ * \scriptable
+ * \generateScriptShell
+ */</comment>
+<class>class <name>RSpatialIndexVisitorAdapter</name> <super>: <specifier>public</specifier> <name>RSpatialIndexVisitor</name></super> <block>{<private type="default">
+</private><public>public:
+    <destructor><specifier>virtual</specifier> <name>~RSpatialIndexVisitorAdapter</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>visitData</name><parameter_list>(
+        <param><decl><type><name>int</name></type> <name>id</name></decl></param>, <param><decl><type><name>int</name></type> <name>pos</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>x1</name></decl></param>, <param><decl><type><name>double</name></type> <name>y1</name></decl></param>, <param><decl><type><name>double</name></type> <name>z1</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>x2</name></decl></param>, <param><decl><type><name>double</name></type> <name>y2</name></decl></param>, <param><decl><type><name>double</name></type> <name>z2</name></decl></param>
+    )</parameter_list> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>id</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>x1</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>y1</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>z1</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>x2</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>y2</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>z2</argument>)</argument_list></macro>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+<comment type="line">//    virtual void visitData(</comment>
+<comment type="line">//        int id, int pos,</comment>
+<comment type="line">//        double x1, double y1, double z1,</comment>
+<comment type="line">//        double x2, double y2, double z2</comment>
+<comment type="line">//    ) {</comment>
+<comment type="line">//        //Q_UNUSED(size)</comment>
+<comment type="line">//        //Q_UNUSED(data)</comment>
+<comment type="line">//        visitData(id, pos, x1,y1,z1, x2,y2,z2);</comment>
+<comment type="line">//    }</comment>
+
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>visitNode</name><parameter_list>(
+        <param><decl><type><name>double</name></type> <name>x1</name></decl></param>, <param><decl><type><name>double</name></type> <name>y1</name></decl></param>, <param><decl><type><name>double</name></type> <name>z1</name></decl></param>,
+        <param><decl><type><name>double</name></type> <name>x2</name></decl></param>, <param><decl><type><name>double</name></type> <name>y2</name></decl></param>, <param><decl><type><name>double</name></type> <name>z2</name></decl></param>
+    )</parameter_list> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>x1</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>y1</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>z1</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>x2</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>y2</argument>)</argument_list></macro>
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>z2</argument>)</argument_list></macro>
+    }</block></function>
+</public>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RSpatialIndexVisitorAdapter*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

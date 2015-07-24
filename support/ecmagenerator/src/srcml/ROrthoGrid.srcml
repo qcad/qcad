@@ -1,500 +1,110 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./grid" filename="ROrthoGrid.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RORTHOGRID_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RORTHOGRID_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"grid_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RGrid.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RGraphicsView</name>;</class_decl>
-  <class_decl>class 
-  <name>RRuler</name>;</class_decl>
-  <comment type="block">/** * \brief Grid representation. * * This
-  class is responsible for updating the grid and snapping to the
-  grid. * * \scriptable * \ingroup grid */</comment>
-  <class>class 
-  <macro>
-    <name>QCADGRID_EXPORT</name>
-  </macro>
-  <name>ROrthoGrid</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RGrid</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor_decl>
-  <name>ROrthoGrid</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RGraphicsView</name>&amp;</type>
-      <name>view</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <specifier>virtual</specifier>
-  <name>~ROrthoGrid</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>clearCache</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>snapToGrid</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>positionUcs</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>update</name>
-  <parameter_list>(
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>force</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>paint</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>paintMetaGrid</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>paintGridLines</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>space</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RBox</name>&amp;</type>
-      <name>box</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>meta</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>paintGridPoints</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>space</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RBox</name>&amp;</type>
-      <name>box</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>paintCursor</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>pos</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>paintRuler</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RRuler</name>&amp;</type>
-      <name>ruler</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>QString</name>
-  </type>
-  <name>getInfoText</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getIdealSpacing</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>minPixelSpacing</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>minSpacing</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>minMetaSpacing</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">// This is just an idea. This might update
-  the grid for</comment>
-  <comment type="line">// an entity that is viewed as elevation
-  view. This might be at</comment>
-  <comment type="line">// any angle.</comment>
-  <comment type="line">//void updateGrid(REntity&amp;
-  entity);</comment>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isIsometric</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setIsometric</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>on</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>
-    <name>RS</name>::
-    <name>IsoProjectionType</name></name>
-  </type>
-  <name>getProjection</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setProjection</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>IsoProjectionType</name></name>
-      </type>
-      <name>p</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QList
-    <argument_list>&lt;
-    <argument>
-      <name>RVector</name>
-    </argument>&gt;</argument_list></name>
-  </type>
-  <name>getIdealGridSpacing</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RGraphicsView</name>&amp;</type>
-      <name>view</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>minPixelSpacing</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>minSpacing</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>minMetaSpacing</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>isFractionalFormat</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>LinearFormat</name></name>
-      </type>
-      <name>linearFormat</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <private>private: 
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>double</name>
-  </type>
-  <name>inchAutoscale</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>value</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>double</name>
-      </type>
-      <name>idealSpacing</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RS</name>::
-        <name>Unit</name></name>
-      </type>
-      <name>unit</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></private>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RBox</name>
-    </type>
-    <name>viewBox</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RBox</name>
-    </type>
-    <name>gridBox</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RBox</name>
-    </type>
-    <name>metaGridBox</name>
-  </decl>;</decl_stmt>
-  <comment type="line">// current grid spacing:</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>spacing</name>
-  </decl>;</decl_stmt>
-  <comment type="line">// automatically calculated grid spacing
-  based on minimum</comment>
-  <comment type="line">// grid spacing and minimum pixel
-  spacing:</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>autoSpacing</name>
-  </decl>;</decl_stmt>
-  <comment type="line">// minimum spacing:</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>minSpacing</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>metaSpacing</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>autoMetaSpacing</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>minMetaSpacing</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>scaleGrid</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>minPixelSpacing</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>infoText</name>
-  </decl>;</decl_stmt>
-  <comment type="line">// cached:</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>mutable</name>
-      <name>int</name>
-    </type>
-    <name>isometric</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>mutable</name>
-      <name>int</name>
-    </type>
-    <name>projection</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>ROrthoGrid*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./grid" filename="ROrthoGrid.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RORTHOGRID_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RORTHOGRID_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"grid_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGrid.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RGraphicsView</name>;</class_decl>
+<class_decl>class <name>RRuler</name>;</class_decl>
+
+
+
+<comment type="block">/**
+ * \brief Grid representation.
+ *
+ * This class is responsible for updating the grid and snapping to the grid.
+ *
+ * \scriptable
+ * \ingroup grid
+ */</comment>
+<class>class <macro><name>QCADGRID_EXPORT</name></macro> <name>ROrthoGrid</name> <super>: <specifier>public</specifier> <name>RGrid</name></super> <block>{<private type="default">
+</private><public>public:
+    <constructor_decl><name>ROrthoGrid</name><parameter_list>(<param><decl><type><name>RGraphicsView</name>&amp;</type> <name>view</name></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~ROrthoGrid</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>clearCache</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>RVector</name></type> <name>snapToGrid</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>positionUcs</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>update</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>force</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paint</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintMetaGrid</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintGridLines</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>space</name></decl></param>, <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>, <param><decl><type><name>bool</name></type> <name>meta</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintGridPoints</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>space</name></decl></param>, <param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>box</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintCursor</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>paintRuler</name><parameter_list>(<param><decl><type><name>RRuler</name>&amp;</type> <name>ruler</name></decl></param>, <param><decl><type><name>qreal</name></type> <name>devicePixelRatio</name> =<init> <expr>1.0</expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getInfoText</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getIdealSpacing</name><parameter_list>(<param><decl><type><name>int</name></type> <name>minPixelSpacing</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>minSpacing</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>minMetaSpacing</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="line">// This is just an idea. This might update the grid for</comment>
+    <comment type="line">// an entity that is viewed as elevation view. This might be at</comment>
+    <comment type="line">// any angle.</comment>
+    <comment type="line">//void updateGrid(REntity&amp; entity);</comment>
+
+    <function_decl><type><name>bool</name></type> <name>isIsometric</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setIsometric</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name><name>RS</name>::<name>IsoProjectionType</name></name></type> <name>getProjection</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setProjection</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>IsoProjectionType</name></name></type> <name>p</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getIdealGridSpacing</name><parameter_list>(<param><decl><type><name>RGraphicsView</name>&amp;</type> <name>view</name></decl></param>, <param><decl><type><name>int</name></type> <name>minPixelSpacing</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>minSpacing</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>minMetaSpacing</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>isFractionalFormat</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>LinearFormat</name></name></type> <name>linearFormat</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><private>private:
+    <function_decl><type><name>static</name> <name>double</name></type> <name>inchAutoscale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>value</name></decl></param>, <param><decl><type><name>double</name></type> <name>idealSpacing</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>)</parameter_list>;</function_decl>
+
+</private><private>private:
+    <decl_stmt><decl><type><name>RBox</name></type> <name>viewBox</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RBox</name></type> <name>gridBox</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RBox</name></type> <name>metaGridBox</name></decl>;</decl_stmt>
+
+    <comment type="line">// current grid spacing:</comment>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>spacing</name></decl>;</decl_stmt>
+    <comment type="line">// automatically calculated grid spacing based on minimum </comment>
+    <comment type="line">// grid spacing and minimum pixel spacing:</comment>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>autoSpacing</name></decl>;</decl_stmt>
+    <comment type="line">// minimum spacing:</comment>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>minSpacing</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>RVector</name></type> <name>metaSpacing</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>autoMetaSpacing</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>minMetaSpacing</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>bool</name></type> <name>scaleGrid</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>minPixelSpacing</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>infoText</name></decl>;</decl_stmt>
+
+    <comment type="line">// cached:</comment>
+    <decl_stmt><decl><type><name>mutable</name> <name>int</name></type> <name>isometric</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>int</name></type> <name>projection</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>ROrthoGrid*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

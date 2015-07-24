@@ -65,14 +65,22 @@ Zrobione
         <translation type="unfinished">Rogi:</translation>
     </message>
     <message>
-        <location filename="../ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation type="unfinished">Polygon (narożniki)</translation>
+        <translation type="obsolete">Polygon (narożniki)</translation>
+    </message>
+    <message>
+        <source>Draw regular polygon from two corner points</source>
+        <translation type="obsolete">Narysuj wielokąt foremny z dwóch narożnych punktów</translation>
+    </message>
+    <message>
+        <location filename="../ShapePolygonPPInit.js" line="+2"/>
+        <source>Polygo&amp;n (2 Points of Side)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>Draw regular polygon from two corner points</source>
-        <translation type="unfinished">Narysuj wielokąt foremny z dwóch narożnych punktów</translation>
+        <source>Draw regular polygon from end points of one side</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

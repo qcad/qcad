@@ -14,7 +14,7 @@
         <translation>Ruotare le entità incollato&lt;br&gt;da questa angolazione</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+97"/>
         <source>Scale:</source>
         <translation>Scala:</translation>
     </message>
@@ -24,7 +24,7 @@
         <translation>Scala entità incollate&lt;br&gt;da questo fattore</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>Rifletti entità&lt;br&gt;incollate orizzontalmente</translation>
     </message>
@@ -34,7 +34,7 @@
         <translation>Rifletti entità&lt;br&gt;incollate verticalmente</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translation>Incolla tutte le entità&lt;br&gt;al layer corrente al&lt;br&gt;posto del layer originale</translation>
     </message>
@@ -64,7 +64,7 @@
         <translation>Sovrascrivere i blocchi</translation>
     </message>
     <message>
-        <location filename="../Paste.js" line="+71"/>
+        <location filename="../Paste.js" line="+77"/>
         <source>Position</source>
         <translation>Posizione</translation>
     </message>

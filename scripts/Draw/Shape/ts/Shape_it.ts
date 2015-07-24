@@ -37,8 +37,12 @@
     </message>
     <message>
         <location line="+5"/>
-        <source>Show line tools</source>
+        <source>Show shape tools</source>
         <translation>Mostra strumenti forma</translation>
+    </message>
+    <message>
+        <source>Show line tools</source>
+        <translation type="vanished">Mostra strumenti forma</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -48,7 +52,7 @@
     <message>
         <location filename="../Shape.ui" line="+17"/>
         <source>Create polyline</source>
-        <translation>Creare &amp;polilinea</translation>
+        <translation>Creare polilinea</translation>
     </message>
 </context>
 </TS>

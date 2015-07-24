@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -22,6 +22,7 @@
 
 RPropertyTypeId REllipseEntity::PropertyCustom;
 RPropertyTypeId REllipseEntity::PropertyHandle;
+RPropertyTypeId REllipseEntity::PropertyProtected;
 RPropertyTypeId REllipseEntity::PropertyType;
 RPropertyTypeId REllipseEntity::PropertyBlock;
 RPropertyTypeId REllipseEntity::PropertyLayer;
@@ -29,6 +30,7 @@ RPropertyTypeId REllipseEntity::PropertyLinetype;
 RPropertyTypeId REllipseEntity::PropertyLinetypeScale;
 RPropertyTypeId REllipseEntity::PropertyLineweight;
 RPropertyTypeId REllipseEntity::PropertyColor;
+RPropertyTypeId REllipseEntity::PropertyDisplayedColor;
 RPropertyTypeId REllipseEntity::PropertyDrawOrder;
 
 RPropertyTypeId REllipseEntity::PropertyCenterX;
@@ -64,6 +66,7 @@ REllipseEntity::~REllipseEntity() {
 void REllipseEntity::init() {
     REllipseEntity::PropertyCustom.generateId(typeid(REllipseEntity), RObject::PropertyCustom);
     REllipseEntity::PropertyHandle.generateId(typeid(REllipseEntity), RObject::PropertyHandle);
+    REllipseEntity::PropertyProtected.generateId(typeid(REllipseEntity), RObject::PropertyProtected);
     REllipseEntity::PropertyType.generateId(typeid(REllipseEntity), REntity::PropertyType);
     REllipseEntity::PropertyBlock.generateId(typeid(REllipseEntity), REntity::PropertyBlock);
     REllipseEntity::PropertyLayer.generateId(typeid(REllipseEntity), REntity::PropertyLayer);
@@ -71,6 +74,7 @@ void REllipseEntity::init() {
     REllipseEntity::PropertyLinetypeScale.generateId(typeid(REllipseEntity), REntity::PropertyLinetypeScale);
     REllipseEntity::PropertyLineweight.generateId(typeid(REllipseEntity), REntity::PropertyLineweight);
     REllipseEntity::PropertyColor.generateId(typeid(REllipseEntity), REntity::PropertyColor);
+    REllipseEntity::PropertyDisplayedColor.generateId(typeid(REllipseEntity), REntity::PropertyDisplayedColor);
     REllipseEntity::PropertyDrawOrder.generateId(typeid(REllipseEntity), REntity::PropertyDrawOrder);
 
     REllipseEntity::PropertyCenterX.generateId(typeid(REllipseEntity), QT_TRANSLATE_NOOP("REntity", "Center"), QT_TRANSLATE_NOOP("REntity", "X"));

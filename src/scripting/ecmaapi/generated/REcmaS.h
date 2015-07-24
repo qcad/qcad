@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaS {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaS {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -115,6 +118,10 @@
     ;static  void fromScriptValueEnumFillType(const QScriptValue& value, RS::FillType& out)
     ;static  QScriptValue toScriptValueEnumOrientation(QScriptEngine* engine, const RS::Orientation& value)
     ;static  void fromScriptValueEnumOrientation(const QScriptValue& value, RS::Orientation& out)
+    ;static  QScriptValue toScriptValueEnumJoinType(QScriptEngine* engine, const RS::JoinType& value)
+    ;static  void fromScriptValueEnumJoinType(const QScriptValue& value, RS::JoinType& out)
+    ;static  QScriptValue toScriptValueEnumEndType(QScriptEngine* engine, const RS::EndType& value)
+    ;static  void fromScriptValueEnumEndType(const QScriptValue& value, RS::EndType& out)
     ;};
     #endif
     

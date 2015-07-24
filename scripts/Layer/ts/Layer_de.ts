@@ -27,9 +27,13 @@
         <translation>Layername:</translation>
     </message>
     <message>
-        <location line="+34"/>
         <source>Pen</source>
-        <translation>Stift</translation>
+        <translation type="vanished">Stift</translation>
+    </message>
+    <message>
+        <location line="+34"/>
+        <source>Attributes</source>
+        <translation>Attribute</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -52,7 +56,7 @@
         <translation>Layer Data</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="+142"/>
+        <location filename="../LayerDialog.js" line="+144"/>
         <source>Leading or trailing spaces.</source>
         <translation>Führende oder nachfolgende Leerzeichen.</translation>
     </message>

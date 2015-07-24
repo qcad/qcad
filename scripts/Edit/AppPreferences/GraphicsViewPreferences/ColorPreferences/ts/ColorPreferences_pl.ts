@@ -68,7 +68,7 @@ Tło okna:</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>Meta grid:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -158,7 +158,7 @@ Tło okna:</translatorcomment>
         <translation type="obsolete">Nieaktywne Krzyżyk:</translation>
     </message>
     <message>
-        <location line="-538"/>
+        <location line="-535"/>
         <source>Origin:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pochodzenie:</translation>

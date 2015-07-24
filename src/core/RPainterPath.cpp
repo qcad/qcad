@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -406,6 +406,10 @@ void RPainterPath::transform(const QTransform& t) {
     for (int i=0; i<points.count(); i++) {
         points[i].transform2d(t);
     }
+}
+
+void RPainterPath::move(const RVector& offset) {
+    translate(offset.x, offset.y);
 }
 
 void RPainterPath::rotate(double angle) {

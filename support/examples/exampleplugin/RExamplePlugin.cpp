@@ -18,7 +18,7 @@ void RExamplePlugin::postInit(InitStatus status) {
         return;
     }
     RMainWindowQt* appWin = RMainWindowQt::getMainWindow();
-    RGuiAction* guiAction = new RGuiAction("My CPP Action");
+    RGuiAction* guiAction = new RGuiAction("My CPP Action", appWin);
     guiAction->setRequiresDocument(true);
     //guiAction->setScriptFile(basePath + "/Line2P.js");
     //guiAction->setIcon(basePath + "/Line2P.svg");
@@ -59,6 +59,7 @@ void RExamplePlugin::initScriptExtensions(QScriptEngine& engine) {
 RPluginInfo RExamplePlugin::getPluginInfo() {
     RPluginInfo ret;
     ret.set("Version", R_QCAD_VERSION_STRING);
+    ret.set("ID", "EXAMPLE");
     ret.set("Name", "Example Plugin");
     ret.set("License", "GPLv3");
     ret.set("URL", "http://qcad.org");

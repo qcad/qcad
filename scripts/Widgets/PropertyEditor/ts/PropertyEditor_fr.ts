@@ -27,17 +27,16 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+372"/>
         <source>Geometry</source>
-        <translation>Géométrie</translation>
+        <translation type="vanished">Géométrie</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location filename="../PropertyEditor.js" line="+415"/>
         <source>Custom</source>
         <translation>Personnalisé</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+164"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -47,12 +46,12 @@
         <translation>Retirer ce propriété à partir des objets sélectionnés</translation>
     </message>
     <message>
-        <location line="+52"/>
+        <location line="+63"/>
         <source>Add custom property to selected objects</source>
         <translation>Ajouter une propriété personnalisée pour les objets sélectionnés</translation>
     </message>
     <message>
-        <location line="+599"/>
+        <location line="+604"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -81,7 +80,7 @@
         <translation type="obsolete">Milieu</translation>
     </message>
     <message>
-        <location line="-1080"/>
+        <location line="-1118"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIABLE*</translation>
@@ -96,18 +95,23 @@ Dessin enregistré : %1</translatorcomment>
         <translation> :</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+173"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Aucune sélection</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+20"/>
+        <source>Specific Properties</source>
+        <translation>Propriétés spécifiques</translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Dependent Entities</source>
         <translation>Entités dépendantes</translation>
     </message>
     <message>
-        <location line="+260"/>
+        <location line="+281"/>
         <source>All</source>
         <translatorcomment>--google--
 Partage &amp;Horizontal
@@ -141,7 +145,7 @@ Sélectionner l&apos;entité de base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="+157"/>
+        <location line="+158"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -152,7 +156,7 @@ Sélectionner l&apos;entité de base</translatorcomment>
         <translation>Utilisez la mesure automatique</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+39"/>
         <source>Yes</source>
         <translation>Oui</translation>
     </message>
@@ -170,7 +174,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+307"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -184,23 +188,32 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation>Sélection :</translation>
     </message>
     <message>
-        <location line="+31"/>
         <source>General</source>
-        <translation>Générale</translation>
+        <translation type="vanished">Générale</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+31"/>
+        <source>General Properties</source>
+        <translation>Propriétés générales</translation>
+    </message>
+    <message>
+        <location line="+106"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Déplacer la sélection dans un nouveau calque</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+62"/>
         <source>Linetype Scale:</source>
         <translation>Échelle du type de ligne :</translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="+49"/>
+        <source>Protected:</source>
+        <translation>Protégé :</translation>
+    </message>
+    <message>
+        <location line="-182"/>
         <source>Handle:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Poignée :</translation>

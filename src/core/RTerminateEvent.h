@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -33,7 +33,7 @@
  */
 class QCADCORE_EXPORT RTerminateEvent : public QEvent {
 public:
-    RTerminateEvent() : QEvent(QEvent::User) {}
+    RTerminateEvent() : QEvent((QEvent::Type)(QEvent::User+200)) {}
     virtual ~RTerminateEvent() {}
 };
 

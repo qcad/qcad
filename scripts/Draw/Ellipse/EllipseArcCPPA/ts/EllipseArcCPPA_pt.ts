@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>EllipseArcCPPA</name>
     <message>
@@ -17,25 +17,25 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location line="+7"/>
         <source>Major point of ellipse or major radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ponto maior de elipse ou raio maior</translation>
+        <translation>Ponto maior da elipse ou o raio maior</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Major point of ellipse</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ponto maior de elipse</translation>
+        <translation>Ponto maior da elipse</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Minor point of ellipse or minor radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ponto menor de elipse ou raio menor</translation>
+        <translation>Ponto menor da elipse ou o raio menor</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Minor point of ellipse</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ponto menor de elipse</translation>
+        <translation>Ponto menor da elipse</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -51,7 +51,7 @@ Entre o ângulo de rotação
         <location line="+7"/>
         <source>Start parameter</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Parâmetro iniciar</translation>
+        <translation>Parâmetro inicial</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -63,7 +63,7 @@ Entre o ângulo de rotação
         <location line="+264"/>
         <source>Invalid major radius.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Inválido raio maior.</translation>
+        <translation>Raio maior inválido.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -101,7 +101,7 @@ Indique o ângulo de início:
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Ângulo de Término:</translatorcomment>
-        <translation>Ângulo de término:</translation>
+        <translation>Ângulo final:</translation>
     </message>
     <message>
         <location filename="../EllipseArcCPPAInit.js" line="+2"/>
@@ -115,7 +115,7 @@ Indique o ângulo de início:
         <location line="+4"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar arco elíptico do centro, ponto maior, a razão e os ângulos</translation>
+        <translation>Desenhe um arco elíptico a partir do centro, ponto maior, razão e ângulos</translation>
     </message>
     <message>
         <location filename="../EllipseArcCPPA.ui" line="+17"/>
@@ -124,7 +124,7 @@ Indique o ângulo de início:
 --file: pt.po--
 Direção de Visualização:
 Descrição:</translatorcomment>
-        <translation>Descrição:</translation>
+        <translation>Direção:</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -141,7 +141,7 @@ Descrição:</translatorcomment>
 Direção de Visualização:
 Direção de Visualização
 LTR</translatorcomment>
-        <translation>Descrição</translation>
+        <translation>Direção</translation>
     </message>
     <message>
         <location line="-10"/>

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -114,7 +114,7 @@ Trim.prototype.pickEntity = function(event, preview) {
             break;
         }
 
-        var shape = entity.getClosestShape(pos);
+        var shape = entity.getClosestSimpleShape(pos);
 
         if (!isLineBasedShape(shape) &&
             !isArcShape(shape) &&
@@ -196,7 +196,8 @@ Trim.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    var op = new RMixedOperation();
+    var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
 
     qDebug(this.limitingEntity, this.limitingShape, this.limitingPos, this.trimEntity, this.trimPos, this.trimBoth);
     var success = Trim.trim(op, this.limitingEntity, this.limitingShape, this.limitingPos, this.trimEntity, this.trimPos, this.trimBoth, preview);

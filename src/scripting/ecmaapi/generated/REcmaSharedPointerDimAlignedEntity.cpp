@@ -121,6 +121,10 @@
                 qScriptValueFromValue(&engine, RDimAlignedEntity::PropertyHandle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RDimAlignedEntity::PropertyProtected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RDimAlignedEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -147,6 +151,10 @@
             
             ctor.setProperty("PropertyColor",
                 qScriptValueFromValue(&engine, RDimAlignedEntity::PropertyColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RDimAlignedEntity::PropertyDisplayedColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyDrawOrder",
@@ -183,6 +191,10 @@
             
             ctor.setProperty("PropertyLinearFactor",
                 qScriptValueFromValue(&engine, RDimAlignedEntity::PropertyLinearFactor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimScale",
+                qScriptValueFromValue(&engine, RDimAlignedEntity::PropertyDimScale),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyAutoTextPos",
@@ -311,7 +323,7 @@
                         return REcmaHelper::throwError("RDimAlignedEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimAlignedData*
                     ap1 =
                     qscriptvalue_cast<
@@ -321,11 +333,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimAlignedEntity: Argument 1 is not of type RDimAlignedData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimAlignedEntity: Argument 1 is not of type RDimAlignedData.",
                                context);                    
                     }
-                    RDimAlignedData& a1 = *ap1;
+                    RDimAlignedData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -406,7 +420,7 @@
                         return REcmaHelper::throwError("RDimAlignedEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimAlignedData*
                     ap1 =
                     qscriptvalue_cast<
@@ -416,11 +430,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimAlignedEntity: Argument 1 is not of type RDimAlignedData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimAlignedEntity: Argument 1 is not of type RDimAlignedData.",
                                context);                    
                     }
-                    RDimAlignedData& a1 = *ap1;
+                    RDimAlignedData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id
@@ -1226,7 +1242,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimAlignedData*
                     ap0 =
                     qscriptvalue_cast<
@@ -1236,11 +1252,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimAlignedEntity: Argument 0 is not of type RDimAlignedData*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimAlignedEntity: Argument 0 is not of type RDimAlignedData.",
                                context);                    
                     }
-                    RDimAlignedData& a0 = *ap0;
+                    RDimAlignedData 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 

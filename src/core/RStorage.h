@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -141,6 +141,8 @@ public:
      */
     virtual QSet<REntity::Id> queryBlockEntities(RBlock::Id blockId) = 0;
 
+    virtual QSet<REntity::Id> queryLayerBlockEntities(RLayer::Id layerId, RBlock::Id blockId) = 0;
+
     /**
      * \return A set of all block attributes which are not stored in the
      * block definition but as separate entities on the same level as
@@ -164,7 +166,7 @@ public:
     /**
      * \return A set of entity IDs of all selected entities.
      */
-    virtual QSet<REntity::Id> querySelectedEntities() = 0;
+    virtual QSet<REntity::Id> querySelectedEntities() const = 0;
 
     /**
      * \return A set of entity IDs of all infinite entities (xlines).
@@ -246,16 +248,11 @@ public:
     virtual QSharedPointer<RView> queryView(RView::Id viewId) const = 0;
     virtual QSharedPointer<RView> queryView(const QString& viewName) const = 0;
 
-    //RTransaction setCurrentLayer(RLayer::Id layerId);
-    //RTransaction setCurrentLayer(const QString& layerName);
-    //void setCurrentLayer(RTransaction& transaction, RLayer::Id layerId);
-    //void setCurrentLayer(RTransaction& transaction, const QString& layerName);
     void setCurrentLayer(RLayer::Id layerId, RTransaction* transaction=NULL);
     void setCurrentLayer(const QString& layerName, RTransaction* transaction=NULL);
 
     virtual RLayer::Id getCurrentLayerId() const;
     virtual RView::Id getCurrentViewId() const {
-        //return (RView::Id) getVariable("CurrentView").toInt();
         return currentViewId;
     }
 
@@ -279,7 +276,6 @@ public:
     }
 
     virtual void setCurrentBlock(RBlock::Id blockId) {
-        //setVariable("CurrentBlock", blockId);
         currentBlockId = blockId;
     }
 
@@ -292,12 +288,10 @@ public:
     }
 
     virtual RBlock::Id getCurrentBlockId() const {
-        //return (RBlock::Id) getVariable("CurrentBlock").toInt();
         return currentBlockId;
     }
 
     void setCurrentView(RView::Id viewId) {
-        //setVariable("CurrentView", viewId);
         currentViewId = viewId;
     }
 
@@ -363,6 +357,13 @@ public:
     virtual QVariant getKnownVariable(RS::KnownVariable key) const = 0;
 
     /**
+     * \return Number of selected entities.
+     */
+    virtual int countSelectedEntities() const {
+        return querySelectedEntities().size();
+    }
+
+    /**
      * Clears the selection status of all entities.
      */
     virtual void clearEntitySelection(
@@ -423,7 +424,7 @@ public:
      *      After the call, this set will contain all entity IDs of
      *      entities that were affected by the call.
      */
-    virtual void deselectEntities(
+    virtual bool deselectEntities(
         const QSet<REntity::Id>& entityIds,
         QSet<REntity::Id>* affectedEntities=NULL
     ) = 0;
@@ -516,25 +517,6 @@ public:
     virtual int getTransactionGroup() const {
         return lastTransactionGroup;
     }
-
-    /**
-     * \return The ID of the last used transaction group.
-     */
-//    virtual int getLastTransactionGroup() {
-//        return lastTransactionGroup;
-//    }
-
-    /**
-     * Sets the ID of the last created transaction. This is called
-     * when a transaction is undone or redone (the last transaction
-     * id indicates where we are in the transaction stack).
-     * The default implementation sets the variable "LastTransaction".
-     */
-//    virtual void setLastTransactionGroup(int transactionGroup) {
-//        lastTransactionGroup = transactionGroup;
-
-//        setModified(true);
-//    }
 
     /**
      * Saves the given transaction. Transactions need to be stored
@@ -635,7 +617,6 @@ private:
     RColor currentColor;
     RLineweight::Lineweight currentLineweight;
     RLinetype::Id currentLinetypeId;
-    //RLayer::Id currentLayerId;
     RView::Id currentViewId;
     RBlock::Id currentBlockId;
 

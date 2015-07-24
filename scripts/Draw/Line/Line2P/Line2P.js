@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -142,11 +142,11 @@ Line2P.prototype.pickCoordinate = function(event, preview) {
 
     case Line2P.State.SettingNextPoint:
         this.point2 = event.getModelPosition();
-        var op = this.getOperation(preview);
         if (preview) {
             this.updatePreview();
         }
         else {
+            var op = this.getOperation(preview);
             if (!isNull(op)) {
                 if (!this.isRayOrXLine()) {
                     this.pointListIndex++;

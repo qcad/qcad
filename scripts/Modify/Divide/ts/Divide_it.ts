@@ -8,7 +8,7 @@
         <translation type="obsolete">Scegliere una linea, un arco o un cerchio</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="+68"/>
+        <location filename="../Divide.js" line="+66"/>
         <source>Choose line, arc, circle, ellipse or spline</source>
         <translation>Scegliere linea, arco, cerchio, ellisse o spline</translation>
     </message>
@@ -18,7 +18,7 @@
         <translation>Scegliere linea, arco, cerchio o ellisse</translation>
     </message>
     <message>
-        <location line="+11"/>
+        <location line="+10"/>
         <source>Specify point</source>
         <translation>Punto</translation>
     </message>

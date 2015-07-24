@@ -28,11 +28,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocument &amp;" typeName="RDocument"
         name="document" isConst="false" />
         <arg type="RMessageHandler *" typeName="RMessageHandler *"
-        name="messageHandler" hasDefault="true" default=" NULL"
+        name="messageHandler" hasDefault="true" default="NULL"
         isConst="false" />
         <arg type="RProgressHandler *"
         typeName="RProgressHandler *" name="progressHandler"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
       </variant>
     </constructor>
     <method name="getErrorMessage" cppName="getErrorMessage"
@@ -112,7 +112,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="forceSelected"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="setStyle" cppName="setStyle" specifier="public"
@@ -195,6 +195,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="getEntity" cppName="getEntity" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="REntity *" isPureVirtual="false" />
+    </method>
+    <method name="getCurrentBlockRef" cppName="getCurrentBlockRef"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
       <variant returnType="REntity *" isPureVirtual="false" />
     </method>
     <method name="isEntitySelected" cppName="isEntitySelected"
@@ -300,9 +305,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="allBlocks"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="undone"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="RBox &amp;" typeName="RBox" name="box"
@@ -313,7 +318,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         typeName="QSet &lt; REntity::Id &gt;" name="entityIds"
         isConst="false" />
         <arg type="bool" typeName="bool" name="allBlocks"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
     <method name="exportEntity" cppName="exportEntity"
@@ -323,19 +328,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="REntity &amp;" typeName="REntity" name="e"
         isConst="false" />
         <arg type="bool" typeName="bool" name="preview"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="allBlocks"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="forceSelected"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
         <arg type="bool" typeName="bool" name="allBlocks"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool" typeName="bool" name="forceSelected"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="startEntity" cppName="startEntity"
@@ -354,9 +359,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="preview"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
         <arg type="bool" typeName="bool" name="forceSelected"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="unexportEntity" cppName="unexportEntity"
@@ -461,7 +466,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RArc &amp;" typeName="RArc" name="arc"
         isConst="true" />
         <arg type="bool" typeName="bool" name="allowForZeroLength"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="exportEllipse" cppName="exportEllipse"
@@ -481,7 +486,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RPolyline &amp;" typeName="RPolyline"
         name="polyline" isConst="true" />
         <arg type="bool" typeName="bool" name="polylineGen"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="double" typeName="double" name="offset"
         hasDefault="true" default="RNANDOUBLE" isConst="false" />
       </variant>

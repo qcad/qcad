@@ -6,12 +6,12 @@
     <message>
         <location filename="../DimAligned.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Ensimmäinen jatke viivasta</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Toinen jatke viivasta</translation>
     </message>
     <message>
         <location line="+8"/>

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -39,6 +39,7 @@ Delete.prototype.beginEvent = function() {
 
 Delete.prototype.applyOperation = function() {
     var op = new RDeleteSelectionOperation();
+    op.setText(this.getToolTitle());
     this.getDocumentInterface().applyOperation(op);
 };
 

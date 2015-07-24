@@ -15,7 +15,7 @@
         <translation>Fatto</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>Polygon area:</source>
         <translatorcomment>--ignored colon--
 --file: qgis_it.ts--</translatorcomment>

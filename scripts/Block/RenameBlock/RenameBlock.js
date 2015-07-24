@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -44,7 +44,7 @@ RenameBlock.prototype.beginEvent = function() {
 
     var dlg = new BlockDialog(this.getDocument(), block);
     var newBlock = dlg.show();
-    if (!newBlock) {
+    if (isNull(newBlock)) {
         this.terminate();
         return;
     }

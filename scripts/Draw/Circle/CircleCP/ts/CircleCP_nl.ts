@@ -6,22 +6,22 @@
     <message>
         <location filename="../CircleCP.js" line="+56"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Middelpunt</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Point on circle or radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Punt op cirkel of straal</translation>
     </message>
     <message>
         <location filename="../CircleCPInit.js" line="+2"/>
         <source>&amp;Center, Point</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Middelpunt, punt</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from center and point on circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Cirkel van middelpunt en punt op cirkel</translation>
     </message>
 </context>
 </TS>

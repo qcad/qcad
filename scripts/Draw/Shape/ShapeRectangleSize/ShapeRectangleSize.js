@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -18,7 +18,7 @@
  */
 
 include("../Shape.js");
-include("../../DrawBasedOnRectangle.js");
+include("../../DrawBasedOnRectangleSize.js");
 
 /**
  * \class ShapeRectangleSize
@@ -26,14 +26,17 @@ include("../../DrawBasedOnRectangle.js");
  * \ingroup ecma_draw_shape
  */
 function ShapeRectangleSize(guiAction) {
-    DrawBasedOnRectangle.call(this, guiAction);
+    DrawBasedOnRectangleSize.call(this, guiAction);
 
     this.createPolyline = false;
+    this.includeBasePath = ShapeRectangleSize.includeBasePath;
+    this.dialogUiFile = "ShapeRectangleSizeDialog.ui";
 
     this.setUiOptions(["../Shape.ui", "ShapeRectangleSize.ui"]);
 }
 
-ShapeRectangleSize.prototype = new DrawBasedOnRectangle();
+ShapeRectangleSize.prototype = new DrawBasedOnRectangleSize();
+ShapeRectangleSize.includeBasePath = includeBasePath;
 
 ShapeRectangleSize.prototype.getShapes = function(corners) {
     return Shape.prototype.getShapes.call(this, corners);
@@ -42,4 +45,3 @@ ShapeRectangleSize.prototype.getShapes = function(corners) {
 ShapeRectangleSize.prototype.slotCreatePolylineChanged = function(checked) {
     this.createPolyline = checked;
 };
-

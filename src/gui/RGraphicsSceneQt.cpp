@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -120,6 +120,8 @@ bool RGraphicsSceneQt::beginPath() {
         }
     }
 
+    REntity* entity = getEntity();
+
     if (draftMode || screenBasedLinetypes || twoColorSelectedMode) {
         QPen localPen = currentPen;
         if (twoColorSelectedMode) {
@@ -141,22 +143,28 @@ bool RGraphicsSceneQt::beginPath() {
         currentPainterPath.setPen(localPen);
     }
     else {
-        currentPainterPath.setPen(currentPen);
+        if (entity!=NULL && entity->getCustomProperty("QCAD", "ScreenWeight", false)==true) {
+            QPen localPen = currentPen;
+            localPen.setCosmetic(true);
+            localPen.setWidthF(entity->getLineweight()/10);
+            currentPainterPath.setPen(localPen);
+        }
+        else {
+            currentPainterPath.setPen(currentPen);
+        }
     }
 
     currentPainterPath.setBrush(QBrush(Qt::NoBrush));
     currentPainterPath.setPixelSizeHint(pixelSizeHint);
 
     if (!exportToPreview) {
-        if (getEntity()->isSelected()) {
+        if (entity!=NULL && entity->isSelected()) {
             currentPainterPath.setSelected(true);
         }
     }
     else {
-        if (getEntity()!=NULL) {
-            if (getEntity()->getCustomProperty("QCADCAM", "simulation", false)==true) {
-                currentPainterPath.setHighlighted(true);
-            }
+        if (entity!=NULL && entity->getCustomProperty("QCADCAM", "simulation", false)==true) {
+            currentPainterPath.setHighlighted(true);
         }
     }
 
@@ -166,7 +174,20 @@ bool RGraphicsSceneQt::beginPath() {
 void RGraphicsSceneQt::endPath() {
     if (!exportToPreview) {
         if (!currentPainterPath.isEmpty()) {
-            addPath(getBlockRefOrEntity()->getId(), currentPainterPath, false);
+//            REntity* entity = getEntity();
+//            if (entity->getColor().isByBlock() ||
+//                entity->getLinetypeId()==document->getLinetypeByBlockId() ||
+//                entity->getLineweight()==RLineweight::WeightByBlock) {
+
+                // entities which are part of a block and have attributes ByBlock are exported to block ref ID:
+                addPath(getBlockRefOrEntity()->getId(), currentPainterPath, false);
+//            }
+//            else {
+//                // entities which are part of a block and have NO attributes ByBlock are exported to entity ID:
+//                if (!painterPaths.contains(getEntity()->getId())) {
+//                    addPath(getEntity()->getId(), currentPainterPath, false);
+//                }
+//            }
         }
     } else {
         addToPreview(currentPainterPath);
@@ -279,8 +300,8 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc, bool allowForZeroLength
     // arc threshold is configurable (FS#1012):
     if (arc.getAngleLength(allowForZeroLength)<=RSettings::getArcAngleLengthThreshold()) {
         // Qt won't export a zero length line as point:
-        RVector startPoint = arc.getStartPoint() - RVector::createPolar(0.01, arc.getStartAngle());
-        RVector endPoint = arc.getEndPoint() + RVector::createPolar(0.01, arc.getStartAngle());
+        RVector startPoint = arc.getStartPoint() - RVector::createPolar(0.01, arc.getStartAngle()+M_PI_2);
+        RVector endPoint = arc.getEndPoint() + RVector::createPolar(0.01, arc.getStartAngle()+M_PI_2);
         currentPainterPath.moveTo(startPoint);
         currentPainterPath.lineTo(endPoint);
         return;
@@ -343,7 +364,13 @@ void RGraphicsSceneQt::exportXLine(const RXLine& xLine) {
 
     // trim line to view box:
     RLine clippedLine = xLine.getClippedLine(box);
-    exportLineSegment(clippedLine);
+
+    double offs = clippedLine.getStartPoint().getDistanceTo(xLine.getBasePoint());
+    if (RMath::isSameDirection(xLine.getBasePoint().getAngleTo(clippedLine.getStartPoint()), xLine.getDirection1())) {
+        offs *= -1;
+    }
+
+    exportLine(clippedLine, offs);
 
     currentPainterPath.setAlwaysRegen(true);
 
@@ -367,7 +394,13 @@ void RGraphicsSceneQt::exportRay(const RRay& ray) {
 
     // trim line to view box:
     RLine clippedLine = ray.getClippedLine(box);
-    exportLineSegment(clippedLine);
+
+    double offs = clippedLine.getStartPoint().getDistanceTo(ray.getBasePoint());
+    if (RMath::isSameDirection(ray.getBasePoint().getAngleTo(clippedLine.getStartPoint()), ray.getDirection1())) {
+        offs *= -1;
+    }
+
+    exportLine(clippedLine, offs);
 
     currentPainterPath.setAlwaysRegen(true);
 
@@ -442,8 +475,9 @@ void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths) {
         return;
     }
 
+    RPainterPath path;
     for (int i=0; i<paths.size(); i++) {
-        RPainterPath path = paths.at(i);
+        path = paths.at(i);
         path.setZLevel(0);
 
         path.setBrush(getBrush(path));

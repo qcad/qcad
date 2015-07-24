@@ -1,12 +1,10 @@
-contains(QT_VERSION, ^5\\..*\\..*) {
+greaterThan(QT_MAJOR_VERSION, 4) {
     cache()
     DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x000000
     QT += printsupport
     macx {
         QT += macextras
     }
-    #INCLUDEPATH += ~/local/qt/include/QtWebKitWidgets
-    #QMAKE_CXXFLAGS += -I/Users/andrew/local/qt/include/QtWebKitWidgets
 }
 else {
     QT += webkit
@@ -47,7 +45,7 @@ macx-ios-* {
 }
 
 !r_mobile {
-    contains(QT_VERSION, ^5\\..*\\..*) {
+    greaterThan(QT_MAJOR_VERSION, 4) {
         QT += webkitwidgets
     }
 }
@@ -56,9 +54,9 @@ win32-msvc2010 {
     CONFIG+=win32-msvc
 }
 
+# building for Mac OS X on the PowerPC platform:
 macx {
     rppc {
-        # building for Mac OS X on the PowerPC platform:
         CONFIG += ppc
         CONFIG -= x86
         QMAKE_CFLAGS_X86 =
@@ -66,9 +64,20 @@ macx {
         QMAKE_OBJECTIVE_CFLAGS_X86 =
         QMAKE_LFLAGS_X86 =
     }
+}
+
+# settings for all Mac OS X builds:
+macx {
     QMAKE_CXXFLAGS_X86 += -Werror=return-type
-    !macx-clang-libc++ {
+    macx-clang* {
         QMAKE_CXXFLAGS += -mmacosx-version-min=10.6
+        exists(/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk) {
+            QMAKE_MAC_SDK = macosx10.9
+        }
+    }
+
+    greaterThan(QT_MAJOR_VERSION, 4) {
+        QMAKE_LFLAGS += -F/System/Library/Frameworks
     }
 }
 
@@ -99,7 +108,7 @@ QT += core \
     xmlpatterns
 
 # make sure that the QtHelp framework is included in the app bundle under Mac OS X:
-contains(QT_VERSION, ^5\\..*\\..*) {
+greaterThan(QT_MAJOR_VERSION, 4) {
     QT += help \
         uitools
     !r_mobile {
@@ -110,12 +119,6 @@ else {
     CONFIG += help \
         designer \
         uitools
-}
-
-# required for the navel spatial index lib:
-!win32 {
-    DEFINES += PTHREADS
-    DEFINES += HAVE_PTHREAD_H
 }
 
 CONFIG -= warn_off
@@ -157,5 +160,5 @@ INCLUDEPATH += \
     $$PWD/src/scripting/ecmaapi/adapters \
     $$PWD/src/io/dxf \
     $$PWD/src/spatialindex \
-    $$PWD/src/3rdparty
-
+    $$PWD/src/3rdparty \
+    $$PWD/src/zip

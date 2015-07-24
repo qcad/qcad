@@ -23,6 +23,21 @@
 Obróć &amp;dwa</translatorcomment>
         <translation type="unfinished">Obróć &amp;dwa</translation>
     </message>
+    <message>
+        <location filename="../Rotate2.ui" line="+17"/>
+        <source>Primary Angle:</source>
+        <translation type="unfinished">Główny Angle:</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Secondary Angle:</source>
+        <translation type="unfinished">Secondary Angle:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Copies:</source>
+        <translation type="unfinished">Kopie:</translation>
+    </message>
 </context>
 <context>
     <name>Rotate2Options</name>
@@ -94,26 +109,23 @@ Kąt (&amp;b):</translatorcomment>
 <context>
     <name>TranslateRotate</name>
     <message>
-        <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Główny Angle:</translation>
+        <translation type="obsolete">Główny Angle:</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Secondary Angle:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Secondary Angle:</translation>
+        <translation type="obsolete">Secondary Angle:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Copies:</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Kopie &amp;wielokrotne:
 Kopie wielokrotne:
 Kopie:</translatorcomment>
-        <translation type="unfinished">Kopie:</translation>
+        <translation type="obsolete">Kopie:</translation>
     </message>
 </context>
 </TS>

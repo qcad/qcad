@@ -142,6 +142,10 @@
                 qScriptValueFromValue(&engine, RImageEntity::PropertyHandle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RImageEntity::PropertyProtected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RImageEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -168,6 +172,10 @@
             
             ctor.setProperty("PropertyColor",
                 qScriptValueFromValue(&engine, RImageEntity::PropertyColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RImageEntity::PropertyDisplayedColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyDrawOrder",
@@ -208,6 +216,10 @@
             
             ctor.setProperty("PropertyHeight",
                 qScriptValueFromValue(&engine, RImageEntity::PropertyHeight),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyFade",
+                qScriptValueFromValue(&engine, RImageEntity::PropertyFade),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -292,7 +304,7 @@
                         return REcmaHelper::throwError("RImageEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RImageData*
                     ap1 =
                     qscriptvalue_cast<
@@ -302,11 +314,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RImageEntity: Argument 1 is not of type RImageData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RImageEntity: Argument 1 is not of type RImageData.",
                                context);                    
                     }
-                    RImageData& a1 = *ap1;
+                    RImageData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -387,7 +401,7 @@
                         return REcmaHelper::throwError("RImageEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RImageData*
                     ap1 =
                     qscriptvalue_cast<
@@ -397,11 +411,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RImageEntity: Argument 1 is not of type RImageData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RImageEntity: Argument 1 is not of type RImageData.",
                                context);                    
                     }
-                    RImageData& a1 = *ap1;
+                    RImageData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id
@@ -426,6 +442,62 @@
     a1
         ,
     a2
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+    } else 
+
+    if( context->argumentCount() ==
+        1
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RImageEntity */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RImageEntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RImageEntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RImageEntity: Argument 0 is not of type RImageEntity*.",
+                               context);                    
+                    }
+                    RImageEntity& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RImageEntity
+                    * cppResult =
+                    new
+                    RImageEntity
+                    (
+                    a0
                     );
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:

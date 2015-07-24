@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="48"
+   height="48"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Edit0.svg">
+  <metadata
+     id="metadata53">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1607"
+     inkscape:window-height="939"
+     id="namedview51"
+     showgrid="false"
+     inkscape:zoom="2.8541667"
+     inkscape:cx="48"
+     inkscape:cy="24"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient2974">
+      <stop
+         offset="0"
+         stop-color="#c1c1c1"
+         id="stop7" />
+      <stop
+         offset="1"
+         stop-color="#acacac"
+         id="stop9" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2994">
+      <stop
+         offset="0"
+         stop-color="#000"
+         id="stop12" />
+      <stop
+         offset="1"
+         stop-color="#c9c9c9"
+         id="stop14" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2966">
+      <stop
+         offset="0"
+         stop-color="#ffd1d1"
+         id="stop17" />
+      <stop
+         offset=".5"
+         stop-color="#ff1d1d"
+         id="stop19" />
+      <stop
+         offset="1"
+         stop-color="#6f0000"
+         id="stop21" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="translate(-5.66929,0)"
+       id="linearGradient2554"
+       xlink:href="#linearGradient2966"
+       y1="17.375999"
+       y2="22.250999"
+       x1="48.905998"
+       x2="50.987999"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       gradientTransform="translate(-5.66929,0)"
+       id="linearGradient2556"
+       xlink:href="#linearGradient2974"
+       y1="19.812"
+       y2="22.625"
+       x1="46"
+       x2="47.688"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       gradientTransform="translate(-5.82554,0.125)"
+       id="linearGradient2560"
+       xlink:href="#linearGradient2994"
+       y1="31.047001"
+       y2="30.702999"
+       x1="25.719"
+       x2="25.514999"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       cx="29.052999"
+       cy="27.641001"
+       gradientTransform="matrix(2.92356,0,0,2.02972,-61.5553,-27.8842)"
+       r="3.2409999"
+       id="radialGradient2558"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#e7e2b8"
+         id="stop27" />
+      <stop
+         offset="1"
+         stop-color="#e7e2b8"
+         stop-opacity="0"
+         id="stop29" />
+    </radialGradient>
+  </defs>
+</svg>

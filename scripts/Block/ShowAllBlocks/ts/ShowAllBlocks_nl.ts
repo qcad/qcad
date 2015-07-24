@@ -10,7 +10,7 @@
     <message>
         <location filename="../ShowAllBlocksInit.js" line="+2"/>
         <source>&amp;Show All Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Laat alle Blokken &amp;zien</translation>
     </message>
 </context>
 </TS>

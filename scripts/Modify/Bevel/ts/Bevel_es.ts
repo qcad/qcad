@@ -19,7 +19,7 @@
         <translation>Medida 2:</translation>
     </message>
     <message>
-        <location filename="../Bevel.js" line="+54"/>
+        <location filename="../Bevel.js" line="+55"/>
         <source>The two entities cannot be bevelled.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Las dos entidades no pueden ser biselados.</translation>

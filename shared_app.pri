@@ -11,7 +11,9 @@ LIBS += \
     -lqcadsnap \
     -lqcadcore \
     -lqcadstemmer \
-    -lstemmer
+    -lstemmer \
+    -lqcadzip \
+    -lquazip
 
 !r_no_opennurbs {
     LIBS += \

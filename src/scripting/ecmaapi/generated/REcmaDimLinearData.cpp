@@ -70,6 +70,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
+            REcmaHelper::registerFunction(&engine, proto, setDefinitionPoint, "setDefinitionPoint");
+            
             REcmaHelper::registerFunction(&engine, proto, setExtensionPoint1, "setExtensionPoint1");
             
             REcmaHelper::registerFunction(&engine, proto, getExtensionPoint1, "getExtensionPoint1");
@@ -226,6 +228,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimLinearData::isValid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimLinearData::setDefinitionPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimLinearData::setDefinitionPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimLinearData::setDefinitionPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimLinearData* self = 
+                        getSelf("setDefinitionPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimLinearData: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDefinitionPoint(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimLinearData.setDefinitionPoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimLinearData::setDefinitionPoint", context, engine);
             return result;
         }
          QScriptValue

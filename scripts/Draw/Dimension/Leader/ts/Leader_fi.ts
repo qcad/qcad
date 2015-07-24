@@ -26,17 +26,17 @@
     <message>
         <location line="+14"/>
         <source>Arrow head</source>
-        <translation type="unfinished">Nuoli</translation>
+        <translation>Nuolenpää</translation>
     </message>
     <message>
         <location filename="../LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation>Leader</translation>
+        <translation>&amp;Perusviiva</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation>Piirrä leader (viiva nuolella)</translation>
+        <translation>Piirrä perusviiva (viiva nuolella)</translation>
     </message>
 </context>
 </TS>

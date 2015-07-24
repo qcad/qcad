@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -40,7 +40,7 @@ Dimension.includeBasePath = includeBasePath;
 Dimension.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="DimensionToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="DimensionToolsPanelAction") {
         EAction.showCadToolBarPanel("DimensionToolsPanel");
         this.terminate();
     }
@@ -57,8 +57,6 @@ Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
     if (!this.uiFile.contains("../Dimension.ui")) {
         return;
     }
-
-    //var optionsToolBar = EAction.getOptionsToolBar();
 
     var prefixCombo = optionsToolBar.findChild("Prefix");
     prefixCombo.clear();
@@ -85,6 +83,8 @@ Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
     lowerToleranceLineEdit.text = "";
     WidgetFactory.initLineEdit(lowerToleranceLineEdit, true);
 
+    this.initScaleCombo();
+    
     // if we are resuming, restore previous values (automatic)
     // it not, keep them empty.
     if (!resume) {
@@ -94,6 +94,21 @@ Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
         lowerToleranceLineEdit.setProperty("Loaded", true);
     }
 };
+
+Dimension.prototype.initScaleCombo = function() {
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var scaleCombo = optionsToolBar.findChild("Scale");
+    scaleCombo.blockSignals(true);
+    var prev = scaleCombo.currentText;
+    scaleCombo.clear();
+    var scales = this.getScales();
+    for (var i=0; i<scales.length; ++i) {
+        scaleCombo.addItem(scales[i]);
+    }
+    scaleCombo.currentText = prev;
+    scaleCombo.blockSignals(false);
+};
+
 
 Dimension.getMenu = function() {
     var menu = EAction.getMenu(Dimension.getTitle(), "DimensionMenu");
@@ -109,7 +124,7 @@ Dimension.getToolBar = function() {
 
 Dimension.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "DimensionToolsPanelButton";
+    var actionName = "DimensionToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Dimension Tools"), mtb);
         action.setScriptFile(Dimension.includeBasePath + "/Dimension.js");
@@ -202,4 +217,17 @@ Dimension.prototype.slotLowerToleranceChanged = function(text) {
     if (!isNull(this.data)) {
         this.data.setLowerTolerance(text);
     }
+};
+
+Dimension.prototype.getScaleString = function() {
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var scaleCombo = optionsToolBar.findChild("Scale");
+    return scaleCombo.currentText;
+};
+
+/**
+ * Parses the given scale string (e.g. "1:2") and returns the scale as number (e.g. 0.5).
+ */
+Dimension.prototype.parseScale = function(scaleString) {
+    return RMath.parseScale(scaleString);
 };

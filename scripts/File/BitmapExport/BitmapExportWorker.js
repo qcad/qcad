@@ -1,3 +1,20 @@
+/**
+ * Exports the given RDocument (doc) to a bitmap (BMP, PNG, JPEG, TIFF, ...).
+ * \param doc RDocument document
+ * \param scene Graphics scene to export (e.g. RGraphicsSceneQt)
+ * \param fileName File name for exported bitmap. Extension determines format.
+ * \param properties Various properties:
+ *  properties["width"]: width of bitmap in pixels (ignored if resolution is present)
+ *  properties["height"]: height of bitmap in pixels (ignored if resolution is present)
+ *  properties["resolution"]: resolution in pixels / drawing unit
+ *  properties["margin"]: margin at borders in pixels
+ *  properties["backgroundColor"]: background color (RColor)
+ *  properties["origin"]: true: export origin point as red cross
+ *  properties["antialiasing"]: true: use antialiasing
+ *  properties["quality"]: Export quality (0..100), JPEG only
+ *  properties["monochrome"]: true: Export as black / white
+ *  properties["grayscale"]: true: Export as grayscale
+ */
 function exportBitmap(doc, scene, fileName, properties) {
     var view = new RGraphicsViewImage();
     view.setScene(scene, false);
@@ -5,8 +22,6 @@ function exportBitmap(doc, scene, fileName, properties) {
     view.setPaintOrigin(properties["origin"]==null ? false : properties["origin"]);
     view.setTextHeightThresholdOverride(0);
     view.setAntialiasing(properties["antialiasing"]==null ? true : properties["antialiasing"]);
-    //qDebug("-a: ", properties["antialiasing"]==null ? true : properties["antialiasing"]);
-    //view.setAntialiasing(true);
 
     if (properties["monochrome"]===true) {
         view.setColorMode(RGraphicsView.BlackWhite);
@@ -40,19 +55,6 @@ function exportBitmap(doc, scene, fileName, properties) {
 
     view.autoZoom(properties["margin"], true);
 
-    //view.setAntialiasing(true);
-    //view.setPaintOrigin(false);
-    //view.setTextHeightThresholdOverride(0);
-
-    // disabled: produces very thin lines, invisible for units >= Meter
-    //view.setPrinting(true);
-
-    //view.setBackgroundColor(properties.background);
-    //view.resizeImage(properties.width, properties.height);
-
-    //view.autoZoom(properties.margin);
-
-    //di.regenerateScenes();
     scene.regenerate();
 
     // export file
@@ -61,12 +63,9 @@ function exportBitmap(doc, scene, fileName, properties) {
     scene.unregisterView(view);
 
     var iw = new QImageWriter(fileName);
-    // always empty
-    //qDebug("BitmapExport.js:", "exportBitmap(): format:", iw.format());
     var ext = new QFileInfo(fileName).suffix().toLowerCase();
     if (ext === "png") {
         iw.setQuality(9);
-        //iw.setCompression(9);
     } else if (ext === "jpg" || ext === "jpeg") {
         iw.setQuality(properties["quality"]==null ? 100 : properties["quality"]);
     } else if (ext === "tif" || ext === "tiff") {
@@ -75,18 +74,11 @@ function exportBitmap(doc, scene, fileName, properties) {
         iw.setCompression(1);
     }
 
-    //var appWin = EAction.getMainWindow();
     var ret;
     if (!iw.write(buffer)) {
-        //print("Error: cannot save file: ", fileName);
-        //print("Error: ", iw.errorString());
         ret = [false, iw.errorString()];
-        //[false, qsTr("Error while generating Bitmap file '%1': %2")
-        //            .arg(fileName).arg(iw.errorString())];
     } else {
-        //print("Conversion finished.");
         ret = [true, ""];
-        //[true, qsTr("Bitmap file has been exported to '%1'").arg(fileName);
     }
     iw.destroy();
 

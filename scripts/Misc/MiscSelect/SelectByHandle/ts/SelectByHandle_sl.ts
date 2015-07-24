@@ -4,7 +4,7 @@
 <context>
     <name>SelectByHandle</name>
     <message>
-        <location filename="../SelectByHandle.js" line="+54"/>
+        <location filename="../SelectByHandle.js" line="+58"/>
         <source>Object selected: </source>
         <translation>Izbran objekt: </translation>
     </message>

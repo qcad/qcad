@@ -4,12 +4,12 @@
 <context>
     <name>Round</name>
     <message>
-        <location filename="../Round.js" line="+56"/>
+        <location filename="../Round.js" line="+57"/>
         <source>The two entities cannot be rounded.</source>
         <translation>２つのエンティティは丸め丸められません。</translation>
     </message>
     <message>
-        <location line="+220"/>
+        <location line="+216"/>
         <source>First entity cannot be trimmed.</source>
         <translation>１つ目のエンティティはトリムできません。</translation>
     </message>

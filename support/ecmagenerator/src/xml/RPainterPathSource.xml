@@ -11,7 +11,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RPainterPath &gt;"
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="draft"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
   </class>

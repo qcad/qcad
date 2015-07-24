@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -42,6 +42,7 @@ class QCADENTITY_EXPORT RPolylineEntity: public REntity {
 public:
     static RPropertyTypeId PropertyCustom;
     static RPropertyTypeId PropertyHandle;
+    static RPropertyTypeId PropertyProtected;
     static RPropertyTypeId PropertyType;
     static RPropertyTypeId PropertyBlock;
     static RPropertyTypeId PropertyLayer;
@@ -49,6 +50,7 @@ public:
     static RPropertyTypeId PropertyLinetypeScale;
     static RPropertyTypeId PropertyLineweight;
     static RPropertyTypeId PropertyColor;
+    static RPropertyTypeId PropertyDisplayedColor;
     static RPropertyTypeId PropertyDrawOrder;
 
     static RPropertyTypeId PropertyClosed;
@@ -63,6 +65,7 @@ public:
 public:
     RPolylineEntity(RDocument* document, const RPolylineData& data,
         RObject::Id objectId = RObject::INVALID_ID);
+    RPolylineEntity(const RPolylineEntity& other);
     virtual ~RPolylineEntity();
 
     static void init();
@@ -181,8 +184,12 @@ public:
         return data.isClosed();
     }
 
-    bool isLogicallyClosed() const {
-        return data.isLogicallyClosed();
+    bool isGeometricallyClosed() const {
+        return data.isGeometricallyClosed();
+    }
+
+    double getLength() const {
+        return data.getLength();
     }
 
     QList<QSharedPointer<RShape> > getExploded() const {

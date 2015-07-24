@@ -4,7 +4,7 @@
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../Dimension.js" line="+65"/>
+        <location filename="../Dimension.js" line="+63"/>
         <source>No prefix</source>
         <translatorcomment>--google--
 &lt;brak przedrostka&gt;</translatorcomment>
@@ -63,7 +63,7 @@ Przełącz znak średnicy
         <translation type="unfinished">Delta</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+58"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narzędzia wymiarowe</translation>
@@ -121,6 +121,16 @@ Górna tolerancja</translatorcomment>
 --file: qcadguiqt_pl.ts--
 Dolna tolerancja</translatorcomment>
         <translation type="unfinished">Dolna tolerancja</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Scale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Drawing Scale</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

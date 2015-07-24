@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -25,6 +25,7 @@
 
 RPropertyTypeId REntity::PropertyCustom;
 RPropertyTypeId REntity::PropertyHandle;
+RPropertyTypeId REntity::PropertyProtected;
 RPropertyTypeId REntity::PropertyType;
 RPropertyTypeId REntity::PropertyBlock;
 RPropertyTypeId REntity::PropertyLayer;
@@ -32,15 +33,20 @@ RPropertyTypeId REntity::PropertyLinetype;
 RPropertyTypeId REntity::PropertyLinetypeScale;
 RPropertyTypeId REntity::PropertyLineweight;
 RPropertyTypeId REntity::PropertyColor;
+RPropertyTypeId REntity::PropertyDisplayedColor;
 RPropertyTypeId REntity::PropertyDrawOrder;
 
 RPropertyTypeId REntity::PropertyMinX;
 RPropertyTypeId REntity::PropertyMaxX;
 RPropertyTypeId REntity::PropertyMinY;
 RPropertyTypeId REntity::PropertyMaxY;
+RPropertyTypeId REntity::PropertySizeX;
+RPropertyTypeId REntity::PropertySizeY;
 
 
 REntity::~REntity() {
+    //qDebug() << "deleting entity: " << QString("0x%1").arg((long int)this, 0, 16);
+    //qDebug() << "deleting entity: " << getId();
 }
 
 bool REntity::isComplex(const RS::EntityType type) {
@@ -66,6 +72,7 @@ bool REntity::isDimension(const RS::EntityType type) {
 void REntity::init() {
     REntity::PropertyCustom.generateId(typeid(REntity), RObject::PropertyCustom);
     REntity::PropertyHandle.generateId(typeid(REntity), RObject::PropertyHandle);
+    REntity::PropertyProtected.generateId(typeid(REntity), RObject::PropertyProtected);
     REntity::PropertyType.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Type"));
     REntity::PropertyBlock.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Block ID"));
     REntity::PropertyLayer.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Layer"));
@@ -73,12 +80,16 @@ void REntity::init() {
     REntity::PropertyLinetypeScale.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Linetype Scale"));
     REntity::PropertyLineweight.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Lineweight"));
     REntity::PropertyColor.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Color"));
+    REntity::PropertyDisplayedColor.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Displayed Color"));
     REntity::PropertyDrawOrder.generateId(typeid(REntity), "", QT_TRANSLATE_NOOP("REntity", "Draw Order"));
 
     REntity::PropertyMinX.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Left"));
     REntity::PropertyMinY.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Bottom"));
     REntity::PropertyMaxX.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Right"));
     REntity::PropertyMaxY.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Boundary"), QT_TRANSLATE_NOOP("REntity", "Top"));
+
+    REntity::PropertySizeX.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Width"));
+    REntity::PropertySizeY.generateId(typeid(REntity), QT_TRANSLATE_NOOP("REntity", "Size"), QT_TRANSLATE_NOOP("REntity", "Height"));
 }
 
 /**
@@ -240,6 +251,12 @@ QPair<QVariant, RPropertyAttributes> REntity::getProperty(
         var.setValue<RColor> (getData().getColor());
         return qMakePair(var, RPropertyAttributes());
     }
+    else if (propertyTypeId == PropertyDisplayedColor) {
+        QVariant var;
+        QStack<REntity*> stack;
+        var.setValue<RColor> (getData().getColor(true, stack));
+        return qMakePair(var, RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    }
     else if (propertyTypeId == PropertyDrawOrder) {
         return qMakePair(QVariant(getData().getDrawOrder()), RPropertyAttributes());
     }
@@ -254,6 +271,12 @@ QPair<QVariant, RPropertyAttributes> REntity::getProperty(
     }
     else if (propertyTypeId == PropertyMaxY) {
         return qMakePair(QVariant(getBoundingBox().getMaximum().y), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    }
+    else if (propertyTypeId == PropertySizeX) {
+        return qMakePair(QVariant(getBoundingBox().getWidth()), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    }
+    else if (propertyTypeId == PropertySizeY) {
+        return qMakePair(QVariant(getBoundingBox().getHeight()), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
 
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes);
@@ -283,8 +306,7 @@ bool REntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
             if (document != NULL) {
                 RLinetypePattern t = value.value<RLinetypePattern> ();
                 int id = document->getLinetypeId(t.getName());
-                ret = ret || RObject::setMember(getData().linetypeId, id,
-                        true);
+                ret = ret || RObject::setMember(getData().linetypeId, id, true);
             }
         }
     } else if (propertyTypeId == PropertyLinetypeScale) {
@@ -384,8 +406,4 @@ void REntity::print(QDebug dbg) const {
         << ", selectionStatus: " << isSelected()
         << ", boundingBoxes: " << getBoundingBoxes()
         << ")";
-}
-
-void REntity::dump() {
-    qDebug() << *this;
 }

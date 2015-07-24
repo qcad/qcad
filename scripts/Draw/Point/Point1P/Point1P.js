@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -16,7 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-
 include("../Point.js");
 
 /**
@@ -26,6 +25,8 @@ include("../Point.js");
  */
 function Point1P(guiAction) {
     Point.call(this, guiAction);
+
+    this.point = undefined;
 }
 
 Point1P.State = {
@@ -54,13 +55,31 @@ Point1P.prototype.setState = function(state) {
     EAction.showSnapTools();
 };
 
-Point1P.prototype.coordinateEvent = function(event) {
-    var pos = event.getModelPosition();
-    this.getDocumentInterface().setRelativeZero(pos);
-    var point = new RPointEntity(
+Point1P.prototype.pickCoordinate = function(event, preview) {
+    var di = this.getDocumentInterface();
+
+    this.point = event.getModelPosition();
+    if (preview) {
+        this.updatePreview();
+    }
+    else {
+        di.setRelativeZero(this.point);
+        this.applyOperation();
+    }
+};
+
+Point1P.prototype.getOperation = function(preview) {
+    if (!isVector(this.point)) {
+        return undefined;
+    }
+
+    var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
+
+    var e = new RPointEntity(
         this.getDocument(),
-        new RPointData(pos)
+        new RPointData(this.point)
     );
-    var op = new RAddObjectOperation(point, this.getToolTitle());
-    this.getDocumentInterface().applyOperation(op);
+    op.addObject(e);
+    return op;
 };

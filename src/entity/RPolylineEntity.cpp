@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -23,6 +23,7 @@
 
 RPropertyTypeId RPolylineEntity::PropertyCustom;
 RPropertyTypeId RPolylineEntity::PropertyHandle;
+RPropertyTypeId RPolylineEntity::PropertyProtected;
 RPropertyTypeId RPolylineEntity::PropertyType;
 RPropertyTypeId RPolylineEntity::PropertyBlock;
 RPropertyTypeId RPolylineEntity::PropertyLayer;
@@ -30,6 +31,7 @@ RPropertyTypeId RPolylineEntity::PropertyLinetype;
 RPropertyTypeId RPolylineEntity::PropertyLinetypeScale;
 RPropertyTypeId RPolylineEntity::PropertyLineweight;
 RPropertyTypeId RPolylineEntity::PropertyColor;
+RPropertyTypeId RPolylineEntity::PropertyDisplayedColor;
 RPropertyTypeId RPolylineEntity::PropertyDrawOrder;
 
 RPropertyTypeId RPolylineEntity::PropertyPolylineGen;
@@ -44,9 +46,16 @@ RPropertyTypeId RPolylineEntity::PropertyLength;
 RPolylineEntity::RPolylineEntity(RDocument* document, const RPolylineData& data,
         RObject::Id objectId) :
     REntity(document, objectId), data(document, data) {
+    RDebug::incCounter("RPolylineEntity");
+}
+
+RPolylineEntity::RPolylineEntity(const RPolylineEntity& other) : REntity(other) {
+    RDebug::incCounter("RPolylineEntity");
+    data = other.data;
 }
 
 RPolylineEntity::~RPolylineEntity() {
+    RDebug::decCounter("RPolylineEntity");
 }
 
 void RPolylineEntity::setShape(const RPolyline& l) {
@@ -58,6 +67,7 @@ void RPolylineEntity::setShape(const RPolyline& l) {
 void RPolylineEntity::init() {
     RPolylineEntity::PropertyCustom.generateId(typeid(RPolylineEntity), RObject::PropertyCustom);
     RPolylineEntity::PropertyHandle.generateId(typeid(RPolylineEntity), RObject::PropertyHandle);
+    RPolylineEntity::PropertyProtected.generateId(typeid(RPolylineEntity), RObject::PropertyProtected);
     RPolylineEntity::PropertyType.generateId(typeid(RPolylineEntity), REntity::PropertyType);
     RPolylineEntity::PropertyBlock.generateId(typeid(RPolylineEntity), REntity::PropertyBlock);
     RPolylineEntity::PropertyLayer.generateId(typeid(RPolylineEntity), REntity::PropertyLayer);
@@ -65,6 +75,7 @@ void RPolylineEntity::init() {
     RPolylineEntity::PropertyLinetypeScale.generateId(typeid(RPolylineEntity), REntity::PropertyLinetypeScale);
     RPolylineEntity::PropertyLineweight.generateId(typeid(RPolylineEntity), REntity::PropertyLineweight);
     RPolylineEntity::PropertyColor.generateId(typeid(RPolylineEntity), REntity::PropertyColor);
+    RPolylineEntity::PropertyDisplayedColor.generateId(typeid(RPolylineEntity), REntity::PropertyDisplayedColor);
     RPolylineEntity::PropertyDrawOrder.generateId(typeid(RPolylineEntity), REntity::PropertyDrawOrder);
 
     RPolylineEntity::PropertyPolylineGen.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Polyline Pattern"));

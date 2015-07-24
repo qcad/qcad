@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -131,9 +131,9 @@ QList<QSharedPointer<RShape> > RDimRadialData::getShapes(const RBox& queryBox, b
 
     QList<QSharedPointer<RShape> > ret;
 
-    if (ignoreComplex) {
-        return ret;
-    }
+//    if (ignoreComplex) {
+//        return ret;
+//    }
 
     defaultAngle = 0.0;
 
@@ -173,15 +173,7 @@ QList<QSharedPointer<RShape> > RDimRadialData::getShapes(const RBox& queryBox, b
     ret.append(QSharedPointer<RShape>(new RLine(definitionPoint, v3)));
 
     // create arrow:
-    //addEntity(createArrow(p2, arrowAngle));
-    RTriangle arrow = RTriangle::createArrow(chordPoint, arrowAngle, dimasz);
-    ret.append(QSharedPointer<RShape>(new RTriangle(arrow)));
-
-    // dimension line:
-    //ret.append(getDimensionLineShapes(
-    //               definitionPoint,
-    //               chordPoint,
-    //               true, true));
+    ret.append(getArrow(chordPoint, arrowAngle));
 
     RVector distV;
     double textAngle;

@@ -4,9 +4,13 @@
 <context>
     <name>SelectionDisplay</name>
     <message>
-        <location filename="../SelectionDisplay.js" line="+57"/>
         <source>No selected entities.</source>
         <translatorcomment>--google--</translatorcomment>
+        <translation type="vanished">No hay entidades seleccionadas.</translation>
+    </message>
+    <message>
+        <location filename="../SelectionDisplay.js" line="+58"/>
+        <source>No entities selected.</source>
         <translation>No hay entidades seleccionadas.</translation>
     </message>
     <message>
@@ -69,6 +73,11 @@ No se pudo transformar la capa &apos;%1&apos;</translatorcomment>
         <translatorcomment>--google--</translatorcomment>
         <translation>Las entidades seleccionadas:
 %1.</translation>
+    </message>
+    <message>
+        <location filename="../SelectionDisplay.ui" line="+26"/>
+        <source>Form</source>
+        <translation>Form</translation>
     </message>
 </context>
 </TS>

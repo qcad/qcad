@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -21,6 +21,7 @@
 
 RPropertyTypeId RDimRotatedEntity::PropertyCustom;
 RPropertyTypeId RDimRotatedEntity::PropertyHandle;
+RPropertyTypeId RDimRotatedEntity::PropertyProtected;
 RPropertyTypeId RDimRotatedEntity::PropertyType;
 RPropertyTypeId RDimRotatedEntity::PropertyBlock;
 RPropertyTypeId RDimRotatedEntity::PropertyLayer;
@@ -28,6 +29,7 @@ RPropertyTypeId RDimRotatedEntity::PropertyLinetype;
 RPropertyTypeId RDimRotatedEntity::PropertyLinetypeScale;
 RPropertyTypeId RDimRotatedEntity::PropertyLineweight;
 RPropertyTypeId RDimRotatedEntity::PropertyColor;
+RPropertyTypeId RDimRotatedEntity::PropertyDisplayedColor;
 RPropertyTypeId RDimRotatedEntity::PropertyDrawOrder;
 
 RPropertyTypeId RDimRotatedEntity::PropertyMiddleOfTextX;
@@ -39,6 +41,7 @@ RPropertyTypeId RDimRotatedEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimRotatedEntity::PropertyMeasuredValue;
 
 RPropertyTypeId RDimRotatedEntity::PropertyLinearFactor;
+RPropertyTypeId RDimRotatedEntity::PropertyDimScale;
 RPropertyTypeId RDimRotatedEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimRotatedEntity::PropertyFontName;
 
@@ -67,6 +70,7 @@ RDimRotatedEntity::~RDimRotatedEntity() {
 void RDimRotatedEntity::init() {
     RDimRotatedEntity::PropertyCustom.generateId(typeid(RDimRotatedEntity), RObject::PropertyCustom);
     RDimRotatedEntity::PropertyHandle.generateId(typeid(RDimRotatedEntity), RObject::PropertyHandle);
+    RDimRotatedEntity::PropertyProtected.generateId(typeid(RDimRotatedEntity), RObject::PropertyProtected);
     RDimRotatedEntity::PropertyType.generateId(typeid(RDimRotatedEntity), REntity::PropertyType);
     RDimRotatedEntity::PropertyBlock.generateId(typeid(RDimRotatedEntity), REntity::PropertyBlock);
     RDimRotatedEntity::PropertyLayer.generateId(typeid(RDimRotatedEntity), REntity::PropertyLayer);
@@ -74,6 +78,7 @@ void RDimRotatedEntity::init() {
     RDimRotatedEntity::PropertyLinetypeScale.generateId(typeid(RDimRotatedEntity), REntity::PropertyLinetypeScale);
     RDimRotatedEntity::PropertyLineweight.generateId(typeid(RDimRotatedEntity), REntity::PropertyLineweight);
     RDimRotatedEntity::PropertyColor.generateId(typeid(RDimRotatedEntity), REntity::PropertyColor);
+    RDimRotatedEntity::PropertyDisplayedColor.generateId(typeid(RDimRotatedEntity), REntity::PropertyDisplayedColor);
     RDimRotatedEntity::PropertyDrawOrder.generateId(typeid(RDimRotatedEntity), REntity::PropertyDrawOrder);
 
     RDimRotatedEntity::PropertyMiddleOfTextX.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyMiddleOfTextX);
@@ -85,6 +90,7 @@ void RDimRotatedEntity::init() {
     RDimRotatedEntity::PropertyMeasuredValue.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyMeasuredValue);
 
     RDimRotatedEntity::PropertyLinearFactor.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyLinearFactor);
+    RDimRotatedEntity::PropertyDimScale.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyDimScale);
     RDimRotatedEntity::PropertyAutoTextPos.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyAutoTextPos);
     RDimRotatedEntity::PropertyFontName.generateId(typeid(RDimRotatedEntity), RDimensionEntity::PropertyFontName);
 

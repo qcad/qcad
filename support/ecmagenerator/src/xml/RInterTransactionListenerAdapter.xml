@@ -13,9 +13,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RDocument *" typeName="RDocument *" name="doc"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>

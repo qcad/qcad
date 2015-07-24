@@ -19,7 +19,7 @@
         <translation>完了</translation>
     </message>
     <message>
-        <location line="+80"/>
+        <location line="+88"/>
         <source>Angle:</source>
         <translation>角度:</translation>
     </message>

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -46,6 +46,8 @@ class RDocument;
  */
 class QCADCORE_EXPORT RLayer: public RObject {
 public:
+    static RPropertyTypeId PropertyType;
+    static RPropertyTypeId PropertyHandle;
     static RPropertyTypeId PropertyProtected;
 
     static RPropertyTypeId PropertyName;
@@ -60,12 +62,17 @@ public:
 
     RLayer(RDocument* document, const QString& name, bool frozen = false,
         bool locked = false, const RColor& color = Qt::black,
-        RLinetype::Id linetype = RLinetype::INVALID_ID,
+        RLinetype::Id linetypeId = RLinetype::INVALID_ID,
         RLineweight::Lineweight lineweight = RLineweight::Weight000);
 
+    RLayer(const RLayer& other);
     virtual ~RLayer();
 
     static void init();
+
+    virtual RS::EntityType getType() const {
+        return RS::ObjectLayer;
+    }
 
     virtual RLayer* clone() const;
 
@@ -100,11 +107,11 @@ public:
     }
 
     RLinetype::Id getLinetypeId() const {
-        return linetype;
+        return linetypeId;
     }
 
     void setLinetypeId(RLinetype::Id lt) {
-        linetype = lt;
+        linetypeId = lt;
     }
 
     RLineweight::Lineweight getLineweight() const {
@@ -128,7 +135,7 @@ private:
     bool frozen;
     bool locked;
     RColor color;
-    RLinetype::Id linetype;
+    RLinetype::Id linetypeId;
     RLineweight::Lineweight lineweight;
 };
 

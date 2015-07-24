@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -45,8 +45,9 @@ EditLayer.prototype.beginEvent = function() {
     }
     
     var operation = new RAddObjectsOperation();
+    operation.setText(this.getToolTitle());
     operation.addObject(newLayer);
-    this.completeOperation(operation, layer, newLayer);
+    this.completeOperation(operation, layer, dlg);
 
     var di = this.getDocumentInterface();
     di.applyOperation(operation);
@@ -59,5 +60,5 @@ EditLayer.prototype.beginEvent = function() {
 /**
  * Hook for derived classes to add more objects to operation.
  */
-EditLayer.prototype.completeOperation = function(operation, newLayer) {
+EditLayer.prototype.completeOperation = function(operation, newLayer, dlg) {
 };

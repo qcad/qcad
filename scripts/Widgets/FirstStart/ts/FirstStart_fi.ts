@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>FirstStart</name>
     <message>
         <location filename="../FirstStart.js" line="+35"/>
         <source>%1 First Start</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Ensimmäinen aloitus</translation>
     </message>
     <message>
-        <location line="+185"/>
+        <location line="+190"/>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation>Musta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation type="unfinished"></translation>
+        <translation>Valkoinen</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kieli:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Welcome to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Tervetuloa %1:een</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ole hyvä ja valitse asetukset uuteen piirrokseen. Kaikkia näitä asetuksia voidaan muuttaa myöhemmin ominaisuusvalikosta.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Yksikkö:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default Paper Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Paperin oletuskoko:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Desimaalipilkku:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Background Color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Taustaväri:</translation>
     </message>
 </context>
 </TS>

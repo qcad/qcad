@@ -5,8 +5,8 @@
     <name>DisplayDistanceAngle</name>
     <message>
         <location filename="../DisplayDistanceAngleInit.js" line="+2"/>
-        <source>Display Distance/Angle</source>
-        <translation type="unfinished"></translation>
+        <source>Display &amp;Distance/Angle</source>
+        <translation>Prikaži &amp;Dimenzijo/Kot</translation>
     </message>
 </context>
 </TS>

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  *
  * This file is part of the QCAD project.
  *
@@ -22,6 +22,9 @@
 #include "RShape.h"
 #include "RExporter.h"
 
+/**
+ * Exports entities into a list of shapes.
+ */
 class RShapesExporter : public RExporter {
 public:
     RShapesExporter(RExporter& exporter, const QList<QSharedPointer<RShape> >& shapes, double offset);

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>BitmapExport</name>
     <message>
@@ -16,25 +16,25 @@ Todos os Ficheiros (*.*)</translatorcomment>
         <location line="+10"/>
         <source>Export as Bitmap</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Exportação como bitmap</translation>
+        <translation>Exporte como Bitmap</translation>
     </message>
     <message>
         <location line="-60"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Erro ao gerar arquivo Bitmap &apos;%1&apos;: %2</translation>
+        <translation>Erro ao gerar o arquivo Bitmap &apos;%1&apos;: %2</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Arquivo bitmap tem sido exportado para &apos;%1&apos;</translation>
+        <translation>O arquivo Bitmap foi exportado para &apos;%1&apos;</translation>
     </message>
     <message>
         <location filename="../BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Exportar bitmap...</translation>
+        <translation>&amp;Exporte como Bitmap...</translation>
     </message>
     <message>
         <location filename="../BitmapExportDialog.ui" line="+14"/>
@@ -42,7 +42,7 @@ Todos os Ficheiros (*.*)</translatorcomment>
         <translatorcomment>--google--
 Exporte como Bitmap...
 Cor e transparência do fundo da página (também usada para exportar bitmaps</translatorcomment>
-        <translation>Exportar bitmap</translation>
+        <translation>Exporte como Bitmap</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -95,7 +95,7 @@ Altura:
 Fundo
 Pano de Fundo:
 Pano de Fundo do Desenho:</translatorcomment>
-        <translation>Fundo</translation>
+        <translation>Pano de Fundo</translation>
     </message>
     <message>
         <location line="+6"/>

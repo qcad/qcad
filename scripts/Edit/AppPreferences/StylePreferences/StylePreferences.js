@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -68,6 +68,7 @@ StylePreferences.load = function(file) {
         var str = textStream.readAll();
         appWin.styleSheet = str;
         qDebug("    Style Sheets loaded:", cssFile.fileName());
+        cssFile.close();
     } else {
         qDebug("    Cannot open file:", cssFile.fileName());
     }

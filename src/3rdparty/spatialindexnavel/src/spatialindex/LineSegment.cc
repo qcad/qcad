@@ -1,27 +1,35 @@
-// Spatial Index Library
-//
-// Copyright (C) 2004  Navel Ltd.
-//
-// This library is free software; you can redistribute it and/or
-// modify it under the terms of the GNU Lesser General Public
-// License as published by the Free Software Foundation; either
-// version 2.1 of the License, or (at your option) any later version.
-//
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-// Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public
-// License along with this library; if not, write to the Free Software
-// Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
-//
-//  Email:
-//    mhadji@gmail.com
+/******************************************************************************
+ * Project:  libspatialindex - A C++ library for spatial indexing
+ * Author:   Marios Hadjieleftheriou, mhadji@gmail.com
+ ******************************************************************************
+ * Copyright (c) 2004, Marios Hadjieleftheriou
+ *
+ * All rights reserved.
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a
+ * copy of this software and associated documentation files (the "Software"),
+ * to deal in the Software without restriction, including without limitation
+ * the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included
+ * in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+ * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+ * DEALINGS IN THE SOFTWARE.
+******************************************************************************/
 
 #include <cstring>
+#include <cmath>
+#include <limits>
 
-#include "../../include/SpatialIndex.h"
+#include <spatialindex/SpatialIndex.h>
 
 using namespace SpatialIndex;
 
@@ -30,7 +38,7 @@ LineSegment::LineSegment()
 {
 }
 
-LineSegment::LineSegment(const double* pStartPoint, const double* pEndPoint, size_t dimension)
+LineSegment::LineSegment(const double* pStartPoint, const double* pEndPoint, uint32_t dimension)
 	: m_dimension(dimension)
 {
 	// no need to initialize arrays to 0 since if a bad_alloc is raised the destructor will not be called.
@@ -89,11 +97,11 @@ LineSegment& LineSegment::operator=(const LineSegment& l)
 bool LineSegment::operator==(const LineSegment& l) const
 {
 	if (m_dimension != l.m_dimension)
-		throw IllegalArgumentException(
+		throw Tools::IllegalArgumentException(
 			"LineSegment::operator==: LineSegments have different number of dimensions."
 		);
 
-	for (size_t i = 0; i < m_dimension; i++)
+	for (uint32_t i = 0; i < m_dimension; ++i)
 	{
 		if (
 			m_pStartPoint[i] < l.m_pStartPoint[i] - std::numeric_limits<double>::epsilon() ||
@@ -118,16 +126,16 @@ LineSegment* LineSegment::clone()
 //
 // ISerializable interface
 //
-size_t LineSegment::getByteArraySize()
+uint32_t LineSegment::getByteArraySize()
 {
-	return (sizeof(size_t) + m_dimension * sizeof(double) * 2);
+	return (sizeof(uint32_t) + m_dimension * sizeof(double) * 2);
 }
 
 void LineSegment::loadFromByteArray(const byte* ptr)
 {
-	size_t dimension;
-	memcpy(&dimension, ptr, sizeof(size_t));
-	ptr += sizeof(size_t);
+	uint32_t dimension;
+	memcpy(&dimension, ptr, sizeof(uint32_t));
+	ptr += sizeof(uint32_t);
 
 	makeDimension(dimension);
 	memcpy(m_pStartPoint, ptr, m_dimension * sizeof(double));
@@ -136,14 +144,14 @@ void LineSegment::loadFromByteArray(const byte* ptr)
 	//ptr += m_dimension * sizeof(double);
 }
 
-void LineSegment::storeToByteArray(byte** data, size_t& len)
+void LineSegment::storeToByteArray(byte** data, uint32_t& len)
 {
 	len = getByteArraySize();
 	*data = new byte[len];
 	byte* ptr = *data;
 
-	memcpy(ptr, &m_dimension, sizeof(size_t));
-	ptr += sizeof(size_t);
+	memcpy(ptr, &m_dimension, sizeof(uint32_t));
+	ptr += sizeof(uint32_t);
 	memcpy(ptr, m_pStartPoint, m_dimension * sizeof(double));
 	ptr += m_dimension * sizeof(double);
 	memcpy(ptr, m_pEndPoint, m_dimension * sizeof(double));
@@ -155,19 +163,25 @@ void LineSegment::storeToByteArray(byte** data, size_t& len)
 //
 bool LineSegment::intersectsShape(const IShape& s) const
 {
-	throw IllegalStateException(
+	const LineSegment* ps = dynamic_cast<const LineSegment*>(&s);
+	if (ps != 0) return intersectsLineSegment(*ps);
+
+	const Region* pr = dynamic_cast<const Region*>(&s);
+	if (pr != 0) return intersectsRegion(*pr);
+
+	throw Tools::IllegalStateException(
 		"LineSegment::intersectsShape: Not implemented yet!"
 	);
 }
 
-bool LineSegment::containsShape(const IShape& s) const
+bool LineSegment::containsShape(const IShape&) const
 {
 	return false;
 }
 
-bool LineSegment::touchesShape(const IShape& s) const
+bool LineSegment::touchesShape(const IShape&) const
 {
-	throw IllegalStateException(
+	throw Tools::IllegalStateException(
 		"LineSegment::touchesShape: Not implemented yet!"
 	);
 }
@@ -175,7 +189,7 @@ bool LineSegment::touchesShape(const IShape& s) const
 void LineSegment::getCenter(Point& out) const
 {
 	double* coords = new double[m_dimension];
-	for (size_t cDim = 0; cDim < m_dimension; cDim++)
+	for (uint32_t cDim = 0; cDim < m_dimension; ++cDim)
 	{
 		coords[cDim] =
 			(std::abs(m_pStartPoint[cDim] - m_pEndPoint[cDim]) / 2.0) +
@@ -186,7 +200,7 @@ void LineSegment::getCenter(Point& out) const
 	delete[] coords;
 }
 
-size_t LineSegment::getDimension() const
+uint32_t LineSegment::getDimension() const
 {
 	return m_dimension;
 }
@@ -195,7 +209,7 @@ void LineSegment::getMBR(Region& out) const
 {
 	double* low = new double[m_dimension];
 	double* high = new double[m_dimension];
-	for (size_t cDim = 0; cDim < m_dimension; cDim++)
+	for (uint32_t cDim = 0; cDim < m_dimension; ++cDim)
 	{
 		low[cDim] = std::min(m_pStartPoint[cDim], m_pEndPoint[cDim]);
 		high[cDim] = std::max(m_pStartPoint[cDim], m_pEndPoint[cDim]);
@@ -227,7 +241,7 @@ double LineSegment::getMinimumDistance(const IShape& s) const
 	}
 */
 
-	throw IllegalStateException(
+	throw Tools::IllegalStateException(
 		"LineSegment::getMinimumDistance: Not implemented yet!"
 	);
 }
@@ -258,6 +272,42 @@ double LineSegment::getMinimumDistance(const Point& p) const
 	double y0 = p.m_pCoords[1];
 
 	return std::abs((x2 - x1) * (y1 - y0) - (x1 - x0) * (y2 - y1)) / (std::sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1)));
+}
+
+bool LineSegment::intersectsRegion(const Region& r) const
+{
+	if (m_dimension != 2)
+		throw Tools::NotSupportedException(
+			"LineSegment::intersectsRegion: only supported for 2 dimensions"
+		);
+
+	if (m_dimension != r.m_dimension)
+		throw Tools::IllegalArgumentException(
+			"LineSegment::intersectsRegion: LineSegment and Region have different number of dimensions."
+		);
+
+    return r.intersectsLineSegment((*this));
+}
+
+bool LineSegment::intersectsLineSegment(const LineSegment& l) const
+{
+	if (m_dimension != 2)
+		throw Tools::NotSupportedException(
+			"LineSegment::intersectsLineSegment: only supported for 2 dimensions"
+		);
+
+	if (m_dimension != l.m_dimension)
+		throw Tools::IllegalArgumentException(
+			"LineSegment::intersectsLineSegment: LineSegments have different number of dimensions."
+		);
+
+    // use Geometry::intersects
+    Point p1, p2, p3, p4;
+    p1 = Point(m_pStartPoint, 2);
+    p2 = Point(m_pEndPoint, 2);
+    p3 = Point(l.m_pStartPoint, 2);
+    p4 = Point(l.m_pEndPoint, 2);
+    return intersects(p1, p2, p3, p4);
 }
 
 // assuming moving from start to end, positive distance is from right hand side.
@@ -347,17 +397,17 @@ double LineSegment::getAngleOfPerpendicularRay()
 	return std::atan(-(m_pStartPoint[0] - m_pEndPoint[0]) / (m_pStartPoint[1] - m_pEndPoint[1]));
 }
 
-void LineSegment::makeInfinite(size_t dimension)
+void LineSegment::makeInfinite(uint32_t dimension)
 {
 	makeDimension(dimension);
-	for (size_t cIndex = 0; cIndex < m_dimension; cIndex++)
+	for (uint32_t cIndex = 0; cIndex < m_dimension; ++cIndex)
 	{
 		m_pStartPoint[cIndex] = std::numeric_limits<double>::max();
 		m_pEndPoint[cIndex] = std::numeric_limits<double>::max();
 	}
 }
 
-void LineSegment::makeDimension(size_t dimension)
+void LineSegment::makeDimension(uint32_t dimension)
 {
 	if (m_dimension != dimension)
 	{
@@ -375,9 +425,68 @@ void LineSegment::makeDimension(size_t dimension)
 	}
 }
 
-std::ostream& operator<<(std::ostream& os, const LineSegment& l)
+// compute double the area of the triangle created by points a, b and c (only for 2 dimensional points)
+double LineSegment::doubleAreaTriangle(const SpatialIndex::Point &a, const SpatialIndex::Point &b, const SpatialIndex::Point &c) {
+    double *pA, *pB, *pC;
+    pA = a.m_pCoords; pB = b.m_pCoords; pC = c.m_pCoords;
+    return (((pB[0] - pA[0]) * (pC[1] - pA[1])) - ((pC[0] - pA[0]) * (pB[1] - pA[1])));
+}
+
+// determine whether point c is to the left of the segment comprised of points a & b (2-d only)
+bool LineSegment::leftOf(const SpatialIndex::Point &a, const SpatialIndex::Point &b, const SpatialIndex::Point &c) {
+    return (doubleAreaTriangle(a, b, c) > 0);
+}
+
+// determine whether all 3 points are on the same line
+bool LineSegment::collinear(const SpatialIndex::Point &a, const SpatialIndex::Point &b, const SpatialIndex::Point &c) {
+    return (doubleAreaTriangle(a, b, c) == 0);
+}
+
+// determine whether the segment comprised of a, b and segment of c, d intersect (exclusive of their endpoints..hence the "Proper")
+bool LineSegment::intersectsProper(const SpatialIndex::Point &a, const SpatialIndex::Point &b, const SpatialIndex::Point &c, const SpatialIndex::Point &d) {
+    if ( collinear(a, b, c) || collinear(a, b, d) ||
+         collinear(c, d, a) || collinear(c, d, b)) {
+        return false;
+    }
+    return ((leftOf(a, b, c) ^ leftOf(a, b, d)) &&
+            (leftOf(c, d, a) ^ leftOf(c, d, b)));
+}
+
+// if the points are collinear, is c between a & b
+bool LineSegment::between(const SpatialIndex::Point &a, const SpatialIndex::Point &b, const SpatialIndex::Point &c) {
+    if ( !collinear(a, b, c) ) {
+        return false;
+    }
+    double *pA, *pB, *pC;
+    pA = a.m_pCoords; pB = b.m_pCoords; pC = c.m_pCoords;
+    if ( pA[0] != pB[0] ) { // a & b are not on the same vertical, compare on x axis
+        return  between(pA[0], pB[0], pC[0]);
+    } else { // a & b are a vertical segment, we need to compare on y axis
+        return between(pA[1], pB[1], pC[1]);
+    }
+}
+
+bool LineSegment::between(double a, double b, double c) {
+    return ( ((a <= c) && (c <= b)) || ((a >= c) && (c >= b)) );
+}
+
+// intersection test, including endpoints
+bool LineSegment::intersects(const SpatialIndex::Point &a, const SpatialIndex::Point &b, const SpatialIndex::Point &c, const SpatialIndex::Point &d) {
+    if (intersectsProper(a, b, c, d)) {
+        return true;
+    } 
+    else if ( between(a, b, c) || between(a, b, d) ||
+              between(c, d, a) || between(c, d, b) ) { 
+        return true;
+    }
+    else { 
+        return false;
+    }
+}
+
+std::ostream& SpatialIndex::operator<<(std::ostream& os, const LineSegment& l)
 {
-	for (size_t cDim = 0; cDim < l.m_dimension; cDim++)
+	for (uint32_t cDim = 0; cDim < l.m_dimension; ++cDim)
 	{
 		os << l.m_pStartPoint[cDim] << ", " << l.m_pEndPoint[cDim] << " ";
 	}

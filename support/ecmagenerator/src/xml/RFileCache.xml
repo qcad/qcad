@@ -12,7 +12,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString"
         name="fileName" isConst="true" />
         <arg type="bool" typeName="bool" name="forceReload"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getBuffer" cppName="getBuffer" specifier="public"
@@ -21,7 +21,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString"
         name="fileName" isConst="true" />
         <arg type="bool" typeName="bool" name="forceReload"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
   </class>

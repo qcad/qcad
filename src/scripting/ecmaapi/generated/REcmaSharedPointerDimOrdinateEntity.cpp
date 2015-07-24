@@ -127,6 +127,10 @@
                 qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyHandle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyProtected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -153,6 +157,10 @@
             
             ctor.setProperty("PropertyColor",
                 qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyDisplayedColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyDrawOrder",
@@ -313,7 +321,7 @@
                         return REcmaHelper::throwError("RDimOrdinateEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimOrdinateData*
                     ap1 =
                     qscriptvalue_cast<
@@ -323,11 +331,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimOrdinateEntity: Argument 1 is not of type RDimOrdinateData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimOrdinateEntity: Argument 1 is not of type RDimOrdinateData.",
                                context);                    
                     }
-                    RDimOrdinateData& a1 = *ap1;
+                    RDimOrdinateData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -408,7 +418,7 @@
                         return REcmaHelper::throwError("RDimOrdinateEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimOrdinateData*
                     ap1 =
                     qscriptvalue_cast<
@@ -418,11 +428,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimOrdinateEntity: Argument 1 is not of type RDimOrdinateData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimOrdinateEntity: Argument 1 is not of type RDimOrdinateData.",
                                context);                    
                     }
-                    RDimOrdinateData& a1 = *ap1;
+                    RDimOrdinateData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id
@@ -1228,7 +1240,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimOrdinateData*
                     ap0 =
                     qscriptvalue_cast<
@@ -1238,11 +1250,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimOrdinateEntity: Argument 0 is not of type RDimOrdinateData*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimOrdinateEntity: Argument 0 is not of type RDimOrdinateData.",
                                context);                    
                     }
-                    RDimOrdinateData& a0 = *ap0;
+                    RDimOrdinateData 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 

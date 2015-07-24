@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -28,6 +28,11 @@
 RLine::RLine() :
     startPoint(RVector::invalid),
     endPoint(RVector::invalid) {
+}
+
+RLine::RLine(double x1, double y1, double x2, double y2) :
+    startPoint(x1, y1),
+    endPoint(x2, y2) {
 }
 
 /**
@@ -129,19 +134,20 @@ QList<RVector> RLine::getPointsWithDistanceToEnd(double distance, RS::From from)
     RVector dv;
     dv.setPolar(distance, a1);
 
-    if (from==RS::FromStart || from==RS::FromAny) {
+    if (from&RS::FromStart) {
         ret.append(startPoint + dv);
     }
 
-    if (from==RS::FromEnd || from==RS::FromAny) {
+    if (from&RS::FromEnd) {
         ret.append(endPoint - dv);
     }
 
     return ret;
 }
 
-double RLine::getAngleAt(double distance) const {
+double RLine::getAngleAt(double distance, RS::From from) const {
     Q_UNUSED(distance)
+    Q_UNUSED(from)
 
     return getAngle();
 }
@@ -155,15 +161,21 @@ RVector RLine::getVectorTo(const RVector& point, bool limited, double strictRang
         return RVector::invalid;
     }
 
+    if (ap.getMagnitude2d() < 1.0e-6) {
+        // distance to start point is very small:
+        return RVector(0,0);
+    }
+
     double b = RVector::getDotProduct(ap, ae) / RVector::getDotProduct(ae, ae);
 
     if (limited && (b < 0 || b > 1.0)) {
-        // orthogonal to line does not cross line:
+        // orthogonal to line does not cross line, use distance to end point:
         RVector ret = getVectorFromEndpointTo(point);
         if (ret.getMagnitude()<strictRange) {
             return ret;
         }
         else {
+            // not within given range:
             return RVector::invalid;
         }
     }
@@ -343,11 +355,17 @@ RS::Ending RLine::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
 
 void RLine::trimStartPoint(const RVector& p) {
     RVector tp = getClosestPointOnShape(p, false);
+    if (!tp.isValid()) {
+        return;
+    }
     setStartPoint(tp);
 }
 
 void RLine::trimEndPoint(const RVector& p) {
     RVector tp = getClosestPointOnShape(p, false);
+    if (!tp.isValid()) {
+        return;
+    }
     setEndPoint(tp);
 }
 

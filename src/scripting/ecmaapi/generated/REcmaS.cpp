@@ -121,6 +121,36 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("ObjectAll",
+    QScriptValue(RS::ObjectAll),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ObjectUnknown",
+    QScriptValue(RS::ObjectUnknown),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ObjectBlock",
+    QScriptValue(RS::ObjectBlock),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ObjectLayer",
+    QScriptValue(RS::ObjectLayer),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ObjectLinetype",
+    QScriptValue(RS::ObjectLinetype),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("ObjectView",
+    QScriptValue(RS::ObjectView),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("EntityAll",
     QScriptValue(RS::EntityAll),
     QScriptValue::ReadOnly);
@@ -428,6 +458,11 @@
 
     ctor.setProperty("FromAny",
     QScriptValue(RS::FromAny),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("AlongPolyline",
+    QScriptValue(RS::AlongPolyline),
     QScriptValue::ReadOnly);
 
 
@@ -1496,6 +1531,51 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("JoinBevel",
+    QScriptValue(RS::JoinBevel),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("JoinRound",
+    QScriptValue(RS::JoinRound),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("JoinMiter",
+    QScriptValue(RS::JoinMiter),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EndClosedPolygon",
+    QScriptValue(RS::EndClosedPolygon),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EndClosedLine",
+    QScriptValue(RS::EndClosedLine),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EndOpenButt",
+    QScriptValue(RS::EndOpenButt),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EndOpenSquare",
+    QScriptValue(RS::EndOpenSquare),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EndOpenRound",
+    QScriptValue(RS::EndOpenRound),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("EndOpenSingle",
+    QScriptValue(RS::EndOpenSingle),
+    QScriptValue::ReadOnly);
+
+
     // enum conversions:
     
     qScriptRegisterMetaType<RS::MessageType>(
@@ -1628,6 +1708,20 @@
         &engine,
         toScriptValueEnumOrientation,
         fromScriptValueEnumOrientation,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
+    qScriptRegisterMetaType<RS::JoinType>(
+        &engine,
+        toScriptValueEnumJoinType,
+        fromScriptValueEnumJoinType,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
+    qScriptRegisterMetaType<RS::EndType>(
+        &engine,
+        toScriptValueEnumEndType,
+        fromScriptValueEnumEndType,
         ctor.property(QString::fromLatin1("prototype"))
     );
 
@@ -2534,5 +2628,25 @@
     
         {
             out = qvariant_cast<RS::Orientation>(value.toVariant());
+        }
+         QScriptValue REcmaS::toScriptValueEnumJoinType(QScriptEngine* engine, const RS::JoinType& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaS::fromScriptValueEnumJoinType(const QScriptValue& value, RS::JoinType& out)
+    
+        {
+            out = qvariant_cast<RS::JoinType>(value.toVariant());
+        }
+         QScriptValue REcmaS::toScriptValueEnumEndType(QScriptEngine* engine, const RS::EndType& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaS::fromScriptValueEnumEndType(const QScriptValue& value, RS::EndType& out)
+    
+        {
+            out = qvariant_cast<RS::EndType>(value.toVariant());
         }
         

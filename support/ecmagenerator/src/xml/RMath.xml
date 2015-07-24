@@ -63,7 +63,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString"
         name="expression" isConst="true" />
         <arg type="bool *" typeName="bool *" name="ok"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
       </variant>
     </method>
     <method name="getError" cppName="getError" specifier="public"
@@ -176,9 +176,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="angle"
         isConst="false" />
         <arg type="bool" typeName="bool" name="readable"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
         <arg type="bool *" typeName="bool *" name="corrected"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
       </variant>
     </method>
     <method name="isAngleReadable" cppName="isAngleReadable"

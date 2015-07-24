@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>CloseDialog</name>
     <message>
@@ -8,7 +8,7 @@
         <source>Closing Drawing...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pt.ts--</translatorcomment>
-        <translation>Fechando o desenho...</translation>
+        <translation>Encerrando o Desenho...</translation>
     </message>
 </context>
 <context>
@@ -37,27 +37,27 @@ Sem Título</translatorcomment>
     </message>
     <message>
         <source>Loading...</source>
-        <translation>Carregando...</translation>
+        <translation type="vanished">Carregando...</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+23"/>
         <source>Import Error</source>
-        <translation>Erro de importação</translation>
+        <translation>Erro de Importação</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Cannot open file</source>
-        <translation>Não é possível abrir arquivo</translation>
+        <translation>Não é possível abrir o arquivo</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No suitable Importer found. Please check file format and extension.</source>
-        <translation>Nenhum importador adequado encontrado. Por favor, verifique formato de arquivo e extensão.</translation>
+        <translation>Nenhum importador adequado foi encontrado. Por favor, verifique o formato do arquivo e a extensão.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Please check your access rights, the file format and file extension.</source>
-        <translation>Por favor, verifique os seus direitos de acesso, o formato de arquivo e extensão do arquivo.</translation>
+        <translation>Por favor, verifique os seus direitos de acesso, o formato do arquivo e a extensão do arquivo.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -65,13 +65,13 @@ Sem Título</translatorcomment>
         <translation>O arquivo está vazio.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>Drawing loaded successfully:</source>
         <translation>Desenho carregado com sucesso:</translation>
     </message>
     <message>
         <source>Opened drawing:</source>
-        <translation>Inaugurado desenho:</translation>
+        <translation type="vanished">Aberto o Desenho:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -79,26 +79,26 @@ Sem Título</translatorcomment>
         <translation>Formato:</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+115"/>
         <source>Untitled %1</source>
         <translation>Sem título %1</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>read-only</source>
-        <translation>Apenas leitura</translation>
+        <translation>apenas leitura</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+54"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Você deseja salvar as alterações feitas no&lt;br&gt;documento &apos;%1&apos;?</translation>
+        <translation>Você deseja gravar as alterações feitas no&lt;br&gt;do documento &apos;%1&apos;?</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Your changes will be lost if you don&apos;t save them.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Suas alterações serão perdidas se você não salvá-los.</translation>
+        <translation>Suas alterações serão perdidas se você não gravá-las.</translation>
     </message>
     <message>
         <location filename="../NewFileInit.js" line="+2"/>

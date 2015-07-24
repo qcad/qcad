@@ -4,7 +4,7 @@
 <context>
     <name>Rotate</name>
     <message>
-        <location filename="../Rotate.js" line="+78"/>
+        <location filename="../Rotate.js" line="+80"/>
         <source>Reference point</source>
         <translation>Referenzpunkt</translation>
     </message>

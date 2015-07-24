@@ -10,7 +10,7 @@
     <message>
         <location filename="../HideAllBlocksInit.js" line="+2"/>
         <source>&amp;Hide All Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Skrij vse bloke</translation>
     </message>
 </context>
 </TS>

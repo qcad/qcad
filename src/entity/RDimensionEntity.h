@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -42,6 +42,7 @@ class QCADENTITY_EXPORT RDimensionEntity: public REntity {
 public:
     static RPropertyTypeId PropertyCustom;
     static RPropertyTypeId PropertyHandle;
+    static RPropertyTypeId PropertyProtected;
     static RPropertyTypeId PropertyType;
     static RPropertyTypeId PropertyBlock;
     static RPropertyTypeId PropertyLayer;
@@ -49,6 +50,7 @@ public:
     static RPropertyTypeId PropertyLinetypeScale;
     static RPropertyTypeId PropertyLineweight;
     static RPropertyTypeId PropertyColor;
+    static RPropertyTypeId PropertyDisplayedColor;
     static RPropertyTypeId PropertyDrawOrder;
 
     static RPropertyTypeId PropertyDefinitionPointX;
@@ -62,6 +64,7 @@ public:
     static RPropertyTypeId PropertyLowerTolerance;
 
     static RPropertyTypeId PropertyLinearFactor;
+    static RPropertyTypeId PropertyDimScale;
     static RPropertyTypeId PropertyAutoTextPos;
     static RPropertyTypeId PropertyFontName;
     //static RPropertyTypeId PropertyHeight;
@@ -169,6 +172,14 @@ public:
 
     void setLinearFactor(double f) {
         getData().setLinearFactor(f);
+    }
+
+    double getDimScale() const {
+        return getData().getDimScale();
+    }
+
+    void setDimScale(double f) {
+        getData().setDimScale(f);
     }
 
 protected:

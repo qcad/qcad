@@ -150,7 +150,22 @@ Seleziona Singolo Oggetto</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+331"/>
+        <location filename="../Viewport.js" line="+244"/>
+        <source>Dropped data not supported</source>
+        <translation>I dati inseriti non sono supportati</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Importing file: </source>
+        <translation>File importazione: </translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Importing URL: </source>
+        <translation>Importazione URL: </translation>
+    </message>
+    <message>
+        <location line="+65"/>
         <source>Grid</source>
         <translation>Griglia</translation>
     </message>

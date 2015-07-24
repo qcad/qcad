@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -69,7 +69,7 @@ public:
 
     virtual void paintCursor(const RVector& pos) = 0;
 
-    virtual void paintRuler(RRuler& ruler) = 0;
+    virtual void paintRuler(RRuler& ruler, qreal devicePixelRatio = 1.0) = 0;
 
     virtual QString getInfoText() = 0;
 

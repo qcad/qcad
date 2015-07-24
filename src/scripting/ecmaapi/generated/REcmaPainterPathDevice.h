@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaPainterPathDevice {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaPainterPathDevice {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

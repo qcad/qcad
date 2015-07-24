@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaRestrictAngleLength {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaRestrictAngleLength {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

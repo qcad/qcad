@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaDebug {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaDebug {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -56,6 +59,27 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hexDump
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        incCounter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        decCounter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCounter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        printCounter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        printCounters
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPrefix
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPrefix
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

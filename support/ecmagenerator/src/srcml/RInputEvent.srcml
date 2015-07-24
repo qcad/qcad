@@ -1,169 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RInputEvent.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RINPUTEVENT_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RINPUTEVENT_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMouseEvent&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RVector.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RGraphicsScene</name>;</class_decl>
-  <class_decl>class 
-  <name>RGraphicsView</name>;</class_decl>
-  <comment type="block">/** * \brief An input event for a \ref
-  RGraphicsScene "graphics scene". * * The coordinates in a mouse
-  event are available as scene coordinates * or screen coordinates
-  from the view the event originated. * * \ingroup core *
-  \scriptable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RInputEvent</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor_decl>
-  <name>RInputEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>position</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RGraphicsScene</name>&amp;</type>
-      <name>s</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RGraphicsView</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <destructor_decl>
-  <specifier>virtual</specifier>
-  <name>~RInputEvent</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getModelPosition</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setModelPosition</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RVector</name>&amp;</type>
-      <name>v</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">// RVector getUcsPosition() const;</comment>
-  <function_decl>
-  <type>
-    <name>RVector</name>
-  </type>
-  <name>getScreenPosition</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-  <name>RGraphicsView</name>&amp;</type>
-  <name>getGraphicsView</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-  <name>RGraphicsScene</name>&amp;</type>
-  <name>getGraphicsScene</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <comment type="block">/** * \return true If the position of the
-  event is valid. */</comment>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isValid</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>modelPosition</name>.
-    <name>valid</name></expr>;</return>}</block>
-  </function></public>
-  <protected>protected: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>modelPosition</name>
-  </decl>;</decl_stmt>
-  <comment type="line">// RVector ucsPosition;</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>RVector</name>
-    </type>
-    <name>screenPosition</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RGraphicsScene</name>&amp;</type>
-    <name>scene</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RGraphicsView</name>&amp;</type>
-    <name>view</name>
-  </decl>;</decl_stmt></protected>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RInputEvent*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RInputEvent.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RINPUTEVENT_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RINPUTEVENT_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMouseEvent&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RGraphicsScene</name>;</class_decl>
+<class_decl>class <name>RGraphicsView</name>;</class_decl>
+
+<comment type="block">/**
+ * \brief An input event for a \ref RGraphicsScene "graphics scene".
+ *
+ * The coordinates in a mouse event are available as scene coordinates
+ * or screen coordinates from the view the event originated.
+ *
+ * \ingroup core
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RInputEvent</name> <block>{<private type="default">
+</private><public>public:
+    <constructor_decl><name>RInputEvent</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>, <param><decl><type><name>RGraphicsScene</name>&amp;</type> <name>s</name></decl></param>, <param><decl><type><name>RGraphicsView</name>&amp;</type> <name>v</name></decl></param>, <param><decl><type><name>qreal</name></type> <name>devicePixelRatio</name>=<init><expr>1.0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RInputEvent</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>RVector</name></type> <name>getModelPosition</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setModelPosition</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setScreenPosition</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+<comment type="line">//  RVector getUcsPosition() const;</comment>
+    <function_decl><type><name>RVector</name></type> <name>getScreenPosition</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>RGraphicsView</name>&amp;</type> <name>getGraphicsView</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RGraphicsScene</name>&amp;</type> <name>getGraphicsScene</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * \return true If the position of the event is valid.
+     */</comment>
+    <function><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>modelPosition</name>.<name>valid</name></expr>;</return>
+    }</block></function>
+
+</public><protected>protected:
+    <decl_stmt><decl><type><name>RVector</name></type> <name>modelPosition</name></decl>;</decl_stmt>
+<comment type="line">//  RVector ucsPosition;</comment>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>screenPosition</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>RGraphicsScene</name>&amp;</type> <name>scene</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RGraphicsView</name>&amp;</type> <name>view</name></decl>;</decl_stmt>
+</protected>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RInputEvent*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

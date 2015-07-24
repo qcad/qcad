@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -100,15 +100,16 @@ function main() {
     }
 
     // parse XML into array:
-    var file = new QFile(xmlFile);
+    //var file = new QFile(xmlFile);
 
-    var xmlReader = new QXmlSimpleReader();
-    var source = new QXmlInputSource(file);
+    //var xmlReader = new QXmlSimpleReader();
+    //var source = new QXmlInputSource(file);
     var handler = new XmlHandler();
-    xmlReader.setContentHandler(handler);
-    var ok = xmlReader.parse(source, false);
+    //xmlReader.setContentHandler(handler);
+    //var ok = xmlReader.parse(source, false);
+    parseXml(xmlFile, handler);
 
-    file.close();
+    //file.close();
 
     // target document:
     var docDest = new RDocument(new RMemoryStorage(), new RSpatialIndexNavel());
@@ -151,6 +152,8 @@ function main() {
             op.setFlipVertical(insert.flipY);
             op.setBlockName(new QFileInfo(src).completeBaseName());
             diDest.applyOperation(op);
+
+            di.destroy();
         }
     }
 
@@ -159,6 +162,8 @@ function main() {
     print("Converting");
     print("  from: " + xmlFile);
     print("  to  : " + outputFile);
+
+    diDest.destroy();
 }
 
 

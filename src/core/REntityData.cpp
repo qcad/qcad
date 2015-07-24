@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -244,17 +244,31 @@ RBox REntityData::getBoundingBox(bool ignoreEmpty) const {
 }
 
 /**
+ * \return A polygon that contains this entity.
+ * Default implementation returns a polygon around the bounding box.
+ */
+RPolyline REntityData::getHull(double offset) const {
+    RBox bb = getBoundingBox();
+    bb.grow(offset);
+    return bb.getPolyline2d();
+}
+
+/**
  * \return A point that is on the entity. Used to check if an entity is
  *  inside a polygon.
  */
 RVector REntityData::getPointOnEntity() const {
+    QList<RVector> midPoints = getMiddlePoints();
+    if (midPoints.size()>0) {
+        return midPoints[0];
+    }
+
     QList<RVector> endPoints = getEndPoints();
     if (endPoints.size()>0) {
         return endPoints[0];
     }
-    else {
-        return getClosestPointOnEntity(RVector(0.0,0.0));
-    }
+
+    return getClosestPointOnEntity(RVector(0.0,0.0));
 }
 
 /**
@@ -358,10 +372,10 @@ RVector REntityData::getVectorTo(const RVector& point, bool limited, double stri
 /**
  * \return True if the given point is on this entity.
  */
-bool REntityData::isOnEntity(const RVector& point, bool limited) const {
+bool REntityData::isOnEntity(const RVector& point, bool limited, double tolerance) const {
     QList<QSharedPointer<RShape> > shapes = getShapes();
     for (int i=0; i<shapes.size(); i++) {
-        if (shapes.at(i)->isOnShape(point, limited)) {
+        if (shapes.at(i)->isOnShape(point, limited, tolerance)) {
             return true;
         }
     }

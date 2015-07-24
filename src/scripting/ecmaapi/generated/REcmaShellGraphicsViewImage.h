@@ -65,7 +65,7 @@
       void autoZoom(
                 int margin
         = RDEFAULT_MIN1, bool ignoreEmpty
-        =  false
+        = false
             );
         
     
@@ -109,28 +109,28 @@
     
       double getFactor(
                 bool includeStepFactor
-        =  true
+        = true
             );
         
     
     
       void setFactor(
                 double f, bool regen
-        =  true
+        = true
             );
         
     
     
       RVector getOffset(
                 bool includeStepOffset
-        =  true
+        = true
             );
         
     
     
       void setOffset(
                 const RVector & offset, bool regen
-        =  true
+        = true
             );
         
     
@@ -160,6 +160,18 @@
     
     
       bool getHairlineMode(
+                
+            );
+        
+    
+    
+      void setAntialiasing(
+                bool on
+            );
+        
+    
+    
+      bool getAntialiasing(
                 
             );
         
@@ -245,7 +257,7 @@
     
       void setScene(
                 RGraphicsSceneQt * scene, bool regen
-        =  true
+        = true
             );
         
     
@@ -258,7 +270,7 @@
     
       void regenerate(
                 bool force
-        =  false
+        = false
             );
         
     
@@ -270,6 +282,12 @@
     
     
       void updateImage(
+                
+            );
+        
+    
+    
+      void giveFocus(
                 
             );
         
@@ -356,18 +374,6 @@
     
       void setPaintOrigin(
                 bool val
-            );
-        
-    
-    
-      void setAntialiasing(
-                bool val
-            );
-        
-    
-    
-      bool getAntialiasing(
-                
             );
         
     
@@ -462,6 +468,18 @@
         
     
     
+      void setPaintOffset(
+                const RVector & offset
+            );
+        
+    
+    
+      RVector getPaintOffset(
+                
+            );
+        
+    
+    
       double getPointSize(
                 double pSize
             );
@@ -536,7 +554,7 @@
     
       void invalidate(
                 bool force
-        =  false
+        = false
             );
         
     
@@ -675,7 +693,7 @@
     
       void pan(
                 const RVector & delta, bool regen
-        =  true
+        = true
             );
         
     
@@ -709,7 +727,7 @@
     
       REntity::Id getClosestEntity(
                 const RVector & screenPosition, int range, int strictRange, bool includeLockedLayers
-        =  true
+        = true
             );
         
     
@@ -770,6 +788,11 @@
     
       bool isPathVisible(
                 const RPainterPath & path
+            );
+        
+    
+      double getDevicePixelRatio(
+                
             );
         
     

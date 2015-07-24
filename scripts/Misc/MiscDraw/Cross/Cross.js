@@ -68,7 +68,7 @@ Cross.prototype.pickEntity = function(event, preview) {
         return;
     }
 
-    var shape = entity.getClosestShape(pos);
+    var shape = entity.getClosestSimpleShape(pos);
     if (!isArcShape(shape) &&
             !isCircleShape(shape) &&
             !isEllipseShape(shape) &&

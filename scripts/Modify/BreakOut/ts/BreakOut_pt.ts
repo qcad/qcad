@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>BreakOut</name>
     <message>
@@ -14,7 +14,7 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Divida 2</translatorcomment>
-        <translation>&amp;Sair segmento</translation>
+        <translation>&amp;Quebre um Segmento</translation>
     </message>
     <message>
         <location filename="../BreakOut.ui" line="+17"/>
@@ -23,22 +23,22 @@
 --file: qcadguiqt_pt.ts--
 Marque para remover segmentos, desmarque para os manter
 Remove Segmento</translatorcomment>
-        <translation>Eliminar segmento</translation>
+        <translation>Elimine um Segmento</translation>
     </message>
     <message>
         <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle or ellipse to auto trim</source>
-        <translation>Escolha linha, arco, círculo ou elipse</translation>
+        <translation>Escolha uma linha, arco, círculo ou elipse para aparar automaticamente</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Choose line, arc, circle, ellipse or spline segment</source>
-        <translation>Escolha segmento de linha, arco, círculo, elipse ou chaveta</translation>
+        <translation>Escolha um segmento de linha, arco, círculo, elipse ou spline</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse segment</source>
-        <translation>Escolha segmento de linha, arco, círculo ou elipse</translation>
+        <translation>Escolha um segmento de linha, arco, círculo ou elipse</translation>
     </message>
 </context>
 </TS>

@@ -38,11 +38,26 @@
         <source>Move entity to desired location</source>
         <translation>Mover entidad</translation>
     </message>
+    <message>
+        <location line="+332"/>
+        <source>Move Reference Point</source>
+        <translation>Mover punto de referencia</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Selection</source>
+        <translation>Desplazar selección</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Entity</source>
+        <translation>Mover entidad</translation>
+    </message>
 </context>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+57"/>
+        <location filename="../EAction.js" line="+58"/>
         <source>Back</source>
         <translation>Atrás</translation>
     </message>
@@ -52,7 +67,7 @@
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location line="+267"/>
+        <location line="+285"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Herramienta activa:</translation>
@@ -68,7 +83,7 @@
         <translation>Ninguno</translation>
     </message>
     <message>
-        <location line="+420"/>
+        <location line="+445"/>
         <source>Options</source>
         <translation>Opciones</translation>
     </message>
@@ -90,13 +105,13 @@
         <translation>Herramientas CAD</translation>
     </message>
     <message>
-        <location line="+692"/>
+        <location line="+659"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad está en una capa bloqueada.</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+86"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es una referencia a bloque.</translation>
@@ -106,6 +121,11 @@
         <source>Entity is not a line or arc.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es una línea o un arco.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc or polyline.</source>
+        <translation>Entidad no es una línea, arco o polilínea.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -138,11 +158,21 @@
     </message>
     <message>
         <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
+        <translation>Entidad no es una línea, un arco, círculo, una elipse o polilínea.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
         <translation>Entidad no es una línea, un arco, círculo, una elipse o una spline.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
+        <translation>Entidad no es una línea, un arco, círculo, una elipse, una spline o polilínea.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad no es una polilínea.</translation>
@@ -151,7 +181,7 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+307"/>
+        <location filename="../ShapeAlgorithms.js" line="+335"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Radio caído por debajo de 0,0 después %1 de círculos concéntricos.</translation>
@@ -163,7 +193,7 @@
         <translation>Radio caído por debajo de 0,0 después %1 de arcos concéntricos.</translation>
     </message>
     <message>
-        <location line="+463"/>
+        <location line="+560"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -196,7 +226,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+949"/>
+        <location filename="../WidgetFactory.js" line="+966"/>
         <source>Restore defaults</source>
         <translation>Restaurar los valores predeterminados</translation>
     </message>
@@ -268,7 +298,7 @@
         <translation>Valor medido</translation>
     </message>
     <message>
-        <location line="+93"/>
+        <location line="+110"/>
         <source>Left</source>
         <translation>Izquierda</translation>
     </message>
@@ -340,7 +370,7 @@
         <translation type="obsolete">Después de la inicialización...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+303"/>
+        <location filename="../autostart.js" line="+328"/>
         <source>Loading add-on translations...</source>
         <translation>Cargando complemento traducciones...</translation>
     </message>
@@ -384,7 +414,67 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+679"/>
+        <location filename="../library.js" line="+712"/>
+        <source>Objects</source>
+        <translation>Objetos</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Object</source>
+        <translation>Objeto</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Unknown Objects</source>
+        <translation>Objetos desconocido</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Unknown Object</source>
+        <translation>Objeto desconocida</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Blocks</source>
+        <translation>Bloques</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Block</source>
+        <translation>Bloque</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Layers</source>
+        <translation>Capas</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Layer</source>
+        <translation>Capa</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Linetypes</source>
+        <translation>Tipos de línea</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Linetype</source>
+        <translation>Tipo de línea</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Views</source>
+        <translation>Vistas</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>View</source>
+        <translation>Vista</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity</source>
         <translation>Entidad</translation>
     </message>

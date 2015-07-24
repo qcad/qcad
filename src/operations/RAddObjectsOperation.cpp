@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -22,6 +22,8 @@
 
 RAddObjectsOperation::RAddObjectsOperation(bool undoable) :
     ROperation(undoable), previewCounter(0), limitPreview(true) {
+
+    RDebug::incCounter("RAddObjectsOperation");
 }
 
 RAddObjectsOperation::RAddObjectsOperation(
@@ -29,12 +31,14 @@ RAddObjectsOperation::RAddObjectsOperation(
         bool useCurrentAttributes, bool undoable) :
     ROperation(undoable), previewCounter(0), limitPreview(true) {
 
+    RDebug::incCounter("RAddObjectsOperation");
     for (int i=0; i<list.count(); ++i) {
         addObject(list[i], useCurrentAttributes);
     }
 }
 
 RAddObjectsOperation::~RAddObjectsOperation() {
+    RDebug::decCounter("RAddObjectsOperation");
 }
 
 void RAddObjectsOperation::replaceObject(const QSharedPointer<RObject>& object,

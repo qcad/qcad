@@ -19,7 +19,7 @@
         <translation>Terminer</translation>
     </message>
     <message>
-        <location line="+80"/>
+        <location line="+88"/>
         <source>Angle:</source>
         <translation>Angle :</translation>
     </message>

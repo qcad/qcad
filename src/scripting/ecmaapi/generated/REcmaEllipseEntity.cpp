@@ -165,6 +165,10 @@
                 qScriptValueFromValue(&engine, REllipseEntity::PropertyHandle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, REllipseEntity::PropertyProtected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, REllipseEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -191,6 +195,10 @@
             
             ctor.setProperty("PropertyColor",
                 qScriptValueFromValue(&engine, REllipseEntity::PropertyColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, REllipseEntity::PropertyDisplayedColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyDrawOrder",
@@ -355,7 +363,7 @@
                         return REcmaHelper::throwError("REllipseEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     REllipseData*
                     ap1 =
                     qscriptvalue_cast<
@@ -365,11 +373,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("REllipseEntity: Argument 1 is not of type REllipseData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("REllipseEntity: Argument 1 is not of type REllipseData.",
                                context);                    
                     }
-                    REllipseData& a1 = *ap1;
+                    REllipseData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -450,7 +460,7 @@
                         return REcmaHelper::throwError("REllipseEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     REllipseData*
                     ap1 =
                     qscriptvalue_cast<
@@ -460,11 +470,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("REllipseEntity: Argument 1 is not of type REllipseData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("REllipseEntity: Argument 1 is not of type REllipseData.",
                                context);                    
                     }
-                    REllipseData& a1 = *ap1;
+                    REllipseData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id

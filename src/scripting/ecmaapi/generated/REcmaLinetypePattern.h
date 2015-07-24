@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaLinetypePattern {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaLinetypePattern {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -188,6 +191,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         equals
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        operator_less
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isLoaded

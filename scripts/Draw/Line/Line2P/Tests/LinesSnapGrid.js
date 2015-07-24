@@ -32,7 +32,7 @@ LinesSnapGrid.prototype = new TdbTest();
 LinesSnapGrid.prototype.test00 = function() {
     qDebug('running LinesSnapGrid.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.clickOnWidget('MainWindow::SnapToolsPanel::SnapGridButton');
     this.zoomTo(-13.99390432098766, -10.443209876543204, 13.928549382716048, 10.245447530864206);

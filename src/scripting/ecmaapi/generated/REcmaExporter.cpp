@@ -123,6 +123,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getEntity, "getEntity");
             
+            REcmaHelper::registerFunction(&engine, proto, getCurrentBlockRef, "getCurrentBlockRef");
+            
             REcmaHelper::registerFunction(&engine, proto, isEntitySelected, "isEntitySelected");
             
             REcmaHelper::registerFunction(&engine, proto, startExport, "startExport");
@@ -1697,6 +1699,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::getEntity", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::getCurrentBlockRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::getCurrentBlockRef", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::getCurrentBlockRef";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("getCurrentBlockRef", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'REntity *'
+    REntity * cppResult =
+        
+               self->getCurrentBlockRef();
+        // return type: REntity *
+                // REntity:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.getCurrentBlockRef().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::getCurrentBlockRef", context, engine);
             return result;
         }
          QScriptValue
@@ -3487,7 +3538,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < RShape >(o0->clone());
+                        
+                          // always clone shape if we expect a shared pointer (might be a simple object on stack):
+                          QSharedPointer < RShape >(o0->clone());
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -3570,7 +3624,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < RShape >(o0->clone());
+                        
+                          // always clone shape if we expect a shared pointer (might be a simple object on stack):
+                          QSharedPointer < RShape >(o0->clone());
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -5064,7 +5121,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RImageData*
                     ap0 =
                     qscriptvalue_cast<
@@ -5074,11 +5131,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RImageData*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RImageData.",
                                context);                    
                     }
-                    RImageData& a0 = *ap0;
+                    RImageData 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 

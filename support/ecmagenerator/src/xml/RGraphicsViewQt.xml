@@ -18,9 +18,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant>
         <arg type="QWidget *" typeName="QWidget *" name="parent"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
         <arg type="bool" typeName="bool" name="showFocus"
-        hasDefault="true" default=" true" isConst="false" />
+        hasDefault="true" default="true" isConst="false" />
       </variant>
     </constructor>
     <method name="disableGestures" cppName="disableGestures"
@@ -36,6 +36,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="repaintNow" cppName="repaintNow"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="giveFocus" cppName="giveFocus" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
     <method name="hasFocus" cppName="hasFocus" specifier="public"
@@ -54,6 +58,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getHeight" cppName="getHeight" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getRect" cppName="getRect" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QRect" isPureVirtual="false" />
     </method>
     <method name="getCursor" cppName="getCursor" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
@@ -101,6 +109,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RTextLabel &amp;" typeName="RTextLabel"
         name="textLabel" isConst="true" />
       </variant>
+    </method>
+    <method name="simulateMouseMoveEvent"
+    cppName="simulateMouseMoveEvent" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getDevicePixelRatio"
+    cppName="getDevicePixelRatio" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
     </method>
     <method name="sizeHint" cppName="sizeHint"
     specifier="protected" isStatic="false" isVirtual="true"

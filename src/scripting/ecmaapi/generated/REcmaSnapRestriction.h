@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSnapRestriction {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSnapRestriction {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

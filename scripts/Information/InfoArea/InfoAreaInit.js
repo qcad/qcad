@@ -5,7 +5,7 @@ function init(basePath) {
     action.setIcon(basePath + "/InfoArea.svg");
     action.setDefaultShortcut(new QKeySequence("i,r"));
     action.setDefaultCommands([ "infoarea", "ir" ]);
-    action.setGroupSortOrder(16400);
-    action.setSortOrder(200);
+    action.setGroupSortOrder(16450);
+    action.setSortOrder(100);
     action.setWidgetNames(["InformationMenu", "InformationToolBar", "InformationToolsPanel"]);
 }

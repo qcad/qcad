@@ -70,6 +70,17 @@
         <translation>Voltear bloque&lt;br&gt;verticalmente</translation>
     </message>
     <message>
+        <location line="+18"/>
+        <source>Single Block</source>
+        <translation>Bloque individual</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location filename="../InsertBlockDialog.ui" line="+14"/>
+        <source>Array of Blocks</source>
+        <translation>Matriz de los bloques</translation>
+    </message>
+    <message>
         <source>Attribute 1:</source>
         <translation type="obsolete">Attribute 1:</translation>
     </message>
@@ -80,6 +91,30 @@
     <message>
         <source>Attribute 3:</source>
         <translation type="obsolete">Attribute 3:</translation>
+    </message>
+    <message>
+        <source>Move / Copy Options</source>
+        <translation type="obsolete">Opciones de mover / copiar</translation>
+    </message>
+    <message>
+        <location filename="../InsertBlockDialog.ui" line="+12"/>
+        <source>Columns:</source>
+        <translation>Columnas:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Rows:</source>
+        <translation>Filas:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Column Spacing:</source>
+        <translation>Espacio entre columnas:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Row Spacing:</source>
+        <translation>Espacio entre filas:</translation>
     </message>
 </context>
 <context>

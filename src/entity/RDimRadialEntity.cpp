@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -21,6 +21,7 @@
 
 RPropertyTypeId RDimRadialEntity::PropertyCustom;
 RPropertyTypeId RDimRadialEntity::PropertyHandle;
+RPropertyTypeId RDimRadialEntity::PropertyProtected;
 RPropertyTypeId RDimRadialEntity::PropertyType;
 RPropertyTypeId RDimRadialEntity::PropertyBlock;
 RPropertyTypeId RDimRadialEntity::PropertyLayer;
@@ -28,6 +29,7 @@ RPropertyTypeId RDimRadialEntity::PropertyLinetype;
 RPropertyTypeId RDimRadialEntity::PropertyLinetypeScale;
 RPropertyTypeId RDimRadialEntity::PropertyLineweight;
 RPropertyTypeId RDimRadialEntity::PropertyColor;
+RPropertyTypeId RDimRadialEntity::PropertyDisplayedColor;
 RPropertyTypeId RDimRadialEntity::PropertyDrawOrder;
 
 RPropertyTypeId RDimRadialEntity::PropertyMiddleOfTextX;
@@ -39,6 +41,7 @@ RPropertyTypeId RDimRadialEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimRadialEntity::PropertyMeasuredValue;
 
 RPropertyTypeId RDimRadialEntity::PropertyLinearFactor;
+RPropertyTypeId RDimRadialEntity::PropertyDimScale;
 RPropertyTypeId RDimRadialEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimRadialEntity::PropertyFontName;
 
@@ -60,6 +63,7 @@ RDimRadialEntity::~RDimRadialEntity() {
 void RDimRadialEntity::init() {
     RDimRadialEntity::PropertyCustom.generateId(typeid(RDimRadialEntity), RObject::PropertyCustom);
     RDimRadialEntity::PropertyHandle.generateId(typeid(RDimRadialEntity), RObject::PropertyHandle);
+    RDimRadialEntity::PropertyProtected.generateId(typeid(RDimRadialEntity), RObject::PropertyProtected);
     RDimRadialEntity::PropertyType.generateId(typeid(RDimRadialEntity), REntity::PropertyType);
     RDimRadialEntity::PropertyBlock.generateId(typeid(RDimRadialEntity), REntity::PropertyBlock);
     RDimRadialEntity::PropertyLayer.generateId(typeid(RDimRadialEntity), REntity::PropertyLayer);
@@ -67,6 +71,7 @@ void RDimRadialEntity::init() {
     RDimRadialEntity::PropertyLinetypeScale.generateId(typeid(RDimRadialEntity), REntity::PropertyLinetypeScale);
     RDimRadialEntity::PropertyLineweight.generateId(typeid(RDimRadialEntity), REntity::PropertyLineweight);
     RDimRadialEntity::PropertyColor.generateId(typeid(RDimRadialEntity), REntity::PropertyColor);
+    RDimRadialEntity::PropertyDisplayedColor.generateId(typeid(RDimRadialEntity), REntity::PropertyDisplayedColor);
     RDimRadialEntity::PropertyDrawOrder.generateId(typeid(RDimRadialEntity), REntity::PropertyDrawOrder);
 
     RDimRadialEntity::PropertyMiddleOfTextX.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyMiddleOfTextX);
@@ -79,6 +84,7 @@ void RDimRadialEntity::init() {
     RDimRadialEntity::PropertyMeasuredValue.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyMeasuredValue);
 
     RDimRadialEntity::PropertyLinearFactor.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyLinearFactor);
+    RDimRadialEntity::PropertyDimScale.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyDimScale);
     RDimRadialEntity::PropertyAutoTextPos.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyAutoTextPos);
     RDimRadialEntity::PropertyFontName.generateId(typeid(RDimRadialEntity), RDimensionEntity::PropertyFontName);
 

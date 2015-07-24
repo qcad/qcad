@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -28,6 +28,7 @@
 
 RPropertyTypeId RImageEntity::PropertyCustom;
 RPropertyTypeId RImageEntity::PropertyHandle;
+RPropertyTypeId RImageEntity::PropertyProtected;
 RPropertyTypeId RImageEntity::PropertyType;
 RPropertyTypeId RImageEntity::PropertyBlock;
 RPropertyTypeId RImageEntity::PropertyLayer;
@@ -35,6 +36,7 @@ RPropertyTypeId RImageEntity::PropertyLinetype;
 RPropertyTypeId RImageEntity::PropertyLinetypeScale;
 RPropertyTypeId RImageEntity::PropertyLineweight;
 RPropertyTypeId RImageEntity::PropertyColor;
+RPropertyTypeId RImageEntity::PropertyDisplayedColor;
 RPropertyTypeId RImageEntity::PropertyDrawOrder;
 
 RPropertyTypeId RImageEntity::PropertyFileName;
@@ -46,13 +48,22 @@ RPropertyTypeId RImageEntity::PropertyScaleFactorY;
 RPropertyTypeId RImageEntity::PropertyWidth;
 RPropertyTypeId RImageEntity::PropertyHeight;
 RPropertyTypeId RImageEntity::PropertyAngle;
+RPropertyTypeId RImageEntity::PropertyFade;
 
 RImageEntity::RImageEntity(RDocument* document, const RImageData& data,
         RObject::Id objectId) :
     REntity(document, objectId), data(document, data) {
+
+    RDebug::incCounter("RImageEntity");
+}
+
+RImageEntity::RImageEntity(const RImageEntity& other) : REntity(other) {
+    RDebug::incCounter("RImageEntity");
+    data = other.data;
 }
 
 RImageEntity::~RImageEntity() {
+    RDebug::decCounter("RImageEntity");
 }
 
 RImageEntity* RImageEntity::clone() const {
@@ -62,6 +73,7 @@ RImageEntity* RImageEntity::clone() const {
 void RImageEntity::init() {
     RImageEntity::PropertyCustom.generateId(typeid(RImageEntity), RObject::PropertyCustom);
     RImageEntity::PropertyHandle.generateId(typeid(RImageEntity), RObject::PropertyHandle);
+    RImageEntity::PropertyProtected.generateId(typeid(RImageEntity), RObject::PropertyProtected);
     RImageEntity::PropertyType.generateId(typeid(RImageEntity), REntity::PropertyType);
     RImageEntity::PropertyBlock.generateId(typeid(RImageEntity), REntity::PropertyBlock);
     RImageEntity::PropertyLayer.generateId(typeid(RImageEntity), REntity::PropertyLayer);
@@ -69,6 +81,7 @@ void RImageEntity::init() {
     RImageEntity::PropertyLinetypeScale.generateId(typeid(RImageEntity), REntity::PropertyLinetypeScale);
     RImageEntity::PropertyLineweight.generateId(typeid(RImageEntity), REntity::PropertyLineweight);
     RImageEntity::PropertyColor.generateId(typeid(RImageEntity), REntity::PropertyColor);
+    RImageEntity::PropertyDisplayedColor.generateId(typeid(RImageEntity), REntity::PropertyDisplayedColor);
     RImageEntity::PropertyDrawOrder.generateId(typeid(RImageEntity), REntity::PropertyDrawOrder);
 
     RImageEntity::PropertyFileName.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "File"));
@@ -84,6 +97,8 @@ void RImageEntity::init() {
     RImageEntity::PropertyHeight.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Height"));
 
     RImageEntity::PropertyAngle.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
+
+    RImageEntity::PropertyFade.generateId(typeid(RImageEntity), "", QT_TRANSLATE_NOOP("REntity", "Fade"));
 }
 
 bool RImageEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -132,6 +147,7 @@ bool RImageEntity::setProperty(RPropertyTypeId propertyTypeId,
         data.vVector.setAngle(value.toDouble() + M_PI/2);
         return true;
     }
+    ret = ret || RObject::setMember(data.fade, value, PropertyFade == propertyTypeId);
 
     return ret;
 }
@@ -157,6 +173,8 @@ QPair<QVariant, RPropertyAttributes> RImageEntity::getProperty(
         return qMakePair(QVariant(data.vVector.getMagnitude() * data.getImage().height()), RPropertyAttributes());
     } else if (propertyTypeId == PropertyAngle) {
         return qMakePair(QVariant(data.uVector.getAngle()), RPropertyAttributes(RPropertyAttributes::Angle));
+    } else if (propertyTypeId == PropertyFade) {
+        return qMakePair(QVariant(data.fade), RPropertyAttributes(RPropertyAttributes::Percentage));
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);

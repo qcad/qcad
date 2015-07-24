@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -99,7 +99,7 @@ public:
     static QString doubleToString(double value, int prec,
         bool showLeadingZeroes=true, bool showTrailingZeroes=false);
 
-    // workaround: make the second version also accesible by scripts:
+    // workaround: make the second version also accessible by scripts:
     static QString doubleToStringDec(double value, int prec,
         bool showLeadingZeroes=true, bool showTrailingZeroes=false) {
 

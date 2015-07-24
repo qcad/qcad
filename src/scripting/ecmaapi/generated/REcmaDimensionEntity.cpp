@@ -118,6 +118,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setLinearFactor, "setLinearFactor");
             
+            REcmaHelper::registerFunction(&engine, proto, getDimScale, "getDimScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimScale, "setDimScale");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDimensionEntity*>(), *proto);
 
@@ -141,6 +145,10 @@
             
             ctor.setProperty("PropertyHandle",
                 qScriptValueFromValue(&engine, RDimensionEntity::PropertyHandle),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RDimensionEntity::PropertyProtected),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyType",
@@ -169,6 +177,10 @@
             
             ctor.setProperty("PropertyColor",
                 qScriptValueFromValue(&engine, RDimensionEntity::PropertyColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RDimensionEntity::PropertyDisplayedColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyDrawOrder",
@@ -213,6 +225,10 @@
             
             ctor.setProperty("PropertyLinearFactor",
                 qScriptValueFromValue(&engine, RDimensionEntity::PropertyLinearFactor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimScale",
+                qScriptValueFromValue(&engine, RDimensionEntity::PropertyDimScale),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyAutoTextPos",
@@ -2077,6 +2093,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionEntity::setLinearFactor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionEntity::getDimScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionEntity::getDimScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::getDimScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionEntity* self = 
+                        getSelf("getDimScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDimScale();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.getDimScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionEntity::getDimScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionEntity::setDimScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionEntity::setDimScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::setDimScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionEntity* self = 
+                        getSelf("setDimScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimScale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.setDimScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionEntity::setDimScale", context, engine);
             return result;
         }
          QScriptValue REcmaDimensionEntity::toString

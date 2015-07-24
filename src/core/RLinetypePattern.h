@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -133,6 +133,7 @@ public:
 
     RLinetypePattern& operator=(const RLinetypePattern& other);
     bool operator==(const RLinetypePattern& other) const;
+    bool operator<(const RLinetypePattern& other) const;
 
     bool isLoaded() { return true; }
     void load() {}

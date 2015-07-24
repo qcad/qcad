@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -84,11 +84,11 @@ RVector RSnapEntityBase::snap(
         }
 
         RVector candidate =
-            position.getClosest(
+            position.getClosest2d(
                 snapEntity(e, position, queryBox, view)
             );
 
-        dist = candidate.getDistanceTo(position);
+        dist = candidate.getDistanceTo2d(position);
         if (dist<minDist) {
             lastSnap = candidate;
             minDist = dist;

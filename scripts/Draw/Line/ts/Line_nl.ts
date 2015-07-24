@@ -1,37 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_NL">
+<TS version="2.1" language="nl">
 <context>
     <name>Line</name>
     <message>
-        <location filename="../Line.js" line="+79"/>
+        <location filename="../Line.js" line="+81"/>
         <source>Line Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijnhulpmiddelen</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show line tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijnhulpmiddelen tonen</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+14"/>
         <source>&amp;Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Lijn</translation>
     </message>
     <message>
         <location filename="../Line.ui" line="+17"/>
+        <source>Same Entity Type as Original</source>
+        <translation>Zelfde objecttype als origineel</translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Line Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijnsegment</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Infinite Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Oneindig lijn</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation type="unfinished"></translation>
+        <translation>Straal</translation>
     </message>
 </context>
 </TS>

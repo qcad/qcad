@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Rotate</name>
     <message>
-        <location filename="../Rotate.js" line="+68"/>
+        <location filename="../Rotate.js" line="+70"/>
         <source>Center point</source>
         <translatorcomment>--google--
 Salta aos pontos de centro
@@ -48,7 +48,7 @@ Ponto de destino</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Opções Mova e Rotacione
 Opções de Rotacione</translatorcomment>
-        <translation>Opções de rotacione</translation>
+        <translation>Opções de Rotação</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -57,7 +57,7 @@ Opções de Rotacione</translatorcomment>
 --file: Mirror_pt.ts--
 Número de cópias
 Entre o número de cópias</translatorcomment>
-        <translation>Número de cópias</translation>
+        <translation>Número de Cópias</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -66,7 +66,7 @@ Entre o número de cópias</translatorcomment>
 --file: Mirror_pt.ts--
 &amp;Apague o Original
 &amp;Apague o original</translatorcomment>
-        <translation>&amp;Apague o original</translation>
+        <translation>&amp;Elimine o original</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -99,7 +99,7 @@ Cópias &amp;Múltiplas</translatorcomment>
         <translatorcomment>--exact match--
 --file: Mirror_pt.ts--
 Use camada e &amp;atributos atual</translatorcomment>
-        <translation>Use camada e &amp;atributos atual</translation>
+        <translation>Use a camada e os &amp;atributos atuais</translation>
     </message>
 </context>
 </TS>

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -33,6 +33,7 @@
  * appearance of an infinit line (xline) entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RXLineData: public REntityData, protected RXLine {
@@ -60,6 +61,15 @@ public:
     double getAngle() const {
         return RXLine::getAngle();
     }
+
+    bool hasFixedAngle() const {
+        return fixedAngle;
+    }
+
+    void setFixedAngle(bool on) {
+        fixedAngle = on;
+    }
+
     bool reverse() {
         return RXLine::reverse();
     }
@@ -94,8 +104,12 @@ public:
         return QList<QSharedPointer<RShape> >() <<
                 QSharedPointer<RShape>(new RXLine(*this));
     }
+
+private:
+    bool fixedAngle;
 };
 
+Q_DECLARE_METATYPE(RXLineData)
 Q_DECLARE_METATYPE(RXLineData*)
 Q_DECLARE_METATYPE(const RXLineData*)
 Q_DECLARE_METATYPE(QSharedPointer<RXLineData>)

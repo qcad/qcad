@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Auto Snap</source>
-        <translation>Autom. Tartunta</translation>
+        <translation>Automaattinen poiminta</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -21,7 +21,7 @@
     <message>
         <location line="+10"/>
         <source>Middle points</source>
-        <translation type="unfinished">Puolivälipisteet</translation>
+        <translation>Keskimmäiset pisteet</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -31,12 +31,12 @@
     <message>
         <location line="+7"/>
         <source>Perpendicular</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohtisuora</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Reference points</source>
-        <translation type="unfinished"></translation>
+        <translation>Viitepisteet</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -59,12 +59,12 @@
     <message>
         <location filename="../SnapAuto.js" line="+34"/>
         <source>Snap</source>
-        <translation>Tartunta</translation>
+        <translation>Poiminta</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Auto Snap</source>
-        <translation>Autom. Tartunta</translation>
+        <translation>Automaattinen poiminta</translation>
     </message>
     <message>
         <location filename="../SnapAutoInit.js" line="+2"/>

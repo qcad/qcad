@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -62,7 +62,8 @@ public:
     void clear();
     void normalize();
 
-    void appendShape(const RShape& shape);
+    void prependShape(const RShape& shape);
+    void appendShape(const RShape& shape, bool prepend = false);
 
     void appendVertex(const RVector& vertex, double bulge = 0.0);
     void prependVertex(const RVector& vertex, double bulge = 0.0);
@@ -74,6 +75,7 @@ public:
     QList<RVector> getVertices() const;
     void setVertexAt(int i, const RVector& v);
     RVector getVertexAt(int i) const;
+    int getVertexIndex(const RVector& v, double tolerance=RS::PointTolerance) const;
     RVector getLastVertex() const;
     int countVertices() const;
 
@@ -85,7 +87,8 @@ public:
 
     void setClosed(bool on);
     bool isClosed() const;
-    bool isLogicallyClosed() const;
+    bool isGeometricallyClosed(double tolerance=RS::PointTolerance) const;
+    RS::Orientation getOrientation() const;
 
     bool contains(const RVector& point, bool borderIsInside=false, double tolerance=RS::PointTolerance) const;
     // TODO:
@@ -107,7 +110,7 @@ public:
     virtual QList<RVector> getPointsWithDistanceToEnd(
         double distance, RS::From from = RS::FromAny) const;
 
-    virtual double getAngleAt(double distance) const;
+    virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;
 
     virtual RVector getVectorTo(const RVector& point,
             bool limited = true, double strictRange = RMAXDOUBLE) const;

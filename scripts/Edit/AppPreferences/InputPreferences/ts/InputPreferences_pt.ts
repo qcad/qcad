@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Input</name>
     <message>
@@ -85,25 +85,25 @@ Pontos de grade:</translatorcomment>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Decimal Point:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ponto decimal:</translation>
+        <translation>Ponto Decimal:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Cartesian Coordinate Separator:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Separador de coordenadas cartesianas:</translation>
+        <translation>Separador de Coordenadas Cartesianas:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Polar Coordinate Separator:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Separador de coordenadas polares:</translation>
+        <translation>Separador de Coordenadas Polares:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Relative Coordinate Prefix:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Prefixo de coordenadas relativo:</translation>
+        <translation>Prefixo de Coordenadas Relativas:</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -118,25 +118,25 @@ Exemplos</translatorcomment>
         <location line="+6"/>
         <source>Absolute Cartesian Coordinate:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Coordenadas cartesianas absolutas:</translation>
+        <translation>Coordenadas Cartesianas Absolutas:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Absolute Polar Coordinate:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Coordenadas polares absoluta:</translation>
+        <translation>Coordenadas Polares Absolutas:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Relative Cartesian Coordinate:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Coordenadas cartesianas relativo:</translation>
+        <translation>Coordenadas Cartesianas Relativas:</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Polar Coordinate:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Coordenada polares relativa:</translation>
+        <translation>Coordenadas Polares Relativas:</translation>
     </message>
 </context>
 <context>
@@ -149,7 +149,7 @@ Exemplos</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Coordinate Format</source>
-        <translation>Formato de coordenadas</translation>
+        <translation>Formato de Coordenadas</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -163,7 +163,7 @@ Exemplos</translatorcomment>
         <location line="+5"/>
         <location line="+15"/>
         <source>(Default)</source>
-        <translation>(padrão)</translation>
+        <translation>(Padrão)</translation>
     </message>
     <message>
         <location line="-25"/>
@@ -173,17 +173,17 @@ Exemplos</translatorcomment>
     <message>
         <location line="+5"/>
         <source>Less Than</source>
-        <translation>Less than</translation>
+        <translation>Menor Que</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>At</source>
-        <translation>At</translation>
+        <translation>Em</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Percentage</source>
-        <translation>Percentagem</translation>
+        <translation>Porcentagem</translation>
     </message>
     <message>
         <location line="+1"/>

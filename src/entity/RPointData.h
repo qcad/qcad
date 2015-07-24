@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -34,6 +34,7 @@
  * appearance of a point entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RPointData: public REntityData, protected RPoint {
@@ -62,6 +63,7 @@ public:
     }
 
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const {
+        Q_UNUSED(ignoreComplex)
         Q_UNUSED(queryBox)
 
         return QList<QSharedPointer<RShape> >() <<
@@ -70,6 +72,7 @@ public:
 
 };
 
+Q_DECLARE_METATYPE(RPointData)
 Q_DECLARE_METATYPE(RPointData*)
 Q_DECLARE_METATYPE(const RPointData*)
 Q_DECLARE_METATYPE(QSharedPointer<RPointData>)

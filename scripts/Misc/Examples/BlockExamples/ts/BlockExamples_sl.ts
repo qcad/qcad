@@ -10,7 +10,7 @@
     <message>
         <location filename="../BlockExamples.js" line="+45"/>
         <source>&amp;Block</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Blok</translation>
     </message>
 </context>
 </TS>

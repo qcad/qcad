@@ -25,14 +25,18 @@
     </message>
     <message>
         <location line="+134"/>
-        <location line="+47"/>
+        <location line="+48"/>
         <source>No solution</source>
         <translation>Keine Lösung</translation>
     </message>
     <message>
-        <location filename="../CircleT2PInit.js" line="+2"/>
         <source>2 Poin&amp;ts and Tangent</source>
-        <translation>2 Punk&amp;te und Tangente</translation>
+        <translation type="vanished">2 Punk&amp;te und Tangente</translation>
+    </message>
+    <message>
+        <location filename="../CircleT2PInit.js" line="+2"/>
+        <source>&amp;Tangent and 2 Points</source>
+        <translation>Tangente und &amp;2 Punkte</translation>
     </message>
     <message>
         <location line="+4"/>

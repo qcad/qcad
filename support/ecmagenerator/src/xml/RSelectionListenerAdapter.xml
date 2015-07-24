@@ -10,7 +10,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <constructor>
       <variant>
         <arg type="QObject *" typeName="QObject *" name="parent"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
       </variant>
     </constructor>
     <method name="updateSelectionListener"

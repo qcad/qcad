@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>DimAligned</name>
     <message>
@@ -8,21 +8,21 @@
         <source>First extension line origin</source>
         <translatorcomment>--google--
 Indique a primeira extensão da linha de origem</translatorcomment>
-        <translation>Origem primeira linha de extensão</translation>
+        <translation>Primeira origem da linha de extensão</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
         <translatorcomment>--google--
 Indique a segunda extensão da linha de origem</translatorcomment>
-        <translation>Origem segunda linha de extensão</translation>
+        <translation>Segunda origem da linha de extensão</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
         <translatorcomment>--google--
 Indique a dimensão da linha de localização</translatorcomment>
-        <translation>Localização da linha cota</translation>
+        <translation>Localização da linha de dimensão</translation>
     </message>
     <message>
         <location filename="../DimAlignedInit.js" line="+2"/>
@@ -36,7 +36,7 @@ Indique a dimensão da linha de localização</translatorcomment>
         <location line="+5"/>
         <source>Draw aligned dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhe cotas alinhadas</translation>
+        <translation>Desenhe dimensões alinhadas</translation>
     </message>
 </context>
 </TS>

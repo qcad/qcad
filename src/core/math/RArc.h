@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -41,6 +41,8 @@ class RPolyline;
 class QCADCORE_EXPORT RArc: public RShape, public RDirected {
 public:
     RArc();
+    RArc(double cx, double cy, double radius, double startAngle,
+         double endAngle, bool reversed = false);
     RArc(const RVector& center, double radius, double startAngle,
             double endAngle, bool reversed = false);
     virtual ~RArc();
@@ -109,7 +111,7 @@ public:
     virtual RVector getStartPoint() const;
     virtual RVector getEndPoint() const;
     virtual RVector getPointAtAngle(double a) const;
-    virtual double getAngleAt(double distance) const;
+    virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;
     RVector getMiddlePoint() const;
 
     void moveStartPoint(const RVector& pos);
@@ -131,6 +133,7 @@ public:
     virtual double getDistanceFromStart(const RVector& p) const;
 
     RPolyline approximateWithLines(double segmentLength);
+    RPolyline approximateWithLinesTan(double segmentLength);
 
 protected:
     virtual void print(QDebug dbg) const;

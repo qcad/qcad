@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>CloseDialog</name>
     <message>
@@ -34,10 +34,10 @@
     </message>
     <message>
         <source>Loading...</source>
-        <translation>Lade...</translation>
+        <translation type="vanished">Lade...</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="+128"/>
+        <location filename="../NewFile.js" line="+137"/>
         <source>Import Error</source>
         <translation>Import Fehler</translation>
     </message>
@@ -54,12 +54,12 @@
 </translation>
     </message>
     <message>
-        <location line="-14"/>
+        <location line="-23"/>
         <source>Opening drawing:</source>
         <translation>Zeichnung öffnen:</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+28"/>
         <source>Cannot open file</source>
         <translation>Kann Datei nicht öffnen</translation>
     </message>
@@ -79,13 +79,13 @@
         <translation>Datei ist leer.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>Drawing loaded successfully:</source>
         <translation>Zeichnung erfolgreich geladen:</translation>
     </message>
     <message>
         <source>Opened drawing:</source>
-        <translation>Zeichnung geöffnet:</translation>
+        <translation type="vanished">Zeichnung geöffnet:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -93,7 +93,7 @@
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+115"/>
         <source>Untitled %1</source>
         <translation>Unbenannt %1</translation>
     </message>
@@ -103,7 +103,7 @@
         <translation>nur lesen</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+54"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>Möchten Sie die gemachten Änderungen in der&lt;br&gt;Zeichnung &apos;%1&apos; speichern?</translation>
     </message>

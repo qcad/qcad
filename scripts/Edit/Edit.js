@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -41,7 +41,7 @@ Edit.includeBasePath = includeBasePath;
 Edit.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="EditToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="EditToolsPanelAction") {
         EAction.showCadToolBarPanel("EditToolsPanel");
         this.terminate();
     }
@@ -60,7 +60,7 @@ Edit.getToolBar = function() {
 
 Edit.getCadToolBarPanel = function() {
     var mtb = EAction.getMainCadToolBarPanel();
-    var actionName = "EditToolsPanelButton";
+    var actionName = "EditToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Edit Tools"), mtb);
         action.setScriptFile(Edit.includeBasePath + "/Edit.js");

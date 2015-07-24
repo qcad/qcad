@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -27,7 +27,62 @@
 
 #include "RSpatialIndex.h"
 
-#include "spatialindexnavel/include/SpatialIndex.h"
+#include "spatialindexnavel/include/spatialindex/SpatialIndex.h"
+
+class RSiDataStream : public SpatialIndex::IDataStream
+{
+public:
+    RSiDataStream(const QList<int>& ids, const QList<QList<RBox> >& bbs) : ids(ids), bbs(bbs), index(0), pos(0) {
+    }
+
+    virtual ~RSiDataStream() { }
+
+    virtual SpatialIndex::IData* getNext() {
+        if (index>=ids.length() || index>=bbs.length()) {
+            return NULL;
+        }
+
+        RBox bb = bbs[index][pos];
+        double p1[] = {
+            bb.getMinimum().x, bb.getMinimum().y, bb.getMinimum().z
+        };
+        double p2[] = {
+            bb.getMaximum().x, bb.getMaximum().y, bb.getMaximum().z
+        };
+        SpatialIndex::Region r(p1, p2, 3);
+        qint64 id = RSpatialIndex::getSIId(ids[index], pos);
+
+        if (pos<bbs[index].length()-1) {
+            pos++;
+        }
+        else {
+            index++;
+            pos = 0;
+        }
+
+        return new SpatialIndex::RTree::Data(0, NULL, r, id);
+    }
+
+    virtual bool hasNext() {
+        return index<ids.length() && index<bbs.length() && pos<bbs[index].length();
+    }
+
+    virtual uint32_t size() {
+        throw Tools::NotSupportedException("Operation not supported.");
+    }
+
+    virtual void rewind() {
+        index = 0;
+        pos = 0;
+    }
+
+private:
+    const QList<int>& ids;
+    const QList<QList<RBox> >& bbs;
+    int index;
+    int pos;
+};
+
 
 /**
  * \ingroup spatialindex
@@ -84,8 +139,7 @@ protected:
      */
     class RSiRegion: public SpatialIndex::Region {
     public:
-        RSiRegion(double x1, double y1, double z1, double x2, double y2,
-                double z2);
+        RSiRegion(double x1, double y1, double z1, double x2, double y2, double z2);
     };
 
     /**
@@ -206,6 +260,8 @@ public:
 
     virtual void clear();
 
+    virtual void bulkLoad(const QList<int>& ids, const QList<QList<RBox> >& bbs);
+
     virtual void addToIndex(int id, int pos,
                     double x1, double y1, double z1,
                     double x2, double y2, double z2);
@@ -226,6 +282,9 @@ public:
             double x1, double y1, double z1,
             double x2, double y2, double z2,
             RSpatialIndexVisitor* dataVisitor = NULL);
+    QList<int> queryIntersectedSimple(const RBox& b) {
+        return RSpatialIndex::queryIntersected(b).keys();
+    }
     virtual QMap<int, QSet<int> > queryContained(
             double x1, double y1, double z1,
             double x2, double y2, double z2,

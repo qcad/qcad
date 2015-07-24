@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -255,6 +255,8 @@ public:
     virtual void setCommandPrompt(const QString& text = "") = 0;
     virtual void setLeftMouseTip(const QString& text = "") = 0;
     virtual void setRightMouseTip(const QString& text = "") = 0;
+
+    QVariant eval(const QString& ext, const QString& script);
 
 protected:
     virtual bool readSettings();

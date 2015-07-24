@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -62,18 +62,27 @@ QSize RRulerQt::sizeHint() const {
 
     QFontMetrics fm(getFont());
     int pixelSize = fm.height();
-    // approximation:
-    //double pixelSize = getFont().pointSize()/72.0*96.0;
-#ifdef Q_OS_MAC
-    int offset = pixelSize>8 ? 12 : 10;
-#else
-    int offset = pixelSize>8 ? 8 : 6;
+    double dpr = 1.0;
+#if QT_VERSION >= 0x050000
+    dpr = devicePixelRatio();
 #endif
+
+#ifdef Q_OS_MAC
+    int offset = pixelSize>8*dpr ? 12*dpr : 10*dpr;
+#else
+    int offset = pixelSize>8*dpr ? 8*dpr : 6*dpr;
+#endif
+
+//#if QT_VERSION >= 0x050000
+//    pixelSize *= devicePixelRatio();
+//    offset *= devicePixelRatio();
+//#endif
+
     QSize size(100, pixelSize + offset);
     if (orientation == Qt::Vertical) {
         size.transpose();
     }
-    hint = size;
+    hint = size/dpr;
     return hint;
 }
 
@@ -100,24 +109,28 @@ void RRulerQt::paintTick(int pos, bool major, const QString& label) {
 #else
     int top = 0;
 #endif
-    int lineLength = 3;
+    qreal dpr = 1.0;
+#if QT_VERSION >= 0x050000
+    dpr = devicePixelRatio();
+#endif
+    int lineLength = 3*dpr;
     if (major) {
-        lineLength = 7;
+        lineLength = 7*dpr;
     }
     if (orientation == Qt::Horizontal) {
         painter->setPen(Qt::white);
-        painter->drawLine(pos + 1, height() - lineLength, pos + 1, height());
+        painter->drawLine(pos + 1, height()*dpr - lineLength, pos + 1, height()*dpr);
         painter->setPen(Qt::black);
-        painter->drawLine(pos, height() - lineLength, pos, height());
+        painter->drawLine(pos, height()*dpr - lineLength, pos, height()*dpr);
         if (!label.isEmpty()) {
             QRect rect(pos - 250, top, 500, 500);
             painter->drawText(rect, Qt::AlignTop | Qt::AlignHCenter, label);
         }
     } else {
         painter->setPen(Qt::white);
-        painter->drawLine(width() - lineLength, pos + 1, width(), pos + 1);
+        painter->drawLine(width()*dpr - lineLength, pos + 1, width()*dpr, pos + 1);
         painter->setPen(Qt::black);
-        painter->drawLine(width() - lineLength, pos, width(), pos);
+        painter->drawLine(width()*dpr - lineLength, pos, width()*dpr, pos);
         if (!label.isEmpty()) {
             painter->save();
             painter->rotate(-90);
@@ -130,22 +143,20 @@ void RRulerQt::paintTick(int pos, bool major, const QString& label) {
 }
     
 void RRulerQt::paintEvent(QPaintEvent* e) {
-//    RMdiChildQt* mdiChild = RMdiChildQt::getMdiChild(this);
-//    if (mdiChild!=NULL) {
-//        if (mdiChild->isInBackground()) {
-//            return;
-//        }
-//    }
+    qreal dpr = 1.0;
+#if QT_VERSION >= 0x050000
+    dpr = devicePixelRatio();
+#endif
 
     if (orientation == Qt::Horizontal) {
-        if (sizeHint().height() != lastSize.height()) {
-            lastSize.setHeight(sizeHint().height());
+        if (sizeHint().height()*dpr != lastSize.height()) {
+            lastSize.setHeight(sizeHint().height()*dpr);
             updateViewport();
             return;
         }
     } else {
-        if (sizeHint().width() != lastSize.width()) {
-            lastSize.setWidth(sizeHint().width());
+        if (sizeHint().width()*dpr != lastSize.width()) {
+            lastSize.setWidth(sizeHint().width()*dpr);
             updateViewport();
             return;
         }
@@ -156,12 +167,7 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
         return;
     }
 
-//    RDocumentInterface* di = view->getDocumentInterface();
-//    if (di==NULL) {
-//        return;
-//    }
-
-    QSize newSize = size();
+    QSize newSize = size()*dpr;
     if (lastSize != newSize) {
         buffer = QImage(newSize, QImage::Format_ARGB32);
         lastSize = newSize;
@@ -184,9 +190,9 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
         }
         fade.setColorAt(0, QColor(0xe5, 0xe5, 0xe5));
         fade.setColorAt(1, QColor(0xc2, 0xc2, 0xc2));
-        painter->fillRect(rect(), fade);
+        painter->fillRect(buffer.rect(), fade);
 #else
-        painter->fillRect(rect(), palette().color(QPalette::Window));
+        painter->fillRect(buffer.rect(), palette().color(QPalette::Window));
 #endif
 
         painter->setPen(Qt::black);
@@ -197,14 +203,15 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
             return;
         }
 
-        grid->paintRuler(*this);
+        grid->paintRuler(*this, dpr);
 
         delete painter;
         painter = NULL;
     }
 
     QPainter wPainter(this);
-    wPainter.drawImage(0,0,buffer);
+    //wPainter.drawImage(0,0,buffer);
+    wPainter.drawImage(rect(), buffer);
     RVector p = view->mapToView(cursorPosition);
     if (orientation==Qt::Horizontal) {
         wPainter.translate(p.x, height()-4);

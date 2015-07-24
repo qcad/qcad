@@ -5,7 +5,7 @@ function init(basePath) {
     action.setIcon(basePath + "/HideAllLayers.svg");
     action.setDefaultShortcut(new QKeySequence("y,h"));
     action.setDefaultCommands(["layerhideall", "yh"]);
-    action.setGroupSortOrder(14100);
-    action.setSortOrder(400);
+    action.setGroupSortOrder(14120);
+    action.setSortOrder(200);
     action.setWidgetNames(["LayerMenu", "LayerToolBar", "LayerToolsPanel"]);
 }

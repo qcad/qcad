@@ -105,6 +105,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryBlockEntities, "queryBlockEntities");
             
+            REcmaHelper::registerFunction(&engine, proto, queryLayerBlockEntities, "queryLayerBlockEntities");
+            
             REcmaHelper::registerFunction(&engine, proto, queryChildEntities, "queryChildEntities");
             
             REcmaHelper::registerFunction(&engine, proto, hasChildEntities, "hasChildEntities");
@@ -124,6 +126,8 @@
             REcmaHelper::registerFunction(&engine, proto, queryContainedEntitiesXY, "queryContainedEntitiesXY");
             
             REcmaHelper::registerFunction(&engine, proto, querySelectedEntities, "querySelectedEntities");
+            
+            REcmaHelper::registerFunction(&engine, proto, queryPropertyEditorObjects, "queryPropertyEditorObjects");
             
             REcmaHelper::registerFunction(&engine, proto, queryDocumentVariables, "queryDocumentVariables");
             
@@ -152,6 +156,8 @@
             REcmaHelper::registerFunction(&engine, proto, queryView, "queryView");
             
             REcmaHelper::registerFunction(&engine, proto, queryLinetype, "queryLinetype");
+            
+            REcmaHelper::registerFunction(&engine, proto, countSelectedEntities, "countSelectedEntities");
             
             REcmaHelper::registerFunction(&engine, proto, clearSelection, "clearSelection");
             
@@ -326,6 +332,10 @@
             REcmaHelper::registerFunction(&engine, proto, setLinetypeScale, "setLinetypeScale");
             
             REcmaHelper::registerFunction(&engine, proto, getLinetypeScale, "getLinetypeScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, formatLinear, "formatLinear");
+            
+            REcmaHelper::registerFunction(&engine, proto, formatAngle, "formatAngle");
             
             REcmaHelper::registerFunction(&engine, proto, getLinearFormat, "getLinearFormat");
             
@@ -2036,6 +2046,80 @@
             return result;
         }
          QScriptValue
+        REcmaDocument::queryLayerBlockEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::queryLayerBlockEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::queryLayerBlockEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("queryLayerBlockEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayer::Id */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RBlock::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayer::Id
+                    a0 =
+                    (RLayer::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RBlock::Id
+                    a1 =
+                    (RBlock::Id)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < REntity::Id >'
+    QSet < REntity::Id > cppResult =
+        
+               self->queryLayerBlockEntities(a0
+        ,
+    a1);
+        // return type: QSet < REntity::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.queryLayerBlockEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::queryLayerBlockEntities", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDocument::queryChildEntities
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -3323,6 +3407,56 @@
             return result;
         }
          QScriptValue
+        REcmaDocument::queryPropertyEditorObjects
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::queryPropertyEditorObjects", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::queryPropertyEditorObjects";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("queryPropertyEditorObjects", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < RObject::Id >'
+    QSet < RObject::Id > cppResult =
+        
+               self->queryPropertyEditorObjects();
+        // return type: QSet < RObject::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.queryPropertyEditorObjects().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::queryPropertyEditorObjects", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDocument::queryDocumentVariables
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4301,6 +4435,55 @@
             return result;
         }
          QScriptValue
+        REcmaDocument::countSelectedEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::countSelectedEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::countSelectedEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("countSelectedEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->countSelectedEntities();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.countSelectedEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::countSelectedEntities", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDocument::clearSelection
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4903,9 +5086,14 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'void'
-    
+    // return type 'bool'
+    bool cppResult =
+        
                self->deselectEntities(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
     } else
 
 
@@ -4947,11 +5135,16 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'void'
-    
+    // return type 'bool'
+    bool cppResult =
+        
                self->deselectEntities(a0
         ,
     a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
     } else
 
 
@@ -5633,7 +5826,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < REntity >(o0->clone());
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < REntity >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -5917,7 +6113,10 @@
 
                     if (o0!=NULL) {
                         a0 =
-                        QSharedPointer < REntity >(o0->clone());
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < REntity >(o0);
+                        
                     }
                     else {
                         // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
@@ -10298,6 +10497,126 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::getLinetypeScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::formatLinear
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::formatLinear", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::formatLinear";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("formatLinear", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->formatLinear(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.formatLinear().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::formatLinear", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::formatAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::formatAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::formatAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("formatAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->formatAngle(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.formatAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::formatAngle", context, engine);
             return result;
         }
          QScriptValue

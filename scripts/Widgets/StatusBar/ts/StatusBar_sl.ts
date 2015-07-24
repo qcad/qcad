@@ -11,25 +11,30 @@
     <message>
         <location line="+7"/>
         <source>Status Bar Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Gradniki statusne vrstice</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinate display</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaz koordinat</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Mouse display</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaz miške</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selection display</source>
+        <translation>Prikaz izbora</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Progress display</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../StatusBar.js" line="+27"/>
+        <location filename="../StatusBar.js" line="+32"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -37,6 +42,11 @@
         <location line="+0"/>
         <source>Status Bar</source>
         <translation>Statusna vrstica</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>&amp;Status Bar</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

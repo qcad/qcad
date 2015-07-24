@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -90,54 +90,53 @@ unsigned long long RColor::getHash() const {
 /**
  * \return Highlighted color for the given color.
  */
-RColor RColor::getHighlighted(const RColor& color, const QColor& bgColor) {
+RColor RColor::getHighlighted(const RColor& color, const QColor& bgColor, int minDist) {
     if (!color.isValid()) {
         return Qt::gray;
     }
 
     RColor ret = color;
-    int minDist = 75;
 
     int vColor = color.value();
     int vBgColor = bgColor.value();
 
     if (vBgColor > vColor) {
         if (vColor+minDist <= vBgColor-minDist) {
-            ret.setHsv(color.hue(), color.saturation(), vColor+minDist);
+            ret.setHsv(color.hue(), color.saturation(), qMin(255, vColor+minDist));
             return ret;
         }
         if (vColor-minDist >= minDist) {
-            ret.setHsv(color.hue(), color.saturation(), vColor-minDist);
+            ret.setHsv(color.hue(), color.saturation(), qMax(0, vColor-minDist));
             return ret;
         }
         else {
-            ret.setHsv(color.hue(), color.saturation(), vBgColor+minDist);
+            ret.setHsv(color.hue(), color.saturation(), qMin(255, vBgColor+minDist));
             return ret;
         }
     }
 
-    if (vBgColor < vColor) {
+    else if (vBgColor < vColor) {
         if (vColor-minDist >= vBgColor+minDist) {
-            ret.setHsv(color.hue(), color.saturation(), vColor-minDist);
+            ret.setHsv(color.hue(), color.saturation(), qMax(0, vColor-minDist));
             return ret;
         }
         if (vColor+minDist <= 255) {
-            ret.setHsv(color.hue(), color.saturation(), vColor+minDist);
+            ret.setHsv(color.hue(), color.saturation(), qMin(255, vColor+minDist));
             return ret;
         }
         else {
-            ret.setHsv(color.hue(), color.saturation(), vBgColor-minDist);
+            ret.setHsv(color.hue(), color.saturation(), qMax(0, vBgColor-minDist));
             return ret;
         }
     }
 
-    if (vBgColor == vColor) {
+    else if (vBgColor == vColor) {
         if (vColor+minDist <= 255-minDist) {
-            ret.setHsv(color.hue(), color.saturation(), vColor+minDist);
+            ret.setHsv(color.hue(), color.saturation(), qMin(255, vColor+minDist));
             return ret;
         }
         else {
-            ret.setHsv(color.hue(), color.saturation(), vColor-minDist);
+            ret.setHsv(color.hue(), color.saturation(), qMax(0, vColor-minDist));
             return ret;
         }
     }
@@ -165,7 +164,8 @@ bool RColor::isFixed() const {
 }
 
 /**
- * \return Name of the color if known, otherwise "#RRGGBB".
+ * \return Localized name of the color if known, otherwise "#RRGGBB".
+ * For a localization neutral name use name() instead.
  */
 QString RColor::getName() const {
     init();
@@ -303,6 +303,7 @@ void RColor::init() {
     init(tr("Cyan"), RColor(Qt::cyan));
     init(tr("Magenta"), RColor(Qt::magenta));
     init(tr("Yellow"), RColor(Qt::yellow));
+    init(tr("Orange"), RColor(255,127,0));
     init(tr("Dark Red"), RColor(Qt::darkRed));
     init(tr("Dark Green"), RColor(Qt::darkGreen));
     init(tr("Dark Blue"), RColor(Qt::darkBlue));
@@ -318,7 +319,16 @@ void RColor::init() {
 
 void RColor::init(const QString& cn, const RColor& c) {
     list.append(QPair<QString, RColor> (cn, c));
-    //iconMap.insert(c, getIcon(c));
+}
+
+void RColor::removeColor(const QString& cn) {
+    init();
+    for (int i=0; i<list.length(); i++) {
+        if (list.at(i).first==cn) {
+            list.removeAt(i);
+            break;
+        }
+    }
 }
 
 QIcon RColor::getIcon(const RColor& color, const QSize& size) {

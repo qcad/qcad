@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaSpatialIndexNavel {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaSpatialIndexNavel {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -50,6 +53,9 @@
         clear
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        bulkLoad
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addToIndex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -57,6 +63,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryIntersected
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryIntersectedSimple
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryContained

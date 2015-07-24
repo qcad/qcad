@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -45,7 +45,7 @@ AddLayer.prototype.beginEvent = function() {
         return;
     }
 
-    var operation = new RAddObjectOperation(this.layer);
+    var operation = new RAddObjectOperation(this.layer, this.getToolTitle());
     var di = this.getDocumentInterface();
     di.applyOperation(operation);
 

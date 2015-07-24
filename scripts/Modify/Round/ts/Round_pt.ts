@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Round</name>
     <message>
-        <location filename="../Round.js" line="+56"/>
+        <location filename="../Round.js" line="+57"/>
         <source>The two entities cannot be rounded.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>As duas entidades não podem ser arredondados.</translation>
+        <translation>As duas entidades não podem ser arredondadas.</translation>
     </message>
     <message>
-        <location line="+220"/>
+        <location line="+216"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--exact match--
 --file: Bevel_pt.ts--
 Primeira entidade não pode ser aparada.</translatorcomment>
-        <translation>Primeira entidade não pode ser aparada.</translation>
+        <translation>A primeira entidade não pode ser aparada.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -23,7 +23,7 @@ Primeira entidade não pode ser aparada.</translatorcomment>
         <translatorcomment>--exact match--
 --file: Bevel_pt.ts--
 Segunda entidade não pode ser aparada.</translatorcomment>
-        <translation>Segunda entidade não pode ser aparada.</translation>
+        <translation>A segunda entidade não pode ser aparada.</translation>
     </message>
     <message>
         <location filename="../RoundInit.js" line="+2"/>

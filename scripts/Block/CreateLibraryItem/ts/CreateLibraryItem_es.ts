@@ -9,7 +9,7 @@
         <translation>Punto de referencia</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+29"/>
         <source>Save library item as...</source>
         <translation>Guardar elemento de biblioteca...</translation>
     </message>

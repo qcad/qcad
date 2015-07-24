@@ -6,7 +6,7 @@
     <message>
         <location filename="../EditMainDrawingInit.js" line="+2"/>
         <source>&amp;Return to Main Drawing</source>
-        <translation type="unfinished">Palaa </translation>
+        <translation>&amp;Palaa pääpiirustukseen</translation>
     </message>
 </context>
 </TS>

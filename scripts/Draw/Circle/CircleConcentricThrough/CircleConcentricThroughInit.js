@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("CircleConcentricThrough", "Concentric (&through Point)"),
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("CircleConcentricThrough", "Concentric (&through Point)"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/CircleConcentricThrough.js");
     action.setIcon(basePath + "/CircleConcentricThrough.svg");

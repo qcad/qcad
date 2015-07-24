@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Hatch</name>
     <message>
         <location filename="../Hatch.js" line="+55"/>
         <source>No boundary selected.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Nenhum limite selecionado.</translation>
+        <translation>Nenhum contorno selecionado</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Loop not closed at point %1/%2.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Contorno não fechado na ponta %1/%2.</translation>
+        <translation>Contorno não fechado no ponto %1/%2.</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cada entidade de contorno deve ser uma linha, arco, círculo, elipse arco, elipse, polilinha ou spline. Encontrados:</translation>
+        <translation>Cada entidade de contorno deve ser uma linha, arco, círculo, elipse arco, elipse, polilinha ou uma spline. Encontrados:</translation>
     </message>
     <message>
         <location filename="../HatchInit.js" line="+2"/>
@@ -66,7 +66,7 @@ Tipo Ordinal</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Desenhe hachurados e preenchimentos sólidos
 Hachuras / preenchimentos sólidos</translatorcomment>
-        <translation>Preenchimento sólido</translation>
+        <translation>Preenchimento Sólido</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -74,7 +74,7 @@ Hachuras / preenchimentos sólidos</translatorcomment>
         <translatorcomment>--google--
 Padrões de Hachura:
 Padrões de Hachura</translatorcomment>
-        <translation>Padrão hachura</translation>
+        <translation>Textura da Hachura</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -84,7 +84,7 @@ Padrões de Hachura</translatorcomment>
 Prévia de impressão para %1
 Prévia de Impressão
 Exibe uma prévia da impressão</translatorcomment>
-        <translation>Pré-visualizar</translation>
+        <translation>Pré-visualize</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -93,7 +93,7 @@ Exibe uma prévia da impressão</translatorcomment>
 --file: pt.po--
 Padrão
 Padrões de Hachura:</translatorcomment>
-        <translation>Padrão</translation>
+        <translation>Textura</translation>
     </message>
     <message>
         <location line="+14"/>

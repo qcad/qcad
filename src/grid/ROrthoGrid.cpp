@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -623,7 +623,7 @@ void ROrthoGrid::paintCursor(const RVector& pos) {
     }
 }
 
-void ROrthoGrid::paintRuler(RRuler& ruler) {
+void ROrthoGrid::paintRuler(RRuler& ruler, qreal devicePixelRatio) {
     RDocument* doc = view.getDocument();
     if (doc == NULL) {
         return;
@@ -768,7 +768,7 @@ void ROrthoGrid::paintRuler(RRuler& ruler) {
         } else {
             v = view.mapToView(RVector(0, p)).y;
         }
-        ruler.paintTick(v, hasLabel, hasLabel ? RUnit::getLabel(p, *doc, false, true, true) : QString());
+        ruler.paintTick(v*devicePixelRatio, hasLabel, hasLabel ? RUnit::getLabel(p, *doc, false, true, true) : QString());
     }
 }
 

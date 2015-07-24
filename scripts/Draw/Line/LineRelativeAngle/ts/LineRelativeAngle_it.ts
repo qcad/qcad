@@ -39,7 +39,7 @@
         <translation>Scegli entità di base</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
         <source>Set position</source>
         <translation>Stabilire la posizione</translation>
     </message>

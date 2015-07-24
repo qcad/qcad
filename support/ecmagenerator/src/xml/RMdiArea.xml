@@ -24,7 +24,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RMdiChildQt *" typeName="RMdiChildQt *"
-        name="child" hasDefault="true" default=" NULL"
+        name="child" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>

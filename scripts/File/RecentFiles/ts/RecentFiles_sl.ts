@@ -23,5 +23,10 @@
         <source>Open &amp;Recent</source>
         <translation>Odpri &amp;nedavno</translation>
     </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Recent files history size:</source>
+        <translation>Obseg zgodovine nedavnih datotek:</translation>
+    </message>
 </context>
 </TS>

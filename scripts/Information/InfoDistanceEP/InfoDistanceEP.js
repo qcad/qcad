@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -88,6 +88,9 @@ InfoDistanceEP.prototype.pickEntity = function(event, preview) {
             if (preview) {
                 di.previewOperation(op);
             }
+            else {
+                op.destroy();
+            }
         }
     }
 
@@ -99,7 +102,7 @@ InfoDistanceEP.prototype.pickEntity = function(event, preview) {
     di.highlightEntity(this.entity.getId());
 
     if (!preview) {
-        this.shape = entity.getClosestShape(pos);
+        this.shape = entity.getClosestSimpleShape(pos);
         this.setState(InfoDistanceEP.State.SettingPoint);
     }
 };
@@ -134,6 +137,9 @@ InfoDistanceEP.prototype.pickCoordinate = function(event, preview) {
             di.applyOperation(op);
             di.setRelativeZero(this.point2);
         }
+        else {
+            op.destroy();
+        }
     }
 
     if (!preview) {
@@ -145,6 +151,7 @@ InfoDistanceEP.prototype.pickCoordinate = function(event, preview) {
 
 InfoDistanceEP.prototype.getOperation = function(preview) {
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
     this.addInfoLine(op, this.point1, this.point2, preview);
     return op;
 };

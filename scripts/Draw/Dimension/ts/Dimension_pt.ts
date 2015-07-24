@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Dimension</name>
     <message>
-        <location filename="../Dimension.js" line="+65"/>
+        <location filename="../Dimension.js" line="+63"/>
         <source>No prefix</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Sem prefixo</translation>
@@ -21,7 +21,7 @@
     <message>
         <location line="+1"/>
         <source>Metric screw</source>
-        <translation>Métrica</translation>
+        <translation>Parafuso métrico</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -36,17 +36,17 @@ Diâmetro (ø)</translatorcomment>
         <location line="+1"/>
         <source>Plus/Minus</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Plus / Minus</translation>
+        <translation>Mais/Menos</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal to</source>
-        <translation>Quase igual</translation>
+        <translation>Quase igual a</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation>Assintoticamente igual</translation>
+        <translation>Assintoticamente igual a</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -65,16 +65,16 @@ Delta Y</translatorcomment>
         <translation>Delta</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+58"/>
         <source>Dimension Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ferramentas cotas</translation>
+        <translation>Ferramentas de Dimensão</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show dimension tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mostrar as ferramentas cotas</translation>
+        <translation>Exiba as ferramentas de dimensões</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -105,7 +105,7 @@ Prefixo de base de dados inválido</translatorcomment>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
 Entre o rótulo fixo ou deixe-o vazio para rotulação automática</translatorcomment>
-        <translation>Entre o rótulo fixo ou deixe-o vazio para rotulação automática</translation>
+        <translation>Entre com o rótulo fixo ou deixe-o vazio para rotulação automática</translation>
     </message>
     <message>
         <location line="+51"/>
@@ -122,6 +122,16 @@ Tolerância superior</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Tolerância Inferior</translatorcomment>
         <translation>Tolerância inferior</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Scale</source>
+        <translation>Escala</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Drawing Scale</source>
+        <translation>Escala de Desenho</translation>
     </message>
 </context>
 </TS>

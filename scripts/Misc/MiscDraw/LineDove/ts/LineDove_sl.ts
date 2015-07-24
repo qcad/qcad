@@ -20,7 +20,7 @@
     <message>
         <location filename="../LineDoveInit.js" line="+2"/>
         <source>&amp;Dovetail Joint</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Rogljičast spoj</translation>
     </message>
     <message>
         <location line="+4"/>

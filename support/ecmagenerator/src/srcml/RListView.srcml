@@ -1,791 +1,121 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./gui" filename="RListView.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RLISTVIEW_H_</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RLISTVIEW_H_</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"gui_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QWidget&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QListView&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QEvent&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QHelpEvent&gt;</cpp:file></cpp:include>
-  <comment type="block">/** * \scriptable * \generateScriptShell *
-  \ingroup gui */</comment>
-  <class>class 
-  <macro>
-    <name>QCADGUI_EXPORT</name>
-  </macro>
-  <name>RListView</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>QListView</name></super>
-  <block>{
-  <private type="default">
-    <macro>
-      <name>Q_OBJECT</name>
-    </macro>
-  </private>
-  <public>public: 
-  <constructor>
-    <name>RListView</name>
-    <parameter_list>(
-    <param>
-      <decl>
-      <type>
-      <name>QWidget</name>*</type>
-      <name>parent</name>=
-      <init>
-        <expr>0</expr>
-      </init></decl>
-    </param>)</parameter_list>
-    <member_list>: 
-    <call>
-      <name>QListView</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>parent</name>
-        </expr>
-      </argument>)</argument_list>
-    </call></member_list>
-    <block>{ }</block>
-  </constructor>
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RListView</name>
-    <parameter_list>()</parameter_list>
-    <block>{ }</block>
-  </destructor>
-  <label>
-  <name>signals</name>:</label>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>signalContextMenuEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QContextMenuEvent</name>*</type>
-      <name>e</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>signalMouseMoveEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QMouseEvent</name>*</type>
-      <name>e</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>signalMousePressEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QMouseEvent</name>*</type>
-      <name>e</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>signalMouseReleaseEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QMouseEvent</name>*</type>
-      <name>e</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>signalDragEnterEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QDragEnterEvent</name>*</type>
-      <name>e</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>signalDragMoveEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QDragMoveEvent</name>*</type>
-      <name>e</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>signalDropEvent</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QDropEvent</name>*</type>
-      <name>e</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>signalStartDrag</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>Qt</name>::
-        <name>DropActions</name></name>
-      </type>
-      <name>supportedActions</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>signalSelectionChanged</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QItemSelection</name>&amp;</type>
-      <name>selected</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QItemSelection</name>&amp;</type>
-      <name>deselected</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>signalCurrentChanged</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QModelIndex</name>&amp;</type>
-      <name>current</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QModelIndex</name>&amp;</type>
-      <name>previous</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>signalToolTipRequested</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QHelpEvent</name>*</type>
-      <name>e</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <protected>protected: 
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>contextMenuEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>QContextMenuEvent</name>*</type>
-        <name>e</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>QListView::contextMenuEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>e</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-    <function_decl>
-    <type>
-      <name>emit</name>
-    </type>
-    <name>signalContextMenuEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>e</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</function_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>mousePressEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>QMouseEvent</name>*</type>
-        <name>e</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>QListView::mousePressEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>e</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-    <function_decl>
-    <type>
-      <name>emit</name>
-    </type>
-    <name>signalMousePressEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>e</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</function_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>mouseReleaseEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>QMouseEvent</name>*</type>
-        <name>e</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>QListView::mouseReleaseEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>e</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-    <function_decl>
-    <type>
-      <name>emit</name>
-    </type>
-    <name>signalMouseReleaseEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>e</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</function_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>mouseMoveEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>QMouseEvent</name>*</type>
-        <name>e</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>QListView::mouseMoveEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>e</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-    <function_decl>
-    <type>
-      <name>emit</name>
-    </type>
-    <name>signalMouseMoveEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>e</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</function_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>dragEnterEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>QDragEnterEvent</name>*</type>
-        <name>e</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>QListView::dragEnterEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>e</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-    <function_decl>
-    <type>
-      <name>emit</name>
-    </type>
-    <name>signalDragEnterEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>e</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</function_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>dragMoveEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>QDragMoveEvent</name>*</type>
-        <name>e</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>QListView::dragMoveEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>e</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-    <function_decl>
-    <type>
-      <name>emit</name>
-    </type>
-    <name>signalDragMoveEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>e</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</function_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>dropEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>QDropEvent</name>*</type>
-        <name>e</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>QListView::dropEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>e</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-    <function_decl>
-    <type>
-      <name>emit</name>
-    </type>
-    <name>signalDropEvent</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>e</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</function_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>startDrag</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>
-          <name>Qt</name>::
-          <name>DropActions</name></name>
-        </type>
-        <name>supportedActions</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>QListView::startDrag</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>supportedActions</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-    <function_decl>
-    <type>
-      <name>emit</name>
-    </type>
-    <name>signalStartDrag</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>supportedActions</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</function_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>selectionChanged</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QItemSelection</name>&amp;</type>
-        <name>selected</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QItemSelection</name>&amp;</type>
-        <name>deselected</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>QListView::selectionChanged</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>selected</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>deselected</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-    <function_decl>
-    <type>
-      <name>emit</name>
-    </type>
-    <name>signalSelectionChanged</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>selected</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>deselected</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</function_decl>}</block>
-  </function>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>currentChanged</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QModelIndex</name>&amp;</type>
-        <name>current</name>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-        <name>const</name>
-        <name>QModelIndex</name>&amp;</type>
-        <name>previous</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <constructor_decl>
-    <name>QListView::currentChanged</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>current</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>previous</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</constructor_decl>
-    <function_decl>
-    <type>
-      <name>emit</name>
-    </type>
-    <name>signalCurrentChanged</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>current</name>
-        </type>
-      </decl>
-    </param>, 
-    <param>
-      <decl>
-        <type>
-          <name>previous</name>
-        </type>
-      </decl>
-    </param>)</parameter_list>;</function_decl>}</block>
-  </function>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>bool</name>
-    </type>
-    <name>event</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>QEvent</name>*</type>
-        <name>event</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <decl_stmt>
-    <decl>
-    <type>
-    <name>QHelpEvent</name>*</type>
-    <name>helpEvent</name>=
-    <init>
-      <expr>
-        <call>
-          <name>dynamic_cast
-          <argument_list>&lt;
-          <argument>
-          <name>
-          QHelpEvent</name>*</argument>&gt;</argument_list></name>
-          <argument_list>(
-          <argument>
-            <expr>
-              <name>event</name>
-            </expr>
-          </argument>)</argument_list>
-        </call>
-      </expr>
-    </init></decl>;</decl_stmt>
-    <if>if 
-    <condition>(
-    <expr>
-    <name>event</name>-&gt;
-    <call>
-      <name>type</name>
-      <argument_list>()</argument_list>
-    </call>==
-    <name>
-    <name>QEvent</name>::
-    <name>ToolTip</name></name>&amp;&amp; 
-    <name>helpEvent</name>!=
-    <name>NULL</name></expr>)</condition>
-    <then>
-      <block>{ 
-      <function_decl>
-      <type>
-        <name>emit</name>
-      </type>
-      <name>signalToolTipRequested</name>
-      <parameter_list>(
-      <param>
-        <decl>
-          <type>
-            <name>helpEvent</name>
-          </type>
-        </decl>
-      </param>)</parameter_list>;</function_decl>
-      <expr_stmt>
-      <expr>
-      <name>event</name>-&gt;
-      <call>
-        <name>accept</name>
-        <argument_list>()</argument_list>
-      </call></expr>;</expr_stmt>
-      <return>return 
-      <expr>
-        <name>true</name>
-      </expr>;</return>}</block>
-    </then></if>
-    <return>return 
-    <expr>
-      <call>
-        <name>
-        <name>QListView</name>::
-        <name>event</name></name>
-        <argument_list>(
-        <argument>
-          <expr>
-            <name>event</name>
-          </expr>
-        </argument>)</argument_list>
-      </call>
-    </expr>;</return>}</block>
-  </function></protected>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RListView*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./gui" filename="RListView.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RLISTVIEW_H_</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RLISTVIEW_H_</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QWidget&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QListView&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QEvent&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QHelpEvent&gt;</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * \scriptable
+ * \generateScriptShell
+ * \ingroup gui
+ */</comment>
+<class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RListView</name><super>: <specifier>public</specifier> <name>QListView</name></super> <block>{<private type="default">
+
+<macro><name>Q_OBJECT</name></macro>
+
+</private><public>public:
+    <constructor><name>RListView</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>parent</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list> <member_list>:
+        <call><name>QListView</name><argument_list>(<argument><expr><name>parent</name></expr></argument>)</argument_list></call> </member_list><block>{
+    }</block></constructor>
+    <destructor><specifier>virtual</specifier> <name>~RListView</name><parameter_list>()</parameter_list> <block>{
+    }</block></destructor>
+
+<label><name>signals</name>:</label>
+    <function_decl><type><name>void</name></type> <name>signalContextMenuEvent</name><parameter_list>(<param><decl><type><name>QContextMenuEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>signalMouseMoveEvent</name><parameter_list>(<param><decl><type><name>QMouseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>signalMousePressEvent</name><parameter_list>(<param><decl><type><name>QMouseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>signalMouseReleaseEvent</name><parameter_list>(<param><decl><type><name>QMouseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>signalDragEnterEvent</name><parameter_list>(<param><decl><type><name>QDragEnterEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>signalDragMoveEvent</name><parameter_list>(<param><decl><type><name>QDragMoveEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>signalDropEvent</name><parameter_list>(<param><decl><type><name>QDropEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>signalStartDrag</name><parameter_list>(<param><decl><type><name><name>Qt</name>::<name>DropActions</name></name></type> <name>supportedActions</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>signalSelectionChanged</name><parameter_list>(<param><decl><type><name>const</name> <name>QItemSelection</name>&amp;</type> <name>selected</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QItemSelection</name>&amp;</type> <name>deselected</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>signalCurrentChanged</name><parameter_list>(<param><decl><type><name>const</name> <name>QModelIndex</name>&amp;</type> <name>current</name></decl></param>,
+        <param><decl><type><name>const</name> <name>QModelIndex</name>&amp;</type> <name>previous</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>signalToolTipRequested</name><parameter_list>(<param><decl><type><name>QHelpEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><protected>protected:
+    <function><type><name>virtual</name> <name>void</name></type> <name>contextMenuEvent</name><parameter_list>(<param><decl><type><name>QContextMenuEvent</name>*</type> <name>e</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>QListView::contextMenuEvent</name><parameter_list>(<param><decl><type><name>e</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <function_decl><type><name>emit</name></type> <name>signalContextMenuEvent</name><parameter_list>(<param><decl><type><name>e</name></type></decl></param>)</parameter_list>;</function_decl>
+    }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>mousePressEvent</name><parameter_list>(<param><decl><type><name>QMouseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>QListView::mousePressEvent</name><parameter_list>(<param><decl><type><name>e</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <function_decl><type><name>emit</name></type> <name>signalMousePressEvent</name><parameter_list>(<param><decl><type><name>e</name></type></decl></param>)</parameter_list>;</function_decl>
+    }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>mouseReleaseEvent</name><parameter_list>(<param><decl><type><name>QMouseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>QListView::mouseReleaseEvent</name><parameter_list>(<param><decl><type><name>e</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <function_decl><type><name>emit</name></type> <name>signalMouseReleaseEvent</name><parameter_list>(<param><decl><type><name>e</name></type></decl></param>)</parameter_list>;</function_decl>
+    }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>mouseMoveEvent</name><parameter_list>(<param><decl><type><name>QMouseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>QListView::mouseMoveEvent</name><parameter_list>(<param><decl><type><name>e</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <function_decl><type><name>emit</name></type> <name>signalMouseMoveEvent</name><parameter_list>(<param><decl><type><name>e</name></type></decl></param>)</parameter_list>;</function_decl>
+    }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>dragEnterEvent</name><parameter_list>(<param><decl><type><name>QDragEnterEvent</name>*</type> <name>e</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>QListView::dragEnterEvent</name><parameter_list>(<param><decl><type><name>e</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <function_decl><type><name>emit</name></type> <name>signalDragEnterEvent</name><parameter_list>(<param><decl><type><name>e</name></type></decl></param>)</parameter_list>;</function_decl>
+    }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>dragMoveEvent</name><parameter_list>(<param><decl><type><name>QDragMoveEvent</name>*</type> <name>e</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>QListView::dragMoveEvent</name><parameter_list>(<param><decl><type><name>e</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <function_decl><type><name>emit</name></type> <name>signalDragMoveEvent</name><parameter_list>(<param><decl><type><name>e</name></type></decl></param>)</parameter_list>;</function_decl>
+    }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>dropEvent</name><parameter_list>(<param><decl><type><name>QDropEvent</name>*</type> <name>e</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>QListView::dropEvent</name><parameter_list>(<param><decl><type><name>e</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <function_decl><type><name>emit</name></type> <name>signalDropEvent</name><parameter_list>(<param><decl><type><name>e</name></type></decl></param>)</parameter_list>;</function_decl>
+    }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>startDrag</name><parameter_list>(<param><decl><type><name><name>Qt</name>::<name>DropActions</name></name></type> <name>supportedActions</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>QListView::startDrag</name><parameter_list>(<param><decl><type><name>supportedActions</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <function_decl><type><name>emit</name></type> <name>signalStartDrag</name><parameter_list>(<param><decl><type><name>supportedActions</name></type></decl></param>)</parameter_list>;</function_decl>
+    }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>selectionChanged</name><parameter_list>(<param><decl><type><name>const</name> <name>QItemSelection</name>&amp;</type> <name>selected</name></decl></param>, <param><decl><type><name>const</name> <name>QItemSelection</name>&amp;</type> <name>deselected</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>QListView::selectionChanged</name><parameter_list>(<param><decl><type><name>selected</name></type></decl></param>, <param><decl><type><name>deselected</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <function_decl><type><name>emit</name></type> <name>signalSelectionChanged</name><parameter_list>(<param><decl><type><name>selected</name></type></decl></param>, <param><decl><type><name>deselected</name></type></decl></param>)</parameter_list>;</function_decl>
+    }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>currentChanged</name><parameter_list>(<param><decl><type><name>const</name> <name>QModelIndex</name>&amp;</type> <name>current</name></decl></param>, <param><decl><type><name>const</name> <name>QModelIndex</name>&amp;</type> <name>previous</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>QListView::currentChanged</name><parameter_list>(<param><decl><type><name>current</name></type></decl></param>, <param><decl><type><name>previous</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <function_decl><type><name>emit</name></type> <name>signalCurrentChanged</name><parameter_list>(<param><decl><type><name>current</name></type></decl></param>, <param><decl><type><name>previous</name></type></decl></param>)</parameter_list>;</function_decl>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>event</name><parameter_list>(<param><decl><type><name>QEvent</name>*</type> <name>event</name></decl></param>)</parameter_list> <block>{
+        <decl_stmt><decl><type><name>QHelpEvent</name>*</type> <name>helpEvent</name> =<init> <expr><call><name>dynamic_cast<argument_list>&lt;<argument><name>QHelpEvent</name>*</argument>&gt;</argument_list></name><argument_list>(<argument><expr><name>event</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+        <if>if <condition>(<expr><name>event</name>-&gt;<call><name>type</name><argument_list>()</argument_list></call>==<name><name>QEvent</name>::<name>ToolTip</name></name> &amp;&amp; <name>helpEvent</name>!=<name>NULL</name></expr>)</condition><then> <block>{
+            <function_decl><type><name>emit</name></type> <name>signalToolTipRequested</name><parameter_list>(<param><decl><type><name>helpEvent</name></type></decl></param>)</parameter_list>;</function_decl>
+            <expr_stmt><expr><name>event</name>-&gt;<call><name>accept</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+            <return>return <expr><name>true</name></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><call><name><name>QListView</name>::<name>event</name></name><argument_list>(<argument><expr><name>event</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+</protected>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RListView*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

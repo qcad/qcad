@@ -1,625 +1,715 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>DefaultAction</name>
     <message>
         <location filename="../DefaultAction.js" line="+89"/>
         <source>Select entity or region</source>
-        <translation type="unfinished"></translation>
+        <translation>Valitse kohde tai alue</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Siirrä kohde tai viite</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Set second corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Aseta toinen kulma</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Specify target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Määrittele kohdepiste tai viitepiste</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Specify target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Määrittele valinnan kohdepiste</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Move entity to desired location</source>
-        <translation type="unfinished"></translation>
+        <translation>Siirrä kohde haluttuun paikkaan</translation>
+    </message>
+    <message>
+        <location line="+332"/>
+        <source>Move Reference Point</source>
+        <translation>Siirrä viite</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Selection</source>
+        <translation>Siirrä valinta</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Entity</source>
+        <translation>Siirrä kohde</translation>
     </message>
 </context>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+57"/>
+        <location filename="../EAction.js" line="+58"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Takaisin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="+267"/>
+        <location line="+285"/>
         <location line="+133"/>
         <source>Active Tool:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktiivinen työkalu:</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Ei mitään</translation>
     </message>
     <message>
-        <location line="+420"/>
+        <location line="+445"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Asetukset</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Block Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Lohkoasetukset</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Main Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Päätyökalut</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>CAD Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>CAD työkalut</translation>
     </message>
     <message>
-        <location line="+692"/>
+        <location line="+659"/>
         <source>Entity is on a locked layer.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde on lukitussa tasossa.</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+86"/>
         <source>Entity is not a block reference.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole lohkoviite.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
+        <translation>Kohde ei ole viiva tai kaari.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc or polyline.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole viiva.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole kaari tai ympyrä.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole viiva, kaari tai ympyrä.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole kaari, ympyrä tai ellipsi.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole viiva, kaari, ympyrä tai ellipsi.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
+        <translation>Kohde ei ole viiva, kaari, ympyrä, ellipsi tai moniviiva.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole viiva, kaari, ympyrä, ellipsi tai käyrä.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
+        <translation>Kohde ei ole viiva, kaari, ympyrä, ellipsi, käyrä tai moniviiva.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kohde ei ole moniviiva.</translation>
     </message>
 </context>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+307"/>
+        <location filename="../ShapeAlgorithms.js" line="+335"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>Säde on pudonnut alle 0.0 arvon %1 samankeskisen ympyrän (ympyröiden) jälkeen.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>Säde on pudonnut alle 0.0 arvon %1 samankeskisen kaaren (kaarien) jälkeen.</translation>
     </message>
     <message>
-        <location line="+463"/>
+        <location line="+560"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vähintään kaksi pistettä ovat samat.</translation>
     </message>
     <message>
         <location line="-22"/>
         <source>No circle possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ympyrä ei mahdollinen.</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>No arc possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kaari ei mahdollinen.</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Invalid number of segments: %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>Virheellinen määrä segmenttejä %1.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Puutteellinen ellipsi, suurempi / pienempi: %1 / %2.</translation>
     </message>
 </context>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+949"/>
+        <location filename="../WidgetFactory.js" line="+966"/>
         <source>Restore defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Palauta oletusarvot</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Insert Symbol</source>
-        <translation type="unfinished"></translation>
+        <translation>Lisää erikoismerkki</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Halkaisija</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation type="unfinished"></translation>
+        <translation>Aste</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus/Minus</source>
-        <translation type="unfinished"></translation>
+        <translation>Plus/miinus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Lähes yhtäsuuri kuin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Asymptoottisesti yhtäsuuri kuin</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pi</source>
-        <translation type="unfinished"></translation>
+        <translation>Pii</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Multiplication</source>
-        <translation type="unfinished"></translation>
+        <translation>Kertolasku</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation type="unfinished"></translation>
+        <translation>Jakolasku</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation type="unfinished"></translation>
+        <translation>Neliö</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished"></translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
-        <translation type="unfinished"></translation>
+        <translation>Pinottu teksti</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Measured value</source>
-        <translation type="unfinished"></translation>
+        <translation>Mitattu arvo</translation>
     </message>
     <message>
-        <location line="+93"/>
+        <location line="+110"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Vasen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Keski</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Oikea</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation type="unfinished"></translation>
+        <translation>Tasattu</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Keskellä</translation>
     </message>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>Sovita</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Ylä</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Base</source>
-        <translation type="unfinished"></translation>
+        <translation>Perus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Ala</translation>
     </message>
 </context>
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+303"/>
+        <location filename="../autostart.js" line="+328"/>
         <source>Loading add-on translations...</source>
-        <translation type="unfinished"></translation>
+        <translation>Lataamassa lisäosia käännökseen...</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Loading add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Lataamassa lisäosia...</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Initializing add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Määrittelemässä lisäosia...</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Initializing add-ons:</source>
-        <translation type="unfinished"></translation>
+        <translation>Alustetaan lisäosat:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Post-initializing add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Jälki-alustetaan lisäosat...</translation>
     </message>
 </context>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+679"/>
-        <source>Entity</source>
+        <location filename="../library.js" line="+712"/>
+        <source>Objects</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Entities</source>
+        <source>Object</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>3dFaces</source>
+        <source>Unknown Objects</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>3dFace</source>
+        <source>Unknown Object</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Block References</source>
+        <source>Blocks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Block Reference</source>
+        <source>Block</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Block References and Attributes</source>
+        <source>Layers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Block Reference and Attributes</source>
+        <source>Layer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Arcs</source>
+        <source>Linetypes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Arc</source>
+        <source>Linetype</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Attributes</source>
+        <source>Views</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+0"/>
-        <source>Attribute</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Attribute Definitions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Attribute Definition</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Circles</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Circle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Dimensions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Dimension</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Aligned Dimensions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Aligned Dimension</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Angular Dimensions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Angular Dimension</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Diametric Dimensions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Diametric Dimension</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Ordinate Dimensions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Ordinate Dimension</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Rotated Dimensions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Rotated Dimension</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Radial Dimensions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Radial Dimension</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Ellipses</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Ellipse</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Hatches</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Hatch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Images</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Image</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Leaders</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Leader</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Lines</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Line</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Infinite Lines</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Infinite Line</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Rays</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Ray</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Points</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Point</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Polylines</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Polyline</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Solids</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Solid</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Traces</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Trace</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Splines</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Spline</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Text based</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Texts</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+2"/>
-        <source>Viewports</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+0"/>
-        <source>Viewport</source>
+        <source>View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
+        <source>Entity</source>
+        <translation>Kohde</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Entities</source>
+        <translation>Kohteet</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>3dFaces</source>
+        <translation>3d pinnat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>3dFace</source>
+        <translation>3d pinta</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Block References</source>
+        <translation>Lohkoviitteet</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Block Reference</source>
+        <translation>Lohkoviite</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Block References and Attributes</source>
+        <translation>Lohkoviitteet ja ominaisuudet</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Block Reference and Attributes</source>
+        <translation>Lohkoviitteet ja ominaisuudet</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Arcs</source>
+        <translation>Kaaret</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Arc</source>
+        <translation>Kaari</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Attributes</source>
+        <translation>Ominaisuudet</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Attribute</source>
+        <translation>Ominaisuus</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Attribute Definitions</source>
+        <translation>Ominaisuuksien määrittely</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Attribute Definition</source>
+        <translation>Ominaisuuksien määrittely</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Circles</source>
+        <translation>Ympyrät</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Circle</source>
+        <translation>Ympyrä</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Dimensions</source>
+        <translation>Mitat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Dimension</source>
+        <translation>Mitta</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Aligned Dimensions</source>
+        <translation>Tasatut mitat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Aligned Dimension</source>
+        <translation>Tasattu mitta</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Angular Dimensions</source>
+        <translation>Kulmamitat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Angular Dimension</source>
+        <translation>Kulmamitta</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Diametric Dimensions</source>
+        <translation>Halkaisijan mitat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Diametric Dimension</source>
+        <translation>Halkaisijan mitta</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Ordinate Dimensions</source>
+        <translation>Y-ordinaatan mitat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ordinate Dimension</source>
+        <translation>Ordinaatan mitta</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Rotated Dimensions</source>
+        <translation>Kierretyt mitat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Rotated Dimension</source>
+        <translation>Kierretty mitta</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Radial Dimensions</source>
+        <translation>Säteittäiset mitat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Radial Dimension</source>
+        <translation>Säteittäinen mitta</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Ellipses</source>
+        <translation>Ellipsit</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ellipse</source>
+        <translation>Ellipsi</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Hatches</source>
+        <translation>Luukut</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Hatch</source>
+        <translation>Luukku</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Images</source>
+        <translation>Kuvat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Image</source>
+        <translation>Kuva</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Leaders</source>
+        <translation>Perusviivat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Leader</source>
+        <translation>Perusviiva</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Lines</source>
+        <translation>Viivat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Line</source>
+        <translation>Viiva</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Infinite Lines</source>
+        <translation>Äärettömät viivat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Infinite Line</source>
+        <translation>Ääretön viiva</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Rays</source>
+        <translation>Säteet</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Ray</source>
+        <translation>Säde</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Points</source>
+        <translation>Pisteet</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Point</source>
+        <translation>Piste</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Polylines</source>
+        <translation>Murtoviivat</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Polyline</source>
+        <translation>Moniviiva</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Solids</source>
+        <translation>Kiinteät</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Solid</source>
+        <translation>Kiinteä</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Traces</source>
+        <translation>Jäljet</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Trace</source>
+        <translation>Jälki</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Splines</source>
+        <translation>Käyrät</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Spline</source>
+        <translation>Käyrä</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Text based</source>
+        <translation>Tekstiin perustuva</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Texts</source>
+        <translation>Tekstit</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Text</source>
+        <translation>Teksti</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Viewports</source>
+        <translation>Näkymät</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Viewport</source>
+        <translation>Näkymä</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Unknown Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Tuntematon kohteet</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Tuntematon kohde</translation>
     </message>
 </context>
 </TS>

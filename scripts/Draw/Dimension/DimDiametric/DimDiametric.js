@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -97,7 +97,7 @@ DimDiametric.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case DimDiametric.State.SettingEntity:
-        var shape = entity.getClosestShape(pos);
+        var shape = entity.getClosestSimpleShape(pos);
 
         if (isArcShape(shape) ||
             isCircleShape(shape)) {
@@ -158,7 +158,12 @@ DimDiametric.prototype.getOperation = function(preview) {
     this.data.setFarChordPoint(RVector.createPolar(radius, angle).operator_add(center));
 
     var doc = this.getDocument();
-    var entity = new RDimDiametricEntity(doc, this.data);
+    var scale = this.parseScale(this.getScaleString());
+    var scaled_data = this.data;
+
+    scaled_data.setLinearFactor(1/scale);
+
+    var entity = new RDimDiametricEntity(doc, scaled_data);
     if (!isEntity(entity)) {
         return undefined;
     }

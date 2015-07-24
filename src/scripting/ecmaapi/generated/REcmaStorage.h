@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaStorage {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaStorage {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -91,6 +94,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryBlockEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryLayerBlockEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         queryChildEntities
@@ -310,6 +316,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getKnownVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        countSelectedEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         clearEntitySelection

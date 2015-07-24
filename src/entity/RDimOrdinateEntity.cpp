@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -21,6 +21,7 @@
 
 RPropertyTypeId RDimOrdinateEntity::PropertyCustom;
 RPropertyTypeId RDimOrdinateEntity::PropertyHandle;
+RPropertyTypeId RDimOrdinateEntity::PropertyProtected;
 RPropertyTypeId RDimOrdinateEntity::PropertyType;
 RPropertyTypeId RDimOrdinateEntity::PropertyBlock;
 RPropertyTypeId RDimOrdinateEntity::PropertyLayer;
@@ -28,6 +29,7 @@ RPropertyTypeId RDimOrdinateEntity::PropertyLinetype;
 RPropertyTypeId RDimOrdinateEntity::PropertyLinetypeScale;
 RPropertyTypeId RDimOrdinateEntity::PropertyLineweight;
 RPropertyTypeId RDimOrdinateEntity::PropertyColor;
+RPropertyTypeId RDimOrdinateEntity::PropertyDisplayedColor;
 RPropertyTypeId RDimOrdinateEntity::PropertyDrawOrder;
 
 RPropertyTypeId RDimOrdinateEntity::PropertyMiddleOfTextX;
@@ -64,6 +66,7 @@ RDimOrdinateEntity::~RDimOrdinateEntity() {
 void RDimOrdinateEntity::init() {
     RDimOrdinateEntity::PropertyCustom.generateId(typeid(RDimOrdinateEntity), RObject::PropertyCustom);
     RDimOrdinateEntity::PropertyHandle.generateId(typeid(RDimOrdinateEntity), RObject::PropertyHandle);
+    RDimOrdinateEntity::PropertyProtected.generateId(typeid(RDimOrdinateEntity), RObject::PropertyProtected);
     RDimOrdinateEntity::PropertyType.generateId(typeid(RDimOrdinateEntity), REntity::PropertyType);
     RDimOrdinateEntity::PropertyBlock.generateId(typeid(RDimOrdinateEntity), REntity::PropertyBlock);
     RDimOrdinateEntity::PropertyLayer.generateId(typeid(RDimOrdinateEntity), REntity::PropertyLayer);
@@ -71,6 +74,7 @@ void RDimOrdinateEntity::init() {
     RDimOrdinateEntity::PropertyLinetypeScale.generateId(typeid(RDimOrdinateEntity), REntity::PropertyLinetypeScale);
     RDimOrdinateEntity::PropertyLineweight.generateId(typeid(RDimOrdinateEntity), REntity::PropertyLineweight);
     RDimOrdinateEntity::PropertyColor.generateId(typeid(RDimOrdinateEntity), REntity::PropertyColor);
+    RDimOrdinateEntity::PropertyDisplayedColor.generateId(typeid(RDimOrdinateEntity), REntity::PropertyDisplayedColor);
     RDimOrdinateEntity::PropertyDrawOrder.generateId(typeid(RDimOrdinateEntity), REntity::PropertyDrawOrder);
 
     RDimOrdinateEntity::PropertyMiddleOfTextX.generateId(typeid(RDimOrdinateEntity), RDimensionEntity::PropertyMiddleOfTextX);

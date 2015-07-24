@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -40,6 +40,7 @@ class QCADCORE_EXPORT RBlockReferenceEntity: public REntity {
 public:
     static RPropertyTypeId PropertyCustom;
     static RPropertyTypeId PropertyHandle;
+    static RPropertyTypeId PropertyProtected;
     static RPropertyTypeId PropertyType;
     static RPropertyTypeId PropertyBlock;
     static RPropertyTypeId PropertyLayer;
@@ -47,6 +48,7 @@ public:
     static RPropertyTypeId PropertyLinetypeScale;
     static RPropertyTypeId PropertyLineweight;
     static RPropertyTypeId PropertyColor;
+    static RPropertyTypeId PropertyDisplayedColor;
     static RPropertyTypeId PropertyDrawOrder;
 
     static RPropertyTypeId PropertyReferencedBlock;
@@ -57,10 +59,15 @@ public:
     static RPropertyTypeId PropertyScaleY;
     static RPropertyTypeId PropertyScaleZ;
     static RPropertyTypeId PropertyRotation;
+    static RPropertyTypeId PropertyColumnCount;
+    static RPropertyTypeId PropertyRowCount;
+    static RPropertyTypeId PropertyColumnSpacing;
+    static RPropertyTypeId PropertyRowSpacing;
 
 public:
     RBlockReferenceEntity(RDocument* document, const RBlockReferenceData& data,
             RObject::Id objectId = RObject::INVALID_ID);
+    RBlockReferenceEntity(const RBlockReferenceEntity& other);
     virtual ~RBlockReferenceEntity();
 
     static void init();
@@ -115,6 +122,38 @@ public:
 
     double getRotation() const {
         return data.getRotation();
+    }
+
+    void setRotation(double r) {
+        data.setRotation(r);
+    }
+
+    int getColumnCount() const {
+        return data.getColumnCount();
+    }
+    void setColumnCount(int c) {
+        data.setColumnCount(c);
+    }
+
+    int getRowCount() const {
+        return data.getRowCount();
+    }
+    void setRowCount(int c) {
+        data.setRowCount(c);
+    }
+
+    double getColumnSpacing() const {
+        return data.getColumnSpacing();
+    }
+    void setColumnSpacing(double s) {
+        data.setColumnSpacing(s);
+    }
+
+    double getRowSpacing() const {
+        return data.getRowSpacing();
+    }
+    void setRowSpacing(double s) {
+        data.setRowSpacing(s);
     }
 
     void setReferencedBlockId(RBlock::Id blockId) {

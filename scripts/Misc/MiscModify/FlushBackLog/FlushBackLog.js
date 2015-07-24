@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -49,7 +49,7 @@ FlushBackLog.prototype.beginEvent = function() {
 };
 
 FlushBackLog.init = function(basePath) {
-    var action = new RGuiAction(qsTr("Flush back log"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("Flush &Undo History"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresSelection(false);
     action.setScriptFile(basePath + "/FlushBackLog.js");

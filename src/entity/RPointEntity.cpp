@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -22,6 +22,7 @@
 
 RPropertyTypeId RPointEntity::PropertyCustom;
 RPropertyTypeId RPointEntity::PropertyHandle;
+RPropertyTypeId RPointEntity::PropertyProtected;
 RPropertyTypeId RPointEntity::PropertyType;
 RPropertyTypeId RPointEntity::PropertyBlock;
 RPropertyTypeId RPointEntity::PropertyLayer;
@@ -29,6 +30,7 @@ RPropertyTypeId RPointEntity::PropertyLinetype;
 RPropertyTypeId RPointEntity::PropertyLinetypeScale;
 RPropertyTypeId RPointEntity::PropertyLineweight;
 RPropertyTypeId RPointEntity::PropertyColor;
+RPropertyTypeId RPointEntity::PropertyDisplayedColor;
 RPropertyTypeId RPointEntity::PropertyDrawOrder;
 
 RPropertyTypeId RPointEntity::PropertyPositionX;
@@ -39,14 +41,23 @@ RPropertyTypeId RPointEntity::PropertyPositionZ;
 RPointEntity::RPointEntity(RDocument* document, const RPointData& data,
         RObject::Id objectId) :
     REntity(document, objectId), data(document, data) {
+
+    RDebug::incCounter("RPointEntity");
+}
+
+RPointEntity::RPointEntity(const RPointEntity& other) : REntity(other) {
+    RDebug::incCounter("RPointEntity");
+    data = other.data;
 }
 
 RPointEntity::~RPointEntity() {
+    RDebug::decCounter("RPointEntity");
 }
 
 void RPointEntity::init() {
     RPointEntity::PropertyCustom.generateId(typeid(RPointEntity), RObject::PropertyCustom);
     RPointEntity::PropertyHandle.generateId(typeid(RPointEntity), RObject::PropertyHandle);
+    RPointEntity::PropertyProtected.generateId(typeid(RPointEntity), RObject::PropertyProtected);
     RPointEntity::PropertyType.generateId(typeid(RPointEntity), REntity::PropertyType);
     RPointEntity::PropertyBlock.generateId(typeid(RPointEntity), REntity::PropertyBlock);
     RPointEntity::PropertyLayer.generateId(typeid(RPointEntity), REntity::PropertyLayer);
@@ -54,6 +65,7 @@ void RPointEntity::init() {
     RPointEntity::PropertyLinetypeScale.generateId(typeid(RPointEntity), REntity::PropertyLinetypeScale);
     RPointEntity::PropertyLineweight.generateId(typeid(RPointEntity), REntity::PropertyLineweight);
     RPointEntity::PropertyColor.generateId(typeid(RPointEntity), REntity::PropertyColor);
+    RPointEntity::PropertyDisplayedColor.generateId(typeid(RPointEntity), REntity::PropertyDisplayedColor);
     RPointEntity::PropertyDrawOrder.generateId(typeid(RPointEntity), REntity::PropertyDrawOrder);
     RPointEntity::PropertyPositionX.generateId(typeid(RPointEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "X"));
     RPointEntity::PropertyPositionY.generateId(typeid(RPointEntity), QT_TRANSLATE_NOOP("REntity", "Position"), QT_TRANSLATE_NOOP("REntity", "Y"));

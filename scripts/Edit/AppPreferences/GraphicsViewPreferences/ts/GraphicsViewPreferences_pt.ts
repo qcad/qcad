@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>GraphicsView</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+51"/>
         <source>Rulers and Scrollbars</source>
-        <translation>Réguas e barras de rolagem</translation>
+        <translation>Réguas e Barras de Rolagem</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -16,7 +16,7 @@
     <message>
         <location line="+10"/>
         <source>Show scrollbars</source>
-        <translation>Mostrar barras de rolagem</translation>
+        <translation>Exiba barras de rolagem</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -26,12 +26,12 @@
     <message>
         <location line="+6"/>
         <source>Show crosshairs</source>
-        <translation>Mostrar mira</translation>
+        <translation>Exiba miras</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Show large crosshairs</source>
-        <translation>Exiba mira grande</translation>
+        <translation>Exiba miras grandes</translation>
     </message>
     <message>
         <source>Grid</source>
@@ -61,12 +61,12 @@
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation>Exiba mira grande</translation>
+        <translation>Exiba o eixo de origem grande</translation>
     </message>
     <message>
         <location line="+71"/>
         <source>Auto Zoom</source>
-        <translation>Close automático</translation>
+        <translation>Zoom Automático</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -76,80 +76,108 @@
     <message>
         <location line="+57"/>
         <source>Color Adjustment</source>
-        <translation>Ajuste de cor</translation>
+        <translation>Ajuste de Cor</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Prevent white on white / black on black display</source>
-        <translation>Auto corrigir as cores preto e branco</translation>
+        <translation>Auto corrigir cores preto-no-preto e branco-no-branco</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Color lightness threshold:</source>
-        <translation>Limiar para a luminosidade da cor:</translation>
+        <translation>Limites para a luminosidade da cor:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Linetypes</source>
-        <translation>Tipos de linha</translation>
+        <translation>Tipos de Linha</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Auto switch to screen based linetypes in model view</source>
-        <translation>Usar automaticamente tipos de linha baseado em tela, tendo em vista modelo</translation>
+        <translation>Comute automaticamente para tipos de linha baseados na tela, na visão de modelagem</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Scale linetype patterns by line weight</source>
-        <translation>Dimensionar os padrões de linha com base na espessura de linha</translation>
+        <translation>Escalone os padrões de tipos de linha, tendo como base a espessura da linha</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Pattern scale for lineweight 0.00mm:</source>
-        <translation>Escala padrão para a espessura de linha 0,00mm:</translation>
+        <translation>Escala padrão para a espessura de linha de 0,00mm:</translation>
     </message>
     <message>
-        <location line="-36"/>
+        <location line="+36"/>
+        <source>Display and Performance</source>
+        <translation>Visualização e Desempenho</translation>
+    </message>
+    <message>
+        <location line="+146"/>
+        <source>Display entities with more than N dashes as continuous:</source>
+        <translation>Mostre entidades com mais de N traços como contínuas:</translation>
+    </message>
+    <message>
+        <location line="+42"/>
+        <source>Minimum angle step for rendering arcs (degrees):</source>
+        <translation>Passo mínimo de ângulo para renderização de arcos (graus):</translation>
+    </message>
+    <message>
+        <location line="+82"/>
+        <source>Anti-aliasing on by default</source>
+        <translation>Suavização ativada como padrão</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Timeout for hatch rendering:</source>
+        <translation>Tempo de espera para renderização de hachura:</translation>
+    </message>
+    <message>
+        <source>Antialiasing on by default</source>
+        <translation type="vanished">Suavização ativada como padrão</translation>
+    </message>
+    <message>
+        <location line="-349"/>
         <source>Automatically use screen based linetypes in model view</source>
-        <translation>Usar automaticamente tipos de linha baseado em tela, tendo em vista modelo</translation>
+        <translation>Use automaticamente tipos de linha baseados em tela, na visão de modelagem</translation>
     </message>
     <message>
         <source>Auto switch linetypes</source>
-        <translation type="vanished">Ajustar automaticamente os tipos de linha</translation>
+        <translation type="obsolete">Ajustar automaticamente os tipos de linha</translation>
     </message>
     <message>
-        <location line="+72"/>
         <source>Performance</source>
-        <translation>Desempenho</translation>
+        <translation type="vanished">Desempenho</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+78"/>
         <source>Number of preview entities:</source>
-        <translation>Número de entidades de prévia:</translation>
+        <translation>Número de entidades para a prévia:</translation>
     </message>
     <message>
         <location line="+58"/>
         <source>Text height display threshold (px):</source>
-        <translation>Mostrar limite para o texto (px):</translation>
+        <translation>Limite da altura do texto de visualização (px):</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Display arcs as lines below this angle (degrees):</source>
-        <translation>Arcos Resultados por linhas abaixo deste ângulo (graus):</translation>
+        <translation>Exiba arcos como linhas, abaixo deste ângulo (graus):</translation>
     </message>
     <message>
         <source>Text height display threshold:</source>
         <translation type="obsolete">Mostrar limite para o texto:</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+265"/>
         <source>Selection</source>
-        <translation>Selecção</translation>
+        <translation>Seleção</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Persistent Selection</source>
-        <translation>Seleção persistente</translation>
+        <translation>Seleção Persistente</translation>
     </message>
 </context>
 <context>
@@ -165,7 +193,7 @@ Ver gráficos</translatorcomment>
     <message>
         <location line="+0"/>
         <source>Appearance</source>
-        <translation>Apresentação</translation>
+        <translation>Aparência</translation>
     </message>
     <message>
         <source>Rulers and Scrollbars</source>

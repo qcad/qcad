@@ -1,1148 +1,385 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RTransaction.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RTRANSACTION_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RTRANSACTION_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QSet&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RObject.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"REntity.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPropertyChange.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RStorage</name>;</class_decl>
-  <class_decl>class 
-  <name>RExporter</name>;</class_decl>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RDEFAULT_QSET_RPROPERTYTYPEID</name>
-  <name>QSet</name>&lt;RPropertyTypeId&gt; ()</cpp:define>
-  <comment type="block">/** * Transaction implementation. * * A
-  transaction encapsulates a change of state of a document. * Every
-  change of a drawing document is wrapped in a transaction * and
-  handled by the QCAD Application Framework as * one change. A
-  transaction might add one or multiple objects, * modify existing
-  objects or delete objects. Combinations in the * same transaction
-  are also possible. * * Each transactions should contain a locical
-  change to a drawing. * For example if a selection is moved from
-  one place to another, * all entities that are part of the
-  selection are moved in the * same transaction. This is important
-  for the undo / redo mechanism * of QCAD. If each entity would be
-  moved in a separate transaction, * the user would have to issue
-  an undo command for each entity to * get back to the state before
-  the entities were moved. * * Transactions can be applied to a
-  document and are * handled by an \ref RTransactionStack for undo
-  / redo functionality. * Transactions are stored in a storage. * *
-  Transactions in the QCAD Application Framework are a low level *
-  concept. They are unaware of graphics views or widgets that need
-  * to be updated. * * \ingroup core * \scriptable * \copyable
-  */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RTransaction</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <constructor_decl>
-  <name>RTransaction</name>
-  <parameter_list>()</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RTransaction</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RStorage</name>&amp;</type>
-      <name>storage</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RTransaction</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RStorage</name>&amp;</type>
-      <name>storage</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>transactionId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>text</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>affectedObjectIds</name>
-    </decl>
-  </param>, 
-  <comment type="line">//const QSet&lt;RObject::Id&gt;&amp;
-  affectedEntities,</comment>
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </argument>, 
-      <argument>
-        <name>QList
-        <argument_list>&lt;
-        <argument>
-          <name>RPropertyChange</name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>propertyChanges</name>
-    </decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <comment type="line">//RTransaction* parent = NULL);</comment>
-  <constructor_decl>
-  <name>RTransaction</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>RStorage</name>&amp;</type>
-      <name>storage</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>text</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>undoable</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <comment type="line">//RTransaction* parent = NULL);</comment>
-  <destructor_decl>
-  <specifier>virtual</specifier>
-  <name>~RTransaction</name>
-  <parameter_list>()</parameter_list>;</destructor_decl>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setRecordAffectedObjects</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>recordAffectedObjects</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setAllowAll</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>allowAll</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setAllowInvisible</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>allowInvisible</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setSpatialIndexDisabled</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>spatialIndexDisabled</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setExistingBlockDetectionDisabled</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>existingBlockDetectionDisabled</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setExistingLayerDetectionDisabled</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>existingLayerDetectionDisabled</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setExistingLinetypeDetectionDisabled</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>existingLinetypeDetectionDisabled</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setBlockRecursionDetectionDisabled</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>blockRecursionDetectionDisabled</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setKeepHandles</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>bool</name>
-        </type>
-        <name>on</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>keepHandles</name>= 
-    <name>on</name></expr>;</expr_stmt>}</block>
-  </function>
-  <comment type="line">// void setUndoing(bool on) {</comment>
-  <comment type="line">// undoing = on;</comment>
-  <comment type="line">// }</comment>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isUndoing</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>undoing</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="line">// void setRedoing(bool on) {</comment>
-  <comment type="line">// redoing = on;</comment>
-  <comment type="line">// }</comment>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isRedoing</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>redoing</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return True if this transaction
-  should store undo / redo information * for later undo / redo
-  functionality. */</comment>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isUndoable</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>undoable</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>isFailed</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>failed</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * Redo undone changes. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>redo</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <comment type="block">/** * Reverts a change to the document.
-  After undo() is called, the state of * the document should be the
-  same as before redo() was called. */</comment>
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>void</name>
-  </type>
-  <name>undo</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>end</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>updateAffectedBlockReferences</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <comment type="block">/** * Sets the ID of this transaction.
-  Typically called by a storage which manages * transaction IDs.
-  */</comment>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setId</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>int</name>
-        </type>
-        <name>id</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>transactionId</name>= 
-    <name>id</name></expr>;</expr_stmt>}</block>
-  </function>
-  <comment type="block">/** * \return Unique ID of this
-  transaction. */</comment>
-  <function>
-    <type>
-      <name>int</name>
-    </type>
-    <name>getId</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>transactionId</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * Set group. */</comment>
-  <function>
-    <type>
-      <name>void</name>
-    </type>
-    <name>setGroup</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>int</name>
-        </type>
-        <name>group</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <expr_stmt>
-    <expr>
-    <name>transactionGroup</name>= 
-    <name>group</name></expr>;</expr_stmt>}</block>
-  </function>
-  <comment type="block">/** * \return Group of this transaction.
-  */</comment>
-  <function>
-    <type>
-      <name>int</name>
-    </type>
-    <name>getGroup</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>transactionGroup</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return Logged text for this
-  transaction. */</comment>
-  <function>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>getText</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>text</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>overwriteBlock</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RBlock</name>
-        </argument>&gt;</argument_list></name>
-      </type>
-      <name>block</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>addObject</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RObject</name>
-        </argument>&gt;</argument_list></name>
-      </type>
-      <name>obj</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>useCurrentAttributes</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>forceNew</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-    <name>const</name>
-    <name>QSet
-    <argument_list>&lt;
-    <argument>
-      <name>RPropertyTypeId</name>
-    </argument>&gt;</argument_list></name>&amp;</type>
-    <name>modifiedPropertyTypeIds</name>=
-    <init>
-      <expr>
-        <name>RDEFAULT_QSET_RPROPERTYTYPEID</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>addAffectedObject</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </type>
-      <name>objectId</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>addAffectedObjects</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>&amp;</type>
-      <name>objectIds</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>addAffectedObject</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RObject</name>
-        </argument>&gt;</argument_list></name>
-      </type>
-      <name>object</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>deleteObject</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </type>
-      <name>objectId</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>deleteObject</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>QSharedPointer
-        <argument_list>&lt;
-        <argument>
-          <name>RObject</name>
-        </argument>&gt;</argument_list></name>
-      </type>
-      <name>object</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \return Set of object IDs of objects
-  that are affected by * this transaction. */</comment>
-  <function>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>getAffectedObjects</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>affectedObjectIds</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return Set of object IDs of objects
-  that have been created or * deleted by this transaction.
-  */</comment>
-  <function>
-    <type>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>getStatusChanges</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>statusChanges</name>
-    </expr>;</return>}</block>
-  </function>
-  <comment type="block">/** * \return Map of properties that are
-  changed by this transaction. */</comment>
-  <function>
-    <type>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </argument>, 
-      <argument>
-        <name>QList
-        <argument_list>&lt;
-        <argument>
-          <name>RPropertyChange</name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>getPropertyChanges</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>propertyChanges</name>
-    </expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>hasOnlyChanges</name>
-    <parameter_list>()</parameter_list>
-    <specifier>const</specifier>
-    <block>{ 
-    <return>return 
-    <expr>
-      <name>onlyChanges</name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>fail</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>endCycle</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isPreview</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl></public>
-  <protected>protected: 
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>addPropertyChange</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </type>
-      <name>objectId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>RPropertyChange</name>&amp;</type>
-      <name>propertyChange</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="line">//void appendChild(RTransaction&amp;
-  t);</comment>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>commit</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>rollback</name>
-  <parameter_list>()</parameter_list>;</function_decl></protected>
-  <protected>protected: 
-  <comment type="block">/** * A transaction always belongs to the
-  storage of a document. */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RStorage</name>*</type>
-    <name>storage</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * Unique ID of this transaction.
-  */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>transactionId</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * Transaction group or -1. Transaction
-  groups are undone / redone together. */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>transactionGroup</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * Log entry for this transaction
-  */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QString</name>
-    </type>
-    <name>text</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * List of IDs of all objects that are
-  affected by this transaction. */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>affectedObjectIds</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * List of IDs of all block references
-  that need to be updated. */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>affectedBlockReferenceIds</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * Map of properties that are changed by
-  this transaction. For every * undoable, a whole list of
-  properties might have changed in a fixed * order. */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </argument>, 
-      <argument>
-        <name>QList
-        <argument_list>&lt;
-        <argument>
-          <name>RPropertyChange</name>
-        </argument>&gt;</argument_list></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>propertyChanges</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * Contains affected objects that have
-  been created or deleted * in this transaction. */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QSet
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>statusChanges</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * Child transactions of this
-  transaction. */</comment>
-  <comment type="line">//QList&lt;RTransaction&gt;
-  childTransactions;</comment>
-  <comment type="block">/** * True if this transaction can be
-  undone. */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>undoable</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * True if this transaction failed.
-  */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>failed</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * True if this transaction only changed
-  objects, no additions, no deletes. */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>onlyChanges</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * True if caller is intereseted in list
-  of objects that are affected * by this transaction. */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>recordAffectedObjects</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * True if all transactions are allowed,
-  even transactions on locked or * invisible layers. Typically the
-  case for importers. */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>allowAll</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * True if all transactions on invisible
-  entities are allowed, * typically transactions on invisible
-  layers. Used to move entities * to an invisible layer.
-  */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>allowInvisible</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * True to ignore spatial index. Used
-  for importers which regenerate * the spatial index in the end.
-  */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>spatialIndexDisabled</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * True to disable detection of existing
-  blocks (performance gain). */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>existingBlockDetectionDisabled</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * True to disable detection of existing
-  layers (performance gain). */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>existingLayerDetectionDisabled</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * True to disable detection of existing
-  linetypes (performance gain). */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>existingLinetypeDetectionDisabled</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * True to disable block recursion
-  detection (performance gain for loading). */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>blockRecursionDetectionDisabled</name>
-  </decl>;</decl_stmt>
-  <comment type="block">/** * True to keep existing object handles
-  (importers). */</comment>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>keepHandles</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QMap
-      <argument_list>&lt;
-      <argument>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </argument>, 
-      <argument>
-        <name>
-        <name>RObject</name>::
-        <name>Id</name></name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>cloneIds</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>undoing</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>redoing</name>
-  </decl>;</decl_stmt></protected>}</block>;</class>
-  <function_decl>
-  <type>
-    <name>QCADCORE_EXPORT</name>
-    <name>QDebug</name>
-  </type>
-  <name>operator&lt;&lt;</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>QDebug</name>
-      </type>
-      <name>dbg</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>RTransaction</name>&amp;</type>
-      <name>t</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RTransaction</argument>)</argument_list>
-  </macro>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RTransaction*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RTransaction.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RTRANSACTION_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RTRANSACTION_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSet&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyTypeId.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPropertyChange.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RStorage</name>;</class_decl>
+<class_decl>class <name>RExporter</name>;</class_decl>
+
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QSET_RPROPERTYTYPEID</name> <name>QSet</name>&lt;RPropertyTypeId&gt; ()</cpp:define>
+
+<comment type="block">/**
+ * Transaction implementation.
+ * 
+ * A transaction encapsulates a change of state of a document.
+ * Every change of a drawing document is wrapped in a transaction
+ * and handled by the QCAD Application Framework as
+ * one change. A transaction might add one or multiple objects,
+ * modify existing objects or delete objects. Combinations in the
+ * same transaction are also possible.
+ * 
+ * Each transactions should contain a locical change to a drawing.
+ * For example if a selection is moved from one place to another,
+ * all entities that are part of the selection are moved in the
+ * same transaction. This is important for the undo / redo mechanism
+ * of QCAD. If each entity would be moved in a separate transaction, 
+ * the user would have to issue an undo command for each entity to
+ * get back to the state before the entities were moved.
+ *
+ * Transactions can be applied to a document and are
+ * handled by an \ref RTransactionStack for undo / redo functionality. 
+ * Transactions are stored in a storage.
+ * 
+ * Transactions in the QCAD Application Framework are a low level
+ * concept. They are unaware of graphics views or widgets that need 
+ * to be updated.
+ *
+ * \ingroup core
+ * \scriptable
+ * \copyable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RTransaction</name> <block>{<private type="default">
+</private><public>public:
+    <constructor_decl><name>RTransaction</name><parameter_list>()</parameter_list>;</constructor_decl>
+
+    <constructor_decl><name>RTransaction</name><parameter_list>(<param><decl><type><name>RStorage</name>&amp;</type> <name>storage</name></decl></param>)</parameter_list>;</constructor_decl>
+
+    <constructor_decl><name>RTransaction</name><parameter_list>(<param><decl><type><name>RStorage</name>&amp;</type> <name>storage</name></decl></param>, <param><decl><type><name>int</name></type> <name>transactionId</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name></decl></param>,
+            <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>affectedObjectIds</name></decl></param>,
+            <comment type="line">//const QSet&lt;RObject::Id&gt;&amp; affectedEntities,</comment>
+            <param><decl><type><name>const</name> <name>QMap<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RPropertyChange</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>propertyChanges</name></decl></param>)</parameter_list>;</constructor_decl>
+            <comment type="line">//RTransaction* parent = NULL);</comment>
+
+    <constructor_decl><name>RTransaction</name><parameter_list>(<param><decl><type><name>RStorage</name>&amp;</type> <name>storage</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name></decl></param>, <param><decl><type><name>bool</name></type> <name>undoable</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+            <comment type="line">//RTransaction* parent = NULL);</comment>
+
+    <destructor_decl><specifier>virtual</specifier> <name>~RTransaction</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function><type><name>void</name></type> <name>setRecordAffectedObjects</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>recordAffectedObjects</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setAllowAll</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>allowAll</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setAllowInvisible</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>allowInvisible</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setSpatialIndexDisabled</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>spatialIndexDisabled</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setExistingBlockDetectionDisabled</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>existingBlockDetectionDisabled</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setExistingLayerDetectionDisabled</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>existingLayerDetectionDisabled</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setExistingLinetypeDetectionDisabled</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>existingLinetypeDetectionDisabled</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setBlockRecursionDetectionDisabled</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>blockRecursionDetectionDisabled</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setKeepHandles</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>keepHandles</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+<comment type="line">//    void setUndoing(bool on) {</comment>
+<comment type="line">//        undoing = on;</comment>
+<comment type="line">//    }</comment>
+
+    <function><type><name>bool</name></type> <name>isUndoing</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>undoing</name></expr>;</return>
+    }</block></function>
+
+<comment type="line">//    void setRedoing(bool on) {</comment>
+<comment type="line">//        redoing = on;</comment>
+<comment type="line">//    }</comment>
+
+    <function><type><name>bool</name></type> <name>isRedoing</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>redoing</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return True if this transaction should store undo / redo information
+     *      for later undo / redo functionality.
+     */</comment>
+    <function><type><name>bool</name></type> <name>isUndoable</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>undoable</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isFailed</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>failed</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * Redo undone changes.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>redo</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Reverts a change to the document. After undo() is called, the state of
+     * the document should be the same as before redo() was called.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>undo</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>end</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>updateAffectedBlockReferences</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * Sets the ID of this transaction. Typically called by a storage which manages
+     * transaction IDs.
+     */</comment>
+    <function><type><name>void</name></type> <name>setId</name><parameter_list>(<param><decl><type><name>int</name></type> <name>id</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>transactionId</name> = <name>id</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return Unique ID of this transaction.
+     */</comment>
+    <function><type><name>int</name></type> <name>getId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>transactionId</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * Set group.
+     */</comment>
+    <function><type><name>void</name></type> <name>setGroup</name><parameter_list>(<param><decl><type><name>int</name></type> <name>group</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>transactionGroup</name> = <name>group</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return Group of this transaction.
+     */</comment>
+    <function><type><name>int</name></type> <name>getGroup</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>transactionGroup</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return Logged text for this transaction.
+     */</comment>
+    <function><type><name>QString</name></type> <name>getText</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>text</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>bool</name></type> <name>overwriteBlock</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RBlock</name></argument>&gt;</argument_list></name></type> <name>block</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>bool</name></type> <name>addObject</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>obj</name></decl></param>,
+                   <param><decl><type><name>bool</name></type> <name>useCurrentAttributes</name> =<init> <expr><name>true</name></expr></init></decl></param>,
+                   <param><decl><type><name>bool</name></type> <name>forceNew</name> =<init> <expr><name>false</name></expr></init></decl></param>,
+                   <param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name>&amp;</type> <name>modifiedPropertyTypeIds</name> =<init> <expr><name>RDEFAULT_QSET_RPROPERTYTYPEID</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>addAffectedObject</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>addAffectedObjects</name><parameter_list>(<param><decl><type><name>const</name> <name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>objectIds</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>addAffectedObject</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>object</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>deleteObject</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>deleteObject</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RObject</name></argument>&gt;</argument_list></name></type> <name>object</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \return Set of object IDs of objects that are affected by
+     *      this transaction.
+     */</comment>
+    <function><type><name>QList<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>getAffectedObjects</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>affectedObjectIds</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return Set of object IDs of objects that have been created or
+     *      deleted by this transaction.
+     */</comment>
+    <function><type><name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>getStatusChanges</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>statusChanges</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \return Map of properties that are changed by this transaction.
+     */</comment>
+    <function><type><name>QMap<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RPropertyChange</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getPropertyChanges</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>propertyChanges</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPropertyChange</name></argument>&gt;</argument_list></name></type> <name>getPropertyChanges</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function><type><name>bool</name></type> <name>hasOnlyChanges</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>onlyChanges</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>void</name></type> <name>fail</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>endCycle</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>bool</name></type> <name>isPreview</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+</public><protected>protected:
+    <function_decl><type><name>bool</name></type> <name>addPropertyChange</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>, <param><decl><type><name>const</name> <name>RPropertyChange</name>&amp;</type> <name>propertyChange</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="line">//void appendChild(RTransaction&amp; t);</comment>
+
+    <function_decl><type><name>void</name></type> <name>commit</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>rollback</name><parameter_list>()</parameter_list>;</function_decl>
+
+</protected><protected>protected:
+    <comment type="block">/**
+     * A transaction always belongs to the storage of a document.
+     */</comment>
+    <decl_stmt><decl><type><name>RStorage</name>*</type> <name>storage</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * Unique ID of this transaction.
+     */</comment>
+    <decl_stmt><decl><type><name>int</name></type> <name>transactionId</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * Transaction group or -1. Transaction groups are undone / redone together.
+     */</comment>
+    <decl_stmt><decl><type><name>int</name></type> <name>transactionGroup</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * Log entry for this transaction
+     */</comment>
+    <decl_stmt><decl><type><name>QString</name></type> <name>text</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * List of IDs of all objects that are affected by this transaction.
+     */</comment>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>affectedObjectIds</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * List of IDs of all block references that need to be updated.
+     */</comment>
+    <decl_stmt><decl><type><name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>affectedBlockReferenceIds</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * Map of properties that are changed by this transaction. For every
+     * undoable, a whole list of properties might have changed in a fixed
+     * order.
+     */</comment>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RPropertyChange</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>propertyChanges</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * Contains affected objects that have been created or deleted
+     * in this transaction.
+     */</comment>
+    <decl_stmt><decl><type><name>QSet<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>statusChanges</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * Child transactions of this transaction.
+     */</comment>
+    <comment type="line">//QList&lt;RTransaction&gt; childTransactions;</comment>
+
+    <comment type="block">/**
+     * True if this transaction can be undone.
+     */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>undoable</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * True if this transaction failed.
+     */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>failed</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * True if this transaction only changed objects, no additions, no deletes.
+     */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>onlyChanges</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * True if caller is intereseted in list of objects that are affected
+     * by this transaction.
+     */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>recordAffectedObjects</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * True if all transactions are allowed, even transactions on locked or
+     * invisible layers. Typically the case for importers.
+     */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>allowAll</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * True if all transactions on invisible entities are allowed,
+     * typically transactions on invisible layers. Used to move entities
+     * to an invisible layer.
+     */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>allowInvisible</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * True to ignore spatial index. Used for importers which regenerate
+     * the spatial index in the end.
+     */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>spatialIndexDisabled</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * True to disable detection of existing blocks (performance gain).
+     */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>existingBlockDetectionDisabled</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * True to disable detection of existing layers (performance gain).
+     */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>existingLayerDetectionDisabled</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * True to disable detection of existing linetypes (performance gain).
+     */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>existingLinetypeDetectionDisabled</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * True to disable block recursion detection (performance gain for loading).
+     */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>blockRecursionDetectionDisabled</name></decl>;</decl_stmt>
+
+    <comment type="block">/**
+     * True to keep existing object handles (importers).
+     */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>keepHandles</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>RObject</name>::<name>Id</name></name></argument>, <argument><name><name>RObject</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>cloneIds</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>bool</name></type> <name>undoing</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>redoing</name></decl>;</decl_stmt>
+</protected>}</block>;</class>
+
+<function_decl><type><name>QCADCORE_EXPORT</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>RTransaction</name>&amp;</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTransaction</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTransaction*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

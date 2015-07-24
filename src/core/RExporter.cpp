@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -242,8 +242,7 @@ QBrush RExporter::getBrush(const RPainterPath& path) {
         }
         REntity* e=getEntity();
         if (e!=NULL && e->isSelected()) {
-            RColor selectionColor = RSettings::getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128));
-            brush.setColor(selectionColor);
+            brush.setColor(RSettings::getSelectionColor());
         }
         else {
             brush.setColor(color);
@@ -273,8 +272,7 @@ void RExporter::setEntityAttributes(bool forceSelected) {
     }
 
     if (forceSelected || currentEntity->isSelected()) {
-        RColor selectionColor = RSettings::getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128));
-        setColor(selectionColor);
+        setColor(RSettings::getSelectionColor());
     }
     else {
         setColor(currentEntity->getColor(true, blockRefStack));
@@ -304,6 +302,13 @@ void RExporter::setDashPattern(const QVector<qreal>& dashes) {
 REntity* RExporter::getEntity() {
     if (entityStack.size()>0) {
         return entityStack.top();
+    }
+    return NULL;
+}
+
+REntity* RExporter::getCurrentBlockRef() {
+    if (!blockRefStack.isEmpty()) {
+        return blockRefStack.top();
     }
     return NULL;
 }
@@ -421,7 +426,11 @@ void RExporter::exportEntities(bool allBlocks, bool undone) {
     for (it=list.begin(); it!=list.end(); it++) {
         QSharedPointer<REntity> e = document->queryEntityDirect(*it);
         if (!e.isNull()) {
+            //RDebug::startTimer(500);
             exportEntity(*e, false);
+//            if (RDebug::stopTimer(500, "export entity", 100)>100000000) {
+//                qDebug() << *e;
+//            }
         }
     }
 }
@@ -507,6 +516,14 @@ void RExporter::exportView(RView::Id viewId) {
 }
 
 /**
+ * Exports the given entity as part of a block definition to be reused by block references.
+ * This is called for entities which have no attributes ByBlock.
+ */
+//void RExporter::exportBlockEntity(REntity& entity, bool preview, bool allBlocks, bool forceSelected) {
+//    RExporter::exportEntity(entity, preview, allBlocks, forceSelected);
+//}
+
+/**
  * Sets the current entity to the given entity and calls \ref exportEntity().
  * Note that entity is a temporary clone.
  */
@@ -528,11 +545,11 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
     QSharedPointer<RLayer> layer;
     if (layerSource!=NULL) {
         RLayer::Id layerId = entity.getLayerId();
-        layer = layerSource->queryLayer(layerId);
+        layer = layerSource->queryLayerDirect(layerId);
         Q_ASSERT(!layer.isNull());
     }
     else {
-        layer = doc->queryLayer(entity.getLayerId());
+        layer = doc->queryLayerDirect(entity.getLayerId());
         if (layer.isNull()) {
             qDebug() << "Document: " << *doc;
             qDebug() << "Layer ID: " << entity.getLayerId();
@@ -624,10 +641,8 @@ void RExporter::exportCurrentEntity(bool preview, bool forceSelected) {
 
     setEntityAttributes(forceSelected);
 
-    //bool sblt = getScreenBasedLinetypes();
     if ((forceSelected || entity->isSelected()) && RSettings::getUseSecondarySelectionColor()) {
         // first part of two color selection:
-        //setScreenBasedLinetypes(true);
         twoColorSelectedMode = true;
     }
 
@@ -650,7 +665,6 @@ void RExporter::exportCurrentEntity(bool preview, bool forceSelected) {
         }
     }
     twoColorSelectedMode = false;
-    //setScreenBasedLinetypes(sblt);
 }
 
 
@@ -760,12 +774,16 @@ double RExporter::exportLine(const RLine& line, double offset) {
 
     double angle = line.getAngle();
 
-    RLinetypePattern p = getLinetypePattern();
-
     // continuous line or
     // we are in draft mode or
     // QCAD is configured to show screen based line patterns
-    if (!p.isValid() || p.getNumDashes() <= 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+    if (draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+        exportLineSegment(line, angle);
+        return ret;
+    }
+
+    RLinetypePattern p = getLinetypePattern();
+    if (!p.isValid() || p.getNumDashes() <= 1) {
         exportLineSegment(line, angle);
         return ret;
     }
@@ -775,7 +793,7 @@ double RExporter::exportLine(const RLine& line, double offset) {
 
     // avoid huge number of small segments due to very fine 
     // pattern or long lines:
-    if (patternLength<RS::PointTolerance || length / patternLength > 5000) {
+    if (patternLength<RS::PointTolerance || length / patternLength > RSettings::getDashThreshold()) {
         exportLineSegment(line, angle);
         return ret;
     }
@@ -928,9 +946,20 @@ void RExporter::exportArc(const RArc& arc, double offset) {
         return;
     }
 
-    RLinetypePattern p = getLinetypePattern();
+    if (getEntity() == NULL || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+        exportArcSegment(arc);
+        return;
+    }
 
-    if (getEntity() == NULL || !p.isValid() || p.getNumDashes() <= 1 || draftMode || screenBasedLinetypes || twoColorSelectedMode) {
+    RLinetypePattern p = getLinetypePattern();
+    if (!p.isValid() || p.getNumDashes() <= 1) {
+        exportArcSegment(arc);
+        return;
+    }
+
+    p.scale(getLineTypePatternScale(p));
+    double patternLength = p.getPatternLength();
+    if (patternLength<RS::PointTolerance || arc.getLength() / patternLength > RSettings::getDashThreshold()) {
         exportArcSegment(arc);
         return;
     }
@@ -1084,9 +1113,10 @@ void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
         if (aStep>1.0) {
             aStep = 1.0;
         }
-        double minAStep = 2*M_PI/360.0;
-        if (!draftMode) {
-            minAStep /= 4;
+
+        double minAStep = RSettings::getMinArcAngleStep();
+        if (draftMode) {
+            minAStep *= 4;
         }
 
         if (aStep<minAStep) {
@@ -1105,8 +1135,7 @@ void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
         for (a=a1+aStep; a<=a2; a+=aStep) {
             ci.x = center.x + cos(a) * radius;
             ci.y = center.y + sin(a) * radius;
-            //path.lineTo(RVector(ci.x, ci.y));
-            this->exportLineSegment(RLine(prev, ci), a+M_PI_2);
+            exportLineSegment(RLine(prev, ci), a+M_PI_2);
             prev = ci;
         }
     } else {
@@ -1117,13 +1146,11 @@ void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
         for (a=a1-aStep; a>=a2; a-=aStep) {
             ci.x = center.x + cos(a) * radius;
             ci.y = center.y + sin(a) * radius;
-            this->exportLineSegment(RLine(prev, ci), a+M_PI_2);
-            //path.lineTo(RVector(cix, ciy));
+            exportLineSegment(RLine(prev, ci), a+M_PI_2);
             prev = ci;
         }
     }
     this->exportLineSegment(RLine(prev, arc.getEndPoint()), arc.getEndAngle()+M_PI_2);
-    //path.lineTo(arc.getEndPoint());
 }
 
 /**
@@ -1196,6 +1223,9 @@ void RExporter::exportEllipse(const REllipse& ellipse, double offset) {
     exportPolyline(polyline, true, offset);
 }
 
+/**
+ * \param polylineGen True: use pattern along whole polyline, False: pattern per segment.
+ */
 void RExporter::exportPolyline(const RPolyline& polyline, bool polylineGen, double offset) {
     RLinetypePattern p = getLinetypePattern();
 
@@ -1249,6 +1279,12 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
         continuous = true;
     }
 
+    p.scale(getLineTypePatternScale(p));
+    double patternLength = p.getPatternLength();
+    if (patternLength<RS::PointTolerance || spline.getLength() / patternLength > RSettings::getDashThreshold()) {
+        continuous = true;
+    }
+
     if (!continuous) {
         if (getEntity()!=NULL && (getEntity()->getType()!=RS::EntitySpline || RSpline::hasProxy())) {
             // we have a spline proxy:
@@ -1271,9 +1307,6 @@ void RExporter::exportSpline(const RSpline& spline, double offset) {
 
         // performance improvement (using real splines):
         RPainterPath pp;
-        //QPen localPen = currentPen;
-        //localPen.setStyle();
-        //pp.setPen(QPen(Qt::SolidLine));
         pp.setPen(currentPen);
         pp.setInheritPen(true);
         pp.addSpline(spline);
@@ -1330,7 +1363,7 @@ void RExporter::exportExplodable(const RExplodable& explodable, double offset) {
     }
 
     if (getEntity()!=NULL && (getEntity()->getType()!=RS::EntitySpline || RSpline::hasProxy())) {
-        // all explodable entities including splines is we have a spline proxy:
+        // all explodable entities including splines if we have a spline proxy:
         RShapesExporter(*this, sub, offset);
         return;
     }
@@ -1389,8 +1422,9 @@ double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
 
     // document wide linetype scale:
     double docLinetypeScale = document->getKnownVariable(RS::LTSCALE).toDouble();
+
+    // LTSCALE might be zero:
     if (docLinetypeScale>1e-6) {
-        // LTSCALE might be zero:
         factor *= docLinetypeScale;
     }
 

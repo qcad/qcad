@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaTextLabel {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaTextLabel {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 

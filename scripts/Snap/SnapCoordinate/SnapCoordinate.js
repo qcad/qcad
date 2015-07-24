@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -71,6 +71,11 @@ RSnapCoordinate.prototype.snap = function(position, view) {
 };
 
 RSnapCoordinate.prototype.showUiOptions = function() {
+    if (isNull(this.action)) {
+        qDebug("RSnapCoordinate.prototype.showUiOptions: action is NULL");
+        return;
+    }
+
     this.action.showUiOptions(false);
 
     // init Set button:

@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaMouseEvent {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaMouseEvent {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -52,6 +55,9 @@
         setModelPosition
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setScreenPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getScreenPosition
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -69,7 +75,16 @@
     
 
     // public methods:
-    static  QScriptValue toString
+    static  QScriptValue
+        hasMouseMoved
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        resetOriginalMousePos
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setOriginalMousePos
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RMouseEvent* getSelf(const QString& fName, QScriptContext* context)

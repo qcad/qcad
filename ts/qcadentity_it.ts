@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="it_IT">
+<TS version="2.1" language="it_IT">
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/entity/RImageEntity.cpp" line="+74"/>
+        <location filename="../src/entity/RImageEntity.cpp" line="+87"/>
         <source>File</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -17,7 +17,7 @@ Caricamento File %1
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RPointEntity.cpp" line="+58"/>
+        <location filename="../src/entity/RPointEntity.cpp" line="+70"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -61,57 +61,62 @@ Altezza Testo:</translatorcomment>
         <translation>Altezza</translation>
     </message>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="+74"/>
-        <location filename="../src/entity/RCircleEntity.cpp" line="+64"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+87"/>
+        <location line="+4"/>
+        <source>Fade</source>
+        <translation>Dissolvenza</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RArcEntity.cpp" line="+86"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+76"/>
+        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+93"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="+93"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+97"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+87"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+93"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+86"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+92"/>
         <location line="+4"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+85"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+89"/>
         <location line="+5"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+85"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+91"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+91"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+97"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+78"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+83"/>
         <location line="+3"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="+76"/>
+        <location filename="../src/entity/REllipseEntity.cpp" line="+80"/>
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+84"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+88"/>
         <location line="+3"/>
-        <location filename="../src/entity/RImageEntity.cpp" line="-8"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="+60"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="+70"/>
+        <location filename="../src/entity/RImageEntity.cpp" line="-12"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="+71"/>
+        <location filename="../src/entity/RLineEntity.cpp" line="+82"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="-2"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+72"/>
-        <location filename="../src/entity/RRayEntity.cpp" line="+73"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+83"/>
+        <location filename="../src/entity/RRayEntity.cpp" line="+78"/>
         <location line="+3"/>
         <location line="+4"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="+70"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="+74"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="+66"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+77"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTraceEntity.cpp" line="+70"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="+74"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RXLineEntity.cpp" line="+73"/>
+        <location filename="../src/entity/RXLineEntity.cpp" line="+78"/>
         <location line="+3"/>
         <location line="+4"/>
         <source>X</source>
@@ -379,7 +384,8 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
         <translation>Angolo</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+11"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <source>Scale</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -392,32 +398,32 @@ Scala</translatorcomment>
 --file: it.po--
 Testo semplice
 Esplode gli oggetti selezionati in oggetti piú semplice, o sottrae le facce</translatorcomment>
-        <translation>Semplice</translation>
+        <translation type="vanished">Semplice</translation>
     </message>
     <message>
         <source>Text</source>
-        <translation>Testo</translation>
+        <translation type="vanished">Testo</translation>
     </message>
     <message>
         <source>Plain Text</source>
-        <translation>Testo normale</translation>
+        <translation type="vanished">Testo normale</translation>
     </message>
     <message>
         <source>Font Name</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Nome del font</translation>
+        <translation type="vanished">Nome del font</translation>
     </message>
     <message>
         <source>Text Height</source>
-        <translation>Altezza Testo</translation>
+        <translation type="vanished">Altezza Testo</translation>
     </message>
     <message>
         <source>Text Angle</source>
-        <translation>Angolo testo</translation>
+        <translation type="vanished">Angolo testo</translation>
     </message>
     <message>
         <source>X Scale</source>
-        <translation>Scala X</translation>
+        <translation type="vanished">Scala X</translation>
     </message>
     <message>
         <source>Bold</source>
@@ -426,7 +432,7 @@ Esplode gli oggetti selezionati in oggetti piú semplice, o sottrae le facce</tr
 &amp;Grassetto
 Grassetto
 grassetto</translatorcomment>
-        <translation>Grassetto</translation>
+        <translation type="vanished">Grassetto</translation>
     </message>
     <message>
         <source>Italic</source>
@@ -434,7 +440,7 @@ grassetto</translatorcomment>
 --file: it3.po--
 Old Italic
 Cors&amp;ivo</translatorcomment>
-        <translation>Italico</translation>
+        <translation type="vanished">Italico</translation>
     </message>
     <message>
         <source>Line Spacing</source>
@@ -443,7 +449,7 @@ Interasse linee:
 Interasse Linee Pre&amp;definito
 Interasse Linee Predefinito
 Interlinea</translatorcomment>
-        <translation>Interasse linee</translation>
+        <translation type="vanished">Interasse linee</translation>
     </message>
     <message>
         <source>Alignment</source>
@@ -451,7 +457,7 @@ Interlinea</translatorcomment>
 --file: it.po--
 Allineamento
 Allineamento|Verticale</translatorcomment>
-        <translation>Allineamento</translation>
+        <translation type="vanished">Allineamento</translation>
     </message>
     <message>
         <source>Horizontal</source>
@@ -460,7 +466,7 @@ Allineamento|Verticale</translatorcomment>
 Affianca &amp;Orizzontalmente
 Affianca Orizzontalmente
 &amp;Orizzontale</translatorcomment>
-        <translation>Orizzontale</translation>
+        <translation type="vanished">Orizzontale</translation>
     </message>
     <message>
         <source>Vertical</source>
@@ -468,7 +474,7 @@ Affianca Orizzontalmente
 --file: qgis_it.ts--
 Verticale
 &amp;Verticale</translatorcomment>
-        <translation>Verticale</translation>
+        <translation type="vanished">Verticale</translation>
     </message>
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="-2"/>
@@ -808,7 +814,7 @@ Valore dell&apos;ordinata</translatorcomment>
         <translation>Angolo di quota</translation>
     </message>
     <message>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="-8"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-19"/>
         <source>Label</source>
         <translatorcomment>--exact match--
 --file: dia.master.it.po--
@@ -876,7 +882,7 @@ Limite inferiore</translatorcomment>
         <translation>Fattore</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Auto Label Position</source>
         <translation>Auto Label Position</translation>
     </message>
@@ -944,8 +950,8 @@ Punto 4|Y</translatorcomment>
         <translation>Punto 4</translation>
     </message>
     <message>
-        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+86"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+85"/>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+90"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+89"/>
         <source>Tag</source>
         <translation>Etichetta</translation>
     </message>
@@ -983,6 +989,12 @@ Punto 4|Y</translatorcomment>
         <location line="+1"/>
         <source>Direction Vector</source>
         <translation>Direzione</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
+        <source>Fixed Angle</source>
+        <translation>Angolo fisso</translation>
     </message>
 </context>
 </TS>

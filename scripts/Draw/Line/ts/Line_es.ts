@@ -4,22 +4,27 @@
 <context>
     <name>Line</name>
     <message>
-        <location filename="../Line.js" line="+84"/>
+        <location filename="../Line.js" line="+86"/>
         <source>Show line tools</source>
         <translation>Mostrar menú &quot;Líneas&quot;</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+14"/>
         <source>&amp;Line</source>
         <translation>&amp;Línea</translation>
     </message>
     <message>
-        <location line="-23"/>
+        <location line="-19"/>
         <source>Line Tools</source>
         <translation>Herramientas de línea</translation>
     </message>
     <message>
         <location filename="../Line.ui" line="+17"/>
+        <source>Same Entity Type as Original</source>
+        <translation>Tipo de entidad Igual que para original</translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Line Segment</source>
         <translation>Segmento de línea</translation>
     </message>

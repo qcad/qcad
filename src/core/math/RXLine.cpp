@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -158,8 +158,9 @@ QList<RVector> RXLine::getPointsWithDistanceToEnd(double distance, RS::From from
     return QList<RVector>();
 }
 
-double RXLine::getAngleAt(double distance) const {
+double RXLine::getAngleAt(double distance, RS::From from) const {
     Q_UNUSED(distance)
+    Q_UNUSED(from)
 
     return getAngle();
 }
@@ -188,8 +189,7 @@ RLine RXLine::getClippedLine(const RBox& box) const {
 
     if (sol.length()==2) {
         ret = RLine(sol[0], sol[1]);
-        double diff = RMath::getAngleDifference180(ret.getAngle(), getAngle());
-        if (fabs(diff) > 1.0e-2) {
+        if (!RMath::isSameDirection(ret.getDirection1(), getDirection1(), 1.0e-2)) {
             ret.reverse();
         }
     }

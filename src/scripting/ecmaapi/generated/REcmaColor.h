@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaColor {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaColor {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -49,6 +52,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getColorIndex
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         createFromCadIndex

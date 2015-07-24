@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaEntity {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaEntity {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -147,10 +150,16 @@
         getBoundingBoxes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getHull
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getShapes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getClosestShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getClosestSimpleShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isInside
@@ -247,9 +256,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getComplexity
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        dump
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

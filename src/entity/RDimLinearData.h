@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -47,6 +47,12 @@ public:
 
     virtual bool isValid() const;
 
+    virtual void setDefinitionPoint(const RVector& p) {
+        definitionPoint = p;
+        recomputeDefinitionPoint(extensionPoint1, extensionPoint2, extensionPoint1, extensionPoint2);
+        update();
+    }
+
     void setExtensionPoint1(const RVector& p) {
         extensionPoint1 = p;
     }
@@ -71,6 +77,11 @@ public:
         Q_UNUSED(newExtPoint1)
         Q_UNUSED(newExtPoint2)
     }
+
+//    virtual void recomputeDefinitionPoint(const RVector& oldDimLineGrip, const RVector& newDimLineGrip) {
+//        Q_UNUSED(oldDimLineGrip)
+//        Q_UNUSED(newDimLineGrip)
+//    }
 
     virtual bool moveReferencePoint(const RVector& referencePoint, 
         const RVector& targetPoint);

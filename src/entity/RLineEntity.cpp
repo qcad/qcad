@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -22,6 +22,7 @@
 
 RPropertyTypeId RLineEntity::PropertyCustom;
 RPropertyTypeId RLineEntity::PropertyHandle;
+RPropertyTypeId RLineEntity::PropertyProtected;
 RPropertyTypeId RLineEntity::PropertyType;
 RPropertyTypeId RLineEntity::PropertyBlock;
 RPropertyTypeId RLineEntity::PropertyLayer;
@@ -29,6 +30,7 @@ RPropertyTypeId RLineEntity::PropertyLinetype;
 RPropertyTypeId RLineEntity::PropertyLinetypeScale;
 RPropertyTypeId RLineEntity::PropertyLineweight;
 RPropertyTypeId RLineEntity::PropertyColor;
+RPropertyTypeId RLineEntity::PropertyDisplayedColor;
 RPropertyTypeId RLineEntity::PropertyDrawOrder;
 
 RPropertyTypeId RLineEntity::PropertyStartPointX;
@@ -45,9 +47,17 @@ RPropertyTypeId RLineEntity::PropertyLength;
 RLineEntity::RLineEntity(RDocument* document, const RLineData& data,
         RObject::Id objectId) :
     REntity(document, objectId), data(document, data) {
+
+    RDebug::incCounter("RLineEntity");
+}
+
+RLineEntity::RLineEntity(const RLineEntity& other) : REntity(other) {
+    RDebug::incCounter("RLineEntity");
+    data = other.data;
 }
 
 RLineEntity::~RLineEntity() {
+    RDebug::decCounter("RLineEntity");
 }
 
 void RLineEntity::setShape(const RLine& l) {
@@ -58,6 +68,7 @@ void RLineEntity::setShape(const RLine& l) {
 void RLineEntity::init() {
     RLineEntity::PropertyCustom.generateId(typeid(RLineEntity), RObject::PropertyCustom);
     RLineEntity::PropertyHandle.generateId(typeid(RLineEntity), RObject::PropertyHandle);
+    RLineEntity::PropertyProtected.generateId(typeid(RLineEntity), RObject::PropertyProtected);
     RLineEntity::PropertyType.generateId(typeid(RLineEntity), REntity::PropertyType);
     RLineEntity::PropertyBlock.generateId(typeid(RLineEntity), REntity::PropertyBlock);
     RLineEntity::PropertyLayer.generateId(typeid(RLineEntity), REntity::PropertyLayer);
@@ -65,6 +76,7 @@ void RLineEntity::init() {
     RLineEntity::PropertyLinetypeScale.generateId(typeid(RLineEntity), REntity::PropertyLinetypeScale);
     RLineEntity::PropertyLineweight.generateId(typeid(RLineEntity), REntity::PropertyLineweight);
     RLineEntity::PropertyColor.generateId(typeid(RLineEntity), REntity::PropertyColor);
+    RLineEntity::PropertyDisplayedColor.generateId(typeid(RLineEntity), REntity::PropertyDisplayedColor);
     RLineEntity::PropertyDrawOrder.generateId(typeid(RLineEntity), REntity::PropertyDrawOrder);
 
     RLineEntity::PropertyStartPointX.generateId(typeid(RLineEntity), QT_TRANSLATE_NOOP("REntity", "Start Point"), QT_TRANSLATE_NOOP("REntity", "X"));

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -42,6 +42,7 @@ public:
         GotSplashWindow,    /**< Splashscreen showing. */
         AddOnsInitialized,  /**< Add ons are initialized, actions created but not added to widgets. */
         ActionsAdded,       /**< Actions have been added to widgets. */
+        GotMainWindowBeforeShow,      /**< Main window created but not shown yet. */
         GotMainWindow,      /**< Main window with all tools and menus has been created. */
         LoadedFiles,        /**< Loaded files given on command line. */
         ScriptsExecuted,    /**< Executed scripts given on command line. */

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -11,12 +11,12 @@
     <message>
         <location line="+10"/>
         <source>Automatically scale meta grid</source>
-        <translation>Grade escalonada meta automaticamente</translation>
+        <translation>Metagrade escalonada automaticamente</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Solid grid lines</source>
-        <translation>Grade linhas de sólidas</translation>
+        <translation>Grades de linhas sólidas</translation>
     </message>
     <message>
         <location line="+7"/>

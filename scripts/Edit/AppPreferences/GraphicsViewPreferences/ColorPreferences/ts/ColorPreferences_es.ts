@@ -73,7 +73,7 @@ Ver gráficos</translatorcomment>
         <translation>Rejilla</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+48"/>
         <source>Meta grid:</source>
         <translation>Meta rejilla:</translation>
     </message>
@@ -164,10 +164,10 @@ Ver gráficos</translatorcomment>
     <message>
         <source>Inactive Crosshairs:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Retículo inactivo:</translation>
+        <translation type="obsolete">Retículo inactivo:</translation>
     </message>
     <message>
-        <location line="-538"/>
+        <location line="-535"/>
         <source>Origin:</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--
@@ -177,11 +177,11 @@ Origen:</translatorcomment>
     <message>
         <source>Relative Zero:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Cero relativo:</translation>
+        <translation type="obsolete">Cero relativo:</translation>
     </message>
     <message>
         <source>Reference Point:</source>
-        <translation type="vanished">Punto de referencia:</translation>
+        <translation type="obsolete">Punto de referencia:</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -194,53 +194,53 @@ Meta cuadrícula
     </message>
     <message>
         <source>Meta Grid:</source>
-        <translation type="vanished">Meta rejilla:</translation>
+        <translation type="obsolete">Meta rejilla:</translation>
     </message>
     <message>
         <source>Zoom Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Cuadro de zoom:</translation>
+        <translation type="obsolete">Cuadro de zoom:</translation>
     </message>
     <message>
         <source>Selection:</source>
         <translatorcomment>--ignored colon--
 --file: grassmods_es.po--</translatorcomment>
-        <translation type="vanished">Selección:</translation>
+        <translation type="obsolete">Selección:</translation>
     </message>
     <message>
         <source>Selection Box Border:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Borde del cuadro de selección:</translation>
+        <translation type="obsolete">Borde del cuadro de selección:</translation>
     </message>
     <message>
         <source>Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Cuadro de selección:</translation>
+        <translation type="obsolete">Cuadro de selección:</translation>
     </message>
     <message>
         <source>Cross Selection Box:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Cuadro de selección de captura:</translation>
+        <translation type="obsolete">Cuadro de selección de captura:</translation>
     </message>
     <message>
         <source>Auxiliary Shapes:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Formas auxiliares:</translation>
+        <translation type="obsolete">Formas auxiliares:</translation>
     </message>
     <message>
         <source>Info Label Background:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Fondo de la etiqueta Información:</translation>
+        <translation type="obsolete">Fondo de la etiqueta Información:</translation>
     </message>
     <message>
         <source>Info Label Font:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Fuente de la etiqueta Información:</translation>
+        <translation type="obsolete">Fuente de la etiqueta Información:</translation>
     </message>
     <message>
         <source>Measurement Tools:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="vanished">Herramientas de medición:</translation>
+        <translation type="obsolete">Herramientas de medición:</translation>
     </message>
 </context>
 </TS>

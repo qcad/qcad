@@ -12,9 +12,8 @@
         <translation type="obsolete">Numero:</translation>
     </message>
     <message>
-        <location filename="../LineParallel.js" line="+68"/>
         <source>Choose line, arc or circle</source>
-        <translation>Scegliere una linea, un arco o un cerchio</translation>
+        <translation type="vanished">Scegliere una linea, un arco o un cerchio</translation>
     </message>
     <message>
         <location filename="../LineParallelInit.js" line="+2"/>

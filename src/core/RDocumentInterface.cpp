@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -73,9 +73,13 @@ RDocumentInterface::RDocumentInterface(RDocument& document)
     cursorOverride(false),
     keepPreviewOnce(false),
     mouseTrackingEnabled(true) {
+    //pressEvent(NULL) {
+
+    RDebug::incCounter("RDocumentInterface");
 }
 
 RDocumentInterface::~RDocumentInterface() {
+    RDebug::decCounter("RDocumentInterface");
     deleting = true;
 
     for (int i=currentActions.size()-1; i>=0; i--) {
@@ -223,6 +227,9 @@ void RDocumentInterface::clear() {
     for (it=scenes.begin(); it!=scenes.end(); it++) {
         (*it)->clear();
     }
+
+    //qDebug() << "RDocumentInterface::clear: modified: " << document.isModified();
+    document.setModified(false);
 }
 
 /**
@@ -254,6 +261,11 @@ RGraphicsView* RDocumentInterface::getGraphicsViewWithFocus() {
  * Sets the action that is active if no other action is active.
  */
 void RDocumentInterface::setDefaultAction(RAction* action) {
+    if (defaultAction!=NULL) {
+        delete defaultAction;
+        defaultAction = NULL;
+    }
+
     defaultAction = action;
 
     if (defaultAction != NULL) {
@@ -359,6 +371,7 @@ void RDocumentInterface::resume() {
     }
 
     if (hasCurrentAction()) {
+        //qDebug() << "resume (di resume)";
         getCurrentAction()->resumeEvent();
     }
     else {
@@ -377,6 +390,7 @@ void RDocumentInterface::resume() {
  */
 void RDocumentInterface::deleteTerminatedActions() {
     bool removed = false;
+    bool removedHadNoState = false;
 
     while (currentActions.size()>0 && currentActions.top()->isTerminated()) {
         cursorPosition = RVector::invalid;
@@ -393,6 +407,7 @@ void RDocumentInterface::deleteTerminatedActions() {
         }
 
         currentActions.pop();
+        removedHadNoState = currentAction->hasNoState();
         delete currentAction;
 
         if (!group.isEmpty()) {
@@ -401,9 +416,9 @@ void RDocumentInterface::deleteTerminatedActions() {
         removed = true;
     }
 
-    // if one or more actions have been terminated, resume previous action
+    // if one or more actions (with state) have been terminated, resume previous action
     // or default action:
-    if (removed) {
+    if (removed /*&& !removedHadNoState // TODO: breaks snap to coordinate options */) {
         if (currentActions.size()>0) {
             currentActions.top()->resumeEvent();
         }
@@ -658,10 +673,22 @@ void RDocumentInterface::mouseMoveEvent(RMouseEvent& event) {
 
     if (hasCurrentAction()) {
         getCurrentAction()->mouseMoveEvent(event);
-        previewClickEvent(*getCurrentAction(), event);
+//        if (pressEvent!=NULL) {
+            // use position of mouse press event:
+//            previewClickEvent(*getCurrentAction(), *pressEvent);
+//        }
+//        else {
+            previewClickEvent(*getCurrentAction(), event);
+//        }
     } else if (defaultAction != NULL) {
         defaultAction->mouseMoveEvent(event);
-        previewClickEvent(*defaultAction, event);
+//        if (pressEvent!=NULL) {
+            // use position of mouse press event:
+//            previewClickEvent(*defaultAction, *pressEvent);
+//        }
+//        else {
+            previewClickEvent(*defaultAction, event);
+//        }
     } else {
         event.ignore();
     }
@@ -686,6 +713,16 @@ void RDocumentInterface::mousePressEvent(RMouseEvent& event) {
     } else {
         event.ignore();
     }
+
+    // remember mouse press event for future mouse move
+    // and mouse release events used to specify positions:
+//    if (pressEvent!=NULL) {
+//        delete pressEvent;
+//        pressEvent = NULL;
+//    }
+//    if (RSettings::getPositionByMousePress()) {
+//        pressEvent = new RMouseEvent(event);
+//    }
 }
 
 /**
@@ -697,10 +734,26 @@ void RDocumentInterface::mouseReleaseEvent(RMouseEvent& event) {
     }
     if (hasCurrentAction()) {
         getCurrentAction()->mouseReleaseEvent(event);
-        handleClickEvent(*getCurrentAction(), event);
+//        if (pressEvent!=NULL) {
+            // use position of mouse press event:
+//            handleClickEvent(*getCurrentAction(), *pressEvent);
+//            delete pressEvent;
+//            pressEvent = NULL;
+//        }
+//        else {
+            handleClickEvent(*getCurrentAction(), event);
+//        }
     } else if (defaultAction != NULL) {
         defaultAction->mouseReleaseEvent(event);
-        handleClickEvent(*defaultAction, event);
+//        if (pressEvent!=NULL) {
+            // use position of mouse press event:
+//            handleClickEvent(*defaultAction, *pressEvent);
+//            delete pressEvent;
+//            pressEvent = NULL;
+//        }
+//        else {
+            handleClickEvent(*defaultAction, event);
+//        }
     } else {
         event.ignore();
     }
@@ -771,7 +824,7 @@ void RDocumentInterface::handleClickEvent(RAction& action, RMouseEvent& event) {
     if (event.button() == Qt::LeftButton && event.modifiers() == Qt::NoModifier) {
         switch (action.getClickMode()) {
         case RAction::PickCoordinate: {
-                RCoordinateEvent ce(snap(event),
+                RCoordinateEvent ce(snap(event, false),
                     event.getGraphicsScene(), event.getGraphicsView());
                 if (ce.isValid()) {
                     cursorPosition = ce.getModelPosition();
@@ -805,7 +858,7 @@ void RDocumentInterface::handleClickEvent(RAction& action, RMouseEvent& event) {
 void RDocumentInterface::previewClickEvent(RAction& action, RMouseEvent& event) {
     switch (action.getClickMode()) {
         case RAction::PickCoordinate: {
-            RCoordinateEvent ce(snap(event),
+            RCoordinateEvent ce(snap(event, true),
                 event.getGraphicsScene(), event.getGraphicsView());
             if (ce.isValid()) {
                 cursorPosition = ce.getModelPosition();
@@ -924,19 +977,22 @@ void RDocumentInterface::ucsSetEvent(const QString& ucsName) {
 }
 
 RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
-        bool notify) {
+        const QString& nameFilter, bool notify) {
     // URL points to local file:
-    if (url.scheme()=="file") {
+#if QT_VERSION >= 0x040800
+    if (url.isLocalFile()) {
         QString filePath = url.toLocalFile();
-        return importFile(filePath, "", notify);
+        qDebug() << "importing local file:" << filePath;
+        return importFile(filePath, nameFilter, notify);
     }
+#endif
 
     QNetworkAccessManager* manager = new QNetworkAccessManager();
     QNetworkReply* reply = manager->get(QNetworkRequest(url));
     do {
         // dangerous: processing events here allows user to 'interrupt'
         // by sending events (mouse moves, etc)
-        //QApplication::processEvents();
+        QApplication::processEvents();
     } while (reply->isRunning());
     QByteArray data = reply->readAll();
 
@@ -946,7 +1002,7 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
     if (file.open()) {
         file.write(data);
         file.close();
-        return importFile(file.fileName(), "", notify);
+        return importFile(file.fileName(), nameFilter, notify);
     }
     return RDocumentInterface::IoErrorGeneralImportUrlError;
 }
@@ -958,17 +1014,26 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
 RDocumentInterface::IoErrorCode RDocumentInterface::importFile(
         const QString& fileName, const QString& nameFilter, bool notify) {
 
+    // TODO: improve detection of downloadable URLs:
+    if (fileName.toLower().startsWith("http://") ||
+        fileName.toLower().startsWith("https://") ||
+        fileName.toLower().startsWith("ftp://")) {
+
+        qDebug() << "importing URL:" << fileName;
+        return importUrl(QUrl(fileName), nameFilter, notify);
+    }
+
     RMainWindow* mainWindow = RMainWindow::getMainWindow();
 
     clearCaches();
 
     QFileInfo fi(fileName);
-    if (fi.size()==0) {
-        return RDocumentInterface::IoErrorZeroSize;
-    }
-
     if (!fi.exists()) {
         return RDocumentInterface::IoErrorNotFound;
+    }
+
+    if (fi.size()==0) {
+        return RDocumentInterface::IoErrorZeroSize;
     }
 
     if (!fi.isReadable()) {
@@ -1104,6 +1169,19 @@ void RDocumentInterface::flushTransactions() {
 }
 
 /**
+ * Flush redoable transactions.
+ */
+void RDocumentInterface::flushRedo() {
+    int tid = document.getStorage().getLastTransactionId();
+    document.getStorage().deleteTransactionsFrom(tid);
+
+    if (RMainWindow::hasMainWindow()) {
+        //RMainWindow::getMainWindow()->postTransactionEvent();
+        RMainWindow::getMainWindow()->notifyTransactionListeners(&document, NULL);
+    }
+}
+
+/**
  * Sets the current snap object.
  * The document interface takes ownership of the object.
  */
@@ -1152,9 +1230,15 @@ RSnapRestriction* RDocumentInterface::getSnapRestriction() {
  *
  * \return Coordinate to which was snapped.
  */
-RVector RDocumentInterface::snap(RMouseEvent& event) {
+RVector RDocumentInterface::snap(RMouseEvent& event, bool preview) {
     if (currentSnap!=NULL) {
+        // only allow interruption by mouse move if this is a preview and no buttons are pressed:
+        //if (preview && (!RSettings::getPositionByMousePress() || event.buttons()==Qt::NoButton)) {
+        if (preview) {
+            RMouseEvent::setOriginalMousePos(event.globalPos());
+        }
         RVector ret = currentSnap->snap(event);
+        RMouseEvent::resetOriginalMousePos();
         if (currentSnapRestriction!=NULL) {
             ret = currentSnapRestriction->restrictSnap(ret, getRelativeZero());
         }
@@ -1261,14 +1345,15 @@ void RDocumentInterface::selectEntities(const QSet<REntity::Id>& entityIds, bool
 /**
  * Deselects the given entities and updates the scenes accordingly.
  */
-void RDocumentInterface::deselectEntities(const QSet<REntity::Id>& entityIds) {
+bool RDocumentInterface::deselectEntities(const QSet<REntity::Id>& entityIds) {
     QSet<RObject::Id> objectIds;
-    document.deselectEntities(entityIds, &objectIds);
+    bool ret = document.deselectEntities(entityIds, &objectIds);
     updateSelectionStatus(objectIds, true);
 
-    if (RMainWindow::hasMainWindow()) {
+    if (ret && RMainWindow::hasMainWindow()) {
         RMainWindow::getMainWindow()->postSelectionChangedEvent();
     }
+    return ret;
 }
 
 /**
@@ -1357,7 +1442,6 @@ void RDocumentInterface::addZoomBoxToPreview(const RBox& box) {
         scene->setLineweight(RLineweight::Weight000);
         scene->setStyle(Qt::DashLine);
         scene->setLinetypeId(document.getLinetypeId("CONTINUOUS"));
-        //scene->setScreenBasedLinetypes(true);
 
         for (int i=0; i<4; ++i) {
             scene->exportLine(RLine(boxCorners[i], boxCorners[(i+1)%4]));
@@ -1818,8 +1902,8 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
             }
 
             // deselect block reference entities of hidden block:
-            QSet<RObject::Id> ids = document.queryBlockReferences(*it);
             if (block->isFrozen()) {
+                QSet<RObject::Id> ids = document.queryBlockReferences(*it);
                 deselectEntities(ids);
             }
             continue;
@@ -2002,10 +2086,25 @@ RDocumentInterface& RDocumentInterface::getClipboard() {
     return *clipboard;
 }
 
+void RDocumentInterface::deleteClipboard() {
+    if (clipboard!=NULL) {
+        delete clipboard;
+        clipboard = NULL;
+    }
+}
+
 RGraphicsView* RDocumentInterface::getLastKnownViewWithFocus() {
     return lastKnownViewWithFocus;
 }
 
 void RDocumentInterface::setLastKnownViewWithFocus(RGraphicsView* view) {
     lastKnownViewWithFocus = view;
+}
+
+QVariant RDocumentInterface::eval(const QString& ext, const QString& script) {
+    RScriptHandler* handler = getScriptHandler(ext);
+    if (handler==NULL) {
+        return QVariant();
+    }
+    return handler->eval(script);
 }

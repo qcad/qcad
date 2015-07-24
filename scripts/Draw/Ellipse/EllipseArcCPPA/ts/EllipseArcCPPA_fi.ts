@@ -11,47 +11,47 @@
     <message>
         <location line="+7"/>
         <source>Major point of ellipse or major radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Ellipsin keskeinen piste tai keskeinen säde</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Major point of ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Ellipsin keskeinen piste</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Minor point of ellipse or minor radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Ellipsin toinen keskipiste tai toinen säde</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Minor point of ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Ellipsin toinen keskipiste</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Rotation angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Kiertokulma</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Start parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Käynnistysparametri</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End parameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Loppuparametri</translation>
     </message>
     <message>
         <location line="+264"/>
         <source>Invalid major radius.</source>
-        <translation type="unfinished"></translation>
+        <translation>Virheellinen pääsäde.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Major radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pääsäde:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -61,12 +61,12 @@
     <message>
         <location line="+13"/>
         <source>Minor radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Toinen pääsäde:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Start angle:</source>
-        <translation>Alkukulma:</translation>
+        <translation>Aloituskulma:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -102,7 +102,7 @@
     <message>
         <location line="+4"/>
         <source>Draw ellipse arc from center, major point, ratio and angles</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirrä elliptinen kaari keskeltä, pääpisteellä, suhteella ja kulmilla</translation>
     </message>
 </context>
 </TS>

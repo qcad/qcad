@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>RemoveBlock</name>
     <message>
@@ -9,13 +9,13 @@
         <translatorcomment>--exact match--
 --file: qcadactions_pt.ts--
 &amp;Remova Bloco</translatorcomment>
-        <translation>&amp;Remova bloco</translation>
+        <translation>&amp;Remova um Bloco</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delete selected block</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Eliminar bloco selecionado</translation>
+        <translation>Elimine o Bloco selecionado</translation>
     </message>
 </context>
 </TS>

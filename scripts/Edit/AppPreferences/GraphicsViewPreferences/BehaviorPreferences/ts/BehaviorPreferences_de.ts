@@ -17,7 +17,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+48"/>
         <source>Double-Click</source>
         <translation>Doppelklick</translation>
     </message>
@@ -32,7 +32,12 @@
         <translation>Doppelklick auf Blockreferenz öffnet Block</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+10"/>
+        <source>Right double-click to reset</source>
+        <translation>Rechts-Doppelklick zum Zurücksetzen</translation>
+    </message>
+    <message>
+        <location line="-42"/>
         <source>Right-Click</source>
         <translation>Rechtsklick</translation>
     </message>
@@ -42,7 +47,7 @@
         <translation>Rechtsklick zum Deselektieren von Objekten</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+46"/>
         <source>Cursor Range</source>
         <translation>Zeigerreichweite</translation>
     </message>

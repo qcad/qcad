@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -33,6 +33,7 @@ include("../Draw.js");
 function Line(guiAction) {
     Draw.call(this, guiAction);
 
+    this.showAutoLineType = false;
     this.lineType = Line.LineType.Line;
 }
 
@@ -40,6 +41,7 @@ Line.prototype = new Draw();
 Line.includeBasePath = includeBasePath;
 
 Line.LineType = {
+    Auto : -1,
     Line : 0,
     XLine : 1,
     Ray : 2
@@ -48,7 +50,7 @@ Line.LineType = {
 Line.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="LineToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="LineToolsPanelAction") {
         EAction.showCadToolBarPanel("LineToolsPanel");
         this.terminate();
     }
@@ -74,7 +76,7 @@ Line.getToolBar = function() {
 
 Line.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "LineToolsPanelButton";
+    var actionName = "LineToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Line Tools"), mtb);
         action.setScriptFile(Line.includeBasePath + "/Line.js");
@@ -90,11 +92,7 @@ Line.getCadToolBarPanel = function() {
         action.setWidgetNames(["MainToolsPanel"]);
     }
 
-    var tb = EAction.getCadToolBarPanel(
-        Line.getTitle(),
-        "LineToolsPanel",
-        true
-    );
+    var tb = EAction.getCadToolBarPanel(Line.getTitle(), "LineToolsPanel", true);
     return tb;
 };
 
@@ -106,8 +104,8 @@ Line.prototype.getTitle = function() {
     return Line.getTitle();
 };
 
-Line.prototype.createLineEntity = function(doc, p1, p2) {
-    switch (this.lineType) {
+Line.createLineEntity = function(doc, p1, p2, lineType) {
+    switch (lineType) {
     default:
     case Line.LineType.Line:
         return new RLineEntity(doc, new RLineData(p1, p2));
@@ -118,14 +116,21 @@ Line.prototype.createLineEntity = function(doc, p1, p2) {
     }
 };
 
+Line.prototype.createLineEntity = function(doc, p1, p2) {
+    return Line.createLineEntity(doc, p1, p2, this.lineType);
+};
+
 Line.prototype.initUiOptions = function(resume, optionsToolBar) {
     Draw.prototype.initUiOptions.call(this, resume, optionsToolBar);
 
-    this.lineType = RSettings.getIntValue(this.settingsGroup + "/Type", 0);
+    this.lineType = RSettings.getIntValue(this.settingsGroup + "/Type",
+        this.showAutoLineType ? Line.LineType.Auto : Line.LineType.Line);
 
-    //var optionsToolBar = EAction.getOptionsToolBar();
     var wn = "";
     switch (this.lineType) {
+    case Line.LineType.Auto:
+        wn = "TypeAuto";
+        break;
     case Line.LineType.Line:
         wn = "TypeSegment";
         break;
@@ -137,7 +142,15 @@ Line.prototype.initUiOptions = function(resume, optionsToolBar) {
         break;
     }
 
-    var w = optionsToolBar.findChild(wn);
+    var w = optionsToolBar.findChild("TypeAutoAction");
+    if (!isNull(w) && !this.showAutoLineType) {
+        w.visible = false;
+        if (wn==="TypeAuto") {
+            wn = "TypeSegment";
+        }
+    }
+
+    w = optionsToolBar.findChild(wn);
     if (!isNull(w)) {
         w.checked = true;
     }
@@ -149,30 +162,66 @@ Line.prototype.hideUiOptions = function(saveToSettings) {
     RSettings.setValue(this.settingsGroup + "/Type", this.lineType);
 };
 
+/**
+ * Implemented by line tool classes to be notified when type changed.
+ */
 Line.prototype.typeChanged = function() {
 };
 
-Line.prototype.slotTypeSegmentChanged = function(checked) {
+Line.prototype.slotTypeAutoChanged = function(checked) {
+    Line.slotTypeAutoChanged(this, checked);
+};
+
+Line.slotTypeAutoChanged = function(obj, checked) {
     if (checked) {
-        this.lineType = Line.LineType.Line;
-        this.updatePreview(true);
-        this.typeChanged();
+        obj.lineType = Line.LineType.Auto;
+        obj.updatePreview(true);
+        if (isFunction(obj.typeChanged)) {
+            obj.typeChanged();
+        }
     }
 };
 
-Line.prototype.slotTypeRayChanged = function(checked) {
+Line.prototype.slotTypeSegmentChanged = function(checked) {
+    Line.slotTypeSegmentChanged(this, checked);
+};
+
+Line.slotTypeSegmentChanged = function(obj, checked) {
     if (checked) {
-        this.lineType = Line.LineType.Ray;
-        this.updatePreview(true);
-        this.typeChanged();
+        obj.lineType = Line.LineType.Line;
+        obj.updatePreview(true);
+        if (isFunction(obj.typeChanged)) {
+            obj.typeChanged();
+        }
+    }
+};
+
+
+Line.prototype.slotTypeRayChanged = function(checked) {
+    Line.slotTypeRayChanged(this, checked);
+};
+
+Line.slotTypeRayChanged = function(obj, checked) {
+    if (checked) {
+        obj.lineType = Line.LineType.Ray;
+        obj.updatePreview(true);
+        if (isFunction(obj.typeChanged)) {
+            obj.typeChanged();
+        }
     }
 };
 
 Line.prototype.slotTypeXLineChanged = function(checked) {
+    Line.slotTypeXLineChanged(this, checked);
+};
+
+Line.slotTypeXLineChanged = function(obj, checked) {
     if (checked) {
-        this.lineType = Line.LineType.XLine;
-        this.updatePreview(true);
-        this.typeChanged();
+        obj.lineType = Line.LineType.XLine;
+        obj.updatePreview(true);
+        if (isFunction(obj.typeChanged)) {
+            obj.typeChanged();
+        }
     }
 };
 

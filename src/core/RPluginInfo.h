@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -24,6 +24,7 @@
 
 #include <QMap>
 #include <QString>
+#include <QStringList>
 #include <QMetaType>
 #include <QVariant>
 

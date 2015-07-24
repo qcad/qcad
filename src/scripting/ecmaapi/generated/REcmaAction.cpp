@@ -33,6 +33,8 @@
             
                 #include "RTabletEvent.h"
             
+                #include "ROperation.h"
+            
             
         // includes for base ecma wrapper classes
          void REcmaAction::initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -158,6 +160,10 @@
             REcmaHelper::registerFunction(&engine, proto, entityPickEventPreview, "entityPickEventPreview");
             
             REcmaHelper::registerFunction(&engine, proto, propertyChangeEvent, "propertyChangeEvent");
+            
+            REcmaHelper::registerFunction(&engine, proto, updatePreview, "updatePreview");
+            
+            REcmaHelper::registerFunction(&engine, proto, applyOperation, "applyOperation");
             
             REcmaHelper::registerFunction(&engine, proto, snap, "snap");
             
@@ -776,7 +782,7 @@
                self->getGuiAction();
         // return type: RGuiAction *
                 // QObject
-                result = engine->newQObject(cppResult);
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
             
     } else
 
@@ -2659,6 +2665,94 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaAction::propertyChangeEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaAction::updatePreview
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaAction::updatePreview", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaAction::updatePreview";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAction* self = 
+                        getSelf("updatePreview", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updatePreview();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAction.updatePreview().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaAction::updatePreview", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaAction::applyOperation
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaAction::applyOperation", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaAction::applyOperation";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAction* self = 
+                        getSelf("applyOperation", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->applyOperation();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAction.applyOperation().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaAction::applyOperation", context, engine);
             return result;
         }
          QScriptValue

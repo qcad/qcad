@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -31,6 +31,8 @@ function Rotate(guiAction) {
     this.referencePoint = undefined;
     this.targetPoint = undefined;
     this.angle = undefined;
+    this.angleByMouse = false;
+    this.useDialog = true;
 }
 
 Rotate.prototype = new Transform();
@@ -117,12 +119,14 @@ Rotate.prototype.pickCoordinate = function(event, preview) {
     case Rotate.State.SettingCenterPoint:
         if (!preview) {
             this.centerPoint = event.getModelPosition();
-            this.setState(-1);
 
-            if (!this.showDialog()) {
-                // dialog canceled:
-                this.terminate();
-                return;
+            if (this.useDialog) {
+                this.setState(-1);
+                if (!this.showDialog()) {
+                    // dialog canceled:
+                    this.terminate();
+                    return;
+                }
             }
 
             // define angle with mouse:
@@ -183,6 +187,7 @@ Rotate.prototype.showDialog = function() {
     WidgetFactory.restoreState(dialog);
     if (!dialog.exec()) {
         dialog.destroy();
+        EAction.activateMainWindow();
         return false;
     }
 
@@ -211,6 +216,7 @@ Rotate.prototype.showDialog = function() {
     WidgetFactory.saveState(dialog);
 
     dialog.destroy();
+    EAction.activateMainWindow();
     return true;
 }
 

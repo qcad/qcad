@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -57,7 +57,7 @@ public:
 
     virtual bool isValid() const;
 
-    void setDefinitionPoint(const RVector& p) {
+    virtual void setDefinitionPoint(const RVector& p) {
         definitionPoint = p;
         update();
     }
@@ -115,6 +115,12 @@ public:
         linearFactor = f;
     }
 
+    double getDimScale() const;
+
+    void setDimScale(double f) {
+        dimScale = f;
+    }
+
     virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0, bool draft = false, double strictRange = RMAXDOUBLE) const;
     virtual bool intersectsWith(const RShape& shape) const;
 
@@ -129,7 +135,7 @@ public:
     virtual bool scale(const RVector& scaleFactors, const RVector& center);
     virtual bool mirror(const RLine& axis);
 
-    double getDimscale() const;
+    //double getDimscale() const;
     double getDimexo() const;
     double getDimexe() const;
     double getDimasz() const;
@@ -204,6 +210,7 @@ protected:
     double textAngle;
 
     double linearFactor;
+    double dimScale;
 
     mutable bool dirty;
     mutable RTextData textData;

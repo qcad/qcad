@@ -4,7 +4,7 @@
 <context>
     <name>Rotate</name>
     <message>
-        <location filename="../Rotate.js" line="+68"/>
+        <location filename="../Rotate.js" line="+70"/>
         <source>Center point</source>
         <translatorcomment>--google--
 Przyciągaj do punktów centralnych</translatorcomment>

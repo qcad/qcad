@@ -4,29 +4,31 @@
 <context>
     <name>CircleCD</name>
     <message>
-        <location filename="../CircleCD.js" line="+56"/>
-        <source>Center or radius</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Center</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../CircleCD.ui" line="+17"/>
-        <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../CircleCDDialog.ui" line="+89"/>
+        <source>Diameter:</source>
+        <translation>直径：</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <location filename="../CircleCDDialog.ui" line="-60"/>
+        <source>Angle:</source>
+        <translation>角度：</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Reference Point:</source>
+        <translation>参考点：</translation>
     </message>
     <message>
         <location filename="../CircleCDInit.js" line="+2"/>
-        <source>Center, &amp;Radius</source>
-        <translation type="unfinished"></translation>
+        <source>Center, &amp;Diameter</source>
+        <translation>圆心，直径</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>Draw circle from center and radius</source>
-        <translation type="unfinished"></translation>
+        <location line="+4"/>
+        <source>Draw circle from center and diameter</source>
+        <translation>由圆心和直径画圆</translation>
     </message>
 </context>
 </TS>

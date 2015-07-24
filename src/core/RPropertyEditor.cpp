@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -185,8 +185,9 @@ void RPropertyEditor::updateFromDocument(RDocument* document,
 
     updatesDisabled = true;
 
-    // add all properties of the entities in the given document:
-    QSet<RObject::Id> entityIds = document->querySelectedEntities();
+    // add all properties of the selected entities in the given document:
+    QSet<RObject::Id> objectIds = document->queryPropertyEditorObjects();
+
     QSet<RObject::Id>::iterator it;
 
     // only block ref and attributes selected: default to filter block ref:
@@ -194,25 +195,25 @@ void RPropertyEditor::updateFromDocument(RDocument* document,
         bool foundBlockRef = false;
         bool foundAttribute = false;
         bool foundOther = false;
-        for (it = entityIds.begin(); it != entityIds.end(); ++it) {
-            QSharedPointer<REntity> entity = document->queryEntityDirect(*it);
-            if (entity.isNull()) {
+        for (it = objectIds.begin(); it != objectIds.end(); ++it) {
+            QSharedPointer<RObject> obj = document->queryObjectDirect(*it);
+            if (obj.isNull()) {
                 continue;
             }
 
-            if (!foundBlockRef && entity->getType()==RS::EntityBlockRef) {
+            if (!foundBlockRef && obj->getType()==RS::EntityBlockRef) {
                 foundBlockRef = true;
                 if (foundAttribute && foundOther) {
                     break;
                 }
             }
-            if (!foundAttribute && entity->getType()==RS::EntityAttribute) {
+            if (!foundAttribute && obj->getType()==RS::EntityAttribute) {
                 foundAttribute = true;
                 if (foundBlockRef && foundOther) {
                     break;
                 }
             }
-            if (!foundOther && entity->getType()!=RS::EntityBlockRef && entity->getType()!=RS::EntityAttribute) {
+            if (!foundOther && obj->getType()!=RS::EntityBlockRef && obj->getType()!=RS::EntityAttribute) {
                 foundOther = true;
                 if (foundBlockRef && foundAttribute) {
                     break;
@@ -225,45 +226,46 @@ void RPropertyEditor::updateFromDocument(RDocument* document,
         }
     }
 
-    for (it = entityIds.begin(); it != entityIds.end(); ++it) {
-        QSharedPointer<REntity> entity = document->queryEntityDirect(*it);
-        if (entity.isNull()) {
+    for (it = objectIds.begin(); it != objectIds.end(); ++it) {
+        QSharedPointer<RObject> obj = document->queryObjectDirect(*it);
+        if (obj.isNull()) {
             continue;
         }
-        if (entityTypeFilter!=RS::EntityAll && !checkType(entity->getType(), entityTypeFilter)) {
+        if (entityTypeFilter!=RS::EntityAll && !checkType(obj->getType(), entityTypeFilter)) {
             continue;
         }
 
-        updateEditor(*entity.data(), false, document);
+        updateEditor(*obj.data(), false, document);
     }
 
-    // remove properties that are not shared by all selected entities:
     RS::EntityType entityTypeFilterProp = entityTypeFilter;
     if (entityTypeFilterProp==RS::EntityBlockRefAttr) {
         // only block ref and attributes selected: show only block ref properties:
         entityTypeFilterProp = RS::EntityBlockRef;
     }
-    for (it = entityIds.begin(); it != entityIds.end(); ++it) {
-        QSharedPointer<REntity> entity = document->queryEntityDirect(*it);
-        if (entity.isNull()) {
+
+    // remove properties that are not shared by all selected entities:
+    for (it = objectIds.begin(); it != objectIds.end(); ++it) {
+        QSharedPointer<RObject> obj = document->queryObjectDirect(*it);
+        if (obj.isNull()) {
             continue;
         }
 
-        QPair<QVariant, RPropertyAttributes> p = entity->getProperty(REntity::PropertyType);
+        QPair<QVariant, RPropertyAttributes> p = obj->getProperty(REntity::PropertyType);
         RS::EntityType type = (RS::EntityType)p.first.toInt();
 
-        if (entityTypeFilterProp==RS::EntityAll || entity->getType()==entityTypeFilterProp) {
+        if (entityTypeFilterProp==RS::EntityAll || obj->getType()==entityTypeFilterProp) {
             bool customOnly = false;
             QSet<RPropertyTypeId> propertyTypeIds;
             if (combinedTypes.contains(type)) {
                 // already filtered out property type IDs of this type,
                 // only look into custom properties:
-                propertyTypeIds = entity->getCustomPropertyTypeIds();
+                propertyTypeIds = obj->getCustomPropertyTypeIds();
                 customOnly = true;
             }
             else {
                 // not filtered out this type yet, look into all properties:
-                propertyTypeIds = entity->getPropertyTypeIds();
+                propertyTypeIds = obj->getPropertyTypeIds();
             }
 
             if (!propertyTypeIds.isEmpty()) {

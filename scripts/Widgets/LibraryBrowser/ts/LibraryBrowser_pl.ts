@@ -4,7 +4,7 @@
 <context>
     <name>LibraryBrowser</name>
     <message>
-        <location filename="../LibraryBrowser.js" line="+70"/>
+        <location filename="../LibraryBrowser.js" line="+71"/>
         <source>audience</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">publiczność</translation>
@@ -86,7 +86,7 @@ Zastępcze widżety</translatorcomment>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1108"/>
+        <location line="+1138"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translatorcomment>--exact match--
@@ -95,7 +95,7 @@ Przeglądarka bibliotek</translatorcomment>
         <translation type="unfinished">Przeglądarka bibliotek</translation>
     </message>
     <message>
-        <location line="-1100"/>
+        <location line="-1130"/>
         <source>Icon</source>
         <translatorcomment>--google--
 XX ikona wybrana wyłączona
@@ -119,7 +119,7 @@ Atrybuty filtru bieżącej dokumentacji (lista oddzielona przecinkami):</transla
         <translation type="unfinished">Wybierz folder źródłowy</translation>
     </message>
     <message>
-        <location line="+654"/>
+        <location line="+684"/>
         <source>Page %1 of %2</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -202,7 +202,17 @@ Library browser will not be available.</source>
         <translation type="unfinished">LibraryBrowser Plugin: nie można połączyć się z DB. Błąd kierowcy: Błąd bazy danych: Plik bazy danych: przeglądarka Biblioteka nie będzie dostępna.</translation>
     </message>
     <message>
-        <location line="+446"/>
+        <location line="+43"/>
+        <source>Source removed from part library: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Force database update.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+393"/>
         <source>&amp;Insert</source>
         <translatorcomment>--google--
 &amp;Wstaw blok
@@ -367,7 +377,7 @@ Anulowano pobieranie.</translatorcomment>
         <translation type="unfinished">System plików</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+60"/>
         <source>Tags</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -376,7 +386,7 @@ Tags</translatorcomment>
         <translation type="unfinished">Tags</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+23"/>
         <source>Look for:</source>
         <translatorcomment>--exact match--
 --file: assistant_pl.ts--
@@ -425,7 +435,12 @@ Ulubione</translatorcomment>
         <translation type="unfinished">Ulubione</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+36"/>
+        <source>Insert selected item into drawing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Update DB from file system</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Aktualizacja DB z systemem plików</translation>

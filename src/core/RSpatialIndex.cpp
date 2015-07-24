@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -49,6 +49,20 @@ int RSpatialIndex::getId(qint64 siid) {
 
 int RSpatialIndex::getPos(qint64 siid) {
     return (int)((siid & Q_INT64_C(0xFFFFFFFF00000000)) >> 32);
+}
+
+void RSpatialIndex::bulkLoad(const QList<int>& ids, const QList<QList<RBox> >& bbs) {
+    for (int i=0; i<ids.length() && i<bbs.length(); i++) {
+        addToIndex(ids[i], bbs[i]);
+    }
+}
+
+void RSpatialIndex::bulkLoadSimple(const QList<int>& ids, const QList<RBox>& bbs) {
+    QList<QList<RBox> > list;
+    for (int i=0; i<bbs.length(); i++) {
+        list.append(QList<RBox>() << bbs[i]);
+    }
+    bulkLoad(ids, list);
 }
 
 void RSpatialIndex::addToIndex(int id, const QList<RBox>& bbs) {

@@ -9,7 +9,7 @@
         <translation>选择基准线或基准弧</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Choose end point of arc</source>
         <translation>选择弧线的结束点</translation>
     </message>
@@ -25,7 +25,7 @@
     <message>
         <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>切向连接(&amp;T)</translation>
     </message>
     <message>
         <location line="+4"/>

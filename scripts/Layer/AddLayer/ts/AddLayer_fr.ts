@@ -19,4 +19,12 @@
         <translation>Ajouter un calque</translation>
     </message>
 </context>
+<context>
+    <name>Layer</name>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+19"/>
+        <source>Default lineweight for new layers:</source>
+        <translation>Épaisseur de ligne par défaut pour nouveaux calques :</translation>
+    </message>
+</context>
 </TS>

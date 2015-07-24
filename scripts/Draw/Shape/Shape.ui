@@ -16,6 +16,9 @@
      <property name="text">
       <string>Create polyline</string>
      </property>
+     <property name="MoveToDialog" stdset="0">
+      <bool>true</bool>
+     </property>
     </widget>
    </item>
   </layout>

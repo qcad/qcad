@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -167,4 +167,15 @@ QList<RVector> RPolylineData::getIntersectionPoints(
     }
 
     return ret;
+}
+
+QList<QSharedPointer<RShape> > RPolylineData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
+    Q_UNUSED(queryBox)
+
+    if (!ignoreComplex) {
+        return QList<QSharedPointer<RShape> >() << QSharedPointer<RShape>(new RPolyline(*this));
+    }
+    else {
+        return getExploded();
+    }
 }

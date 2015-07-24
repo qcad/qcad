@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -79,6 +79,10 @@ public:
     static int getPos(qint64 siid);
 
     virtual void clear() = 0;
+
+    virtual void bulkLoad(const QList<int>& ids, const QList<QList<RBox> >& bbs);
+
+    virtual void bulkLoadSimple(const QList<int>& ids, const QList<RBox>& bbs);
 
     /**
      * Adds a new entry into this spatial index.

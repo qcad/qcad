@@ -1,373 +1,88 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RPluginLoader.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RPLUGINLOADER_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RPLUGINLOADER_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QScriptEngine&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPluginInterface.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RPluginInfo.h"</cpp:file></cpp:include>
-  <comment type="block">/** * Loads and registeres plugins. * *
-  \ingroup core * \scriptable */</comment>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RPluginLoader</name>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>getPluginSuffix</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QStringList</name>
-  </type>
-  <name>getPluginFiles</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>loadPlugins</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>bool</name>
-      </type>
-      <name>init</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>unloadPlugins</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>void</name>
-    </type>
-    <name>loadPlugin</name>
-    <argument_list>(
-    <argument>
-      <expr>
-      <name>QObject</name>* 
-      <name>plugin</name></expr>
-    </argument>, 
-    <argument>
-      <expr>
-        <name>bool</name>
-        <name>init</name>
-      </expr>
-    </argument>, 
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QString</name>&amp; 
-      <name>fileName</name>= 
-      <call>
-        <name>QString</name>
-        <argument_list>()</argument_list>
-      </call></expr>
-    </argument>, 
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QString</name>&amp; 
-      <name>errorString</name>= 
-      <call>
-        <name>QString</name>
-        <argument_list>()</argument_list>
-      </call></expr>
-    </argument>)</argument_list>
-  </decl>;</decl_stmt>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>unloadPlugin</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>fileName</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>remove</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>unloadPlugin</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QObject</name>*</type>
-      <name>plugin</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>remove</name>=
-    <init>
-      <expr>
-        <name>false</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>postInitPlugins</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RPluginInterface</name>::
-        <name>InitStatus</name></name>
-      </type>
-      <name>status</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>postInitPlugin</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QObject</name>*</type>
-      <name>plugin</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>
-        <name>RPluginInterface</name>::
-        <name>InitStatus</name></name>
-      </type>
-      <name>status</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>initScriptExtensions</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>&amp;</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <comment type="block">/** * \nonscriptable */</comment>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>void</name>
-  </type>
-  <name>initScriptExtensions</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QObject</name>*</type>
-      <name>plugin</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>QScriptEngine</name>&amp;</type>
-      <name>engine</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function>
-    <type>
-      <name>static</name>
-      <name>int</name>
-    </type>
-    <name>countPlugins</name>
-    <parameter_list>()</parameter_list>
-    <block>{ 
-    <return>return 
-    <expr>
-    <name>pluginsInfo</name>.
-    <call>
-      <name>count</name>
-      <argument_list>()</argument_list>
-    </call></expr>;</return>}</block>
-  </function>
-  <function>
-    <type>
-      <name>static</name>
-      <name>RPluginInfo</name>
-    </type>
-    <name>getPluginInfo</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-          <name>int</name>
-        </type>
-        <name>i</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <if>if 
-    <condition>(
-    <expr>
-    <name>i</name>&lt;0 || 
-    <name>i</name>&gt;
-    <name>pluginsInfo</name>.
-    <call>
-      <name>count</name>
-      <argument_list>()</argument_list>
-    </call></expr>)</condition>
-    <then>
-      <block>{ 
-      <return>return 
-      <expr>
-        <call>
-          <name>RPluginInfo</name>
-          <argument_list>()</argument_list>
-        </call>
-      </expr>;</return>}</block>
-    </then></if>
-    <return>return 
-    <expr>
-      <name>
-        <name>pluginsInfo</name>
-        <index>[
-        <expr>
-          <name>i</name>
-        </expr>]</index>
-      </name>
-    </expr>;</return>}</block>
-  </function>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>QString</name>
-  </type>
-  <name>getPluginsPath</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>static</name>
-    <name>bool</name>
-  </type>
-  <name>hasPlugin</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>name</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QList
-      <argument_list>&lt;
-      <argument>
-        <name>RPluginInfo</name>
-      </argument>&gt;</argument_list></name>
-    </type>
-    <name>pluginsInfo</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>static</name>
-      <name>QStringList</name>
-    </type>
-    <name>pluginFiles</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RPluginLoader*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RPluginLoader.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RPLUGINLOADER_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RPLUGINLOADER_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QScriptEngine&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPluginInterface.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPluginInfo.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * Loads and registeres plugins.
+ *
+ * \ingroup core
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPluginLoader</name> <block>{<private type="default">
+</private><public>public:
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>getPluginSuffix</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QStringList</name></type> <name>getPluginFiles</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>loadPlugins</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>init</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>unloadPlugins</name><parameter_list>()</parameter_list>;</function_decl>
+    <decl_stmt><decl><type><name>static</name> <name>void</name></type> <name>loadPlugin</name><argument_list>(<argument><expr><name>QObject</name>* <name>plugin</name></expr></argument>, <argument><expr><name>bool</name> <name>init</name></expr></argument>, <argument><expr><name>const</name> <name>QString</name>&amp; <name>fileName</name> = <call><name>QString</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><name>const</name> <name>QString</name>&amp; <name>errorString</name> = <call><name>QString</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>unloadPlugin</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>, <param><decl><type><name>bool</name></type> <name>remove</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>unloadPlugin</name><parameter_list>(<param><decl><type><name>const</name> <name>QObject</name>*</type> <name>plugin</name></decl></param>, <param><decl><type><name>bool</name></type> <name>remove</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>static</name> <name>void</name></type> <name>postInitPlugins</name><parameter_list>(<param><decl><type><name><name>RPluginInterface</name>::<name>InitStatus</name></name></type> <name>status</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>postInitPlugin</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>plugin</name></decl></param>, <param><decl><type><name><name>RPluginInterface</name>::<name>InitStatus</name></name></type> <name>status</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>initScriptExtensions</name><parameter_list>(<param><decl><type><name>QScriptEngine</name>&amp;</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>initScriptExtensions</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>plugin</name></decl></param>, <param><decl><type><name>QScriptEngine</name>&amp;</type> <name>engine</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>static</name> <name>int</name></type> <name>countPlugins</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>pluginsInfo</name>.<call><name>count</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>RPluginInfo</name></type> <name>getPluginInfo</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>i</name>&lt;0 || <name>i</name>&gt;<name>pluginsInfo</name>.<call><name>count</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><call><name>RPluginInfo</name><argument_list>()</argument_list></call></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><name><name>pluginsInfo</name><index>[<expr><name>i</name></expr>]</index></name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>getPluginsPath</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>hasPlugin</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>id</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>RPluginInfo</name></argument>&gt;</argument_list></name></type> <name>pluginsInfo</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QStringList</name></type> <name>pluginFiles</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RPluginLoader*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

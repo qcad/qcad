@@ -91,6 +91,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("GotMainWindowBeforeShow",
+    QScriptValue(RPluginInterface::GotMainWindowBeforeShow),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("GotMainWindow",
     QScriptValue(RPluginInterface::GotMainWindow),
     QScriptValue::ReadOnly);

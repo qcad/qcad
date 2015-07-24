@@ -4,14 +4,12 @@
 <context>
     <name>LineParallelThrough</name>
     <message>
-        <location filename="../LineParallelThrough.js" line="+62"/>
         <source>Choose line, arc or circle</source>
-        <translation>Izberite črto, lok ali krog</translation>
+        <translation type="vanished">Izberite črto, lok ali krog</translation>
     </message>
     <message>
-        <location line="+6"/>
         <source>Specify point</source>
-        <translation>Določite točko</translation>
+        <translation type="vanished">Določite točko</translation>
     </message>
     <message>
         <location filename="../LineParallelThrough.ui" line="+17"/>

@@ -11,14 +11,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString" name="title"
         isConst="true" />
         <arg type="QWidget *" typeName="QWidget *" name="parent"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
         <arg type="Qt::WindowFlags" typeName="Qt::WindowFlags"
         name="flags" hasDefault="true" default="0"
         isConst="false" />
       </variant>
       <variant>
         <arg type="QWidget *" typeName="QWidget *" name="parent"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
         <arg type="Qt::WindowFlags" typeName="Qt::WindowFlags"
         name="flags" hasDefault="true" default="0"
         isConst="false" />

@@ -4,22 +4,22 @@
 <context>
     <name>CoordinateDisplay</name>
     <message>
-        <location filename="../CoordinateDisplay.ui" line="+69"/>
+        <location filename="../CoordinateDisplay.ui" line="+72"/>
         <source>Absolute Cartesian Coordinate</source>
         <translation>絶対デカルト座標</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+21"/>
         <source>Absolute Polar Coordinate</source>
         <translation>絶対極座標</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+21"/>
         <source>Relative Cartesian Coordinate</source>
         <translation>相対デカルト座標</translation>
     </message>
     <message>
-        <location line="+27"/>
+        <location line="+21"/>
         <source>Relative Polar Coordinate</source>
         <translation>相対極座標</translation>
     </message>

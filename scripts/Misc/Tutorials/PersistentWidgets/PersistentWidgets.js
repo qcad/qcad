@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -47,6 +47,7 @@ PersistentWidgets.prototype.beginEvent = function() {
     // Display and execute the dialog:
     if (!dialog.exec()) {
         dialog.destroy();
+        EAction.activateMainWindow();
         // User hit cancel:
         this.terminate();
         return;
@@ -64,6 +65,7 @@ PersistentWidgets.prototype.beginEvent = function() {
     appWin.handleUserMessage("Position Y: " + positionY);
     
     dialog.destroy();
+    EAction.activateMainWindow();
     this.terminate();
 };
 //! [beginEvent]

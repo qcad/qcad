@@ -54,9 +54,40 @@
         <translation>Flip blok&lt;br&gt;verticaal</translation>
     </message>
     <message>
+        <location line="+18"/>
+        <source>Single Block</source>
+        <translation>Enkel blok</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <location filename="../InsertBlockDialog.ui" line="+14"/>
+        <source>Array of Blocks</source>
+        <translation>Array van blokken</translation>
+    </message>
+    <message>
         <location filename="../InsertBlockInit.js" line="+2"/>
         <source>&amp;Insert Block</source>
         <translation>Blok &amp;invoegen</translation>
+    </message>
+    <message>
+        <location filename="../InsertBlockDialog.ui" line="+12"/>
+        <source>Columns:</source>
+        <translation>Kolommen:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Rows:</source>
+        <translation>Rijen:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Column Spacing:</source>
+        <translation>Kolom afstand:</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Row Spacing:</source>
+        <translation>Rij afstand:</translation>
     </message>
 </context>
 </TS>

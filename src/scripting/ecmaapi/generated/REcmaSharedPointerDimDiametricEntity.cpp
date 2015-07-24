@@ -121,6 +121,10 @@
                 qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyHandle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyProtected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -147,6 +151,10 @@
             
             ctor.setProperty("PropertyColor",
                 qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyDisplayedColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyDrawOrder",
@@ -183,6 +191,10 @@
             
             ctor.setProperty("PropertyLinearFactor",
                 qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyLinearFactor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDimScale",
+                qScriptValueFromValue(&engine, RDimDiametricEntity::PropertyDimScale),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyAutoTextPos",
@@ -299,7 +311,7 @@
                         return REcmaHelper::throwError("RDimDiametricEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimDiametricData*
                     ap1 =
                     qscriptvalue_cast<
@@ -309,11 +321,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimDiametricEntity: Argument 1 is not of type RDimDiametricData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimDiametricEntity: Argument 1 is not of type RDimDiametricData.",
                                context);                    
                     }
-                    RDimDiametricData& a1 = *ap1;
+                    RDimDiametricData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -394,7 +408,7 @@
                         return REcmaHelper::throwError("RDimDiametricEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimDiametricData*
                     ap1 =
                     qscriptvalue_cast<
@@ -404,11 +418,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RDimDiametricEntity: Argument 1 is not of type RDimDiametricData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RDimDiametricEntity: Argument 1 is not of type RDimDiametricData.",
                                context);                    
                     }
-                    RDimDiametricData& a1 = *ap1;
+                    RDimDiametricData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id
@@ -1214,7 +1230,7 @@
     ){
     // prepare arguments:
     
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RDimDiametricData*
                     ap0 =
                     qscriptvalue_cast<
@@ -1224,11 +1240,13 @@
                         0
                         )
                     );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDimDiametricEntity: Argument 0 is not of type RDimDiametricData*.",
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RDimDiametricEntity: Argument 0 is not of type RDimDiametricData.",
                                context);                    
                     }
-                    RDimDiametricData& a0 = *ap0;
+                    RDimDiametricData 
+                    a0 = 
+                    *ap0;
                 
     // end of arguments
 

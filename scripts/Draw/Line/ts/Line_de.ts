@@ -4,7 +4,7 @@
 <context>
     <name>Line</name>
     <message>
-        <location filename="../Line.js" line="+79"/>
+        <location filename="../Line.js" line="+81"/>
         <source>Line Tools</source>
         <translation>Linienwerkzeuge</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Linienwerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+14"/>
         <source>&amp;Line</source>
         <translation>&amp;Linie</translation>
     </message>
@@ -23,7 +23,16 @@
         <translation type="obsolete">Linie</translation>
     </message>
     <message>
+        <source>Same Type as Original</source>
+        <translation type="obsolete">Gleicher </translation>
+    </message>
+    <message>
         <location filename="../Line.ui" line="+17"/>
+        <source>Same Entity Type as Original</source>
+        <translation>Gleicher Objekttyp wie Original</translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Line Segment</source>
         <translation>Liniensegment</translation>
     </message>

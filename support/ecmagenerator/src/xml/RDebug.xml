@@ -32,6 +32,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="id" isConst="false" />
         <arg type="QString &amp;" typeName="QString" name="msg"
         isConst="true" />
+        <arg type="int" typeName="int" name="msThreshold"
+        hasDefault="true" default="0" isConst="false" />
       </variant>
     </method>
     <method name="timeStamp" cppName="timeStamp" specifier="public"
@@ -44,6 +46,58 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString" name="str"
         isConst="true" />
       </variant>
+    </method>
+    <method name="incCounter" cppName="incCounter"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="id"
+        hasDefault="true" default="RDEFAULT_QSTRING"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="decCounter" cppName="decCounter"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="id"
+        hasDefault="true" default="RDEFAULT_QSTRING"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getCounter" cppName="getCounter"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="id"
+        hasDefault="true" default="RDEFAULT_QSTRING"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="printCounter" cppName="printCounter"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="id"
+        hasDefault="true" default="RDEFAULT_QSTRING"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="printCounters" cppName="printCounters"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="setPrefix" cppName="setPrefix" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="p"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getPrefix" cppName="getPrefix" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
     </method>
   </class>
 </unit>

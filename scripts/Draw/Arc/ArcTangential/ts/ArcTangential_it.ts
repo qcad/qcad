@@ -16,7 +16,7 @@
         <translation>Scegli linea di base o arco di base</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Choose end point of arc</source>
         <translation>Scegli il punto finale dell&apos;arco</translation>
     </message>

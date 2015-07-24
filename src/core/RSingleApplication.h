@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -40,6 +40,8 @@ public:
     RSingleApplication(Display *dpy, int& argc, char **argv, Qt::HANDLE visual = 0, Qt::HANDLE cmap= 0);
     RSingleApplication(Display* dpy, const QString& appId, int argc, char **argv, Qt::HANDLE visual = 0, Qt::HANDLE colormap = 0);
 #endif
+
+    ~RSingleApplication();
 
     static RSingleApplication* getInstance();
 

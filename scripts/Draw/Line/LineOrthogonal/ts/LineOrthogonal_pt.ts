@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>LineOrthogonal</name>
     <message>
@@ -16,7 +16,7 @@ Restrinja &amp;Ortogonal</translatorcomment>
         <location line="+4"/>
         <source>Draw line orthogonal to base entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar linha ortogonal à entidade de base</translation>
+        <translation>Desenhe uma linha ortogonal à entidade de base</translation>
     </message>
     <message>
         <location filename="../LineOrthogonal.ui" line="+17"/>
@@ -41,7 +41,7 @@ Restrinja &amp;Ortogonal</translatorcomment>
     <message>
         <location line="+5"/>
         <source>End</source>
-        <translation>Fim</translation>
+        <translation>Final</translation>
     </message>
 </context>
 <context>

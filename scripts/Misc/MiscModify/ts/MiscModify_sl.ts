@@ -6,22 +6,22 @@
     <message>
         <location filename="../MiscModify.js" line="+44"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Razno</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Misc Modification Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Razna orodja modifikacij</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show misc modification tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži razna orodja modifikacij</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Modificiraj</translation>
     </message>
 </context>
 </TS>

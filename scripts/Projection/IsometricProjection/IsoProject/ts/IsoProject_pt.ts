@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>IsoProject</name>
     <message>
@@ -32,7 +32,7 @@ Projeção &amp;Isométrica</translatorcomment>
 --file: pt_PT.po--
 Deposita ao fim da garimpagem
 Centro acima</translatorcomment>
-        <translation>Topo</translation>
+        <translation>Superior</translation>
     </message>
     <message>
         <source>ProjectionType</source>
@@ -47,12 +47,12 @@ Centro acima</translatorcomment>
 Direita abaixo
 Em baixo à direita
 Centro abaixo</translatorcomment>
-        <translation>Fundo</translation>
+        <translation>Inferior</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Left back</source>
-        <translation>Esquerda trás</translation>
+        <translation>Esquerda atrás</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -67,17 +67,17 @@ Em baixo à direita</translatorcomment>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation>Direita trás</translation>
+        <translation>Direita atrás</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation>Rotacione anti-horário antes de projeção</translation>
+        <translation>Rotacione a seleção no sentido anti-horário antes de projetar</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation>Rotacione no sentido horário antes de projeção</translation>
+        <translation>Rotacione a seleção no sentido horário antes de projetar</translation>
     </message>
     <message>
         <source>Rotate counter-clockwise</source>
@@ -90,7 +90,7 @@ Em baixo à direita</translatorcomment>
     <message>
         <location line="+18"/>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation>Projeção escala para o tamanho original</translation>
+        <translation>Escalone a projeção para o tamanho original (&quot;desenho isométrico&quot;)</translation>
     </message>
     <message>
         <location line="+3"/>

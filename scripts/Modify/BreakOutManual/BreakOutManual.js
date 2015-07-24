@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -249,7 +249,8 @@ BreakOutManual.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    var op = new RMixedOperation();
+    var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
     var e;
 
     // replace circle with arc:

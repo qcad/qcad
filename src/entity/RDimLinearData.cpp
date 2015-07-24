@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -56,6 +56,11 @@ bool RDimLinearData::isValid() const {
 bool RDimLinearData::moveReferencePoint(const RVector& referencePoint,
         const RVector& targetPoint) {
 
+    bool recomputeDefPoint = false;
+    if (referencePoint.equalsFuzzy(definitionPoint)) {
+        recomputeDefPoint = true;
+    }
+
     bool ret = RDimensionData::moveReferencePoint(referencePoint, targetPoint);
 
     if (referencePoint.equalsFuzzy(extensionPoint1)) {
@@ -63,14 +68,20 @@ bool RDimLinearData::moveReferencePoint(const RVector& referencePoint,
                                  targetPoint, extensionPoint2);
         extensionPoint1 = targetPoint;
         autoTextPos = true;
-        ret = true;
+        update();
+        return true;
     }
     else if (referencePoint.equalsFuzzy(extensionPoint2)) {
         recomputeDefinitionPoint(extensionPoint1, extensionPoint2,
                                  extensionPoint1, targetPoint);
         extensionPoint2 = targetPoint;
         autoTextPos = true;
-        ret = true;
+        update();
+        return true;
+    }
+    else if (recomputeDefPoint) {
+        recomputeDefinitionPoint(extensionPoint1, extensionPoint2,
+                                 extensionPoint1, extensionPoint2);
     }
 
     if (ret) {

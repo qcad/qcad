@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -18,7 +18,7 @@
  */
 
 include("../Circle.js");
-include("../../DrawBasedOnRectangle.js");
+include("../../DrawBasedOnRectangleSize.js");
 
 /**
  * \class CircleCR
@@ -26,12 +26,13 @@ include("../../DrawBasedOnRectangle.js");
  * \ingroup ecma_draw_circle
  */
 function CircleCR(guiAction) {
-    DrawBasedOnRectangle.call(this, guiAction);
+    DrawBasedOnRectangleSize.call(this, guiAction);
 
+    this.dialogUiFile = "CircleCRDialog.ui";
     this.setUiOptions("CircleCR.ui");
 }
 
-CircleCR.prototype = new DrawBasedOnRectangle();
+CircleCR.prototype = new DrawBasedOnRectangleSize();
 
 CircleCR.prototype.getShapes = function(corners) {
     var circle = new RCircle(RVector.getAverage(corners[0], corners[2]), corners[0].getDistanceTo(corners[1])/2);
@@ -55,5 +56,6 @@ CircleCR.prototype.getAuxPreview = function() {
 CircleCR.prototype.slotRadiusChanged = function(value) {
     this.width = value * 2;
     this.height = value * 2;
+    this.updateOkButton();
     this.updatePreview(true);
 };

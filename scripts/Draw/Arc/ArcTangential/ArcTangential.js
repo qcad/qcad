@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -62,7 +62,6 @@ ArcTangential.prototype.setState = function(state) {
         this.appendToStartPoint = undefined;
         this.setLeftMouseTip(qsTr("Choose base line or base arc"));
         this.setRightMouseTip(EAction.trCancel);
-        EAction.showArcTools();
         break;
     case ArcTangential.State.SettingEndPoint:
         this.getDocumentInterface().setClickMode(RAction.PickCoordinate);

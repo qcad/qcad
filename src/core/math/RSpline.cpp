@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -428,6 +428,10 @@ bool RSpline::isClosed() const {
     */
 }
 
+bool RSpline::isGeometricallyClosed(double tolerance) const {
+    return isClosed() || getStartPoint().getDistanceTo(getEndPoint()) < tolerance;
+}
+
 /**
  * \return True if this spline is periodic, i.e. closed and 'smooth'
  *      where start and end connect. The tangents at the start point and
@@ -622,7 +626,7 @@ void RSpline::updateTangentsPeriodic() {
 RPolyline RSpline::toPolyline(int segments) const {
     RPolyline ret;
 
-    QList<QSharedPointer<RShape> > lineSegments = getExploded(segments);
+    QList<QSharedPointer<RShape> > lineSegments = getExplodedBezier(segments);
     for (int k=0; k<lineSegments.size(); k++) {
         QSharedPointer<RDirected> dir = lineSegments[k].dynamicCast<RDirected>();
         if (dir.isNull()) {
@@ -633,6 +637,10 @@ RPolyline RSpline::toPolyline(int segments) const {
         }
         ret.appendVertex(dir->getEndPoint());
     }
+    if (isClosed()) {
+        ret.setClosed(true);
+    }
+
     return ret;
 }
 
@@ -678,8 +686,9 @@ QList<QSharedPointer<RShape> > RSpline::getExploded(int segments) const {
         }
 
         if (prev.isValid()) {
-            RLine* line = new RLine(prev, p1);
-            exploded.append(QSharedPointer<RShape>(line));
+            appendToExploded(RLine(prev, p1));
+//            RLine* line = new RLine(prev, p1);
+//            exploded.append(QSharedPointer<RShape>(line));
         }
         prev = p1;
 
@@ -689,15 +698,60 @@ QList<QSharedPointer<RShape> > RSpline::getExploded(int segments) const {
     p1 = getEndPoint();
     if (!RMath::isNaN(p1.x) && !RMath::isNaN(p1.y)) {
         if (prev.isValid()) {
-            RLine* line = new RLine(prev, p1);
+            appendToExploded(RLine(prev, p1));
+//            RLine* line = new RLine(prev, p1);
             // prevent zero length line at the end:
-            if (line->getLength()>1.0e-4) {
-                exploded.append(QSharedPointer<RShape>(line));
-            }
+//            if (line->getLength()>1.0e-4) {
+//                exploded.append(QSharedPointer<RShape>(line));
+//            }
         }
     }
 
     return exploded;
+}
+
+/**
+ * \return exploded spline, treated as one spline segment, typically only
+ * used for bezier spline segments (degree+1 control points).
+ */
+QList<QSharedPointer<RShape> > RSpline::getExplodedBezier(int segments) const {
+    QList<QSharedPointer<RShape> > ret;
+    QList<RSpline> bezierSegments = getBezierSegments();
+    for (int i=0; i<bezierSegments.length(); i++) {
+        ret.append(bezierSegments[i].getExploded(segments));
+    }
+    return ret;
+}
+
+void RSpline::appendToExploded(const RLine& line) const {
+    if (line.getLength()<1.0e-6) {
+        return;
+    }
+
+    if (!exploded.isEmpty()) {
+        // compare angle of this sement with last segment and
+        // modify last segment if angle is the same (straight line):
+        QSharedPointer<RLine> prev = exploded.last().dynamicCast<RLine>();
+        if (!prev.isNull()) {
+            if (RMath::fuzzyCompare(prev->getAngle(), prev->getStartPoint().getAngleTo(line.getEndPoint()))) {
+                prev->setEndPoint(line.getEndPoint());
+                return;
+            }
+        }
+    }
+
+    exploded.append(QSharedPointer<RShape>(new RLine(line)));
+}
+
+QList<QSharedPointer<RShape> > RSpline::getExplodedWithSegmentLength(double segmentLength) const {
+    QList<QSharedPointer<RShape> > ret;
+    QList<RSpline> bezierSegments = getBezierSegments();
+    for (int i=0; i<bezierSegments.length(); i++) {
+        double len = bezierSegments[i].getLength();
+        int seg = ceil(len / segmentLength);
+        ret.append(bezierSegments[i].getExploded(seg));
+    }
+    return ret;
 }
 
 RBox RSpline::getBoundingBox() const {
@@ -760,8 +814,8 @@ RVector RSpline::getPointAt(double t) const {
 #endif
 }
 
-double RSpline::getAngleAt(double distance) const {
-    QList<RVector> points = getPointsWithDistanceToEnd(distance, RS::FromStart);
+double RSpline::getAngleAt(double distance, RS::From from) const {
+    QList<RVector> points = getPointsWithDistanceToEnd(distance, from);
     if (points.length()!=1) {
         return RNANDOUBLE;
     }
@@ -800,11 +854,11 @@ QList<RVector> RSpline::getPointsWithDistanceToEnd(double distance, RS::From fro
 
     if (splineProxy!=NULL) {
         double t;
-        if (from==RS::FromStart || from==RS::FromAny) {
+        if (from&RS::FromStart) {
             t = splineProxy->getTAtDistance(*this, distance);
             ret << getPointAt(t);
         }
-        if (from==RS::FromEnd || from==RS::FromAny) {
+        if (from&RS::FromEnd) {
             t = splineProxy->getTAtDistance(*this, getLength() - distance);
             ret << getPointAt(t);
         }
@@ -816,12 +870,12 @@ QList<RVector> RSpline::getPointsWithDistanceToEnd(double distance, RS::From fro
             return ret;
         }
 
-        if (from==RS::FromStart || from==RS::FromAny) {
+        if (from&RS::FromStart) {
             RVector p = getPointAt(getTMin() + (distance/length*getTDelta()));
             ret.append(p);
         }
 
-        if (from==RS::FromEnd || from==RS::FromAny) {
+        if (from&RS::FromEnd) {
             RVector p = getPointAt(getTMin() + ((length-distance)/length*getTDelta()));
             ret.append(p);
         }
@@ -1005,14 +1059,14 @@ bool RSpline::isValid() const {
     }
     if (hasFitPoints()) {
         if (fitPoints.count() < 3) {
-            qDebug() << "RSpline::isValid: spline not valid: less than 3 fit points";
+            //qDebug() << "RSpline::isValid: spline not valid: less than 3 fit points";
             return false;
         }
         return true;
     }
     else {
         if (controlPoints.count() < degree+1) {
-            qDebug() << "RSpline::isValid: spline not valid: less than " << degree+1 << " control points";
+            //qDebug() << "RSpline::isValid: spline not valid: less than " << degree+1 << " control points";
             return false;
         }
         return true;
@@ -1330,6 +1384,7 @@ QList<RSpline> RSpline::getBezierSegments() const {
         }
         ret.append(RSpline(ctrlPts, degree));
     }
+    delete dup;
  #endif
 
     return ret;

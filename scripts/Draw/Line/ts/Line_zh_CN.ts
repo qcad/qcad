@@ -4,7 +4,7 @@
 <context>
     <name>Line</name>
     <message>
-        <location filename="../Line.js" line="+79"/>
+        <location filename="../Line.js" line="+81"/>
         <source>Line Tools</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14,12 +14,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+14"/>
         <source>&amp;Line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../Line.ui" line="+17"/>
+        <source>Same Entity Type as Original</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Line Segment</source>
         <translation type="unfinished"></translation>
     </message>

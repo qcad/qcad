@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>SplineControlPoints</name>
     <message>
@@ -32,13 +32,13 @@ lugares:\</translatorcomment>
         <location filename="../SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>&amp;Spline (pontos de controle)</translation>
+        <translation>&amp;Spline (Pontos de Controle)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw spline from control points</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhe spline de pontos de controle</translation>
+        <translation>Desenhe uma spline a partir de pontos de controle</translation>
     </message>
     <message>
         <location filename="../SplineControlPoints.ui" line="+23"/>
@@ -46,7 +46,7 @@ lugares:\</translatorcomment>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pt.ts--
 Desfaça o último ponto de controle</translatorcomment>
-        <translation>Desfaça o último ponto de controle</translation>
+        <translation>Desfaça o Último Ponto de Controle</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -60,14 +60,14 @@ Grau:</translatorcomment>
         <location line="+7"/>
         <source>Choose Spline Degree</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Escolha grau spline</translation>
+        <translation>Escolha o Grau da Spline</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Tick for Closed Spline</source>
         <translatorcomment>--google--
 Assinale em chavetas fechadas</translatorcomment>
-        <translation>Spline fechada</translation>
+        <translation>Marque para uma Spline Fechada</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -77,7 +77,7 @@ Assinale em chavetas fechadas</translatorcomment>
 Não é possível apensar a uma multilinha fechada.
 Não é possível apensar a uma multilinha fechada
 Fe_char</translatorcomment>
-        <translation>Fechado</translation>
+        <translation>Fechada</translation>
     </message>
 </context>
 </TS>

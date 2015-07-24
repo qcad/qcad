@@ -14,7 +14,7 @@
         <translation>トリム対象を選択</translation>
     </message>
     <message>
-        <location line="+131"/>
+        <location line="+132"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>２つのエンティティは交差していないか、現在トリムをサポートされていません。</translation>
     </message>

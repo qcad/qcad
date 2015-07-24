@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaXLineEntity {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaXLineEntity {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -93,6 +96,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasFixedAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setFixedAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDirection1

@@ -1,60 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>BehaviorPreferences</name>
     <message>
         <location filename="../BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Ver gráficos</translation>
+        <translation>Ver Gráficos</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Behavior</source>
-        <translation>Atuação</translation>
+        <translation>Comportamento</translation>
     </message>
 </context>
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+48"/>
         <source>Double-Click</source>
-        <translation>Clique duplo</translation>
+        <translation>Clique Duplo</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Double-click to edit text</source>
-        <translation>Clique duplo vezes para editar o texto</translation>
+        <translation>Clique duplo para editar o texto</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation>Clique duplo referência de bloco para abrir o bloco</translation>
+        <translation>Clique duplo na referência do bloco para abrir o bloco</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+10"/>
+        <source>Right double-click to reset</source>
+        <translation>Clique duplo de direita para resetar</translation>
+    </message>
+    <message>
+        <location line="-42"/>
         <source>Right-Click</source>
-        <translation>Clique com o botão direito</translation>
+        <translation>Clique do Botão Direito</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Right-click to deselect entities</source>
-        <translation>Botão direito do mouse para desmarcar</translation>
+        <translation>Clique direito para desmarcar entidades </translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+46"/>
         <source>Cursor Range</source>
-        <translation>Gama cursor do mouse</translation>
+        <translation>Limites do Cursor</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Cursor range for snap:</source>
-        <translation>Gama cursor do mouse de salto:</translation>
+        <translation>Limites do cursor para salto:</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Cursor range for picking entities:</source>
-        <translation>Gama cursor para escolher entidades:</translation>
+        <translation>Limites do cursor para escolher entidades:</translation>
     </message>
 </context>
 </TS>

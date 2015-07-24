@@ -4,7 +4,7 @@
 <context>
     <name>SaveAs</name>
     <message>
-        <location filename="../SaveAs.js" line="+32"/>
+        <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
         <translation>Carico/Salvare</translation>
     </message>
@@ -14,17 +14,16 @@
         <translation>Salva come</translation>
     </message>
     <message>
-        <location line="+24"/>
         <source>No export filters</source>
-        <translation>Nessun filtri di exportazione</translation>
+        <translation type="vanished">Nessun filtri di exportazione</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+24"/>
         <source>No export filters have been found. Aborting...</source>
         <translation>Non sono stati trovati filtri di exportazione. Interruzione...</translation>
     </message>
     <message>
-        <location line="+55"/>
+        <location line="+66"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>

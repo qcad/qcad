@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -54,12 +54,8 @@ MiscBlock.getToolBar = function() {
 };
 
 MiscBlock.getCadToolBarPanel = function() {
-    return EAction.getMainCadToolBarPanel();
-};
-
-MiscBlock.getCadToolBarPanel = function() {
     var mtb = Misc.getCadToolBarPanel();
-    var actionName = "MiscBlockToolsPanelButton";
+    var actionName = "MiscBlockToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Misc Block Tools"), mtb);
         action.setScriptFile(MiscBlock.includeBasePath + "/MiscBlock.js");

@@ -32,7 +32,7 @@ Lines01.prototype = new TdbTest();
 Lines01.prototype.test00 = function() {
     qDebug('running Lines01.test00()...');
     this.setUp();
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.zoomTo(-28.95, -21.750000000000004, 28.950000000000003, 21.75);
     var p = new RVector(-20, -10);
@@ -46,7 +46,7 @@ Lines01.prototype.test00 = function() {
     this.sendMouseEventToGv(QEvent.MouseButtonRelease, new QPoint(439, 144), Qt.RightButton, 0, 0);
     this.sendMouseEventToGv(QEvent.MouseButtonPress, new QPoint(150, 107), Qt.RightButton, 2, 0);
     this.sendMouseEventToGv(QEvent.MouseButtonRelease, new QPoint(150, 107), Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.zoomTo(-28.95, -21.750000000000004, 28.950000000000003, 21.75);
     var p = new RVector(0, 10);
@@ -60,7 +60,7 @@ Lines01.prototype.test00 = function() {
     this.sendMouseEventToGv(QEvent.MouseButtonRelease, new QPoint(448, 186), Qt.RightButton, 0, 0);
     this.sendMouseEventToGv(QEvent.MouseButtonPress, new QPoint(261, 124), Qt.RightButton, 2, 0);
     this.sendMouseEventToGv(QEvent.MouseButtonRelease, new QPoint(261, 124), Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.zoomTo(-28.95, -21.750000000000004, 28.950000000000003, 21.75);
     var p = new RVector(20, 10);
@@ -74,7 +74,7 @@ Lines01.prototype.test00 = function() {
     this.sendMouseEventToGv(QEvent.MouseButtonRelease, new QPoint(457, 226), Qt.RightButton, 0, 0);
     this.sendMouseEventToGv(QEvent.MouseButtonPress, new QPoint(431, 224), Qt.RightButton, 2, 0);
     this.sendMouseEventToGv(QEvent.MouseButtonRelease, new QPoint(431, 224), Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     this.clickOnWidget('MainWindow::LineToolsPanel::Line2PButton');
     this.zoomTo(-28.95, -21.750000000000004, 28.950000000000003, 21.75);
     var p = new RVector(20, 0);
@@ -88,7 +88,7 @@ Lines01.prototype.test00 = function() {
     this.sendMouseEventToGv(QEvent.MouseButtonRelease, new QPoint(388, 318), Qt.RightButton, 0, 0);
     this.sendMouseEventToGv(QEvent.MouseButtonPress, new QPoint(317, 294), Qt.RightButton, 2, 0);
     this.sendMouseEventToGv(QEvent.MouseButtonRelease, new QPoint(317, 294), Qt.RightButton, 0, 0);
-    this.clickOnWidget('MainWindow::MainToolsPanel::LineMenuButton');
+    this.clickOnWidget('MainWindow::MainToolsPanel::LineToolsPanelButton');
     var w = objectFromPath('MainWindow::LineToolsPanel');
     this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(20, 30), Qt.LeftButton, 1, 0);
     var w = objectFromPath('MainWindow::LineToolsPanel');

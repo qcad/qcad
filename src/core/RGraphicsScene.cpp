@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -42,6 +42,21 @@ RGraphicsScene::~RGraphicsScene() {
     while (!views.isEmpty()) {
         delete views.takeFirst();
     }
+
+    // only delete views not based on QObject
+    // (those are deleted when parent is deleted)
+//    do {
+//        found = false;
+//        for (int i=0; i<views.length(); i++) {
+//            QObject* obj = dynamic_cast<QObject*>(views.at(i));
+//            if (obj==NULL) {
+//                qDebug() << "deleting view";
+//                //delete views.takeAt(i);
+//                found = true;
+//                break;
+//            }
+//        }
+//    } while(found);
 }
 
 /**

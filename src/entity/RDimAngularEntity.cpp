@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -21,6 +21,7 @@
 
 RPropertyTypeId RDimAngularEntity::PropertyCustom;
 RPropertyTypeId RDimAngularEntity::PropertyHandle;
+RPropertyTypeId RDimAngularEntity::PropertyProtected;
 RPropertyTypeId RDimAngularEntity::PropertyType;
 RPropertyTypeId RDimAngularEntity::PropertyBlock;
 RPropertyTypeId RDimAngularEntity::PropertyLayer;
@@ -28,6 +29,7 @@ RPropertyTypeId RDimAngularEntity::PropertyLinetype;
 RPropertyTypeId RDimAngularEntity::PropertyLinetypeScale;
 RPropertyTypeId RDimAngularEntity::PropertyLineweight;
 RPropertyTypeId RDimAngularEntity::PropertyColor;
+RPropertyTypeId RDimAngularEntity::PropertyDisplayedColor;
 RPropertyTypeId RDimAngularEntity::PropertyDrawOrder;
 
 RPropertyTypeId RDimAngularEntity::PropertyMiddleOfTextX;
@@ -71,6 +73,7 @@ RDimAngularEntity::~RDimAngularEntity() {
 void RDimAngularEntity::init() {
     RDimAngularEntity::PropertyCustom.generateId(typeid(RDimAngularEntity), RObject::PropertyCustom);
     RDimAngularEntity::PropertyHandle.generateId(typeid(RDimAngularEntity), RObject::PropertyHandle);
+    RDimAngularEntity::PropertyProtected.generateId(typeid(RDimAngularEntity), RObject::PropertyProtected);
     RDimAngularEntity::PropertyType.generateId(typeid(RDimAngularEntity), REntity::PropertyType);
     RDimAngularEntity::PropertyBlock.generateId(typeid(RDimAngularEntity), REntity::PropertyBlock);
     RDimAngularEntity::PropertyLayer.generateId(typeid(RDimAngularEntity), REntity::PropertyLayer);
@@ -78,6 +81,7 @@ void RDimAngularEntity::init() {
     RDimAngularEntity::PropertyLinetypeScale.generateId(typeid(RDimAngularEntity), REntity::PropertyLinetypeScale);
     RDimAngularEntity::PropertyLineweight.generateId(typeid(RDimAngularEntity), REntity::PropertyLineweight);
     RDimAngularEntity::PropertyColor.generateId(typeid(RDimAngularEntity), REntity::PropertyColor);
+    RDimAngularEntity::PropertyDisplayedColor.generateId(typeid(RDimAngularEntity), REntity::PropertyDisplayedColor);
     RDimAngularEntity::PropertyDrawOrder.generateId(typeid(RDimAngularEntity), REntity::PropertyDrawOrder);
 
     RDimAngularEntity::PropertyMiddleOfTextX.generateId(typeid(RDimAngularEntity), RDimensionEntity::PropertyMiddleOfTextX);

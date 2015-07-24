@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="it_IT">
+<TS version="2.1" language="it_IT">
 <context>
     <name>QObject</name>
     <message>
@@ -188,7 +188,7 @@ Parsec</translatorcomment>
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="+411"/>
+        <location filename="../src/core/RColor.cpp" line="+298"/>
         <source>By Layer</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
@@ -264,6 +264,11 @@ Rosso - magenta</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <source>Orange</source>
+        <translation>Arancione</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Dark Red</source>
         <translation>Rosso scuro</translation>
     </message>
@@ -341,7 +346,7 @@ Altri...</translatorcomment>
 <context>
     <name>RDocumentVariables</name>
     <message>
-        <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+44"/>
         <source>Current Layer ID</source>
         <translation>ID del livello corrente</translation>
     </message>
@@ -364,7 +369,7 @@ Altri...</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+77"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+92"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: photivo_it.ts--
@@ -381,8 +386,8 @@ Lista Blocchi</translatorcomment>
     <message>
         <location line="+1"/>
         <location line="+3"/>
-        <location filename="../src/core/RTextBasedEntity.cpp" line="+70"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+65"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: default.po--
@@ -454,7 +459,27 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
         <translation>Angolo</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+69"/>
+        <location line="+1"/>
+        <source>Columns</source>
+        <translation>Colonne</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rows</source>
+        <translation>Righe</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Column Spacing</source>
+        <translation>Interasse colonne</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Row Spacing</source>
+        <translation>Interasse righe</translation>
+    </message>
+    <message>
+        <location filename="../src/core/REntity.cpp" line="+76"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: liferea-1.8-rc1.it.po--
@@ -509,6 +534,11 @@ Colore G&amp;riglia:</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <source>Displayed Color</source>
+        <translation>Colore visualizzato</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Draw Order</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ordine di disegno</translation>
@@ -542,17 +572,25 @@ Colore G&amp;riglia:</translatorcomment>
         <translation>Sopra</translation>
     </message>
     <message>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
         <translation>Personalizzato</translation>
     </message>
     <message>
+        <location filename="../src/core/REntity.cpp" line="+2"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
         <translation>Larghezza</translation>
     </message>
     <message>
+        <location line="+0"/>
         <location line="+1"/>
+        <source>Size</source>
+        <translation>Dimensioni</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
         <translation>Altezza</translation>
     </message>
@@ -633,7 +671,7 @@ Colore G&amp;riglia:</translatorcomment>
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+169"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+181"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Richiede selezione</translation>
@@ -642,14 +680,18 @@ Colore G&amp;riglia:</translatorcomment>
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+52"/>
+        <location filename="../src/core/RLayer.cpp" line="+73"/>
         <source>Name</source>
         <translation>Nome</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Frozen</source>
-        <translation>Nascosto</translation>
+        <translation type="vanished">Nascosto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hidden</source>
+        <translation>Nascosta</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -680,14 +722,14 @@ Colore G&amp;riglia:</translatorcomment>
 --file: qcadguiqt_it.ts--
 Da Layer
 Scegli layer nella cartella</translatorcomment>
-        <translation>Da Layer</translation>
+        <translation type="vanished">Da Layer</translation>
     </message>
     <message>
         <source>By Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Da Blocco</translatorcomment>
-        <translation>Da Blocco</translation>
+        <translation type="vanished">Da Blocco</translation>
     </message>
     <message>
         <source>Continuous</source>
@@ -695,7 +737,7 @@ Da Blocco</translatorcomment>
 --file: qcadguiqt_it.ts--
 Continua
 Colore continuo</translatorcomment>
-        <translation>Continua</translation>
+        <translation type="vanished">Continua</translation>
     </message>
     <message>
         <source>Dot</source>
@@ -704,7 +746,7 @@ Colore continuo</translatorcomment>
 Punti G&amp;riglia:
 Punti G&amp;riglia
 Punti Griglia:</translatorcomment>
-        <translation>Puntinata</translation>
+        <translation type="vanished">Puntinata</translation>
     </message>
     <message>
         <source>Dot (small)</source>
@@ -712,7 +754,7 @@ Punti Griglia:</translatorcomment>
 --file: qcadguiqt_it.ts--
 Puntinata (Ridotta)
 Trattopunto (Ridotta)</translatorcomment>
-        <translation>Puntinata (Ridotta)</translation>
+        <translation type="vanished">Puntinata (Ridotta)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
@@ -720,7 +762,7 @@ Trattopunto (Ridotta)</translatorcomment>
 --file: qcadguiqt_it.ts--
 Puntinata (Ingrandita)
 Trattopunto (Ingrandita)</translatorcomment>
-        <translation>Puntinata (Ingrandita)</translation>
+        <translation type="vanished">Puntinata (Ingrandita)</translation>
     </message>
     <message>
         <source>Dash</source>
@@ -729,21 +771,21 @@ Trattopunto (Ingrandita)</translatorcomment>
 Trattino
 tratteggiato
 Tratteggiata (Ridotta)</translatorcomment>
-        <translation>Tratteggiata</translation>
+        <translation type="vanished">Tratteggiata</translation>
     </message>
     <message>
         <source>Dash (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Tratteggiata (Ridotta)</translatorcomment>
-        <translation>Tratteggiata (Ridotta)</translation>
+        <translation type="vanished">Tratteggiata (Ridotta)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Tratteggiata (Ingrandita)</translatorcomment>
-        <translation>Tratteggiata (Ingrandita)</translation>
+        <translation type="vanished">Tratteggiata (Ingrandita)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
@@ -751,42 +793,42 @@ Tratteggiata (Ingrandita)</translatorcomment>
 --file: qcadguiqt_it.ts--
 Trattopunto
 Trattopunto (Ridotta)</translatorcomment>
-        <translation>Trattopunto</translation>
+        <translation type="vanished">Trattopunto</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Trattopunto (Ridotta)</translatorcomment>
-        <translation>Trattopunto (Ridotta)</translation>
+        <translation type="vanished">Trattopunto (Ridotta)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Trattopunto (Ingrandita)</translatorcomment>
-        <translation>Trattopunto (Ingrandita)</translation>
+        <translation type="vanished">Trattopunto (Ingrandita)</translation>
     </message>
     <message>
         <source>Divide</source>
         <translatorcomment>--exact match--
 --file: dia.master.it.po--
 Dividi</translatorcomment>
-        <translation>Dividi</translation>
+        <translation type="vanished">Dividi</translation>
     </message>
     <message>
         <source>Divide (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Dividi (Ridotta)</translatorcomment>
-        <translation>Dividi (Ridotta)</translation>
+        <translation type="vanished">Dividi (Ridotta)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Dividi (Ingrandita)</translatorcomment>
-        <translation>Dividi (Ingrandita)</translation>
+        <translation type="vanished">Dividi (Ingrandita)</translation>
     </message>
     <message>
         <source>Center</source>
@@ -795,21 +837,21 @@ Dividi (Ingrandita)</translatorcomment>
 Centro
 Arco: Centro, Punto, Angoli
 </translatorcomment>
-        <translation>Centro</translation>
+        <translation type="vanished">Centro</translation>
     </message>
     <message>
         <source>Center (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Centro (Ridotta)</translatorcomment>
-        <translation>Centro (Ridotta)</translation>
+        <translation type="vanished">Centro (Ridotta)</translation>
     </message>
     <message>
         <source>Center (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Centro (Ingrandita)</translatorcomment>
-        <translation>Centro (Ingrandita)</translation>
+        <translation type="vanished">Centro (Ingrandita)</translation>
     </message>
     <message>
         <source>Border</source>
@@ -817,21 +859,21 @@ Centro (Ingrandita)</translatorcomment>
 --file: qgis_it.ts--
 Bordo
 Margine (Ridotta)</translatorcomment>
-        <translation>Margine</translation>
+        <translation type="vanished">Margine</translation>
     </message>
     <message>
         <source>Border (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Margine (Ridotta)</translatorcomment>
-        <translation>Margine (Ridotta)</translation>
+        <translation type="vanished">Margine (Ridotta)</translation>
     </message>
     <message>
         <source>Border (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_it.ts--
 Margine (Ingrandita)</translatorcomment>
-        <translation>Margine (Ingrandita)</translation>
+        <translation type="vanished">Margine (Ingrandita)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
@@ -857,7 +899,7 @@ Margine (Ingrandita)</translatorcomment>
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+629"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+845"/>
         <source>By Layer</source>
         <translation>Da Layer</translation>
     </message>
@@ -875,7 +917,7 @@ Margine (Ingrandita)</translatorcomment>
     </message>
     <message>
         <source>Border (2x)</source>
-        <translation>Margine (2x)</translation>
+        <translation type="vanished">Margine (2x)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -886,7 +928,7 @@ Margine (Ingrandita)</translatorcomment>
     </message>
     <message>
         <source>Center (2x)</source>
-        <translation>Centro (2x)</translation>
+        <translation type="vanished">Centro (2x)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1047,8 +1089,12 @@ Margine (Ingrandita)</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <source>Drainage Reverse</source>
+        <source>Drainage Reversed</source>
         <translation>Drenaggio inverti</translation>
+    </message>
+    <message>
+        <source>Drainage Reverse</source>
+        <translation type="vanished">Drenaggio inverti</translation>
     </message>
 </context>
 <context>
@@ -1275,7 +1321,7 @@ Unità Predefinite:</translatorcomment>
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+36"/>
+        <location filename="../src/core/RObject.cpp" line="+37"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -1283,6 +1329,11 @@ Nessun oggetto dimensione selezionata con una posizione di testo personalizzato.
 Nessun oggetto dimensione selezionata con una posizione di testo personalizzato
 Personalizzato</translatorcomment>
         <translation>Personalizzato</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type</source>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location line="+1"/>

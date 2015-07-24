@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Circle2PR</name>
     <message>
@@ -27,7 +27,7 @@ Indique o segundo ponto da linha de espelhamento</translatorcomment>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--
 Inválido raio</translatorcomment>
-        <translation>Inválido raio</translation>
+        <translation>Raio inválido</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -43,13 +43,13 @@ Os dois pontos são idênticos</translatorcomment>
         <translatorcomment>--exact match--
 --file: Arc2PR_pt.ts--
 &amp;2 Pontos e raio</translatorcomment>
-        <translation>&amp;2 pontos e raio</translation>
+        <translation>&amp;2 Pontos e Raio</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw circle from 2 points and radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar círculo de 2 pontos e raio</translation>
+        <translation>Desenhe um círculo a partir de 2 pontos e raio</translation>
     </message>
     <message>
         <location filename="../Circle2PR.ui" line="+17"/>
@@ -73,7 +73,7 @@ Solução:</translatorcomment>
         <location line="+7"/>
         <source>Center Left of Line P1 - P2</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Centro esquerda de Linha P1 - P2</translation>
+        <translation>Centro à Esquerda da Linha P1 - P2</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -90,7 +90,7 @@ Solução:</translatorcomment>
         <location line="-10"/>
         <source>Center Right of Line P1 - P2</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Centro é o direito da linha P1-P2</translation>
+        <translation>Centro à Direita da Linha P1 - P2</translation>
     </message>
 </context>
 </TS>

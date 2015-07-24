@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("ShapePolygonCP", "Pol&ygon (Center, Point)"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("ShapePolygonCP", "Pol&ygon (Center, Corner)"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ShapePolygonCP.js");
     action.setIcon(basePath + "/ShapePolygonCP.svg");

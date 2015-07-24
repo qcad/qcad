@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -121,7 +121,7 @@ LineTangent1.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case LineTangent1.State.ChoosingEntity:
-        var shape = entity.getClosestShape(pos);
+        var shape = entity.getClosestSimpleShape(pos);
 
         if (isArcShape(shape) ||
             isCircleShape(shape) ||

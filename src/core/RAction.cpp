@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -29,7 +29,6 @@
 #include "RMainWindow.h"
 #include "RDocumentInterface.h"
 
-
 RAction::RAction(RGuiAction* guiAction)
   : terminated(false),
     override(false),
@@ -40,11 +39,16 @@ RAction::RAction(RGuiAction* guiAction)
     documentInterface(NULL) {
 
     setGuiAction(guiAction);
+
+    RDebug::incCounter("RAction");
+//    qDebug() << "RAction " << QString("0x%1").arg((int)this, 0, 16);
 }
 
 
 
 RAction::~RAction() {
+    RDebug::decCounter("RAction");
+//    qDebug() << "~RAction " << QString("0x%1").arg((int)this, 0, 16);
 }
 
 

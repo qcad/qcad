@@ -134,7 +134,9 @@
             
             REcmaHelper::registerFunction(&engine, proto, isClosed, "isClosed");
             
-            REcmaHelper::registerFunction(&engine, proto, isLogicallyClosed, "isLogicallyClosed");
+            REcmaHelper::registerFunction(&engine, proto, isGeometricallyClosed, "isGeometricallyClosed");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
             
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
@@ -170,6 +172,10 @@
                 qScriptValueFromValue(&engine, RPolylineEntity::PropertyHandle),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyProtected",
+                qScriptValueFromValue(&engine, RPolylineEntity::PropertyProtected),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RPolylineEntity::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
@@ -196,6 +202,10 @@
             
             ctor.setProperty("PropertyColor",
                 qScriptValueFromValue(&engine, RPolylineEntity::PropertyColor),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyDisplayedColor",
+                qScriptValueFromValue(&engine, RPolylineEntity::PropertyDisplayedColor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyDrawOrder",
@@ -312,7 +322,7 @@
                         return REcmaHelper::throwError("RPolylineEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPolylineData*
                     ap1 =
                     qscriptvalue_cast<
@@ -322,11 +332,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RPolylineEntity: Argument 1 is not of type RPolylineData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RPolylineEntity: Argument 1 is not of type RPolylineData.",
                                context);                    
                     }
-                    RPolylineData& a1 = *ap1;
+                    RPolylineData 
+                    a1 = 
+                    *ap1;
                 
     // end of arguments
 
@@ -407,7 +419,7 @@
                         return REcmaHelper::throwError("RPolylineEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
                     }
                 
-                    // argument is reference
+                    // argument isCopyable and has default constructor and isSimpleClass 
                     RPolylineData*
                     ap1 =
                     qscriptvalue_cast<
@@ -417,11 +429,13 @@
                         1
                         )
                     );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RPolylineEntity: Argument 1 is not of type RPolylineData*.",
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RPolylineEntity: Argument 1 is not of type RPolylineData.",
                                context);                    
                     }
-                    RPolylineData& a1 = *ap1;
+                    RPolylineData 
+                    a1 = 
+                    *ap1;
                 
                     // argument isStandardType
                     RObject::Id
@@ -446,6 +460,62 @@
     a1
         ,
     a2
+                    );
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+    } else 
+
+    if( context->argumentCount() ==
+        1
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RPolylineEntity */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RPolylineEntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RPolylineEntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RPolylineEntity: Argument 0 is not of type RPolylineEntity*.",
+                               context);                    
+                    }
+                    RPolylineEntity& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RPolylineEntity
+                    * cppResult =
+                    new
+                    RPolylineEntity
+                    (
+                    a0
                     );
                 
                     // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
@@ -2679,19 +2749,19 @@
             return result;
         }
          QScriptValue
-        REcmaSharedPointerPolylineEntity::isLogicallyClosed
+        REcmaSharedPointerPolylineEntity::isGeometricallyClosed
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerPolylineEntity::isLogicallyClosed", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolylineEntity::isLogicallyClosed";
+            //REcmaHelper::functionStart("REcmaSharedPointerPolylineEntity::isGeometricallyClosed", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolylineEntity::isGeometricallyClosed";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RPolylineEntity* self = 
-                        getSelf("isLogicallyClosed", context);
+                        getSelf("isGeometricallyClosed", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2711,7 +2781,7 @@
     // return type 'bool'
     bool cppResult =
         
-               self->isLogicallyClosed();
+               self->isGeometricallyClosed();
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -2721,10 +2791,59 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.isLogicallyClosed().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.isGeometricallyClosed().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerPolylineEntity::isLogicallyClosed", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolylineEntity::isGeometricallyClosed", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolylineEntity::getLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolylineEntity::getLength", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolylineEntity::getLength";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineEntity* self = 
+                        getSelf("getLength", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getLength();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getLength().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolylineEntity::getLength", context, engine);
             return result;
         }
          QScriptValue

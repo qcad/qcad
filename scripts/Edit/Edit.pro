@@ -8,6 +8,7 @@ SUBDIRS = \
     CutWithReference \
     DrawingPreferences \
     Delete \
+    Duplicate \
     Esc \
     Paste \
     Redo \

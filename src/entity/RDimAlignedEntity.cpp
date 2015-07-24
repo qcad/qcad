@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -21,6 +21,7 @@
 
 RPropertyTypeId RDimAlignedEntity::PropertyCustom;
 RPropertyTypeId RDimAlignedEntity::PropertyHandle;
+RPropertyTypeId RDimAlignedEntity::PropertyProtected;
 RPropertyTypeId RDimAlignedEntity::PropertyType;
 RPropertyTypeId RDimAlignedEntity::PropertyBlock;
 RPropertyTypeId RDimAlignedEntity::PropertyLayer;
@@ -28,6 +29,7 @@ RPropertyTypeId RDimAlignedEntity::PropertyLinetype;
 RPropertyTypeId RDimAlignedEntity::PropertyLinetypeScale;
 RPropertyTypeId RDimAlignedEntity::PropertyLineweight;
 RPropertyTypeId RDimAlignedEntity::PropertyColor;
+RPropertyTypeId RDimAlignedEntity::PropertyDisplayedColor;
 RPropertyTypeId RDimAlignedEntity::PropertyDrawOrder;
 
 RPropertyTypeId RDimAlignedEntity::PropertyMiddleOfTextX;
@@ -39,6 +41,7 @@ RPropertyTypeId RDimAlignedEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimAlignedEntity::PropertyMeasuredValue;
 
 RPropertyTypeId RDimAlignedEntity::PropertyLinearFactor;
+RPropertyTypeId RDimAlignedEntity::PropertyDimScale;
 RPropertyTypeId RDimAlignedEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimAlignedEntity::PropertyFontName;
 
@@ -63,6 +66,7 @@ RDimAlignedEntity::~RDimAlignedEntity() {
 void RDimAlignedEntity::init() {
     RDimAlignedEntity::PropertyCustom.generateId(typeid(RDimAlignedEntity), RObject::PropertyCustom);
     RDimAlignedEntity::PropertyHandle.generateId(typeid(RDimAlignedEntity), RObject::PropertyHandle);
+    RDimAlignedEntity::PropertyProtected.generateId(typeid(RDimAlignedEntity), RObject::PropertyProtected);
     RDimAlignedEntity::PropertyType.generateId(typeid(RDimAlignedEntity), REntity::PropertyType);
     RDimAlignedEntity::PropertyBlock.generateId(typeid(RDimAlignedEntity), REntity::PropertyBlock);
     RDimAlignedEntity::PropertyLayer.generateId(typeid(RDimAlignedEntity), REntity::PropertyLayer);
@@ -70,6 +74,7 @@ void RDimAlignedEntity::init() {
     RDimAlignedEntity::PropertyLinetypeScale.generateId(typeid(RDimAlignedEntity), REntity::PropertyLinetypeScale);
     RDimAlignedEntity::PropertyLineweight.generateId(typeid(RDimAlignedEntity), REntity::PropertyLineweight);
     RDimAlignedEntity::PropertyColor.generateId(typeid(RDimAlignedEntity), REntity::PropertyColor);
+    RDimAlignedEntity::PropertyDisplayedColor.generateId(typeid(RDimAlignedEntity), REntity::PropertyDisplayedColor);
     RDimAlignedEntity::PropertyDrawOrder.generateId(typeid(RDimAlignedEntity), REntity::PropertyDrawOrder);
 
     RDimAlignedEntity::PropertyMiddleOfTextX.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyMiddleOfTextX);
@@ -81,6 +86,7 @@ void RDimAlignedEntity::init() {
     RDimAlignedEntity::PropertyMeasuredValue.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyMeasuredValue);
 
     RDimAlignedEntity::PropertyLinearFactor.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyLinearFactor);
+    RDimAlignedEntity::PropertyDimScale.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimScale);
     RDimAlignedEntity::PropertyAutoTextPos.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyAutoTextPos);
     RDimAlignedEntity::PropertyFontName.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyFontName);
 

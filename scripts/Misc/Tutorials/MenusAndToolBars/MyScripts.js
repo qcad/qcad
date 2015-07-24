@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -43,7 +43,7 @@ MyScripts.getToolBar = function() {
     // EAction.getToolBar is a helper function that returns an existing 
     // or new QToolBar object with the given title and object name.
     // The object name (here "MyScriptToolBar") must be unique. 
-    return EAction.getToolBar(Edit.getTitle(), "MyScriptToolBar");
+    return EAction.getToolBar(MyScripts.getTitle(), "MyScriptToolBar");
 };
 
 // This static function defines and returns the title of the menu 
@@ -53,8 +53,8 @@ MyScripts.getTitle = function() {
     return qsTr("My Scripts");
 };
 
-// Member function that returns also the title of the menu and toolbar.
-// Defined for convenience.
-MyScripts.prototype.getTitle = function() {
-    return MyScripts.getTitle();
+// Init creates the menu and toolbar on start.
+MyScripts.init = function() {
+    MyScripts.getMenu();
+    MyScripts.getToolBar();
 };

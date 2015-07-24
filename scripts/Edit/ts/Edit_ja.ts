@@ -14,12 +14,12 @@
         <translation>図面設定</translation>
     </message>
     <message>
-        <location line="+247"/>
+        <location line="+300"/>
         <source>Restart required</source>
         <translation>再起動が必要</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
         <translation>設定の変更を反映するには
@@ -39,12 +39,12 @@ QCADを再起動してください。</translation>
     <message>
         <location filename="../Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>編集ツール</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show edit tools</source>
-        <translation type="unfinished"></translation>
+        <translation>編集ツールの表示</translation>
     </message>
     <message>
         <location line="+18"/>

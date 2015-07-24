@@ -14,8 +14,8 @@ However, in this case, we start from scratch.
 
 Create a directory for our new tool. For this example, we create
 a directory with the name "ExThreePoints". We place our tool inside the
-DrawExamples directory "scripts/Examples/DrawExamples", so that the path for
-our new tool becomes: "scripts/Examples/DrawExamples/ExThreePoints" (relative
+DrawExamples directory "scripts/Misc/Examples/DrawExamples", so that the path for
+our new tool becomes: "scripts/Misc/Examples/DrawExamples/ExThreePoints" (relative
 to the QCAD installation directory).
 
 Inside this directory, create an empty text file called "ExThreePoints.js".
@@ -37,8 +37,9 @@ the tool: "ExThreePoints".
 name (in this case "ExThreePoints").</b>
 
 A tool class is usually derived from the class
-that is defined in its parent directory. For that reason, we have to include
-the script file of the parent directory. In this case "../DrawExamples.js":
+that is defined in its parent directory or from EAction, defined in scripts/EAction.js.
+For that reason, we have to include the script file of EAction. 
+In this case "scripts/EAction.js":
 
 \snippet ../../DrawExamples/ExThreePoints/ExThreePoints.jsd include
 
@@ -98,7 +99,7 @@ and terminate our tool:
 
 \code{.js}
 ExThreePoints.prototype.beginEvent = function() {
-    DrawExamples.prototype.beginEvent.call(this);
+    EAction.prototype.beginEvent.call(this);
 
     qDebug("ExThreePoints.prototype.beginEvent was called.");
 

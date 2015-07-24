@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaExporter {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaExporter {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -104,6 +107,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCurrentBlockRef
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isEntitySelected

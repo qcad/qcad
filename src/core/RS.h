@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -71,10 +71,19 @@ public:
 
     /**
      * Entity types used for property handling / filtering.
+     * \todo QCAD 4: rename to objectType
      */
     enum EntityType {
+        ObjectAll,
+        ObjectUnknown,      /**< Unknown object */
+
+        ObjectBlock,
+        ObjectLayer,
+        ObjectLinetype,
+        ObjectView,
+
         EntityAll,          /**< All entities (for filters) */
-        EntityUnknown,      /**< Unknown */
+        EntityUnknown,      /**< Unknown entity */
         EntityAttribute,    /**< Block attribute */
         EntityAttributeDefinition,     /**< Block attribute definition */
         EntityBlockRef,     /**< Block reference */
@@ -182,9 +191,10 @@ public:
      * End used to specify from which end of a shape to measure a distance.
      */
     enum From {
-        FromStart,
-        FromEnd,
-        FromAny
+        FromStart = 0x1,
+        FromEnd = 0x2,
+        FromAny = 0x3,         /**< Start or end **/
+        AlongPolyline = 0x4
     };
 
     /**
@@ -470,6 +480,21 @@ public:
         CCW
     };
 
+    enum JoinType {
+        JoinBevel,
+        JoinRound,
+        JoinMiter
+    };
+
+    enum EndType {
+        EndClosedPolygon,
+        EndClosedLine,
+        EndOpenButt,
+        EndOpenSquare,
+        EndOpenRound,
+        EndOpenSingle
+    };
+
 public:
     static bool compare(const QVariant& v1, const QVariant& v2);
     static bool compare(const QPair<QVariant, RPropertyAttributes>& p1,
@@ -539,6 +564,8 @@ Q_DECLARE_METATYPE(RS::VAlign*)
 Q_DECLARE_METATYPE(RS::BooleanOperation)
 Q_DECLARE_METATYPE(RS::FillType)
 Q_DECLARE_METATYPE(RS::Orientation)
+Q_DECLARE_METATYPE(RS::JoinType)
+Q_DECLARE_METATYPE(RS::EndType)
 Q_DECLARE_METATYPE(QList<RS::EntityType>)
 
 #endif

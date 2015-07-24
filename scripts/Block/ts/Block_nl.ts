@@ -4,14 +4,14 @@
 <context>
     <name>Block</name>
     <message>
-        <location filename="../Block.js" line="+66"/>
+        <location filename="../Block.js" line="+67"/>
         <source>Block Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Blokgereedschap</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show block tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Blokgereedschap tonen</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -22,7 +22,7 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="+101"/>
+        <location filename="../BlockDialog.js" line="+105"/>
         <source>Leading or trailing spaces.</source>
         <translation>Spaties voor of na.</translation>
     </message>

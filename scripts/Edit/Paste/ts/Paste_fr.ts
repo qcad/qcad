@@ -14,7 +14,7 @@
         <translation>Pivoter les entités&lt;br&gt;collées par cet angle</translation>
     </message>
     <message>
-        <location line="+90"/>
+        <location line="+97"/>
         <source>Scale:</source>
         <translation>Echelle :</translation>
     </message>
@@ -24,7 +24,7 @@
         <translation>Échelle des entités&lt;br&gt;collées par ce facteur</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
         <translation>Retourner les entités&lt;br&gt;collé horizontalement</translation>
     </message>
@@ -34,7 +34,7 @@
         <translation>Retourner les entités&lt;br&gt;collées verticalement</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
         <translation>Coller toutes les entités&lt;br&gt;de la calque actuelle&lt;br&gt;place de la calque d&apos;origine</translation>
     </message>
@@ -64,7 +64,7 @@
         <translation>Ecraser les blocs</translation>
     </message>
     <message>
-        <location filename="../Paste.js" line="+71"/>
+        <location filename="../Paste.js" line="+77"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>

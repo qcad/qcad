@@ -33,7 +33,7 @@
         <translation>Keine Tangente möglich.</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+58"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
         <translation>Tangent von Punkt in Kreis an Kreis nicht möglich</translation>
     </message>

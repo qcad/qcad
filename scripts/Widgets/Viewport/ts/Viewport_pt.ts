@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Form</name>
     <message>
@@ -25,7 +25,7 @@ Selecione Entidades singulares</translatorcomment>
         <location filename="../Templates/20_ThreeRight.ui" line="+14"/>
         <source>Three: Right</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Três: Direito</translation>
+        <translation>Três: Direita</translation>
     </message>
     <message>
         <location filename="../Templates/21_ThreeLeft.ui" line="+14"/>
@@ -37,7 +37,7 @@ Selecione Entidades singulares</translatorcomment>
         <location filename="../Templates/22_ThreeAbove.ui" line="+14"/>
         <source>Three: Above</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Três: encima del</translation>
+        <translation>Três: Acima</translation>
     </message>
     <message>
         <source>Three: Below</source>
@@ -80,7 +80,7 @@ Selecione Entidades singulares</translatorcomment>
     <message>
         <location filename="../Templates/30_FourEqual.ui" line="+14"/>
         <source>Four: Equal</source>
-        <translation>Quatro: Igualdade</translation>
+        <translation>Quatro: Igual a</translation>
     </message>
 </context>
 <context>
@@ -96,7 +96,7 @@ Selecione Entidades singulares</translatorcomment>
     <message>
         <location filename="../Templates/31_FourRight.ui" line="+14"/>
         <source>Four: Right</source>
-        <translation>Quatro: Direito</translation>
+        <translation>Quatro: Direita</translation>
     </message>
 </context>
 <context>
@@ -112,7 +112,7 @@ Selecione Entidades singulares</translatorcomment>
     <message>
         <location filename="../Templates/23_ThreeBelow.ui" line="+14"/>
         <source>Three: Below</source>
-        <translation>Três: Debajo del</translation>
+        <translation>Três: Abaixo</translation>
     </message>
 </context>
 <context>
@@ -150,14 +150,29 @@ Selecione Entidades singulares</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+331"/>
+        <location filename="../Viewport.js" line="+244"/>
+        <source>Dropped data not supported</source>
+        <translation>Dados inseridos não suportados</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>Importing file: </source>
+        <translation>Importando o arquivo: </translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Importing URL: </source>
+        <translation>Importando a URL: </translation>
+    </message>
+    <message>
+        <location line="+65"/>
         <source>Grid</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 &amp;Grade
 Grelha
 Posicionamento na grade</translatorcomment>
-        <translation>Grelha</translation>
+        <translation>Grade</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -176,7 +191,7 @@ Indique o ângulo de fim ou [Ângulo/Comprimento da corda]</translatorcomment>
 Ponto de corte não está na entidade.
 Ponto de corte não está na entidade
 Ponto de divisão não está contido na entidade.</translatorcomment>
-        <translation>Na entidade</translation>
+        <translation>Na Entidade</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -215,7 +230,7 @@ Salta aos pontos de meio</translatorcomment>
 --file: pt.po--
 Corte fora o segmento
 Selecione o primeiro ponto da linha de intersecção</translatorcomment>
-        <translation>Intersecção</translation>
+        <translation>Interseção</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -229,7 +244,7 @@ Indique o ponto de referência
     <message>
         <location filename="../Viewport.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>Espaçamento da grade &lt; Meta espaçamento da grade</translation>
+        <translation>Espaçamento da Grade &lt; Espaçamento da Metagrade</translation>
     </message>
 </context>
 <context>
@@ -237,7 +252,7 @@ Indique o ponto de referência
     <message>
         <location filename="../ViewportGl.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>Espaçamento da grade &lt; Meta espaçamento da grade</translation>
+        <translation>Espaçamento da Grade &lt; Espaçamento da Metagrade</translation>
     </message>
 </context>
 </TS>

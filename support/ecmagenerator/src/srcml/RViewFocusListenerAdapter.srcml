@@ -1,81 +1,56 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./scripting/ecmaapi/adapters"
-filename="RViewFocusListenerAdapter.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RVIEWFOCUSLISTENERADAPTER_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RVIEWFOCUSLISTENERADAPTER_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"RViewFocusListener.h"</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RGraphicsView</name>;</class_decl>
-  <comment type="block">/** * \brief Abstract base class for
-  classes that are interested in the current * focus. * * \ingroup
-  ecma * \scriptable * \generateScriptShell */</comment>
-  <class>class 
-  <name>RViewFocusListenerAdapter</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>RViewFocusListener</name></super>
-  <block>{
-  <private type="default"></private>
-  <public>public: 
-  <destructor>
-    <specifier>virtual</specifier>
-    <name>~RViewFocusListenerAdapter</name>
-    <parameter_list>()</parameter_list>
-    <block>{}</block>
-  </destructor>
-  <comment type="block">/** * Called by the document whenever the
-  view focus changed from one * view to another. * * \param di The
-  view that has now the focus. */</comment>
-  <function>
-    <type>
-      <name>virtual</name>
-      <name>void</name>
-    </type>
-    <name>updateFocus</name>
-    <parameter_list>(
-    <param>
-      <decl>
-        <type>
-        <name>RGraphicsView</name>*</type>
-        <name>view</name>
-      </decl>
-    </param>)</parameter_list>
-    <block>{ 
-    <macro>
-      <name>Q_UNUSED</name>
-      <argument_list>(
-      <argument>view</argument>)</argument_list>
-    </macro>}</block>
-  </function></public>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>
-    RViewFocusListenerAdapter*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./scripting/ecmaapi/adapters" filename="RViewFocusListenerAdapter.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RVIEWFOCUSLISTENERADAPTER_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RVIEWFOCUSLISTENERADAPTER_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RViewFocusListener.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RGraphicsView</name>;</class_decl>
+
+
+
+<comment type="block">/**
+ * \brief Abstract base class for classes that are interested in the current 
+ * focus.
+ *
+ * \ingroup ecma
+ * \scriptable
+ * \generateScriptShell
+ */</comment>
+<class>class <name>RViewFocusListenerAdapter</name> <super>: <specifier>public</specifier> <name>RViewFocusListener</name></super> <block>{<private type="default">
+</private><public>public:
+    <destructor><specifier>virtual</specifier> <name>~RViewFocusListenerAdapter</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+
+    <comment type="block">/**
+     * Called by the document whenever the view focus changed from one
+     * view to another.
+     *
+     * \param di The view that has now the focus.
+     */</comment>
+    <function><type><name>virtual</name> <name>void</name></type> <name>updateFocus</name><parameter_list>(<param><decl><type><name>RGraphicsView</name>*</type> <name>view</name></decl></param>)</parameter_list> <block>{ <macro><name>Q_UNUSED</name><argument_list>(<argument>view</argument>)</argument_list></macro> }</block></function>
+</public>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RViewFocusListenerAdapter*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

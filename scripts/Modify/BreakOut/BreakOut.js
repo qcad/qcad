@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -66,7 +66,6 @@ BreakOut.prototype.setState = function(state) {
             }
         }
         this.setRightMouseTip(EAction.trCancel);
-        EAction.showModificationTools();
         break;
     }
 
@@ -190,7 +189,8 @@ BreakOut.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    var op = new RMixedOperation();
+    var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
     var e;
 
     if (isNull(newSegments[0]) && isNull(newSegments[1])) {
@@ -222,7 +222,8 @@ BreakOut.prototype.getOperation = function(preview) {
                 op.deleteObject(this.entity);
             }
             else {
-                modifyEntity(op, this.entity.data(), newSegments[2]);
+                //modifyEntity(op, this.entity.data(), newSegments[2]);
+                modifyEntity(op, this.entity.clone(), newSegments[2]);
             }
         }
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>About</name>
     <message>
@@ -15,22 +15,27 @@
         <translation>Sobre %1</translation>
     </message>
     <message>
-        <location line="+67"/>
+        <location line="+69"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
     <message>
-        <location line="+19"/>
+        <location line="+22"/>
         <source>No information available</source>
         <translation>Não há informações disponíveis</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+1"/>
         <source>Plugin:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+20"/>
+        <source>ID:</source>
+        <translation>ID:</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Description:</source>
         <translation>Descrição:</translation>
     </message>
@@ -70,7 +75,7 @@
     <message>
         <location line="+3"/>
         <source>Inactive (restart)</source>
-        <translation>Inativa (restart)</translation>
+        <translation>Inativo (reiniciar)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -80,7 +85,7 @@
     <message>
         <location line="+10"/>
         <source>File:</source>
-        <translation>Ficheiro:</translation>
+        <translation>Arquivo:</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -88,14 +93,14 @@
         <translation>Erro:</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+32"/>
         <source>Script Add-Ons</source>
-        <translation>Script Add-Ons</translation>
+        <translation>Scripts de Add-Ons</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Credits</source>
-        <translation>Credits</translation>
+        <translation>Créditos</translation>
     </message>
     <message>
         <location filename="../AboutInit.js" line="+2"/>
@@ -121,7 +126,7 @@
         <location line="+25"/>
         <location line="+25"/>
         <source>about:blank</source>
-        <translation>about:blank</translation>
+        <translation>sobre:em branco</translation>
     </message>
     <message>
         <location line="-41"/>
@@ -131,7 +136,7 @@
     <message>
         <location line="+25"/>
         <source>Scripts</source>
-        <translation>Roteiros</translation>
+        <translation>Scripts</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -141,7 +146,7 @@
     <message>
         <location line="-75"/>
         <source>Credits</source>
-        <translation>Credits</translation>
+        <translation>Créditos</translation>
     </message>
     <message>
         <source>About Plugins</source>

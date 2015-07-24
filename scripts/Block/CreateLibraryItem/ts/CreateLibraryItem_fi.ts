@@ -6,17 +6,17 @@
     <message>
         <location filename="../CreateLibraryItem.js" line="+49"/>
         <source>Reference Point</source>
-        <translation>Referenssipiste</translation>
+        <translation>Viitepiste</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+29"/>
         <source>Save library item as...</source>
         <translation>Tallenna kirjastokohde nimellä...</translation>
     </message>
     <message>
         <location filename="../CreateLibraryItemInit.js" line="+2"/>
         <source>&amp;Create Library Item</source>
-        <translation>Luo Kirjastokohde</translation>
+        <translation>&amp;Luo kirjastokohde</translation>
     </message>
     <message>
         <location line="+1"/>

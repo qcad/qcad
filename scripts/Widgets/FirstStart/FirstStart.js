@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -29,13 +29,13 @@ FirstStart.prototype.showDialog = function() {
     var code;
     
     this.path = "scripts/Widgets/FirstStart";
-    var formWidget = WidgetFactory.createWidget(this.path, "FirstStartDialog.ui", null);
+    var dialog = WidgetFactory.createWidget(this.path, "FirstStartDialog.ui", null);
 
     var pathFi = new QFileInfo(this.path);
-    formWidget.windowTitle = qsTr("%1 First Start").arg(qApp.applicationName);
-    formWidget.styleSheet = 
+    dialog.windowTitle = qsTr("%1 First Start").arg(qApp.applicationName);
+    dialog.styleSheet =
         "QDialog{ background-image: url(" + pathFi.absoluteFilePath() + "/firststart.png) }";
-    this.widgets = getWidgets(formWidget);
+    this.widgets = getWidgets(dialog);
 
     // language combo
     var langCombo = this.widgets["Language"];
@@ -75,7 +75,7 @@ FirstStart.prototype.showDialog = function() {
     this.translators = [];
     this.changeLanguage(code);
 
-    if (formWidget.exec()) {
+    if (dialog.exec()) {
         // save settings
 
         // language:
@@ -97,6 +97,7 @@ FirstStart.prototype.showDialog = function() {
         RSettings.setValue("DimensionSettings/DIMTXT", dimtxt);
         RSettings.setValue("DimensionSettings/DIMEXE", dimtxt/2);
         RSettings.setValue("DimensionSettings/DIMEXO", dimtxt/4);
+        RSettings.setValue("DimensionSettings/DIMGAP", dimtxt/4);
         RSettings.setValue("DimensionSettings/DIMASZ", dimtxt);
 
         var paperUnit;
@@ -150,7 +151,7 @@ FirstStart.prototype.showDialog = function() {
         settings.sync();
     }
 
-    formWidget.destroy();
+    dialog.destroy();
 };
 
 FirstStart.prototype.changeLanguage = function(code) {
@@ -189,16 +190,20 @@ FirstStart.prototype.changeLanguage = function(code) {
     // paper size combo
     var paperSizeCombo = this.widgets["DefaultPaperSize"];
     PageSettings.initPaperSizeNameCombo(paperSizeCombo);
+
     // default paper size
-    var defaultPrinter = new QPrinter();
-    var paperSize = defaultPrinter.paperSize(QPrinter.Millimeter);
-    defaultPrinter.destroy();
-    // var flags = new Qt.MatchFlags(Qt.MatchExactly);
-    var index = paperSizeCombo.findData(paperSize, Qt.UserRole + 1);
-    if (index==-1) {
-        index = paperSizeCombo.findText("ISO A4");
+    var paperSizeOverride = qApp.property("FirstStartPaperSizeOverride");
+    var index = paperSizeCombo.findText(paperSizeOverride);
+    if (index===-1) {
+        var defaultPrinter = new QPrinter();
+        var paperSize = defaultPrinter.paperSize(QPrinter.Millimeter);
+        defaultPrinter.destroy();
+        index = paperSizeCombo.findData(paperSize, Qt.UserRole + 1);
+        if (index===-1) {
+            index = paperSizeCombo.findText("ISO A4");
+        }
     }
-    if (index==-1) {
+    if (index===-1) {
         index = 0;
     }
     paperSizeCombo.currentIndex = index;

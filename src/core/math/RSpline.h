@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -103,6 +103,7 @@ public:
     //bool isClosedPeriodic() const;
 
     bool isClosed() const;
+    bool isGeometricallyClosed(double tolerance=RS::PointTolerance) const;
     bool isPeriodic() const;
 
     virtual double getDirection1() const;
@@ -130,7 +131,7 @@ public:
 
     virtual double getLength() const;
     RVector getPointAt(double t) const;
-    virtual double getAngleAt(double distance) const;
+    virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;
 
     virtual QList<RVector> getEndPoints() const;
     RVector getMiddlePoint() const;
@@ -159,6 +160,8 @@ public:
     RPolyline toPolyline(int segments) const;
 
     virtual QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const;
+    QList<QSharedPointer<RShape> > getExplodedBezier(int segments) const;
+    QList<QSharedPointer<RShape> > getExplodedWithSegmentLength(double segmentLength) const;
 
     QList<RSpline> getBezierSegments() const;
 
@@ -193,6 +196,8 @@ public:
     }
 
 protected:
+    void appendToExploded(const RLine& line) const;
+    //void appendToExploded(QList<QSharedPointer<RShape> >& list) const;
     void invalidate() const;
     void updateInternal() const;
     void updateBoundingBox() const;

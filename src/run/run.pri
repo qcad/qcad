@@ -49,7 +49,11 @@ else {
             sqldrivers/libqsqlite.dylib \
             sqldrivers/libqsqlodbc.dylib
 
-        !contains(QT_VERSION, ^5\\..*\\..*) {
+        greaterThan(QT_MAJOR_VERSION, 4) {
+            FILES += imageformats/libqtga.dylib
+            FILES += printsupport/libcocoaprintersupport.dylib
+        }
+        else {
             FILES += \
                 codecs/libqcncodecs.dylib \
                 codecs/libqjpcodecs.dylib \
@@ -79,7 +83,10 @@ else {
             imageformats/libqtiff.so \
             sqldrivers/libqsqlite.so
 
-        !contains(QT_VERSION, ^5\\..*\\..*) {
+        greaterThan(QT_MAJOR_VERSION, 4) {
+            FILES += imageformats/libqtga.so
+        }
+        else {
             FILES += \
                 codecs/libqcncodecs.so \
                 codecs/libqjpcodecs.so \
@@ -99,18 +106,28 @@ else {
     }
 
     else:win32 {
-        FILES = \
-            designer\\qwebview.dll \
-            imageformats\\qgif4.dll \
-            imageformats\\qico4.dll \
-            imageformats\\qjpeg4.dll \
-            imageformats\\qmng4.dll \
-            imageformats\\qsvg4.dll \
-            imageformats\\qtiff4.dll \
-            sqldrivers\\qsqlite4.dll
-
-        !contains(QT_VERSION, ^5\\..*\\..*) {
+        greaterThan(QT_MAJOR_VERSION, 4) {
             FILES += \
+                designer\\qwebview.dll \
+                imageformats\\qgif.dll \
+                imageformats\\qico.dll \
+                imageformats\\qjpeg.dll \
+                imageformats\\qmng.dll \
+                imageformats\\qsvg.dll \
+                imageformats\\qtiff.dll \
+                sqldrivers\\qsqlite.dll
+        }
+
+        contains(QT_VERSION, ^4\\..*\\..*) {
+            FILES += \
+                designer\\qwebview.dll \
+                imageformats\\qgif4.dll \
+                imageformats\\qico4.dll \
+                imageformats\\qjpeg4.dll \
+                imageformats\\qmng4.dll \
+                imageformats\\qsvg4.dll \
+                imageformats\\qtiff4.dll \
+                sqldrivers\\qsqlite4.dll \
                 codecs\\qcncodecs4.dll \
                 codecs\\qjpcodecs4.dll \
                 codecs\\qkrcodecs4.dll \
@@ -130,12 +147,17 @@ else {
             }
             !exists("$${DESTDIR_WIN}\\..\\plugins\\$${FILE}") {
                 message(Copying $${FILE})
-                system(copy "$$[QT_INSTALL_PLUGINS]\\$${FILE}" "$${DESTDIR_WIN}\\..\\plugins\\$${FILE}")
+                system(cp "$$[QT_INSTALL_PLUGINS]\\$${FILE}" "$${DESTDIR_WIN}\\..\\plugins\\$${FILE}")
             }
         }
 
         # copy Qt libraries into same dir as exe to avoid Qt version mixup:
-        system(copy "$$[QT_INSTALL_LIBS]\\*.dll" "$${DESTDIR_WIN}")
+        greaterThan(QT_MAJOR_VERSION, 4) {
+            system(cp "$$[QT_INSTALL_BINS]/*.dll" "$${DESTDIR_WIN}")
+        }
+        else {
+            system(cp "$$[QT_INSTALL_LIBS]/*.dll" "$${DESTDIR_WIN}")
+        }
     }
 }
 

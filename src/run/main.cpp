@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -84,7 +84,6 @@ void catchSigPipe(int /*s*/){
 #endif
 
 int main(int argc, char *argv[]) {
-
     // For correct Unicode translation, apply the current system locale:
     setlocale(LC_ALL, "");
     // But use usual conversion for scanf()/sprintf():
@@ -98,7 +97,18 @@ int main(int argc, char *argv[]) {
     setenv("UNICODEMAP_JP", "cp932", 1);
 #endif
 
+    // these are defaults:
+    qApp->setOrganizationName("QCAD");
+    qApp->setOrganizationDomain("QCAD.org");
+    qApp->setApplicationName("QCAD");
+    qApp->setApplicationVersion(RSettings::getVersionString());
+
     RMainWindow::installMessageHandler();
+
+#if QT_VERSION >= 0x050000
+    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+#endif
+
 #ifdef Q_OS_MAC
     // TODO: make available as script function:
     QCoreApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
@@ -184,12 +194,12 @@ int main(int argc, char *argv[]) {
     QDir::setCurrent(RSettings::getApplicationPath());
 
     // disable Qt library paths to avoid plugins for Qt designer from being found:
-    QString pluginPath = RSettings::getPluginPath();
-    if (pluginPath.isEmpty()) {
-        qWarning() << QString("Folder '%1' does not exist").arg(pluginPath);
+    QStringList pluginPaths = RSettings::getPluginPaths();
+    if (pluginPaths.isEmpty()) {
+        qWarning() << "No plugin paths found";
         return -1;
     }
-    app->setLibraryPaths(QStringList() << pluginPath);
+    app->setLibraryPaths(pluginPaths);
 
     RMath::init();
     RFontList::init();
@@ -271,6 +281,10 @@ int main(int argc, char *argv[]) {
     RPatternListImperial::uninit();
     RSingleton::cleanUp();
     RMath::uninit();
+
+    RDocumentInterface::deleteClipboard();
+
+    RDebug::printCounters();
 
     return ret;
 }

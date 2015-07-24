@@ -82,27 +82,24 @@ Wskaż pozycje</translatorcomment>
         <translation type="obsolete">Położenie</translation>
     </message>
     <message>
-        <location filename="../ShapeRectangleSize.ui" line="+17"/>
         <source>&amp;Width:</source>
         <translatorcomment>--google--
 &amp;Szerokość papieru:
 Minimalna &amp;szerokość:</translatorcomment>
-        <translation type="unfinished">Szerokość:</translation>
+        <translation type="obsolete">Szerokość:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>&amp;Height:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 &amp;Wysokość papieru:
 &amp;Wysokość:</translatorcomment>
-        <translation type="unfinished">&amp;Wysokość:</translation>
+        <translation type="obsolete">&amp;Wysokość:</translation>
     </message>
     <message>
-        <location line="+17"/>
         <source>Reference Point:</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Punkt odniesienia:</translation>
+        <translation type="obsolete">Punkt odniesienia:</translation>
     </message>
     <message>
         <source>Rectangle with &amp;Size</source>
@@ -118,54 +115,44 @@ Minimalna &amp;szerokość:</translatorcomment>
 <context>
     <name>ShapeRectangleSize</name>
     <message>
-        <location filename="../ShapeRectangleSize.js" line="+44"/>
         <source>Top Left</source>
-        <translation type="unfinished">Góra - lewo</translation>
+        <translation type="obsolete">Góra - lewo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Top</source>
-        <translation type="unfinished">Do góry</translation>
+        <translation type="obsolete">Do góry</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Top Right</source>
-        <translation type="unfinished">Góra - prawo</translation>
+        <translation type="obsolete">Góra - prawo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Left</source>
-        <translation type="unfinished">Lewo</translation>
+        <translation type="obsolete">Lewo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Środek</translation>
+        <translation type="obsolete">Środek</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished">Prawo</translation>
+        <translation type="obsolete">Prawo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom Left</source>
-        <translation type="unfinished">Dół - lewo</translation>
+        <translation type="obsolete">Dół - lewo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished">W dół</translation>
+        <translation type="obsolete">W dół</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Bottom Right</source>
-        <translation type="unfinished">Dół - prawo</translation>
+        <translation type="obsolete">Dół - prawo</translation>
     </message>
     <message>
-        <location line="+30"/>
         <source>Position</source>
-        <translation type="unfinished">Położenie</translation>
+        <translation type="obsolete">Położenie</translation>
     </message>
     <message>
         <location filename="../ShapeRectangleSizeInit.js" line="+2"/>
@@ -176,6 +163,34 @@ Minimalna &amp;szerokość:</translatorcomment>
         <location line="+5"/>
         <source>Draw rectangle with position and size</source>
         <translation type="unfinished">Narysuj prostokąt pozycji i wielkości</translation>
+    </message>
+    <message>
+        <location filename="../ShapeRectangleSize.ui" line="+17"/>
+        <location filename="../ShapeRectangleSizeDialog.ui" line="+19"/>
+        <source>&amp;Width:</source>
+        <translation type="unfinished">Szerokość:</translation>
+    </message>
+    <message>
+        <location line="+23"/>
+        <location filename="../ShapeRectangleSizeDialog.ui" line="+30"/>
+        <source>&amp;Height:</source>
+        <translation type="unfinished">&amp;Wysokość:</translation>
+    </message>
+    <message>
+        <location line="+30"/>
+        <location filename="../ShapeRectangleSizeDialog.ui" line="-10"/>
+        <source>Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Reference Point:</source>
+        <translation type="unfinished">Punkt odniesienia:</translation>
+    </message>
+    <message>
+        <location filename="../ShapeRectangleSizeDialog.ui" line="+101"/>
+        <source>Create Polyline</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

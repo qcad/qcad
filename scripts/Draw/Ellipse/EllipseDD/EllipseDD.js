@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -18,7 +18,7 @@
  */
 
 include("../Ellipse.js");
-include("../../DrawBasedOnRectangle.js");
+include("../../DrawBasedOnRectangleSize.js");
 include("scripts/ShapeAlgorithms.js");
 
 /**
@@ -27,12 +27,13 @@ include("scripts/ShapeAlgorithms.js");
  * \ingroup ecma_draw_ellipse
  */
 function EllipseDD(guiAction) {
-    DrawBasedOnRectangle.call(this, guiAction);
+    DrawBasedOnRectangleSize.call(this, guiAction);
 
+    this.dialogUiFile = "EllipseDDDialog.ui";
     this.setUiOptions("EllipseDD.ui");
 }
 
-EllipseDD.prototype = new DrawBasedOnRectangle();
+EllipseDD.prototype = new DrawBasedOnRectangleSize();
 
 EllipseDD.prototype.getShapes = function(corners) {
     var lines = [];
@@ -57,12 +58,14 @@ EllipseDD.prototype.getAuxPreview = function() {
     return ret;
 };
 
-EllipseDD.prototype.slotMajorDiameterChanged = function(value) {
+EllipseDD.prototype.slotXDiameterChanged = function(value) {
     this.width = value;
+    this.updateOkButton();
     this.updatePreview(true);
 };
 
-EllipseDD.prototype.slotMinorDiameterChanged = function(value) {
+EllipseDD.prototype.slotYDiameterChanged = function(value) {
     this.height = value;
+    this.updateOkButton();
     this.updatePreview(true);
 };

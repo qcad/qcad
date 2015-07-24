@@ -31,11 +31,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocument &amp;" typeName="RDocument"
         name="document" isConst="false" />
         <arg type="RMessageHandler *" typeName="RMessageHandler *"
-        name="messageHandler" hasDefault="true" default=" NULL"
+        name="messageHandler" hasDefault="true" default="NULL"
         isConst="false" />
         <arg type="RProgressHandler *"
         typeName="RProgressHandler *" name="progressHandler"
-        hasDefault="true" default=" NULL" isConst="false" />
+        hasDefault="true" default="NULL" isConst="false" />
       </variant>
     </method>
   </class>

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -43,7 +43,7 @@ Shape.includeBasePath = includeBasePath;
 Shape.prototype.beginEvent = function() {
     Draw.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ShapeToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ShapeToolsPanelAction") {
         EAction.showCadToolBarPanel("ShapeToolsPanel");
         this.terminate();
     }
@@ -69,17 +69,17 @@ Shape.getToolBar = function() {
 
 Shape.getCadToolBarPanel = function() {
     var mtb = Draw.getCadToolBarPanel();
-    var actionName = "ShapeToolsPanelButton";
+    var actionName = "ShapeToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Shape Tools"), mtb);
         action.setScriptFile(Shape.includeBasePath + "/Shape.js");
         action.objectName = actionName;
         action.setRequiresDocument(true);
         action.setIcon(Shape.includeBasePath + "/Shape.svg");
-        action.setStatusTip(qsTr("Show line tools"));
+        action.setStatusTip(qsTr("Show shape tools"));
         action.setDefaultShortcut(new QKeySequence("w,h"));
         action.setNoState();
-        action.setDefaultCommands(["linemenu"]);
+        action.setDefaultCommands(["shapemenu"]);
         action.setGroupSortOrder(20);
         action.setSortOrder(800);
         action.setWidgetNames(["MainToolsPanel"]);

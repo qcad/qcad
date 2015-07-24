@@ -10,6 +10,13 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant>
         <arg type="RVector &amp;" typeName="RVector" name="offset"
         isConst="true" />
+        <arg type="double" typeName="double" name="rotationAngle"
+        hasDefault="true" default="0.0" isConst="false" />
+        <arg type="double" typeName="double" name="scaleFactor"
+        hasDefault="true" default="1.0" isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="center"
+        hasDefault="true" default="RVector :: nullVector"
+        isConst="true" />
       </variant>
     </constructor>
   </class>

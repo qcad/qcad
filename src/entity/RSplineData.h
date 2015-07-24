@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -33,6 +33,7 @@
  * appearance of a spline entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RSplineData: public REntityData, protected RSpline {
@@ -88,6 +89,14 @@ public:
 
     RVector getEndPoint() const {
         return RSpline::getEndPoint();
+    }
+
+    void setStartPoint(const RVector& sp) {
+        RSpline::setStartPoint(sp);
+    }
+
+    void setEndPoint(const RVector& ep) {
+        RSpline::setEndPoint(ep);
     }
 
     bool reverse() {
@@ -175,6 +184,7 @@ public:
     }
 };
 
+Q_DECLARE_METATYPE(RSplineData)
 Q_DECLARE_METATYPE(RSplineData*)
 Q_DECLARE_METATYPE(const RSplineData*)
 Q_DECLARE_METATYPE(QSharedPointer<RSplineData>)

@@ -22,19 +22,19 @@
     <message>
         <location filename="../NewFile.js" line="+114"/>
         <source>Opening drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Odpiram risbo:</translation>
     </message>
     <message>
         <source>Loading...</source>
         <translation type="vanished">Odpiram...</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+23"/>
         <source>Import Error</source>
         <translation>Napaka pri uvozu</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Cannot open file</source>
         <translation>Ne morem odpret datoteke</translation>
     </message>
@@ -51,16 +51,16 @@
     <message>
         <location line="+4"/>
         <source>File is empty.</source>
-        <translation>Datoteka je prazna</translation>
+        <translation>Datoteka je prazna.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>Drawing loaded successfully:</source>
-        <translation type="unfinished"></translation>
+        <translation>Risba naložena uspešno:</translation>
     </message>
     <message>
         <source>Opened drawing:</source>
-        <translation type="vanished">Odprta risba</translation>
+        <translation type="vanished">Odprta risba:</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -68,7 +68,7 @@
         <translation>Format:</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+115"/>
         <source>Untitled %1</source>
         <translation>Brez naslova %1</translation>
     </message>
@@ -78,7 +78,7 @@
         <translation>Samo za branje</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+54"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>Želite shranit spremembe v&lt;br&gt;&apos;%1&apos; ?</translation>
     </message>

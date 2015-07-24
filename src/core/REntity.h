@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -47,6 +47,10 @@ class RExporter;
 #define RDEFAULT_QSET_INT QSet<int>()
 #endif
 
+#ifndef RDEFAULT_TOLERANCE_1E_MIN4
+#define RDEFAULT_TOLERANCE_1E_MIN4 1.0e-4
+#endif
+
 /**
  * Base class for all entity classes.
  *
@@ -64,6 +68,7 @@ class QCADCORE_EXPORT REntity : public RObject {
 public:
     static RPropertyTypeId PropertyCustom;
     static RPropertyTypeId PropertyHandle;
+    static RPropertyTypeId PropertyProtected;
     static RPropertyTypeId PropertyType;
     static RPropertyTypeId PropertyBlock;
     static RPropertyTypeId PropertyLayer;
@@ -71,12 +76,15 @@ public:
     static RPropertyTypeId PropertyLinetypeScale;
     static RPropertyTypeId PropertyLineweight;
     static RPropertyTypeId PropertyColor;
+    static RPropertyTypeId PropertyDisplayedColor;
     static RPropertyTypeId PropertyDrawOrder;
 
     static RPropertyTypeId PropertyMinX;
     static RPropertyTypeId PropertyMinY;
     static RPropertyTypeId PropertyMaxX;
     static RPropertyTypeId PropertyMaxY;
+    static RPropertyTypeId PropertySizeX;
+    static RPropertyTypeId PropertySizeY;
 
 public:
     REntity(RDocument* document, Id objectId=-1) : RObject(document, objectId) {}
@@ -309,6 +317,13 @@ public:
     }
 
     /**
+     * \copydoc REntityData::getHull
+     */
+    virtual RPolyline getHull(double offset) const {
+        return getData().getHull(offset);
+    }
+
+    /**
      * \copydoc REntityData::getIdBoundingBoxes
      */
 //    virtual QList<QPair<REntity::Id, RBox> > getIdBoundingBoxes() const {
@@ -330,6 +345,13 @@ public:
     }
 
     /**
+     * \copydoc REntityData::getClosestShape
+     */
+    virtual QSharedPointer<RShape> getClosestSimpleShape(const RVector& pos, double range = RNANDOUBLE) const {
+        return getClosestShape(pos, range, true);
+    }
+
+    /**
      * \copydoc REntityData::isInside
      */
     virtual bool isInside(const RBox& box) const {
@@ -339,8 +361,8 @@ public:
     /**
      * \copydoc REntityData::isOnEntity
      */
-    virtual bool isOnEntity(const RVector& point, bool limited=true) const {
-        return getData().isOnEntity(point, limited);
+    virtual bool isOnEntity(const RVector& point, bool limited=true, double tolerance = RDEFAULT_TOLERANCE_1E_MIN4) const {
+        return getData().isOnEntity(point, limited, tolerance);
     }
 
     /**
@@ -564,8 +586,6 @@ public:
     virtual int getComplexity() const {
         return 1;
     }
-
-    void dump();
 
 protected:
     virtual void print(QDebug dbg) const;

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -154,10 +154,13 @@ Stretch.prototype.pickCoordinate = function(event, preview) {
             this.updatePreview();
         }
         else {
-            di.applyOperation(this.getOperation(false));
-            di.setRelativeZero(this.targetPoint);
-            this.setState(Stretch.State.SettingCorner1);
-            //this.terminate();
+            var op = this.getOperation(false);
+            if (!isNull(op)) {
+                op.setText(this.getToolTitle());
+                di.applyOperation(op);
+                di.setRelativeZero(this.targetPoint);
+                this.setState(Stretch.State.SettingCorner1);
+            }
         }
         break;
     }

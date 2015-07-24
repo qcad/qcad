@@ -21,7 +21,7 @@
     <message>
         <location line="+22"/>
         <source>Options Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>オプションツールバー</translation>
     </message>
     <message>
         <location line="+6"/>

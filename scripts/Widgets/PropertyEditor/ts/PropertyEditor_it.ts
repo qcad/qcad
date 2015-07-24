@@ -27,12 +27,11 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+372"/>
         <source>Geometry</source>
-        <translation>Geometria</translation>
+        <translation type="vanished">Geometria</translation>
     </message>
     <message>
-        <location line="+295"/>
+        <location filename="../PropertyEditor.js" line="+701"/>
         <source>Add custom property to selected objects</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
@@ -61,7 +60,7 @@
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="-481"/>
+        <location line="-514"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
@@ -76,7 +75,7 @@ Versione:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+173"/>
         <source>No Selection</source>
         <translatorcomment>--ignored case--
 --file: photivo_it.ts--
@@ -84,7 +83,12 @@ Nessuna selezione</translatorcomment>
         <translation>Nessuna selezione</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+20"/>
+        <source>Specific Properties</source>
+        <translation>Proprietà specifiche</translation>
+    </message>
+    <message>
+        <location line="+14"/>
         <source>Dependent Entities</source>
         <translation>Entità dipendenti</translation>
     </message>
@@ -94,7 +98,7 @@ Nessuna selezione</translatorcomment>
         <translation>Personalizzato</translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+164"/>
         <source>Index</source>
         <translation>Indice</translation>
     </message>
@@ -104,12 +108,12 @@ Nessuna selezione</translatorcomment>
         <translation>Rimuovere questa proprietà dagli oggetti selezionati</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+41"/>
         <source>All</source>
         <translation>Tutto</translation>
     </message>
     <message>
-        <location line="+620"/>
+        <location line="+626"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -139,7 +143,7 @@ Specifica la base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-463"/>
+        <location line="-468"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -150,7 +154,7 @@ Specifica la base</translatorcomment>
         <translation>Utilizzare la misurazione automatica</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+39"/>
         <source>Yes</source>
         <translation>Si</translation>
     </message>
@@ -160,7 +164,7 @@ Specifica la base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+307"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -174,23 +178,32 @@ Specifica la base</translatorcomment>
         <translation>Selezione:</translation>
     </message>
     <message>
-        <location line="+31"/>
         <source>General</source>
-        <translation>Generale</translation>
+        <translation type="vanished">Generale</translation>
     </message>
     <message>
-        <location line="+103"/>
+        <location line="+31"/>
+        <source>General Properties</source>
+        <translation>Proprietà generali</translation>
+    </message>
+    <message>
+        <location line="+106"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Sposta la selezione ad un nuovo layer</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+62"/>
         <source>Linetype Scale:</source>
         <translation>Scala del tipo di linea:</translation>
     </message>
     <message>
-        <location line="-107"/>
+        <location line="+49"/>
+        <source>Protected:</source>
+        <translation>Protetta:</translation>
+    </message>
+    <message>
+        <location line="-182"/>
         <source>Handle:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Maniglia:</translation>

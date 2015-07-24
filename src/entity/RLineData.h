@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -33,6 +33,7 @@
  * appearance of a line entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RLineData: public REntityData, protected RLine {
@@ -50,6 +51,8 @@ public:
     RLine getLine() {
         return *this;
     }
+
+    virtual RPolyline getHull(double offset) const;
 
     RVector getStartPoint() const {
         return RLine::getStartPoint();
@@ -102,6 +105,7 @@ public:
     }
 };
 
+Q_DECLARE_METATYPE(RLineData)
 Q_DECLARE_METATYPE(RLineData*)
 Q_DECLARE_METATYPE(const RLineData*)
 Q_DECLARE_METATYPE(QSharedPointer<RLineData>)

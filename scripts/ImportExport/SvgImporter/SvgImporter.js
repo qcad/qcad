@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -128,27 +128,10 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
     if (transformAttr!=="") {
         // got transform attribute: update transform stack:
         var transform = this.getTransform(transformAttr);
-//        var combinedTransform = new QTransform();
-//        if (this.transformStack.length!==0) {
-//            combinedTransform = this.transformStack[this.transformStack.length-1];
-//        }
         transform.operator_multiply_assign(newTransform);
         newTransform = transform;
 
-//        for (var i=0; i<this.transformStack.length; i++) {
-//            qDebug("[" + i + "]: ", this.transformStack[i]);
-//        }
     }
-//    else {
-//        // no transform attribute given: keep same transform:
-//        if (this.transformStack.length!==0) {
-//            newTransform = this.transformStack[this.transformStack.length-1];
-//        }
-//        // add identity transform to transform stack:
-//        else {
-//            newTransform = new QTransform();
-//        }
-//    }
     this.transformStack.push(newTransform);
     this.svgImporter.setTransform(newTransform);
 
@@ -201,8 +184,11 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
         break;
 
     case "polygon":
+        this.svgImporter.importPolygon(atts.value("points"), false);
+        break;
+
     case "polyline":
-        this.svgImporter.importPolygon(atts.value("points"));
+        this.svgImporter.importPolygon(atts.value("points"), true);
         break;
 
     case "line":
@@ -272,7 +258,7 @@ SvgHandler.prototype.endElement = function(namespaceURI, localName, qName) {
 function SvgImporter(document, resolution) {
     if (isNull(resolution)) {
         // default resolution, e.g. for library items:
-        resolution = 90;
+        resolution = 72;
     }
 
     RFileImporterAdapter.call(this, document);
@@ -305,21 +291,24 @@ SvgImporter.prototype.setTransform = function(t) {
 };
 
 SvgImporter.prototype.importFile = function(fileName) {
-    qDebug("SvgImporter.prototype.importFile");
-
     if (isNull(this.getDocument())) {
         this.setDocument(EAction.getDocument());
     }
 
+    var handler = new SvgHandler(this);
+    parseXml(fileName, handler);
+
+    /*
     var fi = new QFileInfo(fileName);
 
     var file = new QFile(fi.absoluteFilePath());
     var xmlReader = new QXmlSimpleReader();
     var source = new QXmlInputSource(file);
-    var handler = new SvgHandler(this);
-    xmlReader.setContentHandler(handler);
+    //var handler = new SvgHandler(this);
+    //xmlReader.setContentHandler(handler);
     var ok = xmlReader.parse(source, false);
     file.close();
+    */
     
     this.endImport();
 
@@ -436,14 +425,17 @@ SvgImporter.prototype.importPath = function(dData) {
 
     for (var i=0; i<segs.length; i++) {
         var seg = segs[i];
-        //qDebug("seg[" + i + "]: ", seg);
+        if (seg.trim().length===0) {
+            continue;
+        }
+
         var cmd = seg.match(/[mlhvcsqtaz]/i);
         if (!cmd) {
             //qDebug("abort...");
             return;
         }
         cmd = cmd[0];
-        var coords = 
+        var coords =
             seg.match(/(([+-]?[0-9][0-9]*\.?[0-9]*)|[+-]?(\.[0-9]+))([Ee][+-]?[0-9]+)?/gi);
         if (coords) {
             coords = coords.map(parseFloat);
@@ -565,7 +557,12 @@ SvgImporter.prototype.importPath = function(dData) {
             break;
 
         case 'c':
+            qDebug(coords.join(" | "));
             for (k=0; k<coords.length; k+=6) {
+                qDebug([ox, oy,
+                       coords[k+0] + x, coords[k+1] + y,
+                       coords[k+2] + x, coords[k+3] + y,
+                       coords[k+4] + x, coords[k+5] + y].join(" | "));
                 this.importBezier(ox, oy,
                                   coords[k+0] + x, coords[k+1] + y,
                                   coords[k+2] + x, coords[k+3] + y,
@@ -754,14 +751,16 @@ SvgImporter.getArcCenter = function(x1, y1, x2, y2, rx, ry, sweep, isLarge, angl
     return new RVector(x1 - dx3, y1 - dy3);
 };
 
-SvgImporter.prototype.importPolygon = function(pointsData) {
+SvgImporter.prototype.importPolygon = function(pointsData, open) {
     var coordinates = pointsData.trim().split(/[\s,]+/).map(parseFloat);
     for (var i = 0; i < coordinates.length-1; i += 2) {
         var x1 = coordinates[i];
         var y1 = coordinates[i + 1];
         var x2 = coordinates[(i + 2) % coordinates.length];
         var y2 = coordinates[(i + 3) % coordinates.length];
-        this.importLine(x1, y1, x2, y2);
+        if (!open || i!==coordinates.length-2) {
+            this.importLine(x1, y1, x2, y2);
+        }
     }
 };
 

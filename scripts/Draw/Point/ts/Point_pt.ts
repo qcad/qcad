@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Point</name>
     <message>
         <location filename="../Point.js" line="+71"/>
         <source>Point Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ferramentas ponto</translation>
+        <translation>Ferramentas para Ponto</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show point tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mostrar ferramentas de ponto</translation>
+        <translation>Exiba as ferramentas para ponto</translation>
     </message>
     <message>
         <location line="+18"/>

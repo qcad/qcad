@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaInputEvent {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaInputEvent {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -47,6 +50,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setModelPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setScreenPosition
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getScreenPosition

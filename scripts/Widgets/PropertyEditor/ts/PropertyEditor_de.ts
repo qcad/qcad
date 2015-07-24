@@ -26,7 +26,7 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+186"/>
+        <location filename="../PropertyEditor.js" line="+187"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
@@ -36,14 +36,18 @@
         <translation>:</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+173"/>
         <source>No Selection</source>
         <translation>Keine Selektion</translation>
     </message>
     <message>
-        <location line="+18"/>
         <source>Geometry</source>
-        <translation>Geometrie</translation>
+        <translation type="vanished">Geometrie</translation>
+    </message>
+    <message>
+        <location line="+20"/>
+        <source>Specific Properties</source>
+        <translation>Spezifische Eigenschaften</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -51,7 +55,7 @@
         <translation>Abhängige Objekte</translation>
     </message>
     <message>
-        <location line="+170"/>
+        <location line="+181"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -61,12 +65,12 @@
         <translation>Eigenschaft von ausgewählten Objekten entfernen</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+41"/>
         <source>All</source>
         <translation>Alle</translation>
     </message>
     <message>
-        <location line="+620"/>
+        <location line="+626"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -103,7 +107,7 @@
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-599"/>
+        <location line="-604"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -126,7 +130,7 @@
         <translation>Automatisch</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+39"/>
         <source>Yes</source>
         <translation>Ja</translation>
     </message>
@@ -140,7 +144,7 @@
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+307"/>
         <location line="+35"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -152,19 +156,28 @@
         <translation>Auswahl:</translation>
     </message>
     <message>
-        <location line="+31"/>
         <source>General</source>
-        <translation>Allgemein</translation>
+        <translation type="vanished">Allgemein</translation>
     </message>
     <message>
-        <location line="+93"/>
+        <location line="+31"/>
+        <source>General Properties</source>
+        <translation>Allgemeine Eigenschaften</translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>Handle:</source>
         <translation>Handle:</translation>
     </message>
     <message>
-        <location line="+107"/>
+        <location line="+133"/>
         <source>Linetype Scale:</source>
         <translation>Linientypskalierung:</translation>
+    </message>
+    <message>
+        <location line="+49"/>
+        <source>Protected:</source>
+        <translation>Geschützt:</translation>
     </message>
     <message>
         <source>Layer:</source>
@@ -187,12 +200,12 @@
         <translation type="obsolete">Reihenfolge:</translation>
     </message>
     <message>
-        <location line="-97"/>
+        <location line="-111"/>
         <source>Move Selection to a New Layer</source>
         <translation>Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="-909"/>
+        <location filename="../PropertyEditor.js" line="-936"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

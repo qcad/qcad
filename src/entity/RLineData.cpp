@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -37,6 +37,19 @@ RLineData::RLineData(const RLine& line) :
 
 RLineData::RLineData(const RVector& startPoint, const RVector& endPoint) :
     RLine(startPoint, endPoint) {
+}
+
+RPolyline RLineData::getHull(double offset) const {
+    RVector vRight = RVector::createPolar(offset, getAngle()-M_PI/2);
+
+    RPolyline ret;
+    ret.appendVertex(startPoint - vRight);
+    ret.appendVertex(startPoint + vRight);
+    ret.appendVertex(endPoint + vRight);
+    ret.appendVertex(endPoint - vRight);
+    ret.setClosed(true);
+
+    return ret;
 }
 
 QList<RVector> RLineData::getReferencePoints(

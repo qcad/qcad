@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -21,6 +21,7 @@
 
 RPropertyTypeId RAttributeDefinitionEntity::PropertyCustom;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyHandle;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyProtected;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyType;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyBlock;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyLayer;
@@ -28,6 +29,7 @@ RPropertyTypeId RAttributeDefinitionEntity::PropertyLinetype;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyLinetypeScale;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyLineweight;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyColor;
+RPropertyTypeId RAttributeDefinitionEntity::PropertyDisplayedColor;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyDrawOrder;
 
 RPropertyTypeId RAttributeDefinitionEntity::PropertyPositionX;
@@ -59,6 +61,7 @@ RAttributeDefinitionEntity::~RAttributeDefinitionEntity() {
 void RAttributeDefinitionEntity::init() {
     RAttributeDefinitionEntity::PropertyCustom.generateId(typeid(RAttributeDefinitionEntity), RObject::PropertyCustom);
     RAttributeDefinitionEntity::PropertyHandle.generateId(typeid(RAttributeDefinitionEntity), RObject::PropertyHandle);
+    RAttributeDefinitionEntity::PropertyProtected.generateId(typeid(RAttributeDefinitionEntity), RObject::PropertyProtected);
     RAttributeDefinitionEntity::PropertyType.generateId(typeid(RAttributeDefinitionEntity), REntity::PropertyType);
     RAttributeDefinitionEntity::PropertyBlock.generateId(typeid(RAttributeDefinitionEntity), REntity::PropertyBlock);
     RAttributeDefinitionEntity::PropertyLayer.generateId(typeid(RAttributeDefinitionEntity), REntity::PropertyLayer);
@@ -66,6 +69,7 @@ void RAttributeDefinitionEntity::init() {
     RAttributeDefinitionEntity::PropertyLinetypeScale.generateId(typeid(RAttributeDefinitionEntity), REntity::PropertyLinetypeScale);
     RAttributeDefinitionEntity::PropertyLineweight.generateId(typeid(RAttributeDefinitionEntity), REntity::PropertyLineweight);
     RAttributeDefinitionEntity::PropertyColor.generateId(typeid(RAttributeDefinitionEntity), REntity::PropertyColor);
+    RAttributeDefinitionEntity::PropertyDisplayedColor.generateId(typeid(RAttributeDefinitionEntity), REntity::PropertyDisplayedColor);
     RAttributeDefinitionEntity::PropertyDrawOrder.generateId(typeid(RAttributeDefinitionEntity), REntity::PropertyDrawOrder);
 
     RAttributeDefinitionEntity::PropertyPositionX.generateId(typeid(RAttributeDefinitionEntity), RTextBasedEntity::PropertyPositionX);

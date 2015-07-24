@@ -4,28 +4,38 @@
 <context>
     <name>CircleCR</name>
     <message>
-        <location filename="../CircleCR.js" line="+56"/>
         <source>Center or radius</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Center lub promień</translation>
+        <translation type="obsolete">Center lub promień</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Wskaż środek
 Łuk: środek, punkt, kąty</translatorcomment>
-        <translation type="unfinished">Wyśrodkuj</translation>
+        <translation type="obsolete">Wyśrodkuj</translation>
     </message>
     <message>
         <location filename="../CircleCR.ui" line="+17"/>
+        <location filename="../CircleCRDialog.ui" line="+89"/>
         <source>Radius:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 Wprowadź promień:
 Promień:</translatorcomment>
         <translation type="unfinished">Promień:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
+        <location filename="../CircleCRDialog.ui" line="-60"/>
+        <source>Angle:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>Reference Point:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../CircleCRInit.js" line="+2"/>
@@ -36,7 +46,7 @@ Promień:</translatorcomment>
         <translation type="unfinished">Środek, &amp;promień</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from center and radius</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysuj koło od środka i promienia</translation>

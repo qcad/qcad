@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="+74"/>
+        <location filename="../src/entity/RArcEntity.cpp" line="+86"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RCircleEntity.cpp" line="+64"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+76"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+85"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+91"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="+76"/>
+        <location filename="../src/entity/REllipseEntity.cpp" line="+80"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
@@ -22,55 +22,55 @@
     <message>
         <location line="-2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="-2"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+87"/>
+        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+93"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimAngularEntity.cpp" line="+93"/>
+        <location filename="../src/entity/RDimAngularEntity.cpp" line="+97"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+87"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+93"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+86"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+92"/>
         <location line="+4"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+85"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+89"/>
         <location line="+5"/>
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+91"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+97"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+78"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+83"/>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-2"/>
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+84"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+88"/>
         <location line="+3"/>
-        <location filename="../src/entity/RImageEntity.cpp" line="+76"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="+60"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="+70"/>
+        <location filename="../src/entity/RImageEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="+71"/>
+        <location filename="../src/entity/RLineEntity.cpp" line="+82"/>
         <location line="+3"/>
-        <location filename="../src/entity/RPointEntity.cpp" line="+58"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+72"/>
-        <location filename="../src/entity/RRayEntity.cpp" line="+73"/>
+        <location filename="../src/entity/RPointEntity.cpp" line="+70"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+83"/>
+        <location filename="../src/entity/RRayEntity.cpp" line="+78"/>
         <location line="+3"/>
         <location line="+4"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="+70"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="+74"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="+66"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+77"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTraceEntity.cpp" line="+70"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="+74"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RXLineEntity.cpp" line="+73"/>
+        <location filename="../src/entity/RXLineEntity.cpp" line="+78"/>
         <location line="+3"/>
         <location line="+4"/>
         <source>X</source>
@@ -242,8 +242,8 @@
         <translation>Ploščina</translation>
     </message>
     <message>
-        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+86"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+85"/>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+90"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+89"/>
         <source>Tag</source>
         <translation>Značka</translation>
     </message>
@@ -432,7 +432,7 @@
         <translation>Faktor povečave</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+2"/>
         <source>Auto Label Position</source>
         <translation>Pozicija samodejnega napisa</translation>
     </message>
@@ -505,12 +505,13 @@
         <translation>Kot</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="-1"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <source>Scale</source>
         <translation>Povečava</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+5"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
@@ -558,6 +559,11 @@
         <location line="+1"/>
         <source>Height</source>
         <translation>Višina</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Fade</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-3"/>
@@ -655,7 +661,7 @@
     </message>
     <message>
         <source>Simple</source>
-        <translation>Preprosto</translation>
+        <translation type="vanished">Preprosto</translation>
     </message>
     <message>
         <source>Contents</source>
@@ -663,51 +669,51 @@
     </message>
     <message>
         <source>Text</source>
-        <translation>Besedilo</translation>
+        <translation type="vanished">Besedilo</translation>
     </message>
     <message>
         <source>Plain Text</source>
-        <translation>Preprosto besedilo</translation>
+        <translation type="vanished">Preprosto besedilo</translation>
     </message>
     <message>
         <source>Font Name</source>
-        <translation>Ime pisave</translation>
+        <translation type="vanished">Ime pisave</translation>
     </message>
     <message>
         <source>Text Height</source>
-        <translation>Višina besedila</translation>
+        <translation type="vanished">Višina besedila</translation>
     </message>
     <message>
         <source>Text Angle</source>
-        <translation>Kot besedila</translation>
+        <translation type="vanished">Kot besedila</translation>
     </message>
     <message>
         <source>X Scale</source>
-        <translation>X Razmerje</translation>
+        <translation type="vanished">X Razmerje</translation>
     </message>
     <message>
         <source>Bold</source>
-        <translation>Krepko</translation>
+        <translation type="vanished">Krepko</translation>
     </message>
     <message>
         <source>Italic</source>
-        <translation>Poštevno</translation>
+        <translation type="vanished">Poštevno</translation>
     </message>
     <message>
         <source>Line Spacing</source>
-        <translation>Razmik med vrsticami</translation>
+        <translation type="vanished">Razmik med vrsticami</translation>
     </message>
     <message>
         <source>Alignment</source>
-        <translation>Poravnava</translation>
+        <translation type="vanished">Poravnava</translation>
     </message>
     <message>
         <source>Horizontal</source>
-        <translation>Vodoravno</translation>
+        <translation type="vanished">Vodoravno</translation>
     </message>
     <message>
         <source>Vertical</source>
-        <translation>Navpično</translation>
+        <translation type="vanished">Navpično</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
@@ -738,6 +744,12 @@
         <location line="+1"/>
         <source>Direction Vector</source>
         <translation>Smerni vektor</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
+        <source>Fixed Angle</source>
+        <translation>Fiksen kot</translation>
     </message>
 </context>
 </TS>

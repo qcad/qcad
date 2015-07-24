@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.1" language="es_ES">
 <context>
     <name>QObject</name>
     <message>
@@ -183,7 +183,7 @@ Parsec</translatorcomment>
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="+411"/>
+        <location filename="../src/core/RColor.cpp" line="+298"/>
         <source>By Layer</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
@@ -256,6 +256,11 @@ Fijar color de trayecto a magenta:</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <source>Orange</source>
+        <translation>Naranja</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Dark Red</source>
         <translation>Rojo oscuro</translation>
     </message>
@@ -331,7 +336,7 @@ Otros...</translatorcomment>
 <context>
     <name>RDocumentVariables</name>
     <message>
-        <location filename="../src/core/RDocumentVariables.cpp" line="+42"/>
+        <location filename="../src/core/RDocumentVariables.cpp" line="+44"/>
         <source>Current Layer ID</source>
         <translation>ID de la capa actual</translation>
     </message>
@@ -354,7 +359,7 @@ Otros...</translatorcomment>
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+77"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+92"/>
         <source>Block</source>
         <translatorcomment>--exact match--
 --file: Block_es.ts--
@@ -371,8 +376,8 @@ Lista de bloques</translatorcomment>
     <message>
         <location line="+1"/>
         <location line="+3"/>
-        <location filename="../src/core/RTextBasedEntity.cpp" line="+70"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+63"/>
+        <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+65"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -445,7 +450,27 @@ Introduzca ángulo en línea de cota:</translatorcomment>
         <translation>Ángulo</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+69"/>
+        <location line="+1"/>
+        <source>Columns</source>
+        <translation>Columnas</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Rows</source>
+        <translation>Filas</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Column Spacing</source>
+        <translation>Espacio entre columnas</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Row Spacing</source>
+        <translation>Espacio entre filas</translation>
+    </message>
+    <message>
+        <location filename="../src/core/REntity.cpp" line="+76"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -500,6 +525,11 @@ Colores
     </message>
     <message>
         <location line="+1"/>
+        <source>Displayed Color</source>
+        <translation>Color muestra</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Draw Order</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Orden de dibujo</translation>
@@ -533,17 +563,25 @@ Colores
         <translation>Parte superior</translation>
     </message>
     <message>
-        <location filename="../src/core/RPropertyTypeId.cpp" line="+106"/>
+        <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
         <translation>Personalizado</translation>
     </message>
     <message>
+        <location filename="../src/core/REntity.cpp" line="+2"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
         <translation>Ancho</translation>
     </message>
     <message>
+        <location line="+0"/>
         <location line="+1"/>
+        <source>Size</source>
+        <translation>Tamaño</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
         <translation>Altura</translation>
     </message>
@@ -624,7 +662,7 @@ Colores
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+169"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+181"/>
         <source>Requires selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Requiere una selección</translation>
@@ -633,14 +671,18 @@ Colores
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+52"/>
+        <location filename="../src/core/RLayer.cpp" line="+73"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Frozen</source>
-        <translation>Oculto</translation>
+        <translation type="vanished">Oculto</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Hidden</source>
+        <translation>Líneas ocultas</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -670,14 +712,14 @@ Colores
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Por Capa</translatorcomment>
-        <translation>Por Capa</translation>
+        <translation type="vanished">Por Capa</translation>
     </message>
     <message>
         <source>By Block</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Por Bloque</translatorcomment>
-        <translation>Por Bloque</translation>
+        <translation type="vanished">Por Bloque</translation>
     </message>
     <message>
         <source>Continuous</source>
@@ -685,7 +727,7 @@ Por Bloque</translatorcomment>
 --file: qcadguiqt_es.ts--
 Contínua
 CONTROL CONTINUADO</translatorcomment>
-        <translation>Contínua</translation>
+        <translation type="vanished">Contínua</translation>
     </message>
     <message>
         <source>Dot</source>
@@ -694,7 +736,7 @@ CONTROL CONTINUADO</translatorcomment>
 Puntos de cuad&amp;rícula:
 Puntos de cuad&amp;rícula
 Puntos de cuadrícula:</translatorcomment>
-        <translation>Puntos</translation>
+        <translation type="vanished">Puntos</translation>
     </message>
     <message>
         <source>Dot (small)</source>
@@ -702,7 +744,7 @@ Puntos de cuadrícula:</translatorcomment>
 --file: qcadguiqt_es.ts--
 Puntos juntos
 Punto raya (pequeña)</translatorcomment>
-        <translation>Puntos (juntos)</translation>
+        <translation type="vanished">Puntos (juntos)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
@@ -710,7 +752,7 @@ Punto raya (pequeña)</translatorcomment>
 --file: qcadguiqt_es.ts--
 Puntos separados
 Punto raya (grande)</translatorcomment>
-        <translation>Puntos (separados)</translation>
+        <translation type="vanished">Puntos (separados)</translation>
     </message>
     <message>
         <source>Dash</source>
@@ -718,21 +760,21 @@ Punto raya (grande)</translatorcomment>
 --file: qcadguiqt_es.ts--
 Raya
 Raya (pequeña)</translatorcomment>
-        <translation>Raya</translation>
+        <translation type="vanished">Raya</translation>
     </message>
     <message>
         <source>Dash (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Raya (pequeña)</translatorcomment>
-        <translation>Raya (pequeña)</translation>
+        <translation type="vanished">Raya (pequeña)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Raya (grande)</translatorcomment>
-        <translation>Raya (grande)</translation>
+        <translation type="vanished">Raya (grande)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
@@ -740,21 +782,21 @@ Raya (grande)</translatorcomment>
 --file: qcadguiqt_es.ts--
 Punto raya
 Punto raya (pequeña)</translatorcomment>
-        <translation>Punto raya</translation>
+        <translation type="vanished">Punto raya</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Punto raya (pequeña)</translatorcomment>
-        <translation>Punto raya (pequeña)</translation>
+        <translation type="vanished">Punto raya (pequeña)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Punto raya (grande)</translatorcomment>
-        <translation>Punto raya (grande)</translation>
+        <translation type="vanished">Punto raya (grande)</translation>
     </message>
     <message>
         <source>Divide</source>
@@ -762,21 +804,21 @@ Punto raya (grande)</translatorcomment>
 --file: Divide_es.ts--
 Raya 2 puntos
 Partir</translatorcomment>
-        <translation>Partir</translation>
+        <translation type="vanished">Partir</translation>
     </message>
     <message>
         <source>Divide (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Raya 2 puntos (pequeña)</translatorcomment>
-        <translation>Raya 2 puntos (pequeña)</translation>
+        <translation type="vanished">Raya 2 puntos (pequeña)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Raya 2 puntos (grande)</translatorcomment>
-        <translation>Raya 2 puntos (grande)</translation>
+        <translation type="vanished">Raya 2 puntos (grande)</translation>
     </message>
     <message>
         <source>Center</source>
@@ -784,21 +826,21 @@ Raya 2 puntos (grande)</translatorcomment>
 --file: es.po--
 Arco: centro, punto, ángulos
 &amp;Centro, Punto, Angulo</translatorcomment>
-        <translation>Centro</translation>
+        <translation type="vanished">Centro</translation>
     </message>
     <message>
         <source>Center (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Rayas larga corta (pequeño)</translatorcomment>
-        <translation>Rayas larga corta (pequeño)</translation>
+        <translation type="vanished">Rayas larga corta (pequeño)</translation>
     </message>
     <message>
         <source>Center (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 Rayas larga corta (grande)</translatorcomment>
-        <translation>Rayas larga corta (grande)</translation>
+        <translation type="vanished">Rayas larga corta (grande)</translation>
     </message>
     <message>
         <source>Border</source>
@@ -806,21 +848,21 @@ Rayas larga corta (grande)</translatorcomment>
 --file: qtiplot_es.ts--
 Borde
 2 rayas 1 punto (pequeño)</translatorcomment>
-        <translation>Borde</translation>
+        <translation type="vanished">Borde</translation>
     </message>
     <message>
         <source>Border (small)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 2 rayas 1 punto (pequeño)</translatorcomment>
-        <translation>2 rayas 1 punto (pequeño)</translation>
+        <translation type="vanished">2 rayas 1 punto (pequeño)</translation>
     </message>
     <message>
         <source>Border (large)</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--
 2 rayas 1 punto (grande)</translatorcomment>
-        <translation>2 rayas 1 punto (grande)</translation>
+        <translation type="vanished">2 rayas 1 punto (grande)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
@@ -846,7 +888,7 @@ Borde
 <context>
     <name>RLinetypePattern</name>
     <message>
-        <location filename="../src/core/RLinetypePattern.cpp" line="+629"/>
+        <location filename="../src/core/RLinetypePattern.cpp" line="+845"/>
         <source>By Layer</source>
         <translation>Por Capa</translation>
     </message>
@@ -864,7 +906,7 @@ Borde
     </message>
     <message>
         <source>Border (2x)</source>
-        <translation>2 rayas 1 punto (2x)</translation>
+        <translation type="vanished">2 rayas 1 punto (2x)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -875,7 +917,7 @@ Borde
     </message>
     <message>
         <source>Center (2x)</source>
-        <translation>Rayas larga corta (2x)</translation>
+        <translation type="vanished">Rayas larga corta (2x)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -1036,8 +1078,12 @@ Borde
     </message>
     <message>
         <location line="+1"/>
-        <source>Drainage Reverse</source>
+        <source>Drainage Reversed</source>
         <translation>Drenaje reverso</translation>
+    </message>
+    <message>
+        <source>Drainage Reverse</source>
+        <translation type="vanished">Drenaje reverso</translation>
     </message>
 </context>
 <context>
@@ -1263,7 +1309,7 @@ Unidad por defecto:</translatorcomment>
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+36"/>
+        <location filename="../src/core/RObject.cpp" line="+37"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -1271,6 +1317,11 @@ No objetos de dimensión seleccionados con una posición de texto personalizado.
 No objetos de dimensión seleccionados con una posición de texto personalizado
 Personalizado</translatorcomment>
         <translation>Personalizado</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Type</source>
+        <translation>Tipo</translation>
     </message>
     <message>
         <location line="+1"/>

@@ -4,7 +4,7 @@
 <context>
     <name>Line</name>
     <message>
-        <location filename="../Line.js" line="+79"/>
+        <location filename="../Line.js" line="+81"/>
         <source>Line Tools</source>
         <translation>線分ツール</translation>
     </message>
@@ -14,12 +14,17 @@
         <translation>線分ツールを表示</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+14"/>
         <source>&amp;Line</source>
         <translation>&amp;L 線分</translation>
     </message>
     <message>
         <location filename="../Line.ui" line="+17"/>
+        <source>Same Entity Type as Original</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Line Segment</source>
         <translation>行</translation>
     </message>

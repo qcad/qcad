@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -139,7 +139,28 @@ void RSpatialIndexNavel::clear() {
     uninit();
     init();
 }
-    
+
+void RSpatialIndexNavel::bulkLoad(const QList<int>& ids, const QList<QList<RBox> >& bbs) {
+    if (ids.isEmpty() || bbs.isEmpty()) {
+        clear();
+        return;
+    }
+
+    RSiDataStream stream(ids, bbs);
+    uninit();
+
+    buff = SpatialIndex::StorageManager::createNewMemoryStorageManager();
+    SpatialIndex::id_type indexIdentifier;
+    tree = SpatialIndex::RTree::createAndBulkLoadNewRTree(
+            SpatialIndex::RTree::BLM_STR,
+            stream,
+            *buff,
+            0.2, 50, 50,
+            3,
+            SpatialIndex::RTree::RV_RSTAR,
+            indexIdentifier
+    );
+}
     
 /**
  * Adds an item to the index.
@@ -178,12 +199,9 @@ void RSpatialIndexNavel::addToIndex(
     //qDebug() << "\tafter: " << *this << "\n\n";
 }
 
-
 void RSpatialIndexNavel::addToIndex(int id, int pos, const RBox& bb) {
     RSpatialIndex::addToIndex(id, pos, bb);
 }
-
-
 
 /**
  * Internal.

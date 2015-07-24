@@ -5,12 +5,11 @@ function init(basePath) {
     action.setScriptFile(basePath + "/Cut.js");
     action.setIcon(basePath + "/Cut.svg");
     action.setDefaultShortcuts([
-        new QKeySequence(QKeySequence.Cut),
-        new QKeySequence("c,t")
+        new QKeySequence(QKeySequence.Cut)
     ]);
-    action.setDefaultCommands(["cut", "ct"]);
+    action.setDefaultCommands(["cut"]);
     action.setNoState();
     action.setGroupSortOrder(2300);
     action.setSortOrder(100);
-    action.setWidgetNames(["EditMenu", "EditToolBar", "EditToolsPanel"]);
+    action.setWidgetNames(["EditMenu", "!EditToolBar", "EditToolsPanel"]);
 }

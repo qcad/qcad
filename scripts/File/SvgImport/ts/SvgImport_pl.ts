@@ -4,7 +4,7 @@
 <context>
     <name>SvgImport</name>
     <message>
-        <location filename="../SvgImport.js" line="+61"/>
+        <location filename="../SvgImport.js" line="+59"/>
         <source>Import SVG</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Import SVG</translation>

@@ -19,7 +19,7 @@
         <translation>&amp;Proiezione</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+41"/>
         <source>Reference point</source>
         <translation>Punto di riferimento</translation>
     </message>

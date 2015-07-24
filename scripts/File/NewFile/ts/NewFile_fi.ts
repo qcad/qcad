@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="fi_FI">
+<TS version="2.1" language="fi">
 <context>
     <name>CloseDialog</name>
     <message>
         <location filename="../CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation type="unfinished"></translation>
+        <translation>Suljetaan piirrosta...</translation>
     </message>
 </context>
 <context>
@@ -14,7 +14,7 @@
     <message>
         <location filename="../MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>Nimeämätön</translation>
     </message>
 </context>
 <context>
@@ -22,67 +22,67 @@
     <message>
         <location filename="../NewFile.js" line="+114"/>
         <source>Opening drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Avaamassa piirrosta:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+23"/>
         <source>Import Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Tuontivirhe</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Cannot open file</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedostoa ei voida avata</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No suitable Importer found. Please check file format and extension.</source>
-        <translation type="unfinished"></translation>
+        <translation>Soveliasta tuontiohjelmaa ei löydy. Tarkista tiedoston muoto sekä tiedostopääte.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Please check your access rights, the file format and file extension.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tarkista käyttöoikeutesi, tiedoston muoto ja tiedostopääte.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>File is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedosto on tyhjä.</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+12"/>
         <source>Drawing loaded successfully:</source>
-        <translation type="unfinished"></translation>
+        <translation>Piirros ladattu onnistuneesti:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Muoto:</translation>
     </message>
     <message>
-        <location line="+97"/>
+        <location line="+115"/>
         <source>Untitled %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nimetön %1</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>read-only</source>
-        <translation type="unfinished"></translation>
+        <translation>kirjoitussuojattu</translation>
     </message>
     <message>
-        <location line="+48"/>
+        <location line="+54"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
-        <translation type="unfinished"></translation>
+        <translation>Haluatko säästää muutokset, jotka teit &lt;br&gt; dokumentissa &apos;%1&apos;?</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Your changes will be lost if you don&apos;t save them.</source>
-        <translation type="unfinished"></translation>
+        <translation>Muutokset katoavat, jos et tallenna niitä.</translation>
     </message>
     <message>
         <location filename="../NewFileInit.js" line="+2"/>
         <source>&amp;New</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Uusi</translation>
     </message>
 </context>
 </TS>

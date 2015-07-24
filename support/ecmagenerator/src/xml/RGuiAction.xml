@@ -14,12 +14,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     <baseClass name="RSelectionListener" specifier="public" />
     <constructor>
       <variant>
-        <arg type="QString &amp;" typeName="QString" name="text"
+        <arg type="QString &amp;" typeName="QString" name="oriText"
         isConst="true" />
         <arg type="QObject *" typeName="QObject *" name="parent"
         hasDefault="true" default="0" isConst="false" />
       </variant>
     </constructor>
+    <method name="setText" cppName="setText" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="oriText"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="initTexts" cppName="initTexts" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
@@ -32,7 +39,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name="text"
+        <arg type="QString &amp;" typeName="QString" name="oriText"
         isConst="true" />
         <arg type="QString &amp;" typeName="QString"
         name="shortcut" isConst="true" />
@@ -42,7 +49,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name="text"
+        <arg type="QString &amp;" typeName="QString" name="oriText"
         isConst="true" />
         <arg type="QString &amp;" typeName="QString"
         name="shortcut" isConst="true" />
@@ -107,7 +114,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name="text"
+        <arg type="QString &amp;" typeName="QString" name="oriText"
         isConst="true" />
       </variant>
     </method>
@@ -145,7 +152,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QAction *" typeName="QAction *" name="a"
         isConst="true" />
         <arg type="QWidget *" typeName="QWidget *" name="w"
-        hasDefault="true" default=" NULL" isConst="true" />
+        hasDefault="true" default="NULL" isConst="true" />
       </variant>
     </method>
     <method name="setSortOrderStatic" cppName="setSortOrderStatic"
@@ -177,7 +184,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QAction *" typeName="QAction *" name="a"
         isConst="true" />
         <arg type="QWidget *" typeName="QWidget *" name="w"
-        hasDefault="true" default=" NULL" isConst="true" />
+        hasDefault="true" default="NULL" isConst="true" />
       </variant>
     </method>
     <method name="setGroupSortOrder" cppName="setGroupSortOrder"
@@ -203,7 +210,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false">
         <arg type="QWidget *" typeName="QWidget *" name="w"
-        hasDefault="true" default=" NULL" isConst="true" />
+        hasDefault="true" default="NULL" isConst="true" />
       </variant>
     </method>
     <method name="setSortOrder" cppName="setSortOrder"
@@ -229,7 +236,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false">
         <arg type="QWidget *" typeName="QWidget *" name="w"
-        hasDefault="true" default=" NULL" isConst="true" />
+        hasDefault="true" default="NULL" isConst="true" />
       </variant>
     </method>
     <method name="addToMenu" cppName="addToMenu" specifier="public"
@@ -428,7 +435,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="checkable"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="hasNoState" cppName="hasNoState"
@@ -487,7 +494,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString" name="sf"
         isConst="true" />
         <arg type="bool" typeName="bool" name="isSecondary"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getScriptFile" cppName="getScriptFile"
@@ -567,13 +574,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QStringList" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="primaryOnly"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
       <variant returnType="QStringList" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString" name="start"
         isConst="true" />
         <arg type="bool" typeName="bool" name="primaryOnly"
-        hasDefault="true" default=" false" isConst="false" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="clear" cppName="clear" specifier="public"
@@ -587,7 +594,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocument *" typeName="RDocument *"
         name="document" isConst="false" />
         <arg type="RTransaction *" typeName="RTransaction *"
-        name="transaction" hasDefault="true" default=" NULL"
+        name="transaction" hasDefault="true" default="NULL"
         isConst="false" />
       </variant>
     </method>

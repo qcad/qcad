@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -56,7 +56,7 @@ SplineToLine.prototype.beginEvent = function() {
                 var newEntity = shapeToEntity(document, line);
                 newEntity.copyAttributesFrom(entity.data());
 
-                op.deleteObject(entity.data());
+                op.deleteObject(entity.clone());
                 op.addObject(newEntity);
             }
         }

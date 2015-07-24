@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -33,6 +33,7 @@
  * appearance of a polyline entity.
  *
  * \scriptable
+ * \copyable
  * \ingroup entity
  */
 class QCADENTITY_EXPORT RPolylineData: public REntityData, protected RPolyline {
@@ -142,8 +143,8 @@ public:
         return RPolyline::isClosed();
     }
 
-    bool isLogicallyClosed() const {
-        return RPolyline::isLogicallyClosed();
+    bool isGeometricallyClosed() const {
+        return RPolyline::isGeometricallyClosed();
     }
 
     QList<QSharedPointer<RShape> > getExploded() const {
@@ -154,12 +155,7 @@ public:
         RPolyline::simplify(angleTolerance);
     }
 
-    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const {
-        Q_UNUSED(queryBox)
-
-        return QList<QSharedPointer<RShape> >() <<
-                QSharedPointer<RShape>(new RPolyline(*this));
-    }
+    virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const;
 
     virtual QList<RVector> getIntersectionPoints(
             const REntityData& other, bool limited = true, bool same = false,
@@ -176,6 +172,7 @@ protected:
     bool polylineGen;
 };
 
+Q_DECLARE_METATYPE(RPolylineData)
 Q_DECLARE_METATYPE(RPolylineData*)
 Q_DECLARE_METATYPE(const RPolylineData*)
 Q_DECLARE_METATYPE(QSharedPointer<RPolylineData>)

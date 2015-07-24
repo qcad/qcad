@@ -1,458 +1,78 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<unit xmlns="http://www.sdml.info/srcML/src"
-xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++"
-dir="./core" filename="RSingleApplication.h">
-  <comment type="block">/** * Copyright (c) 2011-2014 by Andrew
-  Mustun. All rights reserved. * * This file is part of the QCAD
-  project. * * QCAD is free software: you can redistribute it
-  and/or modify * it under the terms of the GNU General Public
-  License as published by * the Free Software Foundation, either
-  version 3 of the License, or * (at your option) any later
-  version. * * QCAD is distributed in the hope that it will be
-  useful, * but WITHOUT ANY WARRANTY; without even the implied
-  warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR
-  PURPOSE. See the * GNU General Public License for more details. *
-  * You should have received a copy of the GNU General Public
-  License * along with QCAD. */</comment>
-  <cpp:ifndef>#
-  <cpp:directive>ifndef</cpp:directive>
-  <name>RSINGLEAPPLICATION_H</name></cpp:ifndef>
-  <cpp:define>#
-  <cpp:directive>define</cpp:directive>
-  <name>RSINGLEAPPLICATION_H</name></cpp:define>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>"core_global.h"</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QApplication&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
-  <cpp:include>#
-  <cpp:directive>include</cpp:directive>
-  <cpp:file>&lt;QMutex&gt;</cpp:file></cpp:include>
-  <class_decl>class 
-  <name>RLocalPeer</name>;</class_decl>
-  <class>class 
-  <macro>
-    <name>QCADCORE_EXPORT</name>
-  </macro>
-  <name>RSingleApplication</name>
-  <super>: 
-  <specifier>public</specifier>
-  <name>QApplication</name></super>
-  <block>{
-  <private type="default">
-    <macro>
-      <name>Q_OBJECT</name>
-    </macro>
-  </private>
-  <public>public: 
-  <constructor_decl>
-  <name>RSingleApplication</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>int</name>&amp;</type>
-      <name>argc</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>char</name>**</type>
-      <name>argv</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>GUIenabled</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RSingleApplication</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>id</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>int</name>&amp;</type>
-      <name>argc</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>char</name>**</type>
-      <name>argv</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>GUIenabled</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <comment type="line">//RSingleApplication(int&amp; argc, char
-  **argv, Type type);</comment>
-  <cpp:if>#
-  <cpp:directive>if</cpp:directive>
-  <expr>
-    <call>
-      <name>defined</name>
-      <argument_list>(
-      <argument>
-        <expr>
-          <name>Q_OS_X11</name>
-        </expr>
-      </argument>)</argument_list>
-    </call>
-  </expr></cpp:if>
-  <constructor_decl>
-  <name>RSingleApplication</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>Display</name>*</type>
-      <name>dpy</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>Qt</name>::
-      <name>HANDLE</name></name>
-    </type>
-    <name>visual</name>=
-    <init>
-      <expr>0</expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>Qt</name>::
-      <name>HANDLE</name></name>
-    </type>
-    <name>colormap</name>=
-    <init>
-      <expr>0</expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RSingleApplication</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>Display</name>*</type>
-      <name>dpy</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>int</name>&amp;</type>
-      <name>argc</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>char</name>**</type>
-      <name>argv</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>Qt</name>::
-      <name>HANDLE</name></name>
-    </type>
-    <name>visual</name>=
-    <init>
-      <expr>0</expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>Qt</name>::
-      <name>HANDLE</name></name>
-    </type>
-    <name>cmap</name>=
-    <init>
-      <expr>0</expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <constructor_decl>
-  <name>RSingleApplication</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>Display</name>*</type>
-      <name>dpy</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>appId</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-        <name>int</name>
-      </type>
-      <name>argc</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-      <type>
-      <name>char</name>**</type>
-      <name>argv</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>Qt</name>::
-      <name>HANDLE</name></name>
-    </type>
-    <name>visual</name>=
-    <init>
-      <expr>0</expr>
-    </init></decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>
-      <name>Qt</name>::
-      <name>HANDLE</name></name>
-    </type>
-    <name>colormap</name>=
-    <init>
-      <expr>0</expr>
-    </init></decl>
-  </param>)</parameter_list>;</constructor_decl>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
-  <function_decl>
-  <type>
-  <name>static</name>
-  <name>RSingleApplication</name>*</type>
-  <name>getInstance</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>isRunning</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>QString</name>
-  </type>
-  <name>id</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>setActivationWindow</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QWidget</name>*</type>
-      <name>aw</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>bool</name>
-    </type>
-    <name>activateOnMessage</name>=
-    <init>
-      <expr>
-        <name>true</name>
-      </expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-  <name>QWidget</name>*</type>
-  <name>activationWindow</name>
-  <parameter_list>()</parameter_list>
-  <specifier>const</specifier>;</function_decl></public>
-  <public>public slots: 
-  <function_decl>
-  <type>
-    <name>bool</name>
-  </type>
-  <name>sendMessage</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>message</name>
-    </decl>
-  </param>, 
-  <param>
-    <decl>
-    <type>
-      <name>int</name>
-    </type>
-    <name>timeout</name>=
-    <init>
-      <expr>5000</expr>
-    </init></decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>activateWindow</name>
-  <parameter_list>()</parameter_list>;</function_decl>
-  <label>
-  <name>signals</name>:</label>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>messageReceived</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>message</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl>
-  <function_decl>
-  <type>
-    <name>void</name>
-  </type>
-  <name>fileOpenRequestReceived</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>const</name>
-      <name>QString</name>&amp;</type>
-      <name>fileName</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></public>
-  <protected>protected: 
-  <function_decl>
-  <type>
-    <name>virtual</name>
-    <name>bool</name>
-  </type>
-  <name>event</name>
-  <parameter_list>(
-  <param>
-    <decl>
-      <type>
-      <name>QEvent</name>*</type>
-      <name>e</name>
-    </decl>
-  </param>)</parameter_list>;</function_decl></protected>
-  <private>private: 
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>void</name>
-    </type>
-    <name>sysInit</name>
-    <argument_list>(
-    <argument>
-      <expr>
-      <name>const</name>
-      <name>QString</name>&amp; 
-      <name>appId</name>= 
-      <call>
-        <name>QString</name>
-        <argument_list>()</argument_list>
-      </call></expr>
-    </argument>)</argument_list>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>RLocalPeer</name>*</type>
-    <name>peer</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>QWidget</name>*</type>
-    <name>actWin</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-      <name>QMutex</name>
-    </type>
-    <name>mutexEvents</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>QThread</name>*</type>
-    <name>mutexEventsLocker</name>
-  </decl>;</decl_stmt>
-  <decl_stmt>
-  <decl>
-    <type>
-    <name>static</name>
-    <name>RSingleApplication</name>*</type>
-    <name>instance</name>
-  </decl>;</decl_stmt></private>}</block>;</class>
-  <macro>
-    <name>Q_DECLARE_METATYPE</name>
-    <argument_list>(
-    <argument>RSingleApplication*</argument>)</argument_list>
-  </macro>
-  <cpp:endif>#
-  <cpp:directive>endif</cpp:directive></cpp:endif>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RSingleApplication.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RSINGLEAPPLICATION_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RSINGLEAPPLICATION_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QApplication&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMutex&gt;</cpp:file></cpp:include>
+
+<class_decl>class <name>RLocalPeer</name>;</class_decl>
+
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RSingleApplication</name> <super>: <specifier>public</specifier> <name>QApplication</name></super> <block>{<private type="default">
+    <macro><name>Q_OBJECT</name></macro>
+
+</private><public>public:
+    <constructor_decl><name>RSingleApplication</name><parameter_list>(<param><decl><type><name>int</name>&amp;</type> <name>argc</name></decl></param>, <param><decl><type><name>char</name> **</type><name>argv</name></decl></param>, <param><decl><type><name>bool</name></type> <name>GUIenabled</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RSingleApplication</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>id</name></decl></param>, <param><decl><type><name>int</name>&amp;</type> <name>argc</name></decl></param>, <param><decl><type><name>char</name> **</type><name>argv</name></decl></param>, <param><decl><type><name>bool</name></type> <name>GUIenabled</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <comment type="line">//RSingleApplication(int&amp; argc, char **argv, Type type);</comment>
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><call><name>defined</name><argument_list>(<argument><expr><name>Q_OS_X11</name></expr></argument>)</argument_list></call></expr></cpp:if>
+    <constructor_decl><name>RSingleApplication</name><parameter_list>(<param><decl><type><name>Display</name>*</type> <name>dpy</name></decl></param>, <param><decl><type><name><name>Qt</name>::<name>HANDLE</name></name></type> <name>visual</name> =<init> <expr>0</expr></init></decl></param>, <param><decl><type><name><name>Qt</name>::<name>HANDLE</name></name></type> <name>colormap</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RSingleApplication</name><parameter_list>(<param><decl><type><name>Display</name> *</type><name>dpy</name></decl></param>, <param><decl><type><name>int</name>&amp;</type> <name>argc</name></decl></param>, <param><decl><type><name>char</name> **</type><name>argv</name></decl></param>, <param><decl><type><name><name>Qt</name>::<name>HANDLE</name></name></type> <name>visual</name> =<init> <expr>0</expr></init></decl></param>, <param><decl><type><name><name>Qt</name>::<name>HANDLE</name></name></type> <name>cmap</name>=<init> <expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RSingleApplication</name><parameter_list>(<param><decl><type><name>Display</name>*</type> <name>dpy</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>appId</name></decl></param>, <param><decl><type><name>int</name></type> <name>argc</name></decl></param>, <param><decl><type><name>char</name> **</type><name>argv</name></decl></param>, <param><decl><type><name><name>Qt</name>::<name>HANDLE</name></name></type> <name>visual</name> =<init> <expr>0</expr></init></decl></param>, <param><decl><type><name><name>Qt</name>::<name>HANDLE</name></name></type> <name>colormap</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+    <destructor_decl><name>~RSingleApplication</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>static</name> <name>RSingleApplication</name>*</type> <name>getInstance</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>bool</name></type> <name>isRunning</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>id</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setActivationWindow</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>aw</name></decl></param>, <param><decl><type><name>bool</name></type> <name>activateOnMessage</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QWidget</name>*</type> <name>activationWindow</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+</public><public>public slots:
+    <function_decl><type><name>bool</name></type> <name>sendMessage</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>, <param><decl><type><name>int</name></type> <name>timeout</name> =<init> <expr>5000</expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>activateWindow</name><parameter_list>()</parameter_list>;</function_decl>
+
+<label><name>signals</name>:</label>
+    <function_decl><type><name>void</name></type> <name>messageReceived</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>message</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>fileOpenRequestReceived</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><protected>protected:
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>event</name><parameter_list>(<param><decl><type><name>QEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+
+</protected><private>private:
+    <decl_stmt><decl><type><name>void</name></type> <name>sysInit</name><argument_list>(<argument><expr><name>const</name> <name>QString</name>&amp; <name>appId</name> = <call><name>QString</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RLocalPeer</name>*</type> <name>peer</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QWidget</name>*</type> <name>actWin</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMutex</name></type> <name>mutexEvents</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QThread</name>*</type> <name>mutexEventsLocker</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RSingleApplication</name>*</type> <name>instance</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RSingleApplication*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

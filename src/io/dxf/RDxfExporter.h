@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -143,9 +143,9 @@ private:
     DL_Attributes attributes;
     int textStyleCounter;
     QMap<int, QString> textStyles;
-    //QList<DL_StyleData> textStyles;
     // maps image entity IDs to handles:
     QMap<int, int> imageHandles;
+    bool minimalistic;
 };
 
 Q_DECLARE_METATYPE(RDxfExporter*)

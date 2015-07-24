@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -44,14 +44,13 @@ Modify.includeBasePath = includeBasePath;
 Modify.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ModifyToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="ModifyToolsPanelAction") {
         EAction.showCadToolBarPanel("ModifyToolsPanel");
         this.terminate();
     }
 };
 
-Modify.prototype.deleteSelectedEntities = function(msgEntitiesDeleted,
-        msgNothingDeleted) {
+Modify.prototype.deleteSelectedEntities = function(msgEntitiesDeleted, msgNothingDeleted) {
     var di = EAction.getDocumentInterface();
     var doc = di.getDocument();
     var ids = doc.querySelectedEntities();
@@ -95,7 +94,7 @@ Modify.getToolBar = function() {
 
 Modify.getCadToolBarPanel = function() {
     var mtb = EAction.getMainCadToolBarPanel();
-    var actionName = "ModifyToolsPanelButton";
+    var actionName = "ModifyToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Modification Tools"), mtb);
         action.setScriptFile(Modify.includeBasePath + "/Modify.js");

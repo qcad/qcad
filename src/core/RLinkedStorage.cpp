@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -71,7 +71,7 @@ QSet<REntity::Id> RLinkedStorage::queryInfiniteEntities() {
             .unite(backStorage->queryInfiniteEntities());
 }
 
-QSet<REntity::Id> RLinkedStorage::querySelectedEntities() {
+QSet<REntity::Id> RLinkedStorage::querySelectedEntities() const {
     return RMemoryStorage::querySelectedEntities()
             .unite(backStorage->querySelectedEntities());
 }
@@ -90,6 +90,11 @@ QSet<REntity::Id> RLinkedStorage::queryBlockEntities(RBlock::Id blockId) {
         // block is in back storage, return only entities from that block:
         return backStorage->queryBlockEntities(blockId);
     }
+}
+
+QSet<REntity::Id> RLinkedStorage::queryLayerBlockEntities(RLayer::Id layerId, RBlock::Id blockId) {
+    // TODO: implement
+    return RMemoryStorage::queryLayerBlockEntities(layerId, blockId);
 }
 
 QSet<REntity::Id> RLinkedStorage::queryChildEntities(REntity::Id parentId, RS::EntityType type) {

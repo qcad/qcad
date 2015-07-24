@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -570,6 +570,16 @@ bool RVector::operator ==(const RVector& v) const {
     return false;
 }
 
+bool RVector::containsFuzzy(const QList<RVector>& vectors, const RVector& v, double tol) {
+    for (int i=0; i<vectors.length(); i++) {
+        if (v.equalsFuzzy(vectors[i], tol)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 /**
  * \return A vector with the minimum components from the given vectors.
  * These might be mixed components from all vectors.
@@ -707,6 +717,14 @@ RVector RVector::getMaximum(const RVector& v1, const RVector& v2) {
  */
 RVector RVector::getAverage(const RVector& v1, const RVector& v2) {
     return (v1+v2)/2.0;
+}
+
+RVector RVector::getAverage(const QList<RVector>& vectors) {
+    RVector sum = RVector::nullVector;
+    for (int i=0; i<vectors.length(); i++) {
+        sum+=vectors[i];
+    }
+    return sum/vectors.length();
 }
 
 /**
@@ -876,6 +894,14 @@ RVector RVector::getClosest(const QList<RVector>& list) const {
     return list[index];
 }
 
+RVector RVector::getClosest2d(const QList<RVector>& list) const {
+    int index = getClosestIndex2d(list);
+    if (index==-1) {
+        return RVector::invalid;
+    }
+    return list[index];
+}
+
 double RVector::getClosestDistance(const QList<RVector>& list, int counts) {
     double ret=RMAXDOUBLE;
     int i=list.count();
@@ -894,13 +920,19 @@ double RVector::getClosestDistance(const QList<RVector>& list, int counts) {
     return ret;
 }
 
-int RVector::getClosestIndex(const QList<RVector>& list) const {
+int RVector::getClosestIndex(const QList<RVector>& list, bool ignoreZ) const {
     double minDist = RMAXDOUBLE;
     int index = -1;
 
     for (int i = 0; i<list.size(); ++i) {
         if (list[i].valid) {
-            double dist = getDistanceTo(list[i]);
+            double dist;
+            if (ignoreZ) {
+                dist = getDistanceTo2d(list[i]);
+            }
+            else {
+                dist = getDistanceTo(list[i]);
+            }
             if (dist < minDist) {
                 minDist = dist;
                 index = i;
@@ -918,6 +950,15 @@ QList<RVector> RVector::getSortedByDistance(const QList<RVector>& list, const RV
     RVectorDistanceSort::v = v;
     QList<RVector> ret = list;
     qSort(ret.begin(), ret.end(), RVector::RVectorDistanceSort::lessThan);
+    return ret;
+}
+
+/**
+ * \return List of same vectors as given, ordered from left to right, top to bottom.
+ */
+QList<RVector> RVector::getSortedLeftRightTopBottom(const QList<RVector>& list) {
+    QList<RVector> ret = list;
+    qSort(ret.begin(), ret.end(), RVector::RVectorLeftRightTopBottomSort::lessThan);
     return ret;
 }
 
@@ -944,11 +985,11 @@ RVector operator*(double s, const RVector& v) {
  * Stream operator for QDebug
  */
 QDebug operator<<(QDebug dbg, const RVector& v) {
-    if (v.valid) {
-        dbg.nospace() << "RVector(" << v.x << ", " << v.y << ", " << v.z << ")";
-    } else {
-        dbg.nospace() << "RVector(invalid)";
-    }
+//    if (v.valid) {
+        dbg.nospace() << "RVector(" << v.x << ", " << v.y << ", " << v.z << ", " << v.valid << ")";
+//    } else {
+//        dbg.nospace() << "RVector(invalid)";
+//    }
     return dbg;
     //return dbg.space();
 }
@@ -978,6 +1019,10 @@ QDataStream& operator>>(QDataStream& stream, RVector& vector) {
 
 bool RVector::RVectorDistanceSort::lessThan(const RVector& v1, const RVector& v2) {
     return v.getDistanceTo(v1) < v.getDistanceTo(v2);
+}
+
+bool RVector::RVectorLeftRightTopBottomSort::lessThan(const RVector& v1, const RVector& v2) {
+    return v1.y > v2.y || (v1.y==v2.y && v1.x < v2.x);
 }
 
 bool RVector::RVectorAngleSort::lessThan(const RVector& v1, const RVector& v2) {

@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaDimLinearData {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaDimLinearData {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -48,6 +51,9 @@
     // public methods:
     static  QScriptValue
         isValid
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDefinitionPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setExtensionPoint1

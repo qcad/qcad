@@ -6,7 +6,7 @@
     <message>
         <location filename="../ArcConcentricThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aantal:</translation>
     </message>
     <message>
         <location filename="../ArcConcentricThroughInit.js" line="+2"/>

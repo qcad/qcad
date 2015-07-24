@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -44,7 +44,7 @@ Information.includeBasePath = includeBasePath;
 Information.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
-    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="InformationToolsPanelButton") {
+    if (!isNull(this.getGuiAction()) && this.getGuiAction().objectName==="InformationToolsPanelAction") {
         EAction.showCadToolBarPanel("InformationToolsPanel");
         this.terminate();
     }
@@ -65,9 +65,7 @@ Information.prototype.formatAngularResult = function(angle) {
         return "";
     }
 
-    return RUnit.formatAngle(angle,
-                              document.getAngleFormat(), document.getAnglePrecision(),
-                              document.showLeadingZeroesAngle(), document.showTrailingZeroesAngle());
+    return document.formatAngle(angle);
 };
 
 /**
@@ -258,7 +256,7 @@ Information.getToolBar = function() {
 
 Information.getCadToolBarPanel = function() {
     var mtb = EAction.getMainCadToolBarPanel();
-    var actionName = "InformationToolsPanelButton";
+    var actionName = "InformationToolsPanelAction";
     if (!isNull(mtb) && mtb.findChild(actionName)==undefined) {
         var action = new RGuiAction(qsTr("Information Tools"), mtb);
         action.setScriptFile(Information.includeBasePath + "/Information.js");

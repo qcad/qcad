@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -45,9 +45,9 @@ class QCADCORE_EXPORT RScriptHandler {
 
 public:
 
-    RScriptHandler() { };
+    RScriptHandler() { }
 
-    virtual ~RScriptHandler() { };
+    virtual ~RScriptHandler() { }
 
     /**
      * \return The file extensions of script files that are supported by
@@ -65,7 +65,12 @@ public:
     /**
      * Evaluates the given script code.
      */
-    virtual void eval(const QString& script, const QString& fileName = QString()) = 0;
+    virtual QVariant eval(const QString& script, const QString& fileName = QString()) = 0;
+
+    /**
+     * Evaluates the given script code in a global context.
+     */
+    virtual QVariant evalGlobal(const QString& script, const QString& fileName = QString()) = 0;
 
     /**
      * Creates a file importer from the given class name and for the given document.

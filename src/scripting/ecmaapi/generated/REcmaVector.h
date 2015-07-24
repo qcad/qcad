@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaVector {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaVector {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -55,6 +58,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setPolar
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        get2D
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isValid
@@ -177,10 +183,16 @@
         getClosest
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getClosest2d
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getClosestDistance
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getClosestIndex
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getClosestIndex2d
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         operator_add
@@ -226,6 +238,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getCeil
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        containsFuzzy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getMinimum
@@ -280,6 +295,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getSortedByDistance
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSortedLeftRightTopBottom
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getSortedByAngle

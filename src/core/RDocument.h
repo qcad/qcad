@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -101,6 +101,7 @@ public:
 
     QSet<REntity::Id> queryLayerEntities(RLayer::Id layerId, bool allBlocks = false) const;
     QSet<REntity::Id> queryBlockEntities(RBlock::Id blockId) const;
+    QSet<REntity::Id> queryLayerBlockEntities(RLayer::Id layerId, RBlock::Id blockId) const;
     QSet<REntity::Id> queryChildEntities(REntity::Id parentId, RS::EntityType type = RS::EntityAll) const;
     bool hasChildEntities(REntity::Id parentId) const;
     QSet<REntity::Id> queryBlockReferences(RBlock::Id blockId) const;
@@ -132,6 +133,7 @@ public:
     );
 
     QSet<REntity::Id> querySelectedEntities();
+    QSet<RObject::Id> queryPropertyEditorObjects();
 
     QSharedPointer<RDocumentVariables> queryDocumentVariables() const;
     QSharedPointer<RDocumentVariables> queryDocumentVariablesDirect() const;
@@ -153,6 +155,8 @@ public:
     QSharedPointer<RLinetype> queryLinetype(RLinetype::Id linetypeId) const;
     QSharedPointer<RLinetype> queryLinetype(const QString& linetypeName) const;
 
+    int countSelectedEntities() const;
+
     void clearSelection(
         QSet<REntity::Id>* affectedEntities=NULL
     );
@@ -173,7 +177,7 @@ public:
         bool add=false,
         QSet<REntity::Id>* affectedEntities=NULL
     );
-    void deselectEntities(
+    bool deselectEntities(
         const QSet<REntity::Id>& entityId,
         QSet<REntity::Id>* affectedEntities=NULL
     );
@@ -244,6 +248,10 @@ public:
     void setCurrentBlock(const QString& blockName);
     RBlock::Id getCurrentBlockId() const;
 
+//    void setSelectedBlock(RBlock::Id blockId);
+//    void setSelectedBlock(const QString& blockName);
+//    RBlock::Id getSelectedBlockId() const;
+
     QSharedPointer<RView> queryCurrentView();
     void setCurrentView(RView::Id viewId);
     void setCurrentView(const QString& viewName);
@@ -302,6 +310,9 @@ public:
 
     void setLinetypeScale(double v, RTransaction* transaction = NULL);
     double getLinetypeScale() const;
+
+    QString formatLinear(double value);
+    QString formatAngle(double value);
 
     RS::LinearFormat getLinearFormat();
     int getLinearPrecision();

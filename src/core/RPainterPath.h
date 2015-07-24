@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -195,6 +195,7 @@ public:
     QList<RVector> getPoints() const;
 
     void transform(const QTransform& t);
+    void move(const RVector& offset);
     void rotate(double angle);
     void scale(double fx, double fy);
 

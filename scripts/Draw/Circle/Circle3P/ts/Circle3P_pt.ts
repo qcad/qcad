@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Circle3P</name>
     <message>
@@ -40,7 +40,7 @@ Indique o terceiro ponto</translatorcomment>
         <location line="+5"/>
         <source>Draw circle from 3 points</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Desenhar círculo de 3 pontos</translation>
+        <translation>Desenhe um círculo a partir de 3 pontos</translation>
     </message>
 </context>
 </TS>

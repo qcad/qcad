@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>Favorites</name>
     <message>
@@ -11,54 +11,54 @@
 <context>
     <name>LibraryBrowser</name>
     <message>
-        <location filename="../LibraryBrowser.js" line="+70"/>
+        <location filename="../LibraryBrowser.js" line="+71"/>
         <source>audience</source>
-        <translation>Público</translation>
+        <translation>público</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>creator</source>
-        <translation>Autor</translation>
+        <translation>autor</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>dimension</source>
-        <translation>Dimensão</translation>
+        <translation>dimensão</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>levelOfDetail</source>
-        <translation>Nível de detalhe</translation>
+        <translation>NíveldeDetalhe</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>license</source>
-        <translation>Licença</translation>
+        <translation>licença</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>perspective</source>
-        <translation>Perspectiva</translation>
+        <translation>perspectiva</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>presentation</source>
-        <translation>Apresentação</translation>
+        <translation>apresentação</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>publisher</source>
-        <translation>Editor</translation>
+        <translation>editor</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>subject</source>
-        <translation>Sujeito</translation>
+        <translation>sujeito</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>title</source>
-        <translation>Título</translation>
+        <translation>título</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -67,13 +67,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1108"/>
+        <location line="+1138"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
-        <translation>Navegador de biblioteca</translation>
+        <translation>Navegador de Biblioteca</translation>
     </message>
     <message>
-        <location line="-1100"/>
+        <location line="-1130"/>
         <source>Icon</source>
         <translation>Ícone</translation>
     </message>
@@ -85,22 +85,22 @@
     <message>
         <location line="+3"/>
         <source>Choose Source Folder</source>
-        <translation>Escolha a pasta de origem</translation>
+        <translation>Escolha a Pasta de Origem</translation>
     </message>
     <message>
-        <location line="+654"/>
+        <location line="+684"/>
         <source>Page %1 of %2</source>
-        <translation>Page %1 dos %2</translation>
+        <translation>Página %1 de %2</translation>
     </message>
     <message>
         <location line="+220"/>
         <source>Updating icons...</source>
-        <translation>Regenerar icons...</translation>
+        <translation>Atualizando ícones...</translation>
     </message>
     <message>
         <location line="+193"/>
         <source>File:</source>
-        <translation>Ficheiro:</translation>
+        <translation>Arquivo:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -125,7 +125,7 @@
     <message>
         <location line="+16"/>
         <source>Updating library index:</source>
-        <translation>Atualização do índice:</translation>
+        <translation>Atualizando o índice da Biblioteca:</translation>
     </message>
     <message>
         <source>Updating index...</source>
@@ -135,7 +135,7 @@
         <location line="-218"/>
         <location line="+219"/>
         <source>Abort</source>
-        <translation>Abortar</translation>
+        <translation>Aborte</translation>
     </message>
     <message>
         <source>Updating index:</source>
@@ -153,26 +153,36 @@ Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation>Plugin LibraryBrowser: cannot connect to DB.
-Driver error: %1
-Database error: %2
-Database file: %3
-Library browser will not be available.</translation>
+        <translation>Plugin LibraryBrowser: não posso me conectar ao BD.
+Erro de driver: %1
+Erro de Banco de Dados: %2
+Arquivo de Banco de dDados: %3
+Navegador de Biblioteca não estará disponível.</translation>
     </message>
     <message>
-        <location line="+446"/>
+        <location line="+43"/>
+        <source>Source removed from part library: %1</source>
+        <translation>O fonte foi removido da Biblioteca: %1</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Force database update.</source>
+        <translation>Force a atualização da base de dados.</translation>
+    </message>
+    <message>
+        <location line="+393"/>
         <source>&amp;Insert</source>
-        <translation>&amp;Inserir</translation>
+        <translation>&amp;Insira</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Edit Script File...</source>
-        <translation>&amp;Editar arquivo de script...</translation>
+        <translation>&amp;Edite o Arquivo de Script...</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Open &amp;SVG File...</source>
-        <translation>Abrir arquivo &amp;SVG...</translation>
+        <translation>Abra um Arquivo &amp;SVG...</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -182,37 +192,37 @@ Library browser will not be available.</translation>
     <message>
         <location line="+3"/>
         <source>&amp;Edit...</source>
-        <translation>&amp;Edição...</translation>
+        <translation>&amp;Edite...</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>File Browser</source>
-        <translation>Ficheiro</translation>
+        <translation>Navegador de Arquivos</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Show in %1...</source>
-        <translation>&amp;Mostrar com %1...</translation>
+        <translation>&amp;Exiba em %1...</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>&amp;Remove from Favorites</source>
-        <translation>&amp;Remover dos favoritos</translation>
+        <translation>&amp;Remova dos Favoritos</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Add to Favorites</source>
-        <translation>&amp;Adicionar aos favoritos</translation>
+        <translation>&amp;Adicione aos Favoritos</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>&amp;Regenerate Icon</source>
-        <translation>Regenerar &amp;ícone</translation>
+        <translation>Regenere o &amp;ícone</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Regenerate Icons</source>
-        <translation>&amp;Regenerar icons</translation>
+        <translation>&amp;Regenere Ícones</translation>
     </message>
     <message>
         <source>Preferences</source>
@@ -231,17 +241,17 @@ Library browser will not be available.</translation>
     <message>
         <location line="+13"/>
         <source>Display Options</source>
-        <translation>Opções de visualização</translation>
+        <translation>Opções de Visualização</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Icon Size:</source>
-        <translation>Tamanho ícone:</translation>
+        <translation>Tamanho do Ícone:</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>View Mode:</source>
-        <translation>Modo de exibição:</translation>
+        <translation>Modo de Exibição:</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -253,12 +263,12 @@ nos resultados de busca:</translation>
     <message>
         <location line="+18"/>
         <source>Library Sources</source>
-        <translation>Fontes biblioteca</translation>
+        <translation>Fontes de Biblioteca</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add...</source>
-        <translation>Adicionar...</translation>
+        <translation>Adicione...</translation>
     </message>
     <message>
         <source>Add ...</source>
@@ -267,7 +277,7 @@ nos resultados de busca:</translation>
     <message>
         <location line="+10"/>
         <source>Remove</source>
-        <translation>Remover</translation>
+        <translation>Remova</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -277,7 +287,7 @@ nos resultados de busca:</translation>
     <message>
         <location line="+14"/>
         <source>Down</source>
-        <translation>Baixo</translation>
+        <translation>Abaixo</translation>
     </message>
     <message>
         <location filename="../LibraryBrowserInit.js" line="-11"/>
@@ -290,47 +300,52 @@ nos resultados de busca:</translation>
     <message>
         <location filename="../LibraryBrowser.ui" line="+28"/>
         <source>File System</source>
-        <translation>Sistema de arquivos</translation>
+        <translation>Sistema de Arquivos</translation>
     </message>
     <message>
-        <location line="+252"/>
+        <location line="+270"/>
         <source>Favorites</source>
         <translation>Favoritos</translation>
     </message>
     <message>
-        <location line="-201"/>
+        <location line="-210"/>
         <source>Tags</source>
-        <translation>Tags</translation>
+        <translation>Rótulos</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+23"/>
         <source>Look for:</source>
-        <translation>Procurar:</translation>
+        <translation>Procure por:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Clear</source>
-        <translation>Limpar</translation>
+        <translation>Limpe</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Find</source>
-        <translation>Procurar</translation>
+        <translation>Procure</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Reset tag selection</source>
-        <translation>Restaurar</translation>
+        <translation>Resete a seleção de rótulos</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>about:blank</source>
-        <translation>about:blank</translation>
+        <translation>sobre:branco</translation>
     </message>
     <message>
-        <location line="+157"/>
+        <location line="+142"/>
+        <source>Insert selected item into drawing</source>
+        <translation>Insira o item selecionado no desenho</translation>
+    </message>
+    <message>
+        <location line="+27"/>
         <source>Update DB from file system</source>
-        <translation>Actualizar</translation>
+        <translation>Atualizar o BD a partir do sistema de arquivos</translation>
     </message>
     <message>
         <location line="+7"/>

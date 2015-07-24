@@ -16,7 +16,7 @@
         <translation>Basislinie oder Basisbogen wählen</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+5"/>
         <source>Choose end point of arc</source>
         <translation>Endpunkt des Bogens wählen</translation>
     </message>

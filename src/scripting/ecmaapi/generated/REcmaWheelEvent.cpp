@@ -77,6 +77,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setModelPosition, "setModelPosition");
             
+            REcmaHelper::registerFunction(&engine, proto, setScreenPosition, "setScreenPosition");
+            
             REcmaHelper::registerFunction(&engine, proto, getScreenPosition, "getScreenPosition");
             
             REcmaHelper::registerFunction(&engine, proto, getGraphicsView, "getGraphicsView");
@@ -617,6 +619,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaWheelEvent::setModelPosition", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaWheelEvent::setScreenPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaWheelEvent::setScreenPosition", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaWheelEvent::setScreenPosition";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RWheelEvent* self = 
+                        getSelf("setScreenPosition", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RInputEvent: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setScreenPosition(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RWheelEvent.setScreenPosition().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaWheelEvent::setScreenPosition", context, engine);
             return result;
         }
          QScriptValue

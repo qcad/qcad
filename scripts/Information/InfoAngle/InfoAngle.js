@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -93,8 +93,13 @@ InfoAngle.prototype.pickEntity = function(event, preview) {
     // keep showing preview after 2nd entity has been set:
     if (!this.addToDrawing) {
         op = this.getOperation(preview);
-        if (!isNull(op) && preview) {
-            di.previewOperation(op);
+        if (!isNull(op)) {
+            if (preview) {
+                di.previewOperation(op);
+            }
+            else {
+                op.destroy();
+            }
         }
     }
 
@@ -106,7 +111,7 @@ InfoAngle.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case InfoAngle.State.SettingFirstShape:
-        shape = entity.getClosestShape(pos);
+        shape = entity.getClosestSimpleShape(pos);
 
         if (isLineBasedShape(shape)) {
             if (!preview) {
@@ -132,7 +137,7 @@ InfoAngle.prototype.pickEntity = function(event, preview) {
 
     case InfoAngle.State.SettingSecondShape:
         di.highlightEntity(this.entity1.getId());
-        shape = entity.getClosestShape(pos);
+        shape = entity.getClosestSimpleShape(pos);
 
         if (isLineBasedShape(shape)) {
             this.entity2 = entity;
@@ -150,6 +155,9 @@ InfoAngle.prototype.pickEntity = function(event, preview) {
             if (this.addToDrawing) {
                 di.applyOperation(op);
                 di.setRelativeZero(this.point2);
+            }
+            else {
+                op.destroy();
             }
 
             this.setState(InfoAngle.State.SettingFirstShape);
@@ -188,6 +196,7 @@ InfoAngle.prototype.getOperation = function(preview) {
     }
 
     var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
 
     var sol = this.shape1.getIntersectionPoints(this.shape2.data(), false);
     if (!isNull(sol) && sol.length > 0) {

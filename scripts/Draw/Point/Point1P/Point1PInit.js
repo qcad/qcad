@@ -5,7 +5,7 @@ function init(basePath) {
     action.setIcon(basePath + "/Point1P.svg");
     action.setStatusTip(qsTranslate("Point1P", "Draw single point"));
     action.setDefaultShortcut(new QKeySequence("p,o"));
-    action.setDefaultCommands(["point"]);
+    action.setDefaultCommands(["point", "po"]);
     action.setGroupSortOrder(5000);
     action.setSortOrder(100);
     action.setWidgetNames(["DrawPointMenu", "PointToolBar", "PointToolsPanel"]);

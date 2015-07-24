@@ -4,7 +4,7 @@
 <context>
     <name>Line</name>
     <message>
-        <location filename="../Line.js" line="+79"/>
+        <location filename="../Line.js" line="+81"/>
         <source>Line Tools</source>
         <translatorcomment>--google--
 Pokaż menu &quot;Linie&quot;
@@ -20,7 +20,7 @@ Pokaż menu &quot;Linie&quot;</translatorcomment>
         <translation type="unfinished">Pokaż menu &quot;Linie&quot;</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+14"/>
         <source>&amp;Line</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
@@ -30,6 +30,11 @@ Pokaż menu &quot;Linie&quot;</translatorcomment>
     </message>
     <message>
         <location filename="../Line.ui" line="+17"/>
+        <source>Same Entity Type as Original</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+23"/>
         <source>Line Segment</source>
         <translation type="unfinished"></translation>
     </message>

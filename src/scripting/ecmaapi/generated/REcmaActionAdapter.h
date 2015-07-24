@@ -18,7 +18,10 @@
         /**
          * \ingroup scripting_ecmaapi
          */
-        class QCADECMAAPI_EXPORT REcmaActionAdapter {
+        class
+        
+        QCADECMAAPI_EXPORT
+        REcmaActionAdapter {
 
         public:
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -115,6 +118,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         propertyChangeEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updatePreview
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        applyOperation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

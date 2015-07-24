@@ -1,48 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pt_PT">
+<TS version="2.1" language="pt">
 <context>
     <name>DefaultAction</name>
     <message>
         <location filename="../DefaultAction.js" line="+89"/>
         <source>Select entity or region</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Selecione entidade ou região</translation>
+        <translation>Selecione uma entidade ou uma região</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mover uma entidade ou um ponto de referência</translation>
+        <translation>Mova uma entidade ou um ponto de referência</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Set second corner</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Segundo ponto de canto</translation>
+        <translation>Defina o segundo vértice</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Specify target point of reference point</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Indique o ponto de destino</translation>
+        <translation>Indique o ponto de destino para o ponto de referência</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Specify target point of selection</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Indique o ponto de destino</translation>
+        <translation>Indique o ponto de destino da seleção</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Move entity to desired location</source>
-        <translation>Mover entidade</translation>
+        <translation>Mova a entidade para a localização desejada</translation>
+    </message>
+    <message>
+        <location line="+332"/>
+        <source>Move Reference Point</source>
+        <translation>Mova o Ponto de Referência</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Selection</source>
+        <translation>Mova a Seleção</translation>
+    </message>
+    <message>
+        <location line="+24"/>
+        <source>Move Entity</source>
+        <translation>Mova a Entidade</translation>
     </message>
 </context>
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+57"/>
+        <location filename="../EAction.js" line="+58"/>
         <source>Back</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -57,13 +72,13 @@ Retorna ao último menu</translatorcomment>
 --file: pt_PT.po--
 Cancelar
 &amp;Cancelar</translatorcomment>
-        <translation>Cancelar</translation>
+        <translation>Cancele</translation>
     </message>
     <message>
-        <location line="+267"/>
+        <location line="+285"/>
         <location line="+133"/>
         <source>Active Tool:</source>
-        <translation>Ferramenta de ativos:</translation>
+        <translation>Ferramenta Ativa:</translation>
     </message>
     <message>
         <source>Active Tool: %1</source>
@@ -81,7 +96,7 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+420"/>
+        <location line="+445"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -93,13 +108,13 @@ Opções de Biselamento</translatorcomment>
         <location line="+21"/>
         <source>Block Options</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Opções de bloco</translation>
+        <translation>Opções de Bloco</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Main Tools</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Ferramentas principais</translation>
+        <translation>Ferramentas Principais</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -110,80 +125,95 @@ Ferramentas CAD</translatorcomment>
         <translation>Ferramentas CAD</translation>
     </message>
     <message>
-        <location line="+692"/>
+        <location line="+659"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Entidade está em uma camada bloqueada.</translation>
+        <translation>A entidade está em uma camada bloqueada.</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+86"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Entidade não é uma referência de bloco.</translation>
+        <translation>A entidade não é uma referência de Bloco.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Entidade não é uma linha ou arco.</translation>
+        <translation>A entidade não é uma linha ou um arco.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc or polyline.</source>
+        <translation>A entidade não é uma linha, arco ou polilinha.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Entidade não é uma linha.</translation>
+        <translation>A entidade não é uma linha.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Entidade não é um arco ou círculo.</translation>
+        <translation>A entidade não é um arco ou círculo.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Entidade não é uma linha, arco ou círculo.</translation>
+        <translation>A entidade não é uma linha, arco ou círculo.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Entidade não é um arco, círculo ou elipse.</translation>
+        <translation>A entidade não é um arco, círculo ou elipse.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
-        <translation>Entidade não é uma linha, um arco, círculo ou elipse.</translation>
+        <translation>A entidade não é uma linha, arco, círculo ou elipse.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
+        <translation>A entidade não é uma linha, arco, círculo, elipse ou polilinha.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation>Entidade não é uma linha, um arco, círculo, elipse ou uma spline.</translation>
+        <translation>A entidade não é uma linha, arco, círculo, elipse ou spline.</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
+        <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
+        <translation>A entidade não é uma linha, arco, círculo, elipse, spline ou polilinha.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>Entity is not a polyline.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Entidade não é um polilinha.</translation>
+        <translation>A entidade não é um polilinha.</translation>
     </message>
 </context>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+307"/>
+        <location filename="../ShapeAlgorithms.js" line="+335"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Raio caiu abaixo de 0,0, após %1 círculos concêntricos.</translation>
+        <translation>O Raio ficou abaixo de 0,0, após %1 círculo(s) concêntrico(s).</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Raio caiu abaixo de 0,0, após %1 arcos concêntricos.</translation>
+        <translation>O Raio ficou abaixo de 0,0, após %1 arco(s) concêntrico(s).</translation>
     </message>
     <message>
-        <location line="+463"/>
+        <location line="+560"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -204,25 +234,25 @@ Ferramentas CAD</translatorcomment>
         <location line="+24"/>
         <source>Invalid number of segments: %1.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Inválido número de segmentos:.%1.</translation>
+        <translation>Número de segmentos inválido: %1.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Inválido elipse maior / menor: %1 / %2.</translation>
+        <translation>Inválidas - elipse maior / menor: %1 / %2.</translation>
     </message>
 </context>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+949"/>
+        <location filename="../WidgetFactory.js" line="+966"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pt.ts--
 Restaurar os padrões do sistema ou ferramenta
 Restaurar Predefinições</translatorcomment>
-        <translation>Restaurar predefinições</translation>
+        <translation>Restaure padrões</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -232,7 +262,7 @@ Restaurar Predefinições</translatorcomment>
 Insira um símbolo no rótulo
 Insere símbolo
 Insere Símbolo</translatorcomment>
-        <translation>Insere símbolo</translation>
+        <translation>Insira um Símbolo</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -258,17 +288,17 @@ Grau:</translatorcomment>
         <translatorcomment>--exact match--
 --file: Dimension_pt.ts--
 Plus / Minus</translatorcomment>
-        <translation>Plus / Minus</translation>
+        <translation>Mais/Menos</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal to</source>
-        <translation>Quase igual</translation>
+        <translation>Quase igual a</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation>Assintoticamente igual</translation>
+        <translation>Assintoticamente igual a</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -326,7 +356,7 @@ Delta X</translatorcomment>
         <translation>Valor medido</translation>
     </message>
     <message>
-        <location line="+93"/>
+        <location line="+110"/>
         <source>Left</source>
         <translation>Esquerda</translation>
     </message>
@@ -354,12 +384,12 @@ Delta X</translatorcomment>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation>Caber</translation>
+        <translation>Ajustado para</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation>Topo</translation>
+        <translation>Superior</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -369,7 +399,7 @@ Delta X</translatorcomment>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation>Fundo</translation>
+        <translation>Inferior</translation>
     </message>
 </context>
 <context>
@@ -400,9 +430,9 @@ Carregando plugins...</translatorcomment>
         <translation type="obsolete">Pós-inicialização...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+303"/>
+        <location filename="../autostart.js" line="+328"/>
         <source>Loading add-on translations...</source>
-        <translation>Carregar add-on traduções...</translation>
+        <translation>Carregando traduções da add-on...</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -412,12 +442,12 @@ Carregando plugins...</translatorcomment>
     <message>
         <location line="+15"/>
         <source>Initializing add-ons...</source>
-        <translation>Inicializar add-ons...</translation>
+        <translation>Iniciando add-on...</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Post-initializing add-ons...</source>
-        <translation>Pós-inicialização...</translation>
+        <translation>Pós-inicialização de add-ons...</translation>
     </message>
     <message>
         <source>Loading add-on translations ...</source>
@@ -434,7 +464,7 @@ Carregando plugins...</translatorcomment>
     <message>
         <location line="-13"/>
         <source>Initializing add-ons:</source>
-        <translation>Inicializar add-ons:</translation>
+        <translation>Iniciando add-ons:</translation>
     </message>
     <message>
         <source>Post-initializing add-ons ...</source>
@@ -444,7 +474,67 @@ Carregando plugins...</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+679"/>
+        <location filename="../library.js" line="+712"/>
+        <source>Objects</source>
+        <translation>Objectos</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Object</source>
+        <translation>Objecto</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Unknown Objects</source>
+        <translation>Objectos Desconhecidas</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Unknown Object</source>
+        <translation>Objecto Desconhecida</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Blocks</source>
+        <translation>Blocos</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Block</source>
+        <translation>Bloco</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Layers</source>
+        <translation>Camadas</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Layer</source>
+        <translation>Camada</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Linetypes</source>
+        <translation>Tipos de Linha</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Linetype</source>
+        <translation>Tipo de Linha</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Views</source>
+        <translation>Vistas</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>View</source>
+        <translation>Ver</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Entity</source>
         <translation>Entidade</translation>
     </message>
@@ -457,19 +547,19 @@ Carregando plugins...</translatorcomment>
         <location line="+2"/>
         <source>3dFaces</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>3dFaces</translation>
+        <translation>Faces3d</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>3dFace</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>3dFace</translation>
+        <translation>Face3d</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Referências bloco</translation>
+        <translation>Referências de Bloco</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -477,17 +567,17 @@ Carregando plugins...</translatorcomment>
         <translatorcomment>--google--
 Escolha referência de bloco
 Editar bloco baseado em referência de bloco</translatorcomment>
-        <translation>Referência de bloco</translation>
+        <translation>Referência de Bloco</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation>Referências bloco e atributos</translation>
+        <translation>Referências de Bloco e Atributos</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation>Referência de bloco e atributos</translation>
+        <translation>Referências de Bloco e Atributos</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -521,12 +611,12 @@ Selecione a primeira linha ou arco</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Attribute Definitions</source>
-        <translation>Definições de atributos</translation>
+        <translation>Definições de Atributo</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute Definition</source>
-        <translation>Definição de atributo</translation>
+        <translation>Definição de Atributo</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -550,18 +640,18 @@ Não é uma entidade de círculo ou arco</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Dimensions</source>
-        <translation>Cotas</translation>
+        <translation>Dimensões</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation>Cota</translation>
+        <translation>Dimensão</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Aligned Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cotas alinhadas</translation>
+        <translation>Dimensões Alinhadas</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -570,7 +660,7 @@ Não é uma entidade de círculo ou arco</translatorcomment>
 --file: qcadlib_pt.ts--
 Dimensão Alinhada
 Desenhe dimensão alinhados</translatorcomment>
-        <translation>Cota alinhada</translation>
+        <translation>Dimensão Alinhada</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -578,7 +668,7 @@ Desenhe dimensão alinhados</translatorcomment>
         <translatorcomment>--exact match--
 --file: DimensionSettings_pt.ts--
 Dimensões angulares</translatorcomment>
-        <translation>Cotas angulares</translation>
+        <translation>Dimensões Angulares</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -587,13 +677,13 @@ Dimensões angulares</translatorcomment>
 --file: qcadlib_pt.ts--
 Dimensão angular
 Desenhe dimensão angular</translatorcomment>
-        <translation>Cota angular</translation>
+        <translation>Dimensão Angular</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Diametric Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cotas de diâmetros</translation>
+        <translation>Dimensões de Diâmetros</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -602,13 +692,13 @@ Desenhe dimensão angular</translatorcomment>
 --file: qcadlib_pt.ts--
 Dimensão do diâmetro
 Desenhe dimensão diametral</translatorcomment>
-        <translation>Cota de diâmetro</translation>
+        <translation>Dimensão de Diâmetro</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cotas de ordenada</translation>
+        <translation>Dimensões de Ordenada</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -618,25 +708,25 @@ Desenhe dimensão diametral</translatorcomment>
 Ordene dimensão
 Dimenção Ordinal
 Desenhe dimensão ordenada</translatorcomment>
-        <translation>Cota de ordenada</translation>
+        <translation>Dimensão de Ordenada</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cotas rotacionadas</translation>
+        <translation>Dimensões Rotacionadas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cota rotacionada</translation>
+        <translation>Dimensão Rotacionada</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Radial Dimensions</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Cotas de raio</translation>
+        <translation>Dimensões Radiais</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -645,7 +735,7 @@ Desenhe dimensão ordenada</translatorcomment>
 --file: qcadactions_pt.ts--
 Dimensão radial
 Desenhe dimensão radial</translatorcomment>
-        <translation>Cota de raio</translation>
+        <translation>Dimensão Radial</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -708,7 +798,7 @@ Exporte Imagem
         <source>Leaders</source>
         <translatorcomment>--google--
 Chefes de projecto</translatorcomment>
-        <translation>Chamadas de detalhe</translation>
+        <translation>Guias</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -718,7 +808,7 @@ Chefes de projecto</translatorcomment>
 &amp;Conduza
 Conduza
 Conduza (seqüência linear com seta)</translatorcomment>
-        <translation>Chamada de detalhe</translation>
+        <translation>Guia</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -742,12 +832,12 @@ Foca na Linha de Comando
     <message>
         <location line="+2"/>
         <source>Infinite Lines</source>
-        <translation>Linhas infinitas</translation>
+        <translation>Linhas Infinitas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Infinite Line</source>
-        <translation>Linha infinita</translation>
+        <translation>Linha Infinita</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -786,7 +876,7 @@ Indique o ponto de referência</translatorcomment>
 --file: qcadguiqt_pt.ts--
 Desenhe Multilinhas
 Adicione nós a multilinhas existentes</translatorcomment>
-        <translation>Polilíneas</translation>
+        <translation>Polilinhas</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -871,24 +961,24 @@ Insira o texto de dimensão
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation>Viewports</translation>
+        <translation>Âncoras de Visão</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation>Viewport</translation>
+        <translation>Âncora de Visão</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Entidades desconhecido</translation>
+        <translation>Entidades Desconhecidas</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Entity</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Entidade desconhecida</translation>
+        <translation>Entidade Desconhecida</translation>
     </message>
 </context>
 </TS>

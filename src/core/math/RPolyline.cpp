@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2014 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
@@ -21,6 +21,7 @@
 #include "RArc.h"
 #include "RBox.h"
 #include "RCircle.h"
+#include "RDirected.h"
 #include "RLine.h"
 #include "RPainterPath.h"
 #include "RPolyline.h"
@@ -101,36 +102,130 @@ void RPolyline::normalize() {
     bulges = newBulges;
 }
 
-void RPolyline::appendShape(const RShape& shape) {
-    const RDirected* directed = dynamic_cast<const RDirected*>(&shape);
-    if (directed==NULL) {
-        qWarning("RPolyline::appendShape: shape is not a line, arc or polyline");
-        return;
-    }
+void RPolyline::prependShape(const RShape& shape) {
+    appendShape(shape, true);
+//    const RDirected* directed = dynamic_cast<const RDirected*>(&shape);
+//    if (directed==NULL) {
+//        qWarning() << "RPolyline::prependShape: shape is not a line, arc or polyline: " << shape;
+//        return;
+//    }
+
+//    const RPolyline* pl = dynamic_cast<const RPolyline*>(&shape);
+//    if (pl!=NULL) {
+//        for (int i=pl->countSegments()-1; i>=0; --i) {
+//            QSharedPointer<RShape> s = pl->getSegmentAt(i);
+//            if (s.isNull()) {
+//                continue;
+//            }
+//            prependShape(*s.data());
+//        }
+//    }
+
+//    double bulge = 0.0;
+//    const RArc* arc = dynamic_cast<const RArc*>(&shape);
+//    if (arc!=NULL) {
+//        bulge = arc->getBulge();
+//    }
+
+//    const RLine* line = dynamic_cast<const RLine*>(&shape);
+//    if (line!=NULL) {
+//        directed = line;
+//    }
+
+//    if (vertices.size()==0) {
+//        prependVertex(directed->getEndPoint());
+//    }
+
+//    if (!vertices.last().equalsFuzzy(directed->getEndPoint())) {
+//        qWarning("RPolyline::prependShape: arc not connected to polyline");
+//    }
+
+//    prependVertex(directed->getStartPoint());
+//    setBulgeAt(0, bulge);
+}
+
+void RPolyline::appendShape(const RShape& shape, bool prepend) {
+//    const RDirected* directed = dynamic_cast<const RDirected*>(&shape);
+//    if (directed==NULL) {
+//        qWarning() << "RPolyline::appendShape: shape is not a line, arc or polyline: " << shape;
+//        return;
+//    }
 
     const RPolyline* pl = dynamic_cast<const RPolyline*>(&shape);
     if (pl!=NULL) {
-        for (int i=0; i<pl->countSegments(); ++i) {
-            QSharedPointer<RShape> s = pl->getSegmentAt(i);
-            if (s.isNull()) {
-                continue;
+        if (prepend) {
+            for (int i=pl->countSegments()-1; i>=0; --i) {
+                QSharedPointer<RShape> s = pl->getSegmentAt(i);
+                if (s.isNull()) {
+                    continue;
+                }
+                prependShape(*s);
             }
-            appendShape(*s.data());
+        }
+        else {
+            for (int i=0; i<pl->countSegments(); ++i) {
+                QSharedPointer<RShape> s = pl->getSegmentAt(i);
+                if (s.isNull()) {
+                    continue;
+                }
+                appendShape(*s);
+            }
+        }
+        return;
+    }
+
+    const RDirected* directed = NULL;
+    double bulge = 0.0;
+
+    const RLine* line = dynamic_cast<const RLine*>(&shape);
+    if (line!=NULL) {
+        directed = line;
+    }
+    else {
+        const RArc* arc = dynamic_cast<const RArc*>(&shape);
+        if (arc!=NULL) {
+            bulge = arc->getBulge();
+            directed = arc;
         }
     }
 
-    double bulge = 0.0;
-    const RArc* arc = dynamic_cast<const RArc*>(&shape);
-    if (arc!=NULL) {
-        bulge = arc->getBulge();
+    if (directed==NULL) {
+        qWarning() << "RPolyline::appendShape: shape is not a line, arc or polyline: " << shape;
+        return;
     }
 
-    if (vertices.size()==0) {
-        appendVertex(directed->getStartPoint());
+    RVector connectionPoint;
+    RVector nextPoint;
+    double gap;
+    if (prepend) {
+        connectionPoint = directed->getEndPoint();
+        nextPoint = directed->getStartPoint();
+        if (vertices.size()==0) {
+            appendVertex(connectionPoint);
+        }
+        gap = vertices.first().getDistanceTo(connectionPoint);
+    }
+    else {
+        connectionPoint = directed->getStartPoint();
+        nextPoint = directed->getEndPoint();
+        if (vertices.size()==0) {
+            appendVertex(connectionPoint);
+        }
+        gap = vertices.last().getDistanceTo(connectionPoint);
     }
 
-    appendVertex(directed->getEndPoint());
-    setBulgeAt(bulges.size()-2, bulge);
+    if (!RMath::fuzzyCompare(gap, 0.0, 1.0e-4)) {
+        qWarning() << "RPolyline::appendShape: arc or line not connected to polyline, gap: " << gap;
+    }
+
+    if (prepend) {
+        prependVertex(nextPoint);
+        setBulgeAt(0, bulge);
+    }
+    else {
+        appendVertex(nextPoint);
+        setBulgeAt(bulges.size()-2, bulge);
+    }
 }
 
 void RPolyline::appendVertex(const RVector& vertex, double bulge) {
@@ -181,6 +276,20 @@ RVector RPolyline::getVertexAt(int i) const {
     }
 
     return vertices.at(i);
+}
+
+int RPolyline::getVertexIndex(const RVector& v, double tolerance) const {
+    for (int i=0; i<vertices.length(); i++) {
+        if (vertices[i].equalsFuzzy(v, tolerance)) {
+            return i;
+        }
+
+        if (vertices[i].equalsFuzzy(v, 0.01)) {
+            qDebug() << "almost match: " << vertices[i].getDistanceTo(v);
+        }
+    }
+
+    return -1;
 }
 
 RVector RPolyline::getLastVertex() const {
@@ -246,8 +355,76 @@ bool RPolyline::isClosed() const {
     return closed;
 }
 
-bool RPolyline::isLogicallyClosed() const {
-    return isClosed() || getStartPoint().getDistanceTo(getEndPoint()) < RS::PointTolerance;
+bool RPolyline::isGeometricallyClosed(double tolerance) const {
+    return isClosed() || getStartPoint().getDistanceTo(getEndPoint()) < tolerance;
+}
+
+RS::Orientation RPolyline::getOrientation() const {
+    if (!isGeometricallyClosed()) {
+        return RS::Any;
+    }
+
+    RVector minV = RVector::invalid;
+    QSharedPointer<RDirected> shapeBefore;
+    QSharedPointer<RDirected> shapeAfter;
+    QSharedPointer<RShape> shape;
+    QSharedPointer<RDirected> previousShape = getSegmentAt(countSegments()-1).dynamicCast<RDirected>();
+
+    // find minimum vertex (lower left corner):
+    QList<QSharedPointer<RShape> > segments = getExploded();
+    for (int i=0; i<segments.length(); i++) {
+        shape = getSegmentAt(i);
+        if (shape.isNull()) {
+            continue;
+        }
+        QSharedPointer<RDirected> directed = shape.dynamicCast<RDirected>();
+        if (directed.isNull()) {
+            continue;
+        }
+
+        RVector v = directed->getStartPoint();
+        if (!minV.isValid() || v.x<minV.x || (v.x==minV.x && v.y<minV.y)) {
+            minV = v;
+            shapeBefore = previousShape;
+            shapeAfter = directed;
+        }
+
+        previousShape = directed;
+    }
+
+    double l;
+    RVector p;
+    QSharedPointer<RArc> arcBefore = shapeBefore.dynamicCast<RArc>();
+    if (!arcBefore.isNull()) {
+        l = arcBefore->getLength();
+        p = arcBefore->getPointsWithDistanceToEnd(l/10, RS::FromStart)[0];
+        shapeBefore = QSharedPointer<RLine>(new RLine(p, arcBefore->getEndPoint()));
+    }
+
+    QSharedPointer<RArc> arcAfter = shapeAfter.dynamicCast<RArc>();
+    if (!arcAfter.isNull()) {
+        l = arcAfter->getLength();
+        p = arcAfter->getPointsWithDistanceToEnd(l/10, RS::FromEnd)[0];
+        shapeAfter = QSharedPointer<RLine>(new RLine(arcAfter->getStartPoint(), p));
+    }
+
+    double xa = shapeBefore->getStartPoint().x;
+    double ya = shapeBefore->getStartPoint().y;
+    double xb = shapeAfter->getStartPoint().x;
+    double yb = shapeAfter->getStartPoint().y;
+    double xc = shapeAfter->getEndPoint().x;
+    double yc = shapeAfter->getEndPoint().y;
+
+    double det = (xb-xa) * (yc-ya) - (xc-xa) * (yb-ya);
+
+    if (det<0.0) {
+        // clockwise:
+        return RS::CW;
+    }
+    else {
+        // counter-clockwise:
+        return RS::CCW;
+    }
 }
 
 /**
@@ -402,7 +579,7 @@ QSharedPointer<RShape> RPolyline::getSegmentAt(int i) const {
  * polyline is not closed (\see setClosed), false is returned.
  */
 bool RPolyline::contains(const RVector& point, bool borderIsInside, double tolerance) const {
-    if (!isLogicallyClosed()) {
+    if (!isGeometricallyClosed(tolerance)) {
         return false;
     }
 
@@ -578,17 +755,87 @@ QList<RVector> RPolyline::getPointsWithDistanceToEnd(double distance, RS::From f
     QList<RVector> ret;
 
     QList<QSharedPointer<RShape> > sub = getExploded();
-    QList<QSharedPointer<RShape> >::iterator it;
-    for (it=sub.begin(); it!=sub.end(); ++it) {
-        ret.append((*it)->getPointsWithDistanceToEnd(distance, from));
+
+    if (from&RS::AlongPolyline) {
+        double remainingDist;
+        double len;
+
+        if (from&RS::FromStart) {
+            remainingDist = distance;
+            for (int i=0; i<sub.length(); i++) {
+                len = sub[i]->getLength();
+                if (remainingDist>len) {
+                    remainingDist-=len;
+                }
+                else {
+                    ret.append(sub[i]->getPointsWithDistanceToEnd(remainingDist, RS::FromStart));
+                    break;
+                }
+            }
+        }
+
+        if (from&RS::FromEnd) {
+            remainingDist = distance;
+            for (int i=sub.length()-1; i>=0; i--) {
+                len = sub[i]->getLength();
+                if (remainingDist>len) {
+                    remainingDist-=len;
+                }
+                else {
+                    ret.append(sub[i]->getPointsWithDistanceToEnd(remainingDist, RS::FromEnd));
+                    break;
+                }
+            }
+        }
+    }
+    else {
+        QList<QSharedPointer<RShape> >::iterator it;
+        for (it=sub.begin(); it!=sub.end(); ++it) {
+            ret.append((*it)->getPointsWithDistanceToEnd(distance, from));
+        }
     }
 
     return ret;
 }
 
-double RPolyline::getAngleAt(double distance) const {
-    // not implemented
-    Q_ASSERT(false);
+double RPolyline::getAngleAt(double distance, RS::From from) const {
+    QList<QSharedPointer<RShape> > sub = getExploded();
+
+    if (from&RS::AlongPolyline) {
+        double remainingDist;
+        double len;
+
+        if (from&RS::FromStart) {
+            remainingDist = distance;
+            for (int i=0; i<sub.length(); i++) {
+                len = sub[i]->getLength();
+                if (remainingDist>len) {
+                    remainingDist-=len;
+                }
+                else {
+                    return sub[i]->getAngleAt(remainingDist, RS::FromStart);
+                }
+            }
+        }
+
+        if (from&RS::FromEnd) {
+            remainingDist = distance;
+            for (int i=sub.length()-1; i>=0; i--) {
+                len = sub[i]->getLength();
+                if (remainingDist>len) {
+                    remainingDist-=len;
+                }
+                else {
+                    return sub[i]->getAngleAt(remainingDist, RS::FromEnd);
+                }
+            }
+        }
+    }
+    //else {
+        // not implemented / never used
+    //    Q_ASSERT(false);
+    //}
+
     return RNANDOUBLE;
 }
 
@@ -655,7 +902,14 @@ bool RPolyline::mirror(const RLine& axis) {
 bool RPolyline::reverse() {
     RPolyline nPolyline;
     QList<QSharedPointer<RShape> > segments = getExploded();
-    for (int i=segments.count()-1; i>=0; i--) {
+
+    // skip last segment if polyline is closed and add flag instead:
+    int iLast = segments.count()-1;
+    if (isClosed()) {
+        iLast--;
+    }
+
+    for (int i=iLast; i>=0; i--) {
         QSharedPointer<RShape> seg = segments.at(i);
         QSharedPointer<RDirected> directed = seg.dynamicCast<RDirected>();
         directed->reverse();
@@ -703,6 +957,7 @@ void RPolyline::print(QDebug dbg) const {
     RShape::print(dbg);
     dbg.nospace() << ", ";
     dbg.nospace() << "vertices: " << countVertices() << ", ";
+    dbg.nospace() << "bulges: " << bulges.length() << ", ";
     dbg.nospace() << "closed: " << closed << ", ";
     QList<QSharedPointer<RShape> > sub = getExploded();
     QList<QSharedPointer<RShape> >::iterator it;
@@ -715,39 +970,36 @@ void RPolyline::print(QDebug dbg) const {
 bool RPolyline::simplify(double angleTolerance) {
     bool ret = false;
     RPolyline newPolyline;
-    //ret.appendVertex(getStartPoint());
 
     RS::EntityType type = RS::EntityUnknown;
     double angle = RMAXDOUBLE;
-    //double radius = 0;
-    //RVector center;
-    //RVector vertex;
 
     for (int i=0; i<countSegments(); i++) {
         QSharedPointer<RShape> seg = getSegmentAt(i);
 
         QSharedPointer<RLine> line = seg.dynamicCast<RLine>();
         if (!line.isNull()) {
-            double angleDiff = qAbs(RMath::getAngleDifference180(line->getAngle(), angle));
-//            qDebug() << "angle diff: " << angleDiff;
-//            qDebug() << "tol: " << angleTolerance;
-            if (type==RS::EntityLine && angleDiff<angleTolerance) {
-
-                //vertex = line->getEndPoint();
+            if (line->getLength()<RS::PointTolerance) {
                 ret = true;
             }
             else {
-                //qDebug() << "start: " << line->getStartPoint();
-                newPolyline.appendVertex(line->getStartPoint());
-                angle = line->getAngle();
-                type = RS::EntityLine;
+                double angleDiff = qAbs(RMath::getAngleDifference180(line->getAngle(), angle));
+                if (type==RS::EntityLine && angleDiff<angleTolerance) {
+                    ret = true;
+                }
+                else {
+                    newPolyline.appendVertex(line->getStartPoint());
+                    angle = line->getAngle();
+                    type = RS::EntityLine;
+                }
             }
         }
 
         QSharedPointer<RArc> arc = seg.dynamicCast<RArc>();
         if (!arc.isNull()) {
-            // TODO
+            // TODO: simplify anything if possible:
             newPolyline.appendVertex(arc->getStartPoint(), arc->getBulge());
+            angle = RMAXDOUBLE;
         }
     }
 
@@ -758,12 +1010,6 @@ bool RPolyline::simplify(double angleTolerance) {
         newPolyline.appendVertex(getEndPoint());
     }
 
-//    qDebug() << "old polyline: " << *this;
-//    qDebug() << "new polyline: " << newPolyline;
-
-    //*this = newPolyline;
-
-    //clear();
     vertices = newPolyline.vertices;
     bulges = newPolyline.bulges;
     closed = newPolyline.closed;
