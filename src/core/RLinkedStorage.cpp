@@ -368,7 +368,7 @@ RObject::Handle RLinkedStorage::getNewObjectHandle() {
     //return backStorage->getNewObjectHandle();
 }
 
-RLayer::Id RLinkedStorage::getCurrentLayerId() {
+RLayer::Id RLinkedStorage::getCurrentLayerId() const {
     return backStorage->getCurrentLayerId();
 }
 
@@ -376,11 +376,11 @@ RBlock::Id RLinkedStorage::getCurrentBlockId() const {
     return backStorage->getCurrentBlockId();
 }
 
-RView::Id RLinkedStorage::getCurrentViewId() {
+RView::Id RLinkedStorage::getCurrentViewId() const {
     return backStorage->getCurrentViewId();
 }
 
-RColor RLinkedStorage::getCurrentColor() {
+RColor RLinkedStorage::getCurrentColor() const {
     return backStorage->getCurrentColor();
 }
 

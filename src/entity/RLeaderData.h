@@ -88,12 +88,13 @@ public:
     virtual bool moveReferencePoint(const RVector& referencePoint, 
         const RVector& targetPoint);
 
-    QList<QSharedPointer<RShape> > getExploded() const {
-        return RPolyline::getExploded();
+    QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const {
+        return RPolyline::getExploded(segments);
     }
 
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const {
         Q_UNUSED(queryBox)
+        Q_UNUSED(ignoreComplex)
 
         QList<QSharedPointer<RShape> > ret;
         ret << QSharedPointer<RShape>(new RPolyline(*this));

@@ -189,7 +189,10 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
     return true;
 }
 
-void RDxfImporter::processCodeValuePair(unsigned int groupCode, char* groupValue) {
+void RDxfImporter::processCodeValuePair(unsigned int groupCode, const std::string& groupValue) {
+    Q_UNUSED(groupCode)
+    Q_UNUSED(groupValue)
+
     //printf("group code: %d\n", groupCode);
     //printf("group value: %s\n", groupValue);
 }

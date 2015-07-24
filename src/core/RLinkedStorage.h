@@ -113,10 +113,10 @@ public:
     virtual RObject::Id getNewObjectId();
     virtual RObject::Handle getNewObjectHandle();
 
-    virtual RLayer::Id getCurrentLayerId();
+    virtual RLayer::Id getCurrentLayerId() const;
     virtual RBlock::Id getCurrentBlockId() const;
-    virtual RView::Id getCurrentViewId();
-    virtual RColor getCurrentColor();
+    virtual RView::Id getCurrentViewId() const;
+    virtual RColor getCurrentColor() const;
     virtual RLineweight::Lineweight getCurrentLineweight() const;
     virtual RLinetype::Id getCurrentLinetypeId() const;
 

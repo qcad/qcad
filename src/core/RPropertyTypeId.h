@@ -27,6 +27,7 @@
 #include <QMap>
 #include <QMetaType>
 #include <QSet>
+#include <QSharedPointer>
 #include <QString>
 
 #include "RDebug.h"

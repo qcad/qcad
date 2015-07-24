@@ -59,6 +59,8 @@ QString RBlockReferenceData::getReferencedBlockName() const {
 RVector RBlockReferenceData::getVectorTo(
         const RVector& point, bool limited, double strictRange) const {
 
+    Q_UNUSED(strictRange)
+
     if (document == NULL) {
         return RVector::invalid;
     }

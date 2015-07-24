@@ -37,6 +37,8 @@ void RArcExporter::exportLineSegment(const RLine& line, double angle) {
 }
 
 void RArcExporter::exportPainterPaths(const QList<RPainterPath>& paths, double angle, const RVector& pos) {
+    Q_UNUSED(angle)
+
     double arcAngle = arc.getStartAngle() + pos.x / arc.getRadius();
     RVector arcPos = arc.getPointAtAngle(arcAngle);
 

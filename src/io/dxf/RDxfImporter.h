@@ -67,7 +67,7 @@ public:
 
     virtual bool importFile(const QString& fileName, const QString& nameFilter);
 
-    virtual void processCodeValuePair(unsigned int groupCode, char* groupValue);
+    virtual void processCodeValuePair(unsigned int groupCode, const std::string& groupValue);
 
 private:
     // Methods from DL_CreationInterface:
