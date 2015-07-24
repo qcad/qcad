@@ -22,9 +22,9 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="+104"/>
+        <location filename="../BlockDialog.js" line="+105"/>
         <source>Leading or trailing spaces.</source>
-        <translation type="unfinished"></translation>
+        <translation>Начальные или завершающие пробелы.</translation>
     </message>
     <message>
         <location line="+5"/>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../Dimension.js" line="+63"/>
         <source>No prefix</source>
-        <translation type="unfinished"></translation>
+        <translation>Без префикса</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -16,7 +16,7 @@
     <message>
         <location line="+1"/>
         <source>Metric screw</source>
-        <translation type="unfinished"></translation>
+        <translation>Метрический винт</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -36,67 +36,67 @@
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Асимптотически равно</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation type="unfinished"></translation>
+        <translation>Квадратичная</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished"></translation>
+        <translation>Дельта</translation>
     </message>
     <message>
         <location line="+58"/>
         <source>Dimension Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Утилиты размеров</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show dimension tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать утилиты размеров</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>D&amp;imension</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Размер</translation>
     </message>
     <message>
         <location filename="../Dimension.ui" line="+29"/>
         <source>Label:</source>
-        <translation type="unfinished"></translation>
+        <translation>Метка:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Prefix</source>
-        <translation type="unfinished"></translation>
+        <translation>Префикс</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Enter fixed label or leave empty for automatic label</source>
-        <translation type="unfinished"></translation>
+        <translation>Введите фиксированную метку или оставьте пустым для автоматической метки</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Upper tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>Больше допуск</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>Lower tolerance</source>
-        <translation type="unfinished"></translation>
+        <translation>Меньше допуск</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Масшабировать</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Drawing Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Масштаб рисования</translation>
     </message>
 </context>
 </TS>

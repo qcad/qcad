@@ -6,12 +6,12 @@
     <message>
         <location filename="../LineAngle.js" line="+65"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Позиция</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Specify position</source>
-        <translation type="unfinished"></translation>
+        <translation>Укажите положение</translation>
     </message>
     <message>
         <location filename="../LineAngle.ui" line="+17"/>

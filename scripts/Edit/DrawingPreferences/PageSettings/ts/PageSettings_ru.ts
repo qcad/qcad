@@ -1,102 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru_RU">
+<TS version="2.1" language="ru">
 <context>
     <name>PageSettings</name>
     <message>
         <location filename="../PageSettings.js" line="+28"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Значения по умолчанию для новых чертежей</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Printing - Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Печать - Страница</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation type="unfinished"></translation>
+        <translation>Печать</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Страница</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>Пользовательский</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Page Orientation</source>
-        <translation type="unfinished"></translation>
+        <translation>Ориентация бумаги</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Portrait</source>
-        <translation type="unfinished"></translation>
+        <translation>Портретный</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Landscape</source>
-        <translation type="unfinished"></translation>
+        <translation>Пейзаж</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Paper</source>
-        <translation type="unfinished"></translation>
+        <translation>Бумага</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Paper size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер листа:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Paper width:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ширина бумаги:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Paper height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Высота бумаги:</translation>
     </message>
     <message>
         <location line="+74"/>
         <source>Viewport</source>
-        <translation type="unfinished"></translation>
+        <translation>Видовой экран</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Мас&amp;штаб:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Offset X:</source>
-        <translation type="unfinished"></translation>
+        <translation>Смещение X:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Offset Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Смещение Y:</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Zero-Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Нулевая точка</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Miscellaneous</source>
-        <translation type="unfinished"></translation>
+        <translation>Разное</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Show paper borders</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать края страницы</translation>
     </message>
 </context>
 </TS>

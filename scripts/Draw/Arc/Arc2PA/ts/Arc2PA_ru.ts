@@ -21,7 +21,7 @@
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished">Обе точки идентичны</translation>
+        <translation>Обе точки идентичны</translation>
     </message>
     <message>
         <location filename="../Arc2PA.ui" line="+17"/>
@@ -36,7 +36,7 @@
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Против часовой стрелки (положительное)</translation>
     </message>
     <message>
         <location line="+13"/>

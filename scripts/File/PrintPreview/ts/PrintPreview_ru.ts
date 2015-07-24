@@ -6,27 +6,27 @@
     <message>
         <location filename="../PrintPreview.js" line="+161"/>
         <source>Drag to move paper</source>
-        <translation type="unfinished"></translation>
+        <translation>Протянуть для перемещения бумагу</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Завершено</translation>
     </message>
     <message>
         <location line="+383"/>
         <source>Export to PDF</source>
-        <translation type="unfinished"></translation>
+        <translation>Экспортировать как PDF</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Exporting to %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>Экспортирование в %1...</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Export complete: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Экспорт завершён: %1</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -36,97 +36,97 @@
     <message>
         <location filename="../PrintPreview.ui" line="+17"/>
         <source>Close Print Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Закрыть предварительный просмотр</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Print...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Печать...</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Export as PDF...</source>
-        <translation type="unfinished"></translation>
+        <translation>Экспорт в PDF...</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Масштаб:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Drawing Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Масштаб рисования</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Move Paper Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Переместить позицию бумаги</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Auto fit drawing to page(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Вписать чертёж на страницу(ы) автоматически</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Auto Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Центрировать автоматически</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Portrait</source>
-        <translation type="unfinished"></translation>
+        <translation>Портретный</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Landscape</source>
-        <translation type="unfinished"></translation>
+        <translation>Пейзаж</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Auto zoom to page</source>
-        <translation type="unfinished"></translation>
+        <translation>По размеру страницы автоматически</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Full Color Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Полноцветный режим</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Grayscale Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим градаций серого</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Black / White Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Чёрный/белый режим</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Show Paper Borders</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать края страницы</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Print Crop Marks</source>
-        <translation type="unfinished"></translation>
+        <translation>Печатать обрезные метки</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Show More Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Показать больше параметров</translation>
     </message>
     <message>
         <location filename="../PrintPreviewInit.js" line="+2"/>
         <source>Print Pre&amp;view</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Предварительный просмотр</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Preview how current drawing would be printed</source>
-        <translation type="unfinished"></translation>
+        <translation>Предпросмотр как текущий чертёж будет напечатан</translation>
     </message>
 </context>
 </TS>

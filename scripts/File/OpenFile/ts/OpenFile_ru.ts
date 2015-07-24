@@ -11,7 +11,7 @@
     <message>
         <location line="+28"/>
         <source>Open Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть чертеж</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -26,7 +26,7 @@
     <message>
         <location line="+6"/>
         <source>Open an existing drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть существующий чертеж</translation>
     </message>
 </context>
 </TS>

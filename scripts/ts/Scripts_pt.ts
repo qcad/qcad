@@ -495,6 +495,16 @@ Carregando plugins...</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <source>Blocks</source>
+        <translation>Blocos</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Block</source>
+        <translation>Bloco</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Layers</source>
         <translation>Camadas</translation>
     </message>

@@ -6,39 +6,41 @@
     <message>
         <location filename="../AutoSave.js" line="+34"/>
         <source>Load/Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Загрузить/Сохранить</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>Автосохранение</translation>
     </message>
     <message>
         <location line="+95"/>
         <source>Autosaving to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Автосохранение в:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Autosave failed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Автосохранение неудачно:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Autosave complete.</source>
-        <translation type="unfinished"></translation>
+        <translation>Автосохранение завершено</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Был найден &apos;автосохранённый&apos; файл резервного копирования
+для безымянного чертежа. Вы хотите восстановить его?</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation type="unfinished"></translation>
+        <translation>Были найдены &apos;автосохранённые&apos; файлы резервного копирования
+для безымянного чертежа: %1. Вы хотите восстановить их?</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -48,7 +50,7 @@ Do you wish to recover them?</source>
     <message>
         <location line="+16"/>
         <source>Recovered</source>
-        <translation type="unfinished"></translation>
+        <translation>Восстановлено</translation>
     </message>
     <message>
         <location line="+47"/>
@@ -59,7 +61,8 @@ Do you wish to recover them?</source>
         <location line="+1"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Существует &apos;автосохранённый&apos; файл резервного копирования
+для &apos;%1&apos;. Вы хотите восстановить его?</translation>
     </message>
     <message>
         <location line="+25"/>
@@ -86,17 +89,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Enable Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>Включить автосохранение</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Autosave Interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>Интервал автосохранения:</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>min</source>
-        <translation type="unfinished"></translation>
+        <translation>мин</translation>
     </message>
 </context>
 </TS>

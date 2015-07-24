@@ -27,52 +27,52 @@
     <message>
         <location filename="../DrawBasedOnRectangleSize.js" line="+46"/>
         <source>Top Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Вверху слева</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Верх</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Сверху справа</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Левая</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Середина</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Правая</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Слева внизу</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Низ</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Внизу справа</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Позиция</translation>
     </message>
 </context>
 <context>
@@ -80,17 +80,17 @@
     <message>
         <location filename="../DrawBasedOnThreeCircles.js" line="+72"/>
         <source>First arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Первая дуга или окружность</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Вторая дуга или окружность</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Third arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Третья дуга или окружность</translation>
     </message>
 </context>
 </TS>

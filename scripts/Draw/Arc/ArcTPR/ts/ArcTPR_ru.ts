@@ -16,13 +16,13 @@
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите решение</translation>
     </message>
     <message>
         <location line="+120"/>
         <location line="+65"/>
         <source>No solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Решения нет</translation>
     </message>
     <message>
         <location filename="../ArcTPR.ui" line="+17"/>
@@ -32,12 +32,12 @@
     <message>
         <location filename="../ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;По касательной, точке, радиусу</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Рисовать дугу, касающуюся объекта, через точку с заданным радиусом</translation>
     </message>
 </context>
 </TS>

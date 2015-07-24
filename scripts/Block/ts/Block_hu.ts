@@ -22,7 +22,7 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="+104"/>
+        <location filename="../BlockDialog.js" line="+105"/>
         <source>Leading or trailing spaces.</source>
         <translation>Bevezető és követő margó</translation>
     </message>

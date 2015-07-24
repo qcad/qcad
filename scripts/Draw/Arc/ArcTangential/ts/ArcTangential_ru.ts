@@ -21,12 +21,12 @@
     <message>
         <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation type="unfinished"></translation>
+        <translation>%Связанный по касательной</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Рисовать дугу, касающуюся базового объекта</translation>
     </message>
 </context>
 </TS>

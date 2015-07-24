@@ -6,7 +6,7 @@
     <message>
         <location filename="../DeselectBlockReferencesInit.js" line="+2"/>
         <source>&amp;Deselect Block References</source>
-        <translation type="unfinished">Снять привязку блока</translation>
+        <translation>&amp;Снять выделение с привязок блока</translation>
     </message>
 </context>
 </TS>

@@ -11,12 +11,12 @@
     <message>
         <location line="+5"/>
         <source>Show arc tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Visa bågverktyg</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>&amp;Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Båge</translation>
     </message>
 </context>
 </TS>

@@ -21,7 +21,7 @@
     <message>
         <location filename="../Line.ui" line="+17"/>
         <source>Same Entity Type as Original</source>
-        <translation type="unfinished"></translation>
+        <translation>Такой же тип объекта как оригинал</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -31,12 +31,12 @@
     <message>
         <location line="+23"/>
         <source>Infinite Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Бесконечная линия</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Ray</source>
-        <translation type="unfinished"></translation>
+        <translation>Луч</translation>
     </message>
 </context>
 </TS>

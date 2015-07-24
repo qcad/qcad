@@ -31,23 +31,23 @@
     <message>
         <location line="+24"/>
         <source>Solution:</source>
-        <translation type="unfinished"></translation>
+        <translation>Решение:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center Left of Line P1 - P2</source>
-        <translation type="unfinished"></translation>
+        <translation>Центр Слева от линии P1 - P2</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+17"/>
         <source>Solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Решение</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Center Right of Line P1 - P2</source>
-        <translation type="unfinished"></translation>
+        <translation>Центр Справа от линии P1 - P2</translation>
     </message>
     <message>
         <location filename="../Circle2PRInit.js" line="+2"/>

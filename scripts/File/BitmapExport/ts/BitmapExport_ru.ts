@@ -11,7 +11,7 @@
     <message>
         <location line="+10"/>
         <source>Export as Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation>Экспортировать как растровое изображение</translation>
     </message>
     <message>
         <location line="-60"/>
@@ -26,57 +26,57 @@
     <message>
         <location filename="../BitmapExportDialog.ui" line="+14"/>
         <source>Bitmap Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Экспорт растрового изображения</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Width:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ширина:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Высота:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Pixels per drawing unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Пикселей на единицу измерения чертежа:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Margin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Поле:</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>px</source>
-        <translation type="unfinished"></translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Фон:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>White</source>
-        <translation type="unfinished"></translation>
+        <translation>Белый</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation>Черный</translation>
     </message>
     <message>
         <location filename="../BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Экспорт растрового изображения...</translation>
     </message>
 </context>
 </TS>

@@ -424,6 +424,16 @@
     </message>
     <message>
         <location line="+2"/>
+        <source>Blocks</source>
+        <translation>Blöcke</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Block</source>
+        <translation>Block</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Layers</source>
         <translation>Layer</translation>
     </message>

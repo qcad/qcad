@@ -6,7 +6,7 @@
     <message>
         <location filename="../About.js" line="+53"/>
         <source>About %1</source>
-        <translation type="unfinished"></translation>
+        <translation>О %1</translation>
     </message>
     <message>
         <location line="+69"/>
@@ -64,12 +64,12 @@
     <message>
         <location line="+13"/>
         <source>Active</source>
-        <translation type="unfinished"></translation>
+        <translation>Включён</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inactive (restart)</source>
-        <translation type="unfinished"></translation>
+        <translation>Неактивно (рестарт)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -89,12 +89,12 @@
     <message>
         <location line="+32"/>
         <source>Script Add-Ons</source>
-        <translation type="unfinished"></translation>
+        <translation>Скрипты Add-Ons</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Об авторах</translation>
     </message>
     <message>
         <location filename="../AboutInit.js" line="+2"/>
@@ -120,7 +120,7 @@
     <message>
         <location line="-66"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Об авторах</translation>
     </message>
     <message>
         <location line="+25"/>

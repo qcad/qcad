@@ -11,17 +11,17 @@
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Количество:</translation>
     </message>
     <message>
         <location filename="../CircleConcentricInit.js" line="+2"/>
         <source>&amp;Concentric (with Distance)</source>
-        <translation type="unfinished"></translation>
+        <translation>Концентрический (&amp;с расстоянием)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw concentric circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Рисовать концентрическую окружность</translation>
     </message>
 </context>
 </TS>

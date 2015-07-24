@@ -11,7 +11,7 @@
     <message>
         <location line="+16"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Неверное имя блока было скорректировано на &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+55"/>
@@ -51,22 +51,22 @@
     <message>
         <location line="+14"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Переписать существующие слои&lt;br&gt;в чертеже&lt;br&gt;слоями из буфера обмена</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Перезаписать слои</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Переписать существующие блоки&lt;br&gt;в чертеже&lt;br&gt;блоками из буфера обмена</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Перезаписать блоки</translation>
     </message>
     <message>
         <location filename="../InsertBlockItemInit.js" line="+2"/>

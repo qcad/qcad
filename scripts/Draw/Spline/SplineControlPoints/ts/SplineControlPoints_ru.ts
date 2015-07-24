@@ -31,27 +31,27 @@
     <message>
         <location line="+7"/>
         <source>Choose Spline Degree</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите градус кривой</translation>
     </message>
     <message>
         <location line="+70"/>
         <source>Tick for Closed Spline</source>
-        <translation type="unfinished"></translation>
+        <translation>Отметить для закрытой кривой</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Closed</source>
-        <translation type="unfinished"></translation>
+        <translation>Закрытый</translation>
     </message>
     <message>
         <location filename="../SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Кривые (Контрольные точки)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw spline from control points</source>
-        <translation type="unfinished"></translation>
+        <translation>Рисовать кривую из контрольных точек</translation>
     </message>
 </context>
 </TS>

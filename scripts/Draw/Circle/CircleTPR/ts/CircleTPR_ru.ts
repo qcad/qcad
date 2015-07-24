@@ -11,12 +11,12 @@
     <message>
         <location filename="../CircleTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;По касательной, точке, радиусу</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to entity, through point with radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Рисовать окружность, касающуюся объекта, через точку с заданным радиусом</translation>
     </message>
 </context>
 </TS>

@@ -6,17 +6,17 @@
     <message>
         <location filename="../InfoAngle.js" line="+66"/>
         <source>Specify first line</source>
-        <translation type="unfinished"></translation>
+        <translation>Укажите первую линию</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second line</source>
-        <translation type="unfinished"></translation>
+        <translation>Укажите вторую линию</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Завершено</translation>
     </message>
     <message>
         <location line="+88"/>

@@ -60,7 +60,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <source>Untitled %1</source>
         <translation type="unfinished"></translation>
     </message>

@@ -36,7 +36,7 @@
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Против часовой стрелки (положительное)</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -47,7 +47,7 @@
     <message>
         <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>По часовой стрелке (Отрицательное)</translation>
     </message>
     <message>
         <location filename="../ArcCPAInit.js" line="+2"/>

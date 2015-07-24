@@ -60,7 +60,7 @@
         <translation>Formát:</translation>
     </message>
     <message>
-        <location line="+112"/>
+        <location line="+115"/>
         <source>Untitled %1</source>
         <translation>Bez názvu %1</translation>
     </message>

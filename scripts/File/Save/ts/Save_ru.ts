@@ -26,22 +26,22 @@
     <message>
         <location line="+1"/>
         <source>All black entities and layers will be saved as white.</source>
-        <translation type="unfinished"></translation>
+        <translation>Все чёрные объекты и слои будут сохранены как белые.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>All custom colors will be &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Все пользовательские цвета будут &apos;округляться&apos; до ближайшего фиксированного цвета.</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Proceed?</source>
-        <translation type="unfinished"></translation>
+        <translation>Продолжить?</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Saving...</source>
-        <translation type="unfinished"></translation>
+        <translation>Сохраняется...</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -51,12 +51,12 @@
     <message>
         <location line="+1"/>
         <source>Black entities and layers are saved as white.</source>
-        <translation type="unfinished"></translation>
+        <translation>Чёрные объекты и слои сохранены как белые.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Custom colors are &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation type="unfinished"></translation>
+        <translation>Пользовательские цвета &apos;округлены&apos; до ближайшего фиксированного цвета.</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -66,17 +66,17 @@
     <message>
         <location line="+16"/>
         <source>Saved drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Чертёж сохранен:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат:</translation>
     </message>
     <message>
         <location filename="../SaveInit.js" line="+2"/>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Сохранить</translation>
     </message>
 </context>
 </TS>

@@ -152,7 +152,7 @@
     <message>
         <location line="+1"/>
         <source>Identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Идентичная функция</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -162,7 +162,7 @@
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation type="unfinished"></translation>
+        <translation>Ом</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -177,12 +177,12 @@
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation type="unfinished"></translation>
+        <translation>Кубический</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation type="unfinished"></translation>
+        <translation>Неразрывный пробел</translation>
     </message>
     <message>
         <location filename="../TextDialog/TextDialog.ui" line="+14"/>
@@ -202,7 +202,7 @@
     <message>
         <location line="+7"/>
         <source>Text Height in Drawing Units</source>
-        <translation type="unfinished"></translation>
+        <translation>Высота текста в единицах измерения чертежа</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -219,13 +219,14 @@
     <message>
         <location line="-205"/>
         <source>Text fits on one line and has no formatting</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст помещается на одной строке и не имеет форматирования</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation>Простой текст(одна линия, без форматирования)</translation>
+        <translation>Простой текст
+(одна линия, без форматирования)</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -290,17 +291,17 @@
     <message>
         <location line="+42"/>
         <source>Text Geometry</source>
-        <translation type="unfinished"></translation>
+        <translation>Геометрия текста</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Line spacing factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Коэффициент межстрочного интервала:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Line Spacing Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Коэффициент межстрочного интервала</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -340,7 +341,7 @@
     <message>
         <location line="+32"/>
         <source>Base Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Левая основа</translation>
     </message>
     <message>
         <location line="+32"/>
@@ -350,12 +351,12 @@
     <message>
         <location line="+35"/>
         <source>Base Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Центральная основа</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Base Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Правая основа</translation>
     </message>
     <message>
         <location line="+32"/>

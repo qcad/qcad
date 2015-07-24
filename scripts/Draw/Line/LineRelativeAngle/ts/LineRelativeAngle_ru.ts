@@ -6,27 +6,27 @@
     <message>
         <location filename="../LineRelativeAngle.js" line="+70"/>
         <source>Choose base entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите базовый объект</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Set position</source>
-        <translation type="unfinished"></translation>
+        <translation>Установить положение</translation>
     </message>
     <message>
         <location filename="../LineRelativeAngle.ui" line="+17"/>
         <source>Relative Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Относительный угол:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Длина:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Точка привязки:</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -46,12 +46,12 @@
     <message>
         <location filename="../LineRelativeAngleInit.js" line="+2"/>
         <source>R&amp;elative Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Отно&amp;сительный угол</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line with relative angle to base entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Начертить линию под относительным углом к базовому объекту</translation>
     </message>
 </context>
 </TS>

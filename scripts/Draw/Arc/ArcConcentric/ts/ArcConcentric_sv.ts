@@ -21,7 +21,7 @@
     <message>
         <location line="+5"/>
         <source>Draw concentric arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Rita koncentrisk båge</translation>
     </message>
 </context>
 </TS>

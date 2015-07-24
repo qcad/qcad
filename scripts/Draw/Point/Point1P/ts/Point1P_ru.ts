@@ -6,7 +6,7 @@
     <message>
         <location filename="../Point1P.js" line="+51"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Позиция</translation>
     </message>
     <message>
         <location filename="../Point1PInit.js" line="+2"/>

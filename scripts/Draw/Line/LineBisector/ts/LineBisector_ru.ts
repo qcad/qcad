@@ -6,17 +6,17 @@
     <message>
         <location filename="../LineBisector.js" line="+66"/>
         <source>First line</source>
-        <translation type="unfinished"></translation>
+        <translation>Отступ</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Second line</source>
-        <translation type="unfinished"></translation>
+        <translation>Вторая линия</translation>
     </message>
     <message>
         <location line="+77"/>
         <source>Lines don&apos;t intersect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Линии не пересекаются.</translation>
     </message>
     <message>
         <location filename="../LineBisector.ui" line="+17"/>
@@ -26,17 +26,17 @@
     <message>
         <location line="+20"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Количество:</translation>
     </message>
     <message>
         <location filename="../LineBisectorInit.js" line="+2"/>
         <source>Angle &amp;Bisector</source>
-        <translation type="unfinished"></translation>
+        <translation>Угловая &amp;биссектриса</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw angle bisector, trisector, ...</source>
-        <translation type="unfinished"></translation>
+        <translation>Рисовать угловую биссектрису, трисектрису, ...</translation>
     </message>
 </context>
 </TS>

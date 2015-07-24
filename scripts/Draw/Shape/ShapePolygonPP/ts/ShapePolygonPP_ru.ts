@@ -31,7 +31,7 @@
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from end points of one side</source>
-        <translation type="unfinished"></translation>
+        <translation>Рисовать правильный многоугольник из конечных точек одной из сторон</translation>
     </message>
 </context>
 </TS>

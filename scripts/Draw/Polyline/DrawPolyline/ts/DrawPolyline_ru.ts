@@ -6,12 +6,12 @@
     <message>
         <location filename="../DrawPolyline.js" line="+69"/>
         <source>First vertex</source>
-        <translation type="unfinished"></translation>
+        <translation>Первая вершина</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
-        <translation type="unfinished"></translation>
+        <translation>Следующая вершина</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -41,32 +41,32 @@
     <message>
         <location filename="../DrawPolyline.ui" line="+23"/>
         <source>Close polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Закрыть многоугольник</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>,, C</source>
-        <translation type="unfinished"></translation>
+        <translation>,, C</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Undo Previous Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Отменить предыдущий сегмент</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, U</source>
-        <translation type="unfinished"></translation>
+        <translation>,, U</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Redo Segment</source>
-        <translation type="unfinished"></translation>
+        <translation>Вернуть сегмент</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>,, R</source>
-        <translation type="unfinished"></translation>
+        <translation>,, R</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -76,27 +76,27 @@
     <message>
         <location line="+3"/>
         <source>,, A</source>
-        <translation type="unfinished"></translation>
+        <translation>,, A</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Sweep</source>
-        <translation type="unfinished"></translation>
+        <translation>Развёртка</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Restrict length or angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Ограничить длину угла</translation>
     </message>
     <message>
         <location filename="../DrawPolylineInit.js" line="+2"/>
         <source>&amp;Draw Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Рисовать многоугольник</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw polyline with line and arc segments</source>
-        <translation type="unfinished"></translation>
+        <translation>Рисовать многоугольник по линии и сегментам дуги</translation>
     </message>
 </context>
 </TS>

@@ -21,17 +21,17 @@
     <message>
         <location line="+8"/>
         <source>Import Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation>Импортировать растровое изображение</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат:</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Позиция</translation>
     </message>
     <message>
         <location filename="../Image.ui" line="+17"/>

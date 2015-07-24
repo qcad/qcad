@@ -21,7 +21,7 @@
     <message>
         <location line="+58"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат:</translation>
     </message>
     <message>
         <location line="+36"/>

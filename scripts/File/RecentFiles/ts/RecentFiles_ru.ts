@@ -21,12 +21,12 @@
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Открыть недавние файлы</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Recent files history size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер истории недавних файлов:</translation>
     </message>
 </context>
 </TS>

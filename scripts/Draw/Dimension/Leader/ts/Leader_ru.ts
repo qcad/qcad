@@ -11,7 +11,7 @@
     <message>
         <location line="+10"/>
         <source>Next vertex</source>
-        <translation type="unfinished"></translation>
+        <translation>Следующая вершина</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -21,17 +21,17 @@
     <message>
         <location filename="../LeaderInit.js" line="+2"/>
         <source>&amp;Leader</source>
-        <translation type="unfinished"></translation>
+        <translation>П&amp;олка-выноска</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw leader (line sequence with arrow)</source>
-        <translation type="unfinished"></translation>
+        <translation>Рисовать полку-выноску (линию, чередующаяся стрелкой)</translation>
     </message>
     <message>
         <location filename="../Leader.ui" line="+23"/>
         <source>Undo Last Segement</source>
-        <translation type="unfinished"></translation>
+        <translation>Отменить последний сегмент</translation>
     </message>
     <message>
         <location line="+14"/>

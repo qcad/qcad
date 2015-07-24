@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru_RU">
+<TS version="2.1" language="ru">
 <context>
     <name>DefaultAction</name>
     <message>
         <location filename="../DefaultAction.js" line="+89"/>
         <source>Select entity or region</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите объект или регион</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Переместить объект или привязку</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Set second corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Установите второй угол</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Specify target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Укажите целевую точку точки привязки</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Specify target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Укажите целевую точку выделения</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Move entity to desired location</source>
-        <translation type="unfinished"></translation>
+        <translation>Переместите объект в нужное место</translation>
     </message>
     <message>
         <location line="+332"/>
         <source>Move Reference Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Переместить точку привязки</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Перенести выделение</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Перенести объект</translation>
     </message>
 </context>
 <context>
@@ -54,108 +54,108 @@
     <message>
         <location filename="../EAction.js" line="+58"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Назад</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Отменить</translation>
     </message>
     <message>
         <location line="+285"/>
         <location line="+133"/>
         <source>Active Tool:</source>
-        <translation type="unfinished"></translation>
+        <translation>Активный инструмент:</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет</translation>
     </message>
     <message>
         <location line="+445"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Параметры</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Block Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Опции блока</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Main Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Главные инструменты</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>CAD Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Инструменты CAD</translation>
     </message>
     <message>
         <location line="+659"/>
         <source>Entity is on a locked layer.</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект находится на заблокированном слое.</translation>
     </message>
     <message>
         <location line="+86"/>
         <source>Entity is not a block reference.</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект не является привязкой блока.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект не является линией или дугой.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект не является линией, дугой или ломаной.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line.</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект не является линией.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект не является дугой или окружностью.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект не является линией, дугой или окружностью.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект не является дугой, окружностью или эллипсом.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект не является линией, окружностью или эллипсом.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект не является линией, окружностью, эллипсом или ломаной.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект не является кривой, дугой, окружностью, эллипсом или сплайном.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект не является линией, дугой, окружностью, эллипсом, кривой или ломаной.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект не является ломаной.</translation>
     </message>
 </context>
 <context>
@@ -163,38 +163,38 @@
     <message>
         <location filename="../ShapeAlgorithms.js" line="+335"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>Радиус уменьшился до 0.0 после %1 концентрической(их) окружности(ей).</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>Радиус уменьшился до 0.0 после %1 концентрической(их) дуг(и).</translation>
     </message>
     <message>
         <location line="+560"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
-        <translation type="unfinished"></translation>
+        <translation>По крайней мере две точки идентичны.</translation>
     </message>
     <message>
         <location line="-22"/>
         <source>No circle possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет возможности для окружности.</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>No arc possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет возможности для дуги.</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Invalid number of segments: %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>Неверное количество сегментов: %1.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Неверный эллипс мажор/минор: %1 / %2.</translation>
     </message>
 </context>
 <context>
@@ -202,118 +202,118 @@
     <message>
         <location filename="../WidgetFactory.js" line="+966"/>
         <source>Restore defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Восстановить умолчания</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Insert Symbol</source>
-        <translation type="unfinished"></translation>
+        <translation>Вставить символ</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Диаметр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation type="unfinished"></translation>
+        <translation>Градусы</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus/Minus</source>
-        <translation type="unfinished"></translation>
+        <translation>Плюс/Минус</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Приблизительно равно</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Асимптотически равно</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pi</source>
-        <translation type="unfinished"></translation>
+        <translation>Число Пи</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Multiplication</source>
-        <translation type="unfinished"></translation>
+        <translation>Умножение</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation type="unfinished"></translation>
+        <translation>Деление</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation type="unfinished"></translation>
+        <translation>Квадратичная</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished"></translation>
+        <translation>Дельта</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
-        <translation type="unfinished"></translation>
+        <translation>Вложенный текст</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Measured value</source>
-        <translation type="unfinished"></translation>
+        <translation>Измеренное значение</translation>
     </message>
     <message>
         <location line="+110"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Левая</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Центр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Правая</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation type="unfinished"></translation>
+        <translation>Выровненный</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Середина</translation>
     </message>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>Заполнить</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Верх</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Base</source>
-        <translation type="unfinished"></translation>
+        <translation>Основа</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Низ</translation>
     </message>
 </context>
 <context>
@@ -321,27 +321,27 @@
     <message>
         <location filename="../autostart.js" line="+328"/>
         <source>Loading add-on translations...</source>
-        <translation type="unfinished"></translation>
+        <translation>Загрузка переводов для add-on...</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Loading add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Загрузка add-ons...</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Initializing add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Инициализация add-ons...</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Initializing add-ons:</source>
-        <translation type="unfinished"></translation>
+        <translation>Инициализация add-ons...</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Post-initializing add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Пост-инициализация add-ons...</translation>
     </message>
 </context>
 <context>
@@ -349,357 +349,367 @@
     <message>
         <location filename="../library.js" line="+712"/>
         <source>Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Объекты</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Object</source>
-        <translation type="unfinished"></translation>
+        <translation>Объект</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Неизвестные объекты</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Object</source>
+        <translation>Неизвестный объект</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Block</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Слои</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Слой</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Linetypes</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип линии</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation>Тип линии</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Views</source>
-        <translation type="unfinished"></translation>
+        <translation>Представления</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Вид</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Сущность</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Объекты</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>3dFaces</source>
-        <translation type="unfinished"></translation>
+        <translation>3d лица</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>3dFace</source>
-        <translation type="unfinished"></translation>
+        <translation>3d лица</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References</source>
-        <translation type="unfinished"></translation>
+        <translation>Привязки блока</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Привязка блока</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Block References and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Привязки блока и атрибуты</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block Reference and Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Привязка блока и атрибуты</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Arcs</source>
-        <translation type="unfinished"></translation>
+        <translation>дуги</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Дуга</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Атрибуты</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute</source>
-        <translation type="unfinished"></translation>
+        <translation>Параметр</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attribute Definitions</source>
-        <translation type="unfinished"></translation>
+        <translation>Определения атрибутов</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Attribute Definition</source>
-        <translation type="unfinished"></translation>
+        <translation>Определение атрибутов</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Окружности</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Окружность</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Размеры</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Aligned Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Выровненные размеры</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Aligned Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Выровненный размер</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Угловые размеры</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Угловой размер</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Diametric Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Диаметральные размеры</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Diametric Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Диаметральный размер</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ordinate Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Размеры ординаты</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ordinate Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер ординаты</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rotated Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Размеры повёрнутого</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Rotated Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер повёрнутого</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Radial Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Радиальные размеры</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Radial Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Радиальный размер</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ellipses</source>
-        <translation type="unfinished"></translation>
+        <translation>Эллипсы</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Эллипс</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation type="unfinished"></translation>
+        <translation>Штриховки</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Штриховка</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Images</source>
-        <translation type="unfinished"></translation>
+        <translation>Изображения</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Картинка</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Leaders</source>
-        <translation type="unfinished"></translation>
+        <translation>Полки-выноски</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation type="unfinished"></translation>
+        <translation>Полка-выноска</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Линии</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Линия</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Infinite Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Бесконечные линии</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Infinite Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Бесконечная линия</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Rays</source>
-        <translation type="unfinished"></translation>
+        <translation>Лучи</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation type="unfinished"></translation>
+        <translation>Луч</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Точки</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Точка</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Polylines</source>
-        <translation type="unfinished"></translation>
+        <translation>Ломаные</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Ломаная</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Solids</source>
-        <translation type="unfinished"></translation>
+        <translation>Твёрдые тела</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Solid</source>
-        <translation type="unfinished"></translation>
+        <translation>Сплошной</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Traces</source>
-        <translation type="unfinished"></translation>
+        <translation>Чертежи на кальке</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Trace</source>
-        <translation type="unfinished"></translation>
+        <translation>Чертёж на кальке</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Splines</source>
-        <translation type="unfinished"></translation>
+        <translation>Кривые</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation type="unfinished"></translation>
+        <translation>Кривая</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Text based</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст на основе</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Texts</source>
-        <translation type="unfinished"></translation>
+        <translation>Тексты</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Текст</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation type="unfinished"></translation>
+        <translation>Видовые экраны</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation type="unfinished"></translation>
+        <translation>Видовой экран</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Unknown Entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Неизвестные объекты</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Неизвестный объект</translation>
     </message>
 </context>
 </TS>

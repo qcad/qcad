@@ -462,6 +462,16 @@ Dzielenie (÷)</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <source>Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Layers</source>
         <translation type="unfinished"></translation>
     </message>

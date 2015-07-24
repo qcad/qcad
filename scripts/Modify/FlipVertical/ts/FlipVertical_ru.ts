@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru_RU">
+<TS version="2.1" language="ru">
 <context>
     <name>FlipVertical</name>
     <message>
         <location filename="../FlipVerticalInit.js" line="+2"/>
         <source>Flip Verti&amp;cal</source>
-        <translation type="unfinished"></translation>
+        <translation>Отобразить &amp;по-вертикали</translation>
     </message>
 </context>
 </TS>

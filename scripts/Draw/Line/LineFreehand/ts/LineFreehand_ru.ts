@@ -11,17 +11,17 @@
     <message>
         <location line="+8"/>
         <source>Release to stop drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Отпустите чтобы остановить черчение</translation>
     </message>
     <message>
         <location filename="../LineFreehandInit.js" line="+2"/>
         <source>&amp;Freehand Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Произвольная линия (кривая)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw freehand line</source>
-        <translation type="unfinished"></translation>
+        <translation>Рисовать произвольный контур</translation>
     </message>
 </context>
 </TS>

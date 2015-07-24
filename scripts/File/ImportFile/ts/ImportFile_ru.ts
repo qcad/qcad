@@ -11,7 +11,7 @@
     <message>
         <location line="+20"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Фильтры для импорта не найдены. Операция прервана...</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -21,12 +21,12 @@
     <message>
         <location line="+3"/>
         <source>Import Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Импорт чертежа</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат:</translation>
     </message>
     <message>
         <location filename="../ImportFileInit.js" line="+2"/>

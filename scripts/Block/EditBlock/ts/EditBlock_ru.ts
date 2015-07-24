@@ -11,7 +11,7 @@
     <message>
         <location line="+1"/>
         <source>Edit contents of selected block</source>
-        <translation type="unfinished">Править элементы выделенного блока</translation>
+        <translation>Редактировать содержимое выбранного блока</translation>
     </message>
 </context>
 </TS>

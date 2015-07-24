@@ -6,22 +6,22 @@
     <message>
         <location filename="../Round.js" line="+57"/>
         <source>The two entities cannot be rounded.</source>
-        <translation type="unfinished"></translation>
+        <translation>Два объекта не могут быть закруглены.</translation>
     </message>
     <message>
         <location line="+216"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Первый объект не может быть подрезан.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Второй объект не может быть подрезан.</translation>
     </message>
     <message>
         <location filename="../Round.ui" line="+17"/>
         <source>Trim</source>
-        <translation type="unfinished"></translation>
+        <translation>Усечь</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../RoundInit.js" line="+2"/>
         <source>&amp;Round</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Скругление</translation>
     </message>
 </context>
 </TS>

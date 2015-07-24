@@ -6,17 +6,17 @@
     <message>
         <location filename="../DimRotated.js" line="+60"/>
         <source>First extension line origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Первое продление размерной линии</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Second extension line origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Второе продление размерной линии</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Dimension line location</source>
-        <translation type="unfinished"></translation>
+        <translation>Положение размерной линии</translation>
     </message>
     <message>
         <location filename="../DimRotated.ui" line="+17"/>
@@ -26,12 +26,12 @@
     <message>
         <location filename="../DimRotatedInit.js" line="+2"/>
         <source>&amp;Rotated (Linear)</source>
-        <translation type="unfinished"></translation>
+        <translation>С пово&amp;ротом (линейный)</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw linear dimension at a fixed angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Рисовать линейный размер при фиксированном угле</translation>
     </message>
 </context>
 </TS>

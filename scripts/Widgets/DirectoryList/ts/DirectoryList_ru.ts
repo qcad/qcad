@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru_RU">
+<TS version="2.1" language="ru">
 <context>
     <name>DirectoryList</name>
     <message>
@@ -8,12 +8,14 @@
         <source>The folder
 &apos;%1&apos;
 is already in the list.</source>
-        <translation type="unfinished"></translation>
+        <translation>Директория
+&apos;%1&apos;
+уже в списке.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Folder not added</source>
-        <translation type="unfinished"></translation>
+        <translation>Директория не добавлена</translation>
     </message>
 </context>
 </TS>

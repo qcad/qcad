@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru_RU">
+<TS version="2.1" language="ru">
 <context>
     <name>Dialog</name>
     <message>
         <location filename="../Dialog.ui" line="+94"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Отменить</translation>
     </message>
 </context>
 <context>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../Widgets.js" line="+53"/>
         <source>&amp;Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Виджеты</translation>
     </message>
 </context>
 </TS>

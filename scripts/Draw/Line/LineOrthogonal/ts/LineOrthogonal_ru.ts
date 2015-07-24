@@ -31,12 +31,12 @@
     <message>
         <location filename="../LineOrthogonalInit.js" line="+2"/>
         <source>&amp;Orthogonal</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ортогонально</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw line orthogonal to base entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Рисовать линию, ортогональную базовому объекту</translation>
     </message>
 </context>
 </TS>

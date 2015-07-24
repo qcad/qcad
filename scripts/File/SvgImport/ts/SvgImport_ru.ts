@@ -6,7 +6,7 @@
     <message>
         <location filename="../SvgImport.js" line="+59"/>
         <source>Import SVG</source>
-        <translation type="unfinished"></translation>
+        <translation>Импортировать SVG</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -21,22 +21,22 @@
     <message>
         <location filename="../SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Импорт SVG</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Resolution:</source>
-        <translation type="unfinished"></translation>
+        <translation>Разрешение:</translation>
     </message>
     <message>
         <location line="+57"/>
         <source>Pixels / Inch</source>
-        <translation type="unfinished"></translation>
+        <translation>Пиксели/дюйм</translation>
     </message>
     <message>
         <location filename="../SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Импорт SVG...</translation>
     </message>
 </context>
 </TS>
