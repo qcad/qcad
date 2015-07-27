@@ -23,7 +23,7 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="RMathLineEdit" name="Mode">
+        <widget class="QLineEdit" name="Mode">
          <property name="text">
           <string notr="true">0</string>
          </property>
@@ -40,7 +40,7 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="RMathLineEdit" name="Size">
+        <widget class="QLineEdit" name="Size">
          <property name="text">
           <string notr="true">0</string>
          </property>
@@ -512,13 +512,30 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>RMathLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>RMathLineEdit.h</header>
-  </customwidget>
- </customwidgets>
+ <tabstops>
+  <tabstop>Mode</tabstop>
+  <tabstop>Size</tabstop>
+  <tabstop>Button0</tabstop>
+  <tabstop>Button1</tabstop>
+  <tabstop>Button2</tabstop>
+  <tabstop>Button3</tabstop>
+  <tabstop>Button4</tabstop>
+  <tabstop>Button32</tabstop>
+  <tabstop>Button33</tabstop>
+  <tabstop>Button34</tabstop>
+  <tabstop>Button35</tabstop>
+  <tabstop>Button36</tabstop>
+  <tabstop>Button64</tabstop>
+  <tabstop>Button65</tabstop>
+  <tabstop>Button66</tabstop>
+  <tabstop>Button67</tabstop>
+  <tabstop>Button68</tabstop>
+  <tabstop>Button96</tabstop>
+  <tabstop>Button97</tabstop>
+  <tabstop>Button98</tabstop>
+  <tabstop>Button99</tabstop>
+  <tabstop>Button100</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

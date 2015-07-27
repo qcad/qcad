@@ -150,6 +150,11 @@ void RDocument::init() {
         initLinetypes(&transaction);
         docVars->setLinetypeScale(RSettings::getDoubleValue("LinetypeSettings/Scale", 1.0));
 
+        // point display:
+        docVars->setKnownVariable(RS::PDMODE, RSettings::getIntValue("PointDisplaySettings/Mode", 0));
+        docVars->setKnownVariable(RS::PDSIZE, RSettings::getIntValue("PointDisplaySettings/Size", 0));
+
+        // dimension properties:
         docVars->setKnownVariable(RS::DIMTXT, RSettings::getDoubleValue("DimensionSettings/DIMTXT", 2.5));
         docVars->setKnownVariable(RS::DIMEXE, RSettings::getDoubleValue("DimensionSettings/DIMEXE", 1.25));
         docVars->setKnownVariable(RS::DIMEXO, RSettings::getDoubleValue("DimensionSettings/DIMEXO", 0.625));

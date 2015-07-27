@@ -31,108 +31,48 @@ PointDisplaySettings.initPreferences = function(pageWidget, calledByPrefDialog, 
     var widgets = getWidgets(pageWidget);
 
     var modeEdit = pageWidget.findChild("Mode");
+    var pdmode = undefined;
     if (!isNull(document)) {
-        modeEdit.setValue(document.getKnownVariable(RS.PDMODE, 0));
-        var w = pageWidget.findChild("Button" + modeEdit.text);
-        w.checked = true;
+        pdmode = document.getKnownVariable(RS.PDMODE, 0)
+    }
+    else {
+        pdmode = RSettings.getIntValue("PointDisplaySettings/Mode", 0);
+    }
+
+    if (!isNull(pdmode)) {
+        modeEdit.text = pdmode.toString();
+        var w = pageWidget.findChild("Button" + pdmode);
+        if (!isNull(w)) {
+            w.checked = true;
+        }
     }
 
     var sizeEdit = pageWidget.findChild("Size");
-    if (!isNull(document)) {
-        sizeEdit.setValue(document.getKnownVariable(RS.PDSIZE, 0));
+    var pdsize = undefined;
+    if (!isNull(pdsize)) {
+        if (!isNull(document)) {
+            pdsize = document.getKnownVariable(RS.PDSIZE, 0);
+        }
+        else {
+            pdsize = RSettings.getIntValue("PointDisplaySettings/Size", 0);
+        }
+        sizeEdit.text = pdsize.toString();
     }
 
-    widgets["Button0"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(0);
-    });
-    widgets["Button1"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(1);
-    });
-    widgets["Button2"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(2);
-    });
-    widgets["Button3"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(3);
-    });
-    widgets["Button4"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(4);
-    });
-    widgets["Button32"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(32);
-    });
-    widgets["Button33"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(33);
-    });
-    widgets["Button34"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(34);
-    });
-    widgets["Button35"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(35);
-    });
-    widgets["Button36"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(36);
-    });
-    widgets["Button64"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(64);
-    });
-    widgets["Button65"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(65);
-    });
-    widgets["Button66"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(66);
-    });
-    widgets["Button67"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(67);
-    });
-    widgets["Button68"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(68);
-    });
-    widgets["Button96"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(96);
-    });
-    widgets["Button97"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(97);
-    });
-    widgets["Button98"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(98);
-    });
-    widgets["Button99"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(99);
-    });
-    widgets["Button100"]["clicked"].connect(function() {
-        var modeEdit = pageWidget.findChild("Mode");
-        modeEdit.setValue(100);
-    });
-
+    var values = [0,1,2,3,4,32,33,34,35,36,64,65,66,67,68,96,97,98,100];
+    for (var i=0; i<values.length; i++) {
+        var f = function() { modeEdit.text = values[arguments.callee.i].toString(); };
+        f.i = i;
+        widgets["Button" + values[i]]["clicked"].connect(f);
+    }
 };
 
 PointDisplaySettings.savePreferences = function(pageWidget, calledByPrefDialog, document, transaction) {
-    if (isNull(document)) {
-        return;
-    }
-
     var modeEdit = pageWidget.findChild("Mode");
-    document.setKnownVariable(RS.PDMODE, modeEdit.getValue(), transaction);
-
     var sizeEdit = pageWidget.findChild("Size");
-    document.setKnownVariable(RS.PDSIZE, sizeEdit.getValue(), transaction);
+
+    if (!isNull(document)) {
+        document.setKnownVariable(RS.PDMODE, parseInt(modeEdit.text), transaction);
+        document.setKnownVariable(RS.PDSIZE, parseInt(sizeEdit.text), transaction);
+    }
 };
