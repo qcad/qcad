@@ -1055,23 +1055,25 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
             QList<RVector> points = path.getPoints();
             QList<RVector>::iterator it;
             for (it=points.begin(); it<points.end(); it++) {
+                RVector p = *it;
+                p.move(paintOffset);
                 //int rslt = pMode & 7;
                 if (rslt7 == 0) {
-                    drawDot(painter, QPointF((*it).x, (*it).y));
+                    drawDot(painter, QPointF(p.x, p.y));
                 } else if (rslt7 == 2) {
-                    drawPlus(painter, QPointF((*it).x, (*it).y), pSize);
+                    drawPlus(painter, QPointF(p.x, p.y), pSize);
                 } else if (rslt7 == 3) {
-                    drawEx(painter, QPointF((*it).x, (*it).y), pSize);
+                    drawEx(painter, QPointF(p.x, p.y), pSize);
                 } else if (rslt7 == 4) {
-                    drawVBar(painter, QPointF((*it).x, (*it).y), pSize);
+                    drawVBar(painter, QPointF(p.x, p.y), pSize);
                 }
                 //rslt = pMode & 32;
                 if (rslt32 == 32) {
-                    drawCircle(painter, QPointF((*it).x, (*it).y), pSize);
+                    drawCircle(painter, QPointF(p.x, p.y), pSize);
                 }
                 //rslt = pMode & 64;
                 if (rslt64 == 64) {
-                    drawSquare(painter, QPointF((*it).x, (*it).y), pSize);
+                    drawSquare(painter, QPointF(p.x, p.y), pSize);
                 }
             }
         }
