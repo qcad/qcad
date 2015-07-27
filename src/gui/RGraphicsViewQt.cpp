@@ -69,12 +69,12 @@ RGraphicsViewQt::~RGraphicsViewQt() {
  * Triggers a paintEvent based on a buffered offscreen bitmap (very fast).
  */
 void RGraphicsViewQt::repaintView() {
-#if QT_VERSION < 0x040800
+//#if QT_VERSION < 0x040800
     // 20150717: experimental: update is unreliable
-    QWidget::repaint();
-#else
+    //QWidget::repaint();
+//#else
     update();
-#endif
+//#endif
 }
 
 void RGraphicsViewQt::repaintNow() {
