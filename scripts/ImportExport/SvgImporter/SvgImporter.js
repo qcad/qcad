@@ -41,33 +41,41 @@ SvgHandler.rxStyleStroke = new RegExp(
 );
 
 SvgHandler.rxTransform = new RegExp(
-    "(translate)\\s*\\(" +
+    "(translate)\\s*\\(" +           // match 1
         "\\s*" +
-        "([+-]?\\d*\\.?\\d*)" +
+        "([+-]?\\d*\\.?\\d*)" +      // match 2
         "[,\\s]+" +
-        "([+-]?\\d*\\.?\\d*)" +
+        "([+-]?\\d*\\.?\\d*)" +      // match 3
         "[\\s]*" +
     "\\)" +
     "|" +
-    "(rotate)\\s*\\(" +
+    "(rotate)\\s*\\(" +              // match 4
         "\\s*" +
-        "([+-]?\\d*\\.?\\d*)" +
+        "([+-]?\\d*\\.?\\d*)" +      // match 5
         "[\\s]*" +
     "\\)" +
     "|" +
-    "(matrix)\\s*\\(" +
+    "(matrix)\\s*\\(" +              // match 6
         "\\s*" +
-        "([+-]?\\d*\\.?\\d*)" +
+        "([+-]?\\d*\\.?\\d*)" +      // match 7
         "[,\\s]+" +
-        "([+-]?\\d*\\.?\\d*)" +
+        "([+-]?\\d*\\.?\\d*)" +      // match 8
         "[,\\s]+" +
-        "([+-]?\\d*\\.?\\d*)" +
+        "([+-]?\\d*\\.?\\d*)" +      // match 9
         "[,\\s]+" +
-        "([+-]?\\d*\\.?\\d*)" +
+        "([+-]?\\d*\\.?\\d*)" +      // match 10
         "[,\\s]+" +
-        "([+-]?\\d*\\.?\\d*)" +
+        "([+-]?\\d*\\.?\\d*)" +      // match 11
         "[,\\s]+" +
-        "([+-]?\\d*\\.?\\d*)" +
+        "([+-]?\\d*\\.?\\d*)" +      // match 12
+        "[\\s]*" +
+    "\\)" +
+    "|" +
+    "(scale)\\s*\\(" +               // match 13
+        "\\s*" +
+        "([+-]?\\d*\\.?\\d*)" +      // match 14
+        "[,\\s]+" +
+        "([+-]?\\d*\\.?\\d*)" +      // match 15
         "[\\s]*" +
     "\\)",
     "gim"
@@ -102,6 +110,10 @@ SvgHandler.prototype.getTransform = function(str) {
                         match[11], match[12], 1.0
             );
         }
+        else if (!isNull(match[13]) && match[13].toLowerCase()==="scale") {
+            t = new QTransform();
+            t.scale(match[14], match[15]);
+        }
 
         if (!isNull(t)) {
             t.operator_multiply_assign(ret);
@@ -121,6 +133,7 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
 
     // handle transforms:
     var transformAttr = atts.value("transform");
+    qDebug("transformAttr: ", transformAttr);
     var newTransform = new QTransform();
     if (this.transformStack.length!==0) {
         newTransform = this.transformStack[this.transformStack.length-1];
@@ -128,9 +141,9 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
     if (transformAttr!=="") {
         // got transform attribute: update transform stack:
         var transform = this.getTransform(transformAttr);
+        qDebug("trans: ", transform);
         transform.operator_multiply_assign(newTransform);
         newTransform = transform;
-
     }
     this.transformStack.push(newTransform);
     this.svgImporter.setTransform(newTransform);
@@ -173,6 +186,22 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
     var x,y, width,height;
 
     switch (localName) {
+    case "svg":
+        var w = atts.value("width");
+        var h = atts.value("height");
+        var docUnit = this.svgImporter.getDocument().getUnit();
+        if (!isNull(w) && !isNull(h)) {
+            if (w.endsWith("mm") && h.endsWith("mm")) {
+                // SVG file in mm:
+                this.svgImporter.resolutionScale = RUnit.convert(1, RS.Millimeter, docUnit);
+            }
+            else if (w.endsWith("in") && h.endsWith("in")) {
+                // SVG file in in:
+                this.svgImporter.resolutionScale = RUnit.convert(1, RS.Inch, docUnit);
+            }
+        }
+        break;
+
     case "metadata":
         break;
 
