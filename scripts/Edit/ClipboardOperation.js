@@ -36,19 +36,25 @@ ClipboardOperation.prototype.beginEvent = function() {
     Edit.prototype.beginEvent.call(this);
 
     if (this.chooseReferencePoint) {
-        this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
-        this.setCrosshairCursor();
-        var trReferencePoint = qsTr("Reference point");
-        var appWin = RMainWindowQt.getMainWindow();
-        this.setCommandPrompt(trReferencePoint);
-        this.setLeftMouseTip(trReferencePoint);
-        this.setRightMouseTip(EAction.trCancel);
-        EAction.showSnapTools();
+        this.setState(0);
     }
     else {
         this.applyOperation();
         this.terminate();
     }
+};
+
+ClipboardOperation.prototype.setState = function(state) {
+    Edit.prototype.setState.call(this, state);
+
+    this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
+    this.setCrosshairCursor();
+    var trReferencePoint = qsTr("Reference point");
+    var appWin = RMainWindowQt.getMainWindow();
+    this.setCommandPrompt(trReferencePoint);
+    this.setLeftMouseTip(trReferencePoint);
+    this.setRightMouseTip(EAction.trCancel);
+    EAction.showSnapTools();
 };
 
 ClipboardOperation.prototype.coordinateEvent = function(event) {
