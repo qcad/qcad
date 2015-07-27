@@ -968,6 +968,13 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object) {
 
     QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
 
+    if (!entity.isNull()) {
+        if (!allowAll && !entity->isEditable(allowInvisible)) {
+            fail();
+            return;
+        }
+    }
+
     // if the entity has child entities, delete all child entities (e.g. attributes):
     if (!entity.isNull() && storage->hasChildEntities(entity->getId())) {
         QSet<REntity::Id> ids = storage->queryChildEntities(entity->getId());
