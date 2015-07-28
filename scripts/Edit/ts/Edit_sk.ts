@@ -29,7 +29,7 @@ musíte znovu spustiť QCAD.</translation>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../ClipboardOperation.js" line="+41"/>
+        <location filename="../ClipboardOperation.js" line="+52"/>
         <source>Reference point</source>
         <translation>Referenčný bod</translation>
     </message>

@@ -41,7 +41,7 @@ para que as mudanças de preferências entrem em vigor</translation>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../ClipboardOperation.js" line="+41"/>
+        <location filename="../ClipboardOperation.js" line="+52"/>
         <source>Reference point</source>
         <translatorcomment>--ignored case--
 --file: CreateBlock_pt.ts--
