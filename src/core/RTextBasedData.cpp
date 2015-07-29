@@ -259,7 +259,14 @@ bool RTextBasedData::intersectsWith(const RShape& shape) const {
 }
 
 void RTextBasedData::setText(const QString& text) {
-    this->text = text;
+    if (text.contains("\n")) {
+        QString t = text;
+        t.replace(QString("\n"), QString("\\P"));
+        this->text = t;
+    }
+    else {
+        this->text = text;
+    }
     update();
 }
 

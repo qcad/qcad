@@ -1005,6 +1005,7 @@ TextDialog.prototype.updateSource = function(force) {
 TextDialog.prototype.updateRichText = function(force) {
     if (this.getSourceDocument().modified || force===true) {
         var source = this.getSourceDocument().toPlainText();
+        source = source.replace("\n", "\\P");
         var richText = RTextBasedData.toRichText(source, this.getMainFont(), this.fontHeightFactor);
         //richText = richText.replace("<html>", "<html xmlns='http://www.w3.org/1999/xhtml' xml:space='preserve'>");
         //qDebug("HTML: \n\n", richText, "\n\n");
