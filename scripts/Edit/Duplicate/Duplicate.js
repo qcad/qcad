@@ -39,7 +39,7 @@ Duplicate.prototype.beginEvent = function() {
     var op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());
 
-    var ids = doc.queryAllEntities();
+    var ids = doc.querySelectedEntities();
     for (var i = 0; i < ids.length; ++i) {
         var id = ids[i];
         var e = doc.queryEntity(id);
