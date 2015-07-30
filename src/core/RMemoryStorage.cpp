@@ -135,6 +135,44 @@ QSet<RObject::Id> RMemoryStorage::queryAllObjects() {
     return result;
 }
 
+QSet<REntity::Id> RMemoryStorage::queryAllVisibleEntities() {
+    QSet<REntity::Id> result;
+    result.reserve(entityMap.count());
+    RBlock::Id currentBlock = getCurrentBlockId();
+    QHash<REntity::Id, QSharedPointer<REntity> >::iterator it;
+    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
+        QSharedPointer<REntity> e = *it;
+        if (e.isNull()) {
+            continue;
+        }
+        if (e->isUndone()) {
+            continue;
+        }
+
+        RBlock::Id blockId = e->getBlockId();
+        if (blockId != currentBlock) {
+            continue;
+        }
+        QSharedPointer<RBlock> block = queryBlockDirect(blockId);
+        if (!block.isNull()) {
+            if (block->isFrozen()) {
+                continue;
+            }
+        }
+
+        RLayer::Id layerId = e->getLayerId();
+        QSharedPointer<RLayer> layer = queryLayerDirect(layerId);
+        if (!layer.isNull()) {
+            if (layer->isFrozen()) {
+                continue;
+            }
+        }
+
+        result.insert(e->getId());
+    }
+    return result;
+}
+
 QSet<REntity::Id> RMemoryStorage::queryAllEntities(bool undone, bool allBlocks, RS::EntityType type) {
     QSet<REntity::Id> result;
     result.reserve(entityMap.count());

@@ -90,13 +90,13 @@
         moveReferencePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getExploded
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         scale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         stretch
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getExploded
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getShapes

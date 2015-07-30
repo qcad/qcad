@@ -89,6 +89,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryAllObjects, "queryAllObjects");
             
+            REcmaHelper::registerFunction(&engine, proto, queryAllVisibleEntities, "queryAllVisibleEntities");
+            
             REcmaHelper::registerFunction(&engine, proto, queryAllEntities, "queryAllEntities");
             
             REcmaHelper::registerFunction(&engine, proto, queryAllUcs, "queryAllUcs");
@@ -1437,6 +1439,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::queryAllObjects", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::queryAllVisibleEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::queryAllVisibleEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::queryAllVisibleEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("queryAllVisibleEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < REntity::Id >'
+    QSet < REntity::Id > cppResult =
+        
+               self->queryAllVisibleEntities();
+        // return type: QSet < REntity::Id >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.queryAllVisibleEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::queryAllVisibleEntities", context, engine);
             return result;
         }
          QScriptValue

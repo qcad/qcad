@@ -100,6 +100,8 @@ public:
      */
     virtual QSet<RObject::Id> queryAllObjects() = 0;
 
+    virtual QSet<REntity::Id> queryAllVisibleEntities() = 0;
+
     /**
      * \return A set of all entity IDs of the document.
      */

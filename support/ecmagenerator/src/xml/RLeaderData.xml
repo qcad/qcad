@@ -102,6 +102,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="targetPoint" isConst="true" />
       </variant>
     </method>
+    <method name="getExploded" cppName="getExploded"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="int" typeName="int" name="segments"
+        hasDefault="true" default="RDEFAULT_MIN1"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="scale" cppName="scale" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
@@ -119,12 +129,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector" name="offset"
         isConst="true" />
       </variant>
-    </method>
-    <method name="getExploded" cppName="getExploded"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
-      isPureVirtual="false" />
     </method>
     <method name="getShapes" cppName="getShapes" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">

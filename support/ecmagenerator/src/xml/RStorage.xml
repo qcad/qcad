@@ -58,6 +58,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; RObject::Id &gt;"
       isPureVirtual="true" />
     </method>
+    <method name="queryAllVisibleEntities"
+    cppName="queryAllVisibleEntities" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QSet &lt; REntity::Id &gt;"
+      isPureVirtual="true" />
+    </method>
     <method name="queryAllEntities" cppName="queryAllEntities"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

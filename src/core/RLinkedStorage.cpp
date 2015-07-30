@@ -36,6 +36,11 @@ QSet<RObject::Id> RLinkedStorage::queryAllObjects() {
             .unite(backStorage->queryAllObjects());
 }
 
+QSet<REntity::Id> RLinkedStorage::queryAllVisibleEntities() {
+    return RMemoryStorage::queryAllVisibleEntities()
+            .unite(backStorage->queryAllVisibleEntities());
+}
+
 QSet<REntity::Id> RLinkedStorage::queryAllEntities(bool undone, bool allBlocks, RS::EntityType type) {
     return RMemoryStorage::queryAllEntities(undone, allBlocks, type)
             .unite(backStorage->queryAllEntities(undone, allBlocks, type));

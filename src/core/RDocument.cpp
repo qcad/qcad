@@ -854,9 +854,9 @@ QSet<RObject::Id> RDocument::queryAllObjects() const {
     return storage.queryAllObjects();
 }
 
-//QSet<RObject::Id> RDocument::queryAllObjectsFromContainer() const {
-//    return storage.queryAllObjects();
-//}
+QSet<REntity::Id> RDocument::queryAllVisibleEntities() const {
+    return storage.queryAllVisibleEntities();
+}
 
 /**
  * Queries all entities of this document. This operation can be
@@ -868,8 +868,6 @@ QSet<RObject::Id> RDocument::queryAllObjects() const {
 QSet<REntity::Id> RDocument::queryAllEntities(bool undone, bool allBlocks, RS::EntityType type) const {
     return storage.queryAllEntities(undone, allBlocks, type);
 }
-
-
 
 /**
  * Queries all UCSs of this document.
