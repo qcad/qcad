@@ -402,16 +402,16 @@ RLinetype::Id RLinkedStorage::getCurrentLinetypeId() const {
     return backStorage->getCurrentLinetypeId();
 }
 
-QSet<QString> RLinkedStorage::getBlockNames() const {
-    return RMemoryStorage::getBlockNames().unite(backStorage->getBlockNames());
+QSet<QString> RLinkedStorage::getBlockNames(const QString& rxStr) const {
+    return RMemoryStorage::getBlockNames(rxStr).unite(backStorage->getBlockNames(rxStr));
 }
 
 QSet<QString> RLinkedStorage::getViewNames() const {
     return RMemoryStorage::getViewNames().unite(backStorage->getViewNames());
 }
 
-QSet<QString> RLinkedStorage::getLayerNames() const {
-    return RMemoryStorage::getLayerNames().unite(backStorage->getLayerNames());
+QSet<QString> RLinkedStorage::getLayerNames(const QString& rxStr) const {
+    return RMemoryStorage::getLayerNames(rxStr).unite(backStorage->getLayerNames(rxStr));
 }
 
 QSet<QString> RLinkedStorage::getLinetypeNames() const {

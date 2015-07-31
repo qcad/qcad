@@ -8,5 +8,15 @@
         <source>&amp;Duplicate</source>
         <translation>Дублировать(&amp;D)</translation>
     </message>
+    <message>
+        <location filename="../Duplicate.js" line="+55"/>
+        <source>1 entity duplicated</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 entities duplicated</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

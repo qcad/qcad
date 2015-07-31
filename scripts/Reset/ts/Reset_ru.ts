@@ -9,7 +9,7 @@
         <translation>Сбросить</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>&amp;Reset / Idle</source>
         <translation>Сброс/О&amp;жидания</translation>
     </message>

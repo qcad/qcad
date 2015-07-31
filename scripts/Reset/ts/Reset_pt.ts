@@ -13,7 +13,7 @@ Redefinir posição do rótulo de %1 dimensão(s).</translatorcomment>
         <translation>Resete</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>&amp;Reset / Idle</source>
         <translation>&amp;Resete / Inativo</translation>
     </message>

@@ -573,13 +573,16 @@ QString RMemoryStorage::getBlockName(RBlock::Id blockId) const {
     return l->getName();
 }
 
-QSet<QString> RMemoryStorage::getBlockNames() const {
+QSet<QString> RMemoryStorage::getBlockNames(const QString& rxStr) const {
+    QRegExp rx(rxStr);
     QSet<QString> ret;
     QHash<RObject::Id, QSharedPointer<RBlock> >::const_iterator it;
     for (it = blockMap.constBegin(); it != blockMap.constEnd(); ++it) {
         QSharedPointer<RBlock> b = *it;
         if (!b.isNull() && !b->isUndone()) {
-            ret.insert(b->getName());
+            if (rx.isEmpty() || rx.exactMatch(b->getName())) {
+                ret.insert(b->getName());
+            }
         }
     }
     return ret;
@@ -1301,13 +1304,16 @@ QString RMemoryStorage::getLayerName(RLayer::Id layerId) const {
     return l->getName();
 }
 
-QSet<QString> RMemoryStorage::getLayerNames() const {
+QSet<QString> RMemoryStorage::getLayerNames(const QString& rxStr) const {
+    QRegExp rx(rxStr);
     QSet<QString> ret;
     QHash<RObject::Id, QSharedPointer<RLayer> >::const_iterator it;
     for (it = layerMap.constBegin(); it != layerMap.constEnd(); ++it) {
         QSharedPointer<RLayer> l = *it;
         if (!l.isNull() && !l->isUndone()) {
-            ret.insert(l->getName());
+            if (rx.isEmpty() || rx.exactMatch(l->getName())) {
+                ret.insert(l->getName());
+            }
         }
     }
     return ret;

@@ -29,7 +29,7 @@ applicare le modifiche.</translation>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../ClipboardOperation.js" line="+41"/>
+        <location filename="../ClipboardOperation.js" line="+52"/>
         <source>Reference point</source>
         <translatorcomment>--exact match--
 --file: Translate_it.ts--

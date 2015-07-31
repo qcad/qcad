@@ -578,7 +578,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="QSet &lt; QString &gt;"
-      isPureVirtual="false" />
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="rx"
+        hasDefault="true" default="RDEFAULT_QSTRING"
+        isConst="true" />
+      </variant>
     </method>
     <method name="getBlockId" cppName="getBlockId"
     specifier="public" isStatic="false" isVirtual="true"
@@ -635,7 +639,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="QSet &lt; QString &gt;"
-      isPureVirtual="false" />
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="rx"
+        hasDefault="true" default="RDEFAULT_QSTRING"
+        isConst="true" />
+      </variant>
     </method>
     <method name="getLayerId" cppName="getLayerId"
     specifier="public" isStatic="false" isVirtual="true"

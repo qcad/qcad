@@ -13,7 +13,7 @@ Przywróć domyślną wartość &apos;%1&apos; w &apos;%2&apos;</translatorcomme
         <translation type="unfinished">Wyzeruj</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>&amp;Reset / Idle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Reset / Idle</translation>

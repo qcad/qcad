@@ -260,9 +260,9 @@ public:
 
     QString getTempBlockName() const;
     QString getBlockName(RBlock::Id blockId) const;
-    QSet<QString> getBlockNames() const;
+    QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING) const;
     QString getLayerName(RLayer::Id layerId) const;
-    QSet<QString> getLayerNames() const;
+    QSet<QString> getLayerNames(const QString& rxStr = RDEFAULT_QSTRING) const;
     QSet<QString> getViewNames() const;
 
     bool hasLayer(const QString& layerName) const;

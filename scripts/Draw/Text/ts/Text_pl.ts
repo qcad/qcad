@@ -159,7 +159,7 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation type="unfinished">Inne...</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+131"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--

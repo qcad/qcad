@@ -155,7 +155,7 @@ Co&amp;lar</translatorcomment>
         <translation>Outros...</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+131"/>
         <source>Degree</source>
         <translatorcomment>--exact match--
 --file: SplineControlPoints_pt.ts--

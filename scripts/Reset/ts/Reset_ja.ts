@@ -9,7 +9,7 @@
         <translation>リセット</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>&amp;Reset / Idle</source>
         <translation>&amp;R リセット/待ち状態</translation>
     </message>

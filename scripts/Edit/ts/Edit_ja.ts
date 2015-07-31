@@ -29,7 +29,7 @@ QCADを再起動してください。</translation>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../ClipboardOperation.js" line="+41"/>
+        <location filename="../ClipboardOperation.js" line="+52"/>
         <source>Reference point</source>
         <translation>基準点</translation>
     </message>

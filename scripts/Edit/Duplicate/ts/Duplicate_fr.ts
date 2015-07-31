@@ -8,5 +8,15 @@
         <source>&amp;Duplicate</source>
         <translation>&amp;Dupliquer</translation>
     </message>
+    <message>
+        <location filename="../Duplicate.js" line="+55"/>
+        <source>1 entity duplicated</source>
+        <translation>Une entité a été dupliqué</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 entities duplicated</source>
+        <translation>%1 entités ont été dupliqués</translation>
+    </message>
 </context>
 </TS>

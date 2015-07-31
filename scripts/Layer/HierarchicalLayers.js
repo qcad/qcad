@@ -32,10 +32,10 @@ HierarchicalLayers.getChildLayerNames = function(doc, layerName, recursive) {
     }
 
     var ret = [];
+    var prefix = layerName + HierarchicalLayers.separator;
     var names = doc.getLayerNames();
     for (var i=0; i<names.length; i++) {
         var name = names[i];
-        var prefix = layerName + HierarchicalLayers.separator;
         if (name.startsWith(prefix)) {
             if (recursive || !name.substring(prefix.length).contains(HierarchicalLayers.separator)) {
                 ret.push(name);

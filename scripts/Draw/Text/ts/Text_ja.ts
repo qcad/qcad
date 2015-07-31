@@ -110,7 +110,7 @@
         <translation>その他...</translation>
     </message>
     <message>
-        <location line="+130"/>
+        <location line="+131"/>
         <source>Degree</source>
         <translation>角度</translation>
     </message>

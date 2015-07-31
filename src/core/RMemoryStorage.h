@@ -134,11 +134,11 @@ public:
     virtual QVariant getKnownVariable(RS::KnownVariable key) const;
 
     virtual QString getLayerName(RLayer::Id layerId) const;
-    virtual QSet<QString> getLayerNames() const;
+    virtual QSet<QString> getLayerNames(const QString& rxStr = RDEFAULT_QSTRING) const;
     virtual RLayer::Id getLayerId(const QString& layerName) const;
 
     virtual QString getBlockName(RBlock::Id blockId) const;
-    virtual QSet<QString> getBlockNames() const;
+    virtual QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING) const;
     virtual RBlock::Id getBlockId(const QString& blockName) const;
 
     virtual QString getViewName(RView::Id viewId) const;

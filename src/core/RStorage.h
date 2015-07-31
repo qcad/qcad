@@ -40,6 +40,11 @@
 #include "RUcs.h"
 #include "RView.h"
 
+#ifndef RDEFAULT_QSTRING
+#define RDEFAULT_QSTRING QString()
+#endif
+
+
 
 /**
  * This is the abstract base class for all storage implementations.
@@ -317,7 +322,7 @@ public:
     virtual double getLinetypeScale() const;
 
     virtual QString getBlockName(RBlock::Id blockId) const = 0;
-    virtual QSet<QString> getBlockNames() const = 0;
+    virtual QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING) const = 0;
     virtual RBlock::Id getBlockId(const QString& blockName) const = 0;
     virtual bool hasBlock(const QString& blockName) const;
 
@@ -327,7 +332,7 @@ public:
     virtual bool hasView(const QString& viewName) const;
 
     virtual QString getLayerName(RLayer::Id layerId) const = 0;
-    virtual QSet<QString> getLayerNames() const = 0;
+    virtual QSet<QString> getLayerNames(const QString& rxStr = RDEFAULT_QSTRING) const = 0;
     virtual RLayer::Id getLayerId(const QString& layerName) const = 0;
     virtual bool hasLayer(const QString& layerName) const;
 

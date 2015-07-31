@@ -683,8 +683,8 @@ QString RDocument::getBlockName(RBlock::Id blockId) const {
     return storage.getBlockName(blockId);
 }
 
-QSet<QString> RDocument::getBlockNames() const {
-    return storage.getBlockNames();
+QSet<QString> RDocument::getBlockNames(const QString& rxStr) const {
+    return storage.getBlockNames(rxStr);
 }
 
 void RDocument::setCurrentView(RView::Id viewId) {
@@ -711,8 +711,8 @@ QString RDocument::getLayerName(RLayer::Id layerId) const {
     return storage.getLayerName(layerId);
 }
 
-QSet<QString> RDocument::getLayerNames() const {
-    return storage.getLayerNames();
+QSet<QString> RDocument::getLayerNames(const QString& rxStr) const {
+    return storage.getLayerNames(rxStr);
 }
 
 QSet<QString> RDocument::getViewNames() const {

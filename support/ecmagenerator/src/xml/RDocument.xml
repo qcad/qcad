@@ -846,7 +846,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QSet &lt; QString &gt;"
-      isPureVirtual="false" />
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="rx"
+        hasDefault="true" default="RDEFAULT_QSTRING"
+        isConst="true" />
+      </variant>
     </method>
     <method name="getLayerName" cppName="getLayerName"
     specifier="public" isStatic="false" isVirtual="false"
@@ -860,7 +864,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QSet &lt; QString &gt;"
-      isPureVirtual="false" />
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="rx"
+        hasDefault="true" default="RDEFAULT_QSTRING"
+        isConst="true" />
+      </variant>
     </method>
     <method name="getViewNames" cppName="getViewNames"
     specifier="public" isStatic="false" isVirtual="false"
