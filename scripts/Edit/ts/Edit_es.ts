@@ -29,7 +29,7 @@ para aplicar los cambios.</translation>
 <context>
     <name>ClipboardOperation</name>
     <message>
-        <location filename="../ClipboardOperation.js" line="+52"/>
+        <location filename="../ClipboardOperation.js" line="+41"/>
         <source>Reference point</source>
         <translation>Punto de referencia</translation>
     </message>
