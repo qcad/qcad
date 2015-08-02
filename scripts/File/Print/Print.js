@@ -250,8 +250,6 @@ Print.prototype.print = function(pdfFile) {
         transform.translate(-paperBorder.x(), -paperBorder.y()-paperBorder.height());
 
         // apply user defined scale:
-        // offset is NOT applied here to avoid huge values in transformation matrix:
-        transform.translate(-1*scale*unitScale, -1*scale*unitScale);
         transform.scale(scale, scale);
 
         // scale drawing unit to mm:
