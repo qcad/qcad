@@ -16,7 +16,7 @@
     <message>
         <location filename="../Scale.js" line="-11"/>
         <source>Focus point</source>
-        <translation>Fukuspunkt</translation>
+        <translation>Fokuspunkt</translation>
     </message>
     <message>
         <location line="+21"/>
