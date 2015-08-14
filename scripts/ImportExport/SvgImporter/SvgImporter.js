@@ -133,7 +133,7 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
 
     // handle transforms:
     var transformAttr = atts.value("transform");
-    qDebug("transformAttr: ", transformAttr);
+    //qDebug("transformAttr: ", transformAttr);
     var newTransform = new QTransform();
     if (this.transformStack.length!==0) {
         newTransform = this.transformStack[this.transformStack.length-1];
@@ -141,7 +141,7 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
     if (transformAttr!=="") {
         // got transform attribute: update transform stack:
         var transform = this.getTransform(transformAttr);
-        qDebug("trans: ", transform);
+        //qDebug("trans: ", transform);
         transform.operator_multiply_assign(newTransform);
         newTransform = transform;
     }
@@ -362,6 +362,12 @@ SvgImporter.prototype.importShape = function(shape) {
 
     shape.scale(new RVector(1.0, -1.0));
     shape.scale(new RVector(this.resolutionScale, this.resolutionScale));
+
+    if (isEllipseShape(shape)) {
+        if (!isNumber(shape.getRatio())) {
+            return;
+        }
+    }
 
     var entity = shapeToEntity(this.getDocument(), shape);
 
@@ -586,12 +592,12 @@ SvgImporter.prototype.importPath = function(dData) {
             break;
 
         case 'c':
-            qDebug(coords.join(" | "));
+            //qDebug(coords.join(" | "));
             for (k=0; k<coords.length; k+=6) {
-                qDebug([ox, oy,
-                       coords[k+0] + x, coords[k+1] + y,
-                       coords[k+2] + x, coords[k+3] + y,
-                       coords[k+4] + x, coords[k+5] + y].join(" | "));
+//                qDebug([ox, oy,
+//                       coords[k+0] + x, coords[k+1] + y,
+//                       coords[k+2] + x, coords[k+3] + y,
+//                       coords[k+4] + x, coords[k+5] + y].join(" | "));
                 this.importBezier(ox, oy,
                                   coords[k+0] + x, coords[k+1] + y,
                                   coords[k+2] + x, coords[k+3] + y,
