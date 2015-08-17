@@ -64,6 +64,7 @@ RDocumentInterface::RDocumentInterface(RDocument& document)
     currentSnapRestriction(NULL),
     relativeZero(RVector(0,0)),
     relativeZeroLocked(false),
+    snapLocked(false),
     cursorPosition(RVector::invalid),
     suspended(false),
     allowUpdate(true),
@@ -1577,6 +1578,35 @@ void RDocumentInterface::unlockRelativeZero() {
  */
 bool RDocumentInterface::isRelativeZeroLocked() const {
     return relativeZeroLocked;
+}
+
+/**
+ * Locks the current snap function so it should not be changed automatically to auto snap.
+ */
+void RDocumentInterface::lockSnap() {
+    snapLocked = true;
+}
+
+/**
+ * Unlocks the current snap function so it should be changed automatically to auto snap
+ * whenever a new tool is started.
+ */
+void RDocumentInterface::unlockSnap() {
+    snapLocked = false;
+}
+
+/**
+ * Toggles snap lock.
+ */
+void RDocumentInterface::toggleSnapLock() {
+    snapLocked = !snapLocked;
+}
+
+/**
+ * \return True if snap is locked and should never be changed automatically.
+ */
+bool RDocumentInterface::isSnapLocked() const {
+    return snapLocked;
 }
 
 /**

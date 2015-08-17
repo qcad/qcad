@@ -268,6 +268,11 @@
     <function_decl><type><name>void</name></type> <name>unlockRelativeZero</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>isRelativeZeroLocked</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>void</name></type> <name>lockSnap</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>unlockSnap</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>toggleSnapLock</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isSnapLocked</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
     <function_decl><type><name>RVector</name></type> <name>getCursorPosition</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setCursorPosition</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setCursorOverride</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
@@ -338,6 +343,7 @@
     <decl_stmt><decl><type><name>RVector</name></type> <name>lastPosition</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>relativeZero</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>relativeZeroLocked</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>snapLocked</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>cursorPosition</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RUcs</name></type> <name>currentUcs</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>currentUcsName</name></decl>;</decl_stmt>

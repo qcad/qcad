@@ -271,6 +271,14 @@
             
             REcmaHelper::registerFunction(&engine, proto, isRelativeZeroLocked, "isRelativeZeroLocked");
             
+            REcmaHelper::registerFunction(&engine, proto, lockSnap, "lockSnap");
+            
+            REcmaHelper::registerFunction(&engine, proto, unlockSnap, "unlockSnap");
+            
+            REcmaHelper::registerFunction(&engine, proto, toggleSnapLock, "toggleSnapLock");
+            
+            REcmaHelper::registerFunction(&engine, proto, isSnapLocked, "isSnapLocked");
+            
             REcmaHelper::registerFunction(&engine, proto, getCursorPosition, "getCursorPosition");
             
             REcmaHelper::registerFunction(&engine, proto, setCursorPosition, "setCursorPosition");
@@ -7326,6 +7334,187 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::isRelativeZeroLocked", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::lockSnap
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::lockSnap", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::lockSnap";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("lockSnap", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->lockSnap();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.lockSnap().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::lockSnap", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::unlockSnap
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::unlockSnap", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::unlockSnap";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("unlockSnap", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->unlockSnap();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.unlockSnap().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::unlockSnap", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::toggleSnapLock
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::toggleSnapLock", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::toggleSnapLock";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("toggleSnapLock", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->toggleSnapLock();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.toggleSnapLock().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::toggleSnapLock", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::isSnapLocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::isSnapLocked", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::isSnapLocked";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("isSnapLocked", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSnapLocked();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.isSnapLocked().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::isSnapLocked", context, engine);
             return result;
         }
          QScriptValue

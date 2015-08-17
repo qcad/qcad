@@ -267,6 +267,11 @@ public:
     void unlockRelativeZero();
     bool isRelativeZeroLocked() const;
 
+    void lockSnap();
+    void unlockSnap();
+    void toggleSnapLock();
+    bool isSnapLocked() const;
+
     RVector getCursorPosition() const;
     void setCursorPosition(const RVector& p);
     void setCursorOverride(bool on);
@@ -337,6 +342,7 @@ private:
     RVector lastPosition;
     RVector relativeZero;
     bool relativeZeroLocked;
+    bool snapLocked;
     RVector cursorPosition;
     RUcs currentUcs;
     QString currentUcsName;

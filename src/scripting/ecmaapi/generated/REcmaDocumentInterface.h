@@ -352,6 +352,18 @@
         isRelativeZeroLocked
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        lockSnap
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        unlockSnap
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        toggleSnapLock
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isSnapLocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getCursorPosition
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -584,7 +584,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QSet &lt; QString &gt;"
       isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name="rx"
+        <arg type="QString &amp;" typeName="QString" name="rxStr"
         hasDefault="true" default="RDEFAULT_QSTRING"
         isConst="true" />
       </variant>
@@ -610,7 +610,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QSet &lt; QString &gt;"
       isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name="rx"
+        <arg type="QString &amp;" typeName="QString" name="rxStr"
         hasDefault="true" default="RDEFAULT_QSTRING"
         isConst="true" />
       </variant>

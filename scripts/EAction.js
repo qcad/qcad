@@ -101,24 +101,26 @@ EAction.prototype.beginEvent = function() {
 
     // reset snap to auto snap / no restriction:
     if (isNull(this.getGuiAction())
-            || (this.getGuiAction().getGroup() !== "snaps" && this
-                    .getGuiAction().getGroup() !== "snaprestrictions")) {
+            || (this.getGuiAction().getGroup() !== "snaps" &&
+                this.getGuiAction().getGroup() !== "snaprestrictions" &&
+                this.getGuiAction().property("NoSnapReset")!==true)) {
 
         var di = this.getDocumentInterface();
-        if (isNull(di)) {
-            return;
-        }
-        var guiAction = RGuiAction.getByScriptFile("scripts/Snap/SnapAuto/SnapAuto.js");
-        if (!isNull(guiAction)) {
-            guiAction.slotTrigger();
-        }
-        di.setSnap(new RSnapAuto());
+        if (!isNull(di)) {
+            if (!di.isSnapLocked()) {
+                var guiAction = RGuiAction.getByScriptFile("scripts/Snap/SnapAuto/SnapAuto.js");
+                if (!isNull(guiAction)) {
+                    guiAction.slotTrigger();
+                }
+                di.setSnap(new RSnapAuto());
 
-        guiAction = RGuiAction.getByScriptFile("scripts/Snap/RestrictOff/RestrictOff.js");
-        if (!isNull(guiAction)) {
-            guiAction.slotTrigger();
+                guiAction = RGuiAction.getByScriptFile("scripts/Snap/RestrictOff/RestrictOff.js");
+                if (!isNull(guiAction)) {
+                    guiAction.slotTrigger();
+                }
+                di.setSnapRestriction(new RRestrictOff(di));
+            }
         }
-        di.setSnapRestriction(new RRestrictOff(di));
     }
 };
 
