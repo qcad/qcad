@@ -4,14 +4,12 @@
 <context>
     <name>XLineVertical</name>
     <message>
-        <location filename="../XLineVerticalInit.js" line="+2"/>
-        <source>&amp;Vertical Construction Line</source>
-        <translation type="unfinished"></translation>
+        <source>Draw vertical construction line</source>
+        <translation>Nakresliť zvislú pomocnú/konštrukčnú čiaru</translation>
     </message>
     <message>
-        <location line="+4"/>
-        <source>Draw vertical construction line</source>
-        <translation type="unfinished"></translation>
+        <source>&amp;Vertical Construction Line</source>
+        <translation>&amp;Zvislá pomocná čiara</translation>
     </message>
 </context>
 </TS>
