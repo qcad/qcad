@@ -2305,6 +2305,9 @@ void DL_Dxf::writeHeader(DL_WriterA& dw) {
     case DL_Codes::AC1015:
         dw.dxfString(1, "AC1015");
         break;
+    case DL_Codes::AC1009_MIN:
+        // minimalistic DXF version is unidentified in file:
+        break;
     }
 
     // Newer version require that (otherwise a*cad crashes..)
