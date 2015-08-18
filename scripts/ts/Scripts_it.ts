@@ -67,7 +67,7 @@
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="+285"/>
+        <location line="+287"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
