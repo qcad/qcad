@@ -126,6 +126,7 @@ Projection.prototype.setState = function(state) {
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
     case Projection.State.SettingReferencePoint:
+        this.referencePoint = undefined;
         this.targetPoint = undefined;
         var trReferencePoint = qsTr("Reference point");
         this.setCommandPrompt(trReferencePoint);
@@ -134,6 +135,7 @@ Projection.prototype.setState = function(state) {
         break;
 
     case Projection.State.SettingTargetPoint:
+        this.targetPoint = undefined;
         var trTargetPoint = qsTr("Target point");
         this.setCommandPrompt(trTargetPoint);
         this.setLeftMouseTip(trTargetPoint);
@@ -162,6 +164,7 @@ Projection.prototype.pickCoordinate = function(event, preview) {
     switch (this.state) {
     case Projection.State.SettingReferencePoint:
         this.referencePoint = event.getModelPosition();
+        this.clearCache();
         if (preview) {
             this.updatePreview();
         }
