@@ -19,12 +19,12 @@
         <translation>&amp;Projekcija</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+41"/>
         <source>Reference point</source>
         <translation>Refernenčna točka</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Target point</source>
         <translation>Ciljna točka</translation>
     </message>

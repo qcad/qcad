@@ -19,12 +19,12 @@
         <translation>&amp;Proyección</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+41"/>
         <source>Reference point</source>
         <translation>Punto de referencia</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Target point</source>
         <translation>Punto objetivo</translation>
     </message>

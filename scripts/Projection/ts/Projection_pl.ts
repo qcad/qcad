@@ -22,7 +22,7 @@
         <translation type="unfinished">Projekcja</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+41"/>
         <source>Reference point</source>
         <translatorcomment>--google--
 Wskaż punkt odniesienia
@@ -31,7 +31,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation type="unfinished">Punkt odniesienia</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Target point</source>
         <translatorcomment>--google--
 Wskaż punkt docelowy</translatorcomment>

@@ -62,7 +62,7 @@
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="+287"/>
+        <location line="+285"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktiivinen työkalu:</translation>

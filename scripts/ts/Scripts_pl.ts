@@ -75,7 +75,7 @@ Anuluj
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location line="+287"/>
+        <location line="+285"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>

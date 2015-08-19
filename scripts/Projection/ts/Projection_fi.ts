@@ -19,12 +19,12 @@
         <translation>&amp;Projektio</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+41"/>
         <source>Reference point</source>
         <translation>Viitepiste</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+7"/>
         <source>Target point</source>
         <translation>Kohdepiste</translation>
     </message>
