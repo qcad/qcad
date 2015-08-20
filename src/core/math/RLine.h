@@ -81,6 +81,9 @@ public:
     void setLength(double l);
     void setAngle(double a);
 
+    bool isVertical(double tolerance = RS::AngleTolerance) const;
+    bool isHorizontal(double tolerance = RS::AngleTolerance) const;
+
     virtual double getDirection1() const;
     virtual double getDirection2() const;
 

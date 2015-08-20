@@ -40,7 +40,7 @@ public:
     virtual double getTAtPoint(const RSpline& spline, const RVector& point) = 0;
     virtual double getTAtDistance(const RSpline& spline, double dist) = 0;
     virtual RVector getClosestPointOnShape(const RSpline& spline, const RVector& point, bool limited = true) = 0;
-    //virtual QList<RVector> getIntersectionPoints(const RSpline& spline, const RShape& other, bool limited=true, bool same=false) = 0;
+    virtual QList<RVector> getIntersectionPoints(const RSpline& spline, const RShape& other, bool limited=true, bool same=false) = 0;
 };
 
 #endif

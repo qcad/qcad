@@ -77,6 +77,14 @@ void RLine::setAngle(double a) {
     endPoint = startPoint + RVector::createPolar(getLength(), a);
 }
 
+bool RLine::isVertical(double tolerance) const {
+    return RMath::fuzzyCompare(startPoint.y, endPoint.y, tolerance);
+}
+
+bool RLine::isHorizontal(double tolerance) const {
+    return RMath::fuzzyCompare(startPoint.x, endPoint.x, tolerance);
+}
+
 double RLine::getDirection1() const {
     return startPoint.getAngleTo(endPoint);
 }

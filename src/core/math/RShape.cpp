@@ -29,6 +29,7 @@
 #include "RRay.h"
 #include "RShape.h"
 #include "RSpline.h"
+#include "RSplineProxy.h"
 #include "RXLine.h"
 
 double RShape::twopi = M_PI*2;
@@ -159,15 +160,15 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
     // spline / spline intersections disabled for now (too slow)
     // for some operations where performance is not crucial, spline/spline
     // intersection calculation can be forced:
-    if (!force) {
-        const RSpline* spline1 = dynamic_cast<const RSpline*> (&shape1);
-        if (spline1 != NULL) {
-            const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
-            if (spline2 != NULL) {
-                return empty;
-            }
-        }
-    }
+//    if (!force) {
+//        const RSpline* spline1 = dynamic_cast<const RSpline*> (&shape1);
+//        if (spline1 != NULL) {
+//            const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
+//            if (spline2 != NULL) {
+//                return empty;
+//            }
+//        }
+//    }
 
     {
         const RLine* line1 = dynamic_cast<const RLine*> (&shape1);
@@ -477,6 +478,10 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
             if (xline2 != NULL) {
                 return getIntersectionPointsLS(xline2->getLineShape(), *spline1, false);
             }
+            const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
+            if (spline2 != NULL) {
+                return getIntersectionPointsSS(*spline1, *spline2, false);
+            }
         }
     }
 
@@ -779,11 +784,11 @@ QList<RVector> RShape::getIntersectionPointsLS(const RLine& line1,
             const RSpline& spline2, bool limited) {
 //    qDebug() << "RShape::getIntersectionPointsLS";
 
-//    QList<RVector> res;
-//    if (spline2.getIntersectionPointsProxy(res, line1, limited, false)) {
-//        qDebug() << "RShape::getIntersectionPointsLS: from proxy";
-//        return res;
-//    }
+    if (RSpline::hasProxy()) {
+        qDebug() << "RShape::getIntersectionPointsLS: from proxy";
+        RSplineProxy* proxy = RSpline::getSplineProxy();
+        return proxy->getIntersectionPoints(spline2, line1, limited);
+    }
 
     return getIntersectionPointsLX(line1, spline2, limited);
 }
@@ -1544,6 +1549,18 @@ QList<RVector> RShape::getIntersectionPointsEX(const REllipse& ellipse1,
     }
 
     return res;
+}
+
+QList<RVector> RShape::getIntersectionPointsSS(const RSpline& spline1,
+        const RSpline& spline2, bool limited, bool same) {
+
+    if (RSpline::hasProxy()) {
+        qDebug() << "RShape::getIntersectionPointsSS: from proxy";
+        RSplineProxy* proxy = RSpline::getSplineProxy();
+        return proxy->getIntersectionPoints(spline1, spline2, limited);
+    }
+
+    return getIntersectionPointsXX(spline1, spline2, limited);
 }
 
 /**

@@ -191,6 +191,13 @@ public:
     RVector getFloor() const;
     RVector getCeil() const;
 
+    bool lteXY(const RVector& v) const {
+        return RVector::lessThanEqualXY(*this, v);
+    }
+    bool gteXY(const RVector& v) const {
+        return RVector::greaterThanEqualXY(*this, v);
+    }
+
     static bool containsFuzzy(const QList<RVector>& vectors, const RVector& v, double tol = RS::PointTolerance);
 
     static RVector getMinimum(const QList<RVector>& vectors);
@@ -234,6 +241,15 @@ public:
     static bool greaterThanY(const RVector& v1, const RVector& v2) {
         return v1.y > v2.y;
     }
+
+    static bool lessThanEqualXY(const RVector& v1, const RVector& v2) {
+        return v1.x <= v2.x && v2.y <= v2.y;
+    }
+
+    static bool greaterThanEqualXY(const RVector& v1, const RVector& v2) {
+        return v1.x >= v2.x && v2.y >= v2.y;
+    }
+
 
     static QList<RVector> getSortedByDistance(const QList<RVector>& list, const RVector& v);
     class RVectorDistanceSort {

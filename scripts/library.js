@@ -1262,6 +1262,27 @@ Array.prototype.sortNumerical = function() {
     Array.prototype.sort.call(this, function(a,b) { return a - b });
 }
 
+Array.alphaNumericalSorter = function(a, b) {
+    var aVal = parseInt(a);
+    var bVal = parseInt(b);
+    if (isNaN(aVal) && isNaN(bVal)) {
+        // alphabetical:
+        return a.localeCompare(b);
+    }
+    else if (isNaN(aVal)) {
+        // text before numbers:
+        return -1;
+    }
+    else if (isNaN(bVal)) {
+        // numbers after texts:
+        return 1;
+    }
+    else {
+        // nummerical:
+        return aVal - bVal;
+    }
+}
+
 /* Finds the intersection of two sorted arrays.
  *
  * \param a first array, must already be sorted
