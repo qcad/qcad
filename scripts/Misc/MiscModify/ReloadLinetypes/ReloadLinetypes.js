@@ -32,10 +32,6 @@ ReloadLinetypes.prototype.beginEvent = function() {
     EAction.prototype.beginEvent.call(this);
 
     var doc = this.getDocument();
-//    var transaction = new RTransaction(doc.getStorage(), "Reload linetypes", true);
-//    doc.initLinetypes(transaction);
-//    transaction.end();
-
     var di = this.getDocumentInterface();
 
     var lts = doc.getDefaultLinetypes();
@@ -44,8 +40,6 @@ ReloadLinetypes.prototype.beginEvent = function() {
         op.addObject(lts[i]);
     }
     di.applyOperation(op);
-
-    //di.regenerateScenes();
 
     this.terminate();
 };
