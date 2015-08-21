@@ -175,6 +175,10 @@ public:
     RVector operator -() const;
     RVector getNegated() const;
 
+    double dot(const RVector& other) {
+        return RVector::getDotProduct(*this, other);
+    }
+
     RVector normalize();
     RVector getNormalized() const;
 

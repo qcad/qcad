@@ -1360,6 +1360,11 @@ void RSpline::updateBoundingBox() const {
  * \return List of bezier spline segments which together represent this curve.
  */
 QList<RSpline> RSpline::getBezierSegments() const {
+    // spline is a single bezier segment:
+    if (countControlPoints()==getDegree()+1) {
+        return QList<RSpline>() << *this;
+    }
+
     updateInternal();
 
     QList<RSpline> ret;

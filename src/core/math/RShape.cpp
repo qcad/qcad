@@ -356,7 +356,7 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
             }
             const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
             if (spline2 != NULL) {
-                return getIntersectionPointsCS(*circle1, *spline2);
+                return getIntersectionPointsCS(*circle1, *spline2, limited);
             }
             const RRay* ray2 = dynamic_cast<const RRay*> (&shape2);
             if (ray2 != NULL) {
@@ -480,7 +480,7 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
             }
             const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
             if (spline2 != NULL) {
-                return getIntersectionPointsSS(*spline1, *spline2, false);
+                return getIntersectionPointsSS(*spline1, *spline2, limited);
             }
         }
     }
@@ -920,10 +920,10 @@ QList<RVector> RShape::getIntersectionPointsAT(const RArc& arc1,
 QList<RVector> RShape::getIntersectionPointsAS(const RArc& arc1,
             const RSpline& spline2, bool limited) {
 
-//    QList<RVector> res;
-//    if (spline2.getIntersectionPointsProxy(res, arc1, limited, false)) {
-//        return res;
-//    }
+    if (RSpline::hasProxy()) {
+        RSplineProxy* proxy = RSpline::getSplineProxy();
+        return proxy->getIntersectionPoints(spline2, arc1, limited);
+    }
 
     return getIntersectionPointsAX(arc1, spline2, limited);
 }
@@ -1029,10 +1029,10 @@ QList<RVector> RShape::getIntersectionPointsCE(const RCircle& circle1,
 QList<RVector> RShape::getIntersectionPointsCS(const RCircle& circle1,
             const RSpline& spline2, bool limited) {
 
-//    QList<RVector> res;
-//    if (spline2.getIntersectionPointsProxy(res, circle1, limited, false)) {
-//        return res;
-//    }
+    if (RSpline::hasProxy()) {
+        RSplineProxy* proxy = RSpline::getSplineProxy();
+        return proxy->getIntersectionPoints(spline2, circle1, limited);
+    }
 
     return getIntersectionPointsCX(circle1, spline2, limited);
 }
@@ -1524,10 +1524,10 @@ QList<RVector> RShape::getIntersectionPointsEE(const REllipse& ellipse1, const R
 QList<RVector> RShape::getIntersectionPointsES(const REllipse& ellipse1,
             const RSpline& spline2, bool limited) {
 
-//    QList<RVector> res;
-//    if (spline2.getIntersectionPointsProxy(res, ellipse1, limited, false)) {
-//        return res;
-//    }
+    if (RSpline::hasProxy()) {
+        RSplineProxy* proxy = RSpline::getSplineProxy();
+        return proxy->getIntersectionPoints(spline2, ellipse1, limited);
+    }
 
     return getIntersectionPointsEX(ellipse1, spline2, limited);
 }
@@ -1555,7 +1555,6 @@ QList<RVector> RShape::getIntersectionPointsSS(const RSpline& spline1,
         const RSpline& spline2, bool limited, bool same) {
 
     if (RSpline::hasProxy()) {
-        qDebug() << "RShape::getIntersectionPointsSS: from proxy";
         RSplineProxy* proxy = RSpline::getSplineProxy();
         return proxy->getIntersectionPoints(spline1, spline2, limited);
     }
