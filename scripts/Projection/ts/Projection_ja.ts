@@ -19,12 +19,12 @@
         <translation>&amp;P 投影</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+42"/>
         <source>Reference point</source>
         <translation>基準点</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+8"/>
         <source>Target point</source>
         <translation>ターゲット点</translation>
     </message>

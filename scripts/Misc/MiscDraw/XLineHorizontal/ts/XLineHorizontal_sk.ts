@@ -4,10 +4,12 @@
 <context>
     <name>XLineHorizontal</name>
     <message>
+        <location filename="../XLineHorizontalInit.js" line="+2"/>
         <source>&amp;Horizontal Construction Line</source>
         <translation>&amp;Vodorovná pomocná čiara</translation>
     </message>
     <message>
+        <location line="+4"/>
         <source>Draw horizontal construction line</source>
         <translation>Nakresliť vodorovnú pomocnú/konštrukčnú čiaru</translation>
     </message>

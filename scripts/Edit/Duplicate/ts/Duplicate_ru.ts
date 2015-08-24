@@ -11,12 +11,12 @@
     <message>
         <location filename="../Duplicate.js" line="+55"/>
         <source>1 entity duplicated</source>
-        <translation type="unfinished"></translation>
+        <translation>1 объект дублируется</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 entities duplicated</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 объекта(ов) дублируется</translation>
     </message>
 </context>
 </TS>
