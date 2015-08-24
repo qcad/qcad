@@ -142,6 +142,9 @@ public:
 
     virtual RVector getVectorTo(const RVector& point,
             bool limited = true, double strictRange = RMAXDOUBLE) const;
+    virtual bool isOnShape(const RVector& point,
+                           bool limited = true,
+                           double tolerance = RDEFAULT_TOLERANCE_1E_MIN4) const;
 
     virtual bool move(const RVector& offset);
     virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR);

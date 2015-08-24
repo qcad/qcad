@@ -908,6 +908,17 @@ RVector RSpline::getVectorTo(const RVector& point, bool limited, double strictRa
     return ret;
 }
 
+bool RSpline::isOnShape(const RVector& point, bool limited, double tolerance) const {
+    if (hasProxy()) {
+        double t = getTAtPoint(point);
+        RVector p = getPointAt(t);
+        return point.getDistanceTo(p) < tolerance;
+    }
+    else {
+        return RShape::isOnShape(point, limited, tolerance);
+    }
+}
+
 bool RSpline::move(const RVector& offset) {
     for (int i=0; i<controlPoints.size(); i++) {
         controlPoints[i].move(offset);
@@ -1507,6 +1518,8 @@ void RSpline::print(QDebug dbg) const {
     dbg.nospace() << ", end point: " << getEndPoint();
     dbg.nospace() << ", start tan: " << getTangentAtStart();
     dbg.nospace() << ", end tan: " << getTangentAtEnd();
+    dbg.nospace() << ", t_min: " << getTMin();
+    dbg.nospace() << ", t_max: " << getTMax();
 
     QList<RVector> controlPoints = getControlPointsWrapped();
     dbg.nospace() << ",\ncontrolPoints (" << controlPoints.count() << "): ";
