@@ -32,12 +32,21 @@
 #include "RVector.h"
 
 #ifndef M_PI
-#define M_PI        3.14159265358979323846
+#define M_PI        3.14159265358979323846264338327950288
 #endif
 
 #ifndef M_PI_2
-#define M_PI_2        1.57079632679489661923
+#define M_PI_2      1.57079632679489661923132169163975144
 #endif
+
+#ifndef M_LN10
+#define M_LN10      2.30258509299404568401799145468436421
+#endif
+
+#ifndef M_LN2
+#define M_LN2       0.693147180559945309417232121458176568
+#endif
+
 
 
 // Somewhere in the guts of Visual C++ a macro 'max' is defined which
