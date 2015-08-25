@@ -14,7 +14,6 @@ CONFIG -= app_bundle
 
 INCLUDEPATH += ../src
 HEADERS = \
-    test_creationclass.h \
     ../src/dl_attributes.h \
     ../src/dl_codes.h \
     ../src/dl_creationadapter.h \
@@ -28,7 +27,6 @@ HEADERS = \
 
 SOURCES = \
     main.cpp \
-    test_creationclass.cpp \
     ../src/dl_dxf.cpp \
     ../src/dl_writer_ascii.cpp
 

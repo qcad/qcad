@@ -12,24 +12,6 @@ AC1015
 $HANDSEED
   5
 FFFF
-  9
-$INSUNITS
- 70
-4
-  9
-$DIMEXE
- 40
-1.25
-  9
-$TEXTSTYLE
-  7
-Standard
-  9
-$LIMMIN
- 10
-0.0
- 20
-0.0
   0
 ENDSEC
   0
@@ -161,7 +143,7 @@ LTYPE
 100
 AcDbSymbolTable
  70
-25
+3
   0
 LTYPE
   5
@@ -297,6 +279,16 @@ F
   0
 ENDTAB
   0
+TABLE
+  2
+STYLE
+  5
+3
+100
+AcDbSymbolTable
+ 70
+1
+  0
 STYLE
   5
 33
@@ -325,9 +317,11 @@ standard
 1001
 ACAD
 1000
-standard
+txt
 1071
 0
+  0
+ENDTAB
   0
 TABLE
   2
