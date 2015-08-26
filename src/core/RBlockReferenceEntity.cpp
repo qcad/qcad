@@ -63,16 +63,16 @@ RBlockReferenceEntity::RBlockReferenceEntity(RDocument* document,
 //      }
 //      id = block->getId();
 //  }
-    RDebug::incCounter("RRBlockReferenceEntity");
+    RDebug::incCounter("RBlockReferenceEntity");
 }
 
 RBlockReferenceEntity::RBlockReferenceEntity(const RBlockReferenceEntity& other) : REntity(other) {
-    RDebug::incCounter("RRBlockReferenceEntity");
+    RDebug::incCounter("RBlockReferenceEntity");
     data = other.data;
 }
 
 RBlockReferenceEntity::~RBlockReferenceEntity() {
-    RDebug::decCounter("RRBlockReferenceEntity");
+    RDebug::decCounter("RBlockReferenceEntity");
 }
 
 void RBlockReferenceEntity::init() {
