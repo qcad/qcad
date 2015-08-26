@@ -89,7 +89,7 @@ SOURCES += \
     ../opennurbs_polyedgecurve.cpp \
     ../opennurbs_polyline.cpp \
     ../opennurbs_polylinecurve.cpp \
-    ../opennurbs_precompiledheader.cpp \
+    #../opennurbs_precompiledheader.cpp \
     ../opennurbs_quaternion.cpp \
     ../opennurbs_rand.cpp \
     ../opennurbs_revsurface.cpp \

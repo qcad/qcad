@@ -111,15 +111,18 @@
 #if defined(_M_X64) && defined(WIN32) && defined(WIN64)
 // 23 August 2007 Dale Lear
 
-#if defined(_INC_WINDOWS)
-// The user has included Microsoft's windows.h before opennurbs.h,
-// and windows.h has nested includes that unconditionally define WIN32.
-// Just undo the damage here or everybody that includes opennurbs.h after
-// windows.h has to fight with this Microsoft bug.
+// andrew: begin: fix for compilation on win64 / msvc2013:
+//#if defined(_INC_WINDOWS)
+//// The user has included Microsoft's windows.h before opennurbs.h,
+//// and windows.h has nested includes that unconditionally define WIN32.
+//// Just undo the damage here or everybody that includes opennurbs.h after
+//// windows.h has to fight with this Microsoft bug.
+//#undef WIN32
+//#else
+//#error do not define WIN32 for x64 builds
+//#endif
 #undef WIN32
-#else
-#error do not define WIN32 for x64 builds
-#endif
+// andrew: end
 
 // NOTE _WIN32 is defined for any type of Windows build
 #endif
