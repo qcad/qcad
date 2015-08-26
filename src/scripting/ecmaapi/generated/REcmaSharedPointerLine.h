@@ -118,6 +118,12 @@
         setAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isVertical
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isHorizontal
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDirection1
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

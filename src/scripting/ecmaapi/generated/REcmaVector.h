@@ -210,6 +210,9 @@
         getNegated
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        dot
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         normalize
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -238,6 +241,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getCeil
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        lteXY
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        gteXY
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         containsFuzzy
@@ -292,6 +301,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         greaterThanY
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        lessThanEqualXY
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        greaterThanEqualXY
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getSortedByDistance

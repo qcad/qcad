@@ -429,6 +429,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
+    <method name="dot" cppName="dot" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="other"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="normalize" cppName="normalize" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
@@ -493,6 +500,20 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getCeil" cppName="getCeil" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="lteXY" cppName="lteXY" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="gteXY" cppName="gteXY" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
     </method>
     <method name="containsFuzzy" cppName="containsFuzzy"
     specifier="public" isStatic="true" isVirtual="false"
@@ -675,6 +696,26 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="greaterThanY" cppName="greaterThanY"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="v2"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="lessThanEqualXY" cppName="lessThanEqualXY"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v1"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="v2"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="greaterThanEqualXY" cppName="greaterThanEqualXY"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">

@@ -71,6 +71,7 @@
          * This is the default mode.
          */</comment>
         <expr><name>PickCoordinate</name></expr>,
+        <expr><name>PickCoordinateNoSnap</name></expr>,
         <comment type="block">/**
          * Mouse click will pick an entity and trigger \ref entityPickEvent.
          */</comment>

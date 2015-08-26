@@ -82,6 +82,9 @@
     <function_decl><type><name>void</name></type> <name>setLength</name><parameter_list>(<param><decl><type><name>double</name></type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setAngle</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>bool</name></type> <name>isVertical</name><parameter_list>(<param><decl><type><name>double</name></type> <name>tolerance</name> =<init> <expr><name><name>RS</name>::<name>AngleTolerance</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isHorizontal</name><parameter_list>(<param><decl><type><name>double</name></type> <name>tolerance</name> =<init> <expr><name><name>RS</name>::<name>AngleTolerance</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
     <function_decl><type><name>virtual</name> <name>double</name></type> <name>getDirection1</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>double</name></type> <name>getDirection2</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 

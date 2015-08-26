@@ -570,6 +570,21 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
+    <method name="getIntersectionPointsSS"
+    cppName="getIntersectionPointsSS" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false">
+        <arg type="RSpline &amp;" typeName="RSpline" name="spline1"
+        isConst="true" />
+        <arg type="RSpline &amp;" typeName="RSpline" name="spline2"
+        isConst="true" />
+        <arg type="bool" typeName="bool" name="limited"
+        hasDefault="true" default="true" isConst="false" />
+        <arg type="bool" typeName="bool" name="same"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
     <method name="getIntersectionPointsXX"
     cppName="getIntersectionPointsXX" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

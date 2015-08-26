@@ -192,6 +192,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getNegated, "getNegated");
             
+            REcmaHelper::registerFunction(&engine, proto, dot, "dot");
+            
             REcmaHelper::registerFunction(&engine, proto, normalize, "normalize");
             
             REcmaHelper::registerFunction(&engine, proto, getNormalized, "getNormalized");
@@ -211,6 +213,10 @@
             REcmaHelper::registerFunction(&engine, proto, getFloor, "getFloor");
             
             REcmaHelper::registerFunction(&engine, proto, getCeil, "getCeil");
+            
+            REcmaHelper::registerFunction(&engine, proto, lteXY, "lteXY");
+            
+            REcmaHelper::registerFunction(&engine, proto, gteXY, "gteXY");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RVector*>(), *proto);
@@ -261,6 +267,10 @@
             REcmaHelper::registerFunction(&engine, &ctor, lessThanY, "lessThanY");
             
             REcmaHelper::registerFunction(&engine, &ctor, greaterThanY, "greaterThanY");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, lessThanEqualXY, "lessThanEqualXY");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, greaterThanEqualXY, "greaterThanEqualXY");
             
             REcmaHelper::registerFunction(&engine, &ctor, getSortedByDistance, "getSortedByDistance");
             
@@ -4517,6 +4527,78 @@
             return result;
         }
          QScriptValue
+        REcmaVector::dot
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::dot", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::dot";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RVector* self = 
+                        getSelf("dot", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RVector: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->dot(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.dot().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::dot", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaVector::normalize
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -5098,6 +5180,150 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaVector::getCeil", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::lteXY
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::lteXY", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::lteXY";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RVector* self = 
+                        getSelf("lteXY", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RVector: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->lteXY(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.lteXY().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::lteXY", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::gteXY
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::gteXY", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::gteXY";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RVector* self = 
+                        getSelf("gteXY", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RVector: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->gteXY(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.gteXY().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::gteXY", context, engine);
             return result;
         }
          QScriptValue
@@ -6547,6 +6773,180 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaVector::greaterThanY", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::lessThanEqualXY
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::lessThanEqualXY", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::lessThanEqualXY";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RVector: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RVector: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RVector::
+       lessThanEqualXY(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.lessThanEqualXY().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::lessThanEqualXY", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::greaterThanEqualXY
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::greaterThanEqualXY", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::greaterThanEqualXY";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RVector: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RVector: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RVector::
+       greaterThanEqualXY(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.greaterThanEqualXY().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::greaterThanEqualXY", context, engine);
             return result;
         }
          QScriptValue

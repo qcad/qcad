@@ -242,6 +242,9 @@
         getVectorTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isOnShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         move
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

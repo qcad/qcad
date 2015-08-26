@@ -91,7 +91,6 @@ RDocumentInterface::~RDocumentInterface() {
 //        currentSnap->hideUiOptions();
 //    }
 
-
     while (!currentActions.isEmpty()) {
         // make sure that UI options are removed, etc:
         currentActions.top()->suspendEvent();
@@ -824,9 +823,15 @@ void RDocumentInterface::commandEventPreview(RCommandEvent& event) {
 void RDocumentInterface::handleClickEvent(RAction& action, RMouseEvent& event) {
     if (event.button() == Qt::LeftButton && event.modifiers() == Qt::NoModifier) {
         switch (action.getClickMode()) {
-        case RAction::PickCoordinate: {
-                RCoordinateEvent ce(snap(event, false),
-                    event.getGraphicsScene(), event.getGraphicsView());
+        case RAction::PickCoordinate:
+        case RAction::PickCoordinateNoSnap: {
+                RCoordinateEvent ce(RVector(), event.getGraphicsScene(), event.getGraphicsView());
+                if (action.getClickMode()==RAction::PickCoordinateNoSnap) {
+                    ce.setModelPosition(event.getModelPosition());
+                }
+                else {
+                    ce.setModelPosition(snap(event, false));
+                }
                 if (ce.isValid()) {
                     cursorPosition = ce.getModelPosition();
                     action.coordinateEvent(ce);
@@ -858,9 +863,15 @@ void RDocumentInterface::handleClickEvent(RAction& action, RMouseEvent& event) {
  */
 void RDocumentInterface::previewClickEvent(RAction& action, RMouseEvent& event) {
     switch (action.getClickMode()) {
-        case RAction::PickCoordinate: {
-            RCoordinateEvent ce(snap(event, true),
-                event.getGraphicsScene(), event.getGraphicsView());
+        case RAction::PickCoordinate:
+        case RAction::PickCoordinateNoSnap: {
+            RCoordinateEvent ce(RVector(), event.getGraphicsScene(), event.getGraphicsView());
+            if (action.getClickMode()==RAction::PickCoordinateNoSnap) {
+                ce.setModelPosition(event.getModelPosition());
+            }
+            else {
+                ce.setModelPosition(snap(event, false));
+            }
             if (ce.isValid()) {
                 cursorPosition = ce.getModelPosition();
                 action.coordinateEventPreview(ce);

@@ -176,6 +176,10 @@
     <function_decl><type><name>RVector</name></type> <name>operator -</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>getNegated</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function><type><name>double</name></type> <name>dot</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>other</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name><name>RVector</name>::<name>getDotProduct</name></name><argument_list>(<argument><expr>*<name>this</name></expr></argument>, <argument><expr><name>other</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function_decl><type><name>RVector</name></type> <name>normalize</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>getNormalized</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
@@ -191,6 +195,13 @@
 
     <function_decl><type><name>RVector</name></type> <name>getFloor</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>getCeil</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function><type><name>bool</name></type> <name>lteXY</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RVector</name>::<name>lessThanEqualXY</name></name><argument_list>(<argument><expr>*<name>this</name></expr></argument>, <argument><expr><name>v</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>gteXY</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RVector</name>::<name>greaterThanEqualXY</name></name><argument_list>(<argument><expr>*<name>this</name></expr></argument>, <argument><expr><name>v</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
 
     <function_decl><type><name>static</name> <name>bool</name></type> <name>containsFuzzy</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>vectors</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>, <param><decl><type><name>double</name></type> <name>tol</name> =<init> <expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
@@ -235,6 +246,15 @@
     <function><type><name>static</name> <name>bool</name></type> <name>greaterThanY</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v2</name></decl></param>)</parameter_list> <block>{
         <return>return <expr><name>v1</name>.<name>y</name> &gt; <name>v2</name>.<name>y</name></expr>;</return>
     }</block></function>
+
+    <function><type><name>static</name> <name>bool</name></type> <name>lessThanEqualXY</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v2</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><name>v1</name>.<name>x</name> &lt;= <name>v2</name>.<name>x</name> &amp;&amp; <name>v2</name>.<name>y</name> &lt;= <name>v2</name>.<name>y</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>bool</name></type> <name>greaterThanEqualXY</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v1</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v2</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><name>v1</name>.<name>x</name> &gt;= <name>v2</name>.<name>x</name> &amp;&amp; <name>v2</name>.<name>y</name> &gt;= <name>v2</name>.<name>y</name></expr>;</return>
+    }</block></function>
+
 
     <function_decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getSortedByDistance</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
     <class>class <name>RVectorDistanceSort</name> <block>{<private type="default">

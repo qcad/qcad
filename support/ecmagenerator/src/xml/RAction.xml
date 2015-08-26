@@ -21,6 +21,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasStreamOperator="false" isAbstract="true" isScriptable="true">
     <enum name="ClickMode">
       <value name="PickCoordinate" />
+      <value name="PickCoordinateNoSnap" />
       <value name="PickEntity" />
       <value name="PickingDisabled" />
     </enum>

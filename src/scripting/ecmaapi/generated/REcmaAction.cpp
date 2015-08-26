@@ -189,6 +189,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("PickCoordinateNoSnap",
+    QScriptValue(RAction::PickCoordinateNoSnap),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("PickEntity",
     QScriptValue(RAction::PickEntity),
     QScriptValue::ReadOnly);

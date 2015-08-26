@@ -33,12 +33,21 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>M_PI</name></cpp:ifndef>
-<cpp:define>#<cpp:directive>define</cpp:directive> <name>M_PI</name>        3.14159265358979323846</cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>M_PI</name>        3.14159265358979323846264338327950288</cpp:define>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>M_PI_2</name></cpp:ifndef>
-<cpp:define>#<cpp:directive>define</cpp:directive> <name>M_PI_2</name>        1.57079632679489661923</cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>M_PI_2</name>      1.57079632679489661923132169163975144</cpp:define>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>M_LN10</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>M_LN10</name>      2.30258509299404568401799145468436421</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>M_LN2</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>M_LN2</name>       0.693147180559945309417232121458176568</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
 
 
 <comment type="line">// Somewhere in the guts of Visual C++ a macro 'max' is defined which</comment>

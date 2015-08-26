@@ -70,6 +70,7 @@ public:
          * This is the default mode.
          */
         PickCoordinate,
+        PickCoordinateNoSnap,
         /**
          * Mouse click will pick an entity and trigger \ref entityPickEvent.
          */

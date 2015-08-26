@@ -159,6 +159,24 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="isVertical" cppName="isVertical"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="tolerance"
+        hasDefault="true" default="RS :: AngleTolerance"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isHorizontal" cppName="isHorizontal"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="tolerance"
+        hasDefault="true" default="RS :: AngleTolerance"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getDirection1" cppName="getDirection1"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

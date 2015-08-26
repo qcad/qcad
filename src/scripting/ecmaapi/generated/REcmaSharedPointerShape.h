@@ -189,6 +189,9 @@
         getIntersectionPointsEX
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getIntersectionPointsSS
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getIntersectionPointsXX
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
