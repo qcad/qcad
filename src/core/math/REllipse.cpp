@@ -476,7 +476,7 @@ bool REllipse::contains(const RVector& p) const {
     pt.rotate(-getAngle());
     double rx = getMajorRadius();
     double ry = getMinorRadius();
-    return (pt.x*pt.x) / rx*rx + (pt.y*pt.y) / ry*ry <= 1.0;
+    return (pt.x*pt.x) / (rx*rx) + (pt.y*pt.y) / (ry*ry) <= 1.0;
 }
 
 // depends on implementation of getPointsWithDistanceToEnd:
