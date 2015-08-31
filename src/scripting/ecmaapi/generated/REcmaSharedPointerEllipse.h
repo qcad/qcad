@@ -207,6 +207,9 @@
         getSimpsonLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        contains
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getParamTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

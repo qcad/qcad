@@ -115,6 +115,8 @@ public:
     double getLength() const;
     double getSimpsonLength(double f1, double f2) const;
 
+    bool contains(const RVector& p) const;
+
 //    virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;
 
     double getParamTo(const RVector& pos) const;

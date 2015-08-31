@@ -222,6 +222,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getSimpsonLength, "getSimpsonLength");
             
+            REcmaHelper::registerFunction(&engine, proto, contains, "contains");
+            
             REcmaHelper::registerFunction(&engine, proto, getParamTo, "getParamTo");
             
             REcmaHelper::registerFunction(&engine, proto, getRadiusAt, "getRadiusAt");
@@ -3541,6 +3543,78 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEllipse::getSimpsonLength", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEllipse::contains
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEllipse::contains", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::contains";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REllipse* self = 
+                        getSelf("contains", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("REllipse: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->contains(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.contains().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEllipse::contains", context, engine);
             return result;
         }
          QScriptValue

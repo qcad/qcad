@@ -470,6 +470,15 @@ double REllipse::getSimpsonLength(double a1, double a2) const {
     return (df / 3.0) * sum;
 }
 
+bool REllipse::contains(const RVector& p) const {
+    RVector pt = p;
+    pt.move(-center);
+    pt.rotate(-getAngle());
+    double rx = getMajorRadius();
+    double ry = getMinorRadius();
+    return (pt.x*pt.x) / rx*rx + (pt.y*pt.y) / ry*ry <= 1.0;
+}
+
 // depends on implementation of getPointsWithDistanceToEnd:
 //double REllipse::getAngleAt(double distance, RS::From from) const {
 //    REllipse normal = *this;
