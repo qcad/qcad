@@ -308,6 +308,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="contains" cppName="contains" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getParamTo" cppName="getParamTo"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
