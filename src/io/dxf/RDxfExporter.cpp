@@ -354,6 +354,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
 
             // export all QCAD specific document variables:
             QStringList variables = document->getVariables();
+            document->setVariable("QCADVersion", RSettings::getVersionString());
             variables.sort();
             for (int i=0; i<variables.size(); i++) {
                 QString key = variables[i];
