@@ -135,6 +135,20 @@ Explode.prototype.beginEvent = function() {
             }
         }
 
+        // explode solids into polylines:
+        else if (isSolidEntity(entity)) {
+            shapes = entity.getShapes();
+            for (k=0; k<shapes.length; k++) {
+                shape = shapes[k].data();
+                if (shape.countVertices()===4) {
+                    var v3 = shape.getVertexAt(3);
+                    shape.setVertexAt(3, shape.getVertexAt(2));
+                    shape.setVertexAt(2, v3);
+                }
+                newShapes.push(shape.clone());
+            }
+        }
+
         // explode text entities into lines, arcs and splines:
         else if (isTextEntity(entity)) {
             var painterPaths = entity.getPainterPaths();
