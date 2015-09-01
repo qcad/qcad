@@ -174,7 +174,6 @@ public:
     double getTMax() const;
     double getTAtPoint(const RVector& point) const;
     QList<RSpline> getSegments(const QList<RVector>& points) const;
-    //bool getIntersectionPointsProxy(QList<RVector>& res, const RShape& other, bool limited, bool same) const;
 
     void updateFromControlPoints() const;
     void updateFromFitPoints(bool useTangents = false) const;
@@ -188,6 +187,9 @@ public:
      * \nonscriptable
      */
     static void setSplineProxy(RSplineProxy* p) {
+        if (splineProxy!=NULL) {
+            delete splineProxy;
+        }
         splineProxy = p;
     }
 

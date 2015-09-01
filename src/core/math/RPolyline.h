@@ -31,6 +31,7 @@
 #include "RVector.h"
 
 class RBox;
+class RPolylineProxy;
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1
@@ -68,8 +69,11 @@ public:
     void appendVertex(const RVector& vertex, double bulge = 0.0);
     void prependVertex(const RVector& vertex, double bulge = 0.0);
     void insertVertex(int index, const RVector& vertex);
+    void removeFirstVertex();
     void removeLastVertex();
     void removeVertex(int index);
+    void removeVerticesAfter(int index);
+    void removeVerticesBefore(int index);
 
     void setVertices(const QList<RVector>& vertices);
     QList<RVector> getVertices() const;
@@ -103,6 +107,7 @@ public:
     virtual RBox getBoundingBox() const;
 
     virtual double getLength() const;
+    double getLengthTo(const RVector& p) const;
 
     virtual QList<RVector> getEndPoints() const;
     virtual QList<RVector> getMiddlePoints() const;
@@ -114,6 +119,8 @@ public:
 
     virtual RVector getVectorTo(const RVector& point,
             bool limited = true, double strictRange = RMAXDOUBLE) const;
+
+    int getClosestSegment(const RVector& point) const;
 
     virtual bool move(const RVector& offset);
     virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR);
@@ -135,12 +142,34 @@ public:
     }
     int countSegments() const;
     QSharedPointer<RShape> getSegmentAt(int i) const;
+    QSharedPointer<RShape> getLastSegment() const;
 
     static bool isStraight(double bulge);
 
     RPainterPath toPainterPath() const;
 
     bool simplify(double angleTolerance = RS::AngleTolerance);
+
+    static bool hasProxy() {
+        return polylineProxy!=NULL;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static void setPolylineProxy(RPolylineProxy* p) {
+        if (polylineProxy!=NULL) {
+            delete polylineProxy;
+        }
+        polylineProxy = p;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static RPolylineProxy* getPolylineProxy() {
+        return polylineProxy;
+    }
 
 protected:
     bool isLineSegment(int i) const;
@@ -165,6 +194,7 @@ protected:
 private:
     // TODO caching:
     //QList<QSharedPointer<RShape> > subShapes;
+    static RPolylineProxy* polylineProxy;
 };
 
 Q_DECLARE_METATYPE(const RPolyline*)

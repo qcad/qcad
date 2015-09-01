@@ -9,6 +9,8 @@
         
                 #include "RBox.h"
             
+                #include "RPolylineProxy.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -116,9 +118,15 @@
             
             REcmaHelper::registerFunction(&engine, proto, insertVertex, "insertVertex");
             
+            REcmaHelper::registerFunction(&engine, proto, removeFirstVertex, "removeFirstVertex");
+            
             REcmaHelper::registerFunction(&engine, proto, removeLastVertex, "removeLastVertex");
             
             REcmaHelper::registerFunction(&engine, proto, removeVertex, "removeVertex");
+            
+            REcmaHelper::registerFunction(&engine, proto, removeVerticesAfter, "removeVerticesAfter");
+            
+            REcmaHelper::registerFunction(&engine, proto, removeVerticesBefore, "removeVerticesBefore");
             
             REcmaHelper::registerFunction(&engine, proto, setVertices, "setVertices");
             
@@ -166,6 +174,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
             
+            REcmaHelper::registerFunction(&engine, proto, getLengthTo, "getLengthTo");
+            
             REcmaHelper::registerFunction(&engine, proto, getEndPoints, "getEndPoints");
             
             REcmaHelper::registerFunction(&engine, proto, getMiddlePoints, "getMiddlePoints");
@@ -177,6 +187,8 @@
             REcmaHelper::registerFunction(&engine, proto, getAngleAt, "getAngleAt");
             
             REcmaHelper::registerFunction(&engine, proto, getVectorTo, "getVectorTo");
+            
+            REcmaHelper::registerFunction(&engine, proto, getClosestSegment, "getClosestSegment");
             
             REcmaHelper::registerFunction(&engine, proto, move, "move");
             
@@ -206,6 +218,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getSegmentAt, "getSegmentAt");
             
+            REcmaHelper::registerFunction(&engine, proto, getLastSegment, "getLastSegment");
+            
             REcmaHelper::registerFunction(&engine, proto, toPainterPath, "toPainterPath");
             
             REcmaHelper::registerFunction(&engine, proto, simplify, "simplify");
@@ -220,6 +234,8 @@
     // static methods:
     
             REcmaHelper::registerFunction(&engine, &ctor, isStraight, "isStraight");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, hasProxy, "hasProxy");
             
 
     // static properties:
@@ -1192,6 +1208,50 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerPolyline::removeFirstVertex
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::removeFirstVertex", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::removeFirstVertex";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("removeFirstVertex", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeFirstVertex();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.removeFirstVertex().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::removeFirstVertex", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerPolyline::removeLastVertex
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1288,6 +1348,116 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::removeVertex", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::removeVerticesAfter
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::removeVerticesAfter", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::removeVerticesAfter";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("removeVerticesAfter", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeVerticesAfter(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.removeVerticesAfter().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::removeVerticesAfter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::removeVerticesBefore
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::removeVerticesBefore", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::removeVerticesBefore";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("removeVerticesBefore", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeVerticesBefore(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.removeVerticesBefore().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::removeVerticesBefore", context, engine);
             return result;
         }
          QScriptValue
@@ -2772,6 +2942,78 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerPolyline::getLengthTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getLengthTo", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getLengthTo";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getLengthTo", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getLengthTo(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getLengthTo().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getLengthTo", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerPolyline::getEndPoints
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -3325,6 +3567,78 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getVectorTo", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::getClosestSegment
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getClosestSegment", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getClosestSegment";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getClosestSegment", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getClosestSegment(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getClosestSegment().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getClosestSegment", context, engine);
             return result;
         }
          QScriptValue
@@ -4505,6 +4819,55 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerPolyline::getLastSegment
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getLastSegment", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getLastSegment";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getLastSegment", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RShape >'
+    QSharedPointer < RShape > cppResult =
+        
+               self->getLastSegment();
+        // return type: QSharedPointer < RShape >
+                // Shared pointer to shape, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getLastSegment().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getLastSegment", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerPolyline::isStraight
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4682,6 +5045,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::simplify", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::hasProxy
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::hasProxy", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::hasProxy";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RPolyline::
+       hasProxy();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.hasProxy().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::hasProxy", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerPolyline::toString

@@ -58,8 +58,8 @@ BreakOut.prototype.setState = function(state) {
             this.setLeftMouseTip(qsTr("Choose line, arc, circle or ellipse to auto trim"));
         }
         else {
-            if (RSpline.hasProxy()) {
-                this.setLeftMouseTip(qsTr("Choose line, arc, circle, ellipse or spline segment"));
+            if (RSpline.hasProxy() && RPolyline.hasProxy()) {
+                this.setLeftMouseTip(qsTr("Choose line, arc, circle, ellipse, spline or polyline segment"));
             }
             else {
                 this.setLeftMouseTip(qsTr("Choose line, arc, circle or ellipse segment"));
@@ -97,12 +97,13 @@ BreakOut.prototype.pickEntity = function(event, preview) {
             isArcEntity(entity) ||
             isCircleEntity(entity) ||
             isEllipseEntity(entity) ||
-            (RSpline.hasProxy() && isSplineEntity(entity));
+            (RSpline.hasProxy() && isSplineEntity(entity)) ||
+            (RPolyline.hasProxy() && isPolylineEntity(entity));
 
         if (!cond) {
             if (!preview) {
-                if (RSpline.hasProxy()) {
-                    EAction.warnNotLineArcCircleEllipseSpline();
+                if (RSpline.hasProxy() && RPolyline.hasProxy()) {
+                    EAction.warnNotLineArcCircleEllipseSplinePolyline();
                 }
                 else {
                     EAction.warnNotLineArcCircleEllipse();
@@ -171,7 +172,7 @@ BreakOut.prototype.getOperation = function(preview) {
             continue;
         }
 
-        var otherEntity = document.queryEntity(otherEntityIds[i]);
+        var otherEntity = document.queryEntityDirect(otherEntityIds[i]);
 
         // TODO: if shape is arc, circle, ellipse or ellipse arc:
         // entities with full bounding box outside full circle or full ellipse
@@ -278,5 +279,3 @@ BreakOut.prototype.getAuxPreview = function() {
 BreakOut.prototype.slotRemoveSegmentChanged = function(value) {
     this.removeSegment = value;
 };
-
-

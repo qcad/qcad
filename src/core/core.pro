@@ -249,6 +249,7 @@ HEADERS = \
     math/RMatrix.h \
     math/RPoint.h \
     math/RPolyline.h \
+    math/RPolylineProxy.h \
     math/RRay.h \
     math/RShape.h \
     math/RSpline.h \

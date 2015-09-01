@@ -25,6 +25,9 @@
 #include "RLine.h"
 #include "RPainterPath.h"
 #include "RPolyline.h"
+#include "RPolylineProxy.h"
+
+RPolylineProxy* RPolyline::polylineProxy = NULL;
 
 /**
  * Creates a polyline object without points.
@@ -246,7 +249,18 @@ void RPolyline::insertVertex(int index, const RVector& vertex) {
     bulges.insert(index, 0.0);
 }
 
+void RPolyline::removeFirstVertex() {
+    if (vertices.isEmpty()) {
+        return;
+    }
+    vertices.removeFirst();
+    bulges.removeFirst();
+}
+
 void RPolyline::removeLastVertex() {
+    if (vertices.isEmpty()) {
+        return;
+    }
     vertices.removeLast();
     bulges.removeLast();
 }
@@ -254,6 +268,16 @@ void RPolyline::removeLastVertex() {
 void RPolyline::removeVertex(int index) {
     vertices.removeAt(index);
     bulges.removeAt(index);
+}
+
+void RPolyline::removeVerticesAfter(int index) {
+    vertices = vertices.mid(index+1);
+    bulges = bulges.mid(index+1);
+}
+
+void RPolyline::removeVerticesBefore(int index) {
+    vertices = vertices.mid(0, index);
+    bulges = bulges.mid(0, index);
 }
 
 void RPolyline::setVertices(const QList<RVector>& vertices) {
@@ -574,6 +598,10 @@ QSharedPointer<RShape> RPolyline::getSegmentAt(int i) const {
     }
 }
 
+QSharedPointer<RShape> RPolyline::getLastSegment() const {
+    return getSegmentAt(countSegments()-1);
+}
+
 /**
  * Checks if the given point is inside this closed polygon. If this
  * polyline is not closed (\see setClosed), false is returned.
@@ -708,6 +736,27 @@ double RPolyline::getLength() const {
             ret += l;
         }
     }
+
+    return ret;
+}
+
+double RPolyline::getLengthTo(const RVector& p) const {
+    double ret = 0.0;
+
+    int segIdx = getClosestSegment(p);
+
+    for (int i=0; i<segIdx; i++) {
+        double l = getSegmentAt(i)->getLength();
+        if (RMath::isNormal(l)) {
+            ret += l;
+        }
+    }
+
+    QSharedPointer<RShape> seg = getSegmentAt(segIdx);
+    RVector p2 = seg->getClosestPointOnShape(p);
+    QSharedPointer<RDirected> dir = seg.dynamicCast<RDirected>();
+    dir->trimEndPoint(p2);
+    ret += seg->getLength();
 
     return ret;
 }
@@ -854,6 +903,22 @@ RVector RPolyline::getVectorTo(const RVector& point, bool limited, double strict
     return ret;
 }
 
+int RPolyline::getClosestSegment(const RVector& point) const {
+    int ret = -1;
+    double minDist = -1;
+
+    for (int i=0; i<countSegments(); i++) {
+        QSharedPointer<RShape> segment = getSegmentAt(i);
+        double dist = segment->getDistanceTo(point);
+        if (minDist<0 || dist<minDist) {
+            minDist = dist;
+            ret = i;
+        }
+    }
+
+    return ret;
+}
+
 bool RPolyline::move(const RVector& offset) {
     for (int i=0; i<vertices.size(); i++) {
         vertices[i].move(offset);
@@ -945,11 +1010,15 @@ RS::Ending RPolyline::getTrimEnd(const RVector& coord, const RVector& trimPoint)
 }
 
 void RPolyline::trimStartPoint(const RVector& p) {
-    Q_ASSERT(false);
+    if (polylineProxy!=NULL) {
+        polylineProxy->trimStartPoint(*this, p);
+    }
 }
 
 void RPolyline::trimEndPoint(const RVector& p) {
-    Q_ASSERT(false);
+    if (polylineProxy!=NULL) {
+        polylineProxy->trimEndPoint(*this, p);
+    }
 }
 
 void RPolyline::print(QDebug dbg) const {

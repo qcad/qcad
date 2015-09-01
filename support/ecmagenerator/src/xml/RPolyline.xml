@@ -2,6 +2,7 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RBox" />
+  <class_decl name="RPolylineProxy" />
   <class name="RPolyline"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="true" isQObject="false"
@@ -88,6 +89,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="removeFirstVertex" cppName="removeFirstVertex"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="removeLastVertex" cppName="removeLastVertex"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -96,6 +102,22 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="removeVertex" cppName="removeVertex"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="index"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="removeVerticesAfter"
+    cppName="removeVerticesAfter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="index"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="removeVerticesBefore"
+    cppName="removeVerticesBefore" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="int" typeName="int" name="index"
         isConst="false" />
@@ -254,6 +276,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
     </method>
+    <method name="getLengthTo" cppName="getLengthTo"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getEndPoints" cppName="getEndPoints"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -305,6 +335,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
         <arg type="double" typeName="double" name="strictRange"
         hasDefault="true" default="RMAXDOUBLE" isConst="false" />
+      </variant>
+    </method>
+    <method name="getClosestSegment" cppName="getClosestSegment"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="point"
+        isConst="true" />
       </variant>
     </method>
     <method name="move" cppName="move" specifier="public"
@@ -424,6 +462,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="i" isConst="false" />
       </variant>
     </method>
+    <method name="getLastSegment" cppName="getLastSegment"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RShape &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="isStraight" cppName="isStraight"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
@@ -444,6 +488,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="RS :: AngleTolerance"
         isConst="false" />
       </variant>
+    </method>
+    <method name="hasProxy" cppName="hasProxy" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="isLineSegment" cppName="isLineSegment"
     specifier="protected" isStatic="false" isVirtual="false"

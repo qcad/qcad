@@ -94,10 +94,19 @@
         insertVertex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeFirstVertex
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         removeLastVertex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         removeVertex
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeVerticesAfter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeVerticesBefore
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setVertices
@@ -169,6 +178,9 @@
         getLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLengthTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getEndPoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -185,6 +197,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getVectorTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getClosestSegment
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         move
@@ -229,6 +244,9 @@
         getSegmentAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLastSegment
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isStraight
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -236,6 +254,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         simplify
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasProxy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
