@@ -452,6 +452,12 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
         extend = false;
     }
 
+    if (isPolylineShape(shape) && shape.isClosed()) {
+        var lastSegment = shape.getLastSegment();
+        shape.setClosed(false);
+        shape.appendShape(lastSegment.data());
+    }
+
     var res = ShapeAlgorithms.getClosestIntersectionPoints(shape, otherShapes, position, !extend, extend);
 
     var cutPos1 = undefined;
@@ -689,17 +695,30 @@ ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
     else if (isPolylineShape(shape)) {
         var lastSegment;
         rest1 = shape.clone();
-        if (rest1.isClosed()) {
+        var closed = shape.isClosed();
+        if (closed) {
             // convert closed to open polyline:
             lastSegment = rest1.getLastSegment();
             rest1.setClosed(false);
-            rest1.appendShape(lastSegment);
+            rest1.appendShape(lastSegment.data());
         }
+        else {
+            if (shape.isGeometricallyClosed()) {
+                closed = true;
+            }
+        }
+
         rest2 = rest1.clone();
         segment = rest1.clone();
 
         var l1 = shape.getLengthTo(cutPos1);
+        if (l1<RS.PointTolerance && cutPos1.isEnd) {
+            l1 = shape.getLength();
+        }
         var l2 = shape.getLengthTo(cutPos2);
+        if (l2<RS.PointTolerance && cutPos2.isEnd) {
+            l2 = shape.getLength();
+        }
 
         if (l1 < l2) {
             rest1.trimEndPoint(cutPos1);
@@ -714,15 +733,15 @@ ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
             rest2.trimStartPoint(cutPos1);
         }
 
-        if (segment.getLength()<RS.PointTolerance) {
+        if (segment.getLength()<RS.PointTolerance || (closed && RMath.fuzzyCompare(segment.getLength(), shape.getLength()))) {
             segment = undefined;
         }
 
-        if (rest1.getLength()<RS.PointTolerance) {
+        if (rest1.getLength()<RS.PointTolerance || (closed && RMath.fuzzyCompare(rest1.getLength(), shape.getLength()))) {
             rest1 = undefined;
         }
 
-        if (rest2.getLength()<RS.PointTolerance) {
+        if (rest2.getLength()<RS.PointTolerance || (closed && RMath.fuzzyCompare(rest2.getLength(), shape.getLength()))) {
             rest2 = undefined;
         }
     }
@@ -821,11 +840,20 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
     var intersections = [];
 
     // treat start and end points as intersection points:
-    if (onShape && !isCircleShape(shape) && !isFullEllipseShape(shape) && !isXLineShape(shape)) {
-        intersections.push(shape.getStartPoint());
+    if (onShape &&
+        !isCircleShape(shape) &&
+        !isFullEllipseShape(shape) &&
+        !isXLineShape(shape) /*&&
+        (!isPolylineShape(shape) || !shape.isGeometricallyClosed())*/) {
+
+        var sp = shape.getStartPoint();
+        sp.isStart = true;
+        intersections.push(sp);
 
         if (!isRayShape(shape)) {
-            intersections.push(shape.getEndPoint());
+            var ep = shape.getEndPoint()
+            ep.isEnd = true;
+            intersections.push(ep);
         }
     }
 
@@ -840,8 +868,6 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
             }
         }
     }
-
-    //qDebug("intersections: ", intersections);
 
     var cutPos1 = RVector.invalid;
     var distRight = undefined;
@@ -892,28 +918,6 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
                 distLeft = dist;
             }
         }
-        else if (isPolylineShape(shape)) {
-            if (isNull(tPos)) {
-                tPos = shape.getLengthTo(position);
-            }
-            var tInters = shape.getLengthTo(inters);
-
-            dist = tPos - tInters;
-
-            if (dist>0.0) {
-                if (isNull(distRight) || dist<distRight) {
-                    cutPos2 = inters;
-                    distRight = dist;
-                }
-            }
-            else if (dist<0.0) {
-                dist = Math.abs(dist);
-                if (isNull(distLeft) || dist<distLeft) {
-                    cutPos1 = inters;
-                    distLeft = dist;
-                }
-            }
-        }
         else if (isSplineShape(shape)) {
             if (isNull(tPos)) {
                 tPos = shape.getTAtPoint(position);
@@ -936,9 +940,57 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
                 }
             }
         }
+        else if (isPolylineShape(shape)) {
+            if (isNull(tPos)) {
+                tPos = shape.getLengthTo(position);
+            }
+            var tInters = shape.getLengthTo(inters);
+            if (inters.isEnd===true && tInters<RS.PointTolerance) {
+                tInters = shape.getLength();
+            }
+
+            dist = tPos - tInters;
+
+            if (dist>0.0) {
+                if (isNull(distRight) || dist<distRight) {
+                    cutPos2 = inters;
+                    distRight = dist;
+                }
+            }
+            else if (dist<0.0) {
+                dist = Math.abs(dist);
+                if (isNull(distLeft) || dist<distLeft) {
+                    cutPos1 = inters;
+                    distLeft = dist;
+                }
+            }
+
+//            if (isPolylineShape(shape) && shape.isGeometricallyClosed()) {
+//                var dist2 = tPos + shape.getLength() - tInters;
+
+//                if (dist2>0.0) {
+//                    if (isNull(distRight) || dist2<distRight) {
+//                        cutPos2 = inters;
+//                        distRight = dist2;
+//                    }
+//                }
+////                else if (dist<0.0) {
+////                    dist = Math.abs(dist);
+////                    if (isNull(distLeft) || dist<distLeft) {
+////                        cutPos1 = inters;
+////                        distLeft = dist;
+////                    }
+////                }
+//            }
+        }
     }
 
-    if (!isCircleShape(shape) && !isFullEllipseShape(shape) && !isXLineShape(shape) && !isRayShape(shape)) {
+    if (!isCircleShape(shape) &&
+        !isFullEllipseShape(shape) &&
+        !isXLineShape(shape) &&
+        !isRayShape(shape) /*&&
+        (!isPolylineShape(shape) || shape.isGeometricallyClosed())*/) {
+
         if (!isValidVector(cutPos1)) {
             cutPos1 = shape.getEndPoint();
         }
@@ -946,6 +998,12 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
             cutPos2 = shape.getStartPoint();
         }
     }
+
+//    if (isPolylineShape(shape) && shape.isGeometricallyClosed()) {
+//        if (!isValidVector(cutPos2)) {
+
+//        }
+//    }
 
     return [cutPos1, cutPos2];
 };
