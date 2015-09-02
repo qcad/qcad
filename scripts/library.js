@@ -231,6 +231,15 @@ function isLayer(obj) {
 }
 
 /**
+ * Checks if the given object is a block (RBlock).
+ *
+ * \return true if the given object is a block.
+ */
+function isBlock(obj) {
+    return isOfType(obj, RBlock) || isOfType(obj, RBlockPointer);
+}
+
+/**
  * Checks if the given object is a graphics entity.
  *
  * \return true if the given object is an entity (derived from REntity).
