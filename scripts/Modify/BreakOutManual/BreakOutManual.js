@@ -75,7 +75,13 @@ BreakOutManual.prototype.setState = function(state) {
     switch (this.state) {
     case BreakOutManual.State.SettingShape:
         di.setClickMode(RAction.PickEntity);
-        var trFirstPoint = qsTr("Choose line, arc, circle or ellipse to break up");
+        var trFirstPoint;
+        if (RSpline.hasProxy() && RPolyline.hasProxy()) {
+            trFirstPoint = qsTr("Choose line, arc, circle, ellipse or polyline to break up");
+        }
+        else {
+            trFirstPoint = qsTr("Choose line, arc, circle or ellipse to break up");
+        }
         this.setCommandPrompt(trFirstPoint);
         this.setLeftMouseTip(trFirstPoint);
         this.setRightMouseTip(EAction.trCancel);
@@ -128,12 +134,13 @@ BreakOutManual.prototype.pickEntity = function(event, preview) {
             isArcEntity(entity) ||
             isCircleEntity(entity) ||
             isEllipseEntity(entity) ||
-            (RSpline.hasProxy() && isSplineEntity(entity));
+            (RSpline.hasProxy() && isSplineEntity(entity)) ||
+            (RPolyline.hasProxy() && isPolylineEntity(entity));
 
         if (!cond) {
             if (!preview) {
-                if (RSpline.hasProxy()) {
-                    EAction.warnNotLineArcCircleEllipseSpline();
+                if (RSpline.hasProxy() && RPolyline.hasProxy()) {
+                    EAction.warnNotLineArcCircleEllipseSplinePolyline();
                 }
                 else {
                     EAction.warnNotLineArcCircleEllipse();

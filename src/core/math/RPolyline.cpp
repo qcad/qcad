@@ -599,6 +599,9 @@ QSharedPointer<RShape> RPolyline::getSegmentAt(int i) const {
 }
 
 QSharedPointer<RShape> RPolyline::getLastSegment() const {
+    if (countSegments()==0) {
+        return QSharedPointer<RShape>();
+    }
     return getSegmentAt(countSegments()-1);
 }
 
@@ -742,6 +745,10 @@ double RPolyline::getLength() const {
 
 double RPolyline::getLengthTo(const RVector& p) const {
     double ret = 0.0;
+
+    if (p.equalsFuzzy(getStartPoint())) {
+        return ret;
+    }
 
     int segIdx = getClosestSegment(p);
 
@@ -909,7 +916,13 @@ int RPolyline::getClosestSegment(const RVector& point) const {
 
     for (int i=0; i<countSegments(); i++) {
         QSharedPointer<RShape> segment = getSegmentAt(i);
+        if (segment.isNull()) {
+            break;
+        }
         double dist = segment->getDistanceTo(point);
+        if (!RMath::isNormal(dist)) {
+            continue;
+        }
         if (minDist<0 || dist<minDist) {
             minDist = dist;
             ret = i;

@@ -712,11 +712,11 @@ ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
         segment = rest1.clone();
 
         var l1 = shape.getLengthTo(cutPos1);
-        if (l1<RS.PointTolerance && cutPos1.isEnd) {
+        if (l1<RS.PointTolerance && cutPos1.isEnd===true) {
             l1 = shape.getLength();
         }
         var l2 = shape.getLengthTo(cutPos2);
-        if (l2<RS.PointTolerance && cutPos2.isEnd) {
+        if (l2<RS.PointTolerance && cutPos2.isEnd===true) {
             l2 = shape.getLength();
         }
 
