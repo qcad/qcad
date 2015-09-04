@@ -38,6 +38,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="isInvisible" cppName="isInvisible"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setInvisible" cppName="setInvisible"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="i"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getLinetypeId" cppName="getLinetypeId"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

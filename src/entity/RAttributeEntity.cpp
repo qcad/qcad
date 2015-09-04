@@ -47,6 +47,7 @@ RPropertyTypeId RAttributeEntity::PropertyItalic;
 RPropertyTypeId RAttributeEntity::PropertyLineSpacingFactor;
 RPropertyTypeId RAttributeEntity::PropertyHAlign;
 RPropertyTypeId RAttributeEntity::PropertyVAlign;
+RPropertyTypeId RAttributeEntity::PropertyInvisible;
 
 
 RAttributeEntity::RAttributeEntity(RDocument* document, const RAttributeData& data,
@@ -87,6 +88,7 @@ void RAttributeEntity::init() {
     RAttributeEntity::PropertyVAlign.generateId(typeid(RAttributeEntity), RTextBasedEntity::PropertyVAlign);
 
     RAttributeEntity::PropertyTag.generateId(typeid(RAttributeEntity), "", QT_TRANSLATE_NOOP("REntity", "Tag"));
+    RAttributeEntity::PropertyInvisible.generateId(typeid(RAttributeEntity), "", QT_TRANSLATE_NOOP("REntity", "Invisible"));
 }
 
 bool RAttributeEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -94,6 +96,7 @@ bool RAttributeEntity::setProperty(RPropertyTypeId propertyTypeId,
     bool ret = RTextBasedEntity::setProperty(propertyTypeId, value, transaction);
 
     ret = ret || RObject::setMember(data.tag, value, PropertyTag == propertyTypeId);
+    ret = ret || RObject::setMember(data.invisible, value, PropertyInvisible == propertyTypeId);
 
     if (ret) {
         data.update();
@@ -107,7 +110,10 @@ QPair<QVariant, RPropertyAttributes> RAttributeEntity::getProperty(
     if (propertyTypeId == PropertyTag) {
         return qMakePair(QVariant(data.tag), RPropertyAttributes());
     }
-    if (propertyTypeId == PropertyText || propertyTypeId == PropertyPlainText) {
+    else if (propertyTypeId == PropertyInvisible) {
+        return qMakePair(QVariant(data.invisible), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyText || propertyTypeId == PropertyPlainText) {
         // add custom property title for use by parent (block reference):
         propertyTypeId.setCustomPropertyTitle("Attributes");
         propertyTypeId.setCustomPropertyName(getTag());
@@ -126,9 +132,10 @@ void RAttributeEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
     Q_UNUSED(preview);
     Q_UNUSED(forceSelected);
 
-    RAttributeData data = getData();
-
-    e.exportPainterPathSource(data);
+    if (!isInvisible()) {
+        RAttributeData data = getData();
+        e.exportPainterPathSource(data);
+    }
 }
 
 void RAttributeEntity::print(QDebug dbg) const {

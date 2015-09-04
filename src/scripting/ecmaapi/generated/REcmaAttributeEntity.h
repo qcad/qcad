@@ -84,6 +84,12 @@
         ;static  QScriptValue
         setTag
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isInvisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setInvisible
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

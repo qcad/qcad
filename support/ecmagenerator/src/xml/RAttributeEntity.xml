@@ -102,6 +102,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="isInvisible" cppName="isInvisible"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setInvisible" cppName="setInvisible"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="i"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -162,6 +175,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyPlainText" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyVAlign" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyInvisible" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>

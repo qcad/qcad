@@ -69,6 +69,7 @@ public:
     static RPropertyTypeId PropertyText;
     static RPropertyTypeId PropertyPlainText;
     static RPropertyTypeId PropertyVAlign;
+    static RPropertyTypeId PropertyInvisible;
 
 public:
     RAttributeEntity(RDocument* document, const RAttributeData& data,
@@ -115,6 +116,14 @@ public:
 
     void setTag(const QString& t) {
         data.setTag(t);
+    }
+
+    bool isInvisible() const {
+        return data.isInvisible();
+    }
+
+    void setInvisible(bool i) {
+        data.setInvisible(i);
     }
 
 protected:

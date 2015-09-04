@@ -61,6 +61,14 @@
         <expr_stmt><expr><name>tag</name> = <name>t</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>bool</name></type> <name>isInvisible</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>invisible</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setInvisible</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>i</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>invisible</name> = <name>i</name></expr>;</expr_stmt>
+    }</block></function>
+
     <function_decl><type><name>virtual</name> <name><name>RLinetype</name>::<name>Id</name></name></type> <name>getLinetypeId</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>, <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>REntity</name>*</argument>&gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name><name>RLineweight</name>::<name>Lineweight</name></name></type> <name>getLineweight</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>, <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>REntity</name>*</argument>&gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>RColor</name></type> <name>getColor</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>, <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>REntity</name>*</argument>&gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -75,6 +83,7 @@
 
 </public><private>private:
     <decl_stmt><decl><type><name>QString</name></type> <name>tag</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>invisible</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RAttributeData</argument>)</argument_list></macro>

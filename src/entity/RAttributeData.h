@@ -60,6 +60,14 @@ public:
         tag = t;
     }
 
+    bool isInvisible() const {
+        return invisible;
+    }
+
+    void setInvisible(bool i) {
+        invisible = i;
+    }
+
     virtual RLinetype::Id getLinetypeId(bool resolve, const QStack<REntity*>& blockRefStack) const;
     virtual RLineweight::Lineweight getLineweight(bool resolve, const QStack<REntity*>& blockRefStack) const;
     virtual RColor getColor(bool resolve, const QStack<REntity*>& blockRefStack) const;
@@ -74,6 +82,7 @@ public:
 
 private:
     QString tag;
+    bool invisible;
 };
 
 Q_DECLARE_METATYPE(RAttributeData)

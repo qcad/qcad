@@ -63,6 +63,12 @@
         setTag
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isInvisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setInvisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLinetypeId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

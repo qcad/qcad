@@ -70,6 +70,7 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyText</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlainText</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyVAlign</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyInvisible</name></decl>;</decl_stmt>
 
 </public><public>public:
     <constructor_decl><name>RAttributeEntity</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>RAttributeData</name>&amp;</type> <name>data</name></decl></param>,
@@ -116,6 +117,14 @@
 
     <function><type><name>void</name></type> <name>setTag</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>t</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>data</name>.<call><name>setTag</name><argument_list>(<argument><expr><name>t</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isInvisible</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>isInvisible</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setInvisible</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>i</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>setInvisible</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
 </public><protected>protected:

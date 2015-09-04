@@ -84,6 +84,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setTag, "setTag");
             
+            REcmaHelper::registerFunction(&engine, proto, isInvisible, "isInvisible");
+            
+            REcmaHelper::registerFunction(&engine, proto, setInvisible, "setInvisible");
+            
             REcmaHelper::registerFunction(&engine, proto, getLinetypeId, "getLinetypeId");
             
             REcmaHelper::registerFunction(&engine, proto, getLineweight, "getLineweight");
@@ -491,6 +495,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerAttributeData::setTag", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerAttributeData::isInvisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerAttributeData::isInvisible", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerAttributeData::isInvisible";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAttributeData* self = 
+                        getSelf("isInvisible", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isInvisible();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeData.isInvisible().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerAttributeData::isInvisible", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerAttributeData::setInvisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerAttributeData::setInvisible", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerAttributeData::setInvisible";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAttributeData* self = 
+                        getSelf("setInvisible", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setInvisible(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeData.setInvisible().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerAttributeData::setInvisible", context, engine);
             return result;
         }
          QScriptValue
