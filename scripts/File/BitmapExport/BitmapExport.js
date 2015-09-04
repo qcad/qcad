@@ -129,19 +129,16 @@ BitmapExport.prototype.getFilename = function() {
 
 BitmapExport.prototype.getProperties = function() {
     var appWin = EAction.getMainWindow();
-    var dialog = WidgetFactory.createDialog(BitmapExport.includeBasePath, "BitmapExportDialog.ui", appWin);
+    this.dialog = WidgetFactory.createDialog(BitmapExport.includeBasePath, "BitmapExportDialog.ui", appWin);
+    WidgetFactory.restoreState(this.dialog);
 
-    var widthEdit = dialog.findChild("Width");
-    var heightEdit = dialog.findChild("Height");
-    var resolutionCombo = dialog.findChild("Resolution");
-    var marginCombo = dialog.findChild("Margin");
+    var widthEdit = this.dialog.findChild("Width");
+    var heightEdit = this.dialog.findChild("Height");
+    var resolutionCombo = this.dialog.findChild("Resolution");
+    var marginCombo = this.dialog.findChild("Margin");
 
-    var whiteRadio = dialog.findChild("WhiteBackground");
-    var blackRadio = dialog.findChild("BlackBackground");
-
-    var document = this.getDocument();
-    var documentWidth = document.getBoundingBox(true, true).getWidth();
-    var documentHeight = document.getBoundingBox(true, true).getHeight();
+    var whiteRadio = this.dialog.findChild("WhiteBackground");
+    var blackRadio = this.dialog.findChild("BlackBackground");
 
     widthEdit.valueChanged.connect(
                 function() {
@@ -151,26 +148,16 @@ BitmapExport.prototype.getProperties = function() {
                 function() {
                     resolutionCombo.index = 0;
                 });
-    resolutionCombo.editTextChanged.connect(
-                function(str) {
-                    if (str==="auto") {
-                        return;
-                    }
+    resolutionCombo.editTextChanged.connect(this, "resolutionChanged");
+    this.resolutionChanged(resolutionCombo.currentText);
 
-                    var res = parseInt(str, 10);
-                    if (isNaN(res)) {
-                        return;
-                    }
-
-                    widthEdit.setValue(res * documentWidth);
-                    heightEdit.setValue(res * documentHeight);
-                });
-
-    if (!dialog.exec()) {
-        dialog.destroy();
+    if (!this.dialog.exec()) {
+        this.dialog.destroy();
         EAction.activateMainWindow();
         return undefined;
     }
+
+    WidgetFactory.saveState(this.dialog);
 
     var ret = [];
 
@@ -184,9 +171,33 @@ BitmapExport.prototype.getProperties = function() {
     }
     ret["margin"] = RMath.eval(marginCombo.currentText);
 
-    dialog.destroy();
+    this.dialog.destroy();
     EAction.activateMainWindow();
     return ret;
+};
+
+BitmapExport.prototype.resolutionChanged = function(str) {
+    if (str==="auto") {
+        return;
+    }
+
+    var res = parseInt(str, 10);
+    if (isNaN(res)) {
+        return;
+    }
+
+    var widthEdit = this.dialog.findChild("Width");
+    var heightEdit = this.dialog.findChild("Height");
+
+    if (isNull(this.documentWidth) || isNull(this.documentHeight)) {
+        var document = this.getDocument();
+        this.documentWidth = document.getBoundingBox(true, true).getWidth();
+        this.documentHeight = document.getBoundingBox(true, true).getHeight();
+    }
+
+
+    widthEdit.setValue(res * this.documentWidth);
+    heightEdit.setValue(res * this.documentHeight);
 };
 
 BitmapExport.prototype.exportBitmap = function(di, fileName, properties) {
