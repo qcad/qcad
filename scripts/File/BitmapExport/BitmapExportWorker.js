@@ -34,6 +34,10 @@ function exportBitmap(doc, scene, fileName, properties) {
         view.setBackgroundColor(properties["backgroundColor"]);
     }
 
+    if (properties["colorCorrection"]) {
+        view.setColorCorrectionOverride(properties["colorCorrection"]);
+    }
+
     if (typeof(properties["margin"])==="undefined") {
         properties["margin"] = 20;
     }
