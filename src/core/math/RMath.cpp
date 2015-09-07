@@ -34,6 +34,7 @@
  * Last error encountered.
  */
 QString RMath::lastError = "";
+QString RMath::mathExt = QString();
 
 /**
  * \return Absolute modulus.
@@ -344,32 +345,47 @@ double RMath::eval(const QString& expression, bool* ok) {
 
     QScriptEngine e;
 
-    // add common functions of Math to global scope for use in math input fields:
-    QStringList mathProp;
-    mathProp  << "PI" << "LN2" << "LN10" << "LOG2E" << "LOG10E" << "SQRT1_2" << "SQRT2"
-          << "abs"
-          //<< "cos" << "sin" << "tan"
-          //<< "acos" << "asin" << "atan" << "atan2"
-          << "ceil" << "floor"
-          << "exp" << "log"
-          << "max" << "min"
-          << "pow" << "sqrt"
-          << "random"
-          << "round";
-    for (int i=0; i<mathProp.length(); i++) {
-        e.evaluate(mathProp[i] + " = Math." + mathProp[i]);
+
+    if (mathExt.isNull()) {
+        QString inputJs = "scripts/input.js";
+        QFile file(inputJs);
+        if (file.exists()) {
+            if (file.open(QIODevice::ReadOnly|QIODevice::Text)) {
+                mathExt = QString(file.readAll());
+                file.close();
+            }
+        }
+        else {
+            qDebug() << "file not found: input.js";
+        }
     }
+    e.evaluate(mathExt);
 
-    e.evaluate("rad2deg = function(a) { return a / (2.0 * Math.PI) * 360.0; }");
-    e.evaluate("deg2rad = function(a) { return (a / 360.0) * (2.0 * Math.PI); }");
+//    QStringList mathProp;
+//    mathProp  << "PI" << "LN2" << "LN10" << "LOG2E" << "LOG10E" << "SQRT1_2" << "SQRT2"
+//          << "abs"
+//          //<< "cos" << "sin" << "tan"
+//          //<< "acos" << "asin" << "atan" << "atan2"
+//          << "ceil" << "floor"
+//          << "exp" << "log"
+//          << "max" << "min"
+//          << "pow" << "sqrt"
+//          << "random"
+//          << "round";
+//    for (int i=0; i<mathProp.length(); i++) {
+//        e.evaluate(mathProp[i] + " = Math." + mathProp[i]);
+//    }
 
-    e.evaluate("sin = function(v) { return Math.sin(deg2rad(v)); }");
-    e.evaluate("cos = function(v) { return Math.cos(deg2rad(v)); }");
-    e.evaluate("tan = function(v) { return Math.tan(deg2rad(v)); }");
+//    e.evaluate("rad2deg = function(a) { return a / (2.0 * Math.PI) * 360.0; }");
+//    e.evaluate("deg2rad = function(a) { return (a / 360.0) * (2.0 * Math.PI); }");
 
-    e.evaluate("asin = function(v) { return rad2deg(Math.asin(v)); }");
-    e.evaluate("acos = function(v) { return rad2deg(Math.acos(v)); }");
-    e.evaluate("atan = function(v) { return rad2deg(Math.atan(v)); }");
+//    e.evaluate("sin = function(v) { return Math.sin(deg2rad(v)); }");
+//    e.evaluate("cos = function(v) { return Math.cos(deg2rad(v)); }");
+//    e.evaluate("tan = function(v) { return Math.tan(deg2rad(v)); }");
+
+//    e.evaluate("asin = function(v) { return rad2deg(Math.asin(v)); }");
+//    e.evaluate("acos = function(v) { return rad2deg(Math.acos(v)); }");
+//    e.evaluate("atan = function(v) { return rad2deg(Math.atan(v)); }");
     //e.evaluate("atan2 = function(y,x) { return rad2deg(Math.atan2(y,x)); }");
 
     QScriptValue res = e.evaluate(expr);

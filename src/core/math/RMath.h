@@ -158,6 +158,7 @@ public:
     static void getBiQuadRoots(double p[], double r[][5]);
 private:
     static QString lastError;
+    static QString mathExt;
 };
 
 Q_DECLARE_METATYPE(RMath*);
