@@ -67,16 +67,17 @@ BitmapExport.prototype.getFilename = function() {
     var fi;
 
     var drawingFileName = this.getDocument().getFileName();
+    var lastUsedExtension = RSettings.getStringValue("BitmapExport/Extension", "bmp");
     var initialPath = "";
     //var initialFile = "";
     if (drawingFileName.length === 0) {
         fi = new QFileInfo(QDir.homePath());
         initialPath = fi.absoluteFilePath() + QDir.separator
-                + stripDirtyFlag(EAction.getMdiChild().windowTitle);
+                + stripDirtyFlag(EAction.getMdiChild().windowTitle) + "." + lastUsedExtension;;
         //initialFile = fi.completeBaseName();
     } else {
         fi = new QFileInfo(drawingFileName);
-        initialPath = fi.path() + QDir.separator + fi.completeBaseName();
+        initialPath = fi.path() + QDir.separator + fi.completeBaseName() + "." + lastUsedExtension;
     }
 
     var formats = QImageWriter.supportedImageFormats();
@@ -111,8 +112,7 @@ BitmapExport.prototype.getFilename = function() {
         filters.push(filter);
     }
 
-    var ret = File.getSaveFileName(this, qsTr("Export as Bitmap"),
-                   initialPath, filters);
+    var ret = File.getSaveFileName(this, qsTr("Export as Bitmap"), initialPath, filters);
 
     if (isNull(ret)) {
         return undefined;
@@ -123,6 +123,8 @@ BitmapExport.prototype.getFilename = function() {
     if (isNull(fileName) || fileName.length===0) {
         return undefined;
     }
+
+    RSettings.setValue("BitmapExport/Extension", new QFileInfo(fileName).suffix());
 
     return fileName;
 };
