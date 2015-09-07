@@ -148,18 +148,19 @@ double RMath::eval(const QString& expression, bool* ok) {
 
     QString expr = expression;
 
-    // 'correct' commas to points:
+    // 'correct' commas in numbers to points:
     if (RSettings::getNumberLocale().decimalPoint()==',') {
-        expr.replace(',', '.');
+        expr.replace(QRegExp("/(\\d*),(\\d*)/g"), "$1.$2");
     }
 
-    if (expr.contains(',') || expr.contains(';')) {
-        if (ok!=NULL) {
-            *ok = false;
-        }
-        lastError = "Multiple expressions";
-        return RNANDOUBLE;
-    }
+    // removed to support functions with two parameters, e.g: Math.pow(2,2)
+//    if (expr.contains(',') || expr.contains(';')) {
+//        if (ok!=NULL) {
+//            *ok = false;
+//        }
+//        lastError = "Multiple expressions";
+//        return RNANDOUBLE;
+//    }
 
     int idx = -1;
 
