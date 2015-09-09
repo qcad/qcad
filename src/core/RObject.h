@@ -176,9 +176,10 @@ public:
      */
     virtual bool isSelectedForPropertyEditing() = 0;
 
-    bool hasCustomProperty(const QString& title, const QString& key);
-    QVariant getCustomProperty(const QString& title, const QString& key, const QVariant& defaultValue = RDEFAULT_QVARIANT);
-    bool getCustomBoolProperty(const QString& title, const QString& key, bool defaultValue);
+    bool hasCustomProperties() const;
+    bool hasCustomProperty(const QString& title, const QString& key) const;
+    QVariant getCustomProperty(const QString& title, const QString& key, const QVariant& defaultValue = RDEFAULT_QVARIANT) const;
+    bool getCustomBoolProperty(const QString& title, const QString& key, bool defaultValue) const;
     void setCustomProperty(const QString& title, const QString& key, const QVariant& value);
     void removeCustomProperty(const QString& title, const QString& key);
     QStringList getCustomPropertyTitles() const;

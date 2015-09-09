@@ -385,7 +385,11 @@ QSet<RPropertyTypeId> RObject::getCustomPropertyTypeIds() const {
     return ret;
 }
 
-bool RObject::hasCustomProperty(const QString& title, const QString& key) {
+bool RObject::hasCustomProperties() const {
+    return !customProperties.isEmpty();
+}
+
+bool RObject::hasCustomProperty(const QString& title, const QString& key) const {
     if (!customProperties.contains(title)) {
         return false;
     }
@@ -395,7 +399,7 @@ bool RObject::hasCustomProperty(const QString& title, const QString& key) {
 /**
  * \return Value of given custom property.
  */
-QVariant RObject::getCustomProperty(const QString& title, const QString& key, const QVariant& defaultValue) {
+QVariant RObject::getCustomProperty(const QString& title, const QString& key, const QVariant& defaultValue) const {
     if (!customProperties.contains(title)) {
         return defaultValue;
     }
@@ -403,7 +407,7 @@ QVariant RObject::getCustomProperty(const QString& title, const QString& key, co
     return vm.value(key, defaultValue);
 }
 
-bool RObject::getCustomBoolProperty(const QString& title, const QString& key, bool defaultValue) {
+bool RObject::getCustomBoolProperty(const QString& title, const QString& key, bool defaultValue) const {
     QVariant ret = getCustomProperty(title, key, defaultValue);
     if (ret.type()==QVariant::Bool) {
         return ret.toBool();
