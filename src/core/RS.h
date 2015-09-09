@@ -136,7 +136,10 @@ public:
      * (right hand or left hand side)
      */
     enum Side {
-        RightHand, LeftHand, NoSide, BothSides
+        NoSide = 0,
+        LeftHand = 1,
+        RightHand = 2,
+        BothSides = 3
     };
 
     /**
