@@ -140,6 +140,9 @@ FirstStart.prototype.showDialog = function() {
         var dpCombo = this.widgets["DecimalPoint"];
         var dp = dpCombo.itemData(dpCombo.currentIndex);
         RSettings.setValue("Input/DecimalPoint", dp);
+        if (dp===",") {
+            RSettings.setValue("Input/CartesianCoordinateSeparator", ";");
+        }
         var bgClrCombo = this.widgets["BackgroundColor"];
         var bgClr = bgClrCombo.itemData(bgClrCombo.currentIndex);
         RSettings.setValue("GraphicsViewColors/BackgroundColor", bgClr);
