@@ -22,13 +22,12 @@
 
 #include "core_global.h"
 
-#include <QTextLayout>
-
 #include "RDocument.h"
 #include "REntityData.h"
 #include "RPainterPath.h"
 #include "RPainterPathSource.h"
 #include "RVector.h"
+#include "RTextLayout.h"
 
 class QTextDocument;
 
@@ -265,7 +264,7 @@ public:
     static QString escapeUnicode(const QString& str);
     virtual QFont getMainFont() const;
 
-    virtual void update() const;
+    virtual void update(bool layout=true) const;
     virtual bool isDirty() const;
 
     virtual QList<RPainterPath> getPainterPaths(bool draft = false) const;
@@ -280,6 +279,8 @@ public:
     }
 
     virtual RVector getClosestPointOnEntity(const RVector& point, double range, bool limited) const;
+
+    QList<RTextLayout> getTextLayouts() const;
 
 //    virtual RTextBasedData getRenderedTextData() const {
 //        return *this;
@@ -317,6 +318,7 @@ protected:
     mutable QList<RPainterPath> painterPaths;
     mutable bool dirty;
     mutable bool gotDraft;
+    mutable QList<RTextLayout> textLayouts;
 };
 
 Q_DECLARE_METATYPE(RTextBasedData)

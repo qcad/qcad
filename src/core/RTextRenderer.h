@@ -29,9 +29,10 @@
 #include "RPainterPath.h"
 #include "RPainterPathSource.h"
 #include "RTextBasedData.h"
+#include "RTextLayout.h"
 #include "RVector.h"
 
-class QTextDocument;
+//class QTextDocument;
 
 /**
  * Renders formatted text into painter paths.
@@ -44,6 +45,7 @@ public:
     enum Target {
         PainterPaths = 0x01,
         RichText = 0x02
+        // TODO: TextLayout = 0x03
     };
 
 public:
@@ -55,6 +57,14 @@ public:
     QList<RPainterPath> getPainterPaths() const {
         return painterPaths;
     }
+
+    QList<RTextLayout> getTextLayouts() const {
+        return textLayouts;
+    }
+
+//    QList<QTransform> getTextTransforms() const {
+//        return textTransforms;
+//    }
 
     RBox getBoundingBox() const {
         return boundingBox;
@@ -229,7 +239,17 @@ private:
     const RTextBasedData& textData;
 
     Target target;
+
+    // painter paths used to draw text geometry as painter path:
     QList<RPainterPath> painterPaths;
+
+    // text layouts and transformations used to draw text as QTextLayout instead of painter paths:
+    //QList<QPair<QSharedPointer<QTextLayout>, QTransform> > textLayouts;
+    QList<RTextLayout> textLayouts;
+    //QList<QSharedPointer<QTextLayout> > textLayouts;
+    QList<QTransform> lineBlockTransforms;
+    //QList<QTransform> textTransforms;
+
     RBox boundingBox;
     double height;
     double width;
@@ -245,6 +265,7 @@ private:
     QStack<bool> blockItalic;
     QStack<QStringList> openTags;
 };
+
 
 Q_DECLARE_METATYPE(RTextRenderer*)
 Q_DECLARE_METATYPE(RTextRenderer::Target)

@@ -162,10 +162,8 @@ void RTextBasedEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
     Q_UNUSED(preview);
     Q_UNUSED(forceSelected);
 
-    //RTextBasedData data = getData().getRenderedTextData();
-    //if (data.isValid()) {
-        e.exportPainterPathSource(getData());
-    //}
+    //e.exportPainterPathSource(getData());
+    e.exportText(getData());
 }
 
 void RTextBasedEntity::print(QDebug dbg) const {

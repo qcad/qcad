@@ -18,8 +18,8 @@
  */
 #include <QFont>
 #include <QFontMetricsF>
-#include <QTextBlock>
-#include <QTextDocument>
+//#include <QTextBlock>
+//#include <QTextDocument>
 
 #include "RColor.h"
 #include "RDxfServices.h"
@@ -244,6 +244,11 @@ void RTextRenderer::renderSimple() {
     // transform to scale text from 1.0 to current text height:
     QTransform sizeTransform;
     sizeTransform.scale(textHeight * textData.getXScale(), textHeight);
+
+    //TODO: textTransforms.append(sizeTransform);
+    if (!textLayouts.isEmpty()) {
+        textLayouts.last().transform = sizeTransform;
+    }
 
     // transform paths of text:
     boundingBox = RBox();
@@ -556,6 +561,11 @@ void RTextRenderer::render() {
                     QTransform allTransforms = sizeTransform;
                     allTransforms *= blockTransform;
 
+                    //textTransforms.append(allTransforms);
+                    if (!lineBlockTransforms.isEmpty()) {
+                        lineBlockTransforms.last() *= allTransforms;
+                    }
+
                     maxAscent = qMax(maxAscent, ascent * getBlockHeight());
                     minDescent = qMin(minDescent, descent * getBlockHeight());
 
@@ -660,6 +670,8 @@ void RTextRenderer::render() {
                         // combine transforms for current text block:
                         QTransform allTransforms = sizeTransform;
                         allTransforms *= blockTransform;
+
+                        if (!lineBlockTransforms.isEmpty()) lineBlockTransforms.last() *= allTransforms;
 
                         // transform paths of current block and append to paths
                         // of current text line:
@@ -778,6 +790,21 @@ void RTextRenderer::render() {
                 }
 
                 width = qMax(width, lineBoundingBox.getMaximum().x - qMin(0.0, lineBoundingBox.getMinimum().x));
+
+                for (int i=0; i<lineBlockTransforms.length(); ++i) {
+                    lineBlockTransforms[i] *= lineTransform;
+                    if (!textLayouts.isEmpty()) {
+                        int k = textLayouts.length()-lineBlockTransforms.length()+i;
+                        if (k>=0 && k<textLayouts.length()) {
+                            textLayouts[k].transform = lineBlockTransforms[i];
+                        }
+                    }
+                }
+                //textTransforms.append(lineBlockTransforms);
+                //if (!textLayouts.isEmpty()) {
+                //    textLayouts.last().second = lineBlockTransforms;
+                //}
+                lineBlockTransforms.clear();
 
                 // add current text line to result set:
                 QPen pen;
@@ -1127,9 +1154,13 @@ void RTextRenderer::render() {
 
         // apply global transform for position, angle and vertical alignment:
         boundingBox = RBox();
-        for (int i=0; i<painterPaths.size(); ++i) {
+        for (int i=0; i<painterPaths.length(); ++i) {
             painterPaths[i].transform(globalTransform);
             boundingBox.growToInclude(painterPaths[i].getBoundingBox());
+        }
+
+        for (int i=0; i<textLayouts.length(); ++i) {
+            textLayouts[i].transform *= globalTransform;
         }
     }
 
@@ -1241,26 +1272,28 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
     double topSpacing = boxA.y() * 100.0;
 
     // render text into painter paths using a QTextLayout:
-    QTextLayout layout;
+    QTextLayout* layout = new QTextLayout();
+    layout->setCacheEnabled(true);
 
-    layout.setFont(font);
-    layout.setText(blockText);
-    layout.setAdditionalFormats(formats);
+    layout->setFont(font);
+    layout->setText(blockText);
+    layout->setAdditionalFormats(formats);
 
-    layout.beginLayout();
-    QTextLine line = layout.createLine();
+    layout->beginLayout();
+    QTextLine line = layout->createLine();
     if (!line.isValid()) {
         horizontalAdvance = 0.0;
         qWarning("RTextRenderer::getPainterPathsForBlock: got not a single line");
         return QList<RPainterPath>();
     }
-    layout.endLayout();
+    layout->endLayout();
 
     horizontalAdvance = line.horizontalAdvance() * ttfScale;
 
+
     RPainterPathDevice ppd;
     QPainter ppPainter(&ppd);
-    layout.draw(&ppPainter, QPoint(0,0));
+    layout->draw(&ppPainter, QPoint(0,0));
     ppPainter.end();
 
     // transform to exactly 1.0 height for an 'A',
@@ -1269,6 +1302,9 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
     QTransform t;
     t.scale(ttfScale, -ttfScale);
     t.translate(leadingSpace/ttfScale, -topSpacing-heightA);
+    lineBlockTransforms.append(t);
+
+    textLayouts.append(RTextLayout(QSharedPointer<QTextLayout>(layout), QTransform()));
 
     QList<RPainterPath> ret;
     QList<RPainterPath> paths = ppd.getPainterPaths();
@@ -1426,6 +1462,10 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
     horizontalAdvanceNoSpacing = cursor - font->getLetterSpacing() * cxfScale;
     ascent = 1.08;
     descent = -0.36;
+
+    // add null pointer for text layout to indicate we have to use painter paths for this text block:
+    lineBlockTransforms.append(QTransform());
+    textLayouts.append(RTextLayout(ret));
 
     return ret;
 }

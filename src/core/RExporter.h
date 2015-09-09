@@ -32,6 +32,7 @@
 #include "RImageData.h"
 #include "RMatrix.h"
 #include "RPainterPath.h"
+#include "RTextBasedData.h"
 #include "RView.h"
 
 class RArc;
@@ -209,6 +210,7 @@ public:
     virtual void exportBoundingBoxPaths(const QList<RPainterPath>& paths);
 
     virtual void exportImage(const RImageData& image);
+    virtual void exportText(const RTextBasedData& text);
 
     virtual void exportQuad(
         const RVector& p1,

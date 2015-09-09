@@ -30,6 +30,7 @@
 #include "RExporter.h"
 #include "RLine.h"
 #include "RLinetype.h"
+#include "RMainWindow.h"
 #include "RPainterPathSource.h"
 #include "RPolyline.h"
 #include "RSettings.h"
@@ -647,6 +648,13 @@ void RExporter::exportCurrentEntity(bool preview, bool forceSelected) {
     }
 
     entity->exportEntity(*this, preview, forceSelected);
+
+//    if (entity->hasCustomProperties()) {
+//        if (RMainWindow::hasMainWindow()) {
+//            RMainWindow* appWin = RMainWindow::getMainWindow();
+//            appWin->notifyEntityExportListeners(this, entity);
+//        }
+//    }
 
     // selected? export again with second color and pattern:
     if (visualExporter) {
@@ -1411,6 +1419,10 @@ void RExporter::exportBoundingBoxPaths(const QList<RPainterPath>& paths) {
 
 void RExporter::exportImage(const RImageData& image) {
     Q_UNUSED(image)
+}
+
+void RExporter::exportText(const RTextBasedData& text) {
+    Q_UNUSED(text)
 }
 
 double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {

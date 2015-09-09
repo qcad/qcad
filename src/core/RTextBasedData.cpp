@@ -302,12 +302,12 @@ bool RTextBasedData::moveReferencePoint(const RVector& referencePoint,
     if (referencePoint.equalsFuzzy(position)) {
         position = targetPoint;
         ret = true;
-        update();
+        update(false);
     }
     if (referencePoint.equalsFuzzy(alignmentPoint)) {
         alignmentPoint = targetPoint;
         ret = true;
-        update();
+        update(false);
     }
     return ret;
 }
@@ -315,7 +315,7 @@ bool RTextBasedData::moveReferencePoint(const RVector& referencePoint,
 bool RTextBasedData::move(const RVector& offset) {
     position.move(offset);
     alignmentPoint.move(offset);
-    update();
+    update(false);
     return true;
 }
 
@@ -323,7 +323,7 @@ bool RTextBasedData::rotate(double rotation, const RVector& center) {
     position.rotate(rotation, center);
     alignmentPoint.rotate(rotation, center);
     angle = RMath::getNormalizedAngle(angle+rotation);
-    update();
+    update(false);
     return true;
 }
 
@@ -332,7 +332,7 @@ bool RTextBasedData::scale(const RVector& scaleFactors, const RVector& center) {
     alignmentPoint.scale(scaleFactors, center);
     textWidth*=scaleFactors.x;
     textHeight*=scaleFactors.x;
-    update();
+    update(false);
     return true;
 }
 
@@ -361,7 +361,7 @@ bool RTextBasedData::mirror(const RLine& axis) {
             verticalAlignment=RS::VAlignTop;
         }
     }
-    update();
+    update(false);
     return true;
 }
 
@@ -482,14 +482,30 @@ QList<QSharedPointer<RShape> > RTextBasedData::getExploded() const {
 //    return shapes;
 }
 
-void RTextBasedData::update() const {
+void RTextBasedData::update(bool layout) const {
+    qDebug() << "update text";
+    //RDebug::printBacktrace();
     dirty = true;
+    if (layout) {
+        textLayouts.clear();
+    }
     boundingBox = RBox();
     painterPaths.clear();
 }
 
 bool RTextBasedData::isDirty() const {
     return dirty;
+}
+
+QList<RTextLayout> RTextBasedData::getTextLayouts() const {
+    if (textLayouts.isEmpty()) {
+        RDebug::startTimer(5);
+        RTextRenderer renderer(*this, false /*scene->getDraftMode()*/, RTextRenderer::PainterPaths);
+        textLayouts = renderer.getTextLayouts();
+        RDebug::stopTimer(5, "render text");
+    }
+
+    return textLayouts;
 }
 
 /**
