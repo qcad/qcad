@@ -34,8 +34,6 @@
 #include "RMainWindow.h"
 #include "RNewDocumentListener.h"
 #include "RPenListener.h"
-#include "RExportListener.h"
-#include "RImportListener.h"
 #include "RPropertyListener.h"
 #include "RScriptHandler.h"
 #include "RScriptHandlerRegistry.h"
@@ -45,7 +43,6 @@
 #include "RUcsListener.h"
 #include "RVector.h"
 #include "RViewFocusListener.h"
-#include "RViewListener.h"
 #include "RViewListener.h"
 
 
@@ -257,6 +254,27 @@ void RMainWindow::notifyExportListenersPost(RDocumentInterface* documentInterfac
     QList<RExportListener*>::iterator it;
     for (it = exportListeners.begin(); it != exportListeners.end(); ++it) {
         (*it)->postExportEvent(documentInterface);
+    }
+}
+
+void RMainWindow::addEntityExportListener(REntityExportListener* l) {
+    if (l != NULL) {
+        entityExportListeners.push_back(l);
+    } else {
+        qWarning("RMainWindow::addEntityExportListener(): Listener is NULL.");
+    }
+}
+
+void RMainWindow::removeEntityExportListener(REntityExportListener* l) {
+    entityExportListeners.removeAll(l);
+}
+
+void RMainWindow::notifyEntityExportListeners(RExporter* exporter, REntity* entity) {
+    QList<REntityExportListener*>::iterator it;
+    for (it = entityExportListeners.begin(); it != entityExportListeners.end(); ++it) {
+        if ((*it)->checkCustomProperty(entity)) {
+            (*it)->exportEntity(exporter, entity);
+        }
     }
 }
 

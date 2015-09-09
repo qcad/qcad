@@ -24,6 +24,7 @@
 
 #include <QMutex>
 
+#include "REntityExportListener.h"
 #include "RExportListener.h"
 #include "RImportListener.h"
 #include "RInterTransactionListener.h"
@@ -124,6 +125,10 @@ public:
     void removeExportListener(RExportListener* l);
     void notifyExportListenersPre(RDocumentInterface* documentInterface);
     void notifyExportListenersPost(RDocumentInterface* documentInterface);
+
+    void addEntityExportListener(REntityExportListener* l);
+    void removeEntityExportListener(REntityExportListener* l);
+    void notifyEntityExportListeners(RExporter* exporter, REntity* entity);
 
     void addImportListener(RImportListener* l);
     void removeImportListener(RImportListener* l);
@@ -273,6 +278,7 @@ protected:
     QList<RBlockListener*> blockListeners;
     QList<RViewListener*> viewListeners;
     QList<RPenListener*> penListeners;
+    QList<REntityExportListener*> entityExportListeners;
     QList<RExportListener*> exportListeners;
     QList<RImportListener*> importListeners;
     QList<RTransactionListener*> transactionListeners;

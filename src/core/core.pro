@@ -131,8 +131,10 @@ HEADERS = \
     RDxfServices.h \
     REntity.h \
     REntityData.h \
+    REntityExportListener.h \
     REntityPickEvent.h \
     RExporter.h \
+    RExportListener.h \
     RFileCache.h \
     RFileExporter.h \
     RFileExporterFactory.h \
@@ -221,6 +223,7 @@ HEADERS = \
     RTerminateEvent.h \
     RTextBasedData.h \
     RTextBasedEntity.h \
+    RTextLayout.h \
     RTextRenderer.h \
     RThread.h \
     RTransaction.h \
