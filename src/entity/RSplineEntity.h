@@ -226,6 +226,10 @@ public:
         return data.reverse();
     }
 
+    RS::Side getSideOfPoint(const RVector& point) const {
+        return data.getSideOfPoint(point);
+    }
+
     virtual int getComplexity() const;
 
     QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const {

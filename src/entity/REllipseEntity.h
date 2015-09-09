@@ -191,6 +191,10 @@ public:
         return data.reverse();
     }
 
+    RS::Side getSideOfPoint(const RVector& point) const {
+        return data.getSideOfPoint(point);
+    }
+
     double getParamTo(const RVector& pos) {
         return data.getParamTo(pos);
     }

@@ -168,6 +168,10 @@ public:
         return data.reverse();
     }
 
+    RS::Side getSideOfPoint(const RVector& point) const {
+        return data.getSideOfPoint(point);
+    }
+
     RVector getEndPoint() const {
         return data.getEndPoint();
     }
