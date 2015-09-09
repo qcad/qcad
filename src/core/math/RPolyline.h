@@ -27,11 +27,12 @@
 #include "RDirected.h"
 #include "RExplodable.h"
 #include "RPainterPath.h"
+#include "RPolylineProxy.h"
 #include "RShape.h"
 #include "RVector.h"
 
 class RBox;
-class RPolylineProxy;
+//class RPolylineProxy;
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1
