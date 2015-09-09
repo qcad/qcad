@@ -1238,13 +1238,14 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
 
     //RDebug::startTimer(0);
 
+    if (isPrinting()) {
+        text.update(true);
+    }
     QList<RTextLayout> textLayouts = text.getTextLayouts();
 
     for (int i=0; i<textLayouts.length(); i++) {
-        painter->save();
-
         QTransform t1 = textLayouts[i].transform;
-        double h = text.getTextHeight();
+        //double h = text.getTextHeight();
         QTransform t = t1;
 
         // CAD font text block:
@@ -1271,6 +1272,7 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
 
         // TTF font text block:
         else {
+            painter->save();
             painter->setTransform(t, true);
 
             QTextOption o;
@@ -1281,6 +1283,7 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
             textLayouts[i].layout->setTextOption(o);
 
             textLayouts[i].layout->draw(painter, QPoint(0,0));
+
             painter->restore();
         }
 

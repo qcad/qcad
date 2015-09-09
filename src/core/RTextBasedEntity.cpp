@@ -162,8 +162,12 @@ void RTextBasedEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
     Q_UNUSED(preview);
     Q_UNUSED(forceSelected);
 
-    //e.exportPainterPathSource(getData());
-    e.exportText(getData());
+    if (RSettings::getStringValue("TextRendering/RenderAs", "Paths")=="Text") {
+        e.exportText(getData());
+    }
+    else {
+        e.exportPainterPathSource(getData());
+    }
 }
 
 void RTextBasedEntity::print(QDebug dbg) const {
