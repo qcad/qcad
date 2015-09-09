@@ -483,8 +483,7 @@ QList<QSharedPointer<RShape> > RTextBasedData::getExploded() const {
 }
 
 void RTextBasedData::update(bool layout) const {
-    qDebug() << "update text";
-    //RDebug::printBacktrace();
+    //qDebug() << "update text";
     dirty = true;
     if (layout) {
         textLayouts.clear();
@@ -499,10 +498,10 @@ bool RTextBasedData::isDirty() const {
 
 QList<RTextLayout> RTextBasedData::getTextLayouts() const {
     if (textLayouts.isEmpty()) {
-        RDebug::startTimer(5);
+        //RDebug::startTimer(5);
         RTextRenderer renderer(*this, false /*scene->getDraftMode()*/, RTextRenderer::PainterPaths);
         textLayouts = renderer.getTextLayouts();
-        RDebug::stopTimer(5, "render text");
+        //RDebug::stopTimer(5, "render text");
     }
 
     return textLayouts;
