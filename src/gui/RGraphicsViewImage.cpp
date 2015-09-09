@@ -159,7 +159,7 @@ void RGraphicsViewImage::updateImage() {
 
     if (graphicsBufferNeedsUpdate) {
 
-        RDebug::startTimer();
+        //RDebug::startTimer();
         updateGraphicsBuffer();
         graphicsBufferNeedsUpdate = false;
 
@@ -236,9 +236,8 @@ void RGraphicsViewImage::updateImage() {
         lastOffset = offset;
         lastFactor = factor;
 
-        RDebug::stopTimer("update graphics view");
+        //RDebug::stopTimer("update graphics view");
     }
-
 
     graphicsBufferWithPreview = graphicsBuffer;
 
