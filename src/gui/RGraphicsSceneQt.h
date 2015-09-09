@@ -90,6 +90,7 @@ public:
     //virtual void exportPainterPathSource(const RPainterPathSource& pathSource);
     virtual void exportPainterPaths(const QList<RPainterPath>& paths);
     virtual void exportImage(const RImageData& image);
+    virtual void exportText(const RTextBasedData& text);
 
     virtual double getLineTypePatternScale(const RLinetypePattern& p) const;
     
@@ -100,6 +101,8 @@ public:
     QList<RPainterPath> getPreviewPainterPaths();
     bool hasImageFor(REntity::Id entityId);
     RImageData getImage(REntity::Id entityId);
+    bool hasTextFor(REntity::Id entityId);
+    RTextBasedData getText(REntity::Id entityId);
 
     void addPath(REntity::Id entityId, const RPainterPath& path, bool draft);
 
@@ -122,6 +125,7 @@ private:
     QMap<REntity::Id, QList<RPainterPath> > painterPaths;
 
     QMap<REntity::Id, RImageData> images;
+    QMap<REntity::Id, RTextBasedData> texts;
 
     QList<RPainterPath> previewPainterPaths;
 };

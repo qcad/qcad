@@ -25,6 +25,7 @@
 #include "REntity.h"
 #include "RGraphicsSceneQt.h"
 #include "RGraphicsViewImage.h"
+#include "RMainWindow.h"
 #include "RPainterPathExporter.h"
 #include "RPainterPathSource.h"
 #include "RSettings.h"
@@ -172,6 +173,16 @@ bool RGraphicsSceneQt::beginPath() {
 }
 
 void RGraphicsSceneQt::endPath() {
+    // give entity export listeners a chance to decorate entity:
+//    REntity* entity = getEntity();
+//    if (entity!=NULL && entity->hasCustomProperties()) {
+//        if (RMainWindow::hasMainWindow()) {
+//            RMainWindow* appWin = RMainWindow::getMainWindow();
+//            // TODO: start separate path:
+//            appWin->notifyEntityExportListeners(this, entity);
+//        }
+//    }
+
     if (!exportToPreview) {
         if (!currentPainterPath.isEmpty()) {
 //            REntity* entity = getEntity();
@@ -524,6 +535,17 @@ void RGraphicsSceneQt::exportImage(const RImageData& image) {
     }
 }
 
+void RGraphicsSceneQt::exportText(const RTextBasedData& text) {
+    RTextBasedData textCopy = text;
+
+    textCopy.setLineweight(text.getLineweight(true, blockRefStack));
+
+    // generate cached text layouts:
+    textCopy.getTextLayouts();
+
+    texts.insert(getBlockRefOrEntity()->getId(), textCopy);
+}
+
 /**
  * \return Pattern scale factor with scale applied if we are printing.
  */
@@ -585,6 +607,18 @@ RImageData RGraphicsSceneQt::getImage(REntity::Id entityId) {
     }
 
     return RImageData();
+}
+
+bool RGraphicsSceneQt::hasTextFor(REntity::Id entityId) {
+    return texts.contains(entityId);
+}
+
+RTextBasedData RGraphicsSceneQt::getText(REntity::Id entityId) {
+    if (texts.contains(entityId)) {
+        return texts.value(entityId);
+    }
+
+    return RTextBasedData();
 }
 
 void RGraphicsSceneQt::addPath(REntity::Id entityId, const RPainterPath& path, bool draft) {

@@ -34,6 +34,7 @@
 #include "RSnap.h"
 #include "RSnapRestriction.h"
 #include "RTerminateEvent.h"
+#include "RTextRenderer.h"
 #include "RUnit.h"
 #include "RWheelEvent.h"
 
@@ -156,10 +157,9 @@ void RGraphicsViewImage::updateImage() {
         drawingScale = 1.0;
     }
 
-    //RDebug::startTimer();
-
     if (graphicsBufferNeedsUpdate) {
 
+        RDebug::startTimer();
         updateGraphicsBuffer();
         graphicsBufferNeedsUpdate = false;
 
@@ -235,6 +235,8 @@ void RGraphicsViewImage::updateImage() {
         }
         lastOffset = offset;
         lastFactor = factor;
+
+        RDebug::stopTimer("update graphics view");
     }
 
 
@@ -285,8 +287,6 @@ void RGraphicsViewImage::updateImage() {
 
     // relative zero:
     paintRelativeZero(graphicsBufferWithPreview);
-
-    //RDebug::stopTimer("repaint");
 }
 
 void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RVector& pos, bool highlight) {
@@ -803,6 +803,12 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         paintImage(painter, image);
     }
 
+    if (sceneQt->hasTextFor(id)) {
+        RTextBasedData text = sceneQt->getText(id);
+        text.move(paintOffset);
+        paintText(painter, text);
+    }
+
     // paint painter paths:
     QListIterator<RPainterPath> i(painterPaths);
     while (i.hasNext()) {
@@ -1224,6 +1230,63 @@ void RGraphicsViewImage::paintImage(QPainter* painter, RImageData& image) {
         }
     }
 
+}
+
+void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
+    if (scene==NULL) {
+        return;
+    }
+
+    //RDebug::startTimer(0);
+
+    QList<RTextLayout> textLayouts = text.getTextLayouts();
+
+    for (int i=0; i<textLayouts.length(); i++) {
+        painter->save();
+
+        QTransform t1 = textLayouts[i].transform;
+        double h = text.getTextHeight();
+        QTransform t = t1;
+
+        // CAD font text block:
+        if (textLayouts[i].layout.isNull()) {
+            // TODO: painter paths
+            QList<RPainterPath> pps = textLayouts[i].painterPaths;
+            for (int k=0; k<pps.length(); k++) {
+                if (pps[k].getFeatureSize()<0) {
+                    continue;
+                }
+                pps[k].transform(t);
+                QPen pen = pps[k].getPen();
+                pen.setCapStyle(Qt::RoundCap);
+                pen.setJoinStyle(Qt::RoundJoin);
+                pen.setWidthF(text.getLineweight()/100.0);
+                if (text.isSelected()) {
+                    pen.setColor(RSettings::getSelectionColor());
+                }
+                painter->setPen(pen);
+                painter->setBrush(Qt::NoBrush);
+                painter->drawPath(pps[k]);
+            }
+        }
+
+        // TTF font text block:
+        else {
+            painter->setTransform(t, true);
+
+            QTextOption o;
+            if (text.isSelected()) {
+                o.setFlags(QTextOption::SuppressColors);
+                painter->setPen(QPen(RSettings::getSelectionColor()));
+            }
+            textLayouts[i].layout->setTextOption(o);
+
+            textLayouts[i].layout->draw(painter, QPoint(0,0));
+            painter->restore();
+        }
+
+    }
+    //RDebug::stopTimer(0, "draw layouts");
 }
 
 
