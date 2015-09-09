@@ -42,4 +42,7 @@ public:
     QList<RPainterPath> painterPaths;
 };
 
+Q_DECLARE_METATYPE(RTextLayout)
+Q_DECLARE_METATYPE(RTextLayout*)
+
 #endif

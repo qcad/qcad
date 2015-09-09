@@ -543,7 +543,12 @@ void RGraphicsSceneQt::exportText(const RTextBasedData& text) {
     // generate cached text layouts:
     textCopy.getTextLayouts();
 
-    texts.insert(getBlockRefOrEntity()->getId(), textCopy);
+    if (exportToPreview) {
+        addTextToPreview(textCopy);
+    }
+    else {
+        texts.insert(getBlockRefOrEntity()->getId(), textCopy);
+    }
 }
 
 /**
@@ -583,6 +588,7 @@ void RGraphicsSceneQt::deletePainterPaths() {
     painterPaths.clear();
     images.clear();
     previewPainterPaths.clear();
+    previewTexts.clear();
 }
 
 /**
@@ -634,9 +640,14 @@ QList<RPainterPath> RGraphicsSceneQt::getPreviewPainterPaths() {
     return previewPainterPaths;
 }
 
+QList<RTextBasedData> RGraphicsSceneQt::getPreviewTexts() {
+    return previewTexts;
+}
+
 void RGraphicsSceneQt::clearPreview() {
     RGraphicsScene::clearPreview();
     previewPainterPaths.clear();
+    previewTexts.clear();
 }
     
 void RGraphicsSceneQt::addToPreview(const RPainterPath& painterPath) {
@@ -645,6 +656,10 @@ void RGraphicsSceneQt::addToPreview(const RPainterPath& painterPath) {
 
 void RGraphicsSceneQt::addToPreview(const QList<RPainterPath>& painterPaths) {
     previewPainterPaths << painterPaths;
+}
+
+void RGraphicsSceneQt::addTextToPreview(const RTextBasedData& text) {
+    previewTexts << text;
 }
 
 void RGraphicsSceneQt::highlightEntity(REntity& entity) {

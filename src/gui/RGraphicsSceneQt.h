@@ -99,6 +99,7 @@ public:
     void deletePainterPaths();
     QList<RPainterPath> getPainterPaths(REntity::Id entityId);
     QList<RPainterPath> getPreviewPainterPaths();
+    QList<RTextBasedData> getPreviewTexts();
     bool hasImageFor(REntity::Id entityId);
     RImageData getImage(REntity::Id entityId);
     bool hasTextFor(REntity::Id entityId);
@@ -108,6 +109,7 @@ public:
 
     void addToPreview(const QList<RPainterPath>& painterPaths);
     void addToPreview(const RPainterPath& painterPath);
+    void addTextToPreview(const RTextBasedData& text);
 
     virtual void startEntity(bool topLevelEntity);
 
@@ -128,6 +130,7 @@ private:
     QMap<REntity::Id, RTextBasedData> texts;
 
     QList<RPainterPath> previewPainterPaths;
+    QList<RTextBasedData> previewTexts;
 };
 
 Q_DECLARE_METATYPE(RGraphicsSceneQt*)

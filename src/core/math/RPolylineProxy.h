@@ -22,7 +22,8 @@
 
 #include "../core_global.h"
 
-#include "RPolyline.h"
+class RPolyline;
+class RVector;
 
 
 /**

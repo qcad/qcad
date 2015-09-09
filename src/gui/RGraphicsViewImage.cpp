@@ -252,6 +252,19 @@ void RGraphicsViewImage::updateImage() {
         delete painter;
     }
 
+    // draws previewed texts:
+    QList<RTextBasedData> previewTexts = sceneQt->getPreviewTexts();
+    if (!previewTexts.isEmpty()) {
+        QPainter* painter = initPainter(graphicsBufferWithPreview, false);
+        bgColorLightness = getBackgroundColor().lightness();
+        isSelected = false;
+        for (int i=0; i<previewTexts.length(); i++) {
+            paintText(painter, previewTexts[i]);
+        }
+        painter->end();
+        delete painter;
+    }
+
     // highlighting of closest reference point:
     if (scene->getHighlightedReferencePoint().isValid()) {
         RVector p = mapToView(scene->getHighlightedReferencePoint());
@@ -802,6 +815,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         paintImage(painter, image);
     }
 
+    // get text for text based entity:
     if (sceneQt->hasTextFor(id)) {
         RTextBasedData text = sceneQt->getText(id);
         text.move(paintOffset);
