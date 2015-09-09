@@ -168,6 +168,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDirection2, "getDirection2");
             
+            REcmaHelper::registerFunction(&engine, proto, getSideOfPoint, "getSideOfPoint");
+            
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
             REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
@@ -2844,6 +2846,78 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::getDirection2", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::getSideOfPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::getSideOfPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::getSideOfPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getSideOfPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::Side'
+    RS::Side cppResult =
+        
+               self->getSideOfPoint(a0);
+        // return type: RS::Side
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getSideOfPoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::getSideOfPoint", context, engine);
             return result;
         }
          QScriptValue

@@ -166,6 +166,9 @@
         reverse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSideOfPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getComplexity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

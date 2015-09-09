@@ -213,6 +213,34 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="addEntityExportListener"
+    cppName="addEntityExportListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="REntityExportListener *"
+        typeName="REntityExportListener *" name="l"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="removeEntityExportListener"
+    cppName="removeEntityExportListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="REntityExportListener *"
+        typeName="REntityExportListener *" name="l"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyEntityExportListeners"
+    cppName="notifyEntityExportListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RExporter *" typeName="RExporter *"
+        name="exporter" isConst="false" />
+        <arg type="REntity *" typeName="REntity *" name="entity"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="addImportListener" cppName="addImportListener"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

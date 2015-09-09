@@ -170,6 +170,9 @@
         getDirection2
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSideOfPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -130,6 +130,9 @@
         reverse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSideOfPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getEndPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

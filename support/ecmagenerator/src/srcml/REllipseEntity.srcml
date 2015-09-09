@@ -192,6 +192,10 @@
         <return>return <expr><name>data</name>.<call><name>reverse</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name><name>RS</name>::<name>Side</name></name></type> <name>getSideOfPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getSideOfPoint</name><argument_list>(<argument><expr><name>point</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function><type><name>double</name></type> <name>getParamTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>)</parameter_list> <block>{
         <return>return <expr><name>data</name>.<call><name>getParamTo</name><argument_list>(<argument><expr><name>pos</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>

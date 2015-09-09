@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="REntityExportListener.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RENTITYEXPORTLISTENER_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RENTITYEXPORTLISTENER_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSet&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QPair&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RExporter</name>;</class_decl>
+
+<comment type="block">/**
+ * \brief Abstract base class for classes that are interested in the current 
+ * focus.
+ *
+ * \ingroup core
+ * \scriptable
+ */</comment>
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>REntityExportListener</name> <block>{<private type="default">
+</private><public>public:
+    <destructor><specifier>virtual</specifier> <name>~REntityExportListener</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>registerCustomProperty</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>registeredProperties</name>.<call><name>insert</name><argument_list>(<argument><expr><call><name>QPair<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name><argument_list>(<argument><expr><name>title</name></expr></argument>, <argument><expr><name>name</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>bool</name></type> <name>checkCustomProperty</name><parameter_list>(<param><decl><type><name>REntity</name>*</type> <name>e</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <decl_stmt><decl><type><name><name>QSet<argument_list>&lt;<argument><name>QPair<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>::<name>const_iterator</name></name></type> <name>it</name></decl>;</decl_stmt>
+        <for>for (<init><expr><name>it</name>=<name>registeredProperties</name>.<call><name>constBegin</name><argument_list>()</argument_list></call></expr>;</init> <condition><expr><name>it</name>!=<name>registeredProperties</name>.<call><name>constEnd</name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>it</name>++</expr></incr>) <block>{
+            <if>if <condition>(<expr><name>e</name>-&gt;<call><name>hasCustomProperty</name><argument_list>(<argument><expr>(*<name>it</name>).<name>first</name></expr></argument>, <argument><expr>(*<name>it</name>).<name>second</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+                <return>return <expr><name>true</name></expr>;</return>
+            }</block></then></if>
+        }</block></for>
+
+        <return>return <expr><name>false</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * Called by the document whenever an entity is exporter with 
+     * one of the registered custom properties. Can be used to for example
+     * decorate the entity.
+     *
+     * \param exporter The exporter to use to export decorations to.
+     * \param entity The entity currently being drawn.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportEntity</name><parameter_list>(<param><decl><type><name>RExporter</name>*</type> <name>exporter</name></decl></param>, <param><decl><type><name>REntity</name>*</type> <name>entity</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>QSet<argument_list>&lt;<argument><name>QPair<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>registeredProperties</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>REntityExportListener*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

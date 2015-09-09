@@ -137,7 +137,10 @@
      * (right hand or left hand side)
      */</comment>
     <enum>enum <name>Side</name> <block>{
-        <expr><name>RightHand</name></expr>, <expr><name>LeftHand</name></expr>, <expr><name>NoSide</name></expr>, <expr><name>BothSides</name></expr>
+        <expr><name>NoSide</name> = 0</expr>,
+        <expr><name>LeftHand</name> = 1</expr>,
+        <expr><name>RightHand</name> = 2</expr>,
+        <expr><name>BothSides</name> = 3</expr>
     }</block>;</enum>
 
     <comment type="block">/**

@@ -64,6 +64,8 @@ HEADERS += \
     $$PWD/REcmaEllipseEntity.h \
     $$PWD/REcmaEntity.h \
     $$PWD/REcmaEntityData.h \
+    $$PWD/REcmaEntityExportListener.h \
+    $$PWD/REcmaEntityExportListenerAdapter.h \
     $$PWD/REcmaEntityPickEvent.h \
     $$PWD/REcmaEventFilter.h \
     $$PWD/REcmaExplodable.h \
@@ -402,6 +404,8 @@ SOURCES += \
     $$PWD/REcmaEllipseEntity.cpp \
     $$PWD/REcmaEntity.cpp \
     $$PWD/REcmaEntityData.cpp \
+    $$PWD/REcmaEntityExportListener.cpp \
+    $$PWD/REcmaEntityExportListenerAdapter.cpp \
     $$PWD/REcmaEntityPickEvent.cpp \
     $$PWD/REcmaEventFilter.cpp \
     $$PWD/REcmaExplodable.cpp \

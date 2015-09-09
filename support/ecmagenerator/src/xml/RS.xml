@@ -62,9 +62,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="RenderThreeD" />
     </enum>
     <enum name="Side">
-      <value name="RightHand" />
-      <value name="LeftHand" />
       <value name="NoSide" />
+      <value name="LeftHand" />
+      <value name="RightHand" />
       <value name="BothSides" />
     </enum>
     <enum name="Ending">

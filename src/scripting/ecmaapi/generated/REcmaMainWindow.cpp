@@ -151,6 +151,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, notifyExportListenersPost, "notifyExportListenersPost");
             
+            REcmaHelper::registerFunction(&engine, proto, addEntityExportListener, "addEntityExportListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, removeEntityExportListener, "removeEntityExportListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, notifyEntityExportListeners, "notifyEntityExportListeners");
+            
             REcmaHelper::registerFunction(&engine, proto, addImportListener, "addImportListener");
             
             REcmaHelper::registerFunction(&engine, proto, removeImportListener, "removeImportListener");
@@ -1942,6 +1948,212 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindow::notifyExportListenersPost", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindow::addEntityExportListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindow::addEntityExportListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addEntityExportListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindow* self = 
+                        getSelf("addEntityExportListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntityExportListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    REntityExportListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<REntityExportListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type REntityExportListener *REntityExportListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addEntityExportListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addEntityExportListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindow::addEntityExportListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindow::removeEntityExportListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindow::removeEntityExportListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removeEntityExportListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindow* self = 
+                        getSelf("removeEntityExportListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntityExportListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    REntityExportListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<REntityExportListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type REntityExportListener *REntityExportListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeEntityExportListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removeEntityExportListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindow::removeEntityExportListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindow::notifyEntityExportListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindow::notifyEntityExportListeners", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyEntityExportListeners";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindow* self = 
+                        getSelf("notifyEntityExportListeners", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RExporter * */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: REntity * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RExporter * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RExporter >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RExporter *RExporter *.", context);                    
+                    }
+                
+                    // argument is pointer
+                    REntity * a1 = NULL;
+
+                    a1 = 
+                        REcmaHelper::scriptValueTo<REntity >(
+                            context->argument(1)
+                        );
+                    
+                    if (a1==NULL && 
+                        !context->argument(1).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 1 is not of type REntity *REntity *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->notifyEntityExportListeners(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyEntityExportListeners().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindow::notifyEntityExportListeners", context, engine);
             return result;
         }
          QScriptValue

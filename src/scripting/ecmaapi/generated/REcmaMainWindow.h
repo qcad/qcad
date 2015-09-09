@@ -124,6 +124,15 @@
         notifyExportListenersPost
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addEntityExportListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeEntityExportListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        notifyEntityExportListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addImportListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

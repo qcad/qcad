@@ -336,8 +336,8 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("RightHand",
-    QScriptValue(RS::RightHand),
+    ctor.setProperty("NoSide",
+    QScriptValue(RS::NoSide),
     QScriptValue::ReadOnly);
 
 
@@ -346,8 +346,8 @@
     QScriptValue::ReadOnly);
 
 
-    ctor.setProperty("NoSide",
-    QScriptValue(RS::NoSide),
+    ctor.setProperty("RightHand",
+    QScriptValue(RS::RightHand),
     QScriptValue::ReadOnly);
 
 

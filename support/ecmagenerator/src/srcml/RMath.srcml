@@ -159,6 +159,7 @@
     <function_decl><type><name>static</name> <name>void</name></type> <name>getBiQuadRoots</name><parameter_list>(<param><decl><type><name>double</name></type> <name><name>p</name><index>[]</index></name></decl></param>, <param><decl><type><name>double</name></type> <name><name>r</name><index>[]</index><index>[<expr>5</expr>]</index></name></decl></param>)</parameter_list>;</function_decl>
 </public><private>private:
     <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>lastError</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>QString</name></type> <name>mathExt</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <expr_stmt><expr><call><name>Q_DECLARE_METATYPE</name><argument_list>(<argument><expr><name>RMath</name>*</expr></argument>)</argument_list></call></expr>;</expr_stmt>

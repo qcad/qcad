@@ -107,9 +107,13 @@
 #include "REcmaEllipseEntity.h"
 #include "REcmaEntity.h"
 #include "REcmaEntityData.h"
+#include "REcmaEntityExportListener.h"
+#include "REcmaEntityExportListenerAdapter.h"
 #include "REcmaEntityPickEvent.h"
 #include "REcmaEventFilter.h"
 #include "REcmaExporter.h"
+#include "REcmaExportListener.h"
+#include "REcmaExportListenerAdapter.h"
 #include "REcmaFileCache.h"
 #include "REcmaFileExporter.h"
 #include "REcmaFileExporterAdapter.h"
@@ -140,9 +144,7 @@
 #include "REcmaImageData.h"
 #include "REcmaImageEntity.h"
 #include "REcmaImporter.h"
-#include "REcmaExportListener.h"
 #include "REcmaImportListener.h"
-#include "REcmaExportListenerAdapter.h"
 #include "REcmaImportListenerAdapter.h"
 #include "REcmaInputEvent.h"
 #include "REcmaInterTransactionListener.h"
@@ -583,6 +585,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaSelectionListenerAdapter::initEcma(*engine);
     REcmaExportListener::initEcma(*engine);
     REcmaExportListenerAdapter::initEcma(*engine);
+    REcmaEntityExportListener::initEcma(*engine);
+    REcmaEntityExportListenerAdapter::initEcma(*engine);
     REcmaImportListener::initEcma(*engine);
     REcmaImportListenerAdapter::initEcma(*engine);
     REcmaTransactionListener::initEcma(*engine);

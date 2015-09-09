@@ -173,6 +173,9 @@
         getDirection2
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSideOfPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getStartPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
