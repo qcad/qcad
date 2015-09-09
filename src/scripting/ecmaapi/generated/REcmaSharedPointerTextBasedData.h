@@ -249,6 +249,9 @@
         getClosestPointOnEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getTextLayouts
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         toEscapedText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

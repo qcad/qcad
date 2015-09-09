@@ -193,6 +193,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="image" isConst="true" />
       </variant>
     </method>
+    <method name="exportText" cppName="exportText"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTextBasedData &amp;" typeName="RTextBasedData"
+        name="text" isConst="true" />
+      </variant>
+    </method>
     <method name="getLineTypePatternScale"
     cppName="getLineTypePatternScale" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
@@ -229,6 +237,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RPainterPath &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="getPreviewTexts" cppName="getPreviewTexts"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RTextBasedData &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="hasImageFor" cppName="hasImageFor"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -240,6 +254,21 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getImage" cppName="getImage" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RImageData" isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="entityId" isConst="false" />
+      </variant>
+    </method>
+    <method name="hasTextFor" cppName="hasTextFor"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="REntity::Id" typeName="REntity::Id"
+        name="entityId" isConst="false" />
+      </variant>
+    </method>
+    <method name="getText" cppName="getText" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RTextBasedData" isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
       </variant>
@@ -266,6 +295,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RPainterPath &amp;" typeName="RPainterPath"
         name="painterPath" isConst="true" />
+      </variant>
+    </method>
+    <method name="addTextToPreview" cppName="addTextToPreview"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RTextBasedData &amp;" typeName="RTextBasedData"
+        name="text" isConst="true" />
       </variant>
     </method>
     <method name="startEntity" cppName="startEntity"

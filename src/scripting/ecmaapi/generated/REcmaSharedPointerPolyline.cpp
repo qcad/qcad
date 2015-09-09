@@ -9,8 +9,6 @@
         
                 #include "RBox.h"
             
-                #include "RPolylineProxy.h"
-            
             
         // includes for base ecma wrapper classes
         

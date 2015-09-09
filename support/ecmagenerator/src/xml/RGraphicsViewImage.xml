@@ -597,6 +597,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="image" isConst="false" />
       </variant>
     </method>
+    <method name="paintText" cppName="paintText"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        isConst="false" />
+        <arg type="RTextBasedData &amp;" typeName="RTextBasedData"
+        name="text" isConst="false" />
+      </variant>
+    </method>
     <method name="paintOrigin" cppName="paintOrigin"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

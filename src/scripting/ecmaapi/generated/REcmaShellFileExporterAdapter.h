@@ -432,6 +432,11 @@
             );
         
     
+      void exportText(
+                const RTextBasedData & text
+            );
+        
+    
       void exportQuad(
                 const RVector & p1, const RVector & p2, const RVector & p3, const RVector & p4
             );

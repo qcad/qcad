@@ -7,8 +7,6 @@
 
         // forwards declarations mapped to includes
         
-                #include <QTextDocument>
-            
             
         // includes for base ecma wrapper classes
          void REcmaTextRenderer::initEcma(QScriptEngine& engine, QScriptValue* proto 
@@ -54,6 +52,8 @@
             REcmaHelper::registerFunction(&engine, proto, render, "render");
             
             REcmaHelper::registerFunction(&engine, proto, getPainterPaths, "getPainterPaths");
+            
+            REcmaHelper::registerFunction(&engine, proto, getTextLayouts, "getTextLayouts");
             
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
@@ -631,6 +631,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextRenderer::getPainterPaths", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextRenderer::getTextLayouts
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextRenderer::getTextLayouts", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextRenderer::getTextLayouts";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextRenderer* self = 
+                        getSelf("getTextLayouts", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RTextLayout >'
+    QList < RTextLayout > cppResult =
+        
+               self->getTextLayouts();
+        // return type: QList < RTextLayout >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextRenderer.getTextLayouts().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextRenderer::getTextLayouts", context, engine);
             return result;
         }
          QScriptValue

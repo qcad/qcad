@@ -226,6 +226,9 @@
         exportImage
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        exportText
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         exportQuad
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

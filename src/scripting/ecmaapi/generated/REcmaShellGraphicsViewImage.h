@@ -528,6 +528,12 @@
         
     
     
+      void paintText(
+                QPainter * painter, RTextBasedData & text
+            );
+        
+    
+    
       void paintOrigin(
                 QPaintDevice & device
             );
@@ -821,6 +827,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         paintImage
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        paintText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         paintOrigin

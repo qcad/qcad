@@ -116,6 +116,9 @@
         exportImage
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        exportText
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLineTypePatternScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -131,16 +134,28 @@
         getPreviewPainterPaths
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPreviewTexts
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasImageFor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getImage
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasTextFor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getText
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addPath
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addToPreview
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        addTextToPreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         startEntity

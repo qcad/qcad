@@ -55,6 +55,9 @@
         getPainterPaths
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getTextLayouts
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

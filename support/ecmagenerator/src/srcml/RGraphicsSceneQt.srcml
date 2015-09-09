@@ -91,6 +91,7 @@
     <comment type="line">//virtual void exportPainterPathSource(const RPainterPathSource&amp; pathSource);</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportPainterPaths</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name>&amp;</type> <name>paths</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportImage</name><parameter_list>(<param><decl><type><name>const</name> <name>RImageData</name>&amp;</type> <name>image</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportText</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>text</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>double</name></type> <name>getLineTypePatternScale</name><parameter_list>(<param><decl><type><name>const</name> <name>RLinetypePattern</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     
@@ -99,13 +100,17 @@
     <function_decl><type><name>void</name></type> <name>deletePainterPaths</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPaths</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPreviewPainterPaths</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RTextBasedData</name></argument>&gt;</argument_list></name></type> <name>getPreviewTexts</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>hasImageFor</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>RImageData</name></type> <name>getImage</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>hasTextFor</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RTextBasedData</name></type> <name>getText</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>addPath</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>, <param><decl><type><name>bool</name></type> <name>draft</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>addToPreview</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name>&amp;</type> <name>painterPaths</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>addToPreview</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>painterPath</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>addTextToPreview</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>text</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>startEntity</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>topLevelEntity</name></decl></param>)</parameter_list>;</function_decl>
 
@@ -123,8 +128,10 @@
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>painterPaths</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>RImageData</name></argument>&gt;</argument_list></name></type> <name>images</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>RTextBasedData</name></argument>&gt;</argument_list></name></type> <name>texts</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>previewPainterPaths</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RTextBasedData</name></argument>&gt;</argument_list></name></type> <name>previewTexts</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsSceneQt*</argument>)</argument_list></macro>

@@ -5747,6 +5747,87 @@
         
     
     
+      void REcmaShellGraphicsViewImage::paintText(
+                QPainter * painter, RTextBasedData & text
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::paintText", engine);
+                QScriptValue _q_function = __qtscript_self.property("paintText");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=2*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RGraphicsViewImage::paintText";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RGraphicsViewImage::paintText(
+                            painter, text
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintText", engine);
+
+                        
+                            return;
+                          
+                }
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                        // temporary make protected function scriptable, only from the context of this function call:
+                        QScriptValue proto = engine->defaultPrototype(qMetaTypeId<RGraphicsViewImage*>());
+                        REcmaHelper::registerFunction(engine, &proto, paintText, "paintText");
+                        
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: QPainter *, copyable: false
+        << qScriptValueFromValue(engine, 
+
+        painter
+        )
+      
+
+
+
+    // type: RTextBasedData &, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        text
+        )
+      
+                            )
+                        
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::paintText", engine);
+
+                    
+            }
+        
+    
+    
       void REcmaShellGraphicsViewImage::paintOrigin(
                 QPaintDevice & device
             ) {
@@ -9976,6 +10057,93 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaShellGraphicsViewImage::paintImage", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShellGraphicsViewImage::paintText
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShellGraphicsViewImage::paintText", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShellGraphicsViewImage::paintText";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // protected function: can only be called from ECMA shell:
+                    REcmaShellGraphicsViewImage* self = 
+                        getSelfShell("", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QPainter * */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RTextBasedData */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    QPainter * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<QPainter >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type QPainter *QPainter *.", context);                    
+                    }
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTextBasedData*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RTextBasedData*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RTextBasedData.",
+                               context);                    
+                    }
+                    RTextBasedData 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->RGraphicsViewImage::paintText(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.paintText().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShellGraphicsViewImage::paintText", context, engine);
             return result;
         }
          QScriptValue

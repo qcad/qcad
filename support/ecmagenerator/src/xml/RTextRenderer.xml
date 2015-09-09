@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
-  <class_decl name="QTextDocument" />
   <class name="RTextRenderer"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
@@ -37,6 +36,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QList &lt; RPainterPath &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getTextLayouts" cppName="getTextLayouts"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RTextLayout &gt;"
       isPureVirtual="false" />
     </method>
     <method name="getBoundingBox" cppName="getBoundingBox"

@@ -30,9 +30,10 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPathSource.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextBasedData.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextLayout.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
-<class_decl>class <name>QTextDocument</name>;</class_decl>
+<comment type="line">//class QTextDocument;</comment>
 
 <comment type="block">/**
  * Renders formatted text into painter paths.
@@ -45,6 +46,7 @@
     <enum>enum <name>Target</name> <block>{
         <expr><name>PainterPaths</name> = 0x01</expr>,
         <expr><name>RichText</name> = 0x02</expr>
+        <comment type="line">// TODO: TextLayout = 0x03</comment>
     }</block>;</enum>
 
 </public><public>public:
@@ -56,6 +58,14 @@
     <function><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPaths</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>painterPaths</name></expr>;</return>
     }</block></function>
+
+    <function><type><name>QList<argument_list>&lt;<argument><name>RTextLayout</name></argument>&gt;</argument_list></name></type> <name>getTextLayouts</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>textLayouts</name></expr>;</return>
+    }</block></function>
+
+<comment type="line">//    QList&lt;QTransform&gt; getTextTransforms() const {</comment>
+<comment type="line">//        return textTransforms;</comment>
+<comment type="line">//    }</comment>
 
     <function><type><name>RBox</name></type> <name>getBoundingBox</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>boundingBox</name></expr>;</return>
@@ -230,7 +240,17 @@
     <decl_stmt><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>textData</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>Target</name></type> <name>target</name></decl>;</decl_stmt>
+
+    <comment type="line">// painter paths used to draw text geometry as painter path:</comment>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>painterPaths</name></decl>;</decl_stmt>
+
+    <comment type="line">// text layouts and transformations used to draw text as QTextLayout instead of painter paths:</comment>
+    <comment type="line">//QList&lt;QPair&lt;QSharedPointer&lt;QTextLayout&gt;, QTransform&gt; &gt; textLayouts;</comment>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RTextLayout</name></argument>&gt;</argument_list></name></type> <name>textLayouts</name></decl>;</decl_stmt>
+    <comment type="line">//QList&lt;QSharedPointer&lt;QTextLayout&gt; &gt; textLayouts;</comment>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QTransform</name></argument>&gt;</argument_list></name></type> <name>lineBlockTransforms</name></decl>;</decl_stmt>
+    <comment type="line">//QList&lt;QTransform&gt; textTransforms;</comment>
+
     <decl_stmt><decl><type><name>RBox</name></type> <name>boundingBox</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>height</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>width</name></decl>;</decl_stmt>
@@ -246,6 +266,7 @@
     <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>bool</name></argument>&gt;</argument_list></name></type> <name>blockItalic</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>QStringList</name></argument>&gt;</argument_list></name></type> <name>openTags</name></decl>;</decl_stmt>
 </private>}</block>;</class>
+
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTextRenderer*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTextRenderer::Target</argument>)</argument_list></macro>

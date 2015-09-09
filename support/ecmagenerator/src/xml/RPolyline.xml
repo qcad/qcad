@@ -2,7 +2,6 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RBox" />
-  <class_decl name="RPolylineProxy" />
   <class name="RPolyline"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="true" isQObject="false"

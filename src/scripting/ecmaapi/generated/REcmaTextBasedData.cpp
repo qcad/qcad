@@ -208,6 +208,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getClosestPointOnEntity, "getClosestPointOnEntity");
             
+            REcmaHelper::registerFunction(&engine, proto, getTextLayouts, "getTextLayouts");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RTextBasedData*>(), *proto);
 
@@ -4588,6 +4590,33 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->update(a0);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.update().",
                    context);
@@ -5219,6 +5248,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextBasedData::getClosestPointOnEntity", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextBasedData::getTextLayouts
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedData::getTextLayouts", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedData::getTextLayouts";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("getTextLayouts", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RTextLayout >'
+    QList < RTextLayout > cppResult =
+        
+               self->getTextLayouts();
+        // return type: QList < RTextLayout >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getTextLayouts().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedData::getTextLayouts", context, engine);
             return result;
         }
          QScriptValue
