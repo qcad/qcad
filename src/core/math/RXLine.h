@@ -85,7 +85,7 @@ public:
     virtual double getDirection1() const;
     virtual double getDirection2() const;
 
-    RS::Side getSideOfPoint(const RVector& point) const;
+    virtual RS::Side getSideOfPoint(const RVector& point) const;
 
     virtual RVector getStartPoint() const;
     virtual RVector getEndPoint() const;

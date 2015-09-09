@@ -104,6 +104,8 @@ public:
     virtual double getDirection1() const;
     virtual double getDirection2() const;
 
+    virtual RS::Side getSideOfPoint(const RVector& point) const;
+
     virtual RBox getBoundingBox() const;
 
     virtual double getLength() const;

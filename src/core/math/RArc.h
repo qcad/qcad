@@ -99,10 +99,10 @@ public:
     double getArea() const;
     void setArea(double a);
 
-    double getDirection1() const;
-    double getDirection2() const;
+    virtual double getDirection1() const;
+    virtual double getDirection2() const;
 
-    RS::Side getSideOfPoint(const RVector& point) const;
+    virtual RS::Side getSideOfPoint(const RVector& point) const;
 
     double getSweep() const;
     void setSweep(double s);

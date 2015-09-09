@@ -711,6 +711,25 @@ double RPolyline::getDirection2() const {
     return dirShape->getDirection2();
 }
 
+RS::Side RPolyline::getSideOfPoint(const RVector& point) const {
+    int i = getClosestSegment(point);
+    if (i<0 || i>=countSegments()) {
+        return RS::NoSide;
+    }
+
+    QSharedPointer<RShape> segment = getSegmentAt(i);
+    if (segment.isNull()) {
+        return RS::NoSide;
+    }
+
+    QSharedPointer<RDirected> directed = segment.dynamicCast<RDirected>();
+    if (directed.isNull()) {
+        return RS::NoSide;
+    }
+
+    return directed->getSideOfPoint(point);
+}
+
 RBox RPolyline::getBoundingBox() const {
     RBox ret;
 

@@ -40,6 +40,8 @@ public:
     virtual double getDirection1() const = 0;
     virtual double getDirection2() const = 0;
 
+    virtual RS::Side getSideOfPoint(const RVector& point) const = 0;
+
     virtual RVector getStartPoint() const = 0;
     virtual RVector getEndPoint() const = 0;
 

@@ -526,6 +526,25 @@ double REllipse::getDirection2() const{
     }
 }
 
+RS::Side REllipse::getSideOfPoint(const RVector& point) const {
+    if (contains(point)) {
+        if (!reversed) {
+            return RS::RightHand;
+        }
+        else {
+            return RS::LeftHand;
+        }
+    }
+    else {
+        if (!reversed) {
+            return RS::LeftHand;
+        }
+        else {
+            return RS::RightHand;
+        }
+    }
+}
+
 RBox REllipse::getBoundingBox() const {
     double radius1 = getMajorRadius();
     double radius2 = getMinorRadius();

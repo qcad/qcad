@@ -522,6 +522,11 @@ double RSpline::getDirection2() const {
 #endif
 }
 
+RS::Side RSpline::getSideOfPoint(const RVector& point) const {
+    RPolyline pl = toPolyline(16);
+    return pl.getSideOfPoint(point);
+}
+
 RVector RSpline::getStartPoint() const {
     return getPointAt(getTMin());
 }
