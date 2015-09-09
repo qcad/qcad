@@ -24,3 +24,5 @@ spatialindexnavel:  MIT
                     See 3rdparty/spatialindexnavel/COPYING
 stemmer:            BSD 2-Clause License
                     See 3rdparty/stemmer/bsd-2.txt
+quazip:             LPGL version 2.1 or greater.
+                    See 3rdparty/quazip/lgpl-2.1.txt
