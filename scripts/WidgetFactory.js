@@ -985,6 +985,7 @@ WidgetFactory.initLineEdit = function(lineEdit, dimension) {
 
         var subMenu = new QMenu(qsTr("Insert Symbol"));
 
+        // TODO: split into submenus (math, greek, ...):
         var symbols = [
                 ["\u00F8", qsTr("Diameter")],
                 ["\u00B0", qsTr("Degree")],
@@ -992,6 +993,12 @@ WidgetFactory.initLineEdit = function(lineEdit, dimension) {
                 ["\u2248", qsTr("Almost equal to")],
                 ["\u2243", qsTr("Asymptotically equal to")],
                 ["\u03C0", qsTr("Pi")],
+                ["\u221A", qsTr("Square root")],
+                ["\u03A6", qsTr("Phi")],
+                ["\u0278", qsTr("phi")],
+                ["\u03C6", qsTr("Alt phi")],
+                ["\u2126", qsTr("Ohm")],
+                ["\u03C9", qsTr("omega")],
                 ["\u00D7", qsTr("Multiplication")],
                 ["\u00F7", qsTr("Division")],
                 ["\u25FB", qsTr("Square")],
