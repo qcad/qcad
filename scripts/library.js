@@ -1608,7 +1608,7 @@ function coordinateToString(coordinate, decimals, relative, polar, doc) {
         }
         else {
             first = numberToString(coordinate.getMagnitude(), decimals);
-            second = angleToString(coordinate.getAngle() / (2 * Math.PI) * 360);
+            second = angleToString(coordinate.getAngle() / (2 * Math.PI) * 360, decimals);
         }
     }
     else {
