@@ -658,8 +658,16 @@ QList<RPainterPath> RGraphicsSceneQt::getPreviewPainterPaths() {
     return previewPainterPaths;
 }
 
+bool RGraphicsSceneQt::hasPreviewPainterPaths() const {
+    return !previewPainterPaths.isEmpty();
+}
+
 QList<RTextBasedData> RGraphicsSceneQt::getPreviewTexts() {
     return previewTexts;
+}
+
+bool RGraphicsSceneQt::hasPreviewTexts() const {
+    return !previewTexts.isEmpty();
 }
 
 void RGraphicsSceneQt::clearPreview() {

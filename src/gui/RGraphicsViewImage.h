@@ -275,6 +275,7 @@ public:
     }
 
 protected:
+    QList<RPainterPath> getTextLayoutsPainterPaths(const RTextBasedData& text, const QList<RTextLayout>& textLayouts);
     void applyColorCorrection(QPen& pen);
     void applyColorCorrection(QBrush& brush);
     double getPointSize(double pSize);

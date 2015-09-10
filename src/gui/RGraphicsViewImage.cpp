@@ -241,26 +241,31 @@ void RGraphicsViewImage::updateImage() {
 
     graphicsBufferWithPreview = graphicsBuffer;
 
+    // draws previewed texts:
+//    QList<RTextBasedData> previewTexts = sceneQt->getPreviewTexts();
+//    if (!previewTexts.isEmpty()) {
+//        QPainter* painter = initPainter(graphicsBufferWithPreview, false);
+//        bgColorLightness = getBackgroundColor().lightness();
+//        isSelected = false;
+//        for (int i=0; i<previewTexts.length(); i++) {
+//            paintText(painter, previewTexts[i]);
+
+//            // add painter paths (from CAD fonts) to preview:
+//            QList<RTextLayout> tls = previewTexts[i].getTextLayouts();
+//            QList<RPainterPath> pps = getTextLayoutsPainterPaths(previewTexts[i], tls);
+//            qDebug() << "adding to preview: " << pps;
+//            preview.append(pps);
+//        }
+//        painter->end();
+//        delete painter;
+//    }
+
     // draws the current preview on top of the buffer:
-    QList<RPainterPath> preview = sceneQt->getPreviewPainterPaths();
-    if (!preview.isEmpty()) {
+    if (sceneQt->hasPreviewPainterPaths() || sceneQt->hasPreviewTexts()) {
         QPainter* painter = initPainter(graphicsBufferWithPreview, false);
         bgColorLightness = getBackgroundColor().lightness();
         isSelected = false;
         paintEntity(painter, -1);
-        painter->end();
-        delete painter;
-    }
-
-    // draws previewed texts:
-    QList<RTextBasedData> previewTexts = sceneQt->getPreviewTexts();
-    if (!previewTexts.isEmpty()) {
-        QPainter* painter = initPainter(graphicsBufferWithPreview, false);
-        bgColorLightness = getBackgroundColor().lightness();
-        isSelected = false;
-        for (int i=0; i<previewTexts.length(); i++) {
-            paintText(painter, previewTexts[i]);
-        }
         painter->end();
         delete painter;
     }
@@ -815,40 +820,36 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         paintImage(painter, image);
     }
 
-    // paint text for text layout based entity:
-    if (sceneQt->hasTextFor(id)) {
-        RTextBasedData text = sceneQt->getText(id);
-        text.move(paintOffset);
-        paintText(painter, text);
-        QList<RTextLayout> tls = text.getTextLayouts();
-        for (int t=0; t<tls.length(); t++) {
-            for (int k=0; k<tls[t].painterPaths.length(); k++) {
-                RPainterPath pp = tls[t].painterPaths[k];
-                //pp.setSelected(isSelected);
-                pp.transform(tls[t].transform);
+    if (id==-1) {
+        // preview text:
+        QList<RTextBasedData> previewTexts = sceneQt->getPreviewTexts();
+        if (!previewTexts.isEmpty()) {
+            //QPainter* painter = initPainter(graphicsBufferWithPreview, false);
+            //bgColorLightness = getBackgroundColor().lightness();
+            //isSelected = false;
+            for (int i=0; i<previewTexts.length(); i++) {
+                previewTexts[i].move(paintOffset);
+                paintText(painter, previewTexts[i]);
 
-                //if (k==0) {
-                    QPen pen = pp.getPen();
-                    if (!pen.color().isValid() || pen.color()==RColor::CompatByLayer || pen.color()==RColor::CompatByBlock) {
-                        pen.setColor(text.getColor());
-                    }
-                    if (pen.style()==Qt::NoPen) {
-                        pen = QPen(pp.getBrush().color());
-                    }
-                    pen.setCapStyle(Qt::RoundCap);
-                    pen.setJoinStyle(Qt::RoundJoin);
-                    pen.setWidthF(text.getLineweight()/100.0);
-                    if (text.isSelected()) {
-                        pen.setColor(RSettings::getSelectionColor());
-                    }
-                    applyColorCorrection(pen);
-                    pp.setPen(pen);
-                    pp.setBrush(Qt::NoBrush);
-                //}
-
-                painterPaths.append(pp);
-                //painterPaths[i].setFeatureSize(featureSize);
+                // add painter paths (from CAD fonts) to preview:
+                QList<RTextLayout> tls = previewTexts[i].getTextLayouts();
+                //QList<RPainterPath> pps = getTextLayoutsPainterPaths(previewTexts[i], tls);
+                //qDebug() << "adding to preview: " << pps;
+                //preview.append(pps);
+                painterPaths.append(getTextLayoutsPainterPaths(previewTexts[i], tls));
             }
+            //painter->end();
+            //delete painter;
+        }
+    }
+    else {
+        // paint text for text layout based entity:
+        if (sceneQt->hasTextFor(id)) {
+            RTextBasedData text = sceneQt->getText(id);
+            text.move(paintOffset);
+            paintText(painter, text);
+            QList<RTextLayout> tls = text.getTextLayouts();
+            painterPaths.append(getTextLayoutsPainterPaths(text, tls));
         }
     }
 
@@ -1118,6 +1119,40 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
             }
         }
     }
+}
+
+QList<RPainterPath> RGraphicsViewImage::getTextLayoutsPainterPaths(const RTextBasedData& text, const QList<RTextLayout>& textLayouts) {
+    QList<RPainterPath> ret;
+
+    for (int t=0; t<textLayouts.length(); t++) {
+        for (int k=0; k<textLayouts[t].painterPaths.length(); k++) {
+            RPainterPath pp = textLayouts[t].painterPaths[k];
+            pp.transform(textLayouts[t].transform);
+
+            //if (k==0) {
+                QPen pen = pp.getPen();
+                if (!pen.color().isValid() || pen.color()==RColor::CompatByLayer || pen.color()==RColor::CompatByBlock) {
+                    pen.setColor(text.getColor());
+                }
+                if (pen.style()==Qt::NoPen) {
+                    pen = QPen(pp.getBrush().color());
+                }
+                pen.setCapStyle(Qt::RoundCap);
+                pen.setJoinStyle(Qt::RoundJoin);
+                pen.setWidthF(text.getLineweight()/100.0);
+                if (text.isSelected()) {
+                    pen.setColor(RSettings::getSelectionColor());
+                }
+                applyColorCorrection(pen);
+                pp.setPen(pen);
+                pp.setBrush(Qt::NoBrush);
+            //}
+
+            ret.append(pp);
+        }
+    }
+
+    return ret;
 }
 
 void RGraphicsViewImage::applyColorCorrection(QPen& pen) {

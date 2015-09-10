@@ -99,7 +99,9 @@ public:
     void deletePainterPaths();
     QList<RPainterPath> getPainterPaths(REntity::Id entityId);
     QList<RPainterPath> getPreviewPainterPaths();
+    bool hasPreviewPainterPaths() const;
     QList<RTextBasedData> getPreviewTexts();
+    bool hasPreviewTexts() const;
     bool hasImageFor(REntity::Id entityId);
     RImageData getImage(REntity::Id entityId);
     bool hasTextFor(REntity::Id entityId);

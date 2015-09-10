@@ -501,6 +501,7 @@ QList<RTextLayout> RTextBasedData::getTextLayouts() const {
         //RDebug::startTimer(5);
         RTextRenderer renderer(*this, false /*scene->getDraftMode()*/, RTextRenderer::PainterPaths);
         textLayouts = renderer.getTextLayouts();
+
 //        for (int i=0; i<textLayouts.length(); i++) {
 //            textLayouts[i].painterPaths.clear();
 //        }
