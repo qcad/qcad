@@ -23,7 +23,8 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
+<class_decl>class <name>RPolyline</name>;</class_decl>
+<class_decl>class <name>RVector</name>;</class_decl>
 
 
 <comment type="block">/**

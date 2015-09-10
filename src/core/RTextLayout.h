@@ -30,8 +30,8 @@
 class RTextLayout {
 public:
     RTextLayout() {}
-    RTextLayout(QSharedPointer<QTextLayout> layout, const QTransform& transform) : layout(layout), transform(transform) {}
-    RTextLayout(const QList<RPainterPath>& pps) : painterPaths(pps) {}
+    RTextLayout(QSharedPointer<QTextLayout> layout, const QTransform& transform, const QColor& color) : layout(layout), transform(transform), color(color) {}
+    RTextLayout(const QList<RPainterPath>& pps, const QColor& color) : painterPaths(pps), color(color) {}
 
     bool isEmpty() const {
         return layout.isNull() && painterPaths.isEmpty();
@@ -40,6 +40,7 @@ public:
     QSharedPointer<QTextLayout> layout;
     QTransform transform;
     QList<RPainterPath> painterPaths;
+    QColor color;
 };
 
 Q_DECLARE_METATYPE(RTextLayout)

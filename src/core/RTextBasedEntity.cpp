@@ -166,6 +166,7 @@ void RTextBasedEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
         e.exportText(getData());
     }
     else {
+        e.unexportEntity(e.getBlockRefOrEntity()->getId());
         e.exportPainterPathSource(getData());
     }
 }

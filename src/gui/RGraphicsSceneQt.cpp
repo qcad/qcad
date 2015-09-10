@@ -538,10 +538,26 @@ void RGraphicsSceneQt::exportImage(const RImageData& image) {
 void RGraphicsSceneQt::exportText(const RTextBasedData& text) {
     RTextBasedData textCopy = text;
 
+    // resolve line type, color by layer, by block:
     textCopy.setLineweight(text.getLineweight(true, blockRefStack));
+    RColor col = text.getColor(true, blockRefStack);
+    textCopy.setColor(col);
+    //qDebug() << "text color resolved to: " << textCopy.getColor();
+    //textCopy.setLinetypeId(text.getLinetypeId(true, blockRefStack));
 
     // generate cached text layouts:
     textCopy.getTextLayouts();
+//    QList<RTextLayout> lts = textCopy.getTextLayouts();
+//    for (int i=0; i<lts.length(); i++) {
+//        for (int k=0; k<lts[i].painterPaths.length(); k++) {
+//            QPen p = lts[i].painterPaths[k].getPen();
+//            qDebug() << p;
+//            if (!p.color().isValid()) {
+//                p.setColor(col);
+//                lts[i].painterPaths[k].setPen(p);
+//            }
+//        }
+//    }
 
     if (exportToPreview) {
         addTextToPreview(textCopy);
@@ -581,12 +597,14 @@ void RGraphicsSceneQt::unexportEntity(REntity::Id entityId) {
     if (!exportToPreview) {
         painterPaths.remove(entityId);
         images.remove(entityId);
+        texts.remove(entityId);
     }
 }
 
 void RGraphicsSceneQt::deletePainterPaths() {
     painterPaths.clear();
     images.clear();
+    texts.clear();
     previewPainterPaths.clear();
     previewTexts.clear();
 }

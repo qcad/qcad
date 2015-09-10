@@ -1304,7 +1304,12 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
     t.translate(leadingSpace/ttfScale, -topSpacing-heightA);
     lineBlockTransforms.append(t);
 
-    textLayouts.append(RTextLayout(QSharedPointer<QTextLayout>(layout), QTransform()));
+    QColor currentColor = currentFormat.top().foreground().color();
+//    if (currentColor==RColor::CompatByLayer) {
+
+//    }
+            //format.format.foreground().color();
+    textLayouts.append(RTextLayout(QSharedPointer<QTextLayout>(layout), QTransform(), currentColor));
 
     QList<RPainterPath> ret;
     QList<RPainterPath> paths = ppd.getPainterPaths();
@@ -1350,6 +1355,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
     double cursor = 0.0;
     // cxf fonts define glyphs at a scale of 9:1:
     double cxfScale = 1.0/9.0;
+    // invalid color, default, means use color of entity:
     QColor currentColor;
     bool gotLetterSpacing = false;
     QMap<int, double> indexToCursorStart;
@@ -1465,7 +1471,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
 
     // add null pointer for text layout to indicate we have to use painter paths for this text block:
     lineBlockTransforms.append(QTransform());
-    textLayouts.append(RTextLayout(ret));
+    textLayouts.append(RTextLayout(ret, currentColor));
 
     return ret;
 }
@@ -1475,6 +1481,7 @@ void RTextRenderer::preparePath(RPainterPath& path, const RColor& color, double 
     pen.setStyle(Qt::SolidLine);
     pen.setColor(color);
     path.setPen(pen);
+    // invalid color means color from entity, otherwise fixed color:
     if (color.isValid()) {
         // fixed color:
         path.setFixedPenColor(true);

@@ -808,24 +808,56 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         }
     }
 
-    // get image for raster image entity:
+    // paint image for raster image entity:
     if (sceneQt->hasImageFor(id)) {
         RImageData image = sceneQt->getImage(id);
         image.move(paintOffset);
         paintImage(painter, image);
     }
 
-    // get text for text based entity:
+    // paint text for text layout based entity:
     if (sceneQt->hasTextFor(id)) {
         RTextBasedData text = sceneQt->getText(id);
         text.move(paintOffset);
         paintText(painter, text);
+        QList<RTextLayout> tls = text.getTextLayouts();
+        for (int t=0; t<tls.length(); t++) {
+            for (int k=0; k<tls[t].painterPaths.length(); k++) {
+                RPainterPath pp = tls[t].painterPaths[k];
+                //pp.setSelected(isSelected);
+                pp.transform(tls[t].transform);
+
+                //if (k==0) {
+                    QPen pen = pp.getPen();
+                    if (!pen.color().isValid() || pen.color()==RColor::CompatByLayer || pen.color()==RColor::CompatByBlock) {
+                        pen.setColor(text.getColor());
+                    }
+                    if (pen.style()==Qt::NoPen) {
+                        pen = QPen(pp.getBrush().color());
+                    }
+                    pen.setCapStyle(Qt::RoundCap);
+                    pen.setJoinStyle(Qt::RoundJoin);
+                    pen.setWidthF(text.getLineweight()/100.0);
+                    if (text.isSelected()) {
+                        pen.setColor(RSettings::getSelectionColor());
+                    }
+                    applyColorCorrection(pen);
+                    pp.setPen(pen);
+                    pp.setBrush(Qt::NoBrush);
+                //}
+
+                painterPaths.append(pp);
+                //painterPaths[i].setFeatureSize(featureSize);
+            }
+        }
     }
 
     // paint painter paths:
     QListIterator<RPainterPath> i(painterPaths);
     while (i.hasNext()) {
         RPainterPath path = i.next();
+        //qDebug() << "pp selected: " << path.isSelected();
+        //qDebug() << "pp pen: " << path.getPen();
         path.move(paintOffset);
         RBox pathBB = path.getBoundingBox();
 
@@ -886,19 +918,8 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         }
 
         // prevent black on black / white on white drawing
-        if (colorCorrection || colorCorrectionOverride) {
-            if (pen.color().lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
-                pen.setColor(Qt::white);
-            } else if (pen.color().lightness() >= 255-colorThreshold && bgColorLightness >= 255-colorThreshold) {
-                pen.setColor(Qt::black);
-            }
-
-            if (brush.color().lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
-                brush.setColor(Qt::white);
-            } else if (brush.color().lightness() >= 255-colorThreshold && bgColorLightness >= 255-colorThreshold) {
-                brush.setColor(Qt::black);
-            }
-        }
+        applyColorCorrection(pen);
+        applyColorCorrection(brush);
 
         // highlighted:
         if (!isPrinting() && path.isHighlighted()) {
@@ -1099,6 +1120,26 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
     }
 }
 
+void RGraphicsViewImage::applyColorCorrection(QPen& pen) {
+    if (colorCorrection || colorCorrectionOverride) {
+        if (pen.color().lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
+            pen.setColor(Qt::white);
+        } else if (pen.color().lightness() >= 255-colorThreshold && bgColorLightness >= 255-colorThreshold) {
+            pen.setColor(Qt::black);
+        }
+    }
+}
+
+void RGraphicsViewImage::applyColorCorrection(QBrush& brush) {
+    if (colorCorrection || colorCorrectionOverride) {
+        if (brush.color().lightness() <= colorThreshold && bgColorLightness <= colorThreshold) {
+            brush.setColor(Qt::white);
+        } else if (brush.color().lightness() >= 255-colorThreshold && bgColorLightness >= 255-colorThreshold) {
+            brush.setColor(Qt::black);
+        }
+    }
+}
+
 double RGraphicsViewImage::getPointSize(double pSize) {
     int ht = getHeight();
     if (pSize == 0) {
@@ -1258,34 +1299,36 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
     QList<RTextLayout> textLayouts = text.getTextLayouts();
 
     for (int i=0; i<textLayouts.length(); i++) {
-        QTransform t1 = textLayouts[i].transform;
+        QTransform t = textLayouts[i].transform;
         //double h = text.getTextHeight();
-        QTransform t = t1;
 
         // CAD font text block:
-        if (textLayouts[i].layout.isNull()) {
-            // TODO: painter paths
-            QList<RPainterPath> pps = textLayouts[i].painterPaths;
-            for (int k=0; k<pps.length(); k++) {
-                if (pps[k].getFeatureSize()<0) {
-                    continue;
-                }
-                pps[k].transform(t);
-                QPen pen = pps[k].getPen();
-                pen.setCapStyle(Qt::RoundCap);
-                pen.setJoinStyle(Qt::RoundJoin);
-                pen.setWidthF(text.getLineweight()/100.0);
-                if (text.isSelected()) {
-                    pen.setColor(RSettings::getSelectionColor());
-                }
-                painter->setPen(pen);
-                painter->setBrush(Qt::NoBrush);
-                painter->drawPath(pps[k]);
-            }
-        }
+//        if (textLayouts[i].layout.isNull()) {
+             // painter paths:
+//            QList<RPainterPath> pps = textLayouts[i].painterPaths;
+//            for (int k=0; k<pps.length(); k++) {
+//                if (pps[k].getFeatureSize()<0) {
+//                    continue;
+//                }
+//                pps[k].transform(t);
+//                QPen pen = pps[k].getPen();
+//                //qDebug() << "pen: " << pps[k].getPen();
+//                //qDebug() << "brush: " << pps[k].getBrush();
+//                pen.setCapStyle(Qt::RoundCap);
+//                pen.setJoinStyle(Qt::RoundJoin);
+//                pen.setWidthF(text.getLineweight()/100.0);
+//                if (text.isSelected()) {
+//                    pen.setColor(RSettings::getSelectionColor());
+//                }
+//                painter->setPen(pen);
+//                painter->setBrush(Qt::NoBrush);
+//                painter->drawPath(pps[k]);
+//            }
+//        }
 
         // TTF font text block:
-        else {
+//        else {
+        if (!textLayouts[i].layout.isNull()) {
             painter->save();
             painter->setTransform(t, true);
 
@@ -1293,6 +1336,26 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
             if (text.isSelected()) {
                 o.setFlags(QTextOption::SuppressColors);
                 painter->setPen(QPen(RSettings::getSelectionColor()));
+            }
+            else {
+                o.setFlags(QTextOption::SuppressColors);
+                //painter->setPen(QPen(QString("#%1%10000").arg(255-i*10, 0, 16)));
+                //painter->setPen(QPen("red"));
+                //if (textLayouts[i].color==RColor::CompatByLayer) {
+                //    painter->setPen(QPen(text.getLayerId()));
+                //}
+                //painter->setPen(QPen(textLayouts[i].color));
+                //QPen pen(text.getColor());
+                QColor col = textLayouts[i].color;
+                QPen pen;
+                if (col.isValid() && col!=RColor::CompatByLayer && col!=RColor::CompatByBlock) {
+                    pen.setColor(col);
+                }
+                else {
+                    pen.setColor(text.getColor());
+                }
+                applyColorCorrection(pen);
+                painter->setPen(pen);
             }
             textLayouts[i].layout->setTextOption(o);
 
