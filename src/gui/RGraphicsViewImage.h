@@ -275,6 +275,8 @@ public:
     }
 
 protected:
+    void applyColorCorrection(QPen& pen);
+    void applyColorCorrection(QBrush& brush);
     double getPointSize(double pSize);
     virtual void drawDot(QPainter* painter, QPointF pt);
     virtual void drawPlus(QPainter* painter, QPointF pt, double pSize);

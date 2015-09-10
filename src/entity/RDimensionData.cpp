@@ -444,8 +444,15 @@ void RDimensionData::initTextData() const {
                          0.0,
                          false           // not simple (diameter signs, stacked text, ...)
                          );
-    textData.setDocument(document);
 
+    textData.setDocument(document);
+    textData.setLayerId(getLayerId());
+    textData.setBlockId(getBlockId());
+    textData.setColor(getColor());
+    textData.setLineweight(getLineweight());
+    textData.setSelected(isSelected());
+
+    //qDebug() << "label color: " << textData.getColor();
     //qDebug() << "textData: " << textData;
 
     dirty = true;

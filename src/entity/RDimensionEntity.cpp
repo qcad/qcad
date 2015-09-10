@@ -236,6 +236,9 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
     Q_UNUSED(preview);
     Q_UNUSED(forceSelected);
 
+    // make sure text data is removed:
+    e.unexportEntity(e.getBlockRefOrEntity()->getId());
+
     getData().dirty = true;
 
     // export shapes:
@@ -266,12 +269,12 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
     // export text label:
     RTextData& textData = getData().getTextData();
     //qDebug() << "export dim: angle: " << textData.getAngle();
-    e.setBrush(brush);
 
     if (RSettings::getStringValue("TextRendering/RenderAs", "Paths")=="Text") {
         e.exportText(textData);
     }
     else {
+        e.setBrush(brush);
         e.exportPainterPathSource(textData);
     }
 
