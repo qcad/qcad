@@ -22,7 +22,6 @@
 #include "RDebug.h"
 #include "RLine.h"
 #include "RSpline.h"
-#include "RSplineProxy.h"
 #include "RPainterPath.h"
 #include "RPolyline.h"
 

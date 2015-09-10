@@ -32,7 +32,6 @@
 #include "RVector.h"
 
 class RBox;
-//class RPolylineProxy;
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1

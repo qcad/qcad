@@ -25,7 +25,6 @@
 #include "RLine.h"
 #include "RPainterPath.h"
 #include "RPolyline.h"
-//#include "RPolylineProxy.h"
 
 RPolylineProxy* RPolyline::polylineProxy = NULL;
 

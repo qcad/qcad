@@ -32,7 +32,7 @@
  * \scriptable
  * \ingroup ecma
  */
-class QCADCORE_EXPORT REntityExportListenerAdapter : public QObject, public REntityExportListener {
+class REntityExportListenerAdapter : public QObject, public REntityExportListener {
 Q_OBJECT
 
 public:

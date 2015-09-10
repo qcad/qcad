@@ -27,13 +27,13 @@
 #include "RDirected.h"
 #include "RExplodable.h"
 #include "RShape.h"
+#include "RSplineProxy.h"
 #include "RVector.h"
 
 #ifndef R_NO_OPENNURBS
 #include "opennurbs/opennurbs.h"
 #endif
 
-class RSplineProxy;
 
 #ifndef RDEFAULT_MIN1
 #define RDEFAULT_MIN1 -1
