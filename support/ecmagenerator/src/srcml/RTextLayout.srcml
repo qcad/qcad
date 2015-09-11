@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RTextLayout.h"><comment type="block">/**
+ * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RTEXTLAYOUT_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RTEXTLAYOUT_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTextLayout&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTransform&gt;</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
+
+<class>class <name>RTextLayout</name> <block>{<private type="default">
+</private><public>public:
+    <constructor><name>RTextLayout</name><parameter_list>()</parameter_list> <block>{}</block></constructor>
+    <constructor><name>RTextLayout</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>QTextLayout</name></argument>&gt;</argument_list></name></type> <name>layout</name></decl></param>, <param><decl><type><name>const</name> <name>QTransform</name>&amp;</type> <name>transform</name></decl></param>, <param><decl><type><name>const</name> <name>QColor</name>&amp;</type> <name>color</name></decl></param>)</parameter_list> <member_list>: <call><name>layout</name><argument_list>(<argument><expr><name>layout</name></expr></argument>)</argument_list></call>, <call><name>transform</name><argument_list>(<argument><expr><name>transform</name></expr></argument>)</argument_list></call>, <call><name>color</name><argument_list>(<argument><expr><name>color</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+    <constructor><name>RTextLayout</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name>&amp;</type> <name>pps</name></decl></param>, <param><decl><type><name>const</name> <name>QColor</name>&amp;</type> <name>color</name></decl></param>)</parameter_list> <member_list>: <call><name>painterPaths</name><argument_list>(<argument><expr><name>pps</name></expr></argument>)</argument_list></call>, <call><name>color</name><argument_list>(<argument><expr><name>color</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+
+    <function><type><name>bool</name></type> <name>isEmpty</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>layout</name>.<call><name>isNull</name><argument_list>()</argument_list></call> &amp;&amp; <name>painterPaths</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <decl_stmt><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>QTextLayout</name></argument>&gt;</argument_list></name></type> <name>layout</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QTransform</name></type> <name>transform</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>painterPaths</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QColor</name></type> <name>color</name></decl>;</decl_stmt>
+</public>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTextLayout</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTextLayout*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>
