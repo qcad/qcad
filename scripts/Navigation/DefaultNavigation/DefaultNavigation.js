@@ -185,11 +185,13 @@ DefaultNavigation.prototype.wheelEvent = function(event) {
         // wheel behavior is "zoom":
         if (DefaultNavigation.wheelBehavior===DefaultNavigation.WheelBehavior.Zoom) {
             var position = event.getModelPosition();
-            if ((wheelDelta > 0) !== DefaultNavigation.reverseMouseWheelZoom) {
-                this.view.zoom(position, DefaultNavigation.mouseWheelZoomFactor);
-            }
-            else {
-                this.view.zoom(position, 1.0/DefaultNavigation.mouseWheelZoomFactor);
+            if (wheelDelta!==0) {
+                if ((wheelDelta > 0) !== DefaultNavigation.reverseMouseWheelZoom) {
+                    this.view.zoom(position, DefaultNavigation.mouseWheelZoomFactor);
+                }
+                else {
+                    this.view.zoom(position, 1.0/DefaultNavigation.mouseWheelZoomFactor);
+                }
             }
         }
 
