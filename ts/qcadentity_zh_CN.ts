@@ -243,7 +243,7 @@
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+90"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+90"/>
         <source>Tag</source>
         <translation>标签</translation>
     </message>
@@ -741,6 +741,11 @@
     <message>
         <source>Vertical</source>
         <translation type="vanished">垂直</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
+        <source>Invisible</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

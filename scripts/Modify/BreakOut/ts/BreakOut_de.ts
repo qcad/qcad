@@ -24,8 +24,12 @@
     </message>
     <message>
         <location line="+4"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
+        <translation>Linie, Bogen, Kreis, Ellipse, Spline oder Polyliniesegment wählen</translation>
+    </message>
+    <message>
         <source>Choose line, arc, circle, ellipse or spline segment</source>
-        <translation>Linien-, Bogen-, Kreis-, Ellipsen- oder Splinesegment wählen</translation>
+        <translation type="vanished">Linien-, Bogen-, Kreis-, Ellipsen- oder Splinesegment wählen</translation>
     </message>
     <message>
         <location line="+3"/>

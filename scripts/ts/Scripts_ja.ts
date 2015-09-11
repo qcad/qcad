@@ -171,7 +171,7 @@
         <translation>%1同心弧の半径が0.0を下回りました。</translation>
     </message>
     <message>
-        <location line="+560"/>
+        <location line="+686"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>少なくとも2点が同一です。</translation>
@@ -210,7 +210,7 @@
         <translation>シンボルを挿入</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Diameter</source>
         <translation>直径</translation>
     </message>
@@ -238,6 +238,36 @@
         <location line="+1"/>
         <source>Pi</source>
         <translation>パイ</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Square root</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Phi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>phi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alt phi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ohm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>omega</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -347,7 +377,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+712"/>
+        <location filename="../library.js" line="+721"/>
         <source>Objects</source>
         <translation type="unfinished"></translation>
     </message>

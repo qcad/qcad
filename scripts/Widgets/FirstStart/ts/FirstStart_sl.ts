@@ -9,7 +9,7 @@
         <translation>%1 prvi začetek</translation>
     </message>
     <message>
-        <location line="+190"/>
+        <location line="+193"/>
         <source>Black</source>
         <translation>Črno</translation>
     </message>

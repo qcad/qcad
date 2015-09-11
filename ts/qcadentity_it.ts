@@ -951,7 +951,7 @@ Punto 4|Y</translatorcomment>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+90"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+90"/>
         <source>Tag</source>
         <translation>Etichetta</translation>
     </message>
@@ -995,6 +995,11 @@ Punto 4|Y</translatorcomment>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
         <translation>Angolo fisso</translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
+        <source>Invisible</source>
+        <translation>Invisibile</translation>
     </message>
 </context>
 </TS>

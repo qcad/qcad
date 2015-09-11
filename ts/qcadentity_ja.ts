@@ -705,7 +705,7 @@
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+90"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+90"/>
         <source>Tag</source>
         <translation>タグ</translation>
     </message>
@@ -748,6 +748,11 @@
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
+        <source>Invisible</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

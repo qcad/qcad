@@ -10,7 +10,7 @@
     </message>
     <message>
         <location line="+4"/>
-        <source>Choose line, arc, circle, ellipse or spline segment</source>
+        <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

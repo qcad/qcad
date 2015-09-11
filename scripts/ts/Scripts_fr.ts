@@ -193,7 +193,7 @@
         <translation>Rayon chuté en dessous de zéro, après %1 arc(s) concentrique(s).</translation>
     </message>
     <message>
-        <location line="+560"/>
+        <location line="+686"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -236,7 +236,7 @@
         <translation>Insérer symbole</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Diameter</source>
         <translation>Diamètre</translation>
     </message>
@@ -264,6 +264,36 @@
         <location line="+1"/>
         <source>Pi</source>
         <translation>Pi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Square root</source>
+        <translation>Racine carrée</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Phi</source>
+        <translation>Phi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>phi</source>
+        <translation>phi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alt phi</source>
+        <translation>Alt phi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ohm</source>
+        <translation>Ohm</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>omega</source>
+        <translation>omega</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -414,7 +444,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+712"/>
+        <location filename="../library.js" line="+721"/>
         <source>Objects</source>
         <translation>Objets</translation>
     </message>

@@ -213,7 +213,7 @@ Ferramentas CAD</translatorcomment>
         <translation>O Raio ficou abaixo de 0,0, após %1 arco(s) concêntrico(s).</translation>
     </message>
     <message>
-        <location line="+560"/>
+        <location line="+686"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -265,7 +265,7 @@ Insere Símbolo</translatorcomment>
         <translation>Insira um Símbolo</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+4"/>
         <source>Diameter</source>
         <translatorcomment>--exact match--
 --file: Text_pt.ts--
@@ -308,6 +308,36 @@ Plus / Minus</translatorcomment>
 Copie entidades para a área de transferência
 Copie entidade com ponto de referência  para o clipboard</translatorcomment>
         <translation>Pi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Square root</source>
+        <translation>Raiz quadrada</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Phi</source>
+        <translation>Phi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>phi</source>
+        <translation>phi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Alt phi</source>
+        <translation>Alt phi</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Ohm</source>
+        <translation>Ohm</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>omega</source>
+        <translation>omega</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -474,7 +504,7 @@ Carregando plugins...</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+712"/>
+        <location filename="../library.js" line="+721"/>
         <source>Objects</source>
         <translation>Objectos</translation>
     </message>

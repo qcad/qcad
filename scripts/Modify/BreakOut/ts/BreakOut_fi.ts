@@ -10,8 +10,12 @@
     </message>
     <message>
         <location line="+4"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Choose line, arc, circle, ellipse or spline segment</source>
-        <translation>Valitse viiva, kaari, ympyrä, ellipsi tai käyrä segmentti</translation>
+        <translation type="vanished">Valitse viiva, kaari, ympyrä, ellipsi tai käyrä segmentti</translation>
     </message>
     <message>
         <location line="+3"/>

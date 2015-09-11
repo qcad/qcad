@@ -501,7 +501,7 @@
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">Piilotettu</translation>
+        <translation>Piilotettu</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -972,7 +972,7 @@
     <message>
         <location line="+1"/>
         <source>Type</source>
-        <translation type="unfinished">Tyyppi</translation>
+        <translation>Tyyppi</translation>
     </message>
     <message>
         <location line="+1"/>

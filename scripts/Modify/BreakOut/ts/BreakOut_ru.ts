@@ -10,8 +10,12 @@
     </message>
     <message>
         <location line="+4"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Choose line, arc, circle, ellipse or spline segment</source>
-        <translation>Выбрать участок линии, дуги, окружности эллипса или кривой</translation>
+        <translation type="vanished">Выбрать участок линии, дуги, окружности эллипса или кривой</translation>
     </message>
     <message>
         <location line="+3"/>

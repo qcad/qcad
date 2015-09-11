@@ -4,12 +4,17 @@
 <context>
     <name>BreakOutManual</name>
     <message>
-        <location filename="../BreakOutManual.js" line="+78"/>
+        <location filename="../BreakOutManual.js" line="+80"/>
+        <source>Choose line, arc, circle, ellipse or polyline to break up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Choose line, arc, circle or ellipse to break up</source>
         <translation>Valitse katkaistava viiva, kaari tai ellipsi segmentti</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location line="+9"/>
         <source>First break point</source>
         <translation>Ensimmäinen keskeytyskohta</translation>
     </message>
