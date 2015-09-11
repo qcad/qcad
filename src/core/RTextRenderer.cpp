@@ -596,6 +596,10 @@ void RTextRenderer::render() {
                                 horizontalAdvanceNoSpacing,
                                 ascent, descent);
 
+                    // make sure the "A" is not rendered:
+                    textLayouts.removeLast();
+                    lineBlockTransforms.removeLast();
+
                     maxAscent = qMax(maxAscent, ascent * getBlockHeight());
                     minDescent = qMin(minDescent, descent * getBlockHeight());
                 }
