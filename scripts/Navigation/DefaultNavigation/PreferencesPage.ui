@@ -59,8 +59,8 @@
        <property name="editable">
         <bool>true</bool>
        </property>
-       <property name="currentText">
-        <string>1.20</string>
+       <property name="currentIndex">
+        <number>9</number>
        </property>
        <item>
         <property name="text">
@@ -109,7 +109,7 @@
        </item>
        <item>
         <property name="text">
-         <string>1.20</string>
+         <string>1.2</string>
         </property>
        </item>
        <item>
@@ -134,7 +134,22 @@
        </item>
        <item>
         <property name="text">
-         <string notr="true">1.30</string>
+         <string notr="true">1.3</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.4</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2</string>
         </property>
        </item>
       </widget>
