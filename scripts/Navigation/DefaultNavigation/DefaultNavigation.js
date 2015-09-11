@@ -54,6 +54,7 @@ DefaultNavigation.initPreferences = function(pageWidget, calledByPrefDialog, doc
 
 DefaultNavigation.applyPreferences = function(doc) {
     DefaultNavigation.wheelBehavior = RSettings.getIntValue("GraphicsViewNavigation/Wheel", DefaultNavigation.WheelBehavior.Zoom);
+    DefaultNavigation.swapMouseWheelZoom = RSettings.getBoolValue("GraphicsViewNavigation/SwapMouseWheelZoom", false);
     DefaultNavigation.panGesture = RSettings.getBoolValue("GraphicsViewNavigation/PanGesture", false);
 };
 
@@ -184,9 +185,19 @@ DefaultNavigation.prototype.wheelEvent = function(event) {
         if (DefaultNavigation.wheelBehavior===DefaultNavigation.WheelBehavior.Zoom) {
             var position = event.getModelPosition();
             if (wheelDelta > 0) {
-                this.view.zoomIn(position);
+                if (DefaultNavigation.swapMouseWheelZoom) {
+                    this.view.zoomOut(position);
+                }
+                else {
+                    this.view.zoomIn(position);
+                }
             } else if (wheelDelta < 0) {
-                this.view.zoomOut(position);
+                if (DefaultNavigation.swapMouseWheelZoom) {
+                    this.view.zoomIn(position);
+                }
+                else {
+                    this.view.zoomOut(position);
+                }
             }
         }
 
