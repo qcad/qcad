@@ -542,6 +542,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RImageData &amp;" typeName="RImageData"
         name="image" isConst="true" />
+        <arg type="bool" typeName="bool" name="forceSelected"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="exportText" cppName="exportText"
@@ -550,6 +552,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RTextBasedData &amp;" typeName="RTextBasedData"
         name="text" isConst="true" />
+        <arg type="bool" typeName="bool" name="forceSelected"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="exportQuad" cppName="exportQuad"

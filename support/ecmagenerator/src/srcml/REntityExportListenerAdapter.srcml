@@ -33,7 +33,7 @@
  * \scriptable
  * \ingroup ecma
  */</comment>
-<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>REntityExportListenerAdapter</name> <super>: <specifier>public</specifier> <name>QObject</name>, <specifier>public</specifier> <name>REntityExportListener</name></super> <block>{<private type="default">
+<class>class <name>REntityExportListenerAdapter</name> <super>: <specifier>public</specifier> <name>QObject</name>, <specifier>public</specifier> <name>REntityExportListener</name></super> <block>{<private type="default">
 <macro><name>Q_OBJECT</name></macro>
 
 </private><public>public:

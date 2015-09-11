@@ -511,6 +511,30 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
+    <method name="getTextLayoutsPainterPaths"
+    cppName="getTextLayoutsPainterPaths" specifier="protected"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RPainterPath &gt;"
+      isPureVirtual="false">
+        <arg type="RTextBasedData &amp;" typeName="RTextBasedData"
+        name="text" isConst="true" />
+        <arg type="QList &lt; RTextLayout &gt; &amp;"
+        typeName="QList &lt; RTextLayout &gt;" name="textLayouts"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="applyColorCorrection"
+    cppName="applyColorCorrection" specifier="protected"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPen &amp;" typeName="QPen" name="pen"
+        isConst="false" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QBrush &amp;" typeName="QBrush" name="brush"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getPointSize" cppName="getPointSize"
     specifier="protected" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

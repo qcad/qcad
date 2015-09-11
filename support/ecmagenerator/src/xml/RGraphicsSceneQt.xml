@@ -191,6 +191,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RImageData &amp;" typeName="RImageData"
         name="image" isConst="true" />
+        <arg type="bool" typeName="bool" name="forceSelected"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="exportText" cppName="exportText"
@@ -199,6 +201,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RTextBasedData &amp;" typeName="RTextBasedData"
         name="text" isConst="true" />
+        <arg type="bool" typeName="bool" name="forceSelected"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getLineTypePatternScale"
@@ -237,11 +241,21 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; RPainterPath &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="hasPreviewPainterPaths"
+    cppName="hasPreviewPainterPaths" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getPreviewTexts" cppName="getPreviewTexts"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QList &lt; RTextBasedData &gt;"
       isPureVirtual="false" />
+    </method>
+    <method name="hasPreviewTexts" cppName="hasPreviewTexts"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="hasImageFor" cppName="hasImageFor"
     specifier="public" isStatic="false" isVirtual="false"
@@ -251,14 +265,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="entityId" isConst="false" />
       </variant>
     </method>
-    <method name="getImage" cppName="getImage" specifier="public"
+    <method name="getImages" cppName="getImages" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="RImageData" isPureVirtual="false">
+      <variant returnType="QList &lt; RImageData &gt;"
+      isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
       </variant>
     </method>
-    <method name="hasTextFor" cppName="hasTextFor"
+    <method name="hasTextsFor" cppName="hasTextsFor"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
@@ -266,9 +281,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="entityId" isConst="false" />
       </variant>
     </method>
-    <method name="getText" cppName="getText" specifier="public"
+    <method name="getTexts" cppName="getTexts" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="RTextBasedData" isPureVirtual="false">
+      <variant returnType="QList &lt; RTextBasedData &gt;"
+      isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
       </variant>

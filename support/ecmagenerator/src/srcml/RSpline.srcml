@@ -28,13 +28,13 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDirected.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RExplodable.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RShape.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSplineProxy.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>R_NO_OPENNURBS</name></cpp:ifndef>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"opennurbs/opennurbs.h"</cpp:file></cpp:include>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
-<class_decl>class <name>RSplineProxy</name>;</class_decl>
 
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_MIN1</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_MIN1</name> -1</cpp:define>
