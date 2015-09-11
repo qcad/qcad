@@ -7,8 +7,6 @@
 
         // forwards declarations mapped to includes
         
-                #include "RSplineProxy.h"
-            
             
         // includes for base ecma wrapper classes
         

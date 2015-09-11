@@ -5157,7 +5157,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportImage(
-                const RImageData & image
+                const RImageData & image, bool forceSelected
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportImage", engine);
@@ -5170,7 +5170,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=1*/
+                    || _q_function.property("length").toInt32()!=2*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::exportImage";
@@ -5183,7 +5183,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RFileExporterAdapter::exportImage(
-                            image
+                            image, forceSelected
                         );
 
                         // block recursion again:
@@ -5214,6 +5214,15 @@
             new RImageData(image)
         )
       
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        forceSelected
+        )
+      
                             )
                         
                     ;
@@ -5226,7 +5235,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportText(
-                const RTextBasedData & text
+                const RTextBasedData & text, bool forceSelected
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportText", engine);
@@ -5239,7 +5248,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=1*/
+                    || _q_function.property("length").toInt32()!=2*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::exportText";
@@ -5252,7 +5261,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RFileExporterAdapter::exportText(
-                            text
+                            text, forceSelected
                         );
 
                         // block recursion again:
@@ -5281,6 +5290,15 @@
         
             // const reference argument - make a new object:
             new RTextBasedData(text)
+        )
+      
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        forceSelected
         )
       
                             )

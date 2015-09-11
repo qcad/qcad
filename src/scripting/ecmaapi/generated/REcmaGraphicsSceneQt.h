@@ -134,19 +134,25 @@
         getPreviewPainterPaths
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasPreviewPainterPaths
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPreviewTexts
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasPreviewTexts
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasImageFor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getImage
+        getImages
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        hasTextFor
+        hasTextsFor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getText
+        getTexts
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addPath

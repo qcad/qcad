@@ -428,12 +428,14 @@
         
     
       void exportImage(
-                const RImageData & image
+                const RImageData & image, bool forceSelected
+        = false
             );
         
     
       void exportText(
-                const RTextBasedData & text
+                const RTextBasedData & text, bool forceSelected
+        = false
             );
         
     

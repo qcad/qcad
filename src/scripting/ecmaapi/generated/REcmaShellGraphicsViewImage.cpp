@@ -5053,6 +5053,241 @@
         
     
     
+      QList < RPainterPath > REcmaShellGraphicsViewImage::getTextLayoutsPainterPaths(
+                const RTextBasedData & text, const QList < RTextLayout > & textLayouts
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::getTextLayoutsPainterPaths", engine);
+                QScriptValue _q_function = __qtscript_self.property("getTextLayoutsPainterPaths");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=2*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RGraphicsViewImage::getTextLayoutsPainterPaths";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        QList < RPainterPath > ret =
+                        RGraphicsViewImage::getTextLayoutsPainterPaths(
+                            text, textLayouts
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getTextLayoutsPainterPaths", engine);
+
+                        
+                            return ret;
+                          
+                }
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                        // temporary make protected function scriptable, only from the context of this function call:
+                        QScriptValue proto = engine->defaultPrototype(qMetaTypeId<RGraphicsViewImage*>());
+                        REcmaHelper::registerFunction(engine, &proto, getTextLayoutsPainterPaths, "getTextLayoutsPainterPaths");
+                        QList < RPainterPath > res;
+                      
+                          REcmaHelper::fromScriptValue(engine, 
+                        
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: RTextBasedData &, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        
+            // const reference argument - make a new object:
+            new RTextBasedData(text)
+        )
+      
+
+
+
+    // type: QList < RTextLayout > &, copyable: false
+        // List of ...:
+        << REcmaHelper::listToScriptValue(engine, 
+          textLayouts
+        )
+      
+                            )
+                        
+                      , res
+                    
+                      )
+                    
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getTextLayoutsPainterPaths", engine);
+
+                    
+                            return res;
+                          
+            }
+        
+    
+    
+      void REcmaShellGraphicsViewImage::applyColorCorrection(
+                QPen & pen
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::applyColorCorrection", engine);
+                QScriptValue _q_function = __qtscript_self.property("applyColorCorrection");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=1*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RGraphicsViewImage::applyColorCorrection";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RGraphicsViewImage::applyColorCorrection(
+                            pen
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::applyColorCorrection", engine);
+
+                        
+                            return;
+                          
+                }
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                        // temporary make protected function scriptable, only from the context of this function call:
+                        QScriptValue proto = engine->defaultPrototype(qMetaTypeId<RGraphicsViewImage*>());
+                        REcmaHelper::registerFunction(engine, &proto, applyColorCorrection, "applyColorCorrection");
+                        
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: QPen &, copyable: false
+        << qScriptValueFromValue(engine, 
+
+        &pen
+        )
+      
+                            )
+                        
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::applyColorCorrection", engine);
+
+                    
+            }
+        
+      void REcmaShellGraphicsViewImage::applyColorCorrection(
+                QBrush & brush
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::applyColorCorrection", engine);
+                QScriptValue _q_function = __qtscript_self.property("applyColorCorrection");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=1*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RGraphicsViewImage::applyColorCorrection";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RGraphicsViewImage::applyColorCorrection(
+                            brush
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::applyColorCorrection", engine);
+
+                        
+                            return;
+                          
+                }
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                        // temporary make protected function scriptable, only from the context of this function call:
+                        QScriptValue proto = engine->defaultPrototype(qMetaTypeId<RGraphicsViewImage*>());
+                        REcmaHelper::registerFunction(engine, &proto, applyColorCorrection, "applyColorCorrection");
+                        
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: QBrush &, copyable: false
+        << qScriptValueFromValue(engine, 
+
+        &brush
+        )
+      
+                            )
+                        
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::applyColorCorrection", engine);
+
+                    
+            }
+        
+    
+    
       double REcmaShellGraphicsViewImage::getPointSize(
                 double pSize
             ) {
@@ -9338,6 +9573,194 @@
 
     // protected methods (only available for ECMA shell classes) (generated by xsl2xpp.xsl):
 	 QScriptValue
+        REcmaShellGraphicsViewImage::getTextLayoutsPainterPaths
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShellGraphicsViewImage::getTextLayoutsPainterPaths", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShellGraphicsViewImage::getTextLayoutsPainterPaths";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // protected function: can only be called from ECMA shell:
+                    REcmaShellGraphicsViewImage* self = 
+                        getSelfShell("", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RTextBasedData */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QList < RTextLayout > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTextBasedData*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RTextBasedData*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type RTextBasedData.",
+                               context);                    
+                    }
+                    RTextBasedData 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isArray
+                    QList < RTextLayout >
+                    a1;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(1),
+                        a1
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RPainterPath >'
+    QList < RPainterPath > cppResult =
+        
+               self->RGraphicsViewImage::getTextLayoutsPainterPaths(a0
+        ,
+    a1);
+        // return type: QList < RPainterPath >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.getTextLayoutsPainterPaths().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShellGraphicsViewImage::getTextLayoutsPainterPaths", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShellGraphicsViewImage::applyColorCorrection
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShellGraphicsViewImage::applyColorCorrection", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShellGraphicsViewImage::applyColorCorrection";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // protected function: can only be called from ECMA shell:
+                    REcmaShellGraphicsViewImage* self = 
+                        getSelfShell("", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QPen */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QPen*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QPen*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type QPen*.",
+                               context);                    
+                    }
+                    QPen& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->RGraphicsViewImage::applyColorCorrection(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QBrush */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QBrush*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QBrush*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type QBrush*.",
+                               context);                    
+                    }
+                    QBrush& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->RGraphicsViewImage::applyColorCorrection(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.applyColorCorrection().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShellGraphicsViewImage::applyColorCorrection", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaShellGraphicsViewImage::getPointSize
         (QScriptContext* context, QScriptEngine* engine) 
         
