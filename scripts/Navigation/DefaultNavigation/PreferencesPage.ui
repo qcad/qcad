@@ -13,17 +13,7 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="1" column="0" colspan="2">
-      <widget class="QCheckBox" name="PanGesture">
-       <property name="text">
-        <string>Enable pan gesture</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QComboBox" name="Wheel"/>
-     </item>
-     <item row="2" column="0" colspan="2">
+     <item row="4" column="0" colspan="2">
       <widget class="QCheckBox" name="LimitZoomAndScroll">
        <property name="text">
         <string>Limit zoom and scroll to prevent overflows</string>
@@ -33,6 +23,9 @@
        </property>
       </widget>
      </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="Wheel"/>
+     </item>
      <item row="0" column="0">
       <widget class="QLabel" name="label">
        <property name="text">
@@ -41,10 +34,109 @@
       </widget>
      </item>
      <item row="3" column="0" colspan="2">
+      <widget class="QCheckBox" name="PanGesture">
+       <property name="text">
+        <string>Enable pan gesture</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="2">
       <widget class="QCheckBox" name="SwapMouseWheelZoom">
        <property name="text">
         <string>Swap zoom in / zoom out direction for mouse wheel</string>
        </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Mouse wheel zoom factor:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QComboBox" name="MouseWheelZoomFactor">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <property name="currentText">
+        <string>1.20</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>1.02</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.04</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.06</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.08</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.10</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.12</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.14</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.16</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.18</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.20</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.22</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.24</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.26</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1.28</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">1.30</string>
+        </property>
+       </item>
       </widget>
      </item>
     </layout>
