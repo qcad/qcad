@@ -27,17 +27,27 @@
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
+        <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Mouse wheel / two finger swipe:</source>
-        <translation>Maus Rad / Zwei Finger Swipe:</translation>
+        <translation>Mausrad / Zwei Finger Swipe:</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+7"/>
         <source>Enable pan gesture</source>
         <translation>Bewegung zum Verschieben der Ansicht aktivieren</translation>
     </message>
     <message>
         <location line="+7"/>
+        <source>Reverse mouse wheel direction for zoom</source>
+        <translation>Mausrad Richtung für Zoom umdrehen</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Mouse wheel zoom factor:</source>
+        <translation>Mausrad Zoomfaktor:</translation>
+    </message>
+    <message>
+        <location line="-34"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Zoom und pan begrenzen um Überläufe zu verhindern</translation>
     </message>

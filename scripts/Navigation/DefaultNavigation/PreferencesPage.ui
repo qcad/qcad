@@ -64,72 +64,72 @@
        </property>
        <item>
         <property name="text">
-         <string>1.02</string>
+         <string notr="true">1.02</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.04</string>
+         <string notr="true">1.04</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.06</string>
+         <string notr="true">1.06</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.08</string>
+         <string notr="true">1.08</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.10</string>
+         <string notr="true">1.10</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.12</string>
+         <string notr="true">1.12</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.14</string>
+         <string notr="true">1.14</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.16</string>
+         <string notr="true">1.16</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.18</string>
+         <string notr="true">1.18</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.2</string>
+         <string notr="true">1.2</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.22</string>
+         <string notr="true">1.22</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.24</string>
+         <string notr="true">1.24</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.26</string>
+         <string notr="true">1.26</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.28</string>
+         <string notr="true">1.28</string>
         </property>
        </item>
        <item>
@@ -139,17 +139,17 @@
        </item>
        <item>
         <property name="text">
-         <string>1.4</string>
+         <string notr="true">1.4</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>1.5</string>
+         <string notr="true">1.5</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>2</string>
+         <string notr="true">2</string>
         </property>
        </item>
       </widget>

@@ -34,19 +34,29 @@ Texto a mostrar</translatorcomment>
 <context>
     <name>GraphicsViewNavigation</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
+        <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Mouse wheel / two finger swipe:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Roda do mouse / deslocamento de dois dedos:</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+7"/>
         <source>Enable pan gesture</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Habilite o gesto de deslocamento</translation>
     </message>
     <message>
         <location line="+7"/>
+        <source>Reverse mouse wheel direction for zoom</source>
+        <translation>Inverso sentido roda do mouse para zoom</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Mouse wheel zoom factor:</source>
+        <translation>Roda do mouse fator de zoom:</translation>
+    </message>
+    <message>
+        <location line="-34"/>
         <source>Limit zoom and scroll to prevent overflows</source>
         <translation>Limite o zoom e a rolagem para evitar excessos</translation>
     </message>
