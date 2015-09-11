@@ -41,9 +41,9 @@
       </widget>
      </item>
      <item row="5" column="0" colspan="2">
-      <widget class="QCheckBox" name="SwapMouseWheelZoom">
+      <widget class="QCheckBox" name="ReverseMouseWheelZoom">
        <property name="text">
-        <string>Swap zoom in / zoom out direction for mouse wheel</string>
+        <string>Reverse mouse wheel direction for zoom</string>
        </property>
       </widget>
      </item>

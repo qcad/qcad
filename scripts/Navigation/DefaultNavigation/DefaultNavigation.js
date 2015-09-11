@@ -54,7 +54,7 @@ DefaultNavigation.initPreferences = function(pageWidget, calledByPrefDialog, doc
 
 DefaultNavigation.applyPreferences = function(doc) {
     DefaultNavigation.wheelBehavior = RSettings.getIntValue("GraphicsViewNavigation/Wheel", DefaultNavigation.WheelBehavior.Zoom);
-    DefaultNavigation.swapMouseWheelZoom = RSettings.getBoolValue("GraphicsViewNavigation/SwapMouseWheelZoom", false);
+    DefaultNavigation.reverseMouseWheelZoom = RSettings.getBoolValue("GraphicsViewNavigation/ReverseMouseWheelZoom", false);
     DefaultNavigation.mouseWheelZoomFactor = RSettings.getDoubleValue("GraphicsViewNavigation/MouseWheelZoomFactor", 1.2);
     DefaultNavigation.panGesture = RSettings.getBoolValue("GraphicsViewNavigation/PanGesture", false);
 };
@@ -185,7 +185,7 @@ DefaultNavigation.prototype.wheelEvent = function(event) {
         // wheel behavior is "zoom":
         if (DefaultNavigation.wheelBehavior===DefaultNavigation.WheelBehavior.Zoom) {
             var position = event.getModelPosition();
-            if ((wheelDelta > 0) !== DefaultNavigation.swapMouseWheelZoom) {
+            if ((wheelDelta > 0) !== DefaultNavigation.reverseMouseWheelZoom) {
                 this.view.zoom(position, DefaultNavigation.mouseWheelZoomFactor);
             }
             else {
