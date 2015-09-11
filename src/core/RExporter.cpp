@@ -527,6 +527,8 @@ void RExporter::exportView(RView::Id viewId) {
 /**
  * Sets the current entity to the given entity and calls \ref exportEntity().
  * Note that entity is a temporary clone.
+ *
+ * \forceSelected Force selection, used to export entitis as part of a selected block reference.
  */
 void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool forceSelected) {
     RDocument* doc = entity.getDocument();
@@ -1417,12 +1419,14 @@ void RExporter::exportBoundingBoxPaths(const QList<RPainterPath>& paths) {
     Q_UNUSED(paths)
 }
 
-void RExporter::exportImage(const RImageData& image) {
+void RExporter::exportImage(const RImageData& image, bool forceSelected) {
     Q_UNUSED(image)
+    Q_UNUSED(forceSelected)
 }
 
-void RExporter::exportText(const RTextBasedData& text) {
+void RExporter::exportText(const RTextBasedData& text, bool forceSelected) {
     Q_UNUSED(text)
+    Q_UNUSED(forceSelected)
 }
 
 double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {

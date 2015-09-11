@@ -815,9 +815,11 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
 
     // paint image for raster image entity:
     if (sceneQt->hasImageFor(id)) {
-        RImageData image = sceneQt->getImage(id);
-        image.move(paintOffset);
-        paintImage(painter, image);
+        QList<RImageData> images = sceneQt->getImages(id);
+        for (int i=0; i<images.length(); i++) {
+            images[i].move(paintOffset);
+            paintImage(painter, images[i]);
+        }
     }
 
     if (id==-1) {
@@ -844,12 +846,14 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
     }
     else {
         // paint text for text layout based entity:
-        if (sceneQt->hasTextFor(id)) {
-            RTextBasedData text = sceneQt->getText(id);
-            text.move(paintOffset);
-            paintText(painter, text);
-            QList<RTextLayout> tls = text.getTextLayouts();
-            painterPaths.append(getTextLayoutsPainterPaths(text, tls));
+        if (sceneQt->hasTextsFor(id)) {
+            QList<RTextBasedData> texts = sceneQt->getTexts(id);
+            for (int i=0; i<texts.length(); i++) {
+                texts[i].move(paintOffset);
+                paintText(painter, texts[i]);
+                QList<RTextLayout> tls = texts[i].getTextLayouts();
+                painterPaths.append(getTextLayoutsPainterPaths(texts[i], tls));
+            }
         }
     }
 

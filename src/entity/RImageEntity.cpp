@@ -183,9 +183,8 @@ QPair<QVariant, RPropertyAttributes> RImageEntity::getProperty(
 
 void RImageEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
-    Q_UNUSED(forceSelected);
 
-    e.exportImage(data);
+    e.exportImage(data, forceSelected);
 }
 
 void RImageEntity::print(QDebug dbg) const {

@@ -89,8 +89,8 @@ public:
 
     //virtual void exportPainterPathSource(const RPainterPathSource& pathSource);
     virtual void exportPainterPaths(const QList<RPainterPath>& paths);
-    virtual void exportImage(const RImageData& image);
-    virtual void exportText(const RTextBasedData& text);
+    virtual void exportImage(const RImageData& image, bool forceSelected = false);
+    virtual void exportText(const RTextBasedData& text, bool forceSelected = false);
 
     virtual double getLineTypePatternScale(const RLinetypePattern& p) const;
     
@@ -103,9 +103,9 @@ public:
     QList<RTextBasedData> getPreviewTexts();
     bool hasPreviewTexts() const;
     bool hasImageFor(REntity::Id entityId);
-    RImageData getImage(REntity::Id entityId);
-    bool hasTextFor(REntity::Id entityId);
-    RTextBasedData getText(REntity::Id entityId);
+    QList<RImageData> getImages(REntity::Id entityId);
+    bool hasTextsFor(REntity::Id entityId);
+    QList<RTextBasedData> getTexts(REntity::Id entityId);
 
     void addPath(REntity::Id entityId, const RPainterPath& path, bool draft);
 
@@ -128,8 +128,8 @@ private:
     RPainterPath currentPainterPath;
     QMap<REntity::Id, QList<RPainterPath> > painterPaths;
 
-    QMap<REntity::Id, RImageData> images;
-    QMap<REntity::Id, RTextBasedData> texts;
+    QMap<REntity::Id, QList<RImageData> > images;
+    QMap<REntity::Id, QList<RTextBasedData> > texts;
 
     QList<RPainterPath> previewPainterPaths;
     QList<RTextBasedData> previewTexts;

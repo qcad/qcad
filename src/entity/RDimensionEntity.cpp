@@ -234,10 +234,9 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
 
 void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
-    Q_UNUSED(forceSelected);
 
     // make sure text data is removed:
-    e.unexportEntity(e.getBlockRefOrEntity()->getId());
+    //e.unexportEntity(e.getBlockRefOrEntity()->getId());
 
     getData().dirty = true;
 
@@ -271,7 +270,7 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
     //qDebug() << "export dim: angle: " << textData.getAngle();
 
     if (RSettings::getStringValue("TextRendering/RenderAs", "Paths")=="Text") {
-        e.exportText(textData);
+        e.exportText(textData, forceSelected);
     }
     else {
         e.setBrush(brush);

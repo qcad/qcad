@@ -209,8 +209,8 @@ public:
 
     virtual void exportBoundingBoxPaths(const QList<RPainterPath>& paths);
 
-    virtual void exportImage(const RImageData& image);
-    virtual void exportText(const RTextBasedData& text);
+    virtual void exportImage(const RImageData& image, bool forceSelected = false);
+    virtual void exportText(const RTextBasedData& text, bool forceSelected = false);
 
     virtual void exportQuad(
         const RVector& p1,

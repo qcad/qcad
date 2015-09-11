@@ -514,11 +514,14 @@ void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths) {
     }
 }
 
-void RGraphicsSceneQt::exportImage(const RImageData& image) {
+void RGraphicsSceneQt::exportImage(const RImageData& image, bool forceSelected) {
     if (exportToPreview) {
         RPainterPath path;
         path.setPen(currentPen);
         path.setBrush(Qt::NoBrush);
+        if (forceSelected) {
+            path.setSelected(true);
+        }
         QList<RLine> edges = image.getEdges();
         for (int i=0; i<=edges.count(); i++) {
             if (i==0) {
@@ -531,17 +534,25 @@ void RGraphicsSceneQt::exportImage(const RImageData& image) {
         addToPreview(path);
     }
     else {
-        images.insert(getBlockRefOrEntity()->getId(), image);
+        if (images.contains(getBlockRefOrEntity()->getId())) {
+            images[getBlockRefOrEntity()->getId()].append(image);
+        }
+        else {
+            images.insert(getBlockRefOrEntity()->getId(), QList<RImageData>() << image);
+        }
     }
 }
 
-void RGraphicsSceneQt::exportText(const RTextBasedData& text) {
+void RGraphicsSceneQt::exportText(const RTextBasedData& text, bool forceSelected) {
     RTextBasedData textCopy = text;
 
     // resolve line type, color by layer, by block:
     textCopy.setLineweight(text.getLineweight(true, blockRefStack));
     RColor col = text.getColor(true, blockRefStack);
     textCopy.setColor(col);
+    if (forceSelected) {
+        textCopy.setSelected(true);
+    }
     //qDebug() << "text color resolved to: " << textCopy.getColor();
     //textCopy.setLinetypeId(text.getLinetypeId(true, blockRefStack));
 
@@ -563,7 +574,12 @@ void RGraphicsSceneQt::exportText(const RTextBasedData& text) {
         addTextToPreview(textCopy);
     }
     else {
-        texts.insert(getBlockRefOrEntity()->getId(), textCopy);
+        if (texts.contains(getBlockRefOrEntity()->getId())) {
+            texts[getBlockRefOrEntity()->getId()].append(textCopy);
+        }
+        else {
+            texts.insert(getBlockRefOrEntity()->getId(), QList<RTextBasedData>() << textCopy);
+        }
     }
 }
 
@@ -625,24 +641,24 @@ bool RGraphicsSceneQt::hasImageFor(REntity::Id entityId) {
     return images.contains(entityId);
 }
 
-RImageData RGraphicsSceneQt::getImage(REntity::Id entityId) {
+QList<RImageData> RGraphicsSceneQt::getImages(REntity::Id entityId) {
     if (images.contains(entityId)) {
         return images.value(entityId);
     }
 
-    return RImageData();
+    return QList<RImageData>();
 }
 
-bool RGraphicsSceneQt::hasTextFor(REntity::Id entityId) {
+bool RGraphicsSceneQt::hasTextsFor(REntity::Id entityId) {
     return texts.contains(entityId);
 }
 
-RTextBasedData RGraphicsSceneQt::getText(REntity::Id entityId) {
+QList<RTextBasedData> RGraphicsSceneQt::getTexts(REntity::Id entityId) {
     if (texts.contains(entityId)) {
         return texts.value(entityId);
     }
 
-    return RTextBasedData();
+    return QList<RTextBasedData>();
 }
 
 void RGraphicsSceneQt::addPath(REntity::Id entityId, const RPainterPath& path, bool draft) {
@@ -709,7 +725,10 @@ void RGraphicsSceneQt::startEntity(bool topLevelEntity) {
 
     if (!exportToPreview) {
         if (topLevelEntity) {
+            // top level entity (i.e. not entity in block ref): remove previous graphical representations:
             painterPaths.remove(getEntity()->getId());
+            images.remove(getEntity()->getId());
+            texts.remove(getEntity()->getId());
         }
     }
 }
