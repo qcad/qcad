@@ -430,6 +430,7 @@ Print.centerBox = function(document, bBox) {
  */
 Print.drawCropMarks = function(document, painter, border, printing) {
     var scale = Print.getScale(document);
+    var offset = Print.getOffset(document);
     var unitScale = Print.getUnitScale(document);
     var colorMode = Print.getColorMode(document);
     var backgroundColor = Print.getBackgroundColor(document);
@@ -453,8 +454,12 @@ Print.drawCropMarks = function(document, painter, border, printing) {
     Print.pushCropMarkLines(document, lines, border.topRight(), printing);
     Print.pushCropMarkLines(document, lines, border.bottomRight(), printing);
 
+
     // printing:
     if (isFunction(painter.drawLinesF)) {
+        for (var k=0; k<lines.length; ++k) {
+            lines[k].translate(-offset.x, -offset.y);
+        }
         painter.drawLinesF(lines);
     }
 
@@ -509,6 +514,7 @@ Print.drawPageTags = function(document, painter, index, border, printing, printe
 
     var backgroundColor = Print.getBackgroundColor(document);
     var scale = Print.getScale(document);
+    var offset = Print.getOffset(document);
 
     var str = Print.getPageId(document, index);
 
@@ -520,54 +526,6 @@ Print.drawPageTags = function(document, painter, index, border, printing, printe
 
     font = Print.getTagFont();
     font.setPointSizeF(1.0);
-//    qDebug("TagFont: ", font);
-//    if (printing) {
-//        qDebug("TagFont: size A: ", font.pointSizeF());
-//        //var sf = font.pointSizeF() / printerFactor.y / scale;
-//        var sf = font.pointSizeF();
-//        qDebug("sf 1: ", sf);
-//        sf = font.pointSizeF() / 72.0 * 25.4;
-//        qDebug("sf 2: ", sf);
-//        sf = RUnit.convert(sf, RS.Millimeter, document.getUnit());
-//        qDebug("sf 3: ", sf);
-//        sf = sf / scale;
-//        qDebug("sf 4: ", sf);
-//        // convert point size to millimeter:
-//        //sf = font.pointSizeF() / 72.0 * 25.4;
-//        // scale millimeter by drawing scale:
-//        //sf = sf * scale;
-//        // convert millimeter to drawing unit:
-//        //sf = sf / Print.getUnitScale(document);
-//        // convert millimeter to printer units:
-//        //sf /= printerFactor.y;
-//        // convert printer unit to points:
-//        //sf
-//        //font.setPointSizeF(font.pointSizeF() / printerFactor.y / scale); // / Print.getUnitScale(document));
-//        if (sf<0.5) {
-//            sf = 0.5;
-//        }
-//        qDebug("sf 5: ", sf);
-//        font.setPointSizeF(sf);
-//        qDebug("TagFont: size B: ", font.pointSizeF());
-//    }
-//    else {
-//        // 1pt = 1/72" ~= 0.3527 mm
-//        font.setPointSizeF(font.pointSizeF() * (25.4 / 72)); // / Print.getUnitScale(document));
-//    }
-//    qDebug("TagFont: scaled: ", font);
-
-//    if (printing) {
-//        qDebug("window: ", painter.window());
-//        qDebug("viewport: ", painter.viewport());
-//    }
-
-//    if (printing) {
-//        path.moveTo(0,0);
-//        path.lineTo(10,0);
-//        path.lineTo(10,10);
-//        path.lineTo(0,10);
-//        path.lineTo(0,0);
-//    }
 
     var sf = 1.0;
     // font size is given in points:
@@ -596,16 +554,10 @@ Print.drawPageTags = function(document, painter, index, border, printing, printe
     t.scale(sf,-sf);
     path = t.map(path);
 
-    var outside = (Print.getTagAlignment() == "Outside");
+    var outside = (Print.getTagAlignment() === "Outside");
 
     width = path.boundingRect().width();
     height = path.boundingRect().height();
-    //fm = new QFontMetricsF(font);
-    //width = fm.width(str);
-    //height = fm.height();
-    //height = font.pointSizeF();
-    //qDebug("width/height: ", width, height);
-    //qDebug("printer factor: ", printerFactor.x, printerFactor.y);
 
     switch (Print.getTagPosition()) {
     case "Top":
@@ -668,67 +620,22 @@ Print.drawPageTags = function(document, painter, index, border, printing, printe
         color = new QColor("white");
     }
 
-//    font = new QFont("Helvetica");
-//    font.setPointSizeF(10.0);
-//    x = 0;
-//    y = 0;
-    painter.setPen(new QPen(color));
+    var pen = new QPen(Qt.NoPen);
+    painter.setPen(pen);
     painter.setBrush(new QBrush(color));
 
-    //var t = new QTransform();
-    //t.scale(1.0,-1.0);
-    //path = t.map(path);
     path.translate(x,y);
 
     if (printing) {
-        //painter.setPen(new QPen(color));
-        //painter.setFont(font);
-        //painter.drawText(x, y, str);
+        var of = offset.getNegated();
+        path.translate(of.x, of.y);
         painter.drawPath(path);
     }
     else {
-        //path.translate(x,y);
         painter.addPath(new RPainterPath(path));
     }
 
-        //painter.setFont(font);
-//        painter.drawText(
-//                correctedBorder.adjusted(bo,bo,-bo,-bo),
-//                alignment,
-//                str,
-//                new QRectF()
-//        );
-//    }
-
-//    if (printing) {
-//        painter.setTransform(savedTransform2);
-//    }
 };
-
-/**
- * Called when the user accepts the print dialog
- * (OK, Preview, Save as PDF, ...).
- * Destroys the print dialog (required on OS X to continue execution of script).
- */
-//Print.prototype.accept = function() {
-//    this.cancel = false;
-//    if (!isNull(Print.printDialog)) {
-//        Print.printDialog.close();
-//    }
-//    //this.printDialog.destroy();
-//};
-
-/**
- * Called when the user cancels the print dialog.
- * Destroys the print dialog (required on OS X to continue execution of script).
- */
-//Print.prototype.reject = function() {
-//    this.cancel = true;
-//    if (!isNull(Print.printDialog)) {
-//        Print.printDialog.close();
-//        Print.printDialog.destroy();
-//    }
-//};
 
 /**
  * \return All pages (printable areas) as QRectF objects in Millimeter
@@ -1234,10 +1141,6 @@ Print.setShowPaperBorders = function(document, showPaperBorders) {
     document.setVariable("PageSettings/ShowPaperBorders", showPaperBorders);
 };
 
-//Print.getShowBoundingBox = function(document) {
-//    return EAction.getBoolValue("PageSettings/ShowBoundingBox", false, document);
-//};
-
 Print.getPrintCropMarks = function(document) {
     return EAction.getBoolValue("MultiPageSettings/PrintCropMarks", true, document);
 };
@@ -1383,16 +1286,9 @@ Print.getTagAlignment = function(document) {
     return EAction.getValue("PageTagSettings/TagAlignment", "Inside", document);
 };
 
-//Print.getPaperSizeMM = function(document) {
-//    return EAction.getValue("PageSettings/PaperSizeMM", new QSizeF(210,297), document);
-//}
-
 /**
  * Parses the given scale string (e.g. "1:2") and returns the scale as number (e.g. 0.5).
  */
 Print.parseScale = function(scaleString) {
     return RMath.parseScale(scaleString);
 };
-
-/*
-*/
