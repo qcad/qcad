@@ -822,39 +822,28 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         }
     }
 
+    // paint text for text layout based entity:
+    QList<RTextBasedData> texts;
     if (id==-1) {
         // preview text:
-        QList<RTextBasedData> previewTexts = sceneQt->getPreviewTexts();
-        if (!previewTexts.isEmpty()) {
-            //QPainter* painter = initPainter(graphicsBufferWithPreview, false);
-            //bgColorLightness = getBackgroundColor().lightness();
-            //isSelected = false;
-            for (int i=0; i<previewTexts.length(); i++) {
-                previewTexts[i].move(paintOffset);
-                paintText(painter, previewTexts[i]);
-
-                // add painter paths (from CAD fonts) to preview:
-                QList<RTextLayout> tls = previewTexts[i].getTextLayouts();
-                //QList<RPainterPath> pps = getTextLayoutsPainterPaths(previewTexts[i], tls);
-                //qDebug() << "adding to preview: " << pps;
-                //preview.append(pps);
-                painterPaths.append(getTextLayoutsPainterPaths(previewTexts[i], tls));
-            }
-            //painter->end();
-            //delete painter;
-        }
+        texts = sceneQt->getPreviewTexts();
     }
     else {
-        // paint text for text layout based entity:
         if (sceneQt->hasTextsFor(id)) {
-            QList<RTextBasedData> texts = sceneQt->getTexts(id);
-            for (int i=0; i<texts.length(); i++) {
-                texts[i].move(paintOffset);
-                paintText(painter, texts[i]);
-                QList<RTextLayout> tls = texts[i].getTextLayouts();
-                painterPaths.append(getTextLayoutsPainterPaths(texts[i], tls));
-            }
+            texts = sceneQt->getTexts(id);
         }
+    }
+    for (int k=0; k<texts.length(); k++) {
+        texts[k].move(paintOffset);
+        paintText(painter, texts[k]);
+
+        // add painter paths (from CAD fonts) to preview:
+        QList<RTextLayout> tls = texts[k].getTextLayouts();
+        QList<RPainterPath> pps = getTextLayoutsPainterPaths(texts[k], tls);
+        for (int k=0; k<pps.length(); k++) {
+            pps[k].move(-paintOffset);
+        }
+        painterPaths.append(pps);
     }
 
     // paint painter paths:
