@@ -173,6 +173,9 @@ public:
     static int getMouseThreshold();
     static bool getPositionByMousePress();
 
+    static bool isTextRenderedAsText();
+    static bool isLayer0CompatibilityOn();
+
 private:
     static bool isInitialized();
     static void shortenRecentFiles();
@@ -205,6 +208,8 @@ private:
     static double arcAngleLengthThreshold;
     static double minArcAngleStep;
     static int dashThreshold;
+    static int textRenderedAsText;
+    static int layer0CompatibilityOn;
     static QStringList recentFiles;
     static QLocale* numberLocale;
 

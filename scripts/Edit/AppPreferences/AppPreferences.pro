@@ -3,6 +3,7 @@ SUBDIRS = \
     GraphicsViewPreferences \
     InputPreferences \
     LanguagePreferences \
+    LayerCompatibility \
     ScriptingPreferences \
     StartupPreferences \
     StylePreferences \

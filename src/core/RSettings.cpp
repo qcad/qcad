@@ -61,6 +61,8 @@ int RSettings::useSolidLineSelection = -1;
 double RSettings::arcAngleLengthThreshold = -1;
 double RSettings::minArcAngleStep = -1;
 int RSettings::dashThreshold = -1;
+int RSettings::textRenderedAsText = -1;
+int RSettings::layer0CompatibilityOn = -1;
 QStringList RSettings::recentFiles;
 QLocale* RSettings::numberLocale = NULL;
 QString RSettings::applicationNameOverride;
@@ -504,6 +506,20 @@ int RSettings::getDashThreshold() {
         dashThreshold = getValue("GraphicsView/DashThreshold", 1000).toInt();
     }
     return dashThreshold;
+}
+
+bool RSettings::isTextRenderedAsText() {
+    if (textRenderedAsText==-1) {
+        textRenderedAsText = getStringValue("TextRendering/RenderAs", "Paths") == "Text";
+    }
+    return textRenderedAsText;
+}
+
+bool RSettings::isLayer0CompatibilityOn() {
+    if (layer0CompatibilityOn==-1) {
+        layer0CompatibilityOn = getStringValue("LayerCompatibility/Layer0", "QCAD") == "Compatibility";
+    }
+    return layer0CompatibilityOn;
 }
 
 QString RSettings::getQtVersion() {
@@ -967,6 +983,8 @@ void RSettings::resetCache() {
     positionByMousePress = -1;
     minArcAngleStep = -1;
     dashThreshold = -1;
+    textRenderedAsText = -1;
+    layer0CompatibilityOn = -1;
     mouseThreshold = -1;
     cache.clear();
 }

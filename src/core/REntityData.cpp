@@ -83,6 +83,17 @@ RColor REntityData::getColor(bool resolve, const QStack<REntity*>& blockRefStack
                           "color is ByLayer but layer is invalid";
             return RColor(Qt::white);
         }
+
+        if (RSettings::isLayer0CompatibilityOn()) {
+            // entity in block on layer 0, use attributes of block reference if compatibility mode is on:
+            if (l->getName()=="0") {
+                if (blockRefStack.isEmpty()) {
+                    return RColor(Qt::white);
+                }
+                return blockRefStack.top()->getColor(true, blockRefStack);
+            }
+        }
+
         return l->getColor();
     }
 
@@ -131,6 +142,15 @@ RLineweight::Lineweight REntityData::getLineweight(bool resolve, const QStack<RE
                           "line weight of layer '" << l->getName() << "' is ByLayer";
             return RLineweight::Weight000;
         }
+        if (RSettings::isLayer0CompatibilityOn()) {
+            // entity in block on layer 0, use attributes of block reference if compatibility mode is on:
+            if (l->getName()=="0") {
+                if (blockRefStack.isEmpty()) {
+                    return RLineweight::Weight000;
+                }
+                lw = blockRefStack.top()->getLineweight(true, blockRefStack);
+            }
+        }
     }
     else if (lineweight==RLineweight::WeightByBlock) {
         if (blockRefStack.isEmpty()) {
@@ -169,6 +189,15 @@ RLinetype::Id REntityData::getLinetypeId(bool resolve, const QStack<REntity*>& b
                 qWarning() << "REntityData::getLinetypeId: "
                               "line type is ByLayer but layer is invalid";
                 return RLinetype::INVALID_ID;
+            }
+            if (RSettings::isLayer0CompatibilityOn()) {
+                // entity in block on layer 0, use attributes of block reference if compatibility mode is on:
+                if (l->getName()=="0") {
+                    if (blockRefStack.isEmpty()) {
+                        return RLinetype::INVALID_ID;
+                    }
+                    return blockRefStack.top()->getLinetypeId(true, blockRefStack);
+                }
             }
             return l->getLinetypeId();
         }
