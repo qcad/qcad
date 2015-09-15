@@ -66,8 +66,8 @@ public:
     void prependShape(const RShape& shape);
     void appendShape(const RShape& shape, bool prepend = false);
 
-    void appendVertex(const RVector& vertex, double bulge = 0.0);
-    void prependVertex(const RVector& vertex, double bulge = 0.0);
+    void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = RDEFAULT_MIN1, double w2 = RDEFAULT_MIN1);
+    void prependVertex(const RVector& vertex, double bulge = 0.0, double w1 = RDEFAULT_MIN1, double w2 = RDEFAULT_MIN1);
     void insertVertex(int index, const RVector& vertex);
     void removeFirstVertex();
     void removeLastVertex();
@@ -88,6 +88,10 @@ public:
     double getBulgeAt(int i) const;
     void setBulgeAt(int i, double b);
     bool hasArcSegments() const;
+
+    double getStartWidthAt(int i) const;
+    double getEndWidthAt(int i) const;
+    bool hasWidths() const;
 
     void setClosed(bool on);
     bool isClosed() const;
@@ -186,6 +190,9 @@ protected:
     QList<RVector> vertices;
 
     QList<double> bulges;
+
+    QList<double> endWidths;
+    QList<double> startWidths;
 
     /**
      * \getter{isClosed}

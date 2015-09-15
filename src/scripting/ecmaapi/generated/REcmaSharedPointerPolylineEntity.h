@@ -91,12 +91,6 @@
         countVertices
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        appendVertex
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        prependVertex
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         insertVertex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -119,6 +113,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setBulgeAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getStartWidthAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getEndWidthAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDirection1

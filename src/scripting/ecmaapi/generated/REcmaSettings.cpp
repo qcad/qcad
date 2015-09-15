@@ -253,6 +253,10 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getPositionByMousePress, "getPositionByMousePress");
             
+            REcmaHelper::registerFunction(&engine, &ctor, isTextRenderedAsText, "isTextRenderedAsText");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isLayer0CompatibilityOn, "isLayer0CompatibilityOn");
+            
 
     // static properties:
     
@@ -4741,6 +4745,84 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getPositionByMousePress", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::isTextRenderedAsText
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::isTextRenderedAsText", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::isTextRenderedAsText";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       isTextRenderedAsText();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.isTextRenderedAsText().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::isTextRenderedAsText", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::isLayer0CompatibilityOn
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::isLayer0CompatibilityOn", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::isLayer0CompatibilityOn";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       isLayer0CompatibilityOn();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.isLayer0CompatibilityOn().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::isLayer0CompatibilityOn", context, engine);
             return result;
         }
          QScriptValue REcmaSettings::toString

@@ -22,6 +22,9 @@
 
 #include "../core_global.h"
 
+class RArc;
+class RLine;
+class RPainterPath;
 class RPolyline;
 class RVector;
 
@@ -36,6 +39,9 @@ class QCADCORE_EXPORT RPolylineProxy {
 public:
     virtual void trimStartPoint(RPolyline& polyline, const RVector& p) = 0;
     virtual void trimEndPoint(RPolyline& polyline, const RVector& p) = 0;
+
+    virtual void exportThickLine(RPainterPath& path, const RLine& line, double w1, double w2) = 0;
+    virtual void exportThickArc(RPainterPath& path, const RArc& arc, double w1, double w2) = 0;
 };
 
 #endif

@@ -98,10 +98,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, countVertices, "countVertices");
             
-            REcmaHelper::registerFunction(&engine, proto, appendVertex, "appendVertex");
-            
-            REcmaHelper::registerFunction(&engine, proto, prependVertex, "prependVertex");
-            
             REcmaHelper::registerFunction(&engine, proto, insertVertex, "insertVertex");
             
             REcmaHelper::registerFunction(&engine, proto, getVertexAt, "getVertexAt");
@@ -117,6 +113,10 @@
             REcmaHelper::registerFunction(&engine, proto, getBulgeAt, "getBulgeAt");
             
             REcmaHelper::registerFunction(&engine, proto, setBulgeAt, "setBulgeAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, getStartWidthAt, "getStartWidthAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, getEndWidthAt, "getEndWidthAt");
             
             REcmaHelper::registerFunction(&engine, proto, getDirection1, "getDirection1");
             
@@ -235,6 +235,18 @@
             
             ctor.setProperty("PropertyBulgeN",
                 qScriptValueFromValue(&engine, RPolylineEntity::PropertyBulgeN),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyStartWidthN",
+                qScriptValueFromValue(&engine, RPolylineEntity::PropertyStartWidthN),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyEndWidthN",
+                qScriptValueFromValue(&engine, RPolylineEntity::PropertyEndWidthN),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyGlobalWidth",
+                qScriptValueFromValue(&engine, RPolylineEntity::PropertyGlobalWidth),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("PropertyLength",
@@ -1687,244 +1699,6 @@
             return result;
         }
          QScriptValue
-        REcmaPolylineEntity::appendVertex
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaPolylineEntity::appendVertex", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::appendVertex";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RPolylineEntity* self = 
-                        getSelf("appendVertex", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RVector */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RVector*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RVector*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RPolylineEntity: Argument 0 is not of type RVector.",
-                               context);                    
-                    }
-                    RVector 
-                    a0 = 
-                    *ap0;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->appendVertex(a0);
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RVector */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: double */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RVector*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RVector*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RPolylineEntity: Argument 0 is not of type RVector.",
-                               context);                    
-                    }
-                    RVector 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isStandardType
-                    double
-                    a1 =
-                    (double)
-                    
-                    context->argument( 1 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->appendVertex(a0
-        ,
-    a1);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.appendVertex().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaPolylineEntity::appendVertex", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaPolylineEntity::prependVertex
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaPolylineEntity::prependVertex", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::prependVertex";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RPolylineEntity* self = 
-                        getSelf("prependVertex", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RVector */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RVector*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RVector*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RPolylineEntity: Argument 0 is not of type RVector.",
-                               context);                    
-                    }
-                    RVector 
-                    a0 = 
-                    *ap0;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->prependVertex(a0);
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RVector */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: double */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RVector*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RVector*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RPolylineEntity: Argument 0 is not of type RVector.",
-                               context);                    
-                    }
-                    RVector 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isStandardType
-                    double
-                    a1 =
-                    (double)
-                    
-                    context->argument( 1 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->prependVertex(a0
-        ,
-    a1);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.prependVertex().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaPolylineEntity::prependVertex", context, engine);
-            return result;
-        }
-         QScriptValue
         REcmaPolylineEntity::insertVertex
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2398,6 +2172,126 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineEntity::setBulgeAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineEntity::getStartWidthAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getStartWidthAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getStartWidthAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineEntity* self = 
+                        getSelf("getStartWidthAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getStartWidthAt(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getStartWidthAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getStartWidthAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineEntity::getEndWidthAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getEndWidthAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getEndWidthAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineEntity* self = 
+                        getSelf("getEndWidthAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getEndWidthAt(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getEndWidthAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getEndWidthAt", context, engine);
             return result;
         }
          QScriptValue

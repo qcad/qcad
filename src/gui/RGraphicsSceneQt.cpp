@@ -218,10 +218,10 @@ void RGraphicsSceneQt::exportPoint(const RPoint& point) {
     }
 }
 
-double RGraphicsSceneQt::exportLine(const RLine& line, double offset) {
+double RGraphicsSceneQt::exportLine(const RLine& line, double offset, double w1, double w2) {
     bool created = beginPath();
 
-    bool ret = RGraphicsScene::exportLine(line, offset);
+    bool ret = RGraphicsScene::exportLine(line, offset, w1, w2);
 
     if (created) {
         endPath();
@@ -230,10 +230,10 @@ double RGraphicsSceneQt::exportLine(const RLine& line, double offset) {
     return ret;
 }
 
-void RGraphicsSceneQt::exportArc(const RArc& arc, double offset) {
+void RGraphicsSceneQt::exportArc(const RArc& arc, double offset, double w1, double w2) {
     bool created = beginPath();
 
-    RGraphicsScene::exportArc(arc, offset);
+    RGraphicsScene::exportArc(arc, offset, w1, w2);
 
     if (created) {
         endPath();
@@ -247,6 +247,56 @@ void RGraphicsSceneQt::exportEllipse(const REllipse& ellipse, double offset) {
 
     if (created) {
         endPath();
+    }
+}
+
+void RGraphicsSceneQt::exportThickLine(const RLine& line, double w1, double w2) {
+    if (RPolyline::hasProxy()) {
+        bool hasCurrentPath = false;
+        if (currentPainterPath.isValid()) {
+            hasCurrentPath = true;
+            endPath();
+        }
+
+        beginPath();
+
+        RPolyline::getPolylineProxy()->exportThickLine(currentPainterPath, line, w1, w2);
+        currentPainterPath.setBrush(currentPen.color());
+        currentPainterPath.setPen(QPen(Qt::NoPen));
+
+        endPath();
+
+        if (hasCurrentPath) {
+            beginPath();
+        }
+    }
+    else {
+        exportLine(line);
+    }
+}
+
+void RGraphicsSceneQt::exportThickArc(const RArc& arc, double w1, double w2) {
+    if (RPolyline::hasProxy()) {
+        bool hasCurrentPath = false;
+        if (currentPainterPath.isValid()) {
+            hasCurrentPath = true;
+            endPath();
+        }
+
+        beginPath();
+
+        RPolyline::getPolylineProxy()->exportThickArc(currentPainterPath, arc, w1, w2);
+        currentPainterPath.setBrush(currentPen.color());
+        currentPainterPath.setPen(QPen(Qt::NoPen));
+
+        endPath();
+
+        if (hasCurrentPath) {
+            beginPath();
+        }
+    }
+    else {
+        exportArc(arc);
     }
 }
 

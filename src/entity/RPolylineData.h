@@ -79,12 +79,12 @@ public:
         return RPolyline::getVertexAt(i);
     }
 
-    void appendVertex(const RVector& vertex, double bulge = 0.0) {
-        RPolyline::appendVertex(vertex, bulge);
+    void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = -1.0, double w2 = -1.0) {
+        RPolyline::appendVertex(vertex, bulge, w1, w2);
     }
 
-    void prependVertex(const RVector& vertex, double bulge = 0.0) {
-        RPolyline::prependVertex(vertex, bulge);
+    void prependVertex(const RVector& vertex, double bulge = 0.0, double w1 = -1.0, double w2 = -1.0) {
+        RPolyline::prependVertex(vertex, bulge, w1, w2);
     }
 
     void insertVertex(int index, const RVector& vertex) {

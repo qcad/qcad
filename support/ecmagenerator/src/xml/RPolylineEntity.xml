@@ -115,26 +115,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
     </method>
-    <method name="appendVertex" cppName="appendVertex"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RVector &amp;" typeName="RVector" name="vertex"
-        isConst="true" />
-        <arg type="double" typeName="double" name="bulge"
-        hasDefault="true" default="0.0" isConst="false" />
-      </variant>
-    </method>
-    <method name="prependVertex" cppName="prependVertex"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RVector &amp;" typeName="RVector" name="vertex"
-        isConst="true" />
-        <arg type="double" typeName="double" name="bulge"
-        hasDefault="true" default="0.0" isConst="false" />
-      </variant>
-    </method>
     <method name="insertVertex" cppName="insertVertex"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -192,6 +172,20 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="i" isConst="false" />
         <arg type="double" typeName="double" name="b"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="getStartWidthAt" cppName="getStartWidthAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+      </variant>
+    </method>
+    <method name="getEndWidthAt" cppName="getEndWidthAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
       </variant>
     </method>
     <method name="getDirection1" cppName="getDirection1"
@@ -319,6 +313,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyVertexNZ" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyBulgeN" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyStartWidthN" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyEndWidthN" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyGlobalWidth" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyLength" type="RPropertyTypeId"
     isConst="false" isStatic="true" />

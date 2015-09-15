@@ -66,6 +66,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="double" typeName="double" name="bulge"
         hasDefault="true" default="0.0" isConst="false" />
+        <arg type="double" typeName="double" name="w1"
+        hasDefault="true" default="RDEFAULT_MIN1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="w2"
+        hasDefault="true" default="RDEFAULT_MIN1"
+        isConst="false" />
       </variant>
     </method>
     <method name="prependVertex" cppName="prependVertex"
@@ -76,6 +82,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="double" typeName="double" name="bulge"
         hasDefault="true" default="0.0" isConst="false" />
+        <arg type="double" typeName="double" name="w1"
+        hasDefault="true" default="RDEFAULT_MIN1"
+        isConst="false" />
+        <arg type="double" typeName="double" name="w2"
+        hasDefault="true" default="RDEFAULT_MIN1"
+        isConst="false" />
       </variant>
     </method>
     <method name="insertVertex" cppName="insertVertex"
@@ -206,6 +218,24 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="hasArcSegments" cppName="hasArcSegments"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getStartWidthAt" cppName="getStartWidthAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+      </variant>
+    </method>
+    <method name="getEndWidthAt" cppName="getEndWidthAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+      </variant>
+    </method>
+    <method name="hasWidths" cppName="hasWidths" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="setClosed" cppName="setClosed" specifier="public"

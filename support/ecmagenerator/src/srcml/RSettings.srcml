@@ -174,6 +174,9 @@
     <function_decl><type><name>static</name> <name>int</name></type> <name>getMouseThreshold</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getPositionByMousePress</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>isTextRenderedAsText</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>isLayer0CompatibilityOn</name><parameter_list>()</parameter_list>;</function_decl>
+
 </public><private>private:
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isInitialized</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>void</name></type> <name>shortenRecentFiles</name><parameter_list>()</parameter_list>;</function_decl>
@@ -206,6 +209,8 @@
     <decl_stmt><decl><type><name>static</name> <name>double</name></type> <name>arcAngleLengthThreshold</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>double</name></type> <name>minArcAngleStep</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>dashThreshold</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>textRenderedAsText</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>layer0CompatibilityOn</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QStringList</name></type> <name>recentFiles</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>QLocale</name>*</type> <name>numberLocale</name></decl>;</decl_stmt>
 

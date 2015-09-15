@@ -23,6 +23,9 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RArc</name>;</class_decl>
+<class_decl>class <name>RLine</name>;</class_decl>
+<class_decl>class <name>RPainterPath</name>;</class_decl>
 <class_decl>class <name>RPolyline</name>;</class_decl>
 <class_decl>class <name>RVector</name>;</class_decl>
 
@@ -37,6 +40,9 @@
 </private><public>public:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>trimStartPoint</name><parameter_list>(<param><decl><type><name>RPolyline</name>&amp;</type> <name>polyline</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>trimEndPoint</name><parameter_list>(<param><decl><type><name>RPolyline</name>&amp;</type> <name>polyline</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportThickLine</name><parameter_list>(<param><decl><type><name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>, <param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>line</name></decl></param>, <param><decl><type><name>double</name></type> <name>w1</name></decl></param>, <param><decl><type><name>double</name></type> <name>w2</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportThickArc</name><parameter_list>(<param><decl><type><name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>, <param><decl><type><name>const</name> <name>RArc</name>&amp;</type> <name>arc</name></decl></param>, <param><decl><type><name>double</name></type> <name>w1</name></decl></param>, <param><decl><type><name>double</name></type> <name>w2</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 </public>}</block>;</class>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>

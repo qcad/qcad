@@ -162,7 +162,8 @@ void RTextBasedEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
     Q_UNUSED(preview);
     //Q_UNUSED(forceSelected);
 
-    if (RSettings::getStringValue("TextRendering/RenderAs", "Paths")=="Text") {
+    //if (RSettings::getStringValue("TextRendering/RenderAs", "Paths")=="Text") {
+    if (RSettings::isTextRenderedAsText()) {
         e.exportText(getData(), forceSelected);
     }
     else {

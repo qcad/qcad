@@ -80,21 +80,27 @@ void RPolyline::to2D() {
 void RPolyline::clear() {
     vertices.clear();
     bulges.clear();
+    startWidths.clear();
+    endWidths.clear();
 }
 
 void RPolyline::normalize() {
     QList<RVector> newVertices;
     QList<double> newBulges;
+    QList<double> newStartWidths;
+    QList<double> newEndWidths;
 
     RVector vPrev;
 
     for (int i=0; i<vertices.size(); i++) {
         RVector v = vertices[i];
-        double b = bulges.at(i);
+        double b = bulges[i];
 
         if (i==0 || !v.equalsFuzzy(vPrev)) {
             newVertices.append(v);
             newBulges.append(b);
+            newStartWidths.append(startWidths[i]);
+            newEndWidths.append(endWidths[i]);
         }
 
         vPrev = v;
@@ -102,6 +108,8 @@ void RPolyline::normalize() {
 
     vertices = newVertices;
     bulges = newBulges;
+    startWidths = newStartWidths;
+    endWidths = newEndWidths;
 }
 
 void RPolyline::prependShape(const RShape& shape) {
@@ -230,14 +238,18 @@ void RPolyline::appendShape(const RShape& shape, bool prepend) {
     }
 }
 
-void RPolyline::appendVertex(const RVector& vertex, double bulge) {
+void RPolyline::appendVertex(const RVector& vertex, double bulge, double w1, double w2) {
     vertices.append(vertex);
     bulges.append(bulge);
+    startWidths.append(w1);
+    endWidths.append(w2);
 }
 
-void RPolyline::prependVertex(const RVector& vertex, double bulge) {
+void RPolyline::prependVertex(const RVector& vertex, double bulge, double w1, double w2) {
     vertices.prepend(vertex);
     bulges.prepend(bulge);
+    startWidths.prepend(w1);
+    endWidths.prepend(w2);
 }
 
 void RPolyline::insertVertex(int index, const RVector& vertex) {
@@ -246,6 +258,8 @@ void RPolyline::insertVertex(int index, const RVector& vertex) {
         bulges[index-1] = 0.0;
     }
     bulges.insert(index, 0.0);
+    startWidths.insert(index, RNANDOUBLE);
+    endWidths.insert(index, RNANDOUBLE);
 }
 
 void RPolyline::removeFirstVertex() {
@@ -254,6 +268,8 @@ void RPolyline::removeFirstVertex() {
     }
     vertices.removeFirst();
     bulges.removeFirst();
+    startWidths.removeFirst();
+    endWidths.removeFirst();
 }
 
 void RPolyline::removeLastVertex() {
@@ -262,21 +278,29 @@ void RPolyline::removeLastVertex() {
     }
     vertices.removeLast();
     bulges.removeLast();
+    startWidths.removeLast();
+    endWidths.removeLast();
 }
 
 void RPolyline::removeVertex(int index) {
     vertices.removeAt(index);
     bulges.removeAt(index);
+    startWidths.removeAt(index);
+    endWidths.removeAt(index);
 }
 
 void RPolyline::removeVerticesAfter(int index) {
     vertices = vertices.mid(index+1);
     bulges = bulges.mid(index+1);
+    startWidths = startWidths.mid(index+1);
+    endWidths = endWidths.mid(index+1);
 }
 
 void RPolyline::removeVerticesBefore(int index) {
     vertices = vertices.mid(0, index);
     bulges = bulges.mid(0, index);
+    startWidths = startWidths.mid(0, index);
+    endWidths = endWidths.mid(0, index);
 }
 
 void RPolyline::setVertices(const QList<RVector>& vertices) {
@@ -285,6 +309,8 @@ void RPolyline::setVertices(const QList<RVector>& vertices) {
     bulges.clear();
     for (int i=0; i<vertices.size(); ++i) {
         bulges.append(0.0);
+        startWidths.append(RNANDOUBLE);
+        endWidths.append(RNANDOUBLE);
     }
 }
 
@@ -363,6 +389,32 @@ void RPolyline::setBulgeAt(int i, double b) {
 bool RPolyline::hasArcSegments() const {
     for (int i=0; i<bulges.size(); i++) {
         if (!isStraight(bulges[i])) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+double RPolyline::getStartWidthAt(int i) const {
+    if (i<0 || i>=startWidths.size()) {
+        return -1.0;
+    }
+
+    return startWidths.at(i);
+}
+
+double RPolyline::getEndWidthAt(int i) const {
+    if (i<0 || i>=endWidths.size()) {
+        return -1.0;
+    }
+
+    return endWidths.at(i);
+}
+
+bool RPolyline::hasWidths() const {
+    for (int i=0; i<startWidths.length() && i<endWidths.length(); i++) {
+        if (startWidths[i]>0 || endWidths[i]>0) {
             return true;
         }
     }

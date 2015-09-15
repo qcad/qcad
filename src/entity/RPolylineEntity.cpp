@@ -40,6 +40,9 @@ RPropertyTypeId RPolylineEntity::PropertyVertexNX;
 RPropertyTypeId RPolylineEntity::PropertyVertexNY;
 RPropertyTypeId RPolylineEntity::PropertyVertexNZ;
 RPropertyTypeId RPolylineEntity::PropertyBulgeN;
+RPropertyTypeId RPolylineEntity::PropertyStartWidthN;
+RPropertyTypeId RPolylineEntity::PropertyEndWidthN;
+RPropertyTypeId RPolylineEntity::PropertyGlobalWidth;
 
 RPropertyTypeId RPolylineEntity::PropertyLength;
 
@@ -84,7 +87,10 @@ void RPolylineEntity::init() {
     RPolylineEntity::PropertyVertexNY.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RPolylineEntity::PropertyVertexNZ.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"));
     RPolylineEntity::PropertyBulgeN.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Bulge"));
+    RPolylineEntity::PropertyStartWidthN.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Start Width"));
+    RPolylineEntity::PropertyEndWidthN.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "End Width"));
 
+    RPolylineEntity::PropertyGlobalWidth.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Global Width"));
     RPolylineEntity::PropertyLength.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
 }
 
@@ -98,6 +104,18 @@ bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMemberY(data.vertices, value, PropertyVertexNY == propertyTypeId);
     ret = ret || RObject::setMemberZ(data.vertices, value, PropertyVertexNZ == propertyTypeId);
     ret = ret || RObject::setMember(data.bulges, value, PropertyBulgeN == propertyTypeId);
+    ret = ret || RObject::setMember(data.startWidths, value, PropertyStartWidthN == propertyTypeId);
+    ret = ret || RObject::setMember(data.endWidths, value, PropertyEndWidthN == propertyTypeId);
+
+    if (PropertyGlobalWidth==propertyTypeId) {
+        for (int i=0; i<data.startWidths.length(); i++) {
+            data.startWidths[i] = value.toDouble();
+        }
+        for (int i=0; i<data.endWidths.length(); i++) {
+            data.endWidths[i] = value.toDouble();
+        }
+        ret = true;
+    }
     return ret;
 }
 
@@ -128,6 +146,29 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
         QVariant v;
         v.setValue(data.bulges);
         return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
+    } else if (propertyTypeId == PropertyStartWidthN) {
+        QVariant v;
+        v.setValue(data.startWidths);
+        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
+    } else if (propertyTypeId == PropertyEndWidthN) {
+        QVariant v;
+        v.setValue(data.endWidths);
+        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
+    } else if (propertyTypeId == PropertyGlobalWidth) {
+        QVariant v;
+        double val = -1.0;
+        for (int i=0; i<data.startWidths.length() && i<data.endWidths.length(); i++) {
+            if (val<0.0) {
+                val = data.startWidths[i];
+                v.setValue(val);
+            }
+
+            if (!RMath::fuzzyCompare(data.startWidths[i], val) || !RMath::fuzzyCompare(data.endWidths[i], val)) {
+                v.setValue(QString());
+                break;
+            }
+        }
+        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant));
     } else if (propertyTypeId == PropertyLength) {
         QVariant v;
         v.setValue(data.getLength());

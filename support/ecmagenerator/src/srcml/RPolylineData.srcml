@@ -80,13 +80,13 @@
         <return>return <expr><call><name><name>RPolyline</name>::<name>getVertexAt</name></name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>appendVertex</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>vertex</name></decl></param>, <param><decl><type><name>double</name></type> <name>bulge</name> =<init> <expr>0.0</expr></init></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RPolyline::appendVertex</name><parameter_list>(<param><decl><type><name>vertex</name></type></decl></param>, <param><decl><type><name>bulge</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+    <decl_stmt><decl><type><name>void</name></type> <name>appendVertex</name><argument_list>(<argument><expr><name>const</name> <name>RVector</name>&amp; <name>vertex</name></expr></argument>, <argument><expr><name>double</name> <name>bulge</name> = 0.0</expr></argument>, <argument><expr><name>double</name> <name>w1</name> = -1.0</expr></argument>, <argument><expr><name>double</name> <name>w2</name> = -1.0</expr></argument>)</argument_list> <block>{
+        <constructor_decl><name>RPolyline::appendVertex</name><parameter_list>(<param><decl><type><name>vertex</name></type></decl></param>, <param><decl><type><name>bulge</name></type></decl></param>, <param><decl><type><name>w1</name></type></decl></param>, <param><decl><type><name>w2</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></decl></decl_stmt>
 
-    <function><type><name>void</name></type> <name>prependVertex</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>vertex</name></decl></param>, <param><decl><type><name>double</name></type> <name>bulge</name> =<init> <expr>0.0</expr></init></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RPolyline::prependVertex</name><parameter_list>(<param><decl><type><name>vertex</name></type></decl></param>, <param><decl><type><name>bulge</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+    <decl_stmt><decl><type><name>void</name></type> <name>prependVertex</name><argument_list>(<argument><expr><name>const</name> <name>RVector</name>&amp; <name>vertex</name></expr></argument>, <argument><expr><name>double</name> <name>bulge</name> = 0.0</expr></argument>, <argument><expr><name>double</name> <name>w1</name> = -1.0</expr></argument>, <argument><expr><name>double</name> <name>w2</name> = -1.0</expr></argument>)</argument_list> <block>{
+        <constructor_decl><name>RPolyline::prependVertex</name><parameter_list>(<param><decl><type><name>vertex</name></type></decl></param>, <param><decl><type><name>bulge</name></type></decl></param>, <param><decl><type><name>w1</name></type></decl></param>, <param><decl><type><name>w2</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></decl></decl_stmt>
 
     <function><type><name>void</name></type> <name>insertVertex</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>vertex</name></decl></param>)</parameter_list> <block>{
         <constructor_decl><name>RPolyline::insertVertex</name><parameter_list>(<param><decl><type><name>index</name></type></decl></param>, <param><decl><type><name>vertex</name></type></decl></param>)</parameter_list>;</constructor_decl>

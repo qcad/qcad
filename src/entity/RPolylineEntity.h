@@ -59,6 +59,9 @@ public:
     static RPropertyTypeId PropertyVertexNY;
     static RPropertyTypeId PropertyVertexNZ;
     static RPropertyTypeId PropertyBulgeN;
+    static RPropertyTypeId PropertyStartWidthN;
+    static RPropertyTypeId PropertyEndWidthN;
+    static RPropertyTypeId PropertyGlobalWidth;
 
     static RPropertyTypeId PropertyLength;
 
@@ -116,12 +119,12 @@ public:
         return data.countVertices();
     }
 
-    void appendVertex(const RVector& vertex, double bulge = 0.0) {
-        data.appendVertex(vertex, bulge);
+    void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = -1.0, double w2 = -1.0) {
+        data.appendVertex(vertex, bulge, w1, w2);
     }
 
-    void prependVertex(const RVector& vertex, double bulge = 0.0) {
-        data.prependVertex(vertex, bulge);
+    void prependVertex(const RVector& vertex, double bulge = 0.0, double w1 = -1.0, double w2 = -1.0) {
+        data.prependVertex(vertex, bulge, w1, w2);
     }
 
     void insertVertex(int index, const RVector& vertex) {
@@ -154,6 +157,14 @@ public:
 
     void setBulgeAt(int i, double b) {
         data.setBulgeAt(i, b);
+    }
+
+    double getStartWidthAt(int i) const {
+        return data.getStartWidthAt(i);
+    }
+
+    double getEndWidthAt(int i) const {
+        return data.getEndWidthAt(i);
     }
 
     double getDirection1() const {

@@ -102,7 +102,7 @@ Altezza Testo:</translatorcomment>
         <location filename="../src/entity/RLineEntity.cpp" line="+82"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="-2"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+83"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+85"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+78"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -314,7 +314,7 @@ Arcocomplementare</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+5"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
@@ -573,7 +573,7 @@ Punto finale (y):</translatorcomment>
         <translation>Punto finale</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
         <translation>Modello polilinea</translation>
     </message>
@@ -588,13 +588,25 @@ Impossibile connettere alla polilinea chiusa.</translatorcomment>
         <translation>Chiuso</translation>
     </message>
     <message>
+        <location line="+5"/>
+        <source>Start Width</source>
+        <translation>Larghezza iniziale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>End Width</source>
+        <translation>Larghezza finale</translation>
+    </message>
+    <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="+5"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-5"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -606,7 +618,7 @@ Aggiungi vertice</translatorcomment>
         <translation>Vertice</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+0"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-2"/>
         <source>Bulge</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Bulge</translation>

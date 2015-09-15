@@ -24,7 +24,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RExporter.h"</cpp:file></cpp:include>
 
 <comment type="block">/**
- * Exports entities into a list of shapes.
+ * Exports exploded polylines or splines as connected shapes with continuous line pattern.
  */</comment>
 <class>class <name>RShapesExporter</name> <super>: <specifier>public</specifier> <name>RExporter</name></super> <block>{<private type="default">
 </private><public>public:

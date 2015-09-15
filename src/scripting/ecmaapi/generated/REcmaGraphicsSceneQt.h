@@ -74,13 +74,13 @@
         exportPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        exportLine
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        exportArc
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         exportEllipse
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportThickLine
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportThickArc
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         exportPolyline

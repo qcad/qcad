@@ -367,12 +367,6 @@
             );
         
     
-      double exportLine(
-                const RLine & line, double offset
-        = RNANDOUBLE
-            );
-        
-    
       void exportRay(
                 const RRay & ray
             );
@@ -380,12 +374,6 @@
     
       void exportCircle(
                 const RCircle & circle
-            );
-        
-    
-      void exportArc(
-                const RArc & arc, double offset
-        = RNANDOUBLE
             );
         
     
@@ -436,6 +424,16 @@
       void exportText(
                 const RTextBasedData & text, bool forceSelected
         = false
+            );
+        
+    
+      void exportThickLine(
+                const RLine & line, double w1, double w2
+            );
+        
+    
+      void exportThickArc(
+                const RArc & arc, double w1, double w2
             );
         
     

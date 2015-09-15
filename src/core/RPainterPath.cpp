@@ -51,14 +51,20 @@ RPainterPath::~RPainterPath() {
 }
 
 void RPainterPath::addArc(const RArc& arc) {
-    // approximate arc with splines: not good enough:
-    Q_ASSERT(false);
-
-    QList<RSpline> list = RSpline::createSplinesFromArc(arc);
-
-    for (int i=0; i<list.count(); i++) {
-        addSpline(list[i]);
+    RVector cp (currentPosition().x(), currentPosition().y());
+    if (!cp.equalsFuzzy(arc.getStartPoint())) {
+        qWarning() << "arc does not connect to path";
     }
+
+    RCircle c(arc.getCenter(), arc.getRadius());
+    RBox bb = c.getBoundingBox();
+
+    arcTo(bb.getMinimum().x,
+          bb.getMinimum().y,
+          bb.getSize().x,
+          bb.getSize().y,
+          -RMath::rad2deg(arc.getStartAngle()),
+          -RMath::rad2deg(arc.getSweep()));
 }
 
 void RPainterPath::addSpline(const RSpline& spline) {
@@ -525,21 +531,7 @@ void RPainterPath::addShape(QSharedPointer<RShape> shape) {
 
     QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
     if (!arc.isNull()) {
-        //RBox bb = arc->getBoundingBox();
-        RCircle c(arc->getCenter(), arc->getRadius());
-        RBox bb = c.getBoundingBox();
-
-//        qDebug() << "minimum: " << bb.getMinimum().x << "/" << bb.getMinimum().y;
-//        qDebug() << "size: " << bb.getSize().x << "/" << bb.getSize().y;
-//        qDebug() << "start angle: " << RMath::rad2deg(arc->getStartAngle());
-//        qDebug() << "sweep: " << RMath::rad2deg(arc->getSweep());
-
-        arcTo(bb.getMinimum().x,
-                  bb.getMinimum().y,
-                  bb.getSize().x,
-                  bb.getSize().y,
-                  -RMath::rad2deg(arc->getStartAngle()),
-                  -RMath::rad2deg(arc->getSweep()));
+        addArc(*arc);
         return;
     }
 

@@ -23,7 +23,7 @@
 #include "RExporter.h"
 
 /**
- * Exports entities into a list of shapes.
+ * Exports exploded polylines or splines as connected shapes with continuous line pattern.
  */
 class RShapesExporter : public RExporter {
 public:
