@@ -28,6 +28,10 @@
 #include "RPolyline.h"
 #include "RVector.h"
 
+#ifndef RDEFAULT_MIN1
+#define RDEFAULT_MIN1 -1
+#endif
+
 /**
  * Stores and manages all data that defines the geometry and
  * appearance of a polyline entity.
@@ -79,11 +83,11 @@ public:
         return RPolyline::getVertexAt(i);
     }
 
-    void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = -1.0, double w2 = -1.0) {
+    void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = RDEFAULT_MIN1, double w2 = RDEFAULT_MIN1) {
         RPolyline::appendVertex(vertex, bulge, w1, w2);
     }
 
-    void prependVertex(const RVector& vertex, double bulge = 0.0, double w1 = -1.0, double w2 = -1.0) {
+    void prependVertex(const RVector& vertex, double bulge = 0.0, double w1 = RDEFAULT_MIN1, double w2 = RDEFAULT_MIN1) {
         RPolyline::prependVertex(vertex, bulge, w1, w2);
     }
 

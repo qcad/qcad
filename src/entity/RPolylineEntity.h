@@ -30,6 +30,10 @@ class RExporter;
 class RArc;
 class RLine;
 
+#ifndef RDEFAULT_MIN1
+#define RDEFAULT_MIN1 -1
+#endif
+
 /**
  * Polyline entity.
  *
@@ -119,11 +123,11 @@ public:
         return data.countVertices();
     }
 
-    void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = -1.0, double w2 = -1.0) {
+    void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = RDEFAULT_MIN1, double w2 = RDEFAULT_MIN1) {
         data.appendVertex(vertex, bulge, w1, w2);
     }
 
-    void prependVertex(const RVector& vertex, double bulge = 0.0, double w1 = -1.0, double w2 = -1.0) {
+    void prependVertex(const RVector& vertex, double bulge = 0.0, double w1 = RDEFAULT_MIN1, double w2 = RDEFAULT_MIN1) {
         data.prependVertex(vertex, bulge, w1, w2);
     }
 

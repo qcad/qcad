@@ -74,6 +74,12 @@
         exportPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        exportLine
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         exportEllipse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

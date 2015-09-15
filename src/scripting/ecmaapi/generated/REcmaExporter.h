@@ -181,6 +181,9 @@
         exportShapeSegment
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        exportLine
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         exportLineSegment
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -194,6 +197,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         exportCircle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportArc
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         exportArcSegment

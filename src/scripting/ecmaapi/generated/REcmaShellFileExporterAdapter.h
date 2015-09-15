@@ -367,6 +367,14 @@
             );
         
     
+      double exportLine(
+                const RLine & line, double offset
+        = RNANDOUBLE, double w1
+        = RDEFAULT_MIN1, double w2
+        = RDEFAULT_MIN1
+            );
+        
+    
       void exportRay(
                 const RRay & ray
             );
@@ -374,6 +382,14 @@
     
       void exportCircle(
                 const RCircle & circle
+            );
+        
+    
+      void exportArc(
+                const RArc & arc, double offset
+        = RNANDOUBLE, double w1
+        = RDEFAULT_MIN1, double w2
+        = RDEFAULT_MIN1
             );
         
     

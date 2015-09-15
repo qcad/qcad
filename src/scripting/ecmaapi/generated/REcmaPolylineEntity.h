@@ -89,6 +89,12 @@
         countVertices
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        appendVertex
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        prependVertex
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         insertVertex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

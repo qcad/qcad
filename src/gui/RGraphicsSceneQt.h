@@ -42,6 +42,10 @@
 
 class RGraphicsViewImage;
 
+#ifndef RDEFAULT_MIN1
+#define RDEFAULT_MIN1 -1
+#endif
+
 /**
  * \brief Qt based 2d graphics scene.
  *
@@ -73,8 +77,8 @@ public:
     virtual void unexportEntity(REntity::Id entityId);
 
     virtual void exportPoint(const RPoint& point);
-    virtual double exportLine(const RLine& line, double offset = RNANDOUBLE, double w1 = -1.0, double w2 = -1.0);
-    virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE, double w1 = -1.0, double w2 = -1.0);
+    virtual double exportLine(const RLine& line, double offset = RNANDOUBLE, double w1 = RDEFAULT_MIN1, double w2 = RDEFAULT_MIN1);
+    virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE, double w1 = RDEFAULT_MIN1, double w2 = RDEFAULT_MIN1);
     virtual void exportEllipse(const REllipse& ellipse, double offset = RNANDOUBLE);
     //virtual void exportQuad(const RVector& p1, const RVector& p2, const RVector& p3, const RVector& p4);
     virtual void exportThickLine(const RLine& line, double w1, double w2);

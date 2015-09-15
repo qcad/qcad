@@ -54,6 +54,10 @@
 <class_decl>class <name>RVector</name>;</class_decl>
 <class_decl>class <name>RXLine</name>;</class_decl>
 
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_MIN1</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_MIN1</name> -1</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
 <comment type="block">/**
  * Abstract base class for exporters.
  *
@@ -152,7 +156,7 @@
     <comment type="block">/**
      * Exports a line with the current attributes.
      */</comment>
-    <decl_stmt><decl><type><name>virtual</name> <name>double</name></type> <name>exportLine</name><argument_list>(<argument><expr><name>const</name> <name>RLine</name>&amp; <name>line</name></expr></argument>, <argument><expr><name>double</name> <name>offset</name> = <name>RNANDOUBLE</name></expr></argument>, <argument><expr><name>double</name> <name>w1</name> = -1.0</expr></argument>, <argument><expr><name>double</name> <name>w2</name> = -1.0</expr></argument>)</argument_list></decl>;</decl_stmt>
+    <function_decl><type><name>virtual</name> <name>double</name></type> <name>exportLine</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>line</name></decl></param>, <param><decl><type><name>double</name></type> <name>offset</name> =<init> <expr><name>RNANDOUBLE</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>w1</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>w2</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * \nonscriptable
@@ -183,7 +187,7 @@
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportCircle</name><parameter_list>(<param><decl><type><name>const</name> <name>RCircle</name>&amp;</type> <name>circle</name></decl></param>)</parameter_list>;</function_decl>
 
-    <decl_stmt><decl><type><name>virtual</name> <name>void</name></type> <name>exportArc</name><argument_list>(<argument><expr><name>const</name> <name>RArc</name>&amp; <name>arc</name></expr></argument>, <argument><expr><name>double</name> <name>offset</name> = <name>RNANDOUBLE</name></expr></argument>, <argument><expr><name>double</name> <name>w1</name> = -1.0</expr></argument>, <argument><expr><name>double</name> <name>w2</name> = -1.0</expr></argument>)</argument_list></decl>;</decl_stmt>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportArc</name><parameter_list>(<param><decl><type><name>const</name> <name>RArc</name>&amp;</type> <name>arc</name></decl></param>, <param><decl><type><name>double</name></type> <name>offset</name> =<init> <expr><name>RNANDOUBLE</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>w1</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>w2</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportArcSegment</name><parameter_list>(<param><decl><type><name>const</name> <name>RArc</name>&amp;</type> <name>arc</name></decl></param>, <param><decl><type><name>bool</name></type> <name>allowForZeroLength</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
