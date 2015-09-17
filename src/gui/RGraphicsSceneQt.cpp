@@ -256,12 +256,13 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
         RPolyline pl;
         QList<RPolyline> pls;
         bool lastWasArc = false;
+        bool lastWasThin = false;
+
         for (int i=0; i<polyline.countVertices(); i++) {
             double w1 = polyline.getStartWidthAt(i);
             double w2 = polyline.getEndWidthAt(i);
             double b = polyline.getBulgeAt(i);
             RVector v = polyline.getVertexAt(i);
-
 
             pl.appendVertex(v, b, w1, w2);
 
@@ -269,7 +270,8 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
             //   widths change to 0/0
             //   arc segment
             bool isArc = fabs(b)>RS::PointTolerance;
-            if ((w1<=0.0 && w2<=0.0) || isArc || lastWasArc || i==polyline.countVertices()-1) {
+            bool isThin = (w1<=0.0 && w2<=0.0);
+            if ((i>0 && isThin!=lastWasThin) || isArc || lastWasArc || i==polyline.countVertices()-1) {
                 // skip segments with zero width (exported above):
                 if (pl.countSegments()!=0) {
                     pls.append(pl);
@@ -279,8 +281,10 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
                 //QSharedPointer<RShape> shape = polyline.getSegmentAt(i);
 
                 pl.appendVertex(v, b, w1, w2);
-                lastWasArc = isArc;
             }
+
+            lastWasArc = isArc;
+            lastWasThin = isThin;
         }
 
         //qDebug() << "pls: " << pls;
@@ -343,7 +347,7 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
         currentPainterPath.setFillRule(Qt::WindingFill);
         //currentPainterPath.setFillRule(Qt::OddEvenFill);
         currentPainterPath.setBrush(currentPen.color());
-        //currentPainterPath.setPen(QPen(Qt::NoPen));
+        currentPainterPath.setPen(QPen(Qt::NoPen));
         endPath();
 
         if (hasCurrentPath) {

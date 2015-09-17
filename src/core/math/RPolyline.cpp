@@ -414,8 +414,16 @@ double RPolyline::getEndWidthAt(int i) const {
 
 bool RPolyline::hasWidths() const {
     for (int i=0; i<startWidths.length() && i<endWidths.length(); i++) {
-        if (startWidths[i]>0 || endWidths[i]>0) {
-            return true;
+        if (startWidths[i]>0.0) {
+            // widths in last vertex only count if closed:
+            if (i!=startWidths.length()-1 || isClosed()) {
+                return true;
+            }
+        }
+        if (endWidths[i]>0.0) {
+            if (i!=startWidths.length()-1 || isClosed()) {
+                return true;
+            }
         }
     }
 
@@ -1114,17 +1122,19 @@ void RPolyline::trimEndPoint(const RVector& p) {
 }
 
 void RPolyline::print(QDebug dbg) const {
-    dbg.nospace() << "RPolyline(";
+    dbg.nospace() << "\nRPolyline(";
     RShape::print(dbg);
     dbg.nospace() << ", ";
-    dbg.nospace() << "vertices: " << countVertices() << ", ";
-    dbg.nospace() << "bulges: " << bulges.length() << ", ";
+    dbg.nospace() << "vertices: " << vertices << ", ";
+    dbg.nospace() << "bulges: " << bulges << ", ";
+    dbg.nospace() << "start widths: " << startWidths << ", ";
+    dbg.nospace() << "end widths: " << endWidths << ", ";
     dbg.nospace() << "closed: " << closed << ", ";
-    QList<QSharedPointer<RShape> > sub = getExploded();
-    QList<QSharedPointer<RShape> >::iterator it;
-    for (it=sub.begin(); it!=sub.end(); ++it) {
-        dbg.nospace() << "\n" << *it->data() << ", ";
-    }
+//    QList<QSharedPointer<RShape> > sub = getExploded();
+//    QList<QSharedPointer<RShape> >::iterator it;
+//    for (it=sub.begin(); it!=sub.end(); ++it) {
+//        dbg.nospace() << "\n" << *it->data() << ", ";
+//    }
     dbg.nospace() << ")";
 }
 
