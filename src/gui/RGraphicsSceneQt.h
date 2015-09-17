@@ -77,12 +77,13 @@ public:
     virtual void unexportEntity(REntity::Id entityId);
 
     virtual void exportPoint(const RPoint& point);
-    virtual double exportLine(const RLine& line, double offset = RNANDOUBLE, double w1 = RDEFAULT_MIN1, double w2 = RDEFAULT_MIN1);
-    virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE, double w1 = RDEFAULT_MIN1, double w2 = RDEFAULT_MIN1);
+    virtual double exportLine(const RLine& line, double offset = RNANDOUBLE);
+    virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE);
     virtual void exportEllipse(const REllipse& ellipse, double offset = RNANDOUBLE);
     //virtual void exportQuad(const RVector& p1, const RVector& p2, const RVector& p3, const RVector& p4);
-    virtual void exportThickLine(const RLine& line, double w1, double w2);
-    virtual void exportThickArc(const RArc& arc, double w1, double w2);
+    virtual void exportThickPolyline(const RPolyline& polyline);
+//    virtual void exportThickLine(const RLine& line, double w1, double w2);
+//    virtual void exportThickArc(const RArc& arc, double w1, double w2);
     virtual void exportPolyline(const RPolyline& polyline, bool polylineGen = true, double offset = RNANDOUBLE);
     void exportPolylineFill(const RPolyline& polyline);
     virtual void exportSpline(const RSpline& spline, double offset = RNANDOUBLE);

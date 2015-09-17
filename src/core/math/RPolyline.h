@@ -160,6 +160,8 @@ public:
         return polylineProxy!=NULL;
     }
 
+    void stripWidths();
+
     /**
      * \nonscriptable
      */

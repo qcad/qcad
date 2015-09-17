@@ -155,7 +155,7 @@ public:
     /**
      * Exports a line with the current attributes.
      */
-    virtual double exportLine(const RLine& line, double offset = RNANDOUBLE, double w1 = RDEFAULT_MIN1, double w2 = RDEFAULT_MIN1);
+    virtual double exportLine(const RLine& line, double offset = RNANDOUBLE);
 
     /**
      * \nonscriptable
@@ -186,7 +186,7 @@ public:
 
     virtual void exportCircle(const RCircle& circle);
 
-    virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE, double w1 = RDEFAULT_MIN1, double w2 = RDEFAULT_MIN1);
+    virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE);
 
     virtual void exportArcSegment(const RArc& arc, bool allowForZeroLength = false);
 
@@ -216,17 +216,23 @@ public:
     virtual void exportImage(const RImageData& image, bool forceSelected = false);
     virtual void exportText(const RTextBasedData& text, bool forceSelected = false);
 
-    virtual void exportThickLine(const RLine& line, double w1, double w2) {
-        Q_UNUSED(w1)
-        Q_UNUSED(w2)
-        exportLineSegment(line);
+    virtual void exportThickPolyline(const RPolyline& polyline) {
+        RPolyline pl = polyline;
+        pl.stripWidths();
+        exportPolyline(pl);
     }
 
-    virtual void exportThickArc(const RArc& arc, double w1, double w2) {
-        Q_UNUSED(w1)
-        Q_UNUSED(w2)
-        exportArcSegment(arc);
-    }
+//    virtual void exportThickLine(const RLine& line, double w1, double w2) {
+//        Q_UNUSED(w1)
+//        Q_UNUSED(w2)
+//        exportLineSegment(line);
+//    }
+
+//    virtual void exportThickArc(const RArc& arc, double w1, double w2) {
+//        Q_UNUSED(w1)
+//        Q_UNUSED(w2)
+//        exportArcSegment(arc);
+//    }
 
     virtual void exportQuad(
         const RVector& p1,

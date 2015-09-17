@@ -228,6 +228,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, simplify, "simplify");
             
+            REcmaHelper::registerFunction(&engine, proto, stripWidths, "stripWidths");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RPolyline*>(), *proto);
 
@@ -5620,6 +5622,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::hasProxy", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::stripWidths
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::stripWidths", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::stripWidths";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("stripWidths", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->stripWidths();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.stripWidths().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::stripWidths", context, engine);
             return result;
         }
          QScriptValue REcmaPolyline::toString

@@ -769,7 +769,7 @@ RLinetypePattern RExporter::getLinetypePattern() {
     return currentLinetypePattern;
 }
 
-double RExporter::exportLine(const RLine& line, double offset, double w1, double w2) {
+double RExporter::exportLine(const RLine& line, double offset) {
     double ret = RNANDOUBLE;
 
     if (!line.isValid()) {
@@ -794,24 +794,7 @@ double RExporter::exportLine(const RLine& line, double offset, double w1, double
 
     RLinetypePattern p = getLinetypePattern();
     if (!p.isValid() || p.getNumDashes() <= 1) {
-        if (w1>0.0 || w2>0.0) {
-            if (w1<0.0) {
-                w1 = 0.0;
-            }
-            if (w2<0.0) {
-                w2 = 0.0;
-            }
-//            RVector v = RVector::createPolar(0.5, angle+M_PI/2);
-//            RVector p1 = line.startPoint + v*w1;
-//            RVector p2 = line.endPoint + v*w2;
-//            RVector p3 = line.endPoint - v*w2;
-//            RVector p4 = line.startPoint - v*w1;
-            //exportQuad(p1, p2, p3, p4);
-            exportThickLine(line, w1, w2);
-        }
-        else {
-            exportLineSegment(line, angle);
-        }
+        exportLineSegment(line, angle);
         return ret;
     }
 
@@ -968,7 +951,7 @@ bool RExporter::exportLinetypeShape(QList<RPainterPath>& pps, const RLine& line,
     }
 }
 
-void RExporter::exportArc(const RArc& arc, double offset, double w1, double w2) {
+void RExporter::exportArc(const RArc& arc, double offset) {
     if (!arc.isValid()) {
         return;
     }
@@ -980,18 +963,7 @@ void RExporter::exportArc(const RArc& arc, double offset, double w1, double w2) 
 
     RLinetypePattern p = getLinetypePattern();
     if (!p.isValid() || p.getNumDashes() <= 1) {
-        if (w1>0.0 || w2>0.0) {
-            if (w1<0.0) {
-                w1 = 0.0;
-            }
-            if (w2<0.0) {
-                w2 = 0.0;
-            }
-            exportThickArc(arc, w1, w2);
-        }
-        else {
-            exportArcSegment(arc);
-        }
+        exportArcSegment(arc);
         return;
     }
 
@@ -1206,7 +1178,7 @@ void RExporter::exportCircle(const RCircle& circle) {
  */
 void RExporter::exportEllipse(const REllipse& ellipse, double offset) {
     if (ellipse.getMajorRadius()<RS::PointTolerance ||
-            ellipse.getMinorRadius()<RS::PointTolerance) {
+        ellipse.getMinorRadius()<RS::PointTolerance) {
         return;
     }
 
@@ -1287,19 +1259,21 @@ void RExporter::exportPolyline(const RPolyline& polyline, bool polylineGen, doub
         exportExplodable(polyline, offset);
     }
     else {
-        // pattern for each individual segment:
-        for (int i=0; i<polyline.countSegments(); i++) {
-            QSharedPointer<RShape> shape = polyline.getSegmentAt(i);
-            double w1 = polyline.getStartWidthAt(i);
-            double w2 = polyline.getEndWidthAt(i);
-
-            QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
-            if (!line.isNull()) {
-                RExporter::exportLine(*line, RNANDOUBLE, w1, w2);
-            }
-            QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
-            if (!arc.isNull()) {
-                RExporter::exportArc(*arc, RNANDOUBLE, w1, w2);
+        if (polyline.hasWidths()) {
+            exportThickPolyline(polyline);
+        }
+        else {
+            // pattern for each individual segment:
+            for (int i=0; i<polyline.countSegments(); i++) {
+                QSharedPointer<RShape> shape = polyline.getSegmentAt(i);
+                QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
+                if (!line.isNull()) {
+                    RExporter::exportLine(*line);
+                }
+                QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
+                if (!arc.isNull()) {
+                    RExporter::exportArc(*arc);
+                }
             }
         }
     }

@@ -407,12 +407,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="double" typeName="double" name="offset"
         hasDefault="true" default="RNANDOUBLE" isConst="false" />
-        <arg type="double" typeName="double" name="w1"
-        hasDefault="true" default="RDEFAULT_MIN1"
-        isConst="false" />
-        <arg type="double" typeName="double" name="w2"
-        hasDefault="true" default="RDEFAULT_MIN1"
-        isConst="false" />
       </variant>
     </method>
     <method name="exportLineSegment" cppName="exportLineSegment"
@@ -463,12 +457,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
         <arg type="double" typeName="double" name="offset"
         hasDefault="true" default="RNANDOUBLE" isConst="false" />
-        <arg type="double" typeName="double" name="w1"
-        hasDefault="true" default="RDEFAULT_MIN1"
-        isConst="false" />
-        <arg type="double" typeName="double" name="w2"
-        hasDefault="true" default="RDEFAULT_MIN1"
-        isConst="false" />
       </variant>
     </method>
     <method name="exportArcSegment" cppName="exportArcSegment"
@@ -568,28 +556,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
-    <method name="exportThickLine" cppName="exportThickLine"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
+    <method name="exportThickPolyline"
+    cppName="exportThickPolyline" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLine &amp;" typeName="RLine" name="line"
-        isConst="true" />
-        <arg type="double" typeName="double" name="w1"
-        isConst="false" />
-        <arg type="double" typeName="double" name="w2"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="exportThickArc" cppName="exportThickArc"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RArc &amp;" typeName="RArc" name="arc"
-        isConst="true" />
-        <arg type="double" typeName="double" name="w1"
-        isConst="false" />
-        <arg type="double" typeName="double" name="w2"
-        isConst="false" />
+        <arg type="RPolyline &amp;" typeName="RPolyline"
+        name="polyline" isConst="true" />
       </variant>
     </method>
     <method name="exportQuad" cppName="exportQuad"

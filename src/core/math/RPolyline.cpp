@@ -525,6 +525,15 @@ RPainterPath RPolyline::toPainterPath() const {
     return ret;
 }
 
+void RPolyline::stripWidths() {
+    for (int i=0; i<startWidths.length(); i++) {
+        startWidths[i] = -1.0;
+    }
+    for (int i=0; i<endWidths.length(); i++) {
+        endWidths[i] = -1.0;
+    }
+}
+
 /**
  * \return True if the segment at the given position is a line.
  */

@@ -203,9 +203,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportText, "exportText");
             
-            REcmaHelper::registerFunction(&engine, proto, exportThickLine, "exportThickLine");
-            
-            REcmaHelper::registerFunction(&engine, proto, exportThickArc, "exportThickArc");
+            REcmaHelper::registerFunction(&engine, proto, exportThickPolyline, "exportThickPolyline");
             
             REcmaHelper::registerFunction(&engine, proto, exportQuad, "exportQuad");
             
@@ -3796,159 +3794,6 @@
 
 
         
-    
-    if( context->argumentCount() ==
-    3 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RLine */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: double */
-     && (
-            context->argument(2).isNumber()
-        ) /* type: double */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RLine*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RLine*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RLine.",
-                               context);                    
-                    }
-                    RLine 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isStandardType
-                    double
-                    a1 =
-                    (double)
-                    
-                    context->argument( 1 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    double
-                    a2 =
-                    (double)
-                    
-                    context->argument( 2 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'double'
-    double cppResult =
-        
-               self->exportLine(a0
-        ,
-    a1
-        ,
-    a2);
-        // return type: double
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    4 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RLine */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: double */
-     && (
-            context->argument(2).isNumber()
-        ) /* type: double */
-     && (
-            context->argument(3).isNumber()
-        ) /* type: double */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RLine*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RLine*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RLine.",
-                               context);                    
-                    }
-                    RLine 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isStandardType
-                    double
-                    a1 =
-                    (double)
-                    
-                    context->argument( 1 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    double
-                    a2 =
-                    (double)
-                    
-                    context->argument( 2 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    double
-                    a3 =
-                    (double)
-                    
-                    context->argument( 3 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'double'
-    double cppResult =
-        
-               self->exportLine(a0
-        ,
-    a1
-        ,
-    a2
-        ,
-    a3);
-        // return type: double
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.exportLine().",
                    context);
@@ -4451,149 +4296,6 @@
                self->exportArc(a0
         ,
     a1);
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    3 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RArc */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: double */
-     && (
-            context->argument(2).isNumber()
-        ) /* type: double */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RArc*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RArc*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RArc.",
-                               context);                    
-                    }
-                    RArc 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isStandardType
-                    double
-                    a1 =
-                    (double)
-                    
-                    context->argument( 1 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    double
-                    a2 =
-                    (double)
-                    
-                    context->argument( 2 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->exportArc(a0
-        ,
-    a1
-        ,
-    a2);
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    4 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RArc */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: double */
-     && (
-            context->argument(2).isNumber()
-        ) /* type: double */
-     && (
-            context->argument(3).isNumber()
-        ) /* type: double */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RArc*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RArc*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RArc.",
-                               context);                    
-                    }
-                    RArc 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isStandardType
-                    double
-                    a1 =
-                    (double)
-                    
-                    context->argument( 1 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    double
-                    a2 =
-                    (double)
-                    
-                    context->argument( 2 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    double
-                    a3 =
-                    (double)
-                    
-                    context->argument( 3 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->exportArc(a0
-        ,
-    a1
-        ,
-    a2
-        ,
-    a3);
     } else
 
 
@@ -5630,19 +5332,19 @@
             return result;
         }
          QScriptValue
-        REcmaExporter::exportThickLine
+        REcmaExporter::exportThickPolyline
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaExporter::exportThickLine", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::exportThickLine";
+            //REcmaHelper::functionStart("REcmaExporter::exportThickPolyline", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::exportThickPolyline";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RExporter* self = 
-                        getSelf("exportThickLine", context);
+                        getSelf("exportThickPolyline", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -5652,167 +5354,48 @@
                 
     
     if( context->argumentCount() ==
-    3 && (
+    1 && (
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: RLine */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: double */
-     && (
-            context->argument(2).isNumber()
-        ) /* type: double */
+        ) /* type: RPolyline */
     
     ){
     // prepare arguments:
     
                     // argument isCopyable and has default constructor and isSimpleClass 
-                    RLine*
+                    RPolyline*
                     ap0 =
                     qscriptvalue_cast<
-                    RLine*
+                    RPolyline*
                         >(
                         context->argument(
                         0
                         )
                     );
                     if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RLine.",
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RPolyline.",
                                context);                    
                     }
-                    RLine 
+                    RPolyline 
                     a0 = 
                     *ap0;
-                
-                    // argument isStandardType
-                    double
-                    a1 =
-                    (double)
-                    
-                    context->argument( 1 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    double
-                    a2 =
-                    (double)
-                    
-                    context->argument( 2 ).
-                    toNumber();
                 
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->exportThickLine(a0
-        ,
-    a1
-        ,
-    a2);
+               self->exportThickPolyline(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.exportThickLine().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.exportThickPolyline().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaExporter::exportThickLine", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaExporter::exportThickArc
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaExporter::exportThickArc", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::exportThickArc";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RExporter* self = 
-                        getSelf("exportThickArc", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    3 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RArc */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: double */
-     && (
-            context->argument(2).isNumber()
-        ) /* type: double */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RArc*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RArc*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RArc.",
-                               context);                    
-                    }
-                    RArc 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isStandardType
-                    double
-                    a1 =
-                    (double)
-                    
-                    context->argument( 1 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    double
-                    a2 =
-                    (double)
-                    
-                    context->argument( 2 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->exportThickArc(a0
-        ,
-    a1
-        ,
-    a2);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.exportThickArc().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaExporter::exportThickArc", context, engine);
+            //REcmaHelper::functionEnd("REcmaExporter::exportThickPolyline", context, engine);
             return result;
         }
          QScriptValue

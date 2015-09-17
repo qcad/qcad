@@ -369,9 +369,7 @@
     
       double exportLine(
                 const RLine & line, double offset
-        = RNANDOUBLE, double w1
-        = RDEFAULT_MIN1, double w2
-        = RDEFAULT_MIN1
+        = RNANDOUBLE
             );
         
     
@@ -387,9 +385,7 @@
     
       void exportArc(
                 const RArc & arc, double offset
-        = RNANDOUBLE, double w1
-        = RDEFAULT_MIN1, double w2
-        = RDEFAULT_MIN1
+        = RNANDOUBLE
             );
         
     
@@ -443,13 +439,8 @@
             );
         
     
-      void exportThickLine(
-                const RLine & line, double w1, double w2
-            );
-        
-    
-      void exportThickArc(
-                const RArc & arc, double w1, double w2
+      void exportThickPolyline(
+                const RPolyline & polyline
             );
         
     

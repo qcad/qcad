@@ -33,6 +33,7 @@
  */
 class QCADCORE_EXPORT RSplineProxy {
 public:
+    virtual ~RSplineProxy() {}
     virtual void init() = 0;
     virtual void uninit() = 0;
     virtual RSpline updateFromFitPoints(const RSpline& spline, bool useTangents) = 0;

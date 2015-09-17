@@ -218,10 +218,10 @@ void RGraphicsSceneQt::exportPoint(const RPoint& point) {
     }
 }
 
-double RGraphicsSceneQt::exportLine(const RLine& line, double offset, double w1, double w2) {
+double RGraphicsSceneQt::exportLine(const RLine& line, double offset) {
     bool created = beginPath();
 
-    bool ret = RGraphicsScene::exportLine(line, offset, w1, w2);
+    bool ret = RGraphicsScene::exportLine(line, offset);
 
     if (created) {
         endPath();
@@ -230,10 +230,10 @@ double RGraphicsSceneQt::exportLine(const RLine& line, double offset, double w1,
     return ret;
 }
 
-void RGraphicsSceneQt::exportArc(const RArc& arc, double offset, double w1, double w2) {
+void RGraphicsSceneQt::exportArc(const RArc& arc, double offset) {
     bool created = beginPath();
 
-    RGraphicsScene::exportArc(arc, offset, w1, w2);
+    RGraphicsScene::exportArc(arc, offset);
 
     if (created) {
         endPath();
@@ -250,20 +250,100 @@ void RGraphicsSceneQt::exportEllipse(const REllipse& ellipse, double offset) {
     }
 }
 
-void RGraphicsSceneQt::exportThickLine(const RLine& line, double w1, double w2) {
+void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
     if (RPolyline::hasProxy()) {
+        // split polyline at arc segments or width change to 0/0:
+        RPolyline pl;
+        QList<RPolyline> pls;
+        bool lastWasArc = false;
+        for (int i=0; i<polyline.countVertices(); i++) {
+            double w1 = polyline.getStartWidthAt(i);
+            double w2 = polyline.getEndWidthAt(i);
+            double b = polyline.getBulgeAt(i);
+            RVector v = polyline.getVertexAt(i);
+
+
+            pl.appendVertex(v, b, w1, w2);
+
+            // split polyline on:
+            //   widths change to 0/0
+            //   arc segment
+            bool isArc = fabs(b)>RS::PointTolerance;
+            if ((w1<=0.0 && w2<=0.0) || isArc || lastWasArc || i==polyline.countVertices()-1) {
+                // skip segments with zero width (exported above):
+                if (pl.countSegments()!=0) {
+                    pls.append(pl);
+                }
+                pl.clear();
+
+                //QSharedPointer<RShape> shape = polyline.getSegmentAt(i);
+
+                pl.appendVertex(v, b, w1, w2);
+                lastWasArc = isArc;
+            }
+        }
+
+        //qDebug() << "pls: " << pls;
+
         bool hasCurrentPath = false;
         if (currentPainterPath.isValid()) {
+            // current painter path is used for thin segments if any:
+            for (int i=0; i<pls.length(); i++) {
+                if (!pls[i].hasWidths()) {
+                    // export thin partial polyline:
+                    //qDebug() << "thin pl: " << pls[i];
+                    for (int k=0; k<pls[i].countSegments(); k++) {
+                        QSharedPointer<RShape> shape = pls[i].getSegmentAt(k);
+                        QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
+                        if (!line.isNull()) {
+                            RExporter::exportLine(*line);
+                        }
+                        QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
+                        if (!arc.isNull()) {
+                            RExporter::exportArc(*arc);
+                        }
+                    }
+                }
+            }
+//            for (int i=0; i<polyline.countSegments(); i++) {
+//                QSharedPointer<RShape> shape = polyline.getSegmentAt(i);
+//                double w1 = polyline.getStartWidthAt(i);
+//                double w2 = polyline.getEndWidthAt(i);
+//                if (w1>0.0 || w2>0.0) {
+//                    // skip segments with custom width (exported below):
+//                    continue;
+//                }
+//                QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
+//                if (!line.isNull()) {
+//                    RExporter::exportLine(*line);
+//                }
+//                QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
+//                if (!arc.isNull()) {
+//                    RExporter::exportArc(*arc);
+//                }
+//            }
+
             hasCurrentPath = true;
             endPath();
         }
 
+
+
+        RPainterPath pp;
+        for (int i=0; i<pls.length(); i++) {
+            if (pls[i].hasWidths()) {
+                //qDebug() << "thick pl: " << pls[i];
+                RPolyline::getPolylineProxy()->exportThickPolyline(*this, pp, pls[i]);
+            }
+        }
+
         beginPath();
-
-        RPolyline::getPolylineProxy()->exportThickLine(currentPainterPath, line, w1, w2);
+        currentPainterPath.addPath(pp);
+        //currentPainterPath = pp;
+        currentPainterPath.setFillRule(Qt::WindingFill);
+        //currentPainterPath.setFillRule(Qt::OddEvenFill);
         currentPainterPath.setBrush(currentPen.color());
-        currentPainterPath.setPen(QPen(Qt::NoPen));
-
+        //currentPainterPath.setPen(QPen(Qt::NoPen));
         endPath();
 
         if (hasCurrentPath) {
@@ -271,34 +351,61 @@ void RGraphicsSceneQt::exportThickLine(const RLine& line, double w1, double w2) 
         }
     }
     else {
-        exportLine(line);
+        RPolyline pl = polyline;
+        pl.stripWidths();
+        exportPolyline(pl);
     }
 }
 
-void RGraphicsSceneQt::exportThickArc(const RArc& arc, double w1, double w2) {
-    if (RPolyline::hasProxy()) {
-        bool hasCurrentPath = false;
-        if (currentPainterPath.isValid()) {
-            hasCurrentPath = true;
-            endPath();
-        }
+//void RGraphicsSceneQt::exportThickLine(const RLine& line, double w1, double w2) {
+//    if (RPolyline::hasProxy()) {
+//        bool hasCurrentPath = false;
+//        if (currentPainterPath.isValid()) {
+//            hasCurrentPath = true;
+//            endPath();
+//        }
 
-        beginPath();
+//        beginPath();
 
-        RPolyline::getPolylineProxy()->exportThickArc(currentPainterPath, arc, w1, w2);
-        currentPainterPath.setBrush(currentPen.color());
-        currentPainterPath.setPen(QPen(Qt::NoPen));
+//        RPolyline::getPolylineProxy()->exportThickLine(currentPainterPath, line, w1, w2);
+//        currentPainterPath.setBrush(currentPen.color());
+//        currentPainterPath.setPen(QPen(Qt::NoPen));
 
-        endPath();
+//        endPath();
 
-        if (hasCurrentPath) {
-            beginPath();
-        }
-    }
-    else {
-        exportArc(arc);
-    }
-}
+//        if (hasCurrentPath) {
+//            beginPath();
+//        }
+//    }
+//    else {
+//        exportLine(line);
+//    }
+//}
+
+//void RGraphicsSceneQt::exportThickArc(const RArc& arc, double w1, double w2) {
+//    if (RPolyline::hasProxy()) {
+//        bool hasCurrentPath = false;
+//        if (currentPainterPath.isValid()) {
+//            hasCurrentPath = true;
+//            endPath();
+//        }
+
+//        beginPath();
+
+//        RPolyline::getPolylineProxy()->exportThickArc(currentPainterPath, arc, w1, w2);
+//        currentPainterPath.setBrush(currentPen.color());
+//        currentPainterPath.setPen(QPen(Qt::NoPen));
+
+//        endPath();
+
+//        if (hasCurrentPath) {
+//            beginPath();
+//        }
+//    }
+//    else {
+//        exportArc(arc);
+//    }
+//}
 
 void RGraphicsSceneQt::exportPolyline(const RPolyline& polyline, bool polylineGen, double offset) {
     // filling:

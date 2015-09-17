@@ -4338,7 +4338,7 @@
         
     
       double REcmaShellFileExporterAdapter::exportLine(
-                const RLine & line, double offset, double w1, double w2
+                const RLine & line, double offset
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportLine", engine);
@@ -4351,7 +4351,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=4*/
+                    || _q_function.property("length").toInt32()!=2*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::exportLine";
@@ -4365,7 +4365,7 @@
                         //}
                         double ret =
                         RFileExporterAdapter::exportLine(
-                            line, offset, w1, w2
+                            line, offset
                         );
 
                         // block recursion again:
@@ -4408,24 +4408,6 @@
         << qScriptValueFromValue(engine, 
 
         offset
-        )
-      
-
-
-
-    // type: double, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        w1
-        )
-      
-
-
-
-    // type: double, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        w2
         )
       
                             )
@@ -4565,7 +4547,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportArc(
-                const RArc & arc, double offset, double w1, double w2
+                const RArc & arc, double offset
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportArc", engine);
@@ -4578,7 +4560,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=4*/
+                    || _q_function.property("length").toInt32()!=2*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::exportArc";
@@ -4591,7 +4573,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RFileExporterAdapter::exportArc(
-                            arc, offset, w1, w2
+                            arc, offset
                         );
 
                         // block recursion again:
@@ -4629,24 +4611,6 @@
         << qScriptValueFromValue(engine, 
 
         offset
-        )
-      
-
-
-
-    // type: double, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        w1
-        )
-      
-
-
-
-    // type: double, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        w2
         )
       
                             )
@@ -5348,12 +5312,12 @@
             }
         
     
-      void REcmaShellFileExporterAdapter::exportThickLine(
-                const RLine & line, double w1, double w2
+      void REcmaShellFileExporterAdapter::exportThickPolyline(
+                const RPolyline & polyline
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
-                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportThickLine", engine);
-                QScriptValue _q_function = __qtscript_self.property("exportThickLine");
+                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportThickPolyline", engine);
+                QScriptValue _q_function = __qtscript_self.property("exportThickPolyline");
 
 
 
@@ -5362,10 +5326,10 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=3*/
+                    || _q_function.property("length").toInt32()!=1*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
-                    //QString cppSig = "RFileExporterAdapter::exportThickLine";
+                    //QString cppSig = "RFileExporterAdapter::exportThickPolyline";
                     
                         // re-enable recursion for calls from C++ into ECMAScript functions
                         // leave it marked as generated though if appropriate:
@@ -5374,14 +5338,14 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        RFileExporterAdapter::exportThickLine(
-                            line, w1, w2
+                        RFileExporterAdapter::exportThickPolyline(
+                            polyline
                         );
 
                         // block recursion again:
                         _q_function.setData(QScriptValue(engine, prev));
 
-                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportThickLine", engine);
+                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportThickPolyline", engine);
 
                         
                             return;
@@ -5398,30 +5362,12 @@
 
 
 
-    // type: RLine &, copyable: true
+    // type: RPolyline &, copyable: true
         << qScriptValueFromValue(engine, 
 
         
             // const reference argument - make a new object:
-            new RLine(line)
-        )
-      
-
-
-
-    // type: double, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        w1
-        )
-      
-
-
-
-    // type: double, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        w2
+            new RPolyline(polyline)
         )
       
                             )
@@ -5429,94 +5375,7 @@
                     ;
                     _q_function.setData(QScriptValue(engine, prev));
 
-                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportThickLine", engine);
-
-                    
-            }
-        
-    
-      void REcmaShellFileExporterAdapter::exportThickArc(
-                const RArc & arc, double w1, double w2
-            ) {
-                QScriptEngine* engine = __qtscript_self.engine();
-                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportThickArc", engine);
-                QScriptValue _q_function = __qtscript_self.property("exportThickArc");
-
-
-
-                if (!_q_function.isFunction() || 
-                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
-                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
-                    
-                    /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=3*/
-                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
-                    ) {
-                    //QString cppSig = "RFileExporterAdapter::exportThickArc";
-                    
-                        // re-enable recursion for calls from C++ into ECMAScript functions
-                        // leave it marked as generated though if appropriate:
-                        
-                        quint32 prev = _q_function.data().toUInt32();
-                        //if (cppSig!="RGraphicsViewQt::event") {
-                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
-                        //}
-                        RFileExporterAdapter::exportThickArc(
-                            arc, w1, w2
-                        );
-
-                        // block recursion again:
-                        _q_function.setData(QScriptValue(engine, prev));
-
-                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportThickArc", engine);
-
-                        
-                            return;
-                          
-                }
-                    // prevent recursion if script implementation calls base implementation
-                    // mark function as 'in call':
-                    quint32 prev = _q_function.data().toUInt32();
-                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    
-                            _q_function.call(__qtscript_self,
-                                QScriptValueList()
-                                
-
-
-
-    // type: RArc &, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        
-            // const reference argument - make a new object:
-            new RArc(arc)
-        )
-      
-
-
-
-    // type: double, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        w1
-        )
-      
-
-
-
-    // type: double, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        w2
-        )
-      
-                            )
-                        
-                    ;
-                    _q_function.setData(QScriptValue(engine, prev));
-
-                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportThickArc", engine);
+                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportThickPolyline", engine);
 
                     
             }

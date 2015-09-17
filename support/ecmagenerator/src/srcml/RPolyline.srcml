@@ -161,6 +161,8 @@
         <return>return <expr><name>polylineProxy</name>!=<name>NULL</name></expr>;</return>
     }</block></function>
 
+    <function_decl><type><name>void</name></type> <name>stripWidths</name><parameter_list>()</parameter_list>;</function_decl>
+
     <comment type="block">/**
      * \nonscriptable
      */</comment>

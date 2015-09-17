@@ -65,8 +65,20 @@ public:
 
     QList<QSharedPointer<RShape> > getShapes() const;
 
+    RVector getCurrentPosition() const {
+        return RVector(currentPosition().x(), currentPosition().y());
+    }
+
+    bool isAtPosition(const RVector& p, double tolerance = RS::PointTolerance) const;
+
     void moveTo(const RVector& v) {
         QPainterPath::moveTo(v.x, v.y);
+    }
+
+    void moveToOrNop(const RVector& v) {
+        if (!isAtPosition(v)) {
+            moveTo(v);
+        }
     }
 
     void moveTo(qreal x, qreal y) {
@@ -132,6 +144,7 @@ public:
     }
 
     void addPath(const RPainterPath& path);
+    void addLine(const RLine& line);
     void addArc(const RArc& arc);
     void addSpline(const RSpline& spline);
 

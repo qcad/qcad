@@ -50,11 +50,20 @@ RPainterPath::RPainterPath(const QPainterPath& path) :
 RPainterPath::~RPainterPath() {
 }
 
-void RPainterPath::addArc(const RArc& arc) {
-    RVector cp (currentPosition().x(), currentPosition().y());
-    if (!cp.equalsFuzzy(arc.getStartPoint())) {
-        qWarning() << "arc does not connect to path";
+bool RPainterPath::isAtPosition(const RVector& p, double tolerance) const {
+    if (isEmpty()) {
+        return false;
     }
+    return getCurrentPosition().equalsFuzzy(p, tolerance);
+}
+
+void RPainterPath::addLine(const RLine& line) {
+    //moveToOrNop(line.startPoint);
+    lineTo(line.endPoint);
+}
+
+void RPainterPath::addArc(const RArc& arc) {
+    //moveToOrNop(arc.getStartPoint());
 
     RCircle c(arc.getCenter(), arc.getRadius());
     RBox bb = c.getBoundingBox();
@@ -525,7 +534,7 @@ QDebug operator<<(QDebug dbg, RPainterPath& p) {
 void RPainterPath::addShape(QSharedPointer<RShape> shape) {
     QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
     if (!line.isNull()) {
-        lineTo(line->endPoint.x, line->endPoint.y);
+        addLine(*line);
         return;
     }
 

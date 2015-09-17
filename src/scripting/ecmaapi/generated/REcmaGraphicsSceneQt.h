@@ -83,10 +83,7 @@
         exportEllipse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        exportThickLine
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        exportThickArc
+        exportThickPolyline
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         exportPolyline
