@@ -271,7 +271,40 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
             //   arc segment
             bool isArc = fabs(b)>RS::PointTolerance;
             bool isThin = (w1<=0.0 && w2<=0.0);
-            if ((i>0 && isThin!=lastWasThin) || isArc || lastWasArc || i==polyline.countVertices()-1) {
+            bool isMiter = false;
+            QSharedPointer<RLine> before;
+            double wb;
+            if (i>0) {
+                before = polyline.getSegmentAt(i-1).dynamicCast<RLine>();
+                wb = polyline.getEndWidthAt(i-1);
+            }
+            if (!before.isNull()) {
+                QSharedPointer<RLine> after;
+                if (i<polyline.countSegments()) {
+                    after = polyline.getSegmentAt(i).dynamicCast<RLine>();
+                }
+                if (!after.isNull()) {
+                    double ang = fabs(RMath::getAngleDifference180(before->getDirection2(), after->getDirection1()));
+
+                    double a = wb / sin(ang);
+                    double b = w1 / sin(ang);
+                    double d = sqrt(a*a + b*b + 2*a*b*cos(ang));
+                    //if (w1/tan(ang/2)>w1*2 || w2/tan(ang/2)>w2*2) {
+                    if (d/2 > wb*2 && d/2 > w1*2) {
+//                        qDebug() << "ang: " << ang;
+//                        qDebug() << "wb: " << wb;
+//                        qDebug() << "w1: " << w1;
+//                        qDebug() << "a: " << a;
+//                        qDebug() << "b: " << b;
+//                        qDebug() << "d/2: " << d/2;
+                        isMiter = true;
+                    }
+//                    if (ang<M_PI/2) {
+//                        isMiter = true;
+//                    }
+                }
+            }
+            if ((i>0 && isThin!=lastWasThin) || isMiter || isArc || lastWasArc || i==polyline.countVertices()-1) {
                 // skip segments with zero width (exported above):
                 if (pl.countSegments()!=0) {
                     pls.append(pl);
@@ -337,7 +370,7 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
         for (int i=0; i<pls.length(); i++) {
             if (pls[i].hasWidths()) {
                 //qDebug() << "thick pl: " << pls[i];
-                RPolyline::getPolylineProxy()->exportThickPolyline(*this, pp, pls[i]);
+                RPolyline::getPolylineProxy()->exportThickPolyline(*this, pp, pls[i], 2);
             }
         }
 
