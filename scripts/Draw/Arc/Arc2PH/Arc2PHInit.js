@@ -7,6 +7,6 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("a,h"));
     action.setDefaultCommands(["archeight", "ah"]);
     action.setGroupSortOrder(7200);
-    action.setSortOrder(400);
+    action.setSortOrder(500);
     action.setWidgetNames(["DrawArcMenu", "ArcToolBar", "ArcToolsPanel"]);
 }
