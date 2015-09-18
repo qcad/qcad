@@ -498,7 +498,15 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape) {
                 qWarning() << "RHatchData::addBoundary: unexpected boundary type";
             }
         }
-        boundary.last().append(QList<QSharedPointer<RShape> >() << shape);
+
+        // avoid arc boundaries with huge radius:
+        QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
+        if (!arc.isNull() && fabs(arc->getSweep())<RMath::deg2rad(2)) {
+            boundary.last().append(QSharedPointer<RShape>(new RLine(arc->getStartPoint(), arc->getEndPoint())));
+        }
+        else {
+            boundary.last().append(shape);
+        }
     }
 
     update();
