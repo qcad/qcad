@@ -68,6 +68,9 @@ OptionsToolBar.postInit = function(basePath) {
     var flags = new Qt.ToolBarAreas(Qt.TopToolBarArea | Qt.BottomToolBarArea);
     optionsToolBar.setAllowedAreas(flags);
 
+    // floatable tool bar does not resize properly: prevent floating of tool bar here:
+    //optionsToolBar.floatable = false;
+
     var iconLabel = new QLabel(optionsToolBar);
     iconLabel.objectName = "Icon";
     iconLabel.alignment = Qt.AlignCenter;
