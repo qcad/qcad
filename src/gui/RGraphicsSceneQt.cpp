@@ -252,6 +252,15 @@ void RGraphicsSceneQt::exportEllipse(const REllipse& ellipse, double offset) {
 
 void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
     if (RPolyline::hasProxy()) {
+        if (polyline.isClosed()) {
+            // convert logically closed polyline to geometrically closed polyline:
+            RPolyline pl = polyline;
+            pl.setClosed(false);
+            pl.appendVertex(pl.getStartPoint());
+            exportThickPolyline(pl);
+            return;
+        }
+
         // split polyline at arc segments or width change to 0/0:
         RPolyline pl;
         QList<RPolyline> pls;
@@ -289,19 +298,9 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
                     double a = wb / sin(ang);
                     double b = w1 / sin(ang);
                     double d = sqrt(a*a + b*b + 2*a*b*cos(ang));
-                    //if (w1/tan(ang/2)>w1*2 || w2/tan(ang/2)>w2*2) {
                     if (d/2 > wb*2 && d/2 > w1*2) {
-//                        qDebug() << "ang: " << ang;
-//                        qDebug() << "wb: " << wb;
-//                        qDebug() << "w1: " << w1;
-//                        qDebug() << "a: " << a;
-//                        qDebug() << "b: " << b;
-//                        qDebug() << "d/2: " << d/2;
                         isMiter = true;
                     }
-//                    if (ang<M_PI/2) {
-//                        isMiter = true;
-//                    }
                 }
             }
             if ((i>0 && isThin!=lastWasThin) || isMiter || isArc || lastWasArc || i==polyline.countVertices()-1) {
@@ -311,8 +310,6 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
                 }
                 pl.clear();
 
-                //QSharedPointer<RShape> shape = polyline.getSegmentAt(i);
-
                 pl.appendVertex(v, b, w1, w2);
             }
 
@@ -320,7 +317,7 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
             lastWasThin = isThin;
         }
 
-        //qDebug() << "pls: " << pls;
+//        qDebug() << "pls: " << pls;
 
         bool hasCurrentPath = false;
         if (currentPainterPath.isValid()) {
