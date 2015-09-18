@@ -588,7 +588,7 @@ No se puede agregar a una polínea cerrada.</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Global Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Ancho global</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="+5"/>

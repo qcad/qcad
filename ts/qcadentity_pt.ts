@@ -754,7 +754,7 @@ Fechado</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Global Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Largura global</translation>
     </message>
     <message>
         <location filename="../src/entity/RSolidEntity.cpp" line="-13"/>

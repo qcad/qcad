@@ -595,7 +595,7 @@ Fermé</translatorcomment>
     <message>
         <location line="+2"/>
         <source>Global Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Largeur globale</translation>
     </message>
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="+5"/>
