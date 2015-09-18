@@ -98,7 +98,7 @@
         <translation>Kohde on lukitussa tasossa.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+85"/>
         <source>Entity is not a block reference.</source>
         <translation>Kohde ei ole lohkoviite.</translation>
     </message>

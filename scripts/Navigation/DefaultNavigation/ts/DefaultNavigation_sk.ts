@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -39,12 +38,12 @@
     <message>
         <location line="+7"/>
         <source>Reverse mouse wheel direction for zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Priblížiť / vzdialiť obrátené</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Mouse wheel zoom factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Krokovanie kolieska myši:</translation>
     </message>
     <message>
         <location line="-34"/>

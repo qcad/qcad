@@ -98,7 +98,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+85"/>
         <source>Entity is not a block reference.</source>
         <translation type="unfinished"></translation>
     </message>

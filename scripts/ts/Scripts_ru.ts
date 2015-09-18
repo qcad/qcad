@@ -98,7 +98,7 @@
         <translation>Объект находится на заблокированном слое.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+85"/>
         <source>Entity is not a block reference.</source>
         <translation>Объект не является привязкой блока.</translation>
     </message>

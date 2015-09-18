@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -6,7 +5,7 @@
     <message>
         <location filename="../BreakOutManual.js" line="+80"/>
         <source>Choose line, arc, circle, ellipse or polyline to break up</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte prvok ktorý chcete orezať</translation>
     </message>
     <message>
         <location line="+3"/>

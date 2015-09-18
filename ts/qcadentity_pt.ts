@@ -60,7 +60,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location filename="../src/entity/RLineEntity.cpp" line="+82"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+70"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+85"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+86"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+78"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -259,7 +259,7 @@ Diâmetro (ø)</translatorcomment>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+5"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+6"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
@@ -642,7 +642,7 @@ Escalone entidades</translatorcomment>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-8"/>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -750,6 +750,11 @@ Fechado</translatorcomment>
         <location line="+1"/>
         <source>End Width</source>
         <translation>Largura Final</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Global Width</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/entity/RSolidEntity.cpp" line="-13"/>
