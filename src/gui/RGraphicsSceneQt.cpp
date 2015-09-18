@@ -325,7 +325,6 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
             for (int i=0; i<pls.length(); i++) {
                 if (!pls[i].hasWidths()) {
                     // export thin partial polyline:
-                    //qDebug() << "thin pl: " << pls[i];
                     for (int k=0; k<pls[i].countSegments(); k++) {
                         QSharedPointer<RShape> shape = pls[i].getSegmentAt(k);
                         QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
@@ -339,43 +338,21 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
                     }
                 }
             }
-//            for (int i=0; i<polyline.countSegments(); i++) {
-//                QSharedPointer<RShape> shape = polyline.getSegmentAt(i);
-//                double w1 = polyline.getStartWidthAt(i);
-//                double w2 = polyline.getEndWidthAt(i);
-//                if (w1>0.0 || w2>0.0) {
-//                    // skip segments with custom width (exported below):
-//                    continue;
-//                }
-//                QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
-//                if (!line.isNull()) {
-//                    RExporter::exportLine(*line);
-//                }
-//                QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
-//                if (!arc.isNull()) {
-//                    RExporter::exportArc(*arc);
-//                }
-//            }
 
             hasCurrentPath = true;
             endPath();
         }
 
-
-
         RPainterPath pp;
         for (int i=0; i<pls.length(); i++) {
             if (pls[i].hasWidths()) {
-                //qDebug() << "thick pl: " << pls[i];
                 RPolyline::getPolylineProxy()->exportThickPolyline(*this, pp, pls[i], 2);
             }
         }
 
         beginPath();
         currentPainterPath.addPath(pp);
-        //currentPainterPath = pp;
         currentPainterPath.setFillRule(Qt::WindingFill);
-        //currentPainterPath.setFillRule(Qt::OddEvenFill);
         currentPainterPath.setBrush(currentPen.color());
         currentPainterPath.setPen(QPen(Qt::NoPen));
         endPath();
@@ -390,56 +367,6 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
         exportPolyline(pl);
     }
 }
-
-//void RGraphicsSceneQt::exportThickLine(const RLine& line, double w1, double w2) {
-//    if (RPolyline::hasProxy()) {
-//        bool hasCurrentPath = false;
-//        if (currentPainterPath.isValid()) {
-//            hasCurrentPath = true;
-//            endPath();
-//        }
-
-//        beginPath();
-
-//        RPolyline::getPolylineProxy()->exportThickLine(currentPainterPath, line, w1, w2);
-//        currentPainterPath.setBrush(currentPen.color());
-//        currentPainterPath.setPen(QPen(Qt::NoPen));
-
-//        endPath();
-
-//        if (hasCurrentPath) {
-//            beginPath();
-//        }
-//    }
-//    else {
-//        exportLine(line);
-//    }
-//}
-
-//void RGraphicsSceneQt::exportThickArc(const RArc& arc, double w1, double w2) {
-//    if (RPolyline::hasProxy()) {
-//        bool hasCurrentPath = false;
-//        if (currentPainterPath.isValid()) {
-//            hasCurrentPath = true;
-//            endPath();
-//        }
-
-//        beginPath();
-
-//        RPolyline::getPolylineProxy()->exportThickArc(currentPainterPath, arc, w1, w2);
-//        currentPainterPath.setBrush(currentPen.color());
-//        currentPainterPath.setPen(QPen(Qt::NoPen));
-
-//        endPath();
-
-//        if (hasCurrentPath) {
-//            beginPath();
-//        }
-//    }
-//    else {
-//        exportArc(arc);
-//    }
-//}
 
 void RGraphicsSceneQt::exportPolyline(const RPolyline& polyline, bool polylineGen, double offset) {
     // filling:
