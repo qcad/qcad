@@ -253,6 +253,7 @@ void RGraphicsSceneQt::exportEllipse(const REllipse& ellipse, double offset) {
 void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline, bool closed) {
     if (RPolyline::hasProxy()) {
         if (polyline.isClosed()) {
+            qDebug() << "polyline closed";
             // convert logically closed polyline to geometrically closed polyline:
             RPolyline pl = polyline;
             pl.setClosed(false);
@@ -310,11 +311,11 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline, bool close
             lastWasThin = isThin;
         }
 
-//        qDebug() << "pls: " << pls;
+        qDebug() << "pls: " << pls;
 
         bool hasCurrentPath = false;
         if (currentPainterPath.isValid()) {
-            // current painter path is used for thin segments if any:
+            // current painter path is used to export thin segments if any:
             for (int i=0; i<pls.length(); i++) {
                 if (!pls[i].hasWidths()) {
                     // export thin partial polyline:
@@ -340,23 +341,50 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline, bool close
         if (closed) {
             RPolyline firstPl = pls[0];
             RPolyline lastPl = pls[pls.length()-1];
+            if (pls.length()==1) {
+//                 needed for lastSegment to work for closed pl:
+                //firstPl.setClosed(true);
+                //lastPl.setClosed(true);
+            }
             if (firstPl.hasWidths() && lastPl.hasWidths()) {
                 QSharedPointer<RLine> before = lastPl.getLastSegment().dynamicCast<RLine>();
                 QSharedPointer<RLine> after = firstPl.getFirstSegment().dynamicCast<RLine>();
+//                if (pls.length()==1) {
+//                    lastPl.setClosed(true);
+//                    before = lastPl.getLastSegment().dynamicCast<RLine>();
+//                    after = lastPl.getSegmentAt(lastPl.countSegments()-2).dynamicCast<RLine>();
+//                }
+//                else {
+//                    before = lastPl.getLastSegment().dynamicCast<RLine>();
+//                    after = firstPl.getFirstSegment().dynamicCast<RLine>();
+//                }
                 double w1 = firstPl.getStartWidthAt(0);
-                double wb = lastPl.getEndWidthAt(lastPl.countVertices()-2);
+                qDebug() << "firstPl: " << firstPl;
+                qDebug() << "lastPl: " << lastPl;
+                //double wb = lastPl.getEndWidthAt(pls.length()==1 ? lastPl.countVertices()-2 : lastPl.countVertices()-1);
+                //double wb = lastPl.getEndWidthAt(lastPl.countVertices()-1);
+                double wb = lastPl.getEndWidthAt(pls.length()==1 ? lastPl.countVertices()-1 : lastPl.countVertices()-2);
+
+                qDebug() << "before: " << *before;
+                qDebug() << "after: " << *after;
+                qDebug() << "w1: " << w1;
+                qDebug() << "wb: " << wb;
 
                 if (!before.isNull() && !after.isNull()) {
                     if (!getMiter(before, after, w1, wb)) {
+                        qDebug("no miter");
                         if (pls.length()>1) {
+                            qDebug() << "joining";
                             lastPl.appendShape(firstPl);
                             pls.removeFirst();
                             pls.removeLast();
                             pls.prepend(lastPl);
+                            closed = false;
                         }
                     }
                     else {
                         if (pls.length()==1) {
+                            qDebug() << "miter limit for first vertex";
                             // polyline is closed but miter limit reached at first vertex:
                             closed = false;
                         }
@@ -368,7 +396,8 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline, bool close
             }
         }
 
-        //qDebug() << "pls: " << pls;
+        qDebug() << "pls joined: " << pls;
+        qDebug() << "closed: " << closed;
 
         RPainterPath pp;
         for (int i=0; i<pls.length(); i++) {
