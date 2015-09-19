@@ -253,7 +253,6 @@ void RGraphicsSceneQt::exportEllipse(const REllipse& ellipse, double offset) {
 void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline, bool closed) {
     if (RPolyline::hasProxy()) {
         if (polyline.isClosed()) {
-            qDebug() << "polyline closed";
             // convert logically closed polyline to geometrically closed polyline:
             RPolyline pl = polyline;
             pl.setClosed(false);
@@ -310,8 +309,6 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline, bool close
             lastWasArc = isArc;
             lastWasThin = isThin;
         }
-
-        qDebug() << "pls: " << pls;
 
         bool hasCurrentPath = false;
         if (currentPainterPath.isValid()) {
