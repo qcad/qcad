@@ -250,14 +250,14 @@ void RGraphicsSceneQt::exportEllipse(const REllipse& ellipse, double offset) {
     }
 }
 
-void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
+void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline, bool closed) {
     if (RPolyline::hasProxy()) {
         if (polyline.isClosed()) {
             // convert logically closed polyline to geometrically closed polyline:
             RPolyline pl = polyline;
             pl.setClosed(false);
             pl.appendVertex(pl.getStartPoint());
-            exportThickPolyline(pl);
+            exportThickPolyline(pl, true);
             return;
         }
 
@@ -293,14 +293,7 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
                     after = polyline.getSegmentAt(i).dynamicCast<RLine>();
                 }
                 if (!after.isNull()) {
-                    double ang = fabs(RMath::getAngleDifference180(before->getDirection2(), after->getDirection1()));
-
-                    double a = wb / sin(ang);
-                    double b = w1 / sin(ang);
-                    double d = sqrt(a*a + b*b + 2*a*b*cos(ang));
-                    if (d/2 > wb*2 && d/2 > w1*2) {
-                        isMiter = true;
-                    }
+                    isMiter = getMiter(before, after, w1, wb);
                 }
             }
             if ((i>0 && isThin!=lastWasThin) || isMiter || isArc || lastWasArc || i==polyline.countVertices()-1) {
@@ -343,10 +336,44 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
             endPath();
         }
 
+        // join last and first part of closed polyline for trimming / joining:
+        if (closed) {
+            RPolyline firstPl = pls[0];
+            RPolyline lastPl = pls[pls.length()-1];
+            if (firstPl.hasWidths() && lastPl.hasWidths()) {
+                QSharedPointer<RLine> before = lastPl.getLastSegment().dynamicCast<RLine>();
+                QSharedPointer<RLine> after = firstPl.getFirstSegment().dynamicCast<RLine>();
+                double w1 = firstPl.getStartWidthAt(0);
+                double wb = lastPl.getEndWidthAt(lastPl.countVertices()-2);
+
+                if (!before.isNull() && !after.isNull()) {
+                    if (!getMiter(before, after, w1, wb)) {
+                        if (pls.length()>1) {
+                            lastPl.appendShape(firstPl);
+                            pls.removeFirst();
+                            pls.removeLast();
+                            pls.prepend(lastPl);
+                        }
+                    }
+                    else {
+                        if (pls.length()==1) {
+                            // polyline is closed but miter limit reached at first vertex:
+                            closed = false;
+                        }
+                    }
+                }
+            }
+            if (pls.length()>1) {
+                closed = false;
+            }
+        }
+
+        //qDebug() << "pls: " << pls;
+
         RPainterPath pp;
         for (int i=0; i<pls.length(); i++) {
             if (pls[i].hasWidths()) {
-                RPolyline::getPolylineProxy()->exportThickPolyline(*this, pp, pls[i], 2);
+                RPolyline::getPolylineProxy()->exportThickPolyline(*this, pp, pls[i], closed);
             }
         }
 
@@ -366,6 +393,19 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
         pl.stripWidths();
         exportPolyline(pl);
     }
+}
+
+bool RGraphicsSceneQt::getMiter(const QSharedPointer<RLine>& before, const QSharedPointer<RLine>& after, double w1, double wb) {
+    double ang = fabs(RMath::getAngleDifference180(before->getDirection2(), after->getDirection1()));
+
+    double a = wb / sin(ang);
+    double b = w1 / sin(ang);
+    double d = sqrt(a*a + b*b + 2*a*b*cos(ang));
+    if (d/2 > wb*2 && d/2 > w1*2) {
+        return true;
+    }
+
+    return false;
 }
 
 void RGraphicsSceneQt::exportPolyline(const RPolyline& polyline, bool polylineGen, double offset) {

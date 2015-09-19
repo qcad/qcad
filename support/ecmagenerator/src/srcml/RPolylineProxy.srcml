@@ -24,6 +24,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RArc</name>;</class_decl>
+<class_decl>class <name>RExporter</name>;</class_decl>
 <class_decl>class <name>RLine</name>;</class_decl>
 <class_decl>class <name>RPainterPath</name>;</class_decl>
 <class_decl>class <name>RPolyline</name>;</class_decl>
@@ -38,10 +39,11 @@
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RPolylineProxy</name> <block>{<private type="default">
 </private><public>public:
+    <destructor><specifier>virtual</specifier> <name>~RPolylineProxy</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>trimStartPoint</name><parameter_list>(<param><decl><type><name>RPolyline</name>&amp;</type> <name>polyline</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>trimEndPoint</name><parameter_list>(<param><decl><type><name>RPolyline</name>&amp;</type> <name>polyline</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportThickPolyline</name><parameter_list>(<param><decl><type><name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>, <param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>polyline</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportThickPolyline</name><parameter_list>(<param><decl><type><name>RExporter</name>&amp;</type> <name>exporter</name></decl></param>, <param><decl><type><name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>, <param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>polyline</name></decl></param>, <param><decl><type><name>bool</name></type> <name>closed</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <comment type="line">//virtual void exportThickArc(RPainterPath&amp; path, const RArc&amp; arc, double w1, double w2) = 0;</comment>
 </public>}</block>;</class>
 

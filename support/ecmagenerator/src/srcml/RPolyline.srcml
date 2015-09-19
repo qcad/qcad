@@ -90,7 +90,9 @@
     <function_decl><type><name>void</name></type> <name>setBulgeAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>, <param><decl><type><name>double</name></type> <name>b</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>hasArcSegments</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>void</name></type> <name>setStartWidthAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>, <param><decl><type><name>double</name></type> <name>w</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getStartWidthAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setEndWidthAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>, <param><decl><type><name>double</name></type> <name>w</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getEndWidthAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>hasWidths</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
@@ -150,6 +152,7 @@
     <function_decl><type><name>int</name></type> <name>countSegments</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>getSegmentAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>getLastSegment</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>getFirstSegment</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isStraight</name><parameter_list>(<param><decl><type><name>double</name></type> <name>bulge</name></decl></param>)</parameter_list>;</function_decl>
 

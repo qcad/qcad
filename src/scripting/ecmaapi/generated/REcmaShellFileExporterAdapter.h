@@ -440,7 +440,8 @@
         
     
       void exportThickPolyline(
-                const RPolyline & polyline
+                const RPolyline & polyline, bool closed
+        = false
             );
         
     

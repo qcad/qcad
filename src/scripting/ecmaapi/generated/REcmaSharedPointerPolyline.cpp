@@ -150,7 +150,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, hasArcSegments, "hasArcSegments");
             
+            REcmaHelper::registerFunction(&engine, proto, setStartWidthAt, "setStartWidthAt");
+            
             REcmaHelper::registerFunction(&engine, proto, getStartWidthAt, "getStartWidthAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, setEndWidthAt, "setEndWidthAt");
             
             REcmaHelper::registerFunction(&engine, proto, getEndWidthAt, "getEndWidthAt");
             
@@ -225,6 +229,8 @@
             REcmaHelper::registerFunction(&engine, proto, getSegmentAt, "getSegmentAt");
             
             REcmaHelper::registerFunction(&engine, proto, getLastSegment, "getLastSegment");
+            
+            REcmaHelper::registerFunction(&engine, proto, getFirstSegment, "getFirstSegment");
             
             REcmaHelper::registerFunction(&engine, proto, toPainterPath, "toPainterPath");
             
@@ -2509,6 +2515,74 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerPolyline::setStartWidthAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::setStartWidthAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::setStartWidthAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("setStartWidthAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setStartWidthAt(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.setStartWidthAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setStartWidthAt", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerPolyline::getStartWidthAt
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -2566,6 +2640,74 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getStartWidthAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::setEndWidthAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::setEndWidthAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::setEndWidthAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("setEndWidthAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setEndWidthAt(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.setEndWidthAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setEndWidthAt", context, engine);
             return result;
         }
          QScriptValue
@@ -5400,6 +5542,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getLastSegment", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::getFirstSegment
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getFirstSegment", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getFirstSegment";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getFirstSegment", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RShape >'
+    QSharedPointer < RShape > cppResult =
+        
+               self->getFirstSegment();
+        // return type: QSharedPointer < RShape >
+                // Shared pointer to shape, cast to best match:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getFirstSegment().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getFirstSegment", context, engine);
             return result;
         }
          QScriptValue

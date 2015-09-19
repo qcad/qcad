@@ -89,7 +89,9 @@ public:
     void setBulgeAt(int i, double b);
     bool hasArcSegments() const;
 
+    void setStartWidthAt(int i, double w);
     double getStartWidthAt(int i) const;
+    void setEndWidthAt(int i, double w);
     double getEndWidthAt(int i) const;
     bool hasWidths() const;
 
@@ -149,6 +151,7 @@ public:
     int countSegments() const;
     QSharedPointer<RShape> getSegmentAt(int i) const;
     QSharedPointer<RShape> getLastSegment() const;
+    QSharedPointer<RShape> getFirstSegment() const;
 
     static bool isStraight(double bulge);
 

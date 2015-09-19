@@ -81,7 +81,8 @@ public:
     virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE);
     virtual void exportEllipse(const REllipse& ellipse, double offset = RNANDOUBLE);
     //virtual void exportQuad(const RVector& p1, const RVector& p2, const RVector& p3, const RVector& p4);
-    virtual void exportThickPolyline(const RPolyline& polyline);
+    virtual void exportThickPolyline(const RPolyline& polyline, bool closed = false);
+    bool getMiter(const QSharedPointer<RLine>& before, const QSharedPointer<RLine>& after, double w1, double wb);
 //    virtual void exportThickLine(const RLine& line, double w1, double w2);
 //    virtual void exportThickArc(const RArc& arc, double w1, double w2);
     virtual void exportPolyline(const RPolyline& polyline, bool polylineGen = true, double offset = RNANDOUBLE);

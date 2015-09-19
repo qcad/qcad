@@ -94,6 +94,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportThickPolyline, "exportThickPolyline");
             
+            REcmaHelper::registerFunction(&engine, proto, getMiter, "getMiter");
+            
             REcmaHelper::registerFunction(&engine, proto, exportPolyline, "exportPolyline");
             
             REcmaHelper::registerFunction(&engine, proto, exportPolylineFill, "exportPolylineFill");
@@ -1157,11 +1159,224 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPolyline */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RPolyline*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RPolyline*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsSceneQt: Argument 0 is not of type RPolyline.",
+                               context);                    
+                    }
+                    RPolyline 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportThickPolyline(a0
+        ,
+    a1);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.exportThickPolyline().",
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::exportThickPolyline", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsSceneQt::getMiter
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::getMiter", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::getMiter";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsSceneQt* self = 
+                        getSelf("getMiter", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < RLine > */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: QSharedPointer < RLine > */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(3).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < RLine > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     RLine * o0 = 
+                    qscriptvalue_cast < RLine * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RLine >(o0);
+                        
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RLine >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < RLine >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RGraphicsSceneQt: Argument 0 is not of type  RLine .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RGraphicsSceneQt: Argument 0 is not of type  RLine .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RLine > 
+                    //a0 =
+                    //QSharedPointer < RLine >(o0->clone());
+                
+                    // argument is SharedPointer
+                    QSharedPointer < RLine > 
+                    a1;
+
+                    // argument might be a simple pointer:
+                     RLine * o1 = 
+                    qscriptvalue_cast < RLine * > (context->argument(1));
+
+                    if (o1!=NULL) {
+                        a1 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < RLine >(o1);
+                        
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < RLine >*
+                        p1;
+
+                        p1 =
+                        qscriptvalue_cast <QSharedPointer < RLine >* > (context->argument(1));
+
+                        if (p1==NULL) {
+                           return REcmaHelper::throwError("RGraphicsSceneQt: Argument 1 is not of type  RLine .", context);                    
+                        }
+
+                        a1 = *p1;
+
+                           //return REcmaHelper::throwError("RGraphicsSceneQt: Argument 1 is not of type  RLine .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < RLine > 
+                    //a1 =
+                    //QSharedPointer < RLine >(o1->clone());
+                
+                    // argument isStandardType
+                    double
+                    a2 =
+                    (double)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a3 =
+                    (double)
+                    
+                    context->argument( 3 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getMiter(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.getMiter().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::getMiter", context, engine);
             return result;
         }
          QScriptValue

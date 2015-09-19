@@ -74,7 +74,13 @@
     
             REcmaHelper::registerFunction(&engine, proto, getShapes, "getShapes");
             
+            REcmaHelper::registerFunction(&engine, proto, getCurrentPosition, "getCurrentPosition");
+            
+            REcmaHelper::registerFunction(&engine, proto, isAtPosition, "isAtPosition");
+            
             REcmaHelper::registerFunction(&engine, proto, moveTo, "moveTo");
+            
+            REcmaHelper::registerFunction(&engine, proto, moveToOrNop, "moveToOrNop");
             
             REcmaHelper::registerFunction(&engine, proto, lineTo, "lineTo");
             
@@ -87,6 +93,8 @@
             REcmaHelper::registerFunction(&engine, proto, containsPoint, "containsPoint");
             
             REcmaHelper::registerFunction(&engine, proto, addPath, "addPath");
+            
+            REcmaHelper::registerFunction(&engine, proto, addLine, "addLine");
             
             REcmaHelper::registerFunction(&engine, proto, addArc, "addArc");
             
@@ -465,6 +473,184 @@
             return result;
         }
          QScriptValue
+        REcmaPainterPath::getCurrentPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::getCurrentPosition", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getCurrentPosition";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("getCurrentPosition", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getCurrentPosition();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getCurrentPosition().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::getCurrentPosition", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::isAtPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::isAtPosition", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::isAtPosition";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("isAtPosition", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isAtPosition(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isAtPosition(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.isAtPosition().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::isAtPosition", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPainterPath::moveTo
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -569,6 +755,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::moveTo", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::moveToOrNop
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::moveToOrNop", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::moveToOrNop";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("moveToOrNop", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->moveToOrNop(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.moveToOrNop().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::moveToOrNop", context, engine);
             return result;
         }
          QScriptValue
@@ -1226,6 +1479,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::addPath", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::addLine
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::addLine", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::addLine";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("addLine", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RLine */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RLine*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RLine*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type RLine.",
+                               context);                    
+                    }
+                    RLine 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addLine(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.addLine().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::addLine", context, engine);
             return result;
         }
          QScriptValue

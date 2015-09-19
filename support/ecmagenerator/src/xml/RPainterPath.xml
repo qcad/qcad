@@ -32,6 +32,22 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="getCurrentPosition" cppName="getCurrentPosition"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="isAtPosition" cppName="isAtPosition"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="p"
+        isConst="true" />
+        <arg type="double" typeName="double" name="tolerance"
+        hasDefault="true" default="RS :: PointTolerance"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="moveTo" cppName="moveTo" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -43,6 +59,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="qreal" typeName="qreal" name="y"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="moveToOrNop" cppName="moveToOrNop"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
       </variant>
     </method>
     <method name="lineTo" cppName="lineTo" specifier="public"
@@ -120,6 +144,13 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RPainterPath &amp;" typeName="RPainterPath"
         name="path" isConst="true" />
+      </variant>
+    </method>
+    <method name="addLine" cppName="addLine" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RLine &amp;" typeName="RLine" name="line"
+        isConst="true" />
       </variant>
     </method>
     <method name="addArc" cppName="addArc" specifier="public"

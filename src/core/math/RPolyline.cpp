@@ -170,6 +170,8 @@ void RPolyline::appendShape(const RShape& shape, bool prepend) {
                     continue;
                 }
                 prependShape(*s);
+                setStartWidthAt(0, pl->getStartWidthAt(i));
+                setEndWidthAt(0, pl->getEndWidthAt(i));
             }
         }
         else {
@@ -178,6 +180,8 @@ void RPolyline::appendShape(const RShape& shape, bool prepend) {
                 if (s.isNull()) {
                     continue;
                 }
+                setStartWidthAt(vertices.length()-1, pl->getStartWidthAt(i));
+                setEndWidthAt(vertices.length()-1, pl->getEndWidthAt(i));
                 appendShape(*s);
             }
         }
@@ -396,12 +400,26 @@ bool RPolyline::hasArcSegments() const {
     return false;
 }
 
+void RPolyline::setStartWidthAt(int i, double w) {
+    if (i<0 || i>=startWidths.size()) {
+        return;
+    }
+    startWidths[i] = w;
+}
+
 double RPolyline::getStartWidthAt(int i) const {
     if (i<0 || i>=startWidths.size()) {
         return -1.0;
     }
 
     return startWidths.at(i);
+}
+
+void RPolyline::setEndWidthAt(int i, double w) {
+    if (i<0 || i>=endWidths.size()) {
+        return;
+    }
+    endWidths[i] = w;
 }
 
 double RPolyline::getEndWidthAt(int i) const {
@@ -671,6 +689,13 @@ QSharedPointer<RShape> RPolyline::getLastSegment() const {
         return QSharedPointer<RShape>();
     }
     return getSegmentAt(countSegments()-1);
+}
+
+QSharedPointer<RShape> RPolyline::getFirstSegment() const {
+    if (countSegments()==0) {
+        return QSharedPointer<RShape>();
+    }
+    return getSegmentAt(0);
 }
 
 /**

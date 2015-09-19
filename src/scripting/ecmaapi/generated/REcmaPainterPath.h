@@ -51,7 +51,16 @@
         getShapes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getCurrentPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isAtPosition
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         moveTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        moveToOrNop
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         lineTo
@@ -70,6 +79,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        addLine
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addArc

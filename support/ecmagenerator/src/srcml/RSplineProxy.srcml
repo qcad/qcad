@@ -34,6 +34,7 @@
  */</comment>
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RSplineProxy</name> <block>{<private type="default">
 </private><public>public:
+    <destructor><specifier>virtual</specifier> <name>~RSplineProxy</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>uninit</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>RSpline</name></type> <name>updateFromFitPoints</name><parameter_list>(<param><decl><type><name>const</name> <name>RSpline</name>&amp;</type> <name>spline</name></decl></param>, <param><decl><type><name>bool</name></type> <name>useTangents</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>

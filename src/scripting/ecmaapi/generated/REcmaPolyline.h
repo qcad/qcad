@@ -143,7 +143,13 @@
         hasArcSegments
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setStartWidthAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getStartWidthAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setEndWidthAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getEndWidthAt
@@ -255,6 +261,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLastSegment
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getFirstSegment
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isStraight

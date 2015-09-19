@@ -220,11 +220,29 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="setStartWidthAt" cppName="setStartWidthAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+        <arg type="double" typeName="double" name="w"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getStartWidthAt" cppName="getStartWidthAt"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">
         <arg type="int" typeName="int" name="i" isConst="false" />
+      </variant>
+    </method>
+    <method name="setEndWidthAt" cppName="setEndWidthAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+        <arg type="double" typeName="double" name="w"
+        isConst="false" />
       </variant>
     </method>
     <method name="getEndWidthAt" cppName="getEndWidthAt"
@@ -500,6 +518,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="getLastSegment" cppName="getLastSegment"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RShape &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getFirstSegment" cppName="getFirstSegment"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QSharedPointer &lt; RShape &gt;"
