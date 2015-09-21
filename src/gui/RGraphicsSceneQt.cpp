@@ -35,7 +35,7 @@
 
 
 RGraphicsSceneQt::RGraphicsSceneQt(RDocumentInterface& documentInterface)
-    : RGraphicsScene(documentInterface) /*, patternFactor(-1.0)*/ {
+    : RGraphicsScene(documentInterface), decorating(false) {
 
     setProjectionRenderingHint(RS::RenderTop);
 
@@ -173,39 +173,38 @@ bool RGraphicsSceneQt::beginPath() {
 }
 
 void RGraphicsSceneQt::endPath() {
-    // give entity export listeners a chance to decorate entity:
-//    REntity* entity = getEntity();
-//    if (entity!=NULL && entity->hasCustomProperties()) {
-//        if (RMainWindow::hasMainWindow()) {
-//            RMainWindow* appWin = RMainWindow::getMainWindow();
-//            // TODO: start separate path:
-//            appWin->notifyEntityExportListeners(this, entity);
-//        }
-//    }
-
     if (!exportToPreview) {
         if (!currentPainterPath.isEmpty()) {
-//            REntity* entity = getEntity();
-//            if (entity->getColor().isByBlock() ||
-//                entity->getLinetypeId()==document->getLinetypeByBlockId() ||
-//                entity->getLineweight()==RLineweight::WeightByBlock) {
-
-                // entities which are part of a block and have attributes ByBlock are exported to block ref ID:
-                addPath(getBlockRefOrEntity()->getId(), currentPainterPath, false);
-//            }
-//            else {
-//                // entities which are part of a block and have NO attributes ByBlock are exported to entity ID:
-//                if (!painterPaths.contains(getEntity()->getId())) {
-//                    addPath(getEntity()->getId(), currentPainterPath, false);
-//                }
-//            }
+            // entities which are part of a block and have attributes ByBlock are exported to block ref ID:
+            addPath(getBlockRefOrEntity()->getId(), currentPainterPath, false);
         }
     } else {
         addToPreview(currentPainterPath);
     }
 
     currentPainterPath.setValid(false);
-    //setSelectedMode(false);
+
+    if (!decorating) {
+        // give entity export listeners a chance to decorate entity:
+        REntity* entity = getEntity();
+        if (entity!=NULL && entity->hasCustomProperties()) {
+            if (RMainWindow::hasMainWindow()) {
+                RMainWindow* appWin = RMainWindow::getMainWindow();
+                // start separate path for entity decoration:
+                //beginPath();
+                decorating = true;
+                appWin->notifyEntityExportListeners(this, entity);
+                decorating = false;
+    //            if (!exportToPreview) {
+    //                if (!currentPainterPath.isEmpty()) {
+    //                    addPath(getBlockRefOrEntity()->getId(), currentPainterPath, false);
+    //                }
+    //            } else {
+    //                addToPreview(currentPainterPath);
+    //            }
+            }
+        }
+    }
 }
 
 void RGraphicsSceneQt::exportPoint(const RPoint& point) {

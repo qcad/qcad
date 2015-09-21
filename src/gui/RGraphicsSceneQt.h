@@ -142,6 +142,7 @@ private:
 
     QList<RPainterPath> previewPainterPaths;
     QList<RTextBasedData> previewTexts;
+    bool decorating;
 };
 
 Q_DECLARE_METATYPE(RGraphicsSceneQt*)
