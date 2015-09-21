@@ -209,7 +209,7 @@
     <message>
         <location line="+1"/>
         <source>Others...</source>
-        <translation>Andere..</translation>
+        <translation>Andere...</translation>
     </message>
 </context>
 <context>
@@ -292,22 +292,22 @@
     <message>
         <location line="+1"/>
         <source>Columns</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolommen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rows</source>
-        <translation type="unfinished"></translation>
+        <translation>Rijen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolom tussenafstand</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Rij tussenafstend</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+76"/>
@@ -347,7 +347,7 @@
     <message>
         <location line="+1"/>
         <source>Displayed Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Getoond kleur</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -397,7 +397,7 @@
         <location line="+0"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Grootte</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -501,7 +501,7 @@
     <message>
         <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">Verborgen</translation>
+        <translation>Verborgen</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -888,7 +888,7 @@
     <message>
         <location line="+1"/>
         <source>Type</source>
-        <translation type="unfinished">Type</translation>
+        <translation>Type</translation>
     </message>
     <message>
         <location line="+1"/>
