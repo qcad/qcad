@@ -34,37 +34,35 @@ About.prototype.beginEvent = function() {
 
     this.head = "<head>\n"
          + "<style type='text/css'>\n"
+         + "body,td { font-family:Arial, Helvetica, sans-serif;font-size:12pt; }\n"
          + "a { text-decoration:none }\n"
-         + "h1 { font-family:sans;font-size:16pt;margin-bottom:8pt; }\n"
-         + "h2 { font-family:sans;font-size:12pt;font-style:italic;margin-bottom:5pt; }\n"
-         + "body,td { font-family:sans;font-size:9pt; }\n"
+         + "h1 { font-size:16pt;margin-bottom:8pt; }\n"
+         + "h2 { font-size:12pt;font-style:italic;margin-bottom:5pt; }\n"
          + "}\n</style>\n"
          + "</head>";
 
     this.applicationName = qApp.applicationName;
 
     // init plugin view:
-    var webView = dialog.findChild("PluginsText");
-    WidgetFactory.initWebView(webView, this, "openUrl");
-    var webPage = webView.page();
-    webPage.linkDelegationPolicy = QWebPage.DelegateAllLinks;
-    this.initAboutPlugins(webView);
+    var textBrowser = dialog.findChild("PluginsText");
+    WidgetFactory.initTextBrowser(textBrowser, this, "openUrl");
+    this.initAboutPlugins(textBrowser);
 
     dialog.windowTitle = qsTr("About %1").arg(this.applicationName);
 
     // init about view:
-    webView = dialog.findChild("AppText");
-    WidgetFactory.initWebView(webView, this, "openUrl");
-    this.initAboutApp(webView);
+    textBrowser = dialog.findChild("AppText");
+    WidgetFactory.initTextBrowser(textBrowser, this, "openUrl");
+    this.initAboutApp(textBrowser);
 
     // init scripts view:
-    webView = dialog.findChild("ScriptsText");
-    WidgetFactory.initWebView(webView, this, "openUrl");
-    this.initAboutScripts(webView);
+    textBrowser = dialog.findChild("ScriptsText");
+    WidgetFactory.initTextBrowser(textBrowser, this, "openUrl");
+    this.initAboutScripts(textBrowser);
 
-    webView = dialog.findChild("CreditsText");
-    WidgetFactory.initWebView(webView, this, "openUrl");
-    this.initCredits(webView);
+    textBrowser = dialog.findChild("CreditsText");
+    WidgetFactory.initTextBrowser(textBrowser, this, "openUrl");
+    this.initCredits(textBrowser);
 
     // init system view:
     var textEdit = dialog.findChild("SystemText");
@@ -75,13 +73,13 @@ About.prototype.beginEvent = function() {
     EAction.activateMainWindow();
 };
 
-About.prototype.initAboutApp = function(webView) {
+About.prototype.initAboutApp = function(textBrowser) {
     var html =
             "<html>"
             + this.head
             + "<body>"
             + "<h1>%1</h1>".arg(this.applicationName)
-            + "<br/>"
+            + "<hr/>"
             + "<table border='0'><tr>"
             + "<td><b>Version:</b> </td><td>%1.%2.%3.%4 (%5)</td>"
               .arg(RSettings.getMajorVersion())
@@ -90,19 +88,22 @@ About.prototype.initAboutApp = function(webView) {
               .arg(RSettings.getBuildVersion())
               .arg(RSettings.getVersionString())
             + "</tr><tr>"
+            + "<td><b>Internet:</b> </td><td><a href='http://%1'>%1</a></td>".arg(qApp.organizationDomain)
+            + "</tr><tr>"
             + "<td><b>Build Date:</b> </td><td>%1</td>".arg(RSettings.getReleaseDate())
+            + "</tr><tr>"
+            + "<td><b>From revision:</b> </td><td>%1</td>".arg(RSettings.getRevisionString())
             + "</tr><tr>"
             + "<td><b>Qt Version:</b> </td><td>%1</td>".arg(RSettings.getQtVersion())
             + "</tr><tr>"
             + "<td><b>Compiler:</b> </td><td>%1</td>".arg(RSettings.getCompilerVersion())
             + "</tr></table>"
+            + "<hr/>"
             + "<p>%1 is an application for computer-aided design (CAD).</p>".arg(qApp.applicationName)
             + "<p/>"
             + "<p>%1 is free (open source) software.<br/>".arg(qApp.applicationName)
             + "This means that everyone can <a href='http://www.qcad.org/contribute'>get involved!</a></p>"
             + "<p>Plugins and script add-ons are subject to their respective license (see 'Plugins' tab).</p>"
-            + "<p/>"
-            + "<p>Internet: <a href='http://%1'>%1</a></p>".arg(qApp.organizationDomain)
             + "<p/>"
             + "<p>All brand or product names are trademarks or registered trademarks of their respective holders.</p>"
             + "<p/>"
@@ -110,10 +111,10 @@ About.prototype.initAboutApp = function(webView) {
             + "<p>Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).</p>"
             + "<p/>"
             + "</body></html>";
-    webView.setHtml(html);
+    textBrowser.setHtml(html);
 };
 
-About.prototype.initAboutPlugins = function(webView) {
+About.prototype.initAboutPlugins = function(textBrowser) {
     RPluginLoader.loadPlugins(false);
     var html =
             "<html>"
@@ -133,8 +134,6 @@ About.prototype.initAboutPlugins = function(webView) {
         var nameOverrides = [];
         for (var i=0; i<numPlugins; i++) {
             html += "<table border='0' width='100%'>";
-            html += "<col width='25%'/>";
-            html += "<col width='90%'/>";
 
             var text, url;
 
@@ -261,10 +260,10 @@ About.prototype.initAboutPlugins = function(webView) {
 
     html += "</body>";
     html += "</html>";
-    webView.setHtml(html);
+    textBrowser.setHtml(html);
 };
 
-About.prototype.initAboutScripts = function(webView) {
+About.prototype.initAboutScripts = function(textBrowser) {
     var html =
             "<html>"
             + this.head
@@ -299,8 +298,6 @@ About.prototype.initAboutScripts = function(webView) {
         sorted = sorted.sort(function(a,b) { return a[1].localeCompare(b[1]); });
 
         html += "<table border='0' width='100%'>";
-        html += "<col width='25%'/>";
-        html += "<col width='75%'/>";
 
         for (i=0; i<sorted.length; i++) {
             html += "<tr><td>" + sorted[i][0] + "</td><td>" + sorted[i][1] + "</td></tr>"
@@ -310,12 +307,10 @@ About.prototype.initAboutScripts = function(webView) {
     html += "</table>";
     html += "</body>";
     html += "</html>";
-    webView.setHtml(html);
+    textBrowser.setHtml(html);
 };
 
-About.prototype.initCredits = function(webView) {
-    //var credits = include("AboutCredits.js");
-
+About.prototype.initCredits = function(textBrowser) {
     var html =
             "<html>"
             + this.head
@@ -329,13 +324,11 @@ About.prototype.initCredits = function(webView) {
         if (credits[i].length>1 && credits[i][1].length>1) {
             // table with names and credits:
             html += "<table border='0' width='100%'>";
-            html += "<col width='40%'/>";
-            html += "<col width='60%'/>";
             for (var k=1; k<credits[i].length; k++) {
                 if (isArray(credits[i][k]) && credits[i][k].length>1) {
                     html += "<tr>";
-                    html += "<td valign='top'>" + credits[i][k][0] + "</td>";
-                    html += "<td valign='top'>" + credits[i][k][1] + "</td>";
+                    html += "<td width='40%' valign='top'>" + credits[i][k][0] + "</td>";
+                    html += "<td width='60%' valign='top'>" + credits[i][k][1] + "</td>";
                     html += "</tr>";
                 }
             }
@@ -358,7 +351,7 @@ About.prototype.initCredits = function(webView) {
     html += "</body>";
     html += "</html>";
 
-    webView.setHtml(html);
+    textBrowser.setHtml(html);
 };
 
 About.prototype.getTableRow = function(text1, text2, escape) {
@@ -366,7 +359,7 @@ About.prototype.getTableRow = function(text1, text2, escape) {
         text2 = Qt.escape(text2);
     }
 
-    return "<tr><td valign='top'>%1 </td><td>%2</td></tr>".arg(text1).arg(text2);
+    return "<tr><td width='25%' valign='top'>%1 </td><td width='75%'>%2</td></tr>".arg(text1).arg(text2);
 };
 
 About.prototype.initAboutSystem = function(textEdit) {
