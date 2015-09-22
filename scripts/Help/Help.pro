@@ -2,7 +2,6 @@ TEMPLATE = subdirs
 SUBDIRS = \
     ts \
     About \
-    BrowseAddOns \
     BrowseUserManual \
     CheckForUpdates \
     FAQ \
