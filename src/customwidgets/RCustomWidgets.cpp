@@ -33,8 +33,6 @@
 #include "RCharacterWidgetPlugin.h"
 #include "RListViewPlugin.h"
 
-#include <QWebView>
-
 RCustomWidgets::RCustomWidgets(QObject *parent) :
     QObject(parent) {
     widgets.append(new RTextEditPlugin(this));
