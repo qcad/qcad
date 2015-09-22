@@ -61,8 +61,8 @@ CheckForUpdates.prototype.beginEvent = function() {
     // load version info from qcad.org:
     webView.setHtml("<p>" + qsTr("Checking for Updates...") + "</p>");
 
-    if (downloadToFile(url, RSettings.getDataLocation(), 10000)) {
-        var fn = RSettings.getDataLocation() + "/" + CheckForUpdates.getBaseName() + ".html";
+    if (downloadToFile(url, RSettings.getDataLocation(), "updates.html", 10000)) {
+        var fn = RSettings.getDataLocation() + "/updates.html";
         if (new QFileInfo(fn).exists()) {
             webView.setSource(QUrl.fromLocalFile(fn));
         }
@@ -71,7 +71,7 @@ CheckForUpdates.prototype.beginEvent = function() {
         }
     }
     else {
-        webView.setHtml("<p>" + qsTr("No connection to server. Please try again later.") + "</p>");
+        webView.setHtml("<p>" + qsTr("No connection to server or file not found. Please try again later.") + "</p>");
     }
 
     WidgetFactory.restoreState(dialog);

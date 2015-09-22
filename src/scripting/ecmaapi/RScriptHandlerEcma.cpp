@@ -1880,14 +1880,16 @@ QScriptValue RScriptHandlerEcma::ecmaDownload(QScriptContext* context,
 
 QScriptValue RScriptHandlerEcma::ecmaDownloadToFile(QScriptContext* context, QScriptEngine* engine) {
 
-    if (context->argumentCount() == 3 &&
+    if (context->argumentCount() == 4 &&
         context->argument(0).isString() &&
         context->argument(1).isString() &&
-        context->argument(2).isNumber()) {
+        context->argument(2).isString() &&
+        context->argument(3).isNumber()) {
 
         QString url = context->argument(0).toString();
         QString path = context->argument(1).toString();
-        int timeout = context->argument(2).toInteger();
+        QString fileName = context->argument(2).toString();
+        int timeout = context->argument(3).toInteger();
 
         QNetworkAccessManager manager;
         QEventLoop loop;
@@ -1908,19 +1910,37 @@ QScriptValue RScriptHandlerEcma::ecmaDownloadToFile(QScriptContext* context, QSc
             return qScriptValueFromValue(engine, false);
         }
 
-        QString fileName = path + QDir::separator() + QFileInfo(QUrl(url).path()).fileName();
+        if (fileName.isEmpty()) {
+            fileName = QFileInfo(QUrl(url).path()).fileName();
+        }
+
+        fileName = path + QDir::separator() + fileName;
         QDir dir;
         if (!dir.mkpath(path)) {
             qWarning() << "Cannot create dir " << path;
+            delete reply;
+            return qScriptValueFromValue(engine, false);
         }
+        if (QFileInfo(fileName).exists() && !QFile(fileName).remove()) {
+            qWarning() << "Cannot remove file " << fileName;
+            delete reply;
+            return qScriptValueFromValue(engine, false);
+        }
+
+        QByteArray contents = reply->readAll();
+        if (contents.isEmpty()) {
+            qWarning() << "URL does not exist " << url;
+            delete reply;
+            return qScriptValueFromValue(engine, false);
+        }
+
         QFile f(fileName);
         if (!f.open(QIODevice::WriteOnly)) {
             qWarning() << "Cannot write output file " << f.fileName();
             delete reply;
             return qScriptValueFromValue(engine, false);
         }
-
-        f.write(reply->readAll());
+        f.write(contents);
         f.close();
 
         delete reply;
