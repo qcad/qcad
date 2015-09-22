@@ -123,7 +123,9 @@
 #include <QVariant>
 #include <QVector>
 #if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
-#include <QWebView>
+#  if QT_VERSION <= 0x050500
+#    include <QWebView>
+#  endif
 #endif
 #include <QWheelEvent>
 #include <QWidget>
@@ -278,7 +280,9 @@ Q_DECLARE_METATYPE(QValidator*)
 Q_DECLARE_METATYPE(const QValidator*)
 Q_DECLARE_METATYPE(QVariant*)
 #if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
+#  if QT_VERSION <= 0x050500
 Q_DECLARE_METATYPE(QWebView*)
+#  endif
 #endif
 Q_DECLARE_METATYPE(QWheelEvent*)
 Q_DECLARE_METATYPE(QWidget*)
