@@ -97,7 +97,7 @@ About.prototype.initAboutApp = function(textBrowser) {
             + "</tr><tr>"
             + "<td><b>Build Date:</b> </td><td>%1</td>".arg(RSettings.getReleaseDate())
             + "</tr><tr>"
-            + "<td><b>From revision:</b> </td><td>%1</td>".arg(RSettings.getRevisionString())
+            + "<td><b>From revision:</b> </td><td>%1</td>".arg(RSettings.getRevisionString().left(7))
             + "</tr><tr>"
             + "<td><b>Qt Version:</b> </td><td>%1</td>".arg(RSettings.getQtVersion())
             + "</tr><tr>"
