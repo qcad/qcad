@@ -642,7 +642,7 @@ int RSettings::getBuildVersion() {
 
 QString RSettings::getRevisionString() {
     QString ret = "";
-    QFile f("scripts/revision.txt");
+    QFile f("revision.txt");
     if (f.open(QFile::ReadOnly)) {
         ret = QString(f.readAll());
         f.close();
