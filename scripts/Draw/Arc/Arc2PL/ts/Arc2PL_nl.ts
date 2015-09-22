@@ -6,57 +6,57 @@
     <message>
         <location filename="../Arc2PL.js" line="+65"/>
         <source>Start point</source>
-        <translation type="unfinished"></translation>
+        <translation>Startpunt</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation type="unfinished"></translation>
+        <translation>Eindpunt</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Invalid length</source>
-        <translation type="unfinished"></translation>
+        <translation>Ongeldige lengte</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished"></translation>
+        <translation>De twee punten zijn identiek</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>The distance between the two points must be less than the arc length</source>
-        <translation type="unfinished"></translation>
+        <translation>De afstand tussen de twee punten moet kleiner zijn dan de booglengte</translation>
     </message>
     <message>
         <location filename="../Arc2PL.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lengte:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Richting:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tegen de klok in (positief)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Met de klok mee (negatieve)</translation>
     </message>
     <message>
         <location filename="../Arc2PLInit.js" line="+2"/>
         <source>&amp;2 Points and Length</source>
-        <translation type="unfinished"></translation>
+        <translation>2 Punten en &amp;lengte</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and length</source>
-        <translation type="unfinished"></translation>
+        <translation>Boog van twee punten en lengte tekenen</translation>
     </message>
 </context>
 </TS>

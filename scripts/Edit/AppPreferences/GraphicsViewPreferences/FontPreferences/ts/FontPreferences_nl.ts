@@ -6,12 +6,12 @@
     <message>
         <location filename="../FontPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Grafische weergave</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Fonts</source>
-        <translation type="unfinished"></translation>
+        <translation>Lettertypen</translation>
     </message>
 </context>
 <context>
@@ -19,17 +19,17 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+41"/>
         <source>Ruler Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Liniaal:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Snap Label Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Snap label:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Info Label Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Info label:</translation>
     </message>
 </context>
 </TS>

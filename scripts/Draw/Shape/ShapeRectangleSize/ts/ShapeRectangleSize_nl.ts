@@ -34,12 +34,12 @@
     <message>
         <location line="+36"/>
         <source>Reference Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Referentiepunt:</translation>
     </message>
     <message>
         <location filename="../ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Polylijn tekenen</translation>
     </message>
 </context>
 </TS>

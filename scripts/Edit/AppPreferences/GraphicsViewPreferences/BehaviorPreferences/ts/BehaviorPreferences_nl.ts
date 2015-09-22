@@ -6,12 +6,12 @@
     <message>
         <location filename="../BehaviorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Grafische weergave</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Behavior</source>
-        <translation type="unfinished"></translation>
+        <translation>Gedrag</translation>
     </message>
 </context>
 <context>
@@ -19,47 +19,47 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+48"/>
         <source>Double-Click</source>
-        <translation type="unfinished"></translation>
+        <translation>Dubbelklik</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Double-click to edit text</source>
-        <translation type="unfinished"></translation>
+        <translation>Dubbelklik om tekst te bewerken</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Double-click on block reference opens block</source>
-        <translation type="unfinished"></translation>
+        <translation>Dubbelklik op blokreferentie opent blok</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Right double-click to reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechts dubbelklikken om te resetten</translation>
     </message>
     <message>
         <location line="-42"/>
         <source>Right-Click</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechtsklik</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Right-click to deselect entities</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechtsklik om objecten te deselecteren</translation>
     </message>
     <message>
         <location line="+46"/>
         <source>Cursor Range</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor bereik</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Cursor range for snap:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor bereik voor snap:</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>Cursor range for picking entities:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor bereik voor object selectie:</translation>
     </message>
 </context>
 </TS>

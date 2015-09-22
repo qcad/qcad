@@ -6,12 +6,12 @@
     <message>
         <location filename="../ColorPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Grafische weergave</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Kleuren</translation>
     </message>
 </context>
 <context>
@@ -19,137 +19,137 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Grafische weergave</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Background:</source>
-        <translation type="unfinished"></translation>
+        <translation>Achtergrond:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Cursor</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursor</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dradenkruis:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Inactive crosshairs:</source>
-        <translation type="unfinished"></translation>
+        <translation>Inactief draadkruis:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Oorsprong</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Relative zero:</source>
-        <translation type="unfinished"></translation>
+        <translation>Relatief nulpunt:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Raster</translation>
     </message>
     <message>
         <location line="+48"/>
         <source>Meta grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta raster:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Selectie</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Primary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Primaire selectie kleur:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use secondary selection color</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebruik secundaire selectie kleur</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Secondary selection color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Secundaire selectie kleur:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Draggable reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Versleepbare referentiepunten:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Selection box border:</source>
-        <translation type="unfinished"></translation>
+        <translation>Keuzevenster rand:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation>Keuzevenster vulling:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cross-selection box fill:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cross-selectie venster vulling:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Snap Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Snap gereedschappen</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Snap label:</source>
-        <translation type="unfinished"></translation>
+        <translation>Snap label:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Info Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Info gereedschappen</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Measurements and labels:</source>
-        <translation type="unfinished"></translation>
+        <translation>Metingen en labels:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Drawing Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Teken gereedschappen</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Auxiliary shapes:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ondersteunende objecten:</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Zoom Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom gereedschappen</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Zoom box border:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom venster rand:</translation>
     </message>
     <message>
         <location line="-535"/>
         <source>Origin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Oorsprong:</translation>
     </message>
     <message>
         <location line="+81"/>
         <source>Grid:</source>
-        <translation type="unfinished"></translation>
+        <translation>Raster:</translation>
     </message>
 </context>
 </TS>

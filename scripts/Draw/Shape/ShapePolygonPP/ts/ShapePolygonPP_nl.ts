@@ -6,22 +6,22 @@
     <message>
         <location filename="../ShapePolygonPP.js" line="+58"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Eerste hoekpunt</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Corner point</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoekpunt</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaar</translation>
     </message>
     <message>
         <location filename="../ShapePolygonPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoekpunten:</translation>
     </message>
     <message>
         <location filename="../ShapePolygonPPInit.js" line="+2"/>

@@ -6,52 +6,52 @@
     <message>
         <location filename="../Arc2PH.js" line="65"/>
         <source>Start point</source>
-        <translation type="unfinished"></translation>
+        <translation>Startpunt</translation>
     </message>
     <message>
         <location filename="../Arc2PH.js" line="74"/>
         <source>End point</source>
-        <translation type="unfinished"></translation>
+        <translation>Eindpunt</translation>
     </message>
     <message>
         <location filename="../Arc2PH.js" line="155"/>
         <source>Invalid height</source>
-        <translation type="unfinished"></translation>
+        <translation>Ongeldige hoogte</translation>
     </message>
     <message>
         <location filename="../Arc2PH.js" line="162"/>
         <source>The two points are identical</source>
-        <translation type="unfinished"></translation>
+        <translation>De twee punten zijn identiek</translation>
     </message>
     <message>
         <location filename="../Arc2PH.ui" line="17"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoogte:</translation>
     </message>
     <message>
         <location filename="../Arc2PH.ui" line="44"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Richting:</translation>
     </message>
     <message>
         <location filename="../Arc2PH.ui" line="51"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tegen de klok in (positief)</translation>
     </message>
     <message>
         <location filename="../Arc2PH.ui" line="71"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Met de klok mee (negatieve)</translation>
     </message>
     <message>
         <location filename="../Arc2PHInit.js" line="2"/>
         <source>2 Points and &amp;Height</source>
-        <translation type="unfinished"></translation>
+        <translation>2 Punten en &amp;hoogte</translation>
     </message>
     <message>
         <location filename="../Arc2PHInit.js" line="6"/>
         <source>Draw arc from 2 points and height</source>
-        <translation type="unfinished"></translation>
+        <translation>Boog van 2 punten en hoogte tekenen</translation>
     </message>
 </context>
 </TS>

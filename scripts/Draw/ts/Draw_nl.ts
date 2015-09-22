@@ -6,7 +6,7 @@
     <message>
         <location filename="../Draw.js" line="+57"/>
         <source>&amp;Draw</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tekenen</translation>
     </message>
 </context>
 <context>
@@ -14,12 +14,12 @@
     <message>
         <location filename="../DrawBasedOnRectanglePP.js" line="+63"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Eerste hoekpunt</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Tweede hoekpunt</translation>
     </message>
 </context>
 <context>
@@ -27,52 +27,52 @@
     <message>
         <location filename="../DrawBasedOnRectangleSize.js" line="+46"/>
         <source>Top Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Boven links</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Bovenkant</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Boven rechts</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Links</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Middel</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechts</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Onder links</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Onderkant</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Onder rechts</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Positie</translation>
     </message>
 </context>
 <context>
@@ -80,17 +80,17 @@
     <message>
         <location filename="../DrawBasedOnThreeCircles.js" line="+72"/>
         <source>First arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Eerste boog of cirkel</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Second arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Tweede boog of cirkel</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Third arc or circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Derde boog of cirkel</translation>
     </message>
 </context>
 </TS>

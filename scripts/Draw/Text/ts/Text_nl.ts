@@ -6,7 +6,7 @@
     <message>
         <location filename="../TextDialog/CharacterMapDialog.ui" line="+14"/>
         <source>Character Map</source>
-        <translation type="unfinished"></translation>
+        <translation>Speciale tekens</translation>
     </message>
 </context>
 <context>
@@ -14,32 +14,32 @@
     <message>
         <location filename="../Text.js" line="+88"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Positie</translation>
     </message>
     <message>
         <location filename="../Text.ui" line="+17"/>
         <source>Contents:</source>
-        <translation type="unfinished"></translation>
+        <translation>Inhoud:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoogte:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoek:</translation>
     </message>
     <message>
         <location filename="../TextInit.js" line="+2"/>
         <source>&amp;Text</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tekst</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw text</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst tekenen</translation>
     </message>
 </context>
 <context>
@@ -47,345 +47,346 @@
     <message>
         <location filename="../TextDialog/TextDialog.js" line="+242"/>
         <source>Default value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaardwaarde:</translation>
     </message>
     <message>
         <location line="+258"/>
         <source>&amp;Undo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Herstel</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Redo</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Opnieuw</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Knip</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kopieer</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Plak</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vetgedrukt</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cursief</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Subscript</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Onderschrift</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bovenschrift</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Color...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Kleur...</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Special Characters...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Speciale tekens...</translation>
     </message>
     <message>
         <location line="+312"/>
         <source>Others...</source>
-        <translation type="unfinished"></translation>
+        <translation>Andere...</translation>
     </message>
     <message>
         <location line="+131"/>
         <source>Degree</source>
-        <translation type="unfinished"></translation>
+        <translation>Graad</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus-Minus</source>
-        <translation type="unfinished"></translation>
+        <translation>Plus-minus</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Diameter</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal</source>
-        <translation type="unfinished"></translation>
+        <translation>Ongeveer gelijk</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Multiplication</source>
-        <translation type="unfinished"></translation>
+        <translation>Vermenigvuldiging</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation type="unfinished"></translation>
+        <translation>Divisie</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished"></translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pi</source>
-        <translation type="unfinished"></translation>
+        <translation>Pi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Identity</source>
-        <translation type="unfinished"></translation>
+        <translation>Identiteit</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Not equal</source>
-        <translation type="unfinished"></translation>
+        <translation>Niet gelijk</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation type="unfinished"></translation>
+        <translation>Ohm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Omega</source>
-        <translation type="unfinished"></translation>
+        <translation>Omega</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Squared</source>
-        <translation type="unfinished"></translation>
+        <translation>Kwadraat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cubed</source>
-        <translation type="unfinished"></translation>
+        <translation>Cubed</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>No-break space</source>
-        <translation type="unfinished"></translation>
+        <translation>Harde spatie</translation>
     </message>
     <message>
         <location filename="../TextDialog/TextDialog.ui" line="+14"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Main Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoofd font</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoogte:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Text Height in Drawing Units</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst hoogte</translation>
     </message>
     <message>
         <location line="+18"/>
         <location line="+213"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Vetgedrukt</translation>
     </message>
     <message>
         <location line="-206"/>
         <location line="+219"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Cursief</translation>
     </message>
     <message>
         <location line="-205"/>
         <source>Text fits on one line and has no formatting</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst past op één lijn en heeft geen formattering</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Simple text
 (one line, no formatting)</source>
-        <translation type="unfinished"></translation>
+        <translation>Eenvoudige tekst
+(een lijn, geen formattering)</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Rich Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>Knip</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopieer</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Plak</translation>
     </message>
     <message>
         <location line="+115"/>
         <source>Ctrl+B</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+B</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Ctrl+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
         <location line="+40"/>
         <source>Insert Symbol...</source>
-        <translation type="unfinished"></translation>
+        <translation>Voeg symbool in...</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Source</source>
-        <translation type="unfinished"></translation>
+        <translation>Bron</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Attribute Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Attribuut gegevens</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Tag:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tag:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Prompt:</source>
-        <translation type="unfinished"></translation>
+        <translation>Prompt:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Waarde:</translation>
     </message>
     <message>
         <location line="+42"/>
         <source>Text Geometry</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekstgeometrie</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Line spacing factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijn tussenafstand factor:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Line Spacing Factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijn tussenafstand factor</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoek:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Rotation Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotatie hoek</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>Uitlijning</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Bottom Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Onder links</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Bottom Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Onder center</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Top Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Boven center</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Middle Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Midden rechts</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Base Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Basis links</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Top Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Boven links</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Base Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Basis center</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Base Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Basis rechts</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Middle Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Midden center</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Bottom Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Onder rechts</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Middle Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Midden links</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Top Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Boven rechts</translation>
     </message>
     <message>
         <location line="+88"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuleer</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
 </context>
 </TS>

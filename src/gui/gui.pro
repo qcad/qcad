@@ -53,10 +53,13 @@ HEADERS += \
     RTreeWidget.h
 
 !r_mobile {
-    SOURCES += \
-        RWebView.cpp
-    HEADERS += \
-        RWebView.h
+    contains(QT_VERSION, ^5\\.[1-5]\\..*) || contains(QT_VERSION, ^4\\..*\\..*) {
+        # Qt < 5.6:
+        SOURCES += \
+            RWebView.cpp
+        HEADERS += \
+            RWebView.h
+    }
 }
 
 TEMPLATE = lib

@@ -26,12 +26,12 @@
     <message>
         <location filename="../ShapePolygonCPInit.js" line="+2"/>
         <source>Pol&amp;ygon (Center, Corner)</source>
-        <translation type="unfinished"></translation>
+        <translation>Veel&amp;hoek (Centrum, hoek)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from center and corner point</source>
-        <translation type="unfinished"></translation>
+        <translation>Regelmatige veelhoek van centrum en hoekpunt</translation>
     </message>
 </context>
 </TS>

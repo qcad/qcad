@@ -16,12 +16,12 @@
     <message>
         <location line="+8"/>
         <source>Second side</source>
-        <translation type="unfinished"></translation>
+        <translation>Tweede zijkant</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Second Corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Tweede hoek</translation>
     </message>
     <message>
         <location line="+4"/>

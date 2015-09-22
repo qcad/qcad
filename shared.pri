@@ -46,7 +46,13 @@ macx-ios-* {
 
 !r_mobile {
     greaterThan(QT_MAJOR_VERSION, 4) {
-        QT += webkitwidgets
+        greaterThan(QT_MINOR_VERSION, 5) {
+            # Qt >= 5.6
+            QT += webenginewidgets
+        }
+        else {
+            QT += webkitwidgets
+        }
     }
 }
 
