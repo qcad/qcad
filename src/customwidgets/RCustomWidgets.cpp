@@ -45,7 +45,9 @@ RCustomWidgets::RCustomWidgets(QObject *parent) :
     widgets.append(new RLinetypeComboPlugin(this));
     widgets.append(new RRulerQtPlugin(this));
     widgets.append(new RFontChooserWidgetPlugin(this));
+#if QT_VERSION < 0x050600
     widgets.append(new RWebViewPlugin(this));
+#endif
     widgets.append(new RShortcutLineEditPlugin(this));
     widgets.append(new RCharacterWidgetPlugin(this));
     widgets.append(new RListViewPlugin(this));
