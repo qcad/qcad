@@ -1042,6 +1042,11 @@ WidgetFactory.initLineEdit = function(lineEdit, dimension) {
     });
 };
 
+WidgetFactory.initTextBrowser = function(textBrowser, linkHandler, slot) {
+    textBrowser.openLinks = false;
+    textBrowser.anchorClicked.connect(linkHandler, slot);
+};
+
 WidgetFactory.initWebView = function(webView, linkHandler, slot) {
     var webPage = webView.page();
     webPage.linkDelegationPolicy = QWebPage.DelegateExternalLinks;
@@ -1051,7 +1056,6 @@ WidgetFactory.initWebView = function(webView, linkHandler, slot) {
     if (RS.getSystemId()==="osx") {
         webSettings.setFontSize(QWebSettings.DefaultFontSize, EAction.getMainWindow().font.pointSize());
     }
-
 
     if (!RSettings.isQt(5)) {
         // make web view transparent:
