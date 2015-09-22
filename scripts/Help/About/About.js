@@ -32,12 +32,17 @@ About.prototype.beginEvent = function() {
 
     var dialog = this.createWidget("AboutDialog.ui");
 
+    var f = 1;
+    if (RS.getSystemId()==="osx") {
+        f = 1.2;
+    }
+
     this.head = "<head>\n"
          + "<style type='text/css'>\n"
-         + "body,td { font-family:Arial, Helvetica, sans-serif;font-size:12pt; }\n"
+         + "body,td { font-family:Arial, Helvetica, sans-serif;font-size:%1pt; }\n".arg(12*f)
          + "a { text-decoration:none }\n"
-         + "h1 { font-size:16pt;margin-bottom:8pt; }\n"
-         + "h2 { font-size:12pt;font-style:italic;margin-bottom:5pt; }\n"
+         + "h1 { font-size:%1pt;margin-bottom:8pt; }\n".arg(16*f)
+         + "h2 { font-size:%1pt;font-style:italic;margin-bottom:5pt; }\n".arg(12*f)
          + "}\n</style>\n"
          + "</head>";
 
