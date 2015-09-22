@@ -1908,10 +1908,14 @@ QScriptValue RScriptHandlerEcma::ecmaDownloadToFile(QScriptContext* context, QSc
             return qScriptValueFromValue(engine, false);
         }
 
-        QString fileName = QFileInfo(QUrl(url).path()).fileName();
-        QFile f(path + QDir::separator() + fileName);
+        QString fileName = path + QDir::separator() + QFileInfo(QUrl(url).path()).fileName();
+        QDir dir;
+        if (!dir.mkpath(path)) {
+            qWarning() << "Cannot create dir " << path;
+        }
+        QFile f(fileName);
         if (!f.open(QIODevice::WriteOnly)) {
-            qWarning() << "Cannot write output file " << path;
+            qWarning() << "Cannot write output file " << f.fileName();
             delete reply;
             return qScriptValueFromValue(engine, false);
         }
