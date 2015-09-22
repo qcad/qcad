@@ -211,6 +211,9 @@
         getBuildVersion
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getRevisionString
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getSnapRange
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

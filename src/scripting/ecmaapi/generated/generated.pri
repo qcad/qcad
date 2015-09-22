@@ -679,7 +679,9 @@ SOURCES += \
     $$PWD/REcmaXLineEntity.cpp \
     $$PWD/REcmaZip.cpp
 
-!r_mobile {
-    HEADERS += $$PWD/REcmaWebView.h
-    SOURCES += $$PWD/REcmaWebView.cpp
+contains(QT_VERSION, ^5\.[1-5]\..*) || contains(QT_VERSION, ^4\..*\..*) {
+    !r_mobile {
+        HEADERS += $$PWD/REcmaWebView.h
+        SOURCES += $$PWD/REcmaWebView.cpp
+    }
 }

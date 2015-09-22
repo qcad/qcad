@@ -167,6 +167,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getBuildVersion, "getBuildVersion");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getRevisionString, "getRevisionString");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getSnapRange, "getSnapRange");
             
             REcmaHelper::registerFunction(&engine, &ctor, getPickRange, "getPickRange");
@@ -2618,6 +2620,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getBuildVersion", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getRevisionString
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getRevisionString", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getRevisionString";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getRevisionString();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getRevisionString().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getRevisionString", context, engine);
             return result;
         }
          QScriptValue

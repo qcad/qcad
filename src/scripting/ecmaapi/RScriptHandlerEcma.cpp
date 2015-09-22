@@ -340,8 +340,10 @@
 #include "REcmaXLineEntity.h"
 #include "REcmaZip.h"
 
-#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
-#include "REcmaWebView.h"
+#if QT_VERSION < 0x050600
+#  if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
+#    include "REcmaWebView.h"
+#  endif
 #endif
 
 bool RScriptHandlerEcma::alwaysLoadScripts = false;
@@ -875,8 +877,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaFileSystemModel::initEcma(*engine);
 
-#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
+#if QT_VERSION < 0x050600
+#  if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
     REcmaWebView::initEcma(*engine);
+#  endif
 #endif
 
     REcmaFocusListener::initEcma(*engine);
