@@ -85,20 +85,6 @@ EAction.prototype.beginEvent = function() {
     }
     this.showUiOptions(false);
 
-    /*
-    if (!isNull(this.getGuiAction())) {
-        // show doc if available
-        var path = new QFileInfo(this.getGuiAction().getScriptFile()).filePath();
-        var addOn = new AddOn(path);
-        if (addOn.hasDoc()) {
-            var webView = EAction.getMainWindow().findChild("HelpViewer");
-            if (!isNull(webView)) {
-                webView.url = addOn.getDocHtmlUrl();
-            }
-        }
-    }
-    */
-
     // reset snap to auto snap / no restriction:
     if (isNull(this.getGuiAction())
             || (this.getGuiAction().getGroup() !== "snaps" &&
