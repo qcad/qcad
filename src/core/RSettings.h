@@ -117,6 +117,7 @@ public:
     static int getMinorVersion();
     static int getRevisionVersion();
     static int getBuildVersion();
+    static QString getRevisionString();
     static int getSnapRange();
     static int getPickRange();
     static int getZeroWeightWeight();

@@ -640,6 +640,16 @@ int RSettings::getBuildVersion() {
     return R_QCAD_VERSION_BUILD;
 }
 
+QString RSettings::getRevisionString() {
+    QString ret = "";
+    QFile f("scripts/revision.txt");
+    if (f.open(QFile::ReadOnly)) {
+        ret = QString(f.readAll());
+        f.close();
+    }
+    return ret;
+}
+
 QString RSettings::getReleaseDate() {
     return __DATE__;
 }
