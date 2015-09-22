@@ -78,11 +78,11 @@ void RLine::setAngle(double a) {
 }
 
 bool RLine::isVertical(double tolerance) const {
-    return RMath::fuzzyCompare(startPoint.y, endPoint.y, tolerance);
+    return RMath::fuzzyCompare(startPoint.x, endPoint.x, tolerance);
 }
 
 bool RLine::isHorizontal(double tolerance) const {
-    return RMath::fuzzyCompare(startPoint.x, endPoint.x, tolerance);
+    return RMath::fuzzyCompare(startPoint.y, endPoint.y, tolerance);
 }
 
 double RLine::getDirection1() const {
