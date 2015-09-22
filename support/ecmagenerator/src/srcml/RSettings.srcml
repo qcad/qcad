@@ -118,6 +118,7 @@
     <function_decl><type><name>static</name> <name>int</name></type> <name>getMinorVersion</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getRevisionVersion</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getBuildVersion</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>getRevisionString</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getSnapRange</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getPickRange</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getZeroWeightWeight</name><parameter_list>()</parameter_list>;</function_decl>

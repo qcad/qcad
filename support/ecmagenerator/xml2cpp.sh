@@ -109,9 +109,11 @@ then
     cat $profile_tmp | grep -v "REcmaWebView" >tmp2
     mv tmp2 $profile_tmp
     echo "" >> "$profile_tmp"
-    echo "!r_mobile {" >> "$profile_tmp"
-    echo "    HEADERS += \$\$PWD/REcmaWebView.h" >> "$profile_tmp"
-    echo "    SOURCES += \$\$PWD/REcmaWebView.cpp" >> "$profile_tmp"
+    echo "contains(QT_VERSION, ^5\\.[1-5]\\..*) || contains(QT_VERSION, ^4\\..*\\..*) {" >> "$profile_tmp"
+    echo "    !r_mobile {" >> "$profile_tmp"
+    echo "        HEADERS += \$\$PWD/REcmaWebView.h" >> "$profile_tmp"
+    echo "        SOURCES += \$\$PWD/REcmaWebView.cpp" >> "$profile_tmp"
+    echo "    }" >> "$profile_tmp"
     echo "}" >> "$profile_tmp"
 
     diff $profile_tmp $profile
