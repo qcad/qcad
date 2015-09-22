@@ -5,7 +5,7 @@ function init(basePath) {
     action.setIcon(basePath + "/ZoomIn.svg");
     action.setDefaultShortcuts([
         new QKeySequence("+"),
-        // workaround for Qt 5.5 bug:
+        // workaround for Qt 5.5 bug / convenience:
         new QKeySequence("="),
         new QKeySequence(QKeySequence.ZoomIn)
     ]);

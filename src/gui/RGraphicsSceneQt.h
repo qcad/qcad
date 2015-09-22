@@ -63,7 +63,6 @@ public:
     virtual ~RGraphicsSceneQt();
 
     RGraphicsViewImage* getGraphicsView() const;
-    //RGraphicsViewImage* const getGraphicsView() const;
 
     virtual void clear();
 
@@ -80,11 +79,8 @@ public:
     virtual double exportLine(const RLine& line, double offset = RNANDOUBLE);
     virtual void exportArc(const RArc& arc, double offset = RNANDOUBLE);
     virtual void exportEllipse(const REllipse& ellipse, double offset = RNANDOUBLE);
-    //virtual void exportQuad(const RVector& p1, const RVector& p2, const RVector& p3, const RVector& p4);
     virtual void exportThickPolyline(const RPolyline& polyline, bool closed = false);
     bool getMiter(const QSharedPointer<RLine>& before, const QSharedPointer<RLine>& after, double w1, double wb);
-//    virtual void exportThickLine(const RLine& line, double w1, double w2);
-//    virtual void exportThickArc(const RArc& arc, double w1, double w2);
     virtual void exportPolyline(const RPolyline& polyline, bool polylineGen = true, double offset = RNANDOUBLE);
     void exportPolylineFill(const RPolyline& polyline);
     virtual void exportSpline(const RSpline& spline, double offset = RNANDOUBLE);
@@ -96,7 +92,6 @@ public:
     virtual void exportTriangle(const RTriangle& triangle);
     virtual void exportRectangle(const RVector& p1, const RVector& p2);
 
-    //virtual void exportPainterPathSource(const RPainterPathSource& pathSource);
     virtual void exportPainterPaths(const QList<RPainterPath>& paths);
     virtual void exportImage(const RImageData& image, bool forceSelected = false);
     virtual void exportText(const RTextBasedData& text, bool forceSelected = false);

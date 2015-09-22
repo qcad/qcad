@@ -191,17 +191,9 @@ void RGraphicsSceneQt::endPath() {
             if (RMainWindow::hasMainWindow()) {
                 RMainWindow* appWin = RMainWindow::getMainWindow();
                 // start separate path for entity decoration:
-                //beginPath();
                 decorating = true;
                 appWin->notifyEntityExportListeners(this, entity);
                 decorating = false;
-    //            if (!exportToPreview) {
-    //                if (!currentPainterPath.isEmpty()) {
-    //                    addPath(getBlockRefOrEntity()->getId(), currentPainterPath, false);
-    //                }
-    //            } else {
-    //                addToPreview(currentPainterPath);
-    //            }
             }
         }
     }
