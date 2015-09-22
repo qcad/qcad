@@ -31,14 +31,18 @@ CheckForUpdates.prototype.getUrl = function() {
     return CheckForUpdates.getUrl();
 };
 
+CheckForUpdates.getBaseName = function() {
+    var fileName = "";
+    fileName += RSettings.getMajorVersion() + "_";
+    fileName += RSettings.getMinorVersion() + "_";
+    fileName += RSettings.getRevisionVersion() + "_";
+    fileName += RSettings.getBuildVersion();
+    return fileName;
+};
+
 CheckForUpdates.getUrl = function() {
     // compile update info URL:
-    var url = "http://www.qcad.org/qcad/version/";
-    url += RSettings.getMajorVersion() + "_";
-    url += RSettings.getMinorVersion() + "_";
-    url += RSettings.getRevisionVersion() + "_";
-    url += RSettings.getBuildVersion();
-    url += ".html";
+    var url = "http://www.qcad.org/qcad/version/" + CheckForUpdates.getBaseName() + ".html";
     return url;
 };
 
@@ -52,11 +56,23 @@ CheckForUpdates.prototype.beginEvent = function() {
     var appWin = EAction.getMainWindow();
     var dialog = WidgetFactory.createDialog(CheckForUpdates.includeBasePath, "CheckForUpdatesDialog.ui", appWin);
     var webView = dialog.findChild("WebView");
-    WidgetFactory.initWebView(webView, this, "openUrl");
+    WidgetFactory.initTextBrowser(webView, this, "openUrl");
 
     // load version info from qcad.org:
     webView.setHtml("<p>" + qsTr("Checking for Updates...") + "</p>");
-    webView.load(new QUrl(url));
+
+    if (downloadToFile(url, RSettings.getDataLocation(), 10000)) {
+        var fn = RSettings.getDataLocation() + "/" + CheckForUpdates.getBaseName() + ".html";
+        if (new QFileInfo(fn).exists()) {
+            webView.setSource(QUrl.fromLocalFile(fn));
+        }
+        else {
+            webView.setHtml("<p>" + qsTr("Version information not found.") + "</p>");
+        }
+    }
+    else {
+        webView.setHtml("<p>" + qsTr("No connection to server. Please try again later.") + "</p>");
+    }
 
     WidgetFactory.restoreState(dialog);
 
