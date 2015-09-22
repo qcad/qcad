@@ -38,11 +38,6 @@ ExMainWindow.prototype.beginEvent = function() {
     var tb = mw.addToolBar("MyToolBar");
     tb.addAction(new QIcon(ExMainWindow.includeBasePath + "/MyAction.png"), "MyAction");
 
-    var wv = new QWebView(mw);
-    wv.load("http://www.qcad.org");
-    mw.setCentralWidget(wv);
-
-
     this.terminate();
 };
 
