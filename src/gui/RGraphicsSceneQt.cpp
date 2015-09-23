@@ -245,36 +245,8 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
     if (RPolyline::hasProxy()) {
         QList<RPolyline> pls  = polyline.getOutline();
 
-//        bool closed = false;
-//        QList<RPolyline> pls = polyline.splitAtWidthChange(closed);
-
-//        bool hasCurrentPath = false;
-//        if (currentPainterPath.isValid()) {
-//            // current painter path is used to export thin segments if any:
-//            for (int i=0; i<pls.length(); i++) {
-//                if (!pls[i].hasWidths()) {
-//                    // export thin partial polyline:
-//                    for (int k=0; k<pls[i].countSegments(); k++) {
-//                        QSharedPointer<RShape> shape = pls[i].getSegmentAt(k);
-//                        QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
-//                        if (!line.isNull()) {
-//                            RExporter::exportLine(*line);
-//                        }
-//                        QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
-//                        if (!arc.isNull()) {
-//                            RExporter::exportArc(*arc);
-//                        }
-//                    }
-//                }
-//            }
-
-//            hasCurrentPath = true;
-//            endPath();
-//        }
-
         RPainterPath pp;
         for (int i=0; i<pls.length(); i++) {
-            //qDebug() << "pl: " << pls[i];
             if (pls[i].isClosed()) {
                 pp.addPath(pls[i].toPainterPath());
             }
@@ -291,10 +263,6 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
         currentPainterPath.setBrush(currentPen.color());
         currentPainterPath.setPen(QPen(Qt::NoPen));
         endPath();
-
-        //if (hasCurrentPath) {
-            //beginPath();
-        //}
     }
     else {
         RPolyline pl = polyline;

@@ -73,16 +73,9 @@ Explode.prototype.beginEvent = function() {
         else if (isPolylineEntity(entity)) {
             polyline = entity.getData().castToShape();
             if (polyline.hasWidths()) {
-                //var pls = polyline.splitAtWidthChange(closed);
                 var pls = polyline.getOutline();
                 for (k=0; k<pls.length; k++) {
                     newShapes.push(pls[k]);
-//                    if (pls[k].isClosed()) {
-//                        //pp.addPath(pls[i].toPainterPath());
-//                    }
-//                    else {
-//                        //currentPainterPath.addPath(pls[i].toPainterPath());
-//                    }
                 }
             }
             else {
