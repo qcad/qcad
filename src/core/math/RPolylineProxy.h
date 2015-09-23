@@ -42,8 +42,7 @@ public:
     virtual void trimStartPoint(RPolyline& polyline, const RVector& p) = 0;
     virtual void trimEndPoint(RPolyline& polyline, const RVector& p) = 0;
 
-    virtual void exportThickPolyline(RExporter& exporter, RPainterPath& path, const RPolyline& polyline, bool closed = false) = 0;
-    //virtual void exportThickArc(RPainterPath& path, const RArc& arc, double w1, double w2) = 0;
+    virtual QList<RPolyline> renderThickPolyline(const RPolyline& polyline) = 0;
 };
 
 #endif

@@ -5313,7 +5313,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportThickPolyline(
-                const RPolyline & polyline, bool closed
+                const RPolyline & polyline
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportThickPolyline", engine);
@@ -5326,7 +5326,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=2*/
+                    || _q_function.property("length").toInt32()!=1*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::exportThickPolyline";
@@ -5339,7 +5339,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RFileExporterAdapter::exportThickPolyline(
-                            polyline, closed
+                            polyline
                         );
 
                         // block recursion again:
@@ -5368,15 +5368,6 @@
         
             // const reference argument - make a new object:
             new RPolyline(polyline)
-        )
-      
-
-
-
-    // type: bool, copyable: true
-        << qScriptValueFromValue(engine, 
-
-        closed
         )
       
                             )

@@ -86,9 +86,6 @@
         exportThickPolyline
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getMiter
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         exportPolyline
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

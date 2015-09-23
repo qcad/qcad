@@ -606,6 +606,15 @@ QList<QSharedPointer<RShape> > RPolyline::getExploded(int segments) const {
     return ret;
 }
 
+QList<RPolyline> RPolyline::getOutline() const {
+    if (RPolyline::hasProxy()) {
+        return RPolyline::getPolylineProxy()->renderThickPolyline(*this);
+    }
+    else {
+        return QList<RPolyline>();
+    }
+}
+
 /**
  * \return Number of segments. The number of segments equals the
  *      number of vertices for a closed polyline and one less for

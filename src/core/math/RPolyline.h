@@ -145,6 +145,7 @@ public:
     virtual void trimEndPoint(const RVector& p);
 
     virtual QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const;
+    QList<RPolyline> getOutline() const;
     virtual bool isInterpolated() const {
         return false;
     }

@@ -251,6 +251,9 @@
         getExploded
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getOutline
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isInterpolated
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

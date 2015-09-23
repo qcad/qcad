@@ -72,19 +72,34 @@ Explode.prototype.beginEvent = function() {
         // explode polyline into line and arc segments:
         else if (isPolylineEntity(entity)) {
             polyline = entity.getData().castToShape();
-            var polySegments = polyline.getExploded();
-            if (polySegments.length>0) {
-                for (k=0; k<polySegments.length; k++) {
-                    shape = polySegments[k].data();
+            if (polyline.hasWidths()) {
+                //var pls = polyline.splitAtWidthChange(closed);
+                var pls = polyline.getOutline();
+                for (k=0; k<pls.length; k++) {
+                    newShapes.push(pls[k]);
+//                    if (pls[k].isClosed()) {
+//                        //pp.addPath(pls[i].toPainterPath());
+//                    }
+//                    else {
+//                        //currentPainterPath.addPath(pls[i].toPainterPath());
+//                    }
+                }
+            }
+            else {
+                var polySegments = polyline.getExploded();
+                if (polySegments.length>0) {
+                    for (k=0; k<polySegments.length; k++) {
+                        shape = polySegments[k].data();
 
-                    // last shape might have zero length if polyline is closed geometrically and logically:
-                    if (k===polySegments.length-1) {
-                        if (shape.getLength()<1.0e-5) {
-                            break;
+                        // last shape might have zero length if polyline is closed geometrically and logically:
+                        if (k===polySegments.length-1) {
+                            if (shape.getLength()<1.0e-5) {
+                                break;
+                            }
                         }
-                    }
 
-                    newShapes.push(shape.clone());
+                        newShapes.push(shape.clone());
+                    }
                 }
             }
         }

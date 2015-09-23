@@ -241,129 +241,49 @@ void RGraphicsSceneQt::exportEllipse(const REllipse& ellipse, double offset) {
     }
 }
 
-void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline, bool closed) {
+void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
     if (RPolyline::hasProxy()) {
-        if (polyline.isClosed()) {
-            // convert logically closed polyline to geometrically closed polyline:
-            RPolyline pl = polyline;
-            pl.setClosed(false);
-            pl.appendVertex(pl.getStartPoint());
-            exportThickPolyline(pl, true);
-            return;
-        }
+        QList<RPolyline> pls  = polyline.getOutline();
 
-        // split polyline at arc segments or width change to 0/0:
-        RPolyline pl;
-        QList<RPolyline> pls;
-        bool lastWasArc = false;
-        bool lastWasThin = false;
+//        bool closed = false;
+//        QList<RPolyline> pls = polyline.splitAtWidthChange(closed);
 
-        for (int i=0; i<polyline.countVertices(); i++) {
-            double w1 = polyline.getStartWidthAt(i);
-            double w2 = polyline.getEndWidthAt(i);
-            double b = polyline.getBulgeAt(i);
-            RVector v = polyline.getVertexAt(i);
+//        bool hasCurrentPath = false;
+//        if (currentPainterPath.isValid()) {
+//            // current painter path is used to export thin segments if any:
+//            for (int i=0; i<pls.length(); i++) {
+//                if (!pls[i].hasWidths()) {
+//                    // export thin partial polyline:
+//                    for (int k=0; k<pls[i].countSegments(); k++) {
+//                        QSharedPointer<RShape> shape = pls[i].getSegmentAt(k);
+//                        QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
+//                        if (!line.isNull()) {
+//                            RExporter::exportLine(*line);
+//                        }
+//                        QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
+//                        if (!arc.isNull()) {
+//                            RExporter::exportArc(*arc);
+//                        }
+//                    }
+//                }
+//            }
 
-            pl.appendVertex(v, b, w1, w2);
-
-            // split polyline on:
-            //   widths change to 0/0
-            //   arc segment
-            bool isArc = fabs(b)>RS::PointTolerance;
-            bool isThin = (w1<=0.0 && w2<=0.0);
-            bool isMiter = false;
-            QSharedPointer<RLine> before;
-            double wb;
-            if (i>0) {
-                before = polyline.getSegmentAt(i-1).dynamicCast<RLine>();
-                wb = polyline.getEndWidthAt(i-1);
-            }
-            if (!before.isNull()) {
-                QSharedPointer<RLine> after;
-                if (i<polyline.countSegments()) {
-                    after = polyline.getSegmentAt(i).dynamicCast<RLine>();
-                }
-                if (!after.isNull()) {
-                    isMiter = getMiter(before, after, w1, wb);
-                }
-            }
-            if ((i>0 && isThin!=lastWasThin) || isMiter || isArc || lastWasArc || i==polyline.countVertices()-1) {
-                // skip segments with zero width (exported above):
-                if (pl.countSegments()!=0) {
-                    pls.append(pl);
-                }
-                pl.clear();
-
-                pl.appendVertex(v, b, w1, w2);
-            }
-
-            lastWasArc = isArc;
-            lastWasThin = isThin;
-        }
-
-        bool hasCurrentPath = false;
-        if (currentPainterPath.isValid()) {
-            // current painter path is used to export thin segments if any:
-            for (int i=0; i<pls.length(); i++) {
-                if (!pls[i].hasWidths()) {
-                    // export thin partial polyline:
-                    for (int k=0; k<pls[i].countSegments(); k++) {
-                        QSharedPointer<RShape> shape = pls[i].getSegmentAt(k);
-                        QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
-                        if (!line.isNull()) {
-                            RExporter::exportLine(*line);
-                        }
-                        QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
-                        if (!arc.isNull()) {
-                            RExporter::exportArc(*arc);
-                        }
-                    }
-                }
-            }
-
-            hasCurrentPath = true;
-            endPath();
-        }
-
-        // join last and first part of closed polyline for trimming / joining:
-        if (closed) {
-            RPolyline firstPl = pls[0];
-            RPolyline lastPl = pls[pls.length()-1];
-            if (firstPl.hasWidths() && lastPl.hasWidths()) {
-                QSharedPointer<RLine> before = lastPl.getLastSegment().dynamicCast<RLine>();
-                QSharedPointer<RLine> after = firstPl.getFirstSegment().dynamicCast<RLine>();
-                double w1 = firstPl.getStartWidthAt(0);
-                double wb = lastPl.getEndWidthAt(pls.length()==1 ? lastPl.countVertices()-1 : lastPl.countVertices()-2);
-
-                if (!before.isNull() && !after.isNull()) {
-                    if (!getMiter(before, after, w1, wb)) {
-                        if (pls.length()>1) {
-                            lastPl.appendShape(firstPl);
-                            pls.removeFirst();
-                            pls.removeLast();
-                            pls.prepend(lastPl);
-                            closed = false;
-                        }
-                    }
-                    else {
-                        if (pls.length()==1) {
-                            // polyline is closed but miter limit reached at first vertex:
-                            closed = false;
-                        }
-                    }
-                }
-            }
-            if (pls.length()>1) {
-                closed = false;
-            }
-        }
+//            hasCurrentPath = true;
+//            endPath();
+//        }
 
         RPainterPath pp;
         for (int i=0; i<pls.length(); i++) {
-            if (pls[i].hasWidths()) {
-                RPolyline::getPolylineProxy()->exportThickPolyline(*this, pp, pls[i], closed);
+            //qDebug() << "pl: " << pls[i];
+            if (pls[i].isClosed()) {
+                pp.addPath(pls[i].toPainterPath());
+            }
+            else {
+                currentPainterPath.addPath(pls[i].toPainterPath());
             }
         }
+
+        endPath();
 
         beginPath();
         currentPainterPath.addPath(pp);
@@ -372,28 +292,15 @@ void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline, bool close
         currentPainterPath.setPen(QPen(Qt::NoPen));
         endPath();
 
-        if (hasCurrentPath) {
-            beginPath();
-        }
+        //if (hasCurrentPath) {
+            //beginPath();
+        //}
     }
     else {
         RPolyline pl = polyline;
         pl.stripWidths();
         exportPolyline(pl);
     }
-}
-
-bool RGraphicsSceneQt::getMiter(const QSharedPointer<RLine>& before, const QSharedPointer<RLine>& after, double w1, double wb) {
-    double ang = fabs(RMath::getAngleDifference180(before->getDirection2(), after->getDirection1()));
-
-    double a = wb / sin(ang);
-    double b = w1 / sin(ang);
-    double d = sqrt(a*a + b*b + 2*a*b*cos(ang));
-    if (d/2 > wb*2 && d/2 > w1*2) {
-        return true;
-    }
-
-    return false;
 }
 
 void RGraphicsSceneQt::exportPolyline(const RPolyline& polyline, bool polylineGen, double offset) {

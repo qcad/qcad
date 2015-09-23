@@ -185,11 +185,6 @@ void RPolylineEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
 
     e.setBrush(Qt::NoBrush);
 
-    // temp for painter path testing:
-//    RPainterPath pp(data.toPainterPath());
-//    pp.setPen(QPen(Qt::white));
-//    e.exportPainterPaths(QList<RPainterPath>() << pp);
-
     e.exportPolyline(data, data.getPolylineGen());
 }
 

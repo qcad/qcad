@@ -216,7 +216,7 @@ public:
     virtual void exportImage(const RImageData& image, bool forceSelected = false);
     virtual void exportText(const RTextBasedData& text, bool forceSelected = false);
 
-    virtual void exportThickPolyline(const RPolyline& polyline, bool closed = false) {
+    virtual void exportThickPolyline(const RPolyline& polyline) {
         RPolyline pl = polyline;
         pl.stripWidths();
         exportPolyline(pl);
