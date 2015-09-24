@@ -673,29 +673,15 @@ void RDocumentInterface::mouseMoveEvent(RMouseEvent& event) {
 
     if (hasCurrentAction()) {
         getCurrentAction()->mouseMoveEvent(event);
-//        if (pressEvent!=NULL) {
-            // use position of mouse press event:
-//            previewClickEvent(*getCurrentAction(), *pressEvent);
-//        }
-//        else {
-            previewClickEvent(*getCurrentAction(), event);
-//        }
+        previewClickEvent(*getCurrentAction(), event);
     } else if (defaultAction != NULL) {
         defaultAction->mouseMoveEvent(event);
-//        if (pressEvent!=NULL) {
-            // use position of mouse press event:
-//            previewClickEvent(*defaultAction, *pressEvent);
-//        }
-//        else {
-            previewClickEvent(*defaultAction, event);
-//        }
+        previewClickEvent(*defaultAction, event);
     } else {
         event.ignore();
     }
 
-    //if (mouseTrackingEnabled) {
-        repaintViews();
-    //}
+    repaintViews();
 }
 
 /**
