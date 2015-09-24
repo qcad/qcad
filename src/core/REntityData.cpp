@@ -88,7 +88,7 @@ RColor REntityData::getColor(bool resolve, const QStack<REntity*>& blockRefStack
             // entity in block on layer 0, use attributes of block reference if compatibility mode is on:
             if (l->getName()=="0") {
                 if (blockRefStack.isEmpty()) {
-                    return RColor(Qt::white);
+                    return l->getColor();
                 }
                 return blockRefStack.top()->getColor(true, blockRefStack);
             }
@@ -145,10 +145,9 @@ RLineweight::Lineweight REntityData::getLineweight(bool resolve, const QStack<RE
         if (RSettings::isLayer0CompatibilityOn()) {
             // entity in block on layer 0, use attributes of block reference if compatibility mode is on:
             if (l->getName()=="0") {
-                if (blockRefStack.isEmpty()) {
-                    return RLineweight::Weight000;
+                if (!blockRefStack.isEmpty()) {
+                    lw = blockRefStack.top()->getLineweight(true, blockRefStack);
                 }
-                lw = blockRefStack.top()->getLineweight(true, blockRefStack);
             }
         }
     }
@@ -194,7 +193,7 @@ RLinetype::Id REntityData::getLinetypeId(bool resolve, const QStack<REntity*>& b
                 // entity in block on layer 0, use attributes of block reference if compatibility mode is on:
                 if (l->getName()=="0") {
                     if (blockRefStack.isEmpty()) {
-                        return RLinetype::INVALID_ID;
+                        return l->getLinetypeId();
                     }
                     return blockRefStack.top()->getLinetypeId(true, blockRefStack);
                 }
