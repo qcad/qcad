@@ -734,26 +734,10 @@ void RDocumentInterface::mouseReleaseEvent(RMouseEvent& event) {
     }
     if (hasCurrentAction()) {
         getCurrentAction()->mouseReleaseEvent(event);
-//        if (pressEvent!=NULL) {
-            // use position of mouse press event:
-//            handleClickEvent(*getCurrentAction(), *pressEvent);
-//            delete pressEvent;
-//            pressEvent = NULL;
-//        }
-//        else {
-            handleClickEvent(*getCurrentAction(), event);
-//        }
+        handleClickEvent(*getCurrentAction(), event);
     } else if (defaultAction != NULL) {
         defaultAction->mouseReleaseEvent(event);
-//        if (pressEvent!=NULL) {
-            // use position of mouse press event:
-//            handleClickEvent(*defaultAction, *pressEvent);
-//            delete pressEvent;
-//            pressEvent = NULL;
-//        }
-//        else {
-            handleClickEvent(*defaultAction, event);
-//        }
+        handleClickEvent(*defaultAction, event);
     } else {
         event.ignore();
     }
