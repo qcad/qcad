@@ -713,16 +713,6 @@ void RDocumentInterface::mousePressEvent(RMouseEvent& event) {
     } else {
         event.ignore();
     }
-
-    // remember mouse press event for future mouse move
-    // and mouse release events used to specify positions:
-//    if (pressEvent!=NULL) {
-//        delete pressEvent;
-//        pressEvent = NULL;
-//    }
-//    if (RSettings::getPositionByMousePress()) {
-//        pressEvent = new RMouseEvent(event);
-//    }
 }
 
 /**
