@@ -274,6 +274,14 @@ public:
         return paintOffset;
     }
 
+    bool isAlphaEnabled() const {
+        return alphaEnabled;
+    }
+
+    void setAlphaEnabled(bool on) {
+        alphaEnabled = on;
+    }
+
 protected:
     QList<RPainterPath> getTextLayoutsPainterPaths(const RTextBasedData& text, const QList<RTextLayout>& textLayouts);
     void applyColorCorrection(QPen& pen);
@@ -346,6 +354,7 @@ protected:
     RVector backgroundOffset;
     RBox clipBox;
     RVector paintOffset;
+    bool alphaEnabled;
 };
 
 Q_DECLARE_METATYPE(RGraphicsViewImage*)

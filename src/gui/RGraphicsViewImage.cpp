@@ -53,7 +53,8 @@ RGraphicsViewImage::RGraphicsViewImage()
       colorCorrectionOverride(false),
       colorCorrection(false),
       colorThreshold(10),
-      drawingScale(1.0) {
+      drawingScale(1.0),
+      alphaEnabled(false) {
 
     currentScale = 1.0;
     saveViewport();
@@ -557,7 +558,7 @@ void RGraphicsViewImage::updateGraphicsBuffer() {
     QSize newSize(getWidth()*dpr, getHeight()*dpr);
 
     if (lastSize!=newSize && graphicsBuffer.size()!=newSize) {
-        graphicsBuffer = QImage(newSize, QImage::Format_RGB32);
+        graphicsBuffer = QImage(newSize, alphaEnabled ? QImage::Format_ARGB32 : QImage::Format_RGB32);
         lastFactor = -1;
     }
 
@@ -1406,7 +1407,7 @@ int RGraphicsViewImage::getHeight() const {
 }
 
 void RGraphicsViewImage::resizeImage(int w, int h) {
-    graphicsBuffer = QImage(QSize(w,h), QImage::Format_RGB32);
+    graphicsBuffer = QImage(QSize(w,h), alphaEnabled ? QImage::Format_ARGB32 : QImage::Format_RGB32);
 }
 
 void RGraphicsViewImage::setPanOptimization(bool on) {
