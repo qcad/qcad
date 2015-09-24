@@ -246,9 +246,9 @@ void RTextRenderer::renderSimple() {
     sizeTransform.scale(textHeight * textData.getXScale(), textHeight);
 
     //TODO: textTransforms.append(sizeTransform);
-    if (!textLayouts.isEmpty()) {
-        textLayouts.last().transform = sizeTransform;
-    }
+//    if (!textLayouts.isEmpty()) {
+//        textLayouts.last().transform = sizeTransform;
+//    }
 
     // transform paths of text:
     boundingBox = RBox();
@@ -256,6 +256,17 @@ void RTextRenderer::renderSimple() {
         painterPaths[i].transform(sizeTransform);
         boundingBox.growToInclude(painterPaths[i].getBoundingBox());
     }
+
+    for (int i=0; i<textLayouts.length(); ++i) {
+        if (!lineBlockTransforms.isEmpty()) {
+            textLayouts[i].transform *= lineBlockTransforms.last();
+        }
+        textLayouts[i].transform *= sizeTransform;
+    }
+
+    //for (int i=0; i<textLayouts.length(); ++i) {
+    //    textLayouts[i].transform = sizeTransform;
+    //}
 
     // feature size of a text is its height
     // determines if text is displayed or only bounding box
@@ -350,6 +361,10 @@ void RTextRenderer::renderSimple() {
     for (int i=0; i<painterPaths.size(); ++i) {
         painterPaths[i].transform(globalTransform);
         boundingBox.growToInclude(painterPaths[i].getBoundingBox());
+    }
+
+    for (int i=0; i<textLayouts.length(); ++i) {
+        textLayouts[i].transform *= globalTransform;
     }
 }
 
