@@ -36,6 +36,7 @@
  */
 function exportBitmap(doc, scene, fileName, properties) {
     var view = new RGraphicsViewImage();
+    view.setAlphaEnabled(true);
     view.setScene(scene, false);
 
     view.setPaintOrigin(properties["origin"]==null ? false : properties["origin"]);
