@@ -576,6 +576,16 @@
             );
         
     
+      bool isAlphaEnabled(
+                
+            );
+        
+    
+      void setAlphaEnabled(
+                bool on
+            );
+        
+    
             // methods of 2nd level base class RGraphicsView:
             
       void clearCaches(

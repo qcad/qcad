@@ -263,6 +263,12 @@
         ;static  QScriptValue
         getPaintOffset
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isAlphaEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setAlphaEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

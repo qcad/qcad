@@ -214,6 +214,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getPaintOffset, "getPaintOffset");
             
+            REcmaHelper::registerFunction(&engine, proto, isAlphaEnabled, "isAlphaEnabled");
+            
+            REcmaHelper::registerFunction(&engine, proto, setAlphaEnabled, "setAlphaEnabled");
+            
 
     // properties:
     
@@ -4497,6 +4501,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewQt::getPaintOffset", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewQt::isAlphaEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::isAlphaEnabled", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::isAlphaEnabled";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("isAlphaEnabled", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isAlphaEnabled();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.isAlphaEnabled().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::isAlphaEnabled", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewQt::setAlphaEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::setAlphaEnabled", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::setAlphaEnabled";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("setAlphaEnabled", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAlphaEnabled(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.setAlphaEnabled().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::setAlphaEnabled", context, engine);
             return result;
         }
         

@@ -480,6 +480,18 @@
         
     
     
+      bool isAlphaEnabled(
+                
+            );
+        
+    
+    
+      void setAlphaEnabled(
+                bool on
+            );
+        
+    
+    
       QList < RPainterPath > getTextLayoutsPainterPaths(
                 const RTextBasedData & text, const QList < RTextLayout > & textLayouts
             );
