@@ -340,8 +340,7 @@ NewFile.closeRequested = function(mdiChild) {
         return;
     }
 
-    var dialog = WidgetFactory.createDialog(NewFile.includeBasePath,
-                                            "CloseDialog.ui", mdiChild);
+    var dialog = WidgetFactory.createDialog(NewFile.includeBasePath, "CloseDialog.ui", mdiChild);
 
     var fileName = new QFileInfo(document.getFileName()).fileName();
     if (fileName.length===0) {
