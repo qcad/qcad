@@ -33,6 +33,7 @@
  *  properties["quality"]: Export quality (0..100), JPEG only
  *  properties["monochrome"]: true: Export as black / white
  *  properties["grayscale"]: true: Export as grayscale
+ *  properties["window"]: RBox: window to export in drawing coorirdinates
  */
 function exportBitmap(doc, scene, fileName, properties) {
     var view = new RGraphicsViewImage();
@@ -77,7 +78,12 @@ function exportBitmap(doc, scene, fileName, properties) {
 
     view.resizeImage(properties["width"], properties["height"]);
 
-    view.autoZoom(properties["margin"], true);
+    if (properties["window"]) {
+        view.zoomTo(properties["window"], properties["margin"]);
+    }
+    else {
+        view.autoZoom(properties["margin"], true);
+    }
 
     scene.regenerate();
 

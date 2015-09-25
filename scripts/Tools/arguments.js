@@ -100,6 +100,22 @@ function getColorArgument(args, shortFlag, longFlag, def) {
     return new RColor(ret);
 }
 
+function getBoxArgument(args, shortFlag, longFlag, def) {
+    var ret = getArgument(args, shortFlag, longFlag);
+    if (ret===undefined) {
+        return def;
+    }
+    var parts = ret.split(',');
+    if (parts.length!==4) {
+        return def;
+    }
+    for (var i=0; i<parts.length; i++) {
+        parts[i] = parseFloat(parts[i]);
+    }
+
+    return new RBox(new RVector(parts[0], parts[1]), new RVector(parts[0] + parts[2], parts[1] + parts[3]));
+}
+
 /**
  * \return True if the given arguments contain one of the given flags.
  */
