@@ -72,7 +72,7 @@ Explode.prototype.beginEvent = function() {
         // explode polyline into line and arc segments:
         else if (isPolylineEntity(entity)) {
             polyline = entity.getData().castToShape();
-            if (polyline.hasWidths()) {
+            if (RPolyline.hasProxy() && polyline.hasWidths()) {
                 var pls = polyline.getOutline();
                 for (k=0; k<pls.length; k++) {
                     newShapes.push(pls[k]);
