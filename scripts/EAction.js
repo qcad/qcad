@@ -653,19 +653,19 @@ EAction.getMainWindow = function() {
  * This is necessary with Qt>=5.
  */
 EAction.activateMainWindow = function() {
-    if (RSettings.isQt(5)) {
-        var appWin = EAction.getMainWindow();
-        if (isNull(appWin)) {
-            return;
-        }
-        appWin.activateWindow();
+//    if (RSettings.isQt(5)) {
+//        var appWin = EAction.getMainWindow();
+//        if (isNull(appWin)) {
+//            return;
+//        }
+//        appWin.activateWindow();
 
-        var view = EAction.getGraphicsView();
-        if (!isNull(view)) {
-            // view loses focus because of dialogs:
-            view.giveFocus();
-        }
-    }
+//        var view = EAction.getGraphicsView();
+//        if (!isNull(view)) {
+//            // view loses focus because of dialogs:
+//            view.giveFocus();
+//        }
+//    }
 };
 
 /**

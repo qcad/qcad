@@ -548,8 +548,8 @@ bool RMainWindowQt::event(QEvent* e) {
         return true;
     }
 
-#if defined(Q_OS_MAC) || defined(Q_OS_WIN32)
-    // prevent recursion:
+#if QT_VERSION < 0x050000 && (defined(Q_OS_MAC) || defined(Q_OS_WIN32))
+    // Qt 4.x: prevent recursion:
     // (bug, probably in Qt script wrappers: recursion when displaying status tip)
     static bool running = false;
     if (running) {
@@ -560,11 +560,7 @@ bool RMainWindowQt::event(QEvent* e) {
     running = false;
     return ret;
 #else
-    //qDebug() << "RMainWindowQt::event: OK: " << e->type();
     bool ret = QMainWindow::event(e);
-    //if (e->type()!=QEvent::Close) {
-        //unlock("RMainWindowQt::event");
-    //}
     return ret;
 #endif
 }

@@ -69,12 +69,7 @@ RGraphicsViewQt::~RGraphicsViewQt() {
  * Triggers a paintEvent based on a buffered offscreen bitmap (very fast).
  */
 void RGraphicsViewQt::repaintView() {
-//#if QT_VERSION < 0x040800
-    // 20150717: experimental: update is unreliable
-    //QWidget::repaint();
-//#else
     update();
-//#endif
 }
 
 void RGraphicsViewQt::repaintNow() {
@@ -177,6 +172,10 @@ void RGraphicsViewQt::tabletEvent(QTabletEvent* event) {
  * Relays the Qt mouse event to the scene.
  */
 void RGraphicsViewQt::mouseMoveEvent(QMouseEvent* event) {
+    qDebug() << "mouseMoveEvent";
+    qDebug() << "is active:" << isActiveWindow();
+    qDebug() << "hasFocus:" << hasFocus();
+    qDebug() << "updatesEnabled:" << updatesEnabled();
     if (event==NULL || scene==NULL) {
         return;
     }
