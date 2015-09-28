@@ -69,6 +69,16 @@
         </widget>
        </item>
        <item>
+        <widget class="QCheckBox" name="DoubleClickSelectContour">
+         <property name="text">
+          <string>Double-click to select contour</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QCheckBox" name="RightDoubleClickToReset">
          <property name="text">
           <string>Right double-click to reset</string>

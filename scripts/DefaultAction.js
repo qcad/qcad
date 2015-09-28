@@ -619,4 +619,22 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
             Block.editBlock(this.di, entity.getReferencedBlockName());
         }
     }
+    else if (isLineEntity(entity) || 
+		isArcEntity(entity) ||
+		isSplineEntity(entity) ||
+		isPolylineEntity(entity) ||
+		isEllipseEntity(entity)) {
+
+        if (RSettings.getBoolValue("GraphicsView/DoubleClickSelectContour", false)===true) {
+            include("scripts/Select/SelectContour/SelectContour.js");
+            var matchingEntities = SelectContour.getConnectedEntities(this.document, entityId, 0.001);
+            var add = (event.modifiers().valueOf() === Qt.ShiftModifier.valueOf());
+            if (entity.isSelected()) {
+                this.di.selectEntities(matchingEntities, add);
+            }
+            else {
+                this.di.deselectEntities(matchingEntities);
+            }
+        }
+    };
 };
