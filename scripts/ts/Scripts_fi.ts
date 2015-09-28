@@ -62,7 +62,7 @@
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="+287"/>
+        <location line="+273"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktiivinen työkalu:</translation>
@@ -300,7 +300,7 @@
         <translation>Mitattu arvo</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+114"/>
         <source>Left</source>
         <translation>Vasen</translation>
     </message>

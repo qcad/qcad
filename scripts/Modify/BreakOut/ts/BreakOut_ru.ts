@@ -1,14 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ru">
 <context>
     <name>BreakOut</name>
     <message>
-        <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle or ellipse to auto trim</source>
-        <translation>Выберите линию, дугу, окружность или эллипс для автоподрезки</translation>
+        <translation type="vanished">Выберите линию, дугу, окружность или эллипс для автоподрезки</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
         <translation>Выберите линию, дугу, окружность, эллипс, прямую или участок ломаной</translation>
     </message>

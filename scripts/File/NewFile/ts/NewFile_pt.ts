@@ -89,7 +89,7 @@ Sem Título</translatorcomment>
         <translation>apenas leitura</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+53"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Você deseja gravar as alterações feitas no&lt;br&gt;do documento &apos;%1&apos;?</translation>

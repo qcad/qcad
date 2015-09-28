@@ -5,7 +5,7 @@
     <name>BreakOutManual</name>
     <message>
         <location filename="../BreakOutManual.js" line="+80"/>
-        <source>Choose line, arc, circle, ellipse or polyline to break up</source>
+        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

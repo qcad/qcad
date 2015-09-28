@@ -32,12 +32,12 @@
         <translation>ブロック参照をダブルクリックしてブロックをオープン</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Right double-click to reset</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-42"/>
+        <location line="-52"/>
         <source>Right-Click</source>
         <translation type="unfinished"></translation>
     </message>
@@ -47,7 +47,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+36"/>
+        <source>Double-click to select contour</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Cursor Range</source>
         <translation type="unfinished"></translation>
     </message>

@@ -70,7 +70,7 @@
         <translation> ...len na čítanie</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+53"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>Uložiť vykonané zmeny v dokumente&lt;br&gt;&apos;%1&apos; ?</translation>
     </message>

@@ -32,12 +32,12 @@
         <translation>Двойной щелчок по привязке блока открывает блок</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Right double-click to reset</source>
         <translation>Двойной щелчок правой кнопкой мыши для сброса</translation>
     </message>
     <message>
-        <location line="-42"/>
+        <location line="-52"/>
         <source>Right-Click</source>
         <translation>Щелчок правой клавишей</translation>
     </message>
@@ -47,7 +47,12 @@
         <translation>Щелчок правой кнопкой мыши для отмены выбора объектов</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+36"/>
+        <source>Double-click to select contour</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Cursor Range</source>
         <translation>Диапазон курсора</translation>
     </message>

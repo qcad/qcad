@@ -32,12 +32,12 @@
         <translation>Doble clic en una referencia a bloque para abrir el bloque</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Right double-click to reset</source>
         <translation>Haga doble clic para reinicializar</translation>
     </message>
     <message>
-        <location line="-42"/>
+        <location line="-52"/>
         <source>Right-Click</source>
         <translation>Botão direito do mouse</translation>
     </message>
@@ -47,7 +47,12 @@
         <translation>Botón derecho para anular la selección</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+36"/>
+        <source>Double-click to select contour</source>
+        <translation>Doble clic para seleccionar contorno</translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Cursor Range</source>
         <translation>Gama cursor del ratón</translation>
     </message>

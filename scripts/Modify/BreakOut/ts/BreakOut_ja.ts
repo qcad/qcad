@@ -4,12 +4,11 @@
 <context>
     <name>BreakOut</name>
     <message>
-        <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle or ellipse to auto trim</source>
-        <translation>オートトリムのための線分、弧、円または楕円を選択してください</translation>
+        <translation type="vanished">オートトリムのための線分、弧、円または楕円を選択してください</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
         <translation type="unfinished"></translation>
     </message>

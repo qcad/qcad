@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ru">
 <context>
@@ -61,7 +62,7 @@
         <translation>Отменить</translation>
     </message>
     <message>
-        <location line="+287"/>
+        <location line="+273"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Активный инструмент:</translation>
@@ -299,7 +300,7 @@
         <translation>Измеренное значение</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+114"/>
         <source>Left</source>
         <translation>Левая</translation>
     </message>

@@ -4,17 +4,17 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../About.js" line="+53"/>
+        <location filename="../About.js" line="+56"/>
         <source>About %1</source>
         <translation>O %1</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+72"/>
         <source>Plugins</source>
         <translation>Vtičniki</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+20"/>
         <source>No information available</source>
         <translation>Informacije niso navoljo</translation>
     </message>
@@ -92,7 +92,7 @@
         <translation>Dodatki skript</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+47"/>
         <source>Credits</source>
         <translation>Zahvala</translation>
     </message>
@@ -110,30 +110,26 @@
         <translation>O</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+25"/>
-        <location line="+25"/>
-        <location line="+25"/>
         <source>about:blank</source>
-        <translation>o:prazno</translation>
+        <translation type="vanished">o:prazno</translation>
     </message>
     <message>
-        <location line="-66"/>
+        <location line="+67"/>
         <source>Credits</source>
         <translation>Zahvala</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+67"/>
         <source>Plugins</source>
         <translation>Vtičniki</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+67"/>
         <source>Scripts</source>
         <translation>Skripte</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+67"/>
         <source>System</source>
         <translation>Sistem</translation>
     </message>

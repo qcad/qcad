@@ -8,10 +8,20 @@
         <translation type="obsolete">Produktaktualität überprüfen...</translation>
     </message>
     <message>
-        <location filename="../CheckForUpdates.js" line="+58"/>
+        <location filename="../CheckForUpdates.js" line="+62"/>
         <location filename="../CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
         <translation>Überprüfung der Produktaktualität...</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Version information not found.</source>
+        <translation>Versioninformation nicht gefunden.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>No connection to server or file not found. Please try again later.</source>
+        <translation>Keine Verbindung zum Server oder Datei nicht gefunden. Bitte versuchen Sie es später noch einmal.</translation>
     </message>
     <message>
         <location filename="../CheckForUpdatesInit.js" line="+6"/>
@@ -19,12 +29,11 @@
         <translation>&amp;Produktaktualität überprüfen...</translation>
     </message>
     <message>
-        <location filename="../CheckForUpdatesDialog.ui" line="+10"/>
         <source>about:blank</source>
-        <translation>about:blank</translation>
+        <translation type="vanished">about:blank</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location filename="../CheckForUpdatesDialog.ui" line="+53"/>
         <source>Automatically check for updates</source>
         <translation>Produktaktualität automatisch überprüfen</translation>
     </message>

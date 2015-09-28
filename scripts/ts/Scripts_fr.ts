@@ -67,7 +67,7 @@
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="+287"/>
+        <location line="+273"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Outil actif:</translation>
@@ -328,7 +328,7 @@
         <translation>Valeur mesurée</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+114"/>
         <source>Left</source>
         <translation>Gauche</translation>
     </message>

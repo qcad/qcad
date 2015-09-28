@@ -75,7 +75,7 @@ Anuluj
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location line="+287"/>
+        <location line="+273"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -374,7 +374,7 @@ Dzielenie (÷)</translatorcomment>
         <translation type="unfinished">Zmierzona wartość</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+114"/>
         <source>Left</source>
         <translation type="unfinished"></translation>
     </message>

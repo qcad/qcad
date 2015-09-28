@@ -4,17 +4,17 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../About.js" line="+53"/>
+        <location filename="../About.js" line="+56"/>
         <source>About %1</source>
         <translation>O %1</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+72"/>
         <source>Plugins</source>
         <translation>Zásuvné moduly</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+20"/>
         <source>No information available</source>
         <translation>Žiadne dostupné informácie</translation>
     </message>
@@ -92,7 +92,7 @@
         <translation>Skripty Doplnkov</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+47"/>
         <source>Credits</source>
         <translation>Prispievatelia</translation>
     </message>
@@ -110,30 +110,26 @@
         <translation>O programe</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+25"/>
-        <location line="+25"/>
-        <location line="+25"/>
         <source>about:blank</source>
-        <translation>about:blank</translation>
+        <translation type="vanished">about:blank</translation>
     </message>
     <message>
-        <location line="-66"/>
+        <location line="+67"/>
         <source>Credits</source>
         <translation>Tvorcovia</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+67"/>
         <source>Plugins</source>
         <translation>Zásuvné moduly</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+67"/>
         <source>Scripts</source>
         <translation>Skripty</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+67"/>
         <source>System</source>
         <translation>Systém</translation>
     </message>

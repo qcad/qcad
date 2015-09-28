@@ -4,7 +4,7 @@
 <context>
     <name>SelectContour</name>
     <message>
-        <location filename="../SelectContour.js" line="+133"/>
+        <location filename="../SelectContour.js" line="+53"/>
         <source>Choose entity of contour</source>
         <translation>Vyberte prvok obrysu</translation>
     </message>

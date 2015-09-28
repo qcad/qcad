@@ -82,7 +82,7 @@
         <translation>Lecture seule</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+53"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>Voulez-vous enregistrer les modifications que vous avez faites&lt;br&gt;dans le document &apos;%1&apos;?</translation>
     </message>

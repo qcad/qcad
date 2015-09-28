@@ -10,17 +10,17 @@
         <translation type="obsolete">&amp;Sobre</translation>
     </message>
     <message>
-        <location filename="../About.js" line="+53"/>
+        <location filename="../About.js" line="+56"/>
         <source>About %1</source>
         <translation>Sobre %1</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+72"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+20"/>
         <source>No information available</source>
         <translation>Não há informações disponíveis</translation>
     </message>
@@ -98,7 +98,7 @@
         <translation>Scripts de Add-Ons</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+47"/>
         <source>Credits</source>
         <translation>Créditos</translation>
     </message>
@@ -121,30 +121,26 @@
         <translation>Sobre</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+25"/>
-        <location line="+25"/>
-        <location line="+25"/>
         <source>about:blank</source>
-        <translation>sobre:em branco</translation>
+        <translation type="vanished">sobre:em branco</translation>
     </message>
     <message>
-        <location line="-41"/>
+        <location line="+134"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+67"/>
         <source>Scripts</source>
         <translation>Scripts</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+67"/>
         <source>System</source>
         <translation>Sistema</translation>
     </message>
     <message>
-        <location line="-75"/>
+        <location line="-201"/>
         <source>Credits</source>
         <translation>Créditos</translation>
     </message>

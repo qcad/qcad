@@ -8,17 +8,17 @@
         <translation type="obsolete">Ü&amp;ber</translation>
     </message>
     <message>
-        <location filename="../About.js" line="+53"/>
+        <location filename="../About.js" line="+56"/>
         <source>About %1</source>
         <translation>Über %1</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+72"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+20"/>
         <source>No information available</source>
         <translation>Keine Information verfügbar</translation>
     </message>
@@ -96,7 +96,7 @@
         <translation>Skript Add-Ons</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+47"/>
         <source>Credits</source>
         <translation>Beitragende</translation>
     </message>
@@ -118,30 +118,26 @@
         <translation>Über</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+25"/>
-        <location line="+25"/>
-        <location line="+25"/>
         <source>about:blank</source>
-        <translation>about:blank</translation>
+        <translation type="vanished">about:blank</translation>
     </message>
     <message>
-        <location line="-41"/>
+        <location line="+134"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+67"/>
         <source>Scripts</source>
         <translation>Scripts</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+67"/>
         <source>System</source>
         <translation>System</translation>
     </message>
     <message>
-        <location line="-75"/>
+        <location line="-201"/>
         <source>Credits</source>
         <translation>Credits</translation>
     </message>

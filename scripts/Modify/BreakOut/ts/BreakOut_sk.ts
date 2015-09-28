@@ -1,14 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
     <name>BreakOut</name>
     <message>
-        <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle or ellipse to auto trim</source>
-        <translation>Vyberte prvok na automatické orezanie</translation>
+        <translation type="vanished">Vyberte prvok na automatické orezanie</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
         <translation>Vyberte úsek prvku ktorý chcete vyrezať / orezať</translation>
     </message>

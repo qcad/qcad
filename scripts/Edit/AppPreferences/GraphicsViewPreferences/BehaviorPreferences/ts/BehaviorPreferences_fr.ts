@@ -32,12 +32,12 @@
         <translation>Double-cliquez sur une référence de bloc pour ouvrir le bloc</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Right double-click to reset</source>
         <translation>Droit double-cliquez sur pour réinitialiser</translation>
     </message>
     <message>
-        <location line="-42"/>
+        <location line="-52"/>
         <source>Right-Click</source>
         <translation>Clic-droit</translation>
     </message>
@@ -47,7 +47,12 @@
         <translation>Clic-droit pour désélectionner des entités</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+36"/>
+        <source>Double-click to select contour</source>
+        <translation>Double-cliquez pour sélectionner contour</translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Cursor Range</source>
         <translation>Gamme de curseur de souris</translation>
     </message>

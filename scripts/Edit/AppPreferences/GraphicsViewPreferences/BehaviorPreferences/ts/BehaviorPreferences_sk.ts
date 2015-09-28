@@ -32,12 +32,12 @@
         <translation>Dvojklikom na blok otvoriť úpravu bloku</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Right double-click to reset</source>
         <translation>Dvojklik pravým tlačítkom reset</translation>
     </message>
     <message>
-        <location line="-42"/>
+        <location line="-52"/>
         <source>Right-Click</source>
         <translation>Kliknutie pravým tlačidlom myši</translation>
     </message>
@@ -47,7 +47,12 @@
         <translation>Pravé tlačidlo myši zruší výber prvkov (vhodné použiť s viacnásobným výberom prvkov)</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+36"/>
+        <source>Double-click to select contour</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Cursor Range</source>
         <translation>Rozsah kurzoru</translation>
     </message>

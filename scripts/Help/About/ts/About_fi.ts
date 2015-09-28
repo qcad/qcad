@@ -4,17 +4,17 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../About.js" line="+53"/>
+        <location filename="../About.js" line="+56"/>
         <source>About %1</source>
         <translation>Tietoja kohteesta %1</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+72"/>
         <source>Plugins</source>
         <translation>Liitännäiset</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+20"/>
         <source>No information available</source>
         <translation>Tietoja ei ole saatavilla</translation>
     </message>
@@ -92,7 +92,7 @@
         <translation>Skriptin lisäosat</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+47"/>
         <source>Credits</source>
         <translation>Tekijät</translation>
     </message>
@@ -110,30 +110,26 @@
         <translation>Tietoja</translation>
     </message>
     <message>
-        <location line="+16"/>
-        <location line="+25"/>
-        <location line="+25"/>
-        <location line="+25"/>
         <source>about:blank</source>
-        <translation>tietoja: tyhjä</translation>
+        <translation type="vanished">tietoja: tyhjä</translation>
     </message>
     <message>
-        <location line="-66"/>
+        <location line="+67"/>
         <source>Credits</source>
         <translation>Tekijät</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+67"/>
         <source>Plugins</source>
         <translation>Lisäosat</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+67"/>
         <source>Scripts</source>
         <translation>Skriptit</translation>
     </message>
     <message>
-        <location line="+25"/>
+        <location line="+67"/>
         <source>System</source>
         <translation>Järjestelmä</translation>
     </message>

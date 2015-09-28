@@ -103,7 +103,7 @@
         <translation>nur lesen</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+53"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>Möchten Sie die gemachten Änderungen in der&lt;br&gt;Zeichnung &apos;%1&apos; speichern?</translation>
     </message>

@@ -4,9 +4,13 @@
 <context>
     <name>BreakOutManual</name>
     <message>
-        <location filename="../BreakOutManual.js" line="+80"/>
         <source>Choose line, arc, circle, ellipse or polyline to break up</source>
-        <translation>Scegli linea, arco, cerchio, ellisse o polilinea</translation>
+        <translation type="vanished">Scegli linea, arco, cerchio, ellisse o polilinea</translation>
+    </message>
+    <message>
+        <location filename="../BreakOutManual.js" line="+80"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
+        <translation>Scegli linea, arco, cerchio, ellisse, spline o polilinea</translation>
     </message>
     <message>
         <location line="+3"/>

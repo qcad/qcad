@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -55,7 +56,7 @@
         <location filename="../src/entity/RLineEntity.cpp" line="+82"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+70"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+83"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+86"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+78"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -222,7 +223,7 @@
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+3"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+10"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
@@ -516,9 +517,11 @@
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-5"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-12"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location line="+1"/>
+        <location line="+3"/>
         <location line="+1"/>
         <source>Vertex</source>
         <translation>Vrchol</translation>
@@ -569,7 +572,7 @@
         <translation>Šípka</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-5"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
         <translation>Vzor krivky</translation>
     </message>
@@ -582,6 +585,21 @@
         <location line="+4"/>
         <source>Bulge</source>
         <translation>Vypulkina</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Start Width</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>End Width</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Global Width</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>

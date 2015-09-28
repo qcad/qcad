@@ -4,13 +4,12 @@
 <context>
     <name>BreakOut</name>
     <message>
-        <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle or ellipse to auto trim</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Wybierz linię, łuk, okrąg lub elipsę do wykończenia auto</translation>
+        <translation type="obsolete">Wybierz linię, łuk, okrąg lub elipsę do wykończenia auto</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
         <translation type="unfinished"></translation>
     </message>

@@ -70,7 +70,7 @@
         <translation>Только для чтения</translation>
     </message>
     <message>
-        <location line="+54"/>
+        <location line="+53"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
         <translation>Вы хотите сохранить сделанные изменения в&lt;br&gt;документе &quot;%1&quot;?</translation>
     </message>

@@ -32,12 +32,12 @@
         <translation>Doppelklick auf Blockreferenz öffnet Block</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+20"/>
         <source>Right double-click to reset</source>
         <translation>Rechts-Doppelklick zum Zurücksetzen</translation>
     </message>
     <message>
-        <location line="-42"/>
+        <location line="-52"/>
         <source>Right-Click</source>
         <translation>Rechtsklick</translation>
     </message>
@@ -47,7 +47,12 @@
         <translation>Rechtsklick zum Deselektieren von Objekten</translation>
     </message>
     <message>
-        <location line="+46"/>
+        <location line="+36"/>
+        <source>Double-click to select contour</source>
+        <translation>Doppelklick verwenden, um Kontouren zu selektieren</translation>
+    </message>
+    <message>
+        <location line="+20"/>
         <source>Cursor Range</source>
         <translation>Zeigerreichweite</translation>
     </message>

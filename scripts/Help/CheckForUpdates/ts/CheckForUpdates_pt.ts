@@ -4,11 +4,21 @@
 <context>
     <name>CheckForUpdates</name>
     <message>
-        <location filename="../CheckForUpdates.js" line="+58"/>
+        <location filename="../CheckForUpdates.js" line="+62"/>
         <location filename="../CheckForUpdatesDialog.ui" line="+14"/>
         <source>Checking for Updates...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Verifique se há Atualizações...</translation>
+    </message>
+    <message>
+        <location line="+8"/>
+        <source>Version information not found.</source>
+        <translation>Informações sobre a versão não encontrado.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>No connection to server or file not found. Please try again later.</source>
+        <translation>Sem conexão com o servidor ou o arquivo não foi encontrado. Por favor tente de novo mais tarde.</translation>
     </message>
     <message>
         <location filename="../CheckForUpdatesInit.js" line="+6"/>
@@ -17,13 +27,12 @@
         <translation>Verifique se há &amp;atualizações...</translation>
     </message>
     <message>
-        <location filename="../CheckForUpdatesDialog.ui" line="+10"/>
         <source>about:blank</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>sobre:em branco</translation>
+        <translation type="vanished">sobre:em branco</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location filename="../CheckForUpdatesDialog.ui" line="+53"/>
         <source>Automatically check for updates</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Verifique automaticamente por atualizações</translation>

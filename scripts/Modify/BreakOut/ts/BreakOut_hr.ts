@@ -5,11 +5,6 @@
     <name>BreakOut</name>
     <message>
         <location filename="../BreakOut.js" line="+58"/>
-        <source>Choose line, arc, circle or ellipse to auto trim</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+4"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
         <translation type="unfinished"></translation>
     </message>

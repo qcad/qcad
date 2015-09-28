@@ -62,7 +62,7 @@
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location line="+287"/>
+        <location line="+273"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>アクティブツール:</translation>
@@ -300,7 +300,7 @@
         <translation>測定値</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+114"/>
         <source>Left</source>
         <translation>左</translation>
     </message>

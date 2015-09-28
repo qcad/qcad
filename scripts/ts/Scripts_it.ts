@@ -67,7 +67,7 @@
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="+287"/>
+        <location line="+273"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -324,7 +324,7 @@
         <translation>Valore misurato</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+114"/>
         <source>Left</source>
         <translation>Sinistra</translation>
     </message>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ru">
 <context>
@@ -222,7 +223,7 @@
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+6"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+10"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
@@ -516,11 +517,11 @@
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-8"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-12"/>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location line="+1"/>
+        <location line="+3"/>
         <location line="+1"/>
         <source>Vertex</source>
         <translation>Вершина</translation>
@@ -571,7 +572,7 @@
         <translation>Стрелка</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
         <translation>Шаблон ломаной</translation>
     </message>
@@ -586,7 +587,7 @@
         <translation>Выпуклость</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>Start Width</source>
         <translation>Начальная ширина</translation>
     </message>

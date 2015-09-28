@@ -43,6 +43,11 @@
     </message>
     <message>
         <location line="+10"/>
+        <source>Double-click to select contour</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Right double-click to reset</source>
         <translation type="unfinished"></translation>
     </message>

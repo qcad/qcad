@@ -20,12 +20,11 @@
         <translation>&amp;Salir del segmento</translation>
     </message>
     <message>
-        <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle or ellipse to auto trim</source>
-        <translation>Elija línea, arco, círculo o elipse</translation>
+        <translation type="vanished">Elija línea, arco, círculo o elipse</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
         <translation>Seleccionar línea, arco, círculo, elipse, spline o polilínea</translation>
     </message>

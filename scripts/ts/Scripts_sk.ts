@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -61,7 +62,7 @@
         <translation>Zrušiť</translation>
     </message>
     <message>
-        <location line="+287"/>
+        <location line="+273"/>
         <location line="+133"/>
         <source>Active Tool:</source>
         <translation>Aktívny Nástroj:</translation>
@@ -97,7 +98,7 @@
         <translation>Prvok je na zamknutej vrstve.</translation>
     </message>
     <message>
-        <location line="+86"/>
+        <location line="+85"/>
         <source>Entity is not a block reference.</source>
         <translation>Prvok nie je blok.</translation>
     </message>
@@ -299,7 +300,7 @@
         <translation>Nameraná hodnota</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+114"/>
         <source>Left</source>
         <translation>Vľavo</translation>
     </message>

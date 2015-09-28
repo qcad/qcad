@@ -4,12 +4,11 @@
 <context>
     <name>BreakOut</name>
     <message>
-        <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle or ellipse to auto trim</source>
-        <translation>Izberi črto, lok, krog ali elipso za samodejno krajšanje</translation>
+        <translation type="vanished">Izberi črto, lok, krog ali elipso za samodejno krajšanje</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
         <translation type="unfinished"></translation>
     </message>
