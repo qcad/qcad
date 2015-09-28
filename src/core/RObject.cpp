@@ -250,8 +250,14 @@ bool RObject::setMemberZ(QList<RVector>& variable, const QVariant& value,
  *      the double the value.
  */
 bool RObject::setMemberVector(QList<RVector>& variable, const QVariant& value, RObject::XYZ xyz) {
+    // list might change to invalid (e.g. for spline with fit points, converted to spline with control points):
+    if (!value.isValid()) {
+        variable.clear();
+        return true;
+    }
+
     if (!value.canConvert<QList<QPair<int, double> > >()) {
-        qWarning() << QString("RObject::setMemberVector: '%1' is not a QList<QPair<int, double> >").arg(value.toString());
+        qWarning() << "RObject::setMemberVector: '" << value << "' is not a QList<QPair<int, double> >";
         return false;
     }
 

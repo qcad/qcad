@@ -23,11 +23,17 @@ RPropertyChange::RPropertyChange(RPropertyTypeId propertyTypeId, QVariant oldVal
     propertyTypeId(propertyTypeId) {
 
     if (oldValue.type()==QVariant::UserType &&
-        oldValue.canConvert<QList<double> >() &
-        newValue.canConvert<QList<double> >()) {
+        (oldValue.canConvert<QList<double> >() || !oldValue.isValid()) &&
+        (newValue.canConvert<QList<double> >() || !newValue.isValid())) {
 
-        QList<double> oldList = oldValue.value<QList<double> >();
-        QList<double> newList = newValue.value<QList<double> >();
+        QList<double> oldList;
+        if (oldValue.isValid()) {
+            oldList = oldValue.value<QList<double> >();
+        }
+        QList<double> newList;
+        if (newValue.isValid()) {
+            newList = newValue.value<QList<double> >();
+        }
 
         QList<QPair<int, double> > oldCompact;
         QList<QPair<int, double> > newCompact;
