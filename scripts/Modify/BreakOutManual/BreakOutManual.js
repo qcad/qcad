@@ -77,7 +77,7 @@ BreakOutManual.prototype.setState = function(state) {
         di.setClickMode(RAction.PickEntity);
         var trFirstPoint;
         if (RSpline.hasProxy() && RPolyline.hasProxy()) {
-            trFirstPoint = qsTr("Choose line, arc, circle, ellipse or polyline to break up");
+            trFirstPoint = qsTr("Choose line, arc, circle, ellipse, spline or polyline to break up");
         }
         else {
             trFirstPoint = qsTr("Choose line, arc, circle or ellipse to break up");
