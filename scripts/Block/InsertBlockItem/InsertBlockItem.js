@@ -74,7 +74,13 @@ InsertBlockItem.prototype.beginEvent = function() {
         err = this.diItem.importFile(path, "", false);
     }
     else {
-        path = QUrl.fromPercentEncoding(url.encodedPath());
+        if (isFunction(url.encodedPath)) {
+            path = QUrl.fromPercentEncoding(url.encodedPath());
+        }
+        else {
+            path = url.path();
+        }
+
         err = this.diItem.importUrl(url, "", false);
     }
 
