@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Decimal Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Decimale punt:</translation>
     </message>
     <message>
         <location line="+10"/>

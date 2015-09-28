@@ -61,7 +61,7 @@
     <message>
         <location line="+6"/>
         <source>Show large origin axis</source>
-        <translation>Grosses Fadenkreuz</translation>
+        <translation>Grosse Ursprungsachsen anzeigen</translation>
     </message>
     <message>
         <location line="+71"/>
