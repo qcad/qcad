@@ -8,7 +8,7 @@ var credits =
                               "drawing dovetail joint lines,<br>" +
                               "MOL file import." 
                               ],
-        [ "marzof",           "Double-click to select contour."
+        [ "Marco Ferrara",    "Double-click to select contour."
                               ],
         [ "Robert S.",        "Direct distance entry,<br>" +
                               "Snap > X/Y from Points,<br>" +
