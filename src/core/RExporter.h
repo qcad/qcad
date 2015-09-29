@@ -308,6 +308,14 @@ public:
         pixelSizeHint = v;
     }
 
+    bool getPixelUnit() const {
+        return pixelUnit;
+    }
+
+    void setPixelUnit(bool on) {
+        pixelUnit = on;
+    }
+
 protected:
     RDocument* document;
     QPen currentPen;
@@ -324,6 +332,7 @@ protected:
     bool visualExporter;
     QString errorMessage;
     double pixelSizeHint;
+    bool pixelUnit;
 
 private:
     RS::ProjectionRenderingHint projectionRenderingHint;

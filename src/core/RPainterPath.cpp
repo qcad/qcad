@@ -276,6 +276,14 @@ bool RPainterPath::getInheritPen() const {
     return getMode(RPainterPath::InheritPen);
 }
 
+void RPainterPath::setPixelUnit(bool on) {
+    setMode(RPainterPath::PixelUnit, on);
+}
+
+bool RPainterPath::getPixelUnit() const {
+    return getMode(RPainterPath::PixelUnit);
+}
+
 void RPainterPath::setFeatureSize(double s) {
     featureSize = s;
 }

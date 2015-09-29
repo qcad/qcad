@@ -47,15 +47,16 @@
 
 </private><public>public:
     <enum>enum <name>Mode</name> <block>{
-        <expr><name>NoModes</name> = 0x00</expr>,
-        <expr><name>Selected</name> = 0x01</expr>,
-        <expr><name>Highlighted</name> = 0x02</expr>,
-        <expr><name>Invalid</name> = 0x04</expr>,
-        <expr><name>FixedPenColor</name> = 0x08</expr>,
-        <expr><name>FixedBrushColor</name> = 0x10</expr>,
-        <expr><name>AutoRegen</name> = 0x20</expr>,            <comment type="line">// arcs (regen on zoom change)</comment>
-        <expr><name>AlwaysRegen</name> = 0x40</expr>,
-        <expr><name>InheritPen</name> = 0x80</expr>
+        <expr><name>NoModes</name> = 0x000</expr>,
+        <expr><name>Selected</name> = 0x001</expr>,
+        <expr><name>Highlighted</name> = 0x002</expr>,
+        <expr><name>Invalid</name> = 0x004</expr>,
+        <expr><name>FixedPenColor</name> = 0x008</expr>,
+        <expr><name>FixedBrushColor</name> = 0x010</expr>,
+        <expr><name>AutoRegen</name> = 0x020</expr>,            <comment type="line">// arcs (regen on zoom change)</comment>
+        <expr><name>AlwaysRegen</name> = 0x040</expr>,
+        <expr><name>InheritPen</name> = 0x080</expr>,
+        <expr><name>PixelUnit</name> = 0x100</expr>             <comment type="line">// path displayed in pixel (not drawing units)</comment>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Modes</argument>, <argument>Mode</argument>)</argument_list></macro>
 
@@ -194,6 +195,9 @@
 
     <function_decl><type><name>void</name></type> <name>setInheritPen</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>getInheritPen</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setPixelUnit</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>getPixelUnit</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>setFeatureSize</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getFeatureSize</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>

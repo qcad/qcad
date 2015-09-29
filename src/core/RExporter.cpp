@@ -55,7 +55,8 @@ RExporter::RExporter()
       screenBasedLinetypes(false),
       visualExporter(false),
       pixelSizeHint(0.5),
-      projectionRenderingHint(RS::RenderThreeD) {
+      projectionRenderingHint(RS::RenderThreeD),
+      pixelUnit(false) {
 
     currentPen.setColor(Qt::white);
     currentPen.setWidth(3);
@@ -77,7 +78,8 @@ RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProg
       screenBasedLinetypes(false),
       visualExporter(false),
       pixelSizeHint(0.5),
-      projectionRenderingHint(RS::RenderThreeD) {
+      projectionRenderingHint(RS::RenderThreeD),
+      pixelUnit(false) {
 
     currentPen.setColor(Qt::white);
     currentPen.setWidth(3);

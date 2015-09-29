@@ -158,6 +158,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getInheritPen, "getInheritPen");
             
+            REcmaHelper::registerFunction(&engine, proto, setPixelUnit, "setPixelUnit");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPixelUnit, "getPixelUnit");
+            
             REcmaHelper::registerFunction(&engine, proto, setFeatureSize, "setFeatureSize");
             
             REcmaHelper::registerFunction(&engine, proto, getFeatureSize, "getFeatureSize");
@@ -269,6 +273,11 @@
 
     ctor.setProperty("InheritPen",
     QScriptValue(RPainterPath::InheritPen),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("PixelUnit",
+    QScriptValue(RPainterPath::PixelUnit),
     QScriptValue::ReadOnly);
 
 
@@ -3374,6 +3383,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::getInheritPen", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::setPixelUnit
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::setPixelUnit", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setPixelUnit";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("setPixelUnit", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPixelUnit(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setPixelUnit().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::setPixelUnit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::getPixelUnit
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::getPixelUnit", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getPixelUnit";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("getPixelUnit", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getPixelUnit();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getPixelUnit().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::getPixelUnit", context, engine);
             return result;
         }
          QScriptValue

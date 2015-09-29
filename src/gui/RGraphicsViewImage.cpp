@@ -851,8 +851,15 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
     QListIterator<RPainterPath> i(painterPaths);
     while (i.hasNext()) {
         RPainterPath path = i.next();
-        //qDebug() << "pp selected: " << path.isSelected();
-        //qDebug() << "pp pen: " << path.getPen();
+
+        if (path.getPixelUnit()) {
+            // path is displayed in pixels, not drawing unit:
+            RVector sp = path.getStartPoint();
+            path.move(-sp);
+            path.scale(1/factor,1/factor);
+            path.move(sp);
+        }
+
         path.move(paintOffset);
         RBox pathBB = path.getBoundingBox();
 

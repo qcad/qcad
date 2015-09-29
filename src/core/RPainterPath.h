@@ -46,15 +46,16 @@ class QCADCORE_EXPORT RPainterPath : public QPainterPath {
 
 public:
     enum Mode {
-        NoModes = 0x00,
-        Selected = 0x01,
-        Highlighted = 0x02,
-        Invalid = 0x04,
-        FixedPenColor = 0x08,
-        FixedBrushColor = 0x10,
-        AutoRegen = 0x20,            // arcs (regen on zoom change)
-        AlwaysRegen = 0x40,
-        InheritPen = 0x80
+        NoModes = 0x000,
+        Selected = 0x001,
+        Highlighted = 0x002,
+        Invalid = 0x004,
+        FixedPenColor = 0x008,
+        FixedBrushColor = 0x010,
+        AutoRegen = 0x020,            // arcs (regen on zoom change)
+        AlwaysRegen = 0x040,
+        InheritPen = 0x080,
+        PixelUnit = 0x100             // path displayed in pixel (not drawing units)
     };
     Q_DECLARE_FLAGS(Modes, Mode)
 
@@ -193,6 +194,9 @@ public:
 
     void setInheritPen(bool on);
     bool getInheritPen() const;
+
+    void setPixelUnit(bool on);
+    bool getPixelUnit() const;
 
     void setFeatureSize(double s);
     double getFeatureSize() const;

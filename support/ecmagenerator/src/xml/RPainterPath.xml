@@ -19,6 +19,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="AutoRegen" />
       <value name="AlwaysRegen" />
       <value name="InheritPen" />
+      <value name="PixelUnit" />
     </enum>
     <constructor>
       <variant />
@@ -354,6 +355,19 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="getInheritPen" cppName="getInheritPen"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setPixelUnit" cppName="setPixelUnit"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getPixelUnit" cppName="getPixelUnit"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />

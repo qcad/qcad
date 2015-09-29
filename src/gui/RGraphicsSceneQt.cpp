@@ -157,6 +157,7 @@ bool RGraphicsSceneQt::beginPath() {
 
     currentPainterPath.setBrush(QBrush(Qt::NoBrush));
     currentPainterPath.setPixelSizeHint(pixelSizeHint);
+    currentPainterPath.setPixelUnit(pixelUnit);
 
     if (!exportToPreview) {
         if (entity!=NULL && entity->isSelected()) {

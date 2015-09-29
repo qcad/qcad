@@ -177,6 +177,12 @@
         getInheritPen
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setPixelUnit
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPixelUnit
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setFeatureSize
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
