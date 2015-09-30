@@ -164,6 +164,7 @@ void REntity::copyAttributesFrom(REntity* entity, bool copyBlockId) {
     setLineweight(entity->getLineweight());
     setLinetypeId(entity->getLinetypeId());
     setLinetypeScale(entity->getLinetypeScale());
+    setDrawOrder(entity->getDrawOrder());
 }
 
 QList<RVector> REntity::getIntersectionPoints(
