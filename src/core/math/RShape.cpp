@@ -668,7 +668,10 @@ QList<RVector> RShape::getIntersectionPointsLE(const RLine& line1,
         double ad2 = fabs(RMath::getAngleDifference180(a, line1.getDirection2()));
 
         if (ad1 < 1.0e-2 || ad2 < 1.0e-2) {
-            res.append(tangents[i].getEndPoint());
+            RVector candidate = tangents[i].getEndPoint();
+            if (!limited1 || line1.isOnShape(candidate)) {
+                res.append(candidate);
+            }
 
             // no need to continue: max. one tangent possible:
             return res;
