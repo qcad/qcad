@@ -88,12 +88,10 @@ void RPolylineEntity::init() {
     RPolylineEntity::PropertyVertexNZ.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"));
     RPolylineEntity::PropertyBulgeN.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Bulge"));
 
-    if (RPolyline::hasProxy()) {
-        RPolylineEntity::PropertyStartWidthN.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Start Width"));
-        RPolylineEntity::PropertyEndWidthN.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "End Width"));
+    RPolylineEntity::PropertyStartWidthN.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Start Width"));
+    RPolylineEntity::PropertyEndWidthN.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "End Width"));
 
-        RPolylineEntity::PropertyGlobalWidth.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Global Width"));
-    }
+    RPolylineEntity::PropertyGlobalWidth.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Global Width"));
 
     RPolylineEntity::PropertyLength.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
 }
@@ -135,9 +133,9 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
         v.setValue(data.closed);
         return qMakePair(v, RPropertyAttributes());
     } else if (propertyTypeId == PropertyPolylineGen) {
-            QVariant v;
-            v.setValue(data.polylineGen);
-            return qMakePair(v, RPropertyAttributes());
+        QVariant v;
+        v.setValue(data.polylineGen);
+        return qMakePair(v, RPropertyAttributes());
     } else if (propertyTypeId == PropertyVertexNX) {
         QVariant v;
         v.setValue(RVector::getXList(data.vertices));
