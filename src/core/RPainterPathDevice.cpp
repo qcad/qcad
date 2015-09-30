@@ -59,6 +59,8 @@ int RPainterPathDevice::metric(PaintDeviceMetric metric) const {
 #if QT_VERSION >= 0x050000
     case QPaintDevice::PdmDevicePixelRatio:
         return 1;
+#endif
+#if QT_VERSION >= 0x050600
     case QPaintDevice::PdmDevicePixelRatioScaled:
         return 1;
 #endif
