@@ -303,7 +303,7 @@ Invertido</translatorcomment>
         <location line="+3"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+10"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+8"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
@@ -561,7 +561,7 @@ Punto final (y):</translatorcomment>
         <translation>Punto final</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-14"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-12"/>
         <source>Polyline Pattern</source>
         <translation>Patrón polilínea</translation>
     </message>
@@ -576,7 +576,7 @@ No se puede agregar a una polínea cerrada.</translatorcomment>
         <translation>Cerrado</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="+6"/>
         <source>Start Width</source>
         <translation>Ancho inicial</translation>
     </message>
@@ -597,11 +597,11 @@ No se puede agregar a una polínea cerrada.</translatorcomment>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-8"/>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location line="+3"/>
+        <location line="+2"/>
         <location line="+1"/>
         <source>Vertex</source>
         <translatorcomment>--google--
@@ -610,7 +610,7 @@ Primer vértice</translatorcomment>
         <translation>Vértice</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-4"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-3"/>
         <source>Bulge</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Bulto</translation>

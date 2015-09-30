@@ -193,7 +193,7 @@
         <translation>Rayon chuté en dessous de zéro, après %1 arc(s) concentrique(s).</translation>
     </message>
     <message>
-        <location line="+686"/>
+        <location line="+684"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>

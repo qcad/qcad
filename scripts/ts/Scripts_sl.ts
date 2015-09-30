@@ -171,7 +171,7 @@
         <translation>Radius je padel pod 0.0 po %1 kocentričnih lokih.</translation>
     </message>
     <message>
-        <location line="+686"/>
+        <location line="+684"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vsaj dve točki sta identični.</translation>

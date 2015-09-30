@@ -213,7 +213,7 @@ Ferramentas CAD</translatorcomment>
         <translation>O Raio ficou abaixo de 0,0, após %1 arco(s) concêntrico(s).</translation>
     </message>
     <message>
-        <location line="+686"/>
+        <location line="+684"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>

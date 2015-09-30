@@ -223,7 +223,7 @@
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+10"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+8"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
@@ -517,11 +517,11 @@
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-12"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-10"/>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location line="+3"/>
+        <location line="+2"/>
         <location line="+1"/>
         <source>Vertex</source>
         <translatorcomment>temer krivulje?</translatorcomment>
@@ -573,7 +573,7 @@
         <translation>Puščica</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-8"/>
         <source>Polyline Pattern</source>
         <translation>Vzorec lomljenka</translation>
     </message>
@@ -588,7 +588,7 @@
         <translation>Izboklina</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Start Width</source>
         <translation type="unfinished"></translation>
     </message>

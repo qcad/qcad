@@ -193,7 +193,7 @@
         <translation>Radio caído por debajo de 0,0 después %1 de arcos concéntricos.</translation>
     </message>
     <message>
-        <location line="+686"/>
+        <location line="+684"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
