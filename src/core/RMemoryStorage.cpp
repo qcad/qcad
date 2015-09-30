@@ -1022,7 +1022,7 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
         }
 
         // assign draw order to new entities:
-        if (!entity.isNull()) {
+        if (!entity.isNull() && entity->getDrawOrder()==0) {
             entity->setDrawOrder(getMaxDrawOrder());
             setMaxDrawOrder(getMaxDrawOrder()+1);
         }
