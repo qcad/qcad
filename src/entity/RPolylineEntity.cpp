@@ -112,12 +112,7 @@ bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
         ret = ret || RObject::setMember(data.endWidths, value, PropertyEndWidthN == propertyTypeId);
 
         if (PropertyGlobalWidth==propertyTypeId) {
-            for (int i=0; i<data.startWidths.length(); i++) {
-                data.startWidths[i] = value.toDouble();
-            }
-            for (int i=0; i<data.endWidths.length(); i++) {
-                data.endWidths[i] = value.toDouble();
-            }
+            data.setGlobalWidth(value.toDouble());
             ret = true;
         }
     }

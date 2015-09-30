@@ -90,6 +90,7 @@
     <function_decl><type><name>void</name></type> <name>setBulgeAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>, <param><decl><type><name>double</name></type> <name>b</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>hasArcSegments</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>void</name></type> <name>setGlobalWidth</name><parameter_list>(<param><decl><type><name>double</name></type> <name>w</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setStartWidthAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>, <param><decl><type><name>double</name></type> <name>w</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getStartWidthAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setEndWidthAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>, <param><decl><type><name>double</name></type> <name>w</name></decl></param>)</parameter_list>;</function_decl>

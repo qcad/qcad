@@ -40,6 +40,16 @@ QList<RBox> RPolylineData::getBoundingBoxes(bool ignoreEmpty) const {
     Q_UNUSED(ignoreEmpty)
 
     QList<RBox> ret;
+
+    if (hasWidths()) {
+        QList<RPolyline> outline = getOutline();
+        for (int i=0; i<outline.length(); i++) {
+            Q_ASSERT(!outline[i].hasWidths());
+            ret.append(outline[i].getBoundingBox());
+        }
+        return ret;
+    }
+
     QList<QSharedPointer<RShape> > shapes = getExploded();
     for (int i=0; i<shapes.size(); i++) {
         ret.append(shapes.at(i)->getBoundingBox());
@@ -47,10 +57,8 @@ QList<RBox> RPolylineData::getBoundingBoxes(bool ignoreEmpty) const {
     return ret;
 }
 
-QList<RVector> RPolylineData::getReferencePoints(
-        RS::ProjectionRenderingHint hint) const {
+QList<RVector> RPolylineData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
-
     return getVertices();
 }
 

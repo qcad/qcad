@@ -400,6 +400,15 @@ bool RPolyline::hasArcSegments() const {
     return false;
 }
 
+void RPolyline::setGlobalWidth(double w) {
+    for (int i=0; i<startWidths.length(); i++) {
+        startWidths[i] = w;
+    }
+    for (int i=0; i<endWidths.length(); i++) {
+        endWidths[i] = w;
+    }
+}
+
 void RPolyline::setStartWidthAt(int i, double w) {
     if (i<0 || i>=startWidths.size()) {
         return;
@@ -835,6 +844,16 @@ RS::Side RPolyline::getSideOfPoint(const RVector& point) const {
 RBox RPolyline::getBoundingBox() const {
     RBox ret;
 
+    if (hasWidths()) {
+        QList<RPolyline> outline = getOutline();
+        for (int i=0; i<outline.length(); i++) {
+            Q_ASSERT(!outline[i].hasWidths());
+            RBox bb = outline[i].getBoundingBox();
+            ret.growToInclude(bb);
+        }
+        return ret;
+    }
+
     if (countVertices()==1) {
         ret = RBox(vertices.at(0), vertices.at(0));
     }
@@ -1025,6 +1044,39 @@ RVector RPolyline::getVectorTo(const RVector& point, bool limited, double strict
         RVector v = (*it)->getVectorTo(point, limited, strictRange);
         if (v.isValid() && (!ret.isValid() || v.getMagnitude()<ret.getMagnitude())) {
             ret = v;
+        }
+    }
+
+    return ret;
+}
+
+double RPolyline::getDistanceTo(const RVector& point, bool limited, double strictRange) const {
+    if (!hasWidths()) {
+        return RShape::getDistanceTo(point, limited, strictRange);
+    }
+
+    Q_UNUSED(limited)
+
+    if (!getBoundingBox().grow(strictRange).contains(point)) {
+        return RNANDOUBLE;
+    }
+
+    double ret = RNANDOUBLE;
+
+    QList<RPolyline> outline = getOutline();
+    for (int i=0; i<outline.length(); i++) {
+        Q_ASSERT(!outline[i].hasWidths());
+        double d = outline[i].getDistanceTo(point);
+        if (RMath::isNaN(ret) || d<ret) {
+            ret = d;
+        }
+
+        if (outline[i].isGeometricallyClosed()) {
+            if (outline[i].contains(point)) {
+                if (RMath::isNaN(ret) || strictRange<ret) {
+                    ret = strictRange;
+                }
+            }
         }
     }
 

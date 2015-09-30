@@ -220,6 +220,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="setGlobalWidth" cppName="setGlobalWidth"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="w"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="setStartWidthAt" cppName="setStartWidthAt"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

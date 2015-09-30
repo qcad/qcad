@@ -147,7 +147,6 @@ RVector RHatchData::getPointOnEntity() const {
 
 double RHatchData::getDistanceTo(const RVector& point, bool limited, double range, bool draft, double strictRange) const {
     Q_UNUSED(limited)
-    Q_UNUSED(strictRange)
 
     if (!getBoundingBox().grow(strictRange).contains(point)) {
         return RNANDOUBLE;

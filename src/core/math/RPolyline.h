@@ -89,6 +89,7 @@ public:
     void setBulgeAt(int i, double b);
     bool hasArcSegments() const;
 
+    void setGlobalWidth(double w);
     void setStartWidthAt(int i, double w);
     double getStartWidthAt(int i) const;
     void setEndWidthAt(int i, double w);
@@ -127,6 +128,7 @@ public:
 
     virtual RVector getVectorTo(const RVector& point,
             bool limited = true, double strictRange = RMAXDOUBLE) const;
+    virtual double getDistanceTo(const RVector& point, bool limited = true, double strictRange = RMAXDOUBLE) const;
 
     int getClosestSegment(const RVector& point) const;
 

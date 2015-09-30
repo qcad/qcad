@@ -150,6 +150,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, hasArcSegments, "hasArcSegments");
             
+            REcmaHelper::registerFunction(&engine, proto, setGlobalWidth, "setGlobalWidth");
+            
             REcmaHelper::registerFunction(&engine, proto, setStartWidthAt, "setStartWidthAt");
             
             REcmaHelper::registerFunction(&engine, proto, getStartWidthAt, "getStartWidthAt");
@@ -2514,6 +2516,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::hasArcSegments", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::setGlobalWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::setGlobalWidth", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::setGlobalWidth";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("setGlobalWidth", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setGlobalWidth(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.setGlobalWidth().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setGlobalWidth", context, engine);
             return result;
         }
          QScriptValue

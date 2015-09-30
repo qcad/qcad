@@ -143,6 +143,9 @@
         hasArcSegments
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setGlobalWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setStartWidthAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
