@@ -451,6 +451,7 @@ void RDimensionData::initTextData() const {
     textData.setColor(getColor());
     textData.setLineweight(getLineweight());
     textData.setSelected(isSelected());
+    textData.setDimensionLabel(true);
 
     //qDebug() << "label color: " << textData.getColor();
     //qDebug() << "textData: " << textData;

@@ -510,7 +510,9 @@ void RTextRenderer::render() {
             stackedText = QRegExp(rxStackedText).exactMatch(formatting);
             lineFeed = QRegExp(rxLineFeed).exactMatch(formatting);
             paragraphFeed = QRegExp(rxParagraphFeed).exactMatch(formatting);
-            xFeed = QRegExp(rxXFeed).exactMatch(formatting);
+            if (textData.isDimensionLabel()) {
+                xFeed = QRegExp(rxXFeed).exactMatch(formatting);
+            }
             blockEnd = QRegExp(rxEndBlock).exactMatch(formatting);
         }
 
@@ -842,6 +844,9 @@ void RTextRenderer::render() {
                     p.transform(lineTransform);
                     p.setFeatureSize(featureSize);
                     painterPaths.append(p);
+                    //if (!xFeed) {
+                        // TODO: don't count line after xfeed for vertical alignment:
+                    //}
                     boundingBox.growToInclude(p.getBoundingBox());
                 }
 

@@ -242,6 +242,15 @@ public:
         return simple;
     }
 
+    void setDimensionLabel(bool on) {
+        dimensionLabel = on;
+        update();
+    }
+
+    bool isDimensionLabel() const {
+        return dimensionLabel;
+    }
+
     virtual QList<RVector> getReferencePoints(
         RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 
@@ -311,6 +320,7 @@ protected:
     double angle;
     double xScale;
     bool simple;
+    bool dimensionLabel;
 
     mutable double height;
     mutable double width;
