@@ -37,6 +37,7 @@ QChar RTextRenderer::chDiameter = QChar(0x00f8);
 
 QString RTextRenderer::rxLineFeed = "\\\\p(?:x?i(\\d*\\.?\\d+);)?";
 QString RTextRenderer::rxParagraphFeed = "\\\\P";
+QString RTextRenderer::rxXFeed = "\\\\X";
 QString RTextRenderer::rxHeightChange = "\\\\H(\\d*\\.?\\d+)(x?);";
 //QString RTextRenderer::rxRelativeHeightChange = "";
 QString RTextRenderer::rxStackedText = "\\\\S([^^]*)\\^([^;]*);";
@@ -78,6 +79,7 @@ QString RTextRenderer::rxUnicode = "\\\\[Uu]\\+([0-9a-fA-F]{4})";
 QString RTextRenderer::rxAll = "("
     + RTextRenderer::rxLineFeed + "|"
     + RTextRenderer::rxParagraphFeed + "|"
+    + RTextRenderer::rxXFeed + "|"
     + RTextRenderer::rxHeightChange + "|"
     + RTextRenderer::rxStackedText + "|"
     + RTextRenderer::rxColorChangeIndex + "|"
@@ -491,6 +493,7 @@ void RTextRenderer::render() {
 
         bool lineFeed = false;
         bool paragraphFeed = false;
+        bool xFeed = false;
         bool heightChange = false;
         bool stackedText = false;
         bool fontChange = false;
@@ -507,6 +510,7 @@ void RTextRenderer::render() {
             stackedText = QRegExp(rxStackedText).exactMatch(formatting);
             lineFeed = QRegExp(rxLineFeed).exactMatch(formatting);
             paragraphFeed = QRegExp(rxParagraphFeed).exactMatch(formatting);
+            xFeed = QRegExp(rxXFeed).exactMatch(formatting);
             blockEnd = QRegExp(rxEndBlock).exactMatch(formatting);
         }
 
@@ -514,7 +518,7 @@ void RTextRenderer::render() {
         bool end = (i==literals.size()-1);
 
         // first line is empty:
-        if (textBlock.trimmed().isEmpty() && (lineFeed || paragraphFeed || end)) {
+        if (textBlock.trimmed().isEmpty() && (lineFeed || paragraphFeed || xFeed || end)) {
             if (start) {
                 leadingEmptyLines = true;
             }
@@ -526,7 +530,7 @@ void RTextRenderer::render() {
         // reached a new text block that needs to be rendered separately
         // due to line feed, height change, font change, ...:
         if (target==RichText ||
-            lineFeed || paragraphFeed || heightChange || stackedText ||
+            lineFeed || paragraphFeed || xFeed || heightChange || stackedText ||
             fontChange || colorChange || end
             || (blockEnd && blockChangedHeightOrFont)) {
 
@@ -597,7 +601,7 @@ void RTextRenderer::render() {
             }
 
             // empty text, might be line feed, we need ascent, descent anyway:
-            else if ((lineFeed || paragraphFeed || end) && !blockHeight.isEmpty()) {
+            else if ((lineFeed || paragraphFeed || xFeed || end) && !blockHeight.isEmpty()) {
                 if (target==PainterPaths) {
                     double horizontalAdvance = 0.0;
                     double horizontalAdvanceNoSpacing = 0.0;
@@ -717,7 +721,7 @@ void RTextRenderer::render() {
             }
 
             // prepare for next text block:
-            if (lineFeed || paragraphFeed || end) {
+            if (lineFeed || paragraphFeed || xFeed || end) {
                 if (!textBlock.isEmpty()) {
                     if (textBlock.at(textBlock.length()-1).isSpace()) {
                         trailingSpaces = true;
@@ -743,7 +747,7 @@ void RTextRenderer::render() {
             // handle text line.
             // add all painter paths of the current line to result set of
             // painter paths. apply line feed transformations.
-            if (lineFeed || paragraphFeed || end) {
+            if (lineFeed || paragraphFeed || xFeed || end) {
 //                qDebug() << "lineFeed: adding text line:";
 //                qDebug() << "  maxAscent: " << maxAscent;
 //                qDebug() << "  minDescent: " << minDescent;
@@ -752,7 +756,7 @@ void RTextRenderer::render() {
 //                qDebug() << "  trailingSpaces: " << trailingSpaces;
 
                 if (target==RichText) {
-                    if (lineFeed || paragraphFeed) {
+                    if (lineFeed || paragraphFeed || xFeed) {
                         richText += "<br/>";
                     }
                 }

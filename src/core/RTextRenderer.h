@@ -199,6 +199,7 @@ private:
 public:
     static QString rxLineFeed;
     static QString rxParagraphFeed;
+    static QString rxXFeed;
     static QString rxHeightChange;
     //static QString rxRelativeHeightChange;
     static QString rxStackedText;
