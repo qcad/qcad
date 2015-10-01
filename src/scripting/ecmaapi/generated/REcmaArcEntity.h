@@ -119,6 +119,9 @@
         getEndPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getMiddlePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         reverse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

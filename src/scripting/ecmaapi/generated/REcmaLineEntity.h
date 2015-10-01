@@ -89,6 +89,9 @@
         getEndPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getMiddlePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

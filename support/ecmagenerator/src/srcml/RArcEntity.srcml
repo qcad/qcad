@@ -160,6 +160,10 @@
         <return>return <expr><name>data</name>.<call><name>getEndPoint</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>RVector</name></type> <name>getMiddlePoint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getMiddlePoint</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function><type><name>bool</name></type> <name>reverse</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>data</name>.<call><name>reverse</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>

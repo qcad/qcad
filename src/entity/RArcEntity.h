@@ -159,6 +159,10 @@ public:
         return data.getEndPoint();
     }
 
+    RVector getMiddlePoint() const {
+        return data.getMiddlePoint();
+    }
+
     bool reverse() {
         return data.reverse();
     }

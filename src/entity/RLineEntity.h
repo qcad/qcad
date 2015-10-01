@@ -115,6 +115,10 @@ public:
         return data.getEndPoint();
     }
 
+    RVector getMiddlePoint() const {
+        return getData().getMiddlePoint();
+    }
+
     double getAngle() const {
         return data.getAngle();
     }

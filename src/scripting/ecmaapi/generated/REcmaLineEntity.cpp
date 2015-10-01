@@ -94,6 +94,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getEndPoint, "getEndPoint");
             
+            REcmaHelper::registerFunction(&engine, proto, getMiddlePoint, "getMiddlePoint");
+            
             REcmaHelper::registerFunction(&engine, proto, getAngle, "getAngle");
             
             REcmaHelper::registerFunction(&engine, proto, getDirection1, "getDirection1");
@@ -1698,6 +1700,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLineEntity::getEndPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLineEntity::getMiddlePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLineEntity::getMiddlePoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLineEntity::getMiddlePoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLineEntity* self = 
+                        getSelf("getMiddlePoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getMiddlePoint();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLineEntity.getMiddlePoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLineEntity::getMiddlePoint", context, engine);
             return result;
         }
          QScriptValue

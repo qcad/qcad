@@ -218,6 +218,9 @@
         getVectorTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDistanceTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getClosestSegment
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
