@@ -566,7 +566,7 @@ void RTextRenderer::render() {
 
                     // transform to scale text from 1.0 to current text height:
                     QTransform sizeTransform;
-                    sizeTransform.scale(getBlockHeight(), getBlockHeight());
+                    sizeTransform.scale(getBlockHeight() * textData.getXScale(), getBlockHeight());
 
                     // transform for current block due to xCursor position:
                     QTransform blockTransform;
@@ -668,7 +668,7 @@ void RTextRenderer::render() {
 
                         // transform to scale text from 1.0 to current text height * 0.4:
                         QTransform sizeTransform;
-                        sizeTransform.scale(getBlockHeight()*heightFactor, getBlockHeight()*heightFactor);
+                        sizeTransform.scale(getBlockHeight()*heightFactor*textData.getXScale(), getBlockHeight()*heightFactor);
 
                         // move top text more to the right for italic texts:
                         double xOffset = 0.0;
