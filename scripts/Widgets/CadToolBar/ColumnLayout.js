@@ -146,7 +146,10 @@ ColumnLayout.prototype.setGeometry = function(rect) {
     var height = this.parentWidget().height;
 
     var verticalWhenFloating = RSettings.getBoolValue("CadToolBar/VerticalWhenFloating", false);
-    var horizontal = (this.toolBar.orientation===Qt.Horizontal && verticalWhenFloating!==true);
+    var horizontal = this.toolBar.orientation===Qt.Horizontal;
+    if (this.toolBar.floating && verticalWhenFloating) {
+        horizontal = false;
+    }
     var iconSize = RSettings.getIntValue("CadToolBar/IconSize", 32);
 
     if (this.property("sHintColumns")===columns &&

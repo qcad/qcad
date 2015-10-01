@@ -78,6 +78,7 @@ CadToolBar.prototype.contextMenuEvent = function(event) {
     else {
         var tb = appWin.findChild("CadQToolBar");
 
+        // TODO: fix for Qt 5:
         if (tb.floating && !RSettings.isQt(5)) {
             var menu = new QMenu(this);
             menu.objectName = "ContextMenu";
