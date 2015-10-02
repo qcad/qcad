@@ -12,7 +12,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString" name="title"
         isConst="true" />
-        <arg type="QString &amp;" typeName="QString" name="name"
+        <arg type="QString &amp;" typeName="QString" name="regExp"
         isConst="true" />
       </variant>
     </method>

@@ -402,6 +402,18 @@ bool RObject::hasCustomProperty(const QString& title, const QString& key) const 
     return customProperties.value(title).contains(key);
 }
 
+bool RObject::hasCustomProperty(const QString& title, const QRegExp& key) const {
+    if (!customProperties.contains(title)) {
+        return false;
+    }
+    QStringList keys = customProperties.value(title).keys();
+    int i = keys.indexOf(key, 0);
+    if (i==-1) {
+        return false;
+    }
+    return true;
+}
+
 /**
  * \return Value of given custom property.
  */

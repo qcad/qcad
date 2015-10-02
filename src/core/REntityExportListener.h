@@ -41,14 +41,14 @@ class QCADCORE_EXPORT REntityExportListener {
 public:
     virtual ~REntityExportListener() {}
 
-    virtual void registerCustomProperty(const QString& title, const QString& name) {
-        registeredProperties.insert(QPair<QString, QString>(title, name));
+    virtual void registerCustomProperty(const QString& title, const QString& regExp) {
+        registeredProperties.insert(QPair<QString, QString>(title, regExp));
     }
 
     virtual bool checkCustomProperty(REntity* e) const {
         QSet<QPair<QString, QString> >::const_iterator it;
         for (it=registeredProperties.constBegin(); it!=registeredProperties.constEnd(); it++) {
-            if (e->hasCustomProperty((*it).first, (*it).second)) {
+            if (e->hasCustomProperty((*it).first, QRegExp((*it).second))) {
                 return true;
             }
         }

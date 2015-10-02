@@ -178,6 +178,12 @@ public:
 
     bool hasCustomProperties() const;
     bool hasCustomProperty(const QString& title, const QString& key) const;
+
+    /**
+     * \nonscriptable
+     */
+    bool hasCustomProperty(const QString& title, const QRegExp& key) const;
+
     QVariant getCustomProperty(const QString& title, const QString& key, const QVariant& defaultValue = RDEFAULT_QVARIANT) const;
     bool getCustomBoolProperty(const QString& title, const QString& key, bool defaultValue) const;
     void setCustomProperty(const QString& title, const QString& key, const QVariant& value);
