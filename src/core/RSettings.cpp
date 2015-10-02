@@ -312,10 +312,10 @@ void RSettings::loadTranslations(const QString& module, const QStringList& dirs)
         }
     }
 
-    if (!success) {
-        qWarning() << "Cannot load translation: " << module + "_" + locale;
-        qWarning() << "Directories: " << translationsDirs;
-    }
+//    if (!success) {
+//        qWarning() << "Cannot load translation: " << module + "_" + locale;
+//        qWarning() << "Directories: " << translationsDirs;
+//    }
 }
 
 QString RSettings::translate(const QString& context, const QString& str) {
