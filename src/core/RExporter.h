@@ -214,7 +214,7 @@ public:
     virtual void exportBoundingBoxPaths(const QList<RPainterPath>& paths);
 
     virtual void exportImage(const RImageData& image, bool forceSelected = false);
-    virtual void exportText(const RTextBasedData& text, bool forceSelected = false);
+    virtual QList<RPainterPath> exportText(const RTextBasedData& text, bool forceSelected = false);
 
     virtual void exportThickPolyline(const RPolyline& polyline) {
         RPolyline pl = polyline;

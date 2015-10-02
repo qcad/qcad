@@ -1497,7 +1497,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
     ascent = 1.08;
     descent = -0.36;
 
-    // add null pointer for text layout to indicate we have to use painter paths for this text block:
+    // add text layout with paths to indicate we have to use painter paths for this text block:
     lineBlockTransforms.append(QTransform());
     textLayouts.append(RTextLayout(ret, currentColor));
 

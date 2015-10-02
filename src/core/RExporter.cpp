@@ -1432,9 +1432,10 @@ void RExporter::exportImage(const RImageData& image, bool forceSelected) {
     Q_UNUSED(forceSelected)
 }
 
-void RExporter::exportText(const RTextBasedData& text, bool forceSelected) {
+QList<RPainterPath> RExporter::exportText(const RTextBasedData& text, bool forceSelected) {
     Q_UNUSED(text)
     Q_UNUSED(forceSelected)
+    return QList<RPainterPath>();
 }
 
 double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {

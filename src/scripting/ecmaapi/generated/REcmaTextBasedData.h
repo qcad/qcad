@@ -184,6 +184,12 @@
         isSimple
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setDimensionLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isDimensionLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getReferencePoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

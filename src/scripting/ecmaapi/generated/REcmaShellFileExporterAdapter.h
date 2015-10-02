@@ -433,7 +433,7 @@
             );
         
     
-      void exportText(
+      QList < RPainterPath > exportText(
                 const RTextBasedData & text, bool forceSelected
         = false
             );

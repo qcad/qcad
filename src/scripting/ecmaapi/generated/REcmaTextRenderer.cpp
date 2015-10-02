@@ -84,6 +84,10 @@
                 qScriptValueFromValue(&engine, RTextRenderer::rxParagraphFeed),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxXFeed",
+                qScriptValueFromValue(&engine, RTextRenderer::rxXFeed),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxHeightChange",
                 qScriptValueFromValue(&engine, RTextRenderer::rxHeightChange),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

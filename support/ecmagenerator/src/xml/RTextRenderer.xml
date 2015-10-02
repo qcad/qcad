@@ -66,6 +66,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="true" />
     <property name="rxParagraphFeed" type="QString" isConst="false"
     isStatic="true" />
+    <property name="rxXFeed" type="QString" isConst="false"
+    isStatic="true" />
     <property name="rxHeightChange" type="QString" isConst="false"
     isStatic="true" />
     <property name="rxStackedText" type="QString" isConst="false"

@@ -2293,9 +2293,14 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'void'
-    
+    // return type 'QList < RPainterPath >'
+    QList < RPainterPath > cppResult =
+        
                self->exportText(a0);
+        // return type: QList < RPainterPath >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
     } else
 
 
@@ -2343,11 +2348,16 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'void'
-    
+    // return type 'QList < RPainterPath >'
+    QList < RPainterPath > cppResult =
+        
                self->exportText(a0
         ,
     a1);
+        // return type: QList < RPainterPath >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
     } else
 
 

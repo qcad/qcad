@@ -168,6 +168,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, isSimple, "isSimple");
             
+            REcmaHelper::registerFunction(&engine, proto, setDimensionLabel, "setDimensionLabel");
+            
+            REcmaHelper::registerFunction(&engine, proto, isDimensionLabel, "isDimensionLabel");
+            
             REcmaHelper::registerFunction(&engine, proto, getReferencePoints, "getReferencePoints");
             
             REcmaHelper::registerFunction(&engine, proto, moveReferencePoint, "moveReferencePoint");
@@ -3590,6 +3594,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextBasedData::isSimple", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextBasedData::setDimensionLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedData::setDimensionLabel", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedData::setDimensionLabel";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("setDimensionLabel", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimensionLabel(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setDimensionLabel().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedData::setDimensionLabel", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextBasedData::isDimensionLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedData::isDimensionLabel", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedData::isDimensionLabel";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("isDimensionLabel", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isDimensionLabel();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.isDimensionLabel().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedData::isDimensionLabel", context, engine);
             return result;
         }
          QScriptValue

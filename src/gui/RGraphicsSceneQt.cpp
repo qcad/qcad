@@ -565,7 +565,7 @@ void RGraphicsSceneQt::exportImage(const RImageData& image, bool forceSelected) 
     }
 }
 
-void RGraphicsSceneQt::exportText(const RTextBasedData& text, bool forceSelected) {
+QList<RPainterPath> RGraphicsSceneQt::exportText(const RTextBasedData& text, bool forceSelected) {
     RTextBasedData textCopy = text;
 
     // resolve line type, color by layer, by block:
@@ -579,18 +579,7 @@ void RGraphicsSceneQt::exportText(const RTextBasedData& text, bool forceSelected
     //textCopy.setLinetypeId(text.getLinetypeId(true, blockRefStack));
 
     // generate cached text layouts:
-    textCopy.getTextLayouts();
-//    QList<RTextLayout> lts = textCopy.getTextLayouts();
-//    for (int i=0; i<lts.length(); i++) {
-//        for (int k=0; k<lts[i].painterPaths.length(); k++) {
-//            QPen p = lts[i].painterPaths[k].getPen();
-//            qDebug() << p;
-//            if (!p.color().isValid()) {
-//                p.setColor(col);
-//                lts[i].painterPaths[k].setPen(p);
-//            }
-//        }
-//    }
+    QList<RTextLayout> textLayouts = textCopy.getTextLayouts();
 
     if (exportToPreview) {
         addTextToPreview(textCopy);
@@ -603,6 +592,21 @@ void RGraphicsSceneQt::exportText(const RTextBasedData& text, bool forceSelected
             texts.insert(getBlockRefOrEntity()->getId(), QList<RTextBasedData>() << textCopy);
         }
     }
+
+    QList<RPainterPath> ret;
+    for (int t=0; t<textLayouts.length(); t++) {
+        for (int k=0; k<textLayouts[t].painterPaths.length(); k++) {
+            RPainterPath pp = textLayouts[t].painterPaths[k];
+            pp.transform(textLayouts[t].transform);
+            if (text.isSelected() || forceSelected) {
+                pp.setSelected(true);
+                pp.setPen(RSettings::getSelectionColor());
+            }
+            ret.append(pp);
+        }
+    }
+
+    return ret;
 }
 
 /**

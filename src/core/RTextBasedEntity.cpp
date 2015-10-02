@@ -160,14 +160,12 @@ QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
 
 void RTextBasedEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
-    //Q_UNUSED(forceSelected);
 
-    //if (RSettings::getStringValue("TextRendering/RenderAs", "Paths")=="Text") {
     if (RSettings::isTextRenderedAsText()) {
-        e.exportText(getData(), forceSelected);
+        QList<RPainterPath> paths = e.exportText(getData(), forceSelected);
+        e.exportPainterPaths(paths);
     }
     else {
-        //e.unexportEntity(e.getBlockRefOrEntity()->getId());
         e.exportPainterPathSource(getData());
     }
 }

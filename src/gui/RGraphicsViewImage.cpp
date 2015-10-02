@@ -837,14 +837,6 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
     for (int k=0; k<texts.length(); k++) {
         texts[k].move(paintOffset);
         paintText(painter, texts[k]);
-
-        // add painter paths (from CAD fonts) to preview:
-        QList<RTextLayout> tls = texts[k].getTextLayouts();
-        QList<RPainterPath> pps = getTextLayoutsPainterPaths(texts[k], tls);
-        for (int k=0; k<pps.length(); k++) {
-            pps[k].move(-paintOffset);
-        }
-        painterPaths.append(pps);
     }
 
     // paint painter paths:
@@ -1129,26 +1121,6 @@ QList<RPainterPath> RGraphicsViewImage::getTextLayoutsPainterPaths(const RTextBa
         for (int k=0; k<textLayouts[t].painterPaths.length(); k++) {
             RPainterPath pp = textLayouts[t].painterPaths[k];
             pp.transform(textLayouts[t].transform);
-
-            //if (k==0) {
-                QPen pen = pp.getPen();
-                if (!pen.color().isValid() || pen.color()==RColor::CompatByLayer || pen.color()==RColor::CompatByBlock) {
-                    pen.setColor(text.getColor());
-                }
-                if (pen.style()==Qt::NoPen) {
-                    pen = QPen(pp.getBrush().color());
-                }
-                pen.setCapStyle(Qt::RoundCap);
-                pen.setJoinStyle(Qt::RoundJoin);
-                pen.setWidthF(text.getLineweight()/100.0);
-                if (text.isSelected()) {
-                    pen.setColor(RSettings::getSelectionColor());
-                }
-                applyColorCorrection(pen);
-                pp.setPen(pen);
-                pp.setBrush(Qt::NoBrush);
-            //}
-
             ret.append(pp);
         }
     }
