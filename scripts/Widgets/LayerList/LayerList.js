@@ -149,6 +149,13 @@ RLayerListQt.prototype.moveSelectionToLayer = function() {
         return;
     }
 
+    if (!this.di.hasSelection()) {
+        // no selection: edit layer:
+        var a = RGuiAction.getByScriptFile("scripts/Layer/EditLayer/EditLayer.js");
+        a.slotTrigger();
+        return;
+    }
+
     var op = new RChangePropertyOperation(REntity.PropertyLayer, item.text());
     this.di.applyOperation(op);
 };
