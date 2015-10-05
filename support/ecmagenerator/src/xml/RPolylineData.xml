@@ -100,11 +100,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="bulge"
         hasDefault="true" default="0.0" isConst="false" />
         <arg type="double" typeName="double" name="w1"
-        hasDefault="true" default="RDEFAULT_MIN1"
-        isConst="false" />
+        hasDefault="true" default="0.0" isConst="false" />
         <arg type="double" typeName="double" name="w2"
-        hasDefault="true" default="RDEFAULT_MIN1"
-        isConst="false" />
+        hasDefault="true" default="0.0" isConst="false" />
       </variant>
     </method>
     <method name="prependVertex" cppName="prependVertex"
@@ -116,11 +114,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="double" typeName="double" name="bulge"
         hasDefault="true" default="0.0" isConst="false" />
         <arg type="double" typeName="double" name="w1"
-        hasDefault="true" default="RDEFAULT_MIN1"
-        isConst="false" />
+        hasDefault="true" default="0.0" isConst="false" />
         <arg type="double" typeName="double" name="w2"
-        hasDefault="true" default="RDEFAULT_MIN1"
-        isConst="false" />
+        hasDefault="true" default="0.0" isConst="false" />
       </variant>
     </method>
     <method name="insertVertex" cppName="insertVertex"

@@ -562,10 +562,10 @@ RPainterPath RPolyline::toPainterPath() const {
 
 void RPolyline::stripWidths() {
     for (int i=0; i<startWidths.length(); i++) {
-        startWidths[i] = -1.0;
+        startWidths[i] = 0.0;
     }
     for (int i=0; i<endWidths.length(); i++) {
-        endWidths[i] = -1.0;
+        endWidths[i] = 0.0;
     }
 }
 

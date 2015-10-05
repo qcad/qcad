@@ -66,8 +66,8 @@ public:
     void prependShape(const RShape& shape);
     void appendShape(const RShape& shape, bool prepend = false);
 
-    void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = RDEFAULT_MIN1, double w2 = RDEFAULT_MIN1);
-    void prependVertex(const RVector& vertex, double bulge = 0.0, double w1 = RDEFAULT_MIN1, double w2 = RDEFAULT_MIN1);
+    void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = 0.0, double w2 = 0.0);
+    void prependVertex(const RVector& vertex, double bulge = 0.0, double w1 = 0.0, double w2 = 0.0);
     void insertVertex(int index, const RVector& vertex);
     void removeFirstVertex();
     void removeLastVertex();

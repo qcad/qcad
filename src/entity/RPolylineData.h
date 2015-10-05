@@ -93,11 +93,11 @@ public:
         return RPolyline::getVertexAt(i);
     }
 
-    void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = RDEFAULT_MIN1, double w2 = RDEFAULT_MIN1) {
+    void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = 0.0, double w2 = 0.0) {
         RPolyline::appendVertex(vertex, bulge, w1, w2);
     }
 
-    void prependVertex(const RVector& vertex, double bulge = 0.0, double w1 = RDEFAULT_MIN1, double w2 = RDEFAULT_MIN1) {
+    void prependVertex(const RVector& vertex, double bulge = 0.0, double w1 = 0.0, double w2 = 0.0) {
         RPolyline::prependVertex(vertex, bulge, w1, w2);
     }
 
