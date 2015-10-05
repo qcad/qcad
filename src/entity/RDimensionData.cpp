@@ -373,7 +373,7 @@ QList<QSharedPointer<RShape> > RDimensionData::getDimensionLineShapes(
         }
 
         // move text away from dimension line:
-        if (!text.contains("\X")) {
+        if (!text.contains("\\X")) {
             newTextPos+=distV;
         }
 
