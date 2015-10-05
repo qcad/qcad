@@ -1,3 +1,8 @@
+/**
+ * Original source: https://github.com/alexei/sprintf.js
+ * Adapted for use in QCAD
+ */
+
 var re = {
     not_string: /[^s]/,
     number: /[diefg]/,
@@ -12,15 +17,15 @@ var re = {
     sign: /^[\+\-]/
 }
 
-function sprintf() {
-    var key = arguments[0], cache = sprintf.cache
+function sprintf2() {
+    var key = arguments[0], cache = sprintf2.cache
     if (!(cache[key] && cache.hasOwnProperty(key))) {
-        cache[key] = sprintf.parse(key)
+        cache[key] = sprintf2.parse(key)
     }
-    return sprintf.format.call(null, cache[key], arguments)
+    return sprintf2.format.call(null, cache[key], arguments)
 }
 
-sprintf.format = function(parse_tree, argv) {
+sprintf2.format = function(parse_tree, argv) {
     var cursor = 1, tree_length = parse_tree.length, node_type = "", arg, output = [], i, k, match, pad, pad_character, pad_length, is_positive = true, sign = ""
     for (i = 0; i < tree_length; i++) {
         node_type = get_type(parse_tree[i])
@@ -33,7 +38,8 @@ sprintf.format = function(parse_tree, argv) {
                 arg = argv[cursor]
                 for (k = 0; k < match[2].length; k++) {
                     if (!arg.hasOwnProperty(match[2][k])) {
-                        throw new Error(sprintf("[sprintf] property '%s' does not exist", match[2][k]))
+                        qDebug(sprintf2("[sprintf2] property '%s' does not exist", match[2][k]))
+                        return;
                     }
                     arg = arg[match[2][k]]
                 }
@@ -50,7 +56,8 @@ sprintf.format = function(parse_tree, argv) {
             }
 
             if (re.not_string.test(match[8]) && re.not_json.test(match[8]) && (get_type(arg) != "number" && isNaN(arg))) {
-                throw new TypeError(sprintf("[sprintf] expecting number but found %s", get_type(arg)))
+                qDebug(sprintf("[sprintf] expecting number but found %s", get_type(arg)))
+                return;
             }
 
             if (re.number.test(match[8])) {
@@ -117,9 +124,9 @@ sprintf.format = function(parse_tree, argv) {
     return output.join("")
 }
 
-sprintf.cache = {}
+sprintf2.cache = {}
 
-sprintf.parse = function(fmt) {
+sprintf2.parse = function(fmt) {
     var _fmt = fmt, match = [], parse_tree = [], arg_names = 0
     while (_fmt) {
         if ((match = re.text.exec(_fmt)) !== null) {
@@ -142,12 +149,14 @@ sprintf.parse = function(fmt) {
                             field_list[field_list.length] = field_match[1]
                         }
                         else {
-                            throw new SyntaxError("[sprintf] failed to parse named argument key")
+                            qDebug("[sprintf2] failed to parse named argument key")
+                            return;
                         }
                     }
                 }
                 else {
-                    throw new SyntaxError("[sprintf] failed to parse named argument key")
+                    qDebug("[sprintf2] failed to parse named argument key")
+                    return;
                 }
                 match[2] = field_list
             }
@@ -155,12 +164,14 @@ sprintf.parse = function(fmt) {
                 arg_names |= 2
             }
             if (arg_names === 3) {
-                throw new Error("[sprintf] mixing positional and named placeholders is not (yet) supported")
+                qDebug("[sprintf2] mixing positional and named placeholders is not (yet) supported")
+                return;
             }
             parse_tree[parse_tree.length] = match
         }
         else {
-            throw new SyntaxError("[sprintf] unexpected placeholder")
+            qDebug("[sprintf2] unexpected placeholder")
+            return;
         }
         _fmt = _fmt.substring(match[0].length)
     }
