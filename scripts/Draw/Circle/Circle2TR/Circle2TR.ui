@@ -20,6 +20,9 @@
    </item>
    <item>
     <widget class="RMathLineEdit" name="Radius">
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
      <property name="angle" stdset="0">
       <bool>false</bool>
      </property>
