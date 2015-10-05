@@ -161,6 +161,21 @@ Explode.prototype.beginEvent = function() {
         else if (isTextEntity(entity)) {
             var painterPaths = entity.getPainterPaths();
             for (k=0; k<painterPaths.length; k++) {
+                var p = painterPaths[k].getPen();
+                var b = painterPaths[k].getBrush();
+                var col = undefined;
+
+                if (p.style()!==Qt.NoPen) {
+                    if (p.color().isValid()) {
+                        col = p.color().name();
+                    }
+                }
+                else if (b.style()!==Qt.NoBrush) {
+                    if (b.color().isValid()) {
+                        col = b.color().name();
+                    }
+                }
+
                 // ignore text bounding box, used only to display instead of
                 // text at small zoom factors:
                 if (painterPaths[k].getFeatureSize()<0) {
@@ -174,7 +189,9 @@ Explode.prototype.beginEvent = function() {
                     }
 
                     if (!isNull(shape)) {
-                        newShapes.push(shape.clone());
+                        var sc = shape.clone();
+                        sc.color = col;
+                        newShapes.push(sc);
                     }
                 }
             }
@@ -227,6 +244,9 @@ Explode.prototype.beginEvent = function() {
                 if (!isNull(e)) {
                     e.setSelected(true);
                     e.copyAttributesFrom(entity.data());
+                    if (!isNull(shape.color)) {
+                        e.setColor(new RColor(shape.color));
+                    }
                     op.addObject(e, false);
                 }
             }
