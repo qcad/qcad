@@ -529,6 +529,8 @@ QDebug operator<<(QDebug dbg, RPainterPath& p) {
     //dbg.nospace() << p.toString();
     dbg.nospace() << "RPainterPath("
             << "\n\tselected: " << p.isSelected()
+            << "\n\tfixedPenColor: " << p.isFixedPenColor()
+            << "\n\tfixedBrushColor: " << p.isFixedBrushColor()
             << "\n\tfeatureSize: " << p.getFeatureSize()
             << "\n\t" << p.getPen()
             << "\n\t" << p.getBrush()
