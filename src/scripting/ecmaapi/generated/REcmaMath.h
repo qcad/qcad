@@ -82,6 +82,9 @@
         angleToString
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        trimTrailingZeroes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         rad2deg
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

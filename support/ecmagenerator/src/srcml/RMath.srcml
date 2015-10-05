@@ -119,6 +119,7 @@
     <function_decl><type><name>static</name> <name>bool</name></type> <name>hasError</name><parameter_list>()</parameter_list>;</function_decl>
     <comment type="line">//static double stringToAngle(const QString&amp; str);</comment>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>angleToString</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>trimTrailingZeroes</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>s</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>double</name></type> <name>rad2deg</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>double</name></type> <name>deg2rad</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a</name></decl></param>)</parameter_list>;</function_decl>

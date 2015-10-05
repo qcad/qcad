@@ -67,7 +67,6 @@ public:
                                   bool showLeadingZeroes=true, 
                                   bool showTrailingZeroes=false,
                                   bool onlyPreciseResult=false);
-    static QString trimTrailingZeroes(const QString& s);
 
     static QString formatAngle(double angle, RS::AngleFormat format,
                                  int prec,

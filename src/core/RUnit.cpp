@@ -745,34 +745,7 @@ QString RUnit::formatAngle(double angle, RS::AngleFormat format,
     }
 
     return ret;
-}
-    
-    
-    
-QString RUnit::trimTrailingZeroes(const QString& s) {
-    QString ret = s;
-
-    bool done = false;
-    while (!done) {
-        if (ret.size()>0) {
-            if (ret.at(ret.size()-1)=='0') {
-                ret = ret.left(ret.size()-1);
-            }
-            else if (ret.at(ret.size()-1)=='.') {
-                ret = ret.left(ret.size()-1);
-                done = true;
-            }
-            else {
-                done = true;
-            }
-        }
-        else {
-            done = true;
-        }
-    }
-
-    return ret;
-}
+} 
 
 /**
  * Converts a double into a string which is as short as possible

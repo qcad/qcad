@@ -128,14 +128,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
-    <method name="trimTrailingZeroes" cppName="trimTrailingZeroes"
-    specifier="public" isStatic="true" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="QString" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name="s"
-        isConst="true" />
-      </variant>
-    </method>
     <method name="formatAngle" cppName="formatAngle"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

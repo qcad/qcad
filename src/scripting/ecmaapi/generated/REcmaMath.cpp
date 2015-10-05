@@ -81,6 +81,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, angleToString, "angleToString");
             
+            REcmaHelper::registerFunction(&engine, &ctor, trimTrailingZeroes, "trimTrailingZeroes");
+            
             REcmaHelper::registerFunction(&engine, &ctor, rad2deg, "rad2deg");
             
             REcmaHelper::registerFunction(&engine, &ctor, deg2rad, "deg2rad");
@@ -811,6 +813,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMath::angleToString", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMath::trimTrailingZeroes
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMath::trimTrailingZeroes", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMath::trimTrailingZeroes";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RMath::
+       trimTrailingZeroes(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMath.trimTrailingZeroes().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMath::trimTrailingZeroes", context, engine);
             return result;
         }
          QScriptValue

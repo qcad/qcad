@@ -71,8 +71,6 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, formatFractional, "formatFractional");
             
-            REcmaHelper::registerFunction(&engine, &ctor, trimTrailingZeroes, "trimTrailingZeroes");
-            
             REcmaHelper::registerFunction(&engine, &ctor, formatAngle, "formatAngle");
             
             REcmaHelper::registerFunction(&engine, &ctor, isMetric, "isMetric");
@@ -2874,56 +2872,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaUnit::formatFractional", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaUnit::trimTrailingZeroes
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaUnit::trimTrailingZeroes", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaUnit::trimTrailingZeroes";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isString()
-        ) /* type: QString */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    QString
-                    a0 =
-                    (QString)
-                    
-                    context->argument( 0 ).
-                    toString();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QString'
-    QString cppResult =
-        RUnit::
-       trimTrailingZeroes(a0);
-        // return type: QString
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.trimTrailingZeroes().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaUnit::trimTrailingZeroes", context, engine);
             return result;
         }
          QScriptValue

@@ -118,6 +118,7 @@ public:
     static bool hasError();
     //static double stringToAngle(const QString& str);
     static QString angleToString(double a);
+    static QString trimTrailingZeroes(const QString& s);
 
     static double rad2deg(double a);
     static double deg2rad(double a);

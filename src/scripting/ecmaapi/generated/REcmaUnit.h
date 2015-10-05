@@ -64,9 +64,6 @@
         formatFractional
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        trimTrailingZeroes
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         formatAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
