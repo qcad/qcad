@@ -14,7 +14,7 @@
         <translation>CAD työkalurivi</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+35"/>
         <source>Vertical/Horizontal</source>
         <translation>Pystysuora/Vaakasuora</translation>
     </message>

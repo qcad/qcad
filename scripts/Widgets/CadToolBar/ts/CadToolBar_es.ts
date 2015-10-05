@@ -45,7 +45,7 @@ Seleccionador de varios métodos de entrada que usa el menú contextual de los e
         <translation>Barra de herramientas CAD</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+35"/>
         <source>Vertical/Horizontal</source>
         <translation>Vertical / Horizontal</translation>
     </message>

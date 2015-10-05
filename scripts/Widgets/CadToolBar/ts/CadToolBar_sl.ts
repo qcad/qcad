@@ -14,7 +14,7 @@
         <translation>CAD vrstica</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+35"/>
         <source>Vertical/Horizontal</source>
         <translation>Navpično/Vodoravno</translation>
     </message>

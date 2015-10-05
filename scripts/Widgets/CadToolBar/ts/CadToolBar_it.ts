@@ -42,7 +42,7 @@ Spaziatura Griglia minima (px):</translatorcomment>
         <translation>Barra degli strumenti CAD</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+35"/>
         <source>Vertical/Horizontal</source>
         <translation>Verticale / Orizzontale</translation>
     </message>

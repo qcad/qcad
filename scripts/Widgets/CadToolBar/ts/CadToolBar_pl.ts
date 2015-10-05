@@ -19,7 +19,7 @@ Zastępcze widżety</translatorcomment>
         <translation type="unfinished">CAD Toolbar</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+35"/>
         <source>Vertical/Horizontal</source>
         <translation type="unfinished"></translation>
     </message>

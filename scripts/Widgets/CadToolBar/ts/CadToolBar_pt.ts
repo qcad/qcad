@@ -18,7 +18,7 @@ O seu tema não suporta menus de navegação ou de widgets.</translatorcomment>
         <translation>Barra de Ferramentas CAD</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+35"/>
         <source>Vertical/Horizontal</source>
         <translation>Vertical/Horizontal</translation>
     </message>

@@ -14,7 +14,7 @@
         <translation>Panel s nástrojmi CAD</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+35"/>
         <source>Vertical/Horizontal</source>
         <translation>Zvisle / Vodorovne</translation>
     </message>
