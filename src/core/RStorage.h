@@ -315,6 +315,9 @@ public:
     //void setUnit(RTransaction& transaction, RS::Unit unit);
     RS::Unit getUnit() const;
 
+    void setMeasurement(RS::Measurement m, RTransaction* transaction=NULL);
+    RS::Measurement getMeasurement() const;
+
     virtual void setDimensionFont(const QString& f, RTransaction* transaction=NULL);
     virtual QString getDimensionFont() const;
 

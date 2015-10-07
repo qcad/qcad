@@ -232,15 +232,6 @@ int RStorage::getMinDrawOrder() {
     return minDrawOrder - 1;
 }
 
-void RStorage::setUnit(RS::Unit unit, RTransaction* transaction) {
-    bool useLocalTransaction;
-    QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);
-    Q_ASSERT(!docVars.isNull());
-    docVars->setUnit(unit);
-    endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
-    //boundingBoxChanged =
-}
-
 QSharedPointer<RDocumentVariables> RStorage::startDocumentVariablesTransaction(RTransaction*& transaction, bool& useLocalTransaction) {
     useLocalTransaction = (transaction==NULL);
 
@@ -265,12 +256,36 @@ void RStorage::endDocumentVariablesTransaction(RTransaction* transaction, bool u
     }
 }
 
+void RStorage::setUnit(RS::Unit unit, RTransaction* transaction) {
+    bool useLocalTransaction;
+    QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);
+    Q_ASSERT(!docVars.isNull());
+    docVars->setUnit(unit);
+    endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
+}
+
 RS::Unit RStorage::getUnit() const {
     QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
     if (v.isNull()) {
         return RS::None;
     }
     return v->getUnit();
+}
+
+void RStorage::setMeasurement(RS::Measurement m, RTransaction* transaction) {
+    bool useLocalTransaction;
+    QSharedPointer<RDocumentVariables> docVars = startDocumentVariablesTransaction(transaction, useLocalTransaction);
+    Q_ASSERT(!docVars.isNull());
+    docVars->setMeasurement(m);
+    endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
+}
+
+RS::Measurement RStorage::getMeasurement() const {
+    QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
+    if (v.isNull()) {
+        return RS::UnknownMeasurement;
+    }
+    return v->getMeasurement();
 }
 
 void RStorage::setDimensionFont(const QString& f, RTransaction* transaction) {
@@ -643,6 +658,8 @@ QString RStorage::getKnownVariableName(RS::KnownVariable n) {
         return "LUPREC";
     case RS::MAXACTVP:
         return "MAXACTVP";
+    case RS::MEASUREMENT:
+        return "MEASUREMENT";
     case RS::MIRRTEXT:
         return "MIRRTEXT";
     case RS::ORTHOMODE:

@@ -92,6 +92,21 @@ public:
         unit = u;
     }
 
+    RS::Measurement getMeasurement() const {
+        return measurement;
+    }
+
+    void setMeasurement(RS::Measurement m) {
+        if (m!=RS::Metric && m!=RS::Imperial) {
+            return;
+        }
+
+        QVariant v;
+        v.setValue((int)m);
+        knownVariables.insert(RS::MEASUREMENT, v);
+        measurement = m;
+    }
+
     double getLinetypeScale() const {
         return linetypeScale;
     }
@@ -119,6 +134,7 @@ private:
     //RLayer::Id currentBlockId;
     //...
     RS::Unit unit;
+    RS::Measurement measurement;
     double linetypeScale;
     QString dimensionFont;
     QHash<RS::KnownVariable, QVariant> knownVariables;

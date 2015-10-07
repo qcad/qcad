@@ -304,6 +304,9 @@ public:
     //void setUnit(RTransaction& transaction, RS::Unit unit);
     RS::Unit getUnit() const;
 
+    void setMeasurement(RS::Measurement m,  RTransaction* transaction = NULL);
+    RS::Measurement getMeasurement() const;
+
     bool isMetric() const;
 
     void setDimensionFont(const QString& f, RTransaction* transaction = NULL);

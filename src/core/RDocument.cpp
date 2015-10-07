@@ -147,6 +147,7 @@ void RDocument::init() {
 
         // default variables:
         docVars->setUnit(defaultUnit);
+        docVars->setMeasurement(metric ? RS::Metric : RS::Imperial);
         initLinetypes(&transaction);
         docVars->setLinetypeScale(RSettings::getDoubleValue("LinetypeSettings/Scale", 1.0));
 
@@ -380,19 +381,27 @@ void RDocument::setUnit(RS::Unit unit, RTransaction* transaction) {
     initLinetypes(transaction);
 }
 
-//void RDocument::setUnit(RTransaction& transaction, RS::Unit unit) {
-//    storage.setUnit(transaction, unit);
-//    initLinetypes();
-//}
-
 RS::Unit RDocument::getUnit() const {
     return storage.getUnit();
-//    QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
-//    return v->getUnit();
+}
+
+void RDocument::setMeasurement(RS::Measurement m,  RTransaction* transaction) {
+    storage.setMeasurement(m, transaction);
+    initLinetypes(transaction);
+}
+
+RS::Measurement RDocument::getMeasurement() const {
+    return storage.getMeasurement();
 }
 
 bool RDocument::isMetric() const {
-    return RUnit::isMetric(getUnit());
+    RS::Measurement m = getMeasurement();
+
+    if (m==RS::UnknownMeasurement) {
+        return RUnit::isMetric(getUnit());
+    }
+
+    return m==RS::Metric;
 }
 
 void RDocument::setDimensionFont(const QString& f, RTransaction* transaction) {

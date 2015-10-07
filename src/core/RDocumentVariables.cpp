@@ -31,6 +31,7 @@ RDocumentVariables::RDocumentVariables(RDocument* document, RObject::Id objectId
         : RObject(document, objectId),
         currentLayerId(RLayer::INVALID_ID),
         unit(RS::None),
+        measurement(RS::UnknownMeasurement),
         linetypeScale(1.0) {
 }
 
@@ -132,6 +133,10 @@ void RDocumentVariables::setKnownVariable(RS::KnownVariable key, const RVector& 
 void RDocumentVariables::setKnownVariable(RS::KnownVariable key, const QVariant& value) {
     if (key==RS::INSUNITS) {
         setUnit((RS::Unit)value.toInt());
+        return;
+    }
+    else if (key==RS::MEASUREMENT) {
+        setMeasurement((RS::Measurement)value.toInt());
         return;
     }
     else if (key==RS::LTSCALE) {

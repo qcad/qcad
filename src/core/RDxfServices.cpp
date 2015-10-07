@@ -876,6 +876,9 @@ RS::KnownVariable RDxfServices::stringToVariable(const QString& s) {
     if (u=="MAXACTVP") {
         return RS::MAXACTVP;
     }
+    if (u=="MEASUREMENT") {
+        return RS::MEASUREMENT;
+    }
     if (u=="MIRRTEXT") {
         return RS::MIRRTEXT;
     }
@@ -1249,6 +1252,8 @@ QString RDxfServices::variableToString(RS::KnownVariable v) {
         return "LUPREC";
     case RS::MAXACTVP:
         return "MAXACTVP";
+    case RS::MEASUREMENT:
+        return "MEASUREMENT";
     case RS::MIRRTEXT:
         return "MIRRTEXT";
     case RS::ORTHOMODE:
@@ -1662,8 +1667,8 @@ int RDxfServices::getCodeForVariable(RS::KnownVariable v) {
 //        return 290;
     case RS::MAXACTVP:
         return 70;
-//    case RS::MEASUREMENT:
-//        return 70;
+    case RS::MEASUREMENT:
+        return 70;
 //    case RS::MENU:
 //        return 1;
     case RS::MIRRTEXT:

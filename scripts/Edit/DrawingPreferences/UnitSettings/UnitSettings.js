@@ -28,8 +28,12 @@ UnitSettings.getPreferencesCategory = function(appPreferences) {
 };
 
 UnitSettings.initPreferences = function(pageWidget, calledByPrefDialog, document, preferencesAction) {
+    var measurementCombo = pageWidget.findChild("Measurement");
+    UnitSettings.initMeasurementCombo(measurementCombo);
+
     var unitCombo = pageWidget.findChild("Unit");
     UnitSettings.initUnitCombo(unitCombo);
+
     // if the global unit / drawing unit changes in the preferences dialog,
     // other plugins are notified to update their widgets accordingly
     // if necessary:
@@ -44,7 +48,13 @@ UnitSettings.initPreferences = function(pageWidget, calledByPrefDialog, document
     });
 
     if (!isNull(document)) {
-        var i = unitCombo.findData(document.getUnit());
+        var i = measurementCombo.findData(document.getMeasurement());
+        if (i!=-1) {
+            measurementCombo.currentIndex = i;
+        }
+        measurementCombo.setProperty("Loaded", true);
+
+        i = unitCombo.findData(document.getUnit());
         if (i!=-1) {
             unitCombo.currentIndex = i;
         }
@@ -63,6 +73,8 @@ UnitSettings.savePreferences = function(pageWidget, calledByPrefDialog, document
         return;
     }
 
+    var measurementCombo = pageWidget.findChild("Measurement");
+    document.setMeasurement(measurementCombo.itemData(measurementCombo.currentIndex), transaction);
     var unitCombo = pageWidget.findChild("Unit");
     document.setUnit(unitCombo.itemData(unitCombo.currentIndex), transaction);
     unitCombo.setProperty("Saved", true);
@@ -94,4 +106,10 @@ UnitSettings.initUnitCombo = function(unitCombo) {
     unitCombo.addItem(qsTr("Lightyear"), RS.Lightyear);
     unitCombo.addItem(qsTr("Parsec"), RS.Parsec);
     //unitCombo.addItem(qsTr("Plu"), RS.Plu);
+};
+
+UnitSettings.initMeasurementCombo = function(measurementCombo) {
+    measurementCombo.clear();
+    measurementCombo.addItem(qsTr("Imperial"), RS.Imperial);
+    measurementCombo.addItem(qsTr("Metric"), RS.Metric);
 };
