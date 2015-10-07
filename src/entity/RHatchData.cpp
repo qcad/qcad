@@ -28,7 +28,6 @@
 #include "RPointEntity.h"
 #include "RPatternListImperial.h"
 #include "RPatternListMetric.h"
-#include "RPattern.h"
 #include "RSettings.h"
 #include "RSpline.h"
 #include "RUnit.h"
@@ -71,13 +70,11 @@ RHatchData& RHatchData::operator =(const RHatchData& other) {
     angle = other.angle;
     patternName = other.patternName;
     originPoint = other.originPoint;
-    //other.getPainterPath(false);
     other.getPainterPaths(false);
-    //painterPath = other.painterPath;
     painterPaths = other.painterPaths;
     boundaryPath = other.boundaryPath;
-    dirty = other.dirty;
     gotDraft = other.gotDraft;
+    pattern = other.pattern;
 
     boundary.clear();
 
@@ -119,6 +116,7 @@ RHatchData& RHatchData::operator =(const RHatchData& other) {
         }
     }
 
+    dirty = false;
     return *this;
 }
 
@@ -512,6 +510,10 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape) {
 }
 
 QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
+    if (!updatesEnabled) {
+        return painterPaths;
+    }
+
     if (!dirty) {
         // cached painter path represents hatch in current draft mode (draft or normal):
         if (draft==gotDraft) {
@@ -547,12 +549,23 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
     //RDebug::startTimer();
 
     // get pattern:
-    RPattern* p;
-    if (document==NULL || (RUnit::isMetric(document->getUnit()) && document->getUnit()!=RS::None)) {
-        p = RPatternListMetric::get(getPatternName());
+    const RPattern* p = NULL;
+    bool customPattern = false;
+    if (hasCustomPattern()) {
+        //qDebug() << "custom pattern" << pattern;
+        p = &pattern;
+        customPattern = true;
     }
     else {
-        p = RPatternListImperial::get(getPatternName());
+        //if (document==NULL || (RUnit::isMetric(document->getUnit()) && document->getUnit()!=RS::None)) {
+        if (document==NULL || document->isMetric()) {
+            //qDebug() << "metric pattern" << getPatternName();
+            p = RPatternListMetric::get(getPatternName());
+        }
+        else {
+            //qDebug() << "imperial pattern" << getPatternName();
+            p = RPatternListImperial::get(getPatternName());
+        }
     }
 
     // cannot load pattern at this point, return boundary for bounding box correctness:
@@ -566,32 +579,30 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
 
     getBoundaryPath();
 
-    RPattern pattern = *p;
+    RPattern localPattern = *p;
 
-    //qDebug() << "pattern: " << pattern;
-
-    pattern.rotate(angle);
-    pattern.scale(scaleFactor);
-
-    //qDebug() << "pattern scaled: " << pattern;
+    if (!customPattern) {
+        localPattern.rotate(angle);
+        localPattern.scale(scaleFactor);
+    }
 
     RBox boundaryBox = boundaryPath.getBoundingBox();
     boundaryBox.grow(1.0);
     QList<RLine> boundaryEdges = boundaryBox.getLines2d();
     QList<RVector> boundaryCorners = boundaryBox.getCorners2d();
 
-    //RPainterPath clippedPattern;
-
-    // add boundary to painter path as well (debugging):
-    //clippedPattern.addPath(boundaryPath);
-
     QTime timer;
     timer.start();
     int timeOut = -1;
 
-    QList<RPatternLine> patternLines = pattern.getPatternLines();
+    QList<RPatternLine> patternLines = localPattern.getPatternLines();
     for (int i=0; i<patternLines.length(); i++) {
         RPatternLine patternLine = patternLines[i];
+
+        if (customPattern) {
+            // custom patterns are defined with rotated offset:
+            patternLine.offset.rotate(-patternLine.angle);
+        }
 
         // origin for pattern line:
         RVector spBase = originPoint + patternLine.basePoint;
@@ -635,7 +646,11 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
 
         if (RMath::isNaN(maxDistLeft) || RMath::isNaN(maxDistRight)) {
             qWarning() << "RHatchData::getPainterPaths: no max limits found";
-            //return clippedPattern;
+            return painterPaths;
+        }
+
+        if (qAbs(patternLine.offset.y)<RS::PointTolerance) {
+            qWarning() << "RHatchData::getPainterPaths: invalid pattern line offset: " << patternLine.offset;
             return painterPaths;
         }
 
@@ -653,6 +668,7 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
             rightMultiple = -tmp;
         }
 
+        // repeat pattern line from left to right:
         for (int m=leftMultiple; m<rightMultiple; m++) {
             RVector currentOffset = offset * m;
 
@@ -1117,6 +1133,8 @@ QPair<QSharedPointer<RShape>, QSharedPointer<RShape> > RHatchData::getBoundaryEl
 }
 
 void RHatchData::update() const {
+    // clear stored pattern from file:
+    //pattern = RPattern();
     dirty = true;
 }
 

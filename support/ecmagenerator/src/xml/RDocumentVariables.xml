@@ -122,6 +122,20 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getMeasurement" cppName="getMeasurement"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RS::Measurement"
+      isPureVirtual="false" />
+    </method>
+    <method name="setMeasurement" cppName="setMeasurement"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RS::Measurement" typeName="RS::Measurement"
+        name="m" isConst="false" />
+      </variant>
+    </method>
     <method name="getLinetypeScale" cppName="getLinetypeScale"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

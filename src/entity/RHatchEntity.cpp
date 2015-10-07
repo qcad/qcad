@@ -107,6 +107,11 @@ bool RHatchEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& v
     ret = ret || RObject::setMember(data.originPoint.x, value, PropertyOriginX == propertyTypeId);
     ret = ret || RObject::setMember(data.originPoint.y, value, PropertyOriginY == propertyTypeId);
 
+    if (data.hasCustomPattern()) {
+        // user adjusted property: drop custom pattern
+        data.pattern.clear();
+    }
+
     ret = ret || setBoundaryVector(RObject::X, value, PropertyVertexNX == propertyTypeId);
     ret = ret || setBoundaryVector(RObject::Y, value, PropertyVertexNY == propertyTypeId);
     ret = ret || setBoundaryVector(RObject::Z, value, PropertyVertexNZ == propertyTypeId);

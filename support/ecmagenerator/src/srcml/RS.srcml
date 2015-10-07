@@ -214,6 +214,15 @@
     }</block>;</enum>
 
     <comment type="block">/**
+     * Enum of supported measurement systems.
+     */</comment>
+    <enum>enum <name>Measurement</name> <block>{
+        <expr><name>UnknownMeasurement</name> = -1</expr>,
+        <expr><name>Imperial</name> = 0</expr>,         <comment type="block">/**&lt; Imperial */</comment>
+        <expr><name>Metric</name> = 1</expr>,            <comment type="block">/**&lt; Metric */</comment>
+    }</block>;</enum>
+
+    <comment type="block">/**
      * Enum of supported units (values correspond to DXF spec).
      */</comment>
     <enum>enum <name>Unit</name> <block>{
@@ -399,6 +408,7 @@
         <expr><name>LUNITS</name></expr>,
         <expr><name>LUPREC</name></expr>,
         <expr><name>MAXACTVP</name></expr>,
+        <expr><name>MEASUREMENT</name></expr>,
         <expr><name>MIRRTEXT</name></expr>,
         <expr><name>ORTHOMODE</name></expr>,
         <comment type="block">/* Point display mode */</comment>
@@ -563,6 +573,8 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::TextLineSpacingStyle</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::TextLineSpacingStyle*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::Unit</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::Measurement</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::Measurement*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::VAlign</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::VAlign*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::BooleanOperation</argument>)</argument_list></macro>

@@ -109,6 +109,11 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="IsoRight" />
       <value name="IsoRightBack" />
     </enum>
+    <enum name="Measurement">
+      <value name="UnknownMeasurement" />
+      <value name="Imperial" />
+      <value name="Metric" />
+    </enum>
     <enum name="Unit">
       <value name="None" />
       <value name="Inch" />
@@ -252,6 +257,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="LUNITS" />
       <value name="LUPREC" />
       <value name="MAXACTVP" />
+      <value name="MEASUREMENT" />
       <value name="MIRRTEXT" />
       <value name="ORTHOMODE" />
       <value name="PDMODE" />

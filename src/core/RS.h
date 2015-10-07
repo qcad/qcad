@@ -213,6 +213,15 @@ public:
     };
 
     /**
+     * Enum of supported measurement systems.
+     */
+    enum Measurement {
+        UnknownMeasurement = -1,
+        Imperial = 0,         /**< Imperial */
+        Metric = 1,            /**< Metric */
+    };
+
+    /**
      * Enum of supported units (values correspond to DXF spec).
      */
     enum Unit {
@@ -398,6 +407,7 @@ public:
         LUNITS,
         LUPREC,
         MAXACTVP,
+        MEASUREMENT,
         MIRRTEXT,
         ORTHOMODE,
         /* Point display mode */
@@ -562,6 +572,8 @@ Q_DECLARE_METATYPE(RS::TextDrawingDirection*)
 Q_DECLARE_METATYPE(RS::TextLineSpacingStyle)
 Q_DECLARE_METATYPE(RS::TextLineSpacingStyle*)
 Q_DECLARE_METATYPE(RS::Unit)
+Q_DECLARE_METATYPE(RS::Measurement)
+Q_DECLARE_METATYPE(RS::Measurement*)
 Q_DECLARE_METATYPE(RS::VAlign)
 Q_DECLARE_METATYPE(RS::VAlign*)
 Q_DECLARE_METATYPE(RS::BooleanOperation)

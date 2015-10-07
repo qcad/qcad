@@ -52,6 +52,13 @@ public:
         return !fileName.isEmpty();
     }
 
+    void clear() {
+        fileName.clear();
+        name.clear();
+        description.clear();
+        patternLines.clear();
+    }
+
     /** \return the fileName of this pattern. */
     QString getFileName() const {
         return fileName;
@@ -73,6 +80,10 @@ public:
 
     QList<RPatternLine> getPatternLines() const {
         return patternLines;
+    }
+
+    void addPatternLine(const RPatternLine& patternLine) {
+        patternLines.append(patternLine);
     }
 
     void scale(double f);

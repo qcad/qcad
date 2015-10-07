@@ -312,7 +312,6 @@ public:
     void endDocumentVariablesTransaction(RTransaction* transaction, bool useLocalTransaction, QSharedPointer<RDocumentVariables> docVars);
 
     void setUnit(RS::Unit unit, RTransaction* transaction=NULL);
-    //void setUnit(RTransaction& transaction, RS::Unit unit);
     RS::Unit getUnit() const;
 
     void setMeasurement(RS::Measurement m, RTransaction* transaction=NULL);

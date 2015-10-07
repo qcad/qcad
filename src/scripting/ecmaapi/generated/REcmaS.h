@@ -102,6 +102,8 @@
     ;static  void fromScriptValueEnumFrom(const QScriptValue& value, RS::From& out)
     ;static  QScriptValue toScriptValueEnumIsoProjectionType(QScriptEngine* engine, const RS::IsoProjectionType& value)
     ;static  void fromScriptValueEnumIsoProjectionType(const QScriptValue& value, RS::IsoProjectionType& out)
+    ;static  QScriptValue toScriptValueEnumMeasurement(QScriptEngine* engine, const RS::Measurement& value)
+    ;static  void fromScriptValueEnumMeasurement(const QScriptValue& value, RS::Measurement& out)
     ;static  QScriptValue toScriptValueEnumUnit(QScriptEngine* engine, const RS::Unit& value)
     ;static  void fromScriptValueEnumUnit(const QScriptValue& value, RS::Unit& out)
     ;static  QScriptValue toScriptValueEnumAngleFormat(QScriptEngine* engine, const RS::AngleFormat& value)

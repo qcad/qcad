@@ -26,6 +26,7 @@
 #include "RDocument.h"
 #include "REntity.h"
 #include "RLine.h"
+#include "RPattern.h"
 #include "RPainterPath.h"
 #include "RPainterPathSource.h"
 #include "RPoint.h"
@@ -52,6 +53,15 @@ public:
     RHatchData(bool solid, double scaleFactor, double angle, const QString& patternName);
 
     RHatchData& operator=(const RHatchData& other);
+
+    bool hasCustomPattern() const {
+        return !pattern.getPatternLines().isEmpty();
+    }
+
+    virtual bool cloneOnChange() const {
+        // force clone to preserve custom pattern for undo:
+        return hasCustomPattern();
+    }
 
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
@@ -84,6 +94,7 @@ public:
 
     void setSolid(bool on) {
         solid = on;
+        pattern.clear();
         update();
     }
 
@@ -93,6 +104,7 @@ public:
 
     void setScale(double s) {
         scaleFactor = s;
+        pattern.clear();
         update();
     }
 
@@ -102,6 +114,7 @@ public:
 
     void setAngle(double a) {
         angle = a;
+        pattern.clear();
         update();
     }
 
@@ -111,6 +124,7 @@ public:
 
     void setOriginPoint(const RVector& op) {
         originPoint = op;
+        pattern.clear();
         update();
     }
 
@@ -120,6 +134,7 @@ public:
 
     void setPatternName(const QString& n) {
         patternName = n;
+        pattern.clear();
         update();
     }
 
@@ -127,7 +142,6 @@ public:
     void addBoundary(QSharedPointer<RShape> shape);
     RPainterPath getBoundaryPath() const;
     virtual QList<RPainterPath> getPainterPaths(bool draft = false) const;
-
 
     QList<QList<QSharedPointer<RShape> > > getBoundary() const {
         return boundary;
@@ -149,6 +163,10 @@ public:
 
     int getComplexity() const;
 
+    void setPattern(const RPattern& p) {
+        pattern = p;
+    }
+
 protected:
     QList<RLine> getSegments(const RLine& line) const;
 
@@ -163,6 +181,9 @@ private:
      * Hatch boundary, ordered by loops, in strictly defined order.
      */
     QList<QList<QSharedPointer<RShape> > > boundary;
+
+    // custom pattern loaded from file:
+    mutable RPattern pattern;
 
     mutable RPainterPath boundaryPath;
     mutable QList<RPainterPath> painterPaths;

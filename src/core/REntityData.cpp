@@ -24,6 +24,7 @@
 
 REntityData::REntityData(RDocument* document) :
     document(document),
+    updatesEnabled(true),
     selectionStatus(false), 
     drawOrder(0), 
     layerId(RLayer::INVALID_ID), 

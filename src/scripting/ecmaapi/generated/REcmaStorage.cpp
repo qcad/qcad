@@ -191,6 +191,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getUnit, "getUnit");
             
+            REcmaHelper::registerFunction(&engine, proto, setMeasurement, "setMeasurement");
+            
+            REcmaHelper::registerFunction(&engine, proto, getMeasurement, "getMeasurement");
+            
             REcmaHelper::registerFunction(&engine, proto, setDimensionFont, "setDimensionFont");
             
             REcmaHelper::registerFunction(&engine, proto, getDimensionFont, "getDimensionFont");
@@ -4614,6 +4618,157 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::getUnit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::setMeasurement
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::setMeasurement", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::setMeasurement";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("setMeasurement", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::Measurement */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::Measurement
+                    a0 =
+                    (RS::Measurement)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setMeasurement(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::Measurement */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RTransaction * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::Measurement
+                    a0 =
+                    (RS::Measurement)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument is pointer
+                    RTransaction * a1 = NULL;
+
+                    a1 = 
+                        REcmaHelper::scriptValueTo<RTransaction >(
+                            context->argument(1)
+                        );
+                    
+                    if (a1==NULL && 
+                        !context->argument(1).isNull()) {
+                        return REcmaHelper::throwError("RStorage: Argument 1 is not of type RTransaction *RTransaction *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setMeasurement(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.setMeasurement().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::setMeasurement", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getMeasurement
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getMeasurement", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getMeasurement";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getMeasurement", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::Measurement'
+    RS::Measurement cppResult =
+        
+               self->getMeasurement();
+        // return type: RS::Measurement
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getMeasurement().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getMeasurement", context, engine);
             return result;
         }
          QScriptValue

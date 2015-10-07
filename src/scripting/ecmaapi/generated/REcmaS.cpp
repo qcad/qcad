@@ -496,6 +496,21 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("UnknownMeasurement",
+    QScriptValue(RS::UnknownMeasurement),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Imperial",
+    QScriptValue(RS::Imperial),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("Metric",
+    QScriptValue(RS::Metric),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("None",
     QScriptValue(RS::None),
     QScriptValue::ReadOnly);
@@ -1166,6 +1181,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("MEASUREMENT",
+    QScriptValue(RS::MEASUREMENT),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("MIRRTEXT",
     QScriptValue(RS::MIRRTEXT),
     QScriptValue::ReadOnly);
@@ -1652,6 +1672,13 @@
         &engine,
         toScriptValueEnumIsoProjectionType,
         fromScriptValueEnumIsoProjectionType,
+        ctor.property(QString::fromLatin1("prototype"))
+    );
+
+    qScriptRegisterMetaType<RS::Measurement>(
+        &engine,
+        toScriptValueEnumMeasurement,
+        fromScriptValueEnumMeasurement,
         ctor.property(QString::fromLatin1("prototype"))
     );
 
@@ -2548,6 +2575,16 @@
     
         {
             out = qvariant_cast<RS::IsoProjectionType>(value.toVariant());
+        }
+         QScriptValue REcmaS::toScriptValueEnumMeasurement(QScriptEngine* engine, const RS::Measurement& value)
+    
+        {
+            return QScriptValue(engine, (int)value);
+        }
+         void REcmaS::fromScriptValueEnumMeasurement(const QScriptValue& value, RS::Measurement& out)
+    
+        {
+            out = qvariant_cast<RS::Measurement>(value.toVariant());
         }
          QScriptValue REcmaS::toScriptValueEnumUnit(QScriptEngine* engine, const RS::Unit& value)
     

@@ -93,6 +93,21 @@
         <expr_stmt><expr><name>unit</name> = <name>u</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name><name>RS</name>::<name>Measurement</name></name></type> <name>getMeasurement</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>measurement</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setMeasurement</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>Measurement</name></name></type> <name>m</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>m</name>!=<name><name>RS</name>::<name>Metric</name></name> &amp;&amp; <name>m</name>!=<name><name>RS</name>::<name>Imperial</name></name></expr>)</condition><then> <block>{
+            <return>return;</return>
+        }</block></then></if>
+
+        <decl_stmt><decl><type><name>QVariant</name></type> <name>v</name></decl>;</decl_stmt>
+        <expr_stmt><expr><name>v</name>.<call><name>setValue</name><argument_list>(<argument><expr>(<name>int</name>)<name>m</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>knownVariables</name>.<call><name>insert</name><argument_list>(<argument><expr><name><name>RS</name>::<name>MEASUREMENT</name></name></expr></argument>, <argument><expr><name>v</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><name>measurement</name> = <name>m</name></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>double</name></type> <name>getLinetypeScale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>linetypeScale</name></expr>;</return>
     }</block></function>
@@ -120,6 +135,7 @@
     <comment type="line">//RLayer::Id currentBlockId;</comment>
     <comment type="line">//...</comment>
     <decl_stmt><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RS</name>::<name>Measurement</name></name></type> <name>measurement</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>linetypeScale</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>dimensionFont</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QHash<argument_list>&lt;<argument><name><name>RS</name>::<name>KnownVariable</name></name></argument>, <argument><name>QVariant</name></argument>&gt;</argument_list></name></type> <name>knownVariables</name></decl>;</decl_stmt>

@@ -316,6 +316,9 @@
     <comment type="line">//void setUnit(RTransaction&amp; transaction, RS::Unit unit);</comment>
     <function_decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>getUnit</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name>void</name></type> <name>setMeasurement</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>Measurement</name></name></type> <name>m</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name><name>RS</name>::<name>Measurement</name></name></type> <name>getMeasurement</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setDimensionFont</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>f</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QString</name></type> <name>getDimensionFont</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 

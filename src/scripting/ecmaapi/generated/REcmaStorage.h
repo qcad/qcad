@@ -234,6 +234,12 @@
         getUnit
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setMeasurement
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMeasurement
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setDimensionFont
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

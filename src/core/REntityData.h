@@ -125,6 +125,27 @@ public:
     virtual RPolyline getHull(double offset) const;
 
     /**
+     * \return True if the entity caches are updated when the entity is being exported.
+     */
+    virtual bool isUpdatesEnabled() const {
+        return updatesEnabled;
+    }
+
+    /**
+     * Enables / disables cache updates.
+     */
+    void setUpdatesEnabled(bool on) {
+        updatesEnabled = on;
+    }
+
+    /**
+     * Reimplement to force clone on change in transactions.
+     */
+    virtual bool cloneOnChange() const {
+        return false;
+    }
+
+    /**
      * \return True if the entity is currently selected. This can for example
      *      influence the color in which the entity is exported.
      */
@@ -321,6 +342,7 @@ public:
 
 protected:
     RDocument* document;
+    bool updatesEnabled;
     bool selectionStatus;
     int drawOrder;
     RLayer::Id layerId;

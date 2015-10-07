@@ -90,6 +90,12 @@
         setUnit
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getMeasurement
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setMeasurement
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLinetypeScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

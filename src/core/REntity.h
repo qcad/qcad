@@ -147,6 +147,18 @@ public:
 
     virtual void setSelected(bool on);
 
+    virtual bool isUpdatesEnabled() const {
+        return getData().isUpdatesEnabled();
+    }
+
+    void setUpdatesEnabled(bool on) {
+        getData().setUpdatesEnabled(on);
+    }
+
+    virtual bool cloneOnChange() const {
+        return getData().cloneOnChange();
+    }
+
     /**
      * \copydoc REntityData::setDrawOrder
      */

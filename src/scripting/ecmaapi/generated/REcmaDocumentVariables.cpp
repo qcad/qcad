@@ -91,6 +91,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setUnit, "setUnit");
             
+            REcmaHelper::registerFunction(&engine, proto, getMeasurement, "getMeasurement");
+            
+            REcmaHelper::registerFunction(&engine, proto, setMeasurement, "setMeasurement");
+            
             REcmaHelper::registerFunction(&engine, proto, getLinetypeScale, "getLinetypeScale");
             
             REcmaHelper::registerFunction(&engine, proto, setLinetypeScale, "setLinetypeScale");
@@ -1455,6 +1459,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentVariables::setUnit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentVariables::getMeasurement
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentVariables::getMeasurement", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::getMeasurement";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentVariables* self = 
+                        getSelf("getMeasurement", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::Measurement'
+    RS::Measurement cppResult =
+        
+               self->getMeasurement();
+        // return type: RS::Measurement
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.getMeasurement().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::getMeasurement", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentVariables::setMeasurement
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentVariables::setMeasurement", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::setMeasurement";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentVariables* self = 
+                        getSelf("setMeasurement", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::Measurement */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::Measurement
+                    a0 =
+                    (RS::Measurement)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setMeasurement(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.setMeasurement().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::setMeasurement", context, engine);
             return result;
         }
          QScriptValue

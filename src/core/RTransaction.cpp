@@ -537,14 +537,28 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
 //    }
 
     QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
+    bool mustClone = false;
+    if (!entity.isNull() && entity->getId()!=REntity::INVALID_ID) {
+        QSharedPointer<REntity> oldEntity = storage->queryEntityDirect(entity->getId());
+        if (!oldEntity.isNull()) {
+            // object is entity and not new:
+            if (oldEntity->cloneOnChange()) {
+                mustClone = true;
+            }
+        }
+        if (!mustClone) {
+            if (entity->getType()==RS::EntityHatch && modifiedPropertyTypeIds.isEmpty()) {
+                // entity is hatch and not only property has changed:
+                mustClone = true;
+            }
+        }
+    }
 
     // if object is an existing hatch and we are not just changing a property:
     // delete original and add new since hatch geometry cannot be completely
     // defined through properties which is a requirement for changing objects
     // through transactions:
-    if (!entity.isNull() && entity->getType()==RS::EntityHatch &&
-        entity->getId()!=REntity::INVALID_ID && modifiedPropertyTypeIds.isEmpty()) {
-
+    if (mustClone) {
         QSharedPointer<REntity> clone = QSharedPointer<REntity>(entity->clone());
         objectStorage->setObjectId(*clone, REntity::INVALID_ID);
         // note that we delete the OLD entity here

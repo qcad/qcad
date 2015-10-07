@@ -47,6 +47,7 @@
 	<entry key="RS::TextDrawingDirection" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RS::TextLineSpacingStyle" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RTextRenderer::Target" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RS::Measurement" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RS::Unit" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RS::VAlign" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RS::BooleanOperation" value="toNumber()" testFunction="isNumber()" cast="int" />

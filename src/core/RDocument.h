@@ -301,7 +301,6 @@ public:
     QVariant getKnownVariable(RS::KnownVariable key, const QVariant& defaultValue = RDEFAULT_QVARIANT) const;
 
     void setUnit(RS::Unit unit, RTransaction* transaction = NULL);
-    //void setUnit(RTransaction& transaction, RS::Unit unit);
     RS::Unit getUnit() const;
 
     void setMeasurement(RS::Measurement m,  RTransaction* transaction = NULL);
