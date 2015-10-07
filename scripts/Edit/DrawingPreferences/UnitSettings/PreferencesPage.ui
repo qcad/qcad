@@ -11,25 +11,35 @@
    </rect>
   </property>
   <layout class="QFormLayout" name="formLayout">
-   <item row="0" column="0">
+   <item row="1" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
       <string>Drawing Unit:</string>
      </property>
     </widget>
    </item>
-   <item row="0" column="1">
+   <item row="1" column="1">
     <widget class="QComboBox" name="Unit"/>
    </item>
-   <item row="1" column="0">
+   <item row="2" column="0">
     <widget class="QLabel" name="label_2">
      <property name="text">
       <string>Paper Unit:</string>
      </property>
     </widget>
    </item>
-   <item row="1" column="1">
+   <item row="2" column="1">
     <widget class="QComboBox" name="PaperUnit"/>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Measurement System:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QComboBox" name="Measurement"/>
    </item>
   </layout>
  </widget>
