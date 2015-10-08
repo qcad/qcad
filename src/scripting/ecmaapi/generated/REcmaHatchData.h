@@ -58,6 +58,12 @@
         operator_assign
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasCustomPattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        cloneOnChange
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -158,6 +164,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getComplexity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPattern
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

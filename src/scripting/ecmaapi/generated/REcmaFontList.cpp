@@ -59,6 +59,8 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, init, "init");
             
+            REcmaHelper::registerFunction(&engine, &ctor, initSubstitutions, "initSubstitutions");
+            
             REcmaHelper::registerFunction(&engine, &ctor, uninit, "uninit");
             
             REcmaHelper::registerFunction(&engine, &ctor, getNames, "getNames");
@@ -189,6 +191,40 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaFontList::init", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaFontList::initSubstitutions
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaFontList::initSubstitutions", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFontList::initSubstitutions";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RFontList::
+       initSubstitutions();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFontList.initSubstitutions().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaFontList::initSubstitutions", context, engine);
             return result;
         }
          QScriptValue

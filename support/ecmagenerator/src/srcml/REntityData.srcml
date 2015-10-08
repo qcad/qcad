@@ -126,6 +126,27 @@
     <function_decl><type><name>virtual</name> <name>RPolyline</name></type> <name>getHull</name><parameter_list>(<param><decl><type><name>double</name></type> <name>offset</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <comment type="block">/**
+     * \return True if the entity caches are updated when the entity is being exported.
+     */</comment>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isUpdatesEnabled</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>updatesEnabled</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * Enables / disables cache updates.
+     */</comment>
+    <function><type><name>void</name></type> <name>setUpdatesEnabled</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>updatesEnabled</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * Reimplement to force clone on change in transactions.
+     */</comment>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>cloneOnChange</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>false</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
      * \return True if the entity is currently selected. This can for example
      *      influence the color in which the entity is exported.
      */</comment>
@@ -322,6 +343,7 @@
 
 </public><protected>protected:
     <decl_stmt><decl><type><name>RDocument</name>*</type> <name>document</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>updatesEnabled</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>selectionStatus</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>int</name></type> <name>drawOrder</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl>;</decl_stmt>

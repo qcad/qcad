@@ -82,6 +82,10 @@
     
             REcmaHelper::registerFunction(&engine, proto, operator_assign, "operator_assign");
             
+            REcmaHelper::registerFunction(&engine, proto, hasCustomPattern, "hasCustomPattern");
+            
+            REcmaHelper::registerFunction(&engine, proto, cloneOnChange, "cloneOnChange");
+            
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
             REcmaHelper::registerFunction(&engine, proto, getPointOnEntity, "getPointOnEntity");
@@ -149,6 +153,8 @@
             REcmaHelper::registerFunction(&engine, proto, getLoopBoundary, "getLoopBoundary");
             
             REcmaHelper::registerFunction(&engine, proto, getComplexity, "getComplexity");
+            
+            REcmaHelper::registerFunction(&engine, proto, setPattern, "setPattern");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RHatchData*>(), *proto);
@@ -490,6 +496,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaHatchData::operator=", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::hasCustomPattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::hasCustomPattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::hasCustomPattern";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("hasCustomPattern", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasCustomPattern();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.hasCustomPattern().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::hasCustomPattern", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::cloneOnChange
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::cloneOnChange", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::cloneOnChange";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("cloneOnChange", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->cloneOnChange();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.cloneOnChange().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::cloneOnChange", context, engine);
             return result;
         }
          QScriptValue
@@ -3085,6 +3189,71 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaHatchData::getComplexity", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::setPattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::setPattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::setPattern";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("setPattern", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPattern */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RPattern*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RPattern*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RHatchData: Argument 0 is not of type RPattern*.",
+                               context);                    
+                    }
+                    RPattern& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPattern(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.setPattern().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::setPattern", context, engine);
             return result;
         }
          QScriptValue REcmaHatchData::toString

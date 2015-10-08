@@ -148,6 +148,18 @@
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setSelected</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isUpdatesEnabled</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>isUpdatesEnabled</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setUpdatesEnabled</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setUpdatesEnabled</name><argument_list>(<argument><expr><name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>bool</name></type> <name>cloneOnChange</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>cloneOnChange</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
     <comment type="block">/**
      * \copydoc REntityData::setDrawOrder
      */</comment>

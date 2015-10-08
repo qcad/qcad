@@ -70,6 +70,15 @@
         getHull
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isUpdatesEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setUpdatesEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        cloneOnChange
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isSelected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

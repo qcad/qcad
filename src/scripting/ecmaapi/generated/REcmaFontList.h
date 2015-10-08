@@ -49,6 +49,9 @@
         init
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        initSubstitutions
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         uninit
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

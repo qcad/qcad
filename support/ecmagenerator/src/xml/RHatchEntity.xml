@@ -258,6 +258,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyPatternName" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyEntityPattern" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyScaleFactor" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyAngle" type="RPropertyTypeId"

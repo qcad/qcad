@@ -49,6 +49,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
+            REcmaHelper::registerFunction(&engine, proto, clear, "clear");
+            
             REcmaHelper::registerFunction(&engine, proto, getFileName, "getFileName");
             
             REcmaHelper::registerFunction(&engine, proto, getName, "getName");
@@ -58,6 +60,8 @@
             REcmaHelper::registerFunction(&engine, proto, load, "load");
             
             REcmaHelper::registerFunction(&engine, proto, getPatternLines, "getPatternLines");
+            
+            REcmaHelper::registerFunction(&engine, proto, addPatternLine, "addPatternLine");
             
             REcmaHelper::registerFunction(&engine, proto, scale, "scale");
             
@@ -320,6 +324,50 @@
             return result;
         }
          QScriptValue
+        REcmaPattern::clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPattern::clear", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPattern::clear";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPattern* self = 
+                        getSelf("clear", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clear();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPattern.clear().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPattern::clear", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPattern::getFileName
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -557,6 +605,71 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPattern::getPatternLines", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPattern::addPatternLine
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPattern::addPatternLine", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPattern::addPatternLine";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPattern* self = 
+                        getSelf("addPatternLine", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPatternLine */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RPatternLine*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RPatternLine*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RPattern: Argument 0 is not of type RPatternLine*.",
+                               context);                    
+                    }
+                    RPatternLine& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addPatternLine(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPattern.addPatternLine().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPattern::addPatternLine", context, engine);
             return result;
         }
          QScriptValue

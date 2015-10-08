@@ -27,6 +27,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocument.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntity.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLine.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPattern.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPathSource.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPoint.h"</cpp:file></cpp:include>
@@ -53,6 +54,15 @@
     <constructor_decl><name>RHatchData</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>solid</name></decl></param>, <param><decl><type><name>double</name></type> <name>scaleFactor</name></decl></param>, <param><decl><type><name>double</name></type> <name>angle</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>patternName</name></decl></param>)</parameter_list>;</constructor_decl>
 
     <function_decl><type><name>RHatchData</name>&amp;</type> <name>operator=</name><parameter_list>(<param><decl><type><name>const</name> <name>RHatchData</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>bool</name></type> <name>hasCustomPattern</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>!<name>pattern</name>.<call><name>getPatternLines</name><argument_list>()</argument_list></call>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>bool</name></type> <name>cloneOnChange</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <comment type="line">// force clone to preserve custom pattern for undo:</comment>
+        <return>return <expr><call><name>hasCustomPattern</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
 
     <function_decl><type><name>virtual</name> <name>RBox</name></type> <name>getBoundingBox</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>ignoreEmpty</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
@@ -85,6 +95,7 @@
 
     <function><type><name>void</name></type> <name>setSolid</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>solid</name> = <name>on</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>pattern</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
         <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
@@ -94,6 +105,7 @@
 
     <function><type><name>void</name></type> <name>setScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>scaleFactor</name> = <name>s</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>pattern</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
         <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
@@ -103,6 +115,7 @@
 
     <function><type><name>void</name></type> <name>setAngle</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>angle</name> = <name>a</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>pattern</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
         <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
@@ -112,6 +125,7 @@
 
     <function><type><name>void</name></type> <name>setOriginPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>op</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>originPoint</name> = <name>op</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>pattern</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
         <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
@@ -121,6 +135,7 @@
 
     <function><type><name>void</name></type> <name>setPatternName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>n</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>patternName</name> = <name>n</name></expr>;</expr_stmt>
+        <expr_stmt><expr><name>pattern</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
         <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
@@ -128,7 +143,6 @@
     <function_decl><type><name>void</name></type> <name>addBoundary</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>shape</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>RPainterPath</name></type> <name>getBoundaryPath</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPaths</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>draft</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-
 
     <function><type><name>QList<argument_list>&lt;<argument><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getBoundary</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>boundary</name></expr>;</return>
@@ -150,6 +164,10 @@
 
     <function_decl><type><name>int</name></type> <name>getComplexity</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function><type><name>void</name></type> <name>setPattern</name><parameter_list>(<param><decl><type><name>const</name> <name>RPattern</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>pattern</name> = <name>p</name></expr>;</expr_stmt>
+    }</block></function>
+
 </public><protected>protected:
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RLine</name></argument>&gt;</argument_list></name></type> <name>getSegments</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>line</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
@@ -164,6 +182,9 @@
      * Hatch boundary, ordered by loops, in strictly defined order.
      */</comment>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>boundary</name></decl>;</decl_stmt>
+
+    <comment type="line">// custom pattern loaded from file:</comment>
+    <decl_stmt><decl><type><name>mutable</name> <name>RPattern</name></type> <name>pattern</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>mutable</name> <name>RPainterPath</name></type> <name>boundaryPath</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>painterPaths</name></decl>;</decl_stmt>

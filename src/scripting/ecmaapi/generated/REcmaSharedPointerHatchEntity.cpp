@@ -198,6 +198,10 @@
                 qScriptValueFromValue(&engine, RHatchEntity::PropertyPatternName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyEntityPattern",
+                qScriptValueFromValue(&engine, RHatchEntity::PropertyEntityPattern),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyScaleFactor",
                 qScriptValueFromValue(&engine, RHatchEntity::PropertyScaleFactor),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

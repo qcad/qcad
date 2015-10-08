@@ -80,6 +80,15 @@
         setSelected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isUpdatesEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setUpdatesEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        cloneOnChange
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setDrawOrder
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

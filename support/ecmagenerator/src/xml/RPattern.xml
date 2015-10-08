@@ -27,6 +27,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="clear" cppName="clear" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="getFileName" cppName="getFileName"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -49,6 +53,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QList &lt; RPatternLine &gt;"
       isPureVirtual="false" />
+    </method>
+    <method name="addPatternLine" cppName="addPatternLine"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPatternLine &amp;" typeName="RPatternLine"
+        name="patternLine" isConst="true" />
+      </variant>
     </method>
     <method name="scale" cppName="scale" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

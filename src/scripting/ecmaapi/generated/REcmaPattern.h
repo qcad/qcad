@@ -52,6 +52,9 @@
         isValid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clear
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getFileName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -65,6 +68,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getPatternLines
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        addPatternLine
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         scale

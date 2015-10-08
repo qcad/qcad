@@ -23,6 +23,7 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMap&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFileInfo&gt;</cpp:file></cpp:include>
@@ -64,8 +65,16 @@
      */</comment>
     <function><type><name>T</name>*</type> <name>get</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>resName</name></decl></param>)</parameter_list> <block>{
         <if>if <condition>(<expr>!<call><name><name>RS</name>::<name>mapContainsCaseInsensitive</name></name><argument_list>(<argument><expr><name>resMap</name></expr></argument>, <argument><expr><name>resName</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
+            <comment type="line">// resource not found, check substitution map:</comment>
             <if>if <condition>(<expr><call><name><name>RS</name>::<name>mapContainsCaseInsensitive</name></name><argument_list>(<argument><expr><name>resSubstitutionMap</name></expr></argument>, <argument><expr><name>resName</name></expr></argument>)</argument_list></call></expr>)</condition><then> <block>{
-                <return>return <expr><call><name>get</name><argument_list>(<argument><expr><name>resSubstitutionMap</name>.<call><name>value</name><argument_list>(<argument><expr><name>resName</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</return>
+                <comment type="line">// substitution found:</comment>
+                <decl_stmt><decl><type><name>QString</name></type> <name>sub</name> =<init> <expr><call><name><name>RS</name>::<name>mapValueCaseInsensitive</name></name><argument_list>(<argument><expr><name>resSubstitutionMap</name></expr></argument>, <argument><expr><name>resName</name></expr></argument>)</argument_list></call></expr></init></decl>;</decl_stmt>
+                <if>if <condition>(<expr><name>sub</name>.<call><name>compare</name><argument_list>(<argument><expr><name>resName</name></expr></argument>, <argument><expr><name><name>Qt</name>::<name>CaseInsensitive</name></name></expr></argument>)</argument_list></call>==0</expr>)</condition><then> <block>{
+                    <expr_stmt><expr><call><name>qWarning</name><argument_list>()</argument_list></call> &lt;&lt; "recursive resource substitution:" &lt;&lt; <name>resName</name> &lt;&lt; "-&gt;" &lt;&lt; <name>sub</name></expr>;</expr_stmt>
+                    <comment type="line">// cannot substitute font with itself (avoid recursion):</comment>
+                    <return>return <expr><name>NULL</name></expr>;</return>
+                }</block></then></if>
+                <return>return <expr><call><name>get</name><argument_list>(<argument><expr><name>sub</name></expr></argument>)</argument_list></call></expr>;</return>
             }</block></then></if>
             <return>return <expr><name>NULL</name></expr>;</return>
         }</block></then></if>

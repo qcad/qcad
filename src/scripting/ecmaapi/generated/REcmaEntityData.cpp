@@ -71,6 +71,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, getHull, "getHull");
             
+            REcmaHelper::registerFunction(&engine, proto, isUpdatesEnabled, "isUpdatesEnabled");
+            
+            REcmaHelper::registerFunction(&engine, proto, setUpdatesEnabled, "setUpdatesEnabled");
+            
+            REcmaHelper::registerFunction(&engine, proto, cloneOnChange, "cloneOnChange");
+            
             REcmaHelper::registerFunction(&engine, proto, isSelected, "isSelected");
             
             REcmaHelper::registerFunction(&engine, proto, setSelected, "setSelected");
@@ -976,6 +982,159 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEntityData::getHull", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntityData::isUpdatesEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntityData::isUpdatesEnabled", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntityData::isUpdatesEnabled";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntityData* self = 
+                        getSelf("isUpdatesEnabled", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isUpdatesEnabled();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntityData.isUpdatesEnabled().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntityData::isUpdatesEnabled", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntityData::setUpdatesEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntityData::setUpdatesEnabled", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntityData::setUpdatesEnabled";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntityData* self = 
+                        getSelf("setUpdatesEnabled", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setUpdatesEnabled(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntityData.setUpdatesEnabled().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntityData::setUpdatesEnabled", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntityData::cloneOnChange
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntityData::cloneOnChange", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntityData::cloneOnChange";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntityData* self = 
+                        getSelf("cloneOnChange", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->cloneOnChange();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntityData.cloneOnChange().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntityData::cloneOnChange", context, engine);
             return result;
         }
          QScriptValue

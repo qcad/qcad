@@ -35,6 +35,7 @@
 <class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RFontList</name> <block>{<private type="default">
 </private><public>public:
     <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>void</name></type> <name>initSubstitutions</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>void</name></type> <name>uninit</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>QStringList</name></type> <name>getNames</name><parameter_list>()</parameter_list>;</function_decl>

@@ -302,7 +302,6 @@
     <function_decl><type><name>QVariant</name></type> <name>getKnownVariable</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>KnownVariable</name></name></type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>defaultValue</name> =<init> <expr><name>RDEFAULT_QVARIANT</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>setUnit</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>unit</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <comment type="line">//void setUnit(RTransaction&amp; transaction, RS::Unit unit);</comment>
     <function_decl><type><name><name>RS</name>::<name>Unit</name></name></type> <name>getUnit</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>setMeasurement</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>Measurement</name></name></type> <name>m</name></decl></param>,  <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
