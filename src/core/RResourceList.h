@@ -22,6 +22,7 @@
 
 #include "core_global.h"
 
+#include <QDebug>
 #include <QString>
 #include <QMap>
 #include <QFileInfo>
@@ -63,8 +64,16 @@ public:
      */
     T* get(const QString& resName) {
         if (!RS::mapContainsCaseInsensitive(resMap, resName)) {
+            // resource not found, check substitution map:
             if (RS::mapContainsCaseInsensitive(resSubstitutionMap, resName)) {
-                return get(resSubstitutionMap.value(resName));
+                // substitution found:
+                QString sub = RS::mapValueCaseInsensitive(resSubstitutionMap, resName);
+                if (sub.compare(resName, Qt::CaseInsensitive)==0) {
+                    qWarning() << "recursive resource substitution:" << resName << "->" << sub;
+                    // cannot substitute font with itself (avoid recursion):
+                    return NULL;
+                }
+                return get(sub);
             }
             return NULL;
         }
