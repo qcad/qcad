@@ -702,6 +702,13 @@ QSharedPointer<RShape> RPolyline::getSegmentAt(int i) const {
     }
 }
 
+bool RPolyline::isArcSegmentAt(int i) const {
+    if (i<0 || i>=bulges.length()) {
+        return false;
+    }
+    return !RPolyline::isStraight(bulges[i]);
+}
+
 QSharedPointer<RShape> RPolyline::getLastSegment() const {
     if (countSegments()==0) {
         return QSharedPointer<RShape>();

@@ -153,6 +153,7 @@ public:
     }
     int countSegments() const;
     QSharedPointer<RShape> getSegmentAt(int i) const;
+    bool isArcSegmentAt(int i) const;
     QSharedPointer<RShape> getLastSegment() const;
     QSharedPointer<RShape> getFirstSegment() const;
 

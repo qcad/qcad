@@ -16,6 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RArc.h"
 #include "RPolylineData.h"
 #include "RPolylineEntity.h"
 
@@ -59,7 +60,17 @@ QList<RBox> RPolylineData::getBoundingBoxes(bool ignoreEmpty) const {
 
 QList<RVector> RPolylineData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
-    return getVertices();
+
+    QList<RVector> ret = getVertices();
+    for (int i=0; i<countSegments(); i++) {
+        if (isArcSegmentAt(i)) {
+            QSharedPointer<RArc> arc = getSegmentAt(i).dynamicCast<RArc>();
+            if (!arc.isNull()) {
+                ret.append(arc->getMiddlePoint());
+            }
+        }
+    }
+    return ret;
 }
 
 bool RPolylineData::moveReferencePoint(const RVector& referencePoint,
@@ -71,6 +82,19 @@ bool RPolylineData::moveReferencePoint(const RVector& referencePoint,
         if (referencePoint.equalsFuzzy(*it)) {
             (*it) = targetPoint;
             ret = true;
+        }
+    }
+
+    for (int i=0; i<countSegments(); i++) {
+        if (isArcSegmentAt(i)) {
+            QSharedPointer<RArc> arc = getSegmentAt(i).dynamicCast<RArc>();
+            if (!arc.isNull()) {
+                if (referencePoint.equalsFuzzy(arc->getMiddlePoint())) {
+                    RArc a = RArc::createFrom3Points(arc->getStartPoint(), targetPoint, arc->getEndPoint());
+                    setBulgeAt(i, a.getBulge());
+                    ret = true;
+                }
+            }
         }
     }
 
