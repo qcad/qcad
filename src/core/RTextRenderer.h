@@ -131,6 +131,19 @@ private:
         return "";
     }
 
+    void setBlockFontFile(const QString& f) {
+        if (!blockFontFile.isEmpty()) {
+            blockFontFile.top() = f;
+        }
+    }
+
+    QString getBlockFontFile() const {
+        if (!blockFontFile.isEmpty()) {
+            return blockFontFile.top();
+        }
+        return "";
+    }
+
     void setUseCadFont(bool on) {
         if (!useCadFont.isEmpty()) {
             useCadFont.top() = on;
@@ -262,6 +275,7 @@ private:
     QStack<QTextCharFormat> currentFormat;
     QStack<double> blockHeight;
     QStack<QString> blockFont;
+    QStack<QString> blockFontFile;
     QStack<bool> blockBold;
     QStack<bool> blockItalic;
     QStack<QStringList> openTags;

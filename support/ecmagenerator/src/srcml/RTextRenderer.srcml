@@ -132,6 +132,19 @@
         <return>return <expr>""</expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setBlockFontFile</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>f</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr>!<name>blockFontFile</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <expr_stmt><expr><name>blockFontFile</name>.<call><name>top</name><argument_list>()</argument_list></call> = <name>f</name></expr>;</expr_stmt>
+        }</block></then></if>
+    }</block></function>
+
+    <function><type><name>QString</name></type> <name>getBlockFontFile</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr>!<name>blockFontFile</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>blockFontFile</name>.<call><name>top</name><argument_list>()</argument_list></call></expr>;</return>
+        }</block></then></if>
+        <return>return <expr>""</expr>;</return>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>setUseCadFont</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <if>if <condition>(<expr>!<name>useCadFont</name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
             <expr_stmt><expr><name>useCadFont</name>.<call><name>top</name><argument_list>()</argument_list></call> = <name>on</name></expr>;</expr_stmt>
@@ -263,6 +276,7 @@
     <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>QTextCharFormat</name></argument>&gt;</argument_list></name></type> <name>currentFormat</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>blockHeight</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>blockFont</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>blockFontFile</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>bool</name></argument>&gt;</argument_list></name></type> <name>blockBold</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>bool</name></argument>&gt;</argument_list></name></type> <name>blockItalic</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>QStringList</name></argument>&gt;</argument_list></name></type> <name>openTags</name></decl>;</decl_stmt>

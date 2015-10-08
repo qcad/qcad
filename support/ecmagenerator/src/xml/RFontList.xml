@@ -34,6 +34,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="fontName" isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="fontFile" isConst="true" />
       </variant>
     </method>
   </class>

@@ -217,6 +217,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="fontName" isConst="true" />
       </variant>
     </method>
+    <method name="getFontFile" cppName="getFontFile"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="setDrawingDirection"
     cppName="setDrawingDirection" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

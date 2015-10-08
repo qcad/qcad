@@ -186,6 +186,10 @@
         <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setFontName</name><argument_list>(<argument><expr><name>fontName</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>QString</name></type> <name>getFontFile</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getFontFile</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>setDrawingDirection</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>TextDrawingDirection</name></name></type> <name>drawingDirection</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setDrawingDirection</name><argument_list>(<argument><expr><name>drawingDirection</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>

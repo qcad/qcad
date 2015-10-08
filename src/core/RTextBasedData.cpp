@@ -632,7 +632,7 @@ QString RTextBasedData::toEscapedText(const QTextDocument& textDocument, const R
             }
 
             if (fontChanged) {
-                if (RFontList::isCadFont(fontFamily)) {
+                if (RFontList::isCadFont(fontFamily, "")) {
                     ret += QString("\\F%1|c0;")
                             .arg(fontFamily);
                 }
@@ -907,6 +907,7 @@ QDebug operator<<(QDebug dbg, const RTextBasedData& t) {
     dbg.nospace() << "RTextBasedData("
                   << "text: " << t.text
                   << ", font: " << t.fontName
+                  << ", file: " << t.fontFile
                   << ", position: " << t.position
                   << ", alignmnet point: " << t.alignmentPoint
                   << ", angle: " << RMath::rad2deg(t.angle)

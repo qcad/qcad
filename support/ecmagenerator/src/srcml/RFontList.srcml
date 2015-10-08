@@ -44,7 +44,7 @@
         <return>return <expr><name>res</name>.<call><name>get</name><argument_list>(<argument><expr><name>resName</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function_decl><type><name>static</name> <name>bool</name></type> <name>isCadFont</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fontName</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>isCadFont</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fontName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fontFile</name></decl></param>)</parameter_list>;</function_decl>
 
 </public><private>private:
     <decl_stmt><decl><type><name>static</name> <name>RResourceList<argument_list>&lt;<argument><name>RFont</name></argument>&gt;</argument_list></name></type> <name>res</name></decl>;</decl_stmt>

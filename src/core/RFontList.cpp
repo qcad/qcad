@@ -91,10 +91,10 @@ void RFontList::uninit() {
  * \return True if the given font name refers to a CAD font, false if it
  *      refers to a TTF font.
  */
-bool RFontList::isCadFont(const QString& fontName) {
+bool RFontList::isCadFont(const QString& fontName, const QString& fontFile) {
     RFont* font = res.get(fontName);
     if (font==NULL) {
-        return false;
+        return fontFile.toLower().contains(".shx");
     }
     return font->isValid();
 }

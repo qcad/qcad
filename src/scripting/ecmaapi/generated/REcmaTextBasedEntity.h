@@ -140,6 +140,9 @@
         setFontName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getFontFile
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setDrawingDirection
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -130,6 +130,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setFontName, "setFontName");
             
+            REcmaHelper::registerFunction(&engine, proto, getFontFile, "getFontFile");
+            
             REcmaHelper::registerFunction(&engine, proto, setDrawingDirection, "setDrawingDirection");
             
             REcmaHelper::registerFunction(&engine, proto, getDrawingDirection, "getDrawingDirection");
@@ -2487,6 +2489,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedEntity::setFontName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerTextBasedEntity::getFontFile
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedEntity::getFontFile", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedEntity::getFontFile";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedEntity* self = 
+                        getSelf("getFontFile", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getFontFile();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedEntity.getFontFile().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedEntity::getFontFile", context, engine);
             return result;
         }
          QScriptValue

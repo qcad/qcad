@@ -129,6 +129,14 @@
         <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
+    <function><type><name>QString</name></type> <name>getFontFile</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>fontFile</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setFontFile</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fontFile</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>fontFile</name> = <name>fontFile</name></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>bool</name></type> <name>isBold</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>bold</name></expr>;</return>
     }</block></function>
@@ -316,6 +324,7 @@
     <decl_stmt><decl><type><name><name>RS</name>::<name>TextLineSpacingStyle</name></name></type> <name>lineSpacingStyle</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>lineSpacingFactor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QString</name></type> <name>fontName</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QString</name></type> <name>fontFile</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>bold</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>italic</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>angle</name></decl>;</decl_stmt>

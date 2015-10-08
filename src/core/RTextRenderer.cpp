@@ -143,6 +143,7 @@ void RTextRenderer::renderSimple() {
     RS::VAlign verticalAlignment = textData.getVAlign();
     RS::HAlign horizontalAlignment = textData.getHAlign();
     QString fontName = textData.getFontName();
+    QString fontFile = textData.getFontFile();
     bool bold = textData.isBold();
     bool italic = textData.isItalic();
     double angle = textData.getAngle();
@@ -194,9 +195,10 @@ void RTextRenderer::renderSimple() {
     formats.append(fr);
     blockHeight.push(textHeight);
     blockFont.push(fontName);
+    blockFontFile.push(fontFile);
     blockBold.push(bold);
     blockItalic.push(italic);
-    useCadFont.push(RFontList::isCadFont(getBlockFont()));
+    useCadFont.push(RFontList::isCadFont(getBlockFont(), getBlockFontFile()));
     openTags.push(QStringList());
 
     double horizontalAdvance = 0.0;
@@ -386,6 +388,7 @@ void RTextRenderer::render() {
     RS::HAlign horizontalAlignment = textData.getHAlign();
     double lineSpacingFactor = textData.getLineSpacingFactor();
     QString fontName = textData.getFontName();
+    QString fontFile = textData.getFontFile();
     bool bold = textData.isBold();
     bool italic = textData.isItalic();
     double angle = textData.getAngle();
@@ -445,9 +448,10 @@ void RTextRenderer::render() {
     formats.append(fr);
     blockHeight.push(textHeight);
     blockFont.push(fontName);
+    blockFontFile.push(fontFile);
     blockBold.push(bold);
     blockItalic.push(italic);
-    useCadFont.push(RFontList::isCadFont(fontName));
+    useCadFont.push(RFontList::isCadFont(fontName, fontFile));
     openTags.push(QStringList());
 
     width = 0.0;
@@ -1370,10 +1374,6 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockCad(
         if (blockFont.isEmpty()) {
             qWarning() << "RTextRenderer::getPainterPathsForBlockCad: "
                    << "invalid font: stack empty - using 'standard' instead...";
-        }
-        else {
-            qWarning() << "RTextRenderer::getPainterPathsForBlockCad: "
-                   << "invalid font: " << blockFont.top() << " - using 'standard' instead...";
         }
 
         // 20120309: resort to standard font (better than nothing):

@@ -192,6 +192,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="fontName" isConst="true" />
       </variant>
     </method>
+    <method name="getFontFile" cppName="getFontFile"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
+    <method name="setFontFile" cppName="setFontFile"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="fontFile" isConst="true" />
+      </variant>
+    </method>
     <method name="isBold" cppName="isBold" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />

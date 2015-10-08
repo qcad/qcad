@@ -43,7 +43,7 @@ public:
         return res.get(resName);
     }
 
-    static bool isCadFont(const QString& fontName);
+    static bool isCadFont(const QString& fontName, const QString& fontFile);
 
 private:
     static RResourceList<RFont> res;

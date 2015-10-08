@@ -128,6 +128,14 @@ public:
         update();
     }
 
+    QString getFontFile() const {
+        return fontFile;
+    }
+
+    void setFontFile(const QString& fontFile) {
+        this->fontFile = fontFile;
+    }
+
     bool isBold() const {
         return bold;
     }
@@ -315,6 +323,7 @@ protected:
     RS::TextLineSpacingStyle lineSpacingStyle;
     double lineSpacingFactor;
     QString fontName;
+    QString fontFile;
     bool bold;
     bool italic;
     double angle;

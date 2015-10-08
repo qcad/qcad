@@ -185,6 +185,10 @@ public:
         getData().setFontName(fontName);
     }
 
+    QString getFontFile() const {
+        return getData().getFontFile();
+    }
+
     void setDrawingDirection(RS::TextDrawingDirection drawingDirection) {
         getData().setDrawingDirection(drawingDirection);
     }
