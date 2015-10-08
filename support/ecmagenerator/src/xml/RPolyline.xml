@@ -539,6 +539,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="i" isConst="false" />
       </variant>
     </method>
+    <method name="isArcSegmentAt" cppName="isArcSegmentAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+      </variant>
+    </method>
     <method name="getLastSegment" cppName="getLastSegment"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

@@ -204,6 +204,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, moveEndPoint, "moveEndPoint");
             
+            REcmaHelper::registerFunction(&engine, proto, moveMiddlePoint, "moveMiddlePoint");
+            
             REcmaHelper::registerFunction(&engine, proto, getBulge, "getBulge");
             
             REcmaHelper::registerFunction(&engine, proto, move, "move");
@@ -3712,6 +3714,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaArc::moveEndPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaArc::moveMiddlePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaArc::moveMiddlePoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaArc::moveMiddlePoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RArc* self = 
+                        getSelf("moveMiddlePoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RArc: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->moveMiddlePoint(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RArc.moveMiddlePoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaArc::moveMiddlePoint", context, engine);
             return result;
         }
          QScriptValue

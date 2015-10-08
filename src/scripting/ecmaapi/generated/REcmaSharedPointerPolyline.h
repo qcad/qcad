@@ -271,6 +271,9 @@
         getSegmentAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isArcSegmentAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLastSegment
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

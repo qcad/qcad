@@ -232,6 +232,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getSegmentAt, "getSegmentAt");
             
+            REcmaHelper::registerFunction(&engine, proto, isArcSegmentAt, "isArcSegmentAt");
+            
             REcmaHelper::registerFunction(&engine, proto, getLastSegment, "getLastSegment");
             
             REcmaHelper::registerFunction(&engine, proto, getFirstSegment, "getFirstSegment");
@@ -5805,6 +5807,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::getSegmentAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::isArcSegmentAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::isArcSegmentAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::isArcSegmentAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("isArcSegmentAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isArcSegmentAt(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.isArcSegmentAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::isArcSegmentAt", context, engine);
             return result;
         }
          QScriptValue

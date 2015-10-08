@@ -194,6 +194,9 @@
         moveEndPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        moveMiddlePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBulge
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
