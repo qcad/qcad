@@ -95,7 +95,7 @@ Altezza Testo:</translatorcomment>
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+88"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+90"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="-12"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+71"/>
@@ -339,7 +339,7 @@ Modificare il contenuto del blocco selezionato</translatorcomment>
         <translation type="obsolete">Contenuti</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-12"/>
         <source>Solid</source>
         <translatorcomment>--exact match--
 --file: it.po--
@@ -352,6 +352,7 @@ Tratteggi / Riempimenti</translatorcomment>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location line="+1"/>
         <source>Pattern</source>
         <translatorcomment>--exact match--
 --file: Hatch_it.ts--
@@ -360,7 +361,7 @@ Modelli di Tratteggio:</translatorcomment>
         <translation>Modello</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="-3"/>
         <source>Name</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -368,6 +369,11 @@ Documento senza nome %1
 Salva Disegno con Nuovo Nome...
 Salva Disegno con Nuovo Nome</translatorcomment>
         <translation>Nome</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>From Entity</source>
+        <translation>Da entity</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -384,8 +390,18 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
         <translation>Angolo</translation>
     </message>
     <message>
+        <location line="+192"/>
+        <source>Yes</source>
+        <translation>Si</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>No</source>
+        <translation>No</translation>
+    </message>
+    <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="+11"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
         <source>Scale</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--

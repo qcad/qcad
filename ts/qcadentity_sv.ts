@@ -49,7 +49,7 @@
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+88"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+90"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+89"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+71"/>
@@ -485,7 +485,7 @@
         <translation>Slutpunkt</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-4"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-5"/>
         <source>Solid</source>
         <translation>Helfylld</translation>
     </message>
@@ -493,13 +493,19 @@
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location line="+1"/>
         <source>Pattern</source>
         <translation>Mönster</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="-3"/>
         <source>Name</source>
         <translation>Namn</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>From Entity</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -525,6 +531,16 @@
         <location line="+1"/>
         <source>Vertex</source>
         <translation type="unfinished">Spets</translation>
+    </message>
+    <message>
+        <location line="+184"/>
+        <source>Yes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>No</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/entity/RImageEntity.cpp" line="-12"/>

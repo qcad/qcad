@@ -95,7 +95,7 @@ Hauteur
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+88"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+90"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="-12"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+71"/>
@@ -338,7 +338,7 @@ Modifier le contenu du bloc sélectionné</translatorcomment>
         <translation type="obsolete">Sommaire</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-12"/>
         <source>Solid</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -350,6 +350,7 @@ Remplissage uni</translatorcomment>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location line="+1"/>
         <source>Pattern</source>
         <translatorcomment>--exact match--
 --file: Hatch_fr.ts--
@@ -358,7 +359,7 @@ Motifs de &amp;hachure :</translatorcomment>
         <translation>Motif</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="-3"/>
         <source>Name</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -366,6 +367,11 @@ document non nommé %1
 Enregistrement du dessin sous un nouveau nom...
 Enregistrement du dessin sous un nouveau nom</translatorcomment>
         <translation>Nom</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>From Entity</source>
+        <translation>De entité</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -382,8 +388,18 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Angle</translation>
     </message>
     <message>
+        <location line="+192"/>
+        <source>Yes</source>
+        <translation>Oui</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>No</source>
+        <translation>Non</translation>
+    </message>
+    <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="+11"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
         <source>Scale</source>
         <translatorcomment>--exact match--
 --file: Scale_fr.ts--

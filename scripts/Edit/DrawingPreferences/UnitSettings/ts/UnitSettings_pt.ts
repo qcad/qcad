@@ -18,6 +18,11 @@ Principal unidade do desenho:</translatorcomment>
         <translation>Unidade de Papel:</translation>
     </message>
     <message>
+        <location line="+13"/>
+        <source>Measurement System (for line types and hatch patterns):</source>
+        <translation>Sistema de medição (tipos de linha e padrões de hachura):</translation>
+    </message>
+    <message>
         <location filename="../UnitSettings.js" line="+27"/>
         <source>General</source>
         <translatorcomment>--exact match--
@@ -48,7 +53,7 @@ Altura texto em unidades de desenho</translatorcomment>
         <translation>Padrões para Novos Desenhos</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+62"/>
         <source>None</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -223,6 +228,16 @@ Anos-Luz</translatorcomment>
 --file: qcadlib_pt.ts--
 Parsec</translatorcomment>
         <translation>Parsec</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Imperial</source>
+        <translation>Imperial</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Metric</source>
+        <translation>Métrico</translation>
     </message>
 </context>
 </TS>

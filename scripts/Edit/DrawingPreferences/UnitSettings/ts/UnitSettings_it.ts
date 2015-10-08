@@ -24,7 +24,7 @@
         <translation>Predefiniti per nuovi disegni</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+62"/>
         <source>None</source>
         <translation>Niente</translation>
     </message>
@@ -129,6 +129,16 @@
         <translation>Parsec</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>Imperial</source>
+        <translation>Imperiale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Metric</source>
+        <translation>Metrico</translation>
+    </message>
+    <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Drawing Unit:</source>
         <translation>Disegno unitario:</translation>
@@ -137,6 +147,11 @@
         <location line="+10"/>
         <source>Paper Unit:</source>
         <translation>Unità per la carta:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Measurement System (for line types and hatch patterns):</source>
+        <translation>Sistema di misura (tipi di linea e modelli di tratteggio):</translation>
     </message>
 </context>
 </TS>

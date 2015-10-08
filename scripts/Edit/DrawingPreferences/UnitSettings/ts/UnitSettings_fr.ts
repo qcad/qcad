@@ -24,7 +24,7 @@
         <translation>Valeurs par défaut pour les nouveaux dessins</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+62"/>
         <source>None</source>
         <translation>Aucun</translation>
     </message>
@@ -129,6 +129,16 @@
         <translation>Parsec</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>Imperial</source>
+        <translation>Impériale</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Metric</source>
+        <translation>Métrique</translation>
+    </message>
+    <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Drawing Unit:</source>
         <translation>Unité de dessin :</translation>
@@ -137,6 +147,11 @@
         <location line="+10"/>
         <source>Paper Unit:</source>
         <translation>Unité papier :</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Measurement System (for line types and hatch patterns):</source>
+        <translation>Système de mesure (types de ligne et motifs de hachures):</translation>
     </message>
 </context>
 </TS>

@@ -18,7 +18,7 @@
         <translation>Standards für neue Zeichnungen</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+62"/>
         <source>None</source>
         <translation>Keine</translation>
     </message>
@@ -123,6 +123,16 @@
         <translation>Parsec</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>Imperial</source>
+        <translation>Imperial</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Metric</source>
+        <translation>Metrisch</translation>
+    </message>
+    <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Drawing Unit:</source>
         <translation>Zeichnungseinheit:</translation>
@@ -133,7 +143,12 @@
         <translation>Papiereinheit:</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="-70"/>
+        <location line="+13"/>
+        <source>Measurement System (for line types and hatch patterns):</source>
+        <translation>Messsystem (für Linientypen und Schraffurmuster):</translation>
+    </message>
+    <message>
+        <location filename="../UnitSettings.js" line="-89"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
         <translation>Zeichnungseinheit</translation>

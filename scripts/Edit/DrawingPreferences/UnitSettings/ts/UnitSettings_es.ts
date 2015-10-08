@@ -24,7 +24,7 @@
         <translation>Unidad en dibujos nuevos</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+62"/>
         <source>None</source>
         <translation>Ninguno</translation>
     </message>
@@ -129,6 +129,16 @@
         <translation>Parsec</translation>
     </message>
     <message>
+        <location line="+6"/>
+        <source>Imperial</source>
+        <translation>Imperial</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Metric</source>
+        <translation>Métrico</translation>
+    </message>
+    <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Drawing Unit:</source>
         <translation>Unidad de dibujo:</translation>
@@ -137,6 +147,11 @@
         <location line="+10"/>
         <source>Paper Unit:</source>
         <translation>Unidad para el papel:</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Measurement System (for line types and hatch patterns):</source>
+        <translation>Sistema de medición (tipos de línea y patrones de sombreado):</translation>
     </message>
 </context>
 </TS>

@@ -85,7 +85,7 @@ Altura del Texto:</translatorcomment>
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+88"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+90"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="-12"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+71"/>
@@ -328,7 +328,7 @@ Editar el contenido del bloque seleccionado</translatorcomment>
         <translation type="obsolete">Contenidos</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-11"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-12"/>
         <source>Solid</source>
         <translatorcomment>--exact match--
 --file: Scripts_es.ts--
@@ -341,6 +341,7 @@ Sombreado/Relleno</translatorcomment>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location line="+1"/>
         <source>Pattern</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -349,7 +350,7 @@ Patrones Sombreado:</translatorcomment>
         <translation>Patrón</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="-3"/>
         <source>Name</source>
         <translatorcomment>--exact match--
 --file: es.po--
@@ -357,6 +358,11 @@ documento sin título %1
 Guardando el dibujo con nombre nuevo...
 Guardando el dibujo con nombre nuevo</translatorcomment>
         <translation>Nombre</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>From Entity</source>
+        <translation>De entidad</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -373,8 +379,18 @@ Introduzca ángulo en línea de cota:</translatorcomment>
         <translation>Ángulo</translation>
     </message>
     <message>
+        <location line="+192"/>
+        <source>Yes</source>
+        <translation>Sí</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>No</source>
+        <translation>No</translation>
+    </message>
+    <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="+11"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
         <source>Scale</source>
         <translatorcomment>--exact match--
 --file: es.po--

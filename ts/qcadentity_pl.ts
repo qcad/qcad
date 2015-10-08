@@ -49,7 +49,7 @@
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+88"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+90"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+89"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+71"/>
@@ -499,7 +499,7 @@ Punkt główny|Y</translatorcomment>
         <translation>Punkt końcowy</translation>
     </message>
     <message>
-        <location filename="../src/entity/RHatchEntity.cpp" line="-7"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-8"/>
         <source>Solid</source>
         <translation>Jednolity</translation>
     </message>
@@ -507,13 +507,19 @@ Punkt główny|Y</translatorcomment>
         <location line="+2"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location line="+1"/>
         <source>Pattern</source>
         <translation>Wzór</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="-3"/>
         <source>Name</source>
         <translation>Nazwa</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>From Entity</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -525,8 +531,18 @@ Punkt główny|Y</translatorcomment>
         <translation>Kąt</translation>
     </message>
     <message>
+        <location line="+192"/>
+        <source>Yes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>No</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-1"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="-191"/>
         <source>Scale</source>
         <translation>Skala</translation>
     </message>
