@@ -564,6 +564,8 @@ function main() {
         }
     }
 
+    RFontList.initSubstitutions();
+
     RPluginLoader.postInitPlugins(RPluginInterface.GotSplashWindow);
 
     // mark config file with current version number:

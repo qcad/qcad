@@ -16,7 +16,9 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+
 #include "RFontList.h"
+#include "RSettings.h"
 
 RResourceList<RFont> RFontList::res;
 
@@ -41,6 +43,31 @@ void RFontList::init() {
     }
 
     res.resSubstitutionMap.insert("txt", "standard");
+    res.resSubstitutionMap.insert("iso", "standard");
+}
+
+void RFontList::initSubstitutions() {
+    QString settingsKey = QString("FontSubstitution/Substitutions");
+    if (RSettings::hasValue(settingsKey)) {
+        QString v = RSettings::getStringValue(settingsKey, "");
+        if (!v.isEmpty()) {
+            QStringList substitutions = v.split(";");
+            for (int i=0; i<substitutions.length(); i++) {
+                // s[i]: "standard:iso,iso2"
+                QStringList keyValue = substitutions[i].split(":");
+                if (keyValue.length()!=2) {
+                    continue;
+                }
+                QString key = keyValue[0];
+                // key: "standard"
+                QStringList values = keyValue[1].split(",");
+                // values: "iso","iso2"
+                for (int k=0; k<values.length(); k++) {
+                    res.resSubstitutionMap.insert(values[k], key);
+                }
+            }
+        }
+    }
 }
 
 void RFontList::uninit() {

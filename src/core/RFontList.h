@@ -34,6 +34,7 @@
 class QCADCORE_EXPORT RFontList {
 public:
     static void init();
+    static void initSubstitutions();
     static void uninit();
 
     static QStringList getNames();
