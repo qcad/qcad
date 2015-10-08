@@ -47,6 +47,8 @@ void RFontList::init() {
 }
 
 void RFontList::initSubstitutions() {
+
+    // read substitutions from ini file:
     QString settingsKey = QString("FontSubstitution/Substitutions");
     if (RSettings::hasValue(settingsKey)) {
         QString v = RSettings::getStringValue(settingsKey, "");
@@ -66,6 +68,17 @@ void RFontList::initSubstitutions() {
                     res.resSubstitutionMap.insert(values[k], key);
                 }
             }
+        }
+    }
+
+    // read substitutions from command line:
+    QStringList args = qApp->arguments();
+    for (int i=0; i<args.length(); i++) {
+        if (args[i]=="-font-substitution" || args[i]=="-fs") {
+            if (i+2<args.length()) {
+                res.resSubstitutionMap.insert(args[i+1], args[i+2]);
+            }
+            i+=2;
         }
     }
 }

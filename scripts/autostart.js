@@ -114,7 +114,18 @@ function openFiles(args, createNew) {
             || args[i] === "-app-id" || args[i] === "-ignore"
             || args[i] === "-config") {
             // skip 2 arguments
-            if (++i>=args.length) {
+            i++;
+            if (i>=args.length) {
+                break;
+            }
+            continue;
+        }
+
+        // argument with two parameters
+        if (args[i] === "-font-substitution" || args[i] === "-fs") {
+            // skip 3 arguments
+            i+=2;
+            if (i>=args.length) {
                 break;
             }
             continue;
