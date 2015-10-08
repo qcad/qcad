@@ -72,7 +72,7 @@ void RShapesExporter::exportPainterPaths(const QList<RPainterPath>& paths, doubl
 
 RVector RShapesExporter::getPointAt(double d, int* index) {
     int i = getShapeAt(d);
-    if (i<0 || i>=lengthAt.size() || i>=shapes.length()) {
+    if (i<0 || i>=(int)lengthAt.size() || i>=(int)shapes.length()) {
         return RVector::invalid;
     }
 
