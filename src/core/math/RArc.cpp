@@ -241,6 +241,10 @@ void RArc::moveEndPoint(const RVector& pos) {
     }
 }
 
+void RArc::moveMiddlePoint(const RVector& pos) {
+    *this = RArc::createFrom3Points(getStartPoint(), pos, getEndPoint());
+}
+
 double RArc::getBulge() const {
     //qDebug() << "sweep: " << getSweep();
     double bulge = tan(fabs(getSweep()) / 4.0);

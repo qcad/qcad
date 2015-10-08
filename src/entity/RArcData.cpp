@@ -35,14 +35,14 @@ RArcData::RArcData(const RVector& center, double radius, double startAngle,
     RArc(center, radius, startAngle, endAngle, reversed) {
 }
 
-QList<RVector> RArcData::getReferencePoints(
-        RS::ProjectionRenderingHint hint) const {
+QList<RVector> RArcData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
     QList<RVector> ret;
     ret.append(center);
     ret.append(getStartPoint());
     ret.append(getEndPoint());
+    ret.append(getMiddlePoint());
 
     QList<RVector> p;
     p.append(center + RVector(radius, 0));
@@ -59,8 +59,7 @@ QList<RVector> RArcData::getReferencePoints(
     return ret;
 }
 
-bool RArcData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
+bool RArcData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint) {
     bool ret = false;
     if (referencePoint.equalsFuzzy(center)) {
         center = targetPoint;
@@ -77,6 +76,10 @@ bool RArcData::moveReferencePoint(const RVector& referencePoint,
              referencePoint.equalsFuzzy(center - RVector(radius, 0)) ||
              referencePoint.equalsFuzzy(center - RVector(0, radius))) {
         radius = center.getDistanceTo(targetPoint);
+        ret = true;
+    }
+    else if (referencePoint.equalsFuzzy(getMiddlePoint())) {
+        moveMiddlePoint(targetPoint);
         ret = true;
     }
     return ret;

@@ -116,6 +116,7 @@ public:
 
     void moveStartPoint(const RVector& pos);
     void moveEndPoint(const RVector& pos);
+    void moveMiddlePoint(const RVector& pos);
     double getBulge() const;
 
     virtual bool move(const RVector& offset);
