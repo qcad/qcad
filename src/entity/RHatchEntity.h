@@ -54,6 +54,7 @@ public:
     static RPropertyTypeId PropertySolid;
 
     static RPropertyTypeId PropertyPatternName;
+    static RPropertyTypeId PropertyEntityPattern;
     static RPropertyTypeId PropertyScaleFactor;
     static RPropertyTypeId PropertyAngle;
 

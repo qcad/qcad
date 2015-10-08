@@ -42,6 +42,7 @@ RPropertyTypeId RHatchEntity::PropertyDrawOrder;
 RPropertyTypeId RHatchEntity::PropertySolid;
 
 RPropertyTypeId RHatchEntity::PropertyPatternName;
+RPropertyTypeId RHatchEntity::PropertyEntityPattern;
 RPropertyTypeId RHatchEntity::PropertyScaleFactor;
 RPropertyTypeId RHatchEntity::PropertyAngle;
 
@@ -82,6 +83,7 @@ void RHatchEntity::init() {
     RHatchEntity::PropertySolid.generateId(typeid(RHatchEntity), "", QT_TRANSLATE_NOOP("REntity", "Solid"));
 
     RHatchEntity::PropertyPatternName.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "Name"));
+    RHatchEntity::PropertyEntityPattern.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "From Entity"));
     RHatchEntity::PropertyAngle.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "Angle"));
     RHatchEntity::PropertyScaleFactor.generateId(typeid(RHatchEntity), QT_TRANSLATE_NOOP("REntity", "Pattern"), QT_TRANSLATE_NOOP("REntity", "Scale"));
 
@@ -273,6 +275,8 @@ QPair<QVariant, RPropertyAttributes> RHatchEntity::getProperty(
 
     if (propertyTypeId == PropertyPatternName) {
         return qMakePair(QVariant(name), RPropertyAttributes(RPropertyAttributes::Pattern|op));
+    } else if (propertyTypeId == PropertyEntityPattern) {
+        return qMakePair(QVariant(data.hasCustomPattern() ? QT_TRANSLATE_NOOP("REntity", "Yes") : QT_TRANSLATE_NOOP("REntity", "No")), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     } else if (propertyTypeId == PropertyScaleFactor) {
         return qMakePair(QVariant(data.scaleFactor), RPropertyAttributes(op));
     } else if (propertyTypeId == PropertyAngle) {
