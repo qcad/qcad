@@ -122,7 +122,9 @@ void RImporter::endImport() {
         );
     }
 
+    qDebug() << "rebuilding spatial index";
     document->rebuildSpatialIndex();
+    qDebug() << "rebuilding spatial index: OK";
 }
 
 void RImporter::setCurrentBlockId(RBlock::Id id) {
