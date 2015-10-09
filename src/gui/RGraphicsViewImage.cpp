@@ -160,13 +160,16 @@ void RGraphicsViewImage::updateImage() {
 
     if (graphicsBufferNeedsUpdate) {
 
-        //RDebug::startTimer();
+        qDebug() << "updateImage";
+
+        RDebug::startTimer();
         updateGraphicsBuffer();
         graphicsBufferNeedsUpdate = false;
 
         bool displayGrid = gridVisible;
 
         // optimization for panning and scrolling:
+        /*
         if (panOptimization && lastFactor==factor) {
             Q_ASSERT(false);
             QImage lastBuffer = graphicsBuffer.copy();
@@ -220,6 +223,7 @@ void RGraphicsViewImage::updateImage() {
             gbPainter.end();
         }
         else {
+        */
             paintErase(graphicsBuffer);
             bool originBelowEntities = RSettings::getShowLargeOriginAxis();
             if (originBelowEntities) {
@@ -233,11 +237,12 @@ void RGraphicsViewImage::updateImage() {
             if (!originBelowEntities) {
                 paintOrigin(graphicsBuffer);
             }
-        }
+        //}
         lastOffset = offset;
         lastFactor = factor;
 
-        //RDebug::stopTimer("update graphics view");
+        RDebug::stopTimer("update graphics view");
+        qDebug() << "updateImage: OK";
     }
 
     graphicsBufferWithPreview = graphicsBuffer;
@@ -697,7 +702,7 @@ void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) 
         )
     );
 
-    //RDebug::startTimer();
+    RDebug::startTimer();
     mutexSi.lock();
     QSet<REntity::Id> ids;
 
@@ -736,7 +741,7 @@ void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) 
         paintEntity(painter, it.next());
     }
 
-    //RDebug::stopTimer("painting");
+    RDebug::stopTimer("painting");
 }
 
 void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
@@ -748,8 +753,6 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         return;
     }
 
-    // TODO: PERFORMANCE: don't copy list, only get reference from scene
-
     QList<RPainterPath> painterPaths;
 
     // get painter paths for vector graphics entity:
@@ -759,27 +762,6 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
     } else {
         // get painter paths of the given entity:
         painterPaths = sceneQt->getPainterPaths(id);
-
-        // entity is a block ref: add painter paths for block entities, transformed to block ref location:
-//        QSharedPointer<REntity> e = getDocument()->queryEntityDirect(id);
-//        QSharedPointer<RBlockReferenceEntity> blockRef = e.dynamicCast<RBlockReferenceEntity>();
-//        if (!blockRef.isNull()) {
-//            QSharedPointer<RBlock> block = getDocument()->queryBlockDirect(blockRef->getReferencedBlockId());
-//            if (!block.isNull()) {
-//                QSet<REntity::Id> ids = getDocument()->queryBlockEntities(blockRef->getReferencedBlockId());
-//                QSet<REntity::Id>::iterator it;
-//                for (it=ids.begin(); it!=ids.end(); it++) {
-//                    QList<RPainterPath> pps = sceneQt->getPainterPaths(*it);
-//                    for (int i=0; i<pps.length(); i++) {
-////                        pps[i].move(-block->getOrigin());
-////                        pps[i].scale(blockRef->getScaleFactors().x, blockRef->getScaleFactors().y);
-////                        pps[i].rotate(blockRef->getRotation());
-////                        pps[i].move(blockRef->getPosition());
-//                        painterPaths.append(pps[i]);
-//                    }
-//                }
-//            }
-//        }
 
         // if at least one arc path is too detailed or not detailed enough,
         // or the path is an XLine or Ray, regen:
@@ -967,17 +949,17 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         painter->setBrush(brush);
         painter->setPen(pen);
 
-        if (isPrinting() || clipBox.contains(pathBB)) {
-            if (brush.style() != Qt::NoBrush) {
-                painter->fillPath(path, brush);
-            }
+//        if (isPrinting() || clipBox.contains(pathBB)) {
+//            if (brush.style() != Qt::NoBrush) {
+//                painter->fillPath(path, brush);
+//            }
 
-            // draw outline:
-            if (pen.style() != Qt::NoPen) {
-                painter->drawPath(path);
-            }
-        }
-        else {
+//            // draw outline:
+//            if (pen.style() != Qt::NoPen) {
+//                painter->drawPath(path);
+//            }
+//        }
+//        else {
             // prevent overflows for simple lines:
             // TODO: make this an option for rendering:
             if (path.elementCount() == 2 &&
@@ -1055,7 +1037,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
                     }
                 }
             }
-        }
+        //}
 
         // draw points:
         if (path.hasPoints()) {
