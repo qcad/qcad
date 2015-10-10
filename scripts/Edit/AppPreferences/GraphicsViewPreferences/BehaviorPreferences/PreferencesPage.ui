@@ -25,7 +25,7 @@
      <height>613</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout_4">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
      <widget class="QGroupBox" name="RightClick">
       <property name="title">
@@ -36,6 +36,13 @@
         <widget class="QCheckBox" name="RightClickToDeselect">
          <property name="text">
           <string>Right-click to deselect entities</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="RightClickEntityContextMenu">
+         <property name="text">
+          <string>Right-click on entity shows context menu</string>
          </property>
         </widget>
        </item>

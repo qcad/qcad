@@ -909,42 +909,8 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
             }
         }
 
-        // color modes (b/w, grayscale):
-        // TODO: move as much as possible to generation of painter paths:
-        switch (colorMode) {
-        case RGraphicsView::BlackWhite:
-            // dark background: everything white:
-            if (bgColorLightness < 64 && !isPrinting()) {
-                if (pen.style() != Qt::NoPen) {
-                    pen.setColor(Qt::white);
-                }
-                if (brush.style() != Qt::NoBrush) {
-                    brush.setColor(Qt::white);
-                }
-            }
-            // bright background: everything black:
-            else {
-                if (pen.style() != Qt::NoPen) {
-                    pen.setColor(Qt::black);
-                }
-                if (brush.style() != Qt::NoBrush) {
-                    brush.setColor(Qt::black);
-                }
-            }
-            break;
-        case RGraphicsView::GrayScale:
-            if (pen.style() != Qt::NoPen) {
-                int v = qGray(pen.color().rgb());
-                pen.setColor(QColor(v, v, v));
-            }
-            if (brush.style() != Qt::NoBrush) {
-                int v = qGray(brush.color().rgb());
-                brush.setColor(QColor(v, v, v));
-            }
-            break;
-        default:
-            break;
-        }
+        applyColorMode(pen);
+        applyColorMode(brush);
 
         painter->setBrush(brush);
         painter->setPen(pen);
@@ -1128,6 +1094,65 @@ void RGraphicsViewImage::applyColorCorrection(QBrush& brush) {
             brush.setColor(Qt::black);
         }
     }
+}
+
+void RGraphicsViewImage::applyColorMode(QPen& pen) {
+    // color modes (b/w, grayscale):
+    // TODO: move as much as possible to generation of painter paths:
+    switch (colorMode) {
+    case RGraphicsView::BlackWhite:
+        // dark background: everything white:
+        if (bgColorLightness < 64 && !isPrinting()) {
+            if (pen.style() != Qt::NoPen) {
+                pen.setColor(Qt::white);
+            }
+        }
+        // bright background: everything black:
+        else {
+            if (pen.style() != Qt::NoPen) {
+                pen.setColor(Qt::black);
+            }
+        }
+        break;
+    case RGraphicsView::GrayScale:
+        if (pen.style() != Qt::NoPen) {
+            int v = qGray(pen.color().rgb());
+            pen.setColor(QColor(v, v, v));
+        }
+        break;
+    default:
+        break;
+    }
+}
+
+void RGraphicsViewImage::applyColorMode(QBrush& brush) {
+    // color modes (b/w, grayscale):
+    // TODO: move as much as possible to generation of painter paths:
+    switch (colorMode) {
+    case RGraphicsView::BlackWhite:
+        // dark background: everything white:
+        if (bgColorLightness < 64 && !isPrinting()) {
+            if (brush.style() != Qt::NoBrush) {
+                brush.setColor(Qt::white);
+            }
+        }
+        // bright background: everything black:
+        else {
+            if (brush.style() != Qt::NoBrush) {
+                brush.setColor(Qt::black);
+            }
+        }
+        break;
+    case RGraphicsView::GrayScale:
+        if (brush.style() != Qt::NoBrush) {
+            int v = qGray(brush.color().rgb());
+            brush.setColor(QColor(v, v, v));
+        }
+        break;
+    default:
+        break;
+    }
+
 }
 
 double RGraphicsViewImage::getPointSize(double pSize) {
@@ -1345,6 +1370,7 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
                     pen.setColor(text.getColor());
                 }
                 applyColorCorrection(pen);
+                applyColorMode(pen);
                 painter->setPen(pen);
             }
             textLayouts[i].layout->setTextOption(o);

@@ -286,6 +286,8 @@ protected:
     QList<RPainterPath> getTextLayoutsPainterPaths(const RTextBasedData& text, const QList<RTextLayout>& textLayouts);
     void applyColorCorrection(QPen& pen);
     void applyColorCorrection(QBrush& brush);
+    void applyColorMode(QPen& pen);
+    void applyColorMode(QBrush& brush);
     double getPointSize(double pSize);
     virtual void drawDot(QPainter* painter, QPointF pt);
     virtual void drawPlus(QPainter* painter, QPointF pt, double pSize);

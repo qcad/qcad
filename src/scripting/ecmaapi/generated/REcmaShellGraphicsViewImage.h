@@ -508,6 +508,16 @@
         
     
     
+      void applyColorMode(
+                QPen & pen
+            );
+        
+      void applyColorMode(
+                QBrush & brush
+            );
+        
+    
+    
       double getPointSize(
                 double pSize
             );
@@ -837,6 +847,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         applyColorCorrection
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        applyColorMode
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getPointSize
