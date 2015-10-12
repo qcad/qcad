@@ -21,7 +21,7 @@
 
 
 RAttributeData::RAttributeData(RDocument* document, const RAttributeData& data)
-    : RTextBasedData(document, data) {
+    : RTextBasedData(document, data), invisible(false) {
     *this = data;
     this->document = document;
     if (document!=NULL) {
@@ -30,7 +30,7 @@ RAttributeData::RAttributeData(RDocument* document, const RAttributeData& data)
 }
 
 RAttributeData::RAttributeData(const RTextBasedData& textData, RBlockReferenceEntity::Id blockReferenceId, const QString& tag)
-    : RTextBasedData(textData), tag(tag) {
+    : RTextBasedData(textData), tag(tag), invisible(false) {
 
     setParentId(blockReferenceId);
 }
