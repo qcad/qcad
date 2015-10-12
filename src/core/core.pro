@@ -280,6 +280,7 @@ LIBS += -lopennurbs -lzlib
 
 win32 {
     LIBS += -lRpcrt4 -lAdvapi32
+    LIBS += -luser32 -lgdi32
 }
 
 macx {
