@@ -23,3 +23,9 @@ function BehaviorPreferences() {
 BehaviorPreferences.getPreferencesCategory = function() {
     return [qsTr("Graphics View"), qsTr("Behavior")];
 };
+
+BehaviorPreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {
+    // hide right click context menu option:
+    var cb = pageWidget.findChild("RightClickEntityContextMenu");
+    cb.visible = false;
+};
