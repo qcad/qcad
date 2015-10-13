@@ -42,7 +42,7 @@
    <item>
     <widget class="QLabel" name="Message">
      <property name="text">
-      <string/>
+      <string notr="true"/>
      </property>
      <property name="textFormat">
       <enum>Qt::RichText</enum>
