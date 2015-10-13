@@ -65,6 +65,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getCpuCores, "getCpuCores");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getBuildCpuArchitecture, "getBuildCpuArchitecture");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getHostId, "getHostId");
             
             REcmaHelper::registerFunction(&engine, &ctor, getSystemId, "getSystemId");
@@ -2018,6 +2020,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaS::getCpuCores", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaS::getBuildCpuArchitecture
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaS::getBuildCpuArchitecture", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaS::getBuildCpuArchitecture";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RS::
+       getBuildCpuArchitecture();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RS.getBuildCpuArchitecture().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaS::getBuildCpuArchitecture", context, engine);
             return result;
         }
          QScriptValue

@@ -52,6 +52,9 @@
         getCpuCores
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getBuildCpuArchitecture
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getHostId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

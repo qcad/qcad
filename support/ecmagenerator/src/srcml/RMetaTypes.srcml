@@ -141,7 +141,7 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>unsigned int*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>qint64*</argument>)</argument_list></macro>
 
-<cpp:if>#<cpp:directive>if</cpp:directive> <expr>!<name>defined</name> <name>Q_OS_WIN32</name> &amp;&amp; !<name>defined</name> <name>Q_OS_LINUX</name> &amp;&amp; !<name>defined</name> <name>Q_OS_FREEBSD</name></expr></cpp:if>
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr>!<name>defined</name> <name>Q_OS_WIN</name> &amp;&amp; !<name>defined</name> <name>Q_OS_LINUX</name> &amp;&amp; !<name>defined</name> <name>Q_OS_FREEBSD</name></expr></cpp:if>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>size_t*</argument>)</argument_list></macro>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
