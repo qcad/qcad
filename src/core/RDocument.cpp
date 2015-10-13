@@ -66,7 +66,10 @@ RDocument::RDocument(
 
 void RDocument::init() {
     RS::Unit defaultUnit = (RS::Unit)RSettings::getValue("UnitSettings/Unit", RS::None).toInt();
-    bool metric = RUnit::isMetric(defaultUnit);
+    RS::Measurement measurement = (RS::Measurement)RSettings::getValue("UnitSettings/Measurement", RS::Metric).toInt();
+    if (measurement!=RS::Metric && measurement!=RS::Imperial) {
+        measurement = RUnit::isMetric(defaultUnit) ? RS::Metric : RS::Imperial;
+    }
 
     RTransaction transaction(storage, "", false);
     transaction.setRecordAffectedObjects(false);
@@ -87,17 +90,17 @@ void RDocument::init() {
     if (!storageIsLinked && queryLinetype("BYLAYER").isNull()) {
         transaction.addObject(
             QSharedPointer<RLinetype>(
-                new RLinetype(this, RLinetypePattern(metric, "BYLAYER", "By Layer"))
+                new RLinetype(this, RLinetypePattern(measurement==RS::Metric, "BYLAYER", "By Layer"))
             )
         );
         transaction.addObject(
             QSharedPointer<RLinetype>(
-                new RLinetype(this, RLinetypePattern(metric, "BYBLOCK", "By Block"))
+                new RLinetype(this, RLinetypePattern(measurement==RS::Metric, "BYBLOCK", "By Block"))
             )
         );
         transaction.addObject(
             QSharedPointer<RLinetype>(
-                new RLinetype(this, RLinetypePattern(metric, "Continuous", "Solid line"))
+                new RLinetype(this, RLinetypePattern(measurement==RS::Metric, "Continuous", "Solid line"))
             )
         );
     }
@@ -147,7 +150,7 @@ void RDocument::init() {
 
         // default variables:
         docVars->setUnit(defaultUnit);
-        docVars->setMeasurement(metric ? RS::Metric : RS::Imperial);
+        docVars->setMeasurement(measurement);
         initLinetypes(&transaction);
         docVars->setLinetypeScale(RSettings::getDoubleValue("LinetypeSettings/Scale", 1.0));
 

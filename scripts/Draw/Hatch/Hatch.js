@@ -69,7 +69,8 @@ Hatch.prototype.beginEvent = function() {
 
     // collect hatch data (boundary elements ordered as loops):
     this.hatchData = new RHatchData();
-    document.traversed = new Object();
+    this.hatchData.setDocument(document);
+    document.traversed = {};
 
     for (i = 0; i < this.selectedIds.length; i++) {
         entityId = this.selectedIds[i];

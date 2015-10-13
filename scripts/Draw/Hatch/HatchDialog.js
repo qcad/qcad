@@ -32,6 +32,11 @@ function HatchDialog() {
 HatchDialog.basePath = includeBasePath;
 
 HatchDialog.prototype.show =  function(hatchDataIn) {
+    var doc = EAction.getDocument();
+    if (isNull(doc)) {
+        return;
+    }
+
     this.dialog = WidgetFactory.createDialog(HatchDialog.basePath, "HatchDialog.ui", EAction.getMainWindow());
     //this.dialog.windowIcon = new QIcon(HatchDialog.basePath + "/Hatch.svg");
 
@@ -51,16 +56,15 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
     //comboPattern["activated(QString)"].connect(this, "patternChanged");
     comboPattern["currentIndexChanged(QString)"].connect(this, "patternChanged");
 
-    var storage = new RMemoryStorage();
-    var spatialIndex = new RSpatialIndexSimple();
-    var document = new RDocument(storage, spatialIndex);
-    this.documentInterface = new RDocumentInterface(document);
-    this.documentInterface.setNotifyListeners(false);
+    var previewDoc = new RDocument(new RMemoryStorage(), new RSpatialIndexSimple());
+    //previewDoc.setMeasurement(doc.getMeasurement());
+    this.previewDi = new RDocumentInterface(previewDoc);
+    this.previewDi.setNotifyListeners(false);
     var layout = this.dialog.findChild("PreviewLayout");
     var view = new AutoZoomView(this.dialog);
     view.objectName = "PreviewView";
     layout.addWidget(view, 0, 0);
-    view.setScene(new RGraphicsSceneQt(this.documentInterface));
+    view.setScene(new RGraphicsSceneQt(this.previewDi));
     view.disableGestures();
 
     var patternNames;
@@ -89,7 +93,7 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
     this.patternChanged();
 
     var res = this.dialog.exec();
-    this.documentInterface.destroy();
+    this.previewDi.destroy();
     if (!res) {
         this.dialog.destroy();
         EAction.activateMainWindow();
@@ -100,6 +104,7 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
 
     // analyze dialog input:
     var hatchDataOut = isNull(hatchDataIn) ? new RHatchData() : hatchDataIn;
+    hatchDataOut.setDocument(EAction.getDocument());
     hatchDataOut.setAngle(editAngle.getValue());
     hatchDataOut.setScale(editScale.getValue());
     hatchDataOut.setSolid(radioSolid.checked);
@@ -111,9 +116,9 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
 };
 
 HatchDialog.prototype.patternChanged = function() {
-    this.documentInterface.clear();
-    var document = this.documentInterface.getDocument();
-    var metric = RUnit.isMetric(EAction.getDocument().getUnit());
+    this.previewDi.clear();
+    var previewDoc = this.previewDi.getDocument();
+    var metric = EAction.getDocument().isMetric();
 
     var radioSolid = this.dialog.findChild("SolidFill");
     var comboPattern = this.dialog.findChild("Pattern");
@@ -131,34 +136,33 @@ HatchDialog.prototype.patternChanged = function() {
         scale = 1.0;
     }
 
-    var s;
+    // size of preview square:
+    var size = 30.0;
 
     if (radioSolid.checked) {
-        s = 30.0;
+        //size = 30.0;
         patternName = "SOLID";
     }
     else {
         var pattern;
         if (metric) {
-            document.setUnit(RS.Millimeter);
+            previewDoc.setUnit(RS.Millimeter);
+            previewDoc.setMeasurement(RS.Metric);
             pattern = RPatternListMetric.get(patternName);
-            s = 30.0;
         }
         else {
-            document.setUnit(RS.Inch);
+            previewDoc.setUnit(RS.Inch);
+            previewDoc.setMeasurement(RS.Imperial);
             pattern = RPatternListImperial.get(patternName);
-            if (patternName.startsWith("AR-") || patternName.startsWith("ACAD_")) {
-                s = 30.0;
-            }
-            else {
-                s = 3.0;
-            }
+        }
+
+        if (patternName.startsWith("AR-") /*|| patternName.startsWith("ACAD_")*/) {
+            size = 900.0;
         }
 
         if (isNull(pattern)) {
             return;
         }
-        //s = pattern.getSize().getWidth() * 1.5;
     }
 
     var data = new RHatchData(radioSolid.checked, 1.0, angle, patternName);
@@ -171,12 +175,12 @@ HatchDialog.prototype.patternChanged = function() {
         data.setColor(new RColor("white"));
     }
     data.newLoop();
-    data.addBoundary(new RLine(new RVector(0,0), new RVector(s,0)));
-    data.addBoundary(new RLine(new RVector(s,0), new RVector(s,s)));
-    data.addBoundary(new RLine(new RVector(s,s), new RVector(0,s)));
-    data.addBoundary(new RLine(new RVector(0,s), new RVector(0,0)));
-    var hatch = new RHatchEntity(document, data);
+    data.addBoundary(new RLine(new RVector(0,0), new RVector(size,0)));
+    data.addBoundary(new RLine(new RVector(size,0), new RVector(size,size)));
+    data.addBoundary(new RLine(new RVector(size,size), new RVector(0,size)));
+    data.addBoundary(new RLine(new RVector(0,size), new RVector(0,0)));
+    var hatch = new RHatchEntity(previewDoc, data);
     var op = new RAddObjectOperation(hatch, false, false);
-    this.documentInterface.applyOperation(op);
-    this.documentInterface.autoZoom();
+    this.previewDi.applyOperation(op);
+    this.previewDi.autoZoom();
 };

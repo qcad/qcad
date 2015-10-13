@@ -198,8 +198,7 @@ bool RHatchData::intersectsWith(const RShape& shape) const {
     return false;
 }
 
-QList<RVector> RHatchData::getReferencePoints(
-        RS::ProjectionRenderingHint hint) const {
+QList<RVector> RHatchData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
     QList<RVector> ret;
@@ -254,8 +253,7 @@ QList<RVector> RHatchData::getReferencePoints(
     return ret;
 }
 
-bool RHatchData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
+bool RHatchData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint) {
     bool ret = false;
 
     for (int i=0; i<boundary.size(); ++i) {
@@ -558,6 +556,10 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
     }
     else {
         //if (document==NULL || (RUnit::isMetric(document->getUnit()) && document->getUnit()!=RS::None)) {
+        if (document==NULL) {
+            qDebug() << "doc is NULL";
+        }
+
         if (document==NULL || document->isMetric()) {
             //qDebug() << "metric pattern" << getPatternName();
             p = RPatternListMetric::get(getPatternName());
