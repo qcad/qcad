@@ -101,6 +101,8 @@ About.prototype.initAboutApp = function(textBrowser) {
             + "</tr><tr>"
             + "<td><b>Qt Version:</b> </td><td>%1</td>".arg(RSettings.getQtVersion())
             + "</tr><tr>"
+            + "<td><b>Architecture:</b> </td><td>%1</td>".arg(RS.getBuildCpuArchitecture())
+            + "</tr><tr>"
             + "<td><b>Compiler:</b> </td><td>%1</td>".arg(RSettings.getCompilerVersion())
             + "</tr></table>"
             + "<hr/>"

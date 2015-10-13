@@ -232,7 +232,7 @@ void RMainWindowQt::suspendAndResume(QMdiSubWindow* mdiChild) {
 
         diOther->suspend();
 
-#ifndef Q_OS_WIN32
+#ifndef Q_OS_WIN
 #if (QT_VERSION < QT_VERSION_CHECK(4, 8, 0))
         // core part of the workaround for Qt 4.7.x QMdiArea bug
         // with events filtering through all stacked windows:
@@ -548,7 +548,7 @@ bool RMainWindowQt::event(QEvent* e) {
         return true;
     }
 
-#if QT_VERSION < 0x050000 && (defined(Q_OS_MAC) || defined(Q_OS_WIN32))
+#if QT_VERSION < 0x050000 && (defined(Q_OS_MAC) || defined(Q_OS_WIN))
     // Qt 4.x: prevent recursion:
     // (bug, probably in Qt script wrappers: recursion when displaying status tip)
     static bool running = false;

@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#ifdef Q_OS_WIN32
+#ifdef Q_OS_WIN
 // for _isnan:
 #include <cfloat>
 #endif
@@ -54,7 +54,7 @@ int RMath::absmod(int a, int b) {
  * \return v truncated (cut off) at decimal point.
  */
 double RMath::trunc(double v) {
-#if defined Q_OS_WIN32
+#if defined Q_OS_WIN
     if (v==0 || RMath::isNaN(v) || RMath::isInf(v)) {
         return v;
     }
@@ -106,7 +106,7 @@ bool RMath::isNormal(double v) {
 bool RMath::isNaN(double v) {
 #ifdef Q_OS_MAC
     return std::fpclassify(v)==FP_NAN;
-#elif defined Q_OS_WIN32
+#elif defined Q_OS_WIN
     return _isnan(v);
 #else
     return std::isnan(v);
@@ -119,7 +119,7 @@ bool RMath::isNaN(double v) {
 bool RMath::isInf(double v) {
 #ifdef Q_OS_MAC
     return std::fpclassify(v)==FP_INFINITE;
-#elif defined Q_OS_WIN32
+#elif defined Q_OS_WIN
     return !_finite(v);
 #else
     return std::fpclassify(v)==FP_INFINITE;

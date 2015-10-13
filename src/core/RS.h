@@ -513,6 +513,7 @@ public:
     static bool compare(const QPair<QVariant, RPropertyAttributes>& p1,
                         const QPair<QVariant, RPropertyAttributes>& p2);
     static int getCpuCores();
+    static QString getBuildCpuArchitecture();
 
     static QString getHostId();
     static QString getSystemId();

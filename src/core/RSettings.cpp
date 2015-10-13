@@ -571,8 +571,11 @@ QString RSettings::getOSVersion() {
     // QSysInfo::WV_WINDOWS8_1:
     case 0x00b0:
         return "Windows 8.1";
+    // QSysInfo::WV_WINDOWS10:
+    case 0x00c0:
+        return "Windows 10";
     default:
-        return "Windows >= 8";
+        return "Windows >= 10";
     }
 #elif defined (Q_OS_MAC)
     switch (QSysInfo::MacintoshVersion) {
@@ -602,9 +605,12 @@ QString RSettings::getOSVersion() {
     // QSysInfo::MV_10_10:
     case 0x000C:
         return "Mac OS X 10.10";
+    // QSysInfo::MV_10_11:
+    case 0x000D:
+        return "Mac OS X 10.11";
     default:
     case QSysInfo::MV_Unknown:
-        return "Mac OS X > 10.10";
+        return "Mac OS X > 10.11";
     }
 #else
     return "Unknown";

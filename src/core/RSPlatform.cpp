@@ -20,7 +20,7 @@
 #include <QDir>
 #include <QFileInfo>
 #include <QHostInfo>
-#ifdef Q_OS_WIN32
+#ifdef Q_OS_WIN
 #include <Windows.h>
 #else
 #include <unistd.h>
@@ -199,7 +199,7 @@ int RS::getCpuCores() {
         return cores;
     }
 
-#ifdef Q_OS_WIN32
+#ifdef Q_OS_WIN
     SYSTEM_INFO sysinfo;
     GetSystemInfo( &sysinfo );
     cores = sysinfo.dwNumberOfProcessors;
@@ -232,3 +232,23 @@ int RS::getCpuCores() {
     return cores;
 }
 
+/**
+ * \return x32 or x64, depending on the architecture the binary was built for.
+ */
+QString RS::getBuildCpuArchitecture() {
+#if QT_VERSION >= 0x050400
+    return QSysInfo::buildCpuArchitecture();
+#else
+#if defined(QT_ARCH_I386)
+    return "i386";
+#elif defined(QT_ARCH_IA64)
+    return "ia64";
+#elif defined(QT_ARCH_POWERPC)
+    return "ppc";
+#elif defined(QT_ARCH_X86_64)
+    return "x86_64";
+#else
+    return "Unknown / Unsupported";
+#endif
+#endif
+}
