@@ -920,6 +920,21 @@ LibraryBrowser.sourceChanged = function(text) {
     }
 };
 
+LibraryBrowser.getSelectedIndexes = function(selectionModel) {
+    if (isNull(selectionModel)) {
+        return undefined;
+    }
+
+    if (isFunction(selectionModel.selectedIndexes)) {
+        // Qt 4:
+        return selectionModel.selectedIndexes();
+    }
+    else {
+        // Qt 5:
+        return selectionModel.selectedIndexes;
+    }
+};
+
 /**
  * Called when user changes the directory in the file system tree (top).
  * Updates the list view (bottom).
@@ -934,7 +949,7 @@ LibraryBrowser.directoryChanged = function(selected, deselected) {
         var dirTree = formWidget.findChild("DirectoryTree");
         var selectionModel = dirTree.selectionModel();
         if (!isNull(selectionModel)) {
-            selected = selectionModel.selectedIndexes();
+            selected = LibraryBrowser.getSelectedIndexes(selectionModel);
         }
     }
     else {
@@ -1954,7 +1969,7 @@ LibraryBrowser.showDirectory = function(dirName) {
     LibraryBrowser.deselectAllDirs();
     var selectionModel = dirTree.selectionModel();
     var flags = new QItemSelectionModel.SelectionFlags(QItemSelectionModel.Select);
-    var idxList = selectionModel.selectedIndexes();
+    var idxList = LibraryBrowser.getSelectedIndexes(selectionModel);
     selectionModel.select(treeIndex, flags);
     while (treeIndex.isValid()) {
         dirTree.setExpanded(treeIndex, true);
@@ -1976,7 +1991,7 @@ LibraryBrowser.deselectAllDirs = function() {
 
     var selectionModel = dirTree.selectionModel();
     var flags = new QItemSelectionModel.SelectionFlags(QItemSelectionModel.Deselect);
-    var idxList = selectionModel.selectedIndexes();
+    var idxList = LibraryBrowser.getSelectedIndexes(selectionModel);
     for (var i=0; i<idxList.length; i++) {
         selectionModel.select(idxList[i], flags);
     }
