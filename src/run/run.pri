@@ -114,8 +114,11 @@ else {
                 imageformats\\qjpeg.dll \
                 imageformats\\qmng.dll \
                 imageformats\\qsvg.dll \
+                imageformats\\qtga.dll \
                 imageformats\\qtiff.dll \
-                sqldrivers\\qsqlite.dll
+                imageformats\\qwbmp.dll \
+                sqldrivers\\qsqlite.dll \
+                printsupport\\windowsprintersupport.dll
         }
 
         contains(QT_VERSION, ^4\\..*\\..*) {
