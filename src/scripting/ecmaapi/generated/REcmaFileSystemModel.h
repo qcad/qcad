@@ -54,6 +54,9 @@
         rootPath
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        pathIndex
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         index
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

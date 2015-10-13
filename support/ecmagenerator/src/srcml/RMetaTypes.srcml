@@ -52,7 +52,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFontDatabase&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFile&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFileIconProvider&gt;</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFileSystemModel&gt;</cpp:file></cpp:include>
+<comment type="line">//#include &lt;QFileSystemModel&gt;</comment>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QFrame&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QGestureEvent&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QGLWidget&gt;</cpp:file></cpp:include>
@@ -184,7 +184,7 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QEvent*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFile*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFileIconProvider*</argument>)</argument_list></macro>
-<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFileSystemModel*</argument>)</argument_list></macro>
+<comment type="line">//Q_DECLARE_METATYPE(QFileSystemModel*)</comment>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFocusEvent*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFocusFrame*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QFont*</argument>)</argument_list></macro>

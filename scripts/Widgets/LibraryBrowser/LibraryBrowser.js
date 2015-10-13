@@ -890,7 +890,7 @@ LibraryBrowser.sourceChanged = function(text) {
 
     var selectionModel = dirTree.selectionModel();
     selectionModel.selectionChanged.connect(LibraryBrowser, "directoryChanged");
-    var index = LibraryBrowser.fsModel.index(libPath.path());
+    var index = LibraryBrowser.fsModel.pathIndex(libPath.path(), 0);
     dirTree.setRootIndex(index);
 
     LibraryBrowser.fsModel.rowsInserted.connect(function(parent, start, end) {

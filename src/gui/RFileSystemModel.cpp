@@ -49,7 +49,7 @@ QString RFileSystemModel::rootPath() const {
     return QFileSystemModel::rootPath();
 }
 
-QModelIndex RFileSystemModel::index(const QString& path, int column) const {
+QModelIndex RFileSystemModel::pathIndex(const QString& path, int column) const {
     return QFileSystemModel::index(path, column);
 }
 
@@ -107,10 +107,8 @@ bool RFileSystemModel::setItemData(const QModelIndex& index, const QMap<int,
 
 bool RFileSystemModel::setItemData(const QModelIndex& index,
         Qt::ItemDataRole role, const QString& value) {
-    qDebug() << "RFileSystemModel::setItemData: ";
     QMap<int, QVariant> map;
     map.insert(role, value);
-    qDebug() << "RFileSystemModel::setItemData: map:" << map;
     return QFileSystemModel::setItemData(index, map);
 }
 

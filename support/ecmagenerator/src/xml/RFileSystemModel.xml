@@ -24,7 +24,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
-    <method name="index" cppName="index" specifier="public"
+    <method name="pathIndex" cppName="pathIndex" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QModelIndex" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString" name="path"
@@ -32,6 +32,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="int" typeName="int" name="column"
         hasDefault="true" default="0" isConst="false" />
       </variant>
+    </method>
+    <method name="index" cppName="index" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QModelIndex" isPureVirtual="false">
         <arg type="int" typeName="int" name="row"
         isConst="false" />

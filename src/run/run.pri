@@ -67,6 +67,7 @@ else {
 
         for(FILE,FILES) {
             !exists("$${DESTDIR}/../plugins/$${FILE}") {
+                message("copying file $$[QT_INSTALL_PLUGINS]/$${FILE}")
                 system(cp "$$[QT_INSTALL_PLUGINS]/$${FILE}" "$${DESTDIR}/../plugins/$${FILE}")
             }
         }

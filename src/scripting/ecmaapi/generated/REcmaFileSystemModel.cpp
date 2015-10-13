@@ -67,6 +67,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, rootPath, "rootPath");
             
+            REcmaHelper::registerFunction(&engine, proto, pathIndex, "pathIndex");
+            
             REcmaHelper::registerFunction(&engine, proto, index, "index");
             
             REcmaHelper::registerFunction(&engine, proto, filePath, "filePath");
@@ -361,19 +363,19 @@
             return result;
         }
          QScriptValue
-        REcmaFileSystemModel::index
+        REcmaFileSystemModel::pathIndex
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::index", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::index";
+            //REcmaHelper::functionStart("REcmaFileSystemModel::pathIndex", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::pathIndex";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RFileSystemModel* self = 
-                        getSelf("index", context);
+                        getSelf("pathIndex", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -404,7 +406,7 @@
     // return type 'QModelIndex'
     QModelIndex cppResult =
         
-               self->index(a0);
+               self->pathIndex(a0);
         // return type: QModelIndex
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
@@ -447,7 +449,7 @@
     // return type 'QModelIndex'
     QModelIndex cppResult =
         
-               self->index(a0
+               self->pathIndex(a0
         ,
     a1);
         // return type: QModelIndex
@@ -458,6 +460,34 @@
 
 
         
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.pathIndex().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaFileSystemModel::pathIndex", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaFileSystemModel::index
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaFileSystemModel::index", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::index";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RFileSystemModel* self = 
+                        getSelf("index", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
     
     if( context->argumentCount() ==
     2 && (
