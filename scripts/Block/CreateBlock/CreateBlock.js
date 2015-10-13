@@ -68,6 +68,7 @@ CreateBlock.prototype.coordinateEvent = function(event) {
         return;
     }
 
+    var i, entity;
     var di = this.getDocumentInterface();
     var document = this.getDocument();
     var storage = document.getStorage();
@@ -76,17 +77,36 @@ CreateBlock.prototype.coordinateEvent = function(event) {
     var op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());
     op.addObject(block);
-    var blockId = storage.getMaxObjectId();
 
-    for (var i=0; i<ids.length; i++) {
+    var blockId;
+    if (document.hasBlock(block.getName())) {
+        // add selection to existing block:
+        blockId = document.getBlockId(block.getName());
+
+        // clear existing block:
+        var oldIds = document.queryBlockEntities(blockId);
+        for (i=0; i<oldIds.length; i++) {
+            entity = document.queryEntity(oldIds[i]);
+            if (isNull(entity)) {
+                continue;
+            }
+            op.deleteObject(entity);
+        }
+    }
+    else {
+        // add selection to new block:
+        blockId = storage.getMaxObjectId();
+    }
+
+    for (i=0; i<ids.length; i++) {
         var id = ids[i];
 
         // deselect original entity:
         di.deselectEntity(id);
 
-        var entity = document.queryEntity(id);
+        entity = document.queryEntity(id);
         if (isNull(entity)) {
-            debugger;
+            continue;
         }
 
         // move entity to new block:
@@ -99,6 +119,7 @@ CreateBlock.prototype.coordinateEvent = function(event) {
         op.addObject(entity, false);
     }
 
+    // create block reference from selection:
     var blockReference = new RBlockReferenceEntity(document, new RBlockReferenceData(blockId, pos, new RVector(1,1,1), 0.0));
     blockReference.setSelected(true);
     op.addObject(blockReference, false);

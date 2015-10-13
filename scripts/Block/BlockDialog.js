@@ -40,7 +40,6 @@ BlockDialog.prototype.show = function() {
     var lt;
     
     this.dialog = WidgetFactory.createDialog(BlockDialog.includeBasePath, "BlockDialog.ui", EAction.getMainWindow());
-    //this.dialog.windowIcon = new QIcon(BlockDialog.includeBasePath + "/EditBlock/EditBlock.svg");
 
     var widgets = getWidgets(this.dialog);
     var leBlockName = widgets["BlockName"];
@@ -49,9 +48,11 @@ BlockDialog.prototype.show = function() {
     this.validator = new QRegExpValidator(rx, leBlockName);
     leBlockName.setValidator(this.validator);
     leBlockName.textChanged.connect(this, "validate");
+    var creatingBlock = isNull(this.block);
 
-    // init dialog to show attributes of given block:
-    if (!isNull(this.block)) {
+    if (!creatingBlock) {
+        // user is editing an existing block:
+        // init dialog to show attributes of given block:
         leBlockName.text = this.block.getName();
         if (leBlockName.text.startsWith("*")) {
             leBlockName.enabled = false;
@@ -60,7 +61,7 @@ BlockDialog.prototype.show = function() {
 
     this.dialog.show();
 
-    if (isNull(this.block)) {
+    if (creatingBlock) {
         var c = 0;
         while (!this.validate()) {
             ++c;
@@ -75,24 +76,28 @@ BlockDialog.prototype.show = function() {
     }
 
     var text = leBlockName.text.trim();
-    if (!isNull(this.block)) {
+	
+    if (!creatingBlock) {
+        // rename block:
         this.dialog.destroy();
         EAction.activateMainWindow();
         this.block.setName(text);
         return this.block;
     }
-    //this.dialog.setAttribute(Qt.WA_DeleteOnClose);
-    //this.dialog.close();
-    var block = new RBlock(this.document, text, new RVector(0,0));
-    this.dialog.destroy();
-    EAction.activateMainWindow();
-    return block;
+    else {
+        // create new block:
+        var block = new RBlock(this.document, text, new RVector(0,0));
+        this.dialog.destroy();
+        EAction.activateMainWindow();
+        return block;
+    }
 };
 
 /**
  * Block name validation.
  */
 BlockDialog.prototype.validate = function() {
+    var creatingBlock = isNull(this.block);
     var widgets = getWidgets(this.dialog);
 
     var leBlockName = widgets["BlockName"];
@@ -117,15 +122,24 @@ BlockDialog.prototype.validate = function() {
         }
     }
 
-    if (this.document.hasBlock(leBlockName.text)) {
-        if (isNull(this.block) ||
-            this.block.getName().toLowerCase() !== leBlockName.text.toLowerCase()) {
+    var ret = acceptable;
 
+    // block already exists:
+    if (this.document.hasBlock(leBlockName.text)) {
+        if (creatingBlock) {
+            // warning: overwriting an existing block:
+            message.text += "<font color='red'>" + qsTr("Block '%1' already exists<br>and will be overwritten.").arg(leBlockName.text.toString())  + "</font>";
+            acceptable = true;
+        }
+        else if (this.block.getName().toLowerCase() !== leBlockName.text.toLowerCase()) {
+            // error: renaming existing block to existing block name (not allowed):
             message.text = "<font color='red'>" + qsTr("Block already exists.") + "</font>";
             acceptable = false;
         }
+        ret = false;
     }
 
     widgets["ButtonBox"].button(QDialogButtonBox.Ok).enabled = acceptable;
-    return acceptable;
+
+    return ret;
 };
