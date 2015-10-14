@@ -915,17 +915,17 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         painter->setBrush(brush);
         painter->setPen(pen);
 
-//        if (isPrinting() || clipBox.contains(pathBB)) {
-//            if (brush.style() != Qt::NoBrush) {
-//                painter->fillPath(path, brush);
-//            }
+        if (isPrinting() /*|| clipBox.contains(pathBB)*/) {
+            if (brush.style() != Qt::NoBrush) {
+                painter->fillPath(path, brush);
+            }
 
-//            // draw outline:
-//            if (pen.style() != Qt::NoPen) {
-//                painter->drawPath(path);
-//            }
-//        }
-//        else {
+            // draw outline:
+            if (pen.style() != Qt::NoPen) {
+                painter->drawPath(path);
+            }
+        }
+        else {
             // prevent overflows for simple lines:
             // TODO: make this an option for rendering:
             if (path.elementCount() == 2 &&
@@ -1003,7 +1003,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
                     }
                 }
             }
-        //}
+        }
 
         // draw points:
         if (path.hasPoints()) {
