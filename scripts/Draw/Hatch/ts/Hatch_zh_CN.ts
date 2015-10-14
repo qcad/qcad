@@ -9,7 +9,7 @@
         <translation>未选中边界.</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+31"/>
         <source>Loop not closed at point %1/%2.</source>
         <translation>环在点 %1/%2 未闭合.</translation>
     </message>

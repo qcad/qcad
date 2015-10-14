@@ -37,7 +37,7 @@
         <translation>block 1</translation>
     </message>
     <message>
-        <location filename="../BlockDialog.js" line="+105"/>
+        <location filename="../BlockDialog.js" line="+110"/>
         <source>Leading or trailing spaces.</source>
         <translation>Espaces avant ou après.</translation>
     </message>
@@ -52,7 +52,12 @@
         <translation>Nom du bloc n&apos;est pas valide.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+11"/>
+        <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
+        <translation>Block &quot;%1&quot; existe&lt;br&gt;et sera écrasé.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Block already exists.</source>
         <translation>Bloc existe déjà.</translation>
     </message>

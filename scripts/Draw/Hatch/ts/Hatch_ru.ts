@@ -9,7 +9,7 @@
         <translation>Нет выбранной границы</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+31"/>
         <source>Loop not closed at point %1/%2.</source>
         <translation>Цикл не закрыт в точке %1/%2.</translation>
     </message>

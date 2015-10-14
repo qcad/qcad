@@ -9,7 +9,7 @@
         <translation>Ei rajaa valittuna.</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+31"/>
         <source>Loop not closed at point %1/%2.</source>
         <translation>Silmukkaa ei suljettu pisteessa %1/%2.</translation>
     </message>

@@ -17,7 +17,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+48"/>
+        <location filename="../PreferencesPage.ui" line="+55"/>
         <source>Double-Click</source>
         <translation>Doppelklick</translation>
     </message>
@@ -37,7 +37,7 @@
         <translation>Rechts-Doppelklick zum Zurücksetzen</translation>
     </message>
     <message>
-        <location line="-52"/>
+        <location line="-59"/>
         <source>Right-Click</source>
         <translation>Rechtsklick</translation>
     </message>
@@ -45,6 +45,11 @@
         <location line="+6"/>
         <source>Right-click to deselect entities</source>
         <translation>Rechtsklick zum Deselektieren von Objekten</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Right-click on entity shows context menu</source>
+        <translation>Rechtsklick auf Objekt zeigt Kontextmenü</translation>
     </message>
     <message>
         <location line="+36"/>

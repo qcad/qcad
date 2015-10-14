@@ -9,7 +9,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+74"/>
         <source>Plugins</source>
         <translation type="unfinished"></translation>
     </message>

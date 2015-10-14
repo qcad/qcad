@@ -9,7 +9,7 @@
         <translation>Nessun limite selezionato.</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+31"/>
         <source>Loop not closed at point %1/%2.</source>
         <translation>Contorno non è chiuso al punto %1/%2.</translation>
     </message>

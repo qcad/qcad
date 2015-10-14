@@ -15,7 +15,7 @@
         <translation>Sobre %1</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+74"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>

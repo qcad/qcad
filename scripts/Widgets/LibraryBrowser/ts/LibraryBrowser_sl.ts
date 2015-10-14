@@ -60,13 +60,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1138"/>
+        <location line="+1153"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>Brskalnik po knjižnici</translation>
     </message>
     <message>
-        <location line="-1130"/>
+        <location line="-1145"/>
         <source>Icon</source>
         <translation>Ikona</translation>
     </message>
@@ -86,7 +86,7 @@
         <translation>Stran %1 od %2</translation>
     </message>
     <message>
-        <location line="+220"/>
+        <location line="+235"/>
         <source>Updating icons...</source>
         <translation>Posodabljam ikone...</translation>
     </message>

@@ -9,7 +9,7 @@
         <translation>O %1</translation>
     </message>
     <message>
-        <location line="+72"/>
+        <location line="+74"/>
         <source>Plugins</source>
         <translation>Zásuvné moduly</translation>
     </message>

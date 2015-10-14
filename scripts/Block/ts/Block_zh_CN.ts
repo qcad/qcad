@@ -22,7 +22,7 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="+105"/>
+        <location filename="../BlockDialog.js" line="+110"/>
         <source>Leading or trailing spaces.</source>
         <translation>前导或尾随空格。</translation>
     </message>
@@ -37,7 +37,12 @@
         <translation>块名无效。</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+11"/>
+        <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Block already exists.</source>
         <translation>块名已经存在。</translation>
     </message>

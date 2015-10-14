@@ -27,6 +27,11 @@
         <translation>Högercklicka för att avmarkera objekt</translation>
     </message>
     <message>
+        <location line="+7"/>
+        <source>Right-click on entity shows context menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location line="+10"/>
         <source>Double-Click</source>
         <translation>Dubbelklick</translation>

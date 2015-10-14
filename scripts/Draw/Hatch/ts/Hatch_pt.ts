@@ -10,7 +10,7 @@
         <translation>Nenhum contorno selecionado</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+31"/>
         <source>Loop not closed at point %1/%2.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Contorno não fechado no ponto %1/%2.</translation>

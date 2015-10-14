@@ -22,7 +22,7 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="+105"/>
+        <location filename="../BlockDialog.js" line="+110"/>
         <source>Leading or trailing spaces.</source>
         <translation>Führende oder nachfolgende Leerzeichen.</translation>
     </message>
@@ -37,7 +37,12 @@
         <translation>Blockname ist ungültig.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+11"/>
+        <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
+        <translation>Block &quot;%1&quot; ist bereits vorhanden&lt;br&gt;und wird überschrieben.</translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Block already exists.</source>
         <translation>Block existiert bereits.</translation>
     </message>

@@ -9,7 +9,7 @@
         <translation>Geen begrenzing geselecteerd</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+31"/>
         <source>Loop not closed at point %1/%2.</source>
         <translation>Loop niet gesloten op punt %1/%2.</translation>
     </message>

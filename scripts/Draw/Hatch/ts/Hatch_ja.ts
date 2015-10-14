@@ -9,7 +9,7 @@
         <translation>輪郭が選択されていません。</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+31"/>
         <source>Loop not closed at point %1/%2.</source>
         <translation>ループは点 %1/%2 で閉じていません。</translation>
     </message>

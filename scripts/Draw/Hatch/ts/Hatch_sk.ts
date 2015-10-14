@@ -9,7 +9,7 @@
         <translation>Nie je vybratý žiadny obrys.</translation>
     </message>
     <message>
-        <location line="+30"/>
+        <location line="+31"/>
         <source>Loop not closed at point %1/%2.</source>
         <translation>Kontúra nie je uzavretá v bode %1/%2.</translation>
     </message>

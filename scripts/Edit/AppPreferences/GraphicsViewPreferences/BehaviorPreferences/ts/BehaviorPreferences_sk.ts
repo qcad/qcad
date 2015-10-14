@@ -17,7 +17,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+48"/>
+        <location filename="../PreferencesPage.ui" line="+55"/>
         <source>Double-Click</source>
         <translation>Dvojklik</translation>
     </message>
@@ -37,7 +37,7 @@
         <translation>Dvojklik pravým tlačítkom reset</translation>
     </message>
     <message>
-        <location line="-52"/>
+        <location line="-59"/>
         <source>Right-Click</source>
         <translation>Kliknutie pravým tlačidlom myši</translation>
     </message>
@@ -45,6 +45,11 @@
         <location line="+6"/>
         <source>Right-click to deselect entities</source>
         <translation>Pravé tlačidlo myši zruší výber prvkov (vhodné použiť s viacnásobným výberom prvkov)</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Right-click on entity shows context menu</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+36"/>

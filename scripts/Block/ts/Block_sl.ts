@@ -22,7 +22,7 @@
 <context>
     <name>BlockDialog</name>
     <message>
-        <location filename="../BlockDialog.js" line="+105"/>
+        <location filename="../BlockDialog.js" line="+110"/>
         <source>Leading or trailing spaces.</source>
         <translation>Presledki spredaj ali zadaj.</translation>
     </message>
@@ -37,7 +37,12 @@
         <translation>Ime bloka ni veljavno.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+11"/>
+        <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+5"/>
         <source>Block already exists.</source>
         <translation>Blok že obstaja.</translation>
     </message>
