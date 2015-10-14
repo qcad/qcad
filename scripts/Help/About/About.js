@@ -334,8 +334,8 @@ About.prototype.initCredits = function(textBrowser) {
             for (var k=1; k<credits[i].length; k++) {
                 if (isArray(credits[i][k]) && credits[i][k].length>1) {
                     html += "<tr>";
-                    html += "<td width='40%' valign='top'>" + credits[i][k][0] + "</td>";
-                    html += "<td width='60%' valign='top'>" + credits[i][k][1] + "</td>";
+                    html += "<td width='30%' valign='top'>" + credits[i][k][0] + "</td>";
+                    html += "<td width='70%' valign='top'>" + credits[i][k][1] + "</td>";
                     html += "</tr>";
                 }
             }
