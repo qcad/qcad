@@ -211,6 +211,9 @@ private:
 
 public:
     static QString rxLineFeed;
+    static QString rxAlignmentLeft;
+    static QString rxAlignmentCenter;
+    static QString rxAlignmentRight;
     static QString rxParagraphFeed;
     static QString rxXFeed;
     static QString rxHeightChange;

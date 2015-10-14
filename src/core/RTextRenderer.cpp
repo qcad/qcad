@@ -36,6 +36,9 @@ QChar RTextRenderer::chPlusMinus = QChar(0x00b1);
 QChar RTextRenderer::chDiameter = QChar(0x00f8);
 
 QString RTextRenderer::rxLineFeed = "\\\\p(?:x?i(\\d*\\.?\\d+);)?";
+QString RTextRenderer::rxAlignmentLeft = "\\\\pxql;";
+QString RTextRenderer::rxAlignmentCenter = "\\\\pxqc;";
+QString RTextRenderer::rxAlignmentRight = "\\\\pxqr;";
 QString RTextRenderer::rxParagraphFeed = "\\\\P";
 QString RTextRenderer::rxXFeed = "\\\\X";
 QString RTextRenderer::rxHeightChange = "\\\\H(\\d*\\.?\\d+)(x?);";
@@ -78,6 +81,9 @@ QString RTextRenderer::rxUnicode = "\\\\[Uu]\\+([0-9a-fA-F]{4})";
 
 QString RTextRenderer::rxAll = "("
     + RTextRenderer::rxLineFeed + "|"
+    + RTextRenderer::rxAlignmentLeft + "|"
+    + RTextRenderer::rxAlignmentCenter + "|"
+    + RTextRenderer::rxAlignmentRight + "|"
     + RTextRenderer::rxParagraphFeed + "|"
     + RTextRenderer::rxXFeed + "|"
     + RTextRenderer::rxHeightChange + "|"
