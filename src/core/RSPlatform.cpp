@@ -248,7 +248,7 @@ QString RS::getBuildCpuArchitecture() {
 #elif defined(QT_ARCH_X86_64)
     return "x86_64";
 #else
-    return "Unknown / Unsupported";
+    return "";
 #endif
 #endif
 }

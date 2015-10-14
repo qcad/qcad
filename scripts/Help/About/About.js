@@ -100,10 +100,12 @@ About.prototype.initAboutApp = function(textBrowser) {
             + "<td><b>From revision:</b> </td><td>%1</td>".arg(RSettings.getRevisionString().left(7))
             + "</tr><tr>"
             + "<td><b>Qt Version:</b> </td><td>%1</td>".arg(RSettings.getQtVersion())
-            + "</tr><tr>"
-            + "<td><b>Architecture:</b> </td><td>%1</td>".arg(RS.getBuildCpuArchitecture())
-            + "</tr><tr>"
-            + "<td><b>Compiler:</b> </td><td>%1</td>".arg(RSettings.getCompilerVersion())
+            + "</tr><tr>";
+            if (RS.getBuildCpuArchitecture().length!==0) {
+                html += "<td><b>Architecture:</b> </td><td>%1</td>".arg(RS.getBuildCpuArchitecture())
+                + "</tr><tr>";
+            }
+            html += "<td><b>Compiler:</b> </td><td>%1</td>".arg(RSettings.getCompilerVersion())
             + "</tr></table>"
             + "<hr/>"
             + "<p>%1 is an application for computer-aided design (CAD).</p>".arg(qApp.applicationName)
