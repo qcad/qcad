@@ -35,14 +35,14 @@ AddBlock.prototype = new Block();
 AddBlock.prototype.beginEvent = function() {
     Block.prototype.beginEvent.call(this);
 
-    var dlg = new BlockDialog(this.getDocument());
-    this.block = dlg.show();
-    if (isNull(this.block)) {
+    var dlg = new BlockDialog(this.getDocument(), undefined, false);
+    var block = dlg.show();
+    if (isNull(block)) {
         this.terminate();
         return;
     }
     
-    var op = new RAddObjectOperation(this.block);
+    var op = new RAddObjectOperation(block);
     op.setText(this.getToolTitle());
     var di = this.getDocumentInterface();
     di.applyOperation(op);
@@ -50,8 +50,4 @@ AddBlock.prototype.beginEvent = function() {
     di.repaintViews();
 
     this.terminate();
-};
-
-AddBlock.prototype.getAddedBlock = function() {
-    return this.block;
 };

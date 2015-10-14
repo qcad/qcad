@@ -28,10 +28,15 @@ include("../WidgetFactory.js");
  * \param document RDocument the block is in.
  * \param block RBlock object to edit or undefined to create and return a new block.
  */
-function BlockDialog(document, block) {
+function BlockDialog(document, block, allowOverwrite) {
+    if (isNull(allowOverwrite)) {
+        allowOverwrite = true;
+    }
+
     this.dialog = null;
     this.document = document;
     this.block = block;
+    this.allowOverwrite = allowOverwrite;
 }
 
 BlockDialog.includeBasePath = includeBasePath;
@@ -126,12 +131,12 @@ BlockDialog.prototype.validate = function() {
 
     // block already exists:
     if (this.document.hasBlock(leBlockName.text)) {
-        if (creatingBlock) {
+        if (creatingBlock && this.allowOverwrite===true) {
             // warning: overwriting an existing block:
             message.text += "<font color='red'>" + qsTr("Block '%1' already exists<br>and will be overwritten.").arg(leBlockName.text.toString())  + "</font>";
             acceptable = true;
         }
-        else if (this.block.getName().toLowerCase() !== leBlockName.text.toLowerCase()) {
+        else if (isNull(this.block) || this.block.getName().toLowerCase() !== leBlockName.text.toLowerCase()) {
             // error: renaming existing block to existing block name (not allowed):
             message.text = "<font color='red'>" + qsTr("Block already exists.") + "</font>";
             acceptable = false;
