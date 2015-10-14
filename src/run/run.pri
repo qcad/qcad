@@ -157,11 +157,11 @@ else {
 
         # copy Qt libraries into same dir as exe to avoid Qt version mixup:
         greaterThan(QT_MAJOR_VERSION, 4) {
-            system(cp "$$[QT_INSTALL_BINS]\\*.dll" "$${DESTDIR_WIN}")
-            system(cp "$$[QT_INSTALL_PLUGINS]\\platforms\\*.dll" "$${DESTDIR_WIN}\\..\\$${FILE}")
+            system(cp "$$[QT_INSTALL_BINS]/*.dll" "$${DESTDIR_WIN}")
+            system(cp "$$[QT_INSTALL_PLUGINS]/platforms/*.dll" "$${DESTDIR_WIN}\\..\\platforms")
         }
         else {
-            system(cp "$$[QT_INSTALL_LIBS]\\*.dll" "$${DESTDIR_WIN}")
+            system(cp "$$[QT_INSTALL_LIBS]/*.dll" "$${DESTDIR_WIN}")
         }
     }
 }
