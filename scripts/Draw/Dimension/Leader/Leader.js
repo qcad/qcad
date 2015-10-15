@@ -116,12 +116,14 @@ Leader.prototype.pickCoordinate = function(event, preview) {
         if (!preview) {
             point = event.getModelPosition();
 
-            this.leaderEntity = new RLeaderEntity(document, new RLeaderData());
-            this.leaderEntity.appendVertex(point);
-            op = new RAddObjectOperation(this.leaderEntity, this.getToolTitle());
+            var leader = new RLeaderEntity(document, new RLeaderData());
+            leader.appendVertex(point);
+            op = new RAddObjectOperation(leader, this.getToolTitle());
             this.applyOperation(op);
             di.setRelativeZero(point);
-            this.setState(Leader.State.SettingNextVertex);
+            if (!isNull(this.leaderEntity)) {
+                this.setState(Leader.State.SettingNextVertex);
+            }
         }
         break;
 
@@ -129,16 +131,8 @@ Leader.prototype.pickCoordinate = function(event, preview) {
     case Leader.State.SettingNextVertex:
         point = event.getModelPosition();
 
-        // number of existing vertices:
-        var numberOfVertices;
-        if (isNull(this.leaderEntity)) {
-            numberOfVertices = 0;
-        }
-        else {
-            numberOfVertices = this.leaderEntity.countVertices();
-        }
-
-        if (numberOfVertices>0) {
+        // if we have at least one vertex:
+        if (!isNull(this.leaderEntity) && this.leaderEntity.countVertices()>0) {
             var appendPoint = this.leaderEntity.getEndPoint();
             this.segment = new RLine(appendPoint, point);
 
@@ -175,6 +169,10 @@ Leader.prototype.getOperation = function(preview) {
 
     // for preview, only add current segment:
     if (preview) {
+        if (isNull(this.segment)) {
+            return undefined;
+        }
+
         if (this.leaderEntity.countVertices()>1) {
             var entity = new RLineEntity(this.getDocument(), new RLineData(this.segment));
             entity.copyAttributesFrom(this.leaderEntity.data());
@@ -199,6 +197,8 @@ Leader.prototype.getOperation = function(preview) {
  * points to new new clone of the original entity.
  */
 Leader.prototype.applyOperation = function(op) {
+    this.leaderEntity = undefined;
+
     var di = this.getDocumentInterface();
     var document = this.getDocument();
     var transaction = di.applyOperation(op);
