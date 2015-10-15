@@ -154,7 +154,9 @@ DrawPolyline.prototype.pickCoordinate = function(event, preview) {
             this.applyOperation(op);
 
             di.setRelativeZero(point);
-            this.setState(DrawPolyline.State.SettingNextVertex);
+            if (!isNull(this.polylineEntity)) {
+                this.setState(DrawPolyline.State.SettingNextVertex);
+            }
         }
         break;
 
@@ -311,6 +313,7 @@ DrawPolyline.prototype.getOperation = function(preview) {
  * points to new new clone of the original entity.
  */
 DrawPolyline.prototype.applyOperation = function(op) {
+    this.polylineEntity = undefined;
     var di = this.getDocumentInterface();
     var document = this.getDocument();
     var transaction = di.applyOperation(op);
