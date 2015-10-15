@@ -379,6 +379,7 @@ BlockList.init = function(basePath) {
     action.setScriptFile(basePath + "/BlockList.js");
     action.setIcon(basePath + "/BlockList.svg");
     action.setDefaultShortcut(new QKeySequence("g,b"));
+    action.setDefaultCommands(["gb"]);
     action.setGroupSortOrder(3600);
     action.setSortOrder(200);
     action.setWidgetNames(["ViewMenu", "WidgetsToolBar", "ViewToolsPanel"]);
