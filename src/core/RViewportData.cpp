@@ -45,12 +45,10 @@ RViewportData::RViewportData(RDocument* document, const RViewportData& data)
 RBox RViewportData::getBoundingBox(bool ignoreEmpty) const {
     Q_UNUSED(ignoreEmpty)
 
-    RVector v(width/2, height/2);
-    return RBox(center - v, center + v);
+    return RBox(center, width, height);
 }
 
-QList<RVector> RViewportData::getReferencePoints(
-        RS::ProjectionRenderingHint hint) const {
+QList<RVector> RViewportData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
     QList<RVector> ret;
@@ -70,6 +68,14 @@ bool RViewportData::moveReferencePoint(const RVector& referencePoint,
 
 QList<QSharedPointer<RShape> > RViewportData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
     Q_UNUSED(queryBox)
+    Q_UNUSED(ignoreComplex)
 
-    return QList<QSharedPointer<RShape> >() << QSharedPointer<RShape>(new RPoint(getCenter()));
+    QList<QSharedPointer<RShape> > ret;
+
+    QList<RLine> lines = RBox(center, width, height).getLines2d();
+    for (int i=0; i<lines.length(); i++) {
+        ret.append(QSharedPointer<RShape>(lines[i].clone()));
+    }
+
+    return ret;
 }
