@@ -51,6 +51,7 @@ class RRay;
 class RSpline;
 class RTriangle;
 class RVector;
+class RViewportEntity;
 class RXLine;
 
 #ifndef RDEFAULT_MIN1
@@ -84,6 +85,9 @@ public:
 
     void setProjectionRenderingHint(RS::ProjectionRenderingHint p);
     RS::ProjectionRenderingHint getProjectionRenderingHint();
+
+    virtual RBox getClipRectangle() const;
+
     virtual void setPen(const QPen& pen);
     virtual QPen getPen(const RPainterPath& path);
     virtual QPen getPen();
@@ -108,7 +112,8 @@ public:
 
     virtual REntity* getBlockRefOrEntity();
     virtual REntity* getEntity();
-    virtual REntity* getCurrentBlockRef();
+    virtual REntity* getCurrentBlockRef() const;
+    virtual RViewportEntity* getCurrentViewport() const;
 
     /**
      * \nonscriptable
@@ -215,6 +220,7 @@ public:
 
     virtual void exportImage(const RImageData& image, bool forceSelected = false);
     virtual QList<RPainterPath> exportText(const RTextBasedData& text, bool forceSelected = false);
+    //virtual void exportClipRectangle(const RBox& clipRectangle, bool forceSelected = false);
 
     virtual void exportThickPolyline(const RPolyline& polyline) {
         RPolyline pl = polyline;
@@ -323,7 +329,7 @@ protected:
     QBrush currentBrush;
     QStack<REntity*> entityStack;
     RLayer* currentLayer;
-    QStack<REntity*> blockRefStack;
+    QStack<REntity*> blockRefViewportStack;
     RDocument* layerSource;
     RDocument* blockSource;
     bool draftMode;

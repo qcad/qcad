@@ -94,6 +94,7 @@ public:
     virtual void exportPainterPaths(const QList<RPainterPath>& paths);
     virtual void exportImage(const RImageData& image, bool forceSelected = false);
     virtual QList<RPainterPath> exportText(const RTextBasedData& text, bool forceSelected = false);
+    //virtual void exportClipRectangle(const RBox& clipRectangles, bool forceSelected = false);
 
     virtual double getLineTypePatternScale(const RLinetypePattern& p) const;
     
@@ -109,6 +110,8 @@ public:
     QList<RImageData> getImages(REntity::Id entityId);
     bool hasTextsFor(REntity::Id entityId);
     QList<RTextBasedData> getTexts(REntity::Id entityId);
+    //bool hasClipRectangleFor(REntity::Id entityId);
+    //RBox getClipRectangle(REntity::Id entityId);
 
     void addPath(REntity::Id entityId, const RPainterPath& path, bool draft);
 
@@ -129,10 +132,11 @@ public:
 
 private:
     RPainterPath currentPainterPath;
-    QMap<REntity::Id, QList<RPainterPath> > painterPaths;
 
+    QMap<REntity::Id, QList<RPainterPath> > painterPaths;
     QMap<REntity::Id, QList<RImageData> > images;
     QMap<REntity::Id, QList<RTextBasedData> > texts;
+    //QMap<REntity::Id, RBox> clipRectangles;
 
     QList<RPainterPath> previewPainterPaths;
     QList<RTextBasedData> previewTexts;

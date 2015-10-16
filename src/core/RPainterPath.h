@@ -28,6 +28,7 @@
 #include <QPen>
 #include <QSharedPointer>
 
+#include "RBox.h"
 #include "RVector.h"
 
 class RArc;
@@ -204,6 +205,9 @@ public:
     void setPixelSizeHint(double s);
     double getPixelSizeHint() const;
 
+    void setClipRectangle(const RBox& box);
+    RBox getClipRectangle() const;
+
     double getDistanceTo(const RVector& point) const;
 
     void addPoint(const RVector& position);
@@ -230,7 +234,6 @@ public:
     static RVector getMinList(QList<RPainterPath>& pps);
     static RVector getMaxList(QList<RPainterPath>& pps);
 
-
 private:
     int zLevel;
     QPen pen;
@@ -240,6 +243,7 @@ private:
     // < 0 for secondary path (e.g. bounding box of text)
     double featureSize;
     double pixelSizeHint;
+    RBox clipRectangle;
 };
 
 QCADCORE_EXPORT QDebug operator<<(QDebug dbg, RPainterPath& p);

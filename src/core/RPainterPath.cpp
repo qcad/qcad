@@ -300,6 +300,14 @@ double RPainterPath::getPixelSizeHint() const {
     return pixelSizeHint;
 }
 
+void RPainterPath::setClipRectangle(const RBox& box) {
+    clipRectangle = box;
+}
+
+RBox RPainterPath::getClipRectangle() const {
+    return clipRectangle;
+}
+
 /**
  * \return Z-level of the painter path.
  */

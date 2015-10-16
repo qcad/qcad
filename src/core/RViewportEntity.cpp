@@ -104,22 +104,23 @@ QPair<QVariant, RPropertyAttributes> RViewportEntity::getProperty(
 void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
     Q_UNUSED(forceSelected);
-    return;
-
-    e.setBrush(Qt::NoBrush);
-    RVector v1(data.width/2, data.height/2);
-    RVector v2(-data.width/2, data.height/2);
-    e.exportLine(RLine(data.center-v1, data.center+v2));
-    e.exportLine(RLine(data.center+v2, data.center+v1));
-    e.exportLine(RLine(data.center+v1, data.center-v2));
-    e.exportLine(RLine(data.center-v2, data.center-v1));
-
-    qDebug() << "exporting viewport: " << RLine(data.center-v1, data.center+v2);
+    // return;
 
     RDocument* doc = (RDocument*)getDocument();
     if (doc==NULL) {
         return;
     }
+
+    RBox viewportBox(data.center, data.width, data.height);
+
+    // viewport frame:
+    e.setBrush(Qt::NoBrush);
+    qDebug() << "exporting viewport: " << viewportBox;
+    e.exportRectangle(viewportBox.c1, viewportBox.c2);
+
+    // clip rectangle export
+    //e.exportClipRectangle(viewportBox);
+    //e.setClipRectangle(viewportBox);
 
 //    RBlockReferenceEntity modelSpace(doc, RBlockReferenceData(doc->getModelSpaceBlockId(), data.center, RVector(1,1), 0));
 //    modelSpace.update();
@@ -129,6 +130,7 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
     RVector offset;
     offset = -data.viewCenter * data.scale;
 
+    // create temporary block reference to model space block:
     RBlockReferenceData modelSpaceData(
         doc,
         RBlockReferenceData(
@@ -140,8 +142,10 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
     );
     modelSpaceData.update();
 
-    QSet<REntity::Id> ids = doc->queryBlockEntities(doc->getModelSpaceBlockId());
+    ///e.setClipRectangle();
 
+    // render model space block reference into viewport:
+    QSet<REntity::Id> ids = doc->queryBlockEntities(doc->getModelSpaceBlockId());
     QList<REntity::Id> list = doc->getStorage().orderBackToFront(ids);
     int i;
     QList<REntity::Id>::iterator it;
@@ -154,6 +158,14 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
         if (entity.isNull()) {
             continue;
         }
+
+        RBox bb = entity->getBoundingBox();
+        if (!viewportBox.intersects(bb)) {
+            continue;
+        }
+
+        entity->scaleVisualProperties(data.scale);
+
         e.exportEntity(*entity, preview, true);
     }
 }

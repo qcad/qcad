@@ -121,13 +121,13 @@ RDocument& RExporter::getDocument() const {
  *      that is being exported.
  */
 REntity* RExporter::getBlockRefOrEntity() {
-    if (blockRefStack.isEmpty()) {
+    if (blockRefViewportStack.isEmpty()) {
         return getEntity();
     }
 
     // return the top block reference in the hierarchy. this is the
     // first in the stack, NOT the stack top:
-    return blockRefStack.first();
+    return blockRefViewportStack.first();
 }
 
 /**
@@ -166,6 +166,17 @@ void RExporter::setProjectionRenderingHint(RS::ProjectionRenderingHint p) {
  */
 RS::ProjectionRenderingHint RExporter::getProjectionRenderingHint() {
     return projectionRenderingHint;
+}
+
+/**
+ * \return Clip rectangle due to current viewport being exported.
+ */
+RBox RExporter::getClipRectangle() const {
+    RViewportEntity* viewport = getCurrentViewport();
+    if (viewport!=NULL) {
+        return viewport->getBoundingBox();
+    }
+    return RBox();
 }
 
 /**
@@ -230,11 +241,11 @@ QBrush RExporter::getBrush(const RPainterPath& path) {
         }
         // color fixed to "by block" (which really means by block reference):
         if (color==RColor::CompatByBlock) {
-            if (!blockRefStack.isEmpty()) {
+            if (!blockRefViewportStack.isEmpty()) {
                 QStack<REntity*> newBlockRefStack;
-                newBlockRefStack = blockRefStack;
+                newBlockRefStack = blockRefViewportStack;
                 newBlockRefStack.pop();
-                color = blockRefStack.top()->getColor(true, newBlockRefStack);
+                color = blockRefViewportStack.top()->getColor(true, newBlockRefStack);
             }
             else {
                 // this can happen (by block at top level):
@@ -278,10 +289,10 @@ void RExporter::setEntityAttributes(bool forceSelected) {
         setColor(RSettings::getSelectionColor());
     }
     else {
-        setColor(currentEntity->getColor(true, blockRefStack));
+        setColor(currentEntity->getColor(true, blockRefViewportStack));
     }
-    setLineweight(currentEntity->getLineweight(true, blockRefStack));
-    setLinetypeId(currentEntity->getLinetypeId(true, blockRefStack));
+    setLineweight(currentEntity->getLineweight(true, blockRefViewportStack));
+    setLinetypeId(currentEntity->getLinetypeId(true, blockRefViewportStack));
 
     setStyle(Qt::SolidLine);
     setBrushStyle(Qt::SolidPattern);
@@ -309,9 +320,20 @@ REntity* RExporter::getEntity() {
     return NULL;
 }
 
-REntity* RExporter::getCurrentBlockRef() {
-    if (!blockRefStack.isEmpty()) {
-        return blockRefStack.top();
+REntity* RExporter::getCurrentBlockRef() const {
+    if (!blockRefViewportStack.isEmpty()) {
+        return blockRefViewportStack.top();
+    }
+    return NULL;
+}
+
+RViewportEntity* RExporter::getCurrentViewport() const {
+    for (int i=blockRefViewportStack.length()-1; i>=0; i--) {
+        REntity* e = blockRefViewportStack.at(i);
+        RViewportEntity* v = dynamic_cast<RViewportEntity*>(e);
+        if (v!=NULL) {
+            return v;
+        }
     }
     return NULL;
 }
@@ -570,22 +592,22 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
     // check if this entity is a block reference:
     RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(&entity);
     if (blockRef!=NULL) {
-        blockRefStack.push(blockRef);
+        blockRefViewportStack.push(blockRef);
         blockRefOrViewportSet = true;
     }
     // check if this entity is a viewport:
     RViewportEntity* viewPort = dynamic_cast<RViewportEntity*>(&entity);
     if (viewPort!=NULL) {
-        blockRefStack.push(viewPort);
+        blockRefViewportStack.push(viewPort);
         blockRefOrViewportSet = true;
     }
 
-    startEntity(/* topLevelEntity = */ blockRefOrViewportSet || blockRefStack.isEmpty());
+    startEntity(/* topLevelEntity = */ blockRefOrViewportSet || blockRefViewportStack.isEmpty());
     exportCurrentEntity(preview, forceSelected);
     endEntity();
 
     if (blockRefOrViewportSet) {
-        blockRefStack.pop();
+        blockRefViewportStack.pop();
         //blockRefBS.clear();
     }
     currentLayer = NULL;
@@ -1437,6 +1459,11 @@ QList<RPainterPath> RExporter::exportText(const RTextBasedData& text, bool force
     Q_UNUSED(forceSelected)
     return QList<RPainterPath>();
 }
+
+//void RExporter::exportClipRectangle(const RBox& clipRectangle, bool forceSelected) {
+//    Q_UNUSED(clipRectangle)
+//    Q_UNUSED(forceSelected)
+//}
 
 double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
     if (document==NULL) {

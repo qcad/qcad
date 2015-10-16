@@ -32,6 +32,7 @@
 #include "RSpline.h"
 #include "RTextLabel.h"
 #include "RUnit.h"
+#include "RViewportEntity.h"
 
 
 RGraphicsSceneQt::RGraphicsSceneQt(RDocumentInterface& documentInterface)
@@ -122,6 +123,12 @@ bool RGraphicsSceneQt::beginPath() {
     }
 
     REntity* entity = getEntity();
+
+    currentPainterPath.setClipRectangle(getClipRectangle());
+//    RViewportEntity* viewport = getCurrentViewport();
+//    if (viewport!=NULL) {
+//        currentPainterPath.setClipRectangle(viewport->getBoundingBox());
+//    }
 
     if (draftMode || screenBasedLinetypes || twoColorSelectedMode) {
         QPen localPen = currentPen;
@@ -464,6 +471,7 @@ void RGraphicsSceneQt::exportTriangle(const RTriangle& triangle) {
     p.lineTo(triangle.corner[1]);
     p.lineTo(triangle.corner[2]);
     p.lineTo(triangle.corner[0]);
+    p.setClipRectangle(getClipRectangle());
 
     if (!exportToPreview) {
         addPath(getBlockRefOrEntity()->getId(), p, draftMode);
@@ -485,6 +493,7 @@ void RGraphicsSceneQt::exportRectangle(const RVector& p1, const RVector& p2) {
     RVector vMin = RVector::getMinimum(p1, p2);
     RVector vMax = RVector::getMaximum(p1, p2);
     p.addRect(vMin.x, vMin.y, vMax.x, vMax.y);
+    p.setClipRectangle(getClipRectangle());
 
     if (!exportToPreview) {
         if (draftMode) {
@@ -520,6 +529,7 @@ void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths) {
         else {
             path.setPen(getPen(path));
         }
+        path.setClipRectangle(getClipRectangle());
 
         if (!exportToPreview) {
             // export into current path (used for complex linetypes):
@@ -569,8 +579,8 @@ QList<RPainterPath> RGraphicsSceneQt::exportText(const RTextBasedData& text, boo
     RTextBasedData textCopy = text;
 
     // resolve line type, color by layer, by block:
-    textCopy.setLineweight(text.getLineweight(true, blockRefStack));
-    RColor col = text.getColor(true, blockRefStack);
+    textCopy.setLineweight(text.getLineweight(true, blockRefViewportStack));
+    RColor col = text.getColor(true, blockRefViewportStack);
     textCopy.setColor(col);
     if (forceSelected) {
         textCopy.setSelected(true);
@@ -609,6 +619,18 @@ QList<RPainterPath> RGraphicsSceneQt::exportText(const RTextBasedData& text, boo
     return ret;
 }
 
+//void RGraphicsSceneQt::exportClipRectangle(const RBox& clipRectangle, bool forceSelected) {
+//    Q_UNUSED(forceSelected)
+
+//    // TODO: iterate through already exported paths and exclude them from clipping
+//    if (exportToPreview) {
+//        // TODO
+//    }
+//    else {
+//        clipRectangles.insert(getBlockRefOrEntity()->getId(), clipRectangle);
+//    }
+//}
+
 /**
  * \return Pattern scale factor with scale applied if we are printing.
  */
@@ -640,6 +662,7 @@ void RGraphicsSceneQt::unexportEntity(REntity::Id entityId) {
         painterPaths.remove(entityId);
         images.remove(entityId);
         texts.remove(entityId);
+        //clipRectangles.remove(entityId);
     }
 }
 
@@ -647,6 +670,8 @@ void RGraphicsSceneQt::deletePainterPaths() {
     painterPaths.clear();
     images.clear();
     texts.clear();
+    //clipRectangles.clear();
+
     previewPainterPaths.clear();
     previewTexts.clear();
 }
@@ -686,6 +711,18 @@ QList<RTextBasedData> RGraphicsSceneQt::getTexts(REntity::Id entityId) {
 
     return QList<RTextBasedData>();
 }
+
+//bool RGraphicsSceneQt::hasClipRectangleFor(REntity::Id entityId) {
+//    return clipRectangles.contains(entityId);
+//}
+
+//RBox RGraphicsSceneQt::getClipRectangle(REntity::Id entityId) {
+//    if (clipRectangles.contains(entityId)) {
+//        return clipRectangles.value(entityId);
+//    }
+
+//    return RBox();
+//}
 
 void RGraphicsSceneQt::addPath(REntity::Id entityId, const RPainterPath& path, bool draft) {
     if (painterPaths.contains(entityId)) {
