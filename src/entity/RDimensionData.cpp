@@ -197,6 +197,13 @@ bool RDimensionData::scale(const RVector& scaleFactors, const RVector& center) {
     return true;
 }
 
+void RDimensionData::scaleVisualProperties(double scaleFactor) {
+    setDimScale(dimScale * scaleFactor);
+    if (!RMath::fuzzyCompare(scaleFactor, 0.0)) {
+        setLinearFactor(linearFactor / scaleFactor);
+    }
+}
+
 bool RDimensionData::mirror(const RLine& axis) {
     definitionPoint.mirror(axis);
     textPositionCenter.mirror(axis);

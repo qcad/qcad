@@ -119,6 +119,7 @@ public:
 
     void setDimScale(double f) {
         dimScale = f;
+        update();
     }
 
     virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0, bool draft = false, double strictRange = RMAXDOUBLE) const;
@@ -133,6 +134,7 @@ public:
     virtual bool move(const RVector& offset);
     virtual bool rotate(double rotation, const RVector& center);
     virtual bool scale(const RVector& scaleFactors, const RVector& center);
+    virtual void scaleVisualProperties(double scaleFactor);
     virtual bool mirror(const RLine& axis);
 
     //double getDimscale() const;
