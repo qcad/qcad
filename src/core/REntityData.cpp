@@ -503,6 +503,12 @@ bool REntityData::scale(double scaleFactor, const RVector& center) {
     return scale(RVector(scaleFactor, scaleFactor, scaleFactor), center);
 }
 
+void REntityData::scaleVisualProperties(double scaleFactor) {
+    Q_UNUSED(scaleFactor)
+
+    return;
+}
+
 bool REntityData::mirror(const RLine& axis) {
     // if this entity is based on a shape (point,line,arc,...),
     // transform using shape API:

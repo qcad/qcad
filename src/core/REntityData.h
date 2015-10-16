@@ -328,6 +328,7 @@ public:
     virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR);
     virtual bool scale(const RVector& scaleFactors, const RVector& center = RDEFAULT_RVECTOR);
     virtual bool scale(double scaleFactor, const RVector& center = RDEFAULT_RVECTOR);
+    virtual void scaleVisualProperties(double scaleFactor);
     virtual bool mirror(const RLine& axis);
     virtual bool mirror(const RVector& axis1, const RVector& axis2);
     virtual bool flipHorizontal();

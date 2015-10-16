@@ -517,6 +517,10 @@ public:
         return getData().scale(scaleFactor, center);
     }
 
+    virtual void scaleVisualProperties(double scaleFactor) {
+        getData().scaleVisualProperties(scaleFactor);
+    }
+
     /**
      * \copydoc REntityData::mirror
      */
