@@ -472,8 +472,7 @@ void RGraphicsSceneQt::exportTriangle(const RTriangle& triangle) {
     }
 }
 
-void RGraphicsSceneQt::exportRectangle(const RVector& p1,
-        const RVector& p2) {
+void RGraphicsSceneQt::exportRectangle(const RVector& p1, const RVector& p2) {
     if (getEntity() == NULL && !exportToPreview) {
         qWarning("RGraphicsSceneQt::exportRectangle: entity is NULL");
         return;
@@ -483,8 +482,9 @@ void RGraphicsSceneQt::exportRectangle(const RVector& p1,
     p.setZLevel(0);
     p.setPen(currentPen);
     p.setBrush(currentBrush);
-    RVector v = RVector::getMinimum(p1, p2);
-    p.addRect(v.x, v.y, fabs(p2.x - p1.x), fabs(p2.y - p1.y));
+    RVector vMin = RVector::getMinimum(p1, p2);
+    RVector vMax = RVector::getMaximum(p1, p2);
+    p.addRect(vMin.x, vMin.y, vMax.x, vMax.y);
 
     if (!exportToPreview) {
         if (draftMode) {
