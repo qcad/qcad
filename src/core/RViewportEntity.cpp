@@ -115,12 +115,11 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
 
     // viewport frame:
     e.setBrush(Qt::NoBrush);
-    qDebug() << "exporting viewport: " << viewportBox;
+    //qDebug() << "exporting viewport: " << viewportBox;
     e.exportRectangle(viewportBox.c1, viewportBox.c2);
 
     // clip rectangle export
-    //e.exportClipRectangle(viewportBox);
-    //e.setClipRectangle(viewportBox);
+    e.setClipping(true);
 
 //    RBlockReferenceEntity modelSpace(doc, RBlockReferenceData(doc->getModelSpaceBlockId(), data.center, RVector(1,1), 0));
 //    modelSpace.update();
@@ -141,8 +140,6 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
         )
     );
     modelSpaceData.update();
-
-    ///e.setClipRectangle();
 
     // render model space block reference into viewport:
     QSet<REntity::Id> ids = doc->queryBlockEntities(doc->getModelSpaceBlockId());
@@ -168,6 +165,8 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
 
         e.exportEntity(*entity, preview, true);
     }
+
+    e.setClipping(false);
 }
 
 void RViewportEntity::print(QDebug dbg) const {

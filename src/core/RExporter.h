@@ -34,6 +34,7 @@
 #include "RPainterPath.h"
 #include "RTextBasedData.h"
 #include "RView.h"
+#include "RViewportEntity.h"
 
 class RArc;
 class RCircle;
@@ -51,7 +52,6 @@ class RRay;
 class RSpline;
 class RTriangle;
 class RVector;
-class RViewportEntity;
 class RXLine;
 
 #ifndef RDEFAULT_MIN1
@@ -87,6 +87,7 @@ public:
     RS::ProjectionRenderingHint getProjectionRenderingHint();
 
     virtual RBox getClipRectangle() const;
+    void setClipping(bool on);
 
     virtual void setPen(const QPen& pen);
     virtual QPen getPen(const RPainterPath& path);
@@ -339,6 +340,7 @@ protected:
     QString errorMessage;
     double pixelSizeHint;
     bool pixelUnit;
+    bool clipping;
 
 private:
     RS::ProjectionRenderingHint projectionRenderingHint;

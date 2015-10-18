@@ -56,7 +56,8 @@ RExporter::RExporter()
       visualExporter(false),
       pixelSizeHint(0.5),
       projectionRenderingHint(RS::RenderThreeD),
-      pixelUnit(false) {
+      pixelUnit(false),
+      clipping(false) {
 
     currentPen.setColor(Qt::white);
     currentPen.setWidth(3);
@@ -79,7 +80,8 @@ RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProg
       visualExporter(false),
       pixelSizeHint(0.5),
       projectionRenderingHint(RS::RenderThreeD),
-      pixelUnit(false) {
+      pixelUnit(false),
+      clipping(false) {
 
     currentPen.setColor(Qt::white);
     currentPen.setWidth(3);
@@ -172,11 +174,20 @@ RS::ProjectionRenderingHint RExporter::getProjectionRenderingHint() {
  * \return Clip rectangle due to current viewport being exported.
  */
 RBox RExporter::getClipRectangle() const {
+    if (!clipping) {
+        return RBox();
+    }
+
     RViewportEntity* viewport = getCurrentViewport();
     if (viewport!=NULL) {
         return viewport->getBoundingBox();
     }
+
     return RBox();
+}
+
+void RExporter::setClipping(bool on) {
+    clipping = on;
 }
 
 /**

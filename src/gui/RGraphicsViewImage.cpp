@@ -819,28 +819,6 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         paintText(painter, texts[k]);
     }
 
-    qDebug() << "paintEntity: " << id;
-
-//    REntity::Id viewportId = id;
-//    if (viewportId==-1) {
-//        viewportId =
-//    }
-//    RBox clipRectangle;
-//    QSharedPointer<REntity> entity = getDocument()->queryEntityDirect(id);
-//    QSharedPointer<RViewportEntity> viewport = entity.dynamicCast<RViewportEntity>();
-//    if (!viewport.isNull()) {
-//        clipRectangle = viewport->getBoundingBox();
-//    }
-
-////    if (id!=-1) {
-////        if (sceneQt->hasClipRectangleFor(id)) {
-////            clipRectangle = sceneQt->getClipRectangle(id);
-////        }
-////    }
-//    if (clipRectangle.isValid()) {
-//        painter->setClipRect(clipRectangle.getMinimum().x, clipRectangle.getMinimum().y, clipRectangle.getWidth(), clipRectangle.getHeight());
-//    }
-
     // paint painter paths:
     QListIterator<RPainterPath> i(painterPaths);
     while (i.hasNext()) {
@@ -853,14 +831,6 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
             path.scale(1/factor,1/factor);
             path.move(sp);
         }
-
-//        if (path.isExcludedFromClipping()) {
-//            // TODO: might disbale global clipping as well:
-//            painter->setClipping(false);
-//        }
-//        else {
-//            painter->setClipping(true);
-//        }
 
         path.move(paintOffset);
         RBox pathBB = path.getBoundingBox();
@@ -878,7 +848,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
 
         RBox clipRectangle = path.getClipRectangle();
         if (clipRectangle.isValid()) {
-            painter->setClipRect(clipRectangle.getMinimum().x, clipRectangle.getMinimum().y, clipRectangle.getWidth(), clipRectangle.getHeight());
+            painter->setClipRect(QRectF(clipRectangle.getMinimum().x, clipRectangle.getMinimum().y, clipRectangle.getWidth(), clipRectangle.getHeight()));
             painter->setClipping(true);
         }
         else {
