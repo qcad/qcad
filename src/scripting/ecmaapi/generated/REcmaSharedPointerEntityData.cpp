@@ -165,6 +165,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, scale, "scale");
             
+            REcmaHelper::registerFunction(&engine, proto, scaleVisualProperties, "scaleVisualProperties");
+            
             REcmaHelper::registerFunction(&engine, proto, mirror, "mirror");
             
             REcmaHelper::registerFunction(&engine, proto, flipHorizontal, "flipHorizontal");
@@ -5497,6 +5499,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerEntityData::scale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEntityData::scaleVisualProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEntityData::scaleVisualProperties", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEntityData::scaleVisualProperties";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntityData* self = 
+                        getSelf("scaleVisualProperties", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->scaleVisualProperties(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntityData.scaleVisualProperties().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEntityData::scaleVisualProperties", context, engine);
             return result;
         }
          QScriptValue

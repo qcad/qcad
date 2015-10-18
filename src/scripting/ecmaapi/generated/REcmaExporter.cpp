@@ -39,6 +39,8 @@
             
                 #include "RVector.h"
             
+                #include "RViewportEntity.h"
+            
                 #include "RXLine.h"
             
             
@@ -93,6 +95,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getProjectionRenderingHint, "getProjectionRenderingHint");
             
+            REcmaHelper::registerFunction(&engine, proto, getClipRectangle, "getClipRectangle");
+            
+            REcmaHelper::registerFunction(&engine, proto, setClipping, "setClipping");
+            
             REcmaHelper::registerFunction(&engine, proto, setPen, "setPen");
             
             REcmaHelper::registerFunction(&engine, proto, getPen, "getPen");
@@ -124,6 +130,8 @@
             REcmaHelper::registerFunction(&engine, proto, getEntity, "getEntity");
             
             REcmaHelper::registerFunction(&engine, proto, getCurrentBlockRef, "getCurrentBlockRef");
+            
+            REcmaHelper::registerFunction(&engine, proto, getCurrentViewport, "getCurrentViewport");
             
             REcmaHelper::registerFunction(&engine, proto, isEntitySelected, "isEntitySelected");
             
@@ -635,6 +643,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::getProjectionRenderingHint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::getClipRectangle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::getClipRectangle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::getClipRectangle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("getClipRectangle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RBox'
+    RBox cppResult =
+        
+               self->getClipRectangle();
+        // return type: RBox
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.getClipRectangle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::getClipRectangle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::setClipping
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::setClipping", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::setClipping";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("setClipping", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setClipping(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.setClipping().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::setClipping", context, engine);
             return result;
         }
          QScriptValue
@@ -1756,6 +1868,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::getCurrentBlockRef", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::getCurrentViewport
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::getCurrentViewport", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::getCurrentViewport";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("getCurrentViewport", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RViewportEntity *'
+    RViewportEntity * cppResult =
+        
+               self->getCurrentViewport();
+        // return type: RViewportEntity *
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.getCurrentViewport().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::getCurrentViewport", context, engine);
             return result;
         }
          QScriptValue

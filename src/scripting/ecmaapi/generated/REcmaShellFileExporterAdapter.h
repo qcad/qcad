@@ -124,6 +124,16 @@
             );
         
     
+      RBox getClipRectangle(
+                
+            );
+        
+    
+      void setClipping(
+                bool on
+            );
+        
+    
       void setPen(
                 const QPen & pen
             );
@@ -214,6 +224,11 @@
         
     
       REntity * getCurrentBlockRef(
+                
+            );
+        
+    
+      RViewportEntity * getCurrentViewport(
                 
             );
         

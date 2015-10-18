@@ -195,6 +195,12 @@
         getPixelSizeHint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setClipRectangle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getClipRectangle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDistanceTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

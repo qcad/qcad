@@ -111,6 +111,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, scale, "scale");
             
+            REcmaHelper::registerFunction(&engine, proto, scaleVisualProperties, "scaleVisualProperties");
+            
             REcmaHelper::registerFunction(&engine, proto, mirror, "mirror");
             
             REcmaHelper::registerFunction(&engine, proto, getDimexo, "getDimexo");
@@ -2301,6 +2303,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionData::scale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::scaleVisualProperties
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::scaleVisualProperties", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::scaleVisualProperties";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("scaleVisualProperties", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->scaleVisualProperties(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.scaleVisualProperties().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::scaleVisualProperties", context, engine);
             return result;
         }
          QScriptValue

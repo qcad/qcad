@@ -64,6 +64,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <property name="rxLineFeed" type="QString" isConst="false"
     isStatic="true" />
+    <property name="rxAlignmentLeft" type="QString" isConst="false"
+    isStatic="true" />
+    <property name="rxAlignmentCenter" type="QString"
+    isConst="false" isStatic="true" />
+    <property name="rxAlignmentRight" type="QString"
+    isConst="false" isStatic="true" />
     <property name="rxParagraphFeed" type="QString" isConst="false"
     isStatic="true" />
     <property name="rxXFeed" type="QString" isConst="false"

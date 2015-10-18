@@ -518,6 +518,10 @@
         <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>scale</name><argument_list>(<argument><expr><name>scaleFactor</name></expr></argument>, <argument><expr><name>center</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>virtual</name> <name>void</name></type> <name>scaleVisualProperties</name><parameter_list>(<param><decl><type><name>double</name></type> <name>scaleFactor</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>scaleVisualProperties</name><argument_list>(<argument><expr><name>scaleFactor</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
     <comment type="block">/**
      * \copydoc REntityData::mirror
      */</comment>

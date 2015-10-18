@@ -64,6 +64,12 @@
         getProjectionRenderingHint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getClipRectangle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setClipping
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setPen
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -110,6 +116,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getCurrentBlockRef
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCurrentViewport
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isEntitySelected

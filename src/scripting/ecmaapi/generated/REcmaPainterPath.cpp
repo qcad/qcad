@@ -170,6 +170,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getPixelSizeHint, "getPixelSizeHint");
             
+            REcmaHelper::registerFunction(&engine, proto, setClipRectangle, "setClipRectangle");
+            
+            REcmaHelper::registerFunction(&engine, proto, getClipRectangle, "getClipRectangle");
+            
             REcmaHelper::registerFunction(&engine, proto, getDistanceTo, "getDistanceTo");
             
             REcmaHelper::registerFunction(&engine, proto, addPoint, "addPoint");
@@ -3695,6 +3699,122 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::getPixelSizeHint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::setClipRectangle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::setClipRectangle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setClipRectangle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("setClipRectangle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RBox */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setClipRectangle(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setClipRectangle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::setClipRectangle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::getClipRectangle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::getClipRectangle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getClipRectangle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("getClipRectangle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RBox'
+    RBox cppResult =
+        
+               self->getClipRectangle();
+        // return type: RBox
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getClipRectangle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::getClipRectangle", context, engine);
             return result;
         }
          QScriptValue

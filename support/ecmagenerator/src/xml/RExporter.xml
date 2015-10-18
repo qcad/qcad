@@ -17,6 +17,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RSpline" />
   <class_decl name="RTriangle" />
   <class_decl name="RVector" />
+  <class_decl name="RViewportEntity" />
   <class_decl name="RXLine" />
   <class name="RExporter"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
@@ -76,6 +77,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RS::ProjectionRenderingHint"
       isPureVirtual="false" />
+    </method>
+    <method name="getClipRectangle" cppName="getClipRectangle"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RBox" isPureVirtual="false" />
+    </method>
+    <method name="setClipping" cppName="setClipping"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
     </method>
     <method name="setPen" cppName="setPen" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
@@ -201,6 +215,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="REntity *" isPureVirtual="false" />
+    </method>
+    <method name="getCurrentViewport" cppName="getCurrentViewport"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RViewportEntity *"
+      isPureVirtual="false" />
     </method>
     <method name="isEntitySelected" cppName="isEntitySelected"
     specifier="public" isStatic="false" isVirtual="true"

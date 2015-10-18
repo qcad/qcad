@@ -95,6 +95,7 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportPainterPaths</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name>&amp;</type> <name>paths</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportImage</name><parameter_list>(<param><decl><type><name>const</name> <name>RImageData</name>&amp;</type> <name>image</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>exportText</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>text</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <comment type="line">//virtual void exportClipRectangle(const RBox&amp; clipRectangles, bool forceSelected = false);</comment>
 
     <function_decl><type><name>virtual</name> <name>double</name></type> <name>getLineTypePatternScale</name><parameter_list>(<param><decl><type><name>const</name> <name>RLinetypePattern</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     
@@ -110,6 +111,8 @@
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RImageData</name></argument>&gt;</argument_list></name></type> <name>getImages</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>hasTextsFor</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RTextBasedData</name></argument>&gt;</argument_list></name></type> <name>getTexts</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="line">//bool hasClipRectangleFor(REntity::Id entityId);</comment>
+    <comment type="line">//RBox getClipRectangle(REntity::Id entityId);</comment>
 
     <function_decl><type><name>void</name></type> <name>addPath</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>, <param><decl><type><name>bool</name></type> <name>draft</name></decl></param>)</parameter_list>;</function_decl>
 
@@ -130,10 +133,11 @@
 
 </public><private>private:
     <decl_stmt><decl><type><name>RPainterPath</name></type> <name>currentPainterPath</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>painterPaths</name></decl>;</decl_stmt>
 
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>painterPaths</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RImageData</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>images</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RTextBasedData</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>texts</name></decl>;</decl_stmt>
+    <comment type="line">//QMap&lt;REntity::Id, RBox&gt; clipRectangles;</comment>
 
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>previewPainterPaths</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RTextBasedData</name></argument>&gt;</argument_list></name></type> <name>previewTexts</name></decl>;</decl_stmt>

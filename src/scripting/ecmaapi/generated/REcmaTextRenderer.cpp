@@ -80,6 +80,18 @@
                 qScriptValueFromValue(&engine, RTextRenderer::rxLineFeed),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("rxAlignmentLeft",
+                qScriptValueFromValue(&engine, RTextRenderer::rxAlignmentLeft),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxAlignmentCenter",
+                qScriptValueFromValue(&engine, RTextRenderer::rxAlignmentCenter),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("rxAlignmentRight",
+                qScriptValueFromValue(&engine, RTextRenderer::rxAlignmentRight),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("rxParagraphFeed",
                 qScriptValueFromValue(&engine, RTextRenderer::rxParagraphFeed),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
