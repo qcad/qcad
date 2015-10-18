@@ -441,6 +441,8 @@ void RPainterPath::transform(const QTransform& t) {
 
 void RPainterPath::move(const RVector& offset) {
     translate(offset.x, offset.y);
+    RVector::moveList(points, offset);
+    clipRectangle.move(offset);
 }
 
 void RPainterPath::rotate(double angle) {
