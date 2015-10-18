@@ -99,6 +99,8 @@ public:
     RBox& grow(double offset);
     RBox& growXY(double offset);
 
+    void move(const RVector& offset);
+
     QRectF toQRectF() const;
 
     bool operator ==(const RBox& other) const;

@@ -88,6 +88,11 @@ RBox& RBox::growXY(double offset) {
     return *this;
 }
 
+void RBox::move(const RVector& offset) {
+    c1.move(offset);
+    c2.move(offset);
+}
+
 double RBox::getWidth() const {
     return qAbs(c2.x-c1.x);
 }
