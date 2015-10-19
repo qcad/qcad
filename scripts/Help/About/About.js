@@ -267,6 +267,10 @@ About.prototype.initAboutPlugins = function(textBrowser) {
         }
     }
 
+    if (this.applicationName===qApp.applicationName) {
+        this.applicationName = qApp.applicationName + " Community Edition";
+    }
+
     html += "</body>";
     html += "</html>";
     textBrowser.setHtml(html);
