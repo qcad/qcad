@@ -393,6 +393,9 @@ bool RHatchData::scale(const RVector& scaleFactors, const RVector& center) {
         }
     }
 
+    // scale custom entity specific pattern:
+    pattern.scale(scaleFactors.x);
+
     update();
     return true;
 }
