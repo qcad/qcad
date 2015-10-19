@@ -84,9 +84,97 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="const RViewportData &amp;"
       isPureVirtual="false" />
     </method>
+    <method name="getViewportId" cppName="getViewportId"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="setViewportId" cppName="setViewportId"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="id" isConst="false" />
+      </variant>
+    </method>
+    <method name="getStatus" cppName="getStatus" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="setStatus" cppName="setStatus" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="int" typeName="int" name="s" isConst="false" />
+      </variant>
+    </method>
     <method name="getCenter" cppName="getCenter" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setCenter" cppName="setCenter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="c"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getViewCenter" cppName="getViewCenter"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setViewCenter" cppName="setViewCenter"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="c"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getViewTarget" cppName="getViewTarget"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setViewTarget" cppName="setViewTarget"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="t"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getWidth" cppName="getWidth" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setWidth" cppName="setWidth" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="w"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getHeight" cppName="getHeight" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setHeight" cppName="setHeight" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="h"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getScale" cppName="getScale" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="setScale" cppName="setScale" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="s"
+        isConst="false" />
+      </variant>
     </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
@@ -128,6 +216,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyHeight" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyScale" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyViewCenterX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyViewCenterY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyViewTargetX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyViewTargetY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyViewTargetZ" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>

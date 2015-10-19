@@ -239,7 +239,7 @@ public:
     bool getPanOptimization();
 
     virtual void paintEntities(QPainter* painter, const RBox& queryBox);
-    virtual void paintEntity(QPainter* painter, REntity::Id id);
+    virtual void paintEntity(QPainter* painter, REntity::Id id, bool preview = false);
 
     QImage getBuffer() const;
     QTransform getTransform() const;

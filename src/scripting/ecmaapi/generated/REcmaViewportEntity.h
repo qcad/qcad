@@ -74,7 +74,52 @@
         getData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getViewportId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setViewportId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getStatus
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setStatus
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getViewCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setViewCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getViewTarget
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setViewTarget
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getHeight
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setHeight
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

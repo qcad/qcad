@@ -1086,71 +1086,6 @@
             }
         
     
-      RBox REcmaShellFileExporterAdapter::getClipRectangle(
-                
-            ) {
-                QScriptEngine* engine = __qtscript_self.engine();
-                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::getClipRectangle", engine);
-                QScriptValue _q_function = __qtscript_self.property("getClipRectangle");
-
-
-
-                if (!_q_function.isFunction() || 
-                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
-                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
-                    
-                    /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=0*/
-                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
-                    ) {
-                    //QString cppSig = "RFileExporterAdapter::getClipRectangle";
-                    
-                        // re-enable recursion for calls from C++ into ECMAScript functions
-                        // leave it marked as generated though if appropriate:
-                        
-                        quint32 prev = _q_function.data().toUInt32();
-                        //if (cppSig!="RGraphicsViewQt::event") {
-                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
-                        //}
-                        RBox ret =
-                        RFileExporterAdapter::getClipRectangle(
-                            
-                        );
-
-                        // block recursion again:
-                        _q_function.setData(QScriptValue(engine, prev));
-
-                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getClipRectangle", engine);
-
-                        
-                            return ret;
-                          
-                }
-                    // prevent recursion if script implementation calls base implementation
-                    // mark function as 'in call':
-                    quint32 prev = _q_function.data().toUInt32();
-                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    RBox res;
-                      
-                          res = qscriptvalue_cast< 
-                            RBox
-                          >(
-                        
-                            _q_function.call(__qtscript_self)
-                        
-                      )
-                    
-                    ;
-                    _q_function.setData(QScriptValue(engine, prev));
-
-                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getClipRectangle", engine);
-
-                    
-                            return res;
-                          
-            }
-        
-    
       void REcmaShellFileExporterAdapter::setClipping(
                 bool on
             ) {
@@ -1215,6 +1150,71 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::setClipping", engine);
 
                     
+            }
+        
+    
+      bool REcmaShellFileExporterAdapter::getClipping(
+                
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::getClipping", engine);
+                QScriptValue _q_function = __qtscript_self.property("getClipping");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=0*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RFileExporterAdapter::getClipping";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        bool ret =
+                        RFileExporterAdapter::getClipping(
+                            
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getClipping", engine);
+
+                        
+                            return ret;
+                          
+                }
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    bool res;
+                      
+                          res = qscriptvalue_cast< 
+                            bool
+                          >(
+                        
+                            _q_function.call(__qtscript_self)
+                        
+                      )
+                    
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getClipping", engine);
+
+                    
+                            return res;
+                          
             }
         
     
@@ -2400,6 +2400,71 @@
                     _q_function.setData(QScriptValue(engine, prev));
 
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getBlockRefOrEntity", engine);
+
+                    
+                            return res;
+                          
+            }
+        
+    
+      REntity::Id REcmaShellFileExporterAdapter::getBlockRefOrEntityId(
+                
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::getBlockRefOrEntityId", engine);
+                QScriptValue _q_function = __qtscript_self.property("getBlockRefOrEntityId");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=0*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RFileExporterAdapter::getBlockRefOrEntityId";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        REntity::Id ret =
+                        RFileExporterAdapter::getBlockRefOrEntityId(
+                            
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getBlockRefOrEntityId", engine);
+
+                        
+                            return ret;
+                          
+                }
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    REntity::Id res;
+                      
+                          res = qscriptvalue_cast< 
+                            REntity::Id
+                          >(
+                        
+                            _q_function.call(__qtscript_self)
+                        
+                      )
+                    
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getBlockRefOrEntityId", engine);
 
                     
                             return res;
@@ -5516,6 +5581,84 @@
                     
                             return res;
                           
+            }
+        
+    
+      void REcmaShellFileExporterAdapter::exportClipRectangle(
+                const RBox & clipRectangle, bool forceSelected
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportClipRectangle", engine);
+                QScriptValue _q_function = __qtscript_self.property("exportClipRectangle");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=2*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RFileExporterAdapter::exportClipRectangle";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RFileExporterAdapter::exportClipRectangle(
+                            clipRectangle, forceSelected
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportClipRectangle", engine);
+
+                        
+                            return;
+                          
+                }
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: RBox &, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        
+            // const reference argument - make a new object:
+            new RBox(clipRectangle)
+        )
+      
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        forceSelected
+        )
+      
+                            )
+                        
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportClipRectangle", engine);
+
+                    
             }
         
     

@@ -123,13 +123,6 @@ bool RGraphicsSceneQt::beginPath() {
     }
 
     REntity* entity = getEntity();
-
-    currentPainterPath.setClipRectangle(getClipRectangle());
-//    RViewportEntity* viewport = getCurrentViewport();
-//    if (viewport!=NULL) {
-//        currentPainterPath.setClipRectangle(viewport->getBoundingBox());
-//    }
-
     if (draftMode || screenBasedLinetypes || twoColorSelectedMode) {
         QPen localPen = currentPen;
         if (twoColorSelectedMode) {
@@ -184,10 +177,10 @@ void RGraphicsSceneQt::endPath() {
     if (!exportToPreview) {
         if (!currentPainterPath.isEmpty()) {
             // entities which are part of a block and have attributes ByBlock are exported to block ref ID:
-            addPath(getBlockRefOrEntity()->getId(), currentPainterPath, false);
+            addPath(getBlockRefOrEntityId(), currentPainterPath, false);
         }
     } else {
-        addToPreview(currentPainterPath);
+        addToPreview(getBlockRefOrEntityId(), currentPainterPath);
     }
 
     currentPainterPath.setValid(false);
@@ -471,12 +464,11 @@ void RGraphicsSceneQt::exportTriangle(const RTriangle& triangle) {
     p.lineTo(triangle.corner[1]);
     p.lineTo(triangle.corner[2]);
     p.lineTo(triangle.corner[0]);
-    p.setClipRectangle(getClipRectangle());
 
     if (!exportToPreview) {
-        addPath(getBlockRefOrEntity()->getId(), p, draftMode);
+        addPath(getBlockRefOrEntityId(), p, draftMode);
     } else {
-        addToPreview(p);
+        addToPreview(getBlockRefOrEntityId(), p);
     }
 }
 
@@ -493,17 +485,17 @@ void RGraphicsSceneQt::exportRectangle(const RVector& p1, const RVector& p2) {
     RVector vMin = RVector::getMinimum(p1, p2);
     RVector vMax = RVector::getMaximum(p1, p2);
     p.addRect(vMin.x, vMin.y, vMax.x, vMax.y);
-    p.setClipRectangle(getClipRectangle());
+    p.setNoClipping(!getClipping());
 
     if (!exportToPreview) {
         if (draftMode) {
-            addPath(getBlockRefOrEntity()->getId(), p, true);
+            addPath(getBlockRefOrEntityId(), p, true);
         }
         else {
-            addPath(getBlockRefOrEntity()->getId(), p, false);
+            addPath(getBlockRefOrEntityId(), p, false);
         }
     } else {
-        addToPreview(p);
+        addToPreview(getBlockRefOrEntityId(), p);
     }
 }
 
@@ -529,7 +521,6 @@ void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths) {
         else {
             path.setPen(getPen(path));
         }
-        path.setClipRectangle(getClipRectangle());
 
         if (!exportToPreview) {
             // export into current path (used for complex linetypes):
@@ -537,11 +528,11 @@ void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths) {
                 currentPainterPath.addPath(path);
             }
             else {
-                addPath(getBlockRefOrEntity()->getId(), path, draftMode);
+                addPath(getBlockRefOrEntityId(), path, draftMode);
             }
         }
         else {
-            addToPreview(path);
+            addToPreview(getBlockRefOrEntityId(), path);
         }
     }
 }
@@ -563,14 +554,14 @@ void RGraphicsSceneQt::exportImage(const RImageData& image, bool forceSelected) 
                 path.lineTo(edges.at(i % edges.count()).getStartPoint());
             }
         }
-        addToPreview(path);
+        addToPreview(getBlockRefOrEntityId(), path);
     }
     else {
-        if (images.contains(getBlockRefOrEntity()->getId())) {
-            images[getBlockRefOrEntity()->getId()].append(image);
+        if (images.contains(getBlockRefOrEntityId())) {
+            images[getBlockRefOrEntityId()].append(image);
         }
         else {
-            images.insert(getBlockRefOrEntity()->getId(), QList<RImageData>() << image);
+            images.insert(getBlockRefOrEntityId(), QList<RImageData>() << image);
         }
     }
 }
@@ -595,11 +586,11 @@ QList<RPainterPath> RGraphicsSceneQt::exportText(const RTextBasedData& text, boo
         addTextToPreview(textCopy);
     }
     else {
-        if (texts.contains(getBlockRefOrEntity()->getId())) {
-            texts[getBlockRefOrEntity()->getId()].append(textCopy);
+        if (texts.contains(getBlockRefOrEntityId())) {
+            texts[getBlockRefOrEntityId()].append(textCopy);
         }
         else {
-            texts.insert(getBlockRefOrEntity()->getId(), QList<RTextBasedData>() << textCopy);
+            texts.insert(getBlockRefOrEntityId(), QList<RTextBasedData>() << textCopy);
         }
     }
 
@@ -619,17 +610,16 @@ QList<RPainterPath> RGraphicsSceneQt::exportText(const RTextBasedData& text, boo
     return ret;
 }
 
-//void RGraphicsSceneQt::exportClipRectangle(const RBox& clipRectangle, bool forceSelected) {
-//    Q_UNUSED(forceSelected)
+void RGraphicsSceneQt::exportClipRectangle(const RBox& clipRectangle, bool forceSelected) {
+    Q_UNUSED(forceSelected)
 
-//    // TODO: iterate through already exported paths and exclude them from clipping
-//    if (exportToPreview) {
-//        // TODO
-//    }
-//    else {
-//        clipRectangles.insert(getBlockRefOrEntity()->getId(), clipRectangle);
-//    }
-//}
+    if (exportToPreview) {
+        previewClipRectangles.insert(getBlockRefOrEntityId(), clipRectangle);
+    }
+    else {
+        clipRectangles.insert(getBlockRefOrEntityId(), clipRectangle);
+    }
+}
 
 /**
  * \return Pattern scale factor with scale applied if we are printing.
@@ -662,7 +652,7 @@ void RGraphicsSceneQt::unexportEntity(REntity::Id entityId) {
         painterPaths.remove(entityId);
         images.remove(entityId);
         texts.remove(entityId);
-        //clipRectangles.remove(entityId);
+        clipRectangles.remove(entityId);
     }
 }
 
@@ -670,10 +660,12 @@ void RGraphicsSceneQt::deletePainterPaths() {
     painterPaths.clear();
     images.clear();
     texts.clear();
-    //clipRectangles.clear();
+    clipRectangles.clear();
 
     previewPainterPaths.clear();
     previewTexts.clear();
+    previewImages.clear();
+    previewClipRectangles.clear();
 }
 
 /**
@@ -712,17 +704,17 @@ QList<RTextBasedData> RGraphicsSceneQt::getTexts(REntity::Id entityId) {
     return QList<RTextBasedData>();
 }
 
-//bool RGraphicsSceneQt::hasClipRectangleFor(REntity::Id entityId) {
-//    return clipRectangles.contains(entityId);
-//}
+bool RGraphicsSceneQt::hasClipRectangleFor(REntity::Id entityId) {
+    return clipRectangles.contains(entityId);
+}
 
-//RBox RGraphicsSceneQt::getClipRectangle(REntity::Id entityId) {
-//    if (clipRectangles.contains(entityId)) {
-//        return clipRectangles.value(entityId);
-//    }
+RBox RGraphicsSceneQt::getClipRectangle(REntity::Id entityId) {
+    if (clipRectangles.contains(entityId)) {
+        return clipRectangles.value(entityId);
+    }
 
-//    return RBox();
-//}
+    return RBox();
+}
 
 void RGraphicsSceneQt::addPath(REntity::Id entityId, const RPainterPath& path, bool draft) {
     if (painterPaths.contains(entityId)) {
@@ -733,20 +725,31 @@ void RGraphicsSceneQt::addPath(REntity::Id entityId, const RPainterPath& path, b
     }
 }
 
-QList<RPainterPath> RGraphicsSceneQt::getPreviewPainterPaths() {
-    return previewPainterPaths;
+bool RGraphicsSceneQt::hasPreview() const {
+    return !previewPainterPaths.isEmpty() || !previewTexts.isEmpty() || !previewImages.isEmpty();
 }
 
-bool RGraphicsSceneQt::hasPreviewPainterPaths() const {
-    return !previewPainterPaths.isEmpty();
+QList<REntity::Id> RGraphicsSceneQt::getPreviewEntityIds() {
+    QList<REntity::Id> ret = previewPainterPaths.keys();
+    ret.append(previewTexts.keys());
+    ret.append(previewImages.keys());
+    ret.append(previewClipRectangles.keys());
+    ret = ret.toSet().toList();
+    return ret;
 }
 
-QList<RTextBasedData> RGraphicsSceneQt::getPreviewTexts() {
-    return previewTexts;
+QList<RPainterPath> RGraphicsSceneQt::getPreviewPainterPaths(RObject::Id entityId) {
+    if (previewPainterPaths.contains(entityId)) {
+        return previewPainterPaths[entityId];
+    }
+    return QList<RPainterPath>();
 }
 
-bool RGraphicsSceneQt::hasPreviewTexts() const {
-    return !previewTexts.isEmpty();
+QList<RTextBasedData> RGraphicsSceneQt::getPreviewTexts(REntity::Id entityId) {
+    if (previewTexts.contains(entityId)) {
+        return previewTexts[entityId];
+    }
+    return QList<RTextBasedData>();
 }
 
 void RGraphicsSceneQt::clearPreview() {
@@ -755,16 +758,32 @@ void RGraphicsSceneQt::clearPreview() {
     previewTexts.clear();
 }
     
-void RGraphicsSceneQt::addToPreview(const RPainterPath& painterPath) {
-    previewPainterPaths << painterPath;
+void RGraphicsSceneQt::addToPreview(REntity::Id entityId, const RPainterPath& painterPath) {
+    if (previewPainterPaths.contains(entityId)) {
+        previewPainterPaths[entityId].append(painterPath);
+    }
+    else {
+        previewPainterPaths.insert(entityId, QList<RPainterPath>() << painterPath);
+    }
 }
 
-void RGraphicsSceneQt::addToPreview(const QList<RPainterPath>& painterPaths) {
-    previewPainterPaths << painterPaths;
+void RGraphicsSceneQt::addToPreview(REntity::Id entityId, const QList<RPainterPath>& painterPaths) {
+    if (previewPainterPaths.contains(entityId)) {
+        previewPainterPaths[entityId].append(painterPaths);
+    }
+    else {
+        previewPainterPaths.insert(entityId, painterPaths);
+    }
 }
 
 void RGraphicsSceneQt::addTextToPreview(const RTextBasedData& text) {
-    previewTexts << text;
+    REntity::Id entityId = getBlockRefOrEntityId();
+    if (previewTexts.contains(entityId)) {
+        previewTexts[entityId].append(text);
+    }
+    else {
+        previewTexts.insert(entityId, QList<RTextBasedData>() << text);
+    }
 }
 
 void RGraphicsSceneQt::highlightEntity(REntity& entity) {
@@ -775,7 +794,7 @@ void RGraphicsSceneQt::highlightEntity(REntity& entity) {
         painterPaths[i].setSelected(entity.isSelected());
         painterPaths[i].setHighlighted(true);
     }
-    addToPreview(painterPaths);
+    addToPreview(entity.getId(), painterPaths);
     endPreview();
 }
 

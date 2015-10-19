@@ -132,6 +132,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, growXY, "growXY");
             
+            REcmaHelper::registerFunction(&engine, proto, move, "move");
+            
             REcmaHelper::registerFunction(&engine, proto, toQRectF, "toQRectF");
             
             REcmaHelper::registerFunction(&engine, proto, equals, "equals");
@@ -2380,6 +2382,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerBox::growXY", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBox::move
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBox::move", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBox::move";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBox* self = 
+                        getSelf("move", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RBox: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->move(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBox.move().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBox::move", context, engine);
             return result;
         }
          QScriptValue

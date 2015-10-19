@@ -132,6 +132,16 @@ REntity* RExporter::getBlockRefOrEntity() {
     return blockRefViewportStack.first();
 }
 
+REntity::Id RExporter::getBlockRefOrEntityId() {
+    REntity* entity = getBlockRefOrEntity();
+    if (entity==NULL) {
+        return REntity::INVALID_ID;
+    }
+    else {
+        return entity->getId();
+    }
+}
+
 /**
  * \return Pointer to the entity that is currently being exported.
  */
@@ -173,21 +183,25 @@ RS::ProjectionRenderingHint RExporter::getProjectionRenderingHint() {
 /**
  * \return Clip rectangle due to current viewport being exported.
  */
-RBox RExporter::getClipRectangle() const {
-    if (!clipping) {
-        return RBox();
-    }
+//RBox RExporter::getClipRectangle() const {
+//    if (!clipping) {
+//        return RBox();
+//    }
 
-    RViewportEntity* viewport = getCurrentViewport();
-    if (viewport!=NULL) {
-        return viewport->getBoundingBox();
-    }
+//    RViewportEntity* viewport = getCurrentViewport();
+//    if (viewport!=NULL) {
+//        return viewport->getBoundingBox();
+//    }
 
-    return RBox();
-}
+//    return RBox();
+//}
 
 void RExporter::setClipping(bool on) {
     clipping = on;
+}
+
+bool RExporter::getClipping() const {
+    return clipping;
 }
 
 /**
@@ -1471,10 +1485,10 @@ QList<RPainterPath> RExporter::exportText(const RTextBasedData& text, bool force
     return QList<RPainterPath>();
 }
 
-//void RExporter::exportClipRectangle(const RBox& clipRectangle, bool forceSelected) {
-//    Q_UNUSED(clipRectangle)
-//    Q_UNUSED(forceSelected)
-//}
+void RExporter::exportClipRectangle(const RBox& clipRectangle, bool forceSelected) {
+    Q_UNUSED(clipRectangle)
+    Q_UNUSED(forceSelected)
+}
 
 double RExporter::getLineTypePatternScale(const RLinetypePattern& p) const {
     if (document==NULL) {

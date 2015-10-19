@@ -416,6 +416,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="REntity::Id" typeName="REntity::Id" name="id"
         isConst="false" />
+        <arg type="bool" typeName="bool" name="preview"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getBuffer" cppName="getBuffer" specifier="public"

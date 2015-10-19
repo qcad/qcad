@@ -11,6 +11,8 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaEntityData.h"
+                
+                  #include "REcmaPoint.h"
                  void REcmaViewportData::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
@@ -35,7 +37,8 @@
             }
           
         /*
-        
+        REcmaPoint::initEcma(engine, proto);
+          
         */
     
 
@@ -69,6 +72,8 @@
     // methods:
     
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
+            
+            REcmaHelper::registerFunction(&engine, proto, castToShape, "castToShape");
             
             REcmaHelper::registerFunction(&engine, proto, getViewportId, "getViewportId");
             
@@ -299,6 +304,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaViewportData::getBoundingBox", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportData::castToShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportData::castToShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::castToShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportData* self = 
+                        getSelf("castToShape", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RShape *'
+    RShape * cppResult =
+        
+               self->castToShape();
+        // return type: RShape *
+                // RShape:
+                result = REcmaHelper::toScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.castToShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportData::castToShape", context, engine);
             return result;
         }
          QScriptValue

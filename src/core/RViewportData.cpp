@@ -45,22 +45,22 @@ RViewportData::RViewportData(RDocument* document, const RViewportData& data)
 RBox RViewportData::getBoundingBox(bool ignoreEmpty) const {
     Q_UNUSED(ignoreEmpty)
 
-    return RBox(center, width, height);
+    return RBox(position, width, height);
 }
 
 QList<RVector> RViewportData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
     QList<RVector> ret;
-    ret.append(center);
+    ret.append(position);
     return ret;
 }
 
 bool RViewportData::moveReferencePoint(const RVector& referencePoint,
         const RVector& targetPoint) {
     bool ret = false;
-    if (referencePoint.equalsFuzzy(center)) {
-        center = targetPoint;
+    if (referencePoint.equalsFuzzy(position)) {
+        position = targetPoint;
         ret = true;
     }
     return ret;
@@ -72,7 +72,7 @@ QList<QSharedPointer<RShape> > RViewportData::getShapes(const RBox& queryBox, bo
 
     QList<QSharedPointer<RShape> > ret;
 
-    QList<RLine> lines = RBox(center, width, height).getLines2d();
+    QList<RLine> lines = RBox(position, width, height).getLines2d();
     for (int i=0; i<lines.length(); i++) {
         ret.append(QSharedPointer<RShape>(lines[i].clone()));
     }

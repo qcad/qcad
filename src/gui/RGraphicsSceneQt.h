@@ -94,7 +94,7 @@ public:
     virtual void exportPainterPaths(const QList<RPainterPath>& paths);
     virtual void exportImage(const RImageData& image, bool forceSelected = false);
     virtual QList<RPainterPath> exportText(const RTextBasedData& text, bool forceSelected = false);
-    //virtual void exportClipRectangle(const RBox& clipRectangles, bool forceSelected = false);
+    virtual void exportClipRectangle(const RBox& clipRectangles, bool forceSelected = false);
 
     virtual double getLineTypePatternScale(const RLinetypePattern& p) const;
     
@@ -102,22 +102,23 @@ public:
 
     void deletePainterPaths();
     QList<RPainterPath> getPainterPaths(REntity::Id entityId);
-    QList<RPainterPath> getPreviewPainterPaths();
-    bool hasPreviewPainterPaths() const;
-    QList<RTextBasedData> getPreviewTexts();
-    bool hasPreviewTexts() const;
+
+    bool hasPreview() const;
+    QList<REntity::Id> getPreviewEntityIds();
+    QList<RPainterPath> getPreviewPainterPaths(REntity::Id entityId);
+    QList<RTextBasedData> getPreviewTexts(REntity::Id entityId);
+    void addToPreview(REntity::Id entityId, const QList<RPainterPath>& painterPaths);
+    void addToPreview(REntity::Id entityId, const RPainterPath& painterPath);
+    void addTextToPreview(const RTextBasedData& text);
+
     bool hasImageFor(REntity::Id entityId);
     QList<RImageData> getImages(REntity::Id entityId);
     bool hasTextsFor(REntity::Id entityId);
     QList<RTextBasedData> getTexts(REntity::Id entityId);
-    //bool hasClipRectangleFor(REntity::Id entityId);
-    //RBox getClipRectangle(REntity::Id entityId);
+    bool hasClipRectangleFor(REntity::Id entityId);
+    RBox getClipRectangle(REntity::Id entityId);
 
     void addPath(REntity::Id entityId, const RPainterPath& path, bool draft);
-
-    void addToPreview(const QList<RPainterPath>& painterPaths);
-    void addToPreview(const RPainterPath& painterPath);
-    void addTextToPreview(const RTextBasedData& text);
 
     virtual void startEntity(bool topLevelEntity);
 
@@ -136,10 +137,16 @@ private:
     QMap<REntity::Id, QList<RPainterPath> > painterPaths;
     QMap<REntity::Id, QList<RImageData> > images;
     QMap<REntity::Id, QList<RTextBasedData> > texts;
-    //QMap<REntity::Id, RBox> clipRectangles;
+    QMap<REntity::Id, RBox> clipRectangles;
 
-    QList<RPainterPath> previewPainterPaths;
-    QList<RTextBasedData> previewTexts;
+    //QList<RPainterPath> previewPainterPaths;
+    //QList<RTextBasedData> previewTexts;
+
+    QMap<REntity::Id, QList<RPainterPath> > previewPainterPaths;
+    QMap<REntity::Id, QList<RImageData> > previewImages;
+    QMap<REntity::Id, QList<RTextBasedData> > previewTexts;
+    QMap<REntity::Id, RBox> previewClipRectangles;
+
     bool decorating;
 };
 

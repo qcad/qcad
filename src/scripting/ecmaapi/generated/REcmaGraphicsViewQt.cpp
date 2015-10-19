@@ -3863,6 +3863,66 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QPainter * */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: REntity::Id */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    QPainter * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<QPainter >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type QPainter *QPainter *.", context);                    
+                    }
+                
+                    // argument isStandardType
+                    REntity::Id
+                    a1 =
+                    (REntity::Id)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->paintEntity(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.paintEntity().",
                    context);

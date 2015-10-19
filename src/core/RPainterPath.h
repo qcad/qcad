@@ -48,15 +48,16 @@ class QCADCORE_EXPORT RPainterPath : public QPainterPath {
 public:
     enum Mode {
         NoModes = 0x000,
-        Selected = 0x001,
-        Highlighted = 0x002,
+        Selected = 0x001,              //!< show as selected
+        Highlighted = 0x002,           //!< show as highlighted
         Invalid = 0x004,
         FixedPenColor = 0x008,
         FixedBrushColor = 0x010,
-        AutoRegen = 0x020,            // arcs (regen on zoom change)
+        AutoRegen = 0x020,             //!< arcs (regen on zoom change)
         AlwaysRegen = 0x040,
-        InheritPen = 0x080,
-        PixelUnit = 0x100             // path displayed in pixel (not drawing units)
+        InheritPen = 0x080,            //!< inherit pen from entity / context
+        PixelUnit = 0x100,             //!< path displayed in pixel (not drawing units)
+        NoClipping = 0x200             //!< disable clipping for this path
     };
     Q_DECLARE_FLAGS(Modes, Mode)
 
@@ -199,14 +200,14 @@ public:
     void setPixelUnit(bool on);
     bool getPixelUnit() const;
 
+    void setNoClipping(bool on);
+    bool getNoClipping() const;
+
     void setFeatureSize(double s);
     double getFeatureSize() const;
 
     void setPixelSizeHint(double s);
     double getPixelSizeHint() const;
-
-    void setClipRectangle(const RBox& box);
-    RBox getClipRectangle() const;
 
     double getDistanceTo(const RVector& point) const;
 
@@ -243,7 +244,6 @@ private:
     // < 0 for secondary path (e.g. bounding box of text)
     double featureSize;
     double pixelSizeHint;
-    RBox clipRectangle;
 };
 
 QCADCORE_EXPORT QDebug operator<<(QDebug dbg, RPainterPath& p);

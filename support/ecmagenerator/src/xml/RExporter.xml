@@ -17,7 +17,6 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RSpline" />
   <class_decl name="RTriangle" />
   <class_decl name="RVector" />
-  <class_decl name="RViewportEntity" />
   <class_decl name="RXLine" />
   <class name="RExporter"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
@@ -78,11 +77,6 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="RS::ProjectionRenderingHint"
       isPureVirtual="false" />
     </method>
-    <method name="getClipRectangle" cppName="getClipRectangle"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="RBox" isPureVirtual="false" />
-    </method>
     <method name="setClipping" cppName="setClipping"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -90,6 +84,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="on"
         isConst="false" />
       </variant>
+    </method>
+    <method name="getClipping" cppName="getClipping"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="setPen" cppName="setPen" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
@@ -206,6 +205,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="getBlockRefOrEntity" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="REntity *" isPureVirtual="false" />
+    </method>
+    <method name="getBlockRefOrEntityId"
+    cppName="getBlockRefOrEntityId" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="REntity::Id" isPureVirtual="false" />
     </method>
     <method name="getEntity" cppName="getEntity" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
@@ -573,6 +577,16 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="RTextBasedData &amp;" typeName="RTextBasedData"
         name="text" isConst="true" />
+        <arg type="bool" typeName="bool" name="forceSelected"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
+    <method name="exportClipRectangle"
+    cppName="exportClipRectangle" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="clipRectangle"
+        isConst="true" />
         <arg type="bool" typeName="bool" name="forceSelected"
         hasDefault="true" default="false" isConst="false" />
       </variant>

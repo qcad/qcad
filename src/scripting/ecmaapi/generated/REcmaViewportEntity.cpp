@@ -84,7 +84,37 @@
             
             REcmaHelper::registerFunction(&engine, proto, getData, "getData");
             
+            REcmaHelper::registerFunction(&engine, proto, getViewportId, "getViewportId");
+            
+            REcmaHelper::registerFunction(&engine, proto, setViewportId, "setViewportId");
+            
+            REcmaHelper::registerFunction(&engine, proto, getStatus, "getStatus");
+            
+            REcmaHelper::registerFunction(&engine, proto, setStatus, "setStatus");
+            
             REcmaHelper::registerFunction(&engine, proto, getCenter, "getCenter");
+            
+            REcmaHelper::registerFunction(&engine, proto, setCenter, "setCenter");
+            
+            REcmaHelper::registerFunction(&engine, proto, getViewCenter, "getViewCenter");
+            
+            REcmaHelper::registerFunction(&engine, proto, setViewCenter, "setViewCenter");
+            
+            REcmaHelper::registerFunction(&engine, proto, getViewTarget, "getViewTarget");
+            
+            REcmaHelper::registerFunction(&engine, proto, setViewTarget, "setViewTarget");
+            
+            REcmaHelper::registerFunction(&engine, proto, getWidth, "getWidth");
+            
+            REcmaHelper::registerFunction(&engine, proto, setWidth, "setWidth");
+            
+            REcmaHelper::registerFunction(&engine, proto, getHeight, "getHeight");
+            
+            REcmaHelper::registerFunction(&engine, proto, setHeight, "setHeight");
+            
+            REcmaHelper::registerFunction(&engine, proto, getScale, "getScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, setScale, "setScale");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RViewportEntity*>(), *proto);
@@ -169,6 +199,26 @@
             
             ctor.setProperty("PropertyScale",
                 qScriptValueFromValue(&engine, RViewportEntity::PropertyScale),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyViewCenterX",
+                qScriptValueFromValue(&engine, RViewportEntity::PropertyViewCenterX),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyViewCenterY",
+                qScriptValueFromValue(&engine, RViewportEntity::PropertyViewCenterY),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyViewTargetX",
+                qScriptValueFromValue(&engine, RViewportEntity::PropertyViewTargetX),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyViewTargetY",
+                qScriptValueFromValue(&engine, RViewportEntity::PropertyViewTargetY),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyViewTargetZ",
+                qScriptValueFromValue(&engine, RViewportEntity::PropertyViewTargetZ),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -1308,6 +1358,214 @@
             return result;
         }
          QScriptValue
+        REcmaViewportEntity::getViewportId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::getViewportId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::getViewportId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("getViewportId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getViewportId();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.getViewportId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::getViewportId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::setViewportId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::setViewportId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::setViewportId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("setViewportId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setViewportId(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.setViewportId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::setViewportId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::getStatus
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::getStatus", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::getStatus";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("getStatus", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getStatus();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.getStatus().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::getStatus", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::setStatus
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::setStatus", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::setStatus";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("setStatus", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setStatus(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.setStatus().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::setStatus", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaViewportEntity::getCenter
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1354,6 +1612,617 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaViewportEntity::getCenter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::setCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::setCenter", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::setCenter";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("setCenter", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RViewportEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCenter(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.setCenter().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::setCenter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::getViewCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::getViewCenter", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::getViewCenter";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("getViewCenter", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getViewCenter();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.getViewCenter().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::getViewCenter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::setViewCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::setViewCenter", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::setViewCenter";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("setViewCenter", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RViewportEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setViewCenter(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.setViewCenter().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::setViewCenter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::getViewTarget
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::getViewTarget", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::getViewTarget";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("getViewTarget", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getViewTarget();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.getViewTarget().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::getViewTarget", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::setViewTarget
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::setViewTarget", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::setViewTarget";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("setViewTarget", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RViewportEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setViewTarget(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.setViewTarget().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::setViewTarget", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::getWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::getWidth", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::getWidth";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("getWidth", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getWidth();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.getWidth().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::getWidth", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::setWidth
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::setWidth", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::setWidth";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("setWidth", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setWidth(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.setWidth().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::setWidth", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::getHeight
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::getHeight", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::getHeight";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("getHeight", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getHeight();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.getHeight().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::getHeight", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::setHeight
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::setHeight", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::setHeight";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("setHeight", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setHeight(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.setHeight().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::setHeight", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::getScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::getScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::getScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("getScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getScale();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.getScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::getScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::setScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::setScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::setScale";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("setScale", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setScale(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.setScale().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::setScale", context, engine);
             return result;
         }
          QScriptValue REcmaViewportEntity::toString

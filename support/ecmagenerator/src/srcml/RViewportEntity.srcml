@@ -57,6 +57,11 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyWidth</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyHeight</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyViewCenterX</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyViewCenterY</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyViewTargetX</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyViewTargetY</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyViewTargetZ</name></decl>;</decl_stmt>
 
 </public><public>public:
     <constructor_decl><name>RViewportEntity</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>RViewportData</name>&amp;</type> <name>data</name></decl></param>,
@@ -93,8 +98,68 @@
         <return>return <expr><name>data</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>int</name></type> <name>getViewportId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+       <return>return <expr><name>data</name>.<call><name>getViewportId</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setViewportId</name><parameter_list>(<param><decl><type><name>int</name></type> <name>id</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>setViewportId</name><argument_list>(<argument><expr><name>id</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>int</name></type> <name>getStatus</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>getStatus</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setStatus</name><parameter_list>(<param><decl><type><name>int</name></type> <name>s</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>setStatus</name><argument_list>(<argument><expr><name>s</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>RVector</name></type> <name>getCenter</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>data</name>.<call><name>getCenter</name><argument_list>()</argument_list></call></expr>;</return>
+       <return>return <expr><name>data</name>.<call><name>getCenter</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setCenter</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>c</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>setCenter</name><argument_list>(<argument><expr><name>c</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getViewCenter</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+       <return>return <expr><name>data</name>.<call><name>getViewCenter</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setViewCenter</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>c</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>setViewCenter</name><argument_list>(<argument><expr><name>c</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getViewTarget</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getViewTarget</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setViewTarget</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>t</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>setViewTarget</name><argument_list>(<argument><expr><name>t</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getWidth</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getWidth</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setWidth</name><parameter_list>(<param><decl><type><name>double</name></type> <name>w</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>setWidth</name><argument_list>(<argument><expr><name>w</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getHeight</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getHeight</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setHeight</name><parameter_list>(<param><decl><type><name>double</name></type> <name>h</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>setHeight</name><argument_list>(<argument><expr><name>h</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getScale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getScale</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>setScale</name><argument_list>(<argument><expr><name>s</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
 </public><protected>protected:

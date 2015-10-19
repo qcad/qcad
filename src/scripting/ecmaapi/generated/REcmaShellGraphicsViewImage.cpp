@@ -4087,7 +4087,7 @@
     
     
       void REcmaShellGraphicsViewImage::paintEntity(
-                QPainter * painter, REntity::Id id
+                QPainter * painter, REntity::Id id, bool preview
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::paintEntity", engine);
@@ -4100,7 +4100,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=2*/
+                    || _q_function.property("length").toInt32()!=3*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RGraphicsViewImage::paintEntity";
@@ -4113,7 +4113,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RGraphicsViewImage::paintEntity(
-                            painter, id
+                            painter, id, preview
                         );
 
                         // block recursion again:
@@ -4149,6 +4149,15 @@
         << qScriptValueFromValue(engine, 
 
         id
+        )
+      
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        preview
         )
       
                             )

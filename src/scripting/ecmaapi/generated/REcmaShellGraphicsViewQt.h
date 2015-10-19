@@ -517,7 +517,8 @@
         
     
       void paintEntity(
-                QPainter * painter, REntity::Id id
+                QPainter * painter, REntity::Id id, bool preview
+        = false
             );
         
     

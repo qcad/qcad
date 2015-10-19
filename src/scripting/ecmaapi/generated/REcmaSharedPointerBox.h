@@ -139,6 +139,9 @@
         growXY
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        move
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         toQRectF
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -284,6 +284,14 @@ bool RPainterPath::getPixelUnit() const {
     return getMode(RPainterPath::PixelUnit);
 }
 
+void RPainterPath::setNoClipping(bool on) {
+    setMode(RPainterPath::NoClipping, on);
+}
+
+bool RPainterPath::getNoClipping() const {
+    return getMode(RPainterPath::NoClipping);
+}
+
 void RPainterPath::setFeatureSize(double s) {
     featureSize = s;
 }
@@ -298,14 +306,6 @@ void RPainterPath::setPixelSizeHint(double s) {
 
 double RPainterPath::getPixelSizeHint() const {
     return pixelSizeHint;
-}
-
-void RPainterPath::setClipRectangle(const RBox& box) {
-    clipRectangle = box;
-}
-
-RBox RPainterPath::getClipRectangle() const {
-    return clipRectangle;
 }
 
 /**
@@ -442,7 +442,6 @@ void RPainterPath::transform(const QTransform& t) {
 void RPainterPath::move(const RVector& offset) {
     translate(offset.x, offset.y);
     RVector::moveList(points, offset);
-    clipRectangle.move(offset);
 }
 
 void RPainterPath::rotate(double angle) {

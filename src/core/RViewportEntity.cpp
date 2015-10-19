@@ -83,9 +83,9 @@ void RViewportEntity::init() {
 bool RViewportEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
     bool ret = REntity::setProperty(propertyTypeId, value, transaction);
-    ret = ret || RObject::setMember(data.center.x, value, PropertyCenterX == propertyTypeId);
-    ret = ret || RObject::setMember(data.center.y, value, PropertyCenterY == propertyTypeId);
-    ret = ret || RObject::setMember(data.center.z, value, PropertyCenterZ == propertyTypeId);
+    ret = ret || RObject::setMember(data.position.x, value, PropertyCenterX == propertyTypeId);
+    ret = ret || RObject::setMember(data.position.y, value, PropertyCenterY == propertyTypeId);
+    ret = ret || RObject::setMember(data.position.z, value, PropertyCenterZ == propertyTypeId);
     ret = ret || RObject::setMember(data.width, value, PropertyWidth == propertyTypeId);
     ret = ret || RObject::setMember(data.height, value, PropertyHeight == propertyTypeId);
     ret = ret || RObject::setMember(data.scale, value, PropertyScale == propertyTypeId);
@@ -100,11 +100,11 @@ bool RViewportEntity::setProperty(RPropertyTypeId propertyTypeId,
 QPair<QVariant, RPropertyAttributes> RViewportEntity::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
     if (propertyTypeId == PropertyCenterX) {
-        return qMakePair(QVariant(data.center.x), RPropertyAttributes());
+        return qMakePair(QVariant(data.position.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyCenterY) {
-        return qMakePair(QVariant(data.center.y), RPropertyAttributes());
+        return qMakePair(QVariant(data.position.y), RPropertyAttributes());
     } else if (propertyTypeId == PropertyCenterZ) {
-        return qMakePair(QVariant(data.center.z), RPropertyAttributes());
+        return qMakePair(QVariant(data.position.z), RPropertyAttributes());
     } else if (propertyTypeId == PropertyWidth) {
         return qMakePair(QVariant(data.width), RPropertyAttributes());
     } else if (propertyTypeId == PropertyHeight) {
@@ -127,6 +127,7 @@ QPair<QVariant, RPropertyAttributes> RViewportEntity::getProperty(
 
 
 void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
+    qDebug() << "RViewportEntity::exportEntity";
     Q_UNUSED(preview);
     Q_UNUSED(forceSelected);
 
@@ -135,52 +136,51 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
         return;
     }
 
-    RBox viewportBox(data.center, data.width, data.height);
+    RBox viewportBox(data.position, data.width, data.height);
 
     // viewport frame:
     e.setBrush(Qt::NoBrush);
-    //qDebug() << "exporting viewport: " << viewportBox;
     e.exportRectangle(viewportBox.c1, viewportBox.c2);
 
     // clip rectangle export
-    e.setClipping(true);
+    e.exportClipRectangle(viewportBox);
 
-//    RBlockReferenceEntity modelSpace(doc, RBlockReferenceData(doc->getModelSpaceBlockId(), data.center, RVector(1,1), 0));
-//    modelSpace.update();
-//    modelSpace.exportEntity(e, preview);
-
-    //e.exportPoint(data);
     RVector offset(0,0);
     offset -= data.viewCenter * data.scale;
     offset -= data.viewTarget * data.scale;
-
-    qDebug() << "center: " << data.viewCenter;
-    qDebug() << "target: " << data.viewTarget;
 
     // create temporary block reference to model space block:
     RBlockReferenceData modelSpaceData(
         doc,
         RBlockReferenceData(
             doc->getModelSpaceBlockId(),
-            data.center + offset,
+            data.position + offset,
             RVector(data.scale, data.scale),
             0
         )
     );
     modelSpaceData.update();
 
+    // start clipping from here:
+    e.setClipping(true);
+
     // render model space block reference into viewport:
     QSet<REntity::Id> ids = doc->queryBlockEntities(doc->getModelSpaceBlockId());
     QList<REntity::Id> list = doc->getStorage().orderBackToFront(ids);
     int i;
     QList<REntity::Id>::iterator it;
-    for (it = list.begin(), i = 0; it != list.end(); it++, i++) {
+    for (it = list.begin(), i = 0; it != list.end(); it++) {
         if (preview && i>RSettings::getPreviewEntities()) {
             break;
         }
 
         QSharedPointer<REntity> entity = modelSpaceData.queryEntity(*it);
         if (entity.isNull()) {
+            continue;
+        }
+
+        // prevent recursions:
+        if (entity->getType()==RS::EntityViewport) {
             continue;
         }
 
@@ -192,6 +192,8 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
         entity->scaleVisualProperties(data.scale);
 
         e.exportEntity(*entity, preview, true);
+
+        i++;
     }
 
     e.setClipping(false);

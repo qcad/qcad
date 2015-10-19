@@ -86,8 +86,9 @@ public:
     void setProjectionRenderingHint(RS::ProjectionRenderingHint p);
     RS::ProjectionRenderingHint getProjectionRenderingHint();
 
-    virtual RBox getClipRectangle() const;
+    //virtual RBox getClipRectangle() const;
     void setClipping(bool on);
+    bool getClipping() const;
 
     virtual void setPen(const QPen& pen);
     virtual QPen getPen(const RPainterPath& path);
@@ -112,6 +113,7 @@ public:
     virtual RLinetypePattern getLinetypePattern();
 
     virtual REntity* getBlockRefOrEntity();
+    virtual REntity::Id getBlockRefOrEntityId();
     virtual REntity* getEntity();
     virtual REntity* getCurrentBlockRef() const;
     virtual RViewportEntity* getCurrentViewport() const;
@@ -221,7 +223,7 @@ public:
 
     virtual void exportImage(const RImageData& image, bool forceSelected = false);
     virtual QList<RPainterPath> exportText(const RTextBasedData& text, bool forceSelected = false);
-    //virtual void exportClipRectangle(const RBox& clipRectangle, bool forceSelected = false);
+    virtual void exportClipRectangle(const RBox& clipRectangle, bool forceSelected = false);
 
     virtual void exportThickPolyline(const RPolyline& polyline) {
         RPolyline pl = polyline;

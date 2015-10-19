@@ -37,7 +37,7 @@
  * \copyable
  * \ingroup core
  */
-class QCADCORE_EXPORT RViewportData: public REntityData {
+class QCADCORE_EXPORT RViewportData: public REntityData, protected RPoint {
 
     friend class RViewportEntity;
 
@@ -51,6 +51,10 @@ public:
 //        const RVector& viewTarget);
 
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
+
+    virtual RShape* castToShape() {
+        return this;
+    }
 
     int getViewportId() const {
        return viewportId;
@@ -69,11 +73,11 @@ public:
     }
 
     RVector getCenter() const {
-       return center;
+       return position;
     }
 
     void setCenter(const RVector& c) {
-        center = c;
+        position = c;
     }
 
     RVector getViewCenter() const {
@@ -127,7 +131,6 @@ public:
 private:
     int viewportId;
     int status;
-    RVector center;
     double width;
     double height;
     double scale;

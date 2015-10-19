@@ -6,6 +6,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="REntityData" specifier="public" />
+    <baseClass name="RPoint" specifier="protected" />
     <constructor>
       <variant />
     </constructor>
@@ -16,6 +17,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="ignoreEmpty"
         hasDefault="true" default="false" isConst="false" />
       </variant>
+    </method>
+    <method name="castToShape" cppName="castToShape"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="RShape *" isPureVirtual="false" />
     </method>
     <method name="getViewportId" cppName="getViewportId"
     specifier="public" isStatic="false" isVirtual="false"

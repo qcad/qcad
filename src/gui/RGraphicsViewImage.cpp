@@ -265,11 +265,14 @@ void RGraphicsViewImage::updateImage() {
 //    }
 
     // draws the current preview on top of the buffer:
-    if (sceneQt->hasPreviewPainterPaths() || sceneQt->hasPreviewTexts()) {
+    if (sceneQt->hasPreview()) {
         QPainter* painter = initPainter(graphicsBufferWithPreview, false);
         bgColorLightness = getBackgroundColor().lightness();
         isSelected = false;
-        paintEntity(painter, -1);
+        QList<REntity::Id> ids = sceneQt->getPreviewEntityIds();
+        for (int i=0; i<ids.length(); i++) {
+            paintEntity(painter, ids[i], true);
+        }
         painter->end();
         delete painter;
     }
@@ -742,8 +745,8 @@ void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) 
     RDebug::stopTimer("painting");
 }
 
-void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
-    if (!isPrinting() && !isSelected && getDocument()->isSelected(id)) {
+void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool preview) {
+    if (!preview && !isPrinting() && !isSelected && getDocument()->isSelected(id)) {
         static QMutex m;
         m.lock();
         selectedIds.insert(id);
@@ -751,12 +754,47 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         return;
     }
 
-    QList<RPainterPath> painterPaths;
+    // clipping:
+    RBox clipRectangle = sceneQt->getClipRectangle(id);
+    if (clipRectangle.isValid()) {
+        painter->setClipRect(QRectF(clipRectangle.getMinimum().x, clipRectangle.getMinimum().y, clipRectangle.getWidth(), clipRectangle.getHeight()));
+    }
+    else {
+        painter->setClipping(false);
+    }
+
+    // paint image for raster image entity:
+    if (sceneQt->hasImageFor(id)) {
+        QList<RImageData> images = sceneQt->getImages(id);
+        for (int i=0; i<images.length(); i++) {
+            images[i].move(paintOffset);
+            paintImage(painter, images[i]);
+        }
+    }
+
+    // paint text for text layout based entity:
+    QList<RTextBasedData> texts;
+    if (preview) {
+        // preview text:
+        //TODO if (sceneQt->hasPreviewTextsFor(id)) {
+            texts = sceneQt->getPreviewTexts(id);
+        //}
+    }
+    else {
+        if (sceneQt->hasTextsFor(id)) {
+            texts = sceneQt->getTexts(id);
+        }
+    }
+    for (int k=0; k<texts.length(); k++) {
+        texts[k].move(paintOffset);
+        paintText(painter, texts[k]);
+    }
 
     // get painter paths for vector graphics entity:
-    if (id == -1) {
+    QList<RPainterPath> painterPaths;
+    if (preview) {
         // get painter paths of the current preview:
-        painterPaths = sceneQt->getPreviewPainterPaths();
+        painterPaths = sceneQt->getPreviewPainterPaths(id);
     } else {
         // get painter paths of the given entity:
         painterPaths = sceneQt->getPainterPaths(id);
@@ -794,31 +832,6 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
         }
     }
 
-    // paint image for raster image entity:
-    if (sceneQt->hasImageFor(id)) {
-        QList<RImageData> images = sceneQt->getImages(id);
-        for (int i=0; i<images.length(); i++) {
-            images[i].move(paintOffset);
-            paintImage(painter, images[i]);
-        }
-    }
-
-    // paint text for text layout based entity:
-    QList<RTextBasedData> texts;
-    if (id==-1) {
-        // preview text:
-        texts = sceneQt->getPreviewTexts();
-    }
-    else {
-        if (sceneQt->hasTextsFor(id)) {
-            texts = sceneQt->getTexts(id);
-        }
-    }
-    for (int k=0; k<texts.length(); k++) {
-        texts[k].move(paintOffset);
-        paintText(painter, texts[k]);
-    }
-
     // paint painter paths:
     QListIterator<RPainterPath> i(painterPaths);
     while (i.hasNext()) {
@@ -846,13 +859,9 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id) {
             continue;
         }
 
-        RBox clipRectangle = path.getClipRectangle();
+        // individual paths might disable clipping:
         if (clipRectangle.isValid()) {
-            painter->setClipRect(QRectF(clipRectangle.getMinimum().x, clipRectangle.getMinimum().y, clipRectangle.getWidth(), clipRectangle.getHeight()));
-            painter->setClipping(true);
-        }
-        else {
-            painter->setClipping(false);
+            painter->setClipping(!path.getNoClipping());
         }
 
         QPen pen = path.getPen();

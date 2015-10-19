@@ -39,8 +39,6 @@
             
                 #include "RVector.h"
             
-                #include "RViewportEntity.h"
-            
                 #include "RXLine.h"
             
             
@@ -95,9 +93,9 @@
             
             REcmaHelper::registerFunction(&engine, proto, getProjectionRenderingHint, "getProjectionRenderingHint");
             
-            REcmaHelper::registerFunction(&engine, proto, getClipRectangle, "getClipRectangle");
-            
             REcmaHelper::registerFunction(&engine, proto, setClipping, "setClipping");
+            
+            REcmaHelper::registerFunction(&engine, proto, getClipping, "getClipping");
             
             REcmaHelper::registerFunction(&engine, proto, setPen, "setPen");
             
@@ -126,6 +124,8 @@
             REcmaHelper::registerFunction(&engine, proto, getLinetypePattern, "getLinetypePattern");
             
             REcmaHelper::registerFunction(&engine, proto, getBlockRefOrEntity, "getBlockRefOrEntity");
+            
+            REcmaHelper::registerFunction(&engine, proto, getBlockRefOrEntityId, "getBlockRefOrEntityId");
             
             REcmaHelper::registerFunction(&engine, proto, getEntity, "getEntity");
             
@@ -210,6 +210,8 @@
             REcmaHelper::registerFunction(&engine, proto, exportImage, "exportImage");
             
             REcmaHelper::registerFunction(&engine, proto, exportText, "exportText");
+            
+            REcmaHelper::registerFunction(&engine, proto, exportClipRectangle, "exportClipRectangle");
             
             REcmaHelper::registerFunction(&engine, proto, exportThickPolyline, "exportThickPolyline");
             
@@ -646,55 +648,6 @@
             return result;
         }
          QScriptValue
-        REcmaExporter::getClipRectangle
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaExporter::getClipRectangle", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::getClipRectangle";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RExporter* self = 
-                        getSelf("getClipRectangle", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'RBox'
-    RBox cppResult =
-        
-               self->getClipRectangle();
-        // return type: RBox
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.getClipRectangle().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaExporter::getClipRectangle", context, engine);
-            return result;
-        }
-         QScriptValue
         REcmaExporter::setClipping
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -747,6 +700,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::setClipping", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::getClipping
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::getClipping", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::getClipping";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("getClipping", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getClipping();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.getClipping().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::getClipping", context, engine);
             return result;
         }
          QScriptValue
@@ -1770,6 +1772,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::getBlockRefOrEntity", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::getBlockRefOrEntityId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::getBlockRefOrEntityId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::getBlockRefOrEntityId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("getBlockRefOrEntityId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'REntity::Id'
+    REntity::Id cppResult =
+        
+               self->getBlockRefOrEntityId();
+        // return type: REntity::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.getBlockRefOrEntityId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::getBlockRefOrEntityId", context, engine);
             return result;
         }
          QScriptValue
@@ -5504,6 +5555,125 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::exportText", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::exportClipRectangle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::exportClipRectangle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::exportClipRectangle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("exportClipRectangle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RBox */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportClipRectangle(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RBox */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RExporter: Argument 0 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a0 = 
+                    *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportClipRectangle(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.exportClipRectangle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::exportClipRectangle", context, engine);
             return result;
         }
          QScriptValue

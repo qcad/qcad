@@ -35,6 +35,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextBasedData.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RView.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RViewportEntity.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RArc</name>;</class_decl>
 <class_decl>class <name>RCircle</name>;</class_decl>
@@ -52,7 +53,6 @@
 <class_decl>class <name>RSpline</name>;</class_decl>
 <class_decl>class <name>RTriangle</name>;</class_decl>
 <class_decl>class <name>RVector</name>;</class_decl>
-<class_decl>class <name>RViewportEntity</name>;</class_decl>
 <class_decl>class <name>RXLine</name>;</class_decl>
 
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_MIN1</name></cpp:ifndef>
@@ -87,8 +87,9 @@
     <function_decl><type><name>void</name></type> <name>setProjectionRenderingHint</name><parameter_list>(<param><decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>p</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>getProjectionRenderingHint</name><parameter_list>()</parameter_list>;</function_decl>
 
-    <function_decl><type><name>virtual</name> <name>RBox</name></type> <name>getClipRectangle</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <comment type="line">//virtual RBox getClipRectangle() const;</comment>
     <function_decl><type><name>void</name></type> <name>setClipping</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>getClipping</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setPen</name><parameter_list>(<param><decl><type><name>const</name> <name>QPen</name>&amp;</type> <name>pen</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QPen</name></type> <name>getPen</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>)</parameter_list>;</function_decl>
@@ -113,6 +114,7 @@
     <function_decl><type><name>virtual</name> <name>RLinetypePattern</name></type> <name>getLinetypePattern</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>REntity</name>*</type> <name>getBlockRefOrEntity</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name><name>REntity</name>::<name>Id</name></name></type> <name>getBlockRefOrEntityId</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>REntity</name>*</type> <name>getEntity</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>REntity</name>*</type> <name>getCurrentBlockRef</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>RViewportEntity</name>*</type> <name>getCurrentViewport</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -222,7 +224,7 @@
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportImage</name><parameter_list>(<param><decl><type><name>const</name> <name>RImageData</name>&amp;</type> <name>image</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>exportText</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>text</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <comment type="line">//virtual void exportClipRectangle(const RBox&amp; clipRectangle, bool forceSelected = false);</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportClipRectangle</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>clipRectangle</name></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <function><type><name>virtual</name> <name>void</name></type> <name>exportThickPolyline</name><parameter_list>(<param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>polyline</name></decl></param>)</parameter_list> <block>{
         <decl_stmt><decl><type><name>RPolyline</name></type> <name>pl</name> =<init> <expr><name>polyline</name></expr></init></decl>;</decl_stmt>

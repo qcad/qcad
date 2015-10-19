@@ -183,6 +183,12 @@
         getPixelUnit
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setNoClipping
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getNoClipping
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setFeatureSize
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -193,12 +199,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getPixelSizeHint
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setClipRectangle
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getClipRectangle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDistanceTo

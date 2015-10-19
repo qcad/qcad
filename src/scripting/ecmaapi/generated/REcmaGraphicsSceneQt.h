@@ -122,6 +122,9 @@
         exportText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        exportClipRectangle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLineTypePatternScale
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -134,16 +137,22 @@
         getPainterPaths
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getPreviewPainterPaths
+        hasPreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        hasPreviewPainterPaths
+        getPreviewEntityIds
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPreviewPainterPaths
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getPreviewTexts
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        hasPreviewTexts
+        addToPreview
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        addTextToPreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasImageFor
@@ -158,13 +167,13 @@
         getTexts
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasClipRectangleFor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getClipRectangle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addPath
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        addToPreview
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        addTextToPreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         startEntity

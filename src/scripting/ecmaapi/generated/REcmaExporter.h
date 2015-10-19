@@ -64,10 +64,10 @@
         getProjectionRenderingHint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getClipRectangle
+        setClipping
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setClipping
+        getClipping
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setPen
@@ -110,6 +110,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getBlockRefOrEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getBlockRefOrEntityId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getEntity
@@ -236,6 +239,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         exportText
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        exportClipRectangle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         exportThickPolyline

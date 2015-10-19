@@ -20,6 +20,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="AlwaysRegen" />
       <value name="InheritPen" />
       <value name="PixelUnit" />
+      <value name="NoClipping" />
     </enum>
     <constructor>
       <variant />
@@ -372,6 +373,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="setNoClipping" cppName="setNoClipping"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getNoClipping" cppName="getNoClipping"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="setFeatureSize" cppName="setFeatureSize"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -397,19 +411,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
-    </method>
-    <method name="setClipRectangle" cppName="setClipRectangle"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RBox &amp;" typeName="RBox" name="box"
-        isConst="true" />
-      </variant>
-    </method>
-    <method name="getClipRectangle" cppName="getClipRectangle"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="RBox" isPureVirtual="false" />
     </method>
     <method name="getDistanceTo" cppName="getDistanceTo"
     specifier="public" isStatic="false" isVirtual="false"

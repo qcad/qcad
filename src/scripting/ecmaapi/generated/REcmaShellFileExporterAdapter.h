@@ -124,13 +124,13 @@
             );
         
     
-      RBox getClipRectangle(
-                
+      void setClipping(
+                bool on
             );
         
     
-      void setClipping(
-                bool on
+      bool getClipping(
+                
             );
         
     
@@ -214,6 +214,11 @@
         
     
       REntity * getBlockRefOrEntity(
+                
+            );
+        
+    
+      REntity::Id getBlockRefOrEntityId(
                 
             );
         
@@ -450,6 +455,12 @@
     
       QList < RPainterPath > exportText(
                 const RTextBasedData & text, bool forceSelected
+        = false
+            );
+        
+    
+      void exportClipRectangle(
+                const RBox & clipRectangle, bool forceSelected
         = false
             );
         
