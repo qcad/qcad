@@ -56,6 +56,11 @@ public:
     static RPropertyTypeId PropertyWidth;
     static RPropertyTypeId PropertyHeight;
     static RPropertyTypeId PropertyScale;
+    static RPropertyTypeId PropertyViewCenterX;
+    static RPropertyTypeId PropertyViewCenterY;
+    static RPropertyTypeId PropertyViewTargetX;
+    static RPropertyTypeId PropertyViewTargetY;
+    static RPropertyTypeId PropertyViewTargetZ;
 
 public:
     RViewportEntity(RDocument* document, const RViewportData& data,
@@ -92,8 +97,68 @@ public:
         return data;
     }
 
+    int getViewportId() const {
+       return data.getViewportId();
+    }
+
+    void setViewportId(int id) {
+        data.setViewportId(id);
+    }
+
+    int getStatus() const {
+        data.getStatus();
+    }
+
+    void setStatus(int s) {
+        data.setStatus(s);
+    }
+
     RVector getCenter() const {
-        return data.getCenter();
+       return data.getCenter();
+    }
+
+    void setCenter(const RVector& c) {
+        data.setCenter(c);
+    }
+
+    RVector getViewCenter() const {
+       return data.getViewCenter();
+    }
+
+    void setViewCenter(const RVector& c) {
+        data.setViewCenter(c);
+    }
+
+    RVector getViewTarget() const {
+        return data.getViewTarget();
+    }
+
+    void setViewTarget(const RVector& t) {
+        data.setViewTarget(t);
+    }
+
+    double getWidth() const {
+        return data.getWidth();
+    }
+
+    void setWidth(double w) {
+        data.setWidth(w);
+    }
+
+    double getHeight() const {
+        return data.getHeight();
+    }
+
+    void setHeight(double h) {
+        data.setHeight(h);
+    }
+
+    double getScale() const {
+        return data.getScale();
+    }
+
+    void setScale(double s) {
+        data.setScale(s);
     }
 
 protected:

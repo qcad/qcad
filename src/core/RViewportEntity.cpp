@@ -39,6 +39,11 @@ RPropertyTypeId RViewportEntity::PropertyCenterZ;
 RPropertyTypeId RViewportEntity::PropertyWidth;
 RPropertyTypeId RViewportEntity::PropertyHeight;
 RPropertyTypeId RViewportEntity::PropertyScale;
+RPropertyTypeId RViewportEntity::PropertyViewCenterX;
+RPropertyTypeId RViewportEntity::PropertyViewCenterY;
+RPropertyTypeId RViewportEntity::PropertyViewTargetX;
+RPropertyTypeId RViewportEntity::PropertyViewTargetY;
+RPropertyTypeId RViewportEntity::PropertyViewTargetZ;
 
 
 RViewportEntity::RViewportEntity(RDocument* document, const RViewportData& data,
@@ -68,6 +73,11 @@ void RViewportEntity::init() {
     RViewportEntity::PropertyWidth.generateId(typeid(RViewportEntity), "", QT_TRANSLATE_NOOP("REntity", "Width"));
     RViewportEntity::PropertyHeight.generateId(typeid(RViewportEntity), "", QT_TRANSLATE_NOOP("REntity", "Height"));
     RViewportEntity::PropertyScale.generateId(typeid(RViewportEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
+    RViewportEntity::PropertyViewCenterX.generateId(typeid(RViewportEntity), QT_TRANSLATE_NOOP("REntity", "View Center"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RViewportEntity::PropertyViewCenterY.generateId(typeid(RViewportEntity), QT_TRANSLATE_NOOP("REntity", "View Center"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RViewportEntity::PropertyViewTargetX.generateId(typeid(RViewportEntity), QT_TRANSLATE_NOOP("REntity", "View Target"), QT_TRANSLATE_NOOP("REntity", "X"));
+    RViewportEntity::PropertyViewTargetY.generateId(typeid(RViewportEntity), QT_TRANSLATE_NOOP("REntity", "View Target"), QT_TRANSLATE_NOOP("REntity", "Y"));
+    RViewportEntity::PropertyViewTargetZ.generateId(typeid(RViewportEntity), QT_TRANSLATE_NOOP("REntity", "View Target"), QT_TRANSLATE_NOOP("REntity", "Z"));
 }
 
 bool RViewportEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -79,6 +89,11 @@ bool RViewportEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(data.width, value, PropertyWidth == propertyTypeId);
     ret = ret || RObject::setMember(data.height, value, PropertyHeight == propertyTypeId);
     ret = ret || RObject::setMember(data.scale, value, PropertyScale == propertyTypeId);
+    ret = ret || RObject::setMember(data.viewCenter.x, value, PropertyViewCenterX == propertyTypeId);
+    ret = ret || RObject::setMember(data.viewCenter.y, value, PropertyViewCenterY == propertyTypeId);
+    ret = ret || RObject::setMember(data.viewTarget.x, value, PropertyViewTargetX == propertyTypeId);
+    ret = ret || RObject::setMember(data.viewTarget.y, value, PropertyViewTargetY == propertyTypeId);
+    ret = ret || RObject::setMember(data.viewTarget.z, value, PropertyViewTargetZ == propertyTypeId);
     return ret;
 }
 
@@ -96,6 +111,16 @@ QPair<QVariant, RPropertyAttributes> RViewportEntity::getProperty(
         return qMakePair(QVariant(data.height), RPropertyAttributes());
     } else if (propertyTypeId == PropertyScale) {
         return qMakePair(QVariant(data.scale), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyViewCenterX) {
+        return qMakePair(QVariant(data.viewCenter.x), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyViewCenterY) {
+        return qMakePair(QVariant(data.viewCenter.y), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyViewTargetX) {
+        return qMakePair(QVariant(data.viewTarget.x), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyViewTargetY) {
+        return qMakePair(QVariant(data.viewTarget.y), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyViewTargetZ) {
+        return qMakePair(QVariant(data.viewTarget.z), RPropertyAttributes());
     }
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
@@ -126,8 +151,12 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
 //    modelSpace.exportEntity(e, preview);
 
     //e.exportPoint(data);
-    RVector offset;
-    offset = -data.viewCenter * data.scale;
+    RVector offset(0,0);
+    offset -= data.viewCenter * data.scale;
+    offset -= data.viewTarget * data.scale;
+
+    qDebug() << "center: " << data.viewCenter;
+    qDebug() << "target: " << data.viewTarget;
 
     // create temporary block reference to model space block:
     RBlockReferenceData modelSpaceData(
