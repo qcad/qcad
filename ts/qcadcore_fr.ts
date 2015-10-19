@@ -372,7 +372,9 @@ Liste des blocs</translatorcomment>
         <location line="+1"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+65"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+70"/>
+        <location line="+6"/>
+        <location line="+2"/>
         <source>X</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -385,7 +387,7 @@ Exportation du dessin...</translatorcomment>
         <location line="-3"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+0"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="-8"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -401,6 +403,8 @@ Indiquer la position [angle/longueur]</translatorcomment>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-1"/>
+        <location line="+6"/>
+        <location line="+2"/>
         <source>Y</source>
         <translatorcomment>--exact match--
 --file: designer_fr.ts--
@@ -413,7 +417,8 @@ Modifier
         <location line="-2"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
+        <location line="+8"/>
         <source>Z</source>
         <translatorcomment>--google--
 Partage &amp;Horizontal
@@ -425,7 +430,7 @@ Partage Horizontal
         <location line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+3"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="-5"/>
         <source>Scale</source>
         <translatorcomment>--exact match--
 --file: Scale_fr.ts--
@@ -651,6 +656,19 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <location line="+1"/>
         <source>Vertical</source>
         <translation>Vertical</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
+        <location line="+1"/>
+        <source>View Center</source>
+        <translation>Affichage centre</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>View Target</source>
+        <translation>Affichage cible</translation>
     </message>
 </context>
 <context>
