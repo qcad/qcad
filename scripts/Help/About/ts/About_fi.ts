@@ -9,7 +9,7 @@
         <translation>Tietoja kohteesta %1</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+76"/>
         <source>Plugins</source>
         <translation>Liitännäiset</translation>
     </message>
@@ -87,7 +87,7 @@
         <translation>Virhe:</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+36"/>
         <source>Script Add-Ons</source>
         <translation>Skriptin lisäosat</translation>
     </message>

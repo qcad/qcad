@@ -14,7 +14,7 @@
         <translation>Fertig</translation>
     </message>
     <message>
-        <location line="+415"/>
+        <location line="+418"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -38,7 +38,7 @@
         <translation type="obsolete">Letztes Segment rückgängig</translation>
     </message>
     <message>
-        <location line="-446"/>
+        <location line="-449"/>
         <source>First vertex</source>
         <translation>Erster Eckpunkt</translation>
     </message>

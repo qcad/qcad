@@ -11,7 +11,7 @@
     <message>
         <location line="+0"/>
         <location line="+40"/>
-        <location line="+38"/>
+        <location line="+39"/>
         <source>Block List</source>
         <translation>Estoluettelo /lohko</translation>
     </message>

@@ -14,7 +14,7 @@
         <translation>Fatto</translation>
     </message>
     <message>
-        <location line="+415"/>
+        <location line="+418"/>
         <source>close</source>
         <translation>close</translation>
     </message>
@@ -34,7 +34,7 @@
         <translation>arc</translation>
     </message>
     <message>
-        <location line="-446"/>
+        <location line="-449"/>
         <source>First vertex</source>
         <translation>Primo vertice</translation>
     </message>

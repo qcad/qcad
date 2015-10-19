@@ -6,7 +6,7 @@
     <message>
         <location filename="../BlockList.js" line="+337"/>
         <location line="+40"/>
-        <location line="+38"/>
+        <location line="+39"/>
         <source>Block List</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
@@ -14,7 +14,7 @@ Lista de Blocos</translatorcomment>
         <translation>Lista de Blocos</translation>
     </message>
     <message>
-        <location line="-78"/>
+        <location line="-79"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>

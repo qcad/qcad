@@ -19,7 +19,7 @@
         <translation>Končano</translation>
     </message>
     <message>
-        <location line="+415"/>
+        <location line="+418"/>
         <source>close</source>
         <translation>zapri</translation>
     </message>

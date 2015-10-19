@@ -9,7 +9,7 @@
         <translation>%1について</translation>
     </message>
     <message>
-        <location line="+74"/>
+        <location line="+76"/>
         <source>Plugins</source>
         <translation>プラグイン</translation>
     </message>
@@ -87,7 +87,7 @@
         <translation>エラー:</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+36"/>
         <source>Script Add-Ons</source>
         <translation>スクリプトアドオン</translation>
     </message>
