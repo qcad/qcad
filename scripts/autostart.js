@@ -19,7 +19,6 @@
 
 include("library.js");
 include("AddOn.js");
-include("scripts/Edit/AppPreferences/StylePreferences/StylePreferences.js");
 include("scripts/File/OpenFile/OpenFile.js");
 include("scripts/File/AutoSave/AutoSave.js");
 
@@ -38,8 +37,6 @@ function version() {
  * Prints command line usage information on stdout.
  */
 function usage() {
-    var styleNames = StylePreferences.getStyleNames();
-
     print("\nUsage: " + QCoreApplication.arguments()[0] + " [Options] [Files to open]\n"
           + "\n"
           + "-allow-multiple-instances        Don't try to avoid multiple instances from running\n"
@@ -65,8 +62,6 @@ function usage() {
           + "                                 after staring QCAD. Options after the script\n"
           + "                                 file are passed on to the script.\n"
           + "-gui-css-file [CSS file]         Loads the specified CSS file.\n"
-          + "-gui-style [StyleName]           Loads a predefined style. Available styles are:\n"
-          + "                                 " + styleNames.join(", ") + "\n"
           + "-help                            Displays this help.\n"
           + "-locale [locale]                 Sets the locale to be used (overrides\n"
           + "                                 the language set in the preferences).\n"
@@ -245,41 +240,6 @@ function execScripts(args) {
         }
         if (args[i] === "-quit") {
             RSettings.setQuitFlag();
-        }
-    }
-}
-
-/**
- * Loads application wide style sheets given as arguments after
- * -gui-style or -gui-css-file of placed in the user's home under
- * [config directory]/custom.css
- */
-function loadStyleSheets(args) {
-    var idx;
-
-    // load predefined style sheets
-    idx = args.indexOf("-gui-style");
-    if (idx>-1) {
-        qDebug("Loading Style Sheets...");
-        if (idx+1<args.length) {
-            StylePreferences.loadByName(args[idx + 1]);
-        }
-        else {
-            qWarning("No argument given to -gui-style");
-        }
-    }
-
-    // load custom style sheets, if any
-    StylePreferences.loadCustomStyles();
-
-    // load CSS file if given by argument
-    idx = args.indexOf("-gui-css-file");
-    if (idx>-1) {
-        if (idx+1<args.length) {
-            StylePreferences.load(args[idx + 1]);
-        }
-        else {
-            qWarning("No argument given to -gui-css-file");
         }
     }
 }
@@ -664,9 +624,6 @@ function main() {
     appWin.setTabPosition(Qt.BottomDockWidgetArea, QTabWidget.West);
 
     setUpDragAndDrop(appWin);
-
-    // load CSS:
-    loadStyleSheets(args);
 
     appWin.windowIcon = new QIcon("scripts/qcad_icon.png");
     if (!ignoreDockappWindows) {
