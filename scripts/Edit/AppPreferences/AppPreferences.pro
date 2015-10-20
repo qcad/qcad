@@ -6,7 +6,6 @@ SUBDIRS = \
     LayerCompatibility \
     ScriptingPreferences \
     StartupPreferences \
-    StylePreferences \
     TextPreferences \
     ToolBarPreferences \
     ts
