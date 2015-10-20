@@ -55,9 +55,9 @@ RExporter::RExporter()
       screenBasedLinetypes(false),
       visualExporter(false),
       pixelSizeHint(0.5),
-      projectionRenderingHint(RS::RenderThreeD),
       pixelUnit(false),
-      clipping(false) {
+      clipping(false),
+      projectionRenderingHint(RS::RenderThreeD) {
 
     currentPen.setColor(Qt::white);
     currentPen.setWidth(3);
@@ -79,9 +79,9 @@ RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProg
       screenBasedLinetypes(false),
       visualExporter(false),
       pixelSizeHint(0.5),
-      projectionRenderingHint(RS::RenderThreeD),
       pixelUnit(false),
-      clipping(false) {
+      clipping(false),
+      projectionRenderingHint(RS::RenderThreeD) {
 
     currentPen.setColor(Qt::white);
     currentPen.setWidth(3);
@@ -353,7 +353,7 @@ REntity* RExporter::getCurrentBlockRef() const {
 }
 
 RViewportEntity* RExporter::getCurrentViewport() const {
-    for (int i=blockRefViewportStack.length()-1; i>=0; i--) {
+    for (int i=blockRefViewportStack.size()-1; i>=0; i--) {
         REntity* e = blockRefViewportStack.at(i);
         RViewportEntity* v = dynamic_cast<RViewportEntity*>(e);
         if (v!=NULL) {

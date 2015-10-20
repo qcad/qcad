@@ -50,6 +50,7 @@ RLayer::RLayer(RDocument* document, const QString& name,
 }
 
 RLayer::RLayer(const RLayer& other) :
+    RObject(other),
     name(other.name),
     frozen(other.frozen),
     locked(other.locked),

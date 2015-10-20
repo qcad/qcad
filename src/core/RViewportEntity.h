@@ -106,7 +106,7 @@ public:
     }
 
     int getStatus() const {
-        data.getStatus();
+        return data.getStatus();
     }
 
     void setStatus(int s) {
@@ -122,7 +122,7 @@ public:
     }
 
     RVector getViewCenter() const {
-       return data.getViewCenter();
+        return data.getViewCenter();
     }
 
     void setViewCenter(const RVector& c) {
