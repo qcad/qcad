@@ -138,9 +138,12 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
 
     RBox viewportBox(data.position, data.width, data.height);
 
-    // viewport frame:
+    // export viewport frame to layer of viewport:
     e.setBrush(Qt::NoBrush);
-    e.exportRectangle(viewportBox.c1, viewportBox.c2);
+    QList<RLine> lines = viewportBox.getLines2d();
+    for (int i=0; i<lines.length(); i++) {
+        e.exportLine(lines[i]);
+    }
 
     // clip rectangle export
     e.exportClipRectangle(viewportBox);
