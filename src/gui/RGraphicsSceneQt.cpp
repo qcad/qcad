@@ -114,6 +114,7 @@ bool RGraphicsSceneQt::beginPath() {
 
     currentPainterPath = RPainterPath();
     currentPainterPath.setZLevel(0);
+    currentPainterPath.setNoClipping(!getClipping());
 
     if (screenBasedLinetypes && currentPen.style()==Qt::SolidLine) {
         QVector<qreal> pat = currentLinetypePattern.getScreenBasedLinetype();
