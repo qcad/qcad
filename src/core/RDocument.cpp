@@ -1143,7 +1143,10 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
 
         // layer is off:
         if (isLayerFrozen(entity->getLayerId())) {
-            continue;
+            // viewports are exported even if layer is hidden (but without border):
+            if (entity->getType()!=RS::EntityViewport) {
+                continue;
+            }
         }
 
         // referenced block is off:
