@@ -138,11 +138,15 @@ void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelecte
 
     RBox viewportBox(data.position, data.width, data.height);
 
+    // if layer is visible, export viewport frame
+    // viewport contents is always exported!
+    if (isVisible()) {
     // export viewport frame to layer of viewport:
-    e.setBrush(Qt::NoBrush);
-    QList<RLine> lines = viewportBox.getLines2d();
-    for (int i=0; i<lines.length(); i++) {
-        e.exportLine(lines[i]);
+        e.setBrush(Qt::NoBrush);
+        QList<RLine> lines = viewportBox.getLines2d();
+        for (int i=0; i<lines.length(); i++) {
+            e.exportLine(lines[i]);
+        }
     }
 
     // clip rectangle export

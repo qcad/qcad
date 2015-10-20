@@ -675,7 +675,10 @@ void RExporter::exportCurrentEntity(bool preview, bool forceSelected) {
     if (isVisualExporter()) {
         // ... only export entities on visible layers:
         if (currentLayer!=NULL && currentLayer->isFrozen()) {
-            return;
+            // viewports are exported even if layer is hidden (but without border):
+            if (entity->getType()!=RS::EntityViewport) {
+                return;
+            }
         }
 
         // ... only export entities in visible blocks:
