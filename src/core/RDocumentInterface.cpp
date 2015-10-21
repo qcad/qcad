@@ -615,6 +615,13 @@ void RDocumentInterface::regenerateViews(bool force) {
     }
 }
 
+void RDocumentInterface::regenerateViews(QSet<REntity::Id>& entityIds) {
+    QList<RGraphicsScene*>::iterator it;
+    for (it=scenes.begin(); it!=scenes.end(); it++) {
+        (*it)->regenerateViews(entityIds);
+    }
+}
+
 /**
  * Repaints all views.
  */
@@ -1949,7 +1956,7 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
         regenerateScenes(entityIdsToRegenerate, false);
     }
 
-    regenerateViews(true);
+    regenerateViews(entityIdsToRegenerate);
 }
 
 void RDocumentInterface::setCurrentColor(const RColor& color) {

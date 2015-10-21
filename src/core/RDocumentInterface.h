@@ -188,6 +188,7 @@ public:
     void updateSelectionStatus(REntity::Id entityId, bool updateViews);
 
     void regenerateViews(bool force=false);
+    void regenerateViews(QSet<REntity::Id>& entityIds);
     void repaintViews();
 
     void registerScene(RGraphicsScene& scene);

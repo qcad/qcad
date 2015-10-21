@@ -168,6 +168,11 @@ public:
      * \param force True if scene has changed, don't use any optimizations, force regeneration.
      */
     virtual void regenerate(bool force=false) = 0;
+    virtual void regenerate(QSet<REntity::Id>& affectedEntities) {
+        Q_UNUSED(affectedEntities)
+
+        regenerate(true);
+    }
 
     /**
      * Repaints the view (widget, etc..). This differs from regenerate in that

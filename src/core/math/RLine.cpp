@@ -77,10 +77,18 @@ void RLine::setAngle(double a) {
     endPoint = startPoint + RVector::createPolar(getLength(), a);
 }
 
+/**
+ * \return True if the line is vertical.
+ * If the start and end points of the line are identical, the line is both vertical and horizontal.
+ */
 bool RLine::isVertical(double tolerance) const {
     return RMath::fuzzyCompare(startPoint.x, endPoint.x, tolerance);
 }
 
+/**
+ * \return True if the line is horizontal.
+ * If the start and end points of the line are identical, the line is both vertical and horizontal.
+ */
 bool RLine::isHorizontal(double tolerance) const {
     return RMath::fuzzyCompare(startPoint.y, endPoint.y, tolerance);
 }

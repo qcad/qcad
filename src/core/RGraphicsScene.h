@@ -77,6 +77,7 @@ public:
     virtual void regenerate(QSet<REntity::Id>& affectedEntities, bool updateViews);
     virtual void updateSelectionStatus(QSet<REntity::Id>& affectedEntities, bool updateViews);
     virtual void regenerateViews(bool force=false);
+    virtual void regenerateViews(QSet<RObject::Id>& affectedEntities);
     virtual void repaintViews();
     virtual void setCursor(const QCursor& cursor);
 
