@@ -570,7 +570,9 @@ EAction.prototype.setCursor = function(cursor, name) {
     if (!isNull(name)) {
         var views = this.getGraphicsViews();
         for (var i=0; i<views.length; i++) {
-            views[i].setProperty("CursorName", name);
+            if (isFunction(views[i].setProperty)) {
+                views[i].setProperty("CursorName", name);
+            }
         }
     }
 };
