@@ -167,6 +167,10 @@ Block.editBlock = function(di, blockName) {
     for (i=0; i<views.length; i++) {
         view = views[i];
 
+        if (!isFunction(view.property)) {
+            continue;
+        }
+
         blockZoom = view.property("blockZoom");
         if (isNull(blockZoom)) {
             blockZoom = new Object();
@@ -184,6 +188,10 @@ Block.editBlock = function(di, blockName) {
     blockId = doc.getCurrentBlockId();
     for (i=0; i<views.length; i++) {
         view = views[i];
+
+        if (!isFunction(view.property)) {
+            continue;
+        }
 
         blockZoom = view.property("blockZoom");
         if (isNull(blockZoom)) {
