@@ -608,10 +608,8 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
     delete painter;
 
     // paint reference points of selected entities:
-    QMultiMap<REntity::Id, RVector>& referencePoints =
-            scene->getReferencePoints();
+    QMultiMap<REntity::Id, RVector>& referencePoints = scene->getReferencePoints();
     if (!referencePoints.isEmpty() && referencePoints.count()<1000) {
-
         QPainter gbPainter(&graphicsBuffer);
 
         QMultiMap<REntity::Id, RVector>::iterator it;
