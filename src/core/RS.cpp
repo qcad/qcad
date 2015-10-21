@@ -159,8 +159,7 @@ QStringList RS::getDirectoryList(const QString& subDirectory) {
  *
  * \return List of the absolute paths of the files found.
  */
-QStringList RS::getFileList(const QString& subDirectory,
-                                   const QString& fileExtension) {
+QStringList RS::getFileList(const QString& subDirectory, const QString& fileExtension) {
 
     QStringList dirList = getDirectoryList(subDirectory);
 
