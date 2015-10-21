@@ -291,6 +291,13 @@ public:
         return 1.0;
     }
 
+    /**
+     * Reimplementations may return true to prevent this view from being deleted.
+     */
+    virtual bool isShared() const {
+        return false;
+    }
+
 protected:
     bool printing;
     bool printPreview;

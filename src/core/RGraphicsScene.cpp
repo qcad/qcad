@@ -40,7 +40,15 @@ RGraphicsScene::RGraphicsScene(RDocumentInterface& documentInterface)
 RGraphicsScene::~RGraphicsScene() {
     deleting = true;
     while (!views.isEmpty()) {
-        delete views.takeFirst();
+        RGraphicsView* view = views.takeFirst();
+        if (view!=NULL) {
+            if (!view->isShared()) {
+                delete view;
+            }
+            else {
+                view->setScene(NULL);
+            }
+        }
     }
 
     // only delete views not based on QObject
@@ -151,7 +159,7 @@ void RGraphicsScene::regenerate(bool undone) {
 void RGraphicsScene::regenerate(QSet<REntity::Id>& affectedEntities, bool updateViews) {
     exportEntities(affectedEntities, false);
     if (updateViews) {
-        regenerateViews(true);
+        regenerateViews(affectedEntities);
     }
 }
 
@@ -162,7 +170,7 @@ void RGraphicsScene::regenerate(QSet<REntity::Id>& affectedEntities, bool update
 void RGraphicsScene::updateSelectionStatus(QSet<REntity::Id>& affectedEntities, bool updateViews) {
     exportEntities(affectedEntities, false);
     if (updateViews) {
-        regenerateViews(true);
+        regenerateViews(affectedEntities);
     }
 }
 
@@ -173,6 +181,13 @@ void RGraphicsScene::regenerateViews(bool force) {
     QList<RGraphicsView*>::iterator it;
     for (it=views.begin(); it!=views.end(); it++) {
         (*it)->regenerate(force);
+    }
+}
+
+void RGraphicsScene::regenerateViews(QSet<REntity::Id>& affectedEntities) {
+    QList<RGraphicsView*>::iterator it;
+    for (it=views.begin(); it!=views.end(); it++) {
+        (*it)->regenerate(affectedEntities);
     }
 }
 
