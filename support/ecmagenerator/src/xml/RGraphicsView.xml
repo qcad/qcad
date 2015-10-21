@@ -379,6 +379,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="regenerate" cppName="regenerate"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSet &lt; REntity::Id &gt; &amp;"
+        typeName="QSet &lt; REntity::Id &gt;"
+        name="affectedEntities" isConst="false" />
+      </variant>
       <variant returnType="void" isPureVirtual="true">
         <arg type="bool" typeName="bool" name="force"
         hasDefault="true" default="false" isConst="false" />
@@ -667,6 +672,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="getDevicePixelRatio" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="isShared" cppName="isShared" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
   </class>
 </unit>

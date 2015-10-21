@@ -262,6 +262,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDevicePixelRatio, "getDevicePixelRatio");
             
+            REcmaHelper::registerFunction(&engine, proto, isShared, "isShared");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RGraphicsView*>(), *proto);
 
@@ -3721,6 +3723,34 @@
                 
     
     if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QSet < REntity::Id > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QSet < REntity::Id >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->regenerate(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
     0
     ){
     // prepare arguments:
@@ -6287,6 +6317,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsView::getDevicePixelRatio", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsView::isShared
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsView::isShared", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsView::isShared";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsView* self = 
+                        getSelf("isShared", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isShared();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsView.isShared().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsView::isShared", context, engine);
             return result;
         }
          QScriptValue REcmaGraphicsView::toString

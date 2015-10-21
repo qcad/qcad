@@ -120,7 +120,6 @@
     <function_decl><type><name>RBox</name></type> <name>getClipRectangle</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>addPath</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>, <param><decl><type><name>bool</name></type> <name>draft</name></decl></param>)</parameter_list>;</function_decl>
-    <comment type="line">//void addPreviewPath(REntity::Id entityId, const RPainterPath&amp; path);</comment>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>startEntity</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>topLevelEntity</name></decl></param>)</parameter_list>;</function_decl>
 

@@ -169,6 +169,11 @@
      * \param force True if scene has changed, don't use any optimizations, force regeneration.
      */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>regenerate</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>force</name>=<init><expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function><type><name>virtual</name> <name>void</name></type> <name>regenerate</name><parameter_list>(<param><decl><type><name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name>&amp;</type> <name>affectedEntities</name></decl></param>)</parameter_list> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>affectedEntities</argument>)</argument_list></macro>
+
+        <constructor_decl><name>regenerate</name><parameter_list>(<param><decl><type><name>true</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
 
     <comment type="block">/**
      * Repaints the view (widget, etc..). This differs from regenerate in that
@@ -285,6 +290,13 @@
 
     <function><type><name>virtual</name> <name>double</name></type> <name>getDevicePixelRatio</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr>1.0</expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * Reimplementations may return true to prevent this view from being deleted.
+     */</comment>
+    <function><type><name>virtual</name> <name>bool</name></type> <name>isShared</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>false</name></expr>;</return>
     }</block></function>
 
 </public><protected>protected:
