@@ -21,6 +21,7 @@
 
 const QString RBlock::modelSpaceName = "*Model_Space";
 
+RPropertyTypeId RBlock::PropertyCustom;
 RPropertyTypeId RBlock::PropertyName;
 RPropertyTypeId RBlock::PropertyFrozen;
 
@@ -44,6 +45,7 @@ RBlock::~RBlock() {
 }
 
 void RBlock::init() {
+    RBlock::PropertyCustom.generateId(typeid(RBlock), RObject::PropertyCustom);
     RBlock::PropertyName.generateId(typeid(RBlock), "", "Name");
     RBlock::PropertyFrozen.generateId(typeid(RBlock), "", "Hidden");
 }
@@ -56,39 +58,12 @@ void RBlock::setName(const QString& n) {
     name = n.trimmed();
 }
 
-//void RBlock::setAttributeDefinition(const RAttributeDefinition& attDef) {
-//    for (int i=0; i<attributeDefinitions.size(); i++) {
-//        RAttributeDefinition ad = attributeDefinitions[i];
-//        if (ad.)
-//    }
-//    attributeDefinitions.append();
-//}
-
 bool RBlock::setProperty(RPropertyTypeId propertyTypeId,
     const QVariant& value, RTransaction* transaction) {
 
-    Q_UNUSED(transaction)
+    bool ret = RObject::setProperty(propertyTypeId, value, transaction);
 
-    bool ret = false;
-
-//    // set attribute definition, internally a custom property:
-//    if (propertyTypeId.isBlockAttribute()) {
-//        if (value.isValid()) {
-//            setAttributeDefinition(
-//                RAttributeDefinition(
-//                    propertyTypeId.getBlockAttributeTag(),
-//                    propertyTypeId.getBlockAttributePrompt(),
-//                    value.toString()
-//                )
-//            );
-//        }
-//        else {
-//            removeCustomProperty(propertyTypeId.getCustomPropertyName());
-//        }
-//        return true;
-//    }
-
-    ret = RObject::setMember(name, value.toString().trimmed(), PropertyName == propertyTypeId);
+    ret = ret || RObject::setMember(name, value.toString().trimmed(), PropertyName == propertyTypeId);
     ret = ret || RObject::setMember(frozen, value, PropertyFrozen == propertyTypeId);
 
     return ret;
@@ -105,7 +80,6 @@ QPair<QVariant, RPropertyAttributes> RBlock::getProperty(
         return qMakePair(QVariant(frozen), RPropertyAttributes());
     }
 
-    //return qMakePair(QVariant(), RPropertyAttributes());
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 
