@@ -298,10 +298,10 @@ DefaultNavigation.prototype.pinchGestureEvent = function(gesture) {
         return;
     }
 
-    if (changeFlags & QPinchGesture.RotationAngleChanged) {
+    if (typeof(QPinchGesture)!=="undefined" && (changeFlags & QPinchGesture.RotationAngleChanged)) {
         // rotation does nothing
     }
-    if (changeFlags & QPinchGesture.ScaleFactorChanged) {
+    if (typeof(QPinchGesture)!=="undefined" && (changeFlags & QPinchGesture.ScaleFactorChanged)) {
         var value = gesture.property("scaleFactor");
         if (value<=0.0) {
             return;
