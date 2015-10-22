@@ -43,7 +43,7 @@ class RDocumentInterface;
  * Abstract base class for all graphics scenes.
  * A graphics scene is an exporter that exports entities into
  * something that can be shown in a view (painter paths,
- * triangles, OpenGL elements, ...).
+ * triangles, OpenGL lists, ...).
  *
  * Graphics scenes store a map of reference points of all entities
  * that are currently selected. This information is stored at
