@@ -16,9 +16,6 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QDragMoveEvent>
-#include <QScrollBar>
-
 #include "RBlockReferenceEntity.h"
 #include "RDebug.h"
 #include "RDocumentInterface.h"
