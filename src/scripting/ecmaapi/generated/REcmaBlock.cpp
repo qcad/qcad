@@ -110,6 +110,10 @@
 
     // static properties:
     
+            ctor.setProperty("PropertyCustom",
+                qScriptValueFromValue(&engine, RBlock::PropertyCustom),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyName",
                 qScriptValueFromValue(&engine, RBlock::PropertyName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

@@ -164,7 +164,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="double" typeName="double" name="tolerance"
-        hasDefault="true" default="RS :: AngleTolerance"
+        hasDefault="true" default="RS :: PointTolerance"
         isConst="false" />
       </variant>
     </method>
@@ -173,7 +173,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="double" typeName="double" name="tolerance"
-        hasDefault="true" default="RS :: AngleTolerance"
+        hasDefault="true" default="RS :: PointTolerance"
         isConst="false" />
       </variant>
     </method>
