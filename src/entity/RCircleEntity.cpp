@@ -144,5 +144,5 @@ void RCircleEntity::print(QDebug dbg) const {
     dbg.nospace() << "RCircleEntity(";
     REntity::print(dbg);
     dbg.nospace() << ", center: " << getCenter();
-//  dbg.nospace() << ", radius: " << getRadius() << ")";
+    dbg.nospace() << ", radius: " << getRadius() << ")";
 }
