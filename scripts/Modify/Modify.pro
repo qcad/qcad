@@ -3,6 +3,7 @@ SUBDIRS = \
     AutoTrim \
     Bevel \
     BreakOut \
+    BreakOutGap \
     BreakOutManual \
     Divide \
     EditText \

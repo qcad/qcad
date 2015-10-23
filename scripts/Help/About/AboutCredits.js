@@ -11,6 +11,8 @@ var credits =
         [ "Marco Ferrara",    "Double-click to select contour<br>" +
                               "Block > Create Block from Selection: overwrite blocks<br>"
                               ],
+        [ "Norbert K.",       "Modify > Break out Gap<br>"
+                              ],
         [ "Robert S.",        "Direct distance entry<br>" +
                               "Snap > X/Y from Points<br>" +
                               "Snap > Y/X from Points<br>" +
