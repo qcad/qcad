@@ -146,20 +146,25 @@ void RSpatialIndexNavel::bulkLoad(const QList<int>& ids, const QList<QList<RBox>
         return;
     }
 
-    RSiDataStream stream(ids, bbs);
-    uninit();
+    try {
+        RSiDataStream stream(ids, bbs);
+        uninit();
 
-    buff = SpatialIndex::StorageManager::createNewMemoryStorageManager();
-    SpatialIndex::id_type indexIdentifier;
-    tree = SpatialIndex::RTree::createAndBulkLoadNewRTree(
-            SpatialIndex::RTree::BLM_STR,
-            stream,
-            *buff,
-            0.2, 50, 50,
-            3,
-            SpatialIndex::RTree::RV_RSTAR,
-            indexIdentifier
-    );
+        buff = SpatialIndex::StorageManager::createNewMemoryStorageManager();
+        SpatialIndex::id_type indexIdentifier;
+        tree = SpatialIndex::RTree::createAndBulkLoadNewRTree(
+                SpatialIndex::RTree::BLM_STR,
+                stream,
+                *buff,
+                0.2, 50, 50,
+                3,
+                SpatialIndex::RTree::RV_RSTAR,
+                indexIdentifier
+        );
+    }
+    catch(Tools::IllegalArgumentException e) {
+        qWarning() << "caught exception in spatial index: " << e.what().c_str();
+    }
 }
     
 /**
