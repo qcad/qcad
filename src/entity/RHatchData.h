@@ -25,6 +25,7 @@
 #include "RBox.h"
 #include "RDocument.h"
 #include "REntity.h"
+#include "RHatchProxy.h"
 #include "RLine.h"
 #include "RPattern.h"
 #include "RPainterPath.h"
@@ -64,6 +65,8 @@ public:
     }
 
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
+
+    virtual QList<RVector> getEndPoints(const RBox& queryBox = RDEFAULT_RBOX) const;
 
     virtual RVector getPointOnEntity() const;
     virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0, bool draft = false, double strictRange = RMAXDOUBLE) const;
@@ -161,10 +164,33 @@ public:
 
     QList<QSharedPointer<RShape> > getLoopBoundary(int index) const;
 
+    QList<RPolyline> getBoundaryAsPolylines(double segmentLength) const;
+
     int getComplexity() const;
 
     void setPattern(const RPattern& p) {
         pattern = p;
+    }
+
+    static bool hasProxy() {
+        return hatchProxy!=NULL;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static void setHatchProxy(RHatchProxy* p) {
+        if (hatchProxy!=NULL) {
+            delete hatchProxy;
+        }
+        hatchProxy = p;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static RHatchProxy* getHatchProxy() {
+        return hatchProxy;
     }
 
 protected:
@@ -189,6 +215,8 @@ private:
     mutable QList<RPainterPath> painterPaths;
     mutable bool dirty;
     mutable bool gotDraft;
+
+    static RHatchProxy* hatchProxy;
 };
 
 Q_DECLARE_METATYPE(RHatchData)

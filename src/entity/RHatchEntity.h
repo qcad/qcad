@@ -165,6 +165,10 @@ public:
         return data.getLoopBoundary(index);
     }
 
+    QList<RPolyline> getBoundaryAsPolylines(double segmentLength) const {
+        return data.getBoundaryAsPolylines(segmentLength);
+    }
+
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const {
         return data.getShapes(queryBox);
     }

@@ -33,6 +33,8 @@
 #include "RUnit.h"
 #include "RPolyline.h"
 
+RHatchProxy* RHatchData::hatchProxy = NULL;
+
 RHatchData::RHatchData() :
     solid(true),
     scaleFactor(1.0),
@@ -132,6 +134,15 @@ RBox RHatchData::getBoundingBox(bool ignoreEmpty) const {
     }
 
     return boundaryPath.getBoundingBox();
+}
+
+QList<RVector> RHatchData::getEndPoints(const RBox& queryBox) const {
+    QList<RVector> ret;
+    QList<QSharedPointer<RShape> > shapes = getShapes(queryBox, true);
+    for (int i=0; i<shapes.size(); i++) {
+        ret.append(shapes.at(i)->getEndPoints());
+    }
+    return ret;
 }
 
 RVector RHatchData::getPointOnEntity() const {
@@ -1153,6 +1164,15 @@ QList<QSharedPointer<RShape> > RHatchData::getLoopBoundary(int index) const {
         return QList<QSharedPointer<RShape> >();
     }
     return boundary[index];
+}
+
+QList<RPolyline> RHatchData::getBoundaryAsPolylines(double segmentLength) const {
+    if (hasProxy()) {
+        return RHatchData::getHatchProxy()->getBoundaryAsPolylines(*this, segmentLength);
+    }
+    else {
+        return QList<RPolyline>();
+    }
 }
 
 int RHatchData::getComplexity() const {
