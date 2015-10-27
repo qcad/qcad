@@ -67,6 +67,9 @@
         getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getEndPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPointOnEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -163,10 +166,16 @@
         getLoopBoundary
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getBoundaryAsPolylines
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getComplexity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setPattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasProxy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

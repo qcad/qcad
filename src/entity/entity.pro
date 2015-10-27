@@ -80,6 +80,7 @@ HEADERS = \
     REllipseEntity.h \
     RHatchData.h \
     RHatchEntity.h \
+    RHatchProxy.h \
     RImageData.h \
     RImageEntity.h \
     RLeaderData.h \

@@ -282,7 +282,10 @@
     <function_decl><type><name>static</name> <name>QString</name></type> <name>escapeUnicode</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>str</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QFont</name></type> <name>getMainFont</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>update</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>layout</name>=<init><expr><name>true</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>update</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>layout</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function><type><name>virtual</name> <name>void</name></type> <name>update</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <constructor_decl><name>update</name><parameter_list>(<param><decl><type><name>true</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isDirty</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPaths</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>draft</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>

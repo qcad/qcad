@@ -49,6 +49,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="getEndPoints" cppName="getEndPoints"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false">
+        <arg type="RBox &amp;" typeName="RBox" name="queryBox"
+        hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
+      </variant>
+    </method>
     <method name="getPointOnEntity" cppName="getPointOnEntity"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -277,6 +286,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="getBoundaryAsPolylines"
+    cppName="getBoundaryAsPolylines" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RPolyline &gt;"
+      isPureVirtual="false">
+        <arg type="double" typeName="double" name="segmentLength"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getComplexity" cppName="getComplexity"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -289,6 +307,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RPattern &amp;" typeName="RPattern" name="p"
         isConst="true" />
       </variant>
+    </method>
+    <method name="hasProxy" cppName="hasProxy" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="getSegments" cppName="getSegments"
     specifier="protected" isStatic="false" isVirtual="false"

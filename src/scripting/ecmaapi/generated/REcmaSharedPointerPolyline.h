@@ -289,10 +289,10 @@
         simplify
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        hasProxy
+        stripWidths
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        stripWidths
+        hasProxy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

@@ -130,6 +130,9 @@
         getLoopBoundary
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getBoundaryAsPolylines
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getShapes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

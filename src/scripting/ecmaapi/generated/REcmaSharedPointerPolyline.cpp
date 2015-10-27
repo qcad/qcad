@@ -6145,45 +6145,6 @@
             return result;
         }
          QScriptValue
-        REcmaSharedPointerPolyline::hasProxy
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::hasProxy", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::hasProxy";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        RPolyline::
-       hasProxy();
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.hasProxy().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::hasProxy", context, engine);
-            return result;
-        }
-         QScriptValue
         REcmaSharedPointerPolyline::stripWidths
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -6225,6 +6186,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::stripWidths", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::hasProxy
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::hasProxy", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::hasProxy";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RPolyline::
+       hasProxy();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.hasProxy().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::hasProxy", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerPolyline::toString

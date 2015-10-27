@@ -88,6 +88,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
+            REcmaHelper::registerFunction(&engine, proto, getEndPoints, "getEndPoints");
+            
             REcmaHelper::registerFunction(&engine, proto, getPointOnEntity, "getPointOnEntity");
             
             REcmaHelper::registerFunction(&engine, proto, getDistanceTo, "getDistanceTo");
@@ -152,6 +154,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLoopBoundary, "getLoopBoundary");
             
+            REcmaHelper::registerFunction(&engine, proto, getBoundaryAsPolylines, "getBoundaryAsPolylines");
+            
             REcmaHelper::registerFunction(&engine, proto, getComplexity, "getComplexity");
             
             REcmaHelper::registerFunction(&engine, proto, setPattern, "setPattern");
@@ -170,6 +174,8 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, hasProxy, "hasProxy");
+            
 
     // static properties:
     
@@ -675,6 +681,99 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaHatchData::getBoundingBox", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::getEndPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::getEndPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::getEndPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("getEndPoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getEndPoints();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RBox */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RHatchData: Argument 0 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getEndPoints(a0);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.getEndPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::getEndPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -3143,6 +3242,66 @@
             return result;
         }
          QScriptValue
+        REcmaHatchData::getBoundaryAsPolylines
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::getBoundaryAsPolylines", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::getBoundaryAsPolylines";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("getBoundaryAsPolylines", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RPolyline >'
+    QList < RPolyline > cppResult =
+        
+               self->getBoundaryAsPolylines(a0);
+        // return type: QList < RPolyline >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.getBoundaryAsPolylines().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::getBoundaryAsPolylines", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaHatchData::getComplexity
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -3254,6 +3413,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaHatchData::setPattern", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::hasProxy
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::hasProxy", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::hasProxy";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RHatchData::
+       hasProxy();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.hasProxy().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::hasProxy", context, engine);
             return result;
         }
          QScriptValue REcmaHatchData::toString

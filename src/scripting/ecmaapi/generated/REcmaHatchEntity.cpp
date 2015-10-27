@@ -120,6 +120,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLoopBoundary, "getLoopBoundary");
             
+            REcmaHelper::registerFunction(&engine, proto, getBoundaryAsPolylines, "getBoundaryAsPolylines");
+            
             REcmaHelper::registerFunction(&engine, proto, getShapes, "getShapes");
             
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
@@ -2478,6 +2480,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaHatchEntity::getLoopBoundary", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchEntity::getBoundaryAsPolylines
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchEntity::getBoundaryAsPolylines", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::getBoundaryAsPolylines";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchEntity* self = 
+                        getSelf("getBoundaryAsPolylines", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RPolyline >'
+    QList < RPolyline > cppResult =
+        
+               self->getBoundaryAsPolylines(a0);
+        // return type: QList < RPolyline >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getBoundaryAsPolylines().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchEntity::getBoundaryAsPolylines", context, engine);
             return result;
         }
          QScriptValue
