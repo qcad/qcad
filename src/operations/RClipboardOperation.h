@@ -39,14 +39,20 @@ typedef QMap<QString, QString> RQMapQStringQString;
  * 
  * \ingroup operations
  * \scriptable
- * \abstract
  */
 class QCADOPERATIONS_EXPORT RClipboardOperation : public ROperation {
 public:
     RClipboardOperation();
     virtual ~RClipboardOperation() {}
+
+    virtual RTransaction apply(RDocument& document, bool preview = false) const {
+        Q_UNUSED(document)
+        Q_UNUSED(preview)
+    }
     
-protected:
+    /**
+     * \nonscriptable
+     */
     void copy(RDocument& src, RDocument& dest,
         const RVector& offset,
         double scale,
@@ -82,6 +88,26 @@ protected:
         const QString& blockName,
         RTransaction& transaction,
         bool toModelSpaceBlock
+    ) const;
+
+    QSharedPointer<RBlock> copyEntityBlock(
+        REntity& entity,
+        RDocument& src,
+        RDocument& dest,
+        bool overwriteBlocks,
+        bool toCurrentBlock,
+        const QString& blockName,
+        RTransaction& transaction
+    ) const;
+
+    QSharedPointer<RBlock> copyBlock(
+        RBlock::Id blockId,
+        RDocument& src,
+        RDocument& dest,
+        bool overwriteBlocks,
+        bool toCurrentBlock,
+        const QString& blockName,
+        RTransaction& transaction
     ) const;
 
     QSharedPointer<RLayer> copyEntityLayer(

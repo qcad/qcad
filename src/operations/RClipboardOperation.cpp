@@ -293,50 +293,7 @@ void RClipboardOperation::copyEntity(
 
     // add block the entity belongs to, if the block exists it is overwritten
     // if 'overwriteBlocks' is true:
-    QSharedPointer<RBlock> srcBlock =
-        src.queryBlock(entity.getBlockId());
-    if (srcBlock.isNull()) {
-        qWarning("RClipboardOperation::copyToDocument: "
-            "block of entity is NULL.");
-        return;
-    }
-    QString srcBlockName = srcBlock->getName();
-    QSharedPointer<RBlock> destBlock;
-    if (copiedBlocks.contains(srcBlockName)) {
-        destBlock = copiedBlocks.value(srcBlockName);
-    }
-    else {
-        QString destBlockName;
-        if (!blockName.isNull()) {
-            destBlockName = blockName;
-        }
-        else {
-            if (toCurrentBlock) {
-                destBlockName = dest.getBlockName(dest.getCurrentBlockId());
-            }
-            else {
-                destBlockName = srcBlock->getName();
-            }
-        }
-        if (!dest.hasBlock(destBlockName) || (overwriteBlocks && blockName.isNull())) {
-            destBlock = QSharedPointer<RBlock> (srcBlock->clone());
-            dest.getStorage().setObjectId(*destBlock.data(), RObject::INVALID_ID);
-            dest.getStorage().setObjectHandle(*destBlock.data(), RObject::INVALID_HANDLE);
-            destBlock->setDocument(&dest);
-            if (dest.hasBlock(destBlockName)) {
-                if (!transaction.overwriteBlock(destBlock)) {
-                    destBlock = dest.queryBlock(destBlockName);
-                }
-            }
-            else {
-                transaction.addObject(destBlock);
-            }
-        } else {
-            destBlock = dest.queryBlock(destBlockName);
-        }
-
-        copiedBlocks.insert(srcBlockName, destBlock);
-    }
+    QSharedPointer<RBlock> destBlock = copyEntityBlock(entity, src, dest, overwriteBlocks, toCurrentBlock, blockName, transaction);
 
     Q_ASSERT(destBlock->getId()!=RBlock::INVALID_ID);
 
@@ -344,8 +301,7 @@ void RClipboardOperation::copyEntity(
     // add entities of the block the block reference refers to (the block
     // definition is then added automatically):
     // if block contents has already been copied, do nothing
-    RBlockReferenceEntity* blockRef =
-        dynamic_cast<RBlockReferenceEntity*>(&entity);
+    RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(&entity);
     if (blockRef!=NULL && !copiedBlockContents.contains(blockRef->getReferencedBlockId())) {
         QSharedPointer<RBlock> refBlock =
             src.queryBlock(blockRef->getReferencedBlockId());
@@ -454,14 +410,91 @@ void RClipboardOperation::copyEntity(
     transaction.addObject(destEntity, false, true);
 }
 
+QSharedPointer<RBlock> RClipboardOperation::copyEntityBlock(
+    REntity& entity,
+    RDocument& src,
+    RDocument& dest,
+    bool overwriteBlocks,
+    bool toCurrentBlock,
+    const QString& blockName,
+    RTransaction& transaction) const {
+
+    return copyBlock(entity.getBlockId(), src, dest, overwriteBlocks, toCurrentBlock, blockName, transaction);
+}
+
+QSharedPointer<RBlock> RClipboardOperation::copyBlock(
+    RBlock::Id blockId,
+    RDocument& src,
+    RDocument& dest,
+    bool overwriteBlocks,
+    bool toCurrentBlock,
+    const QString& blockName,
+    RTransaction& transaction) const {
+
+    QSharedPointer<RBlock> srcBlock = src.queryBlock(blockId);
+    if (srcBlock.isNull()) {
+        qWarning("RClipboardOperation::copyEntityBlock: "
+            "block of entity is NULL.");
+        return QSharedPointer<RBlock>();
+    }
+    QString srcBlockName = srcBlock->getName();
+    QSharedPointer<RBlock> destBlock;
+    if (copiedBlocks.contains(srcBlockName)) {
+        destBlock = copiedBlocks.value(srcBlockName);
+    }
+    else {
+        QString destBlockName;
+        if (!blockName.isNull()) {
+            destBlockName = blockName;
+        }
+        else {
+            if (toCurrentBlock) {
+                destBlockName = dest.getBlockName(dest.getCurrentBlockId());
+            }
+            else {
+                destBlockName = srcBlock->getName();
+            }
+        }
+        if (!dest.hasBlock(destBlockName) || (overwriteBlocks && blockName.isNull())) {
+            destBlock = QSharedPointer<RBlock> (srcBlock->clone());
+            dest.getStorage().setObjectId(*destBlock.data(), RObject::INVALID_ID);
+            dest.getStorage().setObjectHandle(*destBlock.data(), RObject::INVALID_HANDLE);
+            destBlock->setDocument(&dest);
+            if (dest.hasBlock(destBlockName)) {
+                if (!transaction.overwriteBlock(destBlock)) {
+                    destBlock = dest.queryBlock(destBlockName);
+                }
+            }
+            else {
+                transaction.addObject(destBlock);
+            }
+        } else {
+            destBlock = dest.queryBlock(destBlockName);
+        }
+
+        copiedBlocks.insert(srcBlockName, destBlock);
+    }
+
+    return destBlock;
+}
+
 QSharedPointer<RLayer> RClipboardOperation::copyEntityLayer(
     REntity& entity,
     RDocument& src, RDocument& dest,
     bool overwriteLayers,
     RTransaction& transaction) const {
 
+    return copyLayer(entity.getLayerId(), src, dest, overwriteLayers, transaction);
+}
+
+QSharedPointer<RLayer> RClipboardOperation::copyLayer(
+        RLayer::Id layerId,
+        RDocument& src, RDocument& dest,
+        bool overwriteLayers,
+        RTransaction& transaction) const {
+
     // copy parent layers:
-    QString layerName = entity.getLayerName();
+    QString layerName = src.getLayerName(layerId);
     if (layerName.contains(" ... ")) {
         QStringList l = layerName.split(" ... ");
         l.removeLast();
@@ -477,15 +510,6 @@ QSharedPointer<RLayer> RClipboardOperation::copyEntityLayer(
             l.removeLast();
         }
     }
-
-    return copyLayer(entity.getLayerId(), src, dest, overwriteLayers, transaction);
-}
-
-QSharedPointer<RLayer> RClipboardOperation::copyLayer(
-        RLayer::Id layerId,
-        RDocument& src, RDocument& dest,
-        bool overwriteLayers,
-        RTransaction& transaction) const {
 
     bool overwriteLinetypes = false;
 
