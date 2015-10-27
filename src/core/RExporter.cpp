@@ -577,7 +577,7 @@ void RExporter::exportView(RView::Id viewId) {
  * Sets the current entity to the given entity and calls \ref exportEntity().
  * Note that entity is a temporary clone.
  *
- * \forceSelected Force selection, used to export entitis as part of a selected block reference.
+ * \forceSelected Force selection, used to export entities as part of a selected block reference.
  */
 void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool forceSelected) {
     RDocument* doc = entity.getDocument();
@@ -627,9 +627,66 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
         blockRefOrViewportSet = true;
     }
 
-    startEntity(/* topLevelEntity = */ blockRefOrViewportSet || blockRefViewportStack.isEmpty());
-    exportCurrentEntity(preview, forceSelected);
-    endEntity();
+
+//    REntity* entity = getEntity();
+//    if (entity!=NULL) {
+        bool skip = false;
+
+        // if this exporter exports a visual
+        // representation of the drawing (scene, view, print)...
+        if (isVisualExporter()) {
+            // ... only export entities on visible layers:
+            if (currentLayer!=NULL && currentLayer->isFrozen()) {
+                // viewports are exported even if layer is hidden (but without border):
+                if (entity.getType()!=RS::EntityViewport) {
+                    skip = true;
+                }
+            }
+
+            // ... only export entities in visible blocks:
+            RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(&entity);
+            if (blockRef!=NULL) {
+                RBlock::Id blockId = blockRef->getReferencedBlockId();
+                if (blockId!=RBlock::INVALID_ID) {
+                    QSharedPointer<RBlock> block = document->queryBlockDirect(blockId);
+                    if (!block.isNull() && block->isFrozen()) {
+                        skip = true;
+                    }
+                }
+            }
+        }
+
+
+        if (!skip) {
+            setEntityAttributes(forceSelected);
+
+            if ((forceSelected || entity.isSelected()) && RSettings::getUseSecondarySelectionColor()) {
+                // first part of two color selection:
+                twoColorSelectedMode = true;
+            }
+
+            startEntity(/* topLevelEntity = */ blockRefOrViewportSet || blockRefViewportStack.isEmpty());
+            exportCurrentEntity(preview, forceSelected);
+            endEntity();
+
+            if (visualExporter) {
+                if ((forceSelected || entity.isSelected()) &&
+                    RSettings::getUseSecondarySelectionColor() &&
+                    entity.getType()!=RS::EntityBlockRef &&
+                    entity.getType()!=RS::EntityText &&
+                    entity.getType()!=RS::EntityAttribute &&
+                    entity.getType()!=RS::EntityAttributeDefinition) {
+
+                    RColor secondarySelectionColor = RSettings::getColor("GraphicsViewColors/SecondarySelectionColor", RColor(Qt::white));
+                    setColor(secondarySelectionColor);
+                    //setStyle(Qt::CustomDashLine);
+                    setDashPattern(QVector<qreal>() << 2 << 3);
+                    entity.exportEntity(*this, preview, forceSelected);
+                }
+            }
+            twoColorSelectedMode = false;
+        }
+//    }
 
     if (blockRefOrViewportSet) {
         blockRefViewportStack.pop();
@@ -670,36 +727,36 @@ void RExporter::exportCurrentEntity(bool preview, bool forceSelected) {
         return;
     }
 
-    // if this exporter exports a visual
-    // representation of the drawing (scene, view, print)...
-    if (isVisualExporter()) {
-        // ... only export entities on visible layers:
-        if (currentLayer!=NULL && currentLayer->isFrozen()) {
-            // viewports are exported even if layer is hidden (but without border):
-            if (entity->getType()!=RS::EntityViewport) {
-                return;
-            }
-        }
+//    // if this exporter exports a visual
+//    // representation of the drawing (scene, view, print)...
+//    if (isVisualExporter()) {
+//        // ... only export entities on visible layers:
+//        if (currentLayer!=NULL && currentLayer->isFrozen()) {
+//            // viewports are exported even if layer is hidden (but without border):
+//            if (entity->getType()!=RS::EntityViewport) {
+//                return;
+//            }
+//        }
 
-        // ... only export entities in visible blocks:
-        RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(entity);
-        if (blockRef!=NULL) {
-            RBlock::Id blockId = blockRef->getReferencedBlockId();
-            if (blockId!=RBlock::INVALID_ID) {
-                QSharedPointer<RBlock> block = document->queryBlockDirect(blockId);
-                if (!block.isNull() && block->isFrozen()) {
-                    return;
-                }
-            }
-        }
-    }
+//        // ... only export entities in visible blocks:
+//        RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(entity);
+//        if (blockRef!=NULL) {
+//            RBlock::Id blockId = blockRef->getReferencedBlockId();
+//            if (blockId!=RBlock::INVALID_ID) {
+//                QSharedPointer<RBlock> block = document->queryBlockDirect(blockId);
+//                if (!block.isNull() && block->isFrozen()) {
+//                    return;
+//                }
+//            }
+//        }
+//    }
 
-    setEntityAttributes(forceSelected);
+//    setEntityAttributes(forceSelected);
 
-    if ((forceSelected || entity->isSelected()) && RSettings::getUseSecondarySelectionColor()) {
-        // first part of two color selection:
-        twoColorSelectedMode = true;
-    }
+//    if ((forceSelected || entity->isSelected()) && RSettings::getUseSecondarySelectionColor()) {
+//        // first part of two color selection:
+//        twoColorSelectedMode = true;
+//    }
 
     entity->exportEntity(*this, preview, forceSelected);
 
@@ -711,22 +768,22 @@ void RExporter::exportCurrentEntity(bool preview, bool forceSelected) {
 //    }
 
     // selected? export again with second color and pattern:
-    if (visualExporter) {
-        if ((forceSelected || entity->isSelected()) &&
-            RSettings::getUseSecondarySelectionColor() &&
-            entity->getType()!=RS::EntityBlockRef &&
-            entity->getType()!=RS::EntityText &&
-            entity->getType()!=RS::EntityAttribute &&
-            entity->getType()!=RS::EntityAttributeDefinition) {
+//    if (visualExporter) {
+//        if ((forceSelected || entity->isSelected()) &&
+//            RSettings::getUseSecondarySelectionColor() &&
+//            entity->getType()!=RS::EntityBlockRef &&
+//            entity->getType()!=RS::EntityText &&
+//            entity->getType()!=RS::EntityAttribute &&
+//            entity->getType()!=RS::EntityAttributeDefinition) {
 
-            RColor secondarySelectionColor = RSettings::getColor("GraphicsViewColors/SecondarySelectionColor", RColor(Qt::white));
-            setColor(secondarySelectionColor);
-            //setStyle(Qt::CustomDashLine);
-            setDashPattern(QVector<qreal>() << 2 << 3);
-            entity->exportEntity(*this, preview, forceSelected);
-        }
-    }
-    twoColorSelectedMode = false;
+//            RColor secondarySelectionColor = RSettings::getColor("GraphicsViewColors/SecondarySelectionColor", RColor(Qt::white));
+//            setColor(secondarySelectionColor);
+//            //setStyle(Qt::CustomDashLine);
+//            setDashPattern(QVector<qreal>() << 2 << 3);
+//            entity->exportEntity(*this, preview, forceSelected);
+//        }
+//    }
+//    twoColorSelectedMode = false;
 }
 
 
