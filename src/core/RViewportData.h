@@ -50,7 +50,11 @@ public:
 //        const RVector& viewCenter,
 //        const RVector& viewTarget);
 
-    virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
+    virtual RBox getBoundingBox(bool ignoreEmpty) const;
+
+    virtual RBox getBoundingBox() const {
+        return getBoundingBox(false);
+    }
 
     virtual RShape* castToShape() {
         return this;
