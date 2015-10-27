@@ -281,7 +281,10 @@ public:
     static QString escapeUnicode(const QString& str);
     virtual QFont getMainFont() const;
 
-    virtual void update(bool layout=true) const;
+    virtual void update(bool layout) const;
+    virtual void update() const {
+        update(true);
+    }
     virtual bool isDirty() const;
 
     virtual QList<RPainterPath> getPainterPaths(bool draft = false) const;
