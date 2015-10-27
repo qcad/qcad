@@ -163,11 +163,11 @@ public:
 
     bool simplify(double angleTolerance = RS::AngleTolerance);
 
+    void stripWidths();
+
     static bool hasProxy() {
         return polylineProxy!=NULL;
     }
-
-    void stripWidths();
 
     /**
      * \nonscriptable
