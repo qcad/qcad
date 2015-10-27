@@ -68,6 +68,22 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, apply, "apply");
+            
+            REcmaHelper::registerFunction(&engine, proto, copyEntity, "copyEntity");
+            
+            REcmaHelper::registerFunction(&engine, proto, copyEntityBlock, "copyEntityBlock");
+            
+            REcmaHelper::registerFunction(&engine, proto, copyBlock, "copyBlock");
+            
+            REcmaHelper::registerFunction(&engine, proto, copyEntityLayer, "copyEntityLayer");
+            
+            REcmaHelper::registerFunction(&engine, proto, copyLayer, "copyLayer");
+            
+            REcmaHelper::registerFunction(&engine, proto, copyEntityLinetype, "copyEntityLinetype");
+            
+            REcmaHelper::registerFunction(&engine, proto, copyLinetype, "copyLinetype");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RClipboardOperation*>(), *proto);
 
@@ -100,8 +116,45 @@
      QScriptValue REcmaClipboardOperation::create(QScriptContext* context, QScriptEngine* engine) 
     
     {
-           return REcmaHelper::throwError("Abstract class RClipboardOperation: Cannot be constructed.",
-               context); 
+    if (context->thisObject().strictlyEquals(
+       engine->globalObject())) {
+       return REcmaHelper::throwError(
+       QString::fromLatin1("RClipboardOperation(): Did you forget to construct with 'new'?"),
+           context);
+    }
+
+    QScriptValue result;
+        
+            // generate constructor variants:
+            
+    if( context->argumentCount() ==
+        0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // non-copyable class:
+            RClipboardOperation
+                    * cppResult =
+                    new
+                    RClipboardOperation
+                    ();
+                
+                    // TODO: triggers: Warning: QScriptEngine::newVariant(): changing class of non-QScriptObject not supported:
+                    result = engine->newVariant(context->thisObject(), qVariantFromValue(cppResult));
+                
+    } else 
+
+    {
+       return REcmaHelper::throwError(
+       QString::fromLatin1("RClipboardOperation(): no matching constructor found."),
+           context);
+    }
+    
+    return result;
     }
     
 
@@ -153,7 +206,1382 @@
     
 
     // public methods:
-     QScriptValue REcmaClipboardOperation::toString
+     QScriptValue
+        REcmaClipboardOperation::apply
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaClipboardOperation::apply", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::apply";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RClipboardOperation* self = 
+                        getSelf("apply", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocument */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RDocument*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RTransaction'
+    RTransaction cppResult =
+        
+               self->apply(a0);
+        // return type: RTransaction
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RDocument*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a0 = *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RTransaction'
+    RTransaction cppResult =
+        
+               self->apply(a0
+        ,
+    a1);
+        // return type: RTransaction
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.apply().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::apply", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaClipboardOperation::copyEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaClipboardOperation::copyEntity", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::copyEntity";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RClipboardOperation* self = 
+                        getSelf("copyEntity", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    16 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntity */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(3).isVariant() || 
+            context->argument(3).isQObject() || 
+            context->argument(3).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(4).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(5).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(6).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(7).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(8).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(9).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(10).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(11).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(12).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(13).isString()
+        ) /* type: QString */
+     && (
+            context->argument(14).isVariant() || 
+            context->argument(14).isQObject() || 
+            context->argument(14).isNull()
+        ) /* type: RTransaction */
+     && (
+            context->argument(15).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    REntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type REntity*.",
+                               context);                    
+                    }
+                    REntity& a0 = *ap0;
+                
+                    // argument is reference
+                    RDocument*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a1 = *ap1;
+                
+                    // argument is reference
+                    RDocument*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if( ap2 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a2 = *ap2;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap3 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        3
+                        )
+                    );
+                    if (ap3 == NULL) {
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 3 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a3 = 
+                    *ap3;
+                
+                    // argument isStandardType
+                    double
+                    a4 =
+                    (double)
+                    
+                    context->argument( 4 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a5 =
+                    (double)
+                    
+                    context->argument( 5 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    double
+                    a6 =
+                    (double)
+                    
+                    context->argument( 6 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a7 =
+                    (bool)
+                    
+                    context->argument( 7 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a8 =
+                    (bool)
+                    
+                    context->argument( 8 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a9 =
+                    (bool)
+                    
+                    context->argument( 9 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a10 =
+                    (bool)
+                    
+                    context->argument( 10 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a11 =
+                    (bool)
+                    
+                    context->argument( 11 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a12 =
+                    (bool)
+                    
+                    context->argument( 12 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    QString
+                    a13 =
+                    (QString)
+                    
+                    context->argument( 13 ).
+                    toString();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransaction*
+                    ap14 =
+                    qscriptvalue_cast<
+                    RTransaction*
+                        >(
+                        context->argument(
+                        14
+                        )
+                    );
+                    if (ap14 == NULL) {
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 14 is not of type RTransaction.",
+                               context);                    
+                    }
+                    RTransaction 
+                    a14 = 
+                    *ap14;
+                
+                    // argument isStandardType
+                    bool
+                    a15 =
+                    (bool)
+                    
+                    context->argument( 15 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->copyEntity(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+        ,
+    a5
+        ,
+    a6
+        ,
+    a7
+        ,
+    a8
+        ,
+    a9
+        ,
+    a10
+        ,
+    a11
+        ,
+    a12
+        ,
+    a13
+        ,
+    a14
+        ,
+    a15);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.copyEntity().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::copyEntity", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaClipboardOperation::copyEntityBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaClipboardOperation::copyEntityBlock", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::copyEntityBlock";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RClipboardOperation* self = 
+                        getSelf("copyEntityBlock", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    7 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntity */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(4).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(5).isString()
+        ) /* type: QString */
+     && (
+            context->argument(6).isVariant() || 
+            context->argument(6).isQObject() || 
+            context->argument(6).isNull()
+        ) /* type: RTransaction */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    REntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type REntity*.",
+                               context);                    
+                    }
+                    REntity& a0 = *ap0;
+                
+                    // argument is reference
+                    RDocument*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a1 = *ap1;
+                
+                    // argument is reference
+                    RDocument*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if( ap2 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a2 = *ap2;
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a4 =
+                    (bool)
+                    
+                    context->argument( 4 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    QString
+                    a5 =
+                    (QString)
+                    
+                    context->argument( 5 ).
+                    toString();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransaction*
+                    ap6 =
+                    qscriptvalue_cast<
+                    RTransaction*
+                        >(
+                        context->argument(
+                        6
+                        )
+                    );
+                    if (ap6 == NULL) {
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 6 is not of type RTransaction.",
+                               context);                    
+                    }
+                    RTransaction 
+                    a6 = 
+                    *ap6;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RBlock >'
+    QSharedPointer < RBlock > cppResult =
+        
+               self->copyEntityBlock(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+        ,
+    a5
+        ,
+    a6);
+        // return type: QSharedPointer < RBlock >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.copyEntityBlock().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::copyEntityBlock", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaClipboardOperation::copyBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaClipboardOperation::copyBlock", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::copyBlock";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RClipboardOperation* self = 
+                        getSelf("copyBlock", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    7 && (
+            context->argument(0).isNumber()
+        ) /* type: RBlock::Id */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(4).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(5).isString()
+        ) /* type: QString */
+     && (
+            context->argument(6).isVariant() || 
+            context->argument(6).isQObject() || 
+            context->argument(6).isNull()
+        ) /* type: RTransaction */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RBlock::Id
+                    a0 =
+                    (RBlock::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument is reference
+                    RDocument*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a1 = *ap1;
+                
+                    // argument is reference
+                    RDocument*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if( ap2 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a2 = *ap2;
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a4 =
+                    (bool)
+                    
+                    context->argument( 4 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    QString
+                    a5 =
+                    (QString)
+                    
+                    context->argument( 5 ).
+                    toString();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransaction*
+                    ap6 =
+                    qscriptvalue_cast<
+                    RTransaction*
+                        >(
+                        context->argument(
+                        6
+                        )
+                    );
+                    if (ap6 == NULL) {
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 6 is not of type RTransaction.",
+                               context);                    
+                    }
+                    RTransaction 
+                    a6 = 
+                    *ap6;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RBlock >'
+    QSharedPointer < RBlock > cppResult =
+        
+               self->copyBlock(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+        ,
+    a5
+        ,
+    a6);
+        // return type: QSharedPointer < RBlock >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.copyBlock().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::copyBlock", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaClipboardOperation::copyEntityLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaClipboardOperation::copyEntityLayer", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::copyEntityLayer";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RClipboardOperation* self = 
+                        getSelf("copyEntityLayer", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    5 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntity */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(4).isVariant() || 
+            context->argument(4).isQObject() || 
+            context->argument(4).isNull()
+        ) /* type: RTransaction */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    REntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type REntity*.",
+                               context);                    
+                    }
+                    REntity& a0 = *ap0;
+                
+                    // argument is reference
+                    RDocument*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a1 = *ap1;
+                
+                    // argument is reference
+                    RDocument*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if( ap2 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a2 = *ap2;
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransaction*
+                    ap4 =
+                    qscriptvalue_cast<
+                    RTransaction*
+                        >(
+                        context->argument(
+                        4
+                        )
+                    );
+                    if (ap4 == NULL) {
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 4 is not of type RTransaction.",
+                               context);                    
+                    }
+                    RTransaction 
+                    a4 = 
+                    *ap4;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLayer >'
+    QSharedPointer < RLayer > cppResult =
+        
+               self->copyEntityLayer(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4);
+        // return type: QSharedPointer < RLayer >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.copyEntityLayer().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::copyEntityLayer", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaClipboardOperation::copyLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaClipboardOperation::copyLayer", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::copyLayer";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RClipboardOperation* self = 
+                        getSelf("copyLayer", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    5 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayer::Id */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(4).isVariant() || 
+            context->argument(4).isQObject() || 
+            context->argument(4).isNull()
+        ) /* type: RTransaction */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayer::Id
+                    a0 =
+                    (RLayer::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument is reference
+                    RDocument*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a1 = *ap1;
+                
+                    // argument is reference
+                    RDocument*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if( ap2 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a2 = *ap2;
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransaction*
+                    ap4 =
+                    qscriptvalue_cast<
+                    RTransaction*
+                        >(
+                        context->argument(
+                        4
+                        )
+                    );
+                    if (ap4 == NULL) {
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 4 is not of type RTransaction.",
+                               context);                    
+                    }
+                    RTransaction 
+                    a4 = 
+                    *ap4;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLayer >'
+    QSharedPointer < RLayer > cppResult =
+        
+               self->copyLayer(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4);
+        // return type: QSharedPointer < RLayer >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.copyLayer().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::copyLayer", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaClipboardOperation::copyEntityLinetype
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaClipboardOperation::copyEntityLinetype", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::copyEntityLinetype";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RClipboardOperation* self = 
+                        getSelf("copyEntityLinetype", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    5 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntity */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(4).isVariant() || 
+            context->argument(4).isQObject() || 
+            context->argument(4).isNull()
+        ) /* type: RTransaction */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    REntity*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REntity*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 0 is not of type REntity*.",
+                               context);                    
+                    }
+                    REntity& a0 = *ap0;
+                
+                    // argument is reference
+                    RDocument*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a1 = *ap1;
+                
+                    // argument is reference
+                    RDocument*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if( ap2 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a2 = *ap2;
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransaction*
+                    ap4 =
+                    qscriptvalue_cast<
+                    RTransaction*
+                        >(
+                        context->argument(
+                        4
+                        )
+                    );
+                    if (ap4 == NULL) {
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 4 is not of type RTransaction.",
+                               context);                    
+                    }
+                    RTransaction 
+                    a4 = 
+                    *ap4;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLinetype >'
+    QSharedPointer < RLinetype > cppResult =
+        
+               self->copyEntityLinetype(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4);
+        // return type: QSharedPointer < RLinetype >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.copyEntityLinetype().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::copyEntityLinetype", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaClipboardOperation::copyLinetype
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaClipboardOperation::copyLinetype", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::copyLinetype";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RClipboardOperation* self = 
+                        getSelf("copyLinetype", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    5 && (
+            context->argument(0).isNumber()
+        ) /* type: RLinetype::Id */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RDocument */
+     && (
+            context->argument(3).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(4).isVariant() || 
+            context->argument(4).isQObject() || 
+            context->argument(4).isNull()
+        ) /* type: RTransaction */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLinetype::Id
+                    a0 =
+                    (RLinetype::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument is reference
+                    RDocument*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 1 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a1 = *ap1;
+                
+                    // argument is reference
+                    RDocument*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RDocument*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if( ap2 == NULL ){
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 2 is not of type RDocument*.",
+                               context);                    
+                    }
+                    RDocument& a2 = *ap2;
+                
+                    // argument isStandardType
+                    bool
+                    a3 =
+                    (bool)
+                    
+                    context->argument( 3 ).
+                    toBool();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTransaction*
+                    ap4 =
+                    qscriptvalue_cast<
+                    RTransaction*
+                        >(
+                        context->argument(
+                        4
+                        )
+                    );
+                    if (ap4 == NULL) {
+                           return REcmaHelper::throwError("RClipboardOperation: Argument 4 is not of type RTransaction.",
+                               context);                    
+                    }
+                    RTransaction 
+                    a4 = 
+                    *ap4;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLinetype >'
+    QSharedPointer < RLinetype > cppResult =
+        
+               self->copyLinetype(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4);
+        // return type: QSharedPointer < RLinetype >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.copyLinetype().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::copyLinetype", context, engine);
+            return result;
+        }
+         QScriptValue REcmaClipboardOperation::toString
     (QScriptContext *context, QScriptEngine *engine)
     
     {

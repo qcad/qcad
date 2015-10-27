@@ -4,58 +4,22 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class name="RClipboardOperation"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
-  hasStreamOperator="false" isAbstract="true" isScriptable="true">
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="ROperation" specifier="public" />
     <constructor>
       <variant />
     </constructor>
-    <method name="copy" cppName="copy" specifier="protected"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="RDocument &amp;" typeName="RDocument" name="src"
-        isConst="false" />
+    <method name="apply" cppName="apply" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RTransaction" isPureVirtual="false">
         <arg type="RDocument &amp;" typeName="RDocument"
-        name="dest" isConst="false" />
-        <arg type="RVector &amp;" typeName="RVector" name="offset"
-        isConst="true" />
-        <arg type="double" typeName="double" name="scale"
-        isConst="false" />
-        <arg type="double" typeName="double" name="rotation"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="flipHorizontal"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="flipVertical"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="toCurrentLayer"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="toCurrentBlock"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="overwriteLayers"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="overwriteBlocks"
-        isConst="false" />
-        <arg type="QString &amp;" typeName="QString"
-        name="blockName" isConst="true" />
-        <arg type="QString &amp;" typeName="QString"
-        name="layerName" isConst="true" />
-        <arg type="RTransaction &amp;" typeName="RTransaction"
-        name="transaction" isConst="false" />
-        <arg type="bool" typeName="bool" name="selectionOnly"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="clear"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="toModelSpaceBlock"
-        isConst="false" />
+        name="document" isConst="false" />
         <arg type="bool" typeName="bool" name="preview"
-        isConst="false" />
-        <arg type="RQMapQStringQString &amp;"
-        typeName="RQMapQStringQString" name="attributes"
-        hasDefault="true" default="RDEFAULT_QMAP_QSTRING_QSTRING"
-        isConst="true" />
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="copyEntity" cppName="copyEntity"
-    specifier="protected" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="REntity &amp;" typeName="REntity" name="entity"
@@ -92,8 +56,49 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="copyEntityBlock" cppName="copyEntityBlock"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RBlock &gt;"
+      isPureVirtual="false">
+        <arg type="REntity &amp;" typeName="REntity" name="entity"
+        isConst="false" />
+        <arg type="RDocument &amp;" typeName="RDocument" name="src"
+        isConst="false" />
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="dest" isConst="false" />
+        <arg type="bool" typeName="bool" name="overwriteBlocks"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="toCurrentBlock"
+        isConst="false" />
+        <arg type="QString &amp;" typeName="QString"
+        name="blockName" isConst="true" />
+        <arg type="RTransaction &amp;" typeName="RTransaction"
+        name="transaction" isConst="false" />
+      </variant>
+    </method>
+    <method name="copyBlock" cppName="copyBlock" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RBlock &gt;"
+      isPureVirtual="false">
+        <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
+        isConst="false" />
+        <arg type="RDocument &amp;" typeName="RDocument" name="src"
+        isConst="false" />
+        <arg type="RDocument &amp;" typeName="RDocument"
+        name="dest" isConst="false" />
+        <arg type="bool" typeName="bool" name="overwriteBlocks"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="toCurrentBlock"
+        isConst="false" />
+        <arg type="QString &amp;" typeName="QString"
+        name="blockName" isConst="true" />
+        <arg type="RTransaction &amp;" typeName="RTransaction"
+        name="transaction" isConst="false" />
+      </variant>
+    </method>
     <method name="copyEntityLayer" cppName="copyEntityLayer"
-    specifier="protected" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QSharedPointer &lt; RLayer &gt;"
       isPureVirtual="false">
@@ -109,9 +114,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="transaction" isConst="false" />
       </variant>
     </method>
-    <method name="copyLayer" cppName="copyLayer"
-    specifier="protected" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
+    <method name="copyLayer" cppName="copyLayer" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QSharedPointer &lt; RLayer &gt;"
       isPureVirtual="false">
         <arg type="RLayer::Id" typeName="RLayer::Id" name="layerId"
@@ -127,7 +131,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="copyEntityLinetype" cppName="copyEntityLinetype"
-    specifier="protected" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QSharedPointer &lt; RLinetype &gt;"
       isPureVirtual="false">
@@ -144,7 +148,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="copyLinetype" cppName="copyLinetype"
-    specifier="protected" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QSharedPointer &lt; RLinetype &gt;"
       isPureVirtual="false">

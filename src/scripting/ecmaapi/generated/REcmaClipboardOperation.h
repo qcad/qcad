@@ -49,7 +49,31 @@
     
 
     // public methods:
-    static  QScriptValue toString
+    static  QScriptValue
+        apply
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        copyEntity
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        copyEntityBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        copyBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        copyEntityLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        copyLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        copyEntityLinetype
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        copyLinetype
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RClipboardOperation* getSelf(const QString& fName, QScriptContext* context)
