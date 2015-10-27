@@ -73,8 +73,9 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
         queryBoxList.append(queryBox);
 
         QMap<REntity::Id, QSet<int> > ids = document->queryIntersectedShapesXY(
-                queryBox, true, true, RBlock::INVALID_ID,
-                    QList<RS::EntityType>() << RS::EntityHatch);
+                queryBox, true, true, RBlock::INVALID_ID
+                    // 20151027: allow snapping to hatch end points, etc:
+                    /*, QList<RS::EntityType>() << RS::EntityHatch*/);
         idsList.append(ids.keys().toSet());
 
         if (ids.isEmpty()) {
