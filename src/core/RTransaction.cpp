@@ -491,9 +491,14 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
     }
 
     RObject::Id oldId = RObject::INVALID_ID;
-    if (forceNew && object->getId()!=RObject::INVALID_ID) {
+    if (forceNew) {
         oldId=object->getId();
-        storage->setObjectId(*object, RObject::INVALID_ID);
+        if (object->getId()!=RObject::INVALID_ID) {
+            storage->setObjectId(*object, RObject::INVALID_ID);
+        }
+        if (object->getHandle()!=RObject::INVALID_ID) {
+            storage->setObjectHandle(*object, RObject::INVALID_HANDLE);
+        }
     }
 
     RLinkedStorage* ls = dynamic_cast<RLinkedStorage*>(storage);
