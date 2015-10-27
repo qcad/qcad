@@ -136,15 +136,6 @@ RBox RHatchData::getBoundingBox(bool ignoreEmpty) const {
     return boundaryPath.getBoundingBox();
 }
 
-QList<RVector> RHatchData::getEndPoints(const RBox& queryBox) const {
-    QList<RVector> ret;
-    QList<QSharedPointer<RShape> > shapes = getShapes(queryBox, true);
-    for (int i=0; i<shapes.size(); i++) {
-        ret.append(shapes.at(i)->getEndPoints());
-    }
-    return ret;
-}
-
 RVector RHatchData::getPointOnEntity() const {
     if (dirty) {
         getBoundaryPath();
@@ -453,6 +444,16 @@ QList<QSharedPointer<RShape> > RHatchData::getShapes(const RBox& queryBox, bool 
     QList<QSharedPointer<RShape> > ret;
 
     if (ignoreComplex) {
+        // complex shapes are ignored for example for snapping:
+        for (int i=0; i<boundary.size(); ++i) {
+            QList<QSharedPointer<RShape> > loop = boundary.at(i);
+            for (int k=0; k<loop.size(); ++k) {
+                QSharedPointer<RShape> shape = loop.at(k);
+                if (queryBox.intersects(shape->getBoundingBox())) {
+                    ret.append(shape);
+                }
+            }
+        }
         return ret;
     }
 
