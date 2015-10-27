@@ -57,12 +57,14 @@ QStringList RPluginLoader::getPluginFiles() {
         if (fileName.contains("_debug.")) {
 #ifndef QT_DEBUG
             // debug plugin but built in release mode: skip:
+            qDebug() << "Ignoring debug plugin built in release mode: " << fileName;
             continue;
 #endif
         }
         else {
 #ifdef QT_DEBUG
             // release plugin but built in debug mode: skip:
+            qDebug() << "Ignoring release plugin built in debug mode: " << fileName;
             continue;
 #endif
         }
@@ -117,6 +119,7 @@ void RPluginLoader::loadPlugin(QObject* plugin, bool init, const QString& fileNa
         }
         else {
             // ignore other Qt plugins
+            qDebug() << "Plugin does not implement RPluginInterface";
             return;
         }
     }
