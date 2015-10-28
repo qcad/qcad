@@ -18,7 +18,6 @@
  */
 
 include("../../WidgetFactory.js");
-include("scripts/Widgets/AutoZoomView/AutoZoomView.js");
 
 /**
  * \class HatchDialog
@@ -61,6 +60,10 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
     this.previewDi = new RDocumentInterface(previewDoc);
     this.previewDi.setNotifyListeners(false);
     var layout = this.dialog.findChild("PreviewLayout");
+
+    // keep this include here to make sure command line tools
+    // can use Hatch.js without requiring a GUI:
+    include("scripts/Widgets/AutoZoomView/AutoZoomView.js");
     var view = new AutoZoomView(this.dialog);
     view.objectName = "PreviewView";
     layout.addWidget(view, 0, 0);
