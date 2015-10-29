@@ -137,110 +137,10 @@ BreakOut.prototype.getOperation = function(preview) {
         return;
     }
 
-    var shape = this.entity.getClosestShape(this.pos);
-
-    if (isNull(shape)) {
-        return undefined;
-    }
-
-    // find other shapes that potentially intersect with the chosen entity:
-    var document = this.getDocument();
-    var otherShapes = [];
-    // allow for error: especialy for ellipse segments bordering to tangential lines this is needed:
-    var otherEntityIds;
-
-    if (this.extend) {
-        // TODO: if we are extending, the 'rest' has to be queried instead
-        otherEntityIds = document.queryIntersectedEntitiesXY(document.getBoundingBox().growXY(1.0e-2), true);
-    }
-    else {
-        if (isXLineShape(shape) || isRayShape(shape)) {
-            otherEntityIds = document.queryAllEntities();
-        }
-        else {
-            otherEntityIds = document.queryIntersectedEntitiesXY(shape.getBoundingBox().growXY(1.0e-2));
-        }
-    }
-
-    for (var i=0; i<otherEntityIds.length; i++) {
-        if (otherEntityIds[i]===this.entity.getId()) {
-            continue;
-        }
-
-        var otherEntity = document.queryEntityDirect(otherEntityIds[i]);
-
-        // TODO: if shape is arc, circle, ellipse or ellipse arc:
-        // entities with full bounding box outside full circle or full ellipse
-        // bounding box could be ignored.
-
-        var s = otherEntity.getShapes();
-        if (s.length!==0) {
-            otherShapes = otherShapes.concat(s);
-        }
-    }
-
-    var newSegments = ShapeAlgorithms.autoTrim(shape, otherShapes, this.pos, this.extend);
-
-    if (isNull(newSegments)) {
-        return undefined;
-    }
-
     var op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());
-    var e;
 
-    if (isNull(newSegments[0]) && isNull(newSegments[1])) {
-        if (!this.extend && this.removeSegment) {
-            // delete entity completely:
-            op.deleteObject(this.entity);
-        }
-    }
-    else {
-        // replace circle with arc:
-        if (isCircleEntity(this.entity)) {
-            op.deleteObject(this.entity);
-            if (!isNull(newSegments[2])) {
-                if (this.extend || !this.removeSegment) {
-                    e = shapeToEntity(this.entity.getDocument(), newSegments[2]);
-                    if (!isNull(e)) {
-                        e.copyAttributesFrom(this.entity.data());
-                        op.addObject(e, false);
-                    }
-                }
-            }
-        }
-
-        // change existing entity into segment if we keep the segment,
-        // otherwise delete existing entity
-        else {
-            if (this.removeSegment && !this.extend) {
-                // delete entity completely:
-                op.deleteObject(this.entity);
-            }
-            else {
-                //modifyEntity(op, this.entity.data(), newSegments[2]);
-                modifyEntity(op, this.entity.clone(), newSegments[2]);
-            }
-        }
-    }
-
-    if (!this.extend) {
-        if (!isNull(newSegments[0])) {
-            e = shapeToEntity(this.entity.getDocument(), newSegments[0]);
-            if (!isNull(e)) {
-                e.copyAttributesFrom(this.entity.data());
-                op.addObject(e, false);
-            }
-        }
-
-        if (!isNull(newSegments[1])/* && !this.removeSegment*/) {
-            e = shapeToEntity(this.entity.getDocument(), newSegments[1])
-            if (!isNull(e)) {
-                e.copyAttributesFrom(this.entity.data());
-                op.addObject(e, false);
-            }
-        }
-    }
+    BreakOut.breakOut(op, this.entity, this.pos, this.extend, this.removeSegment);
 
     return op;
 };
@@ -273,4 +173,138 @@ BreakOut.prototype.getAuxPreview = function() {
 
 BreakOut.prototype.slotRemoveSegmentChanged = function(value) {
     this.removeSegment = value;
+};
+
+
+/**
+ * \return Array of shapes to extend or trim to.
+ *
+ * \param doc RDocument
+ * \param entityId ID of entity to exclude (typically clicked entity).
+ * \param shape Shape of (clicked) entity.
+ * \param extend True if entity is being extended.
+ */
+BreakOut.getOtherShapes = function(doc, entityId, shape, extend) {
+    if (isNull(shape)) {
+        return [];
+    }
+
+    // find other shapes that potentially intersect with the chosen entity:
+    var ret = [];
+    // allow for error: especialy for ellipse segments bordering to tangential lines this is needed:
+    var otherEntityIds;
+
+    if (extend===true) {
+        // TODO: if we are extending, the 'rest' has to be queried instead
+        //otherEntityIds = document.queryIntersectedEntitiesXY(document.getBoundingBox().growXY(1.0e-2), true);
+        otherEntityIds = doc.queryAllEntities();
+    }
+    else {
+        if (isXLineShape(shape) || isRayShape(shape)) {
+            otherEntityIds = doc.queryAllEntities();
+        }
+        else {
+            otherEntityIds = doc.queryIntersectedEntitiesXY(shape.getBoundingBox().growXY(1.0e-2));
+        }
+    }
+
+    for (var i=0; i<otherEntityIds.length; i++) {
+        if (otherEntityIds[i]===entityId) {
+            continue;
+        }
+
+        var otherEntity = doc.queryEntityDirect(otherEntityIds[i]);
+
+        // TODO: if shape is arc, circle, ellipse or ellipse arc:
+        // entities with full bounding box outside full circle or full ellipse
+        // bounding box could be ignored.
+
+        var s = otherEntity.getShapes();
+        if (s.length!==0) {
+            ret = ret.concat(s);
+        }
+    }
+
+    return ret;
+};
+
+/**
+ * Breaks out the segment closest to pos from the given entity.
+ *
+ * \param op RAddObjectsOperation
+ * \param entity REntity
+ * \param pos RVector
+ * \param extend True to extend to closesd intersections instead.
+ * \param removeSegment True to remove (delete) broken out segment.
+ *
+ * \return True on success or false otherwise.
+ */
+BreakOut.breakOut = function(op, entity, pos, extend, removeSegment) {
+    var doc = entity.getDocument();
+    var shape = entity.getClosestShape(pos);
+
+    var otherShapes = BreakOut.getOtherShapes(doc, entity.getId(), shape, extend);
+
+    var newSegments = ShapeAlgorithms.autoTrim(shape, otherShapes, pos, extend);
+
+    if (isNull(newSegments)) {
+        return false;
+    }
+
+    var e;
+
+    if (isNull(newSegments[0]) && isNull(newSegments[1])) {
+        if (!extend && removeSegment) {
+            // delete entity completely:
+            op.deleteObject(entity);
+        }
+    }
+    else {
+        // replace circle with arc:
+        if (isCircleEntity(entity)) {
+            op.deleteObject(entity);
+            if (!isNull(newSegments[2])) {
+                if (extend || !removeSegment) {
+                    e = shapeToEntity(doc, newSegments[2]);
+                    if (!isNull(e)) {
+                        e.copyAttributesFrom(entity.data());
+                        op.addObject(e, false);
+                    }
+                }
+            }
+        }
+
+        // change existing entity into segment if we keep the segment,
+        // otherwise delete existing entity
+        else {
+            if (removeSegment && !extend) {
+                // delete entity completely:
+                op.deleteObject(entity);
+            }
+            else {
+                //modifyEntity(op, entity.data(), newSegments[2]);
+                modifyEntity(op, entity.clone(), newSegments[2]);
+            }
+        }
+    }
+
+    if (!extend) {
+        if (!isNull(newSegments[0])) {
+            e = shapeToEntity(entity.getDocument(), newSegments[0]);
+            if (!isNull(e)) {
+                e.copyAttributesFrom(entity.data());
+                op.addObject(e, false);
+            }
+        }
+
+        if (!isNull(newSegments[1])/* && !removeSegment*/) {
+            e = shapeToEntity(entity.getDocument(), newSegments[1])
+            if (!isNull(e)) {
+                e.copyAttributesFrom(entity.data());
+                op.addObject(e, false);
+            }
+        }
+    }
+
+    return true;
 };
