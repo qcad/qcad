@@ -212,8 +212,9 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
                     this.setState(ModifyCorner.State.ChoosingSolution);
                 }
                 else {
-                    op = di.applyOperation(this.getOperation(false));
+                    op = this.getOperation(false);
                     if (!isNull(op)) {
+                        di.applyOperation(op);
                         this.setState(ModifyCorner.State.ChoosingEntity1);
                     }
                 }
