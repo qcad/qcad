@@ -859,9 +859,14 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
 
     // find all intersection points:
     for (var i=0; i<otherShapes.length; i++) {
-        var sol = shape.getIntersectionPoints(otherShapes[i].data(), onShape, false, true);
+        var otherShape = otherShapes[i];
+        if (isFunction(otherShape.data)) {
+            otherShape = otherShape.data();
+        }
+
+        var sol = shape.getIntersectionPoints(otherShape, onShape, false, true);
         for (var k=0; k<sol.length; k++) {
-            if (!onOtherShapes || otherShapes[i].isOnShape(sol[k])) {
+            if (!onOtherShapes || otherShape.isOnShape(sol[k])) {
                 intersections.push(sol[k]);
             }
         }
