@@ -67,9 +67,6 @@
         getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getEndPoints
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getPointOnEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

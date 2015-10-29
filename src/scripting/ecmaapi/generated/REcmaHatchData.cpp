@@ -88,8 +88,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
-            REcmaHelper::registerFunction(&engine, proto, getEndPoints, "getEndPoints");
-            
             REcmaHelper::registerFunction(&engine, proto, getPointOnEntity, "getPointOnEntity");
             
             REcmaHelper::registerFunction(&engine, proto, getDistanceTo, "getDistanceTo");
@@ -681,99 +679,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaHatchData::getBoundingBox", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaHatchData::getEndPoints
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaHatchData::getEndPoints", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::getEndPoints";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RHatchData* self = 
-                        getSelf("getEndPoints", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    0
-    ){
-    // prepare arguments:
-    
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QList < RVector >'
-    QList < RVector > cppResult =
-        
-               self->getEndPoints();
-        // return type: QList < RVector >
-                // List of ...:
-                result = REcmaHelper::listToScriptValue(engine, cppResult);
-            
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RBox */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RBox*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RBox*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RHatchData: Argument 0 is not of type RBox.",
-                               context);                    
-                    }
-                    RBox 
-                    a0 = 
-                    *ap0;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QList < RVector >'
-    QList < RVector > cppResult =
-        
-               self->getEndPoints(a0);
-        // return type: QList < RVector >
-                // List of ...:
-                result = REcmaHelper::listToScriptValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.getEndPoints().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaHatchData::getEndPoints", context, engine);
             return result;
         }
          QScriptValue

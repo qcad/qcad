@@ -139,14 +139,6 @@ DrawBasedOnRectangleSize.prototype.initUiOptions = function(resume, restoreFromS
         }
     }
 
-    if (this.useDialog) {
-        var appWin = EAction.getMainWindow();
-        this.shortcutReturn = new QShortcut(new QKeySequence(Qt.Key_Return.valueOf()), refPointCombo, 0, 0, Qt.WindowShortcut);
-        this.shortcutReturn.activated.connect(this, "showDialog");
-        this.shortcutEnter = new QShortcut(new QKeySequence(Qt.Key_Enter.valueOf()), refPointCombo, 0, 0, Qt.WindowShortcut);
-        this.shortcutEnter.activated.connect(this, "showDialog");
-    }
-
     if (isNull(this.referencePointIndex) ||
         this.referencePointIndex<0 ||
         this.referencePointIndex>this.referencePoints.length-1) {

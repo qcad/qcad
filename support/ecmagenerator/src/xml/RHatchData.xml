@@ -49,15 +49,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
-    <method name="getEndPoints" cppName="getEndPoints"
-    specifier="public" isStatic="false" isVirtual="true"
-    isScriptOverwritable="true">
-      <variant returnType="QList &lt; RVector &gt;"
-      isPureVirtual="false">
-        <arg type="RBox &amp;" typeName="RBox" name="queryBox"
-        hasDefault="true" default="RDEFAULT_RBOX" isConst="true" />
-      </variant>
-    </method>
     <method name="getPointOnEntity" cppName="getPointOnEntity"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

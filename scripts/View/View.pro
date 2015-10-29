@@ -11,6 +11,7 @@ SUBDIRS = \
     OptionsToolBarFocus \
     PanZoom \
     PreviousView \
+    ShowToolDialog \
     ToggleGrid \
     ViewToolBars \
     WindowZoom \

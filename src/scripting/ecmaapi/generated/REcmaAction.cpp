@@ -119,6 +119,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, finishEvent, "finishEvent");
             
+            REcmaHelper::registerFunction(&engine, proto, showDialog, "showDialog");
+            
             REcmaHelper::registerFunction(&engine, proto, suspendEvent, "suspendEvent");
             
             REcmaHelper::registerFunction(&engine, proto, resumeEvent, "resumeEvent");
@@ -1370,6 +1372,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaAction::finishEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaAction::showDialog
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaAction::showDialog", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaAction::showDialog";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RAction* self = 
+                        getSelf("showDialog", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->showDialog();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAction.showDialog().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaAction::showDialog", context, engine);
             return result;
         }
          QScriptValue

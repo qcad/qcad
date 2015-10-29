@@ -57,6 +57,9 @@
         finishEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        showDialog
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         suspendEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -40,7 +40,6 @@
  * 
  * \ingroup operations
  * \scriptable
- * \ a b s t r a c t
  */</comment>
 <class>class <macro><name>QCADOPERATIONS_EXPORT</name></macro> <name>RClipboardOperation</name> <super>: <specifier>public</specifier> <name>ROperation</name></super> <block>{<private type="default">
 </private><public>public:

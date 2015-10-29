@@ -44,6 +44,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="showDialog" cppName="showDialog"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="suspendEvent" cppName="suspendEvent"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
