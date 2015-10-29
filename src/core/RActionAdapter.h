@@ -61,6 +61,7 @@ public:
     virtual void beginEvent() {}
     virtual void setGraphicsView(RGraphicsView* /*view*/) {}
     virtual void finishEvent() {}
+    virtual void showDialog() {}
     virtual void suspendEvent() {}
     virtual void resumeEvent() {}
     virtual void escapeEvent() {}
