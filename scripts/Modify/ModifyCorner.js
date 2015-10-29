@@ -161,9 +161,7 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
 
         var shape = entity.getClosestSimpleShape(pos);
 
-        if (isLineBasedShape(shape) ||
-            isArcShape(shape) ||
-            isCircleShape(shape)) {
+        if (this.isShapeSupported(shape)) {
 
             //qDebug("entity1:", entity);
             //qDebug("entity1:", entity.getId());
@@ -180,7 +178,7 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
         }
         else {
             if (!preview) {
-                EAction.warnNotLineArcCircle();
+                this.warnUnsupportedShape();
             }
         }
         break;
@@ -197,9 +195,7 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
 
         var shape = entity.getClosestSimpleShape(pos);
 
-        if (isLineBasedShape(shape) ||
-            isArcShape(shape) ||
-            isCircleShape(shape)) {
+        if (this.isShapeSupported(shape)) {
 
             this.entity2 = entity;
             this.shape2 = shape;
@@ -249,6 +245,14 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
         }
         break;
     }
+};
+
+ModifyCorner.prototype.isShapeSupported = function(shape) {
+    return isLineBasedShape(shape) || isArcShape(shape) || isCircleShape(shape);
+};
+
+ModifyCorner.prototype.warnUnsupportedShape = function() {
+    EAction.warnNotLineArcCircle();
 };
 
 ModifyCorner.prototype.pickCoordinate = function(event, preview) {
