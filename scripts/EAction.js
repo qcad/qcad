@@ -18,7 +18,7 @@
  */
 
 include("WidgetFactory.js");
-//include("AddOn.js");
+include("scripts/Widgets/OptionsToolBar/OptionsToolBar.js");
 
 if (RSettings.isGuiEnabled()) {
     if (new QFileInfo("scripts/Widgets/CadToolBar/CadToolBar.js").exists()) {
@@ -50,6 +50,10 @@ function EAction(guiAction) {
     this.additionalOptionsToolBars = undefined;
     this.optionsToolBarEnabled = true;
     this.relativeZeroPos = undefined;
+
+    // set to true to prefer dialog over options tool bar:
+    this.useDialog = false;
+    this.dialogUiFile = undefined;
 }
 
 EAction.prototype = new RActionAdapter();
@@ -495,6 +499,114 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
 
     this.optionWidgetActions = undefined;
     this.additionalOptionsToolBars = undefined;
+};
+
+/**
+ * Show dialog to enter some or all of the options.
+ * The default implementation creates a dialog based on this.dialogUiFile.
+ * Widgets in the options tool bar which have the property "MoveToDialog" or
+ * "HideInDialogMode" set are hidden in the options tool bar.
+ */
+EAction.prototype.showDialog = function() {
+    var i;
+    var children;
+
+    var di = this.getDocumentInterface();
+    if (!isNull(di)) {
+        di.clearPreview();
+        di.repaintViews();
+    }
+
+    // collect widgets which are tagged to be shown in the dialog:
+    var c;
+    var widgets = [];
+    var noSyncWidgets = [];
+    var optionsToolBar = EAction.getOptionsToolBar();
+    children = optionsToolBar.children();
+    for (i = 0; i < children.length; ++i) {
+        c = children[i];
+        if (c["HideInDialogMode"]===true) {
+            c.destroy();
+        }
+        else if (c["MoveToDialog"]===true) {
+            widgets.push(c);
+        }
+        else {
+            if (isQWidget(c)) {
+                noSyncWidgets.push(c);
+            }
+        }
+    }
+
+    if (widgets.length===0) {
+        // no widgets to show in dialog, return to normal operation without dialog:
+        return true;
+    }
+
+    // show dialog and move tool bar widgets to its layout:
+    var formLayout = undefined;
+    if (isNull(this.dialogUiFile)) {
+        return;
+    }
+
+    this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile, EAction.getMainWindow());
+    this.initUiOptions(false, this.dialog);
+    WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
+    this.dialog.windowTitle = this.getToolTitle();
+    this.dialog.windowIcon = new QIcon();
+
+    for (i = 0; i < widgets.length; i++) {
+        var a = optionsToolBar.findChild(widgets[i].objectName + "Action");
+        if (!isNull(a)) {
+            a.visible = false;
+        }
+    }
+
+    // remove double separators:
+    OptionsToolBar.normalizeSeparators(this);
+
+    // give focus to control with custom property 'DefaultFocus':
+    children = this.dialog.children();
+    for (i=0; i<children.length; i++) {
+        if (children[i].property("DefaultFocus")===true) {
+            children[i].setFocus();
+            if (isFunction(children[i].selectAll)) {
+                // select all text in line edits:
+                children[i].selectAll();
+            }
+            break;
+        }
+    }
+
+    var ret = this.dialog.exec();
+
+    WidgetFactory.saveState(this.dialog, "Shape");
+    WidgetFactory.saveState(this.dialog, this.settingsGroup);
+
+    // sync invisible part of options tool bar with dialog:
+    for (i=0; i<noSyncWidgets.length; i++) {
+        noSyncWidgets[i].setProperty("Loaded", true);
+    }
+    WidgetFactory.restoreState(optionsToolBar, this.settingsGroup, this);
+    for (i=0; i<noSyncWidgets.length; i++) {
+        noSyncWidgets[i].setProperty("Loaded", false);
+    }
+
+    this.dialog.destroy();
+    this.dialog = undefined;
+
+//    var view = EAction.getGraphicsView();
+//    if (!isNull(view)) {
+//        // view loses focus because of dialog:
+//        view.giveFocus();
+//    }
+
+    EAction.activateMainWindow();
+
+    this.simulateMouseMoveEvent();
+    //this.updatePreview(true);
+
+    return ret;
 };
 
 /**
