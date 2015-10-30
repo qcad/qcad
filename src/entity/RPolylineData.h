@@ -165,6 +165,10 @@ public:
         return RPolyline::getExploded();
     }
 
+    RPainterPath toPainterPath() const {
+        return RPolyline::toPainterPath();
+    }
+
     void simplify(double angleTolerance) {
         RPolyline::simplify(angleTolerance);
     }

@@ -219,6 +219,10 @@ public:
         return countSegments();
     }
 
+    RPainterPath toPainterPath() const {
+        return data.toPainterPath();
+    }
+
     void simplify(double angleTolerance) {
         data.simplify(angleTolerance);
     }
