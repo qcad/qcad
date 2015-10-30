@@ -166,6 +166,10 @@
         <return>return <expr><call><name><name>RPolyline</name>::<name>getExploded</name></name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>RPainterPath</name></type> <name>toPainterPath</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name><name>RPolyline</name>::<name>toPainterPath</name></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>simplify</name><parameter_list>(<param><decl><type><name>double</name></type> <name>angleTolerance</name></decl></param>)</parameter_list> <block>{
         <constructor_decl><name>RPolyline::simplify</name><parameter_list>(<param><decl><type><name>angleTolerance</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>

@@ -132,6 +132,9 @@
         getExploded
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        toPainterPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         simplify
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

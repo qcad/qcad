@@ -220,6 +220,10 @@
         <return>return <expr><call><name>countSegments</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>RPainterPath</name></type> <name>toPainterPath</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>toPainterPath</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>simplify</name><parameter_list>(<param><decl><type><name>double</name></type> <name>angleTolerance</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>data</name>.<call><name>simplify</name><argument_list>(<argument><expr><name>angleTolerance</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>

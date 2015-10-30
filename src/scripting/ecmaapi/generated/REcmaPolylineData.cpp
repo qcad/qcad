@@ -127,6 +127,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
             
+            REcmaHelper::registerFunction(&engine, proto, toPainterPath, "toPainterPath");
+            
             REcmaHelper::registerFunction(&engine, proto, simplify, "simplify");
             
             REcmaHelper::registerFunction(&engine, proto, getShapes, "getShapes");
@@ -2621,6 +2623,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineData::getExploded", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineData::toPainterPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineData::toPainterPath", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineData::toPainterPath";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineData* self = 
+                        getSelf("toPainterPath", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPainterPath'
+    RPainterPath cppResult =
+        
+               self->toPainterPath();
+        // return type: RPainterPath
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineData.toPainterPath().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineData::toPainterPath", context, engine);
             return result;
         }
          QScriptValue
