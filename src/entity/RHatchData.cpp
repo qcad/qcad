@@ -476,6 +476,11 @@ void RHatchData::newLoop() {
     update();
 }
 
+void RHatchData::cancelLoop() {
+    boundary.removeLast();
+    update();
+}
+
 void RHatchData::addBoundary(QSharedPointer<RShape> shape) {
     if (boundary.size()==0) {
         qWarning() << "RHatchData::addBoundary: no loops found";

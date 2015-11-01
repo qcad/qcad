@@ -136,6 +136,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, newLoop, "newLoop");
             
+            REcmaHelper::registerFunction(&engine, proto, cancelLoop, "cancelLoop");
+            
             REcmaHelper::registerFunction(&engine, proto, addBoundary, "addBoundary");
             
             REcmaHelper::registerFunction(&engine, proto, getBoundaryPath, "getBoundaryPath");
@@ -2677,6 +2679,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaHatchData::newLoop", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::cancelLoop
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::cancelLoop", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::cancelLoop";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("cancelLoop", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->cancelLoop();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.cancelLoop().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::cancelLoop", context, engine);
             return result;
         }
          QScriptValue

@@ -139,6 +139,9 @@
         newLoop
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        cancelLoop
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addBoundary
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
