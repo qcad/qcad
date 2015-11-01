@@ -176,7 +176,11 @@ Hatch.verifyBoundaryEntity = function(doc, entity) {
 /**
  * \return RHatchData object created from the given boundary entities entityIds or undefined.
  */
-Hatch.createHatchData = function(doc, entityIds) {
+Hatch.createHatchData = function(doc, entityIds, ignoreOpenLoops) {
+    if (isNull(ignoreOpenLoops)) {
+        ignoreOpenLoops = false;
+    }
+
     var hatchData = new RHatchData();
     hatchData.setDocument(doc);
 
@@ -190,7 +194,12 @@ Hatch.createHatchData = function(doc, entityIds) {
         }
         var entity = doc.queryEntityDirect(entityId);
         if (!Hatch.traverse(hatchData, doc, entity, entityIds)) {
-            return undefined;
+            if (ignoreOpenLoops) {
+                continue;
+            }
+            else {
+                return undefined;
+            }
         }
     }
 
@@ -199,6 +208,7 @@ Hatch.createHatchData = function(doc, entityIds) {
 
 /**
  * Traverses the given candidates recursively for connected entities.
+ * Resulting loops are appened to the given hatch data.
  */
 Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
     var i;
@@ -243,7 +253,10 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
             if (!bEntity.isVisible()) {
                 continue;
             }
-            Hatch.traverse(hatchData, blockReferenceData, bEntity, ids);
+            if (!Hatch.traverse(hatchData, blockReferenceData, bEntity, ids)) {
+                ret = false;
+                break;
+            }
         }
         return ret;
     }
@@ -311,6 +324,7 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
 
     if (!Hatch.connectionPoint.equalsFuzzy(loopStartPoint, Hatch.tolerance)) {
         Hatch.errorPoint = Hatch.connectionPoint;
+        hatchData.cancelLoop();
         //qDebug("start does not connect to end by: ", Hatch.connectionPoint.getDistanceTo(loopStartPoint));
         return false;
     }
