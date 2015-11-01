@@ -74,7 +74,7 @@ SelectContour.prototype.slotToleranceChanged = function(value) {
 
 /**
  * \return Array of entity IDs of entities which are directly or indirectly
- * connected to the given entity.
+ * connected to the given entity, including the given entityId.
  */
 SelectContour.getConnectedEntities = function(doc, entityId, tolerance, recursion) {
     if (isNull(recursion)) {
