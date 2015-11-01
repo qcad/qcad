@@ -444,6 +444,10 @@ function isPolylineEntity(obj) {
     return isOfType(obj, RPolylineEntity) || isOfType(obj, RPolylineEntityPointer);
 }
 
+function isClosedPolylineEntity(obj) {
+    return isPolylineEntity(obj) && obj.isGeometricallyClosed();
+}
+
 /**
  * Checks if the given object is a solid entity.
  *
