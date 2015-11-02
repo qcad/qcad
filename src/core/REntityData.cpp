@@ -16,11 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include "RBlockReferenceEntity.h"
 #include "RDocument.h"
 #include "REntity.h"
 #include "REntityData.h"
 #include "RExplodable.h"
-#include "RBlockReferenceEntity.h"
+#include "RMouseEvent.h"
 
 REntityData::REntityData(RDocument* document) :
     document(document),
@@ -440,10 +441,18 @@ QList<RVector> REntityData::getIntersectionPoints(
 
     QList<RVector> ret;
     QList<QSharedPointer<RShape> > shapes1 = getShapes(queryBox, ignoreComplex);
+
+    if (RMouseEvent::hasMouseMoved()) {
+        return QList<RVector>();
+    }
+
     QList<QSharedPointer<RShape> > shapes2 = other.getShapes(queryBox, ignoreComplex);
 
     for (int i=0; i<shapes1.size(); i++) {
         for (int k=0; k<shapes2.size(); k++) {
+            if (RMouseEvent::hasMouseMoved()) {
+                return QList<RVector>();
+            }
             ret.append(
                 shapes1.at(i)->getIntersectionPoints(*shapes2.at(k), limited, same)
             );
