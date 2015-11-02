@@ -837,7 +837,7 @@ void RDocumentInterface::previewClickEvent(RAction& action, RMouseEvent& event) 
                 ce.setModelPosition(event.getModelPosition());
             }
             else {
-                ce.setModelPosition(snap(event, false));
+                ce.setModelPosition(snap(event, true));
             }
             if (ce.isValid()) {
                 cursorPosition = ce.getModelPosition();
@@ -1217,7 +1217,9 @@ RVector RDocumentInterface::snap(RMouseEvent& event, bool preview) {
             RMouseEvent::setOriginalMousePos(event.globalPos());
         }
         RVector ret = currentSnap->snap(event);
-        RMouseEvent::resetOriginalMousePos();
+        if (preview) {
+            RMouseEvent::resetOriginalMousePos();
+        }
         if (currentSnapRestriction!=NULL) {
             ret = currentSnapRestriction->restrictSnap(ret, getRelativeZero());
         }
