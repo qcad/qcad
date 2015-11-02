@@ -166,19 +166,6 @@ DrawBasedOnRectangleSize.prototype.pickCoordinate = function(event, preview) {
     }
 };
 
-//DrawBasedOnRectangleSize.prototype.keyPressEvent = function(event) {
-//    qDebug("DrawBasedOnRectangleSize.prototype.keyPressEvent: ", event.key());
-//    if (this.useDialog) {
-//        // enter pressed:
-//        if (event.key() === Qt.Key_Enter.valueOf() || event.key() === Qt.Key_Return.valueOf()) {
-//            // show dialog to change size and angle:
-//            this.showDialog();
-//        }
-//    }
-
-//    EAction.prototype.keyPressEvent.call(this, event);
-//};
-
 DrawBasedOnRectangleSize.prototype.updatePreview = function(clear) {
     if (!isNull(this.dialog)) {
         return;
