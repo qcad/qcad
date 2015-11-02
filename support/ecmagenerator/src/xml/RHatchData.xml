@@ -226,6 +226,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="cancelLoop" cppName="cancelLoop"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="addBoundary" cppName="addBoundary"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
