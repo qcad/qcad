@@ -152,6 +152,7 @@ signals:
     void resumedTab(RMdiChildQt* mdiChild);
 
     void closeRequested();
+    void enterPressed();
 
 protected:
     virtual void closeEvent(QCloseEvent* e);

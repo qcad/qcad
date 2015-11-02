@@ -153,6 +153,7 @@
     <function_decl><type><name>void</name></type> <name>resumedTab</name><parameter_list>(<param><decl><type><name>RMdiChildQt</name>*</type> <name>mdiChild</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>closeRequested</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>enterPressed</name><parameter_list>()</parameter_list>;</function_decl>
 
 </public><protected>protected:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>closeEvent</name><parameter_list>(<param><decl><type><name>QCloseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>

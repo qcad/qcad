@@ -21,12 +21,14 @@
 #include <QMdiArea>
 #include <QStatusBar>
 #include <QTabBar>
+#include <QToolBar>
 
 #include <RSingleApplication.h>
 
 #include "RDebug.h"
 #include "RDocumentInterface.h"
 #include "RGuiAction.h"
+#include "RGraphicsViewQt.h"
 #include "RMainWindowQt.h"
 #include "RMdiArea.h"
 #include "RMdiChildQt.h"
@@ -502,6 +504,24 @@ QWidget* RMainWindowQt::getChildWidget(const QString& name) {
 bool RMainWindowQt::event(QEvent* e) {
     if (e==NULL) {
         return false;
+    }
+
+    if (e->type()==QEvent::KeyPress) {
+        QKeyEvent* ke = dynamic_cast<QKeyEvent*>(e);
+        if (ke!=NULL) {
+
+            QWidget* w = QApplication::focusWidget();
+            if (w!=NULL) {
+                if (dynamic_cast<RGraphicsViewQt*>(w)!=NULL ||
+                    dynamic_cast<RMainWindowQt*>(w)!=NULL) {
+                    emit enterPressed();
+                }
+                QWidget* parent = w->parentWidget();
+                if (dynamic_cast<QToolBar*>(parent)!=NULL) {
+                    emit enterPressed();
+                }
+            }
+        }
     }
 
     RSelectionChangedEvent* sce = dynamic_cast<RSelectionChangedEvent*>(e);

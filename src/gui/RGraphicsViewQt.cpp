@@ -287,7 +287,7 @@ void RGraphicsViewQt::keyPressEvent(QKeyEvent* event) {
         return;
     }
     RGraphicsView::handleKeyPressEvent(*event);
-    event->accept();
+    //event->accept();
 }
 
 void RGraphicsViewQt::keyReleaseEvent(QKeyEvent* event) {
@@ -295,7 +295,7 @@ void RGraphicsViewQt::keyReleaseEvent(QKeyEvent* event) {
         return;
     }
     RGraphicsView::handleKeyReleaseEvent(*event);
-    event->accept();
+    //event->accept();
 }
 
 void RGraphicsViewQt::dragEnterEvent(QDragEnterEvent* event) {

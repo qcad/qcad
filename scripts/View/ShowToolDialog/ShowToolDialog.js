@@ -28,6 +28,8 @@ ShowToolDialog.prototype = new EAction();
 ShowToolDialog.init = function(basePath) {
     var appWin = EAction.getMainWindow();
 
+    appWin.enterPressed.connect(ShowToolDialog, "showDialog");
+
 //    // TODO: breaks enter in command line
 //    //var context = Qt.WidgetShortcut;
 //    var context = Qt.WindowShortcut;
