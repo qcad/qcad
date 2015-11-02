@@ -287,7 +287,10 @@ void RGraphicsViewQt::keyPressEvent(QKeyEvent* event) {
         return;
     }
     RGraphicsView::handleKeyPressEvent(*event);
-    //event->accept();
+
+    // we're NOT accepting the event here to make sure the
+    // event handler of the main window has a chance to
+    // handle key press events (e.g. enter to show tool dialog)
 }
 
 void RGraphicsViewQt::keyReleaseEvent(QKeyEvent* event) {
@@ -295,7 +298,10 @@ void RGraphicsViewQt::keyReleaseEvent(QKeyEvent* event) {
         return;
     }
     RGraphicsView::handleKeyReleaseEvent(*event);
-    //event->accept();
+
+    // we're NOT accepting the event here to make sure the
+    // event handler of the main window has a chance to
+    // handle key press events (e.g. enter to show tool dialog)
 }
 
 void RGraphicsViewQt::dragEnterEvent(QDragEnterEvent* event) {
