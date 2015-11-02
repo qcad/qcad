@@ -19,6 +19,7 @@
 #include "RBlockReferenceData.h"
 #include "RBlockReferenceEntity.h"
 #include "RDocument.h"
+#include "RMouseEvent.h"
 
 RBlockReferenceData::RBlockReferenceData() :
     referencedBlockId(RBlock::INVALID_ID),
@@ -414,11 +415,14 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
     for (int col=0; col<columnCount; col++) {
         for (int row=0; row<rowCount; row++) {
             for (it = ids.begin(); it != ids.end(); it++) {
+                if (RMouseEvent::hasMouseMoved()) {
+                    return QList<QSharedPointer<RShape> >();
+                }
+
                 QSharedPointer<REntity> entity = queryEntity(*it);
                 if (entity.isNull()) {
                     continue;
                 }
-
 
                 RS::EntityType t = entity->getType();
 
