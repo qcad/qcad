@@ -508,6 +508,10 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
  * "HideInDialogMode" set are hidden in the options tool bar.
  */
 EAction.prototype.showDialog = function() {
+    if (!this.useDialog) {
+        return;
+    }
+
     var i;
     var children;
 
