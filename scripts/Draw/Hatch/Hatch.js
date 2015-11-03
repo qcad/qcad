@@ -261,10 +261,17 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
         return ret;
     }
 
-    // handle 'loose' boundary elements:
+    var shape = entity.getData().castToShape().clone();
+    if (isFunction(shape.getLength)) {
+        if (shape.getLength()<RS.PointTolerance) {
+            // ignore zero length entity:
+            return false;
+        }
+    }
+
+    // connect 'loose' boundary elements into loops:
     hatchData.newLoop();
     Hatch.traversed[entity.getId()] = true;
-    var shape = entity.getData().castToShape().clone();
     hatchData.addBoundary(shape);
     var currentShape = shape;
     var loopStartPoint = shape.getStartPoint();
@@ -296,6 +303,14 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
 
             if (Hatch.isClosedCurve(entity) || Hatch.isClosedPolyline(entity)) {
                 continue;
+            }
+
+            if (isFunction(entity.getLength)) {
+                // ignore zero length entities:
+                if (entity.getLength()<RS.PointTolerance) {
+                    Hatch.traversed[entityId] = true;
+                    continue;
+                }
             }
 
             var sp = entity.getStartPoint();
