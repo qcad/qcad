@@ -351,18 +351,18 @@ QSharedPointer<RShape> RLine::getTransformed(const QTransform& transform) const 
 }
 
 RS::Ending RLine::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
-    double angEl = getAngle();
-    double angM = trimPoint.getAngleTo(coord);
-    double angDif = angEl-angM;
+    double lineAngle = getAngle();
+    double angleToCoord = trimPoint.getAngleTo(coord);
+    double angleDifference = lineAngle-angleToCoord;
 
-    if (angDif<0.0) {
-        angDif*=-1.0;
+    if (angleDifference<0.0) {
+        angleDifference*=-1.0;
     }
-    if (angDif>M_PI) {
-        angDif=2*M_PI-angDif;
+    if (angleDifference>M_PI) {
+        angleDifference=2*M_PI-angleDifference;
     }
 
-    if (angDif<M_PI/2.0) {
+    if (angleDifference<M_PI/2.0) {
         return RS::EndingStart;
     } else {
         return RS::EndingEnd;
