@@ -549,6 +549,8 @@ EAction.prototype.showDialog = function() {
         return;
     }
 
+    WidgetFactory.saveState(optionsToolBar, this.settingsGroup);
+
     this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile, EAction.getMainWindow());
     this.initUiOptions(false, this.dialog);
     WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
@@ -580,7 +582,8 @@ EAction.prototype.showDialog = function() {
 
     var ret = this.dialog.exec();
 
-    WidgetFactory.saveState(this.dialog, "Shape");
+    // TODO:
+    //WidgetFactory.saveState(this.dialog, "Shape");
     WidgetFactory.saveState(this.dialog, this.settingsGroup);
 
     // sync invisible part of options tool bar with dialog:
