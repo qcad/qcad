@@ -753,7 +753,7 @@ RPolyline RArc::approximateWithLinesTan(double segmentLength) {
     // real angle step:
     aStep = fabs(getSweep()) / steps;
     if (fabs(cos(aStep/2))<RS::PointTolerance) {
-        qWarning() << "RArc::approximateWithLinesTan: segmentLenght too coarse to yield meaningful result";
+        qWarning() << "RArc::approximateWithLinesTan: segmentLength too coarse to yield meaningful result";
         polyline.appendVertex(getStartPoint());
         polyline.appendVertex(getEndPoint());
         return polyline;
