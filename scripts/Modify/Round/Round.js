@@ -75,8 +75,8 @@ Round.prototype.getOperation = function(preview) {
  */
 Round.round = function(op, entity1, pos1, entity2, pos2, trim, radius, preview) {
     if (!isEntity(entity1) || !isValidVector(pos1) ||
-            !isEntity(entity2) || !isValidVector(pos2) ||
-            !isBoolean(trim)) {
+        !isEntity(entity2) || !isValidVector(pos2) ||
+        !isBoolean(trim)) {
         return false;
     }
 
