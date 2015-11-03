@@ -509,16 +509,17 @@ bool RMainWindowQt::event(QEvent* e) {
     if (e->type()==QEvent::KeyPress) {
         QKeyEvent* ke = dynamic_cast<QKeyEvent*>(e);
         if (ke!=NULL) {
-
-            QWidget* w = QApplication::focusWidget();
-            if (w!=NULL) {
-                if (dynamic_cast<RGraphicsViewQt*>(w)!=NULL ||
-                    dynamic_cast<RMainWindowQt*>(w)!=NULL) {
-                    emit enterPressed();
-                }
-                QWidget* parent = w->parentWidget();
-                if (dynamic_cast<QToolBar*>(parent)!=NULL) {
-                    emit enterPressed();
+            if (ke->key()==Qt::Key_Enter || ke->key()==Qt::Key_Return) {
+                QWidget* w = QApplication::focusWidget();
+                if (w!=NULL) {
+                    if (dynamic_cast<RGraphicsViewQt*>(w)!=NULL ||
+                        dynamic_cast<RMainWindowQt*>(w)!=NULL) {
+                        emit enterPressed();
+                    }
+                    QWidget* parent = w->parentWidget();
+                    if (dynamic_cast<QToolBar*>(parent)!=NULL) {
+                        emit enterPressed();
+                    }
                 }
             }
         }
