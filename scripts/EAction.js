@@ -393,6 +393,9 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
             WidgetFactory.restoreState(optionsToolBar, this.settingsGroup, this);
         }
     }
+
+    // hide options tool bar widgets which are shown in a dialog instead:
+    this.hideOptionsToolBarWidgets();
 };
 
 /**
@@ -502,31 +505,26 @@ EAction.prototype.hideUiOptions = function(saveToSettings) {
 };
 
 /**
- * Show dialog to enter some or all of the options.
- * The default implementation creates a dialog based on this.dialogUiFile.
- * Widgets in the options tool bar which have the property "MoveToDialog" or
- * "HideInDialogMode" set are hidden in the options tool bar.
+ * Hides all widgets in the options tool bar which are shown in the tool dialog instead.
  */
-EAction.prototype.showDialog = function() {
+EAction.prototype.hideOptionsToolBarWidgets = function(widgets, noSyncWidgets) {
     if (!this.useDialog) {
         return;
     }
 
-    var i;
-    var children;
-
-    var di = this.getDocumentInterface();
-    if (!isNull(di)) {
-        di.clearPreview();
-        di.repaintViews();
+    if (isNull(widgets)) {
+        widgets = [];
+    }
+    if (isNull(noSyncWidgets)) {
+        noSyncWidgets = [];
     }
 
     // collect widgets which are tagged to be shown in the dialog:
-    var c;
-    var widgets = [];
-    var noSyncWidgets = [];
+    var i, c;
+    //var widgets = [];
+    //var noSyncWidgets = [];
     var optionsToolBar = EAction.getOptionsToolBar();
-    children = optionsToolBar.children();
+    var children = optionsToolBar.children();
     for (i = 0; i < children.length; ++i) {
         c = children[i];
         if (c["HideInDialogMode"]===true) {
@@ -544,22 +542,10 @@ EAction.prototype.showDialog = function() {
 
     if (widgets.length===0) {
         // no widgets to show in dialog, return to normal operation without dialog:
-        return true;
-    }
-
-    // show dialog and move tool bar widgets to its layout:
-    var formLayout = undefined;
-    if (isNull(this.dialogUiFile)) {
         return;
     }
 
     WidgetFactory.saveState(optionsToolBar, this.settingsGroup);
-
-    this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile, EAction.getMainWindow());
-    this.initUiOptions(false, this.dialog);
-    WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
-    this.dialog.windowTitle = this.getToolTitle();
-    this.dialog.windowIcon = new QIcon();
 
     for (i = 0; i < widgets.length; i++) {
         var a = optionsToolBar.findChild(widgets[i].objectName + "Action");
@@ -570,9 +556,50 @@ EAction.prototype.showDialog = function() {
 
     // remove double separators:
     OptionsToolBar.normalizeSeparators(this);
+};
+
+/**
+ * Show dialog to enter some or all of the options.
+ * The default implementation creates a dialog based on this.dialogUiFile.
+ * Widgets in the options tool bar which have the property "MoveToDialog" or
+ * "HideInDialogMode" set are hidden in the options tool bar.
+ */
+EAction.prototype.showDialog = function() {
+    if (!this.useDialog) {
+        return;
+    }
+
+    var di = this.getDocumentInterface();
+    if (!isNull(di)) {
+        di.clearPreview();
+        di.repaintViews();
+    }
+
+    var widgets = [];
+    var noSyncWidgets = [];
+
+    this.hideOptionsToolBarWidgets(widgets, noSyncWidgets);
+
+    if (widgets.length===0) {
+        // no widgets to show in dialog, return to normal operation without dialog:
+        return;
+    }
+
+    // show dialog and move tool bar widgets to its layout:
+    var formLayout = undefined;
+    if (isNull(this.dialogUiFile)) {
+        return;
+    }
+
+    this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile, EAction.getMainWindow());
+    this.initUiOptions(false, this.dialog);
+    WidgetFactory.restoreState(this.dialog, this.settingsGroup, this);
+    this.dialog.windowTitle = this.getToolTitle();
+    this.dialog.windowIcon = new QIcon();
 
     // give focus to control with custom property 'DefaultFocus':
-    children = this.dialog.children();
+    var children = this.dialog.children();
+    var i;
     for (i=0; i<children.length; i++) {
         if (children[i].property("DefaultFocus")===true) {
             children[i].setFocus();
@@ -594,7 +621,10 @@ EAction.prototype.showDialog = function() {
     for (i=0; i<noSyncWidgets.length; i++) {
         noSyncWidgets[i].setProperty("Loaded", true);
     }
+
+    var optionsToolBar = EAction.getOptionsToolBar();
     WidgetFactory.restoreState(optionsToolBar, this.settingsGroup, this);
+
     for (i=0; i<noSyncWidgets.length; i++) {
         noSyncWidgets[i].setProperty("Loaded", false);
     }
