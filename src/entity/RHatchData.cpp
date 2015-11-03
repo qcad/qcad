@@ -487,6 +487,11 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape) {
         return;
     }
 
+    if (shape->getLength()<RS::PointTolerance) {
+        // never append a zero length entity to a hatch boundary:
+        return;
+    }
+
     // if shape is a polyline, add segments as boundaries
     QSharedPointer<RPolyline> polyline = shape.dynamicCast<RPolyline>();
     if (!polyline.isNull()) {
