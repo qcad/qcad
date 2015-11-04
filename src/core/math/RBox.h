@@ -49,6 +49,7 @@ public:
     RBox(const RVector& center, double width, double height);
 
     bool isValid() const;
+    bool isSane() const;
 
     double getWidth() const;
     double getHeight() const;

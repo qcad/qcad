@@ -68,6 +68,10 @@ bool RBox::isValid() const {
     return (c1.isValid() && c2.isValid());
 }
 
+bool RBox::isSane() const {
+    return (c1.isSane() && c2.isSane());
+}
+
 RBox& RBox::grow(double offset) {
     RVector min = getMinimum();
     RVector max = getMaximum();
