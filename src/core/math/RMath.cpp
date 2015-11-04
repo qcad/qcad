@@ -126,6 +126,10 @@ bool RMath::isInf(double v) {
 #endif
 }
 
+bool RMath::isSane(double v) {
+    return !isNaN(v) && !isInf(v) && v>-1e12 && v<1e12;
+}
+
 /**
  * Evaluates the given mathematical expression and returns the result.
  * Angles may be expressed in degrees (default), rad (#r), gon (#g)
