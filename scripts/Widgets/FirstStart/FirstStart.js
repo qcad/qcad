@@ -75,7 +75,7 @@ FirstStart.prototype.showDialog = function() {
     this.translators = [];
     this.changeLanguage(code);
 
-    if (dialog.exec()) {
+    if (QCoreApplication.arguments().contains("-no-initial-dialog") || dialog.exec()) {
         // save settings
 
         // language:
