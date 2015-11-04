@@ -441,6 +441,13 @@ Trim.trimShapes = function(limitingShape, limitingClickPos, trimShape, trimClick
         break;
     }
 
+    if (isXLineShape(trimmedShape1)) {
+        trimmedShape1 = xLineToRay(trimmedShape1);
+    }
+    else if (isRayShape(trimShape) && ending1===RS.EndingEnd) {
+        trimmedShape1 = rayToLine(trimmedShape1);
+    }
+
     // trim limiting shape if possible (not possible for splines):
     if (trimBoth && isFunction(trimmedShape2.getTrimEnd)) {
         ending2 = trimmedShape2.getTrimEnd(is, limitingClickPos);
@@ -460,6 +467,13 @@ Trim.trimShapes = function(limitingShape, limitingClickPos, trimShape, trimClick
             break;
         default:
             break;
+        }
+
+        if (isXLineShape(trimmedShape2)) {
+            trimmedShape2 = xLineToRay(trimmedShape2);
+        }
+        else if (isRayShape(trimmedShape2) && ending2===RS.EndingEnd) {
+            trimmedShape2 = rayToLine(trimmedShape2);
         }
     }
 
