@@ -113,6 +113,8 @@ public:
     static bool isNaN(double v);
     static bool isInf(double v);
 
+    static bool isSane(double v);
+
     static double eval(const QString& expression, bool* ok = NULL);
     static QString getError();
     static bool hasError();
