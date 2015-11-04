@@ -1,5 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("BreakOutGap", "&Break Out Gap"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("BreakOutGap", "&Break out Gap"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/BreakOutGap.js");
     action.setIcon(basePath + "/BreakOutGap.svg");

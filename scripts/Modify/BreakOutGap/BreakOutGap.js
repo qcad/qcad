@@ -90,7 +90,7 @@ BreakOutGap.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
         case BreakOutGap.State.ChoosingEntity:
-            if (isLineBasedEntity(entity) ||
+            if (isLineEntity(entity) ||
                 isArcEntity(entity) ||
                 isCircleEntity(entity)) {
 
