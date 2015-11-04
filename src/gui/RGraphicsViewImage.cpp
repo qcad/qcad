@@ -755,6 +755,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
     // clipping:
     RBox clipRectangle = sceneQt->getClipRectangle(id);
     if (clipRectangle.isValid()) {
+        clipRectangle.move(paintOffset);
         painter->setClipRect(QRectF(clipRectangle.getMinimum().x, clipRectangle.getMinimum().y, clipRectangle.getWidth(), clipRectangle.getHeight()));
     }
     else {
@@ -834,6 +835,10 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
     QListIterator<RPainterPath> i(painterPaths);
     while (i.hasNext()) {
         RPainterPath path = i.next();
+
+        if (!path.isSane()) {
+            continue;
+        }
 
         if (path.getPixelUnit()) {
             // path is displayed in pixels, not drawing unit:
