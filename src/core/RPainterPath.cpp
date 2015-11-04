@@ -212,8 +212,18 @@ bool RPainterPath::getMode(RPainterPath::Mode mode) const {
     return (modes & mode) == mode;
 }
 
-bool RPainterPath::isValid() {
+bool RPainterPath::isValid() const {
     return !getMode(RPainterPath::Invalid);
+}
+
+bool RPainterPath::isSane() const {
+    for (int i=0; i<elementCount(); i++) {
+        QPainterPath::Element el = elementAt(i);
+        if (!RMath::isSane(el.x) || !RMath::isSane(el.y)) {
+            return false;
+        }
+    }
+    return true;
 }
 
 void RPainterPath::setValid(bool on) {
