@@ -45,6 +45,10 @@ bool RVector::isValid() const {
     return valid;
 }
 
+bool RVector::isSane() const {
+    return isValid() && RMath::isSane(x) && RMath::isSane(y) && RMath::isSane(z);
+}
+
 void RVector::setX(double x) {
     this->x = x;
 }

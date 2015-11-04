@@ -83,6 +83,7 @@ public:
     }
 
     bool isValid() const;
+    bool isSane() const;
 
     bool isInside(const RBox& b) const;
 
