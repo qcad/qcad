@@ -234,6 +234,17 @@ public:
         return data.getPolylineGen();
     }
 
+    RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
+        return data.getTrimEnd(trimPoint, clickPoint);
+    }
+
+    void trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+        return data.trimStartPoint(trimPoint, clickPoint);
+    }
+    void trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+        return data.trimEndPoint(trimPoint, clickPoint);
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 

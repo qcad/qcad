@@ -294,17 +294,17 @@ void RPolyline::removeVertex(int index) {
 }
 
 void RPolyline::removeVerticesAfter(int index) {
-    vertices = vertices.mid(index+1);
-    bulges = bulges.mid(index+1);
-    startWidths = startWidths.mid(index+1);
-    endWidths = endWidths.mid(index+1);
+    vertices = vertices.mid(0, index+1);
+    bulges = bulges.mid(0, index+1);
+    startWidths = startWidths.mid(0, index+1);
+    endWidths = endWidths.mid(0, index+1);
 }
 
 void RPolyline::removeVerticesBefore(int index) {
-    vertices = vertices.mid(0, index);
-    bulges = bulges.mid(0, index);
-    startWidths = startWidths.mid(0, index);
-    endWidths = endWidths.mid(0, index);
+    vertices = vertices.mid(index);
+    bulges = bulges.mid(index);
+    startWidths = startWidths.mid(index);
+    endWidths = endWidths.mid(index);
 }
 
 void RPolyline::setVertices(const QList<RVector>& vertices) {
@@ -455,6 +455,22 @@ bool RPolyline::hasWidths() const {
     }
 
     return false;
+}
+
+void RPolyline::setStartWidths(const QList<double>& sw) {
+    startWidths = sw;
+}
+
+QList<double> RPolyline::getStartWidths() const {
+    return startWidths;
+}
+
+void RPolyline::setEndWidths(const QList<double>& ew) {
+    endWidths = ew;
+}
+
+QList<double> RPolyline::getEndWidths() const {
+    return endWidths;
 }
 
 void RPolyline::setClosed(bool on) {
@@ -630,12 +646,14 @@ QList<RPolyline> RPolyline::getOutline() const {
  *      an open polyline.
  */
 int RPolyline::countSegments() const {
-    if (closed) {
-        return countVertices();
+    int ret = countVertices();
+    if (!closed) {
+        ret-=1;
     }
-    else {
-        return countVertices() - 1;
+    if (ret<0) {
+        ret=0;
     }
+    return ret;
 }
 
 /**
@@ -1207,20 +1225,22 @@ QSharedPointer<RShape> RPolyline::getTransformed(const QTransform& transform) co
     return ret;
 }
 
-RS::Ending RPolyline::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
-    // TODO: implement
+RS::Ending RPolyline::getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->getTrimEnd(*this, trimPoint, clickPoint);
+    }
     return RS::EndingNone;
 }
 
-void RPolyline::trimStartPoint(const RVector& p) {
+void RPolyline::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
     if (polylineProxy!=NULL) {
-        polylineProxy->trimStartPoint(*this, p);
+        polylineProxy->trimStartPoint(*this, trimPoint, clickPoint);
     }
 }
 
-void RPolyline::trimEndPoint(const RVector& p) {
+void RPolyline::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
     if (polylineProxy!=NULL) {
-        polylineProxy->trimEndPoint(*this, p);
+        polylineProxy->trimEndPoint(*this, trimPoint, clickPoint);
     }
 }
 

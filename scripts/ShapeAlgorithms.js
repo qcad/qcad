@@ -452,6 +452,7 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
         extend = false;
     }
 
+    // convert closed to open polyline:
     if (isPolylineShape(shape) && shape.isClosed()) {
         var lastSegment = shape.getLastSegment();
         shape.setClosed(false);
@@ -576,22 +577,22 @@ ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
         rest1 = shape.clone();
         rest2 = shape.clone();
 
-        rest1.trimEndPoint(cutPos1);
-        rest2.trimStartPoint(cutPos2);
+        rest1.trimEndPoint(cutPos1, cutPos1);
+        rest2.trimStartPoint(cutPos2, cutPos2);
 
         segment = shape.clone();
-        segment.trimStartPoint(cutPos1);
-        segment.trimEndPoint(cutPos2);
+        segment.trimStartPoint(cutPos1, cutPos1);
+        segment.trimEndPoint(cutPos2, cutPos2);
 
         var angleLength1 = rest1.getAngleLength(true);
         var angleLength2 = rest2.getAngleLength(true);
 
         if (angleLength1+angleLength2 > shape.getAngleLength()) {
-            rest1.trimEndPoint(cutPos2);
-            rest2.trimStartPoint(cutPos1);
+            rest1.trimEndPoint(cutPos2, cutPos2);
+            rest2.trimStartPoint(cutPos1, cutPos1);
 
-            segment.trimStartPoint(cutPos2);
-            segment.trimEndPoint(cutPos1);
+            segment.trimStartPoint(cutPos2, cutPos2);
+            segment.trimEndPoint(cutPos1, cutPos1);
 
             angleLength1 = rest1.getAngleLength(true);
             angleLength2 = rest2.getAngleLength(true);
@@ -721,16 +722,16 @@ ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
         }
 
         if (l1 < l2) {
-            rest1.trimEndPoint(cutPos1);
-            segment.trimStartPoint(cutPos1);
-            segment.trimEndPoint(cutPos2);
-            rest2.trimStartPoint(cutPos2);
+            rest1.trimEndPoint(cutPos1, cutPos1);
+            segment.trimStartPoint(cutPos1, cutPos1);
+            segment.trimEndPoint(cutPos2, cutPos2);
+            rest2.trimStartPoint(cutPos2, cutPos2);
         }
         else {
-            rest1.trimEndPoint(cutPos2);
-            segment.trimStartPoint(cutPos2);
-            segment.trimEndPoint(cutPos1);
-            rest2.trimStartPoint(cutPos1);
+            rest1.trimEndPoint(cutPos2, cutPos2);
+            segment.trimStartPoint(cutPos2, cutPos2);
+            segment.trimEndPoint(cutPos1, cutPos1);
+            rest2.trimStartPoint(cutPos1, cutPos1);
         }
 
         if (segment.getLength()<RS.PointTolerance || (closed && RMath.fuzzyCompare(segment.getLength(), shape.getLength()))) {
@@ -762,16 +763,16 @@ ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
         }
 
         if (tAtCutPos1 < tAtCutPos2) {
-            rest1.trimEndPoint(cutPos1);
-            segment.trimStartPoint(cutPos1);
-            segment.trimEndPoint(cutPos2);
-            rest2.trimStartPoint(cutPos2);
+            rest1.trimEndPoint(cutPos1, cutPos1);
+            segment.trimStartPoint(cutPos1, cutPos1);
+            segment.trimEndPoint(cutPos2, cutPos2);
+            rest2.trimStartPoint(cutPos2, cutPos2);
         }
         else {
-            rest1.trimEndPoint(cutPos2);
-            segment.trimStartPoint(cutPos2);
-            segment.trimEndPoint(cutPos1);
-            rest2.trimStartPoint(cutPos1);
+            rest1.trimEndPoint(cutPos2, cutPos2);
+            segment.trimStartPoint(cutPos2, cutPos2);
+            segment.trimEndPoint(cutPos1, cutPos1);
+            rest2.trimStartPoint(cutPos1, cutPos1);
         }
 
         if (!segment.isValid() || segment.getLength()<RS.PointTolerance) {
@@ -2135,4 +2136,81 @@ ShapeAlgorithms.getPointsOnShape = function(shape, distance, from) {
         }
     }
     return ret;
+};
+
+ShapeAlgorithms.appendShapeToPolylineAuto = function(pl, shape) {
+    if (!isFunction(shape.getEndPoint) || !isFunction(shape.reverse)) {
+        return;
+    }
+
+    if (pl.countVertices()>0 && pl.getEndPoint().equalsFuzzy(shape.getEndPoint())) {
+        shape.reverse();
+    }
+    pl.appendShape(shape);
+};
+
+ShapeAlgorithms.modifyPolylineCorner = function(polyline1, trimmedShape1, ending1, segmentIndex1,
+                                                polyline2, trimmedShape2, ending2, segmentIndex2, cornerShape) {
+    var i, segment;
+
+    var pl = new RPolyline();
+
+    if (segmentIndex1<segmentIndex2 && ending1===RS.EndingEnd && ending2===RS.EndingStart) {
+        for (i=0; i<segmentIndex1; i++) {
+            segment = polyline1.getSegmentAt(i);
+            pl.appendShape(segment.data());
+        }
+
+        ShapeAlgorithms.appendShapeToPolylineAuto(pl, trimmedShape1);
+        if (!isNull(cornerShape)) {
+            ShapeAlgorithms.appendShapeToPolylineAuto(pl, cornerShape);
+        }
+        ShapeAlgorithms.appendShapeToPolylineAuto(pl, trimmedShape2);
+
+        for (i=segmentIndex2+1; i<polyline1.countSegments(); i++) {
+            segment = polyline1.getSegmentAt(i);
+            pl.appendShape(segment.data());
+        }
+    }
+    else if (segmentIndex1>segmentIndex2 && ending1===RS.EndingStart && ending2===RS.EndingEnd) {
+        for (i=0; i<segmentIndex2; i++) {
+            segment = polyline1.getSegmentAt(i);
+            pl.appendShape(segment.data());
+        }
+
+        ShapeAlgorithms.appendShapeToPolylineAuto(pl, trimmedShape2);
+        if (!isNull(cornerShape)) {
+            ShapeAlgorithms.appendShapeToPolylineAuto(pl, cornerShape);
+        }
+        ShapeAlgorithms.appendShapeToPolylineAuto(pl, trimmedShape1);
+
+        for (i=segmentIndex1+1; i<polyline1.countSegments(); i++) {
+            segment = polyline1.getSegmentAt(i);
+            pl.appendShape(segment.data());
+        }
+    }
+    else if (segmentIndex1<segmentIndex2 && ending1===RS.EndingStart && ending2===RS.EndingEnd) {
+        ShapeAlgorithms.appendShapeToPolylineAuto(pl, trimmedShape1);
+        for (i=segmentIndex1+1; i<segmentIndex2; i++) {
+            segment = polyline1.getSegmentAt(i);
+            pl.appendShape(segment.data());
+        }
+        ShapeAlgorithms.appendShapeToPolylineAuto(pl, trimmedShape2);
+        if (!isNull(cornerShape)) {
+            ShapeAlgorithms.appendShapeToPolylineAuto(pl, cornerShape);
+        }
+    }
+    else if (segmentIndex1>segmentIndex2 && ending1===RS.EndingEnd && ending2===RS.EndingStart) {
+        ShapeAlgorithms.appendShapeToPolylineAuto(pl, trimmedShape2);
+        for (i=segmentIndex2+1; i<segmentIndex1; i++) {
+            segment = polyline1.getSegmentAt(i);
+            pl.appendShape(segment.data());
+        }
+        ShapeAlgorithms.appendShapeToPolylineAuto(pl, trimmedShape1);
+        if (!isNull(cornerShape)) {
+            ShapeAlgorithms.appendShapeToPolylineAuto(pl, cornerShape);
+        }
+    }
+
+    return pl;
 };

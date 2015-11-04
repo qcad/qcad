@@ -168,15 +168,15 @@
         <return>return <expr><name>data</name>.<call><name>reverse</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name><name>RS</name>::<name>Ending</name></name></type> <name>getTrimEnd</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>coord</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><name>data</name>.<call><name>getTrimEnd</name><argument_list>(<argument><expr><name>coord</name></expr></argument>, <argument><expr><name>trimPoint</name></expr></argument>)</argument_list></call></expr>;</return>
+    <function><type><name><name>RS</name>::<name>Ending</name></name></type> <name>getTrimEnd</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><name>data</name>.<call><name>getTrimEnd</name><argument_list>(<argument><expr><name>trimPoint</name></expr></argument>, <argument><expr><name>clickPoint</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>trimStartPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><name>data</name>.<call><name>trimStartPoint</name><argument_list>(<argument><expr><name>p</name></expr></argument>)</argument_list></call></expr>;</return>
+    <function><type><name>void</name></type> <name>trimStartPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name>RDEFAULT_RVECTOR</name></expr></init></decl></param>)</parameter_list> <block>{
+        <return>return <expr><name>data</name>.<call><name>trimStartPoint</name><argument_list>(<argument><expr><name>trimPoint</name></expr></argument>, <argument><expr><name>clickPoint</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
-    <function><type><name>void</name></type> <name>trimEndPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><name>data</name>.<call><name>trimEndPoint</name><argument_list>(<argument><expr><name>p</name></expr></argument>)</argument_list></call></expr>;</return>
+    <function><type><name>void</name></type> <name>trimEndPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name>RDEFAULT_RVECTOR</name></expr></init></decl></param>)</parameter_list> <block>{
+        <return>return <expr><name>data</name>.<call><name>trimEndPoint</name><argument_list>(<argument><expr><name>trimPoint</name></expr></argument>, <argument><expr><name>clickPoint</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>double</name></type> <name>getLength</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{

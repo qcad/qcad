@@ -172,6 +172,15 @@
         ;static  QScriptValue
         getPolylineGen
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTrimEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        trimStartPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        trimEndPoint
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

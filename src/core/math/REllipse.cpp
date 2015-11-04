@@ -873,11 +873,11 @@ QSharedPointer<RShape> REllipse::getTransformed(const QTransform& transform) con
     return ret;
 }
 
-RS::Ending REllipse::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
-    double angEl = getParamTo(trimPoint);
-    double angM = getParamTo(coord);
+RS::Ending REllipse::getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
+    double paramToClickPoint = getParamTo(clickPoint);
+    double paramToTrimPoint = getParamTo(trimPoint);
 
-    if (RMath::getAngleDifference(angM, angEl)>M_PI) {
+    if (RMath::getAngleDifference(paramToTrimPoint, paramToClickPoint)>M_PI) {
         return RS::EndingStart;
     }
     else {
@@ -885,12 +885,14 @@ RS::Ending REllipse::getTrimEnd(const RVector& coord, const RVector& trimPoint) 
     }
 }
 
-void REllipse::trimStartPoint(const RVector& p) {
-    setStartParam(getParamTo(p));
+void REllipse::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
+    Q_UNUSED(clickPoint)
+    setStartParam(getParamTo(trimPoint));
 }
 
-void REllipse::trimEndPoint(const RVector& p) {
-    setEndParam(getParamTo(p));
+void REllipse::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
+    Q_UNUSED(clickPoint)
+    setEndParam(getParamTo(trimPoint));
 }
 
 void REllipse::correctMajorMinor() {

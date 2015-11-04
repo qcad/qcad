@@ -350,10 +350,10 @@ QSharedPointer<RShape> RLine::getTransformed(const QTransform& transform) const 
     return QSharedPointer<RShape>(new RLine(startPoint.getTransformed2d(transform), endPoint.getTransformed2d(transform)));
 }
 
-RS::Ending RLine::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
+RS::Ending RLine::getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
     double lineAngle = getAngle();
-    double angleToCoord = trimPoint.getAngleTo(coord);
-    double angleDifference = lineAngle-angleToCoord;
+    double angleToClickPoint = trimPoint.getAngleTo(clickPoint);
+    double angleDifference = lineAngle-angleToClickPoint;
 
     if (angleDifference<0.0) {
         angleDifference*=-1.0;
@@ -369,16 +369,18 @@ RS::Ending RLine::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
     }
 }
 
-void RLine::trimStartPoint(const RVector& p) {
-    RVector tp = getClosestPointOnShape(p, false);
+void RLine::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
+    Q_UNUSED(clickPoint)
+    RVector tp = getClosestPointOnShape(trimPoint, false);
     if (!tp.isValid()) {
         return;
     }
     setStartPoint(tp);
 }
 
-void RLine::trimEndPoint(const RVector& p) {
-    RVector tp = getClosestPointOnShape(p, false);
+void RLine::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
+    Q_UNUSED(clickPoint)
+    RVector tp = getClosestPointOnShape(trimPoint, false);
     if (!tp.isValid()) {
         return;
     }

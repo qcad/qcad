@@ -51,7 +51,7 @@ public:
         return new RRay(*this);
     }
 
-    virtual void trimEndPoint(const RVector& p);
+    virtual void trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid);
     virtual QList<RVector> getPointsWithDistanceToEnd(double distance, RS::From from) const;
 
     virtual bool reverse();

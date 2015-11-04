@@ -103,14 +103,14 @@ public:
         return RSpline::reverse();
     }
 
-    RS::Ending getTrimEnd(const RVector& coord, const RVector& trimPoint) {
-        return RSpline::getTrimEnd(coord, trimPoint);
+    RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
+        return RSpline::getTrimEnd(trimPoint, clickPoint);
     }
-    void trimStartPoint(const RVector& p) {
-        return RSpline::trimStartPoint(p);
+    void trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+        return RSpline::trimStartPoint(trimPoint, clickPoint);
     }
-    void trimEndPoint(const RVector& p) {
-        return RSpline::trimEndPoint(p);
+    void trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+        return RSpline::trimEndPoint(trimPoint, clickPoint);
     }
 
     bool isClosed() const  {

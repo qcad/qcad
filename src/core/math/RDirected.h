@@ -47,14 +47,23 @@ public:
 
     virtual bool reverse() = 0;
 
-    virtual void trimStartPoint(const RVector& p) = 0;
-    virtual void trimEndPoint(const RVector& p) = 0;
+    /**
+     * \param trimPoint Trim start point or end point to this coordinate.
+     * \param clickPoint Point that was clicked by user.
+     */
+    virtual void trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) = 0;
 
     /**
-     * \param coord Clicked coordinate
      * \param trimPoint Trim start point or end point to this coordinate.
+     * \param clickPoint Point that was clicked by user.
      */
-    virtual RS::Ending getTrimEnd(const RVector& coord, const RVector& trimPoint) = 0;
+    virtual void trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) = 0;
+
+    /**
+     * \param trimPoint Trim start point or end point to this coordinate.
+     * \param clickPoint Point that was clicked by user.
+     */
+    virtual RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) = 0;
 
     /**
      * \return Distance of given point to start point of shape along shape.

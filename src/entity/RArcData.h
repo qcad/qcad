@@ -82,15 +82,14 @@ public:
         return RArc::reverse();
     }
 
-    RS::Ending getTrimEnd(const RVector& coord,
-                            const RVector& trimPoint) {
-        return RArc::getTrimEnd(coord, trimPoint);
+    RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
+        return RArc::getTrimEnd(trimPoint, clickPoint);
     }
-    void trimStartPoint(const RVector& p) {
-        return RArc::trimStartPoint(p);
+    void trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+        return RArc::trimStartPoint(trimPoint, clickPoint);
     }
-    void trimEndPoint(const RVector& p) {
-        return RArc::trimEndPoint(p);
+    void trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+        return RArc::trimEndPoint(trimPoint, clickPoint);
     }
 
     double getLength() const {

@@ -41,26 +41,32 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="true">
-        <arg type="RVector &amp;" typeName="RVector" name="p"
-        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="trimPoint" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="clickPoint" hasDefault="true"
+        default="RDEFAULT_RVECTOR" isConst="true" />
       </variant>
     </method>
     <method name="trimEndPoint" cppName="trimEndPoint"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="true">
-        <arg type="RVector &amp;" typeName="RVector" name="p"
-        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="trimPoint" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="clickPoint" hasDefault="true"
+        default="RDEFAULT_RVECTOR" isConst="true" />
       </variant>
     </method>
     <method name="getTrimEnd" cppName="getTrimEnd"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="RS::Ending" isPureVirtual="true">
-        <arg type="RVector &amp;" typeName="RVector" name="coord"
-        isConst="true" />
         <arg type="RVector &amp;" typeName="RVector"
         name="trimPoint" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="clickPoint" isConst="true" />
       </variant>
     </method>
     <method name="getDistanceFromStart"

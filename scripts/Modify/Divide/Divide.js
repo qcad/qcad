@@ -62,8 +62,8 @@ Divide.prototype.setState = function(state) {
         this.pos = undefined;
         this.cutPos = undefined;
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
-        if (RSpline.hasProxy()) {
-            this.setLeftMouseTip(qsTr("Choose line, arc, circle, ellipse or spline"));
+        if (RSpline.hasProxy() && RPolyline.hasProxy()) {
+            this.setLeftMouseTip(qsTr("Choose line, arc, circle, ellipse, spline or polyline"));
         }
         else {
             this.setLeftMouseTip(qsTr("Choose line, arc, circle or ellipse"));
@@ -123,7 +123,8 @@ Divide.prototype.pickEntity = function(event, preview) {
             isArcEntity(entity) ||
             isCircleEntity(entity) ||
             isEllipseEntity(entity) ||
-            (RSpline.hasProxy() && isSplineEntity(entity))) {
+            (RSpline.hasProxy() && isSplineEntity(entity)) ||
+            (RPolyline.hasProxy() && isPolylineEntity(entity))) {
 
             this.entity = entity;
 
@@ -136,7 +137,12 @@ Divide.prototype.pickEntity = function(event, preview) {
         }
         else {
             if (!preview) {
-                EAction.warnNotLineArcCircleEllipse();
+                if (RSpline.hasProxy() && RPolyline.hasProxy()) {
+                    EAction.warnNotLineArcCircleEllipseSplinePolyline();
+                }
+                else {
+                    EAction.warnNotLineArcCircleEllipse();
+                }
             }
         }
         break;
@@ -219,7 +225,8 @@ Divide.divide = function(op, pos, pos2, entity) {
     }
 
     entity = entity.clone();
-    var shape = entity.getClosestSimpleShape(pos);
+    //var shape = entity.getClosestSimpleShape(pos);
+    var shape = entity.castToShape();
 
     if (isNull(pos2)) {
         if (isCircleShape(shape) || (isEllipseShape(shape) && shape.isFullEllipse())) {
@@ -290,25 +297,25 @@ Divide.divide = function(op, pos, pos2, entity) {
         e.copyAttributesFrom(entity);
         op.addObject(e, false);
     }
-    else if (isPolylineShape(shape)) {
-        // TODO
-    }
+//    else if (isPolylineShape(shape)) {
+//        // TODO
+//    }
     else {
         var shape1 = shape.clone();
         var shape2 = shape.clone();
 
-        shape1 = trimEndPoint(shape1, pos);
+        shape1 = trimEndPoint(shape1, pos, pos);
 
         cutPos = shape1.getEndPoint();
 
-        shape2 = trimStartPoint(shape2, pos);
+        shape2 = trimStartPoint(shape2, pos, pos);
 
         // modify chosen entity into first part:
         modifyEntity(op, entity, shape1);
 
         // add second part as new entity:
         if (isLineBasedShape(shape2) || isArcShape(shape2) ||
-            isEllipseShape(shape2) || isSplineShape(shape2)) {
+            isEllipseShape(shape2) || isSplineShape(shape2) || isPolylineShape(shape2)) {
 
             e = shapeToEntity(entity.getDocument(), shape2);
             if (!isNull(e)) {

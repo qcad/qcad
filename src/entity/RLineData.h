@@ -73,14 +73,14 @@ public:
         return RLine::reverse();
     }
 
-    RS::Ending getTrimEnd(const RVector& coord, const RVector& trimPoint) {
-        return RLine::getTrimEnd(coord, trimPoint);
+    RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
+        return RLine::getTrimEnd(trimPoint, clickPoint);
     }
-    void trimStartPoint(const RVector& p) {
-        return RLine::trimStartPoint(p);
+    void trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+        return RLine::trimStartPoint(trimPoint, clickPoint);
     }
-    void trimEndPoint(const RVector& p) {
-        return RLine::trimEndPoint(p);
+    void trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+        return RLine::trimEndPoint(trimPoint, clickPoint);
     }
 
     RS::Side getSideOfPoint(const RVector& point) const {

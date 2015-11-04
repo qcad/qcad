@@ -29,11 +29,11 @@ function ModifyCorner(guiAction) {
 
     this.entity1 = undefined;
     this.shape1 = undefined;
-    this.pos1 = undefined;
+    this.clickPos1 = undefined;
 
     this.entity2 = undefined;
     this.shape2 = undefined;
-    this.pos2 = undefined;
+    this.clickPos2 = undefined;
 
     this.trim = true;
 
@@ -69,10 +69,10 @@ ModifyCorner.prototype.setState = function(state) {
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
         this.entity1 = undefined;
         this.shape1 = undefined;
-        this.pos1 = undefined;
+        this.clickPos1 = undefined;
         this.entity2 = undefined;
         this.shape2 = undefined;
-        this.pos2 = undefined;
+        this.clickPos2 = undefined;
         this.posSolution = undefined;
         this.posPoint = undefined;
         var trEntity1 = qsTr("Choose first entity");
@@ -85,7 +85,7 @@ ModifyCorner.prototype.setState = function(state) {
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
         this.entity2 = undefined;
         this.shape2 = undefined;
-        this.pos2 = undefined;
+        this.clickPos2 = undefined;
         var trEntity2 = qsTr("Choose second entity");
         this.setCommandPrompt(trEntity2);
         this.setLeftMouseTip(trEntity2);
@@ -167,7 +167,7 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
             //qDebug("entity1:", entity.getId());
             this.entity1 = entity;
             this.shape1 = shape;
-            this.pos1 = pos;
+            this.clickPos1 = pos;
 
             if (preview) {
                 this.updatePreview();
@@ -199,7 +199,7 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
 
             this.entity2 = entity;
             this.shape2 = shape;
-            this.pos2 = event.getModelPosition();
+            this.clickPos2 = event.getModelPosition();
 
             if (preview) {
                 this.updatePreview();

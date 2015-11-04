@@ -76,8 +76,9 @@ RLine RRay::getClippedLine(const RBox& box) const {
     return ret;
 }
 
-void RRay::trimEndPoint(const RVector& p) {
-    RVector tp = getClosestPointOnShape(p, false);
+void RRay::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
+    Q_UNUSED(clickPoint)
+    RVector tp = getClosestPointOnShape(trimPoint, false);
     directionVector = tp - basePoint;
 }
 

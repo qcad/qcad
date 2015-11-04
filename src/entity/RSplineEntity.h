@@ -126,16 +126,15 @@ public:
         return data.getDirection2();
     }
 
-    RS::Ending getTrimEnd(const RVector& coord,
-                            const RVector& trimPoint) {
-        return data.getTrimEnd(coord, trimPoint);
+    RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
+        return data.getTrimEnd(trimPoint, clickPoint);
     }
 
-    void trimStartPoint(const RVector& p) {
-        return data.trimStartPoint(p);
+    void trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+        return data.trimStartPoint(trimPoint, clickPoint);
     }
-    void trimEndPoint(const RVector& p) {
-        return data.trimEndPoint(p);
+    void trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+        return data.trimEndPoint(trimPoint, clickPoint);
     }
 
     RVector getTangentAtStart() const {

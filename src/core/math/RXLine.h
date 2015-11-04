@@ -90,9 +90,9 @@ public:
     virtual RVector getStartPoint() const;
     virtual RVector getEndPoint() const;
 
-    virtual void trimStartPoint(const RVector& p);
-    virtual void trimEndPoint(const RVector& p);
-    virtual RS::Ending getTrimEnd(const RVector& coord, const RVector& trimPoint);
+    virtual void trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid);
+    virtual void trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid);
+    virtual RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint);
 
     virtual RLine getClippedLine(const RBox& box) const;
 

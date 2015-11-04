@@ -658,11 +658,11 @@ QSharedPointer<RShape> RArc::getTransformed(const QTransform& transform) const {
     return QSharedPointer<RShape>(ret);
 }
 
-RS::Ending RArc::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
-    double angEl = center.getAngleTo(trimPoint);
-    double angM = center.getAngleTo(coord);
+RS::Ending RArc::getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
+    double angleToTrimPoint = center.getAngleTo(trimPoint);
+    double angleToClickPoint = center.getAngleTo(clickPoint);
 
-    if (RMath::getAngleDifference(angM, angEl)>M_PI) {
+    if (RMath::getAngleDifference(angleToClickPoint, angleToTrimPoint)>M_PI) {
         if (reversed) {
             return RS::EndingEnd;
         } else {
@@ -677,12 +677,14 @@ RS::Ending RArc::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
     }
 }
 
-void RArc::trimStartPoint(const RVector& p) {
-    startAngle = center.getAngleTo(p);
+void RArc::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
+    Q_UNUSED(clickPoint)
+    startAngle = center.getAngleTo(trimPoint);
 }
 
-void RArc::trimEndPoint(const RVector& p) {
-    endAngle = center.getAngleTo(p);
+void RArc::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
+    Q_UNUSED(clickPoint)
+    endAngle = center.getAngleTo(trimPoint);
 }
 
 double RArc::getDistanceFromStart(const RVector& p) const {

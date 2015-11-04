@@ -71,14 +71,14 @@ public:
         return RPolyline::countVertices();
     }
 
-    RS::Ending getTrimEnd(const RVector& coord, const RVector& trimPoint) {
-        return RPolyline::getTrimEnd(coord, trimPoint);
+    RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
+        return RPolyline::getTrimEnd(trimPoint, clickPoint);
     }
-    void trimStartPoint(const RVector& p) {
-        return RPolyline::trimStartPoint(p);
+    void trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+        return RPolyline::trimStartPoint(trimPoint, clickPoint);
     }
-    void trimEndPoint(const RVector& p) {
-        return RPolyline::trimEndPoint(p);
+    void trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+        return RPolyline::trimEndPoint(trimPoint, clickPoint);
     }
 
     virtual QList<RVector> getReferencePoints(

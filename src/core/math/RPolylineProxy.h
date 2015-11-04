@@ -22,6 +22,8 @@
 
 #include "../core_global.h"
 
+#include <RS.h>
+
 class RArc;
 class RExporter;
 class RLine;
@@ -39,8 +41,9 @@ class RVector;
 class QCADCORE_EXPORT RPolylineProxy {
 public:
     virtual ~RPolylineProxy() {}
-    virtual void trimStartPoint(RPolyline& polyline, const RVector& p) = 0;
-    virtual void trimEndPoint(RPolyline& polyline, const RVector& p) = 0;
+    virtual RS::Ending getTrimEnd(RPolyline& polyline, const RVector& trimPoint, const RVector& clickPoint) = 0;
+    virtual void trimStartPoint(RPolyline& polyline, const RVector& trimPoint, const RVector& clickPoint) = 0;
+    virtual void trimEndPoint(RPolyline& polyline, const RVector& trimPoint, const RVector& clickPoint) = 0;
 
     virtual QList<RPolyline> renderThickPolyline(const RPolyline& polyline) = 0;
 };

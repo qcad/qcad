@@ -1816,8 +1816,8 @@ function getClosestSimpleShape(entity, pos) {
     return entity.getClosestSimpleShape(pos);
 }
 
-function trimStartPoint(shape, p) {
-    shape.trimStartPoint(p);
+function trimStartPoint(shape, trimPoint, clickPoint) {
+    shape.trimStartPoint(trimPoint, clickPoint);
     if (isXLineShape(shape)) {
         return xLineToRay(shape);
     }
@@ -1826,8 +1826,8 @@ function trimStartPoint(shape, p) {
     }
 }
 
-function trimEndPoint(shape, p) {
-    shape.trimEndPoint(p);
+function trimEndPoint(shape, trimPoint, clickPoint) {
+    shape.trimEndPoint(trimPoint, clickPoint);
     if (isXLineShape(shape)) {
         return xLineToRay(shape);
     }
@@ -1849,22 +1849,40 @@ function rayToLine(ray) {
 
 /**
  * Modify the given entity to represent the given shape.
+ *
+ * Possible conversions:
+ * Line -> XLine, Ray
+ * XLine -> Line, Ray
+ * Ray -> XLine, Line
+ * Circle -> Arc
  */
 function modifyEntity(op, entity, shape) {
     if ((isXLineEntity(entity) && (isRayShape(shape) || isLineShape(shape))) ||
         (isRayEntity(entity) && (isXLineShape(shape) || isLineShape(shape))) ||
-        (isLineEntity(entity) && (isXLineShape(shape) || isRayShape(shape)))) {
+        (isLineEntity(entity) && (isXLineShape(shape) || isRayShape(shape))) ||
+        (isCircleEntity(entity) && isArcShape(shape))) {
 
         var e = shapeToEntity(entity.getDocument(), shape);
-        e.copyAttributesFrom(entity);
-        op.deleteObject(entity);
+//        if (isFunction(entity.data)) {
+//            e.copyAttributesFrom(entity.data());
+//            op.deleteObject(entity.data());
+//        }
+//        else {
+            e.copyAttributesFrom(entity);
+            op.deleteObject(entity);
+//        }
+
         op.addObject(e, false);
-        return;
+        return true;
     }
 
-    entity.setShape(shape);
+    if (isFunction(entity.setShape)) {
+        entity.setShape(shape);
+        op.addObject(entity, false);
+        return true;
+    }
 
-    op.addObject(entity, false);
+    return false;
 };
 
 

@@ -166,7 +166,7 @@ BreakOutGap.prototype.getOperation = function(preview) {
         var shape1 = this.shape.clone();
         var shape2 = this.shape.clone();
 
-        shape1 = trimEndPoint(shape1, this.pos);
+        shape1 = trimEndPoint(shape1, this.pos, this.pos);
         this.cutPos = shape1.getEndPoint();
         var points = shape1.getPointsWithDistanceToEnd(this.offset/2);
         var line = new RLine(shape1.getStartPoint(), points[1]);
@@ -174,7 +174,7 @@ BreakOutGap.prototype.getOperation = function(preview) {
         // modify chosen entity into first part:
         modifyEntity(op, this.entity, line);
         
-        shape2 = trimStartPoint(shape2, this.pos);
+        shape2 = trimStartPoint(shape2, this.pos, this.pos);
         points = shape2.getPointsWithDistanceToEnd(this.offset/2);
         var line2 = new RLine(points[0], shape2.getEndPoint());
         e = shapeToEntity(this.entity.getDocument(), line2);

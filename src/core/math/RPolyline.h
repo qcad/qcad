@@ -95,6 +95,10 @@ public:
     void setEndWidthAt(int i, double w);
     double getEndWidthAt(int i) const;
     bool hasWidths() const;
+    void setStartWidths(const QList<double>& sw);
+    QList<double> getStartWidths() const;
+    void setEndWidths(const QList<double>& ew);
+    QList<double> getEndWidths() const;
 
     void setClosed(bool on);
     bool isClosed() const;
@@ -142,9 +146,9 @@ public:
 
     virtual QSharedPointer<RShape> getTransformed(const QTransform& transform) const;
 
-    virtual RS::Ending getTrimEnd(const RVector& coord, const RVector& trimPoint);
-    virtual void trimStartPoint(const RVector& p);
-    virtual void trimEndPoint(const RVector& p);
+    virtual RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint);
+    virtual void trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid);
+    virtual void trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid);
 
     virtual QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const;
     QList<RPolyline> getOutline() const;

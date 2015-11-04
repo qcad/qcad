@@ -65,6 +65,8 @@ void RPolylineEntity::setShape(const RPolyline& l) {
     data.setVertices(l.getVertices());
     data.setBulges(l.getBulges());
     data.setClosed(l.isClosed());
+    data.setStartWidths(l.getStartWidths());
+    data.setEndWidths(l.getEndWidths());
 }
 
 void RPolylineEntity::init() {

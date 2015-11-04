@@ -163,6 +163,18 @@
         hasWidths
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setStartWidths
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getStartWidths
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setEndWidths
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getEndWidths
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setClosed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

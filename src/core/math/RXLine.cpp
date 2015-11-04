@@ -97,19 +97,21 @@ RVector RXLine::getEndPoint() const {
     return getSecondPoint();
 }
 
-void RXLine::trimStartPoint(const RVector& p) {
-    RVector tp = getClosestPointOnShape(p, false);
+void RXLine::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
+    Q_UNUSED(clickPoint)
+    RVector tp = getClosestPointOnShape(trimPoint, false);
     basePoint = tp;
 }
 
-void RXLine::trimEndPoint(const RVector& p) {
-    RVector tp = getClosestPointOnShape(p, false);
+void RXLine::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
+    Q_UNUSED(clickPoint)
+    RVector tp = getClosestPointOnShape(trimPoint, false);
     basePoint = tp;
     directionVector = -directionVector;
 }
 
-RS::Ending RXLine::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
-    return getLineShape().getTrimEnd(coord, trimPoint);
+RS::Ending RXLine::getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
+    return getLineShape().getTrimEnd(trimPoint, clickPoint);
 }
 
 RVector RXLine::getBasePoint() const {

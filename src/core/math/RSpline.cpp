@@ -1410,11 +1410,11 @@ QList<RSpline> RSpline::getBezierSegments() const {
     return ret;
 }
 
-RS::Ending RSpline::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
-    double tTrimPoint = getTAtPoint(trimPoint);
-    double tCoord = getTAtPoint(coord);
+RS::Ending RSpline::getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
+    double tAtClickPoint = getTAtPoint(clickPoint);
+    double tAtTrimPoint = getTAtPoint(trimPoint);
 
-    if (tCoord < tTrimPoint) {
+    if (tAtTrimPoint < tAtClickPoint) {
         return RS::EndingEnd;
     }
     else {
@@ -1422,20 +1422,21 @@ RS::Ending RSpline::getTrimEnd(const RVector& coord, const RVector& trimPoint) {
     }
 }
 
-void RSpline::trimStartPoint(const RVector& p) {
+void RSpline::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
+    Q_UNUSED(clickPoint)
     if (splineProxy!=NULL) {
         if (!isValid()) {
             return;
         }
-        if (p.equalsFuzzy(getStartPoint())) {
+        if (trimPoint.equalsFuzzy(getStartPoint())) {
             return;
         }
-        if (p.equalsFuzzy(getEndPoint())) {
+        if (trimPoint.equalsFuzzy(getEndPoint())) {
             this->invalidate();
             return;
         }
 
-        QList<RSpline> splines = splineProxy->split(*this, QList<RVector>() << p);
+        QList<RSpline> splines = splineProxy->split(*this, QList<RVector>() << trimPoint);
         if (splines.length()>1) {
             copySpline(splines[1]);
         }
@@ -1443,20 +1444,21 @@ void RSpline::trimStartPoint(const RVector& p) {
     }
 }
 
-void RSpline::trimEndPoint(const RVector& p) {
+void RSpline::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
+    Q_UNUSED(clickPoint)
     if (splineProxy!=NULL) {
         if (!isValid()) {
             return;
         }
-        if (p.equalsFuzzy(getStartPoint())) {
+        if (trimPoint.equalsFuzzy(getStartPoint())) {
             this->invalidate();
             return;
         }
-        if (p.equalsFuzzy(getEndPoint())) {
+        if (trimPoint.equalsFuzzy(getEndPoint())) {
             return;
         }
 
-        QList<RSpline> splines = splineProxy->split(*this, QList<RVector>() << p);
+        QList<RSpline> splines = splineProxy->split(*this, QList<RVector>() << trimPoint);
         if (splines.length()>0) {
             copySpline(splines[0]);
         }
