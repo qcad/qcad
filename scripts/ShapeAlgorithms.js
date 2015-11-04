@@ -459,14 +459,14 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
         shape.appendShape(lastSegment.data());
     }
 
-    var res = ShapeAlgorithms.getClosestIntersectionPoints(shape, otherShapes, position, !extend, extend);
+    var intersectionPoints = ShapeAlgorithms.getClosestIntersectionPoints(shape, otherShapes, position, !extend, extend);
 
     var cutPos1 = undefined;
     var cutPos2 = undefined;
 
-    if (!isNull(res) && res.length>1) {
-        cutPos1 = res[0];
-        cutPos2 = res[1];
+    if (!isNull(intersectionPoints) && intersectionPoints.length>1) {
+        cutPos1 = intersectionPoints[0];
+        cutPos2 = intersectionPoints[1];
     }
 
     return ShapeAlgorithms.autoTrimManual(shape, cutPos1, cutPos2, position);
@@ -879,7 +879,7 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
     var distLeft = undefined;
 
     // at least 2 intersection points are required to proceed:
-    if (intersections.length<2 && onShape) {
+    if (intersections.length<2 && onShape && !isXLineShape(shape)) {
         return undefined;
     }
 
