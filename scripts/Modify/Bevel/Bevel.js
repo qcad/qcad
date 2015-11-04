@@ -110,17 +110,7 @@ Bevel.bevel = function(op, entity1, clickPos1, entity2, clickPos2, trim, distanc
         }
     }
 
-    // add rounding:
-    //if (isNull(polyline)) {
-        //op.addObject(new RArcEntity(entity1.getDocument(), new RArcData(newShapes[1])));
-    //}
-
-    // add bevel:
-    //if (trim!==true) {
-        // add bevel line:
-        //var bevel = new RLine(bp1, bp2);
-        op.addObject(new RLineEntity(entity1.getDocument(), new RLineData(newShapes[1])));
-    //}
+    op.addObject(new RLineEntity(entity1.getDocument(), new RLineData(newShapes[1])));
 
     return true;
 };
@@ -157,69 +147,6 @@ Bevel.bevelShapes = function(shape1, clickPos1, shape2, clickPos2, trim, samePol
         }
         simpleShape2 = shape2.getSegmentAt(i2).data();
     }
-
-//    if (isPolylineEntity(entity1) && !isPolylineEntity(entity2)) {
-//        return false;
-//    }
-
-//    if (!isPolylineEntity(entity1) && isPolylineEntity(entity2)) {
-//        return false;
-//    }
-
-//    if (isPolylineEntity(entity1) && isPolylineEntity(entity2)) {
-//        if (entity1.getId()!==entity2.getId()) {
-//            return false;
-//        }
-//    }
-
-//    // find out whether we're bevelling within a polyline:
-//    var polyline = undefined;
-//    var segments = undefined;
-//    var shapeIndex1 = undefined;
-//    var shapeIndex2 = undefined;
-//    if (entity1.getId()===entity2.getId() && isPolylineEntity(entity1)) {
-//        polyline = entity1.getData().castToShape();
-//        segments = polyline.getExploded();
-//        var minDistance1 = undefined;
-//        var minDistance2 = undefined;
-//        var segment;
-//        var distance;
-//        for (var i=0; i<segments.length; ++i) {
-//            segment = segments[i];
-
-//            distance = segment.getDistanceTo(clickPos1);
-//            if (isNull(minDistance1) || distance<minDistance1) {
-//                minDistance1 = distance;
-//                shapeIndex1 = i;
-//                shape1 = segment.clone();
-//            }
-
-//            distance = segment.getDistanceTo(clickPos2);
-//            if (isNull(minDistance2) || distance<minDistance2) {
-//                minDistance2 = distance;
-//                shapeIndex2 = i;
-//                shape2 = segment.clone();
-//            }
-//        }
-
-//        if (shapeIndex1==shapeIndex2) {
-//            return false;
-//        }
-
-//        if (shapeIndex2<shapeIndex1) {
-//            var tmp = shapeIndex1;
-//            shapeIndex1 = shapeIndex2;
-//            shapeIndex2 = tmp;
-
-//            tmp = shape1;
-//            shape1 = shape2;
-//            shape2 = tmp;
-
-//            tmp = distance1;
-//            distance1 = distance2;
-//            distance2 = tmp;
-//        }
-//    }
 
     // get intersection point(s) between two shapes:
     var sol = simpleShape1.getIntersectionPoints(simpleShape2, false);
@@ -347,66 +274,6 @@ Bevel.bevelShapes = function(shape1, clickPos1, shape2, clickPos2, trim, samePol
         var pl = ShapeAlgorithms.modifyPolylineCorner(shape1, trimmed1, ending1, i1, shape2, trimmed2, ending2, i2, bevel);
         return [ pl ];
     }
-
-        // trim polyline segment and add bevel segment:
-//        if (!isNull(polyline)) {
-//            var trimmedPolyline = polyline.clone();
-//            trimmedPolyline.clear();
-//            for (i=0; i<segments.length; ++i) {
-//                segment = segments[i];
-
-//                // add first trimmed segment and bevel segment:
-//                if (i==shapeIndex1) {
-//                    if (trimmed1.getStartPoint().equalsFuzzy(bp1)) {
-//                        trimmed1.reverse();
-//                        trimmed1.setStartPoint(shape1.getStartPoint());
-//                    }
-//                    trimmedPolyline.appendShape(trimmed1);
-
-//                    trimmedPolyline.appendVertex(bp2);
-
-//                    if (trimmed2.getEndPoint().equalsFuzzy(bp2)) {
-//                        trimmed2.reverse();
-//                        trimmed2.setEndPoint(shape2.getEndPoint());
-//                    }
-//                    trimmedPolyline.appendShape(trimmed2);
-//                    i = shapeIndex2;
-//                }
-
-//                // add unaffected segment:
-//                else {
-//                    trimmedPolyline.appendShape(segment.data());
-//                }
-//            }
-
-//            entity1.setShape(trimmedPolyline);
-//            op.addObject(entity1, false);
-//        }
-
-        // add new trimmed entities:
-//        else {
-//            if (!modifyEntity(op, entity1.clone(), trimmed1)) {
-//                if (!preview) {
-//                    EAction.handleUserWarning(qsTr("First entity cannot be trimmed."));
-//                }
-//            }
-
-//            if (!modifyEntity(op, entity2.clone(), trimmed2)) {
-//                if (!preview) {
-//                    EAction.handleUserWarning(qsTr("Second entity cannot be trimmed."));
-//                }
-//            }
-//        }
-//    }
-
-//    if (isNull(polyline) || trim!==true) {
-//        // add bevel line:
-//        var bevel = new RLine(bp1, bp2);
-//        op.addObject(new RLineEntity(entity1.getDocument(), new RLineData(bevel)));
-//    }
-
-//    return true;
-
 
     return [ trimmed1, bevel, trimmed2 ];
 };

@@ -114,53 +114,9 @@ void RPolyline::normalize() {
 
 void RPolyline::prependShape(const RShape& shape) {
     appendShape(shape, true);
-//    const RDirected* directed = dynamic_cast<const RDirected*>(&shape);
-//    if (directed==NULL) {
-//        qWarning() << "RPolyline::prependShape: shape is not a line, arc or polyline: " << shape;
-//        return;
-//    }
-
-//    const RPolyline* pl = dynamic_cast<const RPolyline*>(&shape);
-//    if (pl!=NULL) {
-//        for (int i=pl->countSegments()-1; i>=0; --i) {
-//            QSharedPointer<RShape> s = pl->getSegmentAt(i);
-//            if (s.isNull()) {
-//                continue;
-//            }
-//            prependShape(*s.data());
-//        }
-//    }
-
-//    double bulge = 0.0;
-//    const RArc* arc = dynamic_cast<const RArc*>(&shape);
-//    if (arc!=NULL) {
-//        bulge = arc->getBulge();
-//    }
-
-//    const RLine* line = dynamic_cast<const RLine*>(&shape);
-//    if (line!=NULL) {
-//        directed = line;
-//    }
-
-//    if (vertices.size()==0) {
-//        prependVertex(directed->getEndPoint());
-//    }
-
-//    if (!vertices.last().equalsFuzzy(directed->getEndPoint())) {
-//        qWarning("RPolyline::prependShape: arc not connected to polyline");
-//    }
-
-//    prependVertex(directed->getStartPoint());
-//    setBulgeAt(0, bulge);
 }
 
 void RPolyline::appendShape(const RShape& shape, bool prepend) {
-//    const RDirected* directed = dynamic_cast<const RDirected*>(&shape);
-//    if (directed==NULL) {
-//        qWarning() << "RPolyline::appendShape: shape is not a line, arc or polyline: " << shape;
-//        return;
-//    }
-
     const RPolyline* pl = dynamic_cast<const RPolyline*>(&shape);
     if (pl!=NULL) {
         if (prepend) {

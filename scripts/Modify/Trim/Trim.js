@@ -315,13 +315,6 @@ Trim.trim = function(op, limitingEntity, limitingClickPos, trimEntity, trimClick
 Trim.trimShapes = function(limitingShape, limitingClickPos, trimShape, trimClickPos, trimBoth, samePolyline) {
     var i1, i2, segment;
 
-//    if (isCircleShape(limitingShape)) {
-//        limitingShape = ShapeAlgorithms.circleToArc(limitingShape);
-//    }
-//    if (isCircleShape(trimShape)) {
-//        trimShape = ShapeAlgorithms.circleToArc(trimShape);
-//    }
-
     var trimShapeSimple = trimShape;
     if (isPolylineShape(trimShape)) {
         i1 = trimShape.getClosestSegment(trimClickPos);
@@ -429,10 +422,7 @@ Trim.trimShapes = function(limitingShape, limitingClickPos, trimShape, trimClick
     // trim trim entity:
     var ending1, ending2;
 
-    //qDebug("is: ", is);
-    //qDebug("trimClickPos: ", trimClickPos);
     ending1 = trimmedShape1.getTrimEnd(is, trimClickPos);
-    //qDebug("ending1", ending1);
 
     switch (ending1) {
     case RS.EndingStart:
@@ -473,93 +463,10 @@ Trim.trimShapes = function(limitingShape, limitingClickPos, trimShape, trimClick
         }
     }
 
-    //if (samePolyline) {
-//    if (isPolylineEntity(trimEntity) && isPolylineEntity(limitingEntity) && trimBoth) {
-//        // trimming inside polyline: append second polyline to first:
-//        var pl1 = trimmedEntity1.castToShape();
-//        var pl2 = trimmedEntity2.castToShape();
-
-//        if (pl1.getStartPoint().equalsFuzzy(pl2.getStartPoint())) {
-//            pl1.reverse();
-//            pl1.appendShape(pl2);
-//            pl2 = undefined;
-//        }
-//        else if (pl1.getStartPoint().equalsFuzzy(pl2.getEndPoint())) {
-//            pl1.reverse();
-//            pl2.reverse();
-//            pl1.appendShape(pl2);
-//            pl2 = undefined;
-//        }
-//        else if (pl1.getEndPoint().equalsFuzzy(pl1.getStartPoint())) {
-//            pl1.appendShape(pl2);
-//            pl2 = undefined;
-//        }
-//        else if (pl1.getEndPoint().equalsFuzzy(pl2.getEndPoint())) {
-//            pl2.reverse();
-//            pl1.appendShape(pl2);
-//            pl2 = undefined;
-//        }
-
-//        modifyEntity(op, trimEntity, pl1);
-//        if (!isNull(pl2)) {
-//            modifyEntity(op, limitingEntity, pl2);
-//        }
-//        if (!samePolyline) {
-//            op.deleteObject(limitingEntity);
-//        }
-//        return true;
-//    }
-
     if (samePolyline) {
-        //debugger;
         var pl = ShapeAlgorithms.modifyPolylineCorner(trimShape, trimmedShape1, ending1, i1, limitingShape, trimmedShape2, ending2, i2, undefined);
-        //modifyEntity(op, trimEntity, pl);
-//        if (!samePolyline) {
-//            op.deleteObject(limitingEntity);
-//        }
-        //return [ pl ];
         return [ pl ];
     }
 
-//    if (isXLineEntity(trimmedShape1)) {
-//        Trim.trimXLine(op, trimEntity, trimmedShape1);
-//    }
-//    else if (isRayEntity(trimmedShape1) && ending1===RS.EndingEnd) {
-//        Trim.trimRay(op, trimEntity, trimmedShape1);
-//    }
-//    else {
-//        op.addObject(trimmedShape1, false);
-//        if (isCircleEntity(trimEntity) || isFullEllipseEntity(trimEntity)) {
-//            op.deleteObject(trimEntity);
-//        }
-//    }
-
-    qDebug("trimmedShape1:", trimmedShape1);
-    qDebug("trimmedShape2:", trimmedShape2);
-
     return [ trimmedShape1, trimmedShape2 ];
 };
-
-//Trim.trimXLine = function(op, trimEntity, trimmed) {
-//    op.deleteObject(trimEntity);
-//    op.addObject(
-//        shapeToEntity(trimEntity.getDocument(), xLineToRay(trimmed.castToShape())),
-////        new RRayEntity(
-////            trimEntity.getDocument(),
-////            new RRayData(trimmed.getBasePoint(), trimmed.getDirectionVector())
-////        ),
-//        false
-//    );
-//};
-
-//Trim.trimRay = function(op, trimEntity, trimmed) {
-//    op.deleteObject(trimEntity);
-//    op.addObject(
-//        shapeToEntity(trimEntity.getDocument(), rayToLine(trimmed.castToShape())),
-////        new RLineEntity(
-////            trimEntity.getDocument(),
-////            new RLineData(trimmed.getBasePoint(), trimmed.getSecondPoint())
-////            ),
-//        false
-//    );
-//};

@@ -93,128 +93,6 @@ Round.round = function(op, entity1, clickPos1, entity2, clickPos2, trim, radius,
         return false;
     }
 
-//    if (!isShape(shape1) || !isShape(shape2)) {
-//        return false;
-//    }
-
-
-//    if (isPolylineEntity(entity1) && !isPolylineEntity(entity2)) {
-//        return false;
-//    }
-
-//    if (!isPolylineEntity(entity1) && isPolylineEntity(entity2)) {
-//        return false;
-//    }
-
-//    if (isPolylineEntity(entity1) && isPolylineEntity(entity2)) {
-//        if (entity1.getId()!==entity2.getId()) {
-//            return false;
-//        }
-//    }
-
-    // find out whether we're rounding within a polyline:
-//    var polyline = undefined;
-//    var segments = undefined;
-//    var shapeIndex1 = undefined;
-//    var shapeIndex2 = undefined;
-//    if (entity1.getId()===entity2.getId() && isPolylineEntity(entity1)) {
-//        polyline = entity1.getData().castToShape();
-//        //qDebug("polyline: ", polyline);
-//        segments = polyline.getExploded();
-//        var minDistance1 = undefined;
-//        var minDistance2 = undefined;
-//        var segment;
-//        var distance;
-//        for (var i=0; i<segments.length; ++i) {
-//            segment = segments[i];
-
-//            distance = segment.getDistanceTo(clickPos1);
-//            if (isNull(minDistance1) || distance<minDistance1) {
-//                minDistance1 = distance;
-//                shapeIndex1 = i;
-//                shape1 = segment.clone();
-//            }
-
-//            distance = segment.getDistanceTo(clickPos2);
-//            if (isNull(minDistance2) || distance<minDistance2) {
-//                minDistance2 = distance;
-//                shapeIndex2 = i;
-//                shape2 = segment.clone();
-//            }
-//        }
-
-//        if (shapeIndex1===shapeIndex2) {
-//            return false;
-//        }
-
-//        if (shapeIndex2<shapeIndex1) {
-//            var tmp = shapeIndex1;
-//            shapeIndex1 = shapeIndex2;
-//            shapeIndex2 = tmp;
-
-//            tmp = shape1;
-//            shape1 = shape2;
-//            shape2 = tmp;
-//        }
-//    }
-
-    // ####
-
-
-        // trim polyline segment and add bevel segment:
-//        if (!isNull(polyline)) {
-//            var trimmedPolyline = polyline.clone();
-//            trimmedPolyline.clear();
-//            for (i=0; i<segments.length; ++i) {
-//                segment = segments[i];
-
-//                // add first trimmed segment and bevel segment:
-//                if (i==shapeIndex1) {
-//                    if (trimmed1.getStartPoint().equalsFuzzy(bp1)) {
-//                        trimmed1.reverse();
-//                        trimmed1.setStartPoint(shape1.getStartPoint());
-//                    }
-//                    trimmedPolyline.appendShape(trimmed1);
-
-//                    trimmedPolyline.appendShape(arc);
-
-//                    if (trimmed2.getEndPoint().equalsFuzzy(bp2)) {
-//                        trimmed2.reverse();
-//                        trimmed2.setEndPoint(shape2.getEndPoint());
-//                    }
-//                    trimmedPolyline.appendShape(trimmed2);
-//                    i = shapeIndex2;
-//                }
-
-//                // add unaffected segment:
-//                else {
-//                    trimmedPolyline.appendShape(segment.data());
-//                }
-//            }
-
-//            entity1.setShape(trimmedPolyline);
-//            op.addObject(entity1, false);
-//        }
-
-    // rounding within same polyline:
-//    if (samePolyline) {
-//        //entity2 = entity1.clone();
-//        //entity2.getDocument().getStorage().setObjectId(entity2, RObject.INVALID_ID);
-//        var pl = newShapes[0];
-//        //entity1.setShape(newShapes[0]);
-//        //entity1.append
-//        if (!pl.getEndPoint().equalsFuzzy(newShapes[1].getStartPoint())) {
-//            pl.appendVertex(newShapes[1].getStartPoint());
-//        }
-//        pl.appendShape(newShapes[1]);
-//        if (!pl.getEndPoint().equalsFuzzy(newShapes[2].getStartPoint())) {
-//            pl.appendVertex(newShapes[2].getStartPoint());
-//        }
-//        pl.appendShape(newShapes[2]);
-//        modifyEntity(op, entity1, pl);
-//        return true;
-//    }
-
     // add new trimmed entities:
     if (!modifyEntity(op, entity1, newShapes[0])) {
         if (!preview) {
@@ -234,9 +112,7 @@ Round.round = function(op, entity1, clickPos1, entity2, clickPos2, trim, radius,
     }
 
     // add rounding:
-    //if (isNull(polyline)) {
-        op.addObject(new RArcEntity(entity1.getDocument(), new RArcData(newShapes[1])));
-    //}
+    op.addObject(new RArcEntity(entity1.getDocument(), new RArcData(newShapes[1])));
 
     return true;
 };
@@ -365,19 +241,6 @@ Round.roundShapes = function(shape1, clickPos1, shape2, clickPos2, trim, samePol
         var pl = ShapeAlgorithms.modifyPolylineCorner(shape1, trimmed1, ending1, i1, shape2, trimmed2, ending2, i2, arc);
         return [ pl ];
     }
-
-//    if (samePolyline) {
-//        if (!isNull(i1) && !isNull(i2)) {
-//            if (i2<i1) {
-//                arc.reverse();
-//                return [ trimmed2, arc, trimmed1 ];
-//            }
-//        }
-//    }
-
-    qDebug("trimmed1: ", trimmed1);
-    qDebug("arc: ", arc);
-    qDebug("trimmed2: ", trimmed2);
 
     return [ trimmed1, arc, trimmed2 ];
 };
