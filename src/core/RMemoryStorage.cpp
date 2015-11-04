@@ -887,6 +887,10 @@ RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) c
             RBox bb = e->getBoundingBox(false);
             RBox bbIgnoreEmpty = e->getBoundingBox(true);
 
+            if (!bb.isSane()) {
+                continue;
+            }
+
             boundingBox[0][0].growToInclude(bb);
             boundingBox[0][1].growToInclude(bbIgnoreEmpty);
             if (!layerHidden) {
