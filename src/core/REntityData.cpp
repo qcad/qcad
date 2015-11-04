@@ -260,17 +260,18 @@ double REntityData::getDistanceTo(const RVector& point, bool limited, double ran
 RBox REntityData::getBoundingBox(bool ignoreEmpty) const {
     Q_UNUSED(ignoreEmpty)
 
-    RBox bb;
+    RBox ret;
     QList<QSharedPointer<RShape> > shapes = getShapes();
     for (int i=0; i<shapes.size(); i++) {
-        if (!bb.isValid()) {
-            bb = shapes.at(i)->getBoundingBox();
+        RBox bb = shapes.at(i)->getBoundingBox();
+        if (!ret.isValid()) {
+            ret = bb;
         }
         else {
-            bb.growToInclude(shapes.at(i)->getBoundingBox());
+            ret.growToInclude(bb);
         }
     }
-    return bb;
+    return ret;
 }
 
 /**
