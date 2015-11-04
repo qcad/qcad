@@ -160,8 +160,10 @@ public:
     RVector getStartPoint() const;
     RVector getEndPoint() const;
 
-    bool isValid();
+    bool isValid() const;
     void setValid(bool on);
+
+    bool isSane() const;
 
     int getZLevel() const;
     void setZLevel(int zl);
