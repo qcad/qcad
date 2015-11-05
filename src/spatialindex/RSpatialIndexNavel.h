@@ -63,7 +63,7 @@ public:
             }
             else {
                 // skip empty bbs lists:
-                while (bbs[index].isEmpty() && index<bbs.length()) {
+                while (index<bbs.length() && bbs[index].isEmpty()) {
                     index++;
                 }
             }
