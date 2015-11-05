@@ -32,15 +32,15 @@
 class RSiDataStream : public SpatialIndex::IDataStream
 {
 public:
-    RSiDataStream(const QList<int>& ids, const QList<QList<RBox> >& bbs) : ids(ids), bbs(bbs), index(0), pos(0) {
+    RSiDataStream(const QList<int>& ids, const QList<QList<RBox> >& bbs) : ids(ids), bbs(bbs), index(0), pos(0), done(false) {
     }
 
     virtual ~RSiDataStream() { }
 
     virtual SpatialIndex::IData* getNext() {
-        if (index>=ids.length() || index>=bbs.length()) {
-            return NULL;
-        }
+        Q_ASSERT(index<ids.length());
+        Q_ASSERT(index<bbs.length());
+        Q_ASSERT(pos<bbs[index].length());
 
         RBox bb = bbs[index][pos];
         double p1[] = {
@@ -58,13 +58,22 @@ public:
         else {
             index++;
             pos = 0;
+            if (index>=ids.length() || index>=bbs.length()) {
+                done = true;
+            }
+            else {
+                // skip empty bbs lists:
+                while (bbs[index].isEmpty() && index<bbs.length()) {
+                    index++;
+                }
+            }
         }
 
         return new SpatialIndex::RTree::Data(0, NULL, r, id);
     }
 
     virtual bool hasNext() {
-        return index<ids.length() && index<bbs.length() && pos<bbs[index].length();
+        return !done;
     }
 
     virtual uint32_t size() {
@@ -81,6 +90,7 @@ private:
     const QList<QList<RBox> >& bbs;
     int index;
     int pos;
+    bool done;
 };
 
 
@@ -258,6 +268,7 @@ public:
     //static int dataToInt(const uint8_t* data);
     //static void intToData(int i, uint8_t* data);
 
+    virtual RSpatialIndex* create();
     virtual void clear();
 
     virtual void bulkLoad(const QList<int>& ids, const QList<QList<RBox> >& bbs);

@@ -25,6 +25,10 @@ RSpatialIndexSimple::RSpatialIndexSimple() {
 RSpatialIndexSimple::~RSpatialIndexSimple() {
 }
 
+RSpatialIndex* RSpatialIndexSimple::create() {
+    return new RSpatialIndexSimple();
+}
+
 void RSpatialIndexSimple::clear() {
     si.clear();
 }

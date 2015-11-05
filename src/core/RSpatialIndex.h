@@ -78,6 +78,7 @@ public:
     static int getId(qint64 siid);
     static int getPos(qint64 siid);
 
+    virtual RSpatialIndex* create() = 0;
     virtual void clear() = 0;
 
     virtual void bulkLoad(const QList<int>& ids, const QList<QList<RBox> >& bbs);

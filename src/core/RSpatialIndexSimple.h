@@ -42,6 +42,7 @@ public:
     RSpatialIndexSimple();
     virtual ~RSpatialIndexSimple();
 
+    virtual RSpatialIndex* create();
     virtual void clear();
 
     /**

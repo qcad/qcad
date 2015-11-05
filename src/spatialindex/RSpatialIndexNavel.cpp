@@ -134,6 +134,9 @@ void RSpatialIndexNavel::uninit() {
     //sidCounter = 0;
 }
 
+RSpatialIndex* RSpatialIndexNavel::create() {
+    return new RSpatialIndexNavel();
+}
 
 void RSpatialIndexNavel::clear() {
     uninit();
