@@ -20,7 +20,7 @@
 #ifndef RHATCHPROXY_H
 #define RHATCHPROXY_H
 
-#include "../core_global.h"
+#include "entity_global.h"
 
 #include "RPolyline.h"
 
@@ -32,7 +32,7 @@ class RHatchData;
  *
  * \ingroup entity
  */
-class QCADCORE_EXPORT RHatchProxy {
+class QCADENTITY_EXPORT RHatchProxy {
 public:
     virtual ~RHatchProxy() {}
 
