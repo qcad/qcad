@@ -48,6 +48,7 @@ public:
     virtual RTransaction apply(RDocument& document, bool preview = false) const {
         Q_UNUSED(document)
         Q_UNUSED(preview)
+        return RTransaction();
     }
     
     /**
