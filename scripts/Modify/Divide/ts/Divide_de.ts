@@ -4,9 +4,13 @@
 <context>
     <name>Divide</name>
     <message>
-        <location filename="../Divide.js" line="+66"/>
         <source>Choose line, arc, circle, ellipse or spline</source>
-        <translation>Linie, Bogen, Kreis, Ellipse oder Spline wählen</translation>
+        <translation type="vanished">Linie, Bogen, Kreis, Ellipse oder Spline wählen</translation>
+    </message>
+    <message>
+        <location filename="../Divide.js" line="+66"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline</source>
+        <translation>Linie, Bogen, Kreis, Ellipse, Spline oder Polylinie wählen</translation>
     </message>
     <message>
         <location line="+3"/>

@@ -25,13 +25,13 @@
         <translation>Las dos entidades no pueden ser biselados.</translation>
     </message>
     <message>
-        <location line="+251"/>
+        <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Primera entidad no se pueden recortar.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Segunda entidad no se pueden recortar.</translation>

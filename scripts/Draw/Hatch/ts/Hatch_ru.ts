@@ -4,17 +4,17 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="+55"/>
+        <location filename="../Hatch.js" line="+57"/>
         <source>No boundary selected.</source>
         <translation>Нет выбранной границы</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
         <translation>Цикл не закрыт в точке %1/%2.</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+94"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Каждый объект с границей должен быть линией, дугой, окружностью, эллиптической дугой, эллипсом, ломаной или кривой. Найдено:</translation>
     </message>

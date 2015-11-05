@@ -4,17 +4,17 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="+55"/>
+        <location filename="../Hatch.js" line="+57"/>
         <source>No boundary selected.</source>
         <translation>Nobena obroba ni izbrana.</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
         <translation>Zanka ni zaklučena na točki %1/%2.</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+94"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Vsaka entiteta obrobe mora biti črta, krog, elipsa, lok, lok elipse, lomljenka ali krivulja. Najdeno:</translation>
     </message>

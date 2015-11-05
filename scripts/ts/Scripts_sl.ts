@@ -52,7 +52,7 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+58"/>
+        <location filename="../EAction.js" line="+62"/>
         <source>Back</source>
         <translation>Nazaj</translation>
     </message>
@@ -63,7 +63,7 @@
     </message>
     <message>
         <location line="+273"/>
-        <location line="+133"/>
+        <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktivno orodje:</translation>
     </message>
@@ -73,7 +73,7 @@
         <translation>Brez</translation>
     </message>
     <message>
-        <location line="+445"/>
+        <location line="+589"/>
         <source>Options</source>
         <translation>Nastavitve</translation>
     </message>
@@ -171,7 +171,7 @@
         <translation>Radius je padel pod 0.0 po %1 kocentričnih lokih.</translation>
     </message>
     <message>
-        <location line="+684"/>
+        <location line="+690"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vsaj dve točki sta identični.</translation>
@@ -349,7 +349,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+339"/>
+        <location filename="../autostart.js" line="+299"/>
         <source>Loading add-on translations...</source>
         <translation>Nalagam prevode dodatkov...</translation>
     </message>
@@ -377,7 +377,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+721"/>
+        <location filename="../library.js" line="+725"/>
         <source>Objects</source>
         <translation type="unfinished"></translation>
     </message>

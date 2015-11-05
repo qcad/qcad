@@ -4,7 +4,7 @@
 <context>
     <name>Trim</name>
     <message>
-        <location filename="../Trim.js" line="+70"/>
+        <location filename="../Trim.js" line="+71"/>
         <source>Choose limiting entity</source>
         <translation>制限エッジを選択</translation>
     </message>
@@ -14,9 +14,24 @@
         <translation>トリム対象を選択</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+134"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>２つのエンティティは交差していないか、現在トリムをサポートされていません。</translation>
+    </message>
+    <message>
+        <location line="+62"/>
+        <source>First entity cannot be trimmed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Entity cannot be trimmed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Second entity cannot be trimmed.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../TrimInit.js" line="+2"/>

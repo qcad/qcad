@@ -9,12 +9,12 @@
         <translation>Medzi týmito dvomi prvkami sa nedá vytvoriť skosenie.</translation>
     </message>
     <message>
-        <location line="+251"/>
+        <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Prvý prvok nemôže byť orezaný.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>Druhý prvok nemôže byť orezaný.</translation>
     </message>

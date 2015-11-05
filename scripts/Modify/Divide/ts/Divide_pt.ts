@@ -11,9 +11,13 @@ Escolha linha, arco ou círculo</translatorcomment>
         <translation type="obsolete">Escolha linha, arco ou círculo</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="+66"/>
         <source>Choose line, arc, circle, ellipse or spline</source>
-        <translation>Escolha uma linha, arco, círculo, elipse ou spline</translation>
+        <translation type="vanished">Escolha uma linha, arco, círculo, elipse ou spline</translation>
+    </message>
+    <message>
+        <location filename="../Divide.js" line="+66"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline</source>
+        <translation>Escolha uma linha, arco, circulo, elipse, spline ou polilinha</translation>
     </message>
     <message>
         <location line="+3"/>

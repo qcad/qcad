@@ -102,7 +102,7 @@ Hauteur
         <location filename="../src/entity/RLineEntity.cpp" line="+82"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="-2"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+86"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+88"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+78"/>
         <location line="+3"/>
         <location line="+4"/>

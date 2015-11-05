@@ -33,12 +33,12 @@
         <translation>Die zwei Objekte können nicht abgeschrägt werden.</translation>
     </message>
     <message>
-        <location line="+251"/>
+        <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Erstes Objekt kann nicht getrimmt werden.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>Zweites Objekt kann nicht getrimmt werden.</translation>
     </message>

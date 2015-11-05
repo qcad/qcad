@@ -9,12 +9,12 @@
         <translation>Два объекта не могут быть скошены.</translation>
     </message>
     <message>
-        <location line="+251"/>
+        <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Первый объект не может быть подрезан.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>Второй объект не может быть подрезан.</translation>
     </message>

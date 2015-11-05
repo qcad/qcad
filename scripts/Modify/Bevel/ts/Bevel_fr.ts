@@ -10,13 +10,13 @@
         <translation>Les deux entités ne peuvent être chanfreiner.</translation>
     </message>
     <message>
-        <location line="+251"/>
+        <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Première entité ne peut pas être ajuster.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Deuxième entité ne peut pas être ajuster.</translation>

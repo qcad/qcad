@@ -10,7 +10,7 @@
         <translation>As duas entidades não podem ser arredondadas.</translation>
     </message>
     <message>
-        <location line="+216"/>
+        <location line="+42"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--exact match--
 --file: Bevel_pt.ts--

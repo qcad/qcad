@@ -52,7 +52,7 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+58"/>
+        <location filename="../EAction.js" line="+62"/>
         <source>Back</source>
         <translation>Zurück</translation>
     </message>
@@ -63,7 +63,7 @@
     </message>
     <message>
         <location line="+273"/>
-        <location line="+133"/>
+        <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
     </message>
@@ -77,7 +77,7 @@
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+445"/>
+        <location line="+589"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
@@ -175,7 +175,7 @@
         <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location line="+691"/>
+        <location line="+697"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>
@@ -389,7 +389,7 @@
         <translation type="obsolete">Suche Plugins...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+339"/>
+        <location filename="../autostart.js" line="+299"/>
         <source>Loading add-on translations...</source>
         <translation>Lade Add-on Übersetzungen...</translation>
     </message>
@@ -433,7 +433,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+721"/>
+        <location filename="../library.js" line="+725"/>
         <source>Objects</source>
         <translation>Objekte</translation>
     </message>

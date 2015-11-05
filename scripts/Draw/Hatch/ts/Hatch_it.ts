@@ -4,17 +4,17 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="+55"/>
+        <location filename="../Hatch.js" line="+57"/>
         <source>No boundary selected.</source>
         <translation>Nessun limite selezionato.</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+17"/>
         <source>Loop not closed at point %1/%2.</source>
         <translation>Contorno non è chiuso al punto %1/%2.</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+94"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Ogni entità confine deve essere una linea, arco, cerchio, arco ellittico, ellissi, polilinee o spline. Trovato:</translation>
     </message>

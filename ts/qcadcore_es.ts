@@ -689,7 +689,7 @@ Colores
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+73"/>
+        <location filename="../src/core/RLayer.cpp" line="+74"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>

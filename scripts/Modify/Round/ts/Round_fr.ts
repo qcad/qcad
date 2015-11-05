@@ -10,7 +10,7 @@
         <translation>Les deux entités ne peuvent pas être arrondis.</translation>
     </message>
     <message>
-        <location line="+216"/>
+        <location line="+42"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Première entité ne peut pas être ajuster.</translation>

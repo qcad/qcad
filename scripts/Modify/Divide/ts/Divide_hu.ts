@@ -5,7 +5,7 @@
     <name>Divide</name>
     <message>
         <location filename="../Divide.js" line="+66"/>
-        <source>Choose line, arc, circle, ellipse or spline</source>
+        <source>Choose line, arc, circle, ellipse, spline or polyline</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

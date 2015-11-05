@@ -9,7 +9,7 @@
         <translation>Tieto dva prvky sa nedajú zaobliť.</translation>
     </message>
     <message>
-        <location line="+216"/>
+        <location line="+42"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Prvý prvok sa nedá zrezať.</translation>
     </message>

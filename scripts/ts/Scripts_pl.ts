@@ -57,7 +57,7 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+58"/>
+        <location filename="../EAction.js" line="+62"/>
         <source>Back</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -76,7 +76,7 @@ Anuluj
     </message>
     <message>
         <location line="+273"/>
-        <location line="+133"/>
+        <location line="+136"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Aktywne narzędzia:</translation>
@@ -91,7 +91,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+445"/>
+        <location line="+589"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -209,7 +209,7 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished">Promień spadła poniżej 0,0 po koncentrycznym łuk (s).</translation>
     </message>
     <message>
-        <location line="+684"/>
+        <location line="+690"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -443,7 +443,7 @@ Dzielenie (÷)</translatorcomment>
         <translation type="obsolete">Po inicjalizacji wtyczki ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+339"/>
+        <location filename="../autostart.js" line="+299"/>
         <source>Loading add-on translations...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -471,7 +471,7 @@ Dzielenie (÷)</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+721"/>
+        <location filename="../library.js" line="+725"/>
         <source>Objects</source>
         <translation type="unfinished"></translation>
     </message>

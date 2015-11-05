@@ -57,7 +57,7 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+58"/>
+        <location filename="../EAction.js" line="+62"/>
         <source>Back</source>
         <translation>Précédent</translation>
     </message>
@@ -68,7 +68,7 @@
     </message>
     <message>
         <location line="+273"/>
-        <location line="+133"/>
+        <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Outil actif:</translation>
     </message>
@@ -83,7 +83,7 @@
         <translation>Aucun</translation>
     </message>
     <message>
-        <location line="+445"/>
+        <location line="+589"/>
         <source>Options</source>
         <translation>Options</translation>
     </message>
@@ -193,7 +193,7 @@
         <translation>Rayon chuté en dessous de zéro, après %1 arc(s) concentrique(s).</translation>
     </message>
     <message>
-        <location line="+684"/>
+        <location line="+690"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -400,7 +400,7 @@
         <translation type="obsolete">Post-initialisation ...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+339"/>
+        <location filename="../autostart.js" line="+299"/>
         <source>Loading add-on translations...</source>
         <translation>Chargement add-on traductions...</translation>
     </message>
@@ -444,7 +444,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+721"/>
+        <location filename="../library.js" line="+725"/>
         <source>Objects</source>
         <translation>Objets</translation>
     </message>

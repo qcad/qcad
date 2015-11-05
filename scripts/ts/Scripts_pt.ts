@@ -57,7 +57,7 @@
 <context>
     <name>EAction</name>
     <message>
-        <location filename="../EAction.js" line="+58"/>
+        <location filename="../EAction.js" line="+62"/>
         <source>Back</source>
         <translatorcomment>--exact match--
 --file: qt_pt.ts--
@@ -76,7 +76,7 @@ Cancelar
     </message>
     <message>
         <location line="+273"/>
-        <location line="+133"/>
+        <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Ferramenta Ativa:</translation>
     </message>
@@ -96,7 +96,7 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+445"/>
+        <location line="+589"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -213,7 +213,7 @@ Ferramentas CAD</translatorcomment>
         <translation>O Raio ficou abaixo de 0,0, após %1 arco(s) concêntrico(s).</translation>
     </message>
     <message>
-        <location line="+684"/>
+        <location line="+690"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -460,7 +460,7 @@ Carregando plugins...</translatorcomment>
         <translation type="obsolete">Pós-inicialização...</translation>
     </message>
     <message>
-        <location filename="../autostart.js" line="+339"/>
+        <location filename="../autostart.js" line="+299"/>
         <source>Loading add-on translations...</source>
         <translation>Carregando traduções da add-on...</translation>
     </message>
@@ -504,7 +504,7 @@ Carregando plugins...</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+721"/>
+        <location filename="../library.js" line="+725"/>
         <source>Objects</source>
         <translation>Objectos</translation>
     </message>

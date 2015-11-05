@@ -9,7 +9,7 @@
         <translation>Два объекта не могут быть закруглены.</translation>
     </message>
     <message>
-        <location line="+216"/>
+        <location line="+42"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Первый объект не может быть подрезан.</translation>
     </message>

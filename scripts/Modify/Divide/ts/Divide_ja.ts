@@ -8,9 +8,13 @@
         <translation type="obsolete">線分、弧、円を選択してください</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="+66"/>
         <source>Choose line, arc, circle, ellipse or spline</source>
-        <translation>線分,弧,円,楕円またはスプラインを選択してください</translation>
+        <translation type="vanished">線分,弧,円,楕円またはスプラインを選択してください</translation>
+    </message>
+    <message>
+        <location filename="../Divide.js" line="+66"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>

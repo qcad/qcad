@@ -10,13 +10,13 @@
         <translation type="unfinished">Te dwa podmioty nie mogą być frezowane.</translation>
     </message>
     <message>
-        <location line="+251"/>
+        <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pierwszy podmiot nie może być przycięte.</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Druga jednostka nie może być przycięte.</translation>

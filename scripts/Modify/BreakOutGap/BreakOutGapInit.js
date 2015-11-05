@@ -6,6 +6,6 @@ function init(basePath) {
     action.setDefaultShortcut(new QKeySequence("d,3"));
     action.setDefaultCommands(["BreakOutGap", "d3"]);
     action.setGroupSortOrder(13400);
-    action.setSortOrder(350);
+    action.setSortOrder(500);
     action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel"]);
 }

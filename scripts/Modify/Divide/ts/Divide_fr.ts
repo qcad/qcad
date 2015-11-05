@@ -8,9 +8,13 @@
         <translation type="obsolete">Choisissez une ligne, arc ou cercle</translation>
     </message>
     <message>
-        <location filename="../Divide.js" line="+66"/>
         <source>Choose line, arc, circle, ellipse or spline</source>
-        <translation>Choisissez ligne, arc, cercle, ellipse ou spline</translation>
+        <translation type="vanished">Choisissez ligne, arc, cercle, ellipse ou spline</translation>
+    </message>
+    <message>
+        <location filename="../Divide.js" line="+66"/>
+        <source>Choose line, arc, circle, ellipse, spline or polyline</source>
+        <translation>Choisir ligne, arc, cercle, ellipse, spline ou polyligne</translation>
     </message>
     <message>
         <location line="+3"/>

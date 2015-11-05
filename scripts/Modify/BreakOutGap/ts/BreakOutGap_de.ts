@@ -4,24 +4,28 @@
 <context>
     <name>BreakOutGap</name>
     <message>
-        <location filename="../BreakOutGap.js" line="53"/>
+        <location filename="../BreakOutGap.js" line="+53"/>
         <source>Choose line, arc or circle</source>
         <translation>Linie, Bogen oder Kreis wählen</translation>
     </message>
     <message>
-        <location filename="../BreakOutGap.js" line="61"/>
+        <location line="+8"/>
         <source>Specify point</source>
         <translation>Punkt angeben</translation>
     </message>
     <message>
-        <location filename="../BreakOutGapInit.js" line="2"/>
         <source>&amp;Break Out Gap</source>
-        <translation>&amp;Abstand heraustrennen</translation>
+        <translation type="vanished">&amp;Abstand heraustrennen</translation>
     </message>
     <message>
-        <location filename="../BreakOutGap.ui" line="17"/>
+        <location filename="../BreakOutGap.ui" line="+17"/>
         <source>Gap:</source>
         <translation>Zwischenraum:</translation>
+    </message>
+    <message>
+        <location filename="../BreakOutGapInit.js" line="+2"/>
+        <source>&amp;Break out Gap</source>
+        <translation>&amp;Abstand heraustrennen</translation>
     </message>
 </context>
 </TS>

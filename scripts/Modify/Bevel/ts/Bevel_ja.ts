@@ -9,12 +9,12 @@
         <translation>２つのエンティティは面取りできません。</translation>
     </message>
     <message>
-        <location line="+251"/>
+        <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
         <translation>１つ目のエンティティはトリムできません。</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+11"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>２つ目のエンティティはトリムできません。</translation>
     </message>

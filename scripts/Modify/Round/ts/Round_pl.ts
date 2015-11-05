@@ -10,7 +10,7 @@
         <translation type="unfinished">Te dwa podmioty nie mogą być zaokrąglone.</translation>
     </message>
     <message>
-        <location line="+216"/>
+        <location line="+42"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pierwszy podmiot nie może być przycięte.</translation>
