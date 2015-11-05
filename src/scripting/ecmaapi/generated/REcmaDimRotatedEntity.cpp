@@ -105,7 +105,7 @@
         
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -264,7 +264,7 @@
     }
     
     }
-     QScriptValue REcmaDimRotatedEntity::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaDimRotatedEntity::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
     if (context->thisObject().strictlyEquals(

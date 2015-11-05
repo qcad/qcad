@@ -35,6 +35,7 @@
 <class_decl>class <name>RPoint</name>;</class_decl>
 <class_decl>class <name>RPolyline</name>;</class_decl>
 <class_decl>class <name>RProgressHandler</name>;</class_decl>
+<class_decl>class <name>RRay</name>;</class_decl>
 <class_decl>class <name>RSpline</name>;</class_decl>
 <class_decl>class <name>RTriangle</name>;</class_decl>
 <class_decl>class <name>RVector</name>;</class_decl>

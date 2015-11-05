@@ -57,6 +57,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="isSane" cppName="isSane" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="double" typeName="double" name="v"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="eval" cppName="eval" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">

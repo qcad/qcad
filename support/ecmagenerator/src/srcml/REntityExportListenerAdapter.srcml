@@ -25,6 +25,8 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REntityExportListener.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RExporter</name>;</class_decl>
+
 <comment type="block">/**
  * This entity decorator adapter emits signals on block events.
  * Used to simplify entity decoration from QObjects,

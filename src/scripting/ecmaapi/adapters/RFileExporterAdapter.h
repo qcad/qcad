@@ -34,6 +34,7 @@ class RMessageHandler;
 class RPoint;
 class RPolyline;
 class RProgressHandler;
+class RRay;
 class RSpline;
 class RTriangle;
 class RVector;

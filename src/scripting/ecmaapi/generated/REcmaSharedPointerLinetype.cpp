@@ -119,7 +119,7 @@
       
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -160,7 +160,7 @@
     }
     
     }
-     QScriptValue REcmaSharedPointerLinetype::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaSharedPointerLinetype::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
     if (context->thisObject().strictlyEquals(

@@ -96,6 +96,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
+            REcmaHelper::registerFunction(&engine, proto, isSane, "isSane");
+            
             REcmaHelper::registerFunction(&engine, proto, isInside, "isInside");
             
             REcmaHelper::registerFunction(&engine, proto, equalsFuzzy, "equalsFuzzy");
@@ -228,7 +230,7 @@
             
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -305,7 +307,7 @@
     }
     
     }
-     QScriptValue REcmaVector::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaVector::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
     if (context->thisObject().strictlyEquals(
@@ -984,6 +986,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaVector::isValid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaVector::isSane
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaVector::isSane", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaVector::isSane";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RVector* self = 
+                        getSelf("isSane", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSane();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RVector.isSane().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaVector::isSane", context, engine);
             return result;
         }
          QScriptValue

@@ -31,6 +31,8 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSplineProxy.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
+
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>R_NO_OPENNURBS</name></cpp:ifndef>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"opennurbs/opennurbs.h"</cpp:file></cpp:include>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
@@ -160,8 +162,8 @@
     <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>getTransformed</name><parameter_list>(<param><decl><type><name>const</name> <name>QTransform</name>&amp;</type> <name>transform</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name><name>RS</name>::<name>Ending</name></name></type> <name>getTrimEnd</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>trimStartPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name>RDEFAULT_RVECTOR</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>trimEndPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name>RDEFAULT_RVECTOR</name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>trimStartPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>trimEndPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>RPolyline</name></type> <name>toPolyline</name><parameter_list>(<param><decl><type><name>int</name></type> <name>segments</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 

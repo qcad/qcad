@@ -122,7 +122,7 @@
             
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -163,7 +163,7 @@
     }
     
     }
-     QScriptValue REcmaLinetype::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaLinetype::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
     if (context->thisObject().strictlyEquals(

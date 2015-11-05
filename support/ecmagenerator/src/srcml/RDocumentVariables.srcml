@@ -23,9 +23,10 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocumentVariables.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLayer.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
+
+<class_decl>class <name>RDocument</name>;</class_decl>
 
 <comment type="block">/**
  * This type of object is used to store document wide variables.

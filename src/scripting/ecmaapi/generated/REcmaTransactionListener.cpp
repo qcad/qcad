@@ -61,7 +61,7 @@
         
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -84,7 +84,7 @@
     }
     
     }
-     QScriptValue REcmaTransactionListener::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaTransactionListener::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
            return REcmaHelper::throwError("Abstract class RTransactionListener: Cannot be constructed.",

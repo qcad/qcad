@@ -37,6 +37,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="isSane" cppName="isSane" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="getWidth" cppName="getWidth" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />

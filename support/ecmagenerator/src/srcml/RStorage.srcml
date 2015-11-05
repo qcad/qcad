@@ -41,6 +41,8 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RUcs.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RView.h"</cpp:file></cpp:include>
 
+<class_decl>class <name>RDocument</name>;</class_decl>
+
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_QSTRING</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QSTRING</name> <name>QString</name>()</cpp:define>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>

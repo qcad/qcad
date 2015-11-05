@@ -65,6 +65,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, create, "create");
+            
             REcmaHelper::registerFunction(&engine, proto, clear, "clear");
             
             REcmaHelper::registerFunction(&engine, proto, bulkLoad, "bulkLoad");
@@ -87,7 +89,7 @@
         
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -116,7 +118,7 @@
     }
     
     }
-     QScriptValue REcmaSpatialIndex::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaSpatialIndex::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
            return REcmaHelper::throwError("Abstract class RSpatialIndex: Cannot be constructed.",
@@ -342,6 +344,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpatialIndex::getPos", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpatialIndex::create
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpatialIndex::create", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndex::create";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpatialIndex* self = 
+                        getSelf("create", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RSpatialIndex *'
+    RSpatialIndex * cppResult =
+        
+               self->create();
+        // return type: RSpatialIndex *
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndex.create().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpatialIndex::create", context, engine);
             return result;
         }
          QScriptValue

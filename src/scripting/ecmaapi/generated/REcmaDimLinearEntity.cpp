@@ -95,7 +95,7 @@
         
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -248,7 +248,7 @@
     }
     
     }
-     QScriptValue REcmaDimLinearEntity::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaDimLinearEntity::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
            return REcmaHelper::throwError("Abstract class RDimLinearEntity: Cannot be constructed.",

@@ -59,7 +59,7 @@
         
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -82,7 +82,7 @@
     }
     
     }
-     QScriptValue REcmaNewDocumentListener::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaNewDocumentListener::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
            return REcmaHelper::throwError("Abstract class RNewDocumentListener: Cannot be constructed.",

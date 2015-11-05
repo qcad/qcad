@@ -663,7 +663,7 @@
     </xsl:choose>
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     <xsl:apply-templates select="method[@specifier='public']" mode="init" >
@@ -696,7 +696,7 @@
 
 
 <xsl:template name="createAbstract">
-    <xsl:value-of select="$static"/> QScriptValue <xsl:value-of select="$prefix"/>create(QScriptContext* context, QScriptEngine* engine) 
+    <xsl:value-of select="$static"/> QScriptValue <xsl:value-of select="$prefix"/>createEcma(QScriptContext* context, QScriptEngine* engine) 
     <xsl:choose>
         <xsl:when test="$mode='h'">
             <xsl:text>;</xsl:text>
@@ -711,7 +711,7 @@
 </xsl:template>
 
 <xsl:template name="create">
-    <xsl:value-of select="$static"/> QScriptValue <xsl:value-of select="$prefix"/>create(QScriptContext* context, QScriptEngine* engine) 
+    <xsl:value-of select="$static"/> QScriptValue <xsl:value-of select="$prefix"/>createEcma(QScriptContext* context, QScriptEngine* engine) 
     <xsl:choose>
         <xsl:when test="$mode='h'">
             <xsl:text>;</xsl:text>

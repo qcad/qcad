@@ -39,6 +39,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPoint.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RRay.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSpline.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RXLine.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RGraphicsViewImage</name>;</class_decl>

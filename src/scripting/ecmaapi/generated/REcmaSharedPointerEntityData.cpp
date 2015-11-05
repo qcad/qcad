@@ -182,7 +182,7 @@
       
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -205,7 +205,7 @@
     }
     
     }
-     QScriptValue REcmaSharedPointerEntityData::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaSharedPointerEntityData::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
            return REcmaHelper::throwError("Abstract class REntityData: Cannot be constructed.",

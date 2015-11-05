@@ -13,6 +13,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RPoint" />
   <class_decl name="RPolyline" />
   <class_decl name="RProgressHandler" />
+  <class_decl name="RRay" />
   <class_decl name="RSpline" />
   <class_decl name="RTriangle" />
   <class_decl name="RVector" />

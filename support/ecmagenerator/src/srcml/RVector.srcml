@@ -84,6 +84,7 @@
     }</block></function>
 
     <function_decl><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isSane</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>bool</name></type> <name>isInside</name><parameter_list>(<param><decl><type><name>const</name> <name>RBox</name>&amp;</type> <name>b</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 

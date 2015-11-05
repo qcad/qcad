@@ -134,7 +134,7 @@
             
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -274,7 +274,7 @@
     }
     
     }
-     QScriptValue REcmaPropertyAttributes::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaPropertyAttributes::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
     if (context->thisObject().strictlyEquals(

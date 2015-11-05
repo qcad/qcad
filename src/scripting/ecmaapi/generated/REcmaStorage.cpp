@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include "RDocument.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -347,7 +349,7 @@
         
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -372,7 +374,7 @@
     }
     
     }
-     QScriptValue REcmaStorage::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaStorage::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
            return REcmaHelper::throwError("Abstract class RStorage: Cannot be constructed.",

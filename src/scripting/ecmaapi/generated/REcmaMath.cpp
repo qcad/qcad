@@ -53,7 +53,7 @@
         
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -72,6 +72,8 @@
             REcmaHelper::registerFunction(&engine, &ctor, isNaN, "isNaN");
             
             REcmaHelper::registerFunction(&engine, &ctor, isInf, "isInf");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isSane, "isSane");
             
             REcmaHelper::registerFunction(&engine, &ctor, eval, "eval");
             
@@ -140,7 +142,7 @@
     }
     
     }
-     QScriptValue REcmaMath::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaMath::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
     if (context->thisObject().strictlyEquals(
@@ -590,6 +592,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMath::isInf", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMath::isSane
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMath::isSane", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMath::isSane";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RMath::
+       isSane(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMath.isSane().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMath::isSane", context, engine);
             return result;
         }
          QScriptValue

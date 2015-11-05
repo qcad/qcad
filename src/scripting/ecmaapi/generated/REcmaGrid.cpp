@@ -81,7 +81,7 @@
         
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -104,7 +104,7 @@
     }
     
     }
-     QScriptValue REcmaGrid::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaGrid::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
            return REcmaHelper::throwError("Abstract class RGrid: Cannot be constructed.",

@@ -75,7 +75,7 @@
         
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -98,7 +98,7 @@
     }
     
     }
-     QScriptValue REcmaSnapEntityBase::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaSnapEntityBase::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
            return REcmaHelper::throwError("Abstract class RSnapEntityBase: Cannot be constructed.",

@@ -27,7 +27,7 @@
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
     =NULL
     ) 
-    ;static  QScriptValue create(QScriptContext* context, QScriptEngine* engine) 
+    ;static  QScriptValue createEcma(QScriptContext* context, QScriptEngine* engine) 
     ;
 
     // conversion functions for base classes:
@@ -61,6 +61,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getSpatialIndex
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSpatialIndexForBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSpatialIndexForCurrentBlock
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getTransactionStack
@@ -228,6 +234,9 @@
         getSelectionBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clearSpatialIndices
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         rebuildSpatialIndex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -241,9 +250,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addBlockToSpatialIndex
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        removeFromSpatialIndex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         updateAllEntities

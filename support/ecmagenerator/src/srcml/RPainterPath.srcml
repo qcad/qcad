@@ -161,8 +161,10 @@
     <function_decl><type><name>RVector</name></type> <name>getStartPoint</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>getEndPoint</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function_decl><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setValid</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>bool</name></type> <name>isSane</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>int</name></type> <name>getZLevel</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setZLevel</name><parameter_list>(<param><decl><type><name>int</name></type> <name>zl</name></decl></param>)</parameter_list>;</function_decl>

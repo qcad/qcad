@@ -50,6 +50,7 @@
     <constructor_decl><name>RBox</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>center</name></decl></param>, <param><decl><type><name>double</name></type> <name>width</name></decl></param>, <param><decl><type><name>double</name></type> <name>height</name></decl></param>)</parameter_list>;</constructor_decl>
 
     <function_decl><type><name>bool</name></type> <name>isValid</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>isSane</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>double</name></type> <name>getWidth</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getHeight</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>

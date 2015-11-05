@@ -33,6 +33,8 @@
             
                 #include "RProgressHandler.h"
             
+                #include "RRay.h"
+            
                 #include "RSpline.h"
             
                 #include "RTriangle.h"

@@ -25,15 +25,16 @@
 #include <QtScript>
 #include <QList>
 
-#include "RVector.h"
-#include "RSpline.h"
-#include "REntity.h"
-#include "RGrid.h"
-#include "RLineweight.h"
-#include "RGraphicsSceneQt.h"
+#include "RS.h"
 
+class RObject;
+class REntity;
+class REntityData;
 class RGraphicsScene;
 class RGraphicsView;
+class RGrid;
+class RShape;
+class RSnapRestriction;
 
 
 /**

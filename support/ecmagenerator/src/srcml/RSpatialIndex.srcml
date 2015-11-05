@@ -75,10 +75,12 @@
     <destructor><specifier>virtual</specifier> <name>~RSpatialIndex</name><parameter_list>()</parameter_list> <block>{
     }</block></destructor>
 
+
     <function_decl><type><name>static</name> <name>qint64</name></type> <name>getSIId</name><parameter_list>(<param><decl><type><name>int</name></type> <name>id</name></decl></param>, <param><decl><type><name>int</name></type> <name>pos</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getId</name><parameter_list>(<param><decl><type><name>qint64</name></type> <name>siid</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getPos</name><parameter_list>(<param><decl><type><name>qint64</name></type> <name>siid</name></decl></param>)</parameter_list>;</function_decl>
 
+    <function_decl><type><name>virtual</name> <name>RSpatialIndex</name>*</type> <name>create</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>clear</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>bulkLoad</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name>&amp;</type> <name>ids</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>bbs</name></decl></param>)</parameter_list>;</function_decl>

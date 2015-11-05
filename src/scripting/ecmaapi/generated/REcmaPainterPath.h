@@ -27,7 +27,7 @@
       static  void initEcma(QScriptEngine& engine, QScriptValue* proto 
     =NULL
     ) 
-    ;static  QScriptValue create(QScriptContext* context, QScriptEngine* engine) 
+    ;static  QScriptValue createEcma(QScriptContext* context, QScriptEngine* engine) 
     ;
 
     // conversion functions for base classes:
@@ -109,6 +109,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         setValid
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isSane
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getZLevel

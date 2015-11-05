@@ -7,6 +7,8 @@
 
         // forwards declarations mapped to includes
         
+                #include "RExporter.h"
+            
             
         // includes for base ecma wrapper classes
         
@@ -91,7 +93,7 @@
                     
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -114,7 +116,7 @@
     }
     
     }
-     QScriptValue REcmaEntityExportListenerAdapter::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaEntityExportListenerAdapter::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
     if (context->thisObject().strictlyEquals(

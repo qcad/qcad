@@ -73,6 +73,8 @@
     <function_decl><type><name>RStorage</name>&amp;</type> <name>getStorage</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>const</name> <name>RStorage</name>&amp;</type> <name>getStorage</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RSpatialIndex</name>&amp;</type> <name>getSpatialIndex</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>RSpatialIndex</name>*</type> <name>getSpatialIndexForBlock</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>RSpatialIndex</name>*</type> <name>getSpatialIndexForCurrentBlock</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>RTransactionStack</name>&amp;</type> <name>getTransactionStack</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>clear</name><parameter_list>()</parameter_list>;</function_decl>
@@ -197,6 +199,7 @@
     <function_decl><type><name>RBox</name></type> <name>getSelectionBox</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <comment type="line">//void addToSpatialIndex(RObject&amp; object, bool isNew = false);</comment>
+    <function_decl><type><name>void</name></type> <name>clearSpatialIndices</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>rebuildSpatialIndex</name><parameter_list>()</parameter_list>;</function_decl>
     <comment type="line">//void addToSpatialIndex(QSharedPointer&lt;REntity&gt; entity);</comment>
     <function_decl><type><name>void</name></type> <name>addToSpatialIndex</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></type> <name>entity</name></decl></param>)</parameter_list>;</function_decl>
@@ -205,7 +208,7 @@
 
     <function_decl><type><name>void</name></type> <name>removeBlockFromSpatialIndex</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>addBlockToSpatialIndex</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>ignoreBlockId</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>removeFromSpatialIndex</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></type> <name>entity</name></decl></param>)</parameter_list>;</function_decl>
+    <decl_stmt><decl><type><name>virtual</name> <name>void</name></type> <name>removeFromSpatialIndex</name><argument_list>(<argument><expr><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name> <name>entity</name></expr></argument>, <argument><expr><name>const</name> <name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name>&amp; <name>boundingBoxes</name> = <call><name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
     <comment type="line">//virtual void removeFromSpatialIndex2(QSharedPointer&lt;REntity&gt; entity);</comment>
 
     <function_decl><type><name>void</name></type> <name>updateAllEntities</name><parameter_list>()</parameter_list>;</function_decl>
@@ -358,6 +361,8 @@
     <decl_stmt><decl><type><name>RStorage</name>&amp;</type> <name>storage</name></decl>;</decl_stmt>
     <comment type="line">// TODO: map of spatial indices (per block), spatial index template to copy for new blocks:</comment>
     <decl_stmt><decl><type><name>RSpatialIndex</name>&amp;</type> <name>spatialIndex</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>disableSpatialIndicesByBlock</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>RBlock</name>::<name>Id</name></name></argument>, <argument><name>RSpatialIndex</name>*</argument>&gt;</argument_list></name></type> <name>spatialIndicesByBlock</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RTransactionStack</name></type> <name>transactionStack</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>modelSpaceBlockId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeByLayerId</name></decl>;</decl_stmt>

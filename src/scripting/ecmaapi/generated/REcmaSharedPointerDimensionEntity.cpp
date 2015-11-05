@@ -129,7 +129,7 @@
       
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -264,7 +264,7 @@
     }
     
     }
-     QScriptValue REcmaSharedPointerDimensionEntity::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaSharedPointerDimensionEntity::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
            return REcmaHelper::throwError("Abstract class RDimensionEntity: Cannot be constructed.",

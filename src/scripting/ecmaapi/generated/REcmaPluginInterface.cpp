@@ -65,7 +65,7 @@
         
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -135,7 +135,7 @@
     }
     
     }
-     QScriptValue REcmaPluginInterface::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaPluginInterface::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
            return REcmaHelper::throwError("Abstract class RPluginInterface: Cannot be constructed.",

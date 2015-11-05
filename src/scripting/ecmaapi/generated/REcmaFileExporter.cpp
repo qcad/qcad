@@ -79,7 +79,7 @@
         
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -102,7 +102,7 @@
     }
     
     }
-     QScriptValue REcmaFileExporter::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaFileExporter::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
            return REcmaHelper::throwError("Abstract class RFileExporter: Cannot be constructed.",

@@ -32,6 +32,7 @@
 #include "RDimensionEntity.h"
 #include "REllipseEntity.h"
 #include "RGraphicsScene.h"
+#include "RGraphicsSceneQt.h"
 #include "RGraphicsView.h"
 #include "RGraphicsViewQt.h"
 #include "RHatchEntity.h"

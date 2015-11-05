@@ -102,7 +102,7 @@
       
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -257,7 +257,7 @@
     }
     
     }
-     QScriptValue REcmaSharedPointerDimAlignedEntity::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaSharedPointerDimAlignedEntity::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
     if (context->thisObject().strictlyEquals(

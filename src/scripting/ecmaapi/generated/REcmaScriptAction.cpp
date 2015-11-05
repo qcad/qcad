@@ -73,7 +73,7 @@
         
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -96,7 +96,7 @@
     }
     
     }
-     QScriptValue REcmaScriptAction::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaScriptAction::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
            return REcmaHelper::throwError("Abstract class RScriptAction: Cannot be constructed.",

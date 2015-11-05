@@ -138,7 +138,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="trimPoint" isConst="true" />
         <arg type="RVector &amp;" typeName="RVector"
         name="clickPoint" hasDefault="true"
-        default="RDEFAULT_RVECTOR" isConst="true" />
+        default="RVector :: invalid" isConst="true" />
       </variant>
     </method>
     <method name="trimEndPoint" cppName="trimEndPoint"
@@ -149,7 +149,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="trimPoint" isConst="true" />
         <arg type="RVector &amp;" typeName="RVector"
         name="clickPoint" hasDefault="true"
-        default="RDEFAULT_RVECTOR" isConst="true" />
+        default="RVector :: invalid" isConst="true" />
       </variant>
     </method>
     <method name="getTangentAtStart" cppName="getTangentAtStart"

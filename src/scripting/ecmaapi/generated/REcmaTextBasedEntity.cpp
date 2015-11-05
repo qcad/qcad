@@ -168,7 +168,7 @@
         
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -299,7 +299,7 @@
     }
     
     }
-     QScriptValue REcmaTextBasedEntity::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaTextBasedEntity::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
            return REcmaHelper::throwError("Abstract class RTextBasedEntity: Cannot be constructed.",

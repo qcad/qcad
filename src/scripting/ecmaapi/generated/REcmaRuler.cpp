@@ -67,7 +67,7 @@
         
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -90,7 +90,7 @@
     }
     
     }
-     QScriptValue REcmaRuler::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaRuler::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
            return REcmaHelper::throwError("Abstract class RRuler: Cannot be constructed.",

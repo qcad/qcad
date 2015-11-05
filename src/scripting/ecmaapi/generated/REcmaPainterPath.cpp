@@ -114,6 +114,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setValid, "setValid");
             
+            REcmaHelper::registerFunction(&engine, proto, isSane, "isSane");
+            
             REcmaHelper::registerFunction(&engine, proto, getZLevel, "getZLevel");
             
             REcmaHelper::registerFunction(&engine, proto, setZLevel, "setZLevel");
@@ -214,7 +216,7 @@
             
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -309,7 +311,7 @@
     }
     
     }
-     QScriptValue REcmaPainterPath::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaPainterPath::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
     if (context->thisObject().strictlyEquals(
@@ -2147,6 +2149,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::setValid", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::isSane
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::isSane", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::isSane";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("isSane", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isSane();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.isSane().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::isSane", context, engine);
             return result;
         }
          QScriptValue

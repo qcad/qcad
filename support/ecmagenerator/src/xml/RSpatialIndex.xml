@@ -36,6 +36,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="create" cppName="create" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RSpatialIndex *" isPureVirtual="true" />
+    </method>
     <method name="clear" cppName="clear" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="true" />

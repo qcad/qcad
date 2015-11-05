@@ -81,6 +81,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getSpatialIndex, "getSpatialIndex");
             
+            REcmaHelper::registerFunction(&engine, proto, getSpatialIndexForBlock, "getSpatialIndexForBlock");
+            
+            REcmaHelper::registerFunction(&engine, proto, getSpatialIndexForCurrentBlock, "getSpatialIndexForCurrentBlock");
+            
             REcmaHelper::registerFunction(&engine, proto, getTransactionStack, "getTransactionStack");
             
             REcmaHelper::registerFunction(&engine, proto, clear, "clear");
@@ -191,6 +195,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getSelectionBox, "getSelectionBox");
             
+            REcmaHelper::registerFunction(&engine, proto, clearSpatialIndices, "clearSpatialIndices");
+            
             REcmaHelper::registerFunction(&engine, proto, rebuildSpatialIndex, "rebuildSpatialIndex");
             
             REcmaHelper::registerFunction(&engine, proto, addToSpatialIndex, "addToSpatialIndex");
@@ -200,8 +206,6 @@
             REcmaHelper::registerFunction(&engine, proto, removeBlockFromSpatialIndex, "removeBlockFromSpatialIndex");
             
             REcmaHelper::registerFunction(&engine, proto, addBlockToSpatialIndex, "addBlockToSpatialIndex");
-            
-            REcmaHelper::registerFunction(&engine, proto, removeFromSpatialIndex, "removeFromSpatialIndex");
             
             REcmaHelper::registerFunction(&engine, proto, updateAllEntities, "updateAllEntities");
             
@@ -373,7 +377,7 @@
         
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -398,7 +402,7 @@
     }
     
     }
-     QScriptValue REcmaDocument::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaDocument::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
     if (context->thisObject().strictlyEquals(
@@ -841,6 +845,115 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::getSpatialIndex", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getSpatialIndexForBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getSpatialIndexForBlock", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getSpatialIndexForBlock";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getSpatialIndexForBlock", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RBlock::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RBlock::Id
+                    a0 =
+                    (RBlock::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RSpatialIndex *'
+    RSpatialIndex * cppResult =
+        
+               self->getSpatialIndexForBlock(a0);
+        // return type: RSpatialIndex *
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getSpatialIndexForBlock().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getSpatialIndexForBlock", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getSpatialIndexForCurrentBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getSpatialIndexForCurrentBlock", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getSpatialIndexForCurrentBlock";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getSpatialIndexForCurrentBlock", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RSpatialIndex *'
+    RSpatialIndex * cppResult =
+        
+               self->getSpatialIndexForCurrentBlock();
+        // return type: RSpatialIndex *
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getSpatialIndexForCurrentBlock().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getSpatialIndexForCurrentBlock", context, engine);
             return result;
         }
          QScriptValue
@@ -5797,6 +5910,50 @@
             return result;
         }
          QScriptValue
+        REcmaDocument::clearSpatialIndices
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::clearSpatialIndices", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::clearSpatialIndices";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("clearSpatialIndices", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearSpatialIndices();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.clearSpatialIndices().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::clearSpatialIndices", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDocument::rebuildSpatialIndex
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -6125,92 +6282,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::addBlockToSpatialIndex", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaDocument::removeFromSpatialIndex
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaDocument::removeFromSpatialIndex", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::removeFromSpatialIndex";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RDocument* self = 
-                        getSelf("removeFromSpatialIndex", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: QSharedPointer < REntity > */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is SharedPointer
-                    QSharedPointer < REntity > 
-                    a0;
-
-                    // argument might be a simple pointer:
-                     REntity * o0 = 
-                    qscriptvalue_cast < REntity * > (context->argument(0));
-
-                    if (o0!=NULL) {
-                        a0 =
-                        
-                          // never clone RObject based object:
-                          QSharedPointer < REntity >(o0);
-                        
-                    }
-                    else {
-                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
-                        QSharedPointer < REntity >*
-                        p0;
-
-                        p0 =
-                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
-
-                        if (p0==NULL) {
-                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type  REntity .", context);                    
-                        }
-
-                        a0 = *p0;
-
-                           //return REcmaHelper::throwError("RDocument: Argument 0 is not of type  REntity .",
-                           //    context);                    
-                    }
-
-                    //QSharedPointer < REntity > 
-                    //a0 =
-                    //QSharedPointer < REntity >(o0->clone());
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->removeFromSpatialIndex(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.removeFromSpatialIndex().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaDocument::removeFromSpatialIndex", context, engine);
             return result;
         }
          QScriptValue

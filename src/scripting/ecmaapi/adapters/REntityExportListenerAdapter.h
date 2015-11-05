@@ -24,6 +24,8 @@
 
 #include "REntityExportListener.h"
 
+class RExporter;
+
 /**
  * This entity decorator adapter emits signals on block events.
  * Used to simplify entity decoration from QObjects,

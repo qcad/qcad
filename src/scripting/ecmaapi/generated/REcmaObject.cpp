@@ -109,7 +109,7 @@
         
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -180,7 +180,7 @@
     }
     
     }
-     QScriptValue REcmaObject::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaObject::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
            return REcmaHelper::throwError("Abstract class RObject: Cannot be constructed.",

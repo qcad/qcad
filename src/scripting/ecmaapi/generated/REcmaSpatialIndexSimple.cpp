@@ -68,6 +68,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, create, "create");
+            
             REcmaHelper::registerFunction(&engine, proto, clear, "clear");
             
             REcmaHelper::registerFunction(&engine, proto, removeFromIndex, "removeFromIndex");
@@ -84,7 +86,7 @@
         
     
 
-    QScriptValue ctor = engine.newFunction(create, *proto, 2);
+    QScriptValue ctor = engine.newFunction(createEcma, *proto, 2);
     
     // static methods:
     
@@ -107,7 +109,7 @@
     }
     
     }
-     QScriptValue REcmaSpatialIndexSimple::create(QScriptContext* context, QScriptEngine* engine) 
+     QScriptValue REcmaSpatialIndexSimple::createEcma(QScriptContext* context, QScriptEngine* engine) 
     
     {
     if (context->thisObject().strictlyEquals(
@@ -201,6 +203,55 @@
 
     // public methods:
      QScriptValue
+        REcmaSpatialIndexSimple::create
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpatialIndexSimple::create", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndexSimple::create";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpatialIndexSimple* self = 
+                        getSelf("create", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RSpatialIndex *'
+    RSpatialIndex * cppResult =
+        
+               self->create();
+        // return type: RSpatialIndex *
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndexSimple.create().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpatialIndexSimple::create", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSpatialIndexSimple::clear
         (QScriptContext* context, QScriptEngine* engine) 
         
