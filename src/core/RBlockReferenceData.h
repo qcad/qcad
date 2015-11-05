@@ -64,6 +64,7 @@ public:
     virtual double getDistanceTo(const RVector& point,
         bool limited = true, double range = 0.0, bool draft = false, double strictRange = RMAXDOUBLE) const;
 
+    RBox getQueryBoxInBlockCoordinates(const RBox& box) const;
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const;
 
     //virtual void setSelected(bool on);

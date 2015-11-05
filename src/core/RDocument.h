@@ -72,6 +72,8 @@ public:
     RStorage& getStorage();
     const RStorage& getStorage() const;
     RSpatialIndex& getSpatialIndex();
+    RSpatialIndex* getSpatialIndexForBlock(RBlock::Id blockId);
+    RSpatialIndex* getSpatialIndexForCurrentBlock();
     RTransactionStack& getTransactionStack();
 
     void clear();
@@ -196,6 +198,7 @@ public:
     RBox getSelectionBox() const;
 
     //void addToSpatialIndex(RObject& object, bool isNew = false);
+    void clearSpatialIndices();
     virtual void rebuildSpatialIndex();
     //void addToSpatialIndex(QSharedPointer<REntity> entity);
     void addToSpatialIndex(QSharedPointer<REntity> entity);
@@ -204,7 +207,7 @@ public:
 
     void removeBlockFromSpatialIndex(RBlock::Id blockId);
     bool addBlockToSpatialIndex(RBlock::Id blockId, RObject::Id ignoreBlockId);
-    virtual void removeFromSpatialIndex(QSharedPointer<REntity> entity);
+    virtual void removeFromSpatialIndex(QSharedPointer<REntity> entity, const QList<RBox>& boundingBoxes = QList<RBox>());
     //virtual void removeFromSpatialIndex2(QSharedPointer<REntity> entity);
 
     void updateAllEntities();
@@ -355,8 +358,11 @@ private:
     QString fileVersion;
 
     RStorage& storage;
-    // TODO: map of spatial indices (per block), spatial index template to copy for new blocks:
+    // spatial index used to spawn new spatial indices for each block:
     RSpatialIndex& spatialIndex;
+    bool disableSpatialIndicesByBlock;
+    // map of spatial indices (per block):
+    QMap<RBlock::Id, RSpatialIndex*> spatialIndicesByBlock;
     RTransactionStack transactionStack;
     RBlock::Id modelSpaceBlockId;
     RLinetype::Id linetypeByLayerId;

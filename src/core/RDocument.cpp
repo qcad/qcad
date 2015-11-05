@@ -49,6 +49,7 @@ RDocument::RDocument(
     RSpatialIndex& spatialIndex)
     : storage(storage),
       spatialIndex(spatialIndex),
+      disableSpatialIndicesByBlock(false),
       transactionStack(storage) {
 
     storage.setDocument(this);
@@ -358,7 +359,7 @@ QList<QSharedPointer<RObject> > RDocument::getDefaultLinetypes() {
 void RDocument::clear() {
     fileName = "";
     storage.clear();
-    spatialIndex.clear();
+    clearSpatialIndices();
     transactionStack.reset();
 
     // TODO: check if needed (doc vars are reset in init):
@@ -376,6 +377,7 @@ void RDocument::clear() {
 RDocument::~RDocument() {
     RDebug::decCounter("RDocument");
     storage.doDelete();
+    clearSpatialIndices();
     spatialIndex.doDelete();
 }
 
@@ -846,7 +848,21 @@ RSpatialIndex& RDocument::getSpatialIndex() {
     return spatialIndex;
 }
 
+RSpatialIndex* RDocument::getSpatialIndexForBlock(RBlock::Id blockId) {
+    if (disableSpatialIndicesByBlock) {
+        return &spatialIndex;
+    }
 
+    if (!spatialIndicesByBlock.contains(blockId)) {
+        spatialIndicesByBlock.insert(blockId, spatialIndex.create());
+    }
+    return spatialIndicesByBlock[blockId];
+}
+
+RSpatialIndex* RDocument::getSpatialIndexForCurrentBlock() {
+    RBlock::Id currentBlockId = getCurrentBlockId();
+    return getSpatialIndexForBlock(currentBlockId);
+}
 
 /**
  * \return Reference to the transaction stack for undo/redo handling.
@@ -991,6 +1007,10 @@ REntity::Id RDocument::queryClosestXY(
             true, includeLockedLayers
         );
 
+    if (candidates.isEmpty()) {
+        return REntity::INVALID_ID;
+    }
+
     return queryClosestXY(candidates, wcsPosition, range, draft, strictRange);
 }
 
@@ -1048,7 +1068,8 @@ QSet<REntity::Id> RDocument::queryInfiniteEntities() {
  *      given area.
  */
 QSet<REntity::Id> RDocument::queryContainedEntities(const RBox& box) {
-    QSet<REntity::Id> ret = spatialIndex.queryContained(box).keys().toSet();
+    RSpatialIndex* si = getSpatialIndexForCurrentBlock();
+    QSet<REntity::Id> ret = si->queryContained(box).keys().toSet();
 
     // always exclude construction lines (XLine):
     ret.subtract(queryInfiniteEntities());
@@ -1104,7 +1125,8 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         }
     }
     else {
-        candidates = spatialIndex.queryIntersected(boxExpanded);
+        RSpatialIndex* si = getSpatialIndexForBlock(blockId);
+        candidates = si->queryIntersected(boxExpanded);
         candidates.unite(infinites);
     }
 
@@ -1560,17 +1582,29 @@ RBox RDocument::getSelectionBox() const {
     return storage.getSelectionBox();
 }
 
+void RDocument::clearSpatialIndices() {
+    spatialIndex.clear();
+    QMap<RBlock::Id, RSpatialIndex*>::iterator it;
+    for (it=spatialIndicesByBlock.begin(); it!=spatialIndicesByBlock.end(); it++) {
+        delete *it;
+    }
+    spatialIndicesByBlock.clear();
+}
+
 /**
  * Rebuilds the entire spatial index from scratch (e.g. when current
  * block is changed).
  */
 void RDocument::rebuildSpatialIndex() {
-    spatialIndex.clear();
+    qDebug() << "rebuildSpatialIndex";
+    clearSpatialIndices();
 
     QSet<REntity::Id> result = storage.queryAllEntities(false, true);
 
     QList<int> allIds;
     QList<QList<RBox> > allBbs;
+    QMap<RBlock::Id, QList<int> > allIdsByBlock;
+    QMap<RBlock::Id, QList<QList<RBox> > > allBbsByBlock;
 
     QSetIterator<REntity::Id> i(result);
     while (i.hasNext()) {
@@ -1584,13 +1618,55 @@ void RDocument::rebuildSpatialIndex() {
 
         entity->update();
 
+        RObject::Id entityId = entity->getId();
         QList<RBox> bbs = entity->getBoundingBoxes();
 
-        allIds.append(entity->getId());
-        allBbs.append(bbs);
+        if (disableSpatialIndicesByBlock) {
+            allIds.append(entityId);
+            allBbs.append(bbs);
+        }
+        else {
+            RBlock::Id blockId = entity->getBlockId();
+
+            if (!allIdsByBlock.contains(blockId)) {
+                allIdsByBlock.insert(blockId, QList<int>());
+            }
+            allIdsByBlock[blockId].append(entityId);
+
+            if (!allBbsByBlock.contains(blockId)) {
+                allBbsByBlock.insert(blockId, QList<QList<RBox> >());
+            }
+            allBbsByBlock[blockId].append(bbs);
+        }
     }
 
-    spatialIndex.bulkLoad(allIds, allBbs);
+
+    if (!disableSpatialIndicesByBlock) {
+        QList<RBlock::Id> blockIds = queryAllBlocks().toList();
+        for (int i=0; i<blockIds.length(); i++) {
+            RBlock::Id blockId = blockIds[i];
+            RSpatialIndex* si = getSpatialIndexForBlock(blockId);
+            si->bulkLoad(allIdsByBlock[blockId], allBbsByBlock[blockId]);
+//            for (int i=0; i<allIdsByBlock[blockId].length(); i++) {
+//                si->addToIndex(allIdsByBlock[blockId][i], allBbsByBlock[blockId][i]);
+//            }
+        }
+
+//        QMap<RBlock::Id, QList<int> >::iterator it;
+//        for (it=allIdsByBlock.begin(); it!=allIdsByBlock.end(); it++) {
+//            RBlock::Id blockId = it.key();
+//            qDebug() << "block: " << getBlockName(blockId);
+//            RSpatialIndex* si = getSpatialIndexForBlock(blockId);
+//            si->bulkLoad(allIdsByBlock[blockId], allBbsByBlock[blockId]);
+////            for (int i=0; i<allIdsByBlock[blockId].length(); i++) {
+////                si->addToIndex(allIdsByBlock[blockId][i], allBbsByBlock[blockId][i]);
+////            }
+//            //qDebug() << "si: " << *si;
+//        }
+    }
+    else {
+        spatialIndex.bulkLoad(allIds, allBbs);
+    }
 
     // clear cached bounding box:
     storage.update();
@@ -1689,9 +1765,17 @@ bool RDocument::addBlockToSpatialIndex(RBlock::Id blockId, RBlock::Id ignoreBloc
 }
 
 
-void RDocument::removeFromSpatialIndex(QSharedPointer<REntity> entity) {
-    QList<RBox> bbs = entity->getBoundingBoxes();
-    bool ok = spatialIndex.removeFromIndex(entity->getId(), bbs);
+void RDocument::removeFromSpatialIndex(QSharedPointer<REntity> entity, const QList<RBox>& boundingBoxes) {
+    QList<RBox> bbs = boundingBoxes;
+    if (bbs.isEmpty()) {
+        bbs = entity->getBoundingBoxes();
+    }
+
+    RBlock::Id blockId = entity->getBlockId();
+    RSpatialIndex* si = getSpatialIndexForBlock(blockId);
+;
+    //bool ok = spatialIndex.removeFromIndex(entity->getId(), bbs);
+    bool ok = si->removeFromIndex(entity->getId(), bbs);
     if (!ok) {
         //qWarning() << "RDocument::removeFromSpatialIndex: removing entity: " << *entity;
         //qWarning() << "failed to remove entity from spatial index";
@@ -1699,7 +1783,11 @@ void RDocument::removeFromSpatialIndex(QSharedPointer<REntity> entity) {
 }
 
 void RDocument::addToSpatialIndex(QSharedPointer<REntity> entity) {
-    spatialIndex.addToIndex(entity->getId(), entity->getBoundingBoxes());
+    //spatialIndex.addToIndex(entity->getId(), entity->getBoundingBoxes());
+
+    RBlock::Id blockId = entity->getBlockId();
+    RSpatialIndex* si = getSpatialIndexForBlock(blockId);
+    si->addToIndex(entity->getId(), entity->getBoundingBoxes());
 }
 
 
@@ -1793,6 +1881,11 @@ QDebug operator<<(QDebug dbg, RDocument& d) {
     dbg.nospace() << "RDocument(" << QString("0x%1").arg((long int)&d, 0, 16) << ", ";
     dbg.nospace() << d.getStorage();
     dbg.nospace() << d.getSpatialIndex();
+    QSet<RBlock::Id> blockIds = d.queryAllBlocks();
+    for (QSet<RBlock::Id>::iterator it=blockIds.begin(); it!=blockIds.end(); it++) {
+        dbg.nospace() << "\nspatial index for block: " << d.getBlockName(*it);
+        dbg.nospace() << *d.getSpatialIndexForBlock(*it);
+    }
     return dbg.space();
 }
 

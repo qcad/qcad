@@ -173,8 +173,10 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
 
         blockRef->setReferencedBlockId(blockId);
 
-        si.removeFromIndex(blockRef->getId(), bbs);
-        si.addToIndex(blockRef->getId(), blockRef->getBoundingBoxes());
+        document->removeFromSpatialIndex(blockRef, bbs);
+        document->addToSpatialIndex(blockRef);
+        //si.removeFromIndex(blockRef->getId(), bbs);
+        //si.addToIndex(blockRef->getId(), blockRef->getBoundingBoxes());
     }
 
 

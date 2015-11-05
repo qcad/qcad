@@ -71,9 +71,7 @@ QString RBlockReferenceData::getReferencedBlockName() const {
     return document->getBlockName(referencedBlockId);
 }
 
-RVector RBlockReferenceData::getVectorTo(
-        const RVector& point, bool limited, double strictRange) const {
-
+RVector RBlockReferenceData::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     Q_UNUSED(strictRange)
 
     if (document == NULL) {
@@ -104,6 +102,7 @@ RVector RBlockReferenceData::getVectorTo(
                     continue;
                 }
                 if (col!=0 || row!=0) {
+                    // entity might be from cache: clone:
                     entity = QSharedPointer<REntity>(entity->clone());
                     applyColumnRowOffsetTo(*entity, col, row);
                 }
@@ -139,10 +138,24 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
         return RNANDOUBLE;
     }
 
-    QSet<REntity::Id> ids =
-        document->queryBlockEntities(referencedBlockId);
+    bool isArray = (columnCount!=1 || rowCount!=1);
+
+    QSet<REntity::Id> ids;
+    if (range<RS::PointTolerance || isArray) {
+        ids = document->queryBlockEntities(referencedBlockId);
+    }
+    else {
+        RBox qb = getQueryBoxInBlockCoordinates(RBox(point, range));
+        ids = document->queryIntersectedEntitiesXY(qb, true, true, referencedBlockId);
+    }
+
+    if (ids.isEmpty()) {
+        recursionDepth--;
+        return RNANDOUBLE;
+    }
+
     QSet<REntity::Id>::iterator it;
-    double minDist = RMAXDOUBLE;
+    double minDist = RNANDOUBLE;
     for (int col=0; col<columnCount; col++) {
         for (int row=0; row<rowCount; row++) {
             for (it = ids.begin(); it != ids.end(); it++) {
@@ -151,11 +164,18 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
                     continue;
                 }
                 if (col!=0 || row!=0) {
+                    // entity might be from cache: clone:
                     entity = QSharedPointer<REntity>(entity->clone());
                     applyColumnRowOffsetTo(*entity, col, row);
                 }
+                // TODO: range might have to be scaled here:
                 double dist = entity->getDistanceTo(point, limited, range, draft, strictRange);
-                if (RMath::isNormal(dist) && dist < minDist) {
+
+                if (!RMath::isNormal(dist)) {
+                    continue;
+                }
+
+                if (dist < minDist || RMath::isNaN(minDist)) {
                     minDist = dist;
                 }
             }
@@ -188,33 +208,55 @@ QList<RBox> RBlockReferenceData::getBoundingBoxes(bool ignoreEmpty) const {
 
     QSet<REntity::Id> ids = document->queryBlockEntities(referencedBlockId);
 
-    RBox baseBBox;
+//    RBox baseBBox;
+//    QSet<REntity::Id>::iterator it;
+//    for (it = ids.begin(); it != ids.end(); it++) {
+//        QSharedPointer<REntity> entity = queryEntity(*it);
+//        if (entity.isNull()) {
+//            continue;
+//        }
+
+//        RBox b = entity->getBoundingBox(ignoreEmpty);
+//        baseBBox.growToInclude(b);
+//    }
+
+//    if (columnCount==1 && rowCount==1) {
+//        boundingBoxes.append(baseBBox);
+//    }
+//    else {
+//        // add bounding boxes for rows and columns:
+//        for (int col=0; col<columnCount; col++) {
+//            for (int row=0; row<rowCount; row++) {
+//                RVector offset = getColumnRowOffset(col, row);
+//                RBox b = baseBBox;
+//                b.c1 += offset;
+//                b.c2 += offset;
+//                boundingBoxes.append(b);
+//            }
+//        }
+//    }
+
     QSet<REntity::Id>::iterator it;
-    for (it = ids.begin(); it != ids.end(); it++) {
-        QSharedPointer<REntity> entity = queryEntity(*it);
-        if (entity.isNull()) {
-            continue;
-        }
-
-        RBox b = entity->getBoundingBox(ignoreEmpty);
-        baseBBox.growToInclude(b);
-    }
-
-    if (columnCount==1 && rowCount==1) {
-        boundingBoxes.append(baseBBox);
-    }
-    else {
-        // add bounding boxes for rows and columns:
-        for (int col=0; col<columnCount; col++) {
-            for (int row=0; row<rowCount; row++) {
-                RVector offset = getColumnRowOffset(col, row);
-                RBox b = baseBBox;
-                b.c1 += offset;
-                b.c2 += offset;
-                boundingBoxes.append(b);
+    for (int col=0; col<columnCount; col++) {
+        for (int row=0; row<rowCount; row++) {
+            for (it = ids.begin(); it != ids.end(); it++) {
+                QSharedPointer<REntity> entity = queryEntity(*it);
+                if (entity.isNull()) {
+                    continue;
+                }
+                if (col!=0 || row!=0) {
+                    // entity might be from cache: clone:
+                    entity = QSharedPointer<REntity>(entity->clone());
+                    applyColumnRowOffsetTo(*entity, col, row);
+                }
+                entity->update();
+                boundingBoxes.append(entity->getBoundingBoxes());
+                //boundingBoxes.append(entity->getBoundingBox());
             }
         }
     }
+
+    //qDebug() << "bounding boxes: " << boundingBoxes;
 
     recursionDepth--;
 
@@ -379,6 +421,14 @@ QList<RVector> RBlockReferenceData::getReferencePoints(
     return ret;
 }
 
+RBox RBlockReferenceData::getQueryBoxInBlockCoordinates(const RBox& box) const {
+    QList<RVector> corners = box.getCorners2d();
+    RVector::moveList(corners, -position);
+    RVector::rotateList(corners, -rotation);
+    RVector::scaleList(corners, RVector(1.0/scaleFactors.x, 1.0/scaleFactors.y));
+    return RBox(RVector::getMinimum(corners), RVector::getMaximum(corners));
+}
+
 QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
     QList<QSharedPointer<RShape> > ret;
 
@@ -397,12 +447,13 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
     // ignore query box for block arrays:
     QSet<REntity::Id> ids;
     if (queryBox.isValid() && !isArray) {
-        QList<RVector> corners = queryBox.getCorners2d();
-        RVector::moveList(corners, -position);
-        RVector::rotateList(corners, -rotation);
-        RVector::scaleList(corners, RVector(1.0/scaleFactors.x, 1.0/scaleFactors.y));
-
-        RBox queryBoxNeutral(RVector::getMinimum(corners), RVector::getMaximum(corners));
+//        QList<RVector> corners = queryBox.getCorners2d();
+//        RVector::moveList(corners, -position);
+//        RVector::rotateList(corners, -rotation);
+//        RVector::scaleList(corners, RVector(1.0/scaleFactors.x, 1.0/scaleFactors.y));
+//        RBox queryBoxNeutral(RVector::getMinimum(corners), RVector::getMaximum(corners));
+        RBox queryBoxNeutral = getQueryBoxInBlockCoordinates(queryBox);
+        //qDebug() << "queryBoxNeutral:" << queryBoxNeutral;
 
         ids = document->queryIntersectedEntitiesXY(queryBoxNeutral, true, true, referencedBlockId);
     }
@@ -439,6 +490,7 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
                 }
 
                 if (isArray && col>0 || row>0) {
+                    // entity might be from cache: clone:
                     entity = QSharedPointer<REntity>(entity->clone());
                     applyColumnRowOffsetTo(*entity, col, row);
 

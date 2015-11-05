@@ -22,9 +22,10 @@
 
 #include "core_global.h"
 
-#include "RDocumentVariables.h"
 #include "RLayer.h"
 #include "RObject.h"
+
+class RDocument;
 
 /**
  * This type of object is used to store document wide variables.

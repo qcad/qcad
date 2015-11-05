@@ -38,6 +38,7 @@
 #include "RPoint.h"
 #include "RPolyline.h"
 #include "RRay.h"
+#include "RSpline.h"
 #include "RXLine.h"
 
 class RGraphicsViewImage;

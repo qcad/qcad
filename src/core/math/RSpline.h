@@ -30,6 +30,8 @@
 #include "RSplineProxy.h"
 #include "RVector.h"
 
+#include "RPolyline.h"
+
 #ifndef R_NO_OPENNURBS
 #include "opennurbs/opennurbs.h"
 #endif

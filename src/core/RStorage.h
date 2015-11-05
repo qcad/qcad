@@ -40,6 +40,8 @@
 #include "RUcs.h"
 #include "RView.h"
 
+class RDocument;
+
 #ifndef RDEFAULT_QSTRING
 #define RDEFAULT_QSTRING QString()
 #endif
