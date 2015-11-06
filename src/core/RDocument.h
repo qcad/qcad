@@ -45,6 +45,10 @@ class RStorage;
 #define RDEFAULT_QVARIANT QVariant()
 #endif
 
+#ifndef RDEFAULT_QLIST_RBOX
+#define RDEFAULT_QLIST_RBOX QList<RBox>()
+#endif
+
 #define RDEFAULT_QLIST_RS_ENTITYTYPE QList<RS::EntityType>()
 
 
@@ -207,7 +211,7 @@ public:
 
     void removeBlockFromSpatialIndex(RBlock::Id blockId);
     bool addBlockToSpatialIndex(RBlock::Id blockId, RObject::Id ignoreBlockId);
-    virtual void removeFromSpatialIndex(QSharedPointer<REntity> entity, const QList<RBox>& boundingBoxes = QList<RBox>());
+    virtual void removeFromSpatialIndex(QSharedPointer<REntity> entity, const QList<RBox>& boundingBoxes = RDEFAULT_QLIST_RBOX);
     //virtual void removeFromSpatialIndex2(QSharedPointer<REntity> entity);
 
     void updateAllEntities();

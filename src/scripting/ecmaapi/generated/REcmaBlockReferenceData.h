@@ -66,6 +66,9 @@
         getDistanceTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getQueryBoxInBlockCoordinates
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getShapes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

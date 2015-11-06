@@ -1651,18 +1651,6 @@ void RDocument::rebuildSpatialIndex() {
 //                si->addToIndex(allIdsByBlock[blockId][i], allBbsByBlock[blockId][i]);
 //            }
         }
-
-//        QMap<RBlock::Id, QList<int> >::iterator it;
-//        for (it=allIdsByBlock.begin(); it!=allIdsByBlock.end(); it++) {
-//            RBlock::Id blockId = it.key();
-//            qDebug() << "block: " << getBlockName(blockId);
-//            RSpatialIndex* si = getSpatialIndexForBlock(blockId);
-//            si->bulkLoad(allIdsByBlock[blockId], allBbsByBlock[blockId]);
-////            for (int i=0; i<allIdsByBlock[blockId].length(); i++) {
-////                si->addToIndex(allIdsByBlock[blockId][i], allBbsByBlock[blockId][i]);
-////            }
-//            //qDebug() << "si: " << *si;
-//        }
     }
     else {
         spatialIndex.bulkLoad(allIds, allBbs);

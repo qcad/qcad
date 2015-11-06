@@ -252,6 +252,9 @@
         addBlockToSpatialIndex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeFromSpatialIndex
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         updateAllEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

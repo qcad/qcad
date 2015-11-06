@@ -88,7 +88,8 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertySizeY</name></decl>;</decl_stmt>
 
 </public><public>public:
-    <macro><name>REntity</name><argument_list>(<argument>RDocument* document</argument>, <argument>Id objectId=-1</argument>)</argument_list></macro> : <constructor><name>RObject</name><parameter_list>(<param><decl><type><name>document</name></type></decl></param>, <param><decl><type><name>objectId</name></type></decl></param>)</parameter_list> <block>{}</block></constructor>
+    <macro><name>REntity</name><argument_list>(<argument>RDocument* document</argument>, <argument>RObject::Id objectId=-1</argument>)</argument_list></macro>;
+    <constructor_decl><name>REntity</name><parameter_list>(<param><decl><type><name>const</name> <name>REntity</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~REntity</name><parameter_list>()</parameter_list>;</destructor_decl>
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>

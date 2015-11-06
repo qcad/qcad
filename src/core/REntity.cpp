@@ -43,8 +43,18 @@ RPropertyTypeId REntity::PropertyMaxY;
 RPropertyTypeId REntity::PropertySizeX;
 RPropertyTypeId REntity::PropertySizeY;
 
+REntity::REntity(RDocument* document, RObject::Id objectId)
+    : RObject(document, objectId) {
+
+    RDebug::incCounter("REntity");
+}
+
+REntity::REntity(const REntity& other) : RObject(other) {
+    RDebug::incCounter("REntity");
+}
 
 REntity::~REntity() {
+    RDebug::decCounter("REntity");
     //qDebug() << "deleting entity: " << QString("0x%1").arg((long int)this, 0, 16);
     //qDebug() << "deleting entity: " << getId();
 }

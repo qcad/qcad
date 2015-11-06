@@ -72,12 +72,14 @@ RSpatialIndexNavel::RSiPoint::RSiPoint(double x, double y, double z) {
  * Creates a 2d spatial index in memory (r-tree, star shape).
  */
 RSpatialIndexNavel::RSpatialIndexNavel() {
+    RDebug::incCounter("RSpatialIndexNavel");
     init();
 }
 
 
 
 RSpatialIndexNavel::~RSpatialIndexNavel() {
+    RDebug::decCounter("RSpatialIndexNavel");
     uninit();
 }
 

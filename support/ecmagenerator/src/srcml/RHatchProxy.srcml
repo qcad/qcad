@@ -21,7 +21,7 @@
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RHATCHPROXY_H</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RHATCHPROXY_H</name></cpp:define>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"entity_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPolyline.h"</cpp:file></cpp:include>
 
@@ -33,7 +33,7 @@
  *
  * \ingroup entity
  */</comment>
-<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RHatchProxy</name> <block>{<private type="default">
+<class>class <macro><name>QCADENTITY_EXPORT</name></macro> <name>RHatchProxy</name> <block>{<private type="default">
 </private><public>public:
     <destructor><specifier>virtual</specifier> <name>~RHatchProxy</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 

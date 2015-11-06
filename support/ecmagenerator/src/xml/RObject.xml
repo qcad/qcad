@@ -17,8 +17,12 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocument *" typeName="RDocument *"
         name="document" hasDefault="true" default="NULL"
         isConst="false" />
-        <arg type="Id" typeName="Id" name="id" hasDefault="true"
-        default="INVALID_ID" isConst="false" />
+        <arg type="RObject::Id" typeName="RObject::Id" name="id"
+        hasDefault="true" default="INVALID_ID" isConst="false" />
+      </variant>
+      <variant>
+        <arg type="RObject &amp;" typeName="RObject" name="other"
+        isConst="true" />
       </variant>
     </constructor>
     <method name="init" cppName="init" specifier="public"

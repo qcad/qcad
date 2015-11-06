@@ -65,12 +65,9 @@ public:
     };
 
 public:
-
-    RObject(RDocument* document=NULL, Id id = INVALID_ID) :
-        document(document), objectId(id), handle(INVALID_HANDLE), undone(false), protect(false) {
-    }
-    virtual ~RObject() {
-    }
+    RObject(RDocument* document=NULL, RObject::Id id = INVALID_ID);
+    RObject(const RObject& other);
+    virtual ~RObject();
 
     static void init();
 

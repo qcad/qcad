@@ -28,6 +28,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QPainterPath &amp;" typeName="QPainterPath"
         name="path" isConst="true" />
       </variant>
+      <variant>
+        <arg type="RPainterPath &amp;" typeName="RPainterPath"
+        name="other" isConst="true" />
+      </variant>
     </constructor>
     <method name="getShapes" cppName="getShapes" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

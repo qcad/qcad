@@ -207,6 +207,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, addBlockToSpatialIndex, "addBlockToSpatialIndex");
             
+            REcmaHelper::registerFunction(&engine, proto, removeFromSpatialIndex, "removeFromSpatialIndex");
+            
             REcmaHelper::registerFunction(&engine, proto, updateAllEntities, "updateAllEntities");
             
             REcmaHelper::registerFunction(&engine, proto, undo, "undo");
@@ -6282,6 +6284,164 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::addBlockToSpatialIndex", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::removeFromSpatialIndex
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::removeFromSpatialIndex", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::removeFromSpatialIndex";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("removeFromSpatialIndex", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < REntity > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < REntity > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     REntity * o0 = 
+                    qscriptvalue_cast < REntity * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < REntity >(o0);
+                        
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < REntity >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type  REntity .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RDocument: Argument 0 is not of type  REntity .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < REntity > 
+                    //a0 =
+                    //QSharedPointer < REntity >(o0->clone());
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeFromSpatialIndex(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSharedPointer < REntity > */
+     && (
+            context->argument(1).isArray()
+        ) /* type: QList < RBox > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is SharedPointer
+                    QSharedPointer < REntity > 
+                    a0;
+
+                    // argument might be a simple pointer:
+                     REntity * o0 = 
+                    qscriptvalue_cast < REntity * > (context->argument(0));
+
+                    if (o0!=NULL) {
+                        a0 =
+                        
+                          // never clone RObject based object:
+                          QSharedPointer < REntity >(o0);
+                        
+                    }
+                    else {
+                        // qscriptvalue_cast to QSharedPointer<BaseClass> does not work
+                        QSharedPointer < REntity >*
+                        p0;
+
+                        p0 =
+                        qscriptvalue_cast <QSharedPointer < REntity >* > (context->argument(0));
+
+                        if (p0==NULL) {
+                           return REcmaHelper::throwError("RDocument: Argument 0 is not of type  REntity .", context);                    
+                        }
+
+                        a0 = *p0;
+
+                           //return REcmaHelper::throwError("RDocument: Argument 0 is not of type  REntity .",
+                           //    context);                    
+                    }
+
+                    //QSharedPointer < REntity > 
+                    //a0 =
+                    //QSharedPointer < REntity >(o0->clone());
+                
+                    // argument isArray
+                    QList < RBox >
+                    a1;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(1),
+                        a1
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeFromSpatialIndex(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.removeFromSpatialIndex().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::removeFromSpatialIndex", context, engine);
             return result;
         }
          QScriptValue

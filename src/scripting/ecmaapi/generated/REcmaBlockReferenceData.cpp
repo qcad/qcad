@@ -82,6 +82,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDistanceTo, "getDistanceTo");
             
+            REcmaHelper::registerFunction(&engine, proto, getQueryBoxInBlockCoordinates, "getQueryBoxInBlockCoordinates");
+            
             REcmaHelper::registerFunction(&engine, proto, getShapes, "getShapes");
             
             REcmaHelper::registerFunction(&engine, proto, moveReferencePoint, "moveReferencePoint");
@@ -1955,6 +1957,78 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlockReferenceData::getDistanceTo", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlockReferenceData::getQueryBoxInBlockCoordinates
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlockReferenceData::getQueryBoxInBlockCoordinates", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlockReferenceData::getQueryBoxInBlockCoordinates";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlockReferenceData* self = 
+                        getSelf("getQueryBoxInBlockCoordinates", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RBox */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RBox*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RBox*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RBlockReferenceData: Argument 0 is not of type RBox.",
+                               context);                    
+                    }
+                    RBox 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RBox'
+    RBox cppResult =
+        
+               self->getQueryBoxInBlockCoordinates(a0);
+        // return type: RBox
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceData.getQueryBoxInBlockCoordinates().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlockReferenceData::getQueryBoxInBlockCoordinates", context, engine);
             return result;
         }
          QScriptValue

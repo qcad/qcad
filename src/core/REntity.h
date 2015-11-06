@@ -87,7 +87,8 @@ public:
     static RPropertyTypeId PropertySizeY;
 
 public:
-    REntity(RDocument* document, Id objectId=-1) : RObject(document, objectId) {}
+    REntity(RDocument* document, RObject::Id objectId=-1);
+    REntity(const REntity& other);
     virtual ~REntity();
 
     static void init();

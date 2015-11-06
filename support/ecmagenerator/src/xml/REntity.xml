@@ -12,10 +12,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <baseClass name="RObject" specifier="public" />
     <constructor>
       <variant>
-        <arg type="document" typeName="document" name=""
-        isConst="false" />
-        <arg type="objectId" typeName="objectId" name=""
-        isConst="false" />
+        <arg type="REntity &amp;" typeName="REntity" name="other"
+        isConst="true" />
       </variant>
     </constructor>
     <method name="init" cppName="init" specifier="public"

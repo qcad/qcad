@@ -33,15 +33,15 @@
 <class>class <name>RSiDataStream</name> <super>: <specifier>public</specifier> <name><name>SpatialIndex</name>::<name>IDataStream</name></name></super>
 <block>{<private type="default">
 </private><public>public:
-    <constructor><name>RSiDataStream</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name>&amp;</type> <name>ids</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>bbs</name></decl></param>)</parameter_list> <member_list>: <call><name>ids</name><argument_list>(<argument><expr><name>ids</name></expr></argument>)</argument_list></call>, <call><name>bbs</name><argument_list>(<argument><expr><name>bbs</name></expr></argument>)</argument_list></call>, <call><name>index</name><argument_list>(<argument><expr>0</expr></argument>)</argument_list></call>, <call><name>pos</name><argument_list>(<argument><expr>0</expr></argument>)</argument_list></call> </member_list><block>{
+    <constructor><name>RSiDataStream</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name>&amp;</type> <name>ids</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>bbs</name></decl></param>)</parameter_list> <member_list>: <call><name>ids</name><argument_list>(<argument><expr><name>ids</name></expr></argument>)</argument_list></call>, <call><name>bbs</name><argument_list>(<argument><expr><name>bbs</name></expr></argument>)</argument_list></call>, <call><name>index</name><argument_list>(<argument><expr>0</expr></argument>)</argument_list></call>, <call><name>pos</name><argument_list>(<argument><expr>0</expr></argument>)</argument_list></call>, <call><name>done</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call> </member_list><block>{
     }</block></constructor>
 
     <destructor><specifier>virtual</specifier> <name>~RSiDataStream</name><parameter_list>()</parameter_list> <block>{ }</block></destructor>
 
     <function><type><name>virtual</name> <name><name>SpatialIndex</name>::<name>IData</name></name>*</type> <name>getNext</name><parameter_list>()</parameter_list> <block>{
-        <if>if <condition>(<expr><name>index</name>&gt;=<name>ids</name>.<call><name>length</name><argument_list>()</argument_list></call> || <name>index</name>&gt;=<name>bbs</name>.<call><name>length</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
-            <return>return <expr><name>NULL</name></expr>;</return>
-        }</block></then></if>
+        <expr_stmt><expr><call><name>Q_ASSERT</name><argument_list>(<argument><expr><name>index</name>&lt;<name>ids</name>.<call><name>length</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>Q_ASSERT</name><argument_list>(<argument><expr><name>index</name>&lt;<name>bbs</name>.<call><name>length</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <expr_stmt><expr><call><name>Q_ASSERT</name><argument_list>(<argument><expr><name>pos</name>&lt;<name><name>bbs</name><index>[<expr><name>index</name></expr>]</index></name>.<call><name>length</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
 
         <decl_stmt><decl><type><name>RBox</name></type> <name>bb</name> =<init> <expr><name><name>bbs</name><index>[<expr><name>index</name></expr>]</index><index>[<expr><name>pos</name></expr>]</index></name></expr></init></decl>;</decl_stmt>
         <decl_stmt><decl><type><name>double</name></type> <name><name>p1</name><index>[]</index></name> =<init> <expr><block>{
@@ -59,13 +59,22 @@
         <else>else <block>{
             <expr_stmt><expr><name>index</name>++</expr>;</expr_stmt>
             <expr_stmt><expr><name>pos</name> = 0</expr>;</expr_stmt>
+            <if>if <condition>(<expr><name>index</name>&gt;=<name>ids</name>.<call><name>length</name><argument_list>()</argument_list></call> || <name>index</name>&gt;=<name>bbs</name>.<call><name>length</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+                <expr_stmt><expr><name>done</name> = <name>true</name></expr>;</expr_stmt>
+            }</block></then>
+            <else>else <block>{
+                <comment type="line">// skip empty bbs lists:</comment>
+                <while>while <condition>(<expr><name>index</name>&lt;<name>bbs</name>.<call><name>length</name><argument_list>()</argument_list></call> &amp;&amp; <name><name>bbs</name><index>[<expr><name>index</name></expr>]</index></name>.<call><name>isEmpty</name><argument_list>()</argument_list></call></expr>)</condition> <block>{
+                    <expr_stmt><expr><name>index</name>++</expr>;</expr_stmt>
+                }</block></while>
+            }</block></else></if>
         }</block></else></if>
 
         <return>return <expr>new <call><name><name>SpatialIndex</name>::<name>RTree</name>::<name>Data</name></name><argument_list>(<argument><expr>0</expr></argument>, <argument><expr><name>NULL</name></expr></argument>, <argument><expr><name>r</name></expr></argument>, <argument><expr><name>id</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>virtual</name> <name>bool</name></type> <name>hasNext</name><parameter_list>()</parameter_list> <block>{
-        <return>return <expr><name>index</name>&lt;<name>ids</name>.<call><name>length</name><argument_list>()</argument_list></call> &amp;&amp; <name>index</name>&lt;<name>bbs</name>.<call><name>length</name><argument_list>()</argument_list></call> &amp;&amp; <name>pos</name>&lt;<name><name>bbs</name><index>[<expr><name>index</name></expr>]</index></name>.<call><name>length</name><argument_list>()</argument_list></call></expr>;</return>
+        <return>return <expr>!<name>done</name></expr>;</return>
     }</block></function>
 
     <function><type><name>virtual</name> <name>uint32_t</name></type> <name>size</name><parameter_list>()</parameter_list> <block>{
@@ -82,6 +91,7 @@
     <decl_stmt><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>bbs</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>int</name></type> <name>index</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>int</name></type> <name>pos</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>done</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 

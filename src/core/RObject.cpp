@@ -33,6 +33,31 @@ RPropertyTypeId RObject::PropertyType;
 RPropertyTypeId RObject::PropertyHandle;
 RPropertyTypeId RObject::PropertyProtected;
 
+RObject::RObject(RDocument* document, RObject::Id id) :
+    document(document),
+    objectId(id),
+    handle(INVALID_HANDLE),
+    undone(false),
+    protect(false) {
+
+    RDebug::incCounter("RObject");
+}
+
+RObject::RObject(const RObject& other) {
+    RDebug::incCounter("RObject");
+
+    document = other.document;
+    objectId = other.objectId;
+    handle = other.handle;
+    undone = other.undone;
+    protect = other.protect;
+    customProperties = other.customProperties;
+}
+
+RObject::~RObject() {
+    RDebug::decCounter("RObject");
+}
+
 void RObject::init() {
     RObject::PropertyCustom.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("RObject", "Custom"));
     RObject::PropertyType.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("RObject", "Type"));

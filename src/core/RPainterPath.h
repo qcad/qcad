@@ -64,6 +64,7 @@ public:
 public:
     RPainterPath();
     RPainterPath(const QPainterPath& path);
+    RPainterPath(const RPainterPath& other);
     virtual ~RPainterPath();
 
     QList<QSharedPointer<RShape> > getShapes() const;

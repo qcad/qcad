@@ -66,12 +66,9 @@
     }</block>;</enum>
 
 </public><public>public:
-
-    <constructor><name>RObject</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name>=<init><expr><name>NULL</name></expr></init></decl></param>, <param><decl><type><name>Id</name></type> <name>id</name> =<init> <expr><name>INVALID_ID</name></expr></init></decl></param>)</parameter_list> <member_list>:
-        <call><name>document</name><argument_list>(<argument><expr><name>document</name></expr></argument>)</argument_list></call>, <call><name>objectId</name><argument_list>(<argument><expr><name>id</name></expr></argument>)</argument_list></call>, <call><name>handle</name><argument_list>(<argument><expr><name>INVALID_HANDLE</name></expr></argument>)</argument_list></call>, <call><name>undone</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call>, <call><name>protect</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call> </member_list><block>{
-    }</block></constructor>
-    <destructor><specifier>virtual</specifier> <name>~RObject</name><parameter_list>()</parameter_list> <block>{
-    }</block></destructor>
+    <constructor_decl><name>RObject</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name>=<init><expr><name>NULL</name></expr></init></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>id</name> =<init> <expr><name>INVALID_ID</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RObject</name><parameter_list>(<param><decl><type><name>const</name> <name>RObject</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
+    <destructor_decl><specifier>virtual</specifier> <name>~RObject</name><parameter_list>()</parameter_list>;</destructor_decl>
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>
 

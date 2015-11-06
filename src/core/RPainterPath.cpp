@@ -35,6 +35,7 @@ RPainterPath::RPainterPath() :
     modes(RPainterPath::NoModes),
     featureSize(0.0),
     pixelSizeHint(-1) {
+    RDebug::incCounter("RPainterPath");
 }
 
 RPainterPath::RPainterPath(const QPainterPath& path) :
@@ -45,9 +46,23 @@ RPainterPath::RPainterPath(const QPainterPath& path) :
     modes(RPainterPath::NoModes),
     featureSize(0.0),
     pixelSizeHint(-1) {
+    RDebug::incCounter("RPainterPath");
+}
+
+RPainterPath::RPainterPath(const RPainterPath& other) :
+    QPainterPath(other),
+    zLevel(other.zLevel),
+    pen(other.pen),
+    brush(other.brush),
+    modes(other.modes),
+    featureSize(other.featureSize),
+    pixelSizeHint(other.pixelSizeHint) {
+
+    RDebug::incCounter("RPainterPath");
 }
 
 RPainterPath::~RPainterPath() {
+    RDebug::decCounter("RPainterPath");
 }
 
 bool RPainterPath::isAtPosition(const RVector& p, double tolerance) const {

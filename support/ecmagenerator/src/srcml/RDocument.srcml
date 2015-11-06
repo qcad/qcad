@@ -46,6 +46,10 @@
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QVARIANT</name> <name>QVariant</name>()</cpp:define>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RDEFAULT_QLIST_RBOX</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QLIST_RBOX</name> <name>QList</name>&lt;RBox&gt;()</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RDEFAULT_QLIST_RS_ENTITYTYPE</name> <name>QList</name>&lt;RS::EntityType&gt;()</cpp:define>
 
 
@@ -208,7 +212,7 @@
 
     <function_decl><type><name>void</name></type> <name>removeBlockFromSpatialIndex</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>addBlockToSpatialIndex</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>ignoreBlockId</name></decl></param>)</parameter_list>;</function_decl>
-    <decl_stmt><decl><type><name>virtual</name> <name>void</name></type> <name>removeFromSpatialIndex</name><argument_list>(<argument><expr><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name> <name>entity</name></expr></argument>, <argument><expr><name>const</name> <name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name>&amp; <name>boundingBoxes</name> = <call><name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name><argument_list>()</argument_list></call></expr></argument>)</argument_list></decl>;</decl_stmt>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>removeFromSpatialIndex</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></type> <name>entity</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name>&amp;</type> <name>boundingBoxes</name> =<init> <expr><name>RDEFAULT_QLIST_RBOX</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <comment type="line">//virtual void removeFromSpatialIndex2(QSharedPointer&lt;REntity&gt; entity);</comment>
 
     <function_decl><type><name>void</name></type> <name>updateAllEntities</name><parameter_list>()</parameter_list>;</function_decl>
@@ -359,9 +363,10 @@
     <decl_stmt><decl><type><name>QString</name></type> <name>fileVersion</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>RStorage</name>&amp;</type> <name>storage</name></decl>;</decl_stmt>
-    <comment type="line">// TODO: map of spatial indices (per block), spatial index template to copy for new blocks:</comment>
+    <comment type="line">// spatial index used to spawn new spatial indices for each block:</comment>
     <decl_stmt><decl><type><name>RSpatialIndex</name>&amp;</type> <name>spatialIndex</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>disableSpatialIndicesByBlock</name></decl>;</decl_stmt>
+    <comment type="line">// map of spatial indices (per block):</comment>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>RBlock</name>::<name>Id</name></name></argument>, <argument><name>RSpatialIndex</name>*</argument>&gt;</argument_list></name></type> <name>spatialIndicesByBlock</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RTransactionStack</name></type> <name>transactionStack</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>modelSpaceBlockId</name></decl>;</decl_stmt>

@@ -75,7 +75,6 @@
     <destructor><specifier>virtual</specifier> <name>~RSpatialIndex</name><parameter_list>()</parameter_list> <block>{
     }</block></destructor>
 
-
     <function_decl><type><name>static</name> <name>qint64</name></type> <name>getSIId</name><parameter_list>(<param><decl><type><name>int</name></type> <name>id</name></decl></param>, <param><decl><type><name>int</name></type> <name>pos</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getId</name><parameter_list>(<param><decl><type><name>qint64</name></type> <name>siid</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getPos</name><parameter_list>(<param><decl><type><name>qint64</name></type> <name>siid</name></decl></param>)</parameter_list>;</function_decl>

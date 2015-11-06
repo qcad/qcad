@@ -396,6 +396,61 @@
         
     } else 
 
+    if( context->argumentCount() ==
+        1
+                && (
+                
+                        context->argument(
+                        0
+                        ).isVariant()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isQObject()
+                        ||
+                    
+                        context->argument(
+                        0
+                        ).isNull()
+                ) /* type: RPainterPath */
+            
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RPainterPath*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RPainterPath*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type RPainterPath.",
+                               context);                    
+                    }
+                    RPainterPath 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ constructor:
+    
+            // copyable class:
+            RPainterPath
+                    cppResult(
+                    a0
+                    );
+                
+            result = engine->newVariant(
+            context->thisObject(), qVariantFromValue(cppResult));
+        
+    } else 
+
     {
        return REcmaHelper::throwError(
        QString::fromLatin1("RPainterPath(): no matching constructor found."),
