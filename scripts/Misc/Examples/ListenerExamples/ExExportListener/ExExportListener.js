@@ -33,6 +33,9 @@ ExExportListener.prototype = new EAction();
  * Adds a menu for this action to the menu.
  */
 ExExportListener.init = function(basePath) {
+    // comment this return out to enable this example:
+    return;
+
     // create a new export listener:
     var adapter = new RExportListenerAdapter();
 
