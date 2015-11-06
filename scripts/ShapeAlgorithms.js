@@ -461,6 +461,11 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
 
     var intersectionPoints = ShapeAlgorithms.getClosestIntersectionPoints(shape, otherShapes, position, !extend, extend);
 
+    // make sure direction of shape does not change in the process:
+    if (isFunction(shape.getStartPoint)) {
+        intersectionPoints = RVector.getSortedByDistance(intersectionPoints, shape.getStartPoint());
+    }
+
     var cutPos1 = undefined;
     var cutPos2 = undefined;
 
@@ -2149,6 +2154,17 @@ ShapeAlgorithms.appendShapeToPolylineAuto = function(pl, shape) {
     pl.appendShape(shape);
 };
 
+/**
+ * Round or bevel between given polylines.
+ *
+ * \param trimmedShape1 Polyline segment or polyline 1, trimmed to cornerShape.
+ * \param ending1 RS::Ending which end was trimmed.
+ * \param segmentIndex1 Index of polyline segment that was trimmed.
+ * \param trimmedShape2 Polyline segment or polyline 2, trimmed to cornerShape.
+ * \param ending2 RS::Ending which end was trimmed.
+ * \param segmentIndex2 Index of polyline segment that was trimmed.
+ * \param cornerShape Shape to add at corner (arc, line, ...).
+ */
 ShapeAlgorithms.modifyPolylineCorner = function(polyline1, trimmedShape1, ending1, segmentIndex1,
                                                 polyline2, trimmedShape2, ending2, segmentIndex2, cornerShape) {
     var i, segment;
