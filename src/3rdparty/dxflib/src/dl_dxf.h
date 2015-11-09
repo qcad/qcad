@@ -27,6 +27,7 @@
 
 #include "dl_global.h"
 
+#include <limits>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string>
