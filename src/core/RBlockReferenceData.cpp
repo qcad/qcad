@@ -251,12 +251,16 @@ QList<RBox> RBlockReferenceData::getBoundingBoxes(bool ignoreEmpty) const {
                 }
                 entity->update();
                 boundingBoxes.append(entity->getBoundingBoxes());
-                //boundingBoxes.append(entity->getBoundingBox());
             }
         }
     }
 
-    //qDebug() << "bounding boxes: " << boundingBoxes;
+    if (!ignoreEmpty) {
+        if (boundingBoxes.isEmpty()) {
+            // add reference point to bounding boxes for empty block:
+            boundingBoxes.append(RBox(position, 0.0));
+        }
+    }
 
     recursionDepth--;
 
