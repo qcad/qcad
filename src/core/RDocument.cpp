@@ -1646,6 +1646,15 @@ void RDocument::rebuildSpatialIndex() {
         for (int i=0; i<blockIds.length(); i++) {
             RBlock::Id blockId = blockIds[i];
             RSpatialIndex* si = getSpatialIndexForBlock(blockId);
+
+            // remove entries without bounding boxes:
+            for (int i=allIdsByBlock[blockId].length()-1; i>=0 && !allIdsByBlock[blockId].isEmpty(); i--) {
+                if (allBbsByBlock[blockId][i].isEmpty()) {
+                    allIdsByBlock[blockId].removeAt(i);
+                    allBbsByBlock[blockId].removeAt(i);
+                }
+            }
+
             si->bulkLoad(allIdsByBlock[blockId], allBbsByBlock[blockId]);
 //            for (int i=0; i<allIdsByBlock[blockId].length(); i++) {
 //                si->addToIndex(allIdsByBlock[blockId][i], allBbsByBlock[blockId][i]);
