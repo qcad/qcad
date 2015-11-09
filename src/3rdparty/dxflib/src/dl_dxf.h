@@ -48,6 +48,10 @@
 #define M_PI 3.1415926535897932384626433832795
 #endif
 
+#ifndef DL_NANDOUBLE
+#define DL_NANDOUBLE std::numeric_limits<double>::quiet_NaN()
+#endif
+
 class DL_CreationInterface;
 class DL_WriterA;
 
