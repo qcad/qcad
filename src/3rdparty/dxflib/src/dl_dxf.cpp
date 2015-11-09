@@ -1624,9 +1624,9 @@ void DL_Dxf::addText(DL_CreationInterface* creationInterface) {
         getRealValue(20, 0.0),
         getRealValue(30, 0.0),
         // alignment point
-        getRealValue(11, 0.0),
-        getRealValue(21, 0.0),
-        getRealValue(31, 0.0),
+        getRealValue(11, DL_NANDOUBLE),
+        getRealValue(21, DL_NANDOUBLE),
+        getRealValue(31, DL_NANDOUBLE),
         // height
         getRealValue(40, 2.5),
         // x scale
