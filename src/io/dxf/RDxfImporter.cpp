@@ -824,7 +824,7 @@ RTextBasedData RDxfImporter::getTextBasedData(const DL_TextData& data) {
 
     if (data.vJustification!=0 || data.hJustification!=0) {
 
-        // 5 vertical alignment modes:
+        // horizontal alignment:
         switch (data.hJustification) {
         default:
         case 0: // left aligned
@@ -861,6 +861,7 @@ RTextBasedData RDxfImporter::getTextBasedData(const DL_TextData& data) {
             break;
         }
 
+        // vertical alignment:
         switch (data.vJustification) {
         default:
         case 0: // baseline
@@ -881,7 +882,7 @@ RTextBasedData RDxfImporter::getTextBasedData(const DL_TextData& data) {
         }
     } else {
         halign = RS::HAlignLeft;
-        valign = RS::VAlignBottom;
+        valign = RS::VAlignBase;
         //refPoint = RVector(data.ipx, data.ipy);
     }
 
@@ -906,8 +907,11 @@ RTextBasedData RDxfImporter::getTextBasedData(const DL_TextData& data) {
 
     textBasedData.setPosition(position);
 
-    // if alignment is left / base, alignment point is omitted (same as position).
-    if (textBasedData.getHAlign()==RS::HAlignLeft && textBasedData.getVAlign()==RS::VAlignBase) {
+    // if alignment is left / base or alignment point is omitted for other reason,
+    // set alignment point to same as position.
+    if ((textBasedData.getHAlign()==RS::HAlignLeft && textBasedData.getVAlign()==RS::VAlignBase) ||
+        (RMath::isNaN(alignmentPoint.x) || RMath::isNaN(alignmentPoint.y))) {
+
         textBasedData.setAlignmentPoint(position);
     }
     else {
