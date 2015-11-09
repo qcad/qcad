@@ -298,7 +298,7 @@ BreakOut.breakOut = function(op, entity, pos, extend, removeSegment) {
         }
 
         if (!isNull(newSegments[1])/* && !removeSegment*/) {
-            e = shapeToEntity(entity.getDocument(), newSegments[1])
+            e = shapeToEntity(entity.getDocument(), newSegments[1]);
             if (!isNull(e)) {
                 e.copyAttributesFrom(entity.data());
                 op.addObject(e, false);
