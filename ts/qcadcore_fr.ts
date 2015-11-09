@@ -470,7 +470,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
         <translation>Espacement des lignes</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+76"/>
+        <location filename="../src/core/REntity.cpp" line="+86"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -1323,7 +1323,7 @@ Valeurs par &amp;défaut</translatorcomment>
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+37"/>
+        <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--

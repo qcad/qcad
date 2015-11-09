@@ -171,7 +171,7 @@
         <translation>Polomer klesol pod 0.0 po %1 sústredných oblúkoch.</translation>
     </message>
     <message>
-        <location line="+690"/>
+        <location line="+767"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Minimálne dva body sú rovnaké.</translation>

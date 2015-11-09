@@ -171,7 +171,7 @@
         <translation>%1同心弧の半径が0.0を下回りました。</translation>
     </message>
     <message>
-        <location line="+690"/>
+        <location line="+767"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>少なくとも2点が同一です。</translation>

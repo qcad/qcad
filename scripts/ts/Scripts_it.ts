@@ -189,7 +189,7 @@
         <translation>Raggio è sceso sotto 0,0 dopo %1 archi concentrici.</translation>
     </message>
     <message>
-        <location line="+690"/>
+        <location line="+767"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>

@@ -315,7 +315,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+76"/>
+        <location filename="../src/core/REntity.cpp" line="+86"/>
         <source>Type</source>
         <translation>Tyyppi</translation>
     </message>
@@ -983,7 +983,7 @@
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+37"/>
+        <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Custom</source>
         <translation>Mukautettu</translation>
     </message>

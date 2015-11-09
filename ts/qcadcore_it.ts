@@ -484,7 +484,7 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
         <translation>Interasse righe</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+76"/>
+        <location filename="../src/core/REntity.cpp" line="+86"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: liferea-1.8-rc1.it.po--
@@ -1339,7 +1339,7 @@ Unità Predefinite:</translatorcomment>
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+37"/>
+        <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--

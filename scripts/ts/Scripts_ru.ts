@@ -171,7 +171,7 @@
         <translation>Радиус уменьшился до 0.0 после %1 концентрической(их) дуг(и).</translation>
     </message>
     <message>
-        <location line="+690"/>
+        <location line="+767"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>По крайней мере две точки идентичны.</translation>

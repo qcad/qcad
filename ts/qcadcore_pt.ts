@@ -465,7 +465,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
         <translation>Espaçamento de Linha</translation>
     </message>
     <message>
-        <location filename="../src/core/REntity.cpp" line="+76"/>
+        <location filename="../src/core/REntity.cpp" line="+86"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -1321,7 +1321,7 @@ Unidade Padrão:
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+37"/>
+        <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

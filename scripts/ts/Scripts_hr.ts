@@ -171,7 +171,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+690"/>
+        <location line="+767"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation type="unfinished"></translation>
