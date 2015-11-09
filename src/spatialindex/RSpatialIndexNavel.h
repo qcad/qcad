@@ -22,6 +22,7 @@
 
 #include "spatialindex_global.h"
 
+#include <QtGlobal>
 #include <QSet>
 #include <QList>
 
@@ -32,7 +33,10 @@
 class RSiDataStream : public SpatialIndex::IDataStream
 {
 public:
-    RSiDataStream(const QList<int>& ids, const QList<QList<RBox> >& bbs) : ids(ids), bbs(bbs), index(0), pos(0), done(false) {
+    RSiDataStream(const QList<int>& ids, const QList<QList<RBox> >& bbs)
+        : ids(ids), bbs(bbs), index(0), pos(0), done(false) {
+
+        Q_ASSERT(this->ids.length()==this->bbs.length());
     }
 
     virtual ~RSiDataStream() { }
@@ -252,7 +256,7 @@ protected:
         void visitData(std::vector<const SpatialIndex::IData*>& v) {
             std::vector<const SpatialIndex::IData*>::iterator it;
             for (it = v.begin(); it != v.end(); it++) {
-                printf("Visitor::visitData[]: %Ld\n", (*it)->getIdentifier());
+                printf("Visitor::visitData[]: %lld\n", (*it)->getIdentifier());
             }
         }
 
