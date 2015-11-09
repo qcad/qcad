@@ -245,7 +245,7 @@ BreakOut.breakOut = function(op, entity, pos, extend, removeSegment) {
 
     var otherShapes = BreakOut.getOtherShapes(doc, entity.getId(), shape, extend);
 
-    var newSegments = ShapeAlgorithms.autoTrim(shape, otherShapes, pos, extend);
+    var newSegments = ShapeAlgorithms.autoSplit(shape, otherShapes, pos, extend);
 
     if (isNull(newSegments)) {
         return false;
@@ -283,7 +283,9 @@ BreakOut.breakOut = function(op, entity, pos, extend, removeSegment) {
             }
             else {
                 //modifyEntity(op, entity.data(), newSegments[2]);
-                modifyEntity(op, entity.clone(), newSegments[2]);
+                if (!isNull(newSegments[2])) {
+                    modifyEntity(op, entity.clone(), newSegments[2]);
+                }
             }
         }
     }

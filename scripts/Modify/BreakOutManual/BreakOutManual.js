@@ -250,7 +250,7 @@ BreakOutManual.prototype.pickCoordinate = function(event, preview) {
 
 BreakOutManual.prototype.getOperation = function(preview) {
     //var newSegments = BreakOutManual.autoTrim(this.shape, this.point2, this.point4);
-    var newSegments = ShapeAlgorithms.autoTrimManual(this.shape, this.point2, this.point4);
+    var newSegments = ShapeAlgorithms.autoSplitManual(this.shape, this.point2, this.point4);
 
     if (isNull(newSegments)) {
         return undefined;

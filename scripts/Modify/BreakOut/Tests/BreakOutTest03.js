@@ -52,11 +52,10 @@ BreakOutTest03.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setZoom(3.910224438902743, new RVector(48.176, 36.5185, 0, true));
-    var p = new RVector(21.896684, 13.606505);
+    var p = new RVector(29.057398, -1.737883);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
-    this.setZoom(3.910224438902743, new RVector(48.176, 36.5185, 0, true));
-    var p = new RVector(29.057398, -1.737883);
+    var p = new RVector(29.057398, -26.737883);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setZoom(3.910224438902743, new RVector(48.176, 36.5185, 0, true));

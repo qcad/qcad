@@ -447,16 +447,9 @@ ShapeAlgorithms.getOffsetEllipses = function(shape, distance, number, sidePositi
  * The second shape is the rest at the end of the shape.
  * The third shape is the segment self in its new shape.
  */
-ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
+ShapeAlgorithms.autoSplit = function(shape, otherShapes, position, extend) {
     if (isNull(extend)) {
         extend = false;
-    }
-
-    // convert closed to open polyline:
-    if (isPolylineShape(shape) && shape.isClosed()) {
-        var lastSegment = shape.getLastSegment();
-        shape.setClosed(false);
-        shape.appendShape(lastSegment.data());
     }
 
     var intersectionPoints = ShapeAlgorithms.getClosestIntersectionPoints(shape, otherShapes, position, !extend, extend);
@@ -474,10 +467,10 @@ ShapeAlgorithms.autoTrim = function(shape, otherShapes, position, extend) {
         cutPos2 = intersectionPoints[1];
     }
 
-    return ShapeAlgorithms.autoTrimManual(shape, cutPos1, cutPos2, position);
+    return ShapeAlgorithms.autoSplitManual(shape, cutPos1, cutPos2, position);
 };
 
-ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
+ShapeAlgorithms.autoSplitManual = function(shape, cutPos1, cutPos2, position) {
     if (!isCircleShape(shape) && !isFullEllipseShape(shape) &&
         !isXLineShape(shape) && !isRayShape(shape)) {
 
@@ -524,28 +517,6 @@ ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
 
     // xlines:
     else if (isXLineShape(shape)) {
-//        rest1 = undefined;
-//        rest2 = undefined;
-
-//        if (isValidVector(cutPos2)) {
-//            rest1 = new RRay(cutPos2, RVector.createPolar(1.0, shape.getDirection2()));
-//            if (!isValidVector(cutPos1)) {
-//                segment = new RRay(cutPos2, RVector.createPolar(1.0, shape.getDirection1()));
-//            }
-//        }
-//        if (isValidVector(cutPos1)) {
-//            rest2 = new RRay(cutPos1, RVector.createPolar(1.0, shape.getDirection1()));
-//            if (!isValidVector(cutPos2)) {
-//                segment = new RRay(cutPos1, RVector.createPolar(1.0, shape.getDirection2()));
-//            }
-//        }
-
-//        if (isValidVector(cutPos1) && isValidVector(cutPos2)) {
-//            segment = new RLine();
-//            segment.setStartPoint(cutPos1);
-//            segment.setEndPoint(cutPos2);
-//        }
-
         rest1 = undefined;
         rest2 = undefined;
 
@@ -708,6 +679,7 @@ ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
             }
         }
     }
+
     // full ellipses:
     else if (isFullEllipseShape(shape)) {
         if (!isValidVector(cutPos1) || !isValidVector(cutPos2)) {
@@ -754,56 +726,100 @@ ShapeAlgorithms.autoTrimManual = function(shape, cutPos1, cutPos2, position) {
 
     // polyline:
     else if (isPolylineShape(shape)) {
-        var lastSegment;
-        rest1 = shape.clone();
-        var closed = shape.isClosed();
+        var closed = shape.isGeometricallyClosed();
         if (closed) {
-            // convert closed to open polyline:
-            lastSegment = rest1.getLastSegment();
-            rest1.setClosed(false);
-            rest1.appendShape(lastSegment.data());
+            var newShape = new RPolyline();
+            // convert closed to open polyline with start in cutPos1:
+            // find closest segment of polyline:
+            var segmentIndex = shape.getClosestSegment(cutPos1);
+            var firstSegment = shape.getSegmentAt(segmentIndex);
+            // trim segment start to cutPos1
+            firstSegment.trimStartPoint(cutPos1);
+            // start polyline with second part of split segment:
+            newShape.appendShape(firstSegment.data());
+            // append rest of polyline:
+            for (var i=segmentIndex+1; i<shape.countSegments(); i++) {
+                newShape.appendShape(shape.getSegmentAt(i).data());
+            }
+            for (var i=0; i<segmentIndex; i++) {
+                newShape.appendShape(shape.getSegmentAt(i).data());
+            }
+            var lastSegment = shape.getSegmentAt(segmentIndex);
+            // trim segment end to cutPos1
+            lastSegment.trimEndPoint(cutPos1);
+            // end polyline with second part of split segment:
+            newShape.appendShape(lastSegment.data());
+            lastSegment = shape.getLastSegment();
+            newShape.setClosed(false);
+            shape = newShape;
+
+            rest1 = shape.clone();
+            rest2 = shape.clone();
+            segment = shape.clone();
         }
         else {
-            if (shape.isGeometricallyClosed()) {
-                closed = true;
-            }
+            rest1 = shape.clone();
+            rest2 = shape.clone();
+            segment = shape.clone();
         }
 
-        rest2 = rest1.clone();
-        segment = rest1.clone();
-
-        var l1 = shape.getLengthTo(cutPos1);
-        if (l1<RS.PointTolerance && cutPos1.isEnd===true) {
-            l1 = shape.getLength();
-        }
-        var l2 = shape.getLengthTo(cutPos2);
-        if (l2<RS.PointTolerance && cutPos2.isEnd===true) {
-            l2 = shape.getLength();
-        }
-
-        if (l1 < l2) {
-            rest1.trimEndPoint(cutPos1, cutPos1);
-            segment.trimStartPoint(cutPos1, cutPos1);
-            segment.trimEndPoint(cutPos2, cutPos2);
+        if (closed) {
+            rest1.trimEndPoint(cutPos2, cutPos2);
+            segment = undefined;
             rest2.trimStartPoint(cutPos2, cutPos2);
         }
         else {
-            rest1.trimEndPoint(cutPos2, cutPos2);
-            segment.trimStartPoint(cutPos2, cutPos2);
-            segment.trimEndPoint(cutPos1, cutPos1);
-            rest2.trimStartPoint(cutPos1, cutPos1);
+            var l1 = shape.getLengthTo(cutPos1);
+            if (l1<RS.PointTolerance && cutPos1.isEnd===true) {
+                l1 = shape.getLength();
+            }
+            var l2 = shape.getLengthTo(cutPos2);
+            if (l2<RS.PointTolerance && cutPos2.isEnd===true) {
+                l2 = shape.getLength();
+            }
+            if (l1 > l2) {
+                rest1.trimEndPoint(cutPos2, cutPos2);
+                segment.trimStartPoint(cutPos2, cutPos2);
+                segment.trimEndPoint(cutPos1, cutPos1);
+                rest2.trimStartPoint(cutPos1, cutPos1);
+            }
+            else {
+                rest1.trimEndPoint(cutPos1, cutPos1);
+                segment.trimStartPoint(cutPos1, cutPos1);
+                segment.trimEndPoint(cutPos2, cutPos2);
+                rest2.trimStartPoint(cutPos2, cutPos2);
+            }
         }
 
-        if (segment.getLength()<RS.PointTolerance || (closed && RMath.fuzzyCompare(segment.getLength(), shape.getLength()))) {
-            segment = undefined;
+        if (!isNull(segment)) {
+            if (segment.getLength()<RS.PointTolerance || (closed && RMath.fuzzyCompare(segment.getLength(), shape.getLength()))) {
+                segment = undefined;
+            }
         }
 
-        if (rest1.getLength()<RS.PointTolerance || (closed && RMath.fuzzyCompare(rest1.getLength(), shape.getLength()))) {
-            rest1 = undefined;
+        if (!isNull(rest1)) {
+            if (rest1.getLength()<RS.PointTolerance || (closed && RMath.fuzzyCompare(rest1.getLength(), shape.getLength()))) {
+                rest1 = undefined;
+            }
         }
 
-        if (rest2.getLength()<RS.PointTolerance || (closed && RMath.fuzzyCompare(rest2.getLength(), shape.getLength()))) {
-            rest2 = undefined;
+        if (!isNull(rest2)) {
+            if (rest2.getLength()<RS.PointTolerance || (closed && RMath.fuzzyCompare(rest2.getLength(), shape.getLength()))) {
+                rest2 = undefined;
+            }
+        }
+
+        if (isNull(segment) && !isNull(rest1) && !isNull(rest2)) {
+            var distRest1 = rest1.getDistanceTo(position);
+            var distRest2 = rest2.getDistanceTo(position);
+            if (distRest1<distRest2 || isNaN(distRest2)) {
+                segment = rest1;
+                rest1 = undefined;
+            }
+            else {
+                segment = rest2;
+                rest2 = undefined;
+            }
         }
     }
 
@@ -904,8 +920,8 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
     if (onShape &&
         !isCircleShape(shape) &&
         !isFullEllipseShape(shape) &&
-        !isXLineShape(shape) /*&&
-        (!isPolylineShape(shape) || !shape.isGeometricallyClosed())*/) {
+        !isXLineShape(shape) &&
+        (!isPolylineShape(shape) || !shape.isGeometricallyClosed())) {
 
         var sp = shape.getStartPoint();
         sp.isStart = true;
@@ -937,6 +953,12 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
     var distRight = undefined;
     var cutPos2 = RVector.invalid;
     var distLeft = undefined;
+
+    // for closed polylines:
+    var cutPos3 = RVector.invalid;
+    var distRightMax = undefined;
+    var cutPos4 = RVector.invalid;
+    var distLeftMax = undefined;
 
     // at least 2 intersection points are required to proceed:
     if (intersections.length<2 && onShape && !isXLineShape(shape)) {
@@ -1020,6 +1042,10 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
                     cutPos2 = inters;
                     distRight = dist;
                 }
+                if (isNull(distRightMax) || dist>distRightMax) {
+                    cutPos3 = inters;
+                    distRightMax = dist;
+                }
             }
             else if (dist<0.0) {
                 dist = Math.abs(dist);
@@ -1027,33 +1053,19 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
                     cutPos1 = inters;
                     distLeft = dist;
                 }
+                if (isNull(distLeftMax) || dist>distLeftMax) {
+                    cutPos4 = inters;
+                    distLeftMax = dist;
+                }
             }
-
-//            if (isPolylineShape(shape) && shape.isGeometricallyClosed()) {
-//                var dist2 = tPos + shape.getLength() - tInters;
-
-//                if (dist2>0.0) {
-//                    if (isNull(distRight) || dist2<distRight) {
-//                        cutPos2 = inters;
-//                        distRight = dist2;
-//                    }
-//                }
-////                else if (dist<0.0) {
-////                    dist = Math.abs(dist);
-////                    if (isNull(distLeft) || dist<distLeft) {
-////                        cutPos1 = inters;
-////                        distLeft = dist;
-////                    }
-////                }
-//            }
         }
     }
 
     if (!isCircleShape(shape) &&
         !isFullEllipseShape(shape) &&
         !isXLineShape(shape) &&
-        !isRayShape(shape) /*&&
-        (!isPolylineShape(shape) || shape.isGeometricallyClosed())*/) {
+        !isRayShape(shape) &&
+        (!isPolylineShape(shape) || shape.isGeometricallyClosed())) {
 
         if (!isValidVector(cutPos1)) {
             cutPos1 = shape.getEndPoint();
@@ -1063,11 +1075,16 @@ ShapeAlgorithms.getClosestIntersectionPoints = function(shape, otherShapes, posi
         }
     }
 
-//    if (isPolylineShape(shape) && shape.isGeometricallyClosed()) {
-//        if (!isValidVector(cutPos2)) {
-
-//        }
-//    }
+    if (isPolylineShape(shape)) {
+        if (isNull(distLeft)) {
+            cutPos1 = cutPos3;
+            cutPos2 = cutPos2;
+        }
+        if (isNull(distRight)) {
+            cutPos1 = cutPos1;
+            cutPos2 = cutPos4;
+        }
+    }
 
     return [cutPos1, cutPos2];
 };
@@ -1530,11 +1547,6 @@ ShapeAlgorithms.getQuadrilateral = function(line1, line2, line3, line4) {
             }
         } while (i!==-1);
     }
-
-//    qDebug("vs[4]: ", vs[4]);
-//    qDebug("vs[3]: ", vs[3]);
-//    qDebug("vs[2]: ", vs[2]);
-//    qDebug("vs[1]: ", vs[1]);
 
     var vert = [];
 
