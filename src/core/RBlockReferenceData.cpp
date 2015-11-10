@@ -471,6 +471,7 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
         for (int row=0; row<rowCount; row++) {
             for (it = ids.begin(); it != ids.end(); it++) {
                 if (RMouseEvent::hasMouseMoved()) {
+                    recursionDepth--;
                     return QList<QSharedPointer<RShape> >();
                 }
 
