@@ -55,6 +55,7 @@ RPainterPath::RPainterPath(const RPainterPath& other) :
     pen(other.pen),
     brush(other.brush),
     modes(other.modes),
+    points(other.points),
     featureSize(other.featureSize),
     pixelSizeHint(other.pixelSizeHint) {
 
