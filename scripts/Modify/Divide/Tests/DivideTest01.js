@@ -106,6 +106,8 @@ DivideTest01.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::SplineToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::SplineToolsPanel::SplineFitPointsButton');
+    this.setToolOption('SplineFitPoints/Closed', 'false');
+    this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(20.2, 25);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
