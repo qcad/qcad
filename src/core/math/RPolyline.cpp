@@ -542,6 +542,90 @@ void RPolyline::stripWidths() {
 }
 
 /**
+ * Relocates the start point of this closed polyline to the given point.
+ * The visual appearance of the polyline does not change.
+ */
+bool RPolyline::relocateStartPoint(const RVector& p) {
+    if (!isGeometricallyClosed()) {
+        return false;
+    }
+
+    // convert closed to open polyline with start in p:
+    // find closest segment of polyline:
+    int segmentIndex = getClosestSegment(p);
+    if (segmentIndex<0) {
+        return false;
+    }
+
+    RPolyline newShape;
+
+    QSharedPointer<RShape> firstSegment = getSegmentAt(segmentIndex);
+    QSharedPointer<RDirected> firstDirected = firstSegment.dynamicCast<RDirected>();
+    if (firstSegment.isNull() || firstDirected.isNull()) {
+        return false;
+    }
+    QSharedPointer<RShape> lastSegment = getSegmentAt(segmentIndex);
+    QSharedPointer<RDirected> lastDirected = lastSegment.dynamicCast<RDirected>();
+    if (lastSegment.isNull() || lastDirected.isNull()) {
+        return false;
+    }
+
+    // trim segment start to p
+    firstDirected->trimStartPoint(p);
+
+    // start polyline with second part of split segment:
+    newShape.appendShape(*firstSegment);
+
+    // append rest of polyline:
+    for (int i=segmentIndex+1; i<countSegments(); i++) {
+        newShape.appendShape(*getSegmentAt(i));
+    }
+    for (int i=0; i<segmentIndex; i++) {
+        newShape.appendShape(*getSegmentAt(i));
+    }
+
+    // trim segment end to p
+    lastDirected->trimEndPoint(p);
+
+    // end polyline with second part of split segment:
+    newShape.appendShape(*lastSegment);
+    newShape.setClosed(false);
+    *this = newShape;
+
+    return true;
+}
+
+bool RPolyline::convertToClosed() {
+    if (!isGeometricallyClosed()) {
+        return false;
+    }
+
+    if (isClosed()) {
+        return true;
+    }
+
+    removeLastVertex();
+    setClosed(true);
+    return true;
+}
+
+bool RPolyline::convertToOpen() {
+    if (!isClosed()) {
+        return false;
+    }
+
+    if (isGeometricallyClosed()) {
+        return true;
+    }
+
+    QSharedPointer<RShape> last = getLastSegment();
+    setClosed(false);
+    removeLastVertex();
+    appendShape(*last);
+    return true;
+}
+
+/**
  * \return True if the segment at the given position is a line.
  */
 bool RPolyline::isLineSegment(int i) const {

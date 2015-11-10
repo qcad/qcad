@@ -436,14 +436,15 @@ function isImageEntity(obj) {
 }
 
 /**
- * Checks if the given object is a polyline entity.
- *
- * \return true if the given object is a spline entity (RPolylineEntity).
+ * \return true if the given object is a polyline entity (RPolylineEntity).
  */
 function isPolylineEntity(obj) {
     return isOfType(obj, RPolylineEntity) || isOfType(obj, RPolylineEntityPointer);
 }
 
+/**
+ * \return true if the given object is a geometrically closed polyline entity.
+ */
 function isClosedPolylineEntity(obj) {
     return isPolylineEntity(obj) && obj.isGeometricallyClosed();
 }
@@ -685,6 +686,13 @@ function isPointShape(obj) {
  */
 function isPolylineShape(obj) {
     return isOfType(obj, RPolyline) || isOfType(obj, RPolylinePointer);
+}
+
+/**
+ * \return true if the given object is a geometrically closed polyline shape.
+ */
+function isClosedPolylineShape(obj) {
+    return isPolylineShape(obj) && obj.isGeometricallyClosed();
 }
 
 /**

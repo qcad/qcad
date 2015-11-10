@@ -23,6 +23,7 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"spatialindex_global.h"</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QtGlobal&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSet&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QList&gt;</cpp:file></cpp:include>
 
@@ -33,7 +34,10 @@
 <class>class <name>RSiDataStream</name> <super>: <specifier>public</specifier> <name><name>SpatialIndex</name>::<name>IDataStream</name></name></super>
 <block>{<private type="default">
 </private><public>public:
-    <constructor><name>RSiDataStream</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name>&amp;</type> <name>ids</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>bbs</name></decl></param>)</parameter_list> <member_list>: <call><name>ids</name><argument_list>(<argument><expr><name>ids</name></expr></argument>)</argument_list></call>, <call><name>bbs</name><argument_list>(<argument><expr><name>bbs</name></expr></argument>)</argument_list></call>, <call><name>index</name><argument_list>(<argument><expr>0</expr></argument>)</argument_list></call>, <call><name>pos</name><argument_list>(<argument><expr>0</expr></argument>)</argument_list></call>, <call><name>done</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call> </member_list><block>{
+    <constructor><name>RSiDataStream</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>int</name></argument>&gt;</argument_list></name>&amp;</type> <name>ids</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>bbs</name></decl></param>)</parameter_list>
+        <member_list>: <call><name>ids</name><argument_list>(<argument><expr><name>ids</name></expr></argument>)</argument_list></call>, <call><name>bbs</name><argument_list>(<argument><expr><name>bbs</name></expr></argument>)</argument_list></call>, <call><name>index</name><argument_list>(<argument><expr>0</expr></argument>)</argument_list></call>, <call><name>pos</name><argument_list>(<argument><expr>0</expr></argument>)</argument_list></call>, <call><name>done</name><argument_list>(<argument><expr><name>false</name></expr></argument>)</argument_list></call> </member_list><block>{
+
+        <expr_stmt><expr><call><name>Q_ASSERT</name><argument_list>(<argument><expr><name>this</name>-&gt;<name>ids</name>.<call><name>length</name><argument_list>()</argument_list></call>==<name>this</name>-&gt;<name>bbs</name>.<call><name>length</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></constructor>
 
     <destructor><specifier>virtual</specifier> <name>~RSiDataStream</name><parameter_list>()</parameter_list> <block>{ }</block></destructor>
@@ -253,7 +257,7 @@
         <function><type><name>void</name></type> <name>visitData</name><parameter_list>(<param><decl><type><name><name>std</name>::<name>vector<argument_list>&lt;<argument><name>const</name> <name><name>SpatialIndex</name>::<name>IData</name></name>*</argument>&gt;</argument_list></name></name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
             <decl_stmt><decl><type><name><name>std</name>::<name>vector<argument_list>&lt;<argument><name>const</name> <name><name>SpatialIndex</name>::<name>IData</name></name>*</argument>&gt;</argument_list></name>::<name>iterator</name></name></type> <name>it</name></decl>;</decl_stmt>
             <for>for (<init><expr><name>it</name> = <name>v</name>.<call><name>begin</name><argument_list>()</argument_list></call></expr>;</init> <condition><expr><name>it</name> != <name>v</name>.<call><name>end</name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>it</name>++</expr></incr>) <block>{
-                <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr>"Visitor::visitData[]: %Ld\n"</expr></argument>, <argument><expr>(*<name>it</name>)-&gt;<call><name>getIdentifier</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+                <expr_stmt><expr><call><name>printf</name><argument_list>(<argument><expr>"Visitor::visitData[]: %lld\n"</expr></argument>, <argument><expr>(*<name>it</name>)-&gt;<call><name>getIdentifier</name><argument_list>()</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
             }</block></for>
         }</block></function>
 

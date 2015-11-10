@@ -302,6 +302,9 @@
         stripWidths
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        relocateStartPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasProxy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

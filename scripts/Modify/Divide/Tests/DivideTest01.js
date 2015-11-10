@@ -187,6 +187,7 @@ DivideTest01.prototype.test00 = function() {
     var p = new RVector(36.8, 12.9);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.RightButton, 2, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
+    this.verifyDrawing('DivideTest01_000.dxf');
     this.tearDown();
     qDebug('finished DivideTest01.test00()');
 };

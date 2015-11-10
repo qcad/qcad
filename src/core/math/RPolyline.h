@@ -169,6 +169,10 @@ public:
 
     void stripWidths();
 
+    bool relocateStartPoint(const RVector& p);
+    bool convertToClosed();
+    bool convertToOpen();
+
     static bool hasProxy() {
         return polylineProxy!=NULL;
     }

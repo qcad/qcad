@@ -170,6 +170,8 @@
 
     <function_decl><type><name>void</name></type> <name>stripWidths</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>bool</name></type> <name>relocateStartPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>p</name></decl></param>)</parameter_list>;</function_decl>
+
     <function><type><name>static</name> <name>bool</name></type> <name>hasProxy</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>polylineProxy</name>!=<name>NULL</name></expr>;</return>
     }</block></function>
