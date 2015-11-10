@@ -254,6 +254,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, relocateStartPoint, "relocateStartPoint");
             
+            REcmaHelper::registerFunction(&engine, proto, convertToClosed, "convertToClosed");
+            
+            REcmaHelper::registerFunction(&engine, proto, convertToOpen, "convertToOpen");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RPolyline*>(), *proto);
 
@@ -6609,6 +6613,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::relocateStartPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::convertToClosed
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::convertToClosed", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::convertToClosed";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("convertToClosed", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->convertToClosed();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.convertToClosed().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::convertToClosed", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::convertToOpen
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::convertToOpen", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::convertToOpen";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("convertToOpen", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->convertToOpen();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.convertToOpen().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::convertToOpen", context, engine);
             return result;
         }
          QScriptValue

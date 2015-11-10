@@ -307,6 +307,12 @@
         relocateStartPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        convertToClosed
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        convertToOpen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasProxy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
