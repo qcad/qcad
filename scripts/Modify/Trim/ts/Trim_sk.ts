@@ -21,17 +21,17 @@
     <message>
         <location line="+62"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prvý prvok nie je možné orezať.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prvok nie je možné orezať.</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Druhý prvok nie je možné orezať.</translation>
     </message>
     <message>
         <location filename="../TrimInit.js" line="+2"/>

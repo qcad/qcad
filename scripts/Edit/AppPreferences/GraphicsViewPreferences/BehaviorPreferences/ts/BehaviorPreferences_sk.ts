@@ -49,12 +49,12 @@
     <message>
         <location line="+7"/>
         <source>Right-click on entity shows context menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Kliknutím na prvok sa zobrazí kontextová ponuka</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Double-click to select contour</source>
-        <translation type="unfinished"></translation>
+        <translation>Dvojklikom označiť obrys</translation>
     </message>
     <message>
         <location line="+20"/>

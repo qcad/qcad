@@ -487,14 +487,14 @@
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobraziť na stred</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobraziť Cieľ</translation>
     </message>
 </context>
 <context>

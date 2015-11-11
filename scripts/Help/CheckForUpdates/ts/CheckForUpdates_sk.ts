@@ -12,12 +12,12 @@
     <message>
         <location line="+8"/>
         <source>Version information not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Informácia o verzii nebola nájdená.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>No connection to server or file not found. Please try again later.</source>
-        <translation type="unfinished"></translation>
+        <translation>Žiadne pripojenie k serveru alebo súbor nebol nájdený. Skúste neskôr prosím.</translation>
     </message>
     <message>
         <source>about:blank</source>

@@ -171,7 +171,7 @@
         <translation>Radius je padel pod 0.0 po %1 kocentričnih lokih.</translation>
     </message>
     <message>
-        <location line="+767"/>
+        <location line="+769"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vsaj dve točki sta identični.</translation>
@@ -377,7 +377,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+725"/>
+        <location filename="../library.js" line="+733"/>
         <source>Objects</source>
         <translation type="unfinished"></translation>
     </message>

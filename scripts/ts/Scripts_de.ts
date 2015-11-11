@@ -175,7 +175,7 @@
         <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location line="+774"/>
+        <location line="+776"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>
@@ -433,7 +433,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+725"/>
+        <location filename="../library.js" line="+733"/>
         <source>Objects</source>
         <translation>Objekte</translation>
     </message>

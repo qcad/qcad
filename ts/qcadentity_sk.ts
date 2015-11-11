@@ -499,7 +499,7 @@
     <message>
         <location line="+1"/>
         <source>From Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>z prvku</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -513,12 +513,12 @@
     <message>
         <location line="+192"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Áno</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Nie</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-1"/>
@@ -605,17 +605,17 @@
     <message>
         <location line="+2"/>
         <source>Start Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Počiatočná šírka</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Koncová šírka</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Celková šírka</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
