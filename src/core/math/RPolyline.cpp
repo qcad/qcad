@@ -1229,19 +1229,15 @@ bool RPolyline::reverse() {
     RPolyline nPolyline;
     QList<QSharedPointer<RShape> > segments = getExploded();
 
-    // skip last segment if polyline is closed and add flag instead:
-    int iLast = segments.count()-1;
-    if (isClosed()) {
-        iLast--;
-    }
-
-    for (int i=iLast; i>=0; i--) {
+    for (int i=segments.count()-1; i>=0; i--) {
         QSharedPointer<RShape> seg = segments.at(i);
         QSharedPointer<RDirected> directed = seg.dynamicCast<RDirected>();
         directed->reverse();
         nPolyline.appendShape(*seg);
     }
-    nPolyline.setClosed(closed);
+    if (closed) {
+        nPolyline.convertToClosed();
+    }
     *this = nPolyline;
     return true;
 }
