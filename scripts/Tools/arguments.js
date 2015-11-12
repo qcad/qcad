@@ -45,16 +45,9 @@ function getArguments(args, shortFlag, longFlag) {
     var ret = [];
     var i;
 
-    shortFlag = shortFlag.toLowerCase();
-    longFlag = longFlag.toLowerCase();
-    var argsLower = [];
-    for (i=0; i<args.length; i++) {
-        argsLower.push(args[i].toLowerCase());
-    }
-
     do {
         done = true;
-        i = argsLower.indexOf(shortFlag, start);
+        i = args.indexOf(shortFlag, start);
         if (i!==-1) {
             if (i+1 < args.length) {
                 ret.push(args[i+1]);
@@ -64,7 +57,7 @@ function getArguments(args, shortFlag, longFlag) {
         }
 
         for (var k=start; k<args.length; k++) {
-            if (argsLower[k].indexOf(longFlag+"=")===0) {
+            if (args[k].indexOf(longFlag+"=")===0) {
                 var j=args[k].indexOf("=");
                 ret.push(args[k].substr(j+1));
                 start=k+1;
