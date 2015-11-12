@@ -178,6 +178,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, contains, "contains");
             
+            REcmaHelper::registerFunction(&engine, proto, containsShape, "containsShape");
+            
             REcmaHelper::registerFunction(&engine, proto, getStartPoint, "getStartPoint");
             
             REcmaHelper::registerFunction(&engine, proto, getEndPoint, "getEndPoint");
@@ -3540,6 +3542,76 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::contains", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::containsShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::containsShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::containsShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("containsShape", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->containsShape(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.containsShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::containsShape", context, engine);
             return result;
         }
          QScriptValue

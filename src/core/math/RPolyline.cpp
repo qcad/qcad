@@ -812,9 +812,7 @@ bool RPolyline::contains(const RVector& point, bool borderIsInside, double toler
     return c;
 }
 
-/*
-// TODO
-bool RPolyline::contains(const RShape& shape) const {
+bool RPolyline::containsShape(const RShape& shape) const {
     // check if the shape intersects with any of the polygon edges:
     bool gotIntersection = false;
     if (shape.intersectsWith(*this)) {
@@ -826,17 +824,17 @@ bool RPolyline::contains(const RShape& shape) const {
         // entity does not match if there is an intersection:
         return false;
     }
-    else {
-        // check if the shape is completely inside the polygon.
-        // this is the case if one point on the entity is inside the polygon
-        // and the entity does not intersect with the polygon.
-        RVector pointOnEntity = shape.getPointOnShape();
-        if (contains(pointOnEntity)) {
-            return true;
-        }
+
+    // check if the shape is completely inside the polygon.
+    // this is the case if one point on the entity is inside the polygon
+    // and the entity does not intersect with the polygon.
+    const RDirected* dir = dynamic_cast<const RDirected*>(&shape);
+    if (dir!=NULL) {
+        return contains(dir->getStartPoint()) && contains(dir->getEndPoint());
     }
+
+    Q_ASSERT("shape not supported");
 }
-*/
 
 RVector RPolyline::getStartPoint() const {
     if (vertices.size()==0) {

@@ -328,6 +328,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="containsShape" cppName="containsShape"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="shape"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getStartPoint" cppName="getStartPoint"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

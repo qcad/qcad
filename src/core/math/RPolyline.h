@@ -106,8 +106,7 @@ public:
     RS::Orientation getOrientation() const;
 
     bool contains(const RVector& point, bool borderIsInside=false, double tolerance=RS::PointTolerance) const;
-    // TODO:
-    //bool contains(const RShape& shape) const;
+    bool containsShape(const RShape& shape) const;
 
     virtual RVector getStartPoint() const;
     virtual RVector getEndPoint() const;

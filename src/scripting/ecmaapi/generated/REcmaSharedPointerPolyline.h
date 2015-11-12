@@ -190,6 +190,9 @@
         contains
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        containsShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getStartPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
