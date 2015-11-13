@@ -1160,8 +1160,6 @@ QPair<QSharedPointer<RShape>, QSharedPointer<RShape> > RHatchData::getBoundaryEl
 }
 
 void RHatchData::update() const {
-    // clear stored pattern from file:
-    //pattern = RPattern();
     dirty = true;
 }
 

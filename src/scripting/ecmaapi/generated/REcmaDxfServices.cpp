@@ -58,11 +58,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, fixFontName, "fixFontName");
             
-            REcmaHelper::registerFunction(&engine, proto, fixQCad2String, "fixQCad2String");
+            REcmaHelper::registerFunction(&engine, proto, fixVersion2String, "fixVersion2String");
             
             REcmaHelper::registerFunction(&engine, proto, fixDimensionLabel, "fixDimensionLabel");
             
-            REcmaHelper::registerFunction(&engine, proto, detectQCad2Format, "detectQCad2Format");
+            REcmaHelper::registerFunction(&engine, proto, detectVersion2Format, "detectVersion2Format");
             
             REcmaHelper::registerFunction(&engine, proto, hasDIMZIN, "hasDIMZIN");
             
@@ -70,27 +70,33 @@
             
             REcmaHelper::registerFunction(&engine, proto, hasInvalidEllipse, "hasInvalidEllipse");
             
-            REcmaHelper::registerFunction(&engine, proto, getQCad2Compatibility, "getQCad2Compatibility");
+            REcmaHelper::registerFunction(&engine, proto, getVersion2Compatibility, "getVersion2Compatibility");
             
-            REcmaHelper::registerFunction(&engine, proto, getQCad3Compatibility, "getQCad3Compatibility");
+            REcmaHelper::registerFunction(&engine, proto, getVersion3_1Compatibility, "getVersion3_1Compatibility");
             
-            REcmaHelper::registerFunction(&engine, proto, getQCad2LayerName, "getQCad2LayerName");
+            REcmaHelper::registerFunction(&engine, proto, getMajorVersion, "getMajorVersion");
             
-            REcmaHelper::registerFunction(&engine, proto, getQCad2BlockName, "getQCad2BlockName");
+            REcmaHelper::registerFunction(&engine, proto, getMinorVersion, "getMinorVersion");
             
-            REcmaHelper::registerFunction(&engine, proto, getQCad2Font, "getQCad2Font");
+            REcmaHelper::registerFunction(&engine, proto, getPatchVersion, "getPatchVersion");
             
-            REcmaHelper::registerFunction(&engine, proto, getQCad2DimensionLabel, "getQCad2DimensionLabel");
+            REcmaHelper::registerFunction(&engine, proto, getVersion2LayerName, "getVersion2LayerName");
             
-            REcmaHelper::registerFunction(&engine, proto, collectQCad2Info, "collectQCad2Info");
+            REcmaHelper::registerFunction(&engine, proto, getVersionBlockName, "getVersionBlockName");
             
-            REcmaHelper::registerFunction(&engine, proto, getQCad2PatternAngle, "getQCad2PatternAngle");
+            REcmaHelper::registerFunction(&engine, proto, getVersion2Font, "getVersion2Font");
             
-            REcmaHelper::registerFunction(&engine, proto, getQCad2PatternScale, "getQCad2PatternScale");
+            REcmaHelper::registerFunction(&engine, proto, getVersion2DimensionLabel, "getVersion2DimensionLabel");
             
-            REcmaHelper::registerFunction(&engine, proto, getQCad2PatternName, "getQCad2PatternName");
+            REcmaHelper::registerFunction(&engine, proto, collectVersion2Info, "collectVersion2Info");
             
-            REcmaHelper::registerFunction(&engine, proto, fixQCad2HatchData, "fixQCad2HatchData");
+            REcmaHelper::registerFunction(&engine, proto, getVersion2PatternAngle, "getVersion2PatternAngle");
+            
+            REcmaHelper::registerFunction(&engine, proto, getVersion2PatternScale, "getVersion2PatternScale");
+            
+            REcmaHelper::registerFunction(&engine, proto, getVersion2PatternName, "getVersion2PatternName");
+            
+            REcmaHelper::registerFunction(&engine, proto, fixVersion2HatchData, "fixVersion2HatchData");
             
             REcmaHelper::registerFunction(&engine, proto, getCodec, "getCodec");
             
@@ -434,19 +440,19 @@
             return result;
         }
          QScriptValue
-        REcmaDxfServices::fixQCad2String
+        REcmaDxfServices::fixVersion2String
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDxfServices::fixQCad2String", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::fixQCad2String";
+            //REcmaHelper::functionStart("REcmaDxfServices::fixVersion2String", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::fixVersion2String";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDxfServices* self = 
-                        getSelf("fixQCad2String", context);
+                        getSelf("fixVersion2String", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -476,16 +482,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->fixQCad2String(a0);
+               self->fixVersion2String(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.fixQCad2String().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.fixVersion2String().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDxfServices::fixQCad2String", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::fixVersion2String", context, engine);
             return result;
         }
          QScriptValue
@@ -570,19 +576,19 @@
             return result;
         }
          QScriptValue
-        REcmaDxfServices::detectQCad2Format
+        REcmaDxfServices::detectVersion2Format
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDxfServices::detectQCad2Format", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::detectQCad2Format";
+            //REcmaHelper::functionStart("REcmaDxfServices::detectVersion2Format", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::detectVersion2Format";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDxfServices* self = 
-                        getSelf("detectQCad2Format", context);
+                        getSelf("detectVersion2Format", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -612,16 +618,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->detectQCad2Format(a0);
+               self->detectVersion2Format(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.detectQCad2Format().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.detectVersion2Format().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDxfServices::detectQCad2Format", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::detectVersion2Format", context, engine);
             return result;
         }
          QScriptValue
@@ -772,19 +778,19 @@
             return result;
         }
          QScriptValue
-        REcmaDxfServices::getQCad2Compatibility
+        REcmaDxfServices::getVersion2Compatibility
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDxfServices::getQCad2Compatibility", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getQCad2Compatibility";
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersion2Compatibility", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersion2Compatibility";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDxfServices* self = 
-                        getSelf("getQCad2Compatibility", context);
+                        getSelf("getVersion2Compatibility", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -804,7 +810,7 @@
     // return type 'bool'
     bool cppResult =
         
-               self->getQCad2Compatibility();
+               self->getVersion2Compatibility();
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -814,26 +820,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getQCad2Compatibility().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersion2Compatibility().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDxfServices::getQCad2Compatibility", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersion2Compatibility", context, engine);
             return result;
         }
          QScriptValue
-        REcmaDxfServices::getQCad3Compatibility
+        REcmaDxfServices::getVersion3_1Compatibility
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDxfServices::getQCad3Compatibility", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getQCad3Compatibility";
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersion3_1Compatibility", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersion3_1Compatibility";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDxfServices* self = 
-                        getSelf("getQCad3Compatibility", context);
+                        getSelf("getVersion3_1Compatibility", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -853,7 +859,7 @@
     // return type 'bool'
     bool cppResult =
         
-               self->getQCad3Compatibility();
+               self->getVersion3_1Compatibility();
         // return type: bool
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -863,26 +869,173 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getQCad3Compatibility().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersion3_1Compatibility().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDxfServices::getQCad3Compatibility", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersion3_1Compatibility", context, engine);
             return result;
         }
          QScriptValue
-        REcmaDxfServices::getQCad2LayerName
+        REcmaDxfServices::getMajorVersion
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDxfServices::getQCad2LayerName", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getQCad2LayerName";
+            //REcmaHelper::functionStart("REcmaDxfServices::getMajorVersion", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getMajorVersion";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDxfServices* self = 
-                        getSelf("getQCad2LayerName", context);
+                        getSelf("getMajorVersion", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getMajorVersion();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getMajorVersion().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDxfServices::getMajorVersion", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDxfServices::getMinorVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDxfServices::getMinorVersion", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getMinorVersion";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDxfServices* self = 
+                        getSelf("getMinorVersion", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getMinorVersion();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getMinorVersion().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDxfServices::getMinorVersion", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDxfServices::getPatchVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDxfServices::getPatchVersion", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getPatchVersion";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDxfServices* self = 
+                        getSelf("getPatchVersion", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getPatchVersion();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getPatchVersion().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDxfServices::getPatchVersion", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDxfServices::getVersion2LayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersion2LayerName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersion2LayerName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDxfServices* self = 
+                        getSelf("getVersion2LayerName", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -913,7 +1066,7 @@
     // return type 'QString'
     QString cppResult =
         
-               self->getQCad2LayerName(a0);
+               self->getVersion2LayerName(a0);
         // return type: QString
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -923,26 +1076,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getQCad2LayerName().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersion2LayerName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDxfServices::getQCad2LayerName", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersion2LayerName", context, engine);
             return result;
         }
          QScriptValue
-        REcmaDxfServices::getQCad2BlockName
+        REcmaDxfServices::getVersionBlockName
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDxfServices::getQCad2BlockName", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getQCad2BlockName";
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersionBlockName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersionBlockName";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDxfServices* self = 
-                        getSelf("getQCad2BlockName", context);
+                        getSelf("getVersionBlockName", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -973,7 +1126,7 @@
     // return type 'QString'
     QString cppResult =
         
-               self->getQCad2BlockName(a0);
+               self->getVersionBlockName(a0);
         // return type: QString
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -983,26 +1136,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getQCad2BlockName().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersionBlockName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDxfServices::getQCad2BlockName", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersionBlockName", context, engine);
             return result;
         }
          QScriptValue
-        REcmaDxfServices::getQCad2Font
+        REcmaDxfServices::getVersion2Font
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDxfServices::getQCad2Font", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getQCad2Font";
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersion2Font", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersion2Font";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDxfServices* self = 
-                        getSelf("getQCad2Font", context);
+                        getSelf("getVersion2Font", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1033,7 +1186,7 @@
     // return type 'QString'
     QString cppResult =
         
-               self->getQCad2Font(a0);
+               self->getVersion2Font(a0);
         // return type: QString
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1043,26 +1196,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getQCad2Font().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersion2Font().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDxfServices::getQCad2Font", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersion2Font", context, engine);
             return result;
         }
          QScriptValue
-        REcmaDxfServices::getQCad2DimensionLabel
+        REcmaDxfServices::getVersion2DimensionLabel
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDxfServices::getQCad2DimensionLabel", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getQCad2DimensionLabel";
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersion2DimensionLabel", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersion2DimensionLabel";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDxfServices* self = 
-                        getSelf("getQCad2DimensionLabel", context);
+                        getSelf("getVersion2DimensionLabel", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1093,7 +1246,7 @@
     // return type 'QString'
     QString cppResult =
         
-               self->getQCad2DimensionLabel(a0);
+               self->getVersion2DimensionLabel(a0);
         // return type: QString
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1103,26 +1256,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getQCad2DimensionLabel().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersion2DimensionLabel().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDxfServices::getQCad2DimensionLabel", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersion2DimensionLabel", context, engine);
             return result;
         }
          QScriptValue
-        REcmaDxfServices::collectQCad2Info
+        REcmaDxfServices::collectVersion2Info
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDxfServices::collectQCad2Info", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::collectQCad2Info";
+            //REcmaHelper::functionStart("REcmaDxfServices::collectVersion2Info", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::collectVersion2Info";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDxfServices* self = 
-                        getSelf("collectQCad2Info", context);
+                        getSelf("collectVersion2Info", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1153,7 +1306,7 @@
     // return type 'QString'
     QString cppResult =
         
-               self->collectQCad2Info(a0);
+               self->collectVersion2Info(a0);
         // return type: QString
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1163,26 +1316,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.collectQCad2Info().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.collectVersion2Info().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDxfServices::collectQCad2Info", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::collectVersion2Info", context, engine);
             return result;
         }
          QScriptValue
-        REcmaDxfServices::getQCad2PatternAngle
+        REcmaDxfServices::getVersion2PatternAngle
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDxfServices::getQCad2PatternAngle", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getQCad2PatternAngle";
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersion2PatternAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersion2PatternAngle";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDxfServices* self = 
-                        getSelf("getQCad2PatternAngle", context);
+                        getSelf("getVersion2PatternAngle", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1224,7 +1377,7 @@
     // return type 'double'
     double cppResult =
         
-               self->getQCad2PatternAngle(a0
+               self->getVersion2PatternAngle(a0
         ,
     a1);
         // return type: double
@@ -1236,26 +1389,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getQCad2PatternAngle().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersion2PatternAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDxfServices::getQCad2PatternAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersion2PatternAngle", context, engine);
             return result;
         }
          QScriptValue
-        REcmaDxfServices::getQCad2PatternScale
+        REcmaDxfServices::getVersion2PatternScale
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDxfServices::getQCad2PatternScale", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getQCad2PatternScale";
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersion2PatternScale", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersion2PatternScale";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDxfServices* self = 
-                        getSelf("getQCad2PatternScale", context);
+                        getSelf("getVersion2PatternScale", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1297,7 +1450,7 @@
     // return type 'double'
     double cppResult =
         
-               self->getQCad2PatternScale(a0
+               self->getVersion2PatternScale(a0
         ,
     a1);
         // return type: double
@@ -1309,26 +1462,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getQCad2PatternScale().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersion2PatternScale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDxfServices::getQCad2PatternScale", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersion2PatternScale", context, engine);
             return result;
         }
          QScriptValue
-        REcmaDxfServices::getQCad2PatternName
+        REcmaDxfServices::getVersion2PatternName
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDxfServices::getQCad2PatternName", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getQCad2PatternName";
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersion2PatternName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersion2PatternName";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDxfServices* self = 
-                        getSelf("getQCad2PatternName", context);
+                        getSelf("getVersion2PatternName", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1359,7 +1512,7 @@
     // return type 'QString'
     QString cppResult =
         
-               self->getQCad2PatternName(a0);
+               self->getVersion2PatternName(a0);
         // return type: QString
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -1369,26 +1522,26 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getQCad2PatternName().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersion2PatternName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDxfServices::getQCad2PatternName", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersion2PatternName", context, engine);
             return result;
         }
          QScriptValue
-        REcmaDxfServices::fixQCad2HatchData
+        REcmaDxfServices::fixVersion2HatchData
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDxfServices::fixQCad2HatchData", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::fixQCad2HatchData";
+            //REcmaHelper::functionStart("REcmaDxfServices::fixVersion2HatchData", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::fixVersion2HatchData";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RDxfServices* self = 
-                        getSelf("fixQCad2HatchData", context);
+                        getSelf("fixVersion2HatchData", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1451,7 +1604,7 @@
     // call C++ function:
     // return type 'void'
     
-               self->fixQCad2HatchData(a0
+               self->fixVersion2HatchData(a0
         ,
     a1
         ,
@@ -1463,10 +1616,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.fixQCad2HatchData().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.fixVersion2HatchData().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDxfServices::fixQCad2HatchData", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::fixVersion2HatchData", context, engine);
             return result;
         }
          QScriptValue

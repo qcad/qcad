@@ -391,8 +391,29 @@ RS::Unit RDocument::getUnit() const {
 }
 
 void RDocument::setMeasurement(RS::Measurement m,  RTransaction* transaction) {
+    qDebug() << "setMeasurement:" << m;
     storage.setMeasurement(m, transaction);
     initLinetypes(transaction);
+
+    // update hatches:
+    QSet<REntity::Id> ids = storage.queryAllEntities(false, true);
+
+    QSetIterator<REntity::Id> i(ids);
+    while (i.hasNext()) {
+        QSharedPointer<REntity> entity = storage.queryEntityDirect(i.next());
+        if (entity.isNull()) {
+            continue;
+        }
+        if (entity->isUndone()) {
+            continue;
+        }
+        if (entity->getType()!=RS::EntityHatch) {
+            continue;
+        }
+        qDebug() << "update hatch";
+        entity->update();
+        //RHatchEntity* hatch = dynamic_cast<RHatchEntity*>(entity);
+    }
 }
 
 RS::Measurement RDocument::getMeasurement() const {
@@ -528,15 +549,18 @@ QVariant RDocument::getVariable(const QString& key, const QVariant& defaultValue
 }
 
 void RDocument::setKnownVariable(RS::KnownVariable key, const QVariant& value, RTransaction* transaction) {
-    bool wasMetric = true;
+//    bool wasMetric = true;
 
-    if (key==RS::INSUNITS) {
-        wasMetric = RUnit::isMetric(getUnit());
-    }
+//    if (key==RS::INSUNITS) {
+//        wasMetric = RUnit::isMetric(getUnit());
+//    }
 
     storage.setKnownVariable(key, value, transaction);
 
-    if (key==RS::INSUNITS && wasMetric!=RUnit::isMetric(getUnit())) {
+//    if (key==RS::INSUNITS && wasMetric!=RUnit::isMetric(getUnit())) {
+//        initLinetypes(transaction);
+//    }
+    if (key==RS::MEASUREMENT) {
         initLinetypes(transaction);
     }
 }

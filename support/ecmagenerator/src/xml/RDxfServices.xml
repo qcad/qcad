@@ -36,7 +36,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="fontName" isConst="true" />
       </variant>
     </method>
-    <method name="fixQCad2String" cppName="fixQCad2String"
+    <method name="fixVersion2String" cppName="fixVersion2String"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -56,9 +56,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="detectQCad2Format" cppName="detectQCad2Format"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
+    <method name="detectVersion2Format"
+    cppName="detectVersion2Format" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="fileName" isConst="true" />
@@ -78,33 +78,48 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
-    <method name="getQCad2Compatibility"
-    cppName="getQCad2Compatibility" specifier="public"
+    <method name="getVersion2Compatibility"
+    cppName="getVersion2Compatibility" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
-    <method name="getQCad3Compatibility"
-    cppName="getQCad3Compatibility" specifier="public"
+    <method name="getVersion3_1Compatibility"
+    cppName="getVersion3_1Compatibility" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
-    <method name="getQCad2LayerName" cppName="getQCad2LayerName"
+    <method name="getMajorVersion" cppName="getMajorVersion"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getMinorVersion" cppName="getMinorVersion"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getPatchVersion" cppName="getPatchVersion"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getVersion2LayerName"
+    cppName="getVersion2LayerName" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="layerName" isConst="true" />
       </variant>
     </method>
-    <method name="getQCad2BlockName" cppName="getQCad2BlockName"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
+    <method name="getVersionBlockName"
+    cppName="getVersionBlockName" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="blockName" isConst="true" />
       </variant>
     </method>
-    <method name="getQCad2Font" cppName="getQCad2Font"
+    <method name="getVersion2Font" cppName="getVersion2Font"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false">
@@ -112,24 +127,24 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="getQCad2DimensionLabel"
-    cppName="getQCad2DimensionLabel" specifier="public"
+    <method name="getVersion2DimensionLabel"
+    cppName="getVersion2DimensionLabel" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString" name="handle"
         isConst="true" />
       </variant>
     </method>
-    <method name="collectQCad2Info" cppName="collectQCad2Info"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
+    <method name="collectVersion2Info"
+    cppName="collectVersion2Info" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="fileName" isConst="true" />
       </variant>
     </method>
-    <method name="getQCad2PatternAngle"
-    cppName="getQCad2PatternAngle" specifier="public"
+    <method name="getVersion2PatternAngle"
+    cppName="getVersion2PatternAngle" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">
         <arg type="double" typeName="double" name="angle"
@@ -138,8 +153,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="patternName" isConst="true" />
       </variant>
     </method>
-    <method name="getQCad2PatternScale"
-    cppName="getQCad2PatternScale" specifier="public"
+    <method name="getVersion2PatternScale"
+    cppName="getVersion2PatternScale" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">
         <arg type="double" typeName="double" name="scale"
@@ -148,17 +163,17 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="patternName" isConst="true" />
       </variant>
     </method>
-    <method name="getQCad2PatternName"
-    cppName="getQCad2PatternName" specifier="public"
+    <method name="getVersion2PatternName"
+    cppName="getVersion2PatternName" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="patternName" isConst="true" />
       </variant>
     </method>
-    <method name="fixQCad2HatchData" cppName="fixQCad2HatchData"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
+    <method name="fixVersion2HatchData"
+    cppName="fixVersion2HatchData" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString"
         name="patternName" isConst="false" />

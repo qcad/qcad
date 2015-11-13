@@ -94,7 +94,7 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
     }
 
     // detect QCAD 2 DXF file format (dxflib 2.x):
-    dxfServices.detectQCad2Format(fileName);
+    dxfServices.detectVersion2Format(fileName);
 
     lockedLayers.clear();
     mtext = "";
@@ -317,7 +317,7 @@ void RDxfImporter::addBlock(const DL_BlockData& data) {
 //    if (!blockName.startsWith("*")) {
 //        QString oldBlockName = blockName;
 //        blockName.replace(QRegExp("[<>/\":;?*|,=`\\\\]"), "_");
-//        qcad2BlockMapping.insert(oldBlockName, blockName);
+//        version2BlockMapping.insert(oldBlockName, blockName);
 //    }
 
     RVector bp(data.bpx, data.bpy);
@@ -787,7 +787,7 @@ void RDxfImporter::addMText(const DL_MTextData& data) {
         }
     }
 
-    dxfServices.fixQCad2String(mtextString);
+    dxfServices.fixVersion2String(mtextString);
 
     RTextData d(
         RVector::invalid, ip,
@@ -957,7 +957,7 @@ RDimensionData RDxfImporter::convDimensionData(const DL_DimensionData& data) {
 
     QString t;
 
-    if (dxfServices.getQCad2Compatibility()) {
+    if (dxfServices.getVersion2Compatibility()) {
         // middlepoint of text can be 0/0 which is considered to be invalid (!):
         //  because older QCad 1 versions save the middle of the text as 0/0
         //  althought they didn't support custom text positions.
@@ -995,7 +995,7 @@ RDimensionData RDxfImporter::convDimensionData(const DL_DimensionData& data) {
 
     t = decode(data.text.c_str());
     t.replace("^ ", "^");
-    dxfServices.fixQCad2String(t);
+    dxfServices.fixVersion2String(t);
     QString uTol, lTol;
     dxfServices.fixDimensionLabel(t, uTol, lTol);
 
@@ -1148,8 +1148,8 @@ void RDxfImporter::addHatch(const DL_HatchData& data) {
     double angle = RMath::deg2rad(data.angle);
     double scale = data.scale;
 
-    if (dxfServices.getQCad2Compatibility()) {
-        dxfServices.fixQCad2HatchData(patternName, angle, scale, data.solid);
+    if (dxfServices.getVersion2Compatibility()) {
+        dxfServices.fixVersion2HatchData(patternName, angle, scale, data.solid);
     }
 
     hatch = RHatchData(data.solid, scale, angle, patternName);

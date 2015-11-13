@@ -46,38 +46,48 @@ public:
     void fixLayerName(QString& layerName);
     QString fixFontName(const QString& fontName) const;
 
-    void fixQCad2String(QString& str) const;
+    void fixVersion2String(QString& str) const;
     void fixDimensionLabel(QString& text, QString& uTol, QString& lTol) const;
-    void detectQCad2Format(const QString& fileName);
+    void detectVersion2Format(const QString& fileName);
 
     bool hasDIMZIN() const {
-        return qcad2GotDIMZIN;
+        return version2GotDIMZIN;
     }
     bool hasDIMAZIN() const {
-        return qcad2GotDIMAZIN;
+        return version2GotDIMAZIN;
     }
     bool hasInvalidEllipse() const {
-        return qcad2GotInvalidEllipse;
+        return version2GotInvalidEllipse;
     }
-    bool getQCad2Compatibility() const {
-        return qcad2Compatibility;
+    bool getVersion2Compatibility() const {
+        return dxflibMajorVersion==2;
     }
-    bool getQCad3Compatibility() const {
-        return qcad3Compatibility;
+    bool getVersion3_1Compatibility() const {
+        return (dxflibMajorVersion==3 && dxflibMinorVersion==0) ||
+               (dxflibMajorVersion==3 && dxflibMinorVersion==1 && dxflibPatchVersion==0);
+    }
+    int getMajorVersion() const {
+        return dxflibMajorVersion;
+    }
+    int getMinorVersion() const {
+        return dxflibMinorVersion;
+    }
+    int getPatchVersion() const {
+        return dxflibPatchVersion;
     }
 
-    QString getQCad2LayerName(const QString& layerName) const;
-    QString getQCad2BlockName(const QString& blockName) const;
-    QString getQCad2Font(const QString& handle) const;
-    QString getQCad2DimensionLabel(const QString& handle) const;
+    QString getVersion2LayerName(const QString& layerName) const;
+    QString getVersionBlockName(const QString& blockName) const;
+    QString getVersion2Font(const QString& handle) const;
+    QString getVersion2DimensionLabel(const QString& handle) const;
 
-    QString collectQCad2Info(const QString& fileName);
+    QString collectVersion2Info(const QString& fileName);
 
-    double getQCad2PatternAngle(double angle, const QString& patternName) const;
-    double getQCad2PatternScale(double scale, const QString& patternName) const;
-    QString getQCad2PatternName(const QString& patternName) const;
+    double getVersion2PatternAngle(double angle, const QString& patternName) const;
+    double getVersion2PatternScale(double scale, const QString& patternName) const;
+    QString getVersion2PatternName(const QString& patternName) const;
 
-    void fixQCad2HatchData(QString& patternName, double& angle, double& scale, bool solid) const;
+    void fixVersion2HatchData(QString& patternName, double& angle, double& scale, bool solid) const;
 
     QTextCodec* getCodec() const {
         return codec;
@@ -116,16 +126,17 @@ public:
     static void autoFixLinetypePattern(RLinetypePattern& pattern);
 
 private:
-    bool qcad2GotDIMZIN;
-    bool qcad2GotDIMAZIN;
-    bool qcad2GotInvalidEllipse;
-    bool qcad2Compatibility;
-    bool qcad3Compatibility;
+    bool version2GotDIMZIN;
+    bool version2GotDIMAZIN;
+    bool version2GotInvalidEllipse;
+    int dxflibMajorVersion;
+    int dxflibMinorVersion;
+    int dxflibPatchVersion;
 
-    QMap<QString, QString> qcad2BlockMapping;
-    QMap<QString, QString> qcad2LayerMapping;
-    QMap<QString, QString> qcad2TextFonts;
-    QMap<QString, QString> qcad2DimensionLabels;
+    QMap<QString, QString> version2BlockMapping;
+    QMap<QString, QString> version2LayerMapping;
+    QMap<QString, QString> version2TextFonts;
+    QMap<QString, QString> version2DimensionLabels;
 
     QTextCodec* codec;
 };

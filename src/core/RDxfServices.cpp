@@ -25,22 +25,22 @@
 #include "RUnit.h"
 
 RDxfServices::RDxfServices() :
-    qcad2GotDIMZIN(false),
-    qcad2GotDIMAZIN(false),
-    qcad2GotInvalidEllipse(false),
-    qcad2Compatibility(false),
-    qcad3Compatibility(false),
+    version2GotDIMZIN(false),
+    version2GotDIMAZIN(false),
+    version2GotInvalidEllipse(false),
+    dxflibMajorVersion(0),
+    dxflibMinorVersion(0),
     codec(NULL) {
 
 }
 
 void RDxfServices::reset() {
-    qcad2LayerMapping.clear();
-    qcad2BlockMapping.clear();
+    version2LayerMapping.clear();
+    version2BlockMapping.clear();
     codec = NULL;
 }
 
-void RDxfServices::fixQCad2String(QString& str) const {
+void RDxfServices::fixVersion2String(QString& str) const {
     // correct stacked text
     // \S+0.1\-0.1; -> \S+0.1^-0.1;
     QRegExp rx("\\\\S([^\\\\]*)\\\\([^;]*);");
@@ -66,9 +66,10 @@ void RDxfServices::fixDimensionLabel(QString& text, QString& uTol, QString& lTol
     }
 }
 
-void RDxfServices::detectQCad2Format(const QString& fileName) {
-    qcad2Compatibility = false;
-    qcad3Compatibility = false;
+void RDxfServices::detectVersion2Format(const QString& fileName) {
+    dxflibMajorVersion = 0;
+    dxflibMinorVersion = 0;
+    dxflibPatchVersion = 0;
     QFileInfo fi(fileName);
     if (!fi.exists()) {
         return;
@@ -82,33 +83,38 @@ void RDxfServices::detectQCad2Format(const QString& fileName) {
         return;
     }
 
-    qcad2GotDIMZIN = false;
-    qcad2GotDIMAZIN = false;
-    qcad2GotInvalidEllipse = false;
+    version2GotDIMZIN = false;
+    version2GotDIMAZIN = false;
+    version2GotInvalidEllipse = false;
     QFile file(fileName);
     if (file.open(QIODevice::ReadOnly)) {
         QTextStream ts(&file);
         QString code = ts.readLine(75).trimmed();
         if (code=="999") {
             QString comment = ts.readLine(75).trimmed();
-            if (comment.startsWith("dxflib 2.")) {
-                qcad2Compatibility = true;
-            }
-            if (comment.startsWith("dxflib 3.0") || comment.startsWith("dxflib 3.1.0")) {
-                qcad3Compatibility = true;
+            if (comment.startsWith("dxflib ")) {
+                QString versionStr = comment.mid(7);
+                qDebug() << "dxflib version: " << versionStr;
+                QRegExp re("(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)");
+                int idx = re.indexIn(versionStr);
+                if (idx==0) {
+                    dxflibMajorVersion = re.cap(1).toInt();
+                    dxflibMinorVersion = re.cap(2).toInt();
+                    dxflibPatchVersion = re.cap(3).toInt();
+                }
             }
         }
 
-        if (qcad2Compatibility) {
+        if (getVersion2Compatibility()) {
             // parse header for missing / present variables:
             QString line;
             while (!ts.atEnd()) {
                 line = ts.readLine();
                 if (line.contains("$DIMZIN")) {
-                    qcad2GotDIMZIN = true;
+                    version2GotDIMZIN = true;
                 }
                 else if (line.contains("$DIMAZIN")) {
-                    qcad2GotDIMAZIN = true;
+                    version2GotDIMAZIN = true;
                 }
                 else if (line == "ENDSEC"){
                     break;
@@ -125,7 +131,7 @@ void RDxfServices::fixBlockName(QString& blockName) {
     if (!blockName.startsWith("*")) {
         QString oldBlockName = blockName;
         blockName.replace(QRegExp("[<>/\":;?*|,=`\\\\]"), "_");
-        qcad2BlockMapping.insert(oldBlockName, blockName);
+        version2BlockMapping.insert(oldBlockName, blockName);
     }
 }
 
@@ -133,35 +139,35 @@ void RDxfServices::fixLayerName(QString& layerName) {
     // fix invalid layer names (mainly from QCAD 2):
     QString oldLayerName = layerName;
     layerName.replace(QRegExp("[<>/\":;?*|,=`\\\\]"), "_");
-    qcad2LayerMapping.insert(oldLayerName, layerName);
+    version2LayerMapping.insert(oldLayerName, layerName);
 }
 
-QString RDxfServices::getQCad2LayerName(const QString& layerName) const {
-    if (qcad2LayerMapping.contains(layerName)) {
-        return qcad2LayerMapping.value(layerName);
+QString RDxfServices::getVersion2LayerName(const QString& layerName) const {
+    if (version2LayerMapping.contains(layerName)) {
+        return version2LayerMapping.value(layerName);
     }
     return layerName;
 }
 
-QString RDxfServices::getQCad2BlockName(const QString& blockName) const {
-    if (qcad2BlockMapping.contains(blockName)) {
-        return qcad2BlockMapping.value(blockName);
+QString RDxfServices::getVersionBlockName(const QString& blockName) const {
+    if (version2BlockMapping.contains(blockName)) {
+        return version2BlockMapping.value(blockName);
     }
     return blockName;
 }
 
-QString RDxfServices::getQCad2Font(const QString& handle) const {
-    if (qcad2TextFonts.contains(handle)) {
-        return qcad2TextFonts.value(handle);
+QString RDxfServices::getVersion2Font(const QString& handle) const {
+    if (version2TextFonts.contains(handle)) {
+        return version2TextFonts.value(handle);
     }
 
     //Q_ASSERT(false);
     return "standard";
 }
 
-QString RDxfServices::getQCad2DimensionLabel(const QString& handle) const {
-    if (qcad2DimensionLabels.contains(handle)) {
-        return qcad2DimensionLabels.value(handle);
+QString RDxfServices::getVersion2DimensionLabel(const QString& handle) const {
+    if (version2DimensionLabels.contains(handle)) {
+        return version2DimensionLabels.value(handle);
     }
 
     Q_ASSERT(false);
@@ -173,35 +179,35 @@ QString RDxfServices::getQCad2DimensionLabel(const QString& handle) const {
  * is not supported by Teigha. This function collects all font names of
  * MTEXT entities for use by RDwgMTextImporter.
  */
-QString RDxfServices::collectQCad2Info(const QString& fileName) {
-    qcad2TextFonts.clear();
+QString RDxfServices::collectVersion2Info(const QString& fileName) {
+    version2TextFonts.clear();
 
     QFileInfo fi(fileName);
     if (!fi.exists()) {
-        qWarning() << "RDxfServices::collectQCad2Info: file does not exist: " << fileName;
+        qWarning() << "RDxfServices::collectVersion2Info: file does not exist: " << fileName;
         return QString();
     }
 
     if (fi.size()==0) {
-        qWarning() << "RDxfServices::collectQCad2Info: file size is zero: " << fileName;
+        qWarning() << "RDxfServices::collectVersion2Info: file size is zero: " << fileName;
         return QString();
     }
 
     if (fi.suffix().toUpper()!="DXF") {
-        qWarning() << "RDxfServices::collectQCad2Info: file is not a DXF file: " << fileName;
+        qWarning() << "RDxfServices::collectVersion2Info: file is not a DXF file: " << fileName;
         return QString();
     }
 
     QFile file(fileName);
     if (!file.open(QIODevice::ReadOnly)) {
-        qWarning() << "RDxfServices::collectQCad2Info: cannot read file: " << fileName;
+        qWarning() << "RDxfServices::collectVersion2Info: cannot read file: " << fileName;
         return QString();
     }
 
     //QTemporaryFile* tmpFile = new QTemporaryFile("qcad_temp_XXXXXX.dxf");
     QTemporaryFile* tmpFile = new QTemporaryFile();
     if (!tmpFile->open()) {
-        qWarning() << "RDxfServices::collectQCad2Info: cannot write to temporary file: " << tmpFile->fileName();
+        qWarning() << "RDxfServices::collectVersion2Info: cannot write to temporary file: " << tmpFile->fileName();
         delete tmpFile;
 
         return QString();
@@ -332,7 +338,7 @@ QString RDxfServices::collectQCad2Info(const QString& fileName) {
                 else if (value=="symbol") {
                     value="SymbolCad";
                 }
-                qcad2TextFonts.insert(handleMText, value);
+                version2TextFonts.insert(handleMText, value);
             }
         }
 
@@ -342,7 +348,7 @@ QString RDxfServices::collectQCad2Info(const QString& fileName) {
                 handleDimension = value;
             }
             else if (code=="1") {
-                qcad2DimensionLabels.insert(handleDimension, value);
+                version2DimensionLabels.insert(handleDimension, value);
             }
         }
 
@@ -371,7 +377,7 @@ QString RDxfServices::collectQCad2Info(const QString& fileName) {
     return tmpFileName;
 }
 
-double RDxfServices::getQCad2PatternAngle(double angle, const QString& patternName) const {
+double RDxfServices::getVersion2PatternAngle(double angle, const QString& patternName) const {
     QString pat = patternName.toUpper();
     if (pat=="ESCHER") {
         return angle - M_PI/2.0;
@@ -397,7 +403,7 @@ double RDxfServices::getQCad2PatternAngle(double angle, const QString& patternNa
  * \param scale Old QCAD 2 pattern scale.
  * \param patternName Old QCAD 2 pattern name.
  */
-double RDxfServices::getQCad2PatternScale(double scale, const QString& patternName) const {
+double RDxfServices::getVersion2PatternScale(double scale, const QString& patternName) const {
     QString pat = patternName.toUpper();
     if (pat=="ANGLE") {
         return scale * 7;
@@ -482,7 +488,7 @@ double RDxfServices::getQCad2PatternScale(double scale, const QString& patternNa
     return scale;
 }
 
-QString RDxfServices::getQCad2PatternName(const QString& patternName) const {
+QString RDxfServices::getVersion2PatternName(const QString& patternName) const {
     QString pat = patternName.toUpper();
     if (pat=="CONCRETE") {
         return "ANSI33";
@@ -528,8 +534,8 @@ QString RDxfServices::getQCad2PatternName(const QString& patternName) const {
     return pat;
 }
 
-void RDxfServices::fixQCad2HatchData(QString& patternName, double& angle, double& scale, bool solid) const {
-    if (solid || !getQCad2Compatibility()) {
+void RDxfServices::fixVersion2HatchData(QString& patternName, double& angle, double& scale, bool solid) const {
+    if (solid || !getVersion2Compatibility()) {
         return;
     }
 
@@ -542,15 +548,15 @@ void RDxfServices::fixQCad2HatchData(QString& patternName, double& angle, double
     angle = RMath::rad2deg(angle);
 
     // correct angle for some patterns with different base angle in QCAD 3:
-    angle = getQCad2PatternAngle(angle, patternName);
-    scale = getQCad2PatternScale(scale, patternName);
+    angle = getVersion2PatternAngle(angle, patternName);
+    scale = getVersion2PatternScale(scale, patternName);
 
     // angle is now in rad!
     //data.setAngle(angle);
     //data.setScale(scale);
 
     // fix some QCAD 2 pattern names:
-    patternName = getQCad2PatternName(patternName);
+    patternName = getVersion2PatternName(patternName);
     //data.setPatternName(patternName);
 }
 
@@ -575,7 +581,7 @@ QString RDxfServices::fixFontName(const QString& fontName) const {
         ret = "standard";
     }
 
-    if (qcad2Compatibility && ret.toLower()=="courier") {
+    if (getVersion2Compatibility() && ret.toLower()=="courier") {
         ret = "courier_2";
     }
 

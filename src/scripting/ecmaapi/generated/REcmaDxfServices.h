@@ -58,13 +58,13 @@
         fixFontName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        fixQCad2String
+        fixVersion2String
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         fixDimensionLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        detectQCad2Format
+        detectVersion2Format
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasDIMZIN
@@ -76,37 +76,46 @@
         hasInvalidEllipse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getQCad2Compatibility
+        getVersion2Compatibility
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getQCad3Compatibility
+        getVersion3_1Compatibility
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getQCad2LayerName
+        getMajorVersion
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getQCad2BlockName
+        getMinorVersion
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getQCad2Font
+        getPatchVersion
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getQCad2DimensionLabel
+        getVersion2LayerName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        collectQCad2Info
+        getVersionBlockName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getQCad2PatternAngle
+        getVersion2Font
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getQCad2PatternScale
+        getVersion2DimensionLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getQCad2PatternName
+        collectVersion2Info
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        fixQCad2HatchData
+        getVersion2PatternAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getVersion2PatternScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getVersion2PatternName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        fixVersion2HatchData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getCodec

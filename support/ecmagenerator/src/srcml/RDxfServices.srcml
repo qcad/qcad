@@ -47,38 +47,48 @@
     <function_decl><type><name>void</name></type> <name>fixLayerName</name><parameter_list>(<param><decl><type><name>QString</name>&amp;</type> <name>layerName</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>QString</name></type> <name>fixFontName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fontName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function_decl><type><name>void</name></type> <name>fixQCad2String</name><parameter_list>(<param><decl><type><name>QString</name>&amp;</type> <name>str</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>fixVersion2String</name><parameter_list>(<param><decl><type><name>QString</name>&amp;</type> <name>str</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>fixDimensionLabel</name><parameter_list>(<param><decl><type><name>QString</name>&amp;</type> <name>text</name></decl></param>, <param><decl><type><name>QString</name>&amp;</type> <name>uTol</name></decl></param>, <param><decl><type><name>QString</name>&amp;</type> <name>lTol</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>detectQCad2Format</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>detectVersion2Format</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>)</parameter_list>;</function_decl>
 
     <function><type><name>bool</name></type> <name>hasDIMZIN</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>qcad2GotDIMZIN</name></expr>;</return>
+        <return>return <expr><name>version2GotDIMZIN</name></expr>;</return>
     }</block></function>
     <function><type><name>bool</name></type> <name>hasDIMAZIN</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>qcad2GotDIMAZIN</name></expr>;</return>
+        <return>return <expr><name>version2GotDIMAZIN</name></expr>;</return>
     }</block></function>
     <function><type><name>bool</name></type> <name>hasInvalidEllipse</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>qcad2GotInvalidEllipse</name></expr>;</return>
+        <return>return <expr><name>version2GotInvalidEllipse</name></expr>;</return>
     }</block></function>
-    <function><type><name>bool</name></type> <name>getQCad2Compatibility</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>qcad2Compatibility</name></expr>;</return>
+    <function><type><name>bool</name></type> <name>getVersion2Compatibility</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>dxflibMajorVersion</name>==2</expr>;</return>
     }</block></function>
-    <function><type><name>bool</name></type> <name>getQCad3Compatibility</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>qcad3Compatibility</name></expr>;</return>
+    <function><type><name>bool</name></type> <name>getVersion3_1Compatibility</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr>(<name>dxflibMajorVersion</name>==3 &amp;&amp; <name>dxflibMinorVersion</name>==0) ||
+               (<name>dxflibMajorVersion</name>==3 &amp;&amp; <name>dxflibMinorVersion</name>==1 &amp;&amp; <name>dxflibPatchVersion</name>==0)</expr>;</return>
+    }</block></function>
+    <function><type><name>int</name></type> <name>getMajorVersion</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>dxflibMajorVersion</name></expr>;</return>
+    }</block></function>
+    <function><type><name>int</name></type> <name>getMinorVersion</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>dxflibMinorVersion</name></expr>;</return>
+    }</block></function>
+    <function><type><name>int</name></type> <name>getPatchVersion</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>dxflibPatchVersion</name></expr>;</return>
     }</block></function>
 
-    <function_decl><type><name>QString</name></type> <name>getQCad2LayerName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>QString</name></type> <name>getQCad2BlockName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>QString</name></type> <name>getQCad2Font</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>handle</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>QString</name></type> <name>getQCad2DimensionLabel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>handle</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getVersion2LayerName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getVersionBlockName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>blockName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getVersion2Font</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>handle</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getVersion2DimensionLabel</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>handle</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function_decl><type><name>QString</name></type> <name>collectQCad2Info</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>collectVersion2Info</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>fileName</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name>double</name></type> <name>getQCad2PatternAngle</name><parameter_list>(<param><decl><type><name>double</name></type> <name>angle</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>patternName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>double</name></type> <name>getQCad2PatternScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>scale</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>patternName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>QString</name></type> <name>getQCad2PatternName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>patternName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getVersion2PatternAngle</name><parameter_list>(<param><decl><type><name>double</name></type> <name>angle</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>patternName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getVersion2PatternScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>scale</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>patternName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getVersion2PatternName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>patternName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function_decl><type><name>void</name></type> <name>fixQCad2HatchData</name><parameter_list>(<param><decl><type><name>QString</name>&amp;</type> <name>patternName</name></decl></param>, <param><decl><type><name>double</name>&amp;</type> <name>angle</name></decl></param>, <param><decl><type><name>double</name>&amp;</type> <name>scale</name></decl></param>, <param><decl><type><name>bool</name></type> <name>solid</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>fixVersion2HatchData</name><parameter_list>(<param><decl><type><name>QString</name>&amp;</type> <name>patternName</name></decl></param>, <param><decl><type><name>double</name>&amp;</type> <name>angle</name></decl></param>, <param><decl><type><name>double</name>&amp;</type> <name>scale</name></decl></param>, <param><decl><type><name>bool</name></type> <name>solid</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function><type><name>QTextCodec</name>*</type> <name>getCodec</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>codec</name></expr>;</return>
@@ -117,16 +127,17 @@
     <function_decl><type><name>static</name> <name>void</name></type> <name>autoFixLinetypePattern</name><parameter_list>(<param><decl><type><name>RLinetypePattern</name>&amp;</type> <name>pattern</name></decl></param>)</parameter_list>;</function_decl>
 
 </public><private>private:
-    <decl_stmt><decl><type><name>bool</name></type> <name>qcad2GotDIMZIN</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>bool</name></type> <name>qcad2GotDIMAZIN</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>bool</name></type> <name>qcad2GotInvalidEllipse</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>bool</name></type> <name>qcad2Compatibility</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>bool</name></type> <name>qcad3Compatibility</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>version2GotDIMZIN</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>version2GotDIMAZIN</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>version2GotInvalidEllipse</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>dxflibMajorVersion</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>dxflibMinorVersion</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>dxflibPatchVersion</name></decl>;</decl_stmt>
 
-    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>qcad2BlockMapping</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>qcad2LayerMapping</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>qcad2TextFonts</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>qcad2DimensionLabels</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>version2BlockMapping</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>version2LayerMapping</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>version2TextFonts</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name></type> <name>version2DimensionLabels</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>QTextCodec</name>*</type> <name>codec</name></decl>;</decl_stmt>
 </private>}</block>;</class>
