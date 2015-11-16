@@ -1,0 +1,80 @@
+.TH QCad 1 "November 2015" 3.12 QCad3
+.SH NAME
+qcad \- A feature-rich drafting application
+.SH SYNOPSIS
+\fBqcad\fR [ \fIoptions\fR ] [ \fIfiles\fR ]
+.SH DESCRIPTION
+\fIQCAD\fR is a free, open source application for \fIComputer Aided Drafting\fR
+(CAD) in two dimensions (2D). With QCAD you can create, study and alter
+technical drawings such as plans for buildings, interiors, mechanical parts or
+schematics and diagrams.  QCAD builds upon the \fIDrawing Interchange File
+Format\fR. Such DXF-files are used by many other professional CAD-systems.
+.PP
+QCAD works on Windows, Mac OS X and Linux. The source
+code of QCAD is released under the GPL version 3 (GPLv3), a popular Open Source
+license.
+.SH OPTIONS
+.TP
+\-help
+Displays this help.
+.TP
+\-version
+Displays the application version.
+.TP
+\-config \fIpath\fR
+Reads and stores settings to QCAD3.ini at the given location instead of the
+default location.
+.TP
+\-locale \fIlocale\fR
+Sets the locale to be used (overrides the language set in the preferences).
+E.g. '-locale de' starts QCAD in German.
+.TP
+\-filter \fIfilter\fR
+Opens the subsequent file(s) with the explicitly given import filter.
+.TP
+\-allow-multiple-instances
+Don't try to avoid multiple instances from running simultaneously.
+.TP
+\-app-id \fIID\fR
+Set application ID. Multiple instances of the same application (same ID) cannot
+run simultaneously unless -allow-multiple-instances is used.
+.TP
+\-rescan
+Rescan scripts folder for new add-ons
+.TP
+\-always-load-scripts
+Forces reloading of scripts when they are used.  This is mainly useful during
+script development, to apply changes without restarting QCAD.
+.TP
+\-enable-script-debugger
+Enables the script debugger.  NOT recommended as this may cause unexpected
+behavior when using QCAD.
+.TP
+\-debug-action-order
+Print action oder information in menus
+.TP
+\-autostart \fIscript-file\fR
+Starts the given script file instead of the default scripts/autostart.js. Note
+that with this option, QCAD is not started but rather the application
+implemented in the given script.
+.TP
+\-exec \fIscript-file\fR [ \fIoptions\fR ]
+Executes the given script file directly after staring QCAD. Options after the
+script file are passed on to the script.
+.TP
+\-gui-css-file \fICSS-file\fR
+Loads the specified CSS file.
+.TP
+\-no-gui
+Don't use GUI. X11: don't connect to X11 server.
+.TP
+\-no-show
+Use but don't display GUI.
+.TP
+\-enable-xdata
+Enables XData (custom properties) support.
+.TP
+\-quit
+Quits QCAD, for example after executing the given script(s).
+.SH COPYRIGHT
+Copyright (c) Andrew Mustun and others.
