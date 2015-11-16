@@ -227,7 +227,7 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
                 this.updatePreview();
             }
             else {
-                EAction.warnNotLineArcCircle();
+                this.warnUnsupportedShape();
             }
         }
         break;
