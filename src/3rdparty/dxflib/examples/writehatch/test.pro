@@ -23,5 +23,5 @@ SOURCES = \
     ../../src/dl_dxf.cpp \
     ../../src/dl_writer_ascii.cpp
 
-TARGET = test
+TARGET = writehatch
 TEMPLATE = app
