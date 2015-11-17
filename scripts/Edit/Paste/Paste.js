@@ -71,29 +71,39 @@ Paste.prototype.initUiOptions = function(resume, optionsToolBar) {
 Paste.prototype.setState = function(state) {
     Edit.prototype.setState.call(this, state);
 
-    this.setCrosshairCursor();
-    this.di.setClickMode(RAction.PickCoordinate);
-    var appWin = RMainWindowQt.getMainWindow();
-    var trPosition = qsTr("Position");
-    this.setCommandPrompt(trPosition);
-    this.setLeftMouseTip(trPosition);
-    this.setRightMouseTip(EAction.trCancel);
-    EAction.showSnapTools();
+    if (this.state===Paste.State.SettingPosition) {
+        this.setCrosshairCursor();
+        this.di.setClickMode(RAction.PickCoordinate);
+        var trPosition = qsTr("Position");
+        this.setCommandPrompt(trPosition);
+        this.setLeftMouseTip(trPosition);
+        this.setRightMouseTip(EAction.trCancel);
+        EAction.showSnapTools();
+    }
 };
 
 Paste.prototype.pickCoordinate = function(event, preview) {
-    this.offset = event.getModelPosition();
-    if (preview) {
-        this.updatePreview();
-    }
-    else {
-        this.di.applyOperation(this.getOperation());
-        this.di.clearPreview();
-        this.di.repaintViews();
+    if (this.state===Paste.State.SettingPosition) {
+        this.offset = event.getModelPosition();
+        if (preview) {
+            this.updatePreview();
+        }
+        else {
+            var op = this.getOperation();
+            if (!isNull(op)) {
+                this.di.applyOperation(op);
+                this.di.clearPreview();
+                this.di.repaintViews();
+            }
+        }
     }
 };
 
 Paste.prototype.getOperation = function(preview) {
+    if (!isVector(this.offset) || !isNumber(this.scale) || !isNumber(this.rotation)) {
+        return undefined;
+    }
+
     var op = new RPasteOperation(this.sourceDocument);
     op.setText(this.getToolTitle());
     op.setOffset(this.offset);
