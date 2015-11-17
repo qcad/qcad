@@ -134,6 +134,7 @@ Paste.prototype.slotScaleChanged = function(value) {
     } else {
         this.scale = 1;
     }
+    this.updatePreview(true);
 };
 
 Paste.prototype.slotRotationChanged = function(value) {
@@ -143,25 +144,31 @@ Paste.prototype.slotRotationChanged = function(value) {
     } else {
         this.rotation = 0;
     }
+    this.updatePreview(true);
 };
 
 Paste.prototype.slotFlipHorizontalChanged = function(value) {
     this.flipHorizontal = value;
+    this.updatePreview(true);
 };
 
 Paste.prototype.slotFlipVerticalChanged = function(value) {
     this.flipVertical = value;
+    this.updatePreview(true);
 };
 
 Paste.prototype.slotToCurrentLayerChanged = function(value) {
     this.toCurrentLayer = value;
+    this.updatePreview(true);
 };
 
 Paste.prototype.slotOverwriteLayersChanged = function(value) {
     this.overwriteLayers = value;
+    this.updatePreview(true);
 };
 
 Paste.prototype.slotOverwriteBlocksChanged = function(value) {
     this.overwriteBlocks = value;
+    this.updatePreview(true);
 };
 
