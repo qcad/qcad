@@ -1447,42 +1447,7 @@ void RDocumentInterface::addShapeToPreview(RShape& shape, const RColor& color,
         scene->setDashPattern(dashes.toVector());
         scene->setLinetypeId(document.getLinetypeId("CONTINUOUS"));
 
-        RPoint* point = dynamic_cast<RPoint*> (&shape);
-        if (point != NULL) {
-            scene->exportPoint(*point);
-        }
-
-        RLine* line = dynamic_cast<RLine*> (&shape);
-        if (line != NULL) {
-            scene->exportLine(*line);
-        }
-
-        RArc* arc = dynamic_cast<RArc*> (&shape);
-        if (arc != NULL) {
-            scene->exportArc(*arc);
-        }
-
-        RCircle* circle = dynamic_cast<RCircle*> (&shape);
-        if (circle != NULL) {
-            scene->exportCircle(*circle);
-        }
-
-        REllipse* ellipse = dynamic_cast<REllipse*> (&shape);
-        if (ellipse != NULL) {
-            scene->exportEllipse(*ellipse);
-        }
-
-        RSpline* spline = dynamic_cast<RSpline*> (&shape);
-        if (spline != NULL) {
-            scene->exportSpline(*spline);
-        }
-
-        RPolyline* polyline = dynamic_cast<RPolyline*> (&shape);
-        if (polyline != NULL) {
-            scene->exportPolyline(*polyline);
-        }
-
-        // TODO: support other shapes (text, ...)
+        scene->exportShape(QSharedPointer<RShape>(shape.clone()));
 
         scene->endPreview();
     }

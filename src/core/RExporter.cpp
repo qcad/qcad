@@ -1656,9 +1656,19 @@ void RExporter::exportShape(QSharedPointer<RShape> shape) {
         return;
     }
 
+    QSharedPointer<RPoint> point = shape.dynamicCast<RPoint>();
+    if (!point.isNull()) {
+        exportPoint(*point.data());
+    }
+
     QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
     if (!line.isNull()) {
         exportLine(*line.data());
+    }
+
+    QSharedPointer<RXLine> xline = shape.dynamicCast<RXLine>();
+    if (!xline.isNull()) {
+        exportXLine(*xline.data());
     }
 
     QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
@@ -1669,6 +1679,21 @@ void RExporter::exportShape(QSharedPointer<RShape> shape) {
     QSharedPointer<RCircle> circle = shape.dynamicCast<RCircle>();
     if (!circle.isNull()) {
         exportCircle(*circle.data());
+    }
+
+    QSharedPointer<REllipse> ellipse = shape.dynamicCast<REllipse>();
+    if (!ellipse.isNull()) {
+        exportEllipse(*ellipse.data());
+    }
+
+    QSharedPointer<RSpline> spline = shape.dynamicCast<RSpline>();
+    if (!spline.isNull()) {
+        exportSpline(*spline.data());
+    }
+
+    QSharedPointer<RPolyline> polyline = shape.dynamicCast<RPolyline>();
+    if (!polyline.isNull()) {
+        exportPolyline(*polyline.data());
     }
 
     QSharedPointer<RTriangle> triangle = shape.dynamicCast<RTriangle>();
