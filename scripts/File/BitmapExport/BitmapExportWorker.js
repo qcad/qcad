@@ -34,11 +34,16 @@
  *  properties["monochrome"]: true: Export as black / white
  *  properties["grayscale"]: true: Export as grayscale
  *  properties["window"]: RBox: window to export in drawing coorirdinates
+ * \param view Optional graphics view to use.
  */
-function exportBitmap(doc, scene, fileName, properties) {
-    var view = new RGraphicsViewImage();
+function exportBitmap(doc, scene, fileName, properties, view) {
+    var viewCreated = false;
+    if (typeof(view)==="undefined") {
+        view = new RGraphicsViewImage();
+        view.setScene(scene, false);
+        viewCreated = true;
+    }
     view.setAlphaEnabled(true);
-    view.setScene(scene, false);
 
     view.setPaintOrigin(properties["origin"]==null ? false : properties["origin"]);
     view.setTextHeightThresholdOverride(0);
@@ -90,7 +95,10 @@ function exportBitmap(doc, scene, fileName, properties) {
     // export file
     var buffer = view.getBuffer();
 
-    scene.unregisterView(view);
+    if (viewCreated) {
+        scene.unregisterView(view);
+        view.destroy();
+    }
 
     var iw = new QImageWriter(fileName);
     var ext = new QFileInfo(fileName).suffix().toLowerCase();
