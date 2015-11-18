@@ -598,6 +598,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
 
         // allowAll to make sure entities on hidden / locked layers can be imported:
         if (!allowAll && !entity->isEditable(allowInvisible)) {
+            qWarning() << "RTransaction::addObject: entity not editable (locked or hidden layer)";
             fail();
             return false;
         }
@@ -989,6 +990,7 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object) {
 
     if (!entity.isNull()) {
         if (!allowAll && !entity->isEditable(allowInvisible)) {
+            qWarning() << "RTransaction::deleteObject: entity not editable (locked or hidden layer)";
             fail();
             return;
         }
