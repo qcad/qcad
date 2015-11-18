@@ -82,6 +82,14 @@ public:
         return RS::EntityHatch;
     }
 
+    bool hasCustomPattern() const {
+        return data.hasCustomPattern();
+    }
+
+    RPattern getCustomPattern() const {
+        return data.getCustomPattern();
+    }
+
     bool setProperty(RPropertyTypeId propertyTypeId, const QVariant& value,
         RTransaction* transaction=NULL);
     bool setBoundaryVector(RObject::XYZ xyz, const QVariant& value, bool condition);

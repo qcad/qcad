@@ -59,6 +59,10 @@ public:
         return !pattern.getPatternLines().isEmpty();
     }
 
+    RPattern getCustomPattern() const {
+        return pattern;
+    }
+
     virtual bool cloneOnChange() const {
         // force clone to preserve custom pattern for undo:
         return hasCustomPattern();
@@ -207,7 +211,7 @@ private:
      */
     QList<QList<QSharedPointer<RShape> > > boundary;
 
-    // custom pattern loaded from file:
+    // custom pattern loaded from DXF file, not LIN file:
     mutable RPattern pattern;
 
     mutable RPainterPath boundaryPath;
