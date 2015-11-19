@@ -188,8 +188,16 @@ double RBlockReferenceData::getDistanceTo(const RVector& point,
 }
 
 QList<RBox> RBlockReferenceData::getBoundingBoxes(bool ignoreEmpty) const {
-    if (!boundingBoxes.isEmpty()) {
-        return boundingBoxes;
+    QList<RBox>* bbs;
+    if (ignoreEmpty) {
+        bbs = &boundingBoxes;
+    }
+    else {
+        bbs = &boundingBoxesIgnoreEmpty;
+    }
+
+    if (!bbs->isEmpty()) {
+        return *bbs;
     }
 
     if (document == NULL) {
@@ -250,21 +258,21 @@ QList<RBox> RBlockReferenceData::getBoundingBoxes(bool ignoreEmpty) const {
                     applyColumnRowOffsetTo(*entity, col, row);
                 }
                 entity->update();
-                boundingBoxes.append(entity->getBoundingBoxes());
+                bbs->append(entity->getBoundingBoxes(ignoreEmpty));
             }
         }
     }
 
     if (!ignoreEmpty) {
-        if (boundingBoxes.isEmpty()) {
+        if (bbs->isEmpty()) {
             // add reference point to bounding boxes for empty block:
-            boundingBoxes.append(RBox(position, 0.0));
+            bbs->append(RBox(position, 0.0));
         }
     }
 
     recursionDepth--;
 
-    return boundingBoxes;
+    return *bbs;
 }
 
 RBox RBlockReferenceData::getBoundingBox(bool ignoreEmpty) const {

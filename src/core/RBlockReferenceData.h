@@ -153,6 +153,7 @@ private:
     double columnSpacing;
     double rowSpacing;
     mutable QList<RBox> boundingBoxes;
+    mutable QList<RBox> boundingBoxesIgnoreEmpty;
     mutable QMap<REntity::Id, QSharedPointer<REntity> > cache;
 };
 
