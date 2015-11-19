@@ -559,6 +559,13 @@ EAction.prototype.hideOptionsToolBarWidgets = function(widgets, noSyncWidgets) {
 };
 
 /**
+ * Called when user presses enter. Default implementation calls showDialog.
+ */
+EAction.prototype.enterEvent = function() {
+    this.showDialog();
+};
+
+/**
  * Show dialog to enter some or all of the options.
  * The default implementation creates a dialog based on this.dialogUiFile.
  * Widgets in the options tool bar which have the property "MoveToDialog" or

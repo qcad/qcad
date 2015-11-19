@@ -97,7 +97,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, finishEvent, "finishEvent");
             
-            REcmaHelper::registerFunction(&engine, proto, showDialog, "showDialog");
+            REcmaHelper::registerFunction(&engine, proto, enterEvent, "enterEvent");
             
             REcmaHelper::registerFunction(&engine, proto, suspendEvent, "suspendEvent");
             
@@ -454,19 +454,19 @@
             return result;
         }
          QScriptValue
-        REcmaActionAdapter::showDialog
+        REcmaActionAdapter::enterEvent
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaActionAdapter::showDialog", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaActionAdapter::showDialog";
+            //REcmaHelper::functionStart("REcmaActionAdapter::enterEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaActionAdapter::enterEvent";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RActionAdapter* self = 
-                        getSelf("showDialog", context);
+                        getSelf("enterEvent", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -485,16 +485,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->showDialog();
+               self->enterEvent();
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RActionAdapter.showDialog().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RActionAdapter.enterEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaActionAdapter::showDialog", context, engine);
+            //REcmaHelper::functionEnd("REcmaActionAdapter::enterEvent", context, engine);
             return result;
         }
          QScriptValue

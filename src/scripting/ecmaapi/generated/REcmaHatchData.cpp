@@ -84,6 +84,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, hasCustomPattern, "hasCustomPattern");
             
+            REcmaHelper::registerFunction(&engine, proto, getCustomPattern, "getCustomPattern");
+            
             REcmaHelper::registerFunction(&engine, proto, cloneOnChange, "cloneOnChange");
             
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
@@ -551,6 +553,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaHatchData::hasCustomPattern", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::getCustomPattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::getCustomPattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::getCustomPattern";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("getCustomPattern", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPattern'
+    RPattern cppResult =
+        
+               self->getCustomPattern();
+        // return type: RPattern
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.getCustomPattern().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::getCustomPattern", context, engine);
             return result;
         }
          QScriptValue

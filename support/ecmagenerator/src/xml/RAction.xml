@@ -163,7 +163,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="true" />
     </method>
-    <method name="showDialog" cppName="showDialog"
+    <method name="enterEvent" cppName="enterEvent"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="true" />

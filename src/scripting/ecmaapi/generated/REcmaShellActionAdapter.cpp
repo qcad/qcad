@@ -287,12 +287,12 @@
         
     
     
-      void REcmaShellActionAdapter::showDialog(
+      void REcmaShellActionAdapter::enterEvent(
                 
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
-                //REcmaHelper::shellFunctionStart("REcmaShellActionAdapter::showDialog", engine);
-                QScriptValue _q_function = __qtscript_self.property("showDialog");
+                //REcmaHelper::shellFunctionStart("REcmaShellActionAdapter::enterEvent", engine);
+                QScriptValue _q_function = __qtscript_self.property("enterEvent");
 
 
 
@@ -304,7 +304,7 @@
                     || _q_function.property("length").toInt32()!=0*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
-                    //QString cppSig = "RActionAdapter::showDialog";
+                    //QString cppSig = "RActionAdapter::enterEvent";
                     
                         // re-enable recursion for calls from C++ into ECMAScript functions
                         // leave it marked as generated though if appropriate:
@@ -313,14 +313,14 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        RActionAdapter::showDialog(
+                        RActionAdapter::enterEvent(
                             
                         );
 
                         // block recursion again:
                         _q_function.setData(QScriptValue(engine, prev));
 
-                        //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::showDialog", engine);
+                        //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::enterEvent", engine);
 
                         
                             return;
@@ -336,7 +336,7 @@
                     ;
                     _q_function.setData(QScriptValue(engine, prev));
 
-                    //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::showDialog", engine);
+                    //REcmaHelper::shellFunctionEnd("REcmaShellActionAdapter::enterEvent", engine);
 
                     
             }

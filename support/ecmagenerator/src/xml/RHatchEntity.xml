@@ -37,6 +37,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RS::EntityType" isPureVirtual="false" />
     </method>
+    <method name="hasCustomPattern" cppName="hasCustomPattern"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="getCustomPattern" cppName="getCustomPattern"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RPattern" isPureVirtual="false" />
+    </method>
     <method name="setProperty" cppName="setProperty"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

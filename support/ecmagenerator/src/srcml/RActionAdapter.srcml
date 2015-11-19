@@ -62,7 +62,7 @@
     <function><type><name>virtual</name> <name>void</name></type> <name>beginEvent</name><parameter_list>()</parameter_list> <block>{}</block></function>
     <function><type><name>virtual</name> <name>void</name></type> <name>setGraphicsView</name><parameter_list>(<param><decl><type><name>RGraphicsView</name>*</type></decl></param> <comment type="block">/*view*/</comment>)</parameter_list> <block>{}</block></function>
     <function><type><name>virtual</name> <name>void</name></type> <name>finishEvent</name><parameter_list>()</parameter_list> <block>{}</block></function>
-    <function><type><name>virtual</name> <name>void</name></type> <name>showDialog</name><parameter_list>()</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>enterEvent</name><parameter_list>()</parameter_list> <block>{}</block></function>
     <function><type><name>virtual</name> <name>void</name></type> <name>suspendEvent</name><parameter_list>()</parameter_list> <block>{}</block></function>
     <function><type><name>virtual</name> <name>void</name></type> <name>resumeEvent</name><parameter_list>()</parameter_list> <block>{}</block></function>
     <function><type><name>virtual</name> <name>void</name></type> <name>escapeEvent</name><parameter_list>()</parameter_list> <block>{}</block></function>

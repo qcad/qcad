@@ -144,9 +144,9 @@ public:
      */
     virtual void finishEvent() = 0;
     /**
-     * Called when user presses enter to show action dialog with options.
+     * Called when user presses enter (e.g. to show action dialog with options).
      */
-    virtual void showDialog() = 0;
+    virtual void enterEvent() = 0;
     /**
      * Called with the action is Suspended, for example when another action
      * becomes active or the mouse cursor leaves the view.

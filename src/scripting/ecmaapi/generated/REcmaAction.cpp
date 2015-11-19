@@ -119,7 +119,7 @@
             
             REcmaHelper::registerFunction(&engine, proto, finishEvent, "finishEvent");
             
-            REcmaHelper::registerFunction(&engine, proto, showDialog, "showDialog");
+            REcmaHelper::registerFunction(&engine, proto, enterEvent, "enterEvent");
             
             REcmaHelper::registerFunction(&engine, proto, suspendEvent, "suspendEvent");
             
@@ -1375,19 +1375,19 @@
             return result;
         }
          QScriptValue
-        REcmaAction::showDialog
+        REcmaAction::enterEvent
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaAction::showDialog", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaAction::showDialog";
+            //REcmaHelper::functionStart("REcmaAction::enterEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaAction::enterEvent";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RAction* self = 
-                        getSelf("showDialog", context);
+                        getSelf("enterEvent", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -1406,16 +1406,16 @@
     // call C++ function:
     // return type 'void'
     
-               self->showDialog();
+               self->enterEvent();
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RAction.showDialog().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RAction.enterEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaAction::showDialog", context, engine);
+            //REcmaHelper::functionEnd("REcmaAction::enterEvent", context, engine);
             return result;
         }
          QScriptValue

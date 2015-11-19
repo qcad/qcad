@@ -112,7 +112,7 @@
         finishEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        showDialog
+        enterEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         suspendEvent

@@ -78,6 +78,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getType, "getType");
             
+            REcmaHelper::registerFunction(&engine, proto, hasCustomPattern, "hasCustomPattern");
+            
+            REcmaHelper::registerFunction(&engine, proto, getCustomPattern, "getCustomPattern");
+            
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
             
             REcmaHelper::registerFunction(&engine, proto, setBoundaryVector, "setBoundaryVector");
@@ -687,6 +691,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerHatchEntity::hasCustomPattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::hasCustomPattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::hasCustomPattern";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchEntity* self = 
+                        getSelf("hasCustomPattern", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasCustomPattern();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.hasCustomPattern().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::hasCustomPattern", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerHatchEntity::getCustomPattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getCustomPattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getCustomPattern";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchEntity* self = 
+                        getSelf("getCustomPattern", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPattern'
+    RPattern cppResult =
+        
+               self->getCustomPattern();
+        // return type: RPattern
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getCustomPattern().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getCustomPattern", context, engine);
             return result;
         }
          QScriptValue

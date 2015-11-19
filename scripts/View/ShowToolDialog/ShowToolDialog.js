@@ -27,10 +27,10 @@ ShowToolDialog.prototype = new EAction();
 
 ShowToolDialog.init = function(basePath) {
     var appWin = EAction.getMainWindow();
-    appWin.enterPressed.connect(ShowToolDialog, "showDialog");
+    appWin.enterPressed.connect(ShowToolDialog, "triggerEnterEvent");
 };
 
-ShowToolDialog.showDialog = function() {
+ShowToolDialog.triggerEnterEvent = function() {
     var di = EAction.getDocumentInterface();
     if (isNull(di)) {
         return;
@@ -41,5 +41,5 @@ ShowToolDialog.showDialog = function() {
         return;
     }
 
-    a.showDialog();
+    a.enterEvent();
 };

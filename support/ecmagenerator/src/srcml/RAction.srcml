@@ -145,9 +145,9 @@
      */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>finishEvent</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <comment type="block">/**
-     * Called when user presses enter to show action dialog with options.
+     * Called when user presses enter (e.g. to show action dialog with options).
      */</comment>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>showDialog</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>enterEvent</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
     <comment type="block">/**
      * Called with the action is Suspended, for example when another action
      * becomes active or the mouse cursor leaves the view.

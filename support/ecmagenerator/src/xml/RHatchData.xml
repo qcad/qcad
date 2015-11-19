@@ -36,6 +36,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="getCustomPattern" cppName="getCustomPattern"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RPattern" isPureVirtual="false" />
+    </method>
     <method name="cloneOnChange" cppName="cloneOnChange"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
