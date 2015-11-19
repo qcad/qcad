@@ -355,6 +355,10 @@ RVector RGraphicsView::getOffset(bool includeStepOffset) const {
 void RGraphicsView::setOffset(const RVector& offset, bool regen) {
     RVector o = offset;
 
+    if (!o.isSane()) {
+        o = RVector(0,0);
+    }
+
     // 20111024: avoid overflows with weird behaviour when using track pad:
     if (RSettings::getLimitZoomAndScroll()) {
         if (offset.x < -1.0e8 || offset.x > 1.0e8) {
@@ -381,6 +385,10 @@ void RGraphicsView::setOffset(const RVector& offset, bool regen) {
 
 void RGraphicsView::setFactor(double f, bool regen) {
     factor = f;
+
+    if (!RMath::isNormal(factor)) {
+        factor = 1.0;
+    }
 
     if (RSettings::getLimitZoomAndScroll()) {
         if (factor>1.0e6) {
