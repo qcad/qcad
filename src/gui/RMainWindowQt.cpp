@@ -22,6 +22,7 @@
 #include <QStatusBar>
 #include <QTabBar>
 #include <QToolBar>
+#include <QToolButton>
 
 #include <RSingleApplication.h>
 
@@ -513,7 +514,9 @@ bool RMainWindowQt::event(QEvent* e) {
                 QWidget* w = QApplication::focusWidget();
                 if (w!=NULL) {
                     if (dynamic_cast<RGraphicsViewQt*>(w)!=NULL ||
-                        dynamic_cast<RMainWindowQt*>(w)!=NULL) {
+                        dynamic_cast<RMainWindowQt*>(w)!=NULL ||
+                        dynamic_cast<QToolButton*>(w)!=NULL) {
+
                         emit enterPressed();
                     }
                     QWidget* parent = w->parentWidget();
