@@ -66,6 +66,9 @@
         lineTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        arcTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         quadTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

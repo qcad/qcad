@@ -88,6 +88,31 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="arcTo" cppName="arcTo" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QRectF &amp;" typeName="QRectF" name="rect"
+        isConst="true" />
+        <arg type="qreal" typeName="qreal" name="startAngle"
+        isConst="false" />
+        <arg type="qreal" typeName="qreal" name="arcLength"
+        isConst="false" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="qreal" typeName="qreal" name="x"
+        isConst="false" />
+        <arg type="qreal" typeName="qreal" name="y"
+        isConst="false" />
+        <arg type="qreal" typeName="qreal" name="w"
+        isConst="false" />
+        <arg type="qreal" typeName="qreal" name="h"
+        isConst="false" />
+        <arg type="qreal" typeName="qreal" name="startAngle"
+        isConst="false" />
+        <arg type="qreal" typeName="qreal" name="arcLength"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="quadTo" cppName="quadTo" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
