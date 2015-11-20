@@ -587,11 +587,6 @@ EAction.prototype.showDialog = function() {
 
     this.hideOptionsToolBarWidgets(widgets, noSyncWidgets);
 
-    if (widgets.length===0) {
-        // no widgets to show in dialog, return to normal operation without dialog:
-        return;
-    }
-
     // show dialog and move tool bar widgets to its layout:
     var formLayout = undefined;
     if (isNull(this.dialogUiFile)) {
