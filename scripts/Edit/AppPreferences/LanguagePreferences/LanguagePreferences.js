@@ -32,6 +32,7 @@ LanguagePreferences.localLanguageName["es"] = "Español";
 LanguagePreferences.localLanguageName["it"] = "Italiano";
 LanguagePreferences.localLanguageName["ja"] = "日本語";
 LanguagePreferences.localLanguageName["pl"] = "Polski";
+LanguagePreferences.localLanguageName["ru"] = "ру́сский язы́к";
 LanguagePreferences.localLanguageName["sl"] = "Slovenščina";
 
 function LanguagePreferences(guiAction) {
