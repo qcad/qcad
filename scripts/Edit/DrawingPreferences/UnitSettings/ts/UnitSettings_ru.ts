@@ -16,7 +16,7 @@
     <message>
         <location line="+13"/>
         <source>Measurement System (for line types and hatch patterns):</source>
-        <translation type="unfinished"></translation>
+        <translation>Система измерения (для типов линий и образцов штриховки):</translation>
     </message>
     <message>
         <location filename="../UnitSettings.js" line="+25"/>
@@ -142,12 +142,12 @@
     <message>
         <location line="+6"/>
         <source>Imperial</source>
-        <translation type="unfinished"></translation>
+        <translation>Империал</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation>Метрика</translation>
     </message>
 </context>
 </TS>

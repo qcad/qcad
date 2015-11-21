@@ -10,7 +10,7 @@
     <message>
         <location filename="../Divide.js" line="+66"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите линию, дугу, окружность, эллипс, прямую или многоугольник чтобы разбить</translation>
     </message>
     <message>
         <location line="+3"/>

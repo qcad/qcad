@@ -355,7 +355,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-5"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation>Исходное</translation>
+        <translation>Начало координат</translation>
     </message>
     <message>
         <location line="+2"/>

@@ -39,7 +39,7 @@
     <message>
         <location line="+11"/>
         <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation type="unfinished"></translation>
+        <translation>Блок &apos;%1&apos; уже существует&lt;br&gt;и будет перезаписан.</translation>
     </message>
     <message>
         <location line="+5"/>

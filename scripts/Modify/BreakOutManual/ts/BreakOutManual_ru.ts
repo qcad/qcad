@@ -10,7 +10,7 @@
     <message>
         <location filename="../BreakOutManual.js" line="+80"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline to break up</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите линию, дугу, окружность, эллипс, прямую или ломаную чтобы разбить</translation>
     </message>
     <message>
         <location line="+3"/>
