@@ -165,7 +165,7 @@ FirstStart.prototype.changeLanguage = function(code) {
     
     if (code != "en") {
         var translator = new QTranslator(qApp);
-        if (translator.load("FirstStart." + code, this.path + "/ts")) {
+        if (translator.load("FirstStart_" + code, this.path + "/ts")) {
             QCoreApplication.installTranslator(translator);
             this.translators.push(translator);
         } else {
