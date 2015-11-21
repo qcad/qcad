@@ -163,13 +163,22 @@ FirstStart.prototype.changeLanguage = function(code) {
         QCoreApplication.removeTranslator(this.translators[i]);
     }
     
-    if (code != "en") {
-        var translator = new QTranslator(qApp);
-        if (translator.load("FirstStart_" + code, this.path + "/ts")) {
-            QCoreApplication.installTranslator(translator);
-            this.translators.push(translator);
-        } else {
-            qDebug("FirstStart.js: cannot load translation for language " + code);
+    if (code !== "en") {
+        var translators = [
+            [ "FirstStart", this.path + "/ts" ],
+            [ "UnitSettings", "scripts/Edit/DrawingPreferences/UnitSettings/ts" ],
+            [ "InputPreferences", "scripts/Edit/AppPreferences/InputPreferences/ts" ]
+        ];
+
+        for (var i=0; i<translators.length; i++) {
+            var translator = new QTranslator(qApp);
+            if (translator.load(translators[i][0] + "_" + code, translators[i][1])) {
+                QCoreApplication.installTranslator(translator);
+                this.translators.push(translator);
+            }
+            else {
+                qDebug("FirstStart.js: cannot load translation for module: " + translators[i][0] + " / language " + code);
+            }
         }
     }
 
