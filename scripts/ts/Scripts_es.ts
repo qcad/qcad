@@ -83,7 +83,7 @@
         <translation>Ninguno</translation>
     </message>
     <message>
-        <location line="+589"/>
+        <location line="+591"/>
         <source>Options</source>
         <translation>Opciones</translation>
     </message>

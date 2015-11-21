@@ -73,7 +73,7 @@
         <translation>Ei mitään</translation>
     </message>
     <message>
-        <location line="+589"/>
+        <location line="+591"/>
         <source>Options</source>
         <translation>Asetukset</translation>
     </message>

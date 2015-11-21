@@ -11,37 +11,37 @@
     <message>
         <location line="+3"/>
         <source>Inch</source>
-        <translation>Дюймы</translation>
+        <translation>Дюйм</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Foot</source>
-        <translation>Футы</translation>
+        <translation>Фут</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Mile</source>
-        <translation>Мили</translation>
+        <translation>Миля</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Millimeter</source>
-        <translation>Миллиметры</translation>
+        <translation>Миллиметр</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Centimeter</source>
-        <translation>Сантиметры</translation>
+        <translation>Сантиметр</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Meter</source>
-        <translation>Метры</translation>
+        <translation>Метр</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Kilometer</source>
-        <translation>Километры</translation>
+        <translation>Километр</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -487,14 +487,14 @@
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Посмотреть Центр</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation type="unfinished"></translation>
+        <translation>Посмотреть Цель</translation>
     </message>
 </context>
 <context>
