@@ -169,6 +169,10 @@ public:
         data.setPatternName(n);
     }
 
+    void clearCustomPattern() {
+        data.clearCustomPattern();
+    }
+
     QList<QSharedPointer<RShape> > getLoopBoundary(int index) const {
         return data.getLoopBoundary(index);
     }

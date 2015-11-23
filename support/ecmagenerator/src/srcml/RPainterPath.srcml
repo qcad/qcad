@@ -30,7 +30,6 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QSharedPointer&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RBox.h"</cpp:file></cpp:include>
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDebug.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RArc</name>;</class_decl>
@@ -111,16 +110,6 @@
      */</comment>
     <function><type><name>void</name></type> <name>lineTo</name><parameter_list>(<param><decl><type><name>const</name> <name>QPointF</name>&amp;</type> <name>p</name></decl></param>)</parameter_list> <block>{
         <constructor_decl><name>QPainterPath::lineTo</name><parameter_list>(<param><decl><type><name>p</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
-
-    <function><type><name>void</name></type> <name>arcTo</name><parameter_list>(<param><decl><type><name>const</name> <name>QRectF</name> &amp;</type><name>rect</name></decl></param>, <param><decl><type><name>qreal</name></type> <name>startAngle</name></decl></param>, <param><decl><type><name>qreal</name></type> <name>arcLength</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RDebug::printBacktrace</name><parameter_list>()</parameter_list>;</constructor_decl>
-        <constructor_decl><name>QPainterPath::arcTo</name><parameter_list>(<param><decl><type><name>rect</name></type></decl></param>, <param><decl><type><name>startAngle</name></type></decl></param>, <param><decl><type><name>arcLength</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
-
-    <function><type><name>void</name></type> <name>arcTo</name><parameter_list>(<param><decl><type><name>qreal</name></type> <name>x</name></decl></param>, <param><decl><type><name>qreal</name></type> <name>y</name></decl></param>, <param><decl><type><name>qreal</name></type> <name>w</name></decl></param>, <param><decl><type><name>qreal</name></type> <name>h</name></decl></param>, <param><decl><type><name>qreal</name></type> <name>startAngle</name></decl></param>, <param><decl><type><name>qreal</name></type> <name>arcLength</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>RDebug::printBacktrace</name><parameter_list>()</parameter_list>;</constructor_decl>
-        <constructor_decl><name>QPainterPath::arcTo</name><parameter_list>(<param><decl><type><name>x</name></type></decl></param>, <param><decl><type><name>y</name></type></decl></param>, <param><decl><type><name>w</name></type></decl></param>, <param><decl><type><name>h</name></type></decl></param>, <param><decl><type><name>startAngle</name></type></decl></param>, <param><decl><type><name>arcLength</name></type></decl></param>)</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>void</name></type> <name>quadTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>cp</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{

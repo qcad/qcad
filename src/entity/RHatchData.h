@@ -99,7 +99,7 @@ public:
 
     void setSolid(bool on) {
         solid = on;
-        pattern.clear();
+        clearCustomPattern();
         update();
     }
 
@@ -109,7 +109,7 @@ public:
 
     void setScale(double s) {
         scaleFactor = s;
-        pattern.clear();
+        clearCustomPattern();
         update();
     }
 
@@ -119,7 +119,7 @@ public:
 
     void setAngle(double a) {
         angle = a;
-        pattern.clear();
+        clearCustomPattern();
         update();
     }
 
@@ -129,7 +129,7 @@ public:
 
     void setOriginPoint(const RVector& op) {
         originPoint = op;
-        pattern.clear();
+        clearCustomPattern();
         update();
     }
 
@@ -139,8 +139,12 @@ public:
 
     void setPatternName(const QString& n) {
         patternName = n;
-        pattern.clear();
+        clearCustomPattern();
         update();
+    }
+
+    void clearCustomPattern() {
+        pattern.clear();
     }
 
     void newLoop();

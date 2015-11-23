@@ -154,6 +154,7 @@
     <decl_stmt><decl><type><name>double</name></type> <name>columnSpacing</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>rowSpacing</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></type> <name>boundingBoxes</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>QList<argument_list>&lt;<argument><name>RBox</name></argument>&gt;</argument_list></name></type> <name>boundingBoxesIgnoreEmpty</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QSharedPointer<argument_list>&lt;<argument><name>REntity</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>cache</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
