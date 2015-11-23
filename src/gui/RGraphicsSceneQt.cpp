@@ -343,8 +343,9 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc, bool allowForZeroLength
 //     p.addArc(arc);
 //     currentPainterPath.addPath(p);
 
-    if (twoColorSelectedMode) {
-        // QPainterPath with pattern shown as solid when clipped bug workaround:
+    if (twoColorSelectedMode || screenBasedLinetypes) {
+        // QPainterPath with pattern shown as solid (when clipped?)
+        // bug workaround:
         currentPainterPath.moveTo(arc.getStartPoint());
         currentPainterPath.arcTo(
             arc.getCenter().x-arc.getRadius(),

@@ -67,6 +67,8 @@ public:
     RPainterPath(const RPainterPath& other);
     virtual ~RPainterPath();
 
+    void setPath(const QPainterPath& path);
+
     QList<QSharedPointer<RShape> > getShapes() const;
 
     RVector getCurrentPosition() const {

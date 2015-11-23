@@ -1246,6 +1246,7 @@ void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
     RVector ci;
     double a;
 
+//    RPolyline pl;
     if (!arc.isReversed()) {
         // Arc Counterclockwise:
         if(a1>a2-RS::AngleTolerance) {
@@ -1255,6 +1256,7 @@ void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
             ci.x = center.x + cos(a) * radius;
             ci.y = center.y + sin(a) * radius;
             exportLineSegment(RLine(prev, ci), a+M_PI_2);
+//            pl.appendVertex(ci);
             prev = ci;
         }
     } else {
@@ -1266,10 +1268,14 @@ void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
             ci.x = center.x + cos(a) * radius;
             ci.y = center.y + sin(a) * radius;
             exportLineSegment(RLine(prev, ci), a+M_PI_2);
+//            pl.appendVertex(ci);
             prev = ci;
         }
     }
     this->exportLineSegment(RLine(prev, arc.getEndPoint()), arc.getEndAngle()+M_PI_2);
+    //pl.appendVertex(arc.getEndPoint());
+
+    //this->exportPolyline(pl);
 }
 
 /**

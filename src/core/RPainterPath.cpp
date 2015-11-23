@@ -66,6 +66,10 @@ RPainterPath::~RPainterPath() {
     RDebug::decCounter("RPainterPath");
 }
 
+void RPainterPath::setPath(const QPainterPath& path) {
+    *((QPainterPath*)(this)) = path;
+}
+
 bool RPainterPath::isAtPosition(const RVector& p, double tolerance) const {
     if (isEmpty()) {
         return false;
