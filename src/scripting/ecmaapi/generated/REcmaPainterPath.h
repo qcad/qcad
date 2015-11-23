@@ -48,6 +48,9 @@
 
     // public methods:
     static  QScriptValue
+        setPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getShapes
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -64,9 +67,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         lineTo
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        arcTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         quadTo

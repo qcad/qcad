@@ -136,6 +136,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setPatternName, "setPatternName");
             
+            REcmaHelper::registerFunction(&engine, proto, clearCustomPattern, "clearCustomPattern");
+            
             REcmaHelper::registerFunction(&engine, proto, newLoop, "newLoop");
             
             REcmaHelper::registerFunction(&engine, proto, cancelLoop, "cancelLoop");
@@ -2686,6 +2688,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaHatchData::setPatternName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchData::clearCustomPattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchData::clearCustomPattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchData::clearCustomPattern";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchData* self = 
+                        getSelf("clearCustomPattern", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearCustomPattern();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchData.clearCustomPattern().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchData::clearCustomPattern", context, engine);
             return result;
         }
          QScriptValue

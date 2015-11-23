@@ -72,6 +72,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, setPath, "setPath");
+            
             REcmaHelper::registerFunction(&engine, proto, getShapes, "getShapes");
             
             REcmaHelper::registerFunction(&engine, proto, getCurrentPosition, "getCurrentPosition");
@@ -83,8 +85,6 @@
             REcmaHelper::registerFunction(&engine, proto, moveToOrNop, "moveToOrNop");
             
             REcmaHelper::registerFunction(&engine, proto, lineTo, "lineTo");
-            
-            REcmaHelper::registerFunction(&engine, proto, arcTo, "arcTo");
             
             REcmaHelper::registerFunction(&engine, proto, quadTo, "quadTo");
             
@@ -501,6 +501,71 @@
 
     // public methods:
      QScriptValue
+        REcmaPainterPath::setPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::setPath", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setPath";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("setPath", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QPainterPath */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QPainterPath*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QPainterPath*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type QPainterPath*.",
+                               context);                    
+                    }
+                    QPainterPath& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setPath(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setPath().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::setPath", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPainterPath::getShapes
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1006,189 +1071,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::lineTo", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaPainterPath::arcTo
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaPainterPath::arcTo", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::arcTo";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RPainterPath* self = 
-                        getSelf("arcTo", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    3 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: QRectF */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: qreal */
-     && (
-            context->argument(2).isNumber()
-        ) /* type: qreal */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is reference
-                    QRectF*
-                    ap0 =
-                    qscriptvalue_cast<
-                    QRectF*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type QRectF*.",
-                               context);                    
-                    }
-                    QRectF& a0 = *ap0;
-                
-                    // argument isStandardType
-                    qreal
-                    a1 =
-                    (qreal)
-                    
-                    context->argument( 1 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    qreal
-                    a2 =
-                    (qreal)
-                    
-                    context->argument( 2 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->arcTo(a0
-        ,
-    a1
-        ,
-    a2);
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    6 && (
-            context->argument(0).isNumber()
-        ) /* type: qreal */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: qreal */
-     && (
-            context->argument(2).isNumber()
-        ) /* type: qreal */
-     && (
-            context->argument(3).isNumber()
-        ) /* type: qreal */
-     && (
-            context->argument(4).isNumber()
-        ) /* type: qreal */
-     && (
-            context->argument(5).isNumber()
-        ) /* type: qreal */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    qreal
-                    a0 =
-                    (qreal)
-                    
-                    context->argument( 0 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    qreal
-                    a1 =
-                    (qreal)
-                    
-                    context->argument( 1 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    qreal
-                    a2 =
-                    (qreal)
-                    
-                    context->argument( 2 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    qreal
-                    a3 =
-                    (qreal)
-                    
-                    context->argument( 3 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    qreal
-                    a4 =
-                    (qreal)
-                    
-                    context->argument( 4 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    qreal
-                    a5 =
-                    (qreal)
-                    
-                    context->argument( 5 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->arcTo(a0
-        ,
-    a1
-        ,
-    a2
-        ,
-    a3
-        ,
-    a4
-        ,
-    a5);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.arcTo().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaPainterPath::arcTo", context, engine);
             return result;
         }
          QScriptValue

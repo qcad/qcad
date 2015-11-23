@@ -122,6 +122,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setPatternName, "setPatternName");
             
+            REcmaHelper::registerFunction(&engine, proto, clearCustomPattern, "clearCustomPattern");
+            
             REcmaHelper::registerFunction(&engine, proto, getLoopBoundary, "getLoopBoundary");
             
             REcmaHelper::registerFunction(&engine, proto, getBoundaryAsPolylines, "getBoundaryAsPolylines");
@@ -2522,6 +2524,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaHatchEntity::setPatternName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaHatchEntity::clearCustomPattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaHatchEntity::clearCustomPattern", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::clearCustomPattern";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchEntity* self = 
+                        getSelf("clearCustomPattern", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearCustomPattern();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.clearCustomPattern().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaHatchEntity::clearCustomPattern", context, engine);
             return result;
         }
          QScriptValue

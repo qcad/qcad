@@ -100,7 +100,6 @@ public:
     void setSolid(bool on) {
         solid = on;
         clearCustomPattern();
-        update();
     }
 
     double getScale() const {
@@ -110,7 +109,6 @@ public:
     void setScale(double s) {
         scaleFactor = s;
         clearCustomPattern();
-        update();
     }
 
     double getAngle() const {
@@ -120,7 +118,6 @@ public:
     void setAngle(double a) {
         angle = a;
         clearCustomPattern();
-        update();
     }
 
     RVector getOriginPoint() const {
@@ -130,7 +127,6 @@ public:
     void setOriginPoint(const RVector& op) {
         originPoint = op;
         clearCustomPattern();
-        update();
     }
 
     QString getPatternName() const {
@@ -140,11 +136,11 @@ public:
     void setPatternName(const QString& n) {
         patternName = n;
         clearCustomPattern();
-        update();
     }
 
     void clearCustomPattern() {
         pattern.clear();
+        update();
     }
 
     void newLoop();

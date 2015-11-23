@@ -33,6 +33,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="other" isConst="true" />
       </variant>
     </constructor>
+    <method name="setPath" cppName="setPath" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPainterPath &amp;" typeName="QPainterPath"
+        name="path" isConst="true" />
+      </variant>
+    </method>
     <method name="getShapes" cppName="getShapes" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
@@ -85,31 +92,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="qreal" typeName="qreal" name="x"
         isConst="false" />
         <arg type="qreal" typeName="qreal" name="y"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="arcTo" cppName="arcTo" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QRectF &amp;" typeName="QRectF" name="rect"
-        isConst="true" />
-        <arg type="qreal" typeName="qreal" name="startAngle"
-        isConst="false" />
-        <arg type="qreal" typeName="qreal" name="arcLength"
-        isConst="false" />
-      </variant>
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="qreal" typeName="qreal" name="x"
-        isConst="false" />
-        <arg type="qreal" typeName="qreal" name="y"
-        isConst="false" />
-        <arg type="qreal" typeName="qreal" name="w"
-        isConst="false" />
-        <arg type="qreal" typeName="qreal" name="h"
-        isConst="false" />
-        <arg type="qreal" typeName="qreal" name="startAngle"
-        isConst="false" />
-        <arg type="qreal" typeName="qreal" name="arcLength"
         isConst="false" />
       </variant>
     </method>

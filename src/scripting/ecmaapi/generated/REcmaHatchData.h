@@ -139,6 +139,9 @@
         setPatternName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clearCustomPattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         newLoop
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

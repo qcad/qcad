@@ -133,6 +133,9 @@
         setPatternName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clearCustomPattern
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLoopBoundary
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
