@@ -1,22 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru_RU">
+<TS version="2.1" language="ru">
 <context>
     <name>ImportPoints</name>
     <message>
         <location filename="../ImportPoints.js" line="+39"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Все файлы</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Import Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Импорт точек</translation>
     </message>
     <message>
         <location line="+60"/>
         <source>&amp;Import Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Импорт точек</translation>
     </message>
 </context>
 </TS>

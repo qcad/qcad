@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="ru">
 <context>
@@ -307,12 +306,12 @@
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
-        <translation>Промежуток между столбцами:</translation>
+        <translation>Промежуток между столбцами</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation>Расстояние между рядами:</translation>
+        <translation>Расстояние между рядами</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
