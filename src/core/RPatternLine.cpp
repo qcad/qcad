@@ -103,9 +103,9 @@ void RPatternLine::rotate(double a) {
  */
 QDebug operator<<(QDebug dbg, const RPatternLine& p) {
     dbg.nospace() << "RPatternLine(";
+    dbg.nospace() << "\tangle:" << RMath::rad2deg(p.angle);
     dbg.nospace() << "\tbase:" << p.basePoint;
     dbg.nospace() << "\toffset:" << p.offset;
-    dbg.nospace() << "\tangle:" << p.angle;
     for (int i=0; i<p.dashes.length(); ++i) {
         dbg.nospace() << "\t" << p.dashes[i];
     }

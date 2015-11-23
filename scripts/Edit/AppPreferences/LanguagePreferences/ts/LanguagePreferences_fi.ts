@@ -12,7 +12,7 @@
 <context>
     <name>LanguagePreferences</name>
     <message>
-        <location filename="../LanguagePreferences.js" line="+44"/>
+        <location filename="../LanguagePreferences.js" line="+45"/>
         <source>Language Settings</source>
         <translation>Kieliasetukset</translation>
     </message>

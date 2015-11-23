@@ -4,7 +4,7 @@
 <context>
     <name>FirstStart</name>
     <message>
-        <location filename="../FirstStart.js" line="+228"/>
+        <location filename="../FirstStart.js" line="+236"/>
         <source>Black</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -37,12 +37,12 @@ Idioma GUI:</translatorcomment>
         <translation type="obsolete">Bem-vindo ao QCAD</translation>
     </message>
     <message>
-        <location line="-198"/>
+        <location line="-206"/>
         <source>%1 First Start</source>
         <translation>%1 Primeiro Início</translation>
     </message>
     <message>
-        <location line="+199"/>
+        <location line="+207"/>
         <source>Welcome to %1</source>
         <translation>Bem-vindo ao %1</translation>
     </message>

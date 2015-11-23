@@ -9,7 +9,7 @@
         <translation>%1 Ensimmäinen aloitus</translation>
     </message>
     <message>
-        <location line="+193"/>
+        <location line="+201"/>
         <source>Black</source>
         <translation>Musta</translation>
     </message>
