@@ -575,7 +575,6 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
     const RPattern* p = NULL;
     bool customPattern = false;
     if (hasCustomPattern()) {
-        //qDebug() << "custom pattern" << pattern;
         p = &pattern;
         customPattern = true;
     }
@@ -625,11 +624,6 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
     QList<RPatternLine> patternLines = localPattern.getPatternLines();
     for (int i=0; i<patternLines.length(); i++) {
         RPatternLine patternLine = patternLines[i];
-
-        if (customPattern) {
-            // custom patterns are defined with rotated offset:
-            patternLine.offset.rotate(-patternLine.angle);
-        }
 
         // origin for pattern line:
         RVector spBase = originPoint + patternLine.basePoint;
