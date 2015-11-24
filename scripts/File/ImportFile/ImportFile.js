@@ -51,6 +51,14 @@ ImportFile.prototype.beginEvent = function() {
         this.terminate();
         return;
     }
+
+    this.preprocessImportedFile(this.sourceDi);
+};
+
+/**
+ * Give inheriting classes a chance to preprocess the imported file.
+ */
+ImportFile.prototype.preprocessImportedFile = function(sourceDi) {
 };
 
 ImportFile.prototype.finishEvent = function() {
