@@ -701,7 +701,7 @@ void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) 
         )
     );
 
-    RDebug::startTimer();
+    //RDebug::startTimer();
     mutexSi.lock();
     QSet<REntity::Id> ids;
 
@@ -740,7 +740,7 @@ void RGraphicsViewImage::paintEntities(QPainter* painter, const RBox& queryBox) 
         paintEntity(painter, it.next());
     }
 
-    RDebug::stopTimer("painting");
+    //RDebug::stopTimer("painting");
 }
 
 void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool preview) {
