@@ -94,7 +94,7 @@ void RDxfServices::detectVersion2Format(const QString& fileName) {
             QString comment = ts.readLine(75).trimmed();
             if (comment.startsWith("dxflib ")) {
                 QString versionStr = comment.mid(7);
-                qDebug() << "dxflib version: " << versionStr;
+                //qDebug() << "dxflib version: " << versionStr;
                 QRegExp re("(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)");
                 int idx = re.indexIn(versionStr);
                 if (idx==0) {
