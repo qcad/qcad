@@ -604,10 +604,12 @@ void RBlockReferenceData::setRotation(double r) {
 
 void RBlockReferenceData::update() const {
     boundingBoxes.clear();
+    boundingBoxesIgnoreEmpty.clear();
     cache.clear();
 }
 
 void RBlockReferenceData::update(REntity::Id entityId) const {
     boundingBoxes.clear();
+    boundingBoxesIgnoreEmpty.clear();
     cache.remove(entityId);
 }
