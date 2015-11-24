@@ -149,7 +149,7 @@ Hatch.verifyBoundaryEntity = function(doc, entity) {
             if (!bEntity.isVisible()) {
                 continue;
             }
-            ret = ret && Hatch.verifyBoundaryEntity(bEntity);
+            ret = ret && Hatch.verifyBoundaryEntity(doc, bEntity);
         }
         return ret;
     }
@@ -164,11 +164,13 @@ Hatch.verifyBoundaryEntity = function(doc, entity) {
         return true;
     }
 
-    EAction.handleUserWarning(
-                qsTr("Each boundary entity must be a line, arc, " +
-                     "circle, ellipse arc, ellipse, polyline or spline. " +
-                     "Found:") + " " +
-                entityTypeToString(entity.getType(), false));
+    if (!isNull(entity)) {
+        EAction.handleUserWarning(
+                    qsTr("Each boundary entity must be a line, arc, " +
+                         "circle, ellipse arc, ellipse, polyline or spline. " +
+                         "Found:") + " " +
+                    entityTypeToString(entity.getType(), false));
+    }
 
     return false;
 };
