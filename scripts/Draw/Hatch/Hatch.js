@@ -38,7 +38,6 @@ function Hatch(guiAction) {
 
 Hatch.prototype = new Draw();
 Hatch.tolerance = 0.001;
-Hatch.traversed = {};
 Hatch.errorPoint = undefined;
 
 Hatch.prototype.beginEvent = function() {
@@ -186,12 +185,12 @@ Hatch.createHatchData = function(doc, entityIds, ignoreOpenLoops) {
     var hatchData = new RHatchData();
     hatchData.setDocument(doc);
 
-    Hatch.traversed = {};
+    doc.traversed = {};
     Hatch.errorPoint = undefined;
 
     for (var i=0; i<entityIds.length; i++) {
         var entityId = entityIds[i];
-        if (Hatch.traversed[entityId]) {
+        if (doc.traversed[entityId]) {
             continue;
         }
         var entity = doc.queryEntityDirect(entityId);
@@ -223,7 +222,7 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
             var segment = segments[i];
             hatchData.addBoundary(segment);
         }
-        Hatch.traversed[entity.getId()] = true;
+        docOrBlockRef.traversed[entity.getId()] = true;
         return true;
     }
 
@@ -231,7 +230,7 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
     if (Hatch.isClosedCurve(entity)) {
         hatchData.newLoop();
         hatchData.addBoundary(entity.getData().castToShape());
-        Hatch.traversed[entity.getId()] = true;
+        docOrBlockRef.traversed[entity.getId()] = true;
         return true;
     }
 
@@ -273,7 +272,7 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
 
     // connect 'loose' boundary elements into loops:
     hatchData.newLoop();
-    Hatch.traversed[entity.getId()] = true;
+    docOrBlockRef.traversed[entity.getId()] = true;
     hatchData.addBoundary(shape);
     var currentShape = shape;
     var loopStartPoint = shape.getStartPoint();
@@ -286,7 +285,7 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
         Hatch.connectionPoint = currentShape.getEndPoint();
         for (i = 0; i < candidateIds.length; i++) {
             var entityId = candidateIds[i];
-            if (Hatch.traversed[entityId]) {
+            if (docOrBlockRef.traversed[entityId]) {
                 continue;
             }
 
@@ -310,7 +309,7 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
             if (isFunction(entity.getLength)) {
                 // ignore zero length entities:
                 if (entity.getLength()<RS.PointTolerance) {
-                    Hatch.traversed[entityId] = true;
+                    docOrBlockRef.traversed[entityId] = true;
                     continue;
                 }
             }
@@ -322,7 +321,7 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
             var epConnects = Hatch.connectionPoint.equalsFuzzy(ep, Hatch.tolerance);
 
             if (spConnects || epConnects) {
-                Hatch.traversed[entityId] = true;
+                docOrBlockRef.traversed[entityId] = true;
                 shape = entity.getData().castToShape().clone();
                 if (epConnects) {
                     shape.reverse();
