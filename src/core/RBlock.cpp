@@ -46,8 +46,8 @@ RBlock::~RBlock() {
 
 void RBlock::init() {
     RBlock::PropertyCustom.generateId(typeid(RBlock), RObject::PropertyCustom);
-    RBlock::PropertyName.generateId(typeid(RBlock), "", "Name");
-    RBlock::PropertyFrozen.generateId(typeid(RBlock), "", "Hidden");
+    RBlock::PropertyName.generateId(typeid(RBlock), "", QT_TRANSLATE_NOOP("REntity", "Name"));
+    RBlock::PropertyFrozen.generateId(typeid(RBlock), "", QT_TRANSLATE_NOOP("REntity", "Hidden"));
 }
 
 RBlock* RBlock::clone() const {

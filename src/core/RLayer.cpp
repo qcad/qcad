@@ -71,12 +71,12 @@ void RLayer::init() {
     RLayer::PropertyHandle.generateId(typeid(RLayer), RObject::PropertyHandle);
     RLayer::PropertyProtected.generateId(typeid(RLayer), RObject::PropertyProtected);
 
-    RLayer::PropertyName.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Name"));
-    RLayer::PropertyFrozen.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Hidden"));
-    RLayer::PropertyLocked.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Locked"));
-    RLayer::PropertyColor.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Color"));
-    RLayer::PropertyLinetype.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Linetype"));
-    RLayer::PropertyLineweight.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("RLayer", "Lineweight"));
+    RLayer::PropertyName.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Name"));
+    RLayer::PropertyFrozen.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Hidden"));
+    RLayer::PropertyLocked.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Locked"));
+    RLayer::PropertyColor.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Color"));
+    RLayer::PropertyLinetype.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Linetype"));
+    RLayer::PropertyLineweight.generateId(typeid(RLayer), "", QT_TRANSLATE_NOOP("REntity", "Lineweight"));
 }
 
 RLayer* RLayer::clone() const {
