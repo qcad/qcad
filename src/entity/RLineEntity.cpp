@@ -92,7 +92,7 @@ void RLineEntity::init() {
 
 bool RLineEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
-    bool ret = REntity::setProperty(propertyTypeId, value);
+    bool ret = REntity::setProperty(propertyTypeId, value, transaction);
     ret = ret || RObject::setMember(data.startPoint.x, value, PropertyStartPointX
             == propertyTypeId);
     ret = ret || RObject::setMember(data.startPoint.y, value, PropertyStartPointY

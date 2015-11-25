@@ -97,9 +97,10 @@ void RArcEntity::init() {
     RArcEntity::PropertyArea.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Area"));
 }
 
-bool RArcEntity::setProperty(RPropertyTypeId propertyTypeId,
-        const QVariant& value, RTransaction* transaction) {
-    bool ret = REntity::setProperty(propertyTypeId, value);
+bool RArcEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction) {
+
+    bool ret = REntity::setProperty(propertyTypeId, value, transaction);
+
     ret = ret || RObject::setMember(data.center.x, value, PropertyCenterX
             == propertyTypeId);
     ret = ret || RObject::setMember(data.center.y, value, PropertyCenterY

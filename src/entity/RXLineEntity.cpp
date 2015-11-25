@@ -93,7 +93,7 @@ void RXLineEntity::init() {
 bool RXLineEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
 
-    bool ret = REntity::setProperty(propertyTypeId, value);
+    bool ret = REntity::setProperty(propertyTypeId, value, transaction);
 
     ret = ret || RObject::setMember(data.basePoint.x, value, PropertyBasePointX == propertyTypeId);
     ret = ret || RObject::setMember(data.basePoint.y, value, PropertyBasePointY == propertyTypeId);
