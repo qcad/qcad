@@ -30,13 +30,13 @@ function Trim(guiAction) {
     Modify.call(this, guiAction);
 
     this.limitingEntity = undefined;
-    //this.limitingShape = undefined;
     this.limitingClickPos = undefined;
 
     this.trimEntity = undefined;
     this.trimClickPos = undefined;
 
     this.trimBoth = false;
+    this.chooseTrimEntityFirst = false;
 }
 
 Trim.prototype = new Modify();
@@ -51,7 +51,12 @@ Trim.State = {
 Trim.prototype.beginEvent = function() {
     Modify.prototype.beginEvent.call(this);
 
-    this.setState(Trim.State.ChoosingLimitingEntity);
+    if (this.chooseTrimEntityFirst) {
+        this.setState(Trim.State.ChoosingTrimEntity);
+    }
+    else {
+        this.setState(Trim.State.ChoosingLimitingEntity);
+    }
 };
 
 Trim.prototype.setState = function(state) {
@@ -64,10 +69,11 @@ Trim.prototype.setState = function(state) {
     switch (this.state) {
     case Trim.State.ChoosingLimitingEntity:
         this.limitingEntity = undefined;
-        //this.limitingShape = undefined;
         this.limitingClickPos = undefined;
-        this.trimEntity = undefined;
-        this.trimClickPos = undefined;
+        if (!this.chooseTrimEntityFirst) {
+            this.trimEntity = undefined;
+            this.trimClickPos = undefined;
+        }
         var trLimitingEntity = qsTr("Choose limiting entity");
         this.setCommandPrompt(trLimitingEntity);
         this.setLeftMouseTip(trLimitingEntity);
@@ -77,6 +83,10 @@ Trim.prototype.setState = function(state) {
     case Trim.State.ChoosingTrimEntity:
         this.trimEntity = undefined;
         this.trimClickPos = undefined;
+        if (this.chooseTrimEntityFirst) {
+            this.limitingEntity = undefined;
+            this.limitingClickPos = undefined;
+        }
         var trTrimEntity = qsTr("Choose entity to trim");
         this.setCommandPrompt(trTrimEntity);
         this.setLeftMouseTip(trTrimEntity);
@@ -88,11 +98,21 @@ Trim.prototype.setState = function(state) {
 Trim.prototype.escapeEvent = function() {
     switch (this.state) {
     case Trim.State.ChoosingLimitingEntity:
-        Modify.prototype.escapeEvent.call(this);
+        if (this.chooseTrimEntityFirst) {
+            this.setState(Trim.State.ChoosingTrimEntity);
+        }
+        else {
+            Modify.prototype.escapeEvent.call(this);
+        }
         break;
 
     case Trim.State.ChoosingTrimEntity:
-        this.setState(Trim.State.ChoosingLimitingEntity);
+        if (this.chooseTrimEntityFirst) {
+            Modify.prototype.escapeEvent.call(this);
+        }
+        else {
+            this.setState(Trim.State.ChoosingLimitingEntity);
+        }
         break;
     }
 };
@@ -108,7 +128,6 @@ Trim.prototype.pickEntity = function(event, preview) {
     case Trim.State.ChoosingLimitingEntity:
         if (isNull(entity) || (this.trimBoth && !EAction.assertEditable(entity, preview))) {
             this.limitingEntity = undefined;
-            //this.limitingShape = undefined;
             if (preview) {
                 this.updatePreview();
             }
@@ -117,32 +136,33 @@ Trim.prototype.pickEntity = function(event, preview) {
 
         var shape = entity.getClosestSimpleShape(pos);
 
-        if (!isLineBasedShape(shape) &&
-            !isArcShape(shape) &&
-            !isCircleShape(shape) &&
-            !isEllipseShape(shape) &&
-            (!RSpline.hasProxy() || !isSplineShape(shape)) &&
-            (!RPolyline.hasProxy() || !isPolylineShape(shape))) {
-
-            if (!preview) {
-                if (RSpline.hasProxy() && RPolyline.hasProxy()) {
-                    EAction.warnNotLineArcCircleEllipseSplinePolyline();
-                }
-                else {
-                    EAction.warnNotLineArcCircleEllipse();
-                }
+        // unsupported entity chosen:
+        if (!this.isSupportedLimitingShape(shape)) {
+            if (preview) {
+                this.updatePreview();
+            }
+            else {
+                this.warnUnsupportedEntity();
             }
             break;
         }
 
         this.limitingEntity = entity;
-        //this.limitingShape = shape;
         this.limitingClickPos = pos;
         if (preview) {
             this.updatePreview();
         }
         else {
-            this.setState(Trim.State.ChoosingTrimEntity);
+            if (this.chooseTrimEntityFirst) {
+                var op = this.getOperation(false);
+                if (!isNull(op)) {
+                    di.applyOperation(op);
+                }
+                this.setState(Trim.State.ChoosingTrimEntity);
+            }
+            else {
+                this.setState(Trim.State.ChoosingTrimEntity);
+            }
         }
         break;
 
@@ -155,24 +175,14 @@ Trim.prototype.pickEntity = function(event, preview) {
             return;
         }
 
-        if (!isLineBasedEntity(entity) &&
-            !isArcEntity(entity) &&
-            !isCircleEntity(entity) &&
-            !isEllipseEntity(entity) &&
-            (!RSpline.hasProxy() || !isSplineEntity(entity)) &&
-            (!RPolyline.hasProxy() || !isPolylineEntity(entity))) {
-
+        // unsupported entity chosen:
+        if (!this.isSupportedTrimEntity(entity)) {
             this.trimEntity = undefined;
             if (preview) {
                 this.updatePreview();
             }
             else {
-                if (RSpline.hasProxy() && RPolyline.hasProxy()) {
-                    EAction.warnNotLineArcCircleEllipseSplinePolyline();
-                }
-                else {
-                    EAction.warnNotLineArcCircleEllipse();
-                }
+                this.warnUnsupportedEntity();
             }
             break;
         }
@@ -184,13 +194,50 @@ Trim.prototype.pickEntity = function(event, preview) {
             this.updatePreview();
         }
         else {
-            di.applyOperation(this.getOperation(false));
+            if (this.chooseTrimEntityFirst) {
+                this.setState(Trim.State.ChoosingLimitingEntity);
+            }
+            else {
+                var op = this.getOperation(false);
+                if (!isNull(op)) {
+                    di.applyOperation(op);
+                }
+            }
 
+            // trimming both? start asking for next limiting entity
+            // otherwise, trim more entities to same limiting entity
             if (this.trimBoth) {
                 this.setState(Trim.State.ChoosingLimitingEntity);
             }
         }
         break;
+    }
+};
+
+Trim.prototype.isSupportedLimitingShape = function(shape) {
+    return isLineBasedShape(shape) ||
+           isArcShape(shape) ||
+           isCircleShape(shape) ||
+           isEllipseShape(shape) ||
+           (RSpline.hasProxy() && isSplineShape(shape)) ||
+           (RPolyline.hasProxy() && isPolylineShape(shape));
+};
+
+Trim.prototype.isSupportedTrimEntity = function(entity) {
+    return isLineBasedEntity(entity) ||
+           isArcEntity(entity) ||
+           isCircleEntity(entity) ||
+           isEllipseEntity(entity) ||
+           (RSpline.hasProxy() && isSplineEntity(entity)) ||
+           (RPolyline.hasProxy() && isPolylineEntity(entity));
+};
+
+Trim.prototype.warnUnsupportedEntity = function() {
+    if (RSpline.hasProxy() && RPolyline.hasProxy()) {
+        EAction.warnNotLineArcCircleEllipseSplinePolyline();
+    }
+    else {
+        EAction.warnNotLineArcCircleEllipse();
     }
 };
 
@@ -202,11 +249,9 @@ Trim.prototype.getOperation = function(preview) {
     var op = new RAddObjectsOperation();
     op.setText(this.getToolTitle());
 
-    //qDebug(this.limitingEntity, this.limitingShape, this.limitingClickPos, this.trimEntity, this.trimClickPos, this.trimBoth);
     var success = Trim.trim(op, this.limitingEntity, this.limitingClickPos, this.trimEntity, this.trimClickPos, this.trimBoth, preview);
 
     if (!preview) {
-        //this.limitingEntity = undefined;
         this.trimEntity = undefined;
     }
 
@@ -232,12 +277,12 @@ Trim.prototype.getHighlightedEntities = function() {
  * Trims or extends the given trimEntity to the intersection point of the
  * trimEntity and the limitingShape.
  *
- * \param trimClickPos Coordinate which defines which endpoint of the
- *   trim entity to trim.
- * \param trimEntity Entity which will be trimmed.
+ * \param limitingEntity Entity to which the trim entity will be trimmed.
  * \param limitingClickPos Coordinate which defines the intersection to which the
  *    trim entity will be trimmed.
- * \param limitingShape Entity to which the trim entity will be trimmed.
+ * \param trimEntity Entity which will be trimmed.
+ * \param trimClickPos Coordinate which defines which endpoint of the
+ *   trim entity to trim.
  * \param trimBoth true: Trim both entities. false: trim trimEntity only.
  */
 Trim.trim = function(op, limitingEntity, limitingClickPos, trimEntity, trimClickPos, trimBoth, preview) {
@@ -287,10 +332,6 @@ Trim.trim = function(op, limitingEntity, limitingClickPos, trimEntity, trimClick
     }
 
     if (trimBoth) {
-//        if (isFunction(limitingEntity.data)) {
-//            limitingEntity = limitingEntity.data();
-//        }
-
         if (!modifyEntity(op, limitingEntity.clone(), newShapes[1])) {
             if (!preview) {
                 EAction.handleUserWarning(qsTr("Second entity cannot be trimmed."));
@@ -360,7 +401,6 @@ Trim.trimShapes = function(limitingShape, limitingClickPos, trimShape, trimClick
         a1 = RMath.getNormalizedAngle(am-Math.PI/2);
         a2 = RMath.getNormalizedAngle(am+Math.PI/2);
         trimmedShape1 = new RArc(c,r,a1,a2,false);
-        //trimmedShape1.copyAttributesFrom(trimShape.data());
     }
     else if (isFullEllipseShape(trimShape)) {
         c = trimShape.getCenter();
@@ -370,7 +410,6 @@ Trim.trimShapes = function(limitingShape, limitingClickPos, trimShape, trimClick
         a1 = RMath.getNormalizedAngle(am-Math.PI/2);
         a2 = RMath.getNormalizedAngle(am+Math.PI/2);
         trimmedShape1 = new REllipse(c,mp,r,a1,a2,false);
-        //trimmedShape1.copyAttributesFrom(trimShape.data());
     }
     else {
         if (samePolyline) {
