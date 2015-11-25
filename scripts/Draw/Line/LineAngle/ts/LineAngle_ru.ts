@@ -26,7 +26,7 @@
     <message>
         <location line="+23"/>
         <source>&amp;Reference Point:</source>
-        <translation>Базовая точка:</translation>
+        <translation>&amp;Точка привязки:</translation>
     </message>
     <message>
         <location line="+11"/>

@@ -4,7 +4,7 @@
 <context>
     <name>Trim</name>
     <message>
-        <location filename="../Trim.js" line="+79"/>
+        <location filename="../Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Escolha a entidade limitante</translation>
@@ -16,7 +16,7 @@
         <translation>Escolha a entidade para aparar</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+169"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>As duas entidades não se cruzam, ou ainda não são suportadas para aparamento.</translation>
@@ -32,7 +32,7 @@
         <translation>Entidade não pode ser aparada.</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>A segunda entidade não pode ser aparada.</translation>
     </message>

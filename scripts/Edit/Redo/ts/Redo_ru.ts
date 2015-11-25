@@ -6,7 +6,7 @@
     <message>
         <location filename="../RedoInit.js" line="+2"/>
         <source>&amp;Redo</source>
-        <translation>Повторить отменённое действие</translation>
+        <translation>&amp;Повторить отменённое действие</translation>
     </message>
 </context>
 </TS>

@@ -57,7 +57,7 @@
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and angle</source>
-        <translation>Нарисовать сектор по 2-м точкам и углу</translation>
+        <translation>Нарисовать дугу по 2-м точкам и углу</translation>
     </message>
 </context>
 </TS>

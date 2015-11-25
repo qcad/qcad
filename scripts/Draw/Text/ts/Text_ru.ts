@@ -62,17 +62,17 @@
     <message>
         <location line="+4"/>
         <source>Cu&amp;t</source>
-        <translation>Вырезать</translation>
+        <translation>&amp;Вырезать</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Copy</source>
-        <translation>Копировать</translation>
+        <translation>&amp;Копировать</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Paste</source>
-        <translation>Вставить</translation>
+        <translation>В&amp;ставить</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -92,17 +92,17 @@
     <message>
         <location line="+6"/>
         <source>&amp;Superscript</source>
-        <translation>Верхний индекс</translation>
+        <translation>&amp;Верхний индекс</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Color...</source>
-        <translation>Цвет...</translation>
+        <translation>&amp;Цвет...</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Special Characters...</source>
-        <translation>Специальные символы...</translation>
+        <translation>&amp;Специальные символы...</translation>
     </message>
     <message>
         <location line="+312"/>
@@ -172,7 +172,7 @@
     <message>
         <location line="+1"/>
         <source>Squared</source>
-        <translation>Квадрат</translation>
+        <translation>Квадратный</translation>
     </message>
     <message>
         <location line="+1"/>

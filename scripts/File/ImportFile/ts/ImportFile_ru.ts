@@ -6,7 +6,7 @@
     <message>
         <location filename="../ImportFile.js" line="+50"/>
         <source>Error while importing file %1</source>
-        <translation>Ошибка импорта из файла %1</translation>
+        <translation>Ошибка при импортировании файла %1</translation>
     </message>
     <message>
         <location line="+20"/>

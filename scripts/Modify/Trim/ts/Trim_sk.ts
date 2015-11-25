@@ -4,7 +4,7 @@
 <context>
     <name>Trim</name>
     <message>
-        <location filename="../Trim.js" line="+79"/>
+        <location filename="../Trim.js" line="+77"/>
         <source>Choose limiting entity</source>
         <translation>Vyberte prvok PO ktorý chcete predĺžiť</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Vyberte prvok ktorý chcete predĺžiť</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+169"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>Tieto dva prvky sa nepretínajú alebo nie sú podporované pre orezanie.</translation>
     </message>
@@ -29,7 +29,7 @@
         <translation>Prvok nie je možné orezať.</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
         <translation>Druhý prvok nie je možné orezať.</translation>
     </message>

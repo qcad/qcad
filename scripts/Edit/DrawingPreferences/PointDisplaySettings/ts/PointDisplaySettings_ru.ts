@@ -22,12 +22,12 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+21"/>
         <source>Mode: </source>
-        <translation>Режим:</translation>
+        <translation>Режим: </translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Size (pixel):</source>
-        <translation>Размер (в пикселах):</translation>
+        <translation>Размер (в пикселях):</translation>
     </message>
 </context>
 </TS>

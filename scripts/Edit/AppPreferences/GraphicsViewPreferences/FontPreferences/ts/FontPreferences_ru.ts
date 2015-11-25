@@ -19,7 +19,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+41"/>
         <source>Ruler Font:</source>
-        <translation>Шрифт линейки</translation>
+        <translation>Шрифт линейки:</translation>
     </message>
     <message>
         <location line="+16"/>

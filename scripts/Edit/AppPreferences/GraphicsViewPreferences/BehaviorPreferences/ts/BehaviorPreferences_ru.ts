@@ -39,7 +39,7 @@
     <message>
         <location line="-59"/>
         <source>Right-Click</source>
-        <translation>Щелчок правой клавишей</translation>
+        <translation>Щелчок правой кнопкой</translation>
     </message>
     <message>
         <location line="+6"/>

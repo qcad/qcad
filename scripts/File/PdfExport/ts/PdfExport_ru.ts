@@ -6,12 +6,12 @@
     <message>
         <location filename="../PdfExportInit.js" line="+2"/>
         <source>P&amp;DF Export</source>
-        <translation>Э&amp;кспорт PDF</translation>
+        <translation>Э&amp;кспорт в PDF</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Exports the current drawing as PDF</source>
-        <translation>Экспортировать текущий чертеж в PDF</translation>
+        <translation>Экспортировать текущий чертёж в PDF</translation>
     </message>
 </context>
 </TS>

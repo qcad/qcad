@@ -117,7 +117,7 @@
     <message>
         <location line="+95"/>
         <source>Size scale factor:</source>
-        <translation>Величина коэффициента масштабирования</translation>
+        <translation>Величина коэффициента масштабирования:</translation>
     </message>
     <message>
         <location line="+38"/>
@@ -132,7 +132,7 @@
     <message>
         <location line="+10"/>
         <source>Architectural Tick</source>
-        <translation>Архитектурный тик</translation>
+        <translation>Архитектурная засечка</translation>
     </message>
     <message>
         <location line="+23"/>

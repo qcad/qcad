@@ -11,12 +11,12 @@
     <message>
         <location line="+72"/>
         <source>Pixel</source>
-        <translation>Пиксел</translation>
+        <translation>Пиксель</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation>px</translation>
+        <translation>пикс.</translation>
     </message>
     <message>
         <location line="+22"/>

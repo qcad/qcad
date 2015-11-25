@@ -6,7 +6,7 @@
     <message>
         <location filename="../CopyInit.js" line="+2"/>
         <source>&amp;Copy</source>
-        <translation>Копировать</translation>
+        <translation>&amp;Копировать</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Origin</source>
-        <translation>Исходное</translation>
+        <translation>Начало координат</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -46,7 +46,7 @@
     <message>
         <location line="+13"/>
         <source>Auto Zoom</source>
-        <translation>Показать все</translation>
+        <translation>Автоматическое масштабирование</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -91,12 +91,12 @@
     <message>
         <location line="+36"/>
         <source>Display and Performance</source>
-        <translation>Дисплей и производительность</translation>
+        <translation>Отображение и производительность</translation>
     </message>
     <message>
         <location line="+146"/>
         <source>Display entities with more than N dashes as continuous:</source>
-        <translation>Отображать объекты с более чем N тире как непрерывный:</translation>
+        <translation>Отображать объекты с более чем N тире как непрерывные:</translation>
     </message>
     <message>
         <location line="+124"/>

@@ -11,12 +11,12 @@
     <message>
         <location line="+10"/>
         <source>Use reduced selection of fonts:</source>
-        <translation>Используйте уменьшенный выбор шрифтов:</translation>
+        <translation>Использовать сокращённый набор шрифтов:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Uncheck all</source>
-        <translation>Снять все</translation>
+        <translation>Снять все отметки</translation>
     </message>
     <message>
         <location line="+7"/>

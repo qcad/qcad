@@ -29,7 +29,7 @@
     <message>
         <location line="+2"/>
         <source>Layout</source>
-        <translation>Стиль работы</translation>
+        <translation>Слой</translation>
     </message>
     <message>
         <location line="+0"/>

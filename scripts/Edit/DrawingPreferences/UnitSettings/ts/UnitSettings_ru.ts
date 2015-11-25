@@ -11,7 +11,7 @@
     <message>
         <location line="+10"/>
         <source>Paper Unit:</source>
-        <translation>Единица измерения бумаги:</translation>
+        <translation>Единица размера бумаги:</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -42,37 +42,37 @@
     <message>
         <location line="+1"/>
         <source>Inch</source>
-        <translation>Дюймы</translation>
+        <translation>Дюйм</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Foot</source>
-        <translation>Футы</translation>
+        <translation>Фут</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Mile</source>
-        <translation>Мили</translation>
+        <translation>Миля</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Millimeter</source>
-        <translation>Миллиметры</translation>
+        <translation>Миллиметр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Centimeter</source>
-        <translation>Сантиметры</translation>
+        <translation>Сантиметр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Meter</source>
-        <translation>Метры</translation>
+        <translation>Метр</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Kilometer</source>
-        <translation>Километры</translation>
+        <translation>Километр</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -82,7 +82,7 @@
     <message>
         <location line="+1"/>
         <source>Mil</source>
-        <translation>Мил</translation>
+        <translation>Миля</translation>
     </message>
     <message>
         <location line="+1"/>

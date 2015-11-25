@@ -92,7 +92,7 @@
     <message>
         <location filename="../NewFileInit.js" line="+2"/>
         <source>&amp;New</source>
-        <translation>Новый файл</translation>
+        <translation>&amp;Новый файл</translation>
     </message>
 </context>
 </TS>

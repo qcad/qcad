@@ -36,12 +36,12 @@
     <message>
         <location line="+6"/>
         <source>Portrait</source>
-        <translation>Портретный</translation>
+        <translation>Книжная</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Landscape</source>
-        <translation>Пейзаж</translation>
+        <translation>Альбомная</translation>
     </message>
     <message>
         <location line="+23"/>

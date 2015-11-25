@@ -11,7 +11,7 @@
     <message>
         <location line="+1"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation>Файл с именем «%1» уже существует. Заменить его?</translation>
+        <translation>Файл с именем &apos;%1&apos; уже существует. Заменить его?</translation>
     </message>
     <message>
         <location line="+17"/>

@@ -56,12 +56,12 @@
     <message>
         <location line="+64"/>
         <source>px</source>
-        <translation>px</translation>
+        <translation>пикс.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Background</source>
-        <translation>Фон:</translation>
+        <translation>Фон</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -71,7 +71,7 @@
     <message>
         <location line="+10"/>
         <source>Black</source>
-        <translation>Черный</translation>
+        <translation>Чёрный</translation>
     </message>
     <message>
         <location filename="../BitmapExportInit.js" line="+2"/>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../PrintPreview.js" line="+161"/>
         <source>Drag to move paper</source>
-        <translation>Протянуть для перемещения бумагу</translation>
+        <translation>Для перемещения бумаги перетащите её</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -16,7 +16,7 @@
     <message>
         <location line="+383"/>
         <source>Export to PDF</source>
-        <translation>Экспортировать как PDF</translation>
+        <translation>Экспортировать в PDF</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -41,7 +41,7 @@
     <message>
         <location line="+17"/>
         <source>Print...</source>
-        <translation>&amp;Печать...</translation>
+        <translation>Печать...</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -76,17 +76,17 @@
     <message>
         <location line="+18"/>
         <source>Portrait</source>
-        <translation>Портретный</translation>
+        <translation>Книжная</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Landscape</source>
-        <translation>Пейзаж</translation>
+        <translation>Альбомная</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Auto zoom to page</source>
-        <translation>По размеру страницы автоматически</translation>
+        <translation>Автоматическое увеличение до размера страницы</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -101,17 +101,17 @@
     <message>
         <location line="+20"/>
         <source>Black / White Mode</source>
-        <translation>Чёрный/белый режим</translation>
+        <translation>Чёрно-белый режим</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Show Paper Borders</source>
-        <translation>Показать края страницы</translation>
+        <translation>Показывать границы страницы</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Print Crop Marks</source>
-        <translation>Печатать обрезные метки</translation>
+        <translation>Печать меток обрезки</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -121,7 +121,7 @@
     <message>
         <location filename="../PrintPreviewInit.js" line="+2"/>
         <source>Print Pre&amp;view</source>
-        <translation>П&amp;редварительный просмотр</translation>
+        <translation>Про&amp;смотр перед печатью</translation>
     </message>
     <message>
         <location line="+6"/>

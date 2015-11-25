@@ -312,7 +312,7 @@
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation>Расстояние между рядами</translation>
+        <translation>Расстояние между строками</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>

@@ -24,7 +24,7 @@
     <message>
         <location line="+36"/>
         <source>Reference Point:</source>
-        <translation>Базовая точка:</translation>
+        <translation>Точка привязки:</translation>
     </message>
     <message>
         <location filename="../EllipseDDInit.js" line="+2"/>

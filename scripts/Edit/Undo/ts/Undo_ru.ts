@@ -6,7 +6,7 @@
     <message>
         <location filename="../UndoInit.js" line="+2"/>
         <source>&amp;Undo</source>
-        <translation>Отменить</translation>
+        <translation>О&amp;тменить действие</translation>
     </message>
 </context>
 </TS>

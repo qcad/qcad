@@ -6,7 +6,7 @@
     <message>
         <location filename="../Draw.js" line="+57"/>
         <source>&amp;Draw</source>
-        <translation>Рисовать</translation>
+        <translation>&amp;Рисовать</translation>
     </message>
 </context>
 <context>
@@ -62,7 +62,7 @@
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation>Низ</translation>
+        <translation>Внизу</translation>
     </message>
     <message>
         <location line="+1"/>

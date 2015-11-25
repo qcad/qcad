@@ -26,7 +26,7 @@
     <message>
         <location line="+6"/>
         <source>Autosave complete.</source>
-        <translation>Автосохранение завершено</translation>
+        <translation>Автосохранение завершено.</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -55,7 +55,7 @@ Do you wish to recover them?</source>
     <message>
         <location line="+47"/>
         <source>Recover File?</source>
-        <translation>Перезаписать файл?</translation>
+        <translation>Восстановить файл?</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -84,7 +84,7 @@ Do you wish to recover it?</source>
     <message>
         <location line="+16"/>
         <source>Cannot remove file:</source>
-        <translation>Не удалось переместить файл:</translation>
+        <translation>Не удалось удалить файл:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>

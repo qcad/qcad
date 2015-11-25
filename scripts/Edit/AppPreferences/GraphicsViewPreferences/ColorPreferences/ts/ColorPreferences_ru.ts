@@ -44,7 +44,7 @@
     <message>
         <location line="+33"/>
         <source>Origin</source>
-        <translation>Исходное</translation>
+        <translation>Начало координат</translation>
     </message>
     <message>
         <location line="+48"/>
@@ -74,7 +74,7 @@
     <message>
         <location line="+30"/>
         <source>Use secondary selection color</source>
-        <translation>Использовать вторичный цвет выделения:</translation>
+        <translation>Использовать вторичный цвет выделения</translation>
     </message>
     <message>
         <location line="+16"/>

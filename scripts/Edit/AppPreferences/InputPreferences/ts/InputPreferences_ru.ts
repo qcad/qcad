@@ -108,7 +108,7 @@
     <message>
         <location line="+12"/>
         <source>Dot</source>
-        <translation>Пунктирная</translation>
+        <translation>Точка</translation>
     </message>
 </context>
 </TS>

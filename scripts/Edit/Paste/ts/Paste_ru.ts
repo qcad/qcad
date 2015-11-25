@@ -41,7 +41,7 @@
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation>Вставить все объекты&lt;br&gt;в текущий слой&lt;br&gt;вместо оригинального слоя</translation>
+        <translation>Вставить все объекты&lt;br&gt;в текущий слой&lt;br&gt;вместо исходного слоя</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -71,7 +71,7 @@
     <message>
         <location filename="../PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation>Вставить</translation>
+        <translation>&amp;Вставить</translation>
     </message>
 </context>
 </TS>

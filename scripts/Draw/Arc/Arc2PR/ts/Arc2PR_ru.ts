@@ -78,7 +78,7 @@
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and radius</source>
-        <translation>Нарисовать сектор по 2-м точкам и радиусу</translation>
+        <translation>Нарисовать дугу по 2-м точкам и радиусу</translation>
     </message>
 </context>
 </TS>
