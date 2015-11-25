@@ -145,11 +145,15 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
                 text += qsTr("No suitable Importer found. "
                              + "Please check file format and extension.");
                 break;
-            case RDocumentInterface.IoErrorPermission:
             case RDocumentInterface.IoErrorNotFound:
-            case RDocumentInterface.IoErrorGeneralImportError:
+                text += qsTr("File not found.");
+                break;
+            case RDocumentInterface.IoErrorPermission:
                 text += qsTr("Please check your access rights, "
                              + "the file format and file extension.");
+                break;
+            case RDocumentInterface.IoErrorGeneralImportError:
+                text += qsTr("Import failed.");
                 break;
             case RDocumentInterface.IoErrorZeroSize:
                 text += qsTr("File is empty.");
