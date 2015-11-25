@@ -272,7 +272,12 @@ Preferências Gerais do Aplicativo
         <translation>Propriedades gerais</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+25"/>
+        <source>Color:</source>
+        <translation>Cor:</translation>
+    </message>
+    <message>
+        <location line="+81"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Mova a Seleção para uma Nova Camada</translation>

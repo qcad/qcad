@@ -11,12 +11,12 @@
     <message>
         <location line="+44"/>
         <source>Revision:</source>
-        <translation type="unfinished"></translation>
+        <translation>Версия:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
-        <translation type="unfinished"></translation>
+        <translation>Это означает, что каждый может &lt;a href=&apos;%1&apos;&gt;участвовать&lt;/a&gt;!</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -77,52 +77,52 @@
     <message>
         <location line="-115"/>
         <source>Build Date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Дата сборки:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Architecture:</source>
-        <translation type="unfinished"></translation>
+        <translation>Архитектура:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Compiler:</source>
-        <translation type="unfinished"></translation>
+        <translation>Компилятор:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 is an application for computer-aided design (CAD).</source>
-        <translation type="unfinished"></translation>
+        <translation>% 1 - приложение для автоматизированного проектирования (САПР).</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 is free (open source) software.</source>
-        <translation type="unfinished"></translation>
+        <translation>% 1 - свободное программное обеспечение с открытым кодом.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation type="unfinished"></translation>
+        <translation>Плагины и скрипты дополнений подчиняются их соответствующей лицензии (см. вкладку &apos;Плагины&apos;).</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Все бренды или названия продуктов являются товарными знаками или зарегистрированными товарными знаками их соответствующих владельцев.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Portions of this software © 2013 Digia Plc.</source>
-        <translation type="unfinished"></translation>
+        <translation>Фрагменты этой программы © 2013 Digia Plc.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).</source>
-        <translation type="unfinished"></translation>
+        <translation>Фрагменты этой программы © 2012 корпорация Nokia и/или её дочери.</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>No plugins found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Не найдено плагинов.</translation>
     </message>
     <message>
         <location line="+88"/>
@@ -157,7 +157,7 @@
     <message>
         <location line="+7"/>
         <source>No script add-ons found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет найдено скриптов дополнений.</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -175,22 +175,22 @@
     <message>
         <location filename="../AboutCredits.js" line="+4"/>
         <source>Programming</source>
-        <translation type="unfinished"></translation>
+        <translation>Программирование</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Переводы</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Иконки</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Testing, Feedback and Minor Fixes</source>
-        <translation type="unfinished"></translation>
+        <translation>Тестирование, обратная связь и мелкие исправления</translation>
     </message>
 </context>
 <context>

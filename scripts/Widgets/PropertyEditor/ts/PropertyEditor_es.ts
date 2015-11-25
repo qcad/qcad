@@ -205,7 +205,12 @@ Seleccione entidad base</translatorcomment>
         <translation>Propiedades generales</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+25"/>
+        <source>Color:</source>
+        <translation>Color:</translation>
+    </message>
+    <message>
+        <location line="+81"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Mueve la selección a una nueva capa</translation>

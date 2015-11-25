@@ -114,7 +114,12 @@
         <translation>Общие свойства</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+25"/>
+        <source>Color:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+81"/>
         <source>Move Selection to a New Layer</source>
         <translation>Перенос выделения на новый слой</translation>
     </message>
@@ -131,7 +136,7 @@
     <message>
         <location line="-182"/>
         <source>Handle:</source>
-        <translation>Рычаг:</translation>
+        <translation>Обработчик:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>

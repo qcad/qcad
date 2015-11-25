@@ -40,12 +40,22 @@
         <translation>Nenašiel sa vhodný importér. Skontrolujte prosím formát súboru.</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
+        <source>File not found.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Please check your access rights, the file format and file extension.</source>
         <translation>Prosím skontrolujte prístupové práva, formát súboru a príponu súboru.</translation>
     </message>
     <message>
         <location line="+4"/>
+        <source>Import failed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>File is empty.</source>
         <translation>Súbor je prázdny.</translation>
     </message>

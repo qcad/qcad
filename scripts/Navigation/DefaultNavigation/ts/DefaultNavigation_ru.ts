@@ -44,7 +44,7 @@
     <message>
         <location line="+7"/>
         <source>Mouse wheel zoom factor:</source>
-        <translation>Коеффициент масштабирования для колёсика мыши:</translation>
+        <translation>Коэффициент масштабирования для колёсика мыши:</translation>
     </message>
     <message>
         <location line="-34"/>

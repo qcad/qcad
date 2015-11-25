@@ -127,7 +127,12 @@
         <translation>Všeobecné vlastnosti</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+25"/>
+        <source>Color:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Handle:</source>
         <translation>Identifikátor:</translation>
     </message>

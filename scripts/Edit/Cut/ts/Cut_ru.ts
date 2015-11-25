@@ -6,7 +6,7 @@
     <message>
         <location filename="../CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation>&amp;Разбить</translation>
+        <translation>Выре&amp;зать</translation>
     </message>
 </context>
 </TS>

@@ -26,7 +26,7 @@
     <message>
         <location filename="../ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (2 Points of Side)</source>
-        <translation>Полигон (2 точки стороны)</translation>
+        <translation>Полигон (по 2-м точкам стороны)</translation>
     </message>
     <message>
         <location line="+4"/>

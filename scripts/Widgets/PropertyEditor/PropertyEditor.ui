@@ -93,7 +93,7 @@
        <item row="1" column="0">
         <widget class="QLabel" name="LabelColor">
          <property name="text">
-          <string notr="true">Color:</string>
+          <string>Color:</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../DimVerticalInit.js" line="+2"/>
         <source>&amp;Vertical</source>
-        <translation>&amp;Вертикальн</translation>
+        <translation>&amp;Вертикальный</translation>
     </message>
     <message>
         <location line="+5"/>

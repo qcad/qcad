@@ -4,12 +4,12 @@
 <context>
     <name>ImportFile</name>
     <message>
-        <location filename="../ImportFile.js" line="+49"/>
+        <location filename="../ImportFile.js" line="+50"/>
         <source>Error while importing file %1</source>
         <translation>Chyba pri importe súboru %1</translation>
     </message>
     <message>
-        <location line="+28"/>
+        <location line="+20"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Žiadne importované filtre sa nenašli. Končím...</translation>
     </message>

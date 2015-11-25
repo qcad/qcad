@@ -197,7 +197,12 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation>Propriétés générales</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+25"/>
+        <source>Color:</source>
+        <translation>Couleur :</translation>
+    </message>
+    <message>
+        <location line="+81"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Déplacer la sélection dans un nouveau calque</translation>

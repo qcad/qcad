@@ -55,12 +55,22 @@ Sem Título</translatorcomment>
         <translation>Nenhum importador adequado foi encontrado. Por favor, verifique o formato do arquivo e a extensão.</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
+        <source>File not found.</source>
+        <translation>Arquivo não encontrado.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Please check your access rights, the file format and file extension.</source>
         <translation>Por favor, verifique os seus direitos de acesso, o formato do arquivo e a extensão do arquivo.</translation>
     </message>
     <message>
         <location line="+4"/>
+        <source>Import failed.</source>
+        <translation>Importação falhou.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>File is empty.</source>
         <translation>O arquivo está vazio.</translation>
     </message>

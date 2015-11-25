@@ -21,7 +21,7 @@
     <message>
         <location filename="../ArcTangentialInit.js" line="+2"/>
         <source>&amp;Tangentially Connected</source>
-        <translation>%Связанный по касательной</translation>
+        <translation>&amp;Связанный по касательной</translation>
     </message>
     <message>
         <location line="+4"/>

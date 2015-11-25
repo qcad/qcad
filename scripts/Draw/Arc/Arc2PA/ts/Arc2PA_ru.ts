@@ -52,7 +52,7 @@
     <message>
         <location filename="../Arc2PAInit.js" line="+2"/>
         <source>&amp;2 Points and Angle</source>
-        <translation>По 2 точкам и углу</translation>
+        <translation>По 2-м точкам и углу</translation>
     </message>
     <message>
         <location line="+4"/>

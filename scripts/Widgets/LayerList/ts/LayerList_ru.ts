@@ -17,7 +17,7 @@
         <location line="-53"/>
         <location line="+108"/>
         <source>Layer List</source>
-        <translation>Список слоев</translation>
+        <translation>Список слоёв</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>

@@ -121,7 +121,7 @@
     <message>
         <location filename="../PrintPreviewInit.js" line="+2"/>
         <source>Print Pre&amp;view</source>
-        <translation>&amp;Предварительный просмотр</translation>
+        <translation>П&amp;редварительный просмотр</translation>
     </message>
     <message>
         <location line="+6"/>

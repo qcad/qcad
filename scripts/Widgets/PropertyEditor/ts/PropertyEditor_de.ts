@@ -184,8 +184,9 @@
         <translation type="obsolete">Layer:</translation>
     </message>
     <message>
+        <location line="-192"/>
         <source>Color:</source>
-        <translation type="obsolete">Farbe:</translation>
+        <translation>Farbe:</translation>
     </message>
     <message>
         <source>Lineweight:</source>
@@ -200,7 +201,7 @@
         <translation type="obsolete">Reihenfolge:</translation>
     </message>
     <message>
-        <location line="-111"/>
+        <location line="+81"/>
         <source>Move Selection to a New Layer</source>
         <translation>Auswahl auf neuen Layer verschieben</translation>
     </message>

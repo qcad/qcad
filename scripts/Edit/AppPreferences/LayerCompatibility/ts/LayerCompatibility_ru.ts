@@ -21,7 +21,7 @@
     <message>
         <location line="+6"/>
         <source>Layer 0 behaves like a regular layer (QCAD)</source>
-        <translation>Слой 0 ведет себя как обычный слой (QCAD)</translation>
+        <translation>Слой 0 ведёт себя как обычный слой (QCAD)</translation>
     </message>
     <message>
         <location line="+10"/>

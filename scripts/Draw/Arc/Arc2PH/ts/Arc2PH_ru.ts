@@ -46,7 +46,7 @@
     <message>
         <location filename="../Arc2PHInit.js" line="+2"/>
         <source>2 Points and &amp;Height</source>
-        <translation>2 точки и &amp;высота</translation>
+        <translation>По 2-м точкам и &amp;высоте</translation>
     </message>
     <message>
         <location line="+4"/>

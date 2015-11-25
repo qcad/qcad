@@ -48,12 +48,22 @@
         <translation>Aucun importateur appropriée trouvée. S&apos;il vous plaît vérifiez le format de fichier et son extension.</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
+        <source>File not found.</source>
+        <translation>Fichier introuvable.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Please check your access rights, the file format and file extension.</source>
         <translation>S&apos;il vous plaît vérifiez vos droits d&apos;accès, le format de fichier et l&apos;extension de fichier.</translation>
     </message>
     <message>
         <location line="+4"/>
+        <source>Import failed.</source>
+        <translation>Importer échoué.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>File is empty.</source>
         <translation>Le fichier est vide.</translation>
     </message>

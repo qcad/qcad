@@ -6,7 +6,7 @@
     <message>
         <location filename="../DuplicateInit.js" line="+2"/>
         <source>&amp;Duplicate</source>
-        <translation>Дублировать(&amp;D)</translation>
+        <translation>&amp;Дублировать</translation>
     </message>
     <message>
         <location filename="../Duplicate.js" line="+55"/>

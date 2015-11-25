@@ -59,7 +59,7 @@
     <message>
         <location filename="../SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation>Выберите прямоугольную область или отмените её выбор</translation>
+        <translation>Выбрать прямоугольную область или отменить её выбор</translation>
     </message>
     <message>
         <location line="+4"/>

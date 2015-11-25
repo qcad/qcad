@@ -187,7 +187,12 @@ Specifica la base</translatorcomment>
         <translation>Proprietà generali</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+25"/>
+        <source>Color:</source>
+        <translation>Colore:</translation>
+    </message>
+    <message>
+        <location line="+81"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Sposta la selezione ad un nuovo layer</translation>

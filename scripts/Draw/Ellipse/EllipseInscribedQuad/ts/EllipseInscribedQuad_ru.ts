@@ -26,12 +26,12 @@
     <message>
         <location filename="../EllipseInscribedQuadInit.js" line="+2"/>
         <source>Inscribed in Quadrilateral</source>
-        <translation>Зарегистрирован в четырёхугольнике</translation>
+        <translation>Вписанный в четырёхугольник</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse inscribed in quadrilateral</source>
-        <translation>Рисовать эллипс, зарегистрированный в четырёхугольнике</translation>
+        <translation>Рисовать эллипс, вписанный в четырёхугольник</translation>
     </message>
 </context>
 </TS>

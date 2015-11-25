@@ -69,12 +69,22 @@
         <translation>Kein geeigneter Importer gefunden. Bitte überprüfen Sie das Dateiformat und die Dateiendung.</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
+        <source>File not found.</source>
+        <translation>Datei nicht gefunden.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Please check your access rights, the file format and file extension.</source>
         <translation>Bitte überprüfen Sie die Zugriffsrechte, das Dateiformat und die Dateiendung.</translation>
     </message>
     <message>
         <location line="+4"/>
+        <source>Import failed.</source>
+        <translation>Import fehlgeschlagen.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>File is empty.</source>
         <translation>Datei ist leer.</translation>
     </message>
