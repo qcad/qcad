@@ -29,13 +29,13 @@ FirstStart.prototype.showDialog = function() {
     var code;
     
     this.path = "scripts/Widgets/FirstStart";
-    var dialog = WidgetFactory.createWidget(this.path, "FirstStartDialog.ui", null);
+    this.dialog = WidgetFactory.createWidget(this.path, "FirstStartDialog.ui", null);
 
     var pathFi = new QFileInfo(this.path);
-    dialog.windowTitle = qsTr("%1 First Start").arg(qApp.applicationName);
-    dialog.styleSheet =
+    this.dialog.windowTitle = qsTr("%1 First Start").arg(qApp.applicationName);
+    this.dialog.styleSheet =
         "QDialog{ background-image: url(" + pathFi.absoluteFilePath() + "/firststart.png) }";
-    this.widgets = getWidgets(dialog);
+    this.widgets = getWidgets(this.dialog);
 
     // language combo
     var langCombo = this.widgets["Language"];
@@ -75,7 +75,7 @@ FirstStart.prototype.showDialog = function() {
     this.translators = [];
     this.changeLanguage(code);
 
-    if (QCoreApplication.arguments().contains("-no-initial-dialog") || dialog.exec()) {
+    if (QCoreApplication.arguments().contains("-no-initial-dialog") || this.dialog.exec()) {
         // save settings
 
         // language:
@@ -154,7 +154,7 @@ FirstStart.prototype.showDialog = function() {
         settings.sync();
     }
 
-    dialog.destroy();
+    this.dialog.destroy();
 };
 
 FirstStart.prototype.changeLanguage = function(code) {
@@ -238,6 +238,7 @@ FirstStart.prototype.changeLanguage = function(code) {
 };
 
 FirstStart.prototype.retranslateStrings = function() {
+    this.dialog.windowTitle = qsTr("%1 First Start").arg(qApp.applicationName);
     this.widgets["LanguageLabel"].text = qsTr("Language:");
     var title = qsTr("Welcome to %1").arg(qApp.applicationName);
     var text = qsTr("Please choose the settings used for new drawings. "
