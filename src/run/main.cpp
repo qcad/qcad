@@ -74,6 +74,7 @@
 #include "RTextEntity.h"
 #include "RTraceEntity.h"
 #include "RViewportEntity.h"
+#include "RVersion.h"
 #include "RXLineEntity.h"
 
 
@@ -84,6 +85,7 @@ void catchSigPipe(int /*s*/){
 #endif
 
 int main(int argc, char *argv[]) {
+    qDebug() << "QCAD version " << R_QCAD_VERSION_STRING;
     // For correct Unicode translation, apply the current system locale:
     setlocale(LC_ALL, "");
     // But use usual conversion for scanf()/sprintf():
