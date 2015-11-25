@@ -6,7 +6,7 @@
     <message>
         <location filename="../ExLayerWhiteToBlack.js" line="+64"/>
         <source>Changed color of layer &apos;%1&apos; from white to black.</source>
-        <translation>Изменён цвет слоя &apos;% 1&apos; с белого на чёрный.</translation>
+        <translation>Изменён цвет слоя &apos;%1&apos; с белого на чёрный.</translation>
     </message>
     <message>
         <location line="+31"/>

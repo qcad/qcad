@@ -92,12 +92,12 @@
     <message>
         <location line="+3"/>
         <source>%1 is an application for computer-aided design (CAD).</source>
-        <translation>% 1 - приложение для автоматизированного проектирования (САПР).</translation>
+        <translation>%1 - приложение для автоматизированного проектирования (САПР).</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 is free (open source) software.</source>
-        <translation>% 1 - свободное программное обеспечение с открытым кодом.</translation>
+        <translation>%1 - свободное программное обеспечение с открытым кодом.</translation>
     </message>
     <message>
         <location line="+2"/>
