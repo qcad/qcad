@@ -30,6 +30,7 @@ function ImportFile(guiAction) {
 
     this.sourceDocument = new RDocument(new RMemoryStorage(), new RSpatialIndexNavel());
     this.sourceDi = new RDocumentInterface(this.sourceDocument);
+    this.sourceDi.setNotifyListeners(false);
 }
 
 ImportFile.prototype = new Paste();
@@ -51,14 +52,6 @@ ImportFile.prototype.beginEvent = function() {
         this.terminate();
         return;
     }
-
-    this.preprocessImportedFile(this.sourceDi);
-};
-
-/**
- * Give inheriting classes a chance to preprocess the imported file.
- */
-ImportFile.prototype.preprocessImportedFile = function(sourceDi) {
 };
 
 ImportFile.prototype.finishEvent = function() {
