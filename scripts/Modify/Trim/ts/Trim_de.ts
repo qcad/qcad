@@ -9,17 +9,17 @@
         <translation>&amp;Trimmen</translation>
     </message>
     <message>
-        <location filename="../Trim.js" line="+71"/>
+        <location filename="../Trim.js" line="+79"/>
         <source>Choose limiting entity</source>
         <translation>Limitierendes Objekt wählen</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+13"/>
         <source>Choose entity to trim</source>
         <translation>Zu trimmendes Objekt wählen</translation>
     </message>
     <message>
-        <location line="+134"/>
+        <location line="+144"/>
         <source>The two entities don&apos;t intersect, or are currently not supported for trimming.</source>
         <translation>Die zwei Objekte schneiden sich nicht oder werden momentan nicht für Trimmen unterstützt.</translation>
     </message>
