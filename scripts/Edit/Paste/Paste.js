@@ -94,9 +94,17 @@ Paste.prototype.pickCoordinate = function(event, preview) {
                 this.di.applyOperation(op);
                 this.di.clearPreview();
                 this.di.repaintViews();
+                this.postInsertion();
             }
         }
     }
+};
+
+/**
+ * Called after every insert. Can be used by inheriting classes to increment a
+ * counter, preprocess the inserted document, etc.
+ */
+Paste.prototype.postInsertion = function() {
 };
 
 Paste.prototype.getOperation = function(preview) {
