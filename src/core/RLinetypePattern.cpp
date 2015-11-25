@@ -844,6 +844,7 @@ QList<QPair<QString, RLinetypePattern*> > RLinetypePattern::loadAllFrom(bool met
 void RLinetypePattern::initNameMap() {
     nameMap.insert("BYLAYER", tr("By Layer"));
     nameMap.insert("BYBLOCK", tr("By Block"));
+    nameMap.insert("CONTINUOUS", tr("Continuous"));
 
     nameMap.insert("BORDER", tr("Border"));
     nameMap.insert("BORDER2", tr("Border") + " (.5x)");
