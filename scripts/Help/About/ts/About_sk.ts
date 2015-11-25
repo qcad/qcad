@@ -150,12 +150,7 @@
         <translation>Chyba:</translation>
     </message>
     <message>
-        <location line="+23"/>
-        <source>Community Edition</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+13"/>
+        <location line="+36"/>
         <source>Script Add-Ons</source>
         <translation>Skripty Doplnkov</translation>
     </message>
@@ -173,6 +168,29 @@
         <location filename="../AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
         <translation>O progr&amp;ame...</translation>
+    </message>
+</context>
+<context>
+    <name>AboutCredits</name>
+    <message>
+        <location filename="../AboutCredits.js" line="+4"/>
+        <source>Programming</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Translations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Icons</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Testing, Feedback and Minor Fixes</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

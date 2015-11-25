@@ -162,12 +162,11 @@
         <translation>Fehler:</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Community Edition</source>
-        <translation>Community Edition</translation>
+        <translation type="vanished">Community Edition</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+36"/>
         <source>Script Add-Ons</source>
         <translation>Skript Add-Ons</translation>
     </message>
@@ -185,6 +184,29 @@
         <location filename="../AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
         <translation>Ü&amp;ber...</translation>
+    </message>
+</context>
+<context>
+    <name>AboutCredits</name>
+    <message>
+        <location filename="../AboutCredits.js" line="+4"/>
+        <source>Programming</source>
+        <translation>Programmierung</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Translations</source>
+        <translation>Übersetzungen</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Icons</source>
+        <translation>Ikone</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Testing, Feedback and Minor Fixes</source>
+        <translation>Testen, Rückmeldungen und kleinere Korrekturen</translation>
     </message>
 </context>
 <context>
@@ -220,7 +242,7 @@
     <message>
         <location line="-201"/>
         <source>Credits</source>
-        <translation>Credits</translation>
+        <translation>Beitragende</translation>
     </message>
     <message>
         <source>About Plugins</source>

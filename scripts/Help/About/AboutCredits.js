@@ -1,7 +1,7 @@
 var credits = 
 [
     [
-        "Programming",
+        qsTr("Programming"),
         [ "Andrew Mustun",    "Main developer<br>"
                               ],
         [ "Matthias Melcher", "Drawing box joint lines<br>" +
@@ -39,7 +39,7 @@ var credits =
                               ],
     ],
     [
-        "Translations",
+        qsTr("Translations"),
         //[ "Wang Zhen Zhe",     "Chinese (zh_CN) translation." ],
         [ "Timo Seppola",      "Finnish (fi) translation" ],
         [ "Tanaka Hidemune",   "Japanese (ja) translation and user reference manual" ],
@@ -49,11 +49,11 @@ var credits =
         [ "Eduardo Passeto",   "Portuguese (pt) translation" ],
     ],
     [
-        "Icons",
+        qsTr("Icons"),
         [ "Ralf Blumhagen ('blumi')",   "Icons for Apollonius tools in Misc > Drawing" ],
     ],
     [
-        "Testing, Feedback and Minor Fixes",
+        qsTr("Testing, Feedback and Minor Fixes"),
         [ "Clive Tubb ('clive')", "" ],
         [ "Harald Huesges ('Husky')", "" ],
         [ "and many others", "" ],

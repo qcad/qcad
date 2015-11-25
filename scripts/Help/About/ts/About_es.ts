@@ -154,12 +154,11 @@
         <translation>Error:</translation>
     </message>
     <message>
-        <location line="+23"/>
         <source>Community Edition</source>
-        <translation>Community Edition</translation>
+        <translation type="vanished">Community Edition</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+36"/>
         <source>Script Add-Ons</source>
         <translation>Script Add-Ons</translation>
     </message>
@@ -177,6 +176,29 @@
         <location filename="../AboutInit.js" line="+2"/>
         <source>&amp;About...</source>
         <translation>&amp;Acerca de...</translation>
+    </message>
+</context>
+<context>
+    <name>AboutCredits</name>
+    <message>
+        <location filename="../AboutCredits.js" line="+4"/>
+        <source>Programming</source>
+        <translation>Programación</translation>
+    </message>
+    <message>
+        <location line="+38"/>
+        <source>Translations</source>
+        <translation>Traducciones</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Icons</source>
+        <translation>Iconos</translation>
+    </message>
+    <message>
+        <location line="+4"/>
+        <source>Testing, Feedback and Minor Fixes</source>
+        <translation>Pruebas de software, sugerencias y correcciones menores</translation>
     </message>
 </context>
 <context>
