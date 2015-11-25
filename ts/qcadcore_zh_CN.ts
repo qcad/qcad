@@ -331,6 +331,7 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+78"/>
         <source>Linetype</source>
         <translation>线型</translation>
     </message>
@@ -341,11 +342,13 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
         <translation>线宽</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
         <translation>颜色</translation>
     </message>
@@ -496,6 +499,23 @@
         <source>View Target</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../src/core/RBlock.cpp" line="+49"/>
+        <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <source>Name</source>
+        <translation type="unfinished">名字</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Hidden</source>
+        <translation type="unfinished">隐藏</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Locked</source>
+        <translation type="unfinished">锁定的</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
@@ -508,38 +528,32 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+74"/>
         <source>Name</source>
-        <translation>名字</translation>
+        <translation type="vanished">名字</translation>
     </message>
     <message>
         <source>Frozen</source>
         <translation type="vanished">冻结的</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">隐藏</translation>
+        <translation type="obsolete">隐藏</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Locked</source>
-        <translation>锁定的</translation>
+        <translation type="vanished">锁定的</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Color</source>
-        <translation>颜色</translation>
+        <translation type="vanished">颜色</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linetype</source>
-        <translation>线型</translation>
+        <translation type="vanished">线型</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Lineweight</source>
-        <translation>线宽</translation>
+        <translation type="vanished">线宽</translation>
     </message>
 </context>
 <context>
@@ -660,6 +674,11 @@
         <location line="+1"/>
         <source>By Block</source>
         <translation type="unfinished">按块</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Continuous</source>
+        <translation type="unfinished">连续的</translation>
     </message>
     <message>
         <location line="+2"/>

@@ -331,6 +331,7 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+78"/>
         <source>Linetype</source>
         <translation>Тип линии</translation>
     </message>
@@ -341,13 +342,15 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
         <translation>Толщина линий</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
-        <translation>Color</translation>
+        <translation>Цвет</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -496,6 +499,23 @@
         <source>View Target</source>
         <translation>Посмотреть Цель</translation>
     </message>
+    <message>
+        <location filename="../src/core/RBlock.cpp" line="+49"/>
+        <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <source>Name</source>
+        <translation type="unfinished">Имя</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Hidden</source>
+        <translation type="unfinished">Скрыть</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Locked</source>
+        <translation type="unfinished">Запертый</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
@@ -508,34 +528,28 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+74"/>
         <source>Name</source>
-        <translation>Имя</translation>
+        <translation type="vanished">Имя</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Hidden</source>
-        <translation>Скрыть</translation>
+        <translation type="vanished">Скрыть</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Locked</source>
-        <translation>Запертый</translation>
+        <translation type="vanished">Запертый</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Color</source>
-        <translation>Color</translation>
+        <translation type="vanished">Цвет</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linetype</source>
-        <translation>Тип линии</translation>
+        <translation type="vanished">Тип линии</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Lineweight</source>
-        <translation>Толщина линий</translation>
+        <translation type="vanished">Толщина линий</translation>
     </message>
 </context>
 <context>
@@ -572,6 +586,11 @@
         <location line="+1"/>
         <source>By Block</source>
         <translation>По блоку</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Continuous</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>
@@ -903,7 +922,7 @@
     <message>
         <location line="+1"/>
         <source>Handle</source>
-        <translation>Рычаг</translation>
+        <translation>Обработчик</translation>
     </message>
     <message>
         <location line="+1"/>

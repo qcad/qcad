@@ -499,6 +499,7 @@ Lista de Camadas</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+78"/>
         <source>Linetype</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Tipo de Linha</translation>
@@ -510,12 +511,14 @@ Lista de Camadas</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Largura da Linha</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -671,6 +674,23 @@ Abre diálogo de cores</translatorcomment>
         <source>View Target</source>
         <translation>Ver alvo</translation>
     </message>
+    <message>
+        <location filename="../src/core/RBlock.cpp" line="+49"/>
+        <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <source>Name</source>
+        <translation>Nome</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Hidden</source>
+        <translation>Oculto</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Locked</source>
+        <translation>Bloqueado</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
@@ -684,38 +704,32 @@ Abre diálogo de cores</translatorcomment>
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+74"/>
         <source>Name</source>
-        <translation>Nome</translation>
+        <translation type="vanished">Nome</translation>
     </message>
     <message>
         <source>Frozen</source>
         <translation type="vanished">Congelado</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Hidden</source>
-        <translation>Oculto</translation>
+        <translation type="vanished">Oculto</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Locked</source>
-        <translation>Bloqueado</translation>
+        <translation type="vanished">Bloqueado</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Color</source>
-        <translation>Cor</translation>
+        <translation type="vanished">Cor</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linetype</source>
-        <translation>Tipo de Linha</translation>
+        <translation type="vanished">Tipo de Linha</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Lineweight</source>
-        <translation>Espessura da Linha</translation>
+        <translation type="vanished">Espessura da Linha</translation>
     </message>
 </context>
 <context>
@@ -908,6 +922,11 @@ Borda (grande)</translatorcomment>
         <location line="+1"/>
         <source>By Block</source>
         <translation>Pelo Bloco</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Continuous</source>
+        <translation>Contínuo</translation>
     </message>
     <message>
         <location line="+2"/>

@@ -331,6 +331,7 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+78"/>
         <source>Linetype</source>
         <translation type="unfinished"></translation>
     </message>
@@ -341,11 +342,13 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
         <translation type="unfinished"></translation>
     </message>
@@ -496,45 +499,29 @@
         <source>View Target</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../src/core/RBlock.cpp" line="+49"/>
+        <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Locked</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
     <message>
         <location filename="../src/core/RGuiAction.cpp" line="+181"/>
         <source>Requires selection</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>RLayer</name>
-    <message>
-        <location filename="../src/core/RLayer.cpp" line="+74"/>
-        <source>Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Hidden</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Locked</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Color</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Linetype</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Lineweight</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -571,6 +558,11 @@
     <message>
         <location line="+1"/>
         <source>By Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Continuous</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -339,6 +339,7 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+78"/>
         <source>Linetype</source>
         <translation>Linientyp</translation>
     </message>
@@ -349,11 +350,13 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
         <translation>Linienstärke</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
         <translation>Farbe</translation>
     </message>
@@ -504,6 +507,23 @@
         <source>View Target</source>
         <translation>Ansicht Ziel</translation>
     </message>
+    <message>
+        <location filename="../src/core/RBlock.cpp" line="+49"/>
+        <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <source>Name</source>
+        <translation>Name</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Hidden</source>
+        <translation>Verdeckt</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Locked</source>
+        <translation>Gesperrt</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
@@ -516,38 +536,32 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+74"/>
         <source>Name</source>
-        <translation>Name</translation>
+        <translation type="vanished">Name</translation>
     </message>
     <message>
         <source>Frozen</source>
         <translation type="vanished">Versteckt</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Hidden</source>
-        <translation>Verdeckt</translation>
+        <translation type="vanished">Verdeckt</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Locked</source>
-        <translation>Gesperrt</translation>
+        <translation type="vanished">Gesperrt</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Color</source>
-        <translation>Farbe</translation>
+        <translation type="vanished">Farbe</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linetype</source>
-        <translation>Linientyp</translation>
+        <translation type="vanished">Linientyp</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Lineweight</source>
-        <translation>Linienstärke</translation>
+        <translation type="vanished">Linienstärke</translation>
     </message>
 </context>
 <context>
@@ -668,6 +682,11 @@
         <location line="+1"/>
         <source>By Block</source>
         <translation>Von Block</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Continuous</source>
+        <translation>Durchgehend</translation>
     </message>
     <message>
         <location line="+2"/>

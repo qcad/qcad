@@ -495,6 +495,7 @@ Liste des calques</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+78"/>
         <source>Linetype</source>
         <translatorcomment>--exact match--
 --file: LinetypeSettings_fr.ts--
@@ -509,12 +510,14 @@ Type de ligne</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Épaisseur de ligne</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -670,6 +673,23 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <source>View Target</source>
         <translation>Affichage cible</translation>
     </message>
+    <message>
+        <location filename="../src/core/RBlock.cpp" line="+49"/>
+        <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <source>Name</source>
+        <translation>Nom</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Hidden</source>
+        <translation>Caché</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Locked</source>
+        <translation>Verrouillée</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
@@ -683,38 +703,32 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+74"/>
         <source>Name</source>
-        <translation>Nom</translation>
+        <translation type="vanished">Nom</translation>
     </message>
     <message>
         <source>Frozen</source>
         <translation type="vanished">Caché</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Hidden</source>
-        <translation>Caché</translation>
+        <translation type="vanished">Caché</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Locked</source>
-        <translation>Verrouillée</translation>
+        <translation type="vanished">Verrouillée</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Color</source>
-        <translation>Couleur</translation>
+        <translation type="vanished">Couleur</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linetype</source>
-        <translation>Type de ligne</translation>
+        <translation type="vanished">Type de ligne</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Lineweight</source>
-        <translation>Épaisseur de ligne</translation>
+        <translation type="vanished">Épaisseur de ligne</translation>
     </message>
 </context>
 <context>
@@ -909,6 +923,11 @@ Bordure (grande)</translatorcomment>
         <location line="+1"/>
         <source>By Block</source>
         <translation>Par bloc</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Continuous</source>
+        <translation>Continu</translation>
     </message>
     <message>
         <location line="+2"/>

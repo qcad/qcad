@@ -335,6 +335,7 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+78"/>
         <source>Linetype</source>
         <translation>Rodzaj linii</translation>
     </message>
@@ -345,11 +346,13 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
         <translation>Szerokość linii</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
         <translation>Kolor</translation>
     </message>
@@ -501,6 +504,23 @@
         <source>View Target</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../src/core/RBlock.cpp" line="+49"/>
+        <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <source>Name</source>
+        <translation type="unfinished">Nazwa</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Locked</source>
+        <translation type="unfinished">Zamknięty</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
@@ -514,38 +534,28 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+74"/>
         <source>Name</source>
-        <translation>Nazwa</translation>
+        <translation type="vanished">Nazwa</translation>
     </message>
     <message>
         <source>Frozen</source>
         <translation type="vanished">Mrożony</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Hidden</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
         <source>Locked</source>
-        <translation>Zamknięty</translation>
+        <translation type="vanished">Zamknięty</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Color</source>
-        <translation>Kolor</translation>
+        <translation type="vanished">Kolor</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linetype</source>
-        <translation>Rodzaj linii</translation>
+        <translation type="vanished">Rodzaj linii</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Lineweight</source>
-        <translation>Szerokość linii</translation>
+        <translation type="vanished">Szerokość linii</translation>
     </message>
 </context>
 <context>
@@ -666,6 +676,11 @@
         <location line="+1"/>
         <source>By Block</source>
         <translation>Według bloku</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Continuous</source>
+        <translation type="unfinished">Ciągła</translation>
     </message>
     <message>
         <location line="+2"/>

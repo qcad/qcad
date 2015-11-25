@@ -331,6 +331,7 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+78"/>
         <source>Linetype</source>
         <translation>Lijntype</translation>
     </message>
@@ -341,11 +342,13 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
         <translation>Lijndikte</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
         <translation>Kleur</translation>
     </message>
@@ -496,6 +499,23 @@
         <source>View Target</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../src/core/RBlock.cpp" line="+49"/>
+        <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <source>Name</source>
+        <translation type="unfinished">Naam</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Hidden</source>
+        <translation type="unfinished">Verborgen</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Locked</source>
+        <translation type="unfinished">Vergrendeld</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
@@ -508,38 +528,32 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+74"/>
         <source>Name</source>
-        <translation>Naam</translation>
+        <translation type="vanished">Naam</translation>
     </message>
     <message>
         <source>Frozen</source>
         <translation type="vanished">Verborgen</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Hidden</source>
-        <translation>Verborgen</translation>
+        <translation type="vanished">Verborgen</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Locked</source>
-        <translation>Vergrendeld</translation>
+        <translation type="vanished">Vergrendeld</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Color</source>
-        <translation>Kleur</translation>
+        <translation type="vanished">Kleur</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linetype</source>
-        <translation>Lijntype</translation>
+        <translation type="vanished">Lijntype</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Lineweight</source>
-        <translation>Lijndikte</translation>
+        <translation type="vanished">Lijndikte</translation>
     </message>
 </context>
 <context>
@@ -576,6 +590,11 @@
         <location line="+1"/>
         <source>By Block</source>
         <translation>Door blok bepaald</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Continuous</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

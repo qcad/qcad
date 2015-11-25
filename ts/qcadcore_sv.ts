@@ -331,6 +331,7 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+78"/>
         <source>Linetype</source>
         <translation>Linjetyp</translation>
     </message>
@@ -341,11 +342,13 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
         <translation>Linjetjocklek</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
         <translation>Färg</translation>
     </message>
@@ -496,6 +499,23 @@
         <source>View Target</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../src/core/RBlock.cpp" line="+49"/>
+        <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <source>Name</source>
+        <translation type="unfinished">Namn</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Hidden</source>
+        <translation type="unfinished">Dold</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Locked</source>
+        <translation type="unfinished">Låst</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
@@ -508,34 +528,28 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+74"/>
         <source>Name</source>
-        <translation>Namn</translation>
+        <translation type="vanished">Namn</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Hidden</source>
-        <translation>Dold</translation>
+        <translation type="vanished">Dold</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Locked</source>
-        <translation>Låst</translation>
+        <translation type="vanished">Låst</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Color</source>
-        <translation>Färg</translation>
+        <translation type="vanished">Färg</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linetype</source>
-        <translation>Linjetyp</translation>
+        <translation type="vanished">Linjetyp</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Lineweight</source>
-        <translation>Linjetjocklek</translation>
+        <translation type="vanished">Linjetjocklek</translation>
     </message>
 </context>
 <context>
@@ -572,6 +586,11 @@
         <location line="+1"/>
         <source>By Block</source>
         <translation type="unfinished">Av Block</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Continuous</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

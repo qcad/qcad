@@ -331,6 +331,7 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+78"/>
         <source>Linetype</source>
         <translation>Typ čiary</translation>
     </message>
@@ -341,11 +342,13 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
         <translation>Hrúbka čiary</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
         <translation>Farba</translation>
     </message>
@@ -496,6 +499,23 @@
         <source>View Target</source>
         <translation>Zobraziť Cieľ</translation>
     </message>
+    <message>
+        <location filename="../src/core/RBlock.cpp" line="+49"/>
+        <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <source>Name</source>
+        <translation type="unfinished">Názov</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Locked</source>
+        <translation type="unfinished">Zamknutá</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
@@ -508,38 +528,32 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+74"/>
         <source>Name</source>
-        <translation>Názov</translation>
+        <translation type="vanished">Názov</translation>
     </message>
     <message>
         <source>Frozen</source>
         <translation type="vanished">Zmrazená</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Hidden</source>
-        <translation>Skryté</translation>
+        <translation type="vanished">Skryté</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Locked</source>
-        <translation>Zamknutá</translation>
+        <translation type="vanished">Zamknutá</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Color</source>
-        <translation>Farba</translation>
+        <translation type="vanished">Farba</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linetype</source>
-        <translation>Typ čiary</translation>
+        <translation type="vanished">Typ čiary</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Lineweight</source>
-        <translation>Hrúbka čiary</translation>
+        <translation type="vanished">Hrúbka čiary</translation>
     </message>
 </context>
 <context>
@@ -576,6 +590,11 @@
         <location line="+1"/>
         <source>By Block</source>
         <translation>Podľa Bloku</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Continuous</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+2"/>

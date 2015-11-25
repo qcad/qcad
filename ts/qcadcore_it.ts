@@ -510,6 +510,7 @@ Lista Layer</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+78"/>
         <source>Linetype</source>
         <translatorcomment>--exact match--
 --file: LinetypeSettings_it.ts--
@@ -524,12 +525,14 @@ Tipo di linea</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Spessore di linea</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
@@ -685,6 +688,23 @@ Colore G&amp;riglia:</translatorcomment>
         <source>View Target</source>
         <translation>Visualizza obiettivo</translation>
     </message>
+    <message>
+        <location filename="../src/core/RBlock.cpp" line="+49"/>
+        <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <source>Name</source>
+        <translation>Nome</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Hidden</source>
+        <translation>Nascosta</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Locked</source>
+        <translation>Bloccato</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
@@ -698,38 +718,32 @@ Colore G&amp;riglia:</translatorcomment>
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+74"/>
         <source>Name</source>
-        <translation>Nome</translation>
+        <translation type="vanished">Nome</translation>
     </message>
     <message>
         <source>Frozen</source>
         <translation type="vanished">Nascosto</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Hidden</source>
-        <translation>Nascosta</translation>
+        <translation type="vanished">Nascosta</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Locked</source>
-        <translation>Bloccato</translation>
+        <translation type="vanished">Bloccato</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Color</source>
-        <translation>Colore</translation>
+        <translation type="vanished">Colore</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linetype</source>
-        <translation>Tipo di linea</translation>
+        <translation type="vanished">Tipo di linea</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Lineweight</source>
-        <translation>Spessore di linea</translation>
+        <translation type="vanished">Spessore di linea</translation>
     </message>
 </context>
 <context>
@@ -925,6 +939,11 @@ Margine (Ingrandita)</translatorcomment>
         <location line="+1"/>
         <source>By Block</source>
         <translation>Da Blocco</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Continuous</source>
+        <translation>Continua</translation>
     </message>
     <message>
         <location line="+2"/>

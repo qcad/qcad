@@ -336,6 +336,7 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+78"/>
         <source>Linetype</source>
         <translation>ラインタイプ</translation>
     </message>
@@ -346,11 +347,13 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
         <translation>ラインの太さ</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
         <translation>色</translation>
     </message>
@@ -501,6 +504,23 @@
         <source>View Target</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../src/core/RBlock.cpp" line="+49"/>
+        <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Locked</source>
+        <translation type="unfinished">ロック</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
@@ -513,38 +533,28 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+74"/>
         <source>Name</source>
-        <translation>画層名</translation>
+        <translation type="vanished">画層名</translation>
     </message>
     <message>
         <source>Frozen</source>
         <translation type="vanished">凍結</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Hidden</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
         <source>Locked</source>
-        <translation>ロック</translation>
+        <translation type="vanished">ロック</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Color</source>
-        <translation>色</translation>
+        <translation type="vanished">色</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linetype</source>
-        <translation>ラインタイプ</translation>
+        <translation type="vanished">ラインタイプ</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Lineweight</source>
-        <translation>ラインの太さ</translation>
+        <translation type="vanished">ラインの太さ</translation>
     </message>
 </context>
 <context>
@@ -665,6 +675,11 @@
         <location line="+1"/>
         <source>By Block</source>
         <translation>ブロックによる</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Continuous</source>
+        <translation type="unfinished">連続</translation>
     </message>
     <message>
         <location line="+2"/>

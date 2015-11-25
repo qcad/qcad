@@ -331,6 +331,7 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+78"/>
         <source>Linetype</source>
         <translation>Tip črte</translation>
     </message>
@@ -341,11 +342,13 @@
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Lineweight</source>
         <translation>Debelina črte</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
         <translation>Barva</translation>
     </message>
@@ -496,6 +499,23 @@
         <source>View Target</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../src/core/RBlock.cpp" line="+49"/>
+        <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <source>Name</source>
+        <translation type="unfinished">Ime</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Hidden</source>
+        <translation type="unfinished">Nevidna</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayer.cpp" line="+1"/>
+        <source>Locked</source>
+        <translation type="unfinished">Zaklenjeno</translation>
+    </message>
 </context>
 <context>
     <name>RGuiAction</name>
@@ -508,38 +528,32 @@
 <context>
     <name>RLayer</name>
     <message>
-        <location filename="../src/core/RLayer.cpp" line="+74"/>
         <source>Name</source>
-        <translation>Ime</translation>
+        <translation type="vanished">Ime</translation>
     </message>
     <message>
         <source>Frozen</source>
         <translation type="vanished">Zamrznjeno</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">Nevidna</translation>
+        <translation type="obsolete">Nevidna</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Locked</source>
-        <translation>Zaklenjeno</translation>
+        <translation type="vanished">Zaklenjeno</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Color</source>
-        <translation>Barva</translation>
+        <translation type="vanished">Barva</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Linetype</source>
-        <translation>Tip črte</translation>
+        <translation type="vanished">Tip črte</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Lineweight</source>
-        <translation>Debelina črte</translation>
+        <translation type="vanished">Debelina črte</translation>
     </message>
 </context>
 <context>
@@ -660,6 +674,11 @@
         <location line="+1"/>
         <source>By Block</source>
         <translation>Po elementu</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Continuous</source>
+        <translation type="unfinished">Neprekinjeno</translation>
     </message>
     <message>
         <location line="+2"/>
