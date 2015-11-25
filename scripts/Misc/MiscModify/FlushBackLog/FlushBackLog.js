@@ -35,7 +35,7 @@ FlushBackLog.prototype.beginEvent = function() {
     if (!isNull(di)) {
         var buttons = new QMessageBox.StandardButtons(QMessageBox.Yes, QMessageBox.Cancel);
         var ret = QMessageBox.warning(EAction.getMainWindow(),
-            qsTr("Flush Back Log"),
+            qsTr("Flush Undo History"),
             qsTr("Are you sure that you want to flush the undo / redo transaction history?") + " " +
             qsTr("This cannot be undone."),
             buttons

@@ -4,14 +4,14 @@
 <context>
     <name>ExText</name>
     <message>
-        <location filename="../ExText.js" line="67"/>
+        <location filename="../ExText.js" line="+67"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Text</translation>
     </message>
     <message>
-        <location filename="../ExText.js" line="70"/>
+        <location line="+3"/>
         <source>Draw text</source>
-        <translation type="unfinished"></translation>
+        <translation>Text einfügen</translation>
     </message>
 </context>
 </TS>

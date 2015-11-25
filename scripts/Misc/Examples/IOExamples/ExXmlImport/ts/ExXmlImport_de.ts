@@ -4,14 +4,14 @@
 <context>
     <name>ExXmlImport</name>
     <message>
-        <location filename="../ExXmlImport.js" line="71"/>
+        <location filename="../ExXmlImport.js" line="+71"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle Dateien</translation>
     </message>
     <message>
-        <location filename="../ExXmlImport.js" line="72"/>
+        <location line="+1"/>
         <source>Import XML</source>
-        <translation type="unfinished"></translation>
+        <translation>XML importieren</translation>
     </message>
 </context>
 </TS>

@@ -4,7 +4,7 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="+57"/>
+        <location filename="../Hatch.js" line="+56"/>
         <source>No boundary selected.</source>
         <translation>未选中边界.</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>环在点 %1/%2 未闭合.</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+95"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>每个边界实体必须是直线，弧，圆，椭圆弧，椭圆，折线或曲线. 发现：</translation>
     </message>

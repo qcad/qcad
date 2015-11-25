@@ -22,7 +22,7 @@ Branco</translatorcomment>
         <translation>Branco</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Language:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -37,12 +37,13 @@ Idioma GUI:</translatorcomment>
         <translation type="obsolete">Bem-vindo ao QCAD</translation>
     </message>
     <message>
-        <location line="-206"/>
+        <location line="-207"/>
+        <location line="+206"/>
         <source>%1 First Start</source>
         <translation>%1 Primeiro Início</translation>
     </message>
     <message>
-        <location line="+207"/>
+        <location line="+2"/>
         <source>Welcome to %1</source>
         <translation>Bem-vindo ao %1</translation>
     </message>

@@ -4,9 +4,9 @@
 <context>
     <name>ExDumpPolyline</name>
     <message>
-        <location filename="../ExDumpPolyline.js" line="93"/>
+        <location filename="../ExDumpPolyline.js" line="+93"/>
         <source>&amp;Dump Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Polylinie &amp;ausgeben</translation>
     </message>
 </context>
 </TS>

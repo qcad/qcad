@@ -4,24 +4,24 @@
 <context>
     <name>FlushBackLog</name>
     <message>
-        <location filename="../FlushBackLog.js" line="38"/>
-        <source>Flush Back Log</source>
-        <translation type="unfinished"></translation>
+        <location filename="../FlushBackLog.js" line="+38"/>
+        <source>Flush Undo History</source>
+        <translation>Verlauf ufr Rückgängig leeren</translation>
     </message>
     <message>
-        <location filename="../FlushBackLog.js" line="39"/>
+        <location line="+1"/>
         <source>Are you sure that you want to flush the undo / redo transaction history?</source>
-        <translation type="unfinished"></translation>
+        <translation>Sind Sie sicher, dass Sie den Rückgängig/Wiederherstellen Transaktionsverlauf leeren möchten?</translation>
     </message>
     <message>
-        <location filename="../FlushBackLog.js" line="40"/>
+        <location line="+1"/>
         <source>This cannot be undone.</source>
-        <translation type="unfinished"></translation>
+        <translation>Dies kann nicht rückgängig gemacht werden.</translation>
     </message>
     <message>
-        <location filename="../FlushBackLog.js" line="52"/>
+        <location line="+12"/>
         <source>Flush &amp;Undo History</source>
-        <translation type="unfinished"></translation>
+        <translation>Verlauf für &amp;Rückgängig leeren</translation>
     </message>
 </context>
 </TS>

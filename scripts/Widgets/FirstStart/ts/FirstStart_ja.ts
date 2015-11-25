@@ -5,11 +5,12 @@
     <name>FirstStart</name>
     <message>
         <location filename="../FirstStart.js" line="+35"/>
+        <location line="+206"/>
         <source>%1 First Start</source>
         <translation>%1 初回実行</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="-5"/>
         <source>Black</source>
         <translation>黒</translation>
     </message>
@@ -19,7 +20,7 @@
         <translation>白</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Language:</source>
         <translation>言語:</translation>
     </message>

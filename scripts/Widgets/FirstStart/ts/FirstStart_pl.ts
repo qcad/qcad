@@ -5,12 +5,13 @@
     <name>FirstStart</name>
     <message>
         <location filename="../FirstStart.js" line="+35"/>
+        <location line="+206"/>
         <source>%1 First Start</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pierwszy start</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="-5"/>
         <source>Black</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -28,7 +29,7 @@ Biały</translatorcomment>
         <translation type="unfinished">Biały</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Language:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

@@ -13,7 +13,7 @@
         <translation type="vanished">Keine Importfilter</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+28"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Keine Importfilter wurden gefunden. Abbruch...</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="+57"/>
+        <location filename="../Hatch.js" line="+56"/>
         <source>No boundary selected.</source>
         <translation>Ingen yttre gräns vald.</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Slingan är inte sluten vid punkt %1/%2.</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+95"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Varje gränsobjekt måste vara en linje, båge, cirkel, ellipsbåge, ellips, polylinje eller list. Found:</translation>
     </message>

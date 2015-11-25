@@ -4,7 +4,7 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="+57"/>
+        <location filename="../Hatch.js" line="+56"/>
         <source>No boundary selected.</source>
         <translation>Ei rajaa valittuna.</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Silmukkaa ei suljettu pisteessa %1/%2.</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+95"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Jokaisen rajamuodon tulee olla viiva, kaari, ympyrä, elliptinen kaari, ellipsi, murtoviiva tai splini. Löydetty:</translation>
     </message>

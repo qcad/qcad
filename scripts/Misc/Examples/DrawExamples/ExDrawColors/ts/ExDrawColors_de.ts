@@ -4,9 +4,9 @@
 <context>
     <name>ExDrawColors</name>
     <message>
-        <location filename="../ExDrawColors.js" line="64"/>
+        <location filename="../ExDrawColors.js" line="+64"/>
         <source>Draw &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Farben &amp;zeichnen</translation>
     </message>
 </context>
 </TS>

@@ -4,9 +4,9 @@
 <context>
     <name>ChangeFontToArial</name>
     <message>
-        <location filename="../ChangeFontToArial.js" line="65"/>
+        <location filename="../ChangeFontToArial.js" line="+65"/>
         <source>Set Font to Arial</source>
-        <translation type="unfinished"></translation>
+        <translation>Schrift in Arial verändern</translation>
     </message>
 </context>
 </TS>

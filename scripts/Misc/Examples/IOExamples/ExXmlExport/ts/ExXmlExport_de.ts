@@ -4,14 +4,14 @@
 <context>
     <name>ExXmlExport</name>
     <message>
-        <location filename="../ExXmlExport.js" line="37"/>
+        <location filename="../ExXmlExport.js" line="+37"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle Dateien</translation>
     </message>
     <message>
-        <location filename="../ExXmlExport.js" line="38"/>
+        <location line="+1"/>
         <source>Export XML</source>
-        <translation type="unfinished"></translation>
+        <translation>XML exportieren</translation>
     </message>
 </context>
 </TS>

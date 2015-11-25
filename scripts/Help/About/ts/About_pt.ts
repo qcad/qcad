@@ -15,7 +15,17 @@
         <translation>Sobre %1</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+44"/>
+        <source>Revision:</source>
+        <translation>Revisão:</translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
+        <translation>Isto significa que todos &lt;a href=&apos;%1&apos;&gt;podem se envolver&lt;/a&gt;!</translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
@@ -47,12 +57,14 @@
         <translation>Desconhecido</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-102"/>
+        <location line="+95"/>
         <source>Version:</source>
         <translation>Versão:</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-82"/>
+        <location line="+86"/>
         <source>Qt Version:</source>
         <translation>Qt Versão:</translation>
     </message>
@@ -62,13 +74,64 @@
         <translation>Licença:</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="-96"/>
+        <location line="+105"/>
         <location line="+12"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-115"/>
+        <source>Build Date:</source>
+        <translation>Data de constituição:</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Architecture:</source>
+        <translation>Arquitetura:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Compiler:</source>
+        <translation>Compilador:</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 is an application for computer-aided design (CAD).</source>
+        <translation>%1 é um pedido de desenho assistido por computador (CAD).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 is free (open source) software.</source>
+        <translation>%1 é um software livre (open source).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
+        <translation>Plugins e script add-ons estão sujeitos às suas respectivas licenças (ver &quot;Plugins&quot; tab).</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
+        <translation>Todos os nomes de incêndio ou produtos são marcas comerciais ou marcas comerciais registradas de seus respectivos proprietários.</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Portions of this software © 2013 Digia Plc.</source>
+        <translation>Partes deste software © 2013 Digia Plc.</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).</source>
+        <translation>Partes deste software © 2012 Nokia Corporation e / ou de sua controlada(s).</translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>No plugins found.</source>
+        <translation>Nenhum plugin encontrado.</translation>
+    </message>
+    <message>
+        <location line="+88"/>
         <source>Active</source>
         <translation>Ativo</translation>
     </message>
@@ -93,12 +156,22 @@
         <translation>Erro:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+23"/>
+        <source>Community Edition</source>
+        <translation>Community Edition</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Script Add-Ons</source>
         <translation>Scripts de Add-Ons</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+7"/>
+        <source>No script add-ons found.</source>
+        <translation>Nenhum script add-ons encontrados.</translation>
+    </message>
+    <message>
+        <location line="+40"/>
         <source>Credits</source>
         <translation>Créditos</translation>
     </message>

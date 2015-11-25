@@ -14,7 +14,7 @@
         <translation>Blanc</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="+5"/>
         <source>Language:</source>
         <translation>Langue :</translation>
     </message>
@@ -23,12 +23,13 @@
         <translation type="obsolete">Bienvenue à QCAD</translation>
     </message>
     <message>
-        <location line="-206"/>
+        <location line="-207"/>
+        <location line="+206"/>
         <source>%1 First Start</source>
         <translation>%1 premier démarrage</translation>
     </message>
     <message>
-        <location line="+207"/>
+        <location line="+2"/>
         <source>Welcome to %1</source>
         <translation>Bienvenue dans %1</translation>
     </message>

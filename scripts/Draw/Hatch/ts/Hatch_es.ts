@@ -4,7 +4,7 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="+57"/>
+        <location filename="../Hatch.js" line="+56"/>
         <source>No boundary selected.</source>
         <translation>No hay límite seleccionado.</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Contorno no se cierra en el punto %1/%2.</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+95"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Cada objeto de frontera debe ser una línea, arco, círculo, arco elíptico, una elipse, polilínea o spline. Encuentran:</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="+57"/>
+        <location filename="../Hatch.js" line="+56"/>
         <source>No boundary selected.</source>
         <translation>Nie je vybratý žiadny obrys.</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Kontúra nie je uzavretá v bode %1/%2.</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+95"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Každý prvok obrysu musí byť úsečka, oblúk, kružnica, elipsový oblúk, elipsa, krivka alebo spline. Nájdené:</translation>
     </message>

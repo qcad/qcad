@@ -4,7 +4,7 @@
 <context>
     <name>DrawBoundingBox</name>
     <message>
-        <location filename="../DrawBoundingBox.js" line="71"/>
+        <location filename="../DrawBoundingBox.js" line="+71"/>
         <source>Draw &amp;Bounding Box</source>
         <translation type="unfinished"></translation>
     </message>

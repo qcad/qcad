@@ -13,7 +13,7 @@
         <translation type="vanished">Ei tuontisuodattimia</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+28"/>
         <source>No import filters have been found. Aborting...</source>
         <translation>Tuontisuodattimia ei ole löydetty. Keskeytetään...</translation>
     </message>

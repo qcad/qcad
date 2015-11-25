@@ -4,7 +4,7 @@
 <context>
     <name>ReloadLinetypes</name>
     <message>
-        <location filename="../ReloadLinetypes.js" line="48"/>
+        <location filename="../ReloadLinetypes.js" line="+48"/>
         <source>Reload Linetype Definitions</source>
         <translation type="unfinished"></translation>
     </message>

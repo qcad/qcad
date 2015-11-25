@@ -4,7 +4,7 @@
 <context>
     <name>Hatch</name>
     <message>
-        <location filename="../Hatch.js" line="+57"/>
+        <location filename="../Hatch.js" line="+56"/>
         <source>No boundary selected.</source>
         <translation>Geen begrenzing geselecteerd</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Loop niet gesloten op punt %1/%2.</translation>
     </message>
     <message>
-        <location line="+94"/>
+        <location line="+95"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Elk rand objekt moet een lijn, boog, cirkel, ellips boog, ellips, polylijn of spline zijn. Gevonden:</translation>
     </message>

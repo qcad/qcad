@@ -9,7 +9,17 @@
         <translation>%1について</translation>
     </message>
     <message>
-        <location line="+76"/>
+        <location line="+44"/>
+        <source>Revision:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+14"/>
+        <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
         <source>Plugins</source>
         <translation>プラグイン</translation>
     </message>
@@ -41,12 +51,14 @@
         <translation>不明</translation>
     </message>
     <message>
-        <location line="-7"/>
+        <location line="-102"/>
+        <location line="+95"/>
         <source>Version:</source>
         <translation>バージョン:</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-82"/>
+        <location line="+86"/>
         <source>Qt Version:</source>
         <translation>Qtバージョン:</translation>
     </message>
@@ -56,13 +68,64 @@
         <translation>ライセンス:</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="-96"/>
+        <location line="+105"/>
         <location line="+12"/>
         <source>Internet:</source>
         <translation>インターネット:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="-115"/>
+        <source>Build Date:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Architecture:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Compiler:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>%1 is an application for computer-aided design (CAD).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>%1 is free (open source) software.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Portions of this software © 2013 Digia Plc.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+18"/>
+        <source>No plugins found.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+88"/>
         <source>Active</source>
         <translation>アクティブ</translation>
     </message>
@@ -87,12 +150,22 @@
         <translation>エラー:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+23"/>
+        <source>Community Edition</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Script Add-Ons</source>
         <translation>スクリプトアドオン</translation>
     </message>
     <message>
-        <location line="+47"/>
+        <location line="+7"/>
+        <source>No script add-ons found.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+40"/>
         <source>Credits</source>
         <translation>クレジット</translation>
     </message>

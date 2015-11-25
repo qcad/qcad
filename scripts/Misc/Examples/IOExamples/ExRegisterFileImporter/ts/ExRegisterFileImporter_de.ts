@@ -4,29 +4,29 @@
 <context>
     <name>ExRegisterFileImporter</name>
     <message>
-        <location filename="../ExRegisterFileImporter.js" line="37"/>
+        <location filename="../ExRegisterFileImporter.js" line="+37"/>
         <source>Example Files %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Beispieldateien %1</translation>
     </message>
     <message>
-        <location filename="../ExRegisterFileImporter.js" line="88"/>
+        <location line="+51"/>
         <source>Read from file: &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Aus Datei gelesen: &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../ExRegisterFileImporter.js" line="123"/>
+        <location line="+35"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Info</translation>
     </message>
     <message>
-        <location filename="../ExRegisterFileImporter.js" line="124"/>
+        <location line="+1"/>
         <source>Registered a file importer for file type &apos;.example&apos;. Use File &gt; Open to see the filter in action.</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei Exporter für Dateityp &apos;.example&apos; registriert. Verwenden Sie Datei &gt; Öffnen um den Filter in Aktion zu sehen.</translation>
     </message>
     <message>
-        <location filename="../ExRegisterFileImporter.js" line="134"/>
+        <location line="+10"/>
         <source>&amp;Register File Importer</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei Importer &amp;registrieren</translation>
     </message>
 </context>
 </TS>

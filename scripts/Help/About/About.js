@@ -86,38 +86,38 @@ About.prototype.initAboutApp = function(textBrowser) {
             + "<h1>%1</h1>".arg(this.applicationName)
             + "<hr/>"
             + "<table border='0'><tr>"
-            + "<td><b>Version:</b> </td><td>%1.%2.%3.%4 (%5)</td>"
+            + "<td><b>" + qsTr("Version:") + "</b> </td><td>%1.%2.%3.%4 (%5)</td>"
               .arg(RSettings.getMajorVersion())
               .arg(RSettings.getMinorVersion())
               .arg(RSettings.getRevisionVersion())
               .arg(RSettings.getBuildVersion())
               .arg(RSettings.getVersionString())
             + "</tr><tr>"
-            + "<td><b>Internet:</b> </td><td><a href='http://%1'>%1</a></td>".arg(qApp.organizationDomain)
+            + "<td><b>" + qsTr("Internet:") + "</b> </td><td><a href='http://%1'>%1</a></td>".arg(qApp.organizationDomain)
             + "</tr><tr>"
-            + "<td><b>Build Date:</b> </td><td>%1</td>".arg(RSettings.getReleaseDate())
+            + "<td><b>" + qsTr("Build Date:") + "</b> </td><td>%1</td>".arg(RSettings.getReleaseDate())
             + "</tr><tr>"
-            + "<td><b>From revision:</b> </td><td>%1</td>".arg(RSettings.getRevisionString().left(7))
+            + "<td><b>" + qsTr("Revision:") + "</b> </td><td>%1</td>".arg(RSettings.getRevisionString().left(7))
             + "</tr><tr>"
-            + "<td><b>Qt Version:</b> </td><td>%1</td>".arg(RSettings.getQtVersion())
+            + "<td><b>" + qsTr("Qt Version:") + "</b> </td><td>%1</td>".arg(RSettings.getQtVersion())
             + "</tr><tr>";
             if (RS.getBuildCpuArchitecture().length!==0) {
-                html += "<td><b>Architecture:</b> </td><td>%1</td>".arg(RS.getBuildCpuArchitecture())
+                html += "<td><b>" + qsTr("Architecture:") + "</b> </td><td>%1</td>".arg(RS.getBuildCpuArchitecture())
                 + "</tr><tr>";
             }
-            html += "<td><b>Compiler:</b> </td><td>%1</td>".arg(RSettings.getCompilerVersion())
+            html += "<td><b>" + qsTr("Compiler:") + "</b> </td><td>%1</td>".arg(RSettings.getCompilerVersion())
             + "</tr></table>"
             + "<hr/>"
-            + "<p>%1 is an application for computer-aided design (CAD).</p>".arg(qApp.applicationName)
+            + "<p>" + qsTr("%1 is an application for computer-aided design (CAD).") + "</p>".arg(qApp.applicationName)
             + "<p/>"
-            + "<p>%1 is free (open source) software.<br/>".arg(qApp.applicationName)
-            + "This means that everyone can <a href='http://www.qcad.org/contribute'>get involved!</a></p>"
-            + "<p>Plugins and script add-ons are subject to their respective license (see 'Plugins' tab).</p>"
+            + "<p>" + qsTr("%1 is free (open source) software.") + "<br/>".arg(qApp.applicationName)
+            + "" + qsTr("This means that everyone can <a href='%1'>get involved</a>!").arg("http://www.qcad.org/contribute") + "</p>"
+            + "<p>" + qsTr("Plugins and script add-ons are subject to their respective license (see 'Plugins' tab).") + "</p>"
             + "<p/>"
-            + "<p>All brand or product names are trademarks or registered trademarks of their respective holders.</p>"
+            + "<p>" + qsTr("All brand or product names are trademarks or registered trademarks of their respective holders.") + "</p>"
             + "<p/>"
-            + "<p>Portions of this software © 2013 Digia Plc.</p>"
-            + "<p>Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).</p>"
+            + "<p>" + qsTr("Portions of this software © 2013 Digia Plc.") + "</p>"
+            + "<p>" + qsTr("Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).") + "</p>"
             + "<p/>"
             + "</body></html>";
     textBrowser.setHtml(html);
@@ -135,7 +135,7 @@ About.prototype.initAboutPlugins = function(textBrowser) {
     var numPlugins = RPluginLoader.countPlugins();
 
     if (numPlugins===0) {
-        html += "No plugins found.";
+        html += qsTr("No plugins found.");
     }
     else {
         var namePostfixesSlash = [];
@@ -288,7 +288,7 @@ About.prototype.initAboutScripts = function(textBrowser) {
     var numAddOns = addOns.length;
 
     if (numAddOns===0) {
-        html += "No script add-ons found.";
+        html += qsTr("No script add-ons found.");
     }
     else {
         var i;
