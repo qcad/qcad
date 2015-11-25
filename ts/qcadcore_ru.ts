@@ -503,18 +503,18 @@
         <location filename="../src/core/RBlock.cpp" line="+49"/>
         <location filename="../src/core/RLayer.cpp" line="-3"/>
         <source>Name</source>
-        <translation type="unfinished">Имя</translation>
+        <translation>Имя</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">Скрыть</translation>
+        <translation>Скрытый</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Locked</source>
-        <translation type="unfinished">Запертый</translation>
+        <translation>Запертый</translation>
     </message>
 </context>
 <context>
@@ -590,7 +590,7 @@
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation type="unfinished"></translation>
+        <translation>Сплошная</translation>
     </message>
     <message>
         <location line="+2"/>

@@ -10,7 +10,7 @@
     <message>
         <location filename="../BreakOut.js" line="+58"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline segment</source>
-        <translation>Выберите линию, дугу, окружность, эллипс, прямую или участок ломаной</translation>
+        <translation>Выберите линию, дугу, окружность, эллипс, кривую или участок ломаной</translation>
     </message>
     <message>
         <source>Choose line, arc, circle, ellipse or spline segment</source>

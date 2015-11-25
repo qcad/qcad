@@ -42,7 +42,7 @@
     <message>
         <location line="+4"/>
         <source>File not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Файл не найден.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -52,7 +52,7 @@
     <message>
         <location line="+4"/>
         <source>Import failed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Импортирование не удалось.</translation>
     </message>
     <message>
         <location line="+3"/>

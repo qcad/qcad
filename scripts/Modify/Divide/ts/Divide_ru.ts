@@ -10,7 +10,7 @@
     <message>
         <location filename="../Divide.js" line="+66"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation>Выберите линию, дугу, окружность, эллипс, прямую или многоугольник</translation>
+        <translation>Выберите линию, дугу, окружность, эллипс, кривую или многоугольник</translation>
     </message>
     <message>
         <location line="+3"/>
