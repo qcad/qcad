@@ -144,7 +144,7 @@
     <message>
         <location line="-535"/>
         <source>Origin:</source>
-        <translation>Оригинал: </translation>
+        <translation>Начало координат:</translation>
     </message>
     <message>
         <location line="+81"/>

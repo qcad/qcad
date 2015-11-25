@@ -6,7 +6,7 @@
     <message>
         <location filename="../AutoZoomInit.js" line="+2"/>
         <source>&amp;Auto Zoom</source>
-        <translation>П&amp;оказать все</translation>
+        <translation>&amp;Автоматическое масштабирование</translation>
     </message>
 </context>
 </TS>

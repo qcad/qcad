@@ -31,7 +31,7 @@
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation>px</translation>
+        <translation>пикс.</translation>
     </message>
     <message>
         <location line="+9"/>
