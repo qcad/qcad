@@ -150,6 +150,9 @@
         getColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDisplayColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         copyAttributesFrom
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

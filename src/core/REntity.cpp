@@ -120,7 +120,6 @@ RLineweight::Lineweight REntity::getLineweight(bool resolve,
  * \copydoc REntityData::getColor
  */
 RColor REntity::getColor(bool resolve, const QStack<REntity*>& blockRefStack) {
-
     QStack<REntity*> newBlockRefStack = blockRefStack;
     if (!newBlockRefStack.isEmpty() && this==(REntity*)newBlockRefStack.top()) {
         newBlockRefStack.pop();
@@ -264,8 +263,7 @@ QPair<QVariant, RPropertyAttributes> REntity::getProperty(
     }
     else if (propertyTypeId == PropertyDisplayedColor) {
         QVariant var;
-        QStack<REntity*> stack;
-        var.setValue<RColor> (getData().getColor(true, stack));
+        var.setValue<RColor> (getDisplayColor());
         return qMakePair(var, RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
     else if (propertyTypeId == PropertyDrawOrder) {

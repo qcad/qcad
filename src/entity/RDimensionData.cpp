@@ -528,7 +528,9 @@ QString RDimensionData::formatLabel(double distance) const {
         ret = RUnit::formatLinear(distance, document->getUnit(),
             document->getLinearFormat(), document->getLinearPrecision(),
             false,
-            document->showLeadingZeroes(), document->showTrailingZeroes());
+            document->showLeadingZeroes(), document->showTrailingZeroes()
+                                  // TODO: , document->getDecimalSeparator()
+                                  );
     }
     else {
         ret = QString("%1").arg(distance);

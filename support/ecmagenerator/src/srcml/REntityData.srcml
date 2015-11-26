@@ -252,6 +252,11 @@
 
     <function_decl><type><name>virtual</name> <name>RColor</name></type> <name>getColor</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>resolve</name></decl></param>, <param><decl><type><name>const</name> <name>QStack<argument_list>&lt;<argument><name>REntity</name> *</argument>&gt;</argument_list></name>&amp;</type> <name>blockRefStack</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function><type><name>virtual</name> <name>RColor</name></type> <name>getDisplayColor</name><parameter_list>()</parameter_list> <block>{
+        <decl_stmt><decl><type><name>QStack<argument_list>&lt;<argument><name>REntity</name>*</argument>&gt;</argument_list></name></type> <name>stack</name></decl>;</decl_stmt>
+        <return>return <expr><call><name>getColor</name><argument_list>(<argument><expr><name>true</name></expr></argument>, <argument><expr><name>stack</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
     <comment type="block">/**
      * Can be overwritten to return internal, resolved reference points.
      * This is used for example for block references in combination with

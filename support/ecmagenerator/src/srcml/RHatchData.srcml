@@ -101,7 +101,6 @@
     <function><type><name>void</name></type> <name>setSolid</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>solid</name> = <name>on</name></expr>;</expr_stmt>
         <constructor_decl><name>clearCustomPattern</name><parameter_list>()</parameter_list>;</constructor_decl>
-        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>double</name></type> <name>getScale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -111,7 +110,6 @@
     <function><type><name>void</name></type> <name>setScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>s</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>scaleFactor</name> = <name>s</name></expr>;</expr_stmt>
         <constructor_decl><name>clearCustomPattern</name><parameter_list>()</parameter_list>;</constructor_decl>
-        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>double</name></type> <name>getAngle</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -121,7 +119,6 @@
     <function><type><name>void</name></type> <name>setAngle</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>angle</name> = <name>a</name></expr>;</expr_stmt>
         <constructor_decl><name>clearCustomPattern</name><parameter_list>()</parameter_list>;</constructor_decl>
-        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>RVector</name></type> <name>getOriginPoint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -131,7 +128,6 @@
     <function><type><name>void</name></type> <name>setOriginPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>op</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>originPoint</name> = <name>op</name></expr>;</expr_stmt>
         <constructor_decl><name>clearCustomPattern</name><parameter_list>()</parameter_list>;</constructor_decl>
-        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>QString</name></type> <name>getPatternName</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -141,11 +137,11 @@
     <function><type><name>void</name></type> <name>setPatternName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>n</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>patternName</name> = <name>n</name></expr>;</expr_stmt>
         <constructor_decl><name>clearCustomPattern</name><parameter_list>()</parameter_list>;</constructor_decl>
-        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function><type><name>void</name></type> <name>clearCustomPattern</name><parameter_list>()</parameter_list> <block>{
         <expr_stmt><expr><name>pattern</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
     }</block></function>
 
     <function_decl><type><name>void</name></type> <name>newLoop</name><parameter_list>()</parameter_list>;</function_decl>

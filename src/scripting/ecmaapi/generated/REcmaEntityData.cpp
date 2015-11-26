@@ -123,6 +123,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getColor, "getColor");
             
+            REcmaHelper::registerFunction(&engine, proto, getDisplayColor, "getDisplayColor");
+            
             REcmaHelper::registerFunction(&engine, proto, getInternalReferencePoints, "getInternalReferencePoints");
             
             REcmaHelper::registerFunction(&engine, proto, getReferencePoints, "getReferencePoints");
@@ -2534,6 +2536,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEntityData::getColor", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntityData::getDisplayColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntityData::getDisplayColor", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntityData::getDisplayColor";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntityData* self = 
+                        getSelf("getDisplayColor", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RColor'
+    RColor cppResult =
+        
+               self->getDisplayColor();
+        // return type: RColor
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntityData.getDisplayColor().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntityData::getDisplayColor", context, engine);
             return result;
         }
          QScriptValue

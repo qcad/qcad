@@ -251,6 +251,11 @@ public:
 
     virtual RColor getColor(bool resolve, const QStack<REntity *>& blockRefStack) const;
 
+    virtual RColor getDisplayColor() {
+        QStack<REntity*> stack;
+        return getColor(true, stack);
+    }
+
     /**
      * Can be overwritten to return internal, resolved reference points.
      * This is used for example for block references in combination with
