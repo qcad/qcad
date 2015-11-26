@@ -313,6 +313,11 @@ public:
 
     RColor getColor(bool resolve, const QStack<REntity*>& blockRefStack);
 
+    RColor getDisplayColor() {
+        QStack<REntity*> stack;
+        return getColor(true, stack);
+    }
+
     void copyAttributesFrom(REntity* entity, bool copyBlockId=true);
 
     /**
