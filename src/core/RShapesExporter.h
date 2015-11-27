@@ -22,6 +22,11 @@
 #include "RShape.h"
 #include "RExporter.h"
 
+class RPoint;
+class RRay;
+class RTriangle;
+class RXLine;
+
 /**
  * Exports exploded polylines or splines as connected shapes with continuous line pattern.
  */
