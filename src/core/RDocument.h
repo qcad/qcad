@@ -332,6 +332,7 @@ public:
     bool showTrailingZeroesAngle();
     RS::AngleFormat getAngleFormat();
     int getAnglePrecision();
+    //QChar getDecimalSeparator();
 
     bool isModified() const;
     void setModified(bool m);
