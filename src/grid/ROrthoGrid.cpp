@@ -39,7 +39,6 @@ ROrthoGrid::ROrthoGrid(RGraphicsView &view)
     minSpacing(RVector::invalid),
     metaSpacing(RVector::invalid),
     minMetaSpacing(RVector::invalid),
-    scaleGrid(true),
     minPixelSpacing(10),
     isometric(-1),
     projection(-1)
@@ -512,6 +511,8 @@ void ROrthoGrid::paintGridPoints(const RVector& space, const RBox& box) {
 }
 
 void ROrthoGrid::paintGridLines(const RVector& space, const RBox& box, bool meta) {
+    Q_UNUSED(meta)
+
     if (!space.isValid()) {
         return;
     }

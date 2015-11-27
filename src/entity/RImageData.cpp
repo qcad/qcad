@@ -137,10 +137,12 @@ QList<RVector> RImageData::getReferencePoints(
     return ret;
 }
 
-bool RImageData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
-    bool ret = false;
+bool RImageData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint) {
+    Q_UNUSED(referencePoint)
+    Q_UNUSED(targetPoint)
 
+    bool ret = false;
+    // TODO scale image:
     return ret;
 }
 
@@ -172,12 +174,9 @@ bool RImageData::mirror(const RLine& axis) {
 
 QList<QSharedPointer<RShape> > RImageData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
     Q_UNUSED(queryBox)
+    Q_UNUSED(ignoreComplex)
 
     QList<QSharedPointer<RShape> > ret;
-
-    //return QList<QSharedPointer<RShape> >() <<
-    //        QSharedPointer<RShape>();
-
     return ret;
 }
 

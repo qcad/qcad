@@ -96,7 +96,7 @@ RVector RShapesExporter::getPointAt(double d, int* index) {
 
 double RShapesExporter::getAngleAt(double d) {
     int i = getShapeAt(d);
-    if (i<0 || i>shapes.length() || i>lengthAt.size()) {
+    if (i<0 || i>shapes.length() || (unsigned long)i>lengthAt.size()) {
         return 0.0;
     }
     double a = d - (i==0 ? 0.0 : lengthAt[i-1]);
@@ -104,7 +104,7 @@ double RShapesExporter::getAngleAt(double d) {
 }
 
 int RShapesExporter::getShapeAt(double d) {
-    for (int i=0; i<lengthAt.size(); i++) {
+    for (int i=0; (unsigned long)i<lengthAt.size(); i++) {
         double d1;
         if (i==0) {
             d1 = 0.0;

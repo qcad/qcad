@@ -524,6 +524,9 @@ int RDocument::getAnglePrecision() {
     return getKnownVariable(RS::DIMADEC, 2).toInt();
 }
 
+QChar RDocument::getDecimalSeparator() {
+    return getKnownVariable(RS::DIMDSEP, 2).toInt();
+}
 
 QStringList RDocument::getVariables() const {
     return storage.getVariables();

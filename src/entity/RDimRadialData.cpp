@@ -128,12 +128,9 @@ bool RDimRadialData::mirror(const RLine& axis) {
 
 QList<QSharedPointer<RShape> > RDimRadialData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
     Q_UNUSED(queryBox)
+    Q_UNUSED(ignoreComplex)
 
     QList<QSharedPointer<RShape> > ret;
-
-//    if (ignoreComplex) {
-//        return ret;
-//    }
 
     defaultAngle = 0.0;
 

@@ -94,7 +94,6 @@ private:
     RVector autoMetaSpacing;
     RVector minMetaSpacing;
 
-    bool scaleGrid;
     int minPixelSpacing;
     QString infoText;
 

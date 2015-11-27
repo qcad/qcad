@@ -34,6 +34,8 @@ RMoveReferencePointOperation::RMoveReferencePointOperation(
 
 
 RTransaction RMoveReferencePointOperation::apply(RDocument& document, bool preview) const {
+    Q_UNUSED(preview)
+
     RTransaction transaction(document.getStorage(), text);
     transaction.setGroup(transactionGroup);
 

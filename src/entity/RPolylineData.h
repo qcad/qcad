@@ -161,8 +161,8 @@ public:
         return RPolyline::isGeometricallyClosed();
     }
 
-    QList<QSharedPointer<RShape> > getExploded() const {
-        return RPolyline::getExploded();
+    QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const {
+        return RPolyline::getExploded(segments);
     }
 
     RPainterPath toPainterPath() const {

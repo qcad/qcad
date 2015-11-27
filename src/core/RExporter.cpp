@@ -83,6 +83,9 @@ RExporter::RExporter(RDocument& document, RMessageHandler *messageHandler, RProg
       clipping(false),
       projectionRenderingHint(RS::RenderThreeD) {
 
+    Q_UNUSED(messageHandler)
+    Q_UNUSED(progressHandler)
+
     currentPen.setColor(Qt::white);
     currentPen.setWidth(3);
     currentPen.setCapStyle(Qt::RoundCap);

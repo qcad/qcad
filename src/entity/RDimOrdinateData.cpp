@@ -129,6 +129,7 @@ bool RDimOrdinateData::stretch(const RPolyline& area, const RVector& offset) {
 
 QList<QSharedPointer<RShape> > RDimOrdinateData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
     Q_UNUSED(queryBox)
+    Q_UNUSED(ignoreComplex)
 
     QList<QSharedPointer<RShape> > ret;
 

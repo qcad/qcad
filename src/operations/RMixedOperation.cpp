@@ -74,6 +74,8 @@ void RMixedOperation::endCycle() {
 }
 
 RTransaction RMixedOperation::apply(RDocument& document, bool preview) const {
+    Q_UNUSED(preview)
+
     RTransaction transaction(document.getStorage(), text, undoable);
     transaction.setGroup(transactionGroup);
 

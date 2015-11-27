@@ -55,8 +55,17 @@ void RSpatialIndexSimple::addToIndex(
 
 bool RSpatialIndexSimple::removeFromIndex(
         int id, int pos,
-        double /*x1*/, double /*y1*/, double /*z1*/,
-        double /*x2*/, double /*y2*/, double /*z2*/) {
+        double x1, double y1, double z1,
+        double x2, double y2, double z2) {
+
+    Q_UNUSED(id)
+    Q_UNUSED(pos)
+    Q_UNUSED(x1)
+    Q_UNUSED(y1)
+    Q_UNUSED(z1)
+    Q_UNUSED(x2)
+    Q_UNUSED(y2)
+    Q_UNUSED(z2)
     
     Q_ASSERT(false);
     //RBox box(RVector(x1,y1,z1),RVector(x2,y2,z2));
@@ -115,6 +124,12 @@ QMap<int, QSet<int> > RSpatialIndexSimple::queryNearestNeighbor(
     uint k,
     double x, double y, double z,
     RSpatialIndexVisitor* dataVisitor) {
+
+    Q_UNUSED(k)
+    Q_UNUSED(x)
+    Q_UNUSED(y)
+    Q_UNUSED(z)
+    Q_UNUSED(dataVisitor)
 
     qFatal("not implemented");
     return QMap<int, QSet<int> >(); 

@@ -1546,6 +1546,7 @@ QList<RVector> RShape::getIntersectionPointsEX(const REllipse& ellipse1,
 
 QList<RVector> RShape::getIntersectionPointsSS(const RSpline& spline1,
         const RSpline& spline2, bool limited, bool same) {
+    Q_UNUSED(same)
 
     if (RSpline::hasProxy()) {
         RSplineProxy* proxy = RSpline::getSplineProxy();

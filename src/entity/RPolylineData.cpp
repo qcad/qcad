@@ -110,6 +110,8 @@ QList<RVector> RPolylineData::getIntersectionPoints(
         const REntityData& other, bool limited, bool same,
         const RBox& queryBox, bool ignoreComplex) const {
 
+    Q_UNUSED(ignoreComplex)
+
     QList<RVector> ret;
 
     QList<QSharedPointer<RShape> > shapes1All = getExploded();

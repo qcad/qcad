@@ -502,7 +502,7 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
                     continue;
                 }
 
-                if (isArray && col>0 || row>0) {
+                if (isArray && (col>0 || row>0)) {
                     // entity might be from cache: clone:
                     entity = QSharedPointer<REntity>(entity->clone());
                     applyColumnRowOffsetTo(*entity, col, row);

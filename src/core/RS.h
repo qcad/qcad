@@ -342,6 +342,7 @@ public:
         DIMDEC,
         DIMDLE,
         DIMDLI,
+        /** Decimal separator in dimensions */
         DIMDSEP,
         DIMEXE,
         DIMEXO,

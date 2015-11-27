@@ -87,6 +87,17 @@ void RMainWindow::messageHandler(QtMsgType type, const QMessageLogContext& conte
                 p.constData(), (const char*)QTime::currentTime().toString().toLocal8Bit(), localMsg.constData());
         fflush(stderr);
         break;
+#if QT_VERSION >= 0x050500
+    case QtInfoMsg:
+        if (context.file!=NULL && context.function!=NULL) {
+            fprintf(stderr, "\033[36m%s%s:%u, %s:\033[0m\n",
+                    p.constData(), context.file, context.line, context.function);
+        }
+        fprintf(stderr, "%s%s: Info:    %s\n",
+                p.constData(), (const char*)QTime::currentTime().toString().toLocal8Bit(), localMsg.constData());
+        fflush(stderr);
+        break;
+#endif
     case QtWarningMsg:
         if (localMsg.contains("changing class of non-QScriptObject not supported")) {
             break;
