@@ -22,11 +22,6 @@
 #include "RShape.h"
 #include "RExporter.h"
 
-class RPoint;
-class RRay;
-class RTriangle;
-class RXLine;
-
 /**
  * Exports exploded polylines or splines as connected shapes with continuous line pattern.
  */
@@ -48,18 +43,10 @@ public:
 
     virtual void exportPainterPaths(const QList<RPainterPath>& paths, double angle, const RVector& pos);
 
-    virtual void exportXLine(const RXLine& xLine) {
-        Q_UNUSED(xLine)
-    }
-    virtual void exportRay(const RRay& ray) {
-        Q_UNUSED(ray)
-    }
-    virtual void exportPoint(const RPoint& point) {
-        Q_UNUSED(point)
-    }
-    virtual void exportTriangle(const RTriangle& triangle) {
-        Q_UNUSED(triangle)
-    }
+    virtual void exportXLine(const RXLine& ) {}
+    virtual void exportRay(const RRay& ) { }
+    virtual void exportPoint(const RPoint& ) { }
+    virtual void exportTriangle(const RTriangle& ) { }
 
     RVector getPointAt(double d, int* index = NULL);
     double getAngleAt(double d);
