@@ -145,7 +145,7 @@ bool RDxfImporter::importFile(const QString& fileName, const QString& nameFilter
     RImporter::endImport();
 
     // set block reference IDs in the end to support nested blocks (FS#1016):
-    RSpatialIndex& si = document->getSpatialIndex();
+    //RSpatialIndex& si = document->getSpatialIndex();
     QSet<REntity::Id> ids = document->queryAllBlockReferences();
     QSet<REntity::Id>::const_iterator it;
     for (it=ids.constBegin(); it!=ids.constEnd(); it++) {
@@ -1173,6 +1173,7 @@ void RDxfImporter::addHatch(const DL_HatchData& data) {
 }
 
 void RDxfImporter::addHatchLoop(const DL_HatchLoopData& data) {
+    Q_UNUSED(data)
     hatch.newLoop();
 }
 
@@ -1182,7 +1183,7 @@ void RDxfImporter::addHatchEdge(const DL_HatchEdgeData& data) {
     switch (data.type) {
     case 0: {
         RPolyline pl;
-        for (int i=0; i<data.vertices.size(); i++) {
+        for (int i=0; (unsigned long)i<data.vertices.size(); i++) {
             if (data.vertices[i].size()==2) {
                 pl.appendVertex(RVector(data.vertices[i][0], data.vertices[i][1]));
             }
@@ -1262,18 +1263,18 @@ void RDxfImporter::addHatchEdge(const DL_HatchEdgeData& data) {
 
         s->setDegree(data.degree);
         QList<RVector> controlPoints;
-        for (int i=0; i<data.controlPoints.size(); i++) {
+        for (int i=0; (unsigned long)i<data.controlPoints.size(); i++) {
             RVector v(data.controlPoints[i][0], data.controlPoints[i][1]);
             controlPoints.append(v);
         }
         QList<double> knots;
-        for (int i=0; i<data.knots.size(); i++) {
+        for (int i=0; (unsigned long)i<data.knots.size(); i++) {
             knots.append(data.knots[i]);
         }
         //Q_ASSERT(data.degree + 1 + controlPoints.size() == knots.size());
 
         bool periodic = true;
-        for (int i=0; i<data.degree; i++) {
+        for (unsigned int i=0; i<data.degree; i++) {
             if (!controlPoints.at(i).equalsFuzzy(controlPoints.at(controlPoints.size()-data.degree+i))) {
                 periodic = false;
                 break;
@@ -1281,7 +1282,7 @@ void RDxfImporter::addHatchEdge(const DL_HatchEdgeData& data) {
         }
 
         if (periodic) {
-            for (int i=0; i<data.degree; ++i) {
+            for (unsigned int i=0; i<data.degree; ++i) {
                 controlPoints.removeLast();
             }
             s->setControlPoints(controlPoints);
@@ -1363,6 +1364,8 @@ void RDxfImporter::addXRecord(const std::string& handle) {
 }
 
 void RDxfImporter::addXRecordString(int code, const std::string& value) {
+    Q_UNUSED(code)
+
     if (variableKey.isEmpty()) {
         return;
     }
@@ -1370,6 +1373,8 @@ void RDxfImporter::addXRecordString(int code, const std::string& value) {
 }
 
 void RDxfImporter::addXRecordReal(int code, double value) {
+    Q_UNUSED(code)
+
     if (variableKey.isEmpty()) {
         return;
     }
@@ -1377,6 +1382,8 @@ void RDxfImporter::addXRecordReal(int code, double value) {
 }
 
 void RDxfImporter::addXRecordInt(int code, int value) {
+    Q_UNUSED(code)
+
     if (variableKey.isEmpty()) {
         return;
     }
@@ -1384,6 +1391,8 @@ void RDxfImporter::addXRecordInt(int code, int value) {
 }
 
 void RDxfImporter::addXRecordBool(int code, bool value) {
+    Q_UNUSED(code)
+
     if (variableKey.isEmpty()) {
         return;
     }
@@ -1441,6 +1450,7 @@ void RDxfImporter::addDictionaryEntry(const DL_DictionaryEntryData& data) {
 
 void RDxfImporter::setVariableVector(const std::string& key,
                                      double v1, double v2, double v3, int code) {
+    Q_UNUSED(code)
 
     RS::KnownVariable v = dxfServices.stringToVariable(decode(key.c_str()));
     if (v!=RS::INVALID) {
@@ -1450,6 +1460,8 @@ void RDxfImporter::setVariableVector(const std::string& key,
 
 void RDxfImporter::setVariableString(const std::string& key,
                                      const std::string& value, int code) {
+    Q_UNUSED(code)
+
     RS::KnownVariable v = dxfServices.stringToVariable(key.c_str());
     if (v!=RS::INVALID) {
         setKnownVariable(v, value.c_str());
@@ -1457,6 +1469,8 @@ void RDxfImporter::setVariableString(const std::string& key,
 }
 
 void RDxfImporter::setVariableInt(const std::string& key, int value, int code) {
+    Q_UNUSED(code)
+
     RS::KnownVariable v = dxfServices.stringToVariable(key.c_str());
     if (v!=RS::INVALID) {
         setKnownVariable(v, value);
@@ -1464,6 +1478,8 @@ void RDxfImporter::setVariableInt(const std::string& key, int value, int code) {
 }
 
 void RDxfImporter::setVariableDouble(const std::string& key, double value, int code) {
+    Q_UNUSED(code)
+
     RS::KnownVariable v = dxfServices.stringToVariable(key.c_str());
     if (v!=RS::INVALID) {
         setKnownVariable(v, value);
