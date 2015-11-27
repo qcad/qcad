@@ -50,7 +50,7 @@ RView* RView::clone() const {
 
 bool RView::setProperty(RPropertyTypeId propertyTypeId,
     const QVariant& value, RTransaction* transaction) {
-    bool ret = false;
+    bool ret = RObject::setProperty(propertyTypeId, value, transaction);
     ret = RObject::setMember(name, value, PropertyName == propertyTypeId);
     ret = ret || RObject::setMember(centerPoint, value, PropertyCenterPoint == propertyTypeId);
     ret = ret || RObject::setMember(width, value, PropertyWidth == propertyTypeId);
@@ -59,8 +59,11 @@ bool RView::setProperty(RPropertyTypeId propertyTypeId,
 }
 
 QPair<QVariant, RPropertyAttributes> RView::getProperty(
-        RPropertyTypeId& propertyTypeId, bool /*humanReadable*/,
-        bool /*noAttributes*/) {
+        RPropertyTypeId& propertyTypeId, bool humanReadable,
+        bool noAttributes) {
+
+    Q_UNUSED(humanReadable)
+    Q_UNUSED(noAttributes)
 
     if (propertyTypeId == PropertyName) {
         return qMakePair(QVariant(name), RPropertyAttributes());
@@ -75,7 +78,7 @@ QPair<QVariant, RPropertyAttributes> RView::getProperty(
         return qMakePair(QVariant(height), RPropertyAttributes());
     }
 
-    return qMakePair(QVariant(), RPropertyAttributes());
+    return RObject::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 
 bool RView::isSelectedForPropertyEditing() {
