@@ -343,6 +343,7 @@
         <expr><name>DIMDEC</name></expr>,
         <expr><name>DIMDLE</name></expr>,
         <expr><name>DIMDLI</name></expr>,
+        <comment type="block">/** Decimal separator in dimensions */</comment>
         <expr><name>DIMDSEP</name></expr>,
         <expr><name>DIMEXE</name></expr>,
         <expr><name>DIMEXO</name></expr>,

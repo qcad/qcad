@@ -68,6 +68,7 @@ public:
     static QString getStandardLocation(int sl);
     static QString getCacheLocation();
     static QString getDataLocation();
+    static QString getTempLocation();
     static QString getDesktopLocation();
     static QString getDocumentsLocation();
     static QString getHomeLocation();

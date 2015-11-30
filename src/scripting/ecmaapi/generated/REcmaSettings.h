@@ -91,6 +91,9 @@
         getDataLocation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getTempLocation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDesktopLocation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

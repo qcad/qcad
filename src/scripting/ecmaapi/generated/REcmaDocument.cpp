@@ -365,6 +365,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAnglePrecision, "getAnglePrecision");
             
+            REcmaHelper::registerFunction(&engine, proto, getDecimalSeparator, "getDecimalSeparator");
+            
             REcmaHelper::registerFunction(&engine, proto, isModified, "isModified");
             
             REcmaHelper::registerFunction(&engine, proto, setModified, "setModified");
@@ -11513,6 +11515,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::getAnglePrecision", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getDecimalSeparator
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getDecimalSeparator", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getDecimalSeparator";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getDecimalSeparator", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QChar'
+    QChar cppResult =
+        
+               self->getDecimalSeparator();
+        // return type: QChar
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getDecimalSeparator().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getDecimalSeparator", context, engine);
             return result;
         }
          QScriptValue

@@ -69,6 +69,7 @@
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getStandardLocation</name><parameter_list>(<param><decl><type><name>int</name></type> <name>sl</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getCacheLocation</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getDataLocation</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>getTempLocation</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getDesktopLocation</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getDocumentsLocation</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getHomeLocation</name><parameter_list>()</parameter_list>;</function_decl>

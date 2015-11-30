@@ -489,6 +489,9 @@
         getAnglePrecision
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDecimalSeparator
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isModified
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -92,6 +92,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="getTempLocation" cppName="getTempLocation"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="getDesktopLocation" cppName="getDesktopLocation"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">

@@ -213,6 +213,14 @@ QString RSettings::getDataLocation() {
 #endif
 }
 
+QString RSettings::getTempLocation() {
+#if QT_VERSION >= 0x050000
+    return RSettings::getStandardLocation(QStandardPaths::TempLocation);
+#else
+    return RSettings::getStandardLocation(QDesktopServices::TempLocation);
+#endif
+}
+
 QString RSettings::getDesktopLocation() {
 #if QT_VERSION >= 0x050000
     return RSettings::getStandardLocation(QStandardPaths::DesktopLocation);
