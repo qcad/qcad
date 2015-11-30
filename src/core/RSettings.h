@@ -174,6 +174,7 @@ public:
 
     static int getMouseThreshold();
     static bool getPositionByMousePress();
+    static bool getAllowMouseMoveInterruptions();
 
     static bool isTextRenderedAsText();
     static bool isLayer0CompatibilityOn();
@@ -207,6 +208,7 @@ private:
     static int useSecondarySelectionColor;
     static int mouseThreshold;
     static int positionByMousePress;
+    static int allowMouseMoveInterruptions;
     static double arcAngleLengthThreshold;
     static double minArcAngleStep;
     static int dashThreshold;

@@ -57,6 +57,7 @@ int RSettings::autoScaleLinetypePattern = -1;
 int RSettings::useSecondarySelectionColor = -1;
 int RSettings::mouseThreshold = -1;
 int RSettings::positionByMousePress = -1;
+int RSettings::allowMouseMoveInterruptions = -1;
 int RSettings::useSolidLineSelection = -1;
 double RSettings::arcAngleLengthThreshold = -1;
 double RSettings::minArcAngleStep = -1;
@@ -971,6 +972,13 @@ bool RSettings::getPositionByMousePress() {
         positionByMousePress = getValue("GraphicsView/PositionByMousePress", QVariant(false)).toBool();
     }
     return (bool)positionByMousePress;
+}
+
+bool RSettings::getAllowMouseMoveInterruptions() {
+    if (allowMouseMoveInterruptions==-1) {
+        allowMouseMoveInterruptions = getValue("GraphicsView/AllowMouseMoveInterruptions", QVariant(true)).toBool();
+    }
+    return (bool)allowMouseMoveInterruptions;
 }
 
 void RSettings::resetCache() {
