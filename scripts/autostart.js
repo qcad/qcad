@@ -524,10 +524,15 @@ function main() {
     }
     
     // splash:
-    var splash;
-    splash = undefined;
+    var splash = undefined;
     if (RSettings.getBoolValue("Start/EnableSplashScreen", true)) {
-        var fn = "scripts/splashscreen.png";
+        var fn;
+        if (RSettings.getDevicePixelRatio()===2) {
+            fn = "scripts/splashscreen@2x.png";
+        }
+        else {
+            fn = "scripts/splashscreen.png";
+        }
         var pixmap = new QPixmap(fn);
         splash = new QSplashScreen(pixmap);
         if (!QCoreApplication.arguments().contains("-no-show")) {

@@ -18,9 +18,9 @@
    id="svg2"
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="splashscreen.svg"
-   inkscape:export-filename="../../scripts/splashscreen.png"
-   inkscape:export-xdpi="81.629997"
-   inkscape:export-ydpi="81.629997">
+   inkscape:export-filename="../../scripts/splashscreen@2x.png"
+   inkscape:export-xdpi="163.27"
+   inkscape:export-ydpi="163.27">
   <metadata
      id="metadata504">
     <rdf:RDF>
@@ -1665,8 +1665,8 @@
      inkscape:zoom="2.0773318"
      inkscape:cx="230.54783"
      inkscape:cy="137.62949"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-x="785"
+     inkscape:window-y="65"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg2" />
   <g
