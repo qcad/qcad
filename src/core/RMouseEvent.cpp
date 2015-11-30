@@ -43,10 +43,22 @@ RMouseEvent::~RMouseEvent() {
 }
 
 bool RMouseEvent::hasMouseMoved() {
-    return (
-        !oriCursor.isNull() &&
-        (oriCursor - QCursor::pos()).manhattanLength()>RSettings::getMouseThreshold()
-    );
+    static QTime time;
+
+    if (!RSettings::getAllowMouseMoveInterruptions()) {
+        return false;
+    }
+
+    if (!time.isValid() || time.elapsed()>50) {
+        time.start();
+        bool ret = (
+            !oriCursor.isNull() &&
+            (oriCursor - QCursor::pos()).manhattanLength()>RSettings::getMouseThreshold()
+        );
+        return ret;
+    }
+
+    return false;
 }
 
 void RMouseEvent::resetOriginalMousePos() {
