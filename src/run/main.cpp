@@ -95,7 +95,6 @@ int main(int argc, char *argv[]) {
     // see http://qt-project.org/doc/qt-4.8/codecs-jis.html
 #ifdef Q_OS_WIN
     _putenv_s("UNICODEMAP_JP", "cp932");
-    _putenv_s("QT_DEVICE_PIXEL_RATIO", "auto");
 #else
     setenv("UNICODEMAP_JP", "cp932", 1);
 #endif
