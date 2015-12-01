@@ -169,7 +169,7 @@ void RTransaction::redo() {
             if (object->isUndone()) {
                 QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
 
-                object->setUndone(false);
+                storage->setUndoStatus(*object, false);
 
                 if (!spatialIndexDisabled && !entity.isNull()) {
                     document->addToSpatialIndex(entity);
@@ -180,7 +180,7 @@ void RTransaction::redo() {
                 if (!spatialIndexDisabled && !entity.isNull()) {
                     document->removeFromSpatialIndex(entity);
                 }
-                object->setUndone(true);
+                storage->setUndoStatus(*object, true);
             }
         }
 
@@ -252,7 +252,7 @@ void RTransaction::undo() {
             if (object->isUndone()) {
                 // object was deleted and is now restored:
                 QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
-                object->setUndone(false);
+                storage->setUndoStatus(*object, false);
                 if (!spatialIndexDisabled && !entity.isNull()) {
                     document->addToSpatialIndex(entity);
                 }
@@ -263,7 +263,7 @@ void RTransaction::undo() {
                 if (!spatialIndexDisabled && !entity.isNull()) {
                     document->removeFromSpatialIndex(entity);
                 }
-                object->setUndone(true);
+                storage->setUndoStatus(*object, true);
             }
         }
 
@@ -895,8 +895,11 @@ void RTransaction::addAffectedObject(QSharedPointer<RObject> object) {
             addAffectedObject(entity->getBlockId());
 
             // all block references of the block this entity is in are affected:
-            QSet<REntity::Id> affectedBlockRefIds = storage->queryBlockReferences(entity->getBlockId());
-            addAffectedObjects(affectedBlockRefIds);
+            // model space has no references:
+            if (entity->getBlockId()!=storage->getModelSpaceBlockId()) {
+                QSet<REntity::Id> affectedBlockRefIds = storage->queryBlockReferences(entity->getBlockId());
+                addAffectedObjects(affectedBlockRefIds);
+            }
         }
     }
 

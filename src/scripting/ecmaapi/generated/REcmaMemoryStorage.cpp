@@ -136,6 +136,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryLinetype, "queryLinetype");
             
+            REcmaHelper::registerFunction(&engine, proto, clearSelectionCache, "clearSelectionCache");
+            
+            REcmaHelper::registerFunction(&engine, proto, updateSelectedEntityMap, "updateSelectedEntityMap");
+            
             REcmaHelper::registerFunction(&engine, proto, countSelectedEntities, "countSelectedEntities");
             
             REcmaHelper::registerFunction(&engine, proto, clearEntitySelection, "clearEntitySelection");
@@ -2707,6 +2711,94 @@
             return result;
         }
          QScriptValue
+        REcmaMemoryStorage::clearSelectionCache
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::clearSelectionCache", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::clearSelectionCache";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("clearSelectionCache", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearSelectionCache();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.clearSelectionCache().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::clearSelectionCache", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMemoryStorage::updateSelectedEntityMap
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMemoryStorage::updateSelectedEntityMap", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMemoryStorage::updateSelectedEntityMap";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMemoryStorage* self = 
+                        getSelf("updateSelectedEntityMap", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateSelectedEntityMap();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMemoryStorage.updateSelectedEntityMap().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMemoryStorage::updateSelectedEntityMap", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaMemoryStorage::countSelectedEntities
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4853,6 +4945,56 @@
                 // standard Type
                 result = QScriptValue(cppResult);
             
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RObject */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RObject*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RObject*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RMemoryStorage: Argument 0 is not of type RObject*.",
+                               context);                    
+                    }
+                    RObject& a0 = *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setUndoStatus(a0
+        ,
+    a1);
     } else
 
 

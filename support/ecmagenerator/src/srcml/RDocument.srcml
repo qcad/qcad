@@ -370,7 +370,7 @@
     <comment type="line">// map of spatial indices (per block):</comment>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>RBlock</name>::<name>Id</name></name></argument>, <argument><name>RSpatialIndex</name>*</argument>&gt;</argument_list></name></type> <name>spatialIndicesByBlock</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RTransactionStack</name></type> <name>transactionStack</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>modelSpaceBlockId</name></decl>;</decl_stmt>
+    <comment type="line">//RBlock::Id modelSpaceBlockId;</comment>
     <decl_stmt><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeByLayerId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeByBlockId</name></decl>;</decl_stmt>
 </private>}</block>;</class>

@@ -87,6 +87,9 @@ public:
     virtual QSharedPointer<RLinetype> queryLinetype(RLinetype::Id linetypeId) const;
     virtual QSharedPointer<RLinetype> queryLinetype(const QString& linetypeName) const;
 
+    void clearSelectionCache();
+    void updateSelectedEntityMap() const;
+
     virtual int countSelectedEntities() const;
     virtual void clearEntitySelection(QSet<REntity::Id>* affectedEntities = NULL);
     virtual void selectAllEntites(QSet<REntity::Id>* affectedEntities = NULL);
@@ -123,6 +126,7 @@ public:
     virtual void toggleUndoStatus(QSet<RObject::Id>& objects);
     virtual void toggleUndoStatus(RObject::Id object);
     virtual bool setUndoStatus(RObject::Id objectId, bool status);
+    virtual void setUndoStatus(RObject& object, bool status);
     //virtual bool getUndoStatus(RObject::Id objectId) const;
     virtual int getMaxTransactionId();
 
@@ -177,7 +181,7 @@ protected:
     mutable RLineweight::Lineweight maxLineweight;
 
     mutable RBox boundingBox[2][2];
-    mutable bool boundingBoxChanged;
+    mutable bool boundingBoxDirty;
     //mutable bool boundingBoxIgnoreHiddenLayers;
     //mutable bool boundingBoxIgnoreEmpty;
 
@@ -185,6 +189,8 @@ protected:
     QHash<RObject::Id, QSharedPointer<RObject> > objectMap;
     QHash<RObject::Handle, QSharedPointer<RObject> > objectHandleMap;
     QHash<REntity::Id, QSharedPointer<REntity> > entityMap;
+    mutable QHash<REntity::Id, QSharedPointer<REntity> > selectedEntityMap;
+    mutable bool selectedEntityMapDirty;
     QMultiHash<RBlock::Id, QSharedPointer<REntity> > blockEntityMap;
     QHash<RBlock::Id, QSharedPointer<RBlock> > blockMap;
     QHash<RLayer::Id, QSharedPointer<RLayer> > layerMap;

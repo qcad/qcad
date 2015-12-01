@@ -50,7 +50,9 @@ RDocument::RDocument(
     : storage(storage),
       spatialIndex(spatialIndex),
       disableSpatialIndicesByBlock(false),
-      transactionStack(storage) {
+      transactionStack(storage),
+      linetypeByLayerId(RObject::INVALID_ID),
+      linetypeByBlockId(RObject::INVALID_ID) {
 
     storage.setDocument(this);
     init();
@@ -130,7 +132,7 @@ void RDocument::init() {
         transaction.addObject(modelSpace);
     }
 
-    modelSpaceBlockId = getBlockId(RBlock::modelSpaceName);
+    storage.setModelSpaceBlockId(getBlockId(RBlock::modelSpaceName));
 
     // caching for faster operations:
     QSharedPointer<RLinetype> ltByLayer = queryLinetype("BYLAYER");
@@ -781,7 +783,7 @@ RBlock::Id RDocument::getBlockId(const QString& blockName) const {
 }
 
 RBlock::Id RDocument::getModelSpaceBlockId() const {
-    return modelSpaceBlockId;
+    return storage.getModelSpaceBlockId();
 }
 
 QString RDocument::getLinetypeName(RLinetype::Id linetypeId) const {

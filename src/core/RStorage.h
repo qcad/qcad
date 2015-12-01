@@ -300,6 +300,13 @@ public:
         return currentBlockId;
     }
 
+    virtual void setModelSpaceBlockId(RBlock::Id id) {
+        modelSpaceBlockId = id;
+    }
+    virtual RBlock::Id getModelSpaceBlockId() const {
+        return modelSpaceBlockId;
+    }
+
     void setCurrentView(RView::Id viewId) {
         currentViewId = viewId;
     }
@@ -474,8 +481,10 @@ public:
         return b->isFrozen();
     }
 
-    void setObjectId(RObject& object, RObject::Id objectId);
-    void setObjectHandle(RObject& object, RObject::Handle objectHandle);
+    virtual void setObjectId(RObject& object, RObject::Id objectId);
+    virtual void setObjectHandle(RObject& object, RObject::Handle objectHandle);
+
+    virtual void setUndoStatus(RObject& object, bool status);
 
     /**
      * \return True if at least one entity is selected in this storage.
@@ -630,6 +639,7 @@ private:
     RLinetype::Id currentLinetypeId;
     RView::Id currentViewId;
     RBlock::Id currentBlockId;
+    RBlock::Id modelSpaceBlockId;
 
     int lastTransactionId;
     int lastTransactionGroup;

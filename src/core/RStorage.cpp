@@ -62,6 +62,10 @@ void RStorage::setObjectHandle(RObject& object, RObject::Handle objectHandle) {
     }
 }
 
+void RStorage::setUndoStatus(RObject& object, bool status) {
+    object.setUndone(status);
+}
+
 RObject::Id RStorage::getNewObjectId() {
     return idCounter++;
 }

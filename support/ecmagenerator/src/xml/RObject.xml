@@ -78,13 +78,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
-    <method name="setUndone" cppName="setUndone" specifier="public"
-    isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="on"
-        isConst="false" />
-      </variant>
-    </method>
     <method name="getPropertyTypeIds" cppName="getPropertyTypeIds"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
@@ -225,6 +218,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QDebug" typeName="QDebug" name="dbg"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setUndone" cppName="setUndone"
+    specifier="protected" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
         isConst="false" />
       </variant>
     </method>

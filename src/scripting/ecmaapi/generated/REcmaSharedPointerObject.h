@@ -78,9 +78,6 @@
         isUndone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setUndone
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         getPropertyTypeIds
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -183,6 +183,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getCurrentBlockId, "getCurrentBlockId");
             
+            REcmaHelper::registerFunction(&engine, proto, setModelSpaceBlockId, "setModelSpaceBlockId");
+            
+            REcmaHelper::registerFunction(&engine, proto, getModelSpaceBlockId, "getModelSpaceBlockId");
+            
             REcmaHelper::registerFunction(&engine, proto, setCurrentView, "setCurrentView");
             
             REcmaHelper::registerFunction(&engine, proto, startDocumentVariablesTransaction, "startDocumentVariablesTransaction");
@@ -283,6 +287,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setObjectHandle, "setObjectHandle");
             
+            REcmaHelper::registerFunction(&engine, proto, setUndoStatus, "setUndoStatus");
+            
             REcmaHelper::registerFunction(&engine, proto, hasSelection, "hasSelection");
             
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
@@ -312,8 +318,6 @@
             REcmaHelper::registerFunction(&engine, proto, getTransaction, "getTransaction");
             
             REcmaHelper::registerFunction(&engine, proto, toggleUndoStatus, "toggleUndoStatus");
-            
-            REcmaHelper::registerFunction(&engine, proto, setUndoStatus, "setUndoStatus");
             
             REcmaHelper::registerFunction(&engine, proto, getMaxTransactionId, "getMaxTransactionId");
             
@@ -4191,6 +4195,110 @@
             return result;
         }
          QScriptValue
+        REcmaStorage::setModelSpaceBlockId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::setModelSpaceBlockId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::setModelSpaceBlockId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("setModelSpaceBlockId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RBlock::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RBlock::Id
+                    a0 =
+                    (RBlock::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setModelSpaceBlockId(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.setModelSpaceBlockId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::setModelSpaceBlockId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getModelSpaceBlockId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getModelSpaceBlockId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getModelSpaceBlockId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getModelSpaceBlockId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RBlock::Id'
+    RBlock::Id cppResult =
+        
+               self->getModelSpaceBlockId();
+        // return type: RBlock::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getModelSpaceBlockId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getModelSpaceBlockId", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaStorage::setCurrentView
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -7927,6 +8035,129 @@
             return result;
         }
          QScriptValue
+        REcmaStorage::setUndoStatus
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::setUndoStatus", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::setUndoStatus";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("setUndoStatus", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RObject */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RObject*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RObject*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RStorage: Argument 0 is not of type RObject*.",
+                               context);                    
+                    }
+                    RObject& a0 = *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setUndoStatus(a0
+        ,
+    a1);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: RObject::Id */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RObject::Id
+                    a0 =
+                    (RObject::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->setUndoStatus(a0
+        ,
+    a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.setUndoStatus().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::setUndoStatus", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaStorage::hasSelection
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -9061,79 +9292,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::toggleUndoStatus", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaStorage::setUndoStatus
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaStorage::setUndoStatus", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::setUndoStatus";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RStorage* self = 
-                        getSelf("setUndoStatus", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isNumber()
-        ) /* type: RObject::Id */
-     && (
-            context->argument(1).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    RObject::Id
-                    a0 =
-                    (RObject::Id)
-                    (int)
-                    context->argument( 0 ).
-                    toNumber();
-                
-                    // argument isStandardType
-                    bool
-                    a1 =
-                    (bool)
-                    
-                    context->argument( 1 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->setUndoStatus(a0
-        ,
-    a1);
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.setUndoStatus().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaStorage::setUndoStatus", context, engine);
             return result;
         }
          QScriptValue

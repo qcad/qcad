@@ -301,6 +301,13 @@
         <return>return <expr><name>currentBlockId</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>virtual</name> <name>void</name></type> <name>setModelSpaceBlockId</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>modelSpaceBlockId</name> = <name>id</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name>virtual</name> <name><name>RBlock</name>::<name>Id</name></name></type> <name>getModelSpaceBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>modelSpaceBlockId</name></expr>;</return>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>setCurrentView</name><parameter_list>(<param><decl><type><name><name>RView</name>::<name>Id</name></name></type> <name>viewId</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>currentViewId</name> = <name>viewId</name></expr>;</expr_stmt>
     }</block></function>
@@ -475,8 +482,10 @@
         <return>return <expr><name>b</name>-&gt;<call><name>isFrozen</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function_decl><type><name>void</name></type> <name>setObjectId</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>setObjectHandle</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Handle</name></name></type> <name>objectHandle</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setObjectId</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setObjectHandle</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Handle</name></name></type> <name>objectHandle</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setUndoStatus</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name>bool</name></type> <name>status</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * \return True if at least one entity is selected in this storage.
@@ -631,6 +640,7 @@
     <decl_stmt><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>currentLinetypeId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RView</name>::<name>Id</name></name></type> <name>currentViewId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>currentBlockId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>modelSpaceBlockId</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>int</name></type> <name>lastTransactionId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>int</name></type> <name>lastTransactionGroup</name></decl>;</decl_stmt>

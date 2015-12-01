@@ -175,6 +175,7 @@
 
     <function_decl><type><name>static</name> <name>int</name></type> <name>getMouseThreshold</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getPositionByMousePress</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>getAllowMouseMoveInterruptions</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isTextRenderedAsText</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isLayer0CompatibilityOn</name><parameter_list>()</parameter_list>;</function_decl>
@@ -208,6 +209,7 @@
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>useSecondarySelectionColor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>mouseThreshold</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>positionByMousePress</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>allowMouseMoveInterruptions</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>double</name></type> <name>arcAngleLengthThreshold</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>double</name></type> <name>minArcAngleStep</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>int</name></type> <name>dashThreshold</name></decl>;</decl_stmt>

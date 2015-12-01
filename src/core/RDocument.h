@@ -369,7 +369,7 @@ private:
     // map of spatial indices (per block):
     QMap<RBlock::Id, RSpatialIndex*> spatialIndicesByBlock;
     RTransactionStack transactionStack;
-    RBlock::Id modelSpaceBlockId;
+    //RBlock::Id modelSpaceBlockId;
     RLinetype::Id linetypeByLayerId;
     RLinetype::Id linetypeByBlockId;
 };

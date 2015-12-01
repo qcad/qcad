@@ -219,6 +219,12 @@
         getCurrentBlockId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setModelSpaceBlockId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getModelSpaceBlockId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setCurrentView
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -369,6 +375,9 @@
         setObjectHandle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setUndoStatus
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasSelection
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -412,9 +421,6 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         toggleUndoStatus
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setUndoStatus
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getMaxTransactionId

@@ -75,8 +75,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, isUndone, "isUndone");
             
-            REcmaHelper::registerFunction(&engine, proto, setUndone, "setUndone");
-            
             REcmaHelper::registerFunction(&engine, proto, getPropertyTypeIds, "getPropertyTypeIds");
             
             REcmaHelper::registerFunction(&engine, proto, getCustomPropertyTypeIds, "getCustomPropertyTypeIds");
@@ -732,61 +730,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerObject::isUndone", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaSharedPointerObject::setUndone
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::setUndone", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::setUndone";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RObject* self = 
-                        getSelf("setUndone", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isBool()
-        ) /* type: bool */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    bool
-                    a0 =
-                    (bool)
-                    
-                    context->argument( 0 ).
-                    toBool();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->setUndone(a0);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.setUndone().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::setUndone", context, engine);
             return result;
         }
          QScriptValue

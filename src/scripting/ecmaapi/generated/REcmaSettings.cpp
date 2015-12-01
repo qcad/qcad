@@ -257,6 +257,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getPositionByMousePress, "getPositionByMousePress");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getAllowMouseMoveInterruptions, "getAllowMouseMoveInterruptions");
+            
             REcmaHelper::registerFunction(&engine, &ctor, isTextRenderedAsText, "isTextRenderedAsText");
             
             REcmaHelper::registerFunction(&engine, &ctor, isLayer0CompatibilityOn, "isLayer0CompatibilityOn");
@@ -4827,6 +4829,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getPositionByMousePress", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getAllowMouseMoveInterruptions
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getAllowMouseMoveInterruptions", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getAllowMouseMoveInterruptions";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getAllowMouseMoveInterruptions();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getAllowMouseMoveInterruptions().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getAllowMouseMoveInterruptions", context, engine);
             return result;
         }
          QScriptValue

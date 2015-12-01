@@ -152,6 +152,12 @@
         queryLinetype
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        clearSelectionCache
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateSelectedEntityMap
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         countSelectedEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

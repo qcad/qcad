@@ -134,8 +134,6 @@
         <return>return <expr><name>undone</name></expr>;</return>
     }</block></function>
 
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setUndone</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
-
     <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getPropertyTypeIds</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name>RPropertyTypeId</name></argument>&gt;</argument_list></name></type> <name>getCustomPropertyTypeIds</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
@@ -212,6 +210,8 @@
 
 </public><protected>protected:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>print</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>setUndone</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
 
     <function><type><name>void</name></type> <name>setId</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>objectId</name> = <name>id</name></expr>;</expr_stmt>

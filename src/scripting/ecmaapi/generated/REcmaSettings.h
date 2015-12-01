@@ -346,6 +346,9 @@
         getPositionByMousePress
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getAllowMouseMoveInterruptions
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isTextRenderedAsText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -133,8 +133,6 @@ public:
         return undone;
     }
 
-    virtual void setUndone(bool on);
-
     virtual QSet<RPropertyTypeId> getPropertyTypeIds() const;
     virtual QSet<RPropertyTypeId> getCustomPropertyTypeIds() const;
 
@@ -211,6 +209,8 @@ public:
 
 protected:
     virtual void print(QDebug dbg) const;
+
+    void setUndone(bool on);
 
     void setId(RObject::Id id) {
         objectId = id;

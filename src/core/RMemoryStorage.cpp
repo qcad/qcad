@@ -24,10 +24,11 @@
 
 RMemoryStorage::RMemoryStorage() :
     maxLineweight(RLineweight::Weight000), 
-    boundingBoxChanged(true),
+    boundingBoxDirty(true),
     //boundingBoxIgnoreHiddenLayers(false),
     //boundingBoxIgnoreEmpty(false),
-    inTransaction(false) {
+    inTransaction(false),
+    selectedEntityMapDirty(true) {
 
     setLastTransactionId(-1);
 }
@@ -40,7 +41,7 @@ void RMemoryStorage::clear() {
 
     maxLineweight = RLineweight::Weight000;
     inTransaction = false;
-    boundingBoxChanged = true;
+    boundingBoxDirty = true;
     boundingBox[0][0] = RBox();
     boundingBox[0][1] = RBox();
     boundingBox[1][0] = RBox();
@@ -48,6 +49,8 @@ void RMemoryStorage::clear() {
     objectMap.clear();
     objectHandleMap.clear();
     entityMap.clear();
+    selectedEntityMap.clear();
+    selectedEntityMapDirty = true;
     blockEntityMap.clear();
     blockMap.clear();
     layerMap.clear();
@@ -65,7 +68,8 @@ void RMemoryStorage::clear() {
 
 void RMemoryStorage::setCurrentBlock(RBlock::Id blockId) {
     RStorage::setCurrentBlock(blockId);
-    boundingBoxChanged = true;
+    boundingBoxDirty = true;
+    clearSelectionCache();
 }
 
 /*
@@ -112,7 +116,7 @@ void RMemoryStorage::commitTransaction() {
     transactionObjectMap.clear();
     */
     inTransaction = false;
-    boundingBoxChanged = true;
+    boundingBoxDirty = true;
 
     setModified(true);
 }
@@ -286,18 +290,33 @@ QSet<REntity::Id> RMemoryStorage::queryInfiniteEntities() {
     return result;
 }
 
-QSet<REntity::Id> RMemoryStorage::querySelectedEntities() const {
+void RMemoryStorage::clearSelectionCache() {
+    selectedEntityMap.clear();
+    selectedEntityMapDirty = true;
+}
+
+void RMemoryStorage::updateSelectedEntityMap() const {
+    if (!selectedEntityMapDirty) {
+        return;
+    }
+
     RBlock::Id currentBlock = getCurrentBlockId();
-    QSet<REntity::Id> result;
     QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
     for (it = entityMap.constBegin(); it != entityMap.constEnd(); ++it) {
         QSharedPointer<REntity> e = *it;
         if (!e.isNull() && !e->isUndone() && e->isSelected() &&
             e->getBlockId() == currentBlock) {
-            result.insert(e->getId());
+            selectedEntityMap.insert(e->getId(), e);
         }
     }
-    return result;
+
+    selectedEntityMapDirty = false;
+}
+
+QSet<REntity::Id> RMemoryStorage::querySelectedEntities() const {
+    updateSelectedEntityMap();
+
+    return selectedEntityMap.keys().toSet();
 }
 
 QSet<REntity::Id> RMemoryStorage::queryLayerEntities(RLayer::Id layerId, bool allBlocks) {
@@ -704,19 +723,12 @@ void RMemoryStorage::selectAllEntites(QSet<REntity::Id>* affectedEntities) {
             setEntitySelected(e, true, affectedEntities);
         }
     }
+    clearSelectionCache();
 }
 
 int RMemoryStorage::countSelectedEntities() const {
-    RBlock::Id currentBlock = getCurrentBlockId();
-    QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
-    int result = 0;
-    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
-        QSharedPointer<REntity> e = *it;
-        if (!e.isNull() && !e->isUndone() && e->isSelected() && e->getBlockId() == currentBlock) {
-            result++;
-        }
-    }
-    return result;
+    updateSelectedEntityMap();
+    return selectedEntityMap.size();
 }
 
 void RMemoryStorage::clearEntitySelection(QSet<REntity::Id>* affectedEntities) {
@@ -724,13 +736,10 @@ void RMemoryStorage::clearEntitySelection(QSet<REntity::Id>* affectedEntities) {
     for (it = entityMap.begin(); it != entityMap.end(); ++it) {
         QSharedPointer<REntity> e = *it;
         if (!e.isNull() && e->isSelected()) {
-//            if (affectedEntities!=NULL) {
-//                affectedEntities->insert(e->getId());
-//            }
-//            e->setSelected(false);
             setEntitySelected(e, false, affectedEntities);
         }
     }
+    clearSelectionCache();
 }
 
 void RMemoryStorage::selectEntity(REntity::Id entityId, bool add, 
@@ -805,6 +814,7 @@ void RMemoryStorage::setEntitySelected(QSharedPointer<REntity> entity, bool on,
     if (affectedEntities!=NULL) {
         affectedEntities->insert(entity->getId());
     }
+    clearSelectionCache();
 
     // if this is a parent, select all child entities (attributes for block ref):
     // only block references can have child entities (attributes):
@@ -841,21 +851,25 @@ bool RMemoryStorage::deselectEntities(const QSet<REntity::Id>& entityIds, QSet<R
 }
 
 bool RMemoryStorage::hasSelection() const {
-    RBlock::Id currentBlock = getCurrentBlockId();
-    QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
-    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
-        QSharedPointer<REntity> e = *it;
-        if (!e.isNull() && !e->isUndone() && e->isSelected() &&
-            e->getBlockId() == currentBlock) {
-            return true;
-        }
-    }
+    updateSelectedEntityMap();
 
-    return false;
+    return !selectedEntityMap.isEmpty();
+
+//    RBlock::Id currentBlockId = getCurrentBlockId();
+//    QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
+//    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
+//        QSharedPointer<REntity> e = *it;
+//        if (!e.isNull() && !e->isUndone() && e->isSelected() &&
+//            e->getBlockId() == currentBlockId) {
+//            return true;
+//        }
+//    }
+
+//    return false;
 }
 
 RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) const {
-    if (!boundingBoxChanged) {
+    if (!boundingBoxDirty) {
         return boundingBox[ignoreHiddenLayers][ignoreEmpty];
     }
 
@@ -908,7 +922,7 @@ RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) c
         maxLineweight = qMax(lw, maxLineweight);
     }
 
-    boundingBoxChanged = false;
+    boundingBoxDirty = false;
 
 //    qDebug() << "\n\nbb: " << boundingBox[0][0];
 //    qDebug() << "bb ignoreEmpty: " << boundingBox[0][1];
@@ -919,14 +933,13 @@ RBox RMemoryStorage::getBoundingBox(bool ignoreHiddenLayers, bool ignoreEmpty) c
 }
 
 RBox RMemoryStorage::getSelectionBox() const {
-    RBlock::Id currentBlock = getCurrentBlockId();
+    updateSelectedEntityMap();
+
     RBox ret;
     QHash<RObject::Id, QSharedPointer<REntity> >::const_iterator it;
-    for (it = entityMap.constBegin(); it != entityMap.constEnd(); ++it) {
+    for (it = selectedEntityMap.constBegin(); it != selectedEntityMap.constEnd(); ++it) {
         QSharedPointer<REntity> e = *it;
-        if (!e.isNull() && !e->isUndone() && e->isSelected() &&
-                e->getBlockId() == currentBlock) {
-
+        if (!e.isNull()) {
             ret.growToInclude(e->getBoundingBox());
         }
     }
@@ -1129,6 +1142,8 @@ bool RMemoryStorage::deleteObject(RObject::Id objectId) {
         layerMap.remove(objectId);
     }
 
+    clearSelectionCache();
+
     return true;
 }
 
@@ -1210,20 +1225,25 @@ void RMemoryStorage::toggleUndoStatus(QSet<RObject::Id>& objects) {
 }
 
 void RMemoryStorage::toggleUndoStatus(RObject::Id objectId) {
-    QSharedPointer<RObject> obj = queryObjectDirect(objectId);
-    if (!obj.isNull()) {
-        obj->setUndone(!obj->isUndone());
+    QSharedPointer<RObject> object = queryObjectDirect(objectId);
+    if (object.isNull()) {
+        return;
     }
+    setUndoStatus(*object, !object->isUndone());
 }
 
 bool RMemoryStorage::setUndoStatus(RObject::Id objectId, bool status) {
-    QSharedPointer<RObject> obj = queryObjectDirect(objectId);
-    if (obj.isNull()) {
-        qWarning() << QString("RMemoryStorage::setUndoStatus: object is NULL");
+    QSharedPointer<RObject> object = queryObjectDirect(objectId);
+    if (object.isNull()) {
         return false;
     }
-    obj->setUndone(status);
+    setUndoStatus(*object, status);
     return true;
+}
+
+void RMemoryStorage::setUndoStatus(RObject& object, bool status) {
+    RStorage::setUndoStatus(object, status);
+    clearSelectionCache();
 }
 
 //bool RMemoryStorage::getUndoStatus(RObject::Id objectId) const {
@@ -1288,7 +1308,7 @@ void RMemoryStorage::setKnownVariable(RS::KnownVariable key, const QVariant& val
     endDocumentVariablesTransaction(transaction, useLocalTransaction, docVars);
 
     // dimension settings might affect bounding box:
-    boundingBoxChanged = true;
+    boundingBoxDirty = true;
     setModified(true);
 }
 
@@ -1405,7 +1425,7 @@ RLinetype::Id RMemoryStorage::getLinetypeId(const QString& linetypeName) const {
 
 void RMemoryStorage::setLastTransactionId(int transactionId) {
     RStorage::setLastTransactionId(transactionId);
-    boundingBoxChanged = true;
+    boundingBoxDirty = true;
 }
 
 RLineweight::Lineweight RMemoryStorage::getMaxLineweight() const {
@@ -1413,7 +1433,7 @@ RLineweight::Lineweight RMemoryStorage::getMaxLineweight() const {
 }
 
 void RMemoryStorage::update() {
-    boundingBoxChanged = true;
+    boundingBoxDirty = true;
 }
 
 //void RMemoryStorage::setUnit(RS::Unit unit, RTransaction* transaction) {

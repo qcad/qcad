@@ -304,6 +304,16 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="linetypeName" isConst="true" />
       </variant>
     </method>
+    <method name="clearSelectionCache"
+    cppName="clearSelectionCache" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="updateSelectedEntityMap"
+    cppName="updateSelectedEntityMap" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="countSelectedEntities"
     cppName="countSelectedEntities" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
@@ -516,6 +526,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="bool" isPureVirtual="false">
         <arg type="RObject::Id" typeName="RObject::Id"
         name="objectId" isConst="false" />
+        <arg type="bool" typeName="bool" name="status"
+        isConst="false" />
+      </variant>
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RObject &amp;" typeName="RObject" name="object"
+        isConst="false" />
         <arg type="bool" typeName="bool" name="status"
         isConst="false" />
       </variant>
