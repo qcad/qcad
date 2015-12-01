@@ -128,25 +128,32 @@ StatusBar.applyPreferences = function(doc, mdiChild) {
     var appWin = RMainWindowQt.getMainWindow();
 
     var statusBarSplitter = StatusBar.getStatusBarSplitter();
-    var w, i;
+    StatusBar.applyFont(statusBarSplitter);
 
-    var widgetNames = ["Abs", "Rel", "AbsPol", "RelPol", "Right", "Left", "SelectionText"];
-    for (i=0; i<widgetNames.length; i++) {
-        w = statusBarSplitter.findChild(widgetNames[i]);
-        w.font = RSettings.getStatusBarFont();
-    }
-
-    widgetNames = ["CoordinateDisplay", "MouseDisplay", "SelectionDisplay", "ProgressDisplay"];
-    for (i=0; i<widgetNames.length; i++) {
+    var widgetNames = ["CoordinateDisplay", "MouseDisplay", "SelectionDisplay", "ProgressDisplay"];
+    for (var i=0; i<widgetNames.length; i++) {
         var widgetName = widgetNames[i];
 
-        w = statusBarSplitter.findChild(widgetName);
+        var w = statusBarSplitter.findChild(widgetName);
         if (!isNull(w)) {
             w.visible = RSettings.getBoolValue("StatusBar/" + widgetName, true);
         }
         w = statusBarSplitter.findChild(widgetName + "Separator");
         if (!isNull(w)) {
             w.visible = RSettings.getBoolValue("StatusBar/" + widgetName, true);
+        }
+    }
+};
+
+StatusBar.applyFont = function(widget) {
+    var children = widget.children();
+    for (var i = 0; i < children.length; ++i) {
+        var c = children[i];
+        if (isOfType(c, QLabel)) {
+            c.font = RSettings.getStatusBarFont();
+        }
+        else {
+            StatusBar.applyFont(c);
         }
     }
 };
