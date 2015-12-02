@@ -103,17 +103,17 @@ RVector RSnapIntersection::snap(
                 continue;
             }
 
-            QList<RVector> candidates = e1->getIntersectionPoints(*e2, true, queryBox);
+            QList<RVector> ipsCandidates = e1->getIntersectionPoints(*e2, true, queryBox);
 
-            if (candidates.isEmpty()) {
+            if (ipsCandidates.isEmpty()) {
                 continue;
             }
 
-            RVector candidate = position.getClosest(candidates);
+            RVector ipCandidate = position.getClosest(ipsCandidates);
 
-            dist = candidate.getDistanceTo(position);
+            dist = ipCandidate.getDistanceTo(position);
             if (dist<minDist) {
-                lastSnap = candidate;
+                lastSnap = ipCandidate;
                 minDist = dist;
                 entityId1 = e1->getId();
                 entityId2 = e2->getId();
