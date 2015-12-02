@@ -204,12 +204,22 @@ QList<RVector> RPolylineData::getIntersectionPoints(
 }
 
 QList<QSharedPointer<RShape> > RPolylineData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
-    Q_UNUSED(queryBox)
-
     if (!ignoreComplex) {
         return QList<QSharedPointer<RShape> >() << QSharedPointer<RShape>(new RPolyline(*this));
     }
     else {
-        return getExploded();
+        QList<QSharedPointer<RShape> > candidates = getExploded();
+        if (!queryBox.isValid()) {
+            return candidates;
+        }
+
+        QList<QSharedPointer<RShape> > ret;
+        // filter candidates based on query box:
+        for (int i=0; i<candidates.length(); i++) {
+            if (candidates[i]->getBoundingBox().intersects(queryBox)) {
+                ret.append(candidates[i]);
+            }
+        }
+        return ret;
     }
 }
