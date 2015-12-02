@@ -498,6 +498,8 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
                 if (t==RS::EntityAttribute) {
                     continue;
                 }
+
+                // ignore complex entities for operations like snap (hatches, texts):
                 if (ignoreComplex && REntity::isComplex(t)) {
                     continue;
                 }
@@ -514,7 +516,7 @@ QList<QSharedPointer<RShape> > RBlockReferenceData::getShapes(const RBox& queryB
                         }
                     }
                 }
-                ret.append(entity->getShapes(queryBox));
+                ret.append(entity->getShapes(queryBox, ignoreComplex));
             }
         }
     }
