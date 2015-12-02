@@ -76,11 +76,12 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
                 queryBox, true, true, RBlock::INVALID_ID
                     // 20151027: allow snapping to hatch end points, etc:
                     /*, QList<RS::EntityType>() << RS::EntityHatch*/);
-        idsList.append(ids.keys().toSet());
 
         if (ids.isEmpty()) {
             continue;
         }
+
+        idsList.append(ids.keys().toSet());
 
         foundEntities = true;
 
