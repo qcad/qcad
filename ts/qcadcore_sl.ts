@@ -316,6 +316,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
+        <location filename="../src/core/RObject.cpp" line="+63"/>
         <source>Type</source>
         <translation>Tip</translation>
     </message>
@@ -391,9 +392,20 @@
         <translation>Vrh</translation>
     </message>
     <message>
+        <location filename="../src/core/RObject.cpp" line="-1"/>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
         <translation>Po meri</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Handle</source>
+        <translation type="unfinished">Identifikator</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Protected</source>
+        <translation type="unfinished">Zaščiteno</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -998,24 +1010,20 @@
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Custom</source>
-        <translation>Po meri</translation>
+        <translation type="vanished">Po meri</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Type</source>
-        <translation type="unfinished">Tip</translation>
+        <translation type="obsolete">Tip</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Handle</source>
-        <translation>Identifikator</translation>
+        <translation type="vanished">Identifikator</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Protected</source>
-        <translation>Zaščiteno</translation>
+        <translation type="vanished">Zaščiteno</translation>
     </message>
 </context>
 </TS>

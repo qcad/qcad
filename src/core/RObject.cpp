@@ -59,10 +59,10 @@ RObject::~RObject() {
 }
 
 void RObject::init() {
-    RObject::PropertyCustom.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("RObject", "Custom"));
-    RObject::PropertyType.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("RObject", "Type"));
-    RObject::PropertyHandle.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("RObject", "Handle"));
-    RObject::PropertyProtected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("RObject", "Protected"));
+    RObject::PropertyCustom.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Custom"));
+    RObject::PropertyType.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Type"));
+    RObject::PropertyHandle.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Handle"));
+    RObject::PropertyProtected.generateId(typeid(RObject), "", QT_TRANSLATE_NOOP("REntity", "Protected"));
 }
 
 void RObject::setUndone(bool on) {

@@ -316,6 +316,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
+        <location filename="../src/core/RObject.cpp" line="+63"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
@@ -409,9 +410,20 @@
         <translation>Höjd</translation>
     </message>
     <message>
+        <location filename="../src/core/RObject.cpp" line="-1"/>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
         <translation>Anpassad</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Handle</source>
+        <translation type="unfinished">Alias</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Protected</source>
+        <translation type="unfinished">Skyddad</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>
@@ -911,24 +923,20 @@
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Custom</source>
-        <translation>Anpassad</translation>
+        <translation type="vanished">Anpassad</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Type</source>
-        <translation>Typ</translation>
+        <translation type="vanished">Typ</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Handle</source>
-        <translation>Alias</translation>
+        <translation type="vanished">Alias</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Protected</source>
-        <translation>Skyddad</translation>
+        <translation type="vanished">Skyddad</translation>
     </message>
 </context>
 </TS>

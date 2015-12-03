@@ -466,6 +466,7 @@ Insira o ângulo da linha de dimensão:</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
+        <location filename="../src/core/RObject.cpp" line="+63"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -566,9 +567,20 @@ Abre diálogo de cores</translatorcomment>
         <translation>Superior</translation>
     </message>
     <message>
+        <location filename="../src/core/RObject.cpp" line="-1"/>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
         <translation>Personalizado</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Handle</source>
+        <translation>Manipulador</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Protected</source>
+        <translation>Protegido</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -1340,33 +1352,29 @@ Unidade Padrão:
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 Customize..
 Configurar...</translatorcomment>
-        <translation>Personalizado</translation>
+        <translation type="vanished">Personalizado</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Type</source>
-        <translation>Tipo</translation>
+        <translation type="vanished">Tipo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Handle</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 %1 ambíguo não tratado
 Desenhar Alças
 Mover manualmente</translatorcomment>
-        <translation>Manipulador</translation>
+        <translation type="vanished">Manipulador</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Protected</source>
-        <translation>Protegido</translation>
+        <translation type="vanished">Protegido</translation>
     </message>
 </context>
 </TS>

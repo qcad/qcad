@@ -316,6 +316,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
+        <location filename="../src/core/RObject.cpp" line="+63"/>
         <source>Type</source>
         <translation>Type</translation>
     </message>
@@ -391,9 +392,20 @@
         <translation>Bovenkant</translation>
     </message>
     <message>
+        <location filename="../src/core/RObject.cpp" line="-1"/>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
         <translation>Gebruiker gedefinieerd</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Handle</source>
+        <translation type="unfinished">Handle</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Protected</source>
+        <translation type="unfinished">Beschermd</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -918,24 +930,20 @@
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Custom</source>
-        <translation>Gebruiker gedefinieerd</translation>
+        <translation type="vanished">Gebruiker gedefinieerd</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Type</source>
-        <translation>Type</translation>
+        <translation type="vanished">Type</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Handle</source>
-        <translation>Handle</translation>
+        <translation type="vanished">Handle</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Protected</source>
-        <translation>Beschermd</translation>
+        <translation type="vanished">Beschermd</translation>
     </message>
 </context>
 </TS>

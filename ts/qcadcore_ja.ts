@@ -315,6 +315,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
+        <location filename="../src/core/RObject.cpp" line="+63"/>
         <source>Type</source>
         <translation>タイプ</translation>
     </message>
@@ -396,9 +397,20 @@
         <translation>上</translation>
     </message>
     <message>
+        <location filename="../src/core/RObject.cpp" line="-1"/>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
         <translation>カスタム</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Handle</source>
+        <translation>ハンドル</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Protected</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -519,7 +531,7 @@
     <message>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Locked</source>
-        <translation type="unfinished">ロック</translation>
+        <translation>ロック</translation>
     </message>
 </context>
 <context>
@@ -999,24 +1011,16 @@
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Custom</source>
-        <translation>カスタム</translation>
+        <translation type="vanished">カスタム</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Type</source>
-        <translation type="unfinished">タイプ</translation>
+        <translation type="obsolete">タイプ</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Handle</source>
-        <translation>ハンドル</translation>
-    </message>
-    <message>
-        <location line="+1"/>
-        <source>Protected</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">ハンドル</translation>
     </message>
 </context>
 </TS>

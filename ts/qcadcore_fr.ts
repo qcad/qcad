@@ -471,6 +471,7 @@ Indiquer l&apos;angle de la ligne de cote :</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
+        <location filename="../src/core/RObject.cpp" line="+63"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
@@ -565,9 +566,20 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <translation>En haut</translation>
     </message>
     <message>
+        <location filename="../src/core/RObject.cpp" line="-1"/>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
         <translation>Personnalisé</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Handle</source>
+        <translation>Poignée</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Protected</source>
+        <translation>Protégé</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -1342,32 +1354,28 @@ Valeurs par &amp;défaut</translatorcomment>
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: qt_fr.ts--
 Aucun objets de dimension sélectionné avec une position de texte personnalisé.
 Aucun objets de dimension sélectionné avec une position de texte personnalisé
 Personnalisé</translatorcomment>
-        <translation>Personnalisé</translation>
+        <translation type="vanished">Personnalisé</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Type</source>
-        <translation>Type</translation>
+        <translation type="vanished">Type</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Handle</source>
         <translatorcomment>--google--
 Séquence ambiguë %1 non traitée
 Poignée du slider</translatorcomment>
-        <translation>Poignée</translation>
+        <translation type="vanished">Poignée</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Protected</source>
-        <translation>Protégé</translation>
+        <translation type="vanished">Protégé</translation>
     </message>
 </context>
 </TS>

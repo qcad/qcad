@@ -316,6 +316,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
+        <location filename="../src/core/RObject.cpp" line="+63"/>
         <source>Type</source>
         <translation>类型</translation>
     </message>
@@ -391,9 +392,20 @@
         <translation>上部</translation>
     </message>
     <message>
+        <location filename="../src/core/RObject.cpp" line="-1"/>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
         <translation>自定义</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Handle</source>
+        <translation type="unfinished">处理</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Protected</source>
+        <translation type="unfinished">受保护的</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -998,24 +1010,20 @@
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Custom</source>
-        <translation>自定义</translation>
+        <translation type="vanished">自定义</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Type</source>
-        <translation type="unfinished">类型</translation>
+        <translation type="obsolete">类型</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Handle</source>
-        <translation>处理</translation>
+        <translation type="vanished">处理</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Protected</source>
-        <translation>受保护的</translation>
+        <translation type="vanished">受保护的</translation>
     </message>
 </context>
 </TS>

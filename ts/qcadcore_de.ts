@@ -324,6 +324,7 @@
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
+        <location filename="../src/core/RObject.cpp" line="+63"/>
         <source>Type</source>
         <translation>Typ</translation>
     </message>
@@ -399,9 +400,20 @@
         <translation>Oben</translation>
     </message>
     <message>
+        <location filename="../src/core/RObject.cpp" line="-1"/>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Handle</source>
+        <translation>Handle</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Protected</source>
+        <translation>Geschützt</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -1018,24 +1030,20 @@
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Custom</source>
-        <translation>Benutzerdefiniert</translation>
+        <translation type="vanished">Benutzerdefiniert</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Type</source>
-        <translation>Typ</translation>
+        <translation type="vanished">Typ</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Handle</source>
-        <translation>Handle</translation>
+        <translation type="vanished">Handle</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Protected</source>
-        <translation>Geschützt</translation>
+        <translation type="vanished">Geschützt</translation>
     </message>
 </context>
 </TS>

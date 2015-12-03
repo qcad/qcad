@@ -485,6 +485,7 @@ Inserisci l&apos;angolo della linea di quota:</translatorcomment>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
+        <location filename="../src/core/RObject.cpp" line="+63"/>
         <source>Type</source>
         <translatorcomment>--exact match--
 --file: liferea-1.8-rc1.it.po--
@@ -580,9 +581,20 @@ Colore G&amp;riglia:</translatorcomment>
         <translation>Sopra</translation>
     </message>
     <message>
+        <location filename="../src/core/RObject.cpp" line="-1"/>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
         <translation>Personalizzato</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Handle</source>
+        <translation>Manico</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Protected</source>
+        <translation>Protetta</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -1358,33 +1370,29 @@ Unità Predefinite:</translatorcomment>
 <context>
     <name>RObject</name>
     <message>
-        <location filename="../src/core/RObject.cpp" line="+62"/>
         <source>Custom</source>
         <translatorcomment>--exact match--
 --file: locale_it_BKChem.po--
 Nessun oggetto dimensione selezionata con una posizione di testo personalizzato.
 Nessun oggetto dimensione selezionata con una posizione di testo personalizzato
 Personalizzato</translatorcomment>
-        <translation>Personalizzato</translation>
+        <translation type="vanished">Personalizzato</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Type</source>
-        <translation>Tipo</translation>
+        <translation type="vanished">Tipo</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Handle</source>
         <translatorcomment>--google--
 Come gestire il tosaggio
 I layer non gestiti verranno persi.
 I layer non gestiti verranno persi</translatorcomment>
-        <translation>Manico</translation>
+        <translation type="vanished">Manico</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Protected</source>
-        <translation>Protetta</translation>
+        <translation type="vanished">Protetta</translation>
     </message>
 </context>
 </TS>
