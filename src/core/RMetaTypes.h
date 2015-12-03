@@ -333,6 +333,7 @@ Q_DECLARE_METATYPE(Qt::PenStyle)
 Q_DECLARE_METATYPE(Qt::BrushStyle)
 Q_DECLARE_METATYPE(Qt::ItemDataRole)
 Q_DECLARE_METATYPE(Qt::WindowFlags)
+Q_DECLARE_METATYPE(Qt::WidgetAttribute)
 #if !defined(Q_OS_IOS)
 Q_DECLARE_METATYPE(QPrinter::PaperSize)
 #endif
