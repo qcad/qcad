@@ -88,10 +88,7 @@
     <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RLinetype</name></argument>&gt;</argument_list></name></type> <name>queryLinetype</name><parameter_list>(<param><decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>linetypeId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QSharedPointer<argument_list>&lt;<argument><name>RLinetype</name></argument>&gt;</argument_list></name></type> <name>queryLinetype</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>linetypeName</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
-    <function><type><name>void</name></type> <name>clearSelectionCache</name><parameter_list>()</parameter_list> <block>{
-        <expr_stmt><expr><name>selectedEntityMap</name>.<call><name>clear</name><argument_list>()</argument_list></call></expr>;</expr_stmt>
-        <expr_stmt><expr><name>selectedEntityMapDirty</name> = <name>true</name></expr>;</expr_stmt>
-    }</block></function>
+    <function_decl><type><name>void</name></type> <name>clearSelectionCache</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>updateSelectedEntityMap</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>int</name></type> <name>countSelectedEntities</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>

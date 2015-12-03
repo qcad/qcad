@@ -21,5 +21,24 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QSize" isPureVirtual="false" />
     </method>
+    <method name="installEventFilter" cppName="installEventFilter"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QObject *" typeName="QObject *" name="filterObj"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setAttribute" cppName="setAttribute"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="Qt::WidgetAttribute"
+        typeName="Qt::WidgetAttribute" name="attribute"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="on"
+        hasDefault="true" default="true" isConst="false" />
+      </variant>
+    </method>
   </class>
 </unit>

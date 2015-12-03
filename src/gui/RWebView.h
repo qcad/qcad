@@ -37,6 +37,14 @@ public:
     virtual ~RWebView();
     virtual QSize sizeHint() const;
     virtual QSize minimumSizeHint() const;
+
+    void installEventFilter(QObject* filterObj) {
+        QWebView::installEventFilter(filterObj);
+    }
+
+    void setAttribute(Qt::WidgetAttribute attribute, bool on = true) {
+        QWebView::setAttribute(attribute, on);
+    }
 };
 
 Q_DECLARE_METATYPE(RWebView*)

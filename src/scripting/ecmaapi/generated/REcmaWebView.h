@@ -53,6 +53,12 @@
         ;static  QScriptValue
         minimumSizeHint
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        installEventFilter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setAttribute
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

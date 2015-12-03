@@ -67,6 +67,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, minimumSizeHint, "minimumSizeHint");
             
+            REcmaHelper::registerFunction(&engine, proto, installEventFilter, "installEventFilter");
+            
+            REcmaHelper::registerFunction(&engine, proto, setAttribute, "setAttribute");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RWebView*>(), *proto);
 
@@ -302,6 +306,179 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaWebView::minimumSizeHint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaWebView::installEventFilter
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaWebView::installEventFilter", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaWebView::installEventFilter";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RWebView* self = 
+                        getSelf("installEventFilter", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isQObject()
+        ) /* type: QObject * */
+    
+    ){
+    // prepare arguments:
+    
+            // argument isQObject
+            QObject *
+            a0 =
+            qobject_cast<
+            QObject *>
+            ( context->argument(
+            0
+            ).
+            toQObject()
+            );
+        
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->installEventFilter(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RWebView.installEventFilter().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaWebView::installEventFilter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaWebView::setAttribute
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaWebView::setAttribute", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaWebView::setAttribute";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RWebView* self = 
+                        getSelf("setAttribute", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: Qt::WidgetAttribute */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    Qt::WidgetAttribute*
+                    ap0 =
+                    qscriptvalue_cast<
+                    Qt::WidgetAttribute*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RWebView: Argument 0 is not of type Qt::WidgetAttribute*.",
+                               context);                    
+                    }
+                    Qt::WidgetAttribute& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAttribute(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: Qt::WidgetAttribute */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    Qt::WidgetAttribute*
+                    ap0 =
+                    qscriptvalue_cast<
+                    Qt::WidgetAttribute*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RWebView: Argument 0 is not of type Qt::WidgetAttribute*.",
+                               context);                    
+                    }
+                    Qt::WidgetAttribute& a0 = *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAttribute(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RWebView.setAttribute().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaWebView::setAttribute", context, engine);
             return result;
         }
          QScriptValue REcmaWebView::toString
