@@ -131,6 +131,7 @@ void RDxfServices::fixBlockName(QString& blockName) {
     if (!blockName.startsWith("*")) {
         QString oldBlockName = blockName;
         blockName.replace(QRegExp("[<>/\":;?*|,=`\\\\]"), "_");
+        blockName.replace(QChar(0x0083), "_");
         version2BlockMapping.insert(oldBlockName, blockName);
     }
 }
