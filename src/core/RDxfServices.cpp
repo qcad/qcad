@@ -139,6 +139,7 @@ void RDxfServices::fixLayerName(QString& layerName) {
     // fix invalid layer names (mainly from QCAD 2):
     QString oldLayerName = layerName;
     layerName.replace(QRegExp("[<>/\":;?*|,=`\\\\]"), "_");
+    layerName.replace(QChar(0x0083), "_");
     version2LayerMapping.insert(oldLayerName, layerName);
 }
 
