@@ -149,7 +149,7 @@ StatusBar.applyFont = function(widget) {
     var children = widget.children();
     for (var i = 0; i < children.length; ++i) {
         var c = children[i];
-        if (isOfType(c, QLabel)) {
+        if (isOfType(c, QLabel) || isOfType(c, QComboBox)) {
             c.font = RSettings.getStatusBarFont();
         }
         else {
