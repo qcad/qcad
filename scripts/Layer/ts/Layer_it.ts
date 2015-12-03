@@ -36,7 +36,7 @@
         <translation type="vanished">Penna</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+28"/>
         <source>Attributes</source>
         <translation>Attributi</translation>
     </message>
@@ -46,12 +46,12 @@
         <translation>Colore:</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+29"/>
         <source>Lineweight:</source>
         <translation>Larghezza:</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+26"/>
         <source>Linetype:</source>
         <translation>Tipo di linea:</translation>
     </message>

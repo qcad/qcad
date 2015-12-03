@@ -22,7 +22,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>Height:</source>
         <translation type="unfinished"></translation>
     </message>

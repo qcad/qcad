@@ -11,12 +11,12 @@
     <message>
         <location line="+44"/>
         <source>Revision:</source>
-        <translation type="unfinished"></translation>
+        <translation>Revízia:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
-        <translation type="unfinished"></translation>
+        <translation>To znamená, že sa každý môže &lt;a href=&apos;%1&apos;&gt; zapojiť &lt;/a&gt; !</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -77,52 +77,52 @@
     <message>
         <location line="-115"/>
         <source>Build Date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dátum vytvorenia:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Architecture:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Architektúra:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Compiler:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kompilátor:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 is an application for computer-aided design (CAD).</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 je program pre 2D projektovanie a konštruovanie (CAD).</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 is free (open source) software.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 je bezplatný software (open source).</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation type="unfinished"></translation>
+        <translation>Zásuvné moduly a skripty podliehajú vlastným licenciám (pozri záložku Zásuvné moduly).</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Všetky značky alebo názvy produktov sú ochrannými známkami alebo registrovanými ochrannými známkami príslušných vlastníkov.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Portions of this software © 2013 Digia Plc.</source>
-        <translation type="unfinished"></translation>
+        <translation>Súčasti tohto software © 2013 Digia s.r.o..</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).</source>
-        <translation type="unfinished"></translation>
+        <translation>Súčasti tohto softvéru © 2012 Spoločnosť Nokia a / alebo jej dcérske spoločnosti.</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>No plugins found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nenašiel sa žiadny modul</translation>
     </message>
     <message>
         <location line="+88"/>
@@ -157,7 +157,7 @@
     <message>
         <location line="+7"/>
         <source>No script add-ons found.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nenašiel sa žiadny prídavný skript.</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -175,22 +175,22 @@
     <message>
         <location filename="../AboutCredits.js" line="+4"/>
         <source>Programming</source>
-        <translation type="unfinished"></translation>
+        <translation>Programovanie</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Preklady</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikony</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Testing, Feedback and Minor Fixes</source>
-        <translation type="unfinished"></translation>
+        <translation>Testovanie, spätná väzba a drobné opravy</translation>
     </message>
 </context>
 <context>

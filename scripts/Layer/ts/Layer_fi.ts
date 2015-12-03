@@ -51,7 +51,7 @@
         <translation type="vanished">Kynä</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+28"/>
         <source>Attributes</source>
         <translation>Ominaisuudet</translation>
     </message>
@@ -61,12 +61,12 @@
         <translation>Väri:</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+29"/>
         <source>Lineweight:</source>
         <translation>Viivan paksuus:</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+26"/>
         <source>Linetype:</source>
         <translation>Viivatyyppi:</translation>
     </message>

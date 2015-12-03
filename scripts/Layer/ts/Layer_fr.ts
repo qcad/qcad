@@ -37,7 +37,7 @@
         <translation type="vanished">Stylo</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+28"/>
         <source>Attributes</source>
         <translation>Attributs</translation>
     </message>
@@ -47,13 +47,13 @@
         <translation>Couleur :</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+29"/>
         <source>Lineweight:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Epaisseur de la ligne :</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+26"/>
         <source>Linetype:</source>
         <translatorcomment>--ignored colon--
 --file: LinetypeSettings_fr.ts--</translatorcomment>

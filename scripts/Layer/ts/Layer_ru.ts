@@ -47,7 +47,7 @@
         <translation>Название слоя:</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+28"/>
         <source>Attributes</source>
         <translation>Атрибуты</translation>
     </message>
@@ -57,12 +57,12 @@
         <translation>Цвет:</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+29"/>
         <source>Lineweight:</source>
         <translation>Толщина линий:</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+26"/>
         <source>Linetype:</source>
         <translation>Тип линии:</translation>
     </message>

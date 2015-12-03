@@ -13,5 +13,10 @@
         <source>Import XML</source>
         <translation>XML importieren</translation>
     </message>
+    <message>
+        <location filename="../ExXmlImportInit.js" line="+2"/>
+        <source>&amp;Import XML</source>
+        <translation>XML &amp;importieren</translation>
+    </message>
 </context>
 </TS>

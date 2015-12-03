@@ -51,7 +51,7 @@
         <translation type="vanished">ペン</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+28"/>
         <source>Attributes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -61,12 +61,12 @@
         <translation>色:</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+29"/>
         <source>Lineweight:</source>
         <translation>ラインの太さ:</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+26"/>
         <source>Linetype:</source>
         <translation>ラインタイプ:</translation>
     </message>

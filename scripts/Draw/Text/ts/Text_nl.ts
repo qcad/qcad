@@ -22,7 +22,7 @@
         <translation>Inhoud:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>Height:</source>
         <translation>Hoogte:</translation>
     </message>

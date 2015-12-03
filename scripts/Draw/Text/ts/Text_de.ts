@@ -26,7 +26,7 @@
         <translation>&amp;Text</translation>
     </message>
     <message>
-        <location filename="../Text.ui" line="+31"/>
+        <location filename="../Text.ui" line="+37"/>
         <source>Height:</source>
         <translation>Höhe:</translation>
     </message>
@@ -49,7 +49,7 @@
         <translation>Text einfügen</translation>
     </message>
     <message>
-        <location filename="../Text.ui" line="-34"/>
+        <location filename="../Text.ui" line="-40"/>
         <source>Contents:</source>
         <translation>Inhalt:</translation>
     </message>

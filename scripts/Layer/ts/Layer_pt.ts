@@ -67,7 +67,7 @@ Abertura abortada</translatorcomment>
         <translation type="vanished">Caneta</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+28"/>
         <source>Attributes</source>
         <translation>Atributos</translation>
     </message>
@@ -82,13 +82,13 @@ Cor da &amp;Meta Grade:</translatorcomment>
         <translation>Cor:</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+29"/>
         <source>Lineweight:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Espessura da linha:</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+26"/>
         <source>Linetype:</source>
         <translatorcomment>--ignored colon--
 --file: LinetypeSettings_pt.ts--</translatorcomment>

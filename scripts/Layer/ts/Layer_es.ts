@@ -39,7 +39,7 @@ Capacidad de remuestreo de datos de capa de mapa rster de GRASS</translatorcomme
         <translation type="vanished">Trazador</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+28"/>
         <source>Attributes</source>
         <translation>Atributos</translation>
     </message>
@@ -49,13 +49,13 @@ Capacidad de remuestreo de datos de capa de mapa rster de GRASS</translatorcomme
         <translation>Color:</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+29"/>
         <source>Lineweight:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Grosor de línea:</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+26"/>
         <source>Linetype:</source>
         <translatorcomment>--ignored colon--
 --file: LinetypeSettings_es.ts--</translatorcomment>

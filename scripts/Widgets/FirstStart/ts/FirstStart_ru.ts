@@ -42,7 +42,7 @@
     <message>
         <location line="+1"/>
         <source>Default Paper Size:</source>
-        <translation>Размер страницы по умолчанию:</translation>
+        <translation>Размер страницы:</translation>
     </message>
     <message>
         <location line="+1"/>

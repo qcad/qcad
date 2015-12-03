@@ -13,5 +13,10 @@
         <source>Export XML</source>
         <translation>Экспорт XML</translation>
     </message>
+    <message>
+        <location filename="../ExXmlExportInit.js" line="+2"/>
+        <source>&amp;Export XML</source>
+        <translation>&amp;Экспорт XML</translation>
+    </message>
 </context>
 </TS>

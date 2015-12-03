@@ -44,7 +44,7 @@ Desenhe entidades de texto</translatorcomment>
         <translation>Conteúdo:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>Height:</source>
         <translatorcomment>--exact match--
 --file: pt.po--

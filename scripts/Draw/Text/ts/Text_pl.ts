@@ -32,7 +32,7 @@ Błąd podczas wklejania zawartości schowka: Brak głównego elementu &lt;ui&gt
         <translation type="unfinished">Spis treści:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>Height:</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

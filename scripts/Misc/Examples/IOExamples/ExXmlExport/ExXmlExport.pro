@@ -1,4 +1,4 @@
 NAME = $${TARGET} 
 TSDIR = ts
 include(../../../translations.pri)
-SOURCES = $${TARGET}.js
+SOURCES = $${TARGET}.js $${TARGET}Init.js

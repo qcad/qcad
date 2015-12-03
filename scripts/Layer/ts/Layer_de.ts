@@ -31,7 +31,7 @@
         <translation type="vanished">Stift</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+28"/>
         <source>Attributes</source>
         <translation>Attribute</translation>
     </message>
@@ -41,17 +41,17 @@
         <translation>Farbe:</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+29"/>
         <source>Lineweight:</source>
         <translation>Linienbreite:</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+26"/>
         <source>Linetype:</source>
         <translation>Linientyp:</translation>
     </message>
     <message>
-        <location line="-122"/>
+        <location line="-104"/>
         <source>Layer Data</source>
         <translation>Layer Data</translation>
     </message>

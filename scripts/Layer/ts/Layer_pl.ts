@@ -66,7 +66,7 @@ Otwieranie przerwane</translatorcomment>
         <translation type="obsolete">Pióro</translation>
     </message>
     <message>
-        <location line="+34"/>
+        <location line="+28"/>
         <source>Attributes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -81,13 +81,13 @@ Kolor &amp;meta-siatki:</translatorcomment>
         <translation type="unfinished">Kolor:</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+29"/>
         <source>Lineweight:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Szerokość linii:</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+26"/>
         <source>Linetype:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Rodzaj linii:</translation>
