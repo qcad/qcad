@@ -393,7 +393,6 @@ RS::Unit RDocument::getUnit() const {
 }
 
 void RDocument::setMeasurement(RS::Measurement m,  RTransaction* transaction) {
-    qDebug() << "setMeasurement:" << m;
     storage.setMeasurement(m, transaction);
     initLinetypes(transaction);
 
