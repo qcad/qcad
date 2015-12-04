@@ -1245,7 +1245,7 @@ void DL_Dxf::addMText(DL_CreationInterface* creationInterface) {
 
     if (hasValue(50)) {
         if (libVersion<=0x02000200) {
-            // wrong but compatible with dxflib <=2.0.2.0:
+            // wrong but compatible with dxflib <=2.0.2.0 (angle stored in rad):
             angle = getRealValue(50, 0.0);
         } else {
             angle = (getRealValue(50, 0.0)*2*M_PI)/360.0;
@@ -1410,8 +1410,6 @@ bool DL_Dxf::handleMTextData(DL_CreationInterface* creationInterface) {
 
     return false;
 }
-
-
 
 /**
  * Handles additional polyline data.
