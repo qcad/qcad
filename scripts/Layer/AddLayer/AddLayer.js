@@ -45,13 +45,16 @@ AddLayer.prototype.beginEvent = function() {
         return;
     }
 
-    var operation = new RAddObjectOperation(this.layer, this.getToolTitle());
-    var di = this.getDocumentInterface();
-    di.applyOperation(operation);
+    this.applyOperation();
 
+    var di = this.getDocumentInterface();
     di.setCurrentLayer(this.layer);
 
     this.terminate();
+};
+
+AddLayer.prototype.getOperation = function() {
+    return new RAddObjectOperation(this.layer, this.getToolTitle());
 };
 
 AddLayer.prototype.getAddedLayer = function() {
