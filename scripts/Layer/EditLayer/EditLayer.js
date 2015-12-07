@@ -35,7 +35,7 @@ EditLayer.prototype = new Layer();
 EditLayer.prototype.beginEvent = function() {
     Layer.prototype.beginEvent.call(this);
 
-    var layer = this.getDocument().queryCurrentLayer();
+    var layer = this.getCurrentLayer();
     
     var dlg = this.createLayerDialog(this.getDocument(), layer);
     var newLayer = dlg.show();
@@ -55,6 +55,10 @@ EditLayer.prototype.beginEvent = function() {
     di.repaintViews();
     
     this.terminate();
+};
+
+EditLayer.prototype.getCurrentLayer = function() {
+    return this.getDocument().queryCurrentLayer();
 };
 
 /**
