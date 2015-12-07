@@ -1624,7 +1624,15 @@ EAction.prototype.applyOperation = function() {
         qWarning("Operation returned by this.getOperation() is undefined");
         return;
     }
+    this.complementOperation(op);
     di.applyOperation(op);
+};
+
+/**
+ * Can be reimplemented to complement the operation of an action.
+ */
+EAction.prototype.complementOperation = function(op) {
+    return;
 };
 
 /**
