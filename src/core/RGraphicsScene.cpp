@@ -169,6 +169,16 @@ void RGraphicsScene::regenerate(QSet<REntity::Id>& affectedEntities, bool update
  */
 void RGraphicsScene::updateSelectionStatus(QSet<REntity::Id>& affectedEntities, bool updateViews) {
     exportEntities(affectedEntities, false);
+
+    QSet<REntity::Id>::iterator it;
+    for (it=affectedEntities.begin(); it!=affectedEntities.end(); it++) {
+        if (referencePoints.contains(*it)) {
+            if (!document->isSelected(*it)) {
+                referencePoints.remove(*it);
+            }
+        }
+    }
+
     if (updateViews) {
         regenerateViews(affectedEntities);
     }
