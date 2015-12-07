@@ -64,7 +64,6 @@ LayerDialog.prototype.show = function() {
     var rx = new RegExp("[^<>/\\\\\":;\?\*|,=`]{1,255}");
     this.validator = new QRegExpValidator(rx, layerName);
     layerName.setValidator(this.validator);
-    layerName.textChanged.connect(this, "validate");
     var cbColor = widgets["Color"];
     var cbLineweight = widgets["Lineweight"];
     cbLineweight.setLineweight(RSettings.getIntValue("Layer/DefaultLineweight", RLineweight.Weight025));
@@ -86,6 +85,8 @@ LayerDialog.prototype.show = function() {
             cbLinetype.setLinetypePattern(ltP.getPattern());
         }
     }
+
+    layerName.textChanged.connect(this, "validate");
 
     this.initDialog(this.dialog, this.layer);
 
