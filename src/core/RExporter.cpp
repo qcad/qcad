@@ -1313,7 +1313,7 @@ void RExporter::exportEllipse(const REllipse& ellipse, double offset) {
     double aStep;         // Angle Step (rad)
     double a;             // Current Angle (rad)
 
-    aStep=0.05;
+    aStep=M_PI/128;
     RVector vp;
     RVector vc(cp.x, cp.y);
     vp.set(cp.x+cos(a1)*radius1,
