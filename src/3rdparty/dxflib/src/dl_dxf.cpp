@@ -1012,7 +1012,7 @@ void DL_Dxf::addRay(DL_CreationInterface* creationInterface) {
  * Adds a polyline entity that was read from the file via the creation interface.
  */
 void DL_Dxf::addPolyline(DL_CreationInterface* creationInterface) {
-    DL_PolylineData pd(maxVertices, getIntValue(71, 0), getIntValue(72, 0), getIntValue(70, 0));
+    DL_PolylineData pd(maxVertices, getIntValue(71, 0), getIntValue(72, 0), getIntValue(70, 0), getRealValue(38, 0));
     creationInterface->addPolyline(pd);
 
     maxVertices = std::min(maxVertices, vertexIndex+1);
