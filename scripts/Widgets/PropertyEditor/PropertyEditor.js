@@ -630,13 +630,36 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
     }
 
     // enable / disable used / unused fixed controls
-    this.widget.findChild("LabelLayer").visible = gotLayerProperty;
-    this.widget.findChild("Layer").visible = gotLayerProperty;
-    //this.widget.findChild("LayerMenu").visible = gotLayerProperty && PropertyEditor.isLayerMenuEnabled();
-    this.widget.findChild("LabelLinetypeScale").visible = gotLinetypeScaleProperty;
-    this.widget.findChild("LinetypeScale").visible = gotLinetypeScaleProperty;
-    this.widget.findChild("LabelDrawOrder").visible = gotDrawOrderProperty;
-    this.widget.findChild("DrawOrder").visible = gotDrawOrderProperty;
+    var w;
+    this.widget.findChild("LabelLayer").enabled = gotLayerProperty;
+    w = this.widget.findChild("Layer");
+    w.enabled = gotLayerProperty;
+    if (!gotLayerProperty) {
+        w.currentIndex = -1;
+    }
+
+    var gl = this.widget.findChild("General");
+    if (!isNull(gl)) {
+        var l = gl.layout();
+        if (!isNull(l)) {
+            var li = l.itemAtPosition(0, 2);
+            if (!isNull(li)) {
+                w = li.widget();
+                if (!isNull(w)) {
+                    w.enabled = gotLayerProperty;
+                }
+            }
+        }
+    }
+
+    this.widget.findChild("LabelLinetypeScale").enabled = gotLinetypeScaleProperty;
+    w = this.widget.findChild("LinetypeScale");
+    w.enabled = gotLinetypeScaleProperty;
+    w.text = "";
+    this.widget.findChild("LabelDrawOrder").enabled = gotDrawOrderProperty;
+    w = this.widget.findChild("DrawOrder");
+    w.enabled = gotDrawOrderProperty;
+    w.text = "";
 
     // update selection combo box at the top for entity filters:
     if (!onlyChanges) {
