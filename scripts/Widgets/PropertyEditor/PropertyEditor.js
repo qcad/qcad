@@ -17,8 +17,8 @@
  * along with QCAD.
  */
 
+include("scripts/EAction.js");
 include("../../WidgetFactory.js");
-include("../../Layer/AddLayer/AddLayer.js");
 
 /**
  * Internal helper class. Notified when properties are changed.
@@ -59,7 +59,7 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
 
         // value is index of combo box:
         if (isNumber(value)) {
-            if (this.sender.itemData(value)===this.propertyEditor.varies) {
+            if (this.sender.itemData(value)===PropertyEditor.varies) {
                 return;
             }
             this.propertyEditor.propertyChanged(this.propertyType,
@@ -68,7 +68,7 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
             return;
         }
 
-        if (value===this.propertyEditor.varies) {
+        if (value===PropertyEditor.varies) {
             return;
         }
     }
@@ -76,7 +76,7 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
     // value is string from a line edit (e.g. text contents):
     else if (this.sender.toString()==="QLineEdit") {
         value = this.sender.text;
-        if (value===this.propertyEditor.varies) {
+        if (value===PropertyEditor.varies) {
             return;
         }
     }
@@ -184,7 +184,6 @@ function PropertyEditorImpl(basePath) {
     RPropertyEditor.call(this);
 
     this.entityTypeFilter = RS.EntityAll;
-    this.varies = qsTr("*VARIES*");
     this.widget = WidgetFactory.createWidget(basePath, "PropertyEditor.ui");
     this.basePath = basePath;
 
@@ -211,29 +210,6 @@ function PropertyEditorImpl(basePath) {
                 'propertyChanged');
     layerCombo.installEventFilter(new REventFilter(QEvent.Wheel.valueOf(), true));
     layerCombo.focusPolicy = Qt.ClickFocus;
-
-    var addLayerButton = this.widget.findChild("MoveToNewLayer");
-    var propertyEditor = this;
-    addLayerButton.clicked.connect(function() {
-        var di = EAction.getDocumentInterface();
-        if (isNull(di)) {
-            return;
-        }
-        var action = RGuiAction.getByScriptFile("scripts/Layer/AddLayer/AddLayer.js");
-        if (isNull(action)) {
-            return;
-        }
-        action.trigger();
-        var doc = di.getDocument();
-        var layer = doc.queryCurrentLayer();
-        //var action = new AddLayer();
-        //di.setCurrentAction(action);
-        //var layer = action.getAddedLayer();
-        if (!isNull(layer)) {
-            var pw = new PropertyWatcher(propertyEditor, layerCombo, REntity.PropertyLayer);
-            pw.propertyChanged(layer.getName());
-        }
-    });
 
     var colorCombo = this.widget.findChild("Color");
     colorCombo['activated(int)'].connect(
@@ -656,7 +632,7 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
     // enable / disable used / unused fixed controls
     this.widget.findChild("LabelLayer").visible = gotLayerProperty;
     this.widget.findChild("Layer").visible = gotLayerProperty;
-    this.widget.findChild("MoveToNewLayer").visible = gotLayerProperty;
+    //this.widget.findChild("LayerMenu").visible = gotLayerProperty && PropertyEditor.isLayerMenuEnabled();
     this.widget.findChild("LabelLinetypeScale").visible = gotLinetypeScaleProperty;
     this.widget.findChild("LinetypeScale").visible = gotLinetypeScaleProperty;
     this.widget.findChild("LabelDrawOrder").visible = gotDrawOrderProperty;
@@ -881,7 +857,7 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
 
     var newText;
     if (attributes.isMixed()) {
-        newText = this.varies;
+        newText = PropertyEditor.varies;
     }
     else {
         if (attributes.isAngleType()) {
@@ -940,7 +916,7 @@ PropertyEditorImpl.prototype.initStringControls = function(objectName, propertyT
     }
 
     if (attributes.isMixed()) {
-        control.text = this.varies;
+        control.text = PropertyEditor.varies;
         // TODO: make sure that the start of the text is shown:
         //control.home(false);
     }
@@ -1000,13 +976,13 @@ PropertyEditorImpl.prototype.initBooleanControls = function(objectName, property
 
     if (attributes.isMixed()) {
         if (!onlyChanges) {
-            control.insertItem(0, this.varies, this.varies);
+            control.insertItem(0, PropertyEditor.varies, PropertyEditor.varies);
         }
         control.currentIndex = 0;
     }
     else {
         // not varies anymore:
-        var variesIndex = control.findText(this.varies);
+        var variesIndex = control.findText(PropertyEditor.varies);
         if (variesIndex!==-1) {
             control.removeItem(variesIndex);
         }
@@ -1104,13 +1080,13 @@ PropertyEditorImpl.prototype.initChoiceControls = function(
     }
 
     // mixed:
-    var variesIndex = control.findText(this.varies);
+    var variesIndex = control.findText(PropertyEditor.varies);
     if (attributes.isMixed()) {
         if (variesIndex!==-1) {
             control.currentIndex = variesIndex;
         }
         else {
-            control.insertItem(0, this.varies, this.varies);
+            control.insertItem(0, PropertyEditor.varies, PropertyEditor.varies);
             control.currentIndex = 0;
         }
         return new Array(control);
@@ -1296,10 +1272,12 @@ PropertyEditorImpl.prototype.addCustomProperty = function() {
 
 
 function PropertyEditor(guiAction) {
-    Widgets.call(this, guiAction);
+    EAction.call(this, guiAction);
 }
 
-PropertyEditor.prototype = new Widgets();
+PropertyEditor.prototype = new EAction();
+
+PropertyEditor.varies = qsTr("*VARIES*");
 
 PropertyEditor.getPreferencesCategory = function() {
     return [ qsTr("Widgets"), qsTr("Property Editor") ];
@@ -1314,7 +1292,7 @@ PropertyEditor.applyPreferences = function(doc, mdiChild) {
  * Shows / hides the property editor.
  */
 PropertyEditor.prototype.beginEvent = function() {
-    Widgets.prototype.beginEvent.call(this);
+    EAction.prototype.beginEvent.call(this);
 
     var appWin = RMainWindowQt.getMainWindow();
     var dock = appWin.findChild("PropertyEditorDock");
@@ -1327,11 +1305,31 @@ PropertyEditor.prototype.beginEvent = function() {
 };
 
 PropertyEditor.prototype.finishEvent = function() {
-    Widgets.prototype.finishEvent.call(this);
+    EAction.prototype.finishEvent.call(this);
 
     var appWin = RMainWindowQt.getMainWindow();
     var dock = appWin.findChild("PropertyEditorDock");
     this.getGuiAction().setChecked(dock.visible);
+};
+
+/**
+ * Static function to get current entity filter (useful when triggering actions which change properties).
+ */
+PropertyEditor.getEntityTypeFilter = function() {
+    var appWin = EAction.getMainWindow();
+    var widget = appWin.findChild("PropertyEditor");
+    var selectionCombo = widget.findChild("Selection");
+    return selectionCombo.itemData(selectionCombo.currentIndex);
+};
+
+/**
+ * Static function to get current layer displayed in the property editor.
+ */
+PropertyEditor.getCurrentLayerName = function() {
+    var appWin = EAction.getMainWindow();
+    var widget = appWin.findChild("PropertyEditor");
+    var layerCombo = widget.findChild("Layer");
+    return layerCombo.itemText(layerCombo.currentIndex);
 };
 
 PropertyEditor.init = function(basePath) {
