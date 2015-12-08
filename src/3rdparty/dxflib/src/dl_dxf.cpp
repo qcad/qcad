@@ -381,7 +381,7 @@ bool DL_Dxf::processDXFGroup(DL_CreationInterface* creationInterface,
         int color24;
         color24 = getIntValue(420, -1);
         int handle;
-        handle = getIntValue(5, -1);
+        handle = getInt16Value(5, -1);
 
         std::string linetype = getStringValue(6, "BYLAYER");
 

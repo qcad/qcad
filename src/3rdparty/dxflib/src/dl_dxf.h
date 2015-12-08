@@ -418,6 +418,18 @@ public:
         return strtol(str.c_str(), &p, 10);
     }
 
+    int getInt16Value(int code, int def) {
+        if (!hasValue(code)) {
+            return def;
+        }
+        return toInt16(values[code]);
+    }
+
+    int toInt16(const std::string& str) {
+        char* p;
+        return strtol(str.c_str(), &p, 16);
+    }
+
     bool toBool(const std::string& str) {
         char* p;
         return (bool)strtol(str.c_str(), &p, 10);
