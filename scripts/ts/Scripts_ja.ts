@@ -93,7 +93,7 @@
         <translation>CADツール</translation>
     </message>
     <message>
-        <location line="+659"/>
+        <location line="+667"/>
         <source>Entity is on a locked layer.</source>
         <translation>エンティティはロックされた画層にあります。</translation>
     </message>

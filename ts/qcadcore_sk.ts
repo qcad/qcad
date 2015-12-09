@@ -418,12 +418,12 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation type="unfinished">Identifikátor</translation>
+        <translation>Identifikátor</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Protected</source>
-        <translation type="unfinished">Chránené</translation>
+        <translation>Chránené</translation>
     </message>
     <message>
         <location filename="../src/core/RTextBasedEntity.cpp" line="-3"/>

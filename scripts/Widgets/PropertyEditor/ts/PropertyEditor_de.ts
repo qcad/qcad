@@ -26,17 +26,17 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+187"/>
+        <location filename="../PropertyEditor.js" line="+1303"/>
         <source>*VARIES*</source>
         <translation>*VARIIERT*</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-1113"/>
         <source>:</source>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+173"/>
+        <location line="+150"/>
         <source>No Selection</source>
         <translation>Keine Selektion</translation>
     </message>
@@ -65,12 +65,12 @@
         <translation>Eigenschaft von ausgewählten Objekten entfernen</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+64"/>
         <source>All</source>
         <translation>Alle</translation>
     </message>
     <message>
-        <location line="+626"/>
+        <location line="+628"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -107,7 +107,7 @@
         <translation type="obsolete">Mittelpunkt</translation>
     </message>
     <message>
-        <location line="-604"/>
+        <location line="-606"/>
         <source>Add custom property to selected objects</source>
         <translation>Benutzerdefinierte Eigenschaft an ausgewählte Objekte hinzufügen</translation>
     </message>
@@ -144,8 +144,8 @@
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+307"/>
-        <location line="+35"/>
+        <location line="+309"/>
+        <location line="+55"/>
         <location line="+11"/>
         <source>Property Editor</source>
         <translation>Eigenschaften Editor</translation>
@@ -170,7 +170,7 @@
         <translation>Handle:</translation>
     </message>
     <message>
-        <location line="+133"/>
+        <location line="+94"/>
         <source>Linetype Scale:</source>
         <translation>Linientypskalierung:</translation>
     </message>
@@ -184,7 +184,7 @@
         <translation type="obsolete">Layer:</translation>
     </message>
     <message>
-        <location line="-192"/>
+        <location line="-153"/>
         <source>Color:</source>
         <translation>Farbe:</translation>
     </message>
@@ -201,12 +201,11 @@
         <translation type="obsolete">Reihenfolge:</translation>
     </message>
     <message>
-        <location line="+81"/>
         <source>Move Selection to a New Layer</source>
-        <translation>Auswahl auf neuen Layer verschieben</translation>
+        <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="-936"/>
+        <location filename="../PropertyEditor.js" line="-981"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

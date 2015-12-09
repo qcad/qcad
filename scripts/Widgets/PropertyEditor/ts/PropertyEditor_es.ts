@@ -38,7 +38,7 @@ Tipo de línea:</translatorcomment>
         <translation type="vanished">Geometría</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+701"/>
+        <location filename="../PropertyEditor.js" line="+700"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
@@ -67,13 +67,13 @@ Tipo de línea:</translatorcomment>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="-514"/>
+        <location line="+603"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-1113"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -82,7 +82,7 @@ Versión:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+173"/>
+        <location line="+150"/>
         <source>No Selection</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--
@@ -120,7 +120,7 @@ Valor indexado</translatorcomment>
         <translation>Retire esta propiedad de los objetos seleccionados</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+64"/>
         <source>All</source>
         <translatorcomment>--exact match--
 --file: qtiplot_es.ts--
@@ -131,7 +131,7 @@ Mosaico horizontal
         <translation>Todo</translation>
     </message>
     <message>
-        <location line="+626"/>
+        <location line="+628"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -161,7 +161,7 @@ Seleccione entidad base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-468"/>
+        <location line="-470"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -182,8 +182,8 @@ Seleccione entidad base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+307"/>
-        <location line="+35"/>
+        <location line="+309"/>
+        <location line="+55"/>
         <location line="+11"/>
         <source>Property Editor</source>
         <translation>Editor de propiedades</translation>
@@ -210,13 +210,12 @@ Seleccione entidad base</translatorcomment>
         <translation>Color:</translation>
     </message>
     <message>
-        <location line="+81"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Mueve la selección a una nueva capa</translation>
+        <translation type="vanished">Mueve la selección a una nueva capa</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+104"/>
         <source>Linetype Scale:</source>
         <translation>Escala de tipo de línea:</translation>
     </message>
@@ -226,7 +225,7 @@ Seleccione entidad base</translatorcomment>
         <translation>Protegida:</translation>
     </message>
     <message>
-        <location line="-182"/>
+        <location line="-143"/>
         <source>Handle:</source>
         <translatorcomment>--ignored colon--
 --file: es.po--</translatorcomment>

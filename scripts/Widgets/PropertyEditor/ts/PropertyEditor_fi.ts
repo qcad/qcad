@@ -27,17 +27,17 @@
         <translation>Näytä Z koordinaatit</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+187"/>
+        <location filename="../PropertyEditor.js" line="+1303"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-1113"/>
         <source>:</source>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+173"/>
+        <location line="+150"/>
         <source>No Selection</source>
         <translation>Ei valintaa</translation>
     </message>
@@ -71,7 +71,7 @@
         <translation>Poista tämä ominaisuus valituilta kohteilta</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+64"/>
         <source>All</source>
         <translation>Kaikki</translation>
     </message>
@@ -101,13 +101,13 @@
         <translation>Ei</translation>
     </message>
     <message>
-        <location line="+307"/>
+        <location line="+309"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+35"/>
+        <location line="+55"/>
         <location line="+11"/>
         <source>Property Editor</source>
         <translation>Ominaisuuksien muokkaaminen</translation>
@@ -132,12 +132,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+81"/>
         <source>Move Selection to a New Layer</source>
-        <translation>Siirrä valinta uuteen tasoon</translation>
+        <translation type="vanished">Siirrä valinta uuteen tasoon</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+104"/>
         <source>Linetype Scale:</source>
         <translation>Viivatyypin mittakaava:</translation>
     </message>
@@ -147,7 +146,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-182"/>
+        <location line="-143"/>
         <source>Handle:</source>
         <translation>Käsittele:</translation>
     </message>

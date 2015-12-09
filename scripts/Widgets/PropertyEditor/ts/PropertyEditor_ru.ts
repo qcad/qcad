@@ -22,17 +22,17 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+187"/>
+        <location filename="../PropertyEditor.js" line="+1303"/>
         <source>*VARIES*</source>
         <translation>*РАЗНЫЕ*</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-1113"/>
         <source>:</source>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+173"/>
+        <location line="+150"/>
         <source>No Selection</source>
         <translation>Ничего не выбрано</translation>
     </message>
@@ -62,7 +62,7 @@
         <translation>Удалить это свойство из выделенных объектов</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+64"/>
         <source>All</source>
         <translation>Все</translation>
     </message>
@@ -92,14 +92,14 @@
         <translation>Нет</translation>
     </message>
     <message>
-        <location line="+307"/>
-        <location line="+35"/>
+        <location line="+309"/>
+        <location line="+55"/>
         <location line="+11"/>
         <source>Property Editor</source>
         <translation>Редактор Свойств</translation>
     </message>
     <message>
-        <location line="-46"/>
+        <location line="-66"/>
         <source>Widgets</source>
         <translation>Виджеты</translation>
     </message>
@@ -119,12 +119,11 @@
         <translation>Цвет:</translation>
     </message>
     <message>
-        <location line="+81"/>
         <source>Move Selection to a New Layer</source>
-        <translation>Перенос выделения на новый слой</translation>
+        <translation type="vanished">Перенос выделения на новый слой</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+104"/>
         <source>Linetype Scale:</source>
         <translation>Масштаб типа линии:</translation>
     </message>
@@ -134,7 +133,7 @@
         <translation>Защищённый:</translation>
     </message>
     <message>
-        <location line="-182"/>
+        <location line="-143"/>
         <source>Handle:</source>
         <translation>Обработчик:</translation>
     </message>

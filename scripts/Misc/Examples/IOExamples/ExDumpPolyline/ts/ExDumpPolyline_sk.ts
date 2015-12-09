@@ -6,7 +6,7 @@
     <message>
         <location filename="../ExDumpPolyline.js" line="+93"/>
         <source>&amp;Dump Polyline</source>
-        <translation type="unfinished">&amp;Dump polyline (krivka) </translation>
+        <translation>&amp;Dump polyline (krivka) </translation>
     </message>
 </context>
 </TS>

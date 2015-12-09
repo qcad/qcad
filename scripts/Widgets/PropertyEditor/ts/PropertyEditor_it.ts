@@ -31,7 +31,7 @@
         <translation type="vanished">Geometria</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+701"/>
+        <location filename="../PropertyEditor.js" line="+700"/>
         <source>Add custom property to selected objects</source>
         <translation>Aggiungere una proprietà personalizzata per gli oggetti selezionati</translation>
     </message>
@@ -60,13 +60,13 @@
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="-514"/>
+        <location line="+603"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-1113"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: Arduino_it_IT.po--
@@ -75,7 +75,7 @@ Versione:</translatorcomment>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+173"/>
+        <location line="+150"/>
         <source>No Selection</source>
         <translatorcomment>--ignored case--
 --file: photivo_it.ts--
@@ -108,12 +108,12 @@ Nessuna selezione</translatorcomment>
         <translation>Rimuovere questa proprietà dagli oggetti selezionati</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+64"/>
         <source>All</source>
         <translation>Tutto</translation>
     </message>
     <message>
-        <location line="+626"/>
+        <location line="+628"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -143,7 +143,7 @@ Specifica la base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-468"/>
+        <location line="-470"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -164,8 +164,8 @@ Specifica la base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+307"/>
-        <location line="+35"/>
+        <location line="+309"/>
+        <location line="+55"/>
         <location line="+11"/>
         <source>Property Editor</source>
         <translation>Editor delle proprietà</translation>
@@ -192,13 +192,12 @@ Specifica la base</translatorcomment>
         <translation>Colore:</translation>
     </message>
     <message>
-        <location line="+81"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Sposta la selezione ad un nuovo layer</translation>
+        <translation type="vanished">Sposta la selezione ad un nuovo layer</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+104"/>
         <source>Linetype Scale:</source>
         <translation>Scala del tipo di linea:</translation>
     </message>
@@ -208,7 +207,7 @@ Specifica la base</translatorcomment>
         <translation>Protetta:</translation>
     </message>
     <message>
-        <location line="-182"/>
+        <location line="-143"/>
         <source>Handle:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Maniglia:</translation>

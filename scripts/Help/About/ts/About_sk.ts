@@ -82,7 +82,7 @@
     <message>
         <location line="+7"/>
         <source>Architecture:</source>
-        <translation type="unfinished">Architektúra:</translation>
+        <translation>Architektúra:</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -157,7 +157,7 @@
     <message>
         <location line="+7"/>
         <source>No script add-ons found.</source>
-        <translation type="unfinished">Nenašiel sa žiadny prídavný skript.</translation>
+        <translation>Nenašiel sa žiadny prídavný skript.</translation>
     </message>
     <message>
         <location line="+40"/>

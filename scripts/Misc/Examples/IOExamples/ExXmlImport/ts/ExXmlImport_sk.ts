@@ -16,7 +16,7 @@
     <message>
         <location filename="../ExXmlImportInit.js" line="+2"/>
         <source>&amp;Import XML</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Importovať XML</translation>
     </message>
 </context>
 </TS>

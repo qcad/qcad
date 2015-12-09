@@ -22,17 +22,17 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+187"/>
+        <location filename="../PropertyEditor.js" line="+1303"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-1113"/>
         <source>:</source>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+173"/>
+        <location line="+150"/>
         <source>No Selection</source>
         <translation>Ni izbrano</translation>
     </message>
@@ -66,7 +66,7 @@
         <translation>Odstrani to lastnost iz izbranih objektov</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+64"/>
         <source>All</source>
         <translation>Vse</translation>
     </message>
@@ -76,7 +76,7 @@
         <translation>Izbranim objektom dodaj dodatno lastnost</translation>
     </message>
     <message>
-        <location line="+604"/>
+        <location line="+606"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -117,7 +117,7 @@
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="-468"/>
+        <location line="-470"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
@@ -137,8 +137,8 @@
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+307"/>
-        <location line="+35"/>
+        <location line="+309"/>
+        <location line="+55"/>
         <location line="+11"/>
         <source>Property Editor</source>
         <translation>Urejevalec lastnosti</translation>
@@ -163,12 +163,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+81"/>
         <source>Move Selection to a New Layer</source>
-        <translation>Premakni izbrano na drugo plast</translation>
+        <translation type="vanished">Premakni izbrano na drugo plast</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+104"/>
         <source>Linetype Scale:</source>
         <translation>Faktor tipa črte:</translation>
     </message>
@@ -178,7 +177,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-182"/>
+        <location line="-143"/>
         <source>Handle:</source>
         <translation>Identifikator:</translation>
     </message>

@@ -27,17 +27,17 @@
         <translation>Zobraziť Z súradnice</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+187"/>
+        <location filename="../PropertyEditor.js" line="+1303"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-1113"/>
         <source>:</source>
         <translation>:</translation>
     </message>
     <message>
-        <location line="+173"/>
+        <location line="+150"/>
         <source>No Selection</source>
         <translation>Nič nie je vybraté</translation>
     </message>
@@ -71,7 +71,7 @@
         <translation>Odstrániť vlastnosť z vybraných prvkov</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+64"/>
         <source>All</source>
         <translation>Všetko</translation>
     </message>
@@ -101,13 +101,13 @@
         <translation>Nie</translation>
     </message>
     <message>
-        <location line="+307"/>
+        <location line="+309"/>
         <source>Widgets</source>
         <translation>Pomôcky</translation>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+35"/>
+        <location line="+55"/>
         <location line="+11"/>
         <source>Property Editor</source>
         <translation>Vlastnosti</translation>
@@ -137,12 +137,11 @@
         <translation>Identifikátor:</translation>
     </message>
     <message>
-        <location line="+71"/>
         <source>Move Selection to a New Layer</source>
-        <translation>Presunúť výber do Novej vrstvy</translation>
+        <translation type="vanished">Presunúť výber do Novej vrstvy</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+94"/>
         <source>Linetype Scale:</source>
         <translation>Mierka typu čiary:</translation>
     </message>

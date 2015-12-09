@@ -93,7 +93,7 @@
         <translation>Инструменты CAD</translation>
     </message>
     <message>
-        <location line="+659"/>
+        <location line="+667"/>
         <source>Entity is on a locked layer.</source>
         <translation>Объект находится на заблокированном слое.</translation>
     </message>

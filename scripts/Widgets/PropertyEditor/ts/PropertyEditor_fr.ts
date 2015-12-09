@@ -31,7 +31,7 @@
         <translation type="vanished">Géométrie</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+415"/>
+        <location filename="../PropertyEditor.js" line="+391"/>
         <source>Custom</source>
         <translation>Personnalisé</translation>
     </message>
@@ -46,12 +46,12 @@
         <translation>Retirer ce propriété à partir des objets sélectionnés</translation>
     </message>
     <message>
-        <location line="+63"/>
+        <location line="+86"/>
         <source>Add custom property to selected objects</source>
         <translation>Ajouter une propriété personnalisée pour les objets sélectionnés</translation>
     </message>
     <message>
-        <location line="+604"/>
+        <location line="+606"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -80,13 +80,13 @@
         <translation type="obsolete">Milieu</translation>
     </message>
     <message>
-        <location line="-1118"/>
+        <location line="-3"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="+4"/>
+        <location line="-1113"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--
@@ -95,7 +95,7 @@ Dessin enregistré : %1</translatorcomment>
         <translation> :</translation>
     </message>
     <message>
-        <location line="+173"/>
+        <location line="+150"/>
         <source>No Selection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Aucune sélection</translation>
@@ -111,7 +111,7 @@ Dessin enregistré : %1</translatorcomment>
         <translation>Entités dépendantes</translation>
     </message>
     <message>
-        <location line="+281"/>
+        <location line="+304"/>
         <source>All</source>
         <translatorcomment>--google--
 Partage &amp;Horizontal
@@ -174,8 +174,8 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+307"/>
-        <location line="+35"/>
+        <location line="+309"/>
+        <location line="+55"/>
         <location line="+11"/>
         <source>Property Editor</source>
         <translation>Éditeur de propriétés</translation>
@@ -202,13 +202,12 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation>Couleur :</translation>
     </message>
     <message>
-        <location line="+81"/>
         <source>Move Selection to a New Layer</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Déplacer la sélection dans un nouveau calque</translation>
+        <translation type="vanished">Déplacer la sélection dans un nouveau calque</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+104"/>
         <source>Linetype Scale:</source>
         <translation>Échelle du type de ligne :</translation>
     </message>
@@ -218,7 +217,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation>Protégé :</translation>
     </message>
     <message>
-        <location line="-182"/>
+        <location line="-143"/>
         <source>Handle:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Poignée :</translation>
