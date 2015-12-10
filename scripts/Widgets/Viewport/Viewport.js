@@ -325,9 +325,6 @@ EventHandler.prototype.updateSnapInfo = function(painter, snap, restriction) {
         posRestriction = restriction.getLastSnap();
     }
 
-    qDebug("status: ", snap.getStatus());
-    qDebug("status tan: ", RSnap.Tangential);
-
     var text = "";
     switch (snap.getStatus()) {
 //    case RSnap.Free:
