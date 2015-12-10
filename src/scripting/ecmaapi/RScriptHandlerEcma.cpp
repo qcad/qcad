@@ -292,6 +292,7 @@
 #include "REcmaSnapPerpendicular.h"
 #include "REcmaSnapReference.h"
 #include "REcmaSnapRestriction.h"
+#include "REcmaSnapTangential.h"
 #include "REcmaSolidData.h"
 #include "REcmaSolidEntity.h"
 #include "REcmaSpatialIndex.h"
@@ -630,6 +631,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaSnapOnEntity::initEcma(*engine);
     REcmaSnapPerpendicular::initEcma(*engine);
     REcmaSnapReference::initEcma(*engine);
+    REcmaSnapTangential::initEcma(*engine);
 
     REcmaSnapRestriction::initEcma(*engine);
     REcmaRestrictAngleLength::initEcma(*engine);

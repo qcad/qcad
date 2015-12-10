@@ -164,7 +164,7 @@ Zaznacza pojedynczy obiekt</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+68"/>
         <source>Grid</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
@@ -197,6 +197,11 @@ Punkt cięcia nie jest na obiekcie.</translatorcomment>
         <source>Perpendicular</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Prostopadły</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Tangential</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>

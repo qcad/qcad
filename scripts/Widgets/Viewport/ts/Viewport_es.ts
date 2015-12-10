@@ -165,7 +165,7 @@ Selecciona entidades solas</translatorcomment>
         <translation>Importación de URL: </translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+68"/>
         <source>Grid</source>
         <translation>Rejilla</translation>
     </message>
@@ -187,6 +187,11 @@ Selecciona entidades solas</translatorcomment>
 &amp;Perpendicular
 Perpendicular</translatorcomment>
         <translation>Perpendicular</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Tangential</source>
+        <translation>Tangencial</translation>
     </message>
     <message>
         <location line="+3"/>

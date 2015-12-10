@@ -165,7 +165,7 @@ Points uniques</translatorcomment>
         <translation>Importation URL: </translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+68"/>
         <source>Grid</source>
         <translation>Grille</translation>
     </message>
@@ -184,6 +184,11 @@ Points uniques</translatorcomment>
         <source>Perpendicular</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Perpendiculairement</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Tangential</source>
+        <translation>Tangentiel</translation>
     </message>
     <message>
         <location line="+3"/>

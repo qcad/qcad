@@ -28,6 +28,7 @@
 #include "RSnapMiddle.h"
 #include "RSnapOnEntity.h"
 #include "RSnapPerpendicular.h"
+#include "RSnapTangential.h"
 #include "RSnapReference.h"
 
 bool RSnapAuto::initialized = false;
@@ -37,6 +38,7 @@ bool RSnapAuto::endPoints = false;
 bool RSnapAuto::middlePoints = false;
 bool RSnapAuto::centerPoints = false;
 bool RSnapAuto::perpendicular = false;
+bool RSnapAuto::tangential = false;
 bool RSnapAuto::referencePoints = false;
 bool RSnapAuto::gridPoints = false;
 bool RSnapAuto::pointsOnEntity = false;
@@ -176,6 +178,24 @@ RVector RSnapAuto::snap(const RVector& position, RGraphicsView& view, double ran
         lastSnap = RVector::invalid;
     }
 
+    // tangential:
+    if (foundEntities && tangential) {
+        for (int k=0; k<idsList.size() && k<queryBoxList.size(); k++) {
+            // query box and matching IDs cached from intersection snap:
+            RBox queryBox = queryBoxList.at(k);
+            QSet<REntity::Id> ids = idsList.at(k);
+
+            RSnapTangential snapTangential;
+            lastSnap = snapTangential.snap(position, view, ids, queryBox);
+            if (lastSnap.isValid() && lastSnap.getDistanceTo2d(position) < range) {
+                status = RSnap::Tangential;
+                entityIds = snapTangential.getEntityIds();
+                return lastSnap;
+            }
+        }
+        lastSnap = RVector::invalid;
+    }
+
     // reference points:
     if (foundEntities && referencePoints) {
         for (int k=0; k<idsList.size() && k<queryBoxList.size(); k++) {
@@ -244,6 +264,7 @@ void RSnapAuto::init(bool force) {
     middlePoints = RSettings::getBoolValue("AutoSnap/MiddlePoints", true);
     centerPoints = RSettings::getBoolValue("AutoSnap/CenterPoints", false);
     perpendicular = RSettings::getBoolValue("AutoSnap/Perpendicular", true);
+    tangential = RSettings::getBoolValue("AutoSnap/Tangential", true);
     referencePoints = RSettings::getBoolValue("AutoSnap/ReferencePoints", true);
     gridPoints = RSettings::getBoolValue("AutoSnap/GridPoints", true);
     pointsOnEntity = RSettings::getBoolValue("AutoSnap/PointsOnEntity", false);

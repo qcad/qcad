@@ -238,6 +238,9 @@
         ;static  QScriptValue
         approximateWithLinesTan
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTangents
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

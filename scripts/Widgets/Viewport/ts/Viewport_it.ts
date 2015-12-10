@@ -165,7 +165,7 @@ Seleziona Singolo Oggetto</translatorcomment>
         <translation>Importazione URL: </translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+68"/>
         <source>Grid</source>
         <translation>Griglia</translation>
     </message>
@@ -188,6 +188,11 @@ Seleziona Singolo Oggetto</translatorcomment>
 Perpendicolare
 Seleziona il piano perpendicolare alla vista corrente</translatorcomment>
         <translation>Perpendicolare</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Tangential</source>
+        <translation>Tangenziale</translation>
     </message>
     <message>
         <location line="+3"/>

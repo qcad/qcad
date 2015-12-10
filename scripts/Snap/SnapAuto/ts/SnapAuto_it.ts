@@ -35,6 +35,11 @@
     </message>
     <message>
         <location line="+10"/>
+        <source>Tangential</source>
+        <translation>Tangenziale</translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Reference points</source>
         <translation>Punti di riferimento</translation>
     </message>

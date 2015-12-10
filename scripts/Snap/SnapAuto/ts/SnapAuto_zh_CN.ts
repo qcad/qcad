@@ -35,6 +35,11 @@
     </message>
     <message>
         <location line="+10"/>
+        <source>Tangential</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Reference points</source>
         <translation type="unfinished"></translation>
     </message>

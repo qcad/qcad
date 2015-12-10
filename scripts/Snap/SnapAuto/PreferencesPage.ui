@@ -65,6 +65,16 @@
        </widget>
       </item>
       <item>
+       <widget class="QCheckBox" name="Tangential">
+        <property name="text">
+         <string>Tangential</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QCheckBox" name="ReferencePoints">
         <property name="text">
          <string>Reference points</string>

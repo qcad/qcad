@@ -60,6 +60,7 @@ public:
         IntersectionManual,
         Reference,
         Perpendicular,
+        Tangential,
         Coordinate,
         CoordinatePolar
     };

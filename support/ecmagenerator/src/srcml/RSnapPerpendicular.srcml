@@ -28,7 +28,7 @@
 <class_decl>class <name>RMouseEvent</name>;</class_decl>
 
 <comment type="block">/**
- * \brief On entity snapper implementation.
+ * \brief Perpendicular snapper implementation.
  *
  * \scriptable
  *

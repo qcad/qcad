@@ -165,7 +165,7 @@ Selecione Entidades singulares</translatorcomment>
         <translation>Importando a URL: </translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+68"/>
         <source>Grid</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -202,6 +202,11 @@ Ponto de divisão não está contido na entidade.</translatorcomment>
 Perpendicular
 (perpendicular ao traço, \&quot;escova\&quot;)</translatorcomment>
         <translation>Perpendicular</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Tangential</source>
+        <translation>Tangencial</translation>
     </message>
     <message>
         <location line="+3"/>

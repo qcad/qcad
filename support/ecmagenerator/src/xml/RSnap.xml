@@ -19,6 +19,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="IntersectionManual" />
       <value name="Reference" />
       <value name="Perpendicular" />
+      <value name="Tangential" />
       <value name="Coordinate" />
       <value name="CoordinatePolar" />
     </enum>

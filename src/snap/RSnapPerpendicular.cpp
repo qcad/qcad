@@ -19,7 +19,6 @@
 #include "RDocumentInterface.h"
 #include "RGraphicsView.h"
 #include "RSnapPerpendicular.h"
-#include "RSplineEntity.h"
 
 QList<RVector> RSnapPerpendicular::snapEntity(
         QSharedPointer<REntity> entity,

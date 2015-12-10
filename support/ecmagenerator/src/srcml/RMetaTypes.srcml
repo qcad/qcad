@@ -334,6 +334,8 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::BrushStyle</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::ItemDataRole</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::WindowFlags</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::WidgetAttribute</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>Qt::WidgetAttribute*</argument>)</argument_list></macro>
 <cpp:if>#<cpp:directive>if</cpp:directive> <expr>!<call><name>defined</name><argument_list>(<argument><expr><name>Q_OS_IOS</name></expr></argument>)</argument_list></call></expr></cpp:if>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QPrinter::PaperSize</argument>)</argument_list></macro>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>

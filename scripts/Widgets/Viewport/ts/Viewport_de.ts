@@ -153,7 +153,7 @@
         <translation>Importiere URL: </translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+68"/>
         <source>Grid</source>
         <translation>Raster</translation>
     </message>
@@ -171,6 +171,11 @@
         <location line="+3"/>
         <source>Perpendicular</source>
         <translation>Lotrecht</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Tangential</source>
+        <translation>Tangential</translation>
     </message>
     <message>
         <location line="+3"/>

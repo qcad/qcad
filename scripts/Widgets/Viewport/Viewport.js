@@ -325,6 +325,9 @@ EventHandler.prototype.updateSnapInfo = function(painter, snap, restriction) {
         posRestriction = restriction.getLastSnap();
     }
 
+    qDebug("status: ", snap.getStatus());
+    qDebug("status tan: ", RSnap.Tangential);
+
     var text = "";
     switch (snap.getStatus()) {
 //    case RSnap.Free:
@@ -341,6 +344,9 @@ EventHandler.prototype.updateSnapInfo = function(painter, snap, restriction) {
         break;
     case RSnap.Perpendicular:
         text = qsTr("Perpendicular");
+        break;
+    case RSnap.Tangential:
+        text = qsTr("Tangential");
         break;
     case RSnap.Center:
         text = qsTr("Center");

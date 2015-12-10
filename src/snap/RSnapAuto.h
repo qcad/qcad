@@ -54,6 +54,7 @@ private:
     static bool middlePoints;
     static bool centerPoints;
     static bool perpendicular;
+    static bool tangential;
     static bool referencePoints;
     static bool gridPoints;
     static bool pointsOnEntity;

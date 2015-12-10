@@ -61,6 +61,7 @@
         <expr><name>IntersectionManual</name></expr>,
         <expr><name>Reference</name></expr>,
         <expr><name>Perpendicular</name></expr>,
+        <expr><name>Tangential</name></expr>,
         <expr><name>Coordinate</name></expr>,
         <expr><name>CoordinatePolar</name></expr>
     }</block>;</enum>

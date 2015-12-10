@@ -109,7 +109,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+68"/>
         <source>Grid</source>
         <translation type="unfinished"></translation>
     </message>
@@ -126,6 +126,11 @@
     <message>
         <location line="+3"/>
         <source>Perpendicular</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Tangential</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -27,7 +27,7 @@
 class RMouseEvent;
 
 /**
- * \brief On entity snapper implementation.
+ * \brief Perpendicular snapper implementation.
  *
  * \scriptable
  *

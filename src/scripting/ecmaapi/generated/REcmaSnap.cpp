@@ -140,6 +140,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("Tangential",
+    QScriptValue(RSnap::Tangential),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("Coordinate",
     QScriptValue(RSnap::Coordinate),
     QScriptValue::ReadOnly);

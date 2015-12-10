@@ -234,6 +234,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, approximateWithLinesTan, "approximateWithLinesTan");
             
+            REcmaHelper::registerFunction(&engine, proto, getTangents, "getTangents");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RArc*>(), *proto);
 
@@ -4999,6 +5001,78 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaArc::approximateWithLinesTan", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaArc::getTangents
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaArc::getTangents", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaArc::getTangents";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RArc* self = 
+                        getSelf("getTangents", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RArc: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RLine >'
+    QList < RLine > cppResult =
+        
+               self->getTangents(a0);
+        // return type: QList < RLine >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getTangents().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaArc::getTangents", context, engine);
             return result;
         }
          QScriptValue REcmaArc::toString

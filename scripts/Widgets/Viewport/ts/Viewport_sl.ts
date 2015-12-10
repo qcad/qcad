@@ -109,7 +109,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+68"/>
         <source>Grid</source>
         <translation>Mreža</translation>
     </message>
@@ -127,6 +127,11 @@
         <location line="+3"/>
         <source>Perpendicular</source>
         <translation>Pravokotno</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Tangential</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
