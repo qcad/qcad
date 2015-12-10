@@ -94,6 +94,8 @@ public:
 
     virtual QSharedPointer<RShape> getTransformed(const QTransform& transform) const;
 
+    QList<RLine> getTangents(const RVector& point) const;
+
 protected:
     virtual void print(QDebug dbg) const;
 

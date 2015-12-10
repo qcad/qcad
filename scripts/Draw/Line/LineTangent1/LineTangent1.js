@@ -176,15 +176,15 @@ LineTangent1.prototype.getOperation = function(preview) {
     var doc = this.getDocument();
 
     var tangent;
-    if (isArcShape(this.shape) ||
-        isCircleShape(this.shape)) {
-
-        tangent = this.getTangentArcOrCircle(this.shape, preview);
+    var tangents = this.shape.getTangents(this.pos1);
+    if (tangents.length===0) {
+        if (!preview) {
+            this.error = qsTr("Cannot draw tangent from point inside circle to circle")
+        }
     }
-    else if (isEllipseShape(this.shape)) {
-        var tangents = this.shape.getTangents(this.pos1);
+    else {
         if (tangents.length!==2 ||
-            tangents[0].getDistanceTo(this.pos2) < tangents[1].getDistanceTo(this.pos2)) {
+                tangents[0].getDistanceTo(this.pos2) < tangents[1].getDistanceTo(this.pos2)) {
 
             tangent = tangents[0];
         }

@@ -19,6 +19,7 @@
 #include <cmath>
 
 #include "RArc.h"
+#include "RCircle.h"
 #include "RBox.h"
 #include "RMath.h"
 #include "RPolyline.h"
@@ -791,6 +792,10 @@ RPolyline RArc::approximateWithLinesTan(double segmentLength) {
     return polyline;
 }
 
+QList<RLine> RArc::getTangents(const RVector& point) const {
+    RCircle circle(center, radius);
+    return circle.getTangents(point);
+}
 
 void RArc::print(QDebug dbg) const {
     dbg.nospace() << "RArc(";

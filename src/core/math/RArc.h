@@ -136,6 +136,8 @@ public:
     RPolyline approximateWithLines(double segmentLength);
     RPolyline approximateWithLinesTan(double segmentLength);
 
+    QList<RLine> getTangents(const RVector& point) const;
+
 protected:
     virtual void print(QDebug dbg) const;
 

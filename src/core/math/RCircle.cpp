@@ -241,6 +241,32 @@ QSharedPointer<RShape> RCircle::getTransformed(const QTransform& transform) cons
     );
 }
 
+QList<RLine> RCircle::getTangents(const RVector& point) const {
+    QList<RLine> ret;
+
+    // create temporary thales circle:
+    RVector thalesCenter = (point + getCenter())/2;
+    double thalesRadius = point.getDistanceTo(thalesCenter);
+
+    if (thalesRadius < getRadius()/2.0) {
+        return ret;
+    }
+
+    RCircle thalesCircle(thalesCenter, thalesRadius);
+
+    // get the two intersection points which are the tangent points:
+    QList<RVector> ips = thalesCircle.getIntersectionPoints(*this, false);
+
+    if (ips.length()>0) {
+        ret.append(RLine(point, ips[0]));
+        if (ips.length()>1) {
+            ret.append(RLine(point, ips[1]));
+        }
+    }
+
+    return ret;
+}
+
 void RCircle::print(QDebug dbg) const {
     dbg.nospace() << "RCircle(";
     RShape::print(dbg);
