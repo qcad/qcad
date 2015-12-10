@@ -89,6 +89,9 @@ SaveAs.prototype.beginEvent = function() {
 
         // overwrite is handled after extension has been added:
         fileDialog.setOption(QFileDialog.DontConfirmOverwrite, true);
+        if (!isNull(QFileDialog.DontUseCustomDirectoryIcons)) {
+            fileDialog.setOption(QFileDialog.DontUseCustomDirectoryIcons, true);
+        }
         fileDialog.fileMode = QFileDialog.AnyFile;
         fileDialog.acceptMode = QFileDialog.AcceptSave;
         fileDialog.setNameFilters(nameFilters);

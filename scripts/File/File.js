@@ -120,6 +120,10 @@ File.getSaveFileName = function(parentWidget, caption, dir, filterStrings) {
     // overwrite is handled after extension has been added:
     fileDialog.setOption(QFileDialog.DontConfirmOverwrite, true);
 
+    if (!isNull(QFileDialog.DontUseCustomDirectoryIcons)) {
+        fileDialog.setOption(QFileDialog.DontUseCustomDirectoryIcons, true);
+    }
+
     var fiDir = new QFileInfo(dir);
 
     fileDialog.setDirectory(fiDir.absolutePath());

@@ -41,6 +41,9 @@ ImportPoints.prototype.beginEvent = function() {
     fileDialog.setNameFilters([ filterAll ]);
     fileDialog.selectNameFilter(filterAll);
     fileDialog.setOption(QFileDialog.DontUseNativeDialog, false);
+    if (!isNull(QFileDialog.DontUseCustomDirectoryIcons)) {
+        fileDialog.setOption(QFileDialog.DontUseCustomDirectoryIcons, true);
+    }
     fileDialog.fileMode = QFileDialog.ExistingFiles;
     if (!fileDialog.exec()) {
         fileDialog.destroy();

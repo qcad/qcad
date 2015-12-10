@@ -77,6 +77,9 @@ OpenFile.prototype.beginEvent = function() {
     fileDialog.setNameFilters(filters);
     fileDialog.selectNameFilter(allFilter);
     fileDialog.setOption(QFileDialog.DontUseNativeDialog, false);
+    if (!isNull(QFileDialog.DontUseCustomDirectoryIcons)) {
+        fileDialog.setOption(QFileDialog.DontUseCustomDirectoryIcons, true);
+    }
     fileDialog.fileMode = QFileDialog.ExistingFiles;
 
     // global function qcadInitFileDialog may be registered to perform

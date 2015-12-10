@@ -160,6 +160,9 @@ Image.prototype.getFileName = function() {
     fileDialog.setNameFilters(filters);
     fileDialog.selectNameFilter(allFilter);
     fileDialog.setOption(QFileDialog.DontUseNativeDialog, false);
+    if (!isNull(QFileDialog.DontUseCustomDirectoryIcons)) {
+        fileDialog.setOption(QFileDialog.DontUseCustomDirectoryIcons, true);
+    }
     fileDialog.fileMode = QFileDialog.ExistingFiles;
     fileDialog.setLabelText(QFileDialog.FileType, qsTr("Format:"));
     if (!fileDialog.exec()) {
