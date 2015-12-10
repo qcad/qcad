@@ -1102,9 +1102,14 @@ RVector RPolyline::getVectorTo(const RVector& point, bool limited, double strict
     RVector ret = RVector::invalid;
 
     QList<QSharedPointer<RShape> > sub = getExploded();
-    QList<QSharedPointer<RShape> >::iterator it;
-    for (it=sub.begin(); it!=sub.end(); ++it) {
-        RVector v = (*it)->getVectorTo(point, limited, strictRange);
+    for (int i=0; i<sub.length(); i++) {
+        QSharedPointer<RShape> shape = sub.at(i);
+        bool l = limited;
+        if (i!=0 && i!=sub.length()-1) {
+            // segments in the middle: always limited:
+            l = true;
+        }
+        RVector v = shape->getVectorTo(point, l, strictRange);
         if (v.isValid() && (!ret.isValid() || v.getMagnitude()<ret.getMagnitude())) {
             ret = v;
         }
