@@ -47,11 +47,14 @@ QList<RVector> RSnapTangential::snapEntity(
         for (int i=0; i<lines.length(); i++) {
             ret.append(lines[i].getEndPoint());
         }
-        //if (lines.length()==2) {
-            //if (lines[0].getEndPoint().getDistanceTo(point) < lines[1].getEndPoint().getDistanceTo(point)) {
-          //      ret
-            //}
-        //}
+    }
+
+    QSharedPointer<REllipse> ellipse = shape.dynamicCast<REllipse>();
+    if (!ellipse.isNull()) {
+        QList<RLine> lines = ellipse->getTangents(di->getLastPosition());
+        for (int i=0; i<lines.length(); i++) {
+            ret.append(lines[i].getEndPoint());
+        }
     }
 
     return ret;
