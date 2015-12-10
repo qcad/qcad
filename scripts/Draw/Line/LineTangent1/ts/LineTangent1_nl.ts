@@ -19,7 +19,8 @@
         <translation>Geen tangent mogelijk.</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+25"/>
+        <location line="+33"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
         <translation>Kan geen tangent tekenen vanuit punt binnen cirkel naar cirkel</translation>
     </message>

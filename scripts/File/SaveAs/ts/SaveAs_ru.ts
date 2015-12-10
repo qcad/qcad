@@ -29,7 +29,7 @@
         <translation>Фильтры для экспорта не найдены. Операция прервана...</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+69"/>
         <source>Format:</source>
         <translation>Формат:</translation>
     </message>

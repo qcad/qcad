@@ -28,7 +28,7 @@
         <translation>Importa disegno</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+9"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>

@@ -23,7 +23,7 @@ Os&amp;tatnio otwierane pliki</translatorcomment>
         <translation type="unfinished">&amp;Plik</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+62"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

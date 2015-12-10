@@ -19,7 +19,8 @@
         <translation>Tangetti ei mahdollinen.</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+25"/>
+        <location line="+33"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
         <translation>Ei voida piirtää tangenttia ympyrän sisäpuolelta ympyrälle</translation>
     </message>

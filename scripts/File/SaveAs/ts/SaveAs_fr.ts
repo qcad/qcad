@@ -23,7 +23,7 @@
         <translation>Pas de filtres d&apos;exportation ont été trouvés. Abandon...</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+69"/>
         <source>Format:</source>
         <translation>Format :</translation>
     </message>

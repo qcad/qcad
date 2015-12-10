@@ -24,7 +24,7 @@
         <translation>Uvoz Bitmap-e</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+8"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>

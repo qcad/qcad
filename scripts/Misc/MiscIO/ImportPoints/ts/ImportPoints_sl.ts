@@ -14,7 +14,7 @@
         <translation>Uvozi točke</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+63"/>
         <source>&amp;Import Points</source>
         <translation>&amp;Uvozi točke</translation>
     </message>

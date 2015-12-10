@@ -24,7 +24,7 @@
         <translation>Importación bitmap</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+8"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>

@@ -24,7 +24,7 @@
         <translation>导入位图</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+8"/>
         <source>Format:</source>
         <translation>格式：</translation>
     </message>

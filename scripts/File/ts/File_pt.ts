@@ -22,7 +22,7 @@
         <translation>&amp;Arquivo</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+62"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: pt.po--

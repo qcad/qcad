@@ -19,7 +19,8 @@
         <translation>Dotyk nie je možný.</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+25"/>
+        <location line="+33"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
         <translation>Dotyčnicu ku kružnici nie je možné vytvoriť z bodu vnútri nej</translation>
     </message>

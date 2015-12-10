@@ -19,7 +19,8 @@
         <translation>接線を描画できません。</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+25"/>
+        <location line="+33"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
         <translation>円の内側から円に対して接線を引くことはできません</translation>
     </message>

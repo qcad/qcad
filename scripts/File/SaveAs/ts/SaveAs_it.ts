@@ -23,7 +23,7 @@
         <translation>Non sono stati trovati filtri di exportazione. Interruzione...</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+69"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>

@@ -23,7 +23,7 @@
         <translation>Keine Exportfilter wurden gefunden. Abbruch...</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+69"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>

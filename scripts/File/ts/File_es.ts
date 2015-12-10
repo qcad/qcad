@@ -19,7 +19,7 @@
         <translation>&amp;Fichero</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+62"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>

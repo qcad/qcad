@@ -19,7 +19,8 @@
         <translation>Нет возможности для касательной.</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+25"/>
+        <location line="+33"/>
         <source>Cannot draw tangent from point inside circle to circle</source>
         <translation>Нельзя нарисовать касательную от точки изнутри окружности к окружности</translation>
     </message>

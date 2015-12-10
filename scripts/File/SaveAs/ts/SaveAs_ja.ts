@@ -33,7 +33,7 @@
         <translation>エクスポートフィルタがみつかりません。中断します...</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+69"/>
         <source>Format:</source>
         <translation>フォーマット:</translation>
     </message>

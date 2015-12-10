@@ -28,7 +28,7 @@
         <translation>Zeichnung importieren</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+9"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>

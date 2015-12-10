@@ -29,7 +29,7 @@
         <translation>Žiadne exportné filtre sa nenašli. Ukončujem...</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+69"/>
         <source>Format:</source>
         <translation>Formát:</translation>
     </message>

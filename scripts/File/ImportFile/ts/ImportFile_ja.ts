@@ -28,7 +28,7 @@
         <translation>インポート図面</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+9"/>
         <source>Format:</source>
         <translation>フォーマット:</translation>
     </message>

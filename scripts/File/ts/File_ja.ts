@@ -19,7 +19,7 @@
         <translation>&amp;F ファイル</translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+62"/>
         <source>Format:</source>
         <translation>フォーマット:</translation>
     </message>

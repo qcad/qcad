@@ -38,7 +38,7 @@ Zachowaj jako &amp;szablon...</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+69"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

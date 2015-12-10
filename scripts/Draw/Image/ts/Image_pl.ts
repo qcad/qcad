@@ -37,7 +37,7 @@ Wszystkie pliki (*)</translatorcomment>
         <translation type="unfinished">Bitmap import</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+8"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

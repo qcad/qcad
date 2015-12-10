@@ -23,7 +23,7 @@
         <translation>Nenhum filtro de exportação foi encontrado. Abortando...</translation>
     </message>
     <message>
-        <location line="+66"/>
+        <location line="+69"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: pt.po--

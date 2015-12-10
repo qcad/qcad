@@ -9,12 +9,12 @@
         <translation>Importovať body</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+63"/>
         <source>&amp;Import Points</source>
         <translation>&amp;Importovať body</translation>
     </message>
     <message>
-        <location line="-61"/>
+        <location line="-64"/>
         <source>All Files</source>
         <translation>Všetky súbory</translation>
     </message>

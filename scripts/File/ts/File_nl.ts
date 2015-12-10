@@ -19,7 +19,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+58"/>
+        <location line="+62"/>
         <source>Format:</source>
         <translation type="unfinished"></translation>
     </message>
