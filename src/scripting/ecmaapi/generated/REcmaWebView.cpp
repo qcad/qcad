@@ -71,6 +71,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setAttribute, "setAttribute");
             
+            REcmaHelper::registerFunction(&engine, proto, parent, "parent");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RWebView*>(), *proto);
 
@@ -479,6 +481,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaWebView::setAttribute", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaWebView::parent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaWebView::parent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaWebView::parent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RWebView* self = 
+                        getSelf("parent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QObject *'
+    QObject * cppResult =
+        
+               self->parent();
+        // return type: QObject *
+                // QObject
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RWebView.parent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaWebView::parent", context, engine);
             return result;
         }
          QScriptValue REcmaWebView::toString

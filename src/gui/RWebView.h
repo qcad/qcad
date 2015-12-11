@@ -45,6 +45,10 @@ public:
     void setAttribute(Qt::WidgetAttribute attribute, bool on = true) {
         QWebView::setAttribute(attribute, on);
     }
+
+    QObject* parent() const {
+        return QWebView::parent();
+    }
 };
 
 Q_DECLARE_METATYPE(RWebView*)
