@@ -43,9 +43,13 @@ RRulerQt::RRulerQt(QWidget* parent) :
     
     //setAutoFillBackground(false);
 
+    qreal dpr = 1.0;
+#if QT_VERSION >= 0x050000
+    dpr = devicePixelRatio();
+#endif
     cursorArrow.moveTo(0,0);
-    cursorArrow.lineTo(-3,-3);
-    cursorArrow.lineTo(3,-3);
+    cursorArrow.lineTo(-3*dpr,-3*dpr);
+    cursorArrow.lineTo(3*dpr,-3*dpr);
 }
 
 
@@ -60,12 +64,13 @@ QSize RRulerQt::sizeHint() const {
         return hint;
     }
 
-    QFontMetrics fm(getFont());
-    int pixelSize = fm.height();
-    double dpr = 1.0;
+    qreal dpr = 1.0;
 #if QT_VERSION >= 0x050000
     dpr = devicePixelRatio();
 #endif
+
+    QFontMetrics fm(getFont());
+    int pixelSize = fm.height();
 
 #ifdef Q_OS_MAC
     int offset = pixelSize>8*dpr ? 12*dpr : 10*dpr;
