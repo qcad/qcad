@@ -49,6 +49,14 @@ QList<RVector> RSnapTangential::snapEntity(
         }
     }
 
+    QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
+    if (!arc.isNull()) {
+        QList<RLine> lines = arc->getTangents(di->getLastPosition());
+        for (int i=0; i<lines.length(); i++) {
+            ret.append(lines[i].getEndPoint());
+        }
+    }
+
     QSharedPointer<REllipse> ellipse = shape.dynamicCast<REllipse>();
     if (!ellipse.isNull()) {
         QList<RLine> lines = ellipse->getTangents(di->getLastPosition());
