@@ -6,12 +6,12 @@
     <message>
         <location filename="../AutoSave.js" line="+34"/>
         <source>Load/Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Laden/opslaan</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>Auto-opslaan</translation>
     </message>
     <message>
         <location line="+95"/>
@@ -21,24 +21,26 @@
     <message>
         <location line="+20"/>
         <source>Autosave failed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Auto-opslaan gefaald:</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Autosave complete.</source>
-        <translation type="unfinished"></translation>
+        <translation>Auto-opslaan compleet.</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>An &apos;autosave&apos; backup file for an untitled drawing was found.
 Do you wish to recover it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Een &apos;auto-opslaan&apos; bestand voor een naamloos tekening werd gevonden.
+Wilt u de tekening herstellen?</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>%1 &apos;autosave&apos; backup files for untitled drawings were found.
 Do you wish to recover them?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 &apos;Auto-opslaan&apos; bestanden voor naamloose tekeningen gevonden.
+Wilt u deze herstellen?</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -48,25 +50,26 @@ Do you wish to recover them?</source>
     <message>
         <location line="+16"/>
         <source>Recovered</source>
-        <translation type="unfinished"></translation>
+        <translation>Hersteld</translation>
     </message>
     <message>
         <location line="+47"/>
         <source>Recover File?</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestand herstellen?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>An &apos;autosave&apos; backup file for &apos;%1&apos; exists.
 Do you wish to recover it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Een &apos;Auto-opslaan&apos; bestand voor &apos;%1&apos; bestaat.
+Wilt u het herstellen?</translation>
     </message>
     <message>
         <location line="+25"/>
         <location line="+11"/>
         <location line="+5"/>
         <source>Cannot rename file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan naam van het bestand niet veranderen:</translation>
     </message>
     <message>
         <location line="-13"/>
@@ -86,17 +89,17 @@ Do you wish to recover it?</source>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Enable Autosave</source>
-        <translation type="unfinished"></translation>
+        <translation>Auto-opslaan inschakelen</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Autosave Interval:</source>
-        <translation type="unfinished"></translation>
+        <translation>Interval:</translation>
     </message>
     <message>
         <location line="+54"/>
         <source>min</source>
-        <translation type="unfinished"></translation>
+        <translation>min</translation>
     </message>
 </context>
 </TS>

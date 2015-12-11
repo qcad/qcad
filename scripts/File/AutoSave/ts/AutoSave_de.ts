@@ -90,7 +90,7 @@ Möchten Sie die Zeichnung wiederherstellen?</translation>
         <location line="+11"/>
         <location line="+5"/>
         <source>Cannot rename file:</source>
-        <translation>Kann Fatei nicht umbenennen:</translation>
+        <translation>Kann Datei nicht umbenennen:</translation>
     </message>
     <message>
         <location line="-13"/>

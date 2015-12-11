@@ -6,72 +6,72 @@
     <message>
         <location filename="../Paste.js" line="+77"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Positie</translation>
     </message>
     <message>
         <location filename="../Paste.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotatie:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Draai ingevoegde objecten&lt;br&gt;over deze hoek</translation>
     </message>
     <message>
         <location line="+97"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Schaal:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Schaal ingevoegde objecten&lt;br&gt;met deze factor</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingevoegde objecten&lt;br&gt;horizontaal spiegelen</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingevoegde objecten&lt;br&gt;verticaal spiegelen</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Paste all entities&lt;br&gt;to current layer&lt;br&gt;instead of original layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle objecten op huidige laag&lt;br&gt;invoegen in plaats of de originele laag</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>To current layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Op huidige laag</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestaande lagen&lt;br&gt;van de tekening met lagen&lt;br&gt;van het klembord overschrijven</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Lagen overschrijven</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestaande blokken&lt;br&gt;van detekening met lagen&lt;br&gt;van het klembord overschrijven</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Blokken overschrijven</translation>
     </message>
     <message>
         <location filename="../PasteInit.js" line="+2"/>
         <source>&amp;Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Plakken</translation>
     </message>
 </context>
 </TS>

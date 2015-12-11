@@ -6,23 +6,24 @@
     <message>
         <location filename="../AbstractPreferences.js" line="+44"/>
         <source>Application Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Programma Voorkeursinstellingen</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Drawing Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekenings Voorkeursinstellingen</translation>
     </message>
     <message>
         <location line="+300"/>
         <source>Restart required</source>
-        <translation type="unfinished"></translation>
+        <translation>Herstart nodig</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please restart QCAD for
 the preference changes to take effect.</source>
-        <translation type="unfinished"></translation>
+        <translation>Herstart QCAD om
+de wijzigingen door te voeren.</translation>
     </message>
 </context>
 <context>
@@ -30,7 +31,7 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../ClipboardOperation.js" line="+52"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Referentiepunt</translation>
     </message>
 </context>
 <context>
@@ -38,17 +39,17 @@ the preference changes to take effect.</source>
     <message>
         <location filename="../Edit.js" line="+65"/>
         <source>Edit Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Bewerken gereedschappen</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show edit tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Bewerken gereedschappen tonen</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bewerken</translation>
     </message>
 </context>
 <context>
@@ -58,32 +59,32 @@ the preference changes to take effect.</source>
         <location line="+85"/>
         <location line="+21"/>
         <source>Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Voorkeuren</translation>
     </message>
     <message>
         <location line="-88"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filter</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Clear Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoekopdracht terugzetten</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Expand Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>Navigatiestructuur ontvouwen</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Collapse Tree</source>
-        <translation type="unfinished"></translation>
+        <translation>Navigatiestructuur invouwen</translation>
     </message>
     <message>
         <location line="+67"/>
         <source>Restore to Default Values</source>
-        <translation type="unfinished"></translation>
+        <translation>Herstellen naar de standaardwaarden</translation>
     </message>
 </context>
 </TS>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+21"/>
         <source>Viewports</source>
-        <translation>Anisichten</translation>
+        <translation>Ansichten</translation>
     </message>
     <message>
         <location line="+14"/>
