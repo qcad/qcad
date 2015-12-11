@@ -499,7 +499,7 @@
     <message>
         <location line="+1"/>
         <source>From Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Van object</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -513,12 +513,12 @@
     <message>
         <location line="+192"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Ja</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Nee</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-1"/>

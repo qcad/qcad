@@ -389,6 +389,9 @@ About.prototype.initAboutSystem = function(textEdit) {
     text += "\nDate: " + RSettings.getReleaseDate();
     text += "\nQt version: " + RSettings.getQtVersion();
     text += "\nCompiler version: " + RSettings.getCompilerVersion();
+    text += "\nBuild Date: " + RSettings.getReleaseDate();
+    text += "\nRevision: " + RSettings.getRevisionString();
+    text += "\nArchitecture: " + RS.getBuildCpuArchitecture();
 
     text += "\nOS: ";
     if (RS.getSystemId()==="win") {

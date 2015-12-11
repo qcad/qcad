@@ -6,27 +6,27 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Icon Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pictogramgrootte:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Pixel</source>
-        <translation type="unfinished"></translation>
+        <translation>Pixel</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation type="unfinished"></translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>Options Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Opties werkbalk</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Shortcut Prefix Character:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sneltoets prefix karakter:</translation>
     </message>
 </context>
 <context>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../ToolBarPreferences.js" line="+30"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Toolbars</source>
-        <translation type="unfinished"></translation>
+        <translation>Werkbalken</translation>
     </message>
 </context>
 </TS>

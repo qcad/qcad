@@ -6,18 +6,18 @@
     <message>
         <location filename="../GridSettings.js" line="+25"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaardinstellingen voor nieuwe tekeningen</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Raster</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Algemeen</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -26,7 +26,7 @@
         <location line="+22"/>
         <location line="+1"/>
         <source>auto</source>
-        <translation type="unfinished"></translation>
+        <translation>auto</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
         <source>Viewport 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Kijkvenster 1</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -42,7 +42,7 @@
         <location line="+152"/>
         <location line="+152"/>
         <source>Display Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Raster tonen</translation>
     </message>
     <message>
         <location line="-446"/>
@@ -50,7 +50,7 @@
         <location line="+152"/>
         <location line="+152"/>
         <source>Isometric Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Isometrisch raster</translation>
     </message>
     <message>
         <location line="-449"/>
@@ -58,7 +58,7 @@
         <location line="+152"/>
         <location line="+152"/>
         <source>Grid Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Raster tussenafstand</translation>
     </message>
     <message>
         <location line="-450"/>
@@ -70,7 +70,7 @@
         <location line="+116"/>
         <location line="+30"/>
         <source>Y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Y:</translation>
     </message>
     <message>
         <location line="-512"/>
@@ -82,7 +82,7 @@
         <location line="+62"/>
         <location line="+63"/>
         <source>X:</source>
-        <translation type="unfinished"></translation>
+        <translation>X:</translation>
     </message>
     <message>
         <location line="-462"/>
@@ -90,22 +90,22 @@
         <location line="+152"/>
         <location line="+152"/>
         <source>Meta Grid Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>Meta raster tussenafstand</translation>
     </message>
     <message>
         <location line="-390"/>
         <source>Viewport 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Kijkvenster 2</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Kijkvenster 3</translation>
     </message>
     <message>
         <location line="+152"/>
         <source>Viewport 4</source>
-        <translation type="unfinished"></translation>
+        <translation>Kijkvenster 4</translation>
     </message>
 </context>
 </TS>

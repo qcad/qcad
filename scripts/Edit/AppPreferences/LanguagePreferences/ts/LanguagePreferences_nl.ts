@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+20"/>
         <source>Language of User Interface:</source>
-        <translation type="unfinished"></translation>
+        <translation>Taal van de gebruikersinterface:</translation>
     </message>
 </context>
 <context>
@@ -14,12 +14,12 @@
     <message>
         <location filename="../LanguagePreferences.js" line="+45"/>
         <source>Language Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Taal instellingen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Language</source>
-        <translation type="unfinished"></translation>
+        <translation>Taal</translation>
     </message>
 </context>
 </TS>

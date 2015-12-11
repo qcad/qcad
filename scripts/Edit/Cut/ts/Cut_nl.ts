@@ -6,7 +6,7 @@
     <message>
         <location filename="../CutInit.js" line="+2"/>
         <source>&amp;Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Knippen</translation>
     </message>
 </context>
 </TS>

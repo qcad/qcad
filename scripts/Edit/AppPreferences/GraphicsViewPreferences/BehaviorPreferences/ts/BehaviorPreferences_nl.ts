@@ -49,12 +49,12 @@
     <message>
         <location line="+7"/>
         <source>Right-click on entity shows context menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Klik met rechtermuisknop op object toont contextmenu</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Double-click to select contour</source>
-        <translation type="unfinished"></translation>
+        <translation>Dubbelklik selecteert contour</translation>
     </message>
     <message>
         <location line="+20"/>

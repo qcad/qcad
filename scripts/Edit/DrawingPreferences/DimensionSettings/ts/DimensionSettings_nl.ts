@@ -6,190 +6,190 @@
     <message>
         <location filename="../DimensionSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaardinstellingen voor nieuwe tekeningen</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+2"/>
         <source>Dimension Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Dimensie instellingen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Bemating</translation>
     </message>
     <message>
         <location line="+100"/>
         <source>Scientific</source>
-        <translation type="unfinished"></translation>
+        <translation>Wetenschappelijk</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal</source>
-        <translation type="unfinished"></translation>
+        <translation>Decimaal</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Engineering</source>
-        <translation type="unfinished"></translation>
+        <translation>Technisch</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Architectural</source>
-        <translation type="unfinished"></translation>
+        <translation>Bouwkunde</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Fractional</source>
-        <translation type="unfinished"></translation>
+        <translation>Breuken</translation>
     </message>
     <message>
         <location line="+32"/>
         <source>Decimal Degrees</source>
-        <translation type="unfinished"></translation>
+        <translation>Decimale Graden</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Deg/min/sec</source>
-        <translation type="unfinished"></translation>
+        <translation>Deg/min/sec</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gradians</source>
-        <translation type="unfinished"></translation>
+        <translation>Graden</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Radians</source>
-        <translation type="unfinished"></translation>
+        <translation>Radialen</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Surveyor&apos;s units</source>
-        <translation type="unfinished"></translation>
+        <translation>Te meten eenheid</translation>
     </message>
     <message>
         <location line="+193"/>
         <source>Unit / Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Eenheid / Formaat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The drawing unit must be &apos;Inch&apos; or &apos;Foot&apos; to display dimension labels in formats &apos;Architectural&apos; or &apos;Engineering&apos;. Format changed to &apos;Decimal&apos;.</source>
-        <translation type="unfinished"></translation>
+        <translation>De tekening eenheid moet &apos;Inch&apos; of &apos;Foot&apos; zijn dat bematingen in het format &apos;Architectuur&apos; of &apos;Technisch&apos; kunnen worden weergegeven. Format teruggezet op &apos;Decimaal&apos;.</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+29"/>
         <source>Sizes</source>
-        <translation type="unfinished"></translation>
+        <translation>Maten</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Keep proportions</source>
-        <translation type="unfinished"></translation>
+        <translation>Houd verhoudingen</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Text height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst hoogte:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Extension line offset:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hulplijn afzet:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Extension line extension:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hulplijn extentie:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Dimension line gap:</source>
-        <translation type="unfinished"></translation>
+        <translation>Maat lijn uitsparing:</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Arrow size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pijl grootte:</translation>
     </message>
     <message>
         <location line="+95"/>
         <source>Size scale factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Groote schaal factor:</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Arrow Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Pijl stijl</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation>Pijl</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Architectural Tick</source>
-        <translation type="unfinished"></translation>
+        <translation>Bouwkunde Tick</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Font</source>
-        <translation type="unfinished"></translation>
+        <translation>Lettertype</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Dimension label font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bematingtekst lettertype:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Label Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekstformaat</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Linear Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Liniaire bemating</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>&amp;Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Formaat:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>P&amp;recision:</source>
-        <translation type="unfinished"></translation>
+        <translation>P&amp;recisie:</translation>
     </message>
     <message>
         <location line="+32"/>
         <location line="+60"/>
         <source>Show trailing zeros</source>
-        <translation type="unfinished"></translation>
+        <translation>Toon afsluitende nullen</translation>
     </message>
     <message>
         <location line="-50"/>
         <source>Angular Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoek bemating</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>F&amp;ormat:</source>
-        <translation type="unfinished"></translation>
+        <translation>F&amp;ormaat:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Pre&amp;cision:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pre&amp;cisie:</translation>
     </message>
     <message>
         <location line="+32"/>
         <location line="+19"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Voorbeeld</translation>
     </message>
 </context>
 </TS>

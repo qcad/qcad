@@ -14,7 +14,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+20"/>
         <source>Language of User Interface:</source>
-        <translation>Sprache Benutzeroberfläche:</translation>
+        <translation>Sprache der Benutzeroberfläche:</translation>
     </message>
 </context>
 <context>

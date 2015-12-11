@@ -54,7 +54,7 @@
     <message>
         <location line="+36"/>
         <source>Double-click to select contour</source>
-        <translation>Doppelklick verwenden, um Kontouren zu selektieren</translation>
+        <translation>Doppelklick selektiert Kontour</translation>
     </message>
     <message>
         <location line="+20"/>

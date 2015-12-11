@@ -16,7 +16,7 @@
     <message>
         <location line="+2"/>
         <source>Printing</source>
-        <translation type="unfinished"></translation>
+        <translation>Afdrukken</translation>
     </message>
     <message>
         <location line="+0"/>

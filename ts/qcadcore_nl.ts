@@ -400,12 +400,12 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation type="unfinished">Handle</translation>
+        <translation>Handle</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Protected</source>
-        <translation type="unfinished">Beschermd</translation>
+        <translation>Beschermd</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -502,31 +502,31 @@
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
         <location line="+1"/>
         <source>View Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Beeld centrum</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
-        <translation type="unfinished"></translation>
+        <translation>Beeld doel</translation>
     </message>
     <message>
         <location filename="../src/core/RBlock.cpp" line="+49"/>
         <location filename="../src/core/RLayer.cpp" line="-3"/>
         <source>Name</source>
-        <translation type="unfinished">Naam</translation>
+        <translation>Naam</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">Verborgen</translation>
+        <translation>Verborgen</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Locked</source>
-        <translation type="unfinished">Vergrendeld</translation>
+        <translation>Vergrendeld</translation>
     </message>
 </context>
 <context>
@@ -606,7 +606,7 @@
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation type="unfinished"></translation>
+        <translation>Doorlopend</translation>
     </message>
     <message>
         <location line="+2"/>
