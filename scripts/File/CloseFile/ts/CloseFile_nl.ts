@@ -6,7 +6,7 @@
     <message>
         <location filename="../CloseFileInit.js" line="+2"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Sluiten</translation>
     </message>
 </context>
 </TS>

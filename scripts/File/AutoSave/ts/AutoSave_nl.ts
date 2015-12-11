@@ -16,7 +16,7 @@
     <message>
         <location line="+95"/>
         <source>Autosaving to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Auto-opslaan naar:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -45,7 +45,7 @@ Wilt u deze herstellen?</translation>
     <message>
         <location line="+6"/>
         <source>Recover Files?</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestanden herstellen?</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -74,17 +74,17 @@ Wilt u het herstellen?</translation>
     <message>
         <location line="-13"/>
         <source>Moved autosave backup file to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Auto-opslaan bestand hernoemd naar:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Moved original file to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Originele bestand hernoemd naar:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Cannot remove file:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan bestand niet verwijderen:</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>

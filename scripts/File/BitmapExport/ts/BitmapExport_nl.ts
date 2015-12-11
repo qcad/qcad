@@ -6,77 +6,77 @@
     <message>
         <location filename="../BitmapExport.js" line="+105"/>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestanden</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Export as Bitmap</source>
-        <translation type="unfinished"></translation>
+        <translation>Exporteren als bitmap</translation>
     </message>
     <message>
         <location line="-61"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Fout bij het genereren van het bitmap bestand &quot;%1&quot;:%2</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitmap bestand is aangemaakt als &quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../BitmapExportDialog.ui" line="+14"/>
         <source>Bitmap Export</source>
-        <translation type="unfinished"></translation>
+        <translation>Bitmap export</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Grootte</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Width:</source>
-        <translation type="unfinished"></translation>
+        <translation>Breedte:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoogte:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Pixels per drawing unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pixels per tekening eenheid:</translation>
     </message>
     <message>
         <location line="+72"/>
         <source>Margin:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rand:</translation>
     </message>
     <message>
         <location line="+64"/>
         <source>px</source>
-        <translation type="unfinished"></translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Background</source>
-        <translation type="unfinished"></translation>
+        <translation>Achtergrond</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>White</source>
-        <translation type="unfinished"></translation>
+        <translation>Wit</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation>Zwart</translation>
     </message>
     <message>
         <location filename="../BitmapExportInit.js" line="+2"/>
         <source>Bit&amp;map Export...</source>
-        <translation type="unfinished"></translation>
+        <translation>Bit&amp;map export...</translation>
     </message>
 </context>
 </TS>

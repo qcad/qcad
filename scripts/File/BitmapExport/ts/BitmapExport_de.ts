@@ -16,12 +16,12 @@
     <message>
         <location line="-61"/>
         <source>Error while generating Bitmap file &apos;%1&apos;: %2</source>
-        <translation>Fehler beim Generieren der Bitmap Datei &apos;%1&apos;: %2</translation>
+        <translation>Fehler beim Generieren der Bitmap Datei &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Bitmap file has been exported to &apos;%1&apos;</source>
-        <translation>Bitmap wurde erstellt als &apos;%1&apos;</translation>
+        <translation>Bitmapdatei wurde erstellt als &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Bitmap file has been exported to &quot;%1&quot;</source>
