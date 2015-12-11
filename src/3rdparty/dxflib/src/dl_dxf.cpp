@@ -114,10 +114,9 @@ bool DL_Dxf::in(const std::string& file, DL_CreationInterface* creationInterface
 
     fp = fopen(file.c_str(), "rt");
     if (fp) {
-        // TODO: test on various platforms:
-        //std::locale oldLocale = std::locale::global(std::locale("C"));	// use dot in numbers
+        std::locale oldLocale = std::locale::global(std::locale("C"));	// use dot in numbers
         while (readDxfGroups(fp, creationInterface)) {}
-        //std::locale::global(oldLocale);
+        std::locale::global(oldLocale);
         fclose(fp);
         return true;
     }

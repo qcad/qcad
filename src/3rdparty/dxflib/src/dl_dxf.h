@@ -456,7 +456,7 @@ public:
         std::replace(str2.begin(), str2.end(), ',', '.');
         // make sure c++ expects '.' not ',':
         std::istringstream istr(str2);
-        istr.imbue(std::locale("C"));
+        //istr.imbue(std::locale("C"));
         istr >> ret;
         return ret;
     }
