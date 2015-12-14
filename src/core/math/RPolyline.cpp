@@ -1160,7 +1160,7 @@ int RPolyline::getClosestSegment(const RVector& point) const {
         if (segment.isNull()) {
             break;
         }
-        double dist = segment->getDistanceTo(point);
+        double dist = segment->getDistanceTo(point, true, 0.0);
         if (!RMath::isNormal(dist)) {
             continue;
         }
