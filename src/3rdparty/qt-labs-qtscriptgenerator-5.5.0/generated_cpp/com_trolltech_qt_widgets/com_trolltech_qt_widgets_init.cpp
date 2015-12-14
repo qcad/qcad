@@ -82,6 +82,7 @@ QScriptValue qtscript_create_QGraphicsSimpleTextItem_class(QScriptEngine *engine
 QScriptValue qtscript_create_QFrame_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QStackedLayout_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QPanGesture_class(QScriptEngine *engine);
+QScriptValue qtscript_create_QPinchGesture_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QGraphicsSceneWheelEvent_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QStyleOptionComboBox_class(QScriptEngine *engine);
 QScriptValue qtscript_create_QGraphicsTextItem_class(QScriptEngine *engine);
@@ -279,6 +280,7 @@ static const char * const qtscript_com_trolltech_qt_widgets_class_names[] = {
     , "QFrame"
     , "QStackedLayout"
     , "QPanGesture"
+    , "QPinchGesture"
     , "QGraphicsSceneWheelEvent"
     , "QStyleOptionComboBox"
     , "QGraphicsTextItem"
@@ -478,6 +480,7 @@ static const QtBindingCreator qtscript_com_trolltech_qt_widgets_class_functions[
     , qtscript_create_QFrame_class
     , qtscript_create_QStackedLayout_class
     , qtscript_create_QPanGesture_class
+    , qtscript_create_QPinchGesture_class
     , qtscript_create_QGraphicsSceneWheelEvent_class
     , qtscript_create_QStyleOptionComboBox_class
     , qtscript_create_QGraphicsTextItem_class
@@ -597,7 +600,7 @@ static const QtBindingCreator qtscript_com_trolltech_qt_widgets_class_functions[
 void qtscript_initialize_com_trolltech_qt_widgets_bindings(QScriptValue &extensionObject)
 {
     QScriptEngine *engine = extensionObject.engine();
-    for (int i = 0; i < 195; ++i) {
+    for (int i = 0; i < 196; ++i) {
         extensionObject.setProperty(qtscript_com_trolltech_qt_widgets_class_names[i],
             qtscript_com_trolltech_qt_widgets_class_functions[i](engine),
             QScriptValue::SkipInEnumeration);

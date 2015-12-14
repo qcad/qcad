@@ -93,6 +93,7 @@ HEADERS += \
            $$PWD/qtscriptshell_QMouseEventTransition.h \
            $$PWD/qtscriptshell_QPaintDevice.h \
            $$PWD/qtscriptshell_QPanGesture.h \
+           $$PWD/qtscriptshell_QPinchGesture.h \
            $$PWD/qtscriptshell_QPictureFormatPlugin.h \
            $$PWD/qtscriptshell_QPlainTextDocumentLayout.h \
            $$PWD/qtscriptshell_QPlainTextEdit.h \
@@ -283,6 +284,7 @@ SOURCES += \
            $$PWD/qtscript_QMouseEventTransition.cpp \
            $$PWD/qtscript_QPaintDevice.cpp \
            $$PWD/qtscript_QPanGesture.cpp \
+           $$PWD/qtscript_QPinchGesture.cpp \
            $$PWD/qtscript_QPictureFormatPlugin.cpp \
            $$PWD/qtscript_QPlainTextDocumentLayout.cpp \
            $$PWD/qtscript_QPlainTextEdit.cpp \
@@ -466,6 +468,7 @@ SOURCES += \
            $$PWD/qtscriptshell_QMouseEventTransition.cpp \
            $$PWD/qtscriptshell_QPaintDevice.cpp \
            $$PWD/qtscriptshell_QPanGesture.cpp \
+           $$PWD/qtscriptshell_QPinchGesture.cpp \
            $$PWD/qtscriptshell_QPictureFormatPlugin.cpp \
            $$PWD/qtscriptshell_QPlainTextDocumentLayout.cpp \
            $$PWD/qtscriptshell_QPlainTextEdit.cpp \
