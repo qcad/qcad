@@ -229,7 +229,7 @@ bool RBlockReferenceEntity::setProperty(RPropertyTypeId propertyTypeId,
                             //ret.insert(RPropertyTypeId(QT_TRANSLATE_NOOP("REntity", "Attributes"), p.first.toString()));
                             //return qMakePair(QVariant(p.first), RPropertyAttributes());
                             child->setProperty(pid, value.toString(), transaction);
-                            transaction->addObject(child);
+                            transaction->addObject(child, false);
                         }
                     }
                 }
