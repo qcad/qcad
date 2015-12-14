@@ -3,7 +3,6 @@ include("scripts/EAction.js");
 function init(basePath) {
     // make sure the reset toolbar comes first:
     var tb = EAction.getToolBar(qsTranslate("Reset", "Reset"), "ResetToolBar");
-    //tb.minimumSize = new QSize(0,0);
 
     var action = new RGuiAction(qsTranslate("Reset", "&Reset / Idle"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
