@@ -199,7 +199,9 @@ void RGuiAction::setIcon(const QString& iconFile) {
         QAction::setIcon(QIcon());
     }
     else {
-        if (QFileInfo(iconFile).suffix().toLower()=="svg") {
+        if (QFileInfo(iconFile).suffix().toLower()=="svg" &&
+            !QCoreApplication::arguments().contains("-max-icon-res")) {
+
             int iconSize = RSettings::getIntValue("CadToolBar/IconSize", 32);
 
             // retina icons:
