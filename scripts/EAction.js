@@ -1622,10 +1622,11 @@ EAction.prototype.applyOperation = function() {
     var op = this.getOperation();
     if (isNull(op)) {
         qWarning("Operation returned by this.getOperation() is undefined");
-        return;
+        return false;
     }
     this.complementOperation(op);
     di.applyOperation(op);
+    return true;
 };
 
 /**
