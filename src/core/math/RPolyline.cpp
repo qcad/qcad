@@ -947,13 +947,16 @@ double RPolyline::getLength() const {
 }
 
 double RPolyline::getLengthTo(const RVector& p) const {
-    double ret = 0.0;
+    double ret = -1.0;
 
     if (p.equalsFuzzy(getStartPoint())) {
         return ret;
     }
 
     int segIdx = getClosestSegment(p);
+    if (segIdx<0) {
+        return ret;
+    }
 
     for (int i=0; i<segIdx; i++) {
         double l = getSegmentAt(i)->getLength();
