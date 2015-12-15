@@ -292,6 +292,7 @@
     <function_decl><type><name><name>RLinetype</name>::<name>Id</name></name></type> <name>getCurrentLinetypeId</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>RLinetypePattern</name></type> <name>getCurrentLinetypePattern</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>void</name></type> <name>setCurrentLayer</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setCurrentLayer</name><parameter_list>(<param><decl><type><name>const</name> <name>RLayer</name>&amp;</type> <name>layer</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setCurrentLayer</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>)</parameter_list>;</function_decl>
 

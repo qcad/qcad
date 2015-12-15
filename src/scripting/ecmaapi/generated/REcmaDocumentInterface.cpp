@@ -8273,6 +8273,33 @@
     
     if( context->argumentCount() ==
     1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayer::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayer::Id
+                    a0 =
+                    (RLayer::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCurrentLayer(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()

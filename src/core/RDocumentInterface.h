@@ -291,6 +291,7 @@ public:
     RLinetype::Id getCurrentLinetypeId();
     RLinetypePattern getCurrentLinetypePattern();
 
+    void setCurrentLayer(RLayer::Id layerId);
     void setCurrentLayer(const RLayer& layer);
     void setCurrentLayer(const QString& layerName);
 

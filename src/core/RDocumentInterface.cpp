@@ -1963,10 +1963,15 @@ RLinetypePattern RDocumentInterface::getCurrentLinetypePattern() {
  */
 void RDocumentInterface::setCurrentLayer(const QString& layerName) {
     document.setCurrentLayer(layerName);
-//    RTransaction transaction =
     if (RMainWindow::hasMainWindow() && notifyListeners) {
         RMainWindow::getMainWindow()->notifyLayerListeners(this);
-//        RMainWindow::getMainWindow()->postTransactionEvent(transaction);
+    }
+}
+
+void RDocumentInterface::setCurrentLayer(RLayer::Id layerId) {
+    document.setCurrentLayer(layerId);
+    if (RMainWindow::hasMainWindow() && notifyListeners) {
+        RMainWindow::getMainWindow()->notifyLayerListeners(this);
     }
 }
 
