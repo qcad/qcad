@@ -184,6 +184,9 @@
         getQtVersion
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getQtVersionString
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isQt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

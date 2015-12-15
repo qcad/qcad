@@ -44,7 +44,7 @@ TabBar.init = function(basePath) {
     // somewhat buggy:
     //tabBar.movable = true;
 
-    if (RSettings.getQtVersion().startsWith("4.7.")) {
+    if (RSettings.getQtVersionString().startsWith("4.7.")) {
         // starting with Qt 4.8, this is no longer necessary:
         tabBar.tabCloseRequested.connect(function(tabIndex) {
             tabBar.setCurrentIndex(tabIndex);

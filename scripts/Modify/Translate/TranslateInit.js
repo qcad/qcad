@@ -8,7 +8,7 @@ function init(basePath) {
     // workaround for bug FS#709, cursor freezes 
     // after starting tool from docked toolbar
     // affects only Qt 4.8.x on windows
-    if (RS.getSystemId() !== "win" || !RSettings.getQtVersion().startsWith("4.8.")) {
+    if (RS.getSystemId() !== "win" || !RSettings.getQtVersionString().startsWith("4.8.")) {
         action.setStatusTip(qsTranslate("Translate", "Move or copy entities once or multiple times"));
     }
 

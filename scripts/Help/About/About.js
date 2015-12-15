@@ -99,7 +99,7 @@ About.prototype.initAboutApp = function(textBrowser) {
             + "</tr><tr>"
             + "<td><b>" + qsTr("Revision:") + "</b> </td><td>%1</td>".arg(RSettings.getRevisionString().left(7))
             + "</tr><tr>"
-            + "<td><b>" + qsTr("Qt Version:") + "</b> </td><td>%1</td>".arg(RSettings.getQtVersion())
+            + "<td><b>" + qsTr("Qt Version:") + "</b> </td><td>%1</td>".arg(RSettings.getQtVersionString())
             + "</tr><tr>";
             if (RS.getBuildCpuArchitecture().length!==0) {
                 html += "<td><b>" + qsTr("Architecture:") + "</b> </td><td>%1</td>".arg(RS.getBuildCpuArchitecture())
@@ -387,7 +387,7 @@ About.prototype.initAboutSystem = function(textEdit) {
         .arg(RSettings.getRevisionVersion())
         .arg(RSettings.getBuildVersion());
     text += "\nDate: " + RSettings.getReleaseDate();
-    text += "\nQt version: " + RSettings.getQtVersion();
+    text += "\nQt version: " + RSettings.getQtVersionString();
     text += "\nCompiler version: " + RSettings.getCompilerVersion();
     text += "\nBuild Date: " + RSettings.getReleaseDate();
     text += "\nRevision: " + RSettings.getRevisionString();
@@ -411,11 +411,11 @@ About.prototype.initAboutSystem = function(textEdit) {
     var sysloc = QLocale.system();
     text += "\nName: " + sysloc.name();
     text += "\nCountry: " + sysloc.country();
-    if (RSettings.getQtVersion().startsWith("4.8") || RSettings.getQtVersion().startsWith("5")) {
+    if (isFunction(sysloc.nativeCountryName)) {
         text += "\nCountry name: " + sysloc.nativeCountryName();
     }
     text += "\nLanguage: " + sysloc.language();
-    if (RSettings.getQtVersion().startsWith("4.8") || RSettings.getQtVersion().startsWith("5")) {
+    if (isFunction(sysloc.nativeLanguageName)) {
         text += "\nLanguage name: " + sysloc.nativeLanguageName();
     }
     text += "\nScript: " + sysloc.script();

@@ -253,6 +253,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getQtVersion" cppName="getQtVersion"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
+      <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getQtVersionString" cppName="getQtVersionString"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
     <method name="isQt" cppName="isQt" specifier="public"

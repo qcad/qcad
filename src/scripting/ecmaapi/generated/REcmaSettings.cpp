@@ -149,6 +149,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getQtVersion, "getQtVersion");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getQtVersionString, "getQtVersionString");
+            
             REcmaHelper::registerFunction(&engine, &ctor, isQt, "isQt");
             
             REcmaHelper::registerFunction(&engine, &ctor, getCompilerVersion, "getCompilerVersion");
@@ -2245,11 +2247,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QString'
-    QString cppResult =
+    // return type 'int'
+    int cppResult =
         RSettings::
        getQtVersion();
-        // return type: QString
+        // return type: int
                 // standard Type
                 result = QScriptValue(cppResult);
             
@@ -2262,6 +2264,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getQtVersion", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getQtVersionString
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getQtVersionString", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getQtVersionString";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        RSettings::
+       getQtVersionString();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getQtVersionString().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getQtVersionString", context, engine);
             return result;
         }
          QScriptValue

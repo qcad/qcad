@@ -526,7 +526,11 @@ bool RSettings::isLayer0CompatibilityOn() {
     return layer0CompatibilityOn;
 }
 
-QString RSettings::getQtVersion() {
+int RSettings::getQtVersion() {
+    return QT_VERSION;
+}
+
+QString RSettings::getQtVersionString() {
     return qVersion();
 }
 

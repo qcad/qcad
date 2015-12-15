@@ -107,7 +107,8 @@ public:
     static double getArcAngleLengthThreshold();
     static double getMinArcAngleStep();
     static int getDashThreshold();
-    static QString getQtVersion();
+    static int getQtVersion();
+    static QString getQtVersionString();
     static bool isQt(int majorVersion);
     static QString getCompilerVersion();
     static QString getOSVersion();

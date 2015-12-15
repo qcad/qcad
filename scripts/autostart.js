@@ -28,7 +28,7 @@ include("scripts/File/AutoSave/AutoSave.js");
 function version() {
     print();
     print("Version: " + RSettings.getVersionString());
-    print("Qt Version: " + RSettings.getQtVersion());
+    print("Qt Version: " + RSettings.getQtVersionString());
     print("Release Date: " + RSettings.getReleaseDate());
     print();
 }

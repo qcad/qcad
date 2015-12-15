@@ -108,7 +108,8 @@
     <function_decl><type><name>static</name> <name>double</name></type> <name>getArcAngleLengthThreshold</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>double</name></type> <name>getMinArcAngleStep</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>int</name></type> <name>getDashThreshold</name><parameter_list>()</parameter_list>;</function_decl>
-    <function_decl><type><name>static</name> <name>QString</name></type> <name>getQtVersion</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>int</name></type> <name>getQtVersion</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QString</name></type> <name>getQtVersionString</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isQt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>majorVersion</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getCompilerVersion</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>getOSVersion</name><parameter_list>()</parameter_list>;</function_decl>
