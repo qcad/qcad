@@ -31,9 +31,13 @@ function Circle2TR(guiAction) {
     this.entity1 = undefined;
     this.shape1 = undefined;
     this.entity2 = undefined;
+    this.entity2Id = undefined;
     this.shape2 = undefined;
     this.radius = undefined;
     this.center = undefined;
+    this.pos = undefined;
+
+    this.candidates = undefined;
 
     this.setUiOptions("Circle2TR.ui");
 }
@@ -42,7 +46,8 @@ Circle2TR.prototype = new Circle();
 
 Circle2TR.State = {
     ChoosingShape1 : 0,
-    ChoosingShape2 : 1
+    ChoosingShape2 : 1,
+    ChoosingSolution : 2
 };
 
 Circle2TR.prototype.beginEvent = function() {
@@ -63,8 +68,11 @@ Circle2TR.prototype.setState = function(state) {
         this.entity1 = undefined;
         this.shape1 = undefined;
         this.entity2 = undefined;
+        this.entity2Id = undefined;
         this.shape2 = undefined;
         this.center = undefined;
+        this.pos = undefined;
+        this.candidates = undefined;
         var trFirstEntity = qsTr("First line, arc or circle");
         this.setCommandPrompt(trFirstEntity);
         this.setLeftMouseTip(trFirstEntity);
@@ -73,11 +81,22 @@ Circle2TR.prototype.setState = function(state) {
 
     case Circle2TR.State.ChoosingShape2:
         this.entity2 = undefined;
+        this.entity2Id = undefined;
         this.shape2 = undefined;
         this.center = undefined;
+        this.pos = undefined;
+        this.candidates = undefined;
         var trSecondEntity = qsTr("Second line, arc or circle");
         this.setCommandPrompt(trSecondEntity);
         this.setLeftMouseTip(trSecondEntity);
+        this.setRightMouseTip(EAction.trBack);
+        break;
+
+    case Circle2TR.State.ChoosingSolution:
+        this.pos = undefined;
+        var trSolution = qsTr("Choose solution");
+        this.setCommandPrompt(trSolution);
+        this.setLeftMouseTip(trSolution);
         this.setRightMouseTip(EAction.trBack);
         break;
     }
@@ -93,6 +112,10 @@ Circle2TR.prototype.escapeEvent = function() {
 
     case Circle2TR.State.ChoosingShape2:
         this.setState(Circle2TR.State.ChoosingShape1);
+        break;
+
+    case Circle2TR.State.ChoosingSolution:
+        this.setState(Circle2TR.State.ChoosingShape2);
         break;
     }
 };
@@ -126,7 +149,6 @@ Circle2TR.prototype.pickEntity = function(event, preview) {
     case Circle2TR.State.ChoosingShape1:
         this.entity1 = entity;
         this.shape1 = shape;
-        this.pos1 = pos;
 
         if (preview) {
             this.updatePreview();
@@ -137,10 +159,40 @@ Circle2TR.prototype.pickEntity = function(event, preview) {
         break;
 
     case Circle2TR.State.ChoosingShape2:
+        if (entityId!==this.entity2Id) {
+            this.candidates = undefined;
+        }
         this.entity2 = entity;
+        this.entity2Id = entityId;
         this.shape2 = shape;
-        this.pos2 = pos;
 
+        if (preview) {
+            this.updatePreview();
+        }
+        else {
+            var op = this.getOperation(false);
+            if (!isNull(op)) {
+//                di.applyOperation(op);
+//                this.setState(Circle2TR.State.ChoosingShape1);
+                // only one solution:
+                if (this.candidates.length===1) {
+                    di.applyOperation(op);
+                    this.setState(Circle2TR.State.ChoosingShape1);
+                }
+                // multiple solutions:
+                else {
+                    this.setState(Circle2TR.State.ChoosingSolution);
+                }
+            }
+            else {
+                this.setState(Circle2TR.State.ChoosingShape1);
+                this.error = qsTr("No solution");
+            }
+        }
+        break;
+
+    case Circle2TR.State.ChoosingSolution:
+        this.pos = event.getModelPosition();
         if (preview) {
             this.updatePreview();
         }
@@ -149,10 +201,6 @@ Circle2TR.prototype.pickEntity = function(event, preview) {
             if (!isNull(op)) {
                 di.applyOperation(op);
                 this.setState(Circle2TR.State.ChoosingShape1);
-            }
-            else {
-                this.setState(Circle2TR.State.ChoosingShape1);
-                this.error = qsTr("No solution");
             }
         }
         break;
@@ -164,24 +212,24 @@ Circle2TR.prototype.pickEntity = function(event, preview) {
 };
 
 Circle2TR.prototype.getOperation = function(preview) {
-    var shape = this.getCircle2TR(preview);
+    var shapes = this.getCircles2TR(preview);
 
-    if (isNull(shape)) {
+    if (isNull(shapes)) {
         return undefined;
     }
 
     var doc = this.getDocument();
 
-    var entity = new RCircleEntity(doc, new RCircleData(shape));
-
-    if (!isEntity(entity)) {
-        return undefined;
+    var op = new RAddObjectsOperation();
+    op.setText(this.getToolTitle());
+    for (var i=0; i<shapes.length; i++) {
+        var entity = new RCircleEntity(doc, new RCircleData(shapes[i]));
+        op.addObject(entity);
     }
-
-    return new RAddObjectOperation(entity, this.getToolTitle());
+    return op;
 };
 
-Circle2TR.prototype.getCircle2TR = function(preview) {
+Circle2TR.prototype.getCircles2TR = function(preview) {
     if (isNull(this.shape1) || isNull(this.shape2) || !isNumber(this.radius)) {
         return undefined;
     }
@@ -195,37 +243,54 @@ Circle2TR.prototype.getCircle2TR = function(preview) {
 
     var i,k,ips;
 
-    var offset1 = ShapeAlgorithms.getOffsetShapes(this.shape1, this.radius, 1, RS.BothSides);
-    var offset2 = ShapeAlgorithms.getOffsetShapes(this.shape2, this.radius, 1, RS.BothSides);
+    if (isNull(this.candidates)) {
+        var offset1 = ShapeAlgorithms.getOffsetShapes(this.shape1, this.radius, 1, RS.BothSides);
+        var offset2 = ShapeAlgorithms.getOffsetShapes(this.shape2, this.radius, 1, RS.BothSides);
 
-    var candidates = [];
-    for (i=0; i<offset1.length; i++) {
-        for (k=0; k<offset2.length; k++) {
-            ips = offset1[i].getIntersectionPoints(offset2[k], false);
-            candidates = candidates.concat(ips);
+        if (isCircleShape(this.shape1) || isArcShape(this.shape1)) {
+            if (this.radius>this.shape1.getRadius()) {
+                var s = this.shape1.clone();
+                s.setRadius(this.radius - this.shape1.getRadius());
+                offset1.push(s);
+            }
+        }
+        if (isCircleShape(this.shape2) || isArcShape(this.shape2)) {
+            if (this.radius>this.shape2.getRadius()) {
+                var s = this.shape2.clone();
+                s.setRadius(this.radius - this.shape2.getRadius());
+                offset2.push(s);
+            }
+        }
+
+        var centerPoints = [];
+        for (i=0; i<offset1.length; i++) {
+            for (k=0; k<offset2.length; k++) {
+                ips = offset1[i].getIntersectionPoints(offset2[k], false);
+                centerPoints = centerPoints.concat(ips);
+            }
+        }
+
+        this.candidates = [];
+        var circle = undefined;
+        for (i=0; i<centerPoints.length; i++) {
+            var c = new RCircle(centerPoints[i], this.radius);
+            this.candidates.push(c);
         }
     }
 
-    if (candidates.length===0) {
+    if (this.candidates.length===0) {
         if (!preview) {
             this.error = qsTr("No solution");
         }
         return undefined;
     }
 
-    var minDist = -1;
-    var circle = undefined;
-    for (i=0; i<candidates.length; i++) {
-        var c = new RCircle(candidates[i], this.radius);
-        var dist = c.getDistanceTo(this.pos2);
-        if (minDist<0 || dist<minDist) {
-            minDist = dist;
-            circle = c;
-            this.center = candidates[i];
-        }
+    // no position yet: return all candidates for preview:
+    if (isNull(this.pos)) {
+        return this.candidates;
     }
 
-    return circle;
+    return [ ShapeAlgorithms.getClosestShape(this.candidates, this.pos) ];
 };
 
 Circle2TR.prototype.slotRadiusChanged = function(value) {
@@ -247,21 +312,25 @@ Circle2TR.prototype.getHighlightedEntities = function() {
 
 Circle2TR.prototype.getAuxPreview = function() {
     var ret = [];
-    var a;
+//    var a;
 
-    if (isVector(this.center)) {
-        if (isArcShape(this.shape1)) {
-            a = this.shape1.getCenter().getAngleTo(this.center);
-            if (!this.shape1.isAngleWithinArc(a)) {
-                ret.push(new RCircle(this.shape1.getCenter(), this.shape1.getRadius()));
-            }
-        }
-        if (isArcShape(this.shape2)) {
-            a = this.shape2.getCenter().getAngleTo(this.center);
-            if (!this.shape2.isAngleWithinArc(a)) {
-                ret.push(new RCircle(this.shape2.getCenter(), this.shape2.getRadius()));
-            }
-        }
+//    if (isVector(this.center)) {
+//        if (isArcShape(this.shape1)) {
+//            a = this.shape1.getCenter().getAngleTo(this.center);
+//            if (!this.shape1.isAngleWithinArc(a)) {
+//                ret.push(new RCircle(this.shape1.getCenter(), this.shape1.getRadius()));
+//            }
+//        }
+//        if (isArcShape(this.shape2)) {
+//            a = this.shape2.getCenter().getAngleTo(this.center);
+//            if (!this.shape2.isAngleWithinArc(a)) {
+//                ret.push(new RCircle(this.shape2.getCenter(), this.shape2.getRadius()));
+//            }
+//        }
+//    }
+
+    if (!isNull(this.pos)) {
+        return this.candidates;
     }
 
     return ret;
