@@ -356,7 +356,7 @@ void RDocumentInterface::suspend() {
     }
 
     if (currentSnap!=NULL) {
-        currentSnap->hideUiOptions();
+        currentSnap->suspendEvent();
     }
     if (currentSnapRestriction!=NULL) {
         currentSnapRestriction->hideUiOptions();
@@ -371,7 +371,6 @@ void RDocumentInterface::resume() {
     }
 
     if (hasCurrentAction()) {
-        //qDebug() << "resume (di resume)";
         getCurrentAction()->resumeEvent();
     }
     else {
@@ -396,7 +395,10 @@ void RDocumentInterface::deleteTerminatedActions() {
         cursorPosition = RVector::invalid;
         RAction* currentAction = currentActions.top();
         currentAction->finishEvent();
-        setClickMode(RAction::PickingDisabled);
+
+        // removed (20151216): breaks snap ui options:
+        //setClickMode(RAction::PickingDisabled);
+
         // remember GUI action group:
         QString group;
         if (currentAction->getGuiAction()!=NULL &&
@@ -418,7 +420,7 @@ void RDocumentInterface::deleteTerminatedActions() {
 
     // if one or more actions (with state) have been terminated, resume previous action
     // or default action:
-    if (removed /*&& !removedHadNoState // TODO: breaks snap to coordinate options */) {
+    if (removed && !removedHadNoState) {
         if (currentActions.size()>0) {
             currentActions.top()->resumeEvent();
         }
@@ -1166,7 +1168,7 @@ void RDocumentInterface::flushRedo() {
  */
 void RDocumentInterface::setSnap(RSnap* snap) {
     if (currentSnap!=NULL) {
-        currentSnap->hideUiOptions();
+        currentSnap->finishEvent();
         delete currentSnap;
     }
 

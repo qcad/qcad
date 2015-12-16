@@ -73,6 +73,18 @@
         
     
     
+      void suspendEvent(
+                
+            );
+        
+    
+    
+      void finishEvent(
+                
+            );
+        
+    
+    
       QSet < REntity::Id > getEntityIds(
                 
             );

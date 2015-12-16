@@ -55,6 +55,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, hideUiOptions, "hideUiOptions");
             
+            REcmaHelper::registerFunction(&engine, proto, suspendEvent, "suspendEvent");
+            
+            REcmaHelper::registerFunction(&engine, proto, finishEvent, "finishEvent");
+            
             REcmaHelper::registerFunction(&engine, proto, getEntityIds, "getEntityIds");
             
             REcmaHelper::registerFunction(&engine, proto, getStatus, "getStatus");
@@ -508,6 +512,94 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSnap::hideUiOptions", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnap::suspendEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnap::suspendEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnap::suspendEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSnap* self = 
+                        getSelf("suspendEvent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->suspendEvent();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnap.suspendEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnap::suspendEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSnap::finishEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSnap::finishEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSnap::finishEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSnap* self = 
+                        getSelf("finishEvent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->finishEvent();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSnap.finishEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSnap::finishEvent", context, engine);
             return result;
         }
          QScriptValue

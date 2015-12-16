@@ -55,6 +55,12 @@
         hideUiOptions
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        suspendEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        finishEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getEntityIds
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

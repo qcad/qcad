@@ -76,6 +76,16 @@
     
             // methods of 2nd level base class RSnap:
             
+      void suspendEvent(
+                
+            );
+        
+    
+      void finishEvent(
+                
+            );
+        
+    
       QSet < REntity::Id > getEntityIds(
                 
             );

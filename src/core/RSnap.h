@@ -89,6 +89,13 @@ public:
     virtual void showUiOptions() {}
     virtual void hideUiOptions() {}
 
+    virtual void suspendEvent() {
+        hideUiOptions();
+    }
+    virtual void finishEvent() {
+        hideUiOptions();
+    }
+
     /**
      * \return Set of entity IDs that are relevant for the last performed
      * snap, usually used for highlighting.
