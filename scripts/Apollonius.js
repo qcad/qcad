@@ -1444,13 +1444,29 @@ Apollonius.getTangentsThroughPoint = function(circle, p) {
         var circle2 = RCircle.createFrom2Points(p, circle.center);
         var touchingPoints = circle2.getIntersectionPoints(circle, false);
         var lines = [];
-        lines[0] = new RLine(p, touchingPoints[1]);
-        lines[1] = new RLine(p, touchingPoints[0]);
+        if (!isNull(touchingPoints[1])) {
+            lines[0] = new RLine(p, touchingPoints[1]);
+        }
+        else {
+            lines[0] = undefined;
+        }
+
+        if (!isNull(touchingPoints[0])) {
+            lines[1] = new RLine(p, touchingPoints[0]);
+        }
+        else {
+            lines[1] = undefined;
+        }
+
         return lines;
     }
 };
 
 Apollonius.getParallelLinesWithDistance = function(line, distance) {
+    if (isNull(line)) {
+        return [];
+    }
+
     if (!isLineBasedShape(line)) {
         return [];
     }
