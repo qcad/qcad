@@ -87,11 +87,9 @@ Lengthen.prototype.pickEntity = function(event, preview) {
 
     switch (this.state) {
     case Lengthen.State.ChoosingEntity:
-        if (!isLineEntity(entity) &&
-            !isArcEntity(entity)) {
-
+        if (!this.isSupportedEntity(entity)) {
             if (!preview) {
-                EAction.warnNotLineArc();
+                this.warnUnsupportedEntity();
             }
             break;
         }
@@ -119,17 +117,46 @@ Lengthen.prototype.pickEntity = function(event, preview) {
     }
 };
 
+Lengthen.prototype.isSupportedEntity = function(entity) {
+    return isLineEntity(entity) ||
+           isArcEntity(entity) ||
+//           (RSpline.hasProxy() && isSplineEntity(entity)) ||
+           (RPolyline.hasProxy() && isPolylineEntity(entity));
+};
+
+Lengthen.prototype.warnUnsupportedEntity = function() {
+    if (/*RSpline.hasProxy() && */RPolyline.hasProxy()) {
+        EAction.warnNotLineArcPolyline();
+    }
+    else {
+        EAction.warnNotLineArc();
+    }
+};
+
 Lengthen.prototype.getOperation = function(preview) {
     if (isNull(this.pos) || isNull(this.entity) || !isNumber(this.amount)) {
         return undefined;
     }
 
-    var iss = this.entity.getPointsWithDistanceToEnd(-this.amount);
+    if (!preview) {
+        //debugger;
+    }
+
+    var iss;
+    if (isPolylineEntity(this.entity)) {
+        var pl = this.entity.castToShape();
+        iss = pl.getPointsWithDistanceToEnd(-this.amount, RS.FromAny|RS.AlongPolyline);
+    }
+    else {
+        iss = this.entity.getPointsWithDistanceToEnd(-this.amount, RS.FromAny|RS.AlongPolyline);
+    }
+
     if (iss.length!==2) {
         return undefined;
     }
 
     var is = this.pos.getClosest(iss);
+    qDebug("is:", is);
 
     if (!isValidVector(is)) {
         return undefined;
@@ -141,14 +168,20 @@ Lengthen.prototype.getOperation = function(preview) {
             return undefined;
         }
 
+        qDebug("this.entity:", this.entity.castToShape());
+        qDebug("thimStartPoint");
         this.entity.trimStartPoint(is);
     } else {
         if (!isFunction(this.entity.trimEndPoint)) {
             return undefined;
         }
 
+        qDebug("this.entity:", this.entity.castToShape());
+        qDebug("thimEndPoint");
         this.entity.trimEndPoint(is);
     }
+
+    qDebug("this.entity:", this.entity.castToShape());
 
     return new RAddObjectOperation(this.entity, this.getToolTitle(), false);
 };
