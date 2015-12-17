@@ -138,10 +138,6 @@ Lengthen.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    if (!preview) {
-        //debugger;
-    }
-
     var iss;
     if (isPolylineEntity(this.entity)) {
         var pl = this.entity.castToShape();
@@ -156,7 +152,6 @@ Lengthen.prototype.getOperation = function(preview) {
     }
 
     var is = this.pos.getClosest(iss);
-    qDebug("is:", is);
 
     if (!isValidVector(is)) {
         return undefined;
@@ -168,20 +163,14 @@ Lengthen.prototype.getOperation = function(preview) {
             return undefined;
         }
 
-        qDebug("this.entity:", this.entity.castToShape());
-        qDebug("thimStartPoint");
         this.entity.trimStartPoint(is);
     } else {
         if (!isFunction(this.entity.trimEndPoint)) {
             return undefined;
         }
 
-        qDebug("this.entity:", this.entity.castToShape());
-        qDebug("thimEndPoint");
         this.entity.trimEndPoint(is);
     }
-
-    qDebug("this.entity:", this.entity.castToShape());
 
     return new RAddObjectOperation(this.entity, this.getToolTitle(), false);
 };
