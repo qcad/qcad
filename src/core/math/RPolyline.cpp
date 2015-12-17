@@ -947,15 +947,15 @@ double RPolyline::getLength() const {
 }
 
 double RPolyline::getLengthTo(const RVector& p) const {
-    double ret = -1.0;
+    double ret = 0.0;
 
     if (p.equalsFuzzy(getStartPoint())) {
-        return ret;
+        return 0.0;
     }
 
     int segIdx = getClosestSegment(p);
     if (segIdx<0) {
-        return ret;
+        return -1.0;
     }
 
     for (int i=0; i<segIdx; i++) {
@@ -1018,34 +1018,48 @@ QList<RVector> RPolyline::getPointsWithDistanceToEnd(double distance, RS::From f
 
     QList<QSharedPointer<RShape> > sub = getExploded();
 
+    if (sub.isEmpty()) {
+        return ret;
+    }
+
     if (from&RS::AlongPolyline) {
         double remainingDist;
         double len;
 
         if (from&RS::FromStart) {
-            remainingDist = distance;
-            for (int i=0; i<sub.length(); i++) {
-                len = sub[i]->getLength();
-                if (remainingDist>len) {
-                    remainingDist-=len;
-                }
-                else {
-                    ret.append(sub[i]->getPointsWithDistanceToEnd(remainingDist, RS::FromStart));
-                    break;
+            if (distance<0.0) {
+                ret.append(sub.first()->getPointsWithDistanceToEnd(distance, RS::FromStart));
+            }
+            else {
+                remainingDist = distance;
+                for (int i=0; i<sub.length(); i++) {
+                    len = sub[i]->getLength();
+                    if (remainingDist>len) {
+                        remainingDist-=len;
+                    }
+                    else {
+                        ret.append(sub[i]->getPointsWithDistanceToEnd(remainingDist, RS::FromStart));
+                        break;
+                    }
                 }
             }
         }
 
         if (from&RS::FromEnd) {
-            remainingDist = distance;
-            for (int i=sub.length()-1; i>=0; i--) {
-                len = sub[i]->getLength();
-                if (remainingDist>len) {
-                    remainingDist-=len;
-                }
-                else {
-                    ret.append(sub[i]->getPointsWithDistanceToEnd(remainingDist, RS::FromEnd));
-                    break;
+            if (distance<0.0) {
+                ret.append(sub.last()->getPointsWithDistanceToEnd(distance, RS::FromEnd));
+            }
+            else {
+                remainingDist = distance;
+                for (int i=sub.length()-1; i>=0; i--) {
+                    len = sub[i]->getLength();
+                    if (remainingDist>len) {
+                        remainingDist-=len;
+                    }
+                    else {
+                        ret.append(sub[i]->getPointsWithDistanceToEnd(remainingDist, RS::FromEnd));
+                        break;
+                    }
                 }
             }
         }
@@ -1163,7 +1177,7 @@ int RPolyline::getClosestSegment(const RVector& point) const {
         if (segment.isNull()) {
             break;
         }
-        double dist = segment->getDistanceTo(point, true, 0.0);
+        double dist = segment->getDistanceTo(point, true);
         if (!RMath::isNormal(dist)) {
             continue;
         }

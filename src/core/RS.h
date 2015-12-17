@@ -196,7 +196,7 @@ public:
     enum From {
         FromStart = 0x1,
         FromEnd = 0x2,
-        FromAny = 0x3,         /**< Start or end **/
+        FromAny = FromStart|FromEnd,         /**< Start or end **/
         AlongPolyline = 0x4
     };
 
