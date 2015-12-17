@@ -197,7 +197,7 @@ BreakOut.getOtherShapes = function(doc, entityId, shape, extend) {
     if (extend===true) {
         // TODO: if we are extending, the 'rest' has to be queried instead
         //otherEntityIds = document.queryIntersectedEntitiesXY(document.getBoundingBox().growXY(1.0e-2), true);
-        otherEntityIds = doc.queryAllEntities();
+        otherEntityIds = doc.queryAllVisibleEntities();
     }
     else {
         if (isXLineShape(shape) || isRayShape(shape)) {

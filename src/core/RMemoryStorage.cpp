@@ -153,14 +153,29 @@ QSet<REntity::Id> RMemoryStorage::queryAllVisibleEntities() {
             continue;
         }
 
-        RBlock::Id blockId = e->getBlockId();
-        if (blockId != currentBlock) {
-            continue;
-        }
-        QSharedPointer<RBlock> block = queryBlockDirect(blockId);
-        if (!block.isNull()) {
-            if (block->isFrozen()) {
+        {
+            // check if entity is part of a frozen block:
+            RBlock::Id blockId = e->getBlockId();
+            if (blockId != currentBlock) {
                 continue;
+            }
+            QSharedPointer<RBlock> block = queryBlockDirect(blockId);
+            if (!block.isNull()) {
+                if (block->isFrozen()) {
+                    continue;
+                }
+            }
+        }
+
+        // check if entity is a reference to a frozen block:
+        QSharedPointer<RBlockReferenceEntity> blockRef = e.dynamicCast<RBlockReferenceEntity>();
+        if (!blockRef.isNull()) {
+            RBlock::Id blockId = blockRef->getReferencedBlockId();
+            QSharedPointer<RBlock> block = queryBlockDirect(blockId);
+            if (!block.isNull()) {
+                if (block->isFrozen()) {
+                    continue;
+                }
             }
         }
 
