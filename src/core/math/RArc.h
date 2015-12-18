@@ -66,6 +66,8 @@ public:
                                  const RVector& pos,
                                  double direction,
                                  double radius);
+    static QList<RArc> createBiarc(const RVector& startPoint, double startDirection,
+                                   const RVector& endPoint, double endDirection, bool secondTry = false);
 
     virtual RBox getBoundingBox() const;
 

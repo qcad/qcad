@@ -181,6 +181,71 @@ RArc RArc::createTangential(const RVector& startPoint, const RVector& pos,
     return arc;
 }
 
+/**
+ * Creates a biarc (pair of two arcs) with the given conditions.
+ */
+QList<RArc> RArc::createBiarc(const RVector& startPoint, double startDirection,
+                              const RVector& endPoint, double endDirection,
+                              bool secondTry) {
+
+    double length = startPoint.getDistanceTo(endPoint);
+    double angle = startPoint.getAngleTo(endPoint);
+
+    double alpha = RMath::getAngleDifference180(startDirection, angle);
+    double beta = RMath::getAngleDifference180(angle, endDirection);
+
+    double theta;
+    if ((alpha>=0 && beta>=0) || (alpha<=0 && beta<=0)) {
+        // same sign: C-shaped curve:
+        theta = alpha;
+    }
+    else {
+        // different sign: S-shaped curve:
+        theta = (3.0*alpha - beta)/2.0;
+    }
+
+    RVector startNormal(-sin(startDirection), cos(startDirection));
+    RVector jointPointNormal(-sin(theta + startDirection), cos(theta + startDirection));
+
+    double term1 = (length / (2.0*sin((alpha + beta)/2.0)));
+
+    double radius1 = term1 * (sin((beta - alpha + theta)/2.0) / sin(theta/2.0));
+    double radius2 = term1 * (sin((2.0 * alpha - theta)/2.0) / sin((alpha + beta - theta)/2.0));
+
+    // failed, might succeed in reverse direction:
+    if (qAbs(radius1)<RS::PointTolerance || qAbs(radius2)<RS::PointTolerance ||
+        !RMath::isNormal(radius1) || !RMath::isNormal(radius2)) {
+
+        if (secondTry) {
+            return QList<RArc>();
+        }
+
+        QList<RArc> list = RArc::createBiarc(endPoint, endDirection+M_PI, startPoint, startDirection+M_PI, true);
+        for (int i=0; i<list.length(); i++) {
+            list[i].reverse();
+        }
+        return QList<RArc>() << list[1] << list[0];
+//        return QList<RArc>();
+    }
+
+    RVector jointPoint = startPoint + radius1 * (startNormal - jointPointNormal);
+
+    RVector center1 = startPoint + startNormal * radius1;
+    RVector center2 = jointPoint + jointPointNormal * radius2;
+
+    RArc arc1(center1, qAbs(radius1), center1.getAngleTo(startPoint), center1.getAngleTo(jointPoint));
+    if (qAbs(RMath::getAngleDifference180(arc1.getDirection1(), startDirection))>0.1) {
+        arc1.setReversed(true);
+    }
+
+    RArc arc2(center2, qAbs(radius2), center2.getAngleTo(jointPoint), center2.getAngleTo(endPoint));
+    if (qAbs(RMath::getAngleDifference180(arc2.getDirection2() + M_PI, endDirection))>0.1) {
+        arc2.setReversed(true);
+    }
+
+    return QList<RArc>() << arc1 << arc2;
+}
+
 double RArc::getDirection1() const{
     if (!reversed) {
         return RMath::getNormalizedAngle(startAngle+M_PI/2.0);
