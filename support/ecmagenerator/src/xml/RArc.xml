@@ -93,6 +93,23 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="createBiarc" cppName="createBiarc"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RArc &gt;"
+      isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="startPoint" isConst="true" />
+        <arg type="double" typeName="double" name="startDirection"
+        isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="endPoint" isConst="true" />
+        <arg type="double" typeName="double" name="endDirection"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="secondTry"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
+    </method>
     <method name="getBoundingBox" cppName="getBoundingBox"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

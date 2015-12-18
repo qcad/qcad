@@ -86,6 +86,9 @@
         createTangential
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        createBiarc
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

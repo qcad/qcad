@@ -224,6 +224,9 @@
         getPointAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPointAtDistance
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getAngleAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -281,6 +284,12 @@
         trimEndPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        splitAtPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        splitAtParams
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         toPolyline
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -311,7 +320,13 @@
         getTAtPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getTAtDistance
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getSegments
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDiscontinuities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         updateFromControlPoints

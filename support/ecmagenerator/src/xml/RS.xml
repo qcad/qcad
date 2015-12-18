@@ -99,6 +99,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="FromStart" />
       <value name="FromEnd" />
       <value name="FromAny" />
+      <value name="FromStart" />
+      <value name="FromEnd" />
       <value name="AlongPolyline" />
     </enum>
     <enum name="IsoProjectionType">

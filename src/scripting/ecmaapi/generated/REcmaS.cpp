@@ -463,6 +463,16 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("FromStart",
+    QScriptValue(RS::FromStart),
+    QScriptValue::ReadOnly);
+
+
+    ctor.setProperty("FromEnd",
+    QScriptValue(RS::FromEnd),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("AlongPolyline",
     QScriptValue(RS::AlongPolyline),
     QScriptValue::ReadOnly);

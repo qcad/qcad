@@ -90,8 +90,12 @@
     <function><type><name>virtual</name> <name>void</name></type> <name>showUiOptions</name><parameter_list>()</parameter_list> <block>{}</block></function>
     <function><type><name>virtual</name> <name>void</name></type> <name>hideUiOptions</name><parameter_list>()</parameter_list> <block>{}</block></function>
 
-    <function><type><name>virtual</name> <name>void</name></type> <name>suspendEvent</name><parameter_list>()</parameter_list> <block>{}</block></function>
-    <function><type><name>virtual</name> <name>void</name></type> <name>finishEvent</name><parameter_list>()</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>suspendEvent</name><parameter_list>()</parameter_list> <block>{
+        <constructor_decl><name>hideUiOptions</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>finishEvent</name><parameter_list>()</parameter_list> <block>{
+        <constructor_decl><name>hideUiOptions</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
 
     <comment type="block">/**
      * \return Set of entity IDs that are relevant for the last performed

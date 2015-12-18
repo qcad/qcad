@@ -224,6 +224,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getPointAt, "getPointAt");
             
+            REcmaHelper::registerFunction(&engine, proto, getPointAtDistance, "getPointAtDistance");
+            
             REcmaHelper::registerFunction(&engine, proto, getAngleAt, "getAngleAt");
             
             REcmaHelper::registerFunction(&engine, proto, getEndPoints, "getEndPoints");
@@ -262,6 +264,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, trimEndPoint, "trimEndPoint");
             
+            REcmaHelper::registerFunction(&engine, proto, splitAtPoints, "splitAtPoints");
+            
+            REcmaHelper::registerFunction(&engine, proto, splitAtParams, "splitAtParams");
+            
             REcmaHelper::registerFunction(&engine, proto, toPolyline, "toPolyline");
             
             REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
@@ -282,7 +288,11 @@
             
             REcmaHelper::registerFunction(&engine, proto, getTAtPoint, "getTAtPoint");
             
+            REcmaHelper::registerFunction(&engine, proto, getTAtDistance, "getTAtDistance");
+            
             REcmaHelper::registerFunction(&engine, proto, getSegments, "getSegments");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDiscontinuities, "getDiscontinuities");
             
             REcmaHelper::registerFunction(&engine, proto, updateFromControlPoints, "updateFromControlPoints");
             
@@ -3387,6 +3397,66 @@
             return result;
         }
          QScriptValue
+        REcmaSpline::getPointAtDistance
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::getPointAtDistance", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::getPointAtDistance";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("getPointAtDistance", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getPointAtDistance(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getPointAtDistance().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::getPointAtDistance", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSpline::getAngleAt
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -5169,6 +5239,128 @@
             return result;
         }
          QScriptValue
+        REcmaSpline::splitAtPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::splitAtPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::splitAtPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("splitAtPoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RSpline >'
+    QList < RSpline > cppResult =
+        
+               self->splitAtPoints(a0);
+        // return type: QList < RSpline >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.splitAtPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::splitAtPoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::splitAtParams
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::splitAtParams", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::splitAtParams";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("splitAtParams", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < double > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < double >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RSpline >'
+    QList < RSpline > cppResult =
+        
+               self->splitAtParams(a0);
+        // return type: QList < RSpline >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.splitAtParams().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::splitAtParams", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSpline::toPolyline
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -5747,6 +5939,66 @@
             return result;
         }
          QScriptValue
+        REcmaSpline::getTAtDistance
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::getTAtDistance", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::getTAtDistance";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("getTAtDistance", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getTAtDistance(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getTAtDistance().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::getTAtDistance", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSpline::getSegments
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -5805,6 +6057,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpline::getSegments", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::getDiscontinuities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::getDiscontinuities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::getDiscontinuities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("getDiscontinuities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->getDiscontinuities();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getDiscontinuities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::getDiscontinuities", context, engine);
             return result;
         }
          QScriptValue

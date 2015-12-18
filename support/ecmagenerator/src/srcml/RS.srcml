@@ -197,7 +197,7 @@
     <enum>enum <name>From</name> <block>{
         <expr><name>FromStart</name> = 0x1</expr>,
         <expr><name>FromEnd</name> = 0x2</expr>,
-        <expr><name>FromAny</name> = 0x3</expr>,         <comment type="block">/**&lt; Start or end **/</comment>
+        <expr><name>FromAny</name> = <name>FromStart</name>|<name>FromEnd</name></expr>,         <comment type="block">/**&lt; Start or end **/</comment>
         <expr><name>AlongPolyline</name> = 0x4</expr>
     }</block>;</enum>
 
