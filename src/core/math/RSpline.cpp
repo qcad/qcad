@@ -789,17 +789,21 @@ double RSpline::getLength() const {
         return 0.0;
     }
 
-    double length = 0.0;
-    QList<QSharedPointer<RShape> > shapes = getExploded();
-    for (int i=0; i<shapes.size(); i++) {
-        QSharedPointer<RShape> shape = shapes[i];
-        length += shape->getLength();
+    if (hasProxy()) {
+        return splineProxy->getDistanceAtT(*this, getTMax());
+    }
+    else {
+        double length = 0.0;
+        QList<QSharedPointer<RShape> > shapes = getExploded();
+        for (int i=0; i<shapes.size(); i++) {
+            QSharedPointer<RShape> shape = shapes[i];
+            length += shape->getLength();
+        }
+        return length;
     }
 
     // seems to only work in the context of another product which uses OpenNURBS:
-//    curve.GetLength(&length);
-
-    return length;
+    // curve.GetLength(&length);
 }
 
 /**
@@ -816,6 +820,11 @@ RVector RSpline::getPointAt(double t) const {
 #else
     return RVector::invalid;
 #endif
+}
+
+RVector RSpline::getPointAtDistance(double distance) const {
+    double t = getTAtDistance(distance);
+    return getPointAt(t);
 }
 
 double RSpline::getAngleAt(double distance, RS::From from) const {
@@ -1132,11 +1141,41 @@ double RSpline::getTAtPoint(const RVector& point) const {
     return 0.0;
 }
 
-QList<RSpline> RSpline::getSegments(const QList<RVector>& points) const {
+double RSpline::getTAtDistance(double distance) const {
     if (splineProxy!=NULL) {
-        return splineProxy->split(*this, points);
+        return splineProxy->getTAtDistance(*this, distance);
     }
-    return QList<RSpline>();
+    return 0.0;
+}
+
+QList<RSpline> RSpline::getSegments(const QList<RVector>& points) const {
+    return splitAtPoints(points);
+}
+
+QList<RVector> RSpline::getDiscontinuities() const {
+    updateInternal();
+
+    QList<RVector> ret;
+
+#ifndef R_NO_OPENNURBS
+    if (isValid()) {
+        for (int c=0; c<=11; c++) {
+            double t0=getTMin();
+            double t1=getTMax();
+            bool found;
+            do {
+                double t;
+                found = curve.GetNextDiscontinuity((ON::continuity)c, t0, t1, &t);
+                if (found) {
+                    ret.append(getPointAt(t));
+                    t0=t;
+                }
+            } while(found);
+        }
+    }
+#endif
+
+    return ret;
 }
 
 //bool RSpline::getIntersectionPointsProxy(QList<RVector>& res, const RShape& other, bool limited, bool same) const {
@@ -1424,46 +1463,57 @@ RS::Ending RSpline::getTrimEnd(const RVector& trimPoint, const RVector& clickPoi
 
 void RSpline::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
     Q_UNUSED(clickPoint)
-    if (splineProxy!=NULL) {
-        if (!isValid()) {
-            return;
-        }
-        if (trimPoint.equalsFuzzy(getStartPoint())) {
-            return;
-        }
-        if (trimPoint.equalsFuzzy(getEndPoint())) {
-            this->invalidate();
-            return;
-        }
-
-        QList<RSpline> splines = splineProxy->split(*this, QList<RVector>() << trimPoint);
-        if (splines.length()>1) {
-            copySpline(splines[1]);
-        }
-        update();
+    if (!isValid()) {
+        return;
     }
+    if (trimPoint.equalsFuzzy(getStartPoint())) {
+        return;
+    }
+    if (trimPoint.equalsFuzzy(getEndPoint())) {
+        this->invalidate();
+        return;
+    }
+
+    QList<RSpline> splines = splitAtPoints(QList<RVector>() << trimPoint);
+    if (splines.length()>1) {
+        copySpline(splines[1]);
+    }
+    update();
 }
 
 void RSpline::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
     Q_UNUSED(clickPoint)
-    if (splineProxy!=NULL) {
-        if (!isValid()) {
-            return;
-        }
-        if (trimPoint.equalsFuzzy(getStartPoint())) {
-            this->invalidate();
-            return;
-        }
-        if (trimPoint.equalsFuzzy(getEndPoint())) {
-            return;
-        }
-
-        QList<RSpline> splines = splineProxy->split(*this, QList<RVector>() << trimPoint);
-        if (splines.length()>0) {
-            copySpline(splines[0]);
-        }
-        update();
+    if (!isValid()) {
+        return;
     }
+    if (trimPoint.equalsFuzzy(getStartPoint())) {
+        this->invalidate();
+        return;
+    }
+    if (trimPoint.equalsFuzzy(getEndPoint())) {
+        return;
+    }
+
+    QList<RSpline> splines = splitAtPoints(QList<RVector>() << trimPoint);
+    if (splines.length()>0) {
+        copySpline(splines[0]);
+    }
+    update();
+}
+
+QList<RSpline> RSpline::splitAtPoints(const QList<RVector>& points) const {
+    QList<double> params;
+    for (int i=0; i<points.length(); i++) {
+        params.append(getTAtPoint(points[i]));
+    }
+    return splitAtParams(params);
+}
+
+QList<RSpline> RSpline::splitAtParams(const QList<double>& params) const {
+    if (splineProxy!=NULL) {
+        return splineProxy->split(*this, params);
+    }
+    return QList<RSpline>();
 }
 
 void RSpline::update() const {

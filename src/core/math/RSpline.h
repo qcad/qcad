@@ -135,6 +135,7 @@ public:
 
     virtual double getLength() const;
     RVector getPointAt(double t) const;
+    RVector getPointAtDistance(double distance) const;
     virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;
 
     virtual QList<RVector> getEndPoints() const;
@@ -164,6 +165,9 @@ public:
     virtual void trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid);
     virtual void trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid);
 
+    QList<RSpline> splitAtPoints(const QList<RVector>& points) const;
+    QList<RSpline> splitAtParams(const QList<double>& params) const;
+
     RPolyline toPolyline(int segments) const;
 
     virtual QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const;
@@ -177,7 +181,10 @@ public:
     double getTMin() const;
     double getTMax() const;
     double getTAtPoint(const RVector& point) const;
+    double getTAtDistance(double distance) const;
     QList<RSpline> getSegments(const QList<RVector>& points) const;
+
+    QList<RVector> getDiscontinuities() const;
 
     void updateFromControlPoints() const;
     void updateFromFitPoints(bool useTangents = false) const;
