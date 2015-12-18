@@ -168,6 +168,7 @@ void RPolyline::appendShape(const RShape& shape, bool prepend) {
     RVector nextPoint;
     double gap;
     if (prepend) {
+        // prepend:
         connectionPoint = directed->getEndPoint();
         nextPoint = directed->getStartPoint();
         if (vertices.size()==0) {
@@ -176,6 +177,7 @@ void RPolyline::appendShape(const RShape& shape, bool prepend) {
         gap = vertices.first().getDistanceTo(connectionPoint);
     }
     else {
+        // append:
         connectionPoint = directed->getStartPoint();
         nextPoint = directed->getEndPoint();
         if (vertices.size()==0) {
