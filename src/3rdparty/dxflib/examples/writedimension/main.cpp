@@ -1,8 +1,8 @@
-#include "dl_dxf.h"
+	#include "dl_dxf.h"
  
 int main() {
     DL_Dxf dxf;
-    DL_WriterA* dw = dxf.out("hatch.dxf", DL_Codes::AC1015);
+    DL_WriterA* dw = dxf.out("dimension.dxf", DL_Codes::AC1015);
  
     // section header:
     dxf.writeHeader(*dw);
@@ -26,7 +26,7 @@ int main() {
     dxf.writeLayer(
         *dw,
         DL_LayerData("0", 0),
-        DL_Attributes("", 2, 0, 100, "CONTINUOUS")
+        DL_Attributes("", 1, 0x00ff0000, 15, "CONTINUOUS")
     );
     dw->tableEnd();
 
@@ -71,32 +71,37 @@ int main() {
     // ENTITIES:
     dw->sectionEntities();
  
-    DL_Attributes attributes("0", 2, 0, -1, "BYLAYER");
+    DL_Attributes attributes("0", 256, -1, -1, "BYLAYER");
+
+    // LINE:
+    DL_LineData lineData(10, 5, 0, 30, 5, 0);
+    dxf.writeLine(*dw, lineData, attributes);
  
-    // start hatch with one loop:
-    DL_HatchData data(1, false, 100.0, 0.0, "ESCHER", 0.0, 0.0);
-    dxf.writeHatch1(*dw, data, attributes);
- 
-    // start loop:
-    DL_HatchLoopData lData(1);
-    dxf.writeHatchLoop1(*dw, lData);
- 
-    // write edge:
-    DL_HatchEdgeData eData(
-        0.0,
-        0.0,
-        100.0,
-        0.0,
-        M_PI*2,
-        true
-    );
-    dxf.writeHatchEdge(*dw, eData);
- 
-    // end loop:
-    dxf.writeHatchLoop2(*dw, lData);
- 
-    // end hatch:
-    dxf.writeHatch2(*dw, data, attributes);
+    // DIMENSION:
+    DL_DimensionData dimData(10.0,                  // def point (dimension line pos)
+                             50.0,
+                             0.0,
+                             0,                     // text pos (irrelevant if flag 0x80 (128) set for type
+                             0,
+                             0.0,
+                             0x1,                   // type: aligned with auto text pos (0x80 NOT set)
+                             8,                     // attachment point: bottom center
+                             2,                     // line spacing: exact
+                             1.0,                   // line spacing factor
+                             "",                    // text
+                             "Standard",            // style
+                             0.0,                   // text angle
+                             1.0,                   // linear factor
+                             1.0);                  // dim scale
+
+    DL_DimAlignedData dimAlignedData(10.0,          // extension point 1
+                                     5.0,
+                                     0.0,
+                                     30.0,          // extension point 2
+                                     5.0,
+                                     0.0);
+
+    dxf.writeDimAligned(*dw, dimData, dimAlignedData, attributes);
  
     // end section ENTITIES:
     dw->sectionEnd();

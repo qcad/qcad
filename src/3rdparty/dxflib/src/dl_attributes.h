@@ -88,7 +88,7 @@ public:
      * @param layer Layer name for this entity or NULL for no layer
      *              (every entity should be on a named layer!).
      * @param color Color number (0..256). 0 = BYBLOCK, 256 = BYLAYER.
-     * @param color24 24 bit color (see DXF reference).
+     * @param color24 24 bit color (0x00RRGGBB, see DXF reference).
      * @param width Line thickness. Defaults to zero. -1 = BYLAYER, 
      *               -2 = BYBLOCK, -3 = default width
      * @param linetype Line type name or "BYLAYER" or "BYBLOCK". Defaults

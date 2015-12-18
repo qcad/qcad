@@ -2007,7 +2007,7 @@ RColor RDxfServices::numberToColor(int num, const double dxfColors[][3], bool co
 }
 
 /**
- * @return color object from DXF coded integar 24 bit color number.
+ * @return color object from DXF coded integer 24 bit color number.
  */
 RColor RDxfServices::numberToColor24(int num) {
     return RColor(

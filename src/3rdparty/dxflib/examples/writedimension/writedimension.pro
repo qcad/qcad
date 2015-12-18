@@ -1,6 +1,11 @@
 win32-msvc {
   DEFINES += _CRT_SECURE_NO_DEPRECATE
 }
+macx-clang* {
+    exists(/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk) {
+        QMAKE_MAC_SDK = macosx10.11
+    }
+}
 
 OBJECTS_DIR=.obj
 CONFIG -= app_bundle
@@ -23,5 +28,5 @@ SOURCES = \
     ../../src/dl_dxf.cpp \
     ../../src/dl_writer_ascii.cpp
 
-TARGET = writehatch
+TARGET = writedimension
 TEMPLATE = app
