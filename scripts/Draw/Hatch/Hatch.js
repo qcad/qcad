@@ -222,6 +222,8 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
             var segment = segments[i];
             hatchData.addBoundary(segment);
         }
+        // TODO: add polyline as boundary:
+//        hatchData.addBoundary(entity.getData().castToShape());
         docOrBlockRef.traversed[entity.getId()] = true;
         return true;
     }
