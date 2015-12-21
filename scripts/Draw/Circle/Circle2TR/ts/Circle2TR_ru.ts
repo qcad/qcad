@@ -16,7 +16,7 @@
     <message>
         <location line="+8"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите решение</translation>
     </message>
     <message>
         <location line="+92"/>
@@ -37,7 +37,7 @@
     <message>
         <location filename="../Circle2TRInit.js" line="+2"/>
         <source>2 &amp;Tangents and Radius</source>
-        <translation>По 2-м касательным и радиусу</translation>
+        <translation>По 2-м &amp;касательным и радиусу</translation>
     </message>
     <message>
         <location line="+5"/>

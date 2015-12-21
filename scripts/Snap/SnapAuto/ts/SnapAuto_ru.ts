@@ -36,7 +36,7 @@
     <message>
         <location line="+10"/>
         <source>Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation>По касательной</translation>
     </message>
     <message>
         <location line="+10"/>

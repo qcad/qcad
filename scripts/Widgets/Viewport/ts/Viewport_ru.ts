@@ -131,7 +131,7 @@
     <message>
         <location line="+3"/>
         <source>Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation>По касательной</translation>
     </message>
     <message>
         <location line="+3"/>
