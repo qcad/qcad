@@ -494,6 +494,7 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape) {
     }
 
     // if shape is a polyline, add segments as boundaries
+    // TODO: add polyline as boundary
     QSharedPointer<RPolyline> polyline = shape.dynamicCast<RPolyline>();
     if (!polyline.isNull()) {
         QList<QSharedPointer<RShape> > segments = polyline->getExploded();
