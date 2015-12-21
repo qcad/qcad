@@ -1740,7 +1740,8 @@ bool RShape::order(QList<QList<QSharedPointer<RShape> > >& boundary) {
                 }
 
                 if (sp || ep) {
-                    if (ep) {
+                    if (ep && !sp) {
+                        //qDebug() << "reverse element";
                         directed->reverse();
                     }
                     loop.removeAt(k);
