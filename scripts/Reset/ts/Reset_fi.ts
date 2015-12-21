@@ -9,7 +9,7 @@
         <translation>Nollaa</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>&amp;Reset / Idle</source>
         <translation>&amp;Nollaa / vapauta</translation>
     </message>

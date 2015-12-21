@@ -165,7 +165,7 @@ Points uniques</translatorcomment>
         <translation>Importation URL: </translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+65"/>
         <source>Grid</source>
         <translation>Grille</translation>
     </message>

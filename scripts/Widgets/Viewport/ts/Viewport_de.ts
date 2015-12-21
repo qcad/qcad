@@ -153,7 +153,7 @@
         <translation>Importiere URL: </translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+65"/>
         <source>Grid</source>
         <translation>Raster</translation>
     </message>

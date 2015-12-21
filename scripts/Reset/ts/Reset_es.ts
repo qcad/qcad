@@ -13,7 +13,7 @@
         <translation>Reinicializar</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>&amp;Reset / Idle</source>
         <translation>&amp;Reinicializar</translation>
     </message>

@@ -109,7 +109,7 @@
         <translation>Importuje sa URL:</translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+65"/>
         <source>Grid</source>
         <translation>Sieť</translation>
     </message>

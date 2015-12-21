@@ -4,23 +4,28 @@
 <context>
     <name>Circle2TR</name>
     <message>
-        <location filename="../Circle2TR.js" line="+68"/>
+        <location filename="../Circle2TR.js" line="+76"/>
         <source>First line, arc or circle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>Second line, arc or circle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+77"/>
-        <location line="+56"/>
+        <location line="+8"/>
+        <source>Choose solution</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+92"/>
+        <location line="+94"/>
         <source>No solution</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-20"/>
+        <location line="-44"/>
         <source>Invalid radius</source>
         <translation type="unfinished"></translation>
     </message>

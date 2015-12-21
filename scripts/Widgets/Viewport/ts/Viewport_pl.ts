@@ -164,7 +164,7 @@ Zaznacza pojedynczy obiekt</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+65"/>
         <source>Grid</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--

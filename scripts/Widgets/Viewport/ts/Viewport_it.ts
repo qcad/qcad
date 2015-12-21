@@ -165,7 +165,7 @@ Seleziona Singolo Oggetto</translatorcomment>
         <translation>Importazione URL: </translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+65"/>
         <source>Grid</source>
         <translation>Griglia</translation>
     </message>

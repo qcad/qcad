@@ -13,7 +13,7 @@
         <translation>Zurücksetzen</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>&amp;Reset / Idle</source>
         <translation>&amp;Zurücksetzen / Neutral</translation>
     </message>

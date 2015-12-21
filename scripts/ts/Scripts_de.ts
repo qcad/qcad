@@ -97,7 +97,7 @@
         <translation>CAD Werkzeuge</translation>
     </message>
     <message>
-        <location line="+667"/>
+        <location line="+668"/>
         <source>Entity is on a locked layer.</source>
         <translation>Element ist auf gesperrtem Layer.</translation>
     </message>

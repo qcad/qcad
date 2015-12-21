@@ -101,7 +101,7 @@
         <translation>Strumenti CAD</translation>
     </message>
     <message>
-        <location line="+667"/>
+        <location line="+668"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entità è su un layer bloccato.</translation>

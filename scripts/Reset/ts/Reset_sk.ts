@@ -9,7 +9,7 @@
         <translation>Znulovať príkazy</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>&amp;Reset / Idle</source>
         <translation>Znulovať P&amp;ríkazy</translation>
     </message>

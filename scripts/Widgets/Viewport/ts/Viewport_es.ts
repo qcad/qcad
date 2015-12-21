@@ -165,7 +165,7 @@ Selecciona entidades solas</translatorcomment>
         <translation>Importación de URL: </translation>
     </message>
     <message>
-        <location line="+68"/>
+        <location line="+65"/>
         <source>Grid</source>
         <translation>Rejilla</translation>
     </message>

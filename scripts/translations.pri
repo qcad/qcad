@@ -14,4 +14,5 @@ TRANSLATIONS = \
     $${TSDIR}/$${NAME}_sk.ts \
     $${TSDIR}/$${NAME}_sl.ts \
     $${TSDIR}/$${NAME}_sv.ts \
-    $${TSDIR}/$${NAME}_zh_CN.ts
+    $${TSDIR}/$${NAME}_zh_CN.ts \
+    $${TSDIR}/$${NAME}_zh_TW.ts
