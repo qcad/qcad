@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/gui/RColorCombo.cpp" line="+126"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>自訂</translation>
     </message>
 </context>
 <context>

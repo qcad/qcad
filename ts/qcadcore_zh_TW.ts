@@ -6,17 +6,17 @@
     <message>
         <location filename="../src/core/RUnit.cpp" line="+268"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>無</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Inch</source>
-        <translation type="unfinished"></translation>
+        <translation>英寸</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Foot</source>
-        <translation type="unfinished"></translation>
+        <translation>英尺</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -26,17 +26,17 @@
     <message>
         <location line="+3"/>
         <source>Millimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>公釐</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Centimeter</source>
-        <translation type="unfinished"></translation>
+        <translation>公分</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Meter</source>
-        <translation type="unfinished"></translation>
+        <translation>公尺</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -124,32 +124,32 @@
     <message>
         <location line="+1"/>
         <source>Red</source>
-        <translation type="unfinished"></translation>
+        <translation>紅</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Green</source>
-        <translation type="unfinished"></translation>
+        <translation>綠</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Blue</source>
-        <translation type="unfinished"></translation>
+        <translation>藍</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Cyan</source>
-        <translation type="unfinished"></translation>
+        <translation>青色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Magenta</source>
-        <translation type="unfinished"></translation>
+        <translation>洋紅</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Yellow</source>
-        <translation type="unfinished"></translation>
+        <translation>黃色</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -189,12 +189,12 @@
     <message>
         <location line="+1"/>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation>黑色</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Gray</source>
-        <translation type="unfinished"></translation>
+        <translation>灰</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -204,7 +204,7 @@
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation type="unfinished"></translation>
+        <translation>白色</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -241,7 +241,7 @@
         <location filename="../src/core/RBlock.cpp" line="+49"/>
         <location filename="../src/core/RLayer.cpp" line="+74"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -262,7 +262,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -272,7 +272,7 @@
         <location line="+6"/>
         <location line="+2"/>
         <source>X</source>
-        <translation type="unfinished"></translation>
+        <translation>X</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -282,7 +282,7 @@
         <location line="+6"/>
         <location line="+2"/>
         <source>Y</source>
-        <translation type="unfinished"></translation>
+        <translation>Y</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -299,7 +299,7 @@
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-5"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>比例</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -309,12 +309,12 @@
     <message>
         <location line="+1"/>
         <source>Columns</source>
-        <translation type="unfinished"></translation>
+        <translation>欄</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rows</source>
-        <translation type="unfinished"></translation>
+        <translation>列</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -330,7 +330,7 @@
         <location filename="../src/core/REntity.cpp" line="+86"/>
         <location filename="../src/core/RObject.cpp" line="+63"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>類型</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -340,7 +340,7 @@
     <message>
         <location line="+1"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>圖層</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -363,7 +363,7 @@
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="-2"/>
         <source>Color</source>
-        <translation type="unfinished"></translation>
+        <translation>顏色</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -386,56 +386,56 @@
     <message>
         <location line="-3"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>左邊</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>底端</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>右邊</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>最上層</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>大小</translation>
     </message>
     <message>
         <location line="-1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>寬度</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+1"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>高度</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="-1"/>
         <source>Locked</source>
-        <translation type="unfinished"></translation>
+        <translation>鎖定</translation>
     </message>
     <message>
         <location filename="../src/core/RObject.cpp" line="-1"/>
         <location filename="../src/core/RPropertyTypeId.cpp" line="+108"/>
         <source>Custom</source>
-        <translation type="unfinished"></translation>
+        <translation>自訂</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation type="unfinished"></translation>
+        <translation>控制點</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -457,7 +457,7 @@
     <message>
         <location line="+1"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>文字</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -487,7 +487,7 @@
     <message>
         <location line="+1"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation>粗體</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -503,17 +503,17 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Alignment</source>
-        <translation type="unfinished"></translation>
+        <translation>對齊</translation>
     </message>
     <message>
         <location line="-1"/>
         <source>Horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>橫向</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Vertical</source>
-        <translation type="unfinished"></translation>
+        <translation>直向</translation>
     </message>
     <message>
         <location filename="../src/core/RViewportEntity.cpp" line="+2"/>
@@ -542,12 +542,12 @@
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>描述</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -557,7 +557,7 @@
     <message>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>圖樣</translation>
     </message>
 </context>
 <context>
@@ -582,7 +582,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Border</source>
-        <translation type="unfinished"></translation>
+        <translation>邊框</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -769,7 +769,7 @@
     <message>
         <location line="+1"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>預設</translation>
     </message>
     <message>
         <location line="+1"/>

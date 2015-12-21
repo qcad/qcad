@@ -17,7 +17,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>中心點</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -74,7 +74,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>X</source>
-        <translation type="unfinished"></translation>
+        <translation>X</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -131,7 +131,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Y</source>
-        <translation type="unfinished"></translation>
+        <translation>Y</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -187,13 +187,13 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Z</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>半徑</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -228,7 +228,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>長度</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -239,13 +239,13 @@
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation>面銑</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+90"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+90"/>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>標籤</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -360,7 +360,7 @@
         <location filename="../src/entity/RHatchEntity.cpp" line="-5"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>原點</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -440,7 +440,7 @@
         <location line="+1"/>
         <location filename="../src/entity/RHatchEntity.cpp" line="-3"/>
         <source>Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>比例</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -492,7 +492,7 @@
     <message>
         <location filename="../src/entity/RHatchEntity.cpp" line="-5"/>
         <source>Solid</source>
-        <translation type="unfinished"></translation>
+        <translation>黑框</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -500,12 +500,12 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Pattern</source>
-        <translation type="unfinished"></translation>
+        <translation>圖樣</translation>
     </message>
     <message>
         <location line="-3"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名稱</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -519,7 +519,7 @@
         <location filename="../src/entity/RRayEntity.cpp" line="+2"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+2"/>
         <source>Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>角度</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -550,7 +550,7 @@
     <message>
         <location filename="../src/entity/RImageEntity.cpp" line="-12"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>檔案</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -560,7 +560,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>位置</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -575,17 +575,17 @@
     <message>
         <location line="+2"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation>寬度</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation>高度</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation type="unfinished"></translation>
+        <translation>淡化</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-3"/>
@@ -600,7 +600,7 @@
     <message>
         <location line="+1"/>
         <source>Closed</source>
-        <translation type="unfinished"></translation>
+        <translation>閉合</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -656,7 +656,7 @@
         <location line="+3"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+3"/>
         <source>Fixed Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>固定角度</translation>
     </message>
     <message>
         <location filename="../src/entity/RSolidEntity.cpp" line="-13"/>
@@ -730,7 +730,7 @@
     <message>
         <location line="+0"/>
         <source>Knot</source>
-        <translation type="unfinished"></translation>
+        <translation>環結</translation>
     </message>
 </context>
 </TS>
