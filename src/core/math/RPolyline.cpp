@@ -84,6 +84,9 @@ void RPolyline::clear() {
     endWidths.clear();
 }
 
+/**
+ * Removes duplicate vertices.
+ */
 void RPolyline::normalize() {
     QList<RVector> newVertices;
     QList<double> newBulges;

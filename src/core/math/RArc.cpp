@@ -217,10 +217,19 @@ QList<RArc> RArc::createBiarc(const RVector& startPoint, double startDirection,
         !RMath::isNormal(radius1) || !RMath::isNormal(radius2)) {
 
         if (secondTry) {
+//            qDebug() << "biarc creation failed: ";
+//            qDebug() << "startPoint: " << startPoint;
+//            qDebug() << "startDirection: " << startDirection;
+//            qDebug() << "endPoint: " << endPoint;
+//            qDebug() << "endDirection: " << endDirection;
             return QList<RArc>();
         }
 
         QList<RArc> list = RArc::createBiarc(endPoint, endDirection+M_PI, startPoint, startDirection+M_PI, true);
+        if (list.isEmpty()) {
+            return QList<RArc>();
+        }
+
         for (int i=0; i<list.length(); i++) {
             list[i].reverse();
         }
