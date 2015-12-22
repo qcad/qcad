@@ -715,8 +715,8 @@ QSharedPointer<RShape> RArc::getTransformed(const QTransform& transform) const {
     RVector spt = sp.getTransformed2d(transform);
     RVector ep = getEndPoint();
     RVector ept = ep.getTransformed2d(transform);
-    //RVector mp = getMiddlePoint();
-    //RVector mpt = mp.getTransformed2d(transform);
+    RVector mp = getMiddlePoint();
+    RVector mpt = mp.getTransformed2d(transform);
 
     RArc* ret = new RArc(
             ct,
@@ -726,9 +726,9 @@ QSharedPointer<RShape> RArc::getTransformed(const QTransform& transform) const {
             reversed
         );
 
-//    if (!ret->getMiddlePoint().equalsFuzzy(mpt)) {
-//        ret->setReversed(!reversed);
-//    }
+    if (!ret->getMiddlePoint().equalsFuzzy(mpt, 0.01)) {
+        ret->setReversed(!reversed);
+    }
 
     return QSharedPointer<RShape>(ret);
 }
