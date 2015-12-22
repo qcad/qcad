@@ -6,27 +6,27 @@
     <message>
         <location filename="../OpenFile.js" line="+46"/>
         <source>No import filters have been found. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen import filters zijn gevonden. Afgebroken...</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Open Drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Open tekening</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle bestanden</translation>
     </message>
     <message>
         <location filename="../OpenFileInit.js" line="+2"/>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Open</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Open an existing drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Open een bestaande tekening</translation>
     </message>
 </context>
 </TS>

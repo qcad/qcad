@@ -16,12 +16,12 @@
     <message>
         <location filename="../SaveAs.js" line="+38"/>
         <source>Load/Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Laden/opslaan</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Save as</source>
-        <translation type="unfinished"></translation>
+        <translation>Bewaar als</translation>
     </message>
     <message>
         <location line="+24"/>

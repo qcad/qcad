@@ -60,7 +60,7 @@
     <message>
         <location line="+1"/>
         <source>Custom colors are &apos;rounded&apos; to the nearest fixed color.</source>
-        <translation>Benutzerdefinierte Farben werden auf die nächste verfügbare Farbe gerundet.</translation>
+        <translation>Benutzerdefinierte Farben werden auf die nächste verfügbare Farbe &apos;gerundet&apos;.</translation>
     </message>
     <message>
         <source>Saved drawing: %1</source>

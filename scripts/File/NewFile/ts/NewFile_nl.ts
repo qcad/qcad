@@ -6,7 +6,7 @@
     <message>
         <location filename="../CloseDialog.ui" line="+14"/>
         <source>Closing Drawing...</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekening sluiten...</translation>
     </message>
 </context>
 <context>
@@ -14,7 +14,7 @@
     <message>
         <location filename="../MdiChildEmpty.ui" line="+20"/>
         <source>Untitled</source>
-        <translation type="unfinished"></translation>
+        <translation>Naamloos</translation>
     </message>
 </context>
 <context>
@@ -22,77 +22,77 @@
     <message>
         <location filename="../NewFile.js" line="+114"/>
         <source>Opening drawing:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekening openen:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Import Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Import fout</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Cannot open file</source>
-        <translation type="unfinished"></translation>
+        <translation>Kan bestand niet openen</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>No suitable Importer found. Please check file format and extension.</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen geschikte importer gevonden. Controleer bestandsformaat en extensie.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>File not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestand niet gevonden.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Please check your access rights, the file format and file extension.</source>
-        <translation type="unfinished"></translation>
+        <translation>Controleer uw toegangsrechten, het bestandsformaat en de extensie.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Import failed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Import is mislukt.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>File is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestand is leeg.</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Drawing loaded successfully:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekening geladen:</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Formaat:</translation>
     </message>
     <message>
         <location line="+115"/>
         <source>Untitled %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Naamloos %1</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>read-only</source>
-        <translation type="unfinished"></translation>
+        <translation>alleen lezen</translation>
     </message>
     <message>
         <location line="+53"/>
         <source>Do you want to save the changes you made in&lt;br&gt;the document &apos;%1&apos;?</source>
-        <translation type="unfinished"></translation>
+        <translation>Wilt u de wijzigingen in het document&lt;br&gt;&apos;%1&apos; opslaan?</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Your changes will be lost if you don&apos;t save them.</source>
-        <translation type="unfinished"></translation>
+        <translation>Uw wijzigingen gaan verloren als ze niet opgeslagen worden.</translation>
     </message>
     <message>
         <location filename="../NewFileInit.js" line="+2"/>
         <source>&amp;New</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Nieuw</translation>
     </message>
 </context>
 </TS>

@@ -6,27 +6,27 @@
     <message>
         <location filename="../RecentFiles.js" line="+37"/>
         <source>Load/Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Laden/opslaan</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Recent Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Recente bestanden</translation>
     </message>
     <message>
         <location filename="../RecentFilesInit.js" line="+51"/>
         <source>&amp;Clear List</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijst &amp;leegmaken</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Open &amp;Recent</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Recent geopende bestanden</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Recent files history size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aantal recente bestanden:</translation>
     </message>
 </context>
 </TS>

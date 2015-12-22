@@ -6,12 +6,12 @@
     <message>
         <location filename="../PrintCurrentViewInit.js" line="+2"/>
         <source>Print &amp;Current View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Huidige scherm akdrukken</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Print current view</source>
-        <translation type="unfinished"></translation>
+        <translation>Huidige scherm akdrukken</translation>
     </message>
 </context>
 </TS>

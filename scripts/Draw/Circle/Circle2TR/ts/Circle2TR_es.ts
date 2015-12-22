@@ -16,7 +16,7 @@
     <message>
         <location line="+8"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Seleccionar solución</translation>
     </message>
     <message>
         <location line="+92"/>
