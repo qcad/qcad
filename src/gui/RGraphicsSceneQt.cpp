@@ -347,7 +347,7 @@ void RGraphicsSceneQt::exportArcSegment(const RArc& arc, bool allowForZeroLength
         // QPainterPath with pattern shown as solid (when clipped?)
         // bug workaround:
         currentPainterPath.moveTo(arc.getStartPoint());
-        if (twoColorSelectedMode && arc.getSweep()<0.05) {
+        if (twoColorSelectedMode && qAbs(arc.getSweep())<0.05) {
             // Qt bug workaround: arcs with large radius / small angle are off:
             currentPainterPath.lineTo(arc.getEndPoint());
         }
