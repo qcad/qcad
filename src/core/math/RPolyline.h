@@ -119,7 +119,7 @@ public:
     virtual RBox getBoundingBox() const;
 
     virtual double getLength() const;
-    double getLengthTo(const RVector& p) const;
+    double getLengthTo(const RVector& p, bool limited = true) const;
 
     virtual QList<RVector> getEndPoints() const;
     virtual QList<RVector> getMiddlePoints() const;

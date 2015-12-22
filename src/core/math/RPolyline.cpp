@@ -951,7 +951,7 @@ double RPolyline::getLength() const {
     return ret;
 }
 
-double RPolyline::getLengthTo(const RVector& p) const {
+double RPolyline::getLengthTo(const RVector& p, bool limited) const {
     double ret = 0.0;
 
     if (p.equalsFuzzy(getStartPoint())) {
@@ -971,7 +971,11 @@ double RPolyline::getLengthTo(const RVector& p) const {
     }
 
     QSharedPointer<RShape> seg = getSegmentAt(segIdx);
-    RVector p2 = seg->getClosestPointOnShape(p);
+    bool lim = limited;
+    if (segIdx!=0 && segIdx!=countSegments()-1) {
+        lim = true;
+    }
+    RVector p2 = seg->getClosestPointOnShape(p, lim);
     QSharedPointer<RDirected> dir = seg.dynamicCast<RDirected>();
     dir->trimEndPoint(p2);
     ret += seg->getLength();
@@ -1126,12 +1130,12 @@ RVector RPolyline::getVectorTo(const RVector& point, bool limited, double strict
     QList<QSharedPointer<RShape> > sub = getExploded();
     for (int i=0; i<sub.length(); i++) {
         QSharedPointer<RShape> shape = sub.at(i);
-        bool l = limited;
+        bool lim = limited;
         if (i!=0 && i!=sub.length()-1) {
             // segments in the middle: always limited:
-            l = true;
+            lim = true;
         }
-        RVector v = shape->getVectorTo(point, l, strictRange);
+        RVector v = shape->getVectorTo(point, lim, strictRange);
         if (v.isValid() && (!ret.isValid() || v.getMagnitude()<ret.getMagnitude())) {
             ret = v;
         }
