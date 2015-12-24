@@ -1141,7 +1141,7 @@ ShapeAlgorithms.createArcFrom3Points = function(point1, point2, point3) {
 
     var ret = RArc.createFrom3Points(point1, point2, point3);
 
-    if (isNull(ret)) {
+    if (!ret.isValid()) {
         ShapeAlgorithms.error = qsTr("No arc possible.");
         return undefined;
     }
