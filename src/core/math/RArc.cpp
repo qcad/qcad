@@ -95,7 +95,6 @@ RArc RArc::createFrom3Points(const RVector& startPoint,
 
     QList<RVector> ips = midLine1.getIntersectionPoints(midLine2, false);
     if (ips.length()!=1) {
-        //this.error = qsTr("No arc possible");
         return RArc();
     }
 
@@ -103,8 +102,7 @@ RArc RArc::createFrom3Points(const RVector& startPoint,
     double radius = center.getDistanceTo(endPoint);
     double angle1 = center.getAngleTo(startPoint);
     double angle2 = center.getAngleTo(endPoint);
-    bool reversed = RMath::isAngleBetween(center.getAngleTo(point),
-                                            angle1, angle2, true);
+    bool reversed = RMath::isAngleBetween(center.getAngleTo(point), angle1, angle2, true);
 
     return RArc(center, radius, angle1, angle2, reversed);
 }
