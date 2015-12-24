@@ -1332,6 +1332,8 @@ bool RPolyline::simplify(double angleTolerance) {
 
     RS::EntityType type = RS::EntityUnknown;
     double angle = RMAXDOUBLE;
+    double radius = RMAXDOUBLE;
+    RVector center = RVector::invalid;
 
     for (int i=0; i<countSegments(); i++) {
         QSharedPointer<RShape> seg = getSegmentAt(i);
@@ -1352,13 +1354,21 @@ bool RPolyline::simplify(double angleTolerance) {
                     type = RS::EntityLine;
                 }
             }
+            radius = RMAXDOUBLE;
+            center = RVector::invalid;
         }
 
         QSharedPointer<RArc> arc = seg.dynamicCast<RArc>();
         if (!arc.isNull()) {
-            // TODO: simplify anything if possible:
+            // simplify consecutive arcs:
+            if (arc->getCenter().equalsFuzzy(center, 0.001) && RMath::fuzzyCompare(arc->getRadius(), radius, 0.001)) {
+                arc->setStartAngle(arc->getCenter().getAngleTo(newPolyline.getEndPoint()));
+                newPolyline.removeLastVertex();
+            }
             newPolyline.appendVertex(arc->getStartPoint(), arc->getBulge());
             angle = RMAXDOUBLE;
+            radius = arc->getRadius();
+            center = arc->getCenter();
         }
     }
 
@@ -1372,6 +1382,8 @@ bool RPolyline::simplify(double angleTolerance) {
     vertices = newPolyline.vertices;
     bulges = newPolyline.bulges;
     closed = newPolyline.closed;
+    startWidths = newPolyline.startWidths;
+    endWidths = newPolyline.endWidths;
 
     return ret;
 }
