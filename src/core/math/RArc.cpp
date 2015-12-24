@@ -218,6 +218,8 @@ QList<RArc> RArc::createBiarc(const RVector& startPoint, double startDirection,
 
         if (secondTry) {
 //            qDebug() << "biarc creation failed: ";
+//            qDebug() << "radius1: " << radius1;
+//            qDebug() << "radius2: " << radius2;
 //            qDebug() << "startPoint: " << startPoint;
 //            qDebug() << "startDirection: " << startDirection;
 //            qDebug() << "endPoint: " << endPoint;
