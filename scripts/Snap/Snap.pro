@@ -19,6 +19,7 @@ SUBDIRS = \
     SnapPerpendicular \
     SnapReference \
     SnapSelectionCenter \
+    SnapTangential \
     SnapXManual \
     SnapYManual \
     RestrictAngleLength \

@@ -6,12 +6,12 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Default format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaard formaat:</translation>
     </message>
     <message>
         <location line="+50"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Toon waarschuwing bij het opslaan naar een bestandsformaat dat 24-bits kleuren niet ondersteunt</translation>
     </message>
     <message>
         <location filename="../SaveAs.js" line="+38"/>
@@ -26,17 +26,17 @@
     <message>
         <location line="+24"/>
         <source>No export filters have been found. Aborting...</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen export filters zijn gevonden. Afgebroken...</translation>
     </message>
     <message>
         <location line="+69"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Formaat:</translation>
     </message>
     <message>
         <location filename="../SaveAsInit.js" line="+2"/>
         <source>Save &amp;As...</source>
-        <translation type="unfinished"></translation>
+        <translation>Bewaar &amp;als...</translation>
     </message>
 </context>
 </TS>
