@@ -32,12 +32,13 @@ HierarchicalLayers.getChildLayerNames = function(doc, layerName, recursive) {
     }
 
     var ret = [];
-    var prefix = layerName + HierarchicalLayers.separator;
+    var prefixLower = layerName.toLowerCase() + HierarchicalLayers.separator;
     var names = doc.getLayerNames();
     for (var i=0; i<names.length; i++) {
-        var name = names[i];
-        if (name.startsWith(prefix)) {
-            if (recursive || !name.substring(prefix.length).contains(HierarchicalLayers.separator)) {
+        var name = names[i].toLowerCase();;
+        var nameLower = name.toLowerCase();
+        if (nameLower.startsWith(prefixLower)) {
+            if (recursive || !nameLower.substring(prefixLower.length).contains(HierarchicalLayers.separator)) {
                 ret.push(name);
             }
         }
