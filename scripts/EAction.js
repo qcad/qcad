@@ -1220,6 +1220,13 @@ EAction.showPolylineTools = function() {
 };
 
 /**
+ * Shows the CAD toolbar panel with the shape tools.
+ */
+EAction.showShapeTools = function() {
+    EAction.showCadToolBarPanel("ShapeToolsPanel");
+};
+
+/**
  * Shows the CAD toolbar panel with the modification tools.
  */
 EAction.showModificationTools = function() {
