@@ -99,7 +99,3 @@ void RTreeWidget::mouseMoveEvent(QMouseEvent* e) {
         QTreeWidget::mouseMoveEvent(e);
     }
 }
-
-//void RTreeWidget::scrollToItem(const QTreeWidgetItem* item, QAbstractItemView::ScrollHint hint) {
-//    QTreeWidget::scrollToItem(item, hint);
-//}
