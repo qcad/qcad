@@ -299,6 +299,12 @@ Trim.trim = function(op, limitingEntity, limitingClickPos, trimEntity, trimClick
 
     var limitingShape = limitingEntity.castToShape();
     if (isNull(limitingShape)) {
+        limitingShape = limitingEntity.getClosestSimpleShape(limitingClickPos);
+        if (!isNull(limitingShape)) {
+            limitingShape = limitingShape.data();
+        }
+    }
+    if (isNull(limitingShape)) {
         return false;
     }
 
