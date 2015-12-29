@@ -1302,7 +1302,16 @@ Array.alphaNumericalSorter = function(a, b) {
         // nummerical:
         return aVal - bVal;
     }
-}
+};
+
+/**
+ * Sorts this array with string items (case insensitive)
+ */
+Array.prototype.sortCaseInsensitive = function() {
+    Array.prototype.sort.call(this, function (a, b) {
+        return a.toLowerCase().localeCompare(b.toLowerCase());
+    });
+};
 
 /* Finds the intersection of two sorted arrays.
  *
