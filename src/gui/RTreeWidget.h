@@ -50,12 +50,6 @@ public:
         return indexFromItem(item, column);
     }
 
-    //void scrollToItem(const QTreeWidgetItem* item, QAbstractItemView::ScrollHint hint = EnsureVisible);
-
-//    void setIconOffset(int o) {
-//        iconOffset = o;
-//    }
-
 protected:
     void contextMenuEvent(QContextMenuEvent* e);
     void mousePressEvent(QMouseEvent* e);
@@ -71,7 +65,6 @@ private:
     int indexPressed;
     // selectable column or -1 for all:
     int selectableColumn;
-    //int iconOffset;
 };
 
 Q_DECLARE_METATYPE(RTreeWidget*)
