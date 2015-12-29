@@ -71,7 +71,7 @@
           <string>Double-click on block reference opens block</string>
          </property>
          <property name="checked">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -81,7 +81,7 @@
           <string>Double-click to select contour</string>
          </property>
          <property name="checked">
-          <bool>false</bool>
+          <bool>true</bool>
          </property>
         </widget>
        </item>

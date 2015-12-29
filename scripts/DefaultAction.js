@@ -567,7 +567,7 @@ DefaultAction.prototype.selectEntity = function(entityId, add) {
 };
 
 /**
- * Called when the user selects a single entity.
+ * Called when the user double-clicks an entity.
  */
 DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
     if (isNull(this.document) || isNull(this.di)) {
@@ -614,7 +614,7 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
             }
         }
 
-        if (RSettings.getBoolValue("GraphicsView/DoubleClickEditBlock", false)===true) {
+        if (RSettings.getBoolValue("GraphicsView/DoubleClickEditBlock", true)===true) {
             include("scripts/Block/Block.js");
             Block.editBlock(this.di, entity.getReferencedBlockName());
         }
@@ -625,7 +625,7 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
 		isPolylineEntity(entity) ||
 		isEllipseEntity(entity)) {
 
-        if (RSettings.getBoolValue("GraphicsView/DoubleClickSelectContour", false)===true) {
+        if (RSettings.getBoolValue("GraphicsView/DoubleClickSelectContour", true)===true) {
             include("scripts/Select/SelectContour/SelectContour.js");
             var matchingEntities = SelectContour.getConnectedEntities(this.document, entityId, 0.001);
             var add = (event.modifiers().valueOf() === Qt.ShiftModifier.valueOf());
