@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Form</name>
     <message>
@@ -96,17 +96,17 @@
     <message>
         <location filename="../Viewport.js" line="+244"/>
         <source>Dropped data not supported</source>
-        <translation type="unfinished"></translation>
+        <translation>Odvrženi podatki niso podprti</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Importing file: </source>
-        <translation type="unfinished"></translation>
+        <translation>Uvažam datoteko:</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Importing URL: </source>
-        <translation type="unfinished"></translation>
+        <translation>Uvažam URL: </translation>
     </message>
     <message>
         <location line="+65"/>
@@ -131,7 +131,7 @@
     <message>
         <location line="+3"/>
         <source>Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation>Tangencialno</translation>
     </message>
     <message>
         <location line="+3"/>

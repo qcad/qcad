@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>BehaviorPreferences</name>
     <message>
@@ -34,7 +34,7 @@
     <message>
         <location line="+20"/>
         <source>Right double-click to reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Desni dvojni klik za reset</translation>
     </message>
     <message>
         <location line="-59"/>
@@ -49,12 +49,12 @@
     <message>
         <location line="+7"/>
         <source>Right-click on entity shows context menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Desni klik na entiteto prikaže kontekstni meni</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Double-click to select contour</source>
-        <translation type="unfinished"></translation>
+        <translation>Dvoklik za izbiro konture</translation>
     </message>
     <message>
         <location line="+20"/>

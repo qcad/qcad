@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>CloseDialog</name>
     <message>
@@ -26,7 +26,7 @@
     </message>
     <message>
         <source>Loading...</source>
-        <translation type="vanished">Odpiram...</translation>
+        <translation>Odpiram...</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -46,7 +46,7 @@
     <message>
         <location line="+4"/>
         <source>File not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne najdem datoteke.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -56,7 +56,7 @@
     <message>
         <location line="+4"/>
         <source>Import failed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Uvoz spodletel.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -70,7 +70,7 @@
     </message>
     <message>
         <source>Opened drawing:</source>
-        <translation type="vanished">Odprta risba:</translation>
+        <translation>Odprta risba:</translation>
     </message>
     <message>
         <location line="+4"/>

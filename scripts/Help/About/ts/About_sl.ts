@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>About</name>
     <message>
@@ -11,12 +11,12 @@
     <message>
         <location line="+44"/>
         <source>Revision:</source>
-        <translation type="unfinished"></translation>
+        <translation>Revizija:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
-        <translation type="unfinished"></translation>
+        <translation>To pomeni, da lahko sodeluje pri razvoju &lt;a href=&apos;%1&apos;&gt;čisto vsak&lt;/a&gt;!</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -36,7 +36,7 @@
     <message>
         <location line="+20"/>
         <source>ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>ID:</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -77,52 +77,52 @@
     <message>
         <location line="-115"/>
         <source>Build Date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum kreiranja:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Architecture:</source>
-        <translation type="unfinished"></translation>
+        <translation>Arhitektura:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Compiler:</source>
-        <translation type="unfinished"></translation>
+        <translation>Prevajalnik:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>%1 is an application for computer-aided design (CAD).</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 je program za računlaniško podprto načrtovanje (CAD).</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>%1 is free (open source) software.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 je brezplačni(Odprto-Kodni) program.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
-        <translation type="unfinished"></translation>
+        <translation>Vtičniki ter skriptni dodatki nosijo individualne licence (glej zavihek &apos;Vtičniki&apos;).</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>All brand or product names are trademarks or registered trademarks of their respective holders.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vse znamke ali imena izdelkov so blagovna znamka ali registirana blagovna znamka imena ustreznih nosilcev.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Portions of this software © 2013 Digia Plc.</source>
-        <translation type="unfinished"></translation>
+        <translation>Del tega programa  © 2013 Digia Plc.</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).</source>
-        <translation type="unfinished"></translation>
+        <translation>Del tega programa © 2012 Nokia Corporation ter/ali njihovih podružnic.</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>No plugins found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ni najdenih nobenih vtičnikov.</translation>
     </message>
     <message>
         <location line="+88"/>
@@ -157,7 +157,7 @@
     <message>
         <location line="+7"/>
         <source>No script add-ons found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ni najdenih nobenih skriptnih dodatkov.</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -175,22 +175,22 @@
     <message>
         <location filename="../AboutCredits.js" line="+4"/>
         <source>Programming</source>
-        <translation type="unfinished"></translation>
+        <translation>Programiranje</translation>
     </message>
     <message>
         <location line="+38"/>
         <source>Translations</source>
-        <translation type="unfinished"></translation>
+        <translation>Prevodi</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Ikonce</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Testing, Feedback and Minor Fixes</source>
-        <translation type="unfinished"></translation>
+        <translation>Testiranje, Povratna informacija ter Manjši popravki</translation>
     </message>
 </context>
 <context>
@@ -202,7 +202,7 @@
     </message>
     <message>
         <source>about:blank</source>
-        <translation type="vanished">o:prazno</translation>
+        <translation>o:prazno</translation>
     </message>
     <message>
         <location line="+67"/>

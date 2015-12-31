@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Block</name>
     <message>
@@ -39,7 +39,7 @@
     <message>
         <location line="+11"/>
         <source>Block &apos;%1&apos; already exists&lt;br&gt;and will be overwritten.</source>
-        <translation type="unfinished"></translation>
+        <translation>Blok &apos;%1&apos; že obstaja&lt;br&gt;in bo prepisan.</translation>
     </message>
     <message>
         <location line="+5"/>

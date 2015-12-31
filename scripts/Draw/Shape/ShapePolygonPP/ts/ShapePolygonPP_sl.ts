@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>LinePolygonCP</name>
     <message>
         <source>Corners:</source>
-        <translation type="vanished">Vogal:</translation>
+        <translation>Vogal:</translation>
     </message>
 </context>
 <context>
     <name>LinePolygonPP</name>
     <message>
         <source>First corner</source>
-        <translation type="vanished">Prvi vogel</translation>
+        <translation>Prvi vogel</translation>
     </message>
     <message>
         <source>Corner point</source>
-        <translation type="vanished">Točka vogala</translation>
+        <translation>Točka vogala</translation>
     </message>
     <message>
         <source>Done</source>
-        <translation type="vanished">Končano</translation>
+        <translation>Končano</translation>
     </message>
     <message>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation type="vanished">Poligo&amp;n (dva vogala)</translation>
+        <translation>Poligo&amp;n (dva vogala)</translation>
     </message>
     <message>
         <source>Draw regular polygon from two corner points</source>
-        <translation type="vanished">Nariši navadni poligon iz dveh vogalnih točk</translation>
+        <translation>Nariši navadni poligon iz dveh vogalnih točk</translation>
     </message>
 </context>
 <context>
@@ -55,21 +55,21 @@
     </message>
     <message>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation type="vanished">Poligo&amp;n (dva vogala)</translation>
+        <translation>Mn&amp;ogokotnik (dva vogala)</translation>
     </message>
     <message>
         <source>Draw regular polygon from two corner points</source>
-        <translation type="vanished">Nariši navadni poligon iz dveh vogalnih točk</translation>
+        <translation>Nariši navadni poligon iz dveh vogalnih točk</translation>
     </message>
     <message>
         <location filename="../ShapePolygonPPInit.js" line="+2"/>
         <source>Polygo&amp;n (2 Points of Side)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mno&amp;gokotnik (2 točki stranice)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw regular polygon from end points of one side</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši navadni mnogokotnik iz krajiščnih točk ene stranice</translation>
     </message>
 </context>
 </TS>

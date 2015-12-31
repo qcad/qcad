@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Draw</name>
     <message>
@@ -13,43 +13,43 @@
     <name>DrawBasedOnRectangle</name>
     <message>
         <source>Top Left</source>
-        <translation type="vanished">Zgoraj levo</translation>
+        <translation>Zgoraj levo</translation>
     </message>
     <message>
         <source>Top</source>
-        <translation type="vanished">Zgoraj</translation>
+        <translation>Zgoraj</translation>
     </message>
     <message>
         <source>Top Right</source>
-        <translation type="vanished">Zgoraj desno</translation>
+        <translation>Zgoraj desno</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation type="vanished">Levo</translation>
+        <translation>Levo</translation>
     </message>
     <message>
         <source>Middle</source>
-        <translation type="vanished">Sredina</translation>
+        <translation>Sredina</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation type="vanished">Desno</translation>
+        <translation>Desno</translation>
     </message>
     <message>
         <source>Bottom Left</source>
-        <translation type="vanished">Spodaj levo</translation>
+        <translation>Spodaj levo</translation>
     </message>
     <message>
         <source>Bottom</source>
-        <translation type="vanished">Spodaj</translation>
+        <translation>Spodaj</translation>
     </message>
     <message>
         <source>Bottom Right</source>
-        <translation type="vanished">Spodaj desno</translation>
+        <translation>Spodaj desno</translation>
     </message>
     <message>
         <source>Position</source>
-        <translation type="vanished">Pozicija</translation>
+        <translation>Pozicija</translation>
     </message>
 </context>
 <context>
@@ -57,12 +57,12 @@
     <message>
         <location filename="../DrawBasedOnRectanglePP.js" line="+63"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Prvi kot</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Drugi kot</translation>
     </message>
 </context>
 <context>
@@ -70,52 +70,52 @@
     <message>
         <location filename="../DrawBasedOnRectangleSize.js" line="+46"/>
         <source>Top Left</source>
-        <translation type="unfinished">Zgoraj levo</translation>
+        <translation>Zgoraj levo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top</source>
-        <translation type="unfinished">Zgoraj</translation>
+        <translation>Zgoraj</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Top Right</source>
-        <translation type="unfinished">Zgoraj desno</translation>
+        <translation>Zgoraj desno</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Left</source>
-        <translation type="unfinished">Levo</translation>
+        <translation>Levo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Middle</source>
-        <translation type="unfinished">Sredina</translation>
+        <translation>Sredina</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished">Desno</translation>
+        <translation>Desno</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Left</source>
-        <translation type="unfinished">Spodaj levo</translation>
+        <translation>Spodaj levo</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished">Spodaj</translation>
+        <translation>Spodaj</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom Right</source>
-        <translation type="unfinished">Spodaj desno</translation>
+        <translation>Spodaj desno</translation>
     </message>
     <message>
         <location line="+51"/>
         <source>Position</source>
-        <translation type="unfinished">Pozicija</translation>
+        <translation>Pozicija</translation>
     </message>
 </context>
 <context>

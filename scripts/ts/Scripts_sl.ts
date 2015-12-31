@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -110,7 +110,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entiteta ni črta, lok ali lomljenka.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -140,7 +140,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entiteta ni črta, lok, krog ali elipsa ali lomljenka.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -242,32 +242,32 @@
     <message>
         <location line="+1"/>
         <source>Square root</source>
-        <translation type="unfinished"></translation>
+        <translation>Kvadrani koren</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Phi</source>
-        <translation type="unfinished"></translation>
+        <translation>Pi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>phi</source>
-        <translation type="unfinished"></translation>
+        <translation>pi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alt phi</source>
-        <translation type="unfinished"></translation>
+        <translation>stari pi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation type="unfinished"></translation>
+        <translation>Ohm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>omega</source>
-        <translation type="unfinished"></translation>
+        <translation>omega</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -379,62 +379,62 @@
     <message>
         <location filename="../library.js" line="+733"/>
         <source>Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Objekti</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Object</source>
-        <translation type="unfinished"></translation>
+        <translation>Objekt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Neznani objekti</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Unknown Object</source>
-        <translation type="unfinished"></translation>
+        <translation>Neznani objekt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Bloki</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Blok</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Plasti</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Plast</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Linetypes</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipi črt</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation>Tip črte</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Views</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogledi</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Pogled</translation>
     </message>
     <message>
         <location line="+3"/>

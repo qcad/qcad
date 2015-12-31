@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>LibraryBrowser</name>
     <message>
@@ -147,12 +147,12 @@ Vtičnik LibraryBrowser ne bo navoljo.</translation>
     <message>
         <location line="+43"/>
         <source>Source removed from part library: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Vir odstranjen iz knjižnice: %1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Force database update.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vsili pododobitev baze.</translation>
     </message>
     <message>
         <location line="+393"/>
@@ -317,7 +317,7 @@ shown in search results:</source>
     <message>
         <location line="+36"/>
         <source>Insert selected item into drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Vstavi izbrani predmet v risbo</translation>
     </message>
     <message>
         <location line="+27"/>

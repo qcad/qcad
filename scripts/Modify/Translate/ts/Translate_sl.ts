@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Translate</name>
     <message>
         <location filename="../Translate.js" line="+44"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>Spremeni</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Move/Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Premakni/Kopiraj</translation>
     </message>
     <message>
         <location line="+27"/>
@@ -36,22 +36,22 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Use dialog for tool options</source>
-        <translation type="unfinished"></translation>
+        <translation>Uporabi dialog za opcije orodja</translation>
     </message>
     <message>
         <location filename="../Translate.ui" line="+17"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopiraj</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation>Število kopij:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished">Uporabi trenutno plast in &amp;atribute</translation>
+        <translation>Uporabi trenutno plast in &amp;atribute</translation>
     </message>
 </context>
 <context>

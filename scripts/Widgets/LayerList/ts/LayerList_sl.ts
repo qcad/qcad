@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>LayerList</name>
     <message>
         <location filename="../LayerList.js" line="+192"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Gradniki</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -22,7 +22,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Enable alternating row colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Omogoči alternirajoče barve vrstic</translation>
     </message>
 </context>
 </TS>

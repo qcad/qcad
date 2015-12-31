@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>CheckForUpdates</name>
     <message>
@@ -12,16 +12,16 @@
     <message>
         <location line="+8"/>
         <source>Version information not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ni najdenenega podatka o verziji.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>No connection to server or file not found. Please try again later.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ni povezave do strežnika ali ni najdene datoteke. Prosimo poizkusite kasneje znova.</translation>
     </message>
     <message>
         <source>about:blank</source>
-        <translation type="vanished">O:prazno</translation>
+        <translation>O:prazno</translation>
     </message>
     <message>
         <location filename="../CheckForUpdatesDialog.ui" line="+53"/>

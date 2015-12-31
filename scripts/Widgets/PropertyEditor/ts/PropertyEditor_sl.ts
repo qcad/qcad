@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -38,12 +38,12 @@
     </message>
     <message>
         <source>Geometry</source>
-        <translation type="vanished">Geometrija</translation>
+        <translation>Geometrija</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Specific Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Specifične lastnosti</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -150,21 +150,21 @@
     </message>
     <message>
         <source>General</source>
-        <translation type="vanished">Splošno</translation>
+        <translation>Splošno</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>General Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Splošne lastnosti</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>Color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Barva:</translation>
     </message>
     <message>
         <source>Move Selection to a New Layer</source>
-        <translation type="vanished">Premakni izbrano na drugo plast</translation>
+        <translation>Premakni izbrano na drugo plast</translation>
     </message>
     <message>
         <location line="+104"/>
@@ -174,7 +174,7 @@
     <message>
         <location line="+49"/>
         <source>Protected:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaščiteno:</translation>
     </message>
     <message>
         <location line="-143"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Trim</name>
     <message>
@@ -21,17 +21,17 @@
     <message>
         <location line="+62"/>
         <source>First entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Prve entitete ni mogoče krajšat.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entitete ni mogoče krajšat.</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Second entity cannot be trimmed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Druge entitete ni mogoče krajšat.</translation>
     </message>
     <message>
         <location filename="../TrimInit.js" line="+2"/>

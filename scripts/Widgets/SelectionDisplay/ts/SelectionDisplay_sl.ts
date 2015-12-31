@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>SelectionDisplay</name>
     <message>
         <source>No selected entities.</source>
-        <translation type="vanished">Ni izbranih entitet.</translation>
+        <translation>Ni izbranih entitet.</translation>
     </message>
     <message>
         <location filename="../SelectionDisplay.js" line="+58"/>
         <source>No entities selected.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ni izbranih entitet.</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -34,19 +34,19 @@
     </message>
     <message>
         <source>Entities</source>
-        <translation type="vanished">Entitete</translation>
+        <translation>Entitete</translation>
     </message>
     <message>
         <source>on</source>
-        <translation type="vanished">na</translation>
+        <translation>na</translation>
     </message>
     <message>
         <source>Layer &apos;%1&apos;</source>
-        <translation type="vanished">Plast &apos;%1&apos;</translation>
+        <translation>Plast &apos;%1&apos;</translation>
     </message>
     <message>
         <source>%1 Layers</source>
-        <translation type="vanished">%1 Plasti</translation>
+        <translation>%1 Plasti</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -57,7 +57,7 @@
     <message>
         <location filename="../SelectionDisplay.ui" line="+26"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Obrazec</translation>
     </message>
 </context>
 </TS>

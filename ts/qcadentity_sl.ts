@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>REntity</name>
     <message>
@@ -499,7 +499,7 @@
     <message>
         <location line="+1"/>
         <source>From Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Iz entitete</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -513,12 +513,12 @@
     <message>
         <location line="+192"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Da</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimensionEntity.cpp" line="-1"/>
@@ -581,7 +581,7 @@
     <message>
         <location line="+4"/>
         <source>Fade</source>
-        <translation type="unfinished"></translation>
+        <translation>Prelij</translation>
     </message>
     <message>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-3"/>
@@ -606,17 +606,17 @@
     <message>
         <location line="+2"/>
         <source>Start Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Začetna širina</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>End Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Končna širina</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Global Width</source>
-        <translation type="unfinished"></translation>
+        <translation>Globalna širina</translation>
     </message>
     <message>
         <location filename="../src/entity/RSolidEntity.cpp" line="-13"/>
@@ -694,7 +694,7 @@
     </message>
     <message>
         <source>Simple</source>
-        <translation type="vanished">Preprosto</translation>
+        <translation>Preprosto</translation>
     </message>
     <message>
         <source>Contents</source>
@@ -702,51 +702,51 @@
     </message>
     <message>
         <source>Text</source>
-        <translation type="vanished">Besedilo</translation>
+        <translation>Besedilo</translation>
     </message>
     <message>
         <source>Plain Text</source>
-        <translation type="vanished">Preprosto besedilo</translation>
+        <translation>Preprosto besedilo</translation>
     </message>
     <message>
         <source>Font Name</source>
-        <translation type="vanished">Ime pisave</translation>
+        <translation>Ime pisave</translation>
     </message>
     <message>
         <source>Text Height</source>
-        <translation type="vanished">Višina besedila</translation>
+        <translation>Višina besedila</translation>
     </message>
     <message>
         <source>Text Angle</source>
-        <translation type="vanished">Kot besedila</translation>
+        <translation>Kot besedila</translation>
     </message>
     <message>
         <source>X Scale</source>
-        <translation type="vanished">X Razmerje</translation>
+        <translation>X Razmerje</translation>
     </message>
     <message>
         <source>Bold</source>
-        <translation type="vanished">Krepko</translation>
+        <translation>Krepko</translation>
     </message>
     <message>
         <source>Italic</source>
-        <translation type="vanished">Poštevno</translation>
+        <translation>Poštevno</translation>
     </message>
     <message>
         <source>Line Spacing</source>
-        <translation type="vanished">Razmik med vrsticami</translation>
+        <translation>Razmik med vrsticami</translation>
     </message>
     <message>
         <source>Alignment</source>
-        <translation type="vanished">Poravnava</translation>
+        <translation>Poravnava</translation>
     </message>
     <message>
         <source>Horizontal</source>
-        <translation type="vanished">Vodoravno</translation>
+        <translation>Vodoravno</translation>
     </message>
     <message>
         <source>Vertical</source>
-        <translation type="vanished">Navpično</translation>
+        <translation>Navpično</translation>
     </message>
     <message>
         <location filename="../src/entity/RRayEntity.cpp" line="-11"/>
@@ -787,7 +787,7 @@
     <message>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
         <source>Invisible</source>
-        <translation type="unfinished"></translation>
+        <translation>Nevidno</translation>
     </message>
 </context>
 </TS>

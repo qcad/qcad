@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>ExDrawColors</name>
     <message>
         <location filename="../ExDrawColors.js" line="+64"/>
         <source>Draw &amp;Colors</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariši &amp;Barve</translation>
     </message>
 </context>
 </TS>

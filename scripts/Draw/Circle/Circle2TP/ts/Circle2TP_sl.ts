@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Circle2TP</name>
     <message>
@@ -31,12 +31,12 @@
     </message>
     <message>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation type="vanished">Točka, 2 Tan&amp;genti</translation>
+        <translation>Točka, 2 Tan&amp;genti</translation>
     </message>
     <message>
         <location filename="../Circle2TPInit.js" line="+2"/>
         <source>2 Tan&amp;gents and Point</source>
-        <translation type="unfinished"></translation>
+        <translation>2 Ta&amp;genti ter točka</translation>
     </message>
     <message>
         <location line="+4"/>

@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>LineRectangleSize</name>
     <message>
         <source>Top Left</source>
-        <translation type="vanished">Zgoraj levo</translation>
+        <translation>Zgoraj levo</translation>
     </message>
     <message>
         <source>Top</source>
-        <translation type="vanished">Zgoraj</translation>
+        <translation>Zgoraj</translation>
     </message>
     <message>
         <source>Top Right</source>
-        <translation type="vanished">Zgoraj desno</translation>
+        <translation>Zgoraj desno</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation type="vanished">Levo</translation>
+        <translation>Levo</translation>
     </message>
     <message>
         <source>Middle</source>
-        <translation type="vanished">Sredina</translation>
+        <translation>Sredina</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation type="vanished">Desno</translation>
+        <translation>Desno</translation>
     </message>
     <message>
         <source>Bottom Left</source>
-        <translation type="vanished">Spodaj levo</translation>
+        <translation>Spodaj levo</translation>
     </message>
     <message>
         <source>Bottom</source>
-        <translation type="vanished">Spodaj</translation>
+        <translation>Spodaj</translation>
     </message>
     <message>
         <source>Bottom Right</source>
-        <translation type="vanished">Spodaj Desno</translation>
+        <translation>Spodaj Desno</translation>
     </message>
     <message>
         <source>Position</source>
-        <translation type="vanished">Pozicija</translation>
+        <translation>Pozicija</translation>
     </message>
     <message>
         <source>&amp;Width:</source>
-        <translation type="vanished">Š&amp;irina:</translation>
+        <translation>Š&amp;irina:</translation>
     </message>
     <message>
         <source>&amp;Height:</source>
-        <translation type="vanished">&amp;Višina:</translation>
+        <translation>&amp;Višina:</translation>
     </message>
     <message>
         <source>Reference Point:</source>
-        <translation type="vanished">Referenčna točka:</translation>
+        <translation>Referenčna točka:</translation>
     </message>
     <message>
         <source>Rectangle with &amp;Size</source>
-        <translation type="vanished">Pravokotnik z &amp;merami</translation>
+        <translation>Pravokotnik z &amp;merami</translation>
     </message>
     <message>
         <source>Draw rectangle with position and size</source>
-        <translation type="vanished">Nariši pravokotnik s pomočjo pozicije in mer</translation>
+        <translation>Nariši pravokotnik s pomočjo pozicije in mer</translation>
     </message>
 </context>
 <context>
@@ -142,7 +142,7 @@
     <message>
         <location filename="../ShapeRectangleSizeDialog.ui" line="+101"/>
         <source>Create Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Ustvari mnogokotnik</translation>
     </message>
 </context>
 </TS>

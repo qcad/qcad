@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>GraphicsView</name>
     <message>
@@ -91,7 +91,7 @@
     <message>
         <location line="+36"/>
         <source>Display and Performance</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaz in optimizacija</translation>
     </message>
     <message>
         <location line="+146"/>
@@ -106,12 +106,12 @@
     <message>
         <location line="+82"/>
         <source>Anti-aliasing on by default</source>
-        <translation type="unfinished"></translation>
+        <translation>Glajenje robov provzeto vklopljeno</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Timeout for hatch rendering:</source>
-        <translation type="unfinished"></translation>
+        <translation>Iztek časa za izris šrafur:</translation>
     </message>
     <message>
         <location line="-349"/>
@@ -124,7 +124,7 @@
     </message>
     <message>
         <source>Performance</source>
-        <translation type="vanished">Optimizacija</translation>
+        <translation>Optimizacija</translation>
     </message>
     <message>
         <location line="+78"/>
