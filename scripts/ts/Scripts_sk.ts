@@ -93,7 +93,7 @@
         <translation>CAD Nástroje</translation>
     </message>
     <message>
-        <location line="+668"/>
+        <location line="+675"/>
         <source>Entity is on a locked layer.</source>
         <translation>Prvok je na zamknutej vrstve.</translation>
     </message>

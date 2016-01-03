@@ -118,28 +118,9 @@ QStringList RS::getDirectoryList(const QString& subDirectory) {
 #endif
     */
 
-    // Individual directories:
-    /*
-    // TODO:
-    RS_SETTINGS->beginGroup("/Paths");
-    RS_String opt;
-    if (subDirectory=="fonts") {
-        opt = "/Fonts";
-    } else if (subDirectory=="patterns") {
-        opt = "/Patterns";
-    } else if (subDirectory.startsWith("scripts")) {
-        opt = "/Scripts";
-    } else if (subDirectory.startsWith("library")) {
-        opt = "/Library";
-    } else if (subDirectory.startsWith("po")) {
-        opt = "/Translations";
-    }
-    if (!opt.isEmpty()) {
-        dirList += RS_SETTINGS->readEntry(opt, "")
-                .split(RS_RegExp("[;]"));
-    }
-    RS_SETTINGS->endGroup();
-    */
+    // TODO: add a path to users home to be used to extend pattern, etc.
+    //QString appDirName = QSettings.applicationName();
+    //dirList.append(RSettings::getHomeLocation() + "/." + appDirName + "/" + subDirectory);
 
     QStringList ret;
     for (int i=0; i<dirList.size(); i++) {

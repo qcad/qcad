@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>Divide</name>
     <message>
         <source>Choose line, arc, circle, ellipse or spline</source>
-        <translation>Izberi črto, lok, krog, elipso ali krivuljo</translation>
+        <translation type="vanished">Izberi črto, lok, krog, elipso ali krivuljo</translation>
     </message>
     <message>
         <location filename="../Divide.js" line="+66"/>

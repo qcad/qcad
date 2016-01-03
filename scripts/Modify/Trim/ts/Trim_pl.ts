@@ -22,7 +22,7 @@
         <translation type="unfinished">Oba podmioty nie przecinają się, ani nie są obecnie obsługiwane przez przycinanie.</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+68"/>
         <source>First entity cannot be trimmed.</source>
         <translation type="unfinished"></translation>
     </message>

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>LinePolygonCP</name>
     <message>
         <source>Center</source>
-        <translation>Središče</translation>
+        <translation type="vanished">Središče</translation>
     </message>
     <message>
         <source>Corner point</source>
-        <translation>Vogalna točka</translation>
+        <translation type="vanished">Vogalna točka</translation>
     </message>
     <message>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
         <source>Corners:</source>
-        <translation>Vogali:</translation>
+        <translation type="vanished">Vogali:</translation>
     </message>
     <message>
         <source>Pol&amp;ygon (Center, Point)</source>
-        <translation>Pol&amp;igon (središče, točka)</translation>
+        <translation type="vanished">Pol&amp;igon (središče, točka)</translation>
     </message>
     <message>
         <source>Draw regular polygon from center and corner point</source>
-        <translation>Nariši navadni poligon iz središča in vogalne točke</translation>
+        <translation type="vanished">Nariši navadni poligon iz središča in vogalne točke</translation>
     </message>
 </context>
 <context>
@@ -52,7 +52,7 @@
     </message>
     <message>
         <source>Pol&amp;ygon (Center, Point)</source>
-        <translation>Mn&amp;ogokotnik (središče, točka)</translation>
+        <translation type="vanished">Mn&amp;ogokotnik (središče, točka)</translation>
     </message>
     <message>
         <location filename="../ShapePolygonCPInit.js" line="+2"/>

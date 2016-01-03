@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>LinePolygonCP</name>
     <message>
         <source>Corners:</source>
-        <translation>Vogal:</translation>
+        <translation type="vanished">Vogal:</translation>
     </message>
 </context>
 <context>
     <name>LinePolygonPP</name>
     <message>
         <source>First corner</source>
-        <translation>Prvi vogel</translation>
+        <translation type="vanished">Prvi vogel</translation>
     </message>
     <message>
         <source>Corner point</source>
-        <translation>Točka vogala</translation>
+        <translation type="vanished">Točka vogala</translation>
     </message>
     <message>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation>Poligo&amp;n (dva vogala)</translation>
+        <translation type="vanished">Poligo&amp;n (dva vogala)</translation>
     </message>
     <message>
         <source>Draw regular polygon from two corner points</source>
-        <translation>Nariši navadni poligon iz dveh vogalnih točk</translation>
+        <translation type="vanished">Nariši navadni poligon iz dveh vogalnih točk</translation>
     </message>
 </context>
 <context>
@@ -55,11 +55,11 @@
     </message>
     <message>
         <source>Polygo&amp;n (Two Corners)</source>
-        <translation>Mn&amp;ogokotnik (dva vogala)</translation>
+        <translation type="vanished">Mn&amp;ogokotnik (dva vogala)</translation>
     </message>
     <message>
         <source>Draw regular polygon from two corner points</source>
-        <translation>Nariši navadni poligon iz dveh vogalnih točk</translation>
+        <translation type="vanished">Nariši navadni poligon iz dveh vogalnih točk</translation>
     </message>
     <message>
         <location filename="../ShapePolygonPPInit.js" line="+2"/>

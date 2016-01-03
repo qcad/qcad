@@ -22,7 +22,7 @@
         <translation>As duas entidades não se cruzam, ou ainda não são suportadas para aparamento.</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+68"/>
         <source>First entity cannot be trimmed.</source>
         <translation>A primeira entidade não pode ser aparada.</translation>
     </message>

@@ -22,7 +22,7 @@
         <translation>Les deux entités ne se croisent pas, ou ne sont pas supporté pour adjuster.</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+68"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Première entité ne peut pas être ajuster.</translation>
     </message>

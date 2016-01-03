@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>Trim</name>
     <message>
@@ -19,7 +19,7 @@
         <translation>Izbrani entiteti se ne sekata, ali pa trenutno nista podprti za krajšanje.</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+68"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Prve entitete ni mogoče krajšat.</translation>
     </message>

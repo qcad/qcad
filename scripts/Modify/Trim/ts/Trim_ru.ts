@@ -19,7 +19,7 @@
         <translation>Два объекта не пересекаются, или в настоящее время не поддерживается для обрезки.</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+68"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Первый объект не может быть подрезан.</translation>
     </message>

@@ -22,7 +22,7 @@
         <translation>Las dos entidades no se cortan, o no están actualmente soportadas por el recorte.</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+68"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Primera entidad no se pueden recortar.</translation>
     </message>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>BreakOut</name>
     <message>
         <source>Choose line, arc, circle or ellipse to auto trim</source>
-        <translation>Izberi črto, lok, krog ali elipso za samodejno krajšanje</translation>
+        <translation type="vanished">Izberi črto, lok, krog ali elipso za samodejno krajšanje</translation>
     </message>
     <message>
         <location filename="../BreakOut.js" line="+58"/>
@@ -14,7 +14,7 @@
     </message>
     <message>
         <source>Choose line, arc, circle, ellipse or spline segment</source>
-        <translation>Izberi črto, lok, krog, elipso ali segment krivulje</translation>
+        <translation type="vanished">Izberi črto, lok, krog, elipso ali segment krivulje</translation>
     </message>
     <message>
         <location line="+3"/>

@@ -22,7 +22,7 @@
         <translation>Le due entità non si intersecano, o non sono attualmente supportati per il taglio.</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+68"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Prima entità non può essere tagliato.</translation>
     </message>

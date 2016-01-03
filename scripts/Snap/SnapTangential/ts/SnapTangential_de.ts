@@ -4,7 +4,7 @@
 <context>
     <name>SnapTangential</name>
     <message>
-        <location filename="../SnapTangentialInit.js" line="2"/>
+        <location filename="../SnapTangentialInit.js" line="+2"/>
         <source>&amp;Tangential</source>
         <translation>&amp;Tangential</translation>
     </message>

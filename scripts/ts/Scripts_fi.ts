@@ -93,7 +93,7 @@
         <translation>CAD työkalut</translation>
     </message>
     <message>
-        <location line="+668"/>
+        <location line="+675"/>
         <source>Entity is on a locked layer.</source>
         <translation>Kohde on lukitussa tasossa.</translation>
     </message>

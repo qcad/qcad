@@ -24,7 +24,7 @@
         <translation>Die zwei Objekte schneiden sich nicht oder werden momentan nicht für Trimmen unterstützt.</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+68"/>
         <source>First entity cannot be trimmed.</source>
         <translation>Erstes Objekt kann nicht getrimmt werden.</translation>
     </message>

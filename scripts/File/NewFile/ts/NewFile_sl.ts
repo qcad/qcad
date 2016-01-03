@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>CloseDialog</name>
     <message>
@@ -26,7 +26,7 @@
     </message>
     <message>
         <source>Loading...</source>
-        <translation>Odpiram...</translation>
+        <translation type="vanished">Odpiram...</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -70,7 +70,7 @@
     </message>
     <message>
         <source>Opened drawing:</source>
-        <translation>Odprta risba:</translation>
+        <translation type="vanished">Odprta risba:</translation>
     </message>
     <message>
         <location line="+4"/>

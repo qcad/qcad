@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>ArcTPR</name>
     <message>
@@ -44,31 +44,31 @@
     <name>Circle2TP</name>
     <message>
         <source>First line, arc or circle</source>
-        <translation>Prva črta, lok ali krog</translation>
+        <translation type="vanished">Prva črta, lok ali krog</translation>
     </message>
     <message>
         <source>Second line, arc or circle</source>
-        <translation>Druga črta, lok ali krog</translation>
+        <translation type="vanished">Druga črta, lok ali krog</translation>
     </message>
     <message>
         <source>Point on circle line</source>
-        <translation>Točka na črti kroga</translation>
+        <translation type="vanished">Točka na črti kroga</translation>
     </message>
     <message>
         <source>Choose solution</source>
-        <translation>Izberite rešitev</translation>
+        <translation type="vanished">Izberite rešitev</translation>
     </message>
     <message>
         <source>No solution</source>
-        <translation>Ni rešitve</translation>
+        <translation type="vanished">Ni rešitve</translation>
     </message>
     <message>
         <source>Point, 2 Tan&amp;gents</source>
-        <translation>Točka, 2 Tan&amp;genti</translation>
+        <translation type="vanished">Točka, 2 Tan&amp;genti</translation>
     </message>
     <message>
         <source>Draw circle tangential to two entities, through point</source>
-        <translation>Nariši krog tangencialno na dve entiteti, skozi točko</translation>
+        <translation type="vanished">Nariši krog tangencialno na dve entiteti, skozi točko</translation>
     </message>
 </context>
 </TS>

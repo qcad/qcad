@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>CheckForUpdates</name>
     <message>
@@ -21,7 +21,7 @@
     </message>
     <message>
         <source>about:blank</source>
-        <translation>O:prazno</translation>
+        <translation type="vanished">O:prazno</translation>
     </message>
     <message>
         <location filename="../CheckForUpdatesDialog.ui" line="+53"/>
