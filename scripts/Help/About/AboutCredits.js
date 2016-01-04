@@ -18,7 +18,7 @@ var credits =
                               "Snap > Y/X from Points<br>" +
                               "Snap > Distance Manual<br>" +
                               "Misc > Drawing > Centerline Cross<br>" +
-                              "Misc > Drawing > Line from 2 Points (LX)<br>" +
+                              "Misc > Drawing > Counter<br>" +
                               "Edit > Drawing Preferences > General > Point Display<br>" +
                               "Modify > Break out Manual<br>" +
                               "View > Display Distance/Angle<br>" +

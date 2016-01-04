@@ -2,6 +2,7 @@ TEMPLATE = subdirs
 
 SUBDIRS = \
     ts \
+    Counter \
     Cross \
     DrawBoundingBox \
     LineBoxJoint \
