@@ -22,8 +22,6 @@ SvgImporterFactory.prototype.instantiate = function(document, messageHandler, pr
     return new SvgImporter(document);
 };
 
-
-
-function init() {
+function init(basePath) {
     RFileImporterRegistry.registerFileImporter(new SvgImporterFactory());
 }
