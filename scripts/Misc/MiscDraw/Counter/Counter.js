@@ -69,11 +69,14 @@ Counter.prototype.setState = function(state) {
 
 Counter.prototype.pickCoordinate = function(event, preview) {
     var di = this.getDocumentInterface();
+    var doc = di.getDocument();
 
     var pos = event.getModelPosition();
     var str;
     var startnum = EAction.getMainWindow().findChild("Start");
-    str = this.prefix + this.start + this.suffix;
+    var value = doc.formatLinear(this.start);
+    //str = this.prefix + this.start + this.suffix;
+    str = this.prefix + value + this.suffix;
 
     var fontName = RSettings.getStringValue("TextDialog/Font", "Arial");
     var fontHeight = RSettings.getDoubleValue("TextDialog/Height", 1.0);
@@ -97,18 +100,18 @@ Counter.prototype.pickCoordinate = function(event, preview) {
     td.setBold(fontBold);
     td.setItalic(fontItalic);
     td.setLineSpacingFactor(fontLineSpacingFactor);
-    var text = new RTextEntity(this.getDocument(), td);
+    var text = new RTextEntity(doc, td);
     var op = new RAddObjectOperation(text, this.getToolTitle());
-
     if (preview) {
         di.previewOperation(op);
     }
     else {
+        var pr = doc.getLinearPrecision();
         di.applyOperation(op);
         di.setRelativeZero(pos);
         // set start number to start number + increment
         this.start = this.start + this.increment;
-        startnum.text = this.start;
+        startnum.text = doc.formatLinear(this.start);
     }
 };
 
