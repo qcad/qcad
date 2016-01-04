@@ -2107,7 +2107,7 @@ function addActionsToWidgets() {
             if (!isNull(w)) {
 
                 // workaround for QTBUG-38256 (action not triggered for letter based shortcuts in sub menus)
-                if (RSettings.getQtVersion()<0x050500 && RSettings.getQtVersion()>0x050000) {
+                if (RSettings.getQtVersion()<0x050500 && RSettings.getQtVersion()>=0x050000) {
                     if (isOfType(w.parentWidget(), QMenu)) {
                         new QShortcut(a.shortcut, a.parentWidget(), 0, 0,  Qt.WindowShortcut).activated.connect(a, "trigger");
 
