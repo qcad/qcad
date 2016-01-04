@@ -1965,7 +1965,7 @@ LibraryBrowser.showDirectory = function(dirName) {
     }
 
     var dirModel = dirTree.model();
-    var treeIndex = dirModel.index(dirName);
+    var treeIndex = dirModel.pathIndex(dirName);
     LibraryBrowser.deselectAllDirs();
     var selectionModel = dirTree.selectionModel();
     var flags = new QItemSelectionModel.SelectionFlags(QItemSelectionModel.Select);
@@ -1976,7 +1976,7 @@ LibraryBrowser.showDirectory = function(dirName) {
         treeIndex = treeIndex.parent();
         QCoreApplication.processEvents();
     }
-    treeIndex = dirModel.index(dirName);
+    treeIndex = dirModel.pathIndex(dirName);
     dirTree.scrollTo(treeIndex);
     listView.scrollToTop();
 };
