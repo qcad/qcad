@@ -104,7 +104,7 @@ AddOn.prototype.initAddOn = function(splash, text) {
 
     var initFilePath = this.getInitFilePath();
     if (new QFileInfo(initFilePath).exists()) {
-        include(initFilePath, className);
+        include(initFilePath, className, true);
         init(includeBasePath);
     }
     else {
