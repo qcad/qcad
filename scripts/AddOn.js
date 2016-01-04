@@ -296,6 +296,11 @@ AddOn.prototype.getTitle = function() {
 
     if (!isNull(title)) {
         title = title.replace("&", "");
+
+        // remove everything after tab (shortcuts under windows):
+        if (title.indexOf("\t")!==-1) {
+            title = title.substring(0, title.indexOf("\t"));
+        }
     }
 
     return title;
