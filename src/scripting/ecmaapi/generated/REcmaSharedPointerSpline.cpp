@@ -142,6 +142,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, appendControlPoint, "appendControlPoint");
             
+            REcmaHelper::registerFunction(&engine, proto, appendControlPoints, "appendControlPoints");
+            
             REcmaHelper::registerFunction(&engine, proto, removeLastControlPoint, "removeLastControlPoint");
             
             REcmaHelper::registerFunction(&engine, proto, setControlPoints, "setControlPoints");
@@ -151,6 +153,8 @@
             REcmaHelper::registerFunction(&engine, proto, getControlPointsWrapped, "getControlPointsWrapped");
             
             REcmaHelper::registerFunction(&engine, proto, countControlPoints, "countControlPoints");
+            
+            REcmaHelper::registerFunction(&engine, proto, getControlPointAt, "getControlPointAt");
             
             REcmaHelper::registerFunction(&engine, proto, appendFitPoint, "appendFitPoint");
             
@@ -295,6 +299,8 @@
             REcmaHelper::registerFunction(&engine, proto, getSegments, "getSegments");
             
             REcmaHelper::registerFunction(&engine, proto, getDiscontinuities, "getDiscontinuities");
+            
+            REcmaHelper::registerFunction(&engine, proto, simplify, "simplify");
             
             REcmaHelper::registerFunction(&engine, proto, updateFromControlPoints, "updateFromControlPoints");
             
@@ -1128,6 +1134,62 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerSpline::appendControlPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSpline::appendControlPoints", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSpline::appendControlPoints";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("appendControlPoints", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->appendControlPoints(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.appendControlPoints().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSpline::appendControlPoints", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerSpline::removeLastControlPoint
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1372,6 +1434,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerSpline::countControlPoints", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerSpline::getControlPointAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSpline::getControlPointAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSpline::getControlPointAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("getControlPointAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getControlPointAt(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getControlPointAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSpline::getControlPointAt", context, engine);
             return result;
         }
          QScriptValue
@@ -6103,6 +6225,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerSpline::getDiscontinuities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerSpline::simplify
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerSpline::simplify", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerSpline::simplify";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("simplify", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->simplify(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.simplify().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerSpline::simplify", context, engine);
             return result;
         }
          QScriptValue

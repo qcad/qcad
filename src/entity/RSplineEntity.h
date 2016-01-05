@@ -235,6 +235,10 @@ public:
         return data.getExploded(segments);
     }
 
+    void simplify(double tolerance) {
+        data.simplify(tolerance);
+    }
+
     /*
     double getAngle() const {
         return data.getAngle();

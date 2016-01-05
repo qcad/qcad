@@ -77,11 +77,13 @@ public:
     //virtual RVector getClosestPointOnShape(const RVector& p, bool limited) const;
 
     void appendControlPoint(const RVector& point);
+    void appendControlPoints(const QList<RVector>& points);
     void removeLastControlPoint();
     void setControlPoints(const QList<RVector>& points);
     QList<RVector> getControlPoints() const;
     QList<RVector> getControlPointsWrapped() const;
     int countControlPoints() const;
+    RVector getControlPointAt(int i) const;
 
     void appendFitPoint(const RVector& point);
     void removeLastFitPoint();
@@ -185,6 +187,7 @@ public:
     QList<RSpline> getSegments(const QList<RVector>& points) const;
 
     QList<RVector> getDiscontinuities() const;
+    RSpline simplify(double tolerance);
 
     void updateFromControlPoints() const;
     void updateFromFitPoints(bool useTangents = false) const;

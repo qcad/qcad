@@ -51,12 +51,6 @@
         <return>return <expr><call><name>indexFromItem</name><argument_list>(<argument><expr><name>item</name></expr></argument>, <argument><expr><name>column</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
-    <comment type="line">//void scrollToItem(const QTreeWidgetItem* item, QAbstractItemView::ScrollHint hint = EnsureVisible);</comment>
-
-<comment type="line">//    void setIconOffset(int o) {</comment>
-<comment type="line">//        iconOffset = o;</comment>
-<comment type="line">//    }</comment>
-
 </public><protected>protected:
     <function_decl><type><name>void</name></type> <name>contextMenuEvent</name><parameter_list>(<param><decl><type><name>QContextMenuEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>mousePressEvent</name><parameter_list>(<param><decl><type><name>QMouseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
@@ -72,7 +66,6 @@
     <decl_stmt><decl><type><name>int</name></type> <name>indexPressed</name></decl>;</decl_stmt>
     <comment type="line">// selectable column or -1 for all:</comment>
     <decl_stmt><decl><type><name>int</name></type> <name>selectableColumn</name></decl>;</decl_stmt>
-    <comment type="line">//int iconOffset;</comment>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTreeWidget*</argument>)</argument_list></macro>

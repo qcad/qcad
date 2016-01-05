@@ -221,6 +221,14 @@ void RSpline::appendControlPoint(const RVector& point) {
 }
 
 /**
+ * Appends the given control points.
+ */
+void RSpline::appendControlPoints(const QList<RVector>& points) {
+    controlPoints.append(points);
+    update();
+}
+
+/**
  * Removes the last control point.
  *
  * \param upd Update internal spline representation.
@@ -269,6 +277,13 @@ QList<RVector> RSpline::getControlPointsWrapped() const {
  */
 int RSpline::countControlPoints() const {
     return controlPoints.size();
+}
+
+RVector RSpline::getControlPointAt(int i) const {
+    if (i>=0 && i<controlPoints.size()) {
+        return controlPoints.at(i);
+    }
+    return RVector::invalid;
 }
 
 /**
@@ -1178,6 +1193,13 @@ QList<RVector> RSpline::getDiscontinuities() const {
     return ret;
 }
 
+RSpline RSpline::simplify(double tolerance) {
+    if (splineProxy!=NULL) {
+        return splineProxy->simplify(*this, tolerance);
+    }
+    return *this;
+}
+
 //bool RSpline::getIntersectionPointsProxy(QList<RVector>& res, const RShape& other, bool limited, bool same) const {
 //    if (splineProxy!=NULL) {
 //        res.append(splineProxy->getIntersectionPoints(*this, other, limited, same));
@@ -1381,7 +1403,6 @@ void RSpline::updateFromFitPoints(bool useTangents) const {
     }
 
     // call into plugin
-    //if (updateFromFitPointsFunction!=NULL) {
     if (splineProxy!=NULL) {
         RSpline spline = splineProxy->updateFromFitPoints(*this, useTangents);
         this->degree = spline.degree;

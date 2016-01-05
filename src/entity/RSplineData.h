@@ -161,6 +161,11 @@ public:
         return RSpline::toPolyline(segments);
     }
 
+    void simplify(double tolerance) {
+        RSpline s = RSpline::simplify(tolerance);
+        setShape(s);
+    }
+
     //RSpline getSubSpline(double d1, double d2) const {
     //    return RSpline::getSubSpline(d1, d2);
     //}

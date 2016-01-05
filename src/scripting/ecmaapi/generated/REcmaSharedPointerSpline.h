@@ -98,6 +98,9 @@
         appendControlPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        appendControlPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         removeLastControlPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -111,6 +114,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         countControlPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getControlPointAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         appendFitPoint
@@ -327,6 +333,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDiscontinuities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        simplify
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         updateFromControlPoints

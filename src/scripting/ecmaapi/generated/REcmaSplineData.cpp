@@ -129,6 +129,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, toPolyline, "toPolyline");
             
+            REcmaHelper::registerFunction(&engine, proto, simplify, "simplify");
+            
             REcmaHelper::registerFunction(&engine, proto, castToShape, "castToShape");
             
             REcmaHelper::registerFunction(&engine, proto, getShapes, "getShapes");
@@ -2134,6 +2136,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSplineData::toPolyline", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSplineData::simplify
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSplineData::simplify", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::simplify";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSplineData* self = 
+                        getSelf("simplify", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->simplify(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.simplify().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSplineData::simplify", context, engine);
             return result;
         }
          QScriptValue

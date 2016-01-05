@@ -68,6 +68,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="appendControlPoints"
+    cppName="appendControlPoints" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="points"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="removeLastControlPoint"
     cppName="removeLastControlPoint" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -98,6 +107,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="getControlPointAt" cppName="getControlPointAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+      </variant>
     </method>
     <method name="appendFitPoint" cppName="appendFitPoint"
     specifier="public" isStatic="false" isVirtual="false"
@@ -605,6 +621,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QList &lt; RVector &gt;"
       isPureVirtual="false" />
+    </method>
+    <method name="simplify" cppName="simplify" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="tolerance"
+        isConst="false" />
+      </variant>
     </method>
     <method name="updateFromControlPoints"
     cppName="updateFromControlPoints" specifier="public"
