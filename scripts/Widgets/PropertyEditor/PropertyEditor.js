@@ -1325,6 +1325,7 @@ PropertyEditor.prototype.beginEvent = function() {
     var linetypeCombo = dock.findChild("Linetype");
     linetypeCombo.init(EAction.getDocument());
 
+    appWin.notifyPropertyListeners(EAction.getDocument());
 };
 
 PropertyEditor.prototype.finishEvent = function() {
