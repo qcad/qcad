@@ -304,6 +304,7 @@ public:
     static bool triggerByCommand(const QString& cmd);
     static RGuiAction* getByScriptFile(const QString& scriptFile);
     static RGuiAction* getByClassName(const QString& className);
+    static RGuiAction* getByCommand(const QString& command);
     static bool triggerByScriptFile(const QString& scriptFile);
     
     static QStringList getAvailableCommands(bool primaryOnly=false);

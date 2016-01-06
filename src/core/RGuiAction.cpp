@@ -874,6 +874,13 @@ RGuiAction* RGuiAction::getByClassName(const QString& className) {
     return NULL;
 }
 
+RGuiAction* RGuiAction::getByCommand(const QString& command) {
+    if (actionsByCommand.count(command) != 0) {
+        return actionsByCommand[command];
+    }
+
+    return NULL;
+}
 
 /**
  * \return A list of available top level commands. These are commands
