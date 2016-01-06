@@ -138,7 +138,7 @@
     </message>
     <message>
         <location line="+309"/>
-        <location line="+55"/>
+        <location line="+56"/>
         <location line="+11"/>
         <source>Property Editor</source>
         <translation>Urejevalec lastnosti</translation>

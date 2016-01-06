@@ -39,7 +39,7 @@
         <translation>Déplacer entité</translation>
     </message>
     <message>
-        <location line="+332"/>
+        <location line="+343"/>
         <source>Move Reference Point</source>
         <translation>Déplacer référence</translation>
     </message>
@@ -52,6 +52,11 @@
         <location line="+24"/>
         <source>Move Entity</source>
         <translation>Déplacer entité</translation>
+    </message>
+    <message>
+        <location line="+118"/>
+        <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
+        <translation>Édition bloc &apos;%1&apos;&lt;br&gt;Choisissez &lt;i&gt;Bloc &gt; Retour au dessin principal&lt;/i&gt; lorsque vous avez terminé</translation>
     </message>
 </context>
 <context>
@@ -105,7 +110,7 @@
         <translation>Outils de CAO</translation>
     </message>
     <message>
-        <location line="+675"/>
+        <location line="+686"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entité est sur un calque verrouillé.</translation>

@@ -39,7 +39,7 @@
         <translation>Mover entidad</translation>
     </message>
     <message>
-        <location line="+332"/>
+        <location line="+343"/>
         <source>Move Reference Point</source>
         <translation>Mover punto de referencia</translation>
     </message>
@@ -52,6 +52,11 @@
         <location line="+24"/>
         <source>Move Entity</source>
         <translation>Mover entidad</translation>
+    </message>
+    <message>
+        <location line="+118"/>
+        <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
+        <translation>Editar bloque &apos;%1&apos;&lt;br&gt;Elija &lt;i&gt;Bloque &gt; Volver al dibujo principal&lt;/i&gt; cuando se hace</translation>
     </message>
 </context>
 <context>
@@ -105,7 +110,7 @@
         <translation>Herramientas CAD</translation>
     </message>
     <message>
-        <location line="+675"/>
+        <location line="+686"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entidad está en una capa bloqueada.</translation>

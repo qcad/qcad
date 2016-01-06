@@ -39,7 +39,7 @@
         <translation>Spostare entità</translation>
     </message>
     <message>
-        <location line="+332"/>
+        <location line="+343"/>
         <source>Move Reference Point</source>
         <translation>Spostare riferimento</translation>
     </message>
@@ -52,6 +52,11 @@
         <location line="+24"/>
         <source>Move Entity</source>
         <translation>Spostare entità</translation>
+    </message>
+    <message>
+        <location line="+118"/>
+        <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
+        <translation>Modifica blocco &apos;%1&apos;&lt;br&gt;Scegliete &lt;i&gt;Blocco &gt; Torna al disegno principale&lt;/i&gt; quando fatto</translation>
     </message>
 </context>
 <context>
@@ -101,7 +106,7 @@
         <translation>Strumenti CAD</translation>
     </message>
     <message>
-        <location line="+675"/>
+        <location line="+686"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entità è su un layer bloccato.</translation>

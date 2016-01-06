@@ -39,7 +39,7 @@
         <translation>Mova a entidade para a localização desejada</translation>
     </message>
     <message>
-        <location line="+332"/>
+        <location line="+343"/>
         <source>Move Reference Point</source>
         <translation>Mova o Ponto de Referência</translation>
     </message>
@@ -52,6 +52,11 @@
         <location line="+24"/>
         <source>Move Entity</source>
         <translation>Mova a Entidade</translation>
+    </message>
+    <message>
+        <location line="+118"/>
+        <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
+        <translation>Edição bloco &apos;%1&apos;&lt;br&gt;Escolha &lt;i&gt;Bloco &gt; Retorne ao Desenho Principal&lt;/i&gt; quando feito</translation>
     </message>
 </context>
 <context>
@@ -125,7 +130,7 @@ Ferramentas CAD</translatorcomment>
         <translation>Ferramentas CAD</translation>
     </message>
     <message>
-        <location line="+675"/>
+        <location line="+686"/>
         <source>Entity is on a locked layer.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>A entidade está em uma camada bloqueada.</translation>

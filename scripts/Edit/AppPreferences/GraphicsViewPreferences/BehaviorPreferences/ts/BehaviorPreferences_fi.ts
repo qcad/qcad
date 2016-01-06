@@ -17,7 +17,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+55"/>
+        <location filename="../PreferencesPage.ui" line="+48"/>
         <source>Double-Click</source>
         <translation>Kaksoisnapsautus</translation>
     </message>
@@ -25,6 +25,11 @@
         <location line="+6"/>
         <source>Double-click to edit text</source>
         <translation>Muokkaa tekstiä kaksoisnapsauttamalla</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Double-click to edit hatch</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -37,7 +42,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-59"/>
+        <location line="-62"/>
         <source>Right-Click</source>
         <translation>Oikea napsautus</translation>
     </message>
@@ -47,12 +52,7 @@
         <translation>Oikea napsautus poistaa valinnat</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Right-click on entity shows context menu</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+36"/>
+        <location line="+46"/>
         <source>Double-click to select contour</source>
         <translation type="unfinished"></translation>
     </message>

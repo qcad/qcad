@@ -4,37 +4,37 @@
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../Counter.js" line="63"/>
+        <location filename="../Counter.js" line="+63"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>
     <message>
-        <location filename="../Counter.ui" line="17"/>
+        <location filename="../Counter.ui" line="+17"/>
         <source>Start:</source>
         <translation>Start:</translation>
     </message>
     <message>
-        <location filename="../Counter.ui" line="31"/>
+        <location line="+14"/>
         <source>Incr:</source>
         <translation>Schrittweite:</translation>
     </message>
     <message>
-        <location filename="../Counter.ui" line="51"/>
+        <location line="+20"/>
         <source>Prefix:</source>
         <translation>Präfix:</translation>
     </message>
     <message>
-        <location filename="../Counter.ui" line="71"/>
+        <location line="+20"/>
         <source>Suffix:</source>
         <translation>Suffix:</translation>
     </message>
     <message>
-        <location filename="../CounterInit.js" line="2"/>
+        <location filename="../CounterInit.js" line="+2"/>
         <source>&amp;Counter</source>
         <translation>&amp;Zähler</translation>
     </message>
     <message>
-        <location filename="../CounterInit.js" line="6"/>
+        <location line="+4"/>
         <source>Auto increment number</source>
         <translation>Zähler automatisch erhöhen</translation>
     </message>

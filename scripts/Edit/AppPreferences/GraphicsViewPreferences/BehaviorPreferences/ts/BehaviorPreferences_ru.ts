@@ -17,7 +17,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+55"/>
+        <location filename="../PreferencesPage.ui" line="+48"/>
         <source>Double-Click</source>
         <translation>Двойной щелчок</translation>
     </message>
@@ -25,6 +25,11 @@
         <location line="+6"/>
         <source>Double-click to edit text</source>
         <translation>Двойной щелчок для редактирования текста</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Double-click to edit hatch</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -37,7 +42,7 @@
         <translation>Двойной щелчок правой кнопкой мыши для сброса</translation>
     </message>
     <message>
-        <location line="-59"/>
+        <location line="-62"/>
         <source>Right-Click</source>
         <translation>Щелчок правой кнопкой</translation>
     </message>
@@ -47,12 +52,11 @@
         <translation>Щелчок правой кнопкой мыши для отмены выбора объектов</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Right-click on entity shows context menu</source>
-        <translation>Щелчок правой кнопкой мыши показывает контекстное меню</translation>
+        <translation type="vanished">Щелчок правой кнопкой мыши показывает контекстное меню</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+46"/>
         <source>Double-click to select contour</source>
         <translation>Двойной щелчок выбирает контур</translation>
     </message>

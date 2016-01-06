@@ -165,7 +165,7 @@ Specifica la base</translatorcomment>
     </message>
     <message>
         <location line="+309"/>
-        <location line="+55"/>
+        <location line="+56"/>
         <location line="+11"/>
         <source>Property Editor</source>
         <translation>Editor delle proprietà</translation>

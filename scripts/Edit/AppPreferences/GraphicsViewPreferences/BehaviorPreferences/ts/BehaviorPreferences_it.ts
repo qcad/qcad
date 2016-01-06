@@ -17,7 +17,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+55"/>
+        <location filename="../PreferencesPage.ui" line="+48"/>
         <source>Double-Click</source>
         <translation>Doppio-click</translation>
     </message>
@@ -25,6 +25,11 @@
         <location line="+6"/>
         <source>Double-click to edit text</source>
         <translation>Doppio-click per modificare il testo</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Double-click to edit hatch</source>
+        <translation>Doppio-click per modificare il tratteggi</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -37,7 +42,7 @@
         <translation>Destro fare doppio clic per reset</translation>
     </message>
     <message>
-        <location line="-59"/>
+        <location line="-62"/>
         <source>Right-Click</source>
         <translation>Pulsante destro del mouse</translation>
     </message>
@@ -47,12 +52,11 @@
         <translation>Tasto destro del mouse per deselezionare</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Right-click on entity shows context menu</source>
-        <translation>Tasto destro del mouse su un&apos;entità mostra menu contestuale</translation>
+        <translation type="vanished">Tasto destro del mouse su un&apos;entità mostra menu contestuale</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+46"/>
         <source>Double-click to select contour</source>
         <translation>Doppio-click per seleziona contorno</translation>
     </message>

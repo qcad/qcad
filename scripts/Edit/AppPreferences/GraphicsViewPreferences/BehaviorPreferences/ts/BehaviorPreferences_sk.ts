@@ -17,7 +17,7 @@
 <context>
     <name>GraphicsView</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+55"/>
+        <location filename="../PreferencesPage.ui" line="+48"/>
         <source>Double-Click</source>
         <translation>Dvojklik</translation>
     </message>
@@ -25,6 +25,11 @@
         <location line="+6"/>
         <source>Double-click to edit text</source>
         <translation>Dvojklikom otvoriť úpravu textu</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Double-click to edit hatch</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+10"/>
@@ -37,7 +42,7 @@
         <translation>Dvojklik pravým tlačítkom reset</translation>
     </message>
     <message>
-        <location line="-59"/>
+        <location line="-62"/>
         <source>Right-Click</source>
         <translation>Kliknutie pravým tlačidlom myši</translation>
     </message>
@@ -47,12 +52,11 @@
         <translation>Pravé tlačidlo myši zruší výber prvkov (vhodné použiť s viacnásobným výberom prvkov)</translation>
     </message>
     <message>
-        <location line="+7"/>
         <source>Right-click on entity shows context menu</source>
-        <translation>Kliknutím na prvok sa zobrazí kontextová ponuka</translation>
+        <translation type="vanished">Kliknutím na prvok sa zobrazí kontextová ponuka</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+46"/>
         <source>Double-click to select contour</source>
         <translation>Dvojklikom označiť obrys</translation>
     </message>

@@ -145,7 +145,7 @@
     </message>
     <message>
         <location line="+309"/>
-        <location line="+55"/>
+        <location line="+56"/>
         <location line="+11"/>
         <source>Property Editor</source>
         <translation>Eigenschaften Editor</translation>
@@ -205,7 +205,7 @@
         <translation type="vanished">Auswahl auf neuen Layer verschieben</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="-981"/>
+        <location filename="../PropertyEditor.js" line="-982"/>
         <source>Custom</source>
         <translation>Benutzerdefiniert</translation>
     </message>

@@ -34,7 +34,7 @@
         <translation>Siirrä kohde haluttuun paikkaan</translation>
     </message>
     <message>
-        <location line="+332"/>
+        <location line="+343"/>
         <source>Move Reference Point</source>
         <translation>Siirrä viite</translation>
     </message>
@@ -47,6 +47,11 @@
         <location line="+24"/>
         <source>Move Entity</source>
         <translation>Siirrä kohde</translation>
+    </message>
+    <message>
+        <location line="+118"/>
+        <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -93,7 +98,7 @@
         <translation>CAD työkalut</translation>
     </message>
     <message>
-        <location line="+675"/>
+        <location line="+686"/>
         <source>Entity is on a locked layer.</source>
         <translation>Kohde on lukitussa tasossa.</translation>
     </message>

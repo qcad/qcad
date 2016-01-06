@@ -39,13 +39,6 @@
          </property>
         </widget>
        </item>
-       <item>
-        <widget class="QCheckBox" name="RightClickEntityContextMenu">
-         <property name="text">
-          <string>Right-click on entity shows context menu</string>
-         </property>
-        </widget>
-       </item>
       </layout>
      </widget>
     </item>

@@ -93,13 +93,13 @@
     </message>
     <message>
         <location line="+309"/>
-        <location line="+55"/>
+        <location line="+56"/>
         <location line="+11"/>
         <source>Property Editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-66"/>
+        <location line="-67"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
