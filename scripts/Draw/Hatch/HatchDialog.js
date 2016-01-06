@@ -85,7 +85,28 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
 
     if (!isNull(hatchDataIn)) {
         // initialize dialog from given hatch data (hatchDataIn):
-        // TODO
+        var rbSolidFill = this.dialog.findChild("SolidFill");
+        var rbHatchPattern = this.dialog.findChild("HatchPattern");
+        if (hatchDataIn.isSolid()) {
+            rbSolidFill.checked = true;
+        }
+        else {
+            rbHatchPattern.checked = true;
+        }
+
+        var cbPattern = this.dialog.findChild("Pattern");
+        var idx = cbPattern.findText(hatchDataIn.getPatternName(), Qt.MatchFixedString);
+//        if (idx===-1) {
+//            cbPattern.currentIndex = 0;
+//        }
+//        else {
+            cbPattern.currentIndex = idx;
+//        }
+
+        var leAngle = this.dialog.findChild("Angle");
+        leAngle.setValue(hatchDataIn.getAngle());
+        var leScale = this.dialog.findChild("Scale");
+        leScale.setValue(hatchDataIn.getScale());
     }
     else {
         // initialize dialog from previous values (ini file):
@@ -169,6 +190,7 @@ HatchDialog.prototype.patternChanged = function() {
     }
 
     var data = new RHatchData(radioSolid.checked, 1.0, angle, patternName);
+    data.setDocument(previewDoc);
     data.setLineweight(RLineweight.Weight015);
     var bgColor = RSettings.getColor("GraphicsViewColors/BackgroundColor", new RColor("black"));
     if (bgColor.lightness()>200) {
