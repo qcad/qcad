@@ -514,7 +514,7 @@ int RSettings::getDashThreshold() {
 
 bool RSettings::isTextRenderedAsText() {
     if (textRenderedAsText==-1) {
-        textRenderedAsText = getStringValue("TextRendering/RenderAs", "Paths") == "Text";
+        textRenderedAsText = getStringValue("TextRendering/RenderAs", "Text") == "Text";
     }
     return textRenderedAsText;
 }
