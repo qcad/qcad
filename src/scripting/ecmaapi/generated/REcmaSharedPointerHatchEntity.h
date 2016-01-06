@@ -64,6 +64,9 @@
         getType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setData
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasCustomPattern
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -6271,9 +6271,14 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'void'
-    
+    // return type 'RSpline'
+    RSpline cppResult =
+        
                self->simplify(a0);
+        // return type: RSpline
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
     } else
 
 

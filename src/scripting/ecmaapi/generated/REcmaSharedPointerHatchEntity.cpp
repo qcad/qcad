@@ -78,6 +78,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getType, "getType");
             
+            REcmaHelper::registerFunction(&engine, proto, setData, "setData");
+            
             REcmaHelper::registerFunction(&engine, proto, hasCustomPattern, "hasCustomPattern");
             
             REcmaHelper::registerFunction(&engine, proto, getCustomPattern, "getCustomPattern");
@@ -693,6 +695,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerHatchEntity::setData
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setData", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::setData";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RHatchEntity* self = 
+                        getSelf("setData", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RHatchData */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RHatchData*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RHatchData*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RHatchEntity: Argument 0 is not of type RHatchData.",
+                               context);                    
+                    }
+                    RHatchData 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setData(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setData().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setData", context, engine);
             return result;
         }
          QScriptValue

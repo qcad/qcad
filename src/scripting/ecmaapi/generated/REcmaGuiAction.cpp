@@ -283,6 +283,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getByClassName, "getByClassName");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getByCommand, "getByCommand");
+            
             REcmaHelper::registerFunction(&engine, &ctor, triggerByScriptFile, "triggerByScriptFile");
             
             REcmaHelper::registerFunction(&engine, &ctor, getAvailableCommands, "getAvailableCommands");
@@ -4700,6 +4702,56 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGuiAction::getByClassName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::getByCommand
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::getByCommand", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getByCommand";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RGuiAction *'
+    RGuiAction * cppResult =
+        RGuiAction::
+       getByCommand(a0);
+        // return type: RGuiAction *
+                // QObject
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getByCommand().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::getByCommand", context, engine);
             return result;
         }
          QScriptValue
