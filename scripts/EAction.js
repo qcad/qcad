@@ -1749,6 +1749,17 @@ EAction.handleUserMessage = function(message) {
     appWin.handleUserMessage(message);
 };
 
+EAction.handleUserInfo = function(message) {
+    if (isNull(message)) {
+        return;
+    }
+    var appWin = EAction.getMainWindow();
+    if (isNull(appWin)) {
+        return;
+    }
+    appWin.handleUserInfo(message);
+};
+
 EAction.handleUserCommand = function(message) {
     if (isNull(message)) {
         return;
