@@ -624,7 +624,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="simplify" cppName="simplify" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
+      <variant returnType="RSpline" isPureVirtual="false">
         <arg type="double" typeName="double" name="tolerance"
         isConst="false" />
       </variant>
