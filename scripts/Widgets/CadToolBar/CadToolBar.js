@@ -96,6 +96,10 @@ CadToolBar.prototype.contextMenuEvent = function(event) {
     }
 };
 
+/**
+ * \return True if the CAD tool bar switched back to the parent menu,
+ * false if it is already showing the top menu.
+ */
 CadToolBar.back = function() {
     var panel = CadToolBar.getCurrentPanel();
     if (isNull(panel)) {
