@@ -349,7 +349,6 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
         }
     } else if (event.button() == Qt.RightButton) {
         var handled = false;
-        var rightClickEntityContextMenu = undefined;
 
         if (this.state!==DefaultAction.State.Neutral && this.state!==DefaultAction.State.MovingEntityInBlock) {
             this.di.clearPreview();
@@ -364,11 +363,11 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
             entityId = this.getEntityIdUnderCursor(event, rightClickRange);
 
             var rightClickToDeselect = RSettings.getBoolValue("GraphicsView/RightClickToDeselect", false);
-            rightClickEntityContextMenu = RSettings.getBoolValue("GraphicsView/RightClickEntityContextMenu", false);
 
             // right-click on entity can be used to show context menu:
             if (entityId!==-1) {
                 // show entity context menu:
+                var rightClickEntityContextMenu = RSettings.getBoolValue("ContextMenu/RightClickEntityContextMenu", false);
                 if (rightClickEntityContextMenu) {
                     event.accept();
                     appWin.showContextMenu(entityId);
@@ -401,7 +400,8 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
         }
 
         if (!handled) {
-            if (rightClickEntityContextMenu===true) {
+            var rightClickContextMenu = RSettings.getBoolValue("ContextMenu/RightClickContextMenu", false);
+            if (rightClickContextMenu===true) {
                 event.accept();
                 appWin.showContextMenu(RObject.INVALID_ID);
             }
