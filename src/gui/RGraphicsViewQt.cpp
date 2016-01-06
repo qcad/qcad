@@ -248,6 +248,9 @@ void RGraphicsViewQt::mouseReleaseEvent(QMouseEvent* event) {
     if (event==NULL || scene==NULL) {
         return;
     }
+
+    event->ignore();
+
     RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
 
     // if mouse press and mouse release happend within a short time span and the

@@ -615,7 +615,7 @@ void RGraphicsView::handleMouseReleaseEvent(RMouseEvent& event) {
         return;
     }
     scene->handleMouseReleaseEvent(event);
-    if (navigationAction!=NULL) {
+    if (navigationAction!=NULL && !event.isAccepted()) {
         navigationAction->mouseReleaseEvent(event);
     }
 }

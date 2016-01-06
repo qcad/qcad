@@ -66,6 +66,16 @@
         </widget>
        </item>
        <item>
+        <widget class="QCheckBox" name="DoubleClickEditHatch">
+         <property name="text">
+          <string>Double-click to edit hatch</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QCheckBox" name="DoubleClickEditBlock">
          <property name="text">
           <string>Double-click on block reference opens block</string>

@@ -349,6 +349,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
         }
     } else if (event.button() == Qt.RightButton) {
         var handled = false;
+        var rightClickEntityContextMenu = undefined;
 
         if (this.state!==DefaultAction.State.Neutral && this.state!==DefaultAction.State.MovingEntityInBlock) {
             this.di.clearPreview();
@@ -358,17 +359,18 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
         }
 
         else if (this.state===DefaultAction.State.Neutral) {
+            var appWin = EAction.getMainWindow();
             var rightClickRange = RSettings.getIntValue("GraphicsView/RightClickRange", 10);
             entityId = this.getEntityIdUnderCursor(event, rightClickRange);
 
             var rightClickToDeselect = RSettings.getBoolValue("GraphicsView/RightClickToDeselect", false);
-            var rightClickEntityContextMenu = RSettings.getBoolValue("GraphicsView/RightClickEntityContextMenu", false);
+            rightClickEntityContextMenu = RSettings.getBoolValue("GraphicsView/RightClickEntityContextMenu", false);
 
             // right-click on entity can be used to show context menu:
             if (entityId!==-1) {
                 // show entity context menu:
                 if (rightClickEntityContextMenu) {
-                    var appWin = EAction.getMainWindow();
+                    event.accept();
                     appWin.showContextMenu(entityId);
                     handled = true;
                 }
@@ -393,7 +395,16 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
         }
 
         if (!handled) {
-            CadToolBar.back();
+            if (CadToolBar.back()===true) {
+                handled = true;
+            }
+        }
+
+        if (!handled) {
+            if (rightClickEntityContextMenu===true) {
+                event.accept();
+                appWin.showContextMenu(RObject.INVALID_ID);
+            }
         }
     }
 };
@@ -616,7 +627,14 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
 
         if (RSettings.getBoolValue("GraphicsView/DoubleClickEditBlock", true)===true) {
             include("scripts/Block/Block.js");
+            EAction.handleUserMessage(qsTr("Editing block '%1'<br>Choose <i>Block > Return to Main Drawing</i> when done").arg(entity.getReferencedBlockName()));
             Block.editBlock(this.di, entity.getReferencedBlockName());
+        }
+    }
+    else if (isHatchEntity(entity)) {
+        if (RSettings.getBoolValue("GraphicsView/DoubleClickEditHatch", true)===true) {
+            include("scripts/Modify/EditHatch/EditHatch.js");
+            EditHatch.editHatch(entity);
         }
     }
     else if (isLineEntity(entity) || 

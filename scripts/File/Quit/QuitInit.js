@@ -4,7 +4,7 @@ function init(basePath) {
         action.disableIcon();
     }
     action.setRequiresDocument(false);
-    action.setScriptFile(basePath + "/Quit.js");
+    //action.setScriptFile(basePath + "/Quit.js");
     action.setDefaultShortcut(new QKeySequence(QKeySequence.Quit));
     action.setDefaultCommands(["quit", "exit"]);
     action.checkable = false;

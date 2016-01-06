@@ -6,6 +6,7 @@ SUBDIRS = \
     BreakOutGap \
     BreakOutManual \
     Divide \
+    EditHatch \
     EditText \
     Explode \
     FlipHorizontal \

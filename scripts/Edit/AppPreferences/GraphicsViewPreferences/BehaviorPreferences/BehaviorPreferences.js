@@ -26,6 +26,6 @@ BehaviorPreferences.getPreferencesCategory = function() {
 
 BehaviorPreferences.initPreferences = function(pageWidget, calledByPrefDialog, document) {
     // hide right click context menu option:
-    var cb = pageWidget.findChild("RightClickEntityContextMenu");
-    cb.visible = false;
+    //var cb = pageWidget.findChild("RightClickEntityContextMenu");
+    //cb.visible = false;
 };
