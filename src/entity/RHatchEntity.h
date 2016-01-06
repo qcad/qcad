@@ -82,6 +82,10 @@ public:
         return RS::EntityHatch;
     }
 
+    void setData(RHatchData& d) {
+        data = d;
+    }
+
     bool hasCustomPattern() const {
         return data.hasCustomPattern();
     }
