@@ -99,15 +99,16 @@ CadToolBar.prototype.contextMenuEvent = function(event) {
 CadToolBar.back = function() {
     var panel = CadToolBar.getCurrentPanel();
     if (isNull(panel)) {
-        return;
+        return false;
     }
 
     // no back for main tools panel:
     if (panel.objectName==="MainToolsPanel") {
-        return;
+        return false;
     }
 
     CadToolBar.showPanel(panel.backMenuName, true);
+    return true;
 };
 
 CadToolBar.getPanel = function(title, name, hasBackButton) {
