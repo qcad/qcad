@@ -20,8 +20,8 @@
 include("../Edit.js");
 include("../AbstractPreferences.js");
 
-function DrawingPreferences(guiAction) {
-    AbstractPreferences.call(this, guiAction, false);
+function DrawingPreferences(guiAction, initialClassName) {
+    AbstractPreferences.call(this, guiAction, false, initialClassName);
 }
 
 DrawingPreferences.prototype = new AbstractPreferences();

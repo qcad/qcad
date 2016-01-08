@@ -24,8 +24,8 @@ include("../AbstractPreferences.js");
  * \brief Shows the application preferences dialog.
  * \ingroup ecma_edit
  */
-function AppPreferences(guiAction) {
-    AbstractPreferences.call(this, guiAction, true);
+function AppPreferences(guiAction, initialClassName) {
+    AbstractPreferences.call(this, guiAction, true, initialClassName);
 }
 
 AppPreferences.prototype = new AbstractPreferences();

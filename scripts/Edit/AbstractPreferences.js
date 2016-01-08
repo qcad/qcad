@@ -20,13 +20,14 @@
 include("../AddOn.js");
 include("Edit.js");
 
-function AbstractPreferences(guiAction, appPreferences) {
+function AbstractPreferences(guiAction, appPreferences, initialClassName) {
     Edit.call(this, guiAction);
     if (isNull(appPreferences)) {
         appPreferences = true;
     }
     this.appPreferences = appPreferences;
     this.restartWarningShown = false;
+    this.initialClassName = initialClassName;
 }
 
 AbstractPreferences.prototype = new Edit();
@@ -66,6 +67,10 @@ AbstractPreferences.prototype.beginEvent = function() {
 
     AbstractPreferences.fillTreeWidget(this.addOns, this.treeWidget, this.appPreferences);
     this.treeWidget.expandAll();
+
+    if (!isNull(this.initialClassName)) {
+        this.showPageFor(this.initialClassName);
+    }
 
     if (this.dialog.exec() === QDialog.Accepted.valueOf()) {
         // apply calls save and apply:
@@ -465,6 +470,22 @@ AbstractPreferences.prototype.showPage = function() {
     }
     this.pageWidget.setCurrentWidget(widget);
     this.treeWidget.setCurrentItem(item);
+};
+
+AbstractPreferences.prototype.showPageFor = function(className) {
+    var flags = new Qt.MatchFlags(Qt.MatchWildcard | Qt.MatchContains | Qt.MatchRecursive);
+    var items = this.treeWidget.findItems("*", flags, 0);
+    for (var i = 0; i < items.length; ++i) {
+        var item = items[i];
+        var ix = item.data(0, Qt.UserRole);
+        if (!isNull(ix)) {
+            var addOn = this.addOns[ix];
+            if (addOn.getClassName()===className) {
+                this.treeWidget.setCurrentItem(item);
+            }
+        }
+
+    }
 };
 
 /**
