@@ -221,6 +221,22 @@ function execScripts(args) {
             }
             // run existing action:
             var action = RGuiAction.getByScriptFile(args[i]);
+            if (isNull(action)) {
+                // gui action might not exist yet for this script, create one:
+                var resPath = args[i];
+                action = new RGuiAction("");
+                if (!new QFileInfo(resPath).exists()) {
+                    resPath = ":/" + resPath;
+                }
+                if (!new QFileInfo(resPath).exists()) {
+                    action = undefined;
+                }
+                else {
+                    action.setScriptFile(resPath);
+                    action.setRequiresDocument(false);
+                }
+            }
+
             if (!isNull(action)) {
                 ++i;
                 // handle script arguments:
@@ -232,10 +248,16 @@ function execScripts(args) {
                 action.slotTrigger();
             }
 
-            // include script:
             else {
+                // include (run) script which is not an action:
                 var scriptFile = args[i];
-                include(getAbsolutePathForArg(scriptFile));
+                var path = getAbsolutePathForArg(scriptFile);
+                if (new QFileInfo(path).exists()) {
+                    include(path);
+                }
+                else {
+                    qWarning("script not found: ", args[i]);
+                }
             }
         }
         if (args[i] === "-quit") {
