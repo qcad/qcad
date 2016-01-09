@@ -1057,7 +1057,6 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
             QList<RVector>::iterator it;
             for (it=points.begin(); it<points.end(); it++) {
                 RVector p = *it;
-                p.move(paintOffset);
                 //int rslt = pMode & 7;
                 if (rslt7 == 0) {
                     drawDot(painter, QPointF(p.x, p.y));
