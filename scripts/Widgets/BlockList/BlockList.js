@@ -71,6 +71,7 @@ function RBlockListQt(parent, addListener, showHeader) {
 
     this.itemDoubleClicked.connect(this, "editBlock");
     this.itemColumnClicked.connect(this, "itemColumnClickedSlot");
+    this.itemSelectionChanged.connect(this, "blockActivated");
     this.basePath = includeBasePath;
 }
 
