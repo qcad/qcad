@@ -66,6 +66,7 @@ HatchDialog.prototype.show =  function(hatchDataIn) {
     include("scripts/Widgets/AutoZoomView/AutoZoomView.js");
     var view = new AutoZoomView(this.dialog);
     view.objectName = "PreviewView";
+    view.setPaintOrigin(false);
     layout.addWidget(view, 0, 0);
     view.setScene(new RGraphicsSceneQt(this.previewDi));
     view.disableGestures();
