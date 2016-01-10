@@ -655,11 +655,15 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
     this.widget.findChild("LabelLinetypeScale").enabled = gotLinetypeScaleProperty;
     w = this.widget.findChild("LinetypeScale");
     w.enabled = gotLinetypeScaleProperty;
-    w.text = "";
+    if (!gotLinetypeScaleProperty) {
+        w.text = "";
+    }
     this.widget.findChild("LabelDrawOrder").enabled = gotDrawOrderProperty;
     w = this.widget.findChild("DrawOrder");
     w.enabled = gotDrawOrderProperty;
-    w.text = "";
+    if (!gotDrawOrderProperty) {
+        w.text = "";
+    }
 
     // update selection combo box at the top for entity filters:
     if (!onlyChanges) {
