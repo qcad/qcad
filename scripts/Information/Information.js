@@ -160,13 +160,14 @@ Information.prototype.addGridTicks = function(op, view, point1, point2, preview)
     var gridSpacing = spacings[0];
     var metaGridSpacing = spacings[1];
     
+    var c;
+
     // minor ticks
     var dv = point2.operator_subtract(point1);
     var a = point1.getAngleTo(point2);
     var b = new RVector(gridSpacing.x, 0); // assuming equal spacing for x / y
     b = b.rotate(a);
-    var c = b;
-    var num = Math.ceil(dv.getMagnitude() / gridSpacing.x);
+    var num = Math.ceil(dv.getMagnitude2d() / gridSpacing.x);
     for (var i = 1; i < num; ++i) {
         c = b.operator_multiply(i);
         this.addMinorTick(op, view, point1.operator_add(c), a, preview);
@@ -175,8 +176,7 @@ Information.prototype.addGridTicks = function(op, view, point1, point2, preview)
     // major ticks
     b = new RVector(metaGridSpacing.x, 0); // assuming equal spacing for x / y
     b = b.rotate(a);
-    c = b;
-    num = Math.ceil(dv.getMagnitude() / metaGridSpacing.x);
+    num = Math.ceil(dv.getMagnitude2d() / metaGridSpacing.x);
     for (i = 1; i < num; ++i) {
         c = b.operator_multiply(i);
         this.addMajorTick(op, view, point1.operator_add(c), a, preview);
