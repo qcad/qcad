@@ -27,12 +27,12 @@
         <translation>Zobraziť Z súradnice</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+1303"/>
+        <location filename="../PropertyEditor.js" line="+1307"/>
         <source>*VARIES*</source>
         <translation>*Rôzne*</translation>
     </message>
     <message>
-        <location line="-1113"/>
+        <location line="-1117"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -71,7 +71,7 @@
         <translation>Odstrániť vlastnosť z vybraných prvkov</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+68"/>
         <source>All</source>
         <translation>Všetko</translation>
     </message>

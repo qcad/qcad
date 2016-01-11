@@ -35,13 +35,13 @@ Tipo de linha:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1303"/>
+        <location filename="../PropertyEditor.js" line="+1307"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1113"/>
+        <location line="-1117"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--
@@ -97,7 +97,7 @@ Trocar para a próxima camada</translatorcomment>
         <translation>Remova esta propriedade dos objetos selecionados</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+68"/>
         <source>All</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

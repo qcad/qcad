@@ -4,7 +4,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../AbstractPreferences.js" line="+44"/>
+        <location filename="../AbstractPreferences.js" line="+45"/>
         <source>Application Preferences</source>
         <translation>Nastavitve aplikacije</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Nastavitve risbe</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+304"/>
         <source>Restart required</source>
         <translation>Potreben je ponovni zagon</translation>
     </message>

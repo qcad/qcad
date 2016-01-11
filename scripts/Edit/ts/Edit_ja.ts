@@ -4,7 +4,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../AbstractPreferences.js" line="+44"/>
+        <location filename="../AbstractPreferences.js" line="+45"/>
         <source>Application Preferences</source>
         <translation>アプリケーション設定</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>図面設定</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+304"/>
         <source>Restart required</source>
         <translation>再起動が必要</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../AbstractPreferences.js" line="+44"/>
+        <location filename="../AbstractPreferences.js" line="+45"/>
         <source>Application Preferences</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -23,7 +23,7 @@ Preferencje bieżącego rysunku
         <translation type="unfinished">Preferencje rysowania</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+304"/>
         <source>Restart required</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wymaga ponownego uruchomienia</translation>

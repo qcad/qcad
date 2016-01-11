@@ -4,7 +4,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../AbstractPreferences.js" line="+44"/>
+        <location filename="../AbstractPreferences.js" line="+45"/>
         <source>Application Preferences</source>
         <translatorcomment>--exact match--
 --file: AppPreferences_pt.ts--
@@ -24,7 +24,7 @@ Preferências do Desenho Atual...</translatorcomment>
         <translation>Preferências de Desenho</translation>
     </message>
     <message>
-        <location line="+300"/>
+        <location line="+304"/>
         <source>Restart required</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>É necessário reiniciar</translation>

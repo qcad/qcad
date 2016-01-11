@@ -51,7 +51,7 @@
     <message>
         <location line="+118"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Úprava bloku &apos;%1&apos;&lt;br&gt;Vybrať &lt;i&gt;Blok &gt; Návrat ku kresleniu &lt;/i&gt; keď bude hotové</translation>
     </message>
 </context>
 <context>
@@ -354,7 +354,7 @@
 <context>
     <name>autostart</name>
     <message>
-        <location filename="../autostart.js" line="+299"/>
+        <location filename="../autostart.js" line="+321"/>
         <source>Loading add-on translations...</source>
         <translation>Nahrávanie prekladového doplnku...</translation>
     </message>

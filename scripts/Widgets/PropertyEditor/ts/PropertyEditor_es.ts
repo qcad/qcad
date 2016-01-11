@@ -38,7 +38,7 @@ Tipo de línea:</translatorcomment>
         <translation type="vanished">Geometría</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+700"/>
+        <location filename="../PropertyEditor.js" line="+704"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
@@ -73,7 +73,7 @@ Tipo de línea:</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1113"/>
+        <location line="-1117"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -120,7 +120,7 @@ Valor indexado</translatorcomment>
         <translation>Retire esta propiedad de los objetos seleccionados</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+68"/>
         <source>All</source>
         <translatorcomment>--exact match--
 --file: qtiplot_es.ts--

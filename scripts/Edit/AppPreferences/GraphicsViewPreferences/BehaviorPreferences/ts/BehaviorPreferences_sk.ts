@@ -29,7 +29,7 @@
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Dvojitým kliknutím upraviť šrafy/výplň</translation>
     </message>
     <message>
         <location line="+10"/>
