@@ -1549,8 +1549,10 @@ void RExporter::exportImage(const RImageData& image, bool forceSelected) {
 }
 
 QList<RPainterPath> RExporter::exportText(const RTextBasedData& text, bool forceSelected) {
-    Q_UNUSED(text)
     Q_UNUSED(forceSelected)
+
+    setBrush(getBrush());
+    exportPainterPathSource(text);
     return QList<RPainterPath>();
 }
 
