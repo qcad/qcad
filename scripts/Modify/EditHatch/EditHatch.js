@@ -24,7 +24,7 @@
  * editing tool.
  */
 include("../Modify.js");
-include("scripts/Draw/Hatch/HatchDialog/HatchDialog.js");
+include("scripts/Draw/Hatch/HatchDialog.js");
 
 /**
  * \class EditHatch
