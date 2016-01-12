@@ -2063,6 +2063,7 @@ function restoreOverrideCursor() {
 }
 
 function addActionsToWidgets() {
+    var appWin = RMainWindowQt.getMainWindow();
     var actions = RGuiAction.getActions();
     var widgetTypes = ["Menu", "ToolBar", "Panel"];
     for (var c=0; c<actions.length; ++c) {
@@ -2072,6 +2073,7 @@ function addActionsToWidgets() {
         }
         var className = a.getScriptClass();
         var wns = a.getWidgetNames();
+        var addedToWidget = false;
 
         for (var k=0; k<wns.length; k++) {
             var wn = wns[k];
@@ -2103,7 +2105,7 @@ function addActionsToWidgets() {
                     }
                 }
             }
-            var w = RMainWindowQt.getMainWindow().findChild(wn);
+            var w = appWin.findChild(wn);
             if (!isNull(w)) {
 
                 // workaround for QTBUG-38256 (action not triggered for letter based shortcuts in sub menus)
@@ -2122,6 +2124,7 @@ function addActionsToWidgets() {
 
                 if (visibility) {
                     RGuiAction.addToWidget(a, w);
+                    addedToWidget = true;
 
                     if (isFunction(w.widgetForAction)) {
                         // if action was added to tool bar: set object name of tool button:
@@ -2139,6 +2142,12 @@ function addActionsToWidgets() {
             else {
                 qWarning("RGuiAction::init: Cannot add action to widget: ", wn);
             }
+        }
+
+        if (!addedToWidget) {
+            // always add action to main window to make sure keycodes
+            // are active even if action is invisible:
+            RGuiAction.addToWidget(a, appWin);
         }
     }
 }
