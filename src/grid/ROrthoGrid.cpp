@@ -613,6 +613,12 @@ void ROrthoGrid::paintCursor(const RVector& pos) {
         if (RSettings::getShowLargeCrosshair()) {
             view.paintGridLine(RLine(RVector(b.c1.x, pos.y), RVector(b.c2.x, pos.y)));
             view.paintGridLine(RLine(RVector(pos.x, b.c1.y), RVector(pos.x, b.c2.y)));
+
+            // TODO: alternative cross hairs from corners to cursor:
+//            view.paintGridLine(RLine(pos, RVector(b.c1.x, b.c1.y)));
+//            view.paintGridLine(RLine(pos, RVector(b.c1.x, b.c2.y)));
+//            view.paintGridLine(RLine(pos, RVector(b.c2.x, b.c1.y)));
+//            view.paintGridLine(RLine(pos, RVector(b.c2.x, b.c2.y)));
         }
         else {
             double s = view.mapDistanceFromView(25);
