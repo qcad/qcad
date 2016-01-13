@@ -91,8 +91,7 @@ LibraryBrowser.initPreferences = function(pageWidget) {
     viewModeCombo.addItem(qsTr("Icon"), "Icon");
     viewModeCombo.addItem(qsTr("List"), "List");
 
-    var dirList = new DirectoryList(pageWidget, "SourceList",
-            qsTr("Choose Source Folder"));
+    var dirList = new DirectoryList(pageWidget, "SourceList", qsTr("Choose Source Folder"));
 };
 
 LibraryBrowser.applyPreferences = function(doc) {
@@ -389,18 +388,18 @@ LibraryBrowser.updateFavoritesTab = function() {
 LibraryBrowser.initTagsTab = function() {
     var appWin = RMainWindowQt.getMainWindow();
     var formWidget = appWin.findChild("LibraryBrowserForm");
-    var tagsBrowser = appWin.findChild("TagsBrowser");
-    var webPage = tagsBrowser.page();
-    webPage.linkDelegationPolicy = QWebPage.DelegateAllLinks;
+//    var tagsBrowser = appWin.findChild("TagsBrowser");
+//    var webPage = tagsBrowser.page();
+//    webPage.linkDelegationPolicy = QWebPage.DelegateAllLinks;
 
     // make web view transparent:
-    var palette = tagsBrowser.palette;
-    palette.setBrush(QPalette.Base, new QColor(0,0,0,0));
-    webPage.palette = palette;
-    if (!RSettings.isQt(5)) {
-        tagsBrowser.setAttribute(Qt.WA_OpaquePaintEvent, false);
-    }
-    tagsBrowser.linkClicked.connect(LibraryBrowser, "linkClicked");
+//    var palette = tagsBrowser.palette;
+//    palette.setBrush(QPalette.Base, new QColor(0,0,0,0));
+//    webPage.palette = palette;
+//    if (!RSettings.isQt(5)) {
+//        tagsBrowser.setAttribute(Qt.WA_OpaquePaintEvent, false);
+//    }
+//    tagsBrowser.linkClicked.connect(LibraryBrowser, "linkClicked");
 
     var itemView =formWidget.findChild("TagsListView");
     var model = new QStandardItemModel(formWidget);
@@ -494,6 +493,9 @@ LibraryBrowser.linkClicked = function(url) {
  * \param force true: update HTML even if DB has not changed.
  */
 LibraryBrowser.updateTagsTab = function(force) {
+    // disabled:
+    return;
+
     if (force!==true) {
         var dbFileName = LibraryBrowser.getDbFileName();
         var dbMod = new QFileInfo(dbFileName).lastModified();
@@ -515,22 +517,16 @@ LibraryBrowser.updateTagsTab = function(force) {
 
     var mainFrame = tagsBrowser.page().mainFrame();
 
-    //var width = mainFrame.contentsSize.width() - 20;
     var width = tagsBrowser.page().viewportSize.width() - 20;
-//    qDebug("width:", width);
     var columns = Math.floor(width / 100);
-//    qDebug("columns:", columns);
     if (columns===0) {
         columns = 1;
     }
 
-//    var colWidth = 100/columns;
     var colWidth = Math.floor(width/columns) - 16;
-//    qDebug("colWidth:", colWidth);
 
     mainFrame.setScrollBarPolicy(Qt.Horizontal,Qt.ScrollBarAlwaysOff);
     mainFrame.setScrollBarPolicy(Qt.Vertical,Qt.ScrollBarAlwaysOn);
-    //var pos = mainFrame.scrollPosition;
 
     var categories = TagCategoryPeer.doSelectAll();
 
@@ -694,6 +690,9 @@ LibraryBrowser.updateTagsTab = function(force) {
 };
 
 LibraryBrowser.scrollTagsTab = function(fragment) {
+    // disabled:
+    return;
+
     var appWin = RMainWindowQt.getMainWindow();
     var tagsBrowser = appWin.findChild("TagsBrowser");
 
