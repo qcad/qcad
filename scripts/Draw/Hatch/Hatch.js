@@ -216,6 +216,11 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
 
     // handle closed polyline loops:
     if (Hatch.isClosedPolyline(entity)) {
+        if (entity.getLength()<RS.PointTolerance) {
+            // zero length closed polyline: safe to ignore:
+            return true;
+        }
+
         hatchData.newLoop();
         var segments = entity.getExploded();
         for (i=0; i<segments.length; i++) {
