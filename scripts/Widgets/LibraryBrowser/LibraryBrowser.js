@@ -931,7 +931,7 @@ LibraryBrowser.getSelectedIndexes = function(selectionModel) {
     }
     else {
         // Qt 5:
-        return selectionModel.selectedIndexes;
+        return selectionModel.selection.indexes();
     }
 };
 
