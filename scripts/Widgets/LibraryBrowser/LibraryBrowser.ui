@@ -82,10 +82,10 @@
      <widget class="QWidget" name="TagsTab">
       <attribute name="icon">
        <iconset>
-        <normaloff>Tag.svg</normaloff>Tag.svg</iconset>
+        <normaloff>Find.svg</normaloff>Find.svg</iconset>
       </attribute>
       <attribute name="title">
-       <string>Tags</string>
+       <string>Search</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <property name="spacing">
@@ -180,19 +180,6 @@
          <property name="childrenCollapsible">
           <bool>true</bool>
          </property>
-         <widget class="QWebView" name="TagsBrowser">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="url">
-           <url>
-            <string>about:blank</string>
-           </url>
-          </property>
-         </widget>
          <widget class="RListView" name="TagsListView">
           <property name="verticalScrollBarPolicy">
            <enum>Qt::ScrollBarAlwaysOn</enum>
@@ -374,11 +361,6 @@
   </layout>
  </widget>
  <customwidgets>
-  <customwidget>
-   <class>QWebView</class>
-   <extends>QWidget</extends>
-   <header>QtWebKitWidgets/QWebView</header>
-  </customwidget>
   <customwidget>
    <class>RListView</class>
    <extends>QListView</extends>
