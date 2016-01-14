@@ -261,11 +261,9 @@ private:
     QList<RPainterPath> painterPaths;
 
     // text layouts and transformations used to draw text as QTextLayout instead of painter paths:
-    //QList<QPair<QSharedPointer<QTextLayout>, QTransform> > textLayouts;
     QList<RTextLayout> textLayouts;
-    //QList<QSharedPointer<QTextLayout> > textLayouts;
+    // list of block transforms of all QTextLayout blocks of the current line:
     QList<QTransform> lineBlockTransforms;
-    //QList<QTransform> textTransforms;
 
     RBox boundingBox;
     double height;
