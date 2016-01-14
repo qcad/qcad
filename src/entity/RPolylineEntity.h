@@ -207,6 +207,10 @@ public:
         return data.isGeometricallyClosed();
     }
 
+    void autoClose() {
+        data.autoClose();
+    }
+
     double getLength() const {
         return data.getLength();
     }
@@ -225,6 +229,10 @@ public:
 
     void simplify(double angleTolerance) {
         data.simplify(angleTolerance);
+    }
+
+    QList<RVector> verifyTangency(double tolerance = RS::AngleTolerance) {
+        return data.verifyTangency(tolerance);
     }
 
     void setPolylineGen(bool on) {

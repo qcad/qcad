@@ -176,6 +176,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isGeometricallyClosed, "isGeometricallyClosed");
             
+            REcmaHelper::registerFunction(&engine, proto, autoClose, "autoClose");
+            
             REcmaHelper::registerFunction(&engine, proto, getOrientation, "getOrientation");
             
             REcmaHelper::registerFunction(&engine, proto, contains, "contains");
@@ -253,6 +255,8 @@
             REcmaHelper::registerFunction(&engine, proto, toPainterPath, "toPainterPath");
             
             REcmaHelper::registerFunction(&engine, proto, simplify, "simplify");
+            
+            REcmaHelper::registerFunction(&engine, proto, verifyTangency, "verifyTangency");
             
             REcmaHelper::registerFunction(&engine, proto, stripWidths, "stripWidths");
             
@@ -3291,6 +3295,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::isGeometricallyClosed", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::autoClose
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::autoClose", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::autoClose";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("autoClose", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->autoClose();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.autoClose().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::autoClose", context, engine);
             return result;
         }
          QScriptValue
@@ -6623,6 +6671,87 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::simplify", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::verifyTangency
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::verifyTangency", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::verifyTangency";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("verifyTangency", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->verifyTangency();
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RVector >'
+    QList < RVector > cppResult =
+        
+               self->verifyTangency(a0);
+        // return type: QList < RVector >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.verifyTangency().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::verifyTangency", context, engine);
             return result;
         }
          QScriptValue

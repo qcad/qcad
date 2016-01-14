@@ -161,6 +161,10 @@ public:
         return RPolyline::isGeometricallyClosed();
     }
 
+    void autoClose() {
+        RPolyline::autoClose();
+    }
+
     QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const {
         return RPolyline::getExploded(segments);
     }
@@ -171,6 +175,10 @@ public:
 
     void simplify(double angleTolerance) {
         RPolyline::simplify(angleTolerance);
+    }
+
+    QList<RVector> verifyTangency(double tolerance = RS::AngleTolerance) {
+        return RPolyline::verifyTangency(tolerance);
     }
 
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const;

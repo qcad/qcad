@@ -262,11 +262,9 @@
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>painterPaths</name></decl>;</decl_stmt>
 
     <comment type="line">// text layouts and transformations used to draw text as QTextLayout instead of painter paths:</comment>
-    <comment type="line">//QList&lt;QPair&lt;QSharedPointer&lt;QTextLayout&gt;, QTransform&gt; &gt; textLayouts;</comment>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RTextLayout</name></argument>&gt;</argument_list></name></type> <name>textLayouts</name></decl>;</decl_stmt>
-    <comment type="line">//QList&lt;QSharedPointer&lt;QTextLayout&gt; &gt; textLayouts;</comment>
+    <comment type="line">// list of block transforms of all QTextLayout blocks of the current line:</comment>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QTransform</name></argument>&gt;</argument_list></name></type> <name>lineBlockTransforms</name></decl>;</decl_stmt>
-    <comment type="line">//QList&lt;QTransform&gt; textTransforms;</comment>
 
     <decl_stmt><decl><type><name>RBox</name></type> <name>boundingBox</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>double</name></type> <name>height</name></decl>;</decl_stmt>

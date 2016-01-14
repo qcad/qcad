@@ -103,6 +103,8 @@ public:
     void setClosed(bool on);
     bool isClosed() const;
     bool isGeometricallyClosed(double tolerance=RS::PointTolerance) const;
+    void autoClose();
+
     RS::Orientation getOrientation() const;
 
     bool contains(const RVector& point, bool borderIsInside=false, double tolerance=RS::PointTolerance) const;
@@ -165,6 +167,7 @@ public:
     RPainterPath toPainterPath() const;
 
     bool simplify(double angleTolerance = RS::AngleTolerance);
+    QList<RVector> verifyTangency(double tolerance = RS::AngleTolerance);
 
     void stripWidths();
 

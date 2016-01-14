@@ -446,6 +446,19 @@ bool RPolyline::isGeometricallyClosed(double tolerance) const {
     return isClosed() || getStartPoint().getDistanceTo(getEndPoint()) < tolerance;
 }
 
+void RPolyline::autoClose() {
+    if (isClosed()) {
+        return;
+    }
+
+    if (!isGeometricallyClosed()) {
+        return;
+    }
+
+    removeLastVertex();
+    setClosed(true);
+}
+
 RS::Orientation RPolyline::getOrientation() const {
     if (!isGeometricallyClosed()) {
         return RS::Any;
@@ -1386,4 +1399,16 @@ bool RPolyline::simplify(double angleTolerance) {
     endWidths = newPolyline.endWidths;
 
     return ret;
+}
+
+/**
+ * Verifies the tangency of this polyline.
+ */
+QList<RVector> RPolyline::verifyTangency(double tolerance) {
+    if (RPolyline::hasProxy()) {
+        return RPolyline::getPolylineProxy()->verifyTangency(*this, tolerance);
+    }
+    else {
+        return QList<RVector>();
+    }
 }

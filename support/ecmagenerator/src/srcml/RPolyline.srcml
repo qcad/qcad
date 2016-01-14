@@ -104,6 +104,8 @@
     <function_decl><type><name>void</name></type> <name>setClosed</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>isClosed</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>isGeometricallyClosed</name><parameter_list>(<param><decl><type><name>double</name></type> <name>tolerance</name>=<init><expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>autoClose</name><parameter_list>()</parameter_list>;</function_decl>
+
     <function_decl><type><name><name>RS</name>::<name>Orientation</name></name></type> <name>getOrientation</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>bool</name></type> <name>contains</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>, <param><decl><type><name>bool</name></type> <name>borderIsInside</name>=<init><expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>tolerance</name>=<init><expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -166,6 +168,7 @@
     <function_decl><type><name>RPainterPath</name></type> <name>toPainterPath</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>bool</name></type> <name>simplify</name><parameter_list>(<param><decl><type><name>double</name></type> <name>angleTolerance</name> =<init> <expr><name><name>RS</name>::<name>AngleTolerance</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>verifyTangency</name><parameter_list>(<param><decl><type><name>double</name></type> <name>tolerance</name> =<init> <expr><name><name>RS</name>::<name>AngleTolerance</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>stripWidths</name><parameter_list>()</parameter_list>;</function_decl>
 

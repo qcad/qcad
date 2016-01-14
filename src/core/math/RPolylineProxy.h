@@ -46,6 +46,7 @@ public:
     virtual void trimEndPoint(RPolyline& polyline, const RVector& trimPoint, const RVector& clickPoint) = 0;
 
     virtual QList<RPolyline> renderThickPolyline(const RPolyline& polyline) = 0;
+    virtual QList<RVector> verifyTangency(const RPolyline& polyline, double tolerance = RS::AngleTolerance) = 0;
 };
 
 #endif

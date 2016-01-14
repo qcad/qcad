@@ -184,6 +184,9 @@
         isGeometricallyClosed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        autoClose
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getOrientation
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -302,6 +305,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         simplify
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        verifyTangency
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         stripWidths
