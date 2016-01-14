@@ -668,7 +668,7 @@ void RTextRenderer::render() {
                         fr.format = currentFormat.top();
                         localFormats.append(fr);
 
-                        // get painter paths for superscript at height 1.0:
+                        // get painter paths for superscript / subscript at height 1.0:
                         paths = getPainterPathsForBlock(
                                     script, localFormats,
                                     horizontalAdvance[s],
@@ -706,14 +706,16 @@ void RTextRenderer::render() {
                         QTransform allTransforms = sizeTransform;
                         allTransforms *= blockTransform;
 
-                        if (!lineBlockTransforms.isEmpty()) lineBlockTransforms.last() *= allTransforms;
-
                         // transform paths of current block and append to paths
                         // of current text line:
                         for (int i=0; i<paths.size(); ++i) {
                             RPainterPath p = paths.at(i);
                             p.transform(allTransforms);
                             linePaths.append(p);
+                        }
+
+                        if (!lineBlockTransforms.isEmpty()) {
+                            lineBlockTransforms.last() *= allTransforms;
                         }
                     }
 
@@ -731,6 +733,7 @@ void RTextRenderer::render() {
                     }
                 }
             }
+            // end of stacked text handling
 
             // prepare for next text block:
             if (lineFeed || paragraphFeed || xFeed || end) {
@@ -826,12 +829,13 @@ void RTextRenderer::render() {
 
                 width = qMax(width, lineBoundingBox.getMaximum().x - qMin(0.0, lineBoundingBox.getMinimum().x));
 
+                // apply transforms of current text line to all text layouts of current line:
                 for (int i=0; i<lineBlockTransforms.length(); ++i) {
                     lineBlockTransforms[i] *= lineTransform;
                     if (!textLayouts.isEmpty()) {
                         int k = textLayouts.length()-lineBlockTransforms.length()+i;
                         if (k>=0 && k<textLayouts.length()) {
-                            textLayouts[k].transform = lineBlockTransforms[i];
+                            textLayouts[k].transform *= lineBlockTransforms[i];
                         }
                     }
                 }
@@ -1300,14 +1304,19 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
     descent = (boxA.bottom()*100 - boxG.bottom()*100) * ttfScale;
     QFontMetricsF fm(font);
     ascent = fm.ascent() * ttfScale;
+    double topSpacing = boxA.y() * 100.0;
+
+    QTransform t;
+    t.scale(ttfScale, -ttfScale);
+    t.translate(leadingSpace/ttfScale, -topSpacing-heightA);
+    lineBlockTransforms.append(t);
 
     // empty text, e.g. line feed only:
     if (blockText=="") {
         horizontalAdvance = 0.0;
+        textLayouts.append(RTextLayout());
         return QList<RPainterPath>();
     }
-
-    double topSpacing = boxA.y() * 100.0;
 
     // render text into painter paths using a QTextLayout:
     QTextLayout* layout = new QTextLayout();
@@ -1321,13 +1330,13 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
     QTextLine line = layout->createLine();
     if (!line.isValid()) {
         horizontalAdvance = 0.0;
+        textLayouts.append(RTextLayout());
         qWarning("RTextRenderer::getPainterPathsForBlock: got not a single line");
         return QList<RPainterPath>();
     }
     layout->endLayout();
 
     horizontalAdvance = line.horizontalAdvance() * ttfScale;
-
 
     RPainterPathDevice ppd;
     QPainter ppPainter(&ppd);
@@ -1337,16 +1346,7 @@ QList<RPainterPath> RTextRenderer::getPainterPathsForBlockTtf(
     // transform to exactly 1.0 height for an 'A',
     // reference point is bottom left (to make sure that texts of different
     // heights are aligned at the bottom, not top):
-    QTransform t;
-    t.scale(ttfScale, -ttfScale);
-    t.translate(leadingSpace/ttfScale, -topSpacing-heightA);
-    lineBlockTransforms.append(t);
-
     QColor currentColor = currentFormat.top().foreground().color();
-//    if (currentColor==RColor::CompatByLayer) {
-
-//    }
-            //format.format.foreground().color();
     textLayouts.append(RTextLayout(QSharedPointer<QTextLayout>(layout), QTransform(), currentColor));
 
     QList<RPainterPath> ret;
