@@ -132,6 +132,18 @@
         getWeights
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPointAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPointAtDistance
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAngleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         toPolyline
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

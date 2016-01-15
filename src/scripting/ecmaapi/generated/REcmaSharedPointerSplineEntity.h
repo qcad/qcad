@@ -85,6 +85,21 @@
         isValid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getTDelta
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTMin
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTMax
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTAtPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getTAtDistance
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDegree
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -101,6 +116,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         trimEndPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        splitAtPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        splitAtParams
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getTangentAtStart
@@ -149,6 +170,15 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLength
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPointAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPointAtDistance
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAngleAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getStartPoint
