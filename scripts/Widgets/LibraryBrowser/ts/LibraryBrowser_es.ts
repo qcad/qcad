@@ -67,13 +67,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1153"/>
+        <location line="+1152"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>Navegador de la biblioteca</translation>
     </message>
     <message>
-        <location line="-1145"/>
+        <location line="-1144"/>
         <source>Icon</source>
         <translation>Icono</translation>
     </message>
@@ -83,7 +83,7 @@
         <translation>Lista</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Choose Source Folder</source>
         <translation>Elija la carpeta de origen</translation>
     </message>
@@ -303,17 +303,21 @@ en los resultados de búsqueda:</translation>
         <translation>Sistema de archivos</translation>
     </message>
     <message>
-        <location line="+270"/>
+        <location line="+60"/>
+        <source>Search</source>
+        <translation>Buscar</translation>
+    </message>
+    <message>
+        <location line="+197"/>
         <source>Favorites</source>
         <translation>Favoritos</translation>
     </message>
     <message>
-        <location line="-210"/>
         <source>Tags</source>
-        <translation>Tags</translation>
+        <translation type="vanished">Tags</translation>
     </message>
     <message>
-        <location line="+23"/>
+        <location line="-174"/>
         <source>Look for:</source>
         <translation>Buscar:</translation>
     </message>
@@ -333,12 +337,11 @@ en los resultados de búsqueda:</translation>
         <translation>Reinicializar</translation>
     </message>
     <message>
-        <location line="+33"/>
         <source>about:blank</source>
-        <translation>about:blank</translation>
+        <translation type="vanished">about:blank</translation>
     </message>
     <message>
-        <location line="+142"/>
+        <location line="+162"/>
         <source>Insert selected item into drawing</source>
         <translation>Insertar elemento seleccionado en el dibujo</translation>
     </message>

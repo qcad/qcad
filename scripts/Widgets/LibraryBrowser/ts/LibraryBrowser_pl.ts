@@ -86,7 +86,7 @@ Zastępcze widżety</translatorcomment>
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1153"/>
+        <location line="+1152"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translatorcomment>--exact match--
@@ -95,7 +95,7 @@ Przeglądarka bibliotek</translatorcomment>
         <translation type="unfinished">Przeglądarka bibliotek</translation>
     </message>
     <message>
-        <location line="-1145"/>
+        <location line="-1144"/>
         <source>Icon</source>
         <translatorcomment>--google--
 XX ikona wybrana wyłączona
@@ -113,7 +113,7 @@ Atrybuty filtru bieżącej dokumentacji (lista oddzielona przecinkami):</transla
         <translation type="unfinished">Lista</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Choose Source Folder</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wybierz folder źródłowy</translation>
@@ -377,13 +377,17 @@ Anulowano pobieranie.</translatorcomment>
         <translation type="unfinished">System plików</translation>
     </message>
     <message>
-        <location line="+60"/>
         <source>Tags</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
 [E0000-E007F] Tags
 Tags</translatorcomment>
-        <translation type="unfinished">Tags</translation>
+        <translation type="obsolete">Tags</translation>
+    </message>
+    <message>
+        <location line="+60"/>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -420,14 +424,13 @@ Znajdź w tekście...</translatorcomment>
         <translation type="unfinished">Resetowanie wybór znacznika</translation>
     </message>
     <message>
-        <location line="+33"/>
         <source>about:blank</source>
         <translatorcomment>--google--
 &lt;title&gt;o:pusty&lt;/title&gt;</translatorcomment>
-        <translation type="unfinished">about: blank</translation>
+        <translation type="obsolete">about: blank</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+126"/>
         <source>Favorites</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

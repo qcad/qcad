@@ -60,13 +60,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1153"/>
+        <location line="+1152"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>Обзор библиотеки</translation>
     </message>
     <message>
-        <location line="-1145"/>
+        <location line="-1144"/>
         <source>Icon</source>
         <translation>Пиктограмма</translation>
     </message>
@@ -76,7 +76,7 @@
         <translation>Список</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Choose Source Folder</source>
         <translation>Выберите директорию исходного кода</translation>
     </message>
@@ -280,9 +280,13 @@ shown in search results:</source>
         <translation>Файловая система</translation>
     </message>
     <message>
-        <location line="+60"/>
         <source>Tags</source>
-        <translation>Метки</translation>
+        <translation type="vanished">Метки</translation>
+    </message>
+    <message>
+        <location line="+60"/>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -305,12 +309,11 @@ shown in search results:</source>
         <translation>Сбросить выделение тега</translation>
     </message>
     <message>
-        <location line="+33"/>
         <source>about:blank</source>
-        <translation>about:blank</translation>
+        <translation type="vanished">about:blank</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+126"/>
         <source>Favorites</source>
         <translation>Избранное</translation>
     </message>

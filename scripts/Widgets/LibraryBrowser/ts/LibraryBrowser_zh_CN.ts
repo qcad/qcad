@@ -60,13 +60,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1153"/>
+        <location line="+1152"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-1145"/>
+        <location line="-1144"/>
         <source>Icon</source>
         <translation type="unfinished"></translation>
     </message>
@@ -76,7 +76,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Choose Source Folder</source>
         <translation type="unfinished"></translation>
     </message>
@@ -276,7 +276,7 @@ shown in search results:</source>
     </message>
     <message>
         <location line="+60"/>
-        <source>Tags</source>
+        <source>Search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -300,12 +300,7 @@ shown in search results:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+33"/>
-        <source>about:blank</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+106"/>
+        <location line="+126"/>
         <source>Favorites</source>
         <translation type="unfinished"></translation>
     </message>

@@ -60,13 +60,13 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+1153"/>
+        <location line="+1152"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
         <translation>Brskalnik po knjižnici</translation>
     </message>
     <message>
-        <location line="-1145"/>
+        <location line="-1144"/>
         <source>Icon</source>
         <translation>Ikona</translation>
     </message>
@@ -76,7 +76,7 @@
         <translation>Seznam</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+2"/>
         <source>Choose Source Folder</source>
         <translation>Izberite izvorno mapo</translation>
     </message>
@@ -280,9 +280,13 @@ shown in search results:</source>
         <translation>Datotečni sistem</translation>
     </message>
     <message>
-        <location line="+60"/>
         <source>Tags</source>
-        <translation>Značke</translation>
+        <translation type="vanished">Značke</translation>
+    </message>
+    <message>
+        <location line="+60"/>
+        <source>Search</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+23"/>
@@ -305,12 +309,11 @@ shown in search results:</source>
         <translation>Ponastavi izbor značk</translation>
     </message>
     <message>
-        <location line="+33"/>
         <source>about:blank</source>
-        <translation>o:nedoločeno</translation>
+        <translation type="vanished">o:nedoločeno</translation>
     </message>
     <message>
-        <location line="+106"/>
+        <location line="+126"/>
         <source>Favorites</source>
         <translation>Priljubljeno</translation>
     </message>
