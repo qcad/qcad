@@ -6,37 +6,37 @@
     <message>
         <location filename="../SvgImport.js" line="+59"/>
         <source>Import SVG</source>
-        <translation type="unfinished"></translation>
+        <translation>SVG Importeren</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>SVG Files</source>
-        <translation type="unfinished"></translation>
+        <translation>SVG bestanden</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>All Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle bestanden</translation>
     </message>
     <message>
         <location filename="../SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
-        <translation type="unfinished"></translation>
+        <translation>SVG Importeren</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Resolution:</source>
-        <translation type="unfinished"></translation>
+        <translation>Resolutie:</translation>
     </message>
     <message>
         <location line="+57"/>
         <source>Pixels / Inch</source>
-        <translation type="unfinished"></translation>
+        <translation>Pixels / Inch</translation>
     </message>
     <message>
         <location filename="../SvgImportInit.js" line="+2"/>
         <source>SVG &amp;Import...</source>
-        <translation type="unfinished"></translation>
+        <translation>SVG &amp;Importeren...</translation>
     </message>
 </context>
 </TS>

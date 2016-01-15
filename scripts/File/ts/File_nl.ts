@@ -6,32 +6,32 @@
     <message>
         <location filename="../File.js" line="+65"/>
         <source>File Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandgereedschappen</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show file tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandgereedschappen tonen</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bestand</translation>
     </message>
     <message>
         <location line="+62"/>
         <source>Format:</source>
-        <translation type="unfinished"></translation>
+        <translation>Formaat:</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Overwrite File?</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestand overschrijven?</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>The file &apos;%1&apos; already exists. Do you wish to overwrite it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Het bestand &apos;%1&apos; bestaat al. Wilt u het overschrijven?</translation>
     </message>
 </context>
 </TS>
