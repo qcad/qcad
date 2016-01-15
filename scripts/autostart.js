@@ -645,6 +645,10 @@ function main() {
     appWin.updateGuiActions();
     appWin.acceptDrops = true;
     appWin.dockNestingEnabled = true;
+    appWin.setCorner(Qt.TopLeftCorner, Qt.LeftDockWidgetArea);
+    appWin.setCorner(Qt.BottomLeftCorner, Qt.LeftDockWidgetArea);
+    appWin.setCorner(Qt.TopRightCorner, Qt.RightDockWidgetArea);
+    appWin.setCorner(Qt.BottomRightCorner, Qt.RightDockWidgetArea);
     appWin.setTabPosition(Qt.RightDockWidgetArea, QTabWidget.West);
     appWin.setTabPosition(Qt.LeftDockWidgetArea, QTabWidget.West);
     appWin.setTabPosition(Qt.TopDockWidgetArea, QTabWidget.West);
