@@ -114,6 +114,26 @@ public:
         return data.isValid();
     }
 
+    double getTDelta() const {
+        return data.getTDelta();
+    }
+
+    double getTMin() const {
+        return data.getTMin();
+    }
+
+    double getTMax() const {
+        return data.getTMax();
+    }
+
+    double getTAtPoint(const RVector& point) const {
+        return data.getTAtPoint(point);
+    }
+
+    double getTAtDistance(double distance) const {
+        return data.getTAtDistance(distance);
+    }
+
     int getDegree() const {
         return data.getDegree();
     }
@@ -135,6 +155,13 @@ public:
     }
     void trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
         return data.trimEndPoint(trimPoint, clickPoint);
+    }
+
+    QList<RSpline> splitAtPoints(const QList<RVector>& points) const {
+        return data.splitAtPoints(points);
+    }
+    QList<RSpline> splitAtParams(const QList<double>& params) const {
+        return data.splitAtParams(params);
     }
 
     RVector getTangentAtStart() const {
@@ -203,6 +230,18 @@ public:
 
     double getLength() const {
         return data.getLength();
+    }
+
+    RVector getPointAt(double t) const {
+        return data.getPointAt(t);
+    }
+
+    RVector getPointAtDistance(double distance) const {
+        return data.getPointAtDistance(distance);
+    }
+
+    double getAngleAt(double distance, RS::From from = RS::FromStart) const {
+        return data.getAngleAt(distance, from);
     }
 
     RVector getStartPoint() const {
