@@ -106,6 +106,34 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="getTDelta" cppName="getTDelta" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getTMin" cppName="getTMin" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getTMax" cppName="getTMax" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getTAtPoint" cppName="getTAtPoint"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="point"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getTAtDistance" cppName="getTAtDistance"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="distance"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getDegree" cppName="getDegree" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
@@ -150,6 +178,26 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector"
         name="clickPoint" hasDefault="true"
         default="RVector :: invalid" isConst="true" />
+      </variant>
+    </method>
+    <method name="splitAtPoints" cppName="splitAtPoints"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RSpline &gt;"
+      isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="points"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="splitAtParams" cppName="splitAtParams"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RSpline &gt;"
+      isPureVirtual="false">
+        <arg type="QList &lt; double &gt; &amp;"
+        typeName="QList &lt; double &gt;" name="params"
+        isConst="true" />
       </variant>
     </method>
     <method name="getTangentAtStart" cppName="getTangentAtStart"
@@ -241,6 +289,33 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getLength" cppName="getLength" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false" />
+    </method>
+    <method name="getPointAt" cppName="getPointAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="double" typeName="double" name="t"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getPointAtDistance" cppName="getPointAtDistance"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false">
+        <arg type="double" typeName="double" name="distance"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getAngleAt" cppName="getAngleAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="double" typeName="double" name="distance"
+        isConst="false" />
+        <arg type="RS::From" typeName="RS::From" name="from"
+        hasDefault="true" default="RS :: FromStart"
+        isConst="false" />
+      </variant>
     </method>
     <method name="getStartPoint" cppName="getStartPoint"
     specifier="public" isStatic="false" isVirtual="false"

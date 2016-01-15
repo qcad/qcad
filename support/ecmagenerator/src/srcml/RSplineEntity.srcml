@@ -115,6 +115,26 @@
         <return>return <expr><name>data</name>.<call><name>isValid</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>double</name></type> <name>getTDelta</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getTDelta</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getTMin</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getTMin</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getTMax</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getTMax</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getTAtPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getTAtPoint</name><argument_list>(<argument><expr><name>point</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getTAtDistance</name><parameter_list>(<param><decl><type><name>double</name></type> <name>distance</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getTAtDistance</name><argument_list>(<argument><expr><name>distance</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function><type><name>int</name></type> <name>getDegree</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>data</name>.<call><name>getDegree</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
@@ -136,6 +156,13 @@
     }</block></function>
     <function><type><name>void</name></type> <name>trimEndPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>)</parameter_list> <block>{
         <return>return <expr><name>data</name>.<call><name>trimEndPoint</name><argument_list>(<argument><expr><name>trimPoint</name></expr></argument>, <argument><expr><name>clickPoint</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>QList<argument_list>&lt;<argument><name>RSpline</name></argument>&gt;</argument_list></name></type> <name>splitAtPoints</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>points</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>splitAtPoints</name><argument_list>(<argument><expr><name>points</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+    <function><type><name>QList<argument_list>&lt;<argument><name>RSpline</name></argument>&gt;</argument_list></name></type> <name>splitAtParams</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name>&amp;</type> <name>params</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>splitAtParams</name><argument_list>(<argument><expr><name>params</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>RVector</name></type> <name>getTangentAtStart</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -204,6 +231,18 @@
 
     <function><type><name>double</name></type> <name>getLength</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>data</name>.<call><name>getLength</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getPointAt</name><parameter_list>(<param><decl><type><name>double</name></type> <name>t</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getPointAt</name><argument_list>(<argument><expr><name>t</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getPointAtDistance</name><parameter_list>(<param><decl><type><name>double</name></type> <name>distance</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getPointAtDistance</name><argument_list>(<argument><expr><name>distance</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getAngleAt</name><parameter_list>(<param><decl><type><name>double</name></type> <name>distance</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>From</name></name></type> <name>from</name> =<init> <expr><name><name>RS</name>::<name>FromStart</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getAngleAt</name><argument_list>(<argument><expr><name>distance</name></expr></argument>, <argument><expr><name>from</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>RVector</name></type> <name>getStartPoint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
