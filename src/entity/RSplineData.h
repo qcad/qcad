@@ -157,6 +157,19 @@ public:
         return RSpline::getWeights();
     }
 
+    double getLength() const {
+        return RSpline::getLength();
+    }
+    RVector getPointAt(double t) const {
+        return RSpline::getPointAt(t);
+    }
+    RVector getPointAtDistance(double distance) const {
+        return RSpline::getPointAtDistance(distance);
+    }
+    double getAngleAt(double distance, RS::From from = RS::FromStart) const {
+        return RSpline::getAngleAt(distance, from);
+    }
+
     RPolyline toPolyline(int segments) const {
         return RSpline::toPolyline(segments);
     }
