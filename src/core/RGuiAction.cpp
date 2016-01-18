@@ -561,7 +561,8 @@ void RGuiAction::addToWidget(QAction* action, QWidget* w) {
         w->addAction(action);
     }
 
-    if (!action->isSeparator() && !groupSortOrders.contains(getGroupSortOrderStatic(action, w))) {
+    int gso = getGroupSortOrderStatic(action, w);
+    if (!action->isSeparator() && gso>=0 && !groupSortOrders.contains(gso)) {
         addSeparatorToWidget(action, w);
     }
 
