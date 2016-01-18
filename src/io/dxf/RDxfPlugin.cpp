@@ -19,7 +19,7 @@ RPluginInfo RDxfPlugin::getPluginInfo() {
     ret.set("Name", "DXF");
     ret.set("Description",
         QString(
-            "Import support for the DXF format. "
+            "Import/export support for the DXF format. "
             "Based on dxflib."
         )
     );
