@@ -78,6 +78,10 @@ Misc.getCadToolBarPanel = function() {
     return tb;
 };
 
+Misc.getContextMenuCategory = function() {
+    return [qsTr("Misc")];
+};
+
 Misc.getTitle = function() {
     return qsTr("&Misc");
 };

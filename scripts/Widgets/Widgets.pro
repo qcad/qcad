@@ -18,4 +18,5 @@ SUBDIRS = \
     SelectionDisplay \
     StatusBar \
     TabBar \
+    ToolBarContextMenu \
     Viewport

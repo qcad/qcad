@@ -48,7 +48,7 @@ MiscDevelopment.getMenu = function() {
 };
 
 MiscDevelopment.getToolBar = function() {
-    var tb = EAction.getToolBar(qsTr("Misc") + " " + MiscDevelopment.getTitle(), "MiscDevelopmentToolBar");
+    var tb = EAction.getToolBar(qsTr("Misc") + " " + MiscDevelopment.getTitle(), "MiscDevelopmentToolBar", Qt.TopToolBarArea, Misc.getContextMenuCategory());
     tb.visible = false;
     return tb;
 };

@@ -9,5 +9,5 @@ function init(basePath) {
     action.setDefaultCommands(["arcconcentric", "ac"]);
     action.setGroupSortOrder(7300);
     action.setSortOrder(100);
-    action.setWidgetNames(["DrawArcMenu", "ArcToolBar", "ArcToolsPanel"]);
+    action.setWidgetNames(["DrawArcMenu", "ArcToolBar", "ArcToolsPanel", "ArcDockWidget"]);
 }

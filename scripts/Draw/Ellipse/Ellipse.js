@@ -59,7 +59,7 @@ Ellipse.getMenu = function() {
 };
 
 Ellipse.getToolBar = function() {
-    var tb = EAction.getToolBar(Ellipse.getTitle(), "EllipseToolBar");
+    var tb = EAction.getToolBar(Ellipse.getTitle(), "EllipseToolBar", Qt.TopToolBarArea, Draw.getContextMenuCategory());
     tb.visible = false;
     return tb;
 };
@@ -86,6 +86,12 @@ Ellipse.getCadToolBarPanel = function() {
     return tb;
 };
 
+Ellipse.getDockWidget = function() {
+    var d = EAction.getDockWidget(Ellipse.getTitle(), "EllipseDockWidget", Qt.LeftDockWidgetArea, Draw.getContextMenuCategory());
+    d.visible = false;
+    return d;
+};
+
 Ellipse.getTitle = function() {
     return qsTr("&Ellipse");
 };
@@ -98,4 +104,5 @@ Ellipse.init = function() {
     Ellipse.getMenu();
     Ellipse.getToolBar();
     Ellipse.getCadToolBarPanel();
+    //Ellipse.getDockWidget();
 };

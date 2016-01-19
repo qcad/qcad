@@ -48,7 +48,7 @@ MiscIO.getMenu = function() {
 };
 
 MiscIO.getToolBar = function() {
-    var tb = EAction.getToolBar(qsTr("Misc") + " " + MiscIO.getTitle(), "MiscIOToolBar");
+    var tb = EAction.getToolBar(qsTr("Misc") + " " + MiscIO.getTitle(), "MiscIOToolBar", Qt.TopToolBarArea, Misc.getContextMenuCategory());
     tb.visible = false;
     return tb;
 };

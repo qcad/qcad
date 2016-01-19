@@ -650,8 +650,8 @@ function main() {
     appWin.setCorner(Qt.TopRightCorner, Qt.RightDockWidgetArea);
     appWin.setCorner(Qt.BottomRightCorner, Qt.RightDockWidgetArea);
     appWin.setTabPosition(Qt.RightDockWidgetArea, QTabWidget.West);
-    appWin.setTabPosition(Qt.LeftDockWidgetArea, QTabWidget.West);
-    appWin.setTabPosition(Qt.TopDockWidgetArea, QTabWidget.West);
+    appWin.setTabPosition(Qt.LeftDockWidgetArea, QTabWidget.South);
+    appWin.setTabPosition(Qt.TopDockWidgetArea, QTabWidget.South);
     appWin.setTabPosition(Qt.BottomDockWidgetArea, QTabWidget.West);
 
     setUpDragAndDrop(appWin);

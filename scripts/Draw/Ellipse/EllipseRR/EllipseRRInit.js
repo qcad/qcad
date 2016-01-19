@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands(["ellipseradii", "ei"]);
     action.setGroupSortOrder(9150);
     action.setSortOrder(100);
-    action.setWidgetNames(["DrawEllipseMenu", "EllipseToolBar", "EllipseToolsPanel"]);
+    action.setWidgetNames(["DrawEllipseMenu", "EllipseToolBar", "EllipseToolsPanel", "EllipseDockWidget"]);
 }

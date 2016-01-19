@@ -117,7 +117,7 @@ Dimension.getMenu = function() {
 };
 
 Dimension.getToolBar = function() {
-    var tb = EAction.getToolBar(Dimension.getTitle(), "DimensionToolBar");
+    var tb = EAction.getToolBar(Dimension.getTitle(), "DimensionToolBar", Qt.TopToolBarArea, Draw.getContextMenuCategory());
     tb.visible = false;
     return tb;
 };
@@ -148,6 +148,12 @@ Dimension.getCadToolBarPanel = function() {
     return tb;
 };
 
+Dimension.getDockWidget = function() {
+    var d = EAction.getDockWidget(Dimension.getTitle(), "DimensionDockWidget", Qt.LeftDockWidgetArea, Draw.getContextMenuCategory());
+    d.visible = false;
+    return d;
+};
+
 Dimension.getTitle = function() {
     return qsTr("D&imension");
 };
@@ -160,6 +166,7 @@ Dimension.init = function() {
     Dimension.getMenu();
     Dimension.getToolBar();
     Dimension.getCadToolBarPanel();
+    //Dimension.getDockWidget();
 };
 
 

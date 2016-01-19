@@ -23,8 +23,10 @@
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDockWidget&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMainWindow&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QKeyEvent&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QToolBar&gt;</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RCloseCurrentEvent.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RMainWindow.h"</cpp:file></cpp:include>
@@ -108,7 +110,16 @@
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>readSettings</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>writeSettings</name><parameter_list>()</parameter_list>;</function_decl>
 
+    <function_decl><type><name>virtual</name> <name>QMenu</name>*</type> <name>createPopupMenu</name><parameter_list>()</parameter_list>;</function_decl>
+
     <function_decl><type><name>virtual</name> <name>QWidget</name>*</type> <name>getChildWidget</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function><type><name>QList<argument_list>&lt;<argument><name>QDockWidget</name>*</argument>&gt;</argument_list></name></type> <name>getDockWidgets</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>findChildren<argument_list>&lt;<argument><name>QDockWidget</name>*</argument>&gt;</argument_list></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+    <function><type><name>QList<argument_list>&lt;<argument><name>QToolBar</name>*</argument>&gt;</argument_list></name></type> <name>getToolBars</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><call><name>findChildren<argument_list>&lt;<argument><name>QToolBar</name>*</argument>&gt;</argument_list></name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
 
 </public><public>public slots:
     <function_decl><type><name>void</name></type> <name>quit</name><parameter_list>()</parameter_list>;</function_decl>
@@ -154,6 +165,8 @@
 
     <function_decl><type><name>void</name></type> <name>closeRequested</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>enterPressed</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>toolBarContextMenu</name><parameter_list>(<param><decl><type><name>QMenu</name>*</type> <name>menu</name></decl></param>)</parameter_list>;</function_decl>
 
 </public><protected>protected:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>closeEvent</name><parameter_list>(<param><decl><type><name>QCloseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>

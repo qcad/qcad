@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./gui" filename="RFlowLayout.h"><cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RFLOWLAYOUT_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RFLOWLAYOUT_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QLayout&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QRect&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QStyle&gt;</cpp:file></cpp:include>
+<class>class <name>RFlowLayout</name> <super>: <specifier>public</specifier> <name>QLayout</name></super>
+<block>{<private type="default">
+</private><public>public:
+    explicit <macro><name>RFlowLayout</name><argument_list>(<argument>QWidget *parent</argument>, <argument>int margin = -1</argument>, <argument>int hSpacing = -1</argument>, <argument>int vSpacing = -1</argument>)</argument_list></macro>;
+    explicit <macro><name>RFlowLayout</name><argument_list>(<argument>int margin = -1</argument>, <argument>int hSpacing = -1</argument>, <argument>int vSpacing = -1</argument>)</argument_list></macro>;
+    <destructor_decl><name>~RFlowLayout</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function_decl><type><name>void</name></type> <name>addItem</name><parameter_list>(<param><decl><type><name>QLayoutItem</name> *</type><name>item</name></decl></param>)</parameter_list> <specifier>Q_DECL_OVERRIDE</specifier>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>horizontalSpacing</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>verticalSpacing</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name><name>Qt</name>::<name>Orientations</name></name></type> <name>expandingDirections</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>Q_DECL_OVERRIDE</specifier>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>hasHeightForWidth</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>Q_DECL_OVERRIDE</specifier>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>heightForWidth</name><parameter_list>(<param><decl><type><name>int</name></type></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>Q_DECL_OVERRIDE</specifier>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>count</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>Q_DECL_OVERRIDE</specifier>;</function_decl>
+    <function_decl><type><name>QLayoutItem</name> *</type><name>itemAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>Q_DECL_OVERRIDE</specifier>;</function_decl>
+    <function_decl><type><name>QSize</name></type> <name>minimumSize</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>Q_DECL_OVERRIDE</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setGeometry</name><parameter_list>(<param><decl><type><name>const</name> <name>QRect</name> &amp;</type><name>rect</name></decl></param>)</parameter_list> <specifier>Q_DECL_OVERRIDE</specifier>;</function_decl>
+    <function_decl><type><name>QSize</name></type> <name>sizeHint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>Q_DECL_OVERRIDE</specifier>;</function_decl>
+    <function_decl><type><name>QLayoutItem</name> *</type><name>takeAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>)</parameter_list> <specifier>Q_DECL_OVERRIDE</specifier>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>insertAction</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>, <param><decl><type><name>QAction</name>*</type> <name>action</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>indexOf</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>action</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function><type><name>int</name></type> <name>indexOf</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>widget</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>Q_DECL_OVERRIDE</specifier> <block>{ <return>return <expr><call><name><name>QLayout</name>::<name>indexOf</name></name><argument_list>(<argument><expr><name>widget</name></expr></argument>)</argument_list></call></expr>;</return> }</block></function>
+
+</public><private>private:
+    <function_decl><type><name>int</name></type> <name>doLayout</name><parameter_list>(<param><decl><type><name>const</name> <name>QRect</name> &amp;</type><name>rect</name></decl></param>, <param><decl><type><name>bool</name></type> <name>testOnly</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>int</name></type> <name>smartSpacing</name><parameter_list>(<param><decl><type><name><name>QStyle</name>::<name>PixelMetric</name></name></type> <name>pm</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>QLayoutItem</name> *</argument>&gt;</argument_list></name></type> <name>itemList</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>m_hSpace</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>m_vSpace</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

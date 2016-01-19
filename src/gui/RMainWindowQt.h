@@ -22,8 +22,10 @@
 
 #include "gui_global.h"
 
+#include <QDockWidget>
 #include <QMainWindow>
 #include <QKeyEvent>
+#include <QToolBar>
 
 #include "RCloseCurrentEvent.h"
 #include "RMainWindow.h"
@@ -107,7 +109,16 @@ public:
     virtual bool readSettings();
     virtual void writeSettings();
 
+    virtual QMenu* createPopupMenu();
+
     virtual QWidget* getChildWidget(const QString& name);
+
+    QList<QDockWidget*> getDockWidgets() {
+        return findChildren<QDockWidget*>();
+    }
+    QList<QToolBar*> getToolBars() {
+        return findChildren<QToolBar*>();
+    }
 
 public slots:
     void quit();
@@ -153,6 +164,8 @@ signals:
 
     void closeRequested();
     void enterPressed();
+
+    void toolBarContextMenu(QMenu* menu);
 
 protected:
     virtual void closeEvent(QCloseEvent* e);

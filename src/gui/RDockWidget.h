@@ -25,6 +25,8 @@
 #include <QMetaType>
 #include <QDockWidget>
 
+#include "RFlowLayout.h"
+
 /**
  * \scriptable
  * \ingroup gui
@@ -44,6 +46,10 @@ signals:
 protected:
     virtual void showEvent(QShowEvent* event);
     virtual void hideEvent(QHideEvent* event);
+    virtual void actionEvent(QActionEvent *event);
+
+private:
+    RFlowLayout* layout;
 };
 
 Q_DECLARE_METATYPE(RDockWidget*)

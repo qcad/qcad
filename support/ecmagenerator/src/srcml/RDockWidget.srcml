@@ -26,6 +26,8 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDockWidget&gt;</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RFlowLayout.h"</cpp:file></cpp:include>
+
 <comment type="block">/**
  * \scriptable
  * \ingroup gui
@@ -45,7 +47,11 @@
 </public><protected>protected:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>showEvent</name><parameter_list>(<param><decl><type><name>QShowEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>hideEvent</name><parameter_list>(<param><decl><type><name>QHideEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
-</protected>}</block>;</class>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>actionEvent</name><parameter_list>(<param><decl><type><name>QActionEvent</name> *</type><name>event</name></decl></param>)</parameter_list>;</function_decl>
+
+</protected><private>private:
+    <decl_stmt><decl><type><name>RFlowLayout</name>*</type> <name>layout</name></decl>;</decl_stmt>
+</private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RDockWidget*</argument>)</argument_list></macro>
 

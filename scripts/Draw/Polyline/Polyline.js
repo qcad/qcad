@@ -60,8 +60,8 @@ Polyline.getMenu = function() {
 };
 
 Polyline.getToolBar = function() {
-    var tb = EAction.getToolBar(Polyline.getTitle(), "PolylineToolBar");
-    tb.orientation = Qt.Vertical;
+    var tb = EAction.getToolBar(Polyline.getTitle(), "PolylineToolBar", Qt.TopToolBarArea, Draw.getContextMenuCategory());
+    //tb.orientation = Qt.Vertical;
     tb.visible = false;
     return tb;
 };
@@ -92,6 +92,12 @@ Polyline.getCadToolBarPanel = function() {
     return tb;
 };
 
+Polyline.getDockWidget = function() {
+    var d = EAction.getDockWidget(Polyline.getTitle(), "PolylineDockWidget", Qt.LeftDockWidgetArea, Draw.getContextMenuCategory());
+    d.visible = false;
+    return d;
+};
+
 Polyline.getTitle = function() {
     return qsTr("&Polyline");
 };
@@ -104,6 +110,7 @@ Polyline.init = function() {
     Polyline.getMenu();
     Polyline.getToolBar();
     Polyline.getCadToolBarPanel();
+    //Polyline.getDockWidget();
 };
 
 Polyline.prototype.getClosestSegment = function(pos) {

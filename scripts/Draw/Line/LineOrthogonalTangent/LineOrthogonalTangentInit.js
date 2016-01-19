@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands(["lineorthogonaltangent", "orthotangent", "ln"]);
     action.setGroupSortOrder(6500);
     action.setSortOrder(300);
-    action.setWidgetNames(["DrawLineMenu", "LineToolBar", "LineToolsPanel"]);
+    action.setWidgetNames(["DrawLineMenu", "LineToolBar", "LineToolsPanel", "LineDockWidget"]);
 }

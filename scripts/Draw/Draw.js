@@ -44,13 +44,17 @@ Draw.getMenu = function() {
 };
 
 Draw.getToolBar = function() {
-    var tb = EAction.getToolBar(Draw.getTitle(), "DrawToolBar");
+    var tb = EAction.getToolBar(Draw.getTitle(), "DrawToolBar", Qt.TopToolBarArea, Draw.getContextMenuCategory());
     tb.visible = false;
     return tb;
 };
 
 Draw.getCadToolBarPanel = function() {
     return EAction.getMainCadToolBarPanel();
+};
+
+Draw.getContextMenuCategory = function() {
+    return [qsTr("Draw")];
 };
 
 Draw.getTitle = function() {

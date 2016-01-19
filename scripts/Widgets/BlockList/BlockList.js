@@ -416,6 +416,7 @@ BlockList.init = function(basePath) {
     
     var dock = new RDockWidget(qsTr("Block List"), appWin);
     dock.objectName = "BlockListDock";
+    dock.setProperty("Category", [qsTr("Lists")]);
     dock.setWidget(formWidget);
     appWin.addDockWidget(Qt.RightDockWidgetArea, dock);
 

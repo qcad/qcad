@@ -996,18 +996,17 @@ EAction.getSubMenu = function(menu, groupSortOrder, sortOrder, title, objectName
 /**
  * \return Existing or new toolbar.
  * 
- * \param title Translated title of the toolbar. E.g. qsTr("Snap"). \param
- * objectName Object name to use for the toolbar. Used mainly for later
- * identification of the toolbar. E.g. "line". \param toolBarArea Area where
- * the new toolbar should be added. Note that the actual location where the
- * toolbar is added may also depend on the previously saved state of the tool
- * bars. Defaults to Qt.TopToolBarArea.
+ * \param title Translated title of the toolbar. E.g. qsTr("Snap").
+ * \param objectName Object name to use for the toolbar. Used mainly for later
+ * identification of the toolbar. E.g. "line".
+ * \param toolBarArea Area where the new toolbar should be added. Note that the
+ * actual location where the toolbar is added may also depend on the previously
+ * saved state of the tool bars. Defaults to Qt.TopToolBarArea.
  */
-EAction.getToolBar = function(title, objectName, toolBarArea) {
+EAction.getToolBar = function(title, objectName, toolBarArea, category) {
     if (isNull(objectName)) {
         objectName = "";
     }
-
     if (isNull(toolBarArea)) {
         toolBarArea = Qt.TopToolBarArea;
     }
@@ -1042,12 +1041,68 @@ EAction.getToolBar = function(title, objectName, toolBarArea) {
                 "}");
         }
         tb.objectName = objectName;
+        tb.setProperty("Category", category);
         var s = RSettings.getIntValue("ToolBar/IconSize", tb.iconSize.width());
         tb.iconSize = new QSize(s,s);
         appWin.addToolBar(toolBarArea, tb);
     }
 
     return tb;
+};
+
+/**
+ * \return Existing or new dock.
+ *
+ * \param title Translated title of the dock widget. E.g. qsTr("Snap").
+ * \param objectName Object name to use for the toolbar. Used mainly for later
+ * identification of the dock widget. E.g. "line".
+ * \param toolBarArea Area where the new dock should be added. Note that the
+ * actual location where the dock is added may also depend on the previously
+ * saved state of the docks. Defaults to Qt.LeftDockWidgetArea.
+ */
+EAction.getDockWidget = function(title, objectName, dockWidgetArea, category) {
+    if (isNull(objectName)) {
+        objectName = "";
+    }
+    if (isNull(dockWidgetArea)) {
+        dockWidgetArea = Qt.LeftDockWidgetArea;
+    }
+
+    var appWin = EAction.getMainWindow();
+    if (isNull(appWin)) {
+        return undefined;
+    }
+
+    var dock;
+    if (objectName.length !== 0) {
+        dock = appWin.findChild(objectName);
+    }
+
+    if (!isNull(dock) && !isOfType(dock, QDockWidget)) {
+        qWarning("Not a dock: ", dock);
+        return undefined;
+    }
+
+    if (isNull(dock)) {
+        dock = new RDockWidget(title.replace("&", ""));
+        dock.objectName = objectName;
+        dock.setProperty("Category", category);
+        //var s = RSettings.getIntValue("Dock/IconSize", dock.iconSize.width());
+        //dock.iconSize = new QSize(s,s);
+        appWin.addDockWidget(dockWidgetArea, dock);
+    }
+
+//    var flags = dock.windowFlags();
+//    qDebug("flags: ", flags);
+//    flags = new Qt.WindowFlags(flags & ~(Qt.WindowFullscreenButtonHint | Qt.WindowMinimizeButtonHint | Qt.WindowMaximizeButtonHint | Qt.WindowMinMaxButtonsHint | Qt.WindowCloseButtonHint));
+//    //flags &= ~Qt.WindowFullscreenButtonHint;
+//    qDebug("flags: ", flags);
+//    dock.setWindowFlags(flags);
+//    qDebug("f: ", dock.windowFlags());
+
+//    dock.setTitleBarWidget(new QWidget());
+
+    return dock;
 };
 
 /**
@@ -1079,13 +1134,13 @@ EAction.getOptionsToolBar = function() {
  * \return Existing or new block toolbar (used to display options for the
  * current block).
  */
-EAction.getBlockToolBar = function() {
-    if (isNull(EAction.blockToolBar)) {
-        EAction.blockToolBar = EAction.getToolBar(qsTr("Block Options"), "BlockOptions");
-    }
+//EAction.getBlockToolBar = function() {
+//    if (isNull(EAction.blockToolBar)) {
+//        EAction.blockToolBar = EAction.getToolBar(qsTr("Block Options"), "BlockOptions");
+//    }
 
-    return EAction.blockToolBar;
-};
+//    return EAction.blockToolBar;
+//};
 
 /**
  * \return The main (top) CAD toolbar panel.

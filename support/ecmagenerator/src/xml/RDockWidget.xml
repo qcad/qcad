@@ -40,5 +40,13 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="event" isConst="false" />
       </variant>
     </method>
+    <method name="actionEvent" cppName="actionEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QActionEvent *" typeName="QActionEvent *"
+        name="event" isConst="false" />
+      </variant>
+    </method>
   </class>
 </unit>

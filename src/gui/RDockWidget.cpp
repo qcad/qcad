@@ -16,10 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
+#include <QActionEvent>
+#include <QDebug>
+#include <QWidgetAction>
+
 #include "RDockWidget.h"
 
+
 RDockWidget::RDockWidget(const QString& title, QWidget* parent, Qt::WindowFlags flags) :
-    QDockWidget(title, parent, flags) {
+    QDockWidget(title, parent, flags), layout(NULL) {
 }
 
 RDockWidget::RDockWidget(QWidget* parent, Qt::WindowFlags flags) :
@@ -28,8 +33,53 @@ RDockWidget::RDockWidget(QWidget* parent, Qt::WindowFlags flags) :
 
 void RDockWidget::showEvent(QShowEvent* event) {
     emit shown();
+    QDockWidget::showEvent(event);
 }
 
 void RDockWidget::hideEvent(QHideEvent* event) {
     emit hidden();
+    QDockWidget::hideEvent(event);
+}
+
+void RDockWidget::actionEvent(QActionEvent* event) {
+    QAction* action = event->action();
+    QWidgetAction* widgetAction = qobject_cast<QWidgetAction*>(action);
+
+    if (layout==NULL) {
+        // first action added: add widget with flow layout to dock:
+        QWidget* w = new QWidget();
+        layout = new RFlowLayout(2,2,2);
+        w->setLayout(layout);
+        setWidget(w);
+    }
+
+    switch (event->type()) {
+        case QEvent::ActionAdded: {
+            Q_ASSERT_X(widgetAction == 0 || layout->indexOf(widgetAction) == -1,
+                        "RDockWidget", "widgets cannot be inserted multiple times");
+
+            int index = layout->count();
+            if (event->before()) {
+                index = layout->indexOf(event->before());
+                Q_ASSERT_X(index != -1, "RDockWidget::insertAction", "internal error");
+            }
+            layout->insertAction(index, action);
+            break;
+        }
+
+        case QEvent::ActionChanged:
+            layout->invalidate();
+            break;
+
+        case QEvent::ActionRemoved: {
+            int index = layout->indexOf(action);
+            if (index != -1) {
+                delete layout->takeAt(index);
+            }
+            break;
+        }
+
+        default:
+            Q_ASSERT_X(false, "RDockWidget::actionEvent", "internal error");
+    }
 }

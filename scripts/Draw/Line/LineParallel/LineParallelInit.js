@@ -12,5 +12,5 @@ function init(basePath) {
     ]);
     action.setGroupSortOrder(6400);
     action.setSortOrder(100);
-    action.setWidgetNames(["DrawLineMenu", "LineToolBar", "LineToolsPanel"]);
+    action.setWidgetNames(["DrawLineMenu", "LineToolBar", "LineToolsPanel", "LineDockWidget"]);
 }

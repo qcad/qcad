@@ -59,7 +59,7 @@ Point.getMenu = function() {
 };
 
 Point.getToolBar = function() {
-    var tb = EAction.getToolBar(Point.getTitle(), "PointToolBar");
+    var tb = EAction.getToolBar(Point.getTitle(), "PointToolBar", Qt.TopToolBarArea, Draw.getContextMenuCategory());
     tb.visible = false;
     return tb;
 };
@@ -90,6 +90,12 @@ Point.getCadToolBarPanel = function() {
     return tb;
 };
 
+Point.getDockWidget = function() {
+    var d = EAction.getDockWidget(Point.getTitle(), "PointDockWidget", Qt.LeftDockWidgetArea, Draw.getContextMenuCategory());
+    d.visible = false;
+    return d;
+};
+
 Point.getTitle = function() {
     return qsTr("&Point");
 };
@@ -115,4 +121,5 @@ Point.init = function() {
     Point.getMenu();
     Point.getToolBar();
     Point.getCadToolBarPanel();
+    //Point.getDockWidget();
 };

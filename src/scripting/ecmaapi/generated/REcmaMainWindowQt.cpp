@@ -293,7 +293,13 @@
             
             REcmaHelper::registerFunction(&engine, proto, writeSettings, "writeSettings");
             
+            REcmaHelper::registerFunction(&engine, proto, createPopupMenu, "createPopupMenu");
+            
             REcmaHelper::registerFunction(&engine, proto, getChildWidget, "getChildWidget");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDockWidgets, "getDockWidgets");
+            
+            REcmaHelper::registerFunction(&engine, proto, getToolBars, "getToolBars");
             
             REcmaHelper::registerFunction(&engine, proto, quit, "quit");
             
@@ -6390,6 +6396,55 @@
             return result;
         }
          QScriptValue
+        REcmaMainWindowQt::createPopupMenu
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::createPopupMenu", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::createPopupMenu";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("createPopupMenu", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QMenu *'
+    QMenu * cppResult =
+        
+               self->createPopupMenu();
+        // return type: QMenu *
+                // QObject
+                result = engine->newQObject(cppResult, QScriptEngine::QtOwnership);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.createPopupMenu().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::createPopupMenu", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaMainWindowQt::getChildWidget
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -6447,6 +6502,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::getChildWidget", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::getDockWidgets
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::getDockWidgets", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::getDockWidgets";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("getDockWidgets", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QDockWidget * >'
+    QList < QDockWidget * > cppResult =
+        
+               self->getDockWidgets();
+        // return type: QList < QDockWidget * >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.getDockWidgets().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::getDockWidgets", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::getToolBars
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::getToolBars", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::getToolBars";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("getToolBars", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QToolBar * >'
+    QList < QToolBar * > cppResult =
+        
+               self->getToolBars();
+        // return type: QList < QToolBar * >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.getToolBars().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::getToolBars", context, engine);
             return result;
         }
          QScriptValue

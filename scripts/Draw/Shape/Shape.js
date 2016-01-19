@@ -62,7 +62,7 @@ Shape.getMenu = function() {
 };
 
 Shape.getToolBar = function() {
-    var tb = EAction.getToolBar(Shape.getTitle(), "ShapeToolBar");
+    var tb = EAction.getToolBar(Shape.getTitle(), "ShapeToolBar", Qt.TopToolBarArea, Draw.getContextMenuCategory());
     tb.visible = false;
     return tb;
 };
@@ -93,6 +93,12 @@ Shape.getCadToolBarPanel = function() {
     return tb;
 };
 
+Shape.getDockWidget = function() {
+    var d = EAction.getDockWidget(Shape.getTitle(), "ShapeDockWidget", Qt.LeftDockWidgetArea, Draw.getContextMenuCategory());
+    d.visible = false;
+    return d;
+};
+
 Shape.getTitle = function() {
     return qsTr("&Shape");
 };
@@ -105,6 +111,7 @@ Shape.init = function() {
     Shape.getMenu();
     Shape.getToolBar();
     Shape.getCadToolBarPanel();
+    //Shape.getDockWidget();
 };
 
 Shape.prototype.initUiOptions = function(resume, optionsToolBar) {

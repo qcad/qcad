@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands(["circletangent2", "ct2"]);
     action.setGroupSortOrder(8500);
     action.setSortOrder(200);
-    action.setWidgetNames(["DrawCircleMenu", "CircleToolBar", "CircleToolsPanel"]);
+    action.setWidgetNames(["DrawCircleMenu", "CircleToolBar", "CircleToolsPanel", "CircleDockWidget"]);
 }

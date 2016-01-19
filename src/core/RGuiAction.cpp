@@ -1041,8 +1041,5 @@ void RGuiAction::init() {
         if (w!=NULL) {
             addToWidget(this, w);
         }
-        else {
-            qWarning() << "RGuiAction::init: Cannot add action to widget: " << wn;
-        }
     }
 }

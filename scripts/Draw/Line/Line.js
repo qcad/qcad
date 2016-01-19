@@ -69,7 +69,7 @@ Line.getMenu = function() {
 };
 
 Line.getToolBar = function() {
-    var tb = EAction.getToolBar(Line.getTitle(), "LineToolBar");
+    var tb = EAction.getToolBar(Line.getTitle(), "LineToolBar", Qt.TopToolBarArea, Draw.getContextMenuCategory());
     tb.visible = false;
     return tb;
 };
@@ -94,6 +94,12 @@ Line.getCadToolBarPanel = function() {
 
     var tb = EAction.getCadToolBarPanel(Line.getTitle(), "LineToolsPanel", true);
     return tb;
+};
+
+Line.getDockWidget = function() {
+    var d = EAction.getDockWidget(Line.getTitle(), "LineDockWidget", Qt.LeftDockWidgetArea, Draw.getContextMenuCategory());
+    d.visible = false;
+    return d;
 };
 
 Line.getTitle = function() {
@@ -233,4 +239,5 @@ Line.init = function() {
     Line.getMenu();
     Line.getToolBar();
     Line.getCadToolBarPanel();
+    //Line.getDockWidget();
 };

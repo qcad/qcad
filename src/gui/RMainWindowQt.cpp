@@ -18,6 +18,7 @@
  */
 #include <QtGui>
 #include <QLabel>
+#include <QMenu>
 #include <QMdiArea>
 #include <QStatusBar>
 #include <QTabBar>
@@ -43,9 +44,9 @@ RMainWindowQt::RMainWindowQt(QWidget* parent, bool hasMdiArea) :
 
 // uncomment for unified tool bars under Mac:
 //#if QT_VERSION >= 0x050201
-//# ifdef Q_OS_MAC
+//#ifdef Q_OS_MAC
 //    setUnifiedTitleAndToolBarOnMac(true);
-//# endif
+//#endif
 //#endif
 
     if (hasMdiArea) {
@@ -500,6 +501,16 @@ void RMainWindowQt::writeSettings() {
 
 QWidget* RMainWindowQt::getChildWidget(const QString& name) {
     return findChild<QWidget*>(name);
+}
+
+QMenu* RMainWindowQt::createPopupMenu() {
+    QMenu* menu = new QMenu();
+    emit toolBarContextMenu(menu);
+    if (menu->isEmpty()) {
+        delete menu;
+        menu = NULL;
+    }
+    return menu;
 }
 
 bool RMainWindowQt::event(QEvent* e) {

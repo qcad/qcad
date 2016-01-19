@@ -12,5 +12,5 @@ function init(basePath) {
     action.setDefaultCommands(["leader", "dimlea", "de", "ld"]);
     action.setGroupSortOrder(12200);
     action.setSortOrder(200);
-    action.setWidgetNames(["DimensionMenu", "DimensionToolBar", "DimensionToolsPanel"]);
+    action.setWidgetNames(["DimensionMenu", "DimensionToolBar", "DimensionToolsPanel", "DimensionDockWidget"]);
 }

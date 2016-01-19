@@ -49,7 +49,7 @@ MiscSelect.getMenu = function() {
 };
 
 MiscSelect.getToolBar = function() {
-    var tb = EAction.getToolBar(qsTr("Misc") + " " + MiscSelect.getTitle(), "MiscSelectToolBar");
+    var tb = EAction.getToolBar(qsTr("Misc") + " " + MiscSelect.getTitle(), "MiscSelectToolBar", Qt.TopToolBarArea, Misc.getContextMenuCategory());
     tb.visible = false;
     return tb;
 };

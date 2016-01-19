@@ -59,7 +59,7 @@ Spline.getMenu = function() {
 };
 
 Spline.getToolBar = function() {
-    var tb = EAction.getToolBar(Spline.getTitle(), "SplineToolBar");
+    var tb = EAction.getToolBar(Spline.getTitle(), "SplineToolBar", Qt.TopToolBarArea, Draw.getContextMenuCategory());
     tb.orientation = Qt.Vertical;
     tb.visible = false;
     return tb;
@@ -91,6 +91,12 @@ Spline.getCadToolBarPanel = function() {
     return tb;
 };
 
+Spline.getDockWidget = function() {
+    var d = EAction.getDockWidget(Spline.getTitle(), "SplineDockWidget", Qt.LeftDockWidgetArea, Draw.getContextMenuCategory());
+    d.visible = false;
+    return d;
+};
+
 Spline.getTitle = function() {
     return qsTr("&Spline");
 };
@@ -103,4 +109,5 @@ Spline.init = function() {
     Spline.getMenu();
     Spline.getToolBar();
     Spline.getCadToolBarPanel();
+    //Spline.getDockWidget();
 };

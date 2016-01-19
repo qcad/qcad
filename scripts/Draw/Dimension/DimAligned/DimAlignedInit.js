@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("DimAligned", "&Aligned"),
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("DimAligned", "&Aligned"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/DimAligned.js");
     action.setIcon(basePath + "/DimAligned.svg");
@@ -9,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands(["dimaligned", "da"]);
     action.setGroupSortOrder(12100);
     action.setSortOrder(100);
-    action.setWidgetNames(["DimensionMenu", "DimensionToolBar", "DimensionToolsPanel"]);
+    action.setWidgetNames(["DimensionMenu", "DimensionToolBar", "DimensionToolsPanel", "DimensionDockWidget"]);
 }

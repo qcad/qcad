@@ -59,7 +59,7 @@ Arc.getMenu = function() {
 };
 
 Arc.getToolBar = function() {
-    var tb = EAction.getToolBar(Arc.getTitle(), "ArcToolBar");
+    var tb = EAction.getToolBar(Arc.getTitle(), "ArcToolBar", Qt.TopToolBarArea, Draw.getContextMenuCategory());
     tb.visible = false;
     return tb;
 };
@@ -86,6 +86,12 @@ Arc.getCadToolBarPanel = function() {
     return tb;
 };
 
+Arc.getDockWidget = function() {
+    var d = EAction.getDockWidget(Arc.getTitle(), "ArcDockWidget", Qt.LeftDockWidgetArea, Draw.getContextMenuCategory());
+    d.visible = false;
+    return d;
+};
+
 Arc.getTitle = function() {
     return qsTr("&Arc");
 };
@@ -98,4 +104,5 @@ Arc.init = function() {
     Arc.getMenu();
     Arc.getToolBar();
     Arc.getCadToolBarPanel();
+    //Arc.getDockWidget();
 };

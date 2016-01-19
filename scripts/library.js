@@ -2065,7 +2065,7 @@ function restoreOverrideCursor() {
 function addActionsToWidgets() {
     var appWin = RMainWindowQt.getMainWindow();
     var actions = RGuiAction.getActions();
-    var widgetTypes = ["Menu", "ToolBar", "Panel"];
+    var widgetTypes = ["Menu", "ToolBar", "Panel", "DockWidget"];
     for (var c=0; c<actions.length; ++c) {
         var a = actions[c];
         if (a.icon.isNull() && !a.isIconDisabled()) {
@@ -2138,9 +2138,6 @@ function addActionsToWidgets() {
                     // action not visible in this widget:
                     RGuiAction.removeFromWidget(a, w);
                 }
-            }
-            else {
-                qWarning("RGuiAction::init: Cannot add action to widget: ", wn);
             }
         }
 

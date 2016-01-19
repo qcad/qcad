@@ -332,7 +332,16 @@
         writeSettings
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        createPopupMenu
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getChildWidget
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDockWidgets
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getToolBars
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         quit

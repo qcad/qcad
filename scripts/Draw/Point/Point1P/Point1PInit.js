@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands(["point", "po"]);
     action.setGroupSortOrder(5000);
     action.setSortOrder(100);
-    action.setWidgetNames(["DrawPointMenu", "PointToolBar", "PointToolsPanel"]);
+    action.setWidgetNames(["DrawPointMenu", "PointToolBar", "PointToolsPanel", "PointDockWidget"]);
 }
