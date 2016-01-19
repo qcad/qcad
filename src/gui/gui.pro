@@ -8,6 +8,7 @@ SOURCES += \
     RDockWidget.cpp \
     REventFilter.cpp \
     RFileSystemModel.cpp \
+    RFlowLayout.cpp \
     RFocusFrame.cpp \
     RFontChooserWidget.cpp \
     RGraphicsSceneQt.cpp \
@@ -34,6 +35,7 @@ HEADERS += \
     RDockWidget.h \
     REventFilter.h \
     RFileSystemModel.h \
+    RFlowLayout.h \
     RFocusFrame.h \
     RFontChooserWidget.h \
     RGraphicsSceneQt.h \
