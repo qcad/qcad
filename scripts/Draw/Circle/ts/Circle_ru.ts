@@ -14,7 +14,7 @@
         <translation>Показать инструменты работы с окружностью</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Circle</source>
         <translation>Окружность</translation>
     </message>

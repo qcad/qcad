@@ -14,7 +14,7 @@
         <translation>Toon bogen gereedschappen</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Arc</source>
         <translation>&amp;Boog</translation>
     </message>

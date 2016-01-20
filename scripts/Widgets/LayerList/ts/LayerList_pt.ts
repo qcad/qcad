@@ -14,7 +14,12 @@
         <translation>&amp;Lista de Camadas</translation>
     </message>
     <message>
-        <location line="-53"/>
+        <location line="+57"/>
+        <source>Lists</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-110"/>
         <location line="+108"/>
         <source>Layer List</source>
         <translatorcomment>--exact match--

@@ -45,7 +45,7 @@
         <translation type="obsolete">線ツールの表示</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>&amp;Shape</source>
         <translation>&amp;S 成形</translation>
     </message>

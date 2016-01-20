@@ -14,7 +14,7 @@
         <translation>Mostrar menú &quot;Elipses&quot;</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Elipse</translation>
     </message>

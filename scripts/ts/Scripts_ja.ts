@@ -78,17 +78,16 @@
         <translation>なし</translation>
     </message>
     <message>
-        <location line="+591"/>
+        <location line="+646"/>
         <source>Options</source>
         <translation>オプション</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Block Options</source>
-        <translation>ブロックオプション</translation>
+        <translation type="vanished">ブロックオプション</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+31"/>
         <source>Main Tools</source>
         <translation>メインツール</translation>
     </message>

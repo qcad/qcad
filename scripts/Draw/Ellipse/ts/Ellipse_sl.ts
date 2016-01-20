@@ -14,7 +14,7 @@
         <translation>Prikaži orodja elipse</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Elipsa</translation>
     </message>

@@ -82,17 +82,16 @@
         <translation>Kein</translation>
     </message>
     <message>
-        <location line="+591"/>
+        <location line="+646"/>
         <source>Options</source>
         <translation>Optionen</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Block Options</source>
-        <translation>Blockoptionen</translation>
+        <translation type="vanished">Blockoptionen</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+31"/>
         <source>Main Tools</source>
         <translation>Hauptwerkzeuge</translation>
     </message>

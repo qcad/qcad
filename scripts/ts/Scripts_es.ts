@@ -88,18 +88,17 @@
         <translation>Ninguno</translation>
     </message>
     <message>
-        <location line="+591"/>
+        <location line="+646"/>
         <source>Options</source>
         <translation>Opciones</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Block Options</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Opciones de bloque</translation>
+        <translation type="vanished">Opciones de bloque</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+31"/>
         <source>Main Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Herramientas principales</translation>

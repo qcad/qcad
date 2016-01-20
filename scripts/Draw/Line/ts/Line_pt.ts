@@ -20,7 +20,7 @@ Exibe o menu &quot;Linha&quot;</translatorcomment>
         <translation>Exiba as ferramentas de linha</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Line</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

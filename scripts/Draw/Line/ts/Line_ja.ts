@@ -14,7 +14,7 @@
         <translation>線分ツールを表示</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Line</source>
         <translation>&amp;L 線分</translation>
     </message>

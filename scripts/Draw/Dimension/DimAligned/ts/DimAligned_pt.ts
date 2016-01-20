@@ -33,7 +33,7 @@ Indique a dimensão da linha de localização</translatorcomment>
         <translation>&amp;Alinhado</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw aligned dimension</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhe dimensões alinhadas</translation>

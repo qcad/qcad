@@ -20,6 +20,11 @@
         <translation>&amp;Zoznam Vrstiev</translation>
     </message>
     <message>
+        <location line="+57"/>
+        <source>Lists</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Enable alternating row colors</source>
         <translation>Každý druhý riadok označiť farbou</translation>

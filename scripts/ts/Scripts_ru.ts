@@ -78,17 +78,16 @@
         <translation>Нет</translation>
     </message>
     <message>
-        <location line="+591"/>
+        <location line="+646"/>
         <source>Options</source>
         <translation>Параметры</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Block Options</source>
-        <translation>Опции блока</translation>
+        <translation type="vanished">Опции блока</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+31"/>
         <source>Main Tools</source>
         <translation>Главные инструменты</translation>
     </message>

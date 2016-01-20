@@ -4,12 +4,12 @@
 <context>
     <name>Misc</name>
     <message>
-        <location filename="../Misc.js" line="+82"/>
+        <location filename="../Misc.js" line="+86"/>
         <source>&amp;Misc</source>
         <translation>&amp;Rôzne</translation>
     </message>
     <message>
-        <location line="-17"/>
+        <location line="-21"/>
         <source>Show misc tools</source>
         <translation>Zobraziť rôzne nástroje</translation>
     </message>
@@ -17,6 +17,11 @@
         <location line="-5"/>
         <source>Misc Tools</source>
         <translation>Rôzne nástroje</translation>
+    </message>
+    <message>
+        <location line="+22"/>
+        <source>Misc</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

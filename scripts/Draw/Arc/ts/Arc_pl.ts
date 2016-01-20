@@ -19,7 +19,7 @@ Pokaż menu &quot;Łuki&quot;</translatorcomment>
         <translation type="unfinished">Pokaż menu &quot;Łuki&quot;</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Arc</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

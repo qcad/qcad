@@ -14,7 +14,7 @@
         <translation>弧ツールを表示</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Arc</source>
         <translation>&amp;A 弧</translation>
     </message>

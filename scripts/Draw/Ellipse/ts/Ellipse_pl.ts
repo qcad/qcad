@@ -19,7 +19,7 @@ Pokaz menu &quot;Elipsy&quot;</translatorcomment>
         <translation type="unfinished">Pokaz menu &quot;Elipsy&quot;</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Ellipse</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

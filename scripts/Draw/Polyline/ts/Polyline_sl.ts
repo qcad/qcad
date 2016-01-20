@@ -14,7 +14,7 @@
         <translation>Prikaži orodja lomljenke</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Lomljenka</translation>
     </message>

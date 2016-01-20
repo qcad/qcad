@@ -14,7 +14,7 @@
         <translation>Показать инструменты работы с эллипсами</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Эллипс</translation>
     </message>

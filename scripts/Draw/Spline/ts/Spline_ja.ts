@@ -14,7 +14,7 @@
         <translation>スプラインツールを表示</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>&amp;Spline</source>
         <translation>&amp;S スプライン</translation>
     </message>

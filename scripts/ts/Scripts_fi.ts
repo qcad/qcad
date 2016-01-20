@@ -78,17 +78,16 @@
         <translation>Ei mitään</translation>
     </message>
     <message>
-        <location line="+591"/>
+        <location line="+646"/>
         <source>Options</source>
         <translation>Asetukset</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Block Options</source>
-        <translation>Lohkoasetukset</translation>
+        <translation type="vanished">Lohkoasetukset</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+31"/>
         <source>Main Tools</source>
         <translation>Päätyökalut</translation>
     </message>

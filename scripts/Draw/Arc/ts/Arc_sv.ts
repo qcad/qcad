@@ -14,7 +14,7 @@
         <translation>Visa bågverktyg</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Arc</source>
         <translation>&amp;Båge</translation>
     </message>

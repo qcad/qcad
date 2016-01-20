@@ -84,18 +84,17 @@
         <translation>Niente</translation>
     </message>
     <message>
-        <location line="+591"/>
+        <location line="+646"/>
         <source>Options</source>
         <translation>Opzioni</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Block Options</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Opzioni blocco</translation>
+        <translation type="vanished">Opzioni blocco</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+31"/>
         <source>Main Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Strumenti principali</translation>

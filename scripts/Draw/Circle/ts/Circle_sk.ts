@@ -14,7 +14,7 @@
         <translation>Zobraziť nástroje kružnice</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Circle</source>
         <translation>&amp;Kružnica</translation>
     </message>

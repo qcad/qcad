@@ -9,12 +9,12 @@
         <translation>Polylinienwerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Polylinie</translation>
     </message>
     <message>
-        <location line="-23"/>
+        <location line="-29"/>
         <source>Polyline Tools</source>
         <translation>Polylinienwerkzeuge</translation>
     </message>

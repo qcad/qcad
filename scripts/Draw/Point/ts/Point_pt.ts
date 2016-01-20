@@ -16,7 +16,7 @@
         <translation>Exiba as ferramentas para ponto</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>&amp;Point</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

@@ -14,7 +14,7 @@
         <translation>楕円ツールを表示</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;E 楕円</translation>
     </message>

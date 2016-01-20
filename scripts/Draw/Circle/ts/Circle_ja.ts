@@ -14,7 +14,7 @@
         <translation>円ツールを表示</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Circle</source>
         <translation>&amp;C 円</translation>
     </message>

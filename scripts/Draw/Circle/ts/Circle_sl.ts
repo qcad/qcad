@@ -14,7 +14,7 @@
         <translation>Prikaži orodja kroga</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Circle</source>
         <translation>&amp;Krog</translation>
     </message>

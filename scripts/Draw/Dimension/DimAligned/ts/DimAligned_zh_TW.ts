@@ -24,7 +24,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw aligned dimension</source>
         <translation type="unfinished"></translation>
     </message>

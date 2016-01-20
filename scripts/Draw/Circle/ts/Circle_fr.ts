@@ -14,7 +14,7 @@
         <translation>Afficher les outils de cercle</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Circle</source>
         <translation>&amp;Cercle</translation>
     </message>

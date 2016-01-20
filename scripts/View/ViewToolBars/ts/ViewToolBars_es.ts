@@ -4,9 +4,13 @@
 <context>
     <name>ViewToolBars</name>
     <message>
-        <location filename="../ViewToolBarsPostInit.js" line="+5"/>
         <source>&amp;Toolbars</source>
-        <translation>&amp;Barras de herramientas</translation>
+        <translation type="vanished">&amp;Barras de herramientas</translation>
+    </message>
+    <message>
+        <location filename="../ViewToolBarsPostInit.js" line="+6"/>
+        <source>&amp;Toolbars and Widgets</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

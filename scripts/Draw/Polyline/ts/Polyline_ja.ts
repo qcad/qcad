@@ -14,7 +14,7 @@
         <translation>ポリラインツールを表示</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>&amp;Polyline</source>
         <translation>&amp;P ポリライン</translation>
     </message>

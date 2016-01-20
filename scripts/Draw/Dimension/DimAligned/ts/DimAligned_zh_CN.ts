@@ -24,7 +24,7 @@
         <translation>已对齐</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw aligned dimension</source>
         <translation>绘制对齐标注</translation>
     </message>

@@ -14,7 +14,7 @@
         <translation>Показать инструменты дуги</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Arc</source>
         <translation>Дуга</translation>
     </message>

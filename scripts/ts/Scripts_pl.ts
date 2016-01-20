@@ -96,7 +96,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+591"/>
+        <location line="+646"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
@@ -105,13 +105,12 @@ Opcje łuku</translatorcomment>
         <translation type="unfinished">Opcje</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Block Options</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Opcje Zablokuj</translation>
+        <translation type="obsolete">Opcje Zablokuj</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+31"/>
         <source>Main Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Głównymi narzędziami</translation>

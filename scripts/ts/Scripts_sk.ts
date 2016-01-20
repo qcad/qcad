@@ -78,17 +78,16 @@
         <translation>Žiadne</translation>
     </message>
     <message>
-        <location line="+591"/>
+        <location line="+646"/>
         <source>Options</source>
         <translation>Možnosti</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Block Options</source>
-        <translation>Možnosti bloku</translation>
+        <translation type="vanished">Možnosti bloku</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+31"/>
         <source>Main Tools</source>
         <translation>Hlavné Nástroje</translation>
     </message>

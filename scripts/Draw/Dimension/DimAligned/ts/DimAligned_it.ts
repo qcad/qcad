@@ -24,7 +24,7 @@
         <translation>&amp;Allineato</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw aligned dimension</source>
         <translation>Quota allineata</translation>
     </message>

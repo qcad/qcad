@@ -14,7 +14,7 @@
         <translation>Lijnhulpmiddelen tonen</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Line</source>
         <translation>&amp;Lijn</translation>
     </message>

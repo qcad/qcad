@@ -5,6 +5,11 @@
     <name>Draw</name>
     <message>
         <location filename="../Draw.js" line="+57"/>
+        <source>Draw</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>&amp;Draw</source>
         <translation>&amp;Kresliť</translation>
     </message>

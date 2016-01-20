@@ -16,7 +16,7 @@
         <translation type="unfinished">Pokaż narzędzia spline</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>&amp;Spline</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--

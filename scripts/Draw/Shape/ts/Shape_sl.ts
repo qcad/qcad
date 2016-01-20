@@ -45,7 +45,7 @@
         <translation type="obsolete">Prikaži orodja črte</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>&amp;Shape</source>
         <translation>&amp;Oblike</translation>
     </message>

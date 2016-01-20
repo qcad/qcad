@@ -101,7 +101,7 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+591"/>
+        <location line="+646"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -110,13 +110,12 @@ Opções de Biselamento</translatorcomment>
         <translation>Opções</translation>
     </message>
     <message>
-        <location line="+21"/>
         <source>Block Options</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Opções de Bloco</translation>
+        <translation type="vanished">Opções de Bloco</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+31"/>
         <source>Main Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ferramentas Principais</translation>

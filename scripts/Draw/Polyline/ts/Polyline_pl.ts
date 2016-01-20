@@ -19,7 +19,7 @@ Pokaż menu &quot;Łamane&quot;</translatorcomment>
         <translation type="unfinished">Pokaż menu &quot;Łamane&quot;</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>&amp;Polyline</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--

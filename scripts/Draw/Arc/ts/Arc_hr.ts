@@ -14,7 +14,7 @@
         <translation>Prikaži alate za lukove</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Arc</source>
         <translation>&amp;Luk</translation>
     </message>

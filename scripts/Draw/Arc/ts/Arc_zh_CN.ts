@@ -14,7 +14,7 @@
         <translation>显示弧线工具</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Arc</source>
         <translation>弧线(&amp;A)</translation>
     </message>

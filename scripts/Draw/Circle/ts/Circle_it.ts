@@ -14,7 +14,7 @@
         <translation>Mostra menù &quot;Cerchi&quot;</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Circle</source>
         <translation>&amp;Cerchio</translation>
     </message>

@@ -24,7 +24,7 @@
         <translation>Вы&amp;ровненный</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw aligned dimension</source>
         <translation>Рисовать выровненный размер</translation>
     </message>

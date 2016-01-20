@@ -14,7 +14,7 @@
         <translation>Näytä murtoviivan työkalut</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Moniviiva</translation>
     </message>

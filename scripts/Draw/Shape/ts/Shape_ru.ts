@@ -14,7 +14,7 @@
         <translation>Показать инструменты работы с фигурами</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>&amp;Shape</source>
         <translation>Фигура</translation>
     </message>

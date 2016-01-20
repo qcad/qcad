@@ -16,6 +16,11 @@
         <translation>ウィジェット</translation>
     </message>
     <message>
+        <location line="+81"/>
+        <source>Lists</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Hide internal blocks</source>
         <translation type="unfinished"></translation>

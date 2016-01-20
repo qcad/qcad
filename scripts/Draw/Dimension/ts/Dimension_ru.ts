@@ -59,7 +59,7 @@
         <translation>Показать утилиты размеров</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>D&amp;imension</source>
         <translation>&amp;Размер</translation>
     </message>

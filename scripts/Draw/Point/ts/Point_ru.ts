@@ -14,7 +14,7 @@
         <translation>Показать инструменты работы с точками</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>&amp;Point</source>
         <translation>Точка</translation>
     </message>

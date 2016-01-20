@@ -14,7 +14,7 @@
         <translation>Näytä pistetyökalut</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>&amp;Point</source>
         <translation>&amp;Piste</translation>
     </message>

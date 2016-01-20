@@ -19,7 +19,7 @@ Exibe o menu &quot;Círculo&quot;</translatorcomment>
         <translation>Exiba as ferramentas de Círculo</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Circle</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

@@ -14,7 +14,7 @@
         <translation>Exiba as ferramentas de elipse</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Elipse</translation>
     </message>

@@ -14,7 +14,7 @@
         <translation>Показать инструменты работы с линией</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+20"/>
         <source>&amp;Line</source>
         <translation>Линия</translation>
     </message>

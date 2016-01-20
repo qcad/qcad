@@ -14,7 +14,7 @@
         <translation>Mostra strumenti polilinea</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Polilinea</translation>
     </message>
