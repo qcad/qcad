@@ -108,7 +108,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="normalize" cppName="normalize" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="tolerance"
+        hasDefault="true" default="RS :: PointTolerance"
+        isConst="false" />
+      </variant>
     </method>
     <method name="countVertices" cppName="countVertices"
     specifier="public" isStatic="false" isVirtual="false"

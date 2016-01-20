@@ -87,7 +87,7 @@ void RPolyline::clear() {
 /**
  * Removes duplicate vertices.
  */
-void RPolyline::normalize() {
+void RPolyline::normalize(double tolerance) {
     QList<RVector> newVertices;
     QList<double> newBulges;
     QList<double> newStartWidths;
@@ -99,7 +99,7 @@ void RPolyline::normalize() {
         RVector v = vertices[i];
         double b = bulges[i];
 
-        if (i==0 || !v.equalsFuzzy(vPrev)) {
+        if (i==0 || !v.equalsFuzzy(vPrev, tolerance)) {
             newVertices.append(v);
             newBulges.append(b);
             newStartWidths.append(startWidths[i]);
@@ -740,8 +740,12 @@ QSharedPointer<RShape> RPolyline::getSegmentAt(int i) const {
         bool reversed = bulge<0.0;
         double alpha = atan(bulge)*4.0;
 
-        if (fabs(alpha) > 2*M_PI-RS::AngleTolerance) {
-            return QSharedPointer<RShape>();
+        if (fabs(alpha) > 2*M_PI-RS::PointTolerance) {
+            qDebug() << "p1:" << p1;
+            qDebug() << "p2:" << p2;
+            qDebug() << "b:" << bulge;
+            return QSharedPointer<RShape>(new RLine(p1, p2));
+            //return QSharedPointer<RShape>();
         }
 
         double radius;

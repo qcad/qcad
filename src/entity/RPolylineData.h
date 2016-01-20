@@ -81,8 +81,8 @@ public:
         RPolyline::clear();
     }
 
-    void normalize() {
-        RPolyline::normalize();
+    void normalize(double tolerance = RS::PointTolerance) {
+        RPolyline::normalize(tolerance);
     }
 
     QList<RVector> getVertices() const {

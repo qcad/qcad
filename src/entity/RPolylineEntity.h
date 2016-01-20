@@ -115,8 +115,8 @@ public:
         data.clear();
     }
 
-    void normalize() {
-        data.normalize();
+    void normalize(double tolerance = RS::PointTolerance) {
+        data.normalize(tolerance);
     }
 
     int countVertices() const {

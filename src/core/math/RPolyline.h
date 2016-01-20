@@ -61,7 +61,7 @@ public:
     virtual void to2D();
 
     void clear();
-    void normalize();
+    void normalize(double tolerance = RS::PointTolerance);
 
     bool prependShape(const RShape& shape);
     bool appendShape(const RShape& shape, bool prepend = false);
