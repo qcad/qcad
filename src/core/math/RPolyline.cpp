@@ -115,11 +115,13 @@ void RPolyline::normalize() {
     endWidths = newEndWidths;
 }
 
-void RPolyline::prependShape(const RShape& shape) {
-    appendShape(shape, true);
+bool RPolyline::prependShape(const RShape& shape) {
+    return appendShape(shape, true);
 }
 
-void RPolyline::appendShape(const RShape& shape, bool prepend) {
+bool RPolyline::appendShape(const RShape& shape, bool prepend) {
+    bool ret = true;
+
     const RPolyline* pl = dynamic_cast<const RPolyline*>(&shape);
     if (pl!=NULL) {
         if (prepend) {
@@ -128,7 +130,7 @@ void RPolyline::appendShape(const RShape& shape, bool prepend) {
                 if (s.isNull()) {
                     continue;
                 }
-                prependShape(*s);
+                ret = ret && prependShape(*s);
                 setStartWidthAt(0, pl->getStartWidthAt(i));
                 setEndWidthAt(0, pl->getEndWidthAt(i));
             }
@@ -141,10 +143,10 @@ void RPolyline::appendShape(const RShape& shape, bool prepend) {
                 }
                 setStartWidthAt(vertices.length()-1, pl->getStartWidthAt(i));
                 setEndWidthAt(vertices.length()-1, pl->getEndWidthAt(i));
-                appendShape(*s);
+                ret = ret && appendShape(*s);
             }
         }
-        return;
+        return ret;
     }
 
     const RDirected* directed = NULL;
@@ -164,7 +166,7 @@ void RPolyline::appendShape(const RShape& shape, bool prepend) {
 
     if (directed==NULL) {
         qWarning() << "RPolyline::appendShape: shape is not a line, arc or polyline: " << shape;
-        return;
+        return false;
     }
 
     RVector connectionPoint;
@@ -190,7 +192,8 @@ void RPolyline::appendShape(const RShape& shape, bool prepend) {
     }
 
     if (!RMath::fuzzyCompare(gap, 0.0, 1.0e-4)) {
-        qWarning() << "RPolyline::appendShape: arc or line not connected to polyline, gap: " << gap;
+        qWarning() << "RPolyline::appendShape: arc or line not connected to polyline:\nshape:" << shape << "\ngap: " << gap;
+        ret = false;
     }
 
     if (prepend) {
@@ -201,6 +204,8 @@ void RPolyline::appendShape(const RShape& shape, bool prepend) {
         appendVertex(nextPoint);
         setBulgeAt(bulges.size()-2, bulge);
     }
+
+    return ret;
 }
 
 void RPolyline::appendVertex(const RVector& vertex, double bulge, double w1, double w2) {
@@ -865,6 +870,10 @@ RVector RPolyline::getStartPoint() const {
 RVector RPolyline::getEndPoint() const {
     if (vertices.size()==0) {
         return RVector::invalid;
+    }
+
+    if (isClosed()) {
+        return vertices.first();
     }
 
     return vertices.last();
