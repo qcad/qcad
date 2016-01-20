@@ -43,7 +43,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="prependShape" cppName="prependShape"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
+      <variant returnType="bool" isPureVirtual="false">
         <arg type="RShape &amp;" typeName="RShape" name="shape"
         isConst="true" />
       </variant>
@@ -51,7 +51,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="appendShape" cppName="appendShape"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
+      <variant returnType="bool" isPureVirtual="false">
         <arg type="RShape &amp;" typeName="RShape" name="shape"
         isConst="true" />
         <arg type="bool" typeName="bool" name="prepend"
