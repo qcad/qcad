@@ -40,6 +40,14 @@
 
     <function_decl><type><name>void</name></type> <name>insertAction</name><parameter_list>(<param><decl><type><name>int</name></type> <name>index</name></decl></param>, <param><decl><type><name>QAction</name>*</type> <name>action</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>int</name></type> <name>indexOf</name><parameter_list>(<param><decl><type><name>QAction</name>*</type> <name>action</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function><type><name>void</name></type> <name>invalidate</name><parameter_list>()</parameter_list> <block>{
+        <constructor_decl><name>QLayout::invalidate</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
     <function><type><name>int</name></type> <name>indexOf</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>widget</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><call><name><name>QLayout</name>::<name>indexOf</name></name><argument_list>(<argument><expr><name>widget</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>

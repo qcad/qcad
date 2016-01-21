@@ -96,10 +96,8 @@ Line.getCadToolBarPanel = function() {
     return tb;
 };
 
-Line.getDockWidget = function() {
-    var d = EAction.getDockWidget(Line.getTitle(), "LineDockWidget", Qt.LeftDockWidgetArea, Draw.getContextMenuCategory());
-    d.visible = false;
-    return d;
+Line.getToolMatrixPanel = function() {
+    return EAction.getToolMatrixPanel(Line.getTitle(), "LineDockWidget", 200);
 };
 
 Line.getTitle = function() {
@@ -239,5 +237,5 @@ Line.init = function() {
     Line.getMenu();
     Line.getToolBar();
     Line.getCadToolBarPanel();
-    //Line.getDockWidget();
+    Line.getToolMatrixPanel();
 };

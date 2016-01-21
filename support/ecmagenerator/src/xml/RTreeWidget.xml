@@ -29,7 +29,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="contextMenuEvent" cppName="contextMenuEvent"
-    specifier="protected" isStatic="false" isVirtual="false"
+    specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QContextMenuEvent *"
@@ -37,7 +37,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="mousePressEvent" cppName="mousePressEvent"
-    specifier="protected" isStatic="false" isVirtual="false"
+    specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QMouseEvent *" typeName="QMouseEvent *" name="e"
@@ -45,7 +45,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="mouseReleaseEvent" cppName="mouseReleaseEvent"
-    specifier="protected" isStatic="false" isVirtual="false"
+    specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QMouseEvent *" typeName="QMouseEvent *" name="e"
@@ -53,11 +53,19 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="mouseMoveEvent" cppName="mouseMoveEvent"
-    specifier="protected" isStatic="false" isVirtual="false"
+    specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QMouseEvent *" typeName="QMouseEvent *" name="e"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="resizeEvent" cppName="resizeEvent"
+    specifier="protected" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QResizeEvent *" typeName="QResizeEvent *"
+        name="event" isConst="false" />
       </variant>
     </method>
   </class>

@@ -115,13 +115,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="indexOf" cppName="indexOf" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false">
-        <arg type="QWidget *" typeName="QWidget *" name="widget"
-        isConst="false" />
-      </variant>
-      <variant returnType="int" isPureVirtual="false">
         <arg type="QAction *" typeName="QAction *" name="action"
         isConst="false" />
       </variant>
+    </method>
+    <method name="invalidate" cppName="invalidate"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
     </method>
   </class>
 </unit>

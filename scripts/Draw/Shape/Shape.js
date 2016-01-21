@@ -93,8 +93,8 @@ Shape.getCadToolBarPanel = function() {
     return tb;
 };
 
-Shape.getDockWidget = function() {
-    var d = EAction.getDockWidget(Shape.getTitle(), "ShapeDockWidget", Qt.LeftDockWidgetArea, Draw.getContextMenuCategory());
+Shape.getToolMatrixPanel = function() {
+    var d = EAction.getToolMatrixPanel(Shape.getTitle(), "ShapeDockWidget");
     d.visible = false;
     return d;
 };
@@ -111,7 +111,7 @@ Shape.init = function() {
     Shape.getMenu();
     Shape.getToolBar();
     Shape.getCadToolBarPanel();
-    //Shape.getDockWidget();
+    //Shape.getToolMatrixPanel();
 };
 
 Shape.prototype.initUiOptions = function(resume, optionsToolBar) {

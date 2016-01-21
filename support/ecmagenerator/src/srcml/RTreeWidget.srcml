@@ -52,10 +52,11 @@
     }</block></function>
 
 </public><protected>protected:
-    <function_decl><type><name>void</name></type> <name>contextMenuEvent</name><parameter_list>(<param><decl><type><name>QContextMenuEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>mousePressEvent</name><parameter_list>(<param><decl><type><name>QMouseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>mouseReleaseEvent</name><parameter_list>(<param><decl><type><name>QMouseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>mouseMoveEvent</name><parameter_list>(<param><decl><type><name>QMouseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>contextMenuEvent</name><parameter_list>(<param><decl><type><name>QContextMenuEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>mousePressEvent</name><parameter_list>(<param><decl><type><name>QMouseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>mouseReleaseEvent</name><parameter_list>(<param><decl><type><name>QMouseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>mouseMoveEvent</name><parameter_list>(<param><decl><type><name>QMouseEvent</name>*</type> <name>e</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>resizeEvent</name><parameter_list>(<param><decl><type><name>QResizeEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
 
 <label><name>signals</name>:</label>
     <function_decl><type><name>void</name></type> <name>itemColumnClicked</name><parameter_list>(<param><decl><type><name>QTreeWidgetItem</name>*</type> <name>item</name></decl></param>, <param><decl><type><name>int</name></type> <name>column</name></decl></param>)</parameter_list>;</function_decl>

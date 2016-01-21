@@ -126,6 +126,7 @@
 #include "REcmaFileImporterFactoryAdapter.h"
 #include "REcmaFileImporterRegistry.h"
 #include "REcmaFileSystemModel.h"
+#include "REcmaFlowLayout.h"
 #include "REcmaFocusListener.h"
 #include "REcmaFocusListenerAdapter.h"
 #include "REcmaFontChooserWidget.h"
@@ -849,6 +850,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaPropertyListener::initEcma(*engine);
     REcmaPropertyEditor::initEcma(*engine);
 
+    REcmaFlowLayout::initEcma(*engine);
     REcmaListWidget::initEcma(*engine);
     REcmaTreeWidget::initEcma(*engine);
     REcmaListView::initEcma(*engine);

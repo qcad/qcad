@@ -84,6 +84,7 @@ HEADERS += \
     $$PWD/REcmaFileImporterFactoryAdapter.h \
     $$PWD/REcmaFileImporterRegistry.h \
     $$PWD/REcmaFileSystemModel.h \
+    $$PWD/REcmaFlowLayout.h \
     $$PWD/REcmaFocusFrame.h \
     $$PWD/REcmaFocusListener.h \
     $$PWD/REcmaFocusListenerAdapter.h \
@@ -257,6 +258,7 @@ HEADERS += \
     $$PWD/REcmaShellFileExporterFactoryAdapter.h \
     $$PWD/REcmaShellFileImporterAdapter.h \
     $$PWD/REcmaShellFileImporterFactoryAdapter.h \
+    $$PWD/REcmaShellFlowLayout.h \
     $$PWD/REcmaShellFocusListenerAdapter.h \
     $$PWD/REcmaShellGraphicsViewImage.h \
     $$PWD/REcmaShellGraphicsViewQt.h \
@@ -425,6 +427,7 @@ SOURCES += \
     $$PWD/REcmaFileImporterFactoryAdapter.cpp \
     $$PWD/REcmaFileImporterRegistry.cpp \
     $$PWD/REcmaFileSystemModel.cpp \
+    $$PWD/REcmaFlowLayout.cpp \
     $$PWD/REcmaFocusFrame.cpp \
     $$PWD/REcmaFocusListener.cpp \
     $$PWD/REcmaFocusListenerAdapter.cpp \
@@ -598,6 +601,7 @@ SOURCES += \
     $$PWD/REcmaShellFileExporterFactoryAdapter.cpp \
     $$PWD/REcmaShellFileImporterAdapter.cpp \
     $$PWD/REcmaShellFileImporterFactoryAdapter.cpp \
+    $$PWD/REcmaShellFlowLayout.cpp \
     $$PWD/REcmaShellFocusListenerAdapter.cpp \
     $$PWD/REcmaShellGraphicsViewImage.cpp \
     $$PWD/REcmaShellGraphicsViewQt.cpp \

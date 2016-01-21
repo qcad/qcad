@@ -90,10 +90,8 @@ Point.getCadToolBarPanel = function() {
     return tb;
 };
 
-Point.getDockWidget = function() {
-    var d = EAction.getDockWidget(Point.getTitle(), "PointDockWidget", Qt.LeftDockWidgetArea, Draw.getContextMenuCategory());
-    d.visible = false;
-    return d;
+Point.getToolMatrixPanel = function() {
+    return EAction.getToolMatrixPanel(Point.getTitle(), "PointDockWidget", 100);
 };
 
 Point.getTitle = function() {
@@ -121,5 +119,5 @@ Point.init = function() {
     Point.getMenu();
     Point.getToolBar();
     Point.getCadToolBarPanel();
-    //Point.getDockWidget();
+    Point.getToolMatrixPanel();
 };

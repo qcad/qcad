@@ -51,10 +51,11 @@ public:
     }
 
 protected:
-    void contextMenuEvent(QContextMenuEvent* e);
-    void mousePressEvent(QMouseEvent* e);
-    void mouseReleaseEvent(QMouseEvent* e);
-    void mouseMoveEvent(QMouseEvent* e);
+    virtual void contextMenuEvent(QContextMenuEvent* e);
+    virtual void mousePressEvent(QMouseEvent* e);
+    virtual void mouseReleaseEvent(QMouseEvent* e);
+    virtual void mouseMoveEvent(QMouseEvent* e);
+    virtual void resizeEvent(QResizeEvent* event);
 
 signals:
     void itemColumnClicked(QTreeWidgetItem* item, int column);

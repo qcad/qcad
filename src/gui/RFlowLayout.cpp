@@ -175,6 +175,7 @@ void RFlowLayout::insertAction(int index, QAction* action) {
 }
 
 int RFlowLayout::indexOf(QAction* action) const {
+    //qDebug() << "indexOf: " << action;
     for (int i = 0; i < itemList.count(); ++i) {
         QLayoutItem* item = itemList.at(i);
         QWidget* w = item->widget();

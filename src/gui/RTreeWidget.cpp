@@ -99,3 +99,7 @@ void RTreeWidget::mouseMoveEvent(QMouseEvent* e) {
         QTreeWidget::mouseMoveEvent(e);
     }
 }
+
+void RTreeWidget::resizeEvent(QResizeEvent* event) {
+    QTreeWidget::resizeEvent(event);
+}

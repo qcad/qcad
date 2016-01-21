@@ -5,10 +5,23 @@
 #include <QRect>
 #include <QStyle>
 
+#ifndef RDEFAULT_MIN1
+#define RDEFAULT_MIN1 -1
+#endif
+
+/**
+ * Flow layout.
+ *
+ * \ingroup gui
+ * \scriptable
+ * \generateScriptShell
+ */
 class RFlowLayout : public QLayout {
+    Q_OBJECT
+
 public:
-    explicit RFlowLayout(QWidget* parent, int margin = -1, int hSpacing = -1, int vSpacing = -1);
-    explicit RFlowLayout(int margin = -1, int hSpacing = -1, int vSpacing = -1);
+    RFlowLayout(QWidget* parent, int margin = RDEFAULT_MIN1, int hSpacing = RDEFAULT_MIN1, int vSpacing = RDEFAULT_MIN1);
+    RFlowLayout(int margin = RDEFAULT_MIN1, int hSpacing = RDEFAULT_MIN1, int vSpacing = RDEFAULT_MIN1);
     ~RFlowLayout();
 
     void addItem(QLayoutItem* item);
@@ -26,6 +39,14 @@ public:
 
     void insertAction(int index, QAction* action);
     int indexOf(QAction* action) const;
+
+    void invalidate() {
+        QLayout::invalidate();
+    }
+
+    /**
+     * \nonscriptable
+     */
     int indexOf(QWidget* widget) const {
         return QLayout::indexOf(widget);
     }
@@ -38,5 +59,7 @@ private:
     int hSpace;
     int vSpace;
 };
+
+Q_DECLARE_METATYPE(RFlowLayout*)
 
 #endif

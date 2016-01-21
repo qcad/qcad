@@ -1054,25 +1054,35 @@ EAction.getToolBar = function(title, objectName, toolBarArea, category) {
  * \return Existing or new dock.
  *
  * \param title Translated title of the dock widget. E.g. qsTr("Snap").
- * \param objectName Object name to use for the toolbar. Used mainly for later
+ * \param objectName Object name to use for the dock widget. Used mainly for later
  * identification of the dock widget. E.g. "line".
  * \param toolBarArea Area where the new dock should be added. Note that the
  * actual location where the dock is added may also depend on the previously
  * saved state of the docks. Defaults to Qt.LeftDockWidgetArea.
  */
-EAction.getDockWidget = function(title, objectName, dockWidgetArea, category) {
+EAction.getToolMatrixPanel = function(title, objectName, order) {
     if (isNull(objectName)) {
         objectName = "";
     }
-    if (isNull(dockWidgetArea)) {
-        dockWidgetArea = Qt.LeftDockWidgetArea;
-    }
+//    if (isNull(dockWidgetArea)) {
+//        dockWidgetArea = Qt.LeftDockWidgetArea;
+//    }
 
-    var appWin = EAction.getMainWindow();
-    if (isNull(appWin)) {
-        return undefined;
-    }
+//    var appWin = EAction.getMainWindow();
+//    if (isNull(appWin)) {
+//        return undefined;
+//    }
 
+    //var dw = appWin.findChild(objectName);
+
+    //if (isNull(dw)) {
+        include("scripts/Widgets/CadToolMatrix/CadToolMatrix.js");
+        return CadToolMatrix.getToolMatrixPanel(title, objectName, order);
+    //}
+
+    //return dw;
+
+/*
     var dock;
     if (objectName.length !== 0) {
         dock = appWin.findChild(objectName);
@@ -1103,6 +1113,7 @@ EAction.getDockWidget = function(title, objectName, dockWidgetArea, category) {
 //    dock.setTitleBarWidget(new QWidget());
 
     return dock;
+    */
 };
 
 /**

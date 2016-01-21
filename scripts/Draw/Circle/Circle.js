@@ -86,8 +86,8 @@ Circle.getCadToolBarPanel = function() {
     return tb;
 };
 
-Circle.getDockWidget = function() {
-    var d = EAction.getDockWidget(Circle.getTitle(), "CircleDockWidget", Qt.LeftDockWidgetArea, Draw.getContextMenuCategory());
+Circle.getToolMatrixPanel = function() {
+    var d = EAction.getToolMatrixPanel(Circle.getTitle(), "CircleDockWidget");
     d.visible = false;
     return d;
 };
@@ -104,5 +104,5 @@ Circle.init = function() {
     Circle.getMenu();
     Circle.getToolBar();
     Circle.getCadToolBarPanel();
-    //Circle.getDockWidget();
+    //Circle.getToolMatrixPanel();
 };

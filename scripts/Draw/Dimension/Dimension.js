@@ -148,8 +148,8 @@ Dimension.getCadToolBarPanel = function() {
     return tb;
 };
 
-Dimension.getDockWidget = function() {
-    var d = EAction.getDockWidget(Dimension.getTitle(), "DimensionDockWidget", Qt.LeftDockWidgetArea, Draw.getContextMenuCategory());
+Dimension.getToolMatrixPanel = function() {
+    var d = EAction.getToolMatrixPanel(Dimension.getTitle(), "DimensionDockWidget");
     d.visible = false;
     return d;
 };
@@ -166,7 +166,7 @@ Dimension.init = function() {
     Dimension.getMenu();
     Dimension.getToolBar();
     Dimension.getCadToolBarPanel();
-    //Dimension.getDockWidget();
+    //Dimension.getToolMatrixPanel();
 };
 
 

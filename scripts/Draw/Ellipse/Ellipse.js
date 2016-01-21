@@ -86,8 +86,8 @@ Ellipse.getCadToolBarPanel = function() {
     return tb;
 };
 
-Ellipse.getDockWidget = function() {
-    var d = EAction.getDockWidget(Ellipse.getTitle(), "EllipseDockWidget", Qt.LeftDockWidgetArea, Draw.getContextMenuCategory());
+Ellipse.getToolMatrixPanel = function() {
+    var d = EAction.getToolMatrixPanel(Ellipse.getTitle(), "EllipseDockWidget");
     d.visible = false;
     return d;
 };
@@ -104,5 +104,5 @@ Ellipse.init = function() {
     Ellipse.getMenu();
     Ellipse.getToolBar();
     Ellipse.getCadToolBarPanel();
-    //Ellipse.getDockWidget();
+    //Ellipse.getToolMatrixPanel();
 };

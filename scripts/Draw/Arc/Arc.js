@@ -86,8 +86,8 @@ Arc.getCadToolBarPanel = function() {
     return tb;
 };
 
-Arc.getDockWidget = function() {
-    var d = EAction.getDockWidget(Arc.getTitle(), "ArcDockWidget", Qt.LeftDockWidgetArea, Draw.getContextMenuCategory());
+Arc.getToolMatrixPanel = function() {
+    var d = EAction.getToolMatrixPanel(Arc.getTitle(), "ArcDockWidget");
     d.visible = false;
     return d;
 };
@@ -104,5 +104,5 @@ Arc.init = function() {
     Arc.getMenu();
     Arc.getToolBar();
     Arc.getCadToolBarPanel();
-    //Arc.getDockWidget();
+    //Arc.getToolMatrixPanel();
 };

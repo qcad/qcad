@@ -4,6 +4,7 @@ SUBDIRS = \
     AutoZoomView \
     BlockList \
     CadToolBar \
+    CadToolMatrix \
     CommandLine \
     CoordinateDisplay \
     DirectoryList \

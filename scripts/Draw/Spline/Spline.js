@@ -91,8 +91,8 @@ Spline.getCadToolBarPanel = function() {
     return tb;
 };
 
-Spline.getDockWidget = function() {
-    var d = EAction.getDockWidget(Spline.getTitle(), "SplineDockWidget", Qt.LeftDockWidgetArea, Draw.getContextMenuCategory());
+Spline.getToolMatrixPanel = function() {
+    var d = EAction.getToolMatrixPanel(Spline.getTitle(), "SplineDockWidget");
     d.visible = false;
     return d;
 };
@@ -109,5 +109,5 @@ Spline.init = function() {
     Spline.getMenu();
     Spline.getToolBar();
     Spline.getCadToolBarPanel();
-    //Spline.getDockWidget();
+    //Spline.getToolMatrixPanel();
 };
