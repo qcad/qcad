@@ -87,9 +87,7 @@ Arc.getCadToolBarPanel = function() {
 };
 
 Arc.getToolMatrixPanel = function() {
-    var d = EAction.getToolMatrixPanel(Arc.getTitle(), "ArcDockWidget");
-    d.visible = false;
-    return d;
+    return EAction.getToolMatrixPanel(Arc.getTitle(), "ArcDockWidget", 300);
 };
 
 Arc.getTitle = function() {
@@ -104,5 +102,5 @@ Arc.init = function() {
     Arc.getMenu();
     Arc.getToolBar();
     Arc.getCadToolBarPanel();
-    //Arc.getToolMatrixPanel();
+    Arc.getToolMatrixPanel();
 };

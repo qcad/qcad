@@ -24,6 +24,8 @@ function RCadToolMatrixTreePanel(parent) {
     var layout = new RFlowLayout(2,2,2);
     //layout.sizeConstraint = QLayout.SetMinimumSize;
     //layout.sizeConstraint = QLayout.SetFixedSize;
+    var iconSize = RSettings.getIntValue("CadToolMatrix/IconSize", 20);
+    layout.setIconSize(new QSize(iconSize, iconSize));
     this.setLayout(layout);
 }
 

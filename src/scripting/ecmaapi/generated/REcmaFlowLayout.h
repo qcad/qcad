@@ -48,6 +48,9 @@
 
     // public methods:
     static  QScriptValue
+        setIconSize
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addItem
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

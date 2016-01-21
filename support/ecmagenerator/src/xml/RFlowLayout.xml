@@ -32,6 +32,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </constructor>
+    <method name="setIconSize" cppName="setIconSize"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QSize &amp;" typeName="QSize" name="s"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="addItem" cppName="addItem" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

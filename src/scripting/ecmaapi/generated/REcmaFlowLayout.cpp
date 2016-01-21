@@ -63,6 +63,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, setIconSize, "setIconSize");
+            
             REcmaHelper::registerFunction(&engine, proto, addItem, "addItem");
             
             REcmaHelper::registerFunction(&engine, proto, horizontalSpacing, "horizontalSpacing");
@@ -668,6 +670,71 @@
 
     // public methods:
      QScriptValue
+        REcmaFlowLayout::setIconSize
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaFlowLayout::setIconSize", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFlowLayout::setIconSize";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RFlowLayout* self = 
+                        getSelf("setIconSize", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QSize */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QSize*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QSize*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RFlowLayout: Argument 0 is not of type QSize*.",
+                               context);                    
+                    }
+                    QSize& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setIconSize(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFlowLayout.setIconSize().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaFlowLayout::setIconSize", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaFlowLayout::addItem
         (QScriptContext* context, QScriptEngine* engine) 
         

@@ -10,7 +10,7 @@
 #endif
 
 /**
- * Flow layout.
+ * Flow layout. Added actions are represented as QToolButtons.
  *
  * \ingroup gui
  * \scriptable
@@ -23,6 +23,10 @@ public:
     RFlowLayout(QWidget* parent, int margin = RDEFAULT_MIN1, int hSpacing = RDEFAULT_MIN1, int vSpacing = RDEFAULT_MIN1);
     RFlowLayout(int margin = RDEFAULT_MIN1, int hSpacing = RDEFAULT_MIN1, int vSpacing = RDEFAULT_MIN1);
     ~RFlowLayout();
+
+    void setIconSize(const QSize& s) {
+        iconSize = s;
+    }
 
     void addItem(QLayoutItem* item);
     int horizontalSpacing() const;
@@ -58,6 +62,7 @@ private:
     QList<QLayoutItem*> itemList;
     int hSpace;
     int vSpace;
+    QSize iconSize;
 };
 
 Q_DECLARE_METATYPE(RFlowLayout*)

@@ -6,7 +6,7 @@
 #include "RSettings.h"
 
 RFlowLayout::RFlowLayout(QWidget* parent, int margin, int hSpacing, int vSpacing)
-    : QLayout(parent), hSpace(hSpacing), vSpace(vSpacing) {
+    : QLayout(parent), hSpace(hSpacing), vSpace(vSpacing), iconSize(32,32) {
     setContentsMargins(margin, margin, margin, margin);
 }
 
@@ -161,8 +161,8 @@ void RFlowLayout::insertAction(int index, QAction* action) {
     }
 
     QToolButton* button = new QToolButton(parentWidget());
-    int iconSize = RSettings::getIntValue("CadToolBar/IconSize", 32);
-    button->setIconSize(QSize(iconSize, iconSize));
+    //int iconSize = RSettings::getIntValue("CadToolBar/IconSize", 32);
+    button->setIconSize(iconSize);
     button->setDefaultAction(action);
     itemList.insert(index, new QWidgetItem(button));
     invalidate();

@@ -48,6 +48,12 @@
         
     
     
+      void setIconSize(
+                const QSize & s
+            );
+        
+    
+    
       void addItem(
                 QLayoutItem * item
             );
