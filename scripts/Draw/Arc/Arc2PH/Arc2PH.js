@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2016 by Andrew Mustun. All rights reserved.
  * Copyright (c) 2015 by Robert S. (Modification to draw arc with specified height).
  * This file is part of the QCAD project.
  *

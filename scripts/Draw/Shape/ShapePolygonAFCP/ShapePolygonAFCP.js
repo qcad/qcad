@@ -1,6 +1,6 @@
 /**
  * Modifications Copyright (c) 2015 by Robert S.
- * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2016 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *

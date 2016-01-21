@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2016 by Andrew Mustun. All rights reserved.
  * 
  * DirectDistanceEntry handling added 2013 by Robert S.
  *
