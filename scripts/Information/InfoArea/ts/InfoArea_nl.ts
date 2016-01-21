@@ -6,37 +6,37 @@
     <message>
         <location filename="../InfoArea.js" line="+70"/>
         <source>Set next polygon corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Set volgende hoek</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaar</translation>
     </message>
     <message>
         <location line="+132"/>
         <source>Polygon area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Polygoonoppervlakte:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>circumference:</source>
-        <translation type="unfinished"></translation>
+        <translation>Omtrek:</translation>
     </message>
     <message>
         <location filename="../InfoArea.ui" line="+17"/>
         <source>Calculate length and close tool.</source>
-        <translation type="unfinished"></translation>
+        <translation>Lengte berekenen en gereedschap sluiten.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Close Tool.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gereedschap sluiten.</translation>
     </message>
     <message>
         <location filename="../InfoAreaInit.js" line="+2"/>
         <source>Pol&amp;ygonal Area</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Polygoonoppervlakte</translation>
     </message>
 </context>
 </TS>
