@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./core" filename="RLineweight.h"><comment type="block">/**
- * Copyright (c) 2011-2015 by Andrew Mustun. All rights reserved.
+ * Copyright (c) 2011-2016 by Andrew Mustun. All rights reserved.
  * 
  * This file is part of the QCAD project.
  *
