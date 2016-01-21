@@ -19,7 +19,7 @@
     <message>
         <location filename="../ShowReadme.js" line="+46"/>
         <source>File &apos;%1&apos; doesn&apos;t exist.</source>
-        <translation>Datei &apos;%1&apos; besteht nicht.</translation>
+        <translation>Datei &quot;%1&quot; besteht nicht.</translation>
     </message>
     <message>
         <location filename="../ShowReadmeInit.js" line="+2"/>

@@ -16,9 +16,8 @@
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+81"/>
         <source>Lists</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Listas</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>

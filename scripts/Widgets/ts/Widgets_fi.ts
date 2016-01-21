@@ -21,5 +21,10 @@
         <source>&amp;Widgets</source>
         <translation>&amp;Pienoisohjelmat</translation>
     </message>
+    <message>
+        <location line="+8"/>
+        <source>Lists</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

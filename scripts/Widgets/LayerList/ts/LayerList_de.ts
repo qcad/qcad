@@ -14,12 +14,11 @@
         <translation>&amp;Layerliste</translation>
     </message>
     <message>
-        <location line="+57"/>
         <source>Lists</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Listen</translation>
     </message>
     <message>
-        <location line="-110"/>
+        <location line="-53"/>
         <location line="+108"/>
         <source>Layer List</source>
         <translation>Layerliste</translation>

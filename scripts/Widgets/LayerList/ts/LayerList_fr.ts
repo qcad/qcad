@@ -14,12 +14,11 @@
         <translation>&amp;Liste des calques</translation>
     </message>
     <message>
-        <location line="+57"/>
         <source>Lists</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Listes</translation>
     </message>
     <message>
-        <location line="-110"/>
+        <location line="-53"/>
         <location line="+108"/>
         <source>Layer List</source>
         <translation>Liste des calques</translation>

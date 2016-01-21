@@ -30,5 +30,10 @@ Anuluj
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Widgety</translation>
     </message>
+    <message>
+        <location line="+8"/>
+        <source>Lists</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

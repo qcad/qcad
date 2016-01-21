@@ -151,12 +151,12 @@
     <message>
         <location line="+7"/>
         <source>Calculate Area of Sector</source>
-        <translation>Sektor Berechnung</translation>
+        <translation>Sektorfläche berechnen</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Calculate Area of Segment</source>
-        <translation>Segment Berechnung</translation>
+        <translation>Segmentfläche berechnen</translation>
     </message>
     <message>
         <location line="+30"/>

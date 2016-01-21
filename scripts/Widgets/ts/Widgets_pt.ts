@@ -29,5 +29,10 @@ Cancelar
         <source>&amp;Widgets</source>
         <translation>&amp;Widgets</translation>
     </message>
+    <message>
+        <location line="+8"/>
+        <source>Lists</source>
+        <translation>Listas</translation>
+    </message>
 </context>
 </TS>

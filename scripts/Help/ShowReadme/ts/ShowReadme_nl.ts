@@ -6,12 +6,12 @@
     <message>
         <location filename="../ShowReadmeDialog.ui" line="+14"/>
         <source>Readme</source>
-        <translation type="unfinished"></translation>
+        <translation>Readme</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Don&apos;t show this dialog at startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Dit dialoogvenster bij het opstarten niet weergeven</translation>
     </message>
 </context>
 <context>
@@ -19,12 +19,12 @@
     <message>
         <location filename="../ShowReadme.js" line="+46"/>
         <source>File &apos;%1&apos; doesn&apos;t exist.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestand &quot;%1&quot; bestaat niet.</translation>
     </message>
     <message>
         <location filename="../ShowReadmeInit.js" line="+2"/>
         <source>Show &amp;Readme</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Readme tonen</translation>
     </message>
 </context>
 </TS>

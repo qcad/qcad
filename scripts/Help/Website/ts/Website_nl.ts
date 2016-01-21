@@ -6,7 +6,7 @@
     <message>
         <location filename="../WebsiteInit.js" line="+2"/>
         <source>Visit &amp;Website</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Website</translation>
     </message>
 </context>
 </TS>

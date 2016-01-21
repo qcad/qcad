@@ -57,6 +57,10 @@ Widgets.prototype.getTitle = function() {
     return Widgets.getTitle();
 };
 
+Widgets.getListContextMenuCategory = function() {
+    return [qsTr("Lists")];
+};
+
 Widgets.init = function() {
     Widgets.getToolBar();
 };

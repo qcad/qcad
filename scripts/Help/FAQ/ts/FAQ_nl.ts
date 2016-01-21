@@ -6,7 +6,7 @@
     <message>
         <location filename="../FAQInit.js" line="+2"/>
         <source>FA&amp;Qs (online)</source>
-        <translation type="unfinished"></translation>
+        <translation>Veel gestelde &amp;vragen (online)</translation>
     </message>
 </context>
 </TS>
