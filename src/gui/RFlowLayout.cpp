@@ -1,4 +1,6 @@
-#include <QtWidgets>
+#include <QAction>
+#include <QWidget>
+#include <QToolButton>
 
 #include "RFlowLayout.h"
 #include "RSettings.h"
