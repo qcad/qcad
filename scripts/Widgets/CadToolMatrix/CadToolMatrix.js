@@ -25,52 +25,21 @@ function RCadToolMatrixTreePanel(parent) {
     //layout.sizeConstraint = QLayout.SetMinimumSize;
     //layout.sizeConstraint = QLayout.SetFixedSize;
     this.setLayout(layout);
-
-    //this.minimumSize = new QSize(100, 100);
-    //this.sizeHint = new QSize(100,100);
 }
 
 RCadToolMatrixTreePanel.prototype = new QWidget();
 
-//RCadToolMatrixTreePanel.prototype.sizeHint = function() {
-//    qDebug("RCadToolMatrixTreePanel.prototype.sizeHint");
-//    return new QSize(100,300);
-//};
-
-//RCadToolMatrixTreePanel.prototype.hasHeightForWidth = function() {
-//    qDebug("RCadToolMatrixTreePanel.prototype.hasHeightForWidth");
-//    return true;
-//};
-
 RCadToolMatrixTreePanel.prototype.actionEvent = function(event) {
     var action = event.action();
-    //qDebug("action event: ", action);
-
-    /*
-    //var widgetAction = qobject_cast<QWidgetAction*>(action);
-
-    if (layout==NULL) {
-        // first action added: add widget with flow layout to dock:
-        QWidget* w = new QWidget();
-        layout = new RFlowLayout(2,2,2);
-        w->setLayout(layout);
-        setWidget(w);
-    }
-    */
 
     var layout = this.layout();
     var index;
 
     switch (event.type()) {
     case QEvent.ActionAdded:
-//        qDebug("action added");
-//        qDebug("layout: ", layout);
-//        qDebug("action added: before: ", event.before());
         index = layout.count();
         if (event.before()) {
-//            debugger;
             index = layout.indexOf(event.before().getQAction());
-//            qDebug("action added: index: ", index);
         }
         layout.insertAction(index, action);
         break;
@@ -82,7 +51,6 @@ RCadToolMatrixTreePanel.prototype.actionEvent = function(event) {
     case QEvent.ActionRemoved: {
         index = layout.indexOf(action);
         if (index !== -1) {
-            //delete layout->takeAt(index);
             var w = layout.takeAt(index);
             w.destroy();
         }
@@ -103,8 +71,8 @@ function RCadToolMatrixTree(parent) {
 
     //var buttonSize = RSettings.getIntValue("CadToolMatrix/IconSize", 32) * 1.25;
 
-    this.indentation = 0;
     this.header().close();
+    this.indentation = 0;
     this.columnCount = 1;
     this.selectionMode = QAbstractItemView.NoSelection;
     if (RSettings.isQt(5)) {
@@ -115,37 +83,12 @@ function RCadToolMatrixTree(parent) {
     }
 
     this.itemPressed.connect(this, "handleMousePress");
-
-//    var item = new QTreeWidgetItem();
-//    item.setText(0, qsTr("Lines"));
-//    this.addTopLevelItem(item);
-
-//    var subItem = new QTreeWidgetItem();
-//    var matrix = new QWidget();
-//    var layout = new RFlowLayout(2,2,2);
-//    matrix.setLayout(layout);
-//    layout.addWidget(new QToolButton());
-//    //matrix.minimumSize = new QSize(100, 100);
-//    matrix.autoFillBackground = true;
-//    item.addChild(subItem);
-
-//    this.setItemWidget(subItem, 0, matrix);
-
-    //this.expandAll();
-
-    //var treeWidget = new RTreeWidget(this);
-
-//    var layout = new QVBoxLayout();
-//    layout.objectName = "Layout";
-//    layout.setContentsMargins(0,0,0,0);
-//    this.setLayout(layout);
 }
 
 RCadToolMatrixTree.prototype = new RTreeWidget();
 
 RCadToolMatrixTree.prototype.resizeEvent = function(event) {
     RTreeWidget.prototype.resizeEvent.call(this, event);
-    //qDebug("resize");
 
     for (var i=0; i<this.topLevelItemCount; i++) {
         var item = this.topLevelItem(i);
@@ -153,20 +96,16 @@ RCadToolMatrixTree.prototype.resizeEvent = function(event) {
         var embeddedWidget = this.itemWidget(subItem, 0);
         var width = this.header().width;
         embeddedWidget.setFixedWidth(width);
-        //w.setFixedHeight(100);
-        //subItem.setSizeHint(0, new QSize(-1, 100));
-        //qDebug("sizeHint: ", embeddedWidget.sizeHint);
         var height = embeddedWidget.layout().heightForWidth(width);
-        //qDebug("heightForWidth: ", height);
         embeddedWidget.setFixedHeight(height);
-        //subItem.setSizeHint(0, embeddedWidget.sizeHint);
         subItem.setSizeHint(0, new QSize(width, height));
     }
 };
 
+/**
+ * Expand / collapse with single click.
+ */
 RCadToolMatrixTree.prototype.handleMousePress = function(item) {
-    qDebug("mouse press");
-
     if (isNull(item)) {
         return;
     }
@@ -181,15 +120,6 @@ RCadToolMatrixTree.prototype.handleMousePress = function(item) {
     }
 };
 
-//RCadToolMatrixTree.getPreferencesCategory = function() {
-//    return [qsTr("Widgets"), qsTr("CAD Tool Matrix")];
-//};
-
-//RCadToolMatrixTree.applyPreferences = function(doc) {
-//};
-
-//RCadToolMatrixTree.prototype.contextMenuEvent = function(event) {
-//};
 
 
 
@@ -199,6 +129,10 @@ function CadToolMatrix(guiAction) {
 
 CadToolMatrix.prototype = new Widgets();
 CadToolMatrix.includeBasePath = includeBasePath;
+
+CadToolMatrix.getPreferencesCategory = function() {
+    return [qsTr("Widgets"), qsTr("CAD Tool Matrix")];
+};
 
 CadToolMatrix.getToolMatrix = function() {
     var appWin = EAction.getMainWindow();
@@ -246,9 +180,7 @@ CadToolMatrix.getToolMatrixPanel = function(title, objectName, order) {
         for (var i=0; i<tm.topLevelItemCount; i++) {
             var topLevelItem = tm.topLevelItem(i);
             var o = topLevelItem.data(0, Qt.UserRole);
-            qDebug("existing order:", o);
             if (o>order) {
-                //debugger;
                 tm.insertTopLevelItem(i, item);
                 found = true;
                 break;
@@ -258,21 +190,14 @@ CadToolMatrix.getToolMatrixPanel = function(title, objectName, order) {
         if (!found) {
             tm.addTopLevelItem(item);
         }
-        //tm.insertTopLevelItem(i, item);
-        //qDebug("add item: ", title);
     }
     else {
         item = items[0];
     }
 
     var subItem = new QTreeWidgetItem();
-    //subItem.setText(0, title);
     dw = new RCadToolMatrixTreePanel();
     dw.objectName = objectName;
-    //var layout = new RFlowLayout(2,2,2);
-    //dw.setLayout(layout);
-    //layout.addWidget(new QToolButton());
-    //matrix.minimumSize = new QSize(100, 100);
     dw.autoFillBackground = true;
     item.addChild(subItem);
     tm.setItemWidget(subItem, 0, dw);
