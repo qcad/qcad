@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>132</width>
+    <width>240</width>
     <height>351</height>
    </rect>
   </property>
@@ -27,10 +27,52 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="QLineEdit" name="Filter"/>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>2</number>
+     </property>
+     <item>
+      <widget class="QLineEdit" name="FilterEdit">
+       <property name="placeholderText">
+        <string>Filter</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="Clear">
+       <property name="styleSheet">
+        <string notr="true">border:none;</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>Clear.svg</normaloff>Clear.svg</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>Clear</sender>
+   <signal>clicked()</signal>
+   <receiver>FilterEdit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>225</x>
+     <y>173</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>177</x>
+     <y>168</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>
