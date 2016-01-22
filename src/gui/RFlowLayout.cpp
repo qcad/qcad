@@ -1,7 +1,9 @@
 #include <QAction>
+#include <QEvent>
 #include <QWidget>
 #include <QToolButton>
 
+#include "REventFilter.h"
 #include "RFlowLayout.h"
 #include "RSettings.h"
 
@@ -164,6 +166,9 @@ void RFlowLayout::insertAction(int index, QAction* action) {
     //int iconSize = RSettings::getIntValue("CadToolBar/IconSize", 32);
     button->setIconSize(iconSize);
     button->setDefaultAction(action);
+    // allow scrolling with scrollwheel if button is inside scroll area
+    // and mouse cursor is on a disabled button:
+    button->installEventFilter(new REventFilter(QEvent::Wheel, true));
     itemList.insert(index, new QWidgetItem(button));
     invalidate();
 
