@@ -87,7 +87,7 @@ Ellipse.getCadToolBarPanel = function() {
 };
 
 Ellipse.getToolMatrixPanel = function() {
-    return EAction.getToolMatrixPanel(Ellipse.getTitle(), "EllipseDockWidget", 500);
+    return EAction.getToolMatrixPanel(Ellipse.getTitle(), "EllipseMatrixPanel", 500);
 };
 
 Ellipse.getTitle = function() {

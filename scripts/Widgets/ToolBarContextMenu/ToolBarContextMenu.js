@@ -45,11 +45,33 @@ ToolBarContextMenu.getSubMenu = function(menu, categories) {
     return m;
 };
 
+ToolBarContextMenu.sort = function(a,b) {
+    var catA = a.property("Category");
+    var catB = b.property("Category");
+    var actionA = a.toggleViewAction();
+    var actionB = b.toggleViewAction();
+
+    if (isNull(catA) && !isNull(catB)) {
+        return -1;
+    }
+    if (!isNull(catA) && isNull(catB)) {
+        return 1;
+    }
+
+    var titleA = isNull(catA) ? actionA.text : catA[0];
+    var titleB = isNull(catB) ? actionB.text : catB[0];
+
+    return titleA.localeCompare(titleB);
+};
+
 ToolBarContextMenu.createMenu = function(menu) {
     var appWin = RMainWindowQt.getMainWindow();
     var tbs = appWin.getToolBars();
     var dws = appWin.getDockWidgets();
     var i, a, m, cat;
+
+    dws.sort(ToolBarContextMenu.sort);
+    tbs.sort(ToolBarContextMenu.sort);
 
     for (i = 0; i<dws.length; i++) {
         var dw = dws[i];

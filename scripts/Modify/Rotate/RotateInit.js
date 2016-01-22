@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands(["rotate", "ro"]);
     action.setGroupSortOrder(13100);
     action.setSortOrder(200);
-    action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel"]);
+    action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel", "ModifyMatrixPanel"]);
 }

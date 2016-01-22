@@ -231,6 +231,10 @@ Select.getCadToolBarPanel = function() {
     return tb;
 };
 
+Select.getToolMatrixPanel = function() {
+    return EAction.getToolMatrixPanel(Select.getTitle(), "SelectMatrixPanel", 4000);
+};
+
 Select.getTitle = function() {
     return qsTr("&Select");
 };
@@ -243,4 +247,5 @@ Select.init = function() {
     Select.getMenu();
     Select.getToolBar();
     Select.getCadToolBarPanel();
+    Select.getToolMatrixPanel();
 };

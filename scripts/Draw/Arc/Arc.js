@@ -87,7 +87,7 @@ Arc.getCadToolBarPanel = function() {
 };
 
 Arc.getToolMatrixPanel = function() {
-    return EAction.getToolMatrixPanel(Arc.getTitle(), "ArcDockWidget", 300);
+    return EAction.getToolMatrixPanel(Arc.getTitle(), "ArcMatrixPanel", 300);
 };
 
 Arc.getTitle = function() {

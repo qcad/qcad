@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands(["linepolygon", "polygon", "pg1"]);
     action.setGroupSortOrder(11520);
     action.setSortOrder(100);
-    action.setWidgetNames(["DrawShapeMenu", "ShapeToolBar", "ShapeToolsPanel", "ShapeDockWidget"]);
+    action.setWidgetNames(["DrawShapeMenu", "ShapeToolBar", "ShapeToolsPanel", "ShapeMatrixPanel"]);
 }

@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands(["spline", "sp"]);
     action.setGroupSortOrder(10100);
     action.setSortOrder(100);
-    action.setWidgetNames(["SplineMenu", "SplineToolBar", "SplineToolsPanel", "SplineDockWidget"]);
+    action.setWidgetNames(["SplineMenu", "SplineToolBar", "SplineToolsPanel", "SplineMatrixPanel"]);
 }

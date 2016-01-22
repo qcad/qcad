@@ -7,5 +7,5 @@ function init(basePath) {
     action.setDefaultCommands(["insertbitmap", "bitmap", "im"]);
     action.setGroupSortOrder(30);
     action.setSortOrder(400);
-    action.setWidgetNames(["DrawMenu", "DrawToolBar", "MainToolsPanel"]);
+    action.setWidgetNames(["DrawMenu", "DrawToolBar", "MainToolsPanel", "DrawMatrixPanel"]);
 }

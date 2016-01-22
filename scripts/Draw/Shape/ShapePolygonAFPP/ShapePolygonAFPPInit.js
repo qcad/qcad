@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands(["polygonss", "pg4"]);
     action.setGroupSortOrder(11520);
     action.setSortOrder(400);
-    action.setWidgetNames(["DrawShapeMenu", "ShapeToolBar", "ShapeToolsPanel", "ShapeDockWidget"]);
+    action.setWidgetNames(["DrawShapeMenu", "ShapeToolBar", "ShapeToolsPanel", "ShapeMatrixPanel"]);
 }

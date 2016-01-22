@@ -280,6 +280,10 @@ Information.getCadToolBarPanel = function() {
     return tb;
 };
 
+Information.getToolMatrixPanel = function() {
+    return EAction.getToolMatrixPanel(Information.getTitle(), "InformationMatrixPanel", 4000);
+};
+
 Information.getTitle = function() {
     return qsTr("&Info");
 };
@@ -292,4 +296,5 @@ Information.init = function() {
     Information.getMenu();
     Information.getToolBar();
     Information.getCadToolBarPanel();
+    Information.getToolMatrixPanel();
 };

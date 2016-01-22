@@ -7,5 +7,5 @@ function init(basePath) {
     action.setDefaultCommands([ "infoangle", "ia" ]);
     action.setGroupSortOrder(16300);
     action.setSortOrder(100);
-    action.setWidgetNames(["InformationMenu", "InformationToolBar", "InformationToolsPanel"]);
+    action.setWidgetNames(["InformationMenu", "InformationToolBar", "InformationToolsPanel", "InformationMatrixPanel"]);
 }

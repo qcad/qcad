@@ -9,5 +9,5 @@ function init(basePath) {
     action.setDefaultCommands(["dimordinate", "do"]);
     action.setGroupSortOrder(12200);
     action.setSortOrder(100);
-    action.setWidgetNames(["DimensionMenu", "DimensionToolBar", "DimensionToolsPanel", "DimensionDockWidget"]);
+    action.setWidgetNames(["DimensionMenu", "DimensionToolBar", "DimensionToolsPanel", "DimensionMatrixPanel"]);
 }

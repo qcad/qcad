@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands(["selectintersected", "tx", "ux"]);
     action.setGroupSortOrder(4300);
     action.setSortOrder(200);
-    action.setWidgetNames(["SelectMenu", "SelectToolBar", "SelectToolsPanel"]);
+    action.setWidgetNames(["SelectMenu", "SelectToolBar", "SelectToolsPanel", "SelectMatrixPanel"]);
 }

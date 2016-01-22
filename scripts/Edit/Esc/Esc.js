@@ -68,6 +68,21 @@ Esc.prototype.beginEvent = function() {
         }
     }
 
+    // special case: erase tool matrix filter text:
+    var filterEdit = objectFromPath("MainWindow::ToolMatrixDock::FilterEdit");
+    if (!isNull(filterEdit)) {
+        if (filterEdit.focus) {
+            if (filterEdit.text!=="") {
+                filterEdit.text = "";
+                this.terminate();
+                return;
+            }
+            else {
+                returnFocus = true;
+            }
+        }
+    }
+
     // return focus to graphics view or application window:
     if (returnFocus) {
         var view = this.getGraphicsViews();

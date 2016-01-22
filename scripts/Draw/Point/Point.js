@@ -91,7 +91,7 @@ Point.getCadToolBarPanel = function() {
 };
 
 Point.getToolMatrixPanel = function() {
-    return EAction.getToolMatrixPanel(Point.getTitle(), "PointDockWidget", 100);
+    return EAction.getToolMatrixPanel(Point.getTitle(), "PointMatrixPanel", 100);
 };
 
 Point.getTitle = function() {

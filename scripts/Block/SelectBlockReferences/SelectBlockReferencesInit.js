@@ -7,5 +7,5 @@ function init(basePath) {
     action.setDefaultCommands(["blockselect", "selectblock", "b+"]);
     action.setGroupSortOrder(14400);
     action.setSortOrder(100);
-    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel"]);
+    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel", "BlockMatrixPanel"]);
 }

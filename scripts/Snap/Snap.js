@@ -75,6 +75,10 @@ Snap.getCadToolBarPanel = function() {
     return tb;
 };
 
+Snap.getToolMatrixPanel = function() {
+    return EAction.getToolMatrixPanel(Snap.getTitle(), "SnapMatrixPanel", 5000);
+};
+
 Snap.getTitle = function() {
     return qsTr("&Snap");
 };
@@ -87,6 +91,7 @@ Snap.init = function() {
     Snap.getMenu();
     Snap.getToolBar();
     Snap.getCadToolBarPanel();
+    Snap.getToolMatrixPanel();
 };
 
 Snap.prototype.beginEvent = function() {

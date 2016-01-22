@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands(["lineparallelthrough", "lineoffsetthrough", "parallelthrough", "lg"]);
     action.setGroupSortOrder(6400);
     action.setSortOrder(200);
-    action.setWidgetNames(["DrawLineMenu", "LineToolBar", "LineToolsPanel", "LineDockWidget"]);
+    action.setWidgetNames(["DrawLineMenu", "LineToolBar", "LineToolsPanel", "LineMatrixPanel"]);
 }

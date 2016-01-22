@@ -8,5 +8,5 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("AddBlock", "Add new empty block"));
     action.setGroupSortOrder(14200);
     action.setSortOrder(100);
-    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel"]);
+    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel", "BlockMatrixPanel"]);
 }

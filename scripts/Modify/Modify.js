@@ -118,6 +118,10 @@ Modify.getCadToolBarPanel = function() {
     return tb;
 };
 
+Modify.getToolMatrixPanel = function() {
+    return EAction.getToolMatrixPanel(Modify.getTitle(), "ModifyMatrixPanel", 3000);
+};
+
 Modify.getTitle = function() {
     return qsTr("&Modify");
 };
@@ -130,4 +134,5 @@ Modify.init = function() {
     Modify.getMenu();
     Modify.getToolBar();
     Modify.getCadToolBarPanel();
+    Modify.getToolMatrixPanel();
 };

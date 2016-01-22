@@ -7,6 +7,6 @@ function init(basePath) {
     action.setDefaultCommands(["layerunlockall", "yn"]);
     action.setGroupSortOrder(14150);
     action.setSortOrder(200);
-    action.setWidgetNames(["LayerMenu", "LayerToolBar", "LayerToolsPanel"]);
+    action.setWidgetNames(["LayerMenu", "LayerToolBar", "LayerToolsPanel", "LayerMatrixPanel"]);
 }
 

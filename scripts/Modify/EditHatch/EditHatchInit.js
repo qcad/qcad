@@ -7,5 +7,5 @@ function init(basePath) {
     action.setDefaultCommands(["edithatch", "modifyhatch", "mh"]);
     action.setGroupSortOrder(13500);
     action.setSortOrder(200);
-    action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel"]);
+    action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel", "ModifyMatrixPanel"]);
 }

@@ -7,5 +7,5 @@ function init(basePath) {
     action.setIcon(basePath + "/EditMainDrawing.svg");
     action.setGroupSortOrder(14350);
     action.setSortOrder(500);
-    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel"]);
+    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel", "BlockMatrixPanel"]);
 }

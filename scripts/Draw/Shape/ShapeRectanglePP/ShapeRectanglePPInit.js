@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands(["rectangle", "linerectangle", "rect", "re"]);
     action.setGroupSortOrder(11510);
     action.setSortOrder(100);
-    action.setWidgetNames(["DrawShapeMenu", "ShapeToolBar", "ShapeToolsPanel", "ShapeDockWidget"]);
+    action.setWidgetNames(["DrawShapeMenu", "ShapeToolBar", "ShapeToolsPanel", "ShapeMatrixPanel"]);
 }

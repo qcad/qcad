@@ -86,6 +86,10 @@ Block.getCadToolBarPanel = function() {
     return tb;
 };
 
+Block.getToolMatrixPanel = function() {
+    return EAction.getToolMatrixPanel(Block.getTitle(), "BlockMatrixPanel", 8000);
+};
+
 Block.getTitle = function() {
     return qsTr("&Block");
 };
@@ -98,6 +102,7 @@ Block.init = function() {
     Block.getMenu();
     Block.getToolBar();
     Block.getCadToolBarPanel();
+    Block.getToolMatrixPanel();
 };
 
 /**

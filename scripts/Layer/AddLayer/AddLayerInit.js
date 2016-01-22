@@ -7,5 +7,5 @@ function init(basePath) {
     action.setDefaultCommands(["layeradd", "ya"]);
     action.setGroupSortOrder(14200);
     action.setSortOrder(100);
-    action.setWidgetNames(["LayerMenu", "LayerToolBar", "LayerToolsPanel"]);
+    action.setWidgetNames(["LayerMenu", "LayerToolBar", "LayerToolsPanel", "LayerMatrixPanel"]);
 }

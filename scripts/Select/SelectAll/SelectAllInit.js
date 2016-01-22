@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("SelectAll", "Select &All"), RMainWindowQt
-            .getMainWindow());
+    var action = new RGuiAction(qsTranslate("SelectAll", "Select &All"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/SelectAll.js");
     action.setIcon(basePath + "/SelectAll.svg");
@@ -13,5 +12,5 @@ function init(basePath) {
     action.setNoState();
     action.setGroupSortOrder(4100);
     action.setSortOrder(200);
-    action.setWidgetNames(["SelectMenu", "SelectToolBar", "SelectToolsPanel"]);
+    action.setWidgetNames(["SelectMenu", "SelectToolBar", "SelectToolsPanel", "SelectMatrixPanel"]);
 }

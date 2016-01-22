@@ -53,6 +53,10 @@ Draw.getCadToolBarPanel = function() {
     return EAction.getMainCadToolBarPanel();
 };
 
+Draw.getToolMatrixPanel = function() {
+    return EAction.getToolMatrixPanel(Draw.getTitle(), "DrawMatrixPanel", 2000);
+};
+
 Draw.getContextMenuCategory = function() {
     return [qsTr("Draw")];
 };
@@ -69,4 +73,5 @@ Draw.init = function() {
     Draw.getMenu();
     Draw.getToolBar();
     Draw.getCadToolBarPanel();
+    Draw.getToolMatrixPanel();
 };

@@ -11,5 +11,5 @@ function init(basePath) {
     action.setDefaultCommands(["librarycreate", "bt"]);
     action.setGroupSortOrder(14600);
     action.setSortOrder(100);
-    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel"]);
+    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel", "BlockMatrixPanel"]);
 }

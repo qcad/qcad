@@ -94,7 +94,7 @@ Shape.getCadToolBarPanel = function() {
 };
 
 Shape.getToolMatrixPanel = function() {
-    return EAction.getToolMatrixPanel(Shape.getTitle(), "ShapeDockWidget", 800);
+    return EAction.getToolMatrixPanel(Shape.getTitle(), "ShapeMatrixPanel", 800);
 };
 
 Shape.getTitle = function() {

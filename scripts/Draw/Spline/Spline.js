@@ -92,7 +92,7 @@ Spline.getCadToolBarPanel = function() {
 };
 
 Spline.getToolMatrixPanel = function() {
-    return EAction.getToolMatrixPanel(Spline.getTitle(), "SplineDockWidget", 600);
+    return EAction.getToolMatrixPanel(Spline.getTitle(), "SplineMatrixPanel", 600);
 };
 
 Spline.getTitle = function() {

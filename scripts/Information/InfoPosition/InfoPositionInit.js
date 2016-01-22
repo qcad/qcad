@@ -7,5 +7,5 @@ function init(basePath) {
     action.setDefaultCommands([ "infopos", "io" ]);
     action.setGroupSortOrder(16100);
     action.setSortOrder(100);
-    action.setWidgetNames(["InformationMenu", "InformationToolBar", "InformationToolsPanel"]);
+    action.setWidgetNames(["InformationMenu", "InformationToolBar", "InformationToolsPanel", "InformationMatrixPanel"]);
 }

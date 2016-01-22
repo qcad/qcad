@@ -87,7 +87,7 @@ Circle.getCadToolBarPanel = function() {
 };
 
 Circle.getToolMatrixPanel = function() {
-    return EAction.getToolMatrixPanel(Circle.getTitle(), "CircleDockWidget", 400);
+    return EAction.getToolMatrixPanel(Circle.getTitle(), "CircleMatrixPanel", 400);
 };
 
 Circle.getTitle = function() {

@@ -149,9 +149,7 @@ Dimension.getCadToolBarPanel = function() {
 };
 
 Dimension.getToolMatrixPanel = function() {
-    var d = EAction.getToolMatrixPanel(Dimension.getTitle(), "DimensionDockWidget");
-    d.visible = false;
-    return d;
+    return EAction.getToolMatrixPanel(Dimension.getTitle(), "DimensionMatrixPanel", 2100);
 };
 
 Dimension.getTitle = function() {
@@ -166,7 +164,7 @@ Dimension.init = function() {
     Dimension.getMenu();
     Dimension.getToolBar();
     Dimension.getCadToolBarPanel();
-    //Dimension.getToolMatrixPanel();
+    Dimension.getToolMatrixPanel();
 };
 
 

@@ -9,7 +9,7 @@ function init(basePath) {
     action.setNoState(true);
     action.setGroupSortOrder(15000);
     action.setSortOrder(200);
-    action.setWidgetNames(["SnapMenu", "SnapToolBar", "SnapToolsPanel"]);
+    action.setWidgetNames(["SnapMenu", "SnapToolBar", "SnapToolsPanel", "SnapMatrixPanel"]);
 
     var appWin = EAction.getMainWindow();
     appWin.addFocusListener(action);

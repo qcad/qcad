@@ -93,7 +93,7 @@ Polyline.getCadToolBarPanel = function() {
 };
 
 Polyline.getToolMatrixPanel = function() {
-    return EAction.getToolMatrixPanel(Polyline.getTitle(), "PolylineDockWidget", 700);
+    return EAction.getToolMatrixPanel(Polyline.getTitle(), "PolylineMatrixPanel", 700);
 };
 
 Polyline.getTitle = function() {

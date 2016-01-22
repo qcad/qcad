@@ -85,6 +85,10 @@ Layer.getCadToolBarPanel = function() {
     return tb;
 };
 
+Layer.getToolMatrixPanel = function() {
+    return EAction.getToolMatrixPanel(Layer.getTitle(), "LayerMatrixPanel", 7000);
+};
+
 Layer.getTitle = function() {
     return qsTr("&Layer");
 };
@@ -97,6 +101,7 @@ Layer.init = function() {
     Layer.getMenu();
     Layer.getToolBar();
     Layer.getCadToolBarPanel();
+    Layer.getToolMatrixPanel();
 };
 
 Layer.showHide = function(show, obj, layerId) {

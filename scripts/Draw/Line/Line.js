@@ -97,7 +97,7 @@ Line.getCadToolBarPanel = function() {
 };
 
 Line.getToolMatrixPanel = function() {
-    return EAction.getToolMatrixPanel(Line.getTitle(), "LineDockWidget", 200);
+    return EAction.getToolMatrixPanel(Line.getTitle(), "LineMatrixPanel", 200);
 };
 
 Line.getTitle = function() {

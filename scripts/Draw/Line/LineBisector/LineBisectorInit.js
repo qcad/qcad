@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands(["linebisector", "bisector", "lb"]);
     action.setGroupSortOrder(6300);
     action.setSortOrder(100);
-    action.setWidgetNames(["DrawLineMenu", "LineToolBar", "LineToolsPanel", "LineDockWidget"]);
+    action.setWidgetNames(["DrawLineMenu", "LineToolBar", "LineToolsPanel", "LineMatrixPanel"]);
 }

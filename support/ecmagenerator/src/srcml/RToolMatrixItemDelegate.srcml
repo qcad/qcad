@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./gui" filename="RToolMatrixItemDelegate.h"><comment type="block">/**
- * Copyright (c) 2011-2016 by Andrew Mustun. All rights reserved.
+ * Copyright (C) 2015 The Qt Company Ltd.
+ * Copyright (c) 2016 by Andrew Mustun.
  * 
  * This file is part of the QCAD project.
  *
@@ -16,6 +17,17 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
+ *
+ * GNU Lesser General Public License Usage
+ * Alternatively, this file may be used under the terms of the GNU Lesser
+ * General Public License version 2.1 or version 3 as published by the Free
+ * Software Foundation and appearing in the file LICENSE.LGPLv21 and
+ * LICENSE.LGPLv3 included in the packaging of this file. Please review the
+ * following information to ensure the GNU Lesser General Public License
+ * requirements will be met: https://www.gnu.org/licenses/lgpl.html and
+ * http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+ *
+ * Derived from qttools/src/designer/src/lib/shared/sheet_delegate_p.h
  */</comment>
 
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RTOOLMATRIXITEMDELEGATE_H_</name></cpp:ifndef>
@@ -26,6 +38,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QWidget&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTreeWidget&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QTreeWidgetItem&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QItemDelegate&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QtDebug&gt;</cpp:file></cpp:include>
 
 <comment type="block">/**
@@ -46,4 +59,6 @@
 </public><private>private:
     <decl_stmt><decl><type><name>QTreeView</name>*</type> <name>treeView</name></decl>;</decl_stmt>
 </private>}</block>;</class>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

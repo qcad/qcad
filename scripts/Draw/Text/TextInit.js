@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands(["text", "te"]);
     action.setGroupSortOrder(30);
     action.setSortOrder(100);
-    action.setWidgetNames(["DrawMenu", "DrawToolBar", "MainToolsPanel"]);
+    action.setWidgetNames(["DrawMenu", "DrawToolBar", "MainToolsPanel", "DrawMatrixPanel"]);
 }

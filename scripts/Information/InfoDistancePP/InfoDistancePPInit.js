@@ -8,5 +8,5 @@ function init(basePath) {
     action.setDefaultCommands([ "infodist", "ip" ]);
     action.setGroupSortOrder(16200);
     action.setSortOrder(100);
-    action.setWidgetNames(["InformationMenu", "InformationToolBar", "InformationToolsPanel"]);
+    action.setWidgetNames(["InformationMenu", "InformationToolBar", "InformationToolsPanel", "InformationMatrixPanel"]);
 }

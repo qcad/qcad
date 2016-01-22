@@ -7,5 +7,5 @@ function init(basePath) {
     action.setDefaultCommands([ "acearea", "ic" ]);
     action.setGroupSortOrder(16450);
     action.setSortOrder(200);
-    action.setWidgetNames(["InformationMenu", "InformationToolBar", "InformationToolsPanel"]);
+    action.setWidgetNames(["InformationMenu", "InformationToolBar", "InformationToolsPanel", "InformationMatrixPanel"]);
 }
