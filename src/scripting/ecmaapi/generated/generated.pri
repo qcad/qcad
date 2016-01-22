@@ -116,7 +116,6 @@ HEADERS += \
     $$PWD/REcmaLeaderEntity.h \
     $$PWD/REcmaLine.h \
     $$PWD/REcmaLineData.h \
-    $$PWD/REcmaLineEdit.h \
     $$PWD/REcmaLineEntity.h \
     $$PWD/REcmaLinetype.h \
     $$PWD/REcmaLinetypeCombo.h \
@@ -462,7 +461,6 @@ SOURCES += \
     $$PWD/REcmaLeaderEntity.cpp \
     $$PWD/REcmaLine.cpp \
     $$PWD/REcmaLineData.cpp \
-    $$PWD/REcmaLineEdit.cpp \
     $$PWD/REcmaLineEntity.cpp \
     $$PWD/REcmaLinetype.cpp \
     $$PWD/REcmaLinetypeCombo.cpp \

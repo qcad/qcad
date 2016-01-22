@@ -6,11 +6,90 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>492</width>
-    <height>389</height>
+    <width>398</width>
+    <height>298</height>
    </rect>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout"/>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Icon Size:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QComboBox" name="IconSize">
+       <property name="currentIndex">
+        <number>7</number>
+       </property>
+       <item>
+        <property name="text">
+         <string notr="true">10</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">12</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">14</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">16</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">18</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">20</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">22</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">24</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">26</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">28</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="toolTip">
+        <string>Pixel</string>
+       </property>
+       <property name="text">
+        <string>px</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

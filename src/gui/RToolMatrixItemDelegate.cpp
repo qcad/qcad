@@ -48,6 +48,12 @@ void RToolMatrixItemDelegate::paint(QPainter* painter, const QStyleOptionViewIte
     Q_ASSERT(model);
 
     if (!model->parent(index).isValid()) {
+//        bool hidden = model->data(index, Qt::UserRole+2).toBool();
+//        qDebug() << "hidden: " << hidden;
+//        if (hidden) {
+//            return;
+//        }
+
         // this is a top-level item.
         QStyleOptionButton buttonOption;
 
@@ -118,7 +124,14 @@ void RToolMatrixItemDelegate::paint(QPainter* painter, const QStyleOptionViewIte
 }
 
 QSize RToolMatrixItemDelegate::sizeHint(const QStyleOptionViewItem& opt, const QModelIndex& index) const {
-    QStyleOptionViewItem option = opt;
+//    const QAbstractItemModel* model = index.model();
+//    Q_ASSERT(model);
+
+    //QStyleOptionViewItem option = opt;
+//    bool hidden = model->data(index, Qt::UserRole+2).toBool();
     QSize sz = QItemDelegate::sizeHint(opt, index) + QSize(2, 2);
+//    if (hidden) {
+//        sz.setHeight(0);
+//    }
     return sz;
 }

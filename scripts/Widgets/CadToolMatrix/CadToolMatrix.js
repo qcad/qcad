@@ -33,22 +33,30 @@ function RCadToolMatrixTreePanel(parent, objectName) {
     this.setLayout(layout);
 
     this.styleSheet =
-          "QWidget#" + objectName + " { background: qlineargradient( x1:0 y1:0, x2:1 y2:0, stop:0 #eeeeee, stop:1 #ffffff); }"
+          "QWidget#" + objectName + " { background: qlineargradient( x1:0 y1:0, x2:1 y2:0, stop:0 #dddddd, stop:1 #eeeeee); }"
         + "QToolButton {"
-        + "  border: none;"
+        + "  border-style: none;"
         + "}"
-        + "QToolButton:checked {"
-        + "  border-radius: 4px; "
-        + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #b7b7b7, stop: 0.8 #cfcfcf, stop: 1 #d1d1d1);"
-        + "}"
-        + "QToolButton:pressed {"
-        + "  border-radius: 4px; "
-        + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #a4a4a4, stop: 0.8 #b3b3b3, stop: 1 #b5b5b5);"
-        + "}";
+        + RCadToolMatrixTreePanel.getCheckedStyle()
+        + RCadToolMatrixTreePanel.getPressedStyle();
 
 }
 
 RCadToolMatrixTreePanel.prototype = new QWidget();
+
+RCadToolMatrixTreePanel.getCheckedStyle = function() {
+    return "QToolButton:checked {"
+            + "  border-radius: 4px; "
+            + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #b7b7b7, stop: 0.8 #cfcfcf, stop: 1 #d1d1d1);"
+            + "}";
+};
+
+RCadToolMatrixTreePanel.getPressedStyle = function() {
+    return "QToolButton:pressed {"
+            + "  border-radius: 4px; "
+            + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #a4a4a4, stop: 0.8 #b3b3b3, stop: 1 #b5b5b5);"
+            + "}";
+}
 
 /**
  * Inserts actions added to the panel into the flow layout of the panel.
@@ -140,7 +148,8 @@ RCadToolMatrixTree.prototype.updatePanelSizes = function() {
         }
         var width = this.header().width;
         embeddedWidget.setFixedWidth(width);
-        var height = embeddedWidget.layout().heightForWidth(width);
+        var layout = embeddedWidget.layout();
+        var height = layout.heightForWidth(width);
         embeddedWidget.setFixedHeight(height);
         subItem.setSizeHint(0, new QSize(width, height));
     }
@@ -193,37 +202,94 @@ RCadToolMatrixTree.prototype.filter = function(text) {
                 continue;
             }
 
-            if (action.text==="&3 Points") {
-                qDebug("action.text:", action.text);
-                qDebug("text:", text);
-                if (text==="") {
-                    //debugger;
-                }
-            }
 
-            if (text.length===0 || re.test(action.text) || re.test(item.text(0))) {
-                child.visible = true;
+            if (text.length===0) {
+                // no filter:
                 found = true;
+                child.styleSheet = "QToolButton { border-style: none; }";
             }
             else {
-                child.visible = false;
+                var actionText = action.text.replace("&", "");
+                var commands = action.getCommands();
+                var match = re.test(actionText) || re.test(item.text(0));
+                match = match || commands.contains(actionText, function(t) { return re.test(t); });
+
+                if (match) {
+                    // filter match:
+                    //child.visible = true;
+                    found = true;
+                    //child.styleSheet = "QToolButton { border-style: none; border-radius: 4px; background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #d7b7b7, stop: 0.8 #efcfcf, stop: 1 #f1d1d1); }";
+                    child.styleSheet = "QToolButton { border-style: none; border-radius: 4px; background-color: white; }"
+                            + RCadToolMatrixTreePanel.getCheckedStyle() + RCadToolMatrixTreePanel.getPressedStyle();
+                }
+                else {
+                    // filter does not match:
+                    //child.visible = false;
+                    //child.styleSheet = "QToolButton { border-style: none; }";
+                    child.styleSheet = "";
+                }
             }
         }
 
         if (!found) {
             // hide category:
-            item.setHidden(true);
+            // CRASH if tool tip is visible for one of the tool buttons in this category:
+            //item.setHidden(true);
+            //item.setData(0, Qt.UserRole+2, true);
         }
         else {
-            item.setHidden(false);
-            //item.setExpanded(false);
-            //item.setExpanded(true);
+            //item.setHidden(false);
+            //item.setData(0, Qt.UserRole+2, false);
         }
     }
+
+    //QCoreApplication.processEvents();
 
     this.updatePanelSizes();
 };
 
+RCadToolMatrixTree.prototype.updateIconSize = function() {
+    var iconSize = RSettings.getIntValue("CadToolMatrix/IconSize", 24);
+    iconSize = new QSize(iconSize, iconSize);
+
+    for (var i=0; i<this.topLevelItemCount; i++) {
+        var item = this.topLevelItem(i);
+        var subItem = item.child(0);
+        if (isNull(subItem)) {
+            continue;
+        }
+        var embeddedWidget = this.itemWidget(subItem, 0);
+        if (isNull(embeddedWidget)) {
+            continue;
+        }
+
+        var layout = embeddedWidget.layout();
+        layout.setIconSize(iconSize);
+
+        var children = embeddedWidget.children();
+        var found = false;
+        for (var k=0; k<children.length; k++) {
+            var child = children[k];
+            if (!isOfType(child, QToolButton)) {
+                continue;
+            }
+            child.iconSize = iconSize;
+        }
+
+        //layout.invalidate();
+        //item.setExpanded(!item.isExpanded());
+        //item.setExpanded(!item.isExpanded());
+
+//        var width = this.header().width;
+//        embeddedWidget.setFixedWidth(width);
+//        var height = embeddedWidget.layout().heightForWidth(width);
+//        embeddedWidget.setFixedHeight(height);
+//        subItem.setSizeHint(0, new QSize(width, height));
+    }
+
+    //this.resize(this.size);
+    //this.updatePanelSizes();
+};
 
 
 
@@ -236,6 +302,24 @@ CadToolMatrix.includeBasePath = includeBasePath;
 
 CadToolMatrix.getPreferencesCategory = function() {
     return [qsTr("Widgets"), qsTr("CAD Tool Matrix")];
+};
+
+CadToolMatrix.applyPreferences = function(doc) {
+    if (!isNull(doc)) {
+        // document settings: nothing to do
+        return;
+    }
+
+    var appWin = EAction.getMainWindow();
+    if (isNull(appWin)) {
+        return;
+    }
+
+    // TODO:
+    //var cadToolMatrix = appWin.findChild("ToolMatrix");
+    //RCadToolMatrixTree.prototype.updateIconSize.call(cadToolMatrix);
+    //RCadToolMatrixTree.prototype.updatePanelSizes.call(cadToolMatrix);
+    //cadToolMatrix.update();
 };
 
 /**
