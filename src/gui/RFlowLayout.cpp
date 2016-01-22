@@ -47,7 +47,6 @@ void RFlowLayout::setListViewMode(bool on) {
     QList<QToolButton*> buttons = parent->findChildren<QToolButton*>();
     for (int i=0; i<buttons.length(); i++) {
         QToolButton* tb = buttons[i];
-        qDebug() << "button: " << tb->text();
         if (listViewMode) {
             tb->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
         }
