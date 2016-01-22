@@ -28,7 +28,6 @@
  * \ingroup gui
  */
 class QCADGUI_EXPORT RToolButton: public QToolButton {
-
 Q_OBJECT
 
 public:

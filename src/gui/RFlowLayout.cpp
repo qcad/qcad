@@ -7,12 +7,12 @@
 #include "RToolButton.h"
 
 RFlowLayout::RFlowLayout(QWidget* parent, int margin, int hSpacing, int vSpacing)
-    : QLayout(parent), hSpace(hSpacing), vSpace(vSpacing), iconSize(32,32) {
+    : QLayout(parent), hSpace(hSpacing), vSpace(vSpacing), iconSize(32,32), listViewMode(false) {
     setContentsMargins(margin, margin, margin, margin);
 }
 
 RFlowLayout::RFlowLayout(int margin, int hSpacing, int vSpacing)
-    : hSpace(hSpacing), vSpace(vSpacing) {
+    : hSpace(hSpacing), vSpace(vSpacing), iconSize(32,32), listViewMode(false) {
     setContentsMargins(margin, margin, margin, margin);
 }
 
@@ -157,6 +157,9 @@ int RFlowLayout::doLayout(const QRect& rect, bool testOnly) const {
         bool listModeItem = (tb!=NULL && tb->toolButtonStyle()==Qt::ToolButtonTextBesideIcon);
         if (listModeItem) {
             wid->setFixedWidth(effectiveRect.width());
+        }
+        else {
+            wid->setFixedWidth(wid->height());
         }
         int nextX = x + item->sizeHint().width() + spaceX;
         if (nextX - spaceX > effectiveRect.right() && lineHeight > 0 || listModeItem) {
