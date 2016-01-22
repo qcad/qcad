@@ -316,6 +316,7 @@
 #include "REcmaTextLabel.h"
 #include "REcmaTextRenderer.h"
 #include "REcmaThread.h"
+#include "REcmaToolMatrixItemDelegate.h"
 #include "REcmaTraceData.h"
 #include "REcmaTraceEntity.h"
 #include "REcmaTransformation.h"
@@ -850,6 +851,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaPropertyListener::initEcma(*engine);
     REcmaPropertyEditor::initEcma(*engine);
 
+    REcmaToolMatrixItemDelegate::initEcma(*engine);
     REcmaFlowLayout::initEcma(*engine);
     REcmaListWidget::initEcma(*engine);
     REcmaTreeWidget::initEcma(*engine);

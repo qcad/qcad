@@ -273,6 +273,7 @@ HEADERS += \
     $$PWD/REcmaShellSnapRestriction.h \
     $$PWD/REcmaShellSpatialIndexVisitorAdapter.h \
     $$PWD/REcmaShellThread.h \
+    $$PWD/REcmaShellToolMatrixItemDelegate.h \
     $$PWD/REcmaShellTreeWidget.h \
     $$PWD/REcmaShellViewFocusListenerAdapter.h \
     $$PWD/REcmaShellWidget.h \
@@ -315,6 +316,7 @@ HEADERS += \
     $$PWD/REcmaTextLabel.h \
     $$PWD/REcmaTextRenderer.h \
     $$PWD/REcmaThread.h \
+    $$PWD/REcmaToolMatrixItemDelegate.h \
     $$PWD/REcmaTraceData.h \
     $$PWD/REcmaTraceEntity.h \
     $$PWD/REcmaTransaction.h \
@@ -616,6 +618,7 @@ SOURCES += \
     $$PWD/REcmaShellSnapRestriction.cpp \
     $$PWD/REcmaShellSpatialIndexVisitorAdapter.cpp \
     $$PWD/REcmaShellThread.cpp \
+    $$PWD/REcmaShellToolMatrixItemDelegate.cpp \
     $$PWD/REcmaShellTreeWidget.cpp \
     $$PWD/REcmaShellViewFocusListenerAdapter.cpp \
     $$PWD/REcmaShellWidget.cpp \
@@ -658,6 +661,7 @@ SOURCES += \
     $$PWD/REcmaTextLabel.cpp \
     $$PWD/REcmaTextRenderer.cpp \
     $$PWD/REcmaThread.cpp \
+    $$PWD/REcmaToolMatrixItemDelegate.cpp \
     $$PWD/REcmaTraceData.cpp \
     $$PWD/REcmaTraceEntity.cpp \
     $$PWD/REcmaTransaction.cpp \
