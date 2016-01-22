@@ -65,6 +65,8 @@
     
             REcmaHelper::registerFunction(&engine, proto, setIconSize, "setIconSize");
             
+            REcmaHelper::registerFunction(&engine, proto, setListViewMode, "setListViewMode");
+            
             REcmaHelper::registerFunction(&engine, proto, addItem, "addItem");
             
             REcmaHelper::registerFunction(&engine, proto, horizontalSpacing, "horizontalSpacing");
@@ -732,6 +734,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaFlowLayout::setIconSize", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaFlowLayout::setListViewMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaFlowLayout::setListViewMode", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaFlowLayout::setListViewMode";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RFlowLayout* self = 
+                        getSelf("setListViewMode", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setListViewMode(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RFlowLayout.setListViewMode().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaFlowLayout::setListViewMode", context, engine);
             return result;
         }
          QScriptValue

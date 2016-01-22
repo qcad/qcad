@@ -24,6 +24,40 @@ RFlowLayout::~RFlowLayout() {
     }
 }
 
+void RFlowLayout::setIconSize(const QSize& s) {
+    iconSize = s;
+
+    QWidget* parent = parentWidget();
+    if (parent==NULL) {
+        return;
+    }
+    QList<QToolButton*> buttons = parent->findChildren<QToolButton*>();
+    for (int i=0; i<buttons.length(); i++) {
+        QToolButton* tb = buttons[i];
+        tb->setIconSize(iconSize);
+    }
+}
+
+void RFlowLayout::setListViewMode(bool on) {
+    listViewMode = on;
+
+    QWidget* parent = parentWidget();
+    if (parent==NULL) {
+        return;
+    }
+    QList<QToolButton*> buttons = parent->findChildren<QToolButton*>();
+    for (int i=0; i<buttons.length(); i++) {
+        QToolButton* tb = buttons[i];
+        qDebug() << "button: " << tb->text();
+        if (listViewMode) {
+            tb->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+        }
+        else {
+            tb->setToolButtonStyle(Qt::ToolButtonIconOnly);
+        }
+    }
+}
+
 void RFlowLayout::addItem(QLayoutItem* item) {
     itemList.append(item);
 }
@@ -105,6 +139,7 @@ int RFlowLayout::doLayout(const QRect& rect, bool testOnly) const {
     QLayoutItem* item;
     foreach (item, itemList) {
         QWidget* wid = item->widget();
+        QToolButton* tb = qobject_cast<QToolButton*>(wid);
 
         if (wid->isHidden()) {
             continue;
@@ -121,7 +156,7 @@ int RFlowLayout::doLayout(const QRect& rect, bool testOnly) const {
                 QSizePolicy::PushButton, QSizePolicy::PushButton, Qt::Vertical);
         }
         int nextX = x + item->sizeHint().width() + spaceX;
-        if (nextX - spaceX > effectiveRect.right() && lineHeight > 0) {
+        if (nextX - spaceX > effectiveRect.right() && lineHeight > 0 || (tb!=NULL && tb->toolButtonStyle()==Qt::ToolButtonTextBesideIcon)) {
             x = effectiveRect.x();
             y = y + lineHeight + spaceY;
             nextX = x + item->sizeHint().width() + spaceX;
@@ -168,6 +203,7 @@ void RFlowLayout::insertAction(int index, QAction* action) {
     QToolButton* button = new QToolButton(parentWidget());
     //int iconSize = RSettings::getIntValue("CadToolBar/IconSize", 32);
     button->setIconSize(iconSize);
+    button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     button->setDefaultAction(action);
     // allow scrolling with scrollwheel if button is inside scroll area
     // and mouse cursor is on a disabled button:

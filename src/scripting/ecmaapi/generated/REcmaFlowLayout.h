@@ -51,6 +51,9 @@
         setIconSize
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setListViewMode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addItem
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -136,16 +136,11 @@ RCadToolMatrixTree.prototype.resizeEvent = function(event) {
 };
 
 RCadToolMatrixTree.prototype.updatePanelSizes = function() {
-    for (var i=0; i<this.topLevelItemCount; i++) {
-        var item = this.topLevelItem(i);
-        var subItem = item.child(0);
-        if (isNull(subItem)) {
-            continue;
-        }
-        var embeddedWidget = this.itemWidget(subItem, 0);
-        if (isNull(embeddedWidget)) {
-            continue;
-        }
+    var embeddedWidgets = RCadToolMatrixTree.getItemsAndEmbeddedWidgets(this);
+    for (var i=0; i<embeddedWidgets.length; i++) {
+        var item = embeddedWidgets[i][0];
+        var subItem = embeddedWidgets[i][1];
+        var embeddedWidget = embeddedWidgets[i][2];
         var width = this.header().width;
         embeddedWidget.setFixedWidth(width);
         var layout = embeddedWidget.layout();
@@ -153,6 +148,7 @@ RCadToolMatrixTree.prototype.updatePanelSizes = function() {
         embeddedWidget.setFixedHeight(height);
         subItem.setSizeHint(0, new QSize(width, height));
     }
+    this.updateGeometries();
 };
 
 /**
@@ -173,21 +169,33 @@ RCadToolMatrixTree.prototype.handleMousePress = function(item) {
     }
 };
 
-RCadToolMatrixTree.prototype.filter = function(text) {
-    // hide all tool buttons / categories which don't match the filter:
-    var re = new RegExp(text, "gi");
-
-    for (var i=0; i<this.topLevelItemCount; i++) {
-        var item = this.topLevelItem(i);
+RCadToolMatrixTree.getItemsAndEmbeddedWidgets = function(tree) {
+    var ret = [];
+    for (var i=0; i<tree.topLevelItemCount; i++) {
+        var item = tree.topLevelItem(i);
         var subItem = item.child(0);
         if (isNull(subItem)) {
             continue;
         }
 
-        var embeddedWidget = this.itemWidget(subItem, 0);
+        var embeddedWidget = tree.itemWidget(subItem, 0);
         if (isNull(embeddedWidget)) {
             continue;
         }
+
+        ret.push([item, subItem, embeddedWidget]);
+    }
+    return ret;
+};
+
+RCadToolMatrixTree.prototype.filter = function(text) {
+    // hide all tool buttons / categories which don't match the filter:
+    var re = new RegExp(text, "gi");
+
+    var embeddedWidgets = RCadToolMatrixTree.getItemsAndEmbeddedWidgets(this);
+    for (var i=0; i<embeddedWidgets.length; i++) {
+        var item = embeddedWidgets[i][0];
+        var embeddedWidget = embeddedWidgets[i][2];
 
         var children = embeddedWidget.children();
         var found = false;
@@ -252,29 +260,22 @@ RCadToolMatrixTree.prototype.updateIconSize = function() {
     var iconSize = RSettings.getIntValue("CadToolMatrix/IconSize", 24);
     iconSize = new QSize(iconSize, iconSize);
 
-    for (var i=0; i<this.topLevelItemCount; i++) {
-        var item = this.topLevelItem(i);
-        var subItem = item.child(0);
-        if (isNull(subItem)) {
-            continue;
-        }
-        var embeddedWidget = this.itemWidget(subItem, 0);
-        if (isNull(embeddedWidget)) {
-            continue;
-        }
+    var embeddedWidgets = RCadToolMatrixTree.getItemsAndEmbeddedWidgets(this);
+    for (var i=0; i<embeddedWidgets.length; i++) {
+        var embeddedWidget = embeddedWidgets[i][2];
 
         var layout = embeddedWidget.layout();
         layout.setIconSize(iconSize);
 
-        var children = embeddedWidget.children();
-        var found = false;
-        for (var k=0; k<children.length; k++) {
-            var child = children[k];
-            if (!isOfType(child, QToolButton)) {
-                continue;
-            }
-            child.iconSize = iconSize;
-        }
+//        var children = embeddedWidget.children();
+//        var found = false;
+//        for (var k=0; k<children.length; k++) {
+//            var child = children[k];
+//            if (!isOfType(child, QToolButton)) {
+//                continue;
+//            }
+//            child.iconSize = iconSize;
+//        }
 
         //layout.invalidate();
         //item.setExpanded(!item.isExpanded());
@@ -289,6 +290,46 @@ RCadToolMatrixTree.prototype.updateIconSize = function() {
 
     //this.resize(this.size);
     //this.updatePanelSizes();
+};
+
+RCadToolMatrixTree.prototype.contextMenuEvent = function(event) {
+    qDebug("context menu");
+
+    var menu = new QMenu(RMainWindowQt.getMainWindow());
+    var self = this;
+    var a;
+
+    a = menu.addAction(qsTr("Expand all"));
+    a.triggered.connect(function() {
+        self.expandAll();
+    });
+    a = menu.addAction(qsTr("Collapse all"));
+    a.triggered.connect(function() {
+        self.collapseAll();
+    });
+
+    menu.addSeparator();
+
+    a = menu.addAction(qsTr("List View"));
+    a.triggered.connect(function() {
+        self.setListViewMode(true);
+    });
+    a = menu.addAction(qsTr("Icon View"));
+    a.triggered.connect(function() {
+        self.setListViewMode(false);
+    });
+
+    menu.exec(QCursor.pos());
+};
+
+RCadToolMatrixTree.prototype.setListViewMode = function(enable) {
+    var embeddedWidgets = RCadToolMatrixTree.getItemsAndEmbeddedWidgets(this);
+    for (var i=0; i<embeddedWidgets.length; i++) {
+        var embeddedWidget = embeddedWidgets[i][2];
+        var layout = embeddedWidget.layout();
+        layout.setListViewMode(enable);
+    }
+    this.updatePanelSizes();
 };
 
 
@@ -315,10 +356,9 @@ CadToolMatrix.applyPreferences = function(doc) {
         return;
     }
 
-    // TODO:
-    //var cadToolMatrix = appWin.findChild("ToolMatrix");
-    //RCadToolMatrixTree.prototype.updateIconSize.call(cadToolMatrix);
-    //RCadToolMatrixTree.prototype.updatePanelSizes.call(cadToolMatrix);
+    var cadToolMatrix = appWin.findChild("ToolMatrix");
+    RCadToolMatrixTree.prototype.updateIconSize.call(cadToolMatrix);
+    RCadToolMatrixTree.prototype.updatePanelSizes.call(cadToolMatrix);
     //cadToolMatrix.update();
 };
 
@@ -416,7 +456,7 @@ CadToolMatrix.getToolMatrixPanel = function(title, objectName, order) {
 /**
  * Restore state of collapsed categories.
  */
-CadToolMatrix.init = function(basePath) {
+CadToolMatrix.postInit = function(basePath) {
     var appWin = EAction.getMainWindow();
     if (isNull(appWin)) {
         return undefined;

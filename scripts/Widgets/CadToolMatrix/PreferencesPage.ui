@@ -75,6 +75,36 @@
          <string notr="true">28</string>
         </property>
        </item>
+       <item>
+        <property name="text">
+         <string notr="true">30</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">32</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">34</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">36</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">38</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string notr="true">40</string>
+        </property>
+       </item>
       </widget>
      </item>
      <item>

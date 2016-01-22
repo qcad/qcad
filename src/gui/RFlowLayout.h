@@ -25,9 +25,8 @@ public:
     RFlowLayout(int margin = RDEFAULT_MIN1, int hSpacing = RDEFAULT_MIN1, int vSpacing = RDEFAULT_MIN1);
     ~RFlowLayout();
 
-    void setIconSize(const QSize& s) {
-        iconSize = s;
-    }
+    void setIconSize(const QSize& s);
+    void setListViewMode(bool on);
 
     void addItem(QLayoutItem* item);
     int horizontalSpacing() const;
@@ -64,6 +63,7 @@ private:
     int hSpace;
     int vSpace;
     QSize iconSize;
+    bool listViewMode;
 };
 
 Q_DECLARE_METATYPE(RFlowLayout*)

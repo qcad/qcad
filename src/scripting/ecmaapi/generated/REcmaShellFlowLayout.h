@@ -54,6 +54,12 @@
         
     
     
+      void setListViewMode(
+                bool on
+            );
+        
+    
+    
       void addItem(
                 QLayoutItem * item
             );
