@@ -16,13 +16,13 @@
         <translation type="unfinished">Pokaż narzędzi projekcyjnych</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>&amp;Projection</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Projekcja</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+43"/>
         <source>Reference point</source>
         <translatorcomment>--google--
 Wskaż punkt odniesienia

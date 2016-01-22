@@ -14,7 +14,7 @@
         <translation>显示椭圆工具</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
         <source>&amp;Ellipse</source>
         <translation>椭圆(&amp;E)</translation>
     </message>

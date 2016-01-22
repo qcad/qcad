@@ -19,7 +19,7 @@
         <translation>Pano orodij izbire</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+9"/>
         <source>&amp;Select</source>
         <translation>&amp;Izberi</translation>
     </message>

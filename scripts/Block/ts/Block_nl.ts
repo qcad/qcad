@@ -14,7 +14,7 @@
         <translation>Blokgereedschap tonen</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>

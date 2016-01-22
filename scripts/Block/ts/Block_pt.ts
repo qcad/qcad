@@ -14,7 +14,7 @@
         <translation>Exiba as ferramentas para Blocos</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Block</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

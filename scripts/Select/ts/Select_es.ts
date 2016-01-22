@@ -26,7 +26,7 @@ Mostrar menú &quot;Selección&quot;</translatorcomment>
         <translation type="obsolete">Herramientas de selección</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+9"/>
         <source>&amp;Select</source>
         <translation>&amp;Seleccionar</translation>
     </message>

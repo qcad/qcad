@@ -23,7 +23,7 @@
         <translation type="obsolete">Selektionswerkzeuge Panel</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+9"/>
         <source>&amp;Select</source>
         <translation>&amp;Selektion</translation>
     </message>

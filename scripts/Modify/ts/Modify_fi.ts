@@ -14,7 +14,7 @@
         <translation>Näytä muunnostyökalut</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation>&amp;Muunna</translation>
     </message>

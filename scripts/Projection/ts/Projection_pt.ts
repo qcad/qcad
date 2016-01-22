@@ -14,12 +14,12 @@
         <translation>Exiba as ferramentas de projeção</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>&amp;Projection</source>
         <translation>&amp;Projeção</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+43"/>
         <source>Reference point</source>
         <translation>Ponto de referência</translation>
     </message>

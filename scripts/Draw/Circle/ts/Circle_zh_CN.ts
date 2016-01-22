@@ -14,7 +14,7 @@
         <translation>显示圆形工具</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
         <source>&amp;Circle</source>
         <translation>圆形(&amp;C)</translation>
     </message>

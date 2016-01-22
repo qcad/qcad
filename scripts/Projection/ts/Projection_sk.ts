@@ -14,12 +14,12 @@
         <translation>Zobraziť nástroje premietania</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>&amp;Projection</source>
         <translation>&amp;Premietanie</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+43"/>
         <source>Reference point</source>
         <translation>Referenčný bod</translation>
     </message>

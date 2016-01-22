@@ -59,7 +59,7 @@
         <translation>显示尺寸工具</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>D&amp;imension</source>
         <translation>尺寸(&amp;i)</translation>
     </message>

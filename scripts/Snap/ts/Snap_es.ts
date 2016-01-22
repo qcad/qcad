@@ -15,7 +15,7 @@
         <translation>Mostrar herramientas de forzar</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+21"/>
         <source>&amp;Snap</source>
         <translation>&amp;Forzar</translation>
     </message>

@@ -14,7 +14,7 @@
         <translation>Mostra menù &quot;Archi&quot;</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
         <source>&amp;Arc</source>
         <translation>&amp;Arco</translation>
     </message>

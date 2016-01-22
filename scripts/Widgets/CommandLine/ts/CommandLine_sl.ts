@@ -11,7 +11,7 @@
     <message>
         <location line="+0"/>
         <location line="+45"/>
-        <location filename="../CommandLine.ui" line="+14"/>
+        <location filename="../CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Ukazna vrstica</translation>
     </message>

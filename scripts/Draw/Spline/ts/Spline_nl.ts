@@ -14,7 +14,7 @@
         <translation>Spline gereedschappen tonen</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>&amp;Spline</source>
         <translation>&amp;Spline</translation>
     </message>

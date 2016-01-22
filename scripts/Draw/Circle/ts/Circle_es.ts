@@ -14,7 +14,7 @@
         <translation>Mostrar menú &quot;Círculos&quot;</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
         <source>&amp;Circle</source>
         <translation>&amp;Círculo</translation>
     </message>

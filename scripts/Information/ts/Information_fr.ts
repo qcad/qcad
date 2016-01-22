@@ -16,7 +16,7 @@
         <translation>Montrer les outils d&apos;information</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Info</source>
         <translation>&amp;Infos</translation>
     </message>

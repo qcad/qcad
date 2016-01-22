@@ -19,7 +19,7 @@ Pokaż menu &quot;Okręgi&quot;</translatorcomment>
         <translation type="unfinished">Pokaż menu &quot;Okręgi&quot;</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
         <source>&amp;Circle</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

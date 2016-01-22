@@ -18,7 +18,7 @@
         <translation type="vanished">Näytä viivatyökalut</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>&amp;Shape</source>
         <translation>&amp;Muoto</translation>
     </message>

@@ -14,7 +14,7 @@
         <translation>Näytä käyrätyökalut</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>&amp;Spline</source>
         <translation>&amp;Käyrä</translation>
     </message>

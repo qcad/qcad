@@ -14,7 +14,7 @@
         <translation>Показать инструменты работы с кривой</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>&amp;Spline</source>
         <translation>&amp;Кривая</translation>
     </message>

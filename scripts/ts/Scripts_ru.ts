@@ -78,7 +78,7 @@
         <translation>Нет</translation>
     </message>
     <message>
-        <location line="+646"/>
+        <location line="+657"/>
         <source>Options</source>
         <translation>Параметры</translation>
     </message>

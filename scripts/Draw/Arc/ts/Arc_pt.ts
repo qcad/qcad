@@ -19,7 +19,7 @@ Exibe o menu &quot;Arco&quot;</translatorcomment>
         <translation>Exiba as ferramentas de arco</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
         <source>&amp;Arc</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

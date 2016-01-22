@@ -6,7 +6,7 @@
     <message>
         <location filename="../CommandLine.js" line="+30"/>
         <location line="+45"/>
-        <location filename="../CommandLine.ui" line="+14"/>
+        <location filename="../CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Riga di comando</translation>
     </message>

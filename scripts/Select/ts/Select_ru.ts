@@ -19,7 +19,7 @@
         <translation>Панель инструментов выделения</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+9"/>
         <source>&amp;Select</source>
         <translation>В&amp;ыбор</translation>
     </message>

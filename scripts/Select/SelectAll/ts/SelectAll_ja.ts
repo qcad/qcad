@@ -9,7 +9,7 @@
         <translation>&amp;A 全てを選択</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Select all visible entities</source>
         <translation>全ての可視エンティティを選択</translation>
     </message>

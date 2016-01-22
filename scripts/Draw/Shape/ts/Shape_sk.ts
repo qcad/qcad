@@ -14,7 +14,7 @@
         <translation>Zobraziť nástroje tvaru</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>&amp;Shape</source>
         <translation>&amp;Tvar</translation>
     </message>

@@ -13,7 +13,7 @@ Odznacz &amp;wszystko</translatorcomment>
         <translation type="unfinished">Zaznacz &amp;wszystko</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Select all visible entities</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Zaznacz wszystkie widoczne jednostki</translation>

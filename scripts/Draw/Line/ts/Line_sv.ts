@@ -14,7 +14,7 @@
         <translation>Visa linjeverktyg</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
         <source>&amp;Line</source>
         <translation>&amp;Linje</translation>
     </message>

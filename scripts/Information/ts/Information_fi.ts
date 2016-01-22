@@ -14,7 +14,7 @@
         <translation>Näytä tietotyökalut</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Info</source>
         <translation>&amp;Tietoja</translation>
     </message>

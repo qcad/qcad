@@ -59,7 +59,7 @@
         <translation>Prikaži alate za kotiranje</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>D&amp;imension</source>
         <translation>K&amp;ote</translation>
     </message>

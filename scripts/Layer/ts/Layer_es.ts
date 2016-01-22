@@ -14,7 +14,7 @@
         <translation>Mostrar herramientas de capa</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Layer</source>
         <translation>&amp;Capa</translation>
     </message>

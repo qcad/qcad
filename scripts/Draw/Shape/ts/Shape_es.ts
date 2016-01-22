@@ -45,7 +45,7 @@
         <translation type="vanished">Mostrar herramientas de forma</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>&amp;Shape</source>
         <translation>&amp;Forma</translation>
     </message>

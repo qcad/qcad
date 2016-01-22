@@ -4,12 +4,12 @@
 <context>
     <name>Point</name>
     <message>
-        <location filename="../Point.js" line="+100"/>
+        <location filename="../Point.js" line="+98"/>
         <source>&amp;Point</source>
         <translation>&amp;Point</translation>
     </message>
     <message>
-        <location line="-29"/>
+        <location line="-27"/>
         <source>Point Tools</source>
         <translation>Outils point</translation>
     </message>

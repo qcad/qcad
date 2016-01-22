@@ -13,7 +13,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
     <message>
         <location line="-29"/>
         <location line="+45"/>
-        <location filename="../CommandLine.ui" line="+14"/>
+        <location filename="../CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

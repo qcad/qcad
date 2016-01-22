@@ -9,7 +9,7 @@
         <translation>Tout &amp;sélectionner</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Select all visible entities</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Sélectionnez toutes les entités visibles</translation>

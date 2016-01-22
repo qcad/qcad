@@ -14,7 +14,7 @@
         <translation>Kör eszköztár megmutatása</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
         <source>&amp;Circle</source>
         <translation>Kör</translation>
     </message>
