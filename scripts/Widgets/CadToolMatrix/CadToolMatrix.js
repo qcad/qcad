@@ -17,40 +17,6 @@
  * along with QCAD.
  */
 
-//function RCadToolMatrixDelegate(parent) {
-//    QItemDelegate.call(this, parent);
-//}
-
-//RCadToolMatrixDelegate.prototype = new QItemDelegate();
-
-//RCadToolMatrixDelegate.prototype.paint = function(painter, option, index) {
-//    var model = index.model();
-
-//    qDebug("model:", model);
-//    if (!model.parent(index).isValid()) {
-//        qDebug("root");
-//    }
-
-//    var s = RCadToolMatrixDelegate.prototype.paint;
-//    RCadToolMatrixDelegate.prototype.paint = undefined;
-
-//    QItemDelegate.prototype.paint.call(this, painter, option, index);
-
-//    RCadToolMatrixDelegate.prototype.paint = s;
-//};
-
-//RCadToolMatrixDelegate.prototype.sizeHint = function(opt, index) {
-//    var s = RCadToolMatrixDelegate.prototype.sizeHint;
-//    RCadToolMatrixDelegate.prototype.sizeHint = undefined;
-
-//    var ret = QItemDelegate.prototype.sizeHint.call(this, opt, index);
-
-//    RCadToolMatrixDelegate.prototype.sizeHint = s;
-
-//    return ret;
-//};
-
-
 function RCadToolMatrixTreePanel(parent) {
     QWidget.call(this, parent);
 
@@ -105,18 +71,6 @@ function RCadToolMatrixTree(parent) {
     RTreeWidget.call(this, parent);
 
     //var buttonSize = RSettings.getIntValue("CadToolMatrix/IconSize", 32) * 1.25;
-
-//    this.styleSheet =
-//         "QTreeWidget {alternate-background-color: yellow;}\n" +
-//         "QTreeView::item { border: 1px solid #d9d9d9; border-top-color: transparent; border-bottom-color: transparent; }\n" +
-//         "QTreeView::branch { background: palette(base); }\n" +
-//         "QTreeView::branch:has-siblings:!adjoins-item { background: cyan; }\n" +
-//         "QTreeView::branch:has-siblings:adjoins-item { background: red; }\n" +
-//         "QTreeView::branch:!has-children:!has-siblings:adjoins-item { background: blue; } \n" +
-//         "QTreeView::branch:closed:has-children:has-siblings { background: pink; }\n" +
-//         "QTreeView::branch:has-children:!has-siblings:closed { background: gray; }\n" +
-//         "QTreeView::branch:open:has-children:has-siblings { background: magenta; }\n" +
-//         "QTreeView::branch:open:has-children:!has-siblings { background: green; }\n";
 
     this.header().hide();
     this.indentation = 0;
