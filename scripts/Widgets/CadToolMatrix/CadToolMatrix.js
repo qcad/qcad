@@ -324,8 +324,6 @@ RCadToolMatrixTree.prototype.updateIconSize = function() {
 };
 
 RCadToolMatrixTree.prototype.contextMenuEvent = function(event) {
-    qDebug("context menu");
-
     var menu = new QMenu(RMainWindowQt.getMainWindow());
     var self = this;
     var a;
@@ -351,6 +349,11 @@ RCadToolMatrixTree.prototype.contextMenuEvent = function(event) {
     });
 
     menu.exec(QCursor.pos());
+};
+
+RCadToolMatrixTree.prototype.updateListViewMode = function() {
+    var listViewMode = RSettings.getBoolValue("CadToolMatrix/ListViewMode", false);
+    RCadToolMatrixTree.prototype.setListViewMode.call(this, listViewMode);
 };
 
 RCadToolMatrixTree.prototype.setListViewMode = function(enable) {
@@ -390,8 +393,8 @@ CadToolMatrix.applyPreferences = function(doc) {
 
     var cadToolMatrix = appWin.findChild("ToolMatrix");
     RCadToolMatrixTree.prototype.updateIconSize.call(cadToolMatrix);
+    RCadToolMatrixTree.prototype.updateListViewMode.call(cadToolMatrix);
     RCadToolMatrixTree.prototype.updatePanelSizes.call(cadToolMatrix);
-    //cadToolMatrix.update();
 };
 
 /**
