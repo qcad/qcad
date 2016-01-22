@@ -2,6 +2,7 @@
 #define RFLOWLAYOUT_H
 
 #include <QLayout>
+#include <QMetaType>
 #include <QRect>
 #include <QStyle>
 
