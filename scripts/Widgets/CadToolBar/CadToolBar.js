@@ -209,55 +209,13 @@ CadToolBar.getCurrentPanelName = function() {
 };
 
 CadToolBar.prototype.updateIconSize = function() {
-    var columns = RSettings.getIntValue("CadToolBar/Columns", 2);
-    var iconSize = RSettings.getIntValue("CadToolBar/IconSize", 32);
-    var buttonSize = iconSize * 1.25;
-
-    //qDebug("conf iconSize:", iconSize);
-
     var toolBar = this.parentWidget();
-    //qDebug("toolBar:", toolBar.objectName);
-    //qDebug("icon size before:", toolBar.iconSize);
-    //toolBar.iconSize = new QSize(columns*iconSize, columns*iconSize);
-    //toolBar.iconSize = new QSize(iconSize, iconSize);
-    //this.minimumWidth = buttonSize;
-    //this.minimumHeight = buttonSize;
-    //qDebug("icon size after:", toolBar.iconSize);
-
-    //CadToolBar.setIconSize(this, iconSize);
 
     // workaround for QToolBar bug (not resizing when layout changes):
     if (toolBar.floating) {
         toolBar.resize(toolBar.sizeHint.width(), toolBar.sizeHint.height());
     }
-
-//    toolBar.update();
 };
-
-//CadToolBar.setIconSize = function(widget, iconSize) {
-//    if (isNull(widget)) {
-//        return;
-//    }
-//    if (!isQWidget(widget) || !isFunction(widget.children)) {
-//        return;
-//    }
-
-//    var children = widget.children();
-//    for (var i = 0; i < children.length; ++i) {
-//        var c = children[i];
-
-//        if (!c || isDeleted(c)) {
-//            break;
-//        }
-
-//        if (isOfType(c, QToolButton)) {
-//            c.iconSize = iconSize;
-//            continue;
-//        }
-
-//        CadToolBar.setIconSize(c);
-//    }
-//};
 
 CadToolBar.init = function() {
     var appWin = EAction.getMainWindow();
