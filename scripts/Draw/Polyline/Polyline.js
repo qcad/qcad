@@ -93,9 +93,7 @@ Polyline.getCadToolBarPanel = function() {
 };
 
 Polyline.getToolMatrixPanel = function() {
-    var d = EAction.getToolMatrixPanel(Polyline.getTitle(), "PolylineDockWidget");
-    d.visible = false;
-    return d;
+    return EAction.getToolMatrixPanel(Polyline.getTitle(), "PolylineDockWidget", 700);
 };
 
 Polyline.getTitle = function() {
@@ -110,7 +108,7 @@ Polyline.init = function() {
     Polyline.getMenu();
     Polyline.getToolBar();
     Polyline.getCadToolBarPanel();
-    //Polyline.getToolMatrixPanel();
+    Polyline.getToolMatrixPanel();
 };
 
 Polyline.prototype.getClosestSegment = function(pos) {

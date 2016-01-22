@@ -94,9 +94,7 @@ Shape.getCadToolBarPanel = function() {
 };
 
 Shape.getToolMatrixPanel = function() {
-    var d = EAction.getToolMatrixPanel(Shape.getTitle(), "ShapeDockWidget");
-    d.visible = false;
-    return d;
+    return EAction.getToolMatrixPanel(Shape.getTitle(), "ShapeDockWidget", 800);
 };
 
 Shape.getTitle = function() {
@@ -111,7 +109,7 @@ Shape.init = function() {
     Shape.getMenu();
     Shape.getToolBar();
     Shape.getCadToolBarPanel();
-    //Shape.getToolMatrixPanel();
+    Shape.getToolMatrixPanel();
 };
 
 Shape.prototype.initUiOptions = function(resume, optionsToolBar) {
