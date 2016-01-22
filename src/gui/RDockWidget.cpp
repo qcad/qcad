@@ -43,7 +43,7 @@ void RDockWidget::hideEvent(QHideEvent* event) {
 
 void RDockWidget::actionEvent(QActionEvent* event) {
     QAction* action = event->action();
-    //QWidgetAction* widgetAction = qobject_cast<QWidgetAction*>(action);
+    QWidgetAction* widgetAction = qobject_cast<QWidgetAction*>(action);
 
     if (layout==NULL) {
         // first action added: add widget with flow layout to dock:
