@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RToolMatrixItemDelegate"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QItemDelegate" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QTreeView *" typeName="QTreeView *" name="view"
+        isConst="false" />
+        <arg type="QWidget *" typeName="QWidget *" name="parent"
+        isConst="false" />
+      </variant>
+    </constructor>
+    <method name="paint" cppName="paint" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        isConst="false" />
+        <arg type="QStyleOptionViewItem &amp;"
+        typeName="QStyleOptionViewItem" name="option"
+        isConst="true" />
+        <arg type="QModelIndex &amp;" typeName="QModelIndex"
+        name="index" isConst="true" />
+      </variant>
+    </method>
+    <method name="sizeHint" cppName="sizeHint" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSize" isPureVirtual="false">
+        <arg type="QStyleOptionViewItem &amp;"
+        typeName="QStyleOptionViewItem" name="opt"
+        isConst="true" />
+        <arg type="QModelIndex &amp;" typeName="QModelIndex"
+        name="index" isConst="true" />
+      </variant>
+    </method>
+  </class>
+</unit>
