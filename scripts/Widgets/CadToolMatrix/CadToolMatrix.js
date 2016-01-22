@@ -118,7 +118,7 @@ function RCadToolMatrixTree(parent) {
 
     this.setItemDelegate(new RToolMatrixItemDelegate(this, this));
 
-    this.itemPressed.connect(this, "handleMousePress");
+    this.itemPressed.connect(this, "handleItemPress");
 
     this.minimumWidth = 120;
     this.sizeIncrement = new QSize(32,0);
@@ -126,6 +126,9 @@ function RCadToolMatrixTree(parent) {
     var p = this.palette;
     p.setColor(QPalette.Base, new QColor("#dddddd"));
     this.palette = p;
+
+    this.panStartValue = undefined;
+    this.panStartY = undefined;
 }
 
 RCadToolMatrixTree.prototype = new RTreeWidget();
@@ -154,7 +157,7 @@ RCadToolMatrixTree.prototype.updatePanelSizes = function() {
 /**
  * Expand / collapse with single click.
  */
-RCadToolMatrixTree.prototype.handleMousePress = function(item) {
+RCadToolMatrixTree.prototype.handleItemPress = function(item) {
     if (isNull(item)) {
         return;
     }
@@ -165,8 +168,39 @@ RCadToolMatrixTree.prototype.handleMousePress = function(item) {
 
     if (isNull(item.parent())) {
         item.setExpanded(!item.isExpanded());
+    }
+};
+
+RCadToolMatrixTree.prototype.mousePressEvent = function(event) {
+    qDebug("event.button().valueOf(): ", event.button().valueOf());
+    qDebug("Qt.MidButton.valueOf(): ", Qt.MidButton.valueOf());
+    if (event.button().valueOf() !== Qt.MidButton.valueOf()) {
         return;
     }
+
+    // start panning:
+    var sb = this.verticalScrollBar();
+    this.panStartValue = sb.value;
+    this.panStartY = event.y();
+    this.mouseTracking = true;
+};
+
+RCadToolMatrixTree.prototype.mouseReleaseEvent = function(event) {
+    if (event.button().valueOf() !== Qt.MidButton.valueOf()) {
+        return;
+    }
+    // stop panning:
+    this.panStartValue = undefined;
+    this.panStartY = undefined;
+    this.mouseTracking = false;
+};
+
+RCadToolMatrixTree.prototype.mouseMoveEvent = function(event) {
+    if (isNull(this.panStartValue) || isNull(this.panStartY)) {
+        return;
+    }
+    var sb = this.verticalScrollBar();
+    sb.value = this.panStartValue + (this.panStartY - event.y()) * 2;
 };
 
 RCadToolMatrixTree.getItemsAndEmbeddedWidgets = function(tree) {

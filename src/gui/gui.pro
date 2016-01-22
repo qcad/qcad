@@ -24,6 +24,7 @@ SOURCES += \
     RMdiChildQt.cpp \
     RRulerQt.cpp \
     RTextEdit.cpp \
+    RToolButton.cpp \
     RToolMatrixItemDelegate.cpp \
     RTreeWidget.cpp
 
@@ -53,6 +54,7 @@ HEADERS += \
     RMdiChildQt.h \
     RRulerQt.h \
     RTextEdit.h \
+    RToolButton.h \
     RToolMatrixItemDelegate.h \
     RTreeWidget.h
 

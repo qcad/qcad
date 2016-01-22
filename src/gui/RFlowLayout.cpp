@@ -1,11 +1,10 @@
 #include <QAction>
 #include <QEvent>
 #include <QWidget>
-#include <QToolButton>
 
-#include "REventFilter.h"
 #include "RFlowLayout.h"
 #include "RSettings.h"
+#include "RToolButton.h"
 
 RFlowLayout::RFlowLayout(QWidget* parent, int margin, int hSpacing, int vSpacing)
     : QLayout(parent), hSpace(hSpacing), vSpace(vSpacing), iconSize(32,32) {
@@ -155,8 +154,12 @@ int RFlowLayout::doLayout(const QRect& rect, bool testOnly) const {
             spaceY = wid->style()->layoutSpacing(
                 QSizePolicy::PushButton, QSizePolicy::PushButton, Qt::Vertical);
         }
+        bool listModeItem = (tb!=NULL && tb->toolButtonStyle()==Qt::ToolButtonTextBesideIcon);
+        if (listModeItem) {
+            wid->setFixedWidth(effectiveRect.width());
+        }
         int nextX = x + item->sizeHint().width() + spaceX;
-        if (nextX - spaceX > effectiveRect.right() && lineHeight > 0 || (tb!=NULL && tb->toolButtonStyle()==Qt::ToolButtonTextBesideIcon)) {
+        if (nextX - spaceX > effectiveRect.right() && lineHeight > 0 || listModeItem) {
             x = effectiveRect.x();
             y = y + lineHeight + spaceY;
             nextX = x + item->sizeHint().width() + spaceX;
@@ -200,14 +203,11 @@ void RFlowLayout::insertAction(int index, QAction* action) {
         return;
     }
 
-    QToolButton* button = new QToolButton(parentWidget());
+    RToolButton* button = new RToolButton(parentWidget());
     //int iconSize = RSettings::getIntValue("CadToolBar/IconSize", 32);
     button->setIconSize(iconSize);
     button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
     button->setDefaultAction(action);
-    // allow scrolling with scrollwheel if button is inside scroll area
-    // and mouse cursor is on a disabled button:
-    button->installEventFilter(new REventFilter(QEvent::Wheel, true));
     itemList.insert(index, new QWidgetItem(button));
     invalidate();
 
