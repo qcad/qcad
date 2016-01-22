@@ -1081,6 +1081,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
 }
 
 QList<RPainterPath> RGraphicsViewImage::getTextLayoutsPainterPaths(const RTextBasedData& text, const QList<RTextLayout>& textLayouts) {
+    Q_UNUSED(text)
     QList<RPainterPath> ret;
 
     for (int t=0; t<textLayouts.length(); t++) {

@@ -722,6 +722,7 @@ RBox RGraphicsSceneQt::getClipRectangle(REntity::Id entityId) {
 }
 
 void RGraphicsSceneQt::addPath(REntity::Id entityId, const RPainterPath& path, bool draft) {
+    Q_UNUSED(draft)
     if (painterPaths.contains(entityId)) {
         painterPaths[entityId].append(path);
     }
