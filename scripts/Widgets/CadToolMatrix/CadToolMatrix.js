@@ -17,19 +17,42 @@
  * along with QCAD.
  */
 
-function RCadToolMatrixTreePanel(parent) {
+/**
+ * Represents a panel in the tool matrix. Panels are embedded as child items under
+ * the root item of the appropriate category in the tool matrix tree.
+ */
+function RCadToolMatrixTreePanel(parent, objectName) {
     QWidget.call(this, parent);
 
-    var layout = new RFlowLayout(2,2,2);
-    //layout.sizeConstraint = QLayout.SetMinimumSize;
-    //layout.sizeConstraint = QLayout.SetFixedSize;
-    var iconSize = RSettings.getIntValue("CadToolMatrix/IconSize", 20);
+    this.objectName = objectName;
+    this.autoFillBackground = true;
+
+    var layout = new RFlowLayout(1,1,1);
+    var iconSize = RSettings.getIntValue("CadToolMatrix/IconSize", 24);
     layout.setIconSize(new QSize(iconSize, iconSize));
     this.setLayout(layout);
+
+    this.styleSheet =
+          "QWidget#" + objectName + " { background: qlineargradient( x1:0 y1:0, x2:1 y2:0, stop:0 #eeeeee, stop:1 #ffffff); }"
+        + "QToolButton {"
+        + "  border: none;"
+        + "}"
+        + "QToolButton:checked {"
+        + "  border-radius: 4px; "
+        + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #b7b7b7, stop: 0.8 #cfcfcf, stop: 1 #d1d1d1);"
+        + "}"
+        + "QToolButton:pressed {"
+        + "  border-radius: 4px; "
+        + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #a4a4a4, stop: 0.8 #b3b3b3, stop: 1 #b5b5b5);"
+        + "}";
+
 }
 
 RCadToolMatrixTreePanel.prototype = new QWidget();
 
+/**
+ * Inserts actions added to the panel into the flow layout of the panel.
+ */
 RCadToolMatrixTreePanel.prototype.actionEvent = function(event) {
     var action = event.action();
 
@@ -88,17 +111,33 @@ function RCadToolMatrixTree(parent) {
     this.setItemDelegate(new RToolMatrixItemDelegate(this, this));
 
     this.itemPressed.connect(this, "handleMousePress");
+
+    this.minimumWidth = 120;
+    this.sizeIncrement = new QSize(32,0);
+
+    var p = this.palette;
+    p.setColor(QPalette.Base, new QColor("#dddddd"));
+    this.palette = p;
 }
 
 RCadToolMatrixTree.prototype = new RTreeWidget();
 
 RCadToolMatrixTree.prototype.resizeEvent = function(event) {
     RTreeWidget.prototype.resizeEvent.call(this, event);
+    this.updatePanelSizes();
+};
 
+RCadToolMatrixTree.prototype.updatePanelSizes = function() {
     for (var i=0; i<this.topLevelItemCount; i++) {
         var item = this.topLevelItem(i);
         var subItem = item.child(0);
+        if (isNull(subItem)) {
+            continue;
+        }
         var embeddedWidget = this.itemWidget(subItem, 0);
+        if (isNull(embeddedWidget)) {
+            continue;
+        }
         var width = this.header().width;
         embeddedWidget.setFixedWidth(width);
         var height = embeddedWidget.layout().heightForWidth(width);
@@ -125,6 +164,66 @@ RCadToolMatrixTree.prototype.handleMousePress = function(item) {
     }
 };
 
+RCadToolMatrixTree.prototype.filter = function(text) {
+    // hide all tool buttons / categories which don't match the filter:
+    var re = new RegExp(text, "gi");
+
+    for (var i=0; i<this.topLevelItemCount; i++) {
+        var item = this.topLevelItem(i);
+        var subItem = item.child(0);
+        if (isNull(subItem)) {
+            continue;
+        }
+
+        var embeddedWidget = this.itemWidget(subItem, 0);
+        if (isNull(embeddedWidget)) {
+            continue;
+        }
+
+        var children = embeddedWidget.children();
+        var found = false;
+        for (var k=0; k<children.length; k++) {
+            var child = children[k];
+            if (!isOfType(child, QToolButton)) {
+                continue;
+            }
+
+            var action = child.defaultAction();
+            if (isNull(action)) {
+                continue;
+            }
+
+            if (action.text==="&3 Points") {
+                qDebug("action.text:", action.text);
+                qDebug("text:", text);
+                if (text==="") {
+                    //debugger;
+                }
+            }
+
+            if (text.length===0 || re.test(action.text) || re.test(item.text(0))) {
+                child.visible = true;
+                found = true;
+            }
+            else {
+                child.visible = false;
+            }
+        }
+
+        if (!found) {
+            // hide category:
+            item.setHidden(true);
+        }
+        else {
+            item.setHidden(false);
+            //item.setExpanded(false);
+            //item.setExpanded(true);
+        }
+    }
+
+    this.updatePanelSizes();
+};
+
 
 
 
@@ -139,19 +238,32 @@ CadToolMatrix.getPreferencesCategory = function() {
     return [qsTr("Widgets"), qsTr("CAD Tool Matrix")];
 };
 
+/**
+ * \return Newly created or existing instance of RCadToolMatrixTree.
+ */
 CadToolMatrix.getToolMatrix = function() {
     var appWin = EAction.getMainWindow();
 
     var toolMatrix = appWin.findChild("ToolMatrix");
     if (isNull(toolMatrix)) {
         var formWidget = WidgetFactory.createWidget(CadToolMatrix.includeBasePath, "CadToolMatrix.ui");
+
         var layout = formWidget.findChild("VerticalLayout");
+
+        // add tool matrix:
         toolMatrix = new RCadToolMatrixTree(appWin);
         toolMatrix.objectName = "ToolMatrix";
         layout.addWidget(toolMatrix, 1, 0);
 
+        // init filter widget:
+        var filterEdit = formWidget.findChild("FilterEdit");
+        filterEdit.textChanged.connect(toolMatrix, "filter");
+        var clearButton = formWidget.findChild("Clear");
+        if (filterEdit.clearButtonEnabled===true) {
+            clearButton.hide();
+        }
         var dock = new RDockWidget(qsTr("CAD Tools"), appWin);
-        dock.objectName = "CadToolMatrix";
+        dock.objectName = "ToolMatrixDock";
         dock.setWidget(formWidget);
         appWin.addDockWidget(Qt.LeftDockWidgetArea, dock);
     }
@@ -159,6 +271,11 @@ CadToolMatrix.getToolMatrix = function() {
     return toolMatrix;
 };
 
+/**
+ * \return RCadToolMatrixTreePanel with RFlowLayout to which QActions can be added as part of a
+ * tool panel in the tools matrix. The category in the tool matrix tree is added if
+ * it is not yet present.
+ */
 CadToolMatrix.getToolMatrixPanel = function(title, objectName, order) {
     var appWin = EAction.getMainWindow();
     if (isNull(appWin)) {
@@ -180,8 +297,10 @@ CadToolMatrix.getToolMatrixPanel = function(title, objectName, order) {
     if (items.length===0) {
         item = new QTreeWidgetItem();
         item.setChildIndicatorPolicy(QTreeWidgetItem.ShowIndicator);
-        item.setText(0, title/* + "_" + order*/);
+        item.setText(0, title);
+//        item.setText(0, title + "_" + order);
         item.setData(0, Qt.UserRole, order);
+        item.setData(0, Qt.UserRole+1, objectName);
         var found = false;
         for (var i=0; i<tm.topLevelItemCount; i++) {
             var topLevelItem = tm.topLevelItem(i);
@@ -202,9 +321,7 @@ CadToolMatrix.getToolMatrixPanel = function(title, objectName, order) {
     }
 
     var subItem = new QTreeWidgetItem();
-    dw = new RCadToolMatrixTreePanel();
-    dw.objectName = objectName;
-    dw.autoFillBackground = true;
+    dw = new RCadToolMatrixTreePanel(tm, objectName);
     item.addChild(subItem);
     tm.setItemWidget(subItem, 0, dw);
     tm.expandAll();
@@ -212,5 +329,57 @@ CadToolMatrix.getToolMatrixPanel = function(title, objectName, order) {
     return dw;
 };
 
+/**
+ * Restore state of collapsed categories.
+ */
 CadToolMatrix.init = function(basePath) {
+    var appWin = EAction.getMainWindow();
+    if (isNull(appWin)) {
+        return undefined;
+    }
+
+    var toolMatrix = appWin.findChild("ToolMatrix");
+    if (isNull(toolMatrix)) {
+        return;
+    }
+
+    var closedCategories = RSettings.getStringValue("CadToolMatrix/ClosedCategories", "");
+    if (closedCategories.isEmpty()) {
+        return;
+    }
+
+    closedCategories = closedCategories.split(",");
+    for (var i=0; i<toolMatrix.topLevelItemCount; i++) {
+        var item = toolMatrix.topLevelItem(i);
+        var id = item.data(0, Qt.UserRole+1);
+        if (closedCategories.contains(id)) {
+            item.setExpanded(false);
+        }
+    }
+};
+
+/**
+ * Store state of collapsed categories.
+ */
+CadToolMatrix.uninit = function() {
+    var appWin = EAction.getMainWindow();
+    if (isNull(appWin)) {
+        return undefined;
+    }
+
+    var toolMatrix = appWin.findChild("ToolMatrix");
+    if (isNull(toolMatrix)) {
+        return;
+    }
+
+    // store expanded state:
+    var closedCategories = [];
+    for (var i=0; i<toolMatrix.topLevelItemCount; i++) {
+        var item = toolMatrix.topLevelItem(i);
+        if (!item.isExpanded()) {
+            var id = item.data(0, Qt.UserRole+1);
+            closedCategories.push(id);
+        }
+    }
+    RSettings.setValue("CadToolMatrix/ClosedCategories", closedCategories.join(","));
 };
