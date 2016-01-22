@@ -122,7 +122,7 @@
    <item row="1" column="0">
     <widget class="QCheckBox" name="ListViewMode">
      <property name="text">
-      <string>List mode</string>
+      <string>List view</string>
      </property>
     </widget>
    </item>
