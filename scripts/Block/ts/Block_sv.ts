@@ -14,7 +14,7 @@
         <translation>Visa blockverktyg</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Block</source>
         <translation>&amp;Block</translation>
     </message>

@@ -14,7 +14,7 @@
         <translation>Показать утилиты многоугольника</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>&amp;Polyline</source>
         <translation>&amp;Ломаная</translation>
     </message>

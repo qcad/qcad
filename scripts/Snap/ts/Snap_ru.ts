@@ -14,7 +14,7 @@
         <translation>Показать инструменты прилипания</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+21"/>
         <source>&amp;Snap</source>
         <translation>Пр&amp;ивязка</translation>
     </message>

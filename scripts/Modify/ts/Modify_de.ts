@@ -22,7 +22,7 @@
         <translation>Bearbeitungswerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation>&amp;Modifizieren</translation>
     </message>

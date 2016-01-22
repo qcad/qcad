@@ -55,7 +55,7 @@ Exibe o menu &quot;Linha&quot;</translatorcomment>
         <translation type="vanished">Exiba as ferramentas de linha</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>&amp;Shape</source>
         <translation>&amp;Forma</translation>
     </message>

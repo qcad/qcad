@@ -14,7 +14,7 @@
         <translation>Показать утилиты информации</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Info</source>
         <translation>И&amp;нфо</translation>
     </message>

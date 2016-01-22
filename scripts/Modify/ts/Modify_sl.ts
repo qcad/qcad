@@ -14,7 +14,7 @@
         <translation>Prikaži orodja za urejanje</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translation>&amp;Uredi</translation>
     </message>

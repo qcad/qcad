@@ -77,7 +77,7 @@ Delta Y</translatorcomment>
         <translation>Exiba as ferramentas de dimensões</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>D&amp;imension</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>D&amp;imensão</translation>

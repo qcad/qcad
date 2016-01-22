@@ -14,7 +14,7 @@
         <translation>Prikaži orodjarno lokov</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
         <source>&amp;Arc</source>
         <translation>&amp;Lok</translation>
     </message>

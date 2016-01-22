@@ -14,7 +14,7 @@
         <translation>Näytä ympyrätyökalut</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
         <source>&amp;Circle</source>
         <translation>Ympyrä</translation>
     </message>

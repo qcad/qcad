@@ -14,7 +14,7 @@
         <translation>Zobraziť nástroje čiar</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
         <source>&amp;Line</source>
         <translation>Č&amp;iara</translation>
     </message>

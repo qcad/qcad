@@ -14,7 +14,7 @@
         <translation>表示ブロックツール</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Block</source>
         <translation>&amp;B ブロック</translation>
     </message>

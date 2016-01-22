@@ -14,7 +14,7 @@
         <translation>Afficher les outils d&apos;arc</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
         <source>&amp;Arc</source>
         <translation>&amp;Arc</translation>
     </message>

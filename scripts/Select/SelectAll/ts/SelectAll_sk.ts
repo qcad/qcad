@@ -9,7 +9,7 @@
         <translation>Vybr&amp;ať všetko</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Select all visible entities</source>
         <translation>Vybrať všetky viditeľné prvky</translation>
     </message>

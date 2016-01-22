@@ -101,7 +101,7 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+646"/>
+        <location line="+657"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

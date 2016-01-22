@@ -14,7 +14,7 @@
         <translation>Bogenwerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
         <source>&amp;Arc</source>
         <translation>&amp;Bogen</translation>
     </message>

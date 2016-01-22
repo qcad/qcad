@@ -14,7 +14,7 @@
         <translation>Toon cirkel gereedschappen</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
         <source>&amp;Circle</source>
         <translation>&amp;Cirkel</translation>
     </message>

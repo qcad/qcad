@@ -14,7 +14,7 @@
         <translation>Ív eszköztár megjelenítése</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
         <source>&amp;Arc</source>
         <translation>Körív</translation>
     </message>

@@ -14,12 +14,12 @@
         <translation>投影ツールを表示</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>&amp;Projection</source>
         <translation>&amp;P 投影</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+43"/>
         <source>Reference point</source>
         <translation>基準点</translation>
     </message>

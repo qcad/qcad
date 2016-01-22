@@ -14,12 +14,12 @@
         <translation>Показать инструменты проекции</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+18"/>
         <source>&amp;Projection</source>
         <translation>&amp;Проекция</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+43"/>
         <source>Reference point</source>
         <translation>Точка привязки</translation>
     </message>

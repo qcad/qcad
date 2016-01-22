@@ -59,7 +59,7 @@
         <translation>Näytä mittatyökalut</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>D&amp;imension</source>
         <translation>Mittasuhde</translation>
     </message>

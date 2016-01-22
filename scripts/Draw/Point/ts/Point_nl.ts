@@ -14,7 +14,7 @@
         <translation>Punt gereedschap tonen</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>&amp;Point</source>
         <translation>&amp;Punt</translation>
     </message>

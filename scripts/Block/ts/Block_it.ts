@@ -14,7 +14,7 @@
         <translation>Mostra gli strumenti di blocco</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Block</source>
         <translation>&amp;Blocco</translation>
     </message>

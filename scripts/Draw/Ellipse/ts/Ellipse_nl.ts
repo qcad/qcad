@@ -14,7 +14,7 @@
         <translation>Ellipsgereedschap tonen</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+18"/>
         <source>&amp;Ellipse</source>
         <translation>&amp;Ellips</translation>
     </message>

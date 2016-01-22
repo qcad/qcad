@@ -43,7 +43,7 @@ Pokaż menu &quot;Linie&quot;</translatorcomment>
         <translation type="obsolete">Pokaż menu &quot;Linie&quot;</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>&amp;Shape</source>
         <translation type="unfinished"></translation>
     </message>

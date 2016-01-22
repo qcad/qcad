@@ -14,7 +14,7 @@
         <translation>Prikaži orodja pritrjevanja</translation>
     </message>
     <message>
-        <location line="+17"/>
+        <location line="+21"/>
         <source>&amp;Snap</source>
         <translation>&amp;Pritrdi</translation>
     </message>

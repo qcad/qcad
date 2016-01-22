@@ -75,7 +75,7 @@ Przełącz znak średnicy
         <translation type="unfinished">Pokaż narzędzia rozmiarom</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>D&amp;imension</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Wymiar</translation>

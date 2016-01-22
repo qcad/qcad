@@ -9,7 +9,7 @@
         <translation>Izberi &amp;vse</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Select all visible entities</source>
         <translation>Izberi vse vidne entitete</translation>
     </message>

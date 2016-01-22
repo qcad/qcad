@@ -14,7 +14,7 @@
         <translation>Blockwerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Block</source>
         <translation>Blo&amp;ck</translation>
     </message>

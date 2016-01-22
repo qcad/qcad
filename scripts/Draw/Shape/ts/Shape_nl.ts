@@ -14,7 +14,7 @@
         <translation>Vormgereedschappen tonen</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>&amp;Shape</source>
         <translation>&amp;Vorm</translation>
     </message>

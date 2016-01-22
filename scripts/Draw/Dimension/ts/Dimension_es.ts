@@ -63,7 +63,7 @@
         <translation>Herramientas dimensión</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>D&amp;imension</source>
         <translation>D&amp;imensión</translation>
     </message>

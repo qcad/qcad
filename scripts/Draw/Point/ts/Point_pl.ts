@@ -16,7 +16,7 @@
         <translation type="unfinished">Pokaż narzędzi punktowych</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>&amp;Point</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

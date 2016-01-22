@@ -14,7 +14,7 @@
         <translation>Mostra strumenti di livello</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Layer</source>
         <translation>&amp;Layer</translation>
     </message>

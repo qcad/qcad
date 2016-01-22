@@ -16,7 +16,7 @@
         <translation type="unfinished">Pokaż narzędzi modyfikacji</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Modify</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--
