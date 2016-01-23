@@ -489,7 +489,7 @@ function main() {
 
     // Prevent errors with old configuration files:
     // QCAD 3 RC2/3: Reset toolbar location
-    if (RSettings.getIntValue("Application/Version", 0)<=3000006) {
+    if (RSettings.hasValue("Application/Version") && RSettings.getIntValue("Application/Version", 0)<=3000006) {
         ignoreDockappWindows = true;
     }
 

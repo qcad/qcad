@@ -33,7 +33,7 @@ function RCadToolMatrixTreePanel(parent, objectName) {
     this.setLayout(layout);
 
     this.styleSheet =
-          "QWidget#" + objectName + " { background: qlineargradient( x1:0 y1:0, x2:1 y2:0, stop:0 #dddddd, stop:1 #eeeeee); }"
+          "QWidget#" + objectName + " { background: qlineargradient( x1:0 y1:0, x2:1 y2:0, stop:0 #eeeeee, stop:1 #ffffff); }"
         + "QToolButton {"
         + "  border-style: none;"
         + "}"
@@ -425,6 +425,7 @@ CadToolMatrix.getToolMatrix = function() {
         dock.objectName = "ToolMatrixDock";
         dock.setWidget(formWidget);
         appWin.addDockWidget(Qt.LeftDockWidgetArea, dock);
+        dock.visible = false;
     }
 
     return toolMatrix;

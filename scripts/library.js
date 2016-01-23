@@ -2065,7 +2065,7 @@ function restoreOverrideCursor() {
 function addActionsToWidgets() {
     var appWin = RMainWindowQt.getMainWindow();
     var actions = RGuiAction.getActions();
-    var widgetTypes = ["Menu", "ToolBar", "Panel", "DockWidget"];
+    var widgetTypes = ["Menu", "ToolBar", "MatrixPanel", "Panel"];
     for (var c=0; c<actions.length; ++c) {
         var a = actions[c];
         if (a.icon.isNull() && !a.isIconDisabled()) {
@@ -2074,6 +2074,7 @@ function addActionsToWidgets() {
         var className = a.getScriptClass();
         var wns = a.getWidgetNames();
         var addedToWidget = false;
+
 
         for (var k=0; k<wns.length; k++) {
             var wn = wns[k];
@@ -2102,6 +2103,7 @@ function addActionsToWidgets() {
                         key = className + "/VisibleIn" + keyPostfix;
                         visibility = RSettings.getBoolValue(key, visibility);
                         RSettings.setValue(key, visibility, false);
+                        break;
                     }
                 }
             }
