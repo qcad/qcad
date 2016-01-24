@@ -1064,56 +1064,8 @@ EAction.getToolMatrixPanel = function(title, objectName, order) {
     if (isNull(objectName)) {
         objectName = "";
     }
-//    if (isNull(dockWidgetArea)) {
-//        dockWidgetArea = Qt.LeftDockWidgetArea;
-//    }
-
-//    var appWin = EAction.getMainWindow();
-//    if (isNull(appWin)) {
-//        return undefined;
-//    }
-
-    //var dw = appWin.findChild(objectName);
-
-    //if (isNull(dw)) {
-        include("scripts/Widgets/CadToolMatrix/CadToolMatrix.js");
-        return CadToolMatrix.getToolMatrixPanel(title, objectName, order);
-    //}
-
-    //return dw;
-
-/*
-    var dock;
-    if (objectName.length !== 0) {
-        dock = appWin.findChild(objectName);
-    }
-
-    if (!isNull(dock) && !isOfType(dock, QDockWidget)) {
-        qWarning("Not a dock: ", dock);
-        return undefined;
-    }
-
-    if (isNull(dock)) {
-        dock = new RDockWidget(title.replace("&", ""));
-        dock.objectName = objectName;
-        dock.setProperty("Category", category);
-        //var s = RSettings.getIntValue("Dock/IconSize", dock.iconSize.width());
-        //dock.iconSize = new QSize(s,s);
-        appWin.addDockWidget(dockWidgetArea, dock);
-    }
-
-//    var flags = dock.windowFlags();
-//    qDebug("flags: ", flags);
-//    flags = new Qt.WindowFlags(flags & ~(Qt.WindowFullscreenButtonHint | Qt.WindowMinimizeButtonHint | Qt.WindowMaximizeButtonHint | Qt.WindowMinMaxButtonsHint | Qt.WindowCloseButtonHint));
-//    //flags &= ~Qt.WindowFullscreenButtonHint;
-//    qDebug("flags: ", flags);
-//    dock.setWindowFlags(flags);
-//    qDebug("f: ", dock.windowFlags());
-
-//    dock.setTitleBarWidget(new QWidget());
-
-    return dock;
-    */
+    include("scripts/Widgets/CadToolMatrix/CadToolMatrix.js");
+    return CadToolMatrix.getToolMatrixPanel(title, objectName, order);
 };
 
 /**
