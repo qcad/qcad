@@ -221,33 +221,33 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
         break;
 
     case "line":
-        x1 = parseFloat(atts.value("x1"));
-        y1 = parseFloat(atts.value("y1"));
-        x2 = parseFloat(atts.value("x2"));
-        y2 = parseFloat(atts.value("y2"));
+        x1 = SvgHandler.getFloatAttribute(atts, "x1", 0.0);
+        y1 = SvgHandler.getFloatAttribute(atts, "y1", 0.0);
+        x2 = SvgHandler.getFloatAttribute(atts, "x2", 0.0);
+        y2 = SvgHandler.getFloatAttribute(atts, "y2", 0.0);
         this.svgImporter.importLine(x1,y1, x2,y2);
         break;
 
     case "circle":
-        cx = parseFloat(atts.value("cx"));
-        cy = parseFloat(atts.value("cy"));
-        r = parseFloat(atts.value("r"));
+        cx = SvgHandler.getFloatAttribute(atts, "cx", 0.0);
+        cy = SvgHandler.getFloatAttribute(atts, "cy", 0.0);
+        r = SvgHandler.getFloatAttribute(atts, "r", 0.0);
         this.svgImporter.importCircle(cx,cy, r);
         break;
 
     case "ellipse":
-        cx = parseFloat(atts.value("cx"));
-        cy = parseFloat(atts.value("cy"));
-        rx = parseFloat(atts.value("rx"));
-        ry = parseFloat(atts.value("ry"));
+        cx = SvgHandler.getFloatAttribute(atts, "cx", 0.0);
+        cy = SvgHandler.getFloatAttribute(atts, "cy", 0.0);
+        rx = SvgHandler.getFloatAttribute(atts, "rx", 0.0);
+        ry = SvgHandler.getFloatAttribute(atts, "ry", 0.0);
         this.svgImporter.importEllipse(cx,cy, rx,ry);
         break;
 
     case "rect":
-        x = parseFloat(atts.value("x"));
-        y = parseFloat(atts.value("y"));
-        width = parseFloat(atts.value("width"));
-        height = parseFloat(atts.value("height"));
+        x = SvgHandler.getFloatAttribute(atts, "x", 0.0);
+        y = SvgHandler.getFloatAttribute(atts, "y", 0.0);
+        width = SvgHandler.getFloatAttribute(atts, "width", 0.0);
+        height = SvgHandler.getFloatAttribute(atts, "height", 0.0);
         this.svgImporter.importRectangle(x,y, width,height);
         break;
     }
@@ -255,6 +255,14 @@ SvgHandler.prototype.startElement = function(namespaceURI, localName, qName, att
     this.context = localName;
 
     return true;
+};
+
+SvgHandler.getFloatAttribute = function(atts, name, def) {
+    var str = atts.value(name);
+    if (str.length===0) {
+        return def;
+    }
+    return parseFloat(str);
 };
 
 SvgHandler.prototype.endElement = function(namespaceURI, localName, qName) {
