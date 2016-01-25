@@ -8,5 +8,5 @@ function init(basePath) {
     action.setNoState();
     action.setGroupSortOrder(1100);
     action.setSortOrder(100);
-    action.setWidgetNames(["FileMenu", "FileToolBar", "FileToolsPanel"]);
+    action.setWidgetNames(["FileMenu", "FileToolBar", "FileToolsPanel", "FileMatrixPanel"]);
 }

@@ -8,5 +8,5 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("PdfExport", "Exports the current drawing as PDF"));
     action.setGroupSortOrder(1500);
     action.setSortOrder(100);
-    action.setWidgetNames(["FileMenu", "!FileToolBar", "FileToolsPanel"]);
+    action.setWidgetNames(["FileMenu", "!FileToolBar", "FileToolsPanel", "FileMatrixPanel"]);
 }

@@ -8,5 +8,5 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("Print", "Print current drawing"));
     action.setGroupSortOrder(1600);
     action.setSortOrder(200);
-    action.setWidgetNames(["FileMenu", "!FileToolBar", "FileToolsPanel"]);
+    action.setWidgetNames(["FileMenu", "!FileToolBar", "FileToolsPanel", "FileMatrixPanel"]);
 }

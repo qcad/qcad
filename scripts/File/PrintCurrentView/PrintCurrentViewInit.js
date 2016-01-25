@@ -8,5 +8,5 @@ function init(basePath) {
     action.setStatusTip(qsTranslate("PrintCurrentView", "Print current view"));
     action.setGroupSortOrder(1600);
     action.setSortOrder(250);
-    action.setWidgetNames(["FileMenu", "!FileToolBar", "FileToolsPanel"]);
+    action.setWidgetNames(["FileMenu", "!FileToolBar", "FileToolsPanel", "FileMatrixPanel"]);
 }

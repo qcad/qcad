@@ -143,6 +143,11 @@ int RFlowLayout::doLayout(const QRect& rect, bool testOnly) const {
             continue;
         }
 
+        QAction* action = tb->defaultAction();
+        if (action==NULL || !action->isVisible()) {
+            continue;
+        }
+
         int spaceX = horizontalSpacing();
         if (spaceX == -1) {
             spaceX = wid->style()->layoutSpacing(

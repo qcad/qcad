@@ -83,6 +83,9 @@ File.getCadToolBarPanel = function() {
     return tb;
 };
 
+File.getToolMatrixPanel = function() {
+    return EAction.getToolMatrixPanel(File.getTitle(), "FileMatrixPanel", 10);
+};
 
 File.getTitle = function() {
     return qsTr("&File");
@@ -96,6 +99,7 @@ File.init = function() {
     File.getMenu();
     File.getToolBar();
     File.getCadToolBarPanel();
+    File.getToolMatrixPanel();
 };
 
 

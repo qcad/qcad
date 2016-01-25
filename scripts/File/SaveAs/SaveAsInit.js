@@ -7,5 +7,5 @@ function init(basePath) {
     action.setDefaultCommands(["saveas"]);
     action.setGroupSortOrder(1100);
     action.setSortOrder(200);
-    action.setWidgetNames(["FileMenu", "FileToolBar", "FileToolsPanel"]);
+    action.setWidgetNames(["FileMenu", "FileToolBar", "FileToolsPanel", "FileMatrixPanel"]);
 }

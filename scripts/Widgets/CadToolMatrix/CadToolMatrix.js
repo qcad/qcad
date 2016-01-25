@@ -235,7 +235,7 @@ RCadToolMatrixTree.prototype.filter = function(text) {
         var settingsKey = objectName.replace("MatrixPanel", "");
         var embeddedWidget = embeddedWidgets[i][2];
 
-        qDebug("settingsKey:", settingsKey);
+        //qDebug("settingsKey:", settingsKey);
 
         var children = embeddedWidget.children();
         var found = false;
@@ -385,6 +385,7 @@ CadToolMatrix.getPreferencesCategory = function() {
 };
 
 CadToolMatrix.applyPreferences = function(doc) {
+    qDebug("CadToolMatrix.applyPreferences");
     if (!isNull(doc)) {
         // document settings: nothing to do
         return;
