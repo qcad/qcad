@@ -231,7 +231,11 @@ RCadToolMatrixTree.prototype.filter = function(text) {
     var embeddedWidgets = RCadToolMatrixTree.getItemsAndEmbeddedWidgets(this);
     for (var i=0; i<embeddedWidgets.length; i++) {
         var item = embeddedWidgets[i][0];
+        var objectName = item.data(0, Qt.UserRole+1);
+        var settingsKey = objectName.replace("MatrixPanel", "");
         var embeddedWidget = embeddedWidgets[i][2];
+
+        qDebug("settingsKey:", settingsKey);
 
         var children = embeddedWidget.children();
         var found = false;
@@ -274,9 +278,8 @@ RCadToolMatrixTree.prototype.filter = function(text) {
             }
         }
 
-        if (!found) {
+        if (!found || RSettings.getBoolValue(settingsKey + "/VisibleInCadToolMatrix", true)===false) {
             // hide category:
-            // CRASH if tool tip is visible for one of the tool buttons in this category:
             item.setHidden(true);
         }
         else {
@@ -284,7 +287,8 @@ RCadToolMatrixTree.prototype.filter = function(text) {
         }
     }
 
-    this.updatePanelSizes();
+    //this.updatePanelSizes();
+    RCadToolMatrixTree.prototype.updatePanelSizes.call(this);
 };
 
 RCadToolMatrixTree.prototype.updateIconSize = function() {
@@ -394,7 +398,10 @@ CadToolMatrix.applyPreferences = function(doc) {
     var cadToolMatrix = appWin.findChild("ToolMatrix");
     RCadToolMatrixTree.prototype.updateIconSize.call(cadToolMatrix);
     RCadToolMatrixTree.prototype.updateListViewMode.call(cadToolMatrix);
-    RCadToolMatrixTree.prototype.updatePanelSizes.call(cadToolMatrix);
+
+    var cadToolMatrixDock = appWin.findChild("ToolMatrixDock");
+    RCadToolMatrixTree.prototype.filter.call(cadToolMatrix, cadToolMatrixDock.findChild("FilterEdit").text);
+    //RCadToolMatrixTree.prototype.updatePanelSizes.call(cadToolMatrix);
 };
 
 /**
@@ -448,19 +455,28 @@ CadToolMatrix.getToolMatrixPanel = function(title, objectName, order) {
     }
 
     title = title.replace("&", "");
+    //var settingsKey = objectName.replace("MatrixPanel", "");
 
     var tm = CadToolMatrix.getToolMatrix();
 
+    // find existing root item:
     var flags = new Qt.MatchFlags(Qt.MatchFixedString | Qt.MatchRecursive);
     var items = tm.findItems(title, flags);
     var item;
     if (items.length===0) {
+        // add root item at desired position:
         item = new QTreeWidgetItem();
         item.setChildIndicatorPolicy(QTreeWidgetItem.ShowIndicator);
         item.setText(0, title);
 //        item.setText(0, title + "_" + order);
         item.setData(0, Qt.UserRole, order);
         item.setData(0, Qt.UserRole+1, objectName);
+
+//        if (RSettings.getBoolValue(settingsKey + "/VisibleInCadToolMatrix", true)===false) {
+//            //item.setHidden(true);
+//            item.setData(0, Qt.UserRole+2, false);
+//        }
+
         var found = false;
         for (var i=0; i<tm.topLevelItemCount; i++) {
             var topLevelItem = tm.topLevelItem(i);
@@ -518,6 +534,8 @@ CadToolMatrix.postInit = function(basePath) {
             item.setExpanded(false);
         }
     }
+
+    RCadToolMatrixTree.prototype.filter.call(toolMatrix, "");
 };
 
 /**

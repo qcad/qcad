@@ -58,8 +58,8 @@ ToolBarContextMenu.sort = function(a,b) {
         return 1;
     }
 
-    var titleA = isNull(catA) ? actionA.text : catA[0];
-    var titleB = isNull(catB) ? actionB.text : catB[0];
+    var titleA = (isNull(catA) || catA.length===0) ? actionA.text : catA[0];
+    var titleB = (isNull(catB) || catB.length===0) ? actionB.text : catB[0];
 
     return titleA.localeCompare(titleB);
 };

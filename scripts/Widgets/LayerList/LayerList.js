@@ -299,7 +299,7 @@ LayerList.init = function(basePath) {
 
     var dock = new RDockWidget(qsTr("Layer List"), appWin);
     dock.objectName = "LayerListDock";
-    dock.setProperty("Category", Widgets.getListContextMenuCategory());
+    //dock.setProperty("Category", Widgets.getListContextMenuCategory());
     dock.setWidget(formWidget);
     appWin.addDockWidget(Qt.RightDockWidgetArea, dock);
 
