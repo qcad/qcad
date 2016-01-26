@@ -87,6 +87,7 @@ Block.getCadToolBarPanel = function() {
 };
 
 Block.getToolMatrixPanel = function() {
+    RSettings.setValue("Block/VisibleInCadToolMatrix", false, false);
     return EAction.getToolMatrixPanel(Block.getTitle(), "BlockMatrixPanel", 8000);
 };
 
