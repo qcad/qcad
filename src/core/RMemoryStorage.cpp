@@ -810,20 +810,22 @@ void RMemoryStorage::selectEntities(const QSet<REntity::Id>& entityIds,
 void RMemoryStorage::setEntitySelected(QSharedPointer<REntity> entity, bool on,
     QSet<REntity::Id>* affectedEntities, bool onlyDescend) {
 
-    Q_UNUSED(onlyDescend)
-
-//    disabled:
-//    attributes can be selected individually to edit their attributes
-//    if (!onlyDescend) {
-//        // entity has a parent: select parent instead
-//        // (select block ref for attribute):
-//        REntity::Id parentId = entity->getParentId();
-//        QSharedPointer<REntity> parent = queryEntityDirect(parentId);
-//        if (!parent.isNull()) {
-//            setEntitySelected(parent, on, affectedEntities);
-//            return;
-//        }
-//    }
+    // if user clicks block attribute, select block reference and attributes instead (acad compat)
+    // otherwise attributes can be selected individually to edit their attributes
+    if (RSettings::getSelectBlockWithAttribute()) {
+        if (!onlyDescend && entity->getType()==RS::EntityAttribute) {
+            REntity::Id parentId = entity->getParentId();
+            if (parentId!=REntity::INVALID_ID) {
+                // entity has a parent: select parent instead
+                // (select block ref for attribute):
+                QSharedPointer<REntity> parent = queryEntityDirect(parentId);
+                if (!parent.isNull()) {
+                    setEntitySelected(parent, on, affectedEntities);
+                    return;
+                }
+            }
+        }
+    }
 
     entity->setSelected(on);
     if (affectedEntities!=NULL) {
@@ -833,12 +835,8 @@ void RMemoryStorage::setEntitySelected(QSharedPointer<REntity> entity, bool on,
 
     // if this is a parent, select all child entities (attributes for block ref):
     // only block references can have child entities (attributes):
-    if (entity->getType()!=RS::EntityBlockRef) {
-        return;
-    }
-
     // TODO: improve performance for selecting block references (cache child ids):
-    if (hasChildEntities(entity->getId())) {
+    if (entity->getType()==RS::EntityBlockRef && hasChildEntities(entity->getId())) {
         QSet<REntity::Id> childIds = queryChildEntities(entity->getId());
         QSet<REntity::Id>::iterator it;
         for (it=childIds.begin(); it!=childIds.end(); it++) {
