@@ -523,9 +523,6 @@ CadToolMatrix.postInit = function(basePath) {
     var listViewMode = RSettings.getBoolValue("CadToolMatrix/ListViewMode", false);
     RCadToolMatrixTree.prototype.setListViewMode.call(toolMatrix, listViewMode);
     var closedCategories = RSettings.getStringValue("CadToolMatrix/ClosedCategories", "");
-    if (closedCategories.isEmpty()) {
-        return;
-    }
 
     closedCategories = closedCategories.split(",");
     for (var i=0; i<toolMatrix.topLevelItemCount; i++) {
