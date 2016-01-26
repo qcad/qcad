@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../View.js");
+include("scripts/View/View.js");
 
 function PanZoom(guiAction) {
     View.call(this, guiAction);

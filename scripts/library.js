@@ -2075,7 +2075,6 @@ function addActionsToWidgets() {
         var wns = a.getWidgetNames();
         var addedToWidget = false;
 
-
         for (var k=0; k<wns.length; k++) {
             var wn = wns[k];
             if (wn.length===0) {

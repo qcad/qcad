@@ -84,7 +84,7 @@ Edit.getCadToolBarPanel = function() {
 };
 
 Edit.getToolMatrixPanel = function() {
-    RSettings.setValue("Edit/VisibleInCadToolMatrix", false, false);
+    RSettings.setValue("Edit/VisibleInMatrixPanel", false, false);
     return EAction.getToolMatrixPanel(Edit.getTitle(), "EditMatrixPanel", 20);
 };
 

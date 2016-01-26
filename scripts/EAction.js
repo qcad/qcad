@@ -1003,7 +1003,7 @@ EAction.getSubMenu = function(menu, groupSortOrder, sortOrder, title, objectName
  * actual location where the toolbar is added may also depend on the previously
  * saved state of the tool bars. Defaults to Qt.TopToolBarArea.
  */
-EAction.getToolBar = function(title, objectName, toolBarArea, category) {
+EAction.getToolBar = function(title, objectName, toolBarArea, category, before) {
     if (isNull(objectName)) {
         objectName = "";
     }
@@ -1044,7 +1044,12 @@ EAction.getToolBar = function(title, objectName, toolBarArea, category) {
         tb.setProperty("Category", category);
         var s = RSettings.getIntValue("ToolBar/IconSize", tb.iconSize.width());
         tb.iconSize = new QSize(s,s);
-        appWin.addToolBar(toolBarArea, tb);
+        if (isNull(before)) {
+            appWin.addToolBar(toolBarArea, tb);
+        }
+        else {
+            appWin.insertToolBar(before, tb);
+        }
     }
 
     return tb;

@@ -7,5 +7,5 @@ function init(basePath) {
     action.setDefaultCommands(["zoomwindow", "zw"]);
     action.setGroupSortOrder(3300);
     action.setSortOrder(600);
-    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
+    action.setWidgetNames(["ZoomMenu", "ViewToolBar", "ZoomToolsPanel", "ZoomMatrixPanel"]);
 }

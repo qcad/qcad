@@ -54,8 +54,7 @@ View.getMenu = function() {
 };
 
 View.getToolBar = function() {
-    var tb = EAction.getToolBar(View.getTitle(), "ViewToolBar");
-    return tb;
+    return EAction.getToolBar(View.getTitle(), "ViewToolBar");
 };
 
 View.getCadToolBarPanel = function() {
@@ -84,6 +83,11 @@ View.getCadToolBarPanel = function() {
     return tb;
 };
 
+View.getToolMatrixPanel = function() {
+    RSettings.setValue("View/VisibleInMatrixPanel", false, false);
+    return EAction.getToolMatrixPanel(View.getTitle(), "ViewMatrixPanel", 30);
+};
+
 View.getTitle = function() {
     return qsTr("&View");
 };
@@ -96,4 +100,5 @@ View.init = function() {
     View.getMenu();
     View.getToolBar();
     View.getCadToolBarPanel();
+    View.getToolMatrixPanel();
 };

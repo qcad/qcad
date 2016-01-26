@@ -83,8 +83,16 @@ RCadToolMatrixTreePanel.prototype.actionEvent = function(event) {
     case QEvent.ActionRemoved: {
         index = layout.indexOf(action);
         if (index !== -1) {
-            var w = layout.takeAt(index);
-            w.destroy();
+            var li = layout.takeAt(index);
+            if (!isNull(li)) {
+                var w = li.widget();
+                if (!isNull(w)) {
+                    if (isFunction(w.destroy)) {
+                        w.destroy();
+                    }
+                }
+                li.invalidate();
+            }
         }
         break;
     }
@@ -278,7 +286,7 @@ RCadToolMatrixTree.prototype.filter = function(text) {
             }
         }
 
-        if (!found || RSettings.getBoolValue(settingsKey + "/VisibleInCadToolMatrix", true)===false) {
+        if (!found || RSettings.getBoolValue(settingsKey + "/VisibleInMatrixPanel", true)===false) {
             // hide category:
             item.setHidden(true);
         }
@@ -473,7 +481,7 @@ CadToolMatrix.getToolMatrixPanel = function(title, objectName, order) {
         item.setData(0, Qt.UserRole, order);
         item.setData(0, Qt.UserRole+1, objectName);
 
-//        if (RSettings.getBoolValue(settingsKey + "/VisibleInCadToolMatrix", true)===false) {
+//        if (RSettings.getBoolValue(settingsKey + "/VisibleInMatrixPanel", true)===false) {
 //            //item.setHidden(true);
 //            item.setData(0, Qt.UserRole+2, false);
 //        }

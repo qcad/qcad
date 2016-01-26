@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../View.js");
+include("scripts/View/View.js");
 
 /**
  * Helper class to update AntialiasingMode button status when focus changes
@@ -80,7 +80,7 @@ AntialiasingMode.init = function(basePath) {
     action.setNoState(true);
     action.setGroupSortOrder(3100);
     action.setSortOrder(300);
-    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
+    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel", "ViewMatrixPanel"]);
 
     var appWin = EAction.getMainWindow();
     var fl = new ToggleAntialiasingModeFocusListener(action);

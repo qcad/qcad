@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../View.js");
+include("scripts/View/View.js");
 
 /**
  * Helper class to update LinetypeMode button status when focus changes
@@ -93,7 +93,7 @@ LinetypeMode.init = function(basePath) {
     action.setNoState(true);
     action.setGroupSortOrder(3100);
     action.setSortOrder(200);
-    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
+    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel", "ViewMatrixPanel"]);
 
     var appWin = EAction.getMainWindow();
     var fl = new ToggleLinetypeModeFocusListener(action);

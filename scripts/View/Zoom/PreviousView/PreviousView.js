@@ -17,19 +17,17 @@
  * along with QCAD.
  */
 
-include("../View.js");
+include("scripts/View/View.js");
 
-function ZoomToSelection(guiAction) {
+function PreviousView(guiAction) {
     View.call(this, guiAction);
 }
 
-ZoomToSelection.prototype = new View();
+PreviousView.prototype = new View();
 
-ZoomToSelection.prototype.beginEvent = function() {
+PreviousView.prototype.beginEvent = function() {
     View.prototype.beginEvent.call(this);
-    if (!this.getDocumentInterface().zoomToSelection()) {
-        EAction.handleUserWarning(qsTr("No selection found."));
-    }
+    this.getDocumentInterface().zoomPrevious();
     this.terminate();
 };
 

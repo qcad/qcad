@@ -17,17 +17,17 @@
  * along with QCAD.
  */
 
-include("../View.js");
+include("scripts/View/View.js");
 
-function ZoomOut(guiAction) {
+function ZoomIn(guiAction) {
     View.call(this, guiAction);
 }
 
-ZoomOut.prototype = new View();
+ZoomIn.prototype = new View();
 
-ZoomOut.prototype.beginEvent = function() {
+ZoomIn.prototype.beginEvent = function() {
     View.prototype.beginEvent.call(this);
-    this.getDocumentInterface().zoomOut();
+    this.getDocumentInterface().zoomIn();
     this.terminate();
 };
 

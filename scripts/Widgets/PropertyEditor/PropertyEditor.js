@@ -1371,7 +1371,7 @@ PropertyEditor.init = function(basePath) {
     action.setDefaultCommands(["gp"]);
     action.setGroupSortOrder(3700);
     action.setSortOrder(100);
-    action.setWidgetNames(["ViewMenu", "WidgetsToolBar", "ViewToolsPanel"]);
+    action.setWidgetNames(["ViewMenu", "WidgetsToolBar", "ViewToolsPanel", "WidgetsMatrixPanel"]);
 
     var pe = new PropertyEditorImpl(basePath);
     var dock = new RDockWidget(qsTr("Property Editor"), appWin);

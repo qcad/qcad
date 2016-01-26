@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../View.js");
+include("scripts/View/View.js");
 
 
 /**
@@ -95,7 +95,7 @@ ToggleGrid.init = function(basePath) {
     action.setNoState(true);
     action.setGroupSortOrder(3200);
     action.setSortOrder(100);
-    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
+    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel", "ViewMatrixPanel"]);
 
     var appWin = EAction.getMainWindow();
     var fl = new ToggleGridFocusListener(action);

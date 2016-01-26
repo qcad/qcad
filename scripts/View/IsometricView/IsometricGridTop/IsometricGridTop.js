@@ -150,7 +150,7 @@ IsometricGridTop.init = function(basePath) {
     action.setNoState(true);
     action.setGroupSortOrder(3500);
     action.setSortOrder(100);
-    action.setWidgetNames(["ViewMenu", "IsometricViewToolBar", "ViewToolsPanel"]);
+    action.setWidgetNames(["ViewMenu", "IsometricViewToolBar", "ViewToolsPanel", "ViewMatrixPanel"]);
 
     var appWin = EAction.getMainWindow();
     var fl = new ProjectionFocusListener(action, RS.IsoTop);

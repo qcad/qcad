@@ -86,7 +86,7 @@ Layer.getCadToolBarPanel = function() {
 };
 
 Layer.getToolMatrixPanel = function() {
-    RSettings.setValue("Layer/VisibleInCadToolMatrix", false, false);
+    RSettings.setValue("Layer/VisibleInMatrixPanel", false, false);
     return EAction.getToolMatrixPanel(Layer.getTitle(), "LayerMatrixPanel", 7000);
 };
 

@@ -383,7 +383,7 @@ BlockList.init = function(basePath) {
     action.setDefaultCommands(["gb"]);
     action.setGroupSortOrder(3600);
     action.setSortOrder(200);
-    action.setWidgetNames(["ViewMenu", "WidgetsToolBar", "ViewToolsPanel"]);
+    action.setWidgetNames(["ViewMenu", "WidgetsToolBar", "ViewToolsPanel", "WidgetsMatrixPanel"]);
 
     var formWidget = WidgetFactory.createWidget(basePath, "BlockList.ui");
     var layout = formWidget.findChild("verticalLayout");

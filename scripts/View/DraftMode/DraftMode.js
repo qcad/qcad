@@ -17,7 +17,7 @@
  * along with QCAD.
  */
 
-include("../View.js");
+include("scripts/View/View.js");
 
 /**
  * Helper class to update DraftMode button status when focus changes
@@ -93,7 +93,7 @@ DraftMode.init = function(basePath) {
     action.setNoState(true);
     action.setGroupSortOrder(3100);
     action.setSortOrder(100);
-    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
+    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel", "ViewMatrixPanel"]);
 
     var appWin = EAction.getMainWindow();
     var fl = new ToggleDraftModeFocusListener(action);

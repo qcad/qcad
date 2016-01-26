@@ -44,9 +44,12 @@ Widgets.getMenu = function() {
 };
 
 Widgets.getToolBar = function() {
-    var tb = EAction.getToolBar(Widgets.getTitle(), "WidgetsToolBar", Qt.RightToolBarArea);
-    //tb.visible = false;
-    return tb;
+    return EAction.getToolBar(Widgets.getTitle(), "WidgetsToolBar", Qt.RightToolBarArea);
+};
+
+Widgets.getToolMatrixPanel = function() {
+    RSettings.setValue("Widgets/VisibleInMatrixPanel", false, false);
+    return EAction.getToolMatrixPanel(Widgets.getTitle(), "WidgetsMatrixPanel", 40);
 };
 
 Widgets.getTitle = function() {
@@ -57,10 +60,11 @@ Widgets.prototype.getTitle = function() {
     return Widgets.getTitle();
 };
 
-Widgets.getListContextMenuCategory = function() {
-    return [qsTr("Lists")];
-};
+//Widgets.getListContextMenuCategory = function() {
+//    return [qsTr("Lists")];
+//};
 
 Widgets.init = function() {
     Widgets.getToolBar();
+    Widgets.getToolMatrixPanel();
 };

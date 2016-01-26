@@ -1,6 +1,5 @@
 function init(basePath) {
-    var action = new RGuiAction(qsTranslate("ZoomOut", "Zoom &Out"),
-        RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTranslate("ZoomOut", "Zoom &Out"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/ZoomOut.js");
     action.setIcon(basePath + "/ZoomOut.svg");
@@ -12,5 +11,5 @@ function init(basePath) {
     action.setNoState();
     action.setGroupSortOrder(3300);
     action.setSortOrder(200);
-    action.setWidgetNames(["ViewMenu", "ViewToolBar", "ViewToolsPanel"]);
+    action.setWidgetNames(["ZoomMenu", "ViewToolBar", "ZoomToolsPanel", "ZoomMatrixPanel"]);
 }
