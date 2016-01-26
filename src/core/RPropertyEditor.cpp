@@ -222,7 +222,12 @@ void RPropertyEditor::updateFromDocument(RDocument* document,
         }
 
         if (foundBlockRef && foundAttribute && !foundOther) {
-            entityTypeFilter = RS::EntityBlockRefAttr;
+            if (RSettings::getSelectBlockWithAttribute()) {
+                entityTypeFilter = RS::EntityBlockRef;
+            }
+            else {
+                entityTypeFilter = RS::EntityBlockRefAttr;
+            }
         }
     }
 
@@ -287,8 +292,14 @@ void RPropertyEditor::updateFromDocument(RDocument* document,
         }
     }
 
-    if (combinedTypes.contains(RS::EntityBlockRef) && combinedTypes.contains(RS::EntityAttribute)) {
-        combinedTypes.insert(RS::EntityBlockRefAttr, combinedTypes[RS::EntityBlockRef] + combinedTypes[RS::EntityBlockRefAttr]);
+    if (RSettings::getSelectBlockWithAttribute()) {
+        //combinedTypes.remove(RS::EntityBlockRefAttr);
+        combinedTypes.remove(RS::EntityAttribute);
+    }
+    else {
+        if (combinedTypes.contains(RS::EntityBlockRef) && combinedTypes.contains(RS::EntityAttribute)) {
+            combinedTypes.insert(RS::EntityBlockRefAttr, combinedTypes[RS::EntityBlockRef] + combinedTypes[RS::EntityBlockRefAttr]);
+        }
     }
 
     updateGui(onlyChanges, entityTypeFilter);
