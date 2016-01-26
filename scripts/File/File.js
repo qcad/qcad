@@ -84,6 +84,7 @@ File.getCadToolBarPanel = function() {
 };
 
 File.getToolMatrixPanel = function() {
+    RSettings.setValue("File/VisibleInCadToolMatrix", false, false);
     return EAction.getToolMatrixPanel(File.getTitle(), "FileMatrixPanel", 10);
 };
 
