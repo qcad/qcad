@@ -179,6 +179,7 @@ public:
 
     static bool isTextRenderedAsText();
     static bool isLayer0CompatibilityOn();
+    static bool getSelectBlockWithAttribute();
 
 private:
     static bool isInitialized();
@@ -215,6 +216,7 @@ private:
     static int dashThreshold;
     static int textRenderedAsText;
     static int layer0CompatibilityOn;
+    static int selectBlockWithAttribute;
     static QStringList recentFiles;
     static QLocale* numberLocale;
 

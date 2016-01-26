@@ -64,6 +64,7 @@ double RSettings::minArcAngleStep = -1;
 int RSettings::dashThreshold = -1;
 int RSettings::textRenderedAsText = -1;
 int RSettings::layer0CompatibilityOn = -1;
+int RSettings::selectBlockWithAttribute = -1;
 QStringList RSettings::recentFiles;
 QLocale* RSettings::numberLocale = NULL;
 QString RSettings::applicationNameOverride;
@@ -524,6 +525,13 @@ bool RSettings::isLayer0CompatibilityOn() {
         layer0CompatibilityOn = getStringValue("LayerCompatibility/Layer0", "QCAD") == "Compatibility";
     }
     return layer0CompatibilityOn;
+}
+
+bool RSettings::getSelectBlockWithAttribute() {
+    if (selectBlockWithAttribute==-1) {
+        selectBlockWithAttribute = getBoolValue("GraphicsView/SelectBlockWithAttribute", false);
+    }
+    return selectBlockWithAttribute;
 }
 
 int RSettings::getQtVersion() {
@@ -1020,6 +1028,7 @@ void RSettings::resetCache() {
     dashThreshold = -1;
     textRenderedAsText = -1;
     layer0CompatibilityOn = -1;
+    selectBlockWithAttribute = -1;
     mouseThreshold = -1;
     cache.clear();
 }
