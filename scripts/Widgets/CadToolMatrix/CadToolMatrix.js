@@ -381,7 +381,7 @@ CadToolMatrix.prototype = new Widgets();
 CadToolMatrix.includeBasePath = includeBasePath;
 
 CadToolMatrix.getPreferencesCategory = function() {
-    return [qsTr("Widgets"), qsTr("CAD Tool Matrix")];
+    return [qsTr("Widgets"), qsTr("Tool Matrix")];
 };
 
 CadToolMatrix.applyPreferences = function(doc) {
@@ -429,7 +429,7 @@ CadToolMatrix.getToolMatrix = function() {
         if (filterEdit.clearButtonEnabled===true) {
             clearButton.hide();
         }
-        var dock = new RDockWidget(qsTr("CAD Tools"), appWin);
+        var dock = new RDockWidget(qsTr("Tool Matrix"), appWin);
         dock.objectName = "ToolMatrixDock";
         dock.setWidget(formWidget);
         appWin.addDockWidget(Qt.LeftDockWidgetArea, dock);

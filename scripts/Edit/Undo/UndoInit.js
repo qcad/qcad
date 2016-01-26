@@ -12,7 +12,7 @@ function init(basePath) {
     action.setNoState();
     action.setGroupSortOrder(2100);
     action.setSortOrder(100);
-    action.setWidgetNames(["EditMenu", "EditToolBar", "EditToolsPanel"]);
+    action.setWidgetNames(["EditMenu", "EditToolBar", "EditToolsPanel", "EditMatrixPanel"]);
 
     var appWin = EAction.getMainWindow();
     appWin.addTransactionListener(action);

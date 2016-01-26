@@ -11,5 +11,5 @@ function init(basePath) {
     action.setDefaultCommands(["cutwithreference", "rt"]);
     action.setGroupSortOrder(2300);
     action.setSortOrder(150);
-    action.setWidgetNames(["EditMenu", "EditToolBar", "EditToolsPanel"]);
+    action.setWidgetNames(["EditMenu", "EditToolBar", "EditToolsPanel", "EditMatrixPanel"]);
 }

@@ -10,5 +10,5 @@ function init(basePath) {
     action.setDefaultCommands(["paste", "ps"]);
     action.setGroupSortOrder(2300);
     action.setSortOrder(300);
-    action.setWidgetNames(["EditMenu", "EditToolBar", "EditToolsPanel"]);
+    action.setWidgetNames(["EditMenu", "EditToolBar", "EditToolsPanel", "EditMatrixPanel"]);
 }
