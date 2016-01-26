@@ -25,7 +25,7 @@
      <height>613</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout_3">
+   <layout class="QVBoxLayout" name="verticalLayout_4">
     <item>
      <widget class="QGroupBox" name="RightClick">
       <property name="title">
@@ -92,6 +92,22 @@
         <widget class="QCheckBox" name="RightDoubleClickToReset">
          <property name="text">
           <string>Right double-click to reset</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>Block Selection</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QCheckBox" name="SelectBlockWithAttribute">
+         <property name="text">
+          <string>Select block reference with attribute</string>
          </property>
         </widget>
        </item>
@@ -240,7 +256,7 @@
       <property name="sizeHint" stdset="0">
        <size>
         <width>20</width>
-        <height>485</height>
+        <height>40</height>
        </size>
       </property>
      </spacer>
