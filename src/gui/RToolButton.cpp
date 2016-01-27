@@ -16,10 +16,10 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RToolButton.h"
+#include <QEvent>
+#include <QMetaType>
 
-#include <QDebug>
-#include <QMouseEvent>
+#include "RToolButton.h"
 
 RToolButton::RToolButton(QWidget* parent) :
     QToolButton(parent) {
