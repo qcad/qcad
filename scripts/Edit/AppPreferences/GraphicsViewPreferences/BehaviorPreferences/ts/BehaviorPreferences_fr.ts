@@ -42,7 +42,12 @@
         <translation>Droit double-cliquez sur pour réinitialiser</translation>
     </message>
     <message>
-        <location line="-62"/>
+        <location line="+16"/>
+        <source>Select block references together with attributes</source>
+        <translation>Sélectionner références de bloc ainsi que leurs attributs</translation>
+    </message>
+    <message>
+        <location line="-78"/>
         <source>Right-Click</source>
         <translation>Clic-droit</translation>
     </message>
@@ -62,6 +67,15 @@
     </message>
     <message>
         <location line="+20"/>
+        <source>Block Selection</source>
+        <translation>Bloc sélection</translation>
+    </message>
+    <message>
+        <source>Select block reference with attribute</source>
+        <translation type="obsolete">Choisir référence de bloc avec l&apos;attribut</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Cursor Range</source>
         <translation>Gamme de curseur de souris</translation>
     </message>

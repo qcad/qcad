@@ -14,7 +14,7 @@
         <translation>Layerwerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+23"/>
         <source>&amp;Layer</source>
         <translation>&amp;Layer</translation>
     </message>

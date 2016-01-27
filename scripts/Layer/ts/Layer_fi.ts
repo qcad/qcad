@@ -14,7 +14,7 @@
         <translation>Näytä tasotyökalut</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+23"/>
         <source>&amp;Layer</source>
         <translation>&amp;Taso</translation>
     </message>

@@ -42,7 +42,12 @@
         <translation>Haga doble clic para reinicializar</translation>
     </message>
     <message>
-        <location line="-62"/>
+        <location line="+16"/>
+        <source>Select block references together with attributes</source>
+        <translation>Seleccione referencias a bloque junto con sus atributos</translation>
+    </message>
+    <message>
+        <location line="-78"/>
         <source>Right-Click</source>
         <translation>Botão direito do mouse</translation>
     </message>
@@ -62,6 +67,15 @@
     </message>
     <message>
         <location line="+20"/>
+        <source>Block Selection</source>
+        <translation>Bloque selección</translation>
+    </message>
+    <message>
+        <source>Select block reference with attribute</source>
+        <translation type="obsolete">Seleccione referencia a bloque con el atributo</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Cursor Range</source>
         <translation>Gama cursor del ratón</translation>
     </message>

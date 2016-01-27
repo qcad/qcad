@@ -14,7 +14,7 @@
         <translation>Показать инструменты слоёв</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+23"/>
         <source>&amp;Layer</source>
         <translation>С&amp;лой</translation>
     </message>

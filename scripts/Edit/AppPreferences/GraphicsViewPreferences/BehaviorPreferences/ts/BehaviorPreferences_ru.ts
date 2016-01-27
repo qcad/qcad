@@ -42,7 +42,12 @@
         <translation>Двойной щелчок правой кнопкой мыши для сброса</translation>
     </message>
     <message>
-        <location line="-62"/>
+        <location line="+16"/>
+        <source>Select block references together with attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-78"/>
         <source>Right-Click</source>
         <translation>Щелчок правой кнопкой</translation>
     </message>
@@ -62,6 +67,11 @@
     </message>
     <message>
         <location line="+20"/>
+        <source>Block Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Cursor Range</source>
         <translation>Диапазон курсора</translation>
     </message>

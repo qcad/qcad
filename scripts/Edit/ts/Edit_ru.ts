@@ -47,7 +47,7 @@ the preference changes to take effect.</source>
         <translation>Показать инструменты редактирования</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Edit</source>
         <translation>&amp;Правка</translation>
     </message>

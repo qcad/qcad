@@ -46,7 +46,7 @@ the preference changes to take effect.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Edit</source>
         <translation type="unfinished"></translation>
     </message>

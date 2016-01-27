@@ -24,7 +24,7 @@
         <translation>两点(&amp;2)</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>按两个截然相反的点画圆</translation>
     </message>

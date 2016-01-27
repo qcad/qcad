@@ -63,7 +63,7 @@ Copie entidade com ponto de referência  para o clipboard</translatorcomment>
         <translation>Exiba as ferramentas de edição</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Edit</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

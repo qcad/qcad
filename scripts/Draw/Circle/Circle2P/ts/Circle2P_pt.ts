@@ -39,7 +39,7 @@ Os dois pontos são idênticos</translatorcomment>
         <translation>&amp;2 Pontos</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Desenhe um círculo a partir de 2 pontos diametralmente opostos</translation>

@@ -14,7 +14,7 @@
         <translation>Afficher les outils de la couche</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+23"/>
         <source>&amp;Layer</source>
         <translation>&amp;Calque</translation>
     </message>

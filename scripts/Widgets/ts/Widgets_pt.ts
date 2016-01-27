@@ -25,14 +25,13 @@ Cancelar
 <context>
     <name>Widgets</name>
     <message>
-        <location filename="../Widgets.js" line="+53"/>
+        <location filename="../Widgets.js" line="+56"/>
         <source>&amp;Widgets</source>
         <translation>&amp;Widgets</translation>
     </message>
     <message>
-        <location line="+8"/>
         <source>Lists</source>
-        <translation>Listas</translation>
+        <translation type="vanished">Listas</translation>
     </message>
 </context>
 </TS>

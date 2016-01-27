@@ -42,7 +42,12 @@
         <translation>Destro fare doppio clic per reset</translation>
     </message>
     <message>
-        <location line="-62"/>
+        <location line="+16"/>
+        <source>Select block references together with attributes</source>
+        <translation>Selezionare i riferimenti di blocco insieme con i loro attributi</translation>
+    </message>
+    <message>
+        <location line="-78"/>
         <source>Right-Click</source>
         <translation>Pulsante destro del mouse</translation>
     </message>
@@ -62,6 +67,11 @@
     </message>
     <message>
         <location line="+20"/>
+        <source>Block Selection</source>
+        <translation>Blocco selezione</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Cursor Range</source>
         <translation>Gamma cursore del mouse</translation>
     </message>

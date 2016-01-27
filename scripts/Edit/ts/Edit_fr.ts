@@ -47,7 +47,7 @@ pour appliquer les modifications.</translation>
         <translation>Afficher les outils d&apos;édition</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Edit</source>
         <translation>&amp;Édition</translation>
     </message>

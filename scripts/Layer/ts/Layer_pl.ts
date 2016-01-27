@@ -14,7 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+23"/>
         <source>&amp;Layer</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

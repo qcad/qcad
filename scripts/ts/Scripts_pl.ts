@@ -96,7 +96,7 @@ Wyrażenia &quot;pragma&quot; nie są obsługiwane. Dlatego musi wystąpić wyra
         <translation type="unfinished">Brak</translation>
     </message>
     <message>
-        <location line="+657"/>
+        <location line="+614"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

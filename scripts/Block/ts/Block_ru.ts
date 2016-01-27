@@ -14,7 +14,7 @@
         <translation>Показать инструменты работы с блоками</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+23"/>
         <source>&amp;Block</source>
         <translation>Блок</translation>
     </message>

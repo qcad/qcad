@@ -42,7 +42,12 @@
         <translation>Clique duplo de direita para resetar</translation>
     </message>
     <message>
-        <location line="-62"/>
+        <location line="+16"/>
+        <source>Select block references together with attributes</source>
+        <translation>Selecione referências de blocos juntamente com seus atributos</translation>
+    </message>
+    <message>
+        <location line="-78"/>
         <source>Right-Click</source>
         <translation>Clique do Botão Direito</translation>
     </message>
@@ -62,6 +67,15 @@
     </message>
     <message>
         <location line="+20"/>
+        <source>Block Selection</source>
+        <translation>Bloco seleção</translation>
+    </message>
+    <message>
+        <source>Select block reference with attribute</source>
+        <translation type="obsolete">Selecione referência de bloco com o atributo</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Cursor Range</source>
         <translation>Limites do Cursor</translation>
     </message>

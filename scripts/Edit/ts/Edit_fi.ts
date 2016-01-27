@@ -47,7 +47,7 @@ asetuksien muutokset astuvat voimaan.</translation>
         <translation>Näytä muokkaustyökalut</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Edit</source>
         <translation>&amp;Muokkaa</translation>
     </message>

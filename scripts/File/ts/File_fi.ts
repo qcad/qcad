@@ -14,12 +14,12 @@
         <translation>Näytä tiedostotyökalut</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;File</source>
         <translation>&amp;Tiedosto</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+63"/>
         <source>Format:</source>
         <translation>Muoto:</translation>
     </message>

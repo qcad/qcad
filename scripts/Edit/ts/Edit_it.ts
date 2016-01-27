@@ -51,7 +51,7 @@ Copia gli oggetti nel blocco note con un punto di riferimento</translatorcomment
         <translation>Mostra strumenti di editing</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Edit</source>
         <translation>&amp;Modifica</translation>
     </message>

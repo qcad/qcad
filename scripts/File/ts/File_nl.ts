@@ -14,12 +14,12 @@
         <translation>Bestandgereedschappen tonen</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;File</source>
         <translation>&amp;Bestand</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+63"/>
         <source>Format:</source>
         <translation>Formaat:</translation>
     </message>

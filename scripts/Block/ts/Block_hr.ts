@@ -14,7 +14,7 @@
         <translation>Prikaži alate za blokove</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+23"/>
         <source>&amp;Block</source>
         <translation>&amp;Blok</translation>
     </message>

@@ -24,7 +24,7 @@
         <translation>2 Pistettä</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>Piirrä ympyrä 2 pistellä halkaisijaltaan vastakkaisilta puolilta</translation>
     </message>

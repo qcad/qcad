@@ -24,7 +24,7 @@
         <translation>&amp;2 Točki</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>Nariši krog iz 2 diametrično nasprotni točki</translation>
     </message>

@@ -47,7 +47,7 @@ de wijzigingen door te voeren.</translation>
         <translation>Bewerken gereedschappen tonen</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Edit</source>
         <translation>&amp;Bewerken</translation>
     </message>

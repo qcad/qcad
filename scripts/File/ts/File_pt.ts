@@ -14,7 +14,7 @@
         <translation>Exiba ferramentas de arquivo</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;File</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--
@@ -22,7 +22,7 @@
         <translation>&amp;Arquivo</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+63"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: pt.po--

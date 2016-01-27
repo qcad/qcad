@@ -58,6 +58,16 @@
     </message>
     <message>
         <location line="+10"/>
+        <source>Block Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Select block references together with attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+10"/>
         <source>Cursor Range</source>
         <translation type="unfinished"></translation>
     </message>

@@ -66,7 +66,7 @@
 <context>
     <name>CircleTPR</name>
     <message>
-        <location filename="../CircleTPR.js" line="+38"/>
+        <location filename="../CircleTPR.js" line="+39"/>
         <source>Point on circle</source>
         <translation>Punto su cerchio</translation>
     </message>
@@ -79,6 +79,11 @@
         <location line="+4"/>
         <source>Draw circle tangential to entity, through point with radius</source>
         <translation>Disegnare un cerchio tangente ad una entità, attraverso un punto con raggio</translation>
+    </message>
+    <message>
+        <location filename="../CircleTPR.ui" line="+17"/>
+        <source>Radius:</source>
+        <translation>Raggio:</translation>
     </message>
 </context>
 </TS>

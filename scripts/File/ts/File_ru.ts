@@ -14,12 +14,12 @@
         <translation>Показать инструменты работы с файлами</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;File</source>
         <translation>Файл</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+63"/>
         <source>Format:</source>
         <translation>Формат:</translation>
     </message>

@@ -24,7 +24,7 @@
         <translation>&amp;2 Punkte</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>Kreis zeichnen von zwei diagonal gegenüber liegenden Punkten</translation>
     </message>

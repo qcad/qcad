@@ -14,7 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;File</source>
         <translatorcomment>--exact match--
 --file: qtconfig_pl.ts--
@@ -23,7 +23,7 @@ Os&amp;tatnio otwierane pliki</translatorcomment>
         <translation type="unfinished">&amp;Plik</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+63"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

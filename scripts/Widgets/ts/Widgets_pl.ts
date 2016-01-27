@@ -25,15 +25,10 @@ Anuluj
 <context>
     <name>Widgets</name>
     <message>
-        <location filename="../Widgets.js" line="+53"/>
+        <location filename="../Widgets.js" line="+56"/>
         <source>&amp;Widgets</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Widgety</translation>
-    </message>
-    <message>
-        <location line="+8"/>
-        <source>Lists</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

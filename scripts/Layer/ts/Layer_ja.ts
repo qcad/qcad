@@ -14,7 +14,7 @@
         <translation>表示レイヤツール</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+23"/>
         <source>&amp;Layer</source>
         <translation>&amp;L 画層</translation>
     </message>

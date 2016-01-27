@@ -42,7 +42,12 @@
         <translation>Dvojklik pravým tlačítkom reset</translation>
     </message>
     <message>
-        <location line="-62"/>
+        <location line="+16"/>
+        <source>Select block references together with attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-78"/>
         <source>Right-Click</source>
         <translation>Kliknutie pravým tlačidlom myši</translation>
     </message>
@@ -62,6 +67,11 @@
     </message>
     <message>
         <location line="+20"/>
+        <source>Block Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Cursor Range</source>
         <translation>Rozsah kurzoru</translation>
     </message>

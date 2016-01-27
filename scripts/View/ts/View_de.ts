@@ -19,7 +19,7 @@
 <context>
     <name>View</name>
     <message>
-        <location filename="../View.js" line="+65"/>
+        <location filename="../View.js" line="+64"/>
         <source>View Tools</source>
         <translation>Ansichtswerkzeuge</translation>
     </message>
@@ -29,7 +29,7 @@
         <translation>Ansichtswerkzeuge anzeigen</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;View</source>
         <translation>&amp;Ansicht</translation>
     </message>

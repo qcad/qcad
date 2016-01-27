@@ -4,7 +4,7 @@
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../CadToolMatrix.js" line="+331"/>
+        <location filename="../CadToolMatrix.js" line="+343"/>
         <source>Expand all</source>
         <translation>Tout étendre</translation>
     </message>
@@ -30,13 +30,17 @@
     </message>
     <message>
         <location line="+0"/>
-        <source>CAD Tool Matrix</source>
-        <translation>Matrice des outils CAO</translation>
+        <location line="+48"/>
+        <source>Tool Matrix</source>
+        <translation>Matrice des outils</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <source>CAD Tool Matrix</source>
+        <translation type="vanished">Matrice des outils CAO</translation>
+    </message>
+    <message>
         <source>CAD Tools</source>
-        <translation>Outils de CAO</translation>
+        <translation type="vanished">Outils de CAO</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>

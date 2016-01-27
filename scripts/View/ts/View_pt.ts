@@ -18,7 +18,7 @@
 <context>
     <name>View</name>
     <message>
-        <location filename="../View.js" line="+65"/>
+        <location filename="../View.js" line="+64"/>
         <source>View Tools</source>
         <translation>Ferramentas de Visualização</translation>
     </message>
@@ -28,7 +28,7 @@
         <translation>Exiba as ferramentas de visualização</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;View</source>
         <translatorcomment>--exact match--
 --file: qcad_pt.ts--

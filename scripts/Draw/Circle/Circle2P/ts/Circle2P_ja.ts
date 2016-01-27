@@ -24,7 +24,7 @@
         <translation>&amp;2点</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>直径となる２点を指定して円を描画</translation>
     </message>

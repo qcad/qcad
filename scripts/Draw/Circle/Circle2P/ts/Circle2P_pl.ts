@@ -36,7 +36,7 @@ Wskaż drugi punkt linii odbicia</translatorcomment>
         <translation type="unfinished">&amp;2 Punkty</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Narysuj koło z 2 diametralnie przeciwstawnych punktów</translation>

@@ -24,7 +24,7 @@
         <translation>По 2-м точкам</translation>
     </message>
     <message>
-        <location line="+5"/>
+        <location line="+4"/>
         <source>Draw circle from 2 diametrically opposite points</source>
         <translation>Нарисовать окружность по 2-м отдельным точкам</translation>
     </message>

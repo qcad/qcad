@@ -61,7 +61,7 @@ Wycina obiekty z punktem odniesienia</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Edit</source>
         <translatorcomment>--exact match--
 --file: linguist_pl.ts--

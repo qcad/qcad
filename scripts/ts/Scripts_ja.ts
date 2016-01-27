@@ -78,7 +78,7 @@
         <translation>なし</translation>
     </message>
     <message>
-        <location line="+657"/>
+        <location line="+614"/>
         <source>Options</source>
         <translation>オプション</translation>
     </message>

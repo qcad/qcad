@@ -4,7 +4,7 @@
 <context>
     <name>View</name>
     <message>
-        <location filename="../View.js" line="+65"/>
+        <location filename="../View.js" line="+64"/>
         <source>View Tools</source>
         <translation>Orodja prikaza</translation>
     </message>
@@ -14,7 +14,7 @@
         <translation>Prikaži orodja prikaza</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+23"/>
         <source>&amp;View</source>
         <translation>&amp;Pogled</translation>
     </message>

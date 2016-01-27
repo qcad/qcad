@@ -42,7 +42,12 @@
         <translation>Rechts-Doppelklick zum Zurücksetzen</translation>
     </message>
     <message>
-        <location line="-62"/>
+        <location line="+16"/>
+        <source>Select block references together with attributes</source>
+        <translation>Blockreferenzen zusammen mit ihren Attributen selektieren</translation>
+    </message>
+    <message>
+        <location line="-78"/>
         <source>Right-Click</source>
         <translation>Rechtsklick</translation>
     </message>
@@ -62,6 +67,15 @@
     </message>
     <message>
         <location line="+20"/>
+        <source>Block Selection</source>
+        <translation>Blockselektion</translation>
+    </message>
+    <message>
+        <source>Select block reference with attribute</source>
+        <translation type="obsolete">Wählen Sie die Blockreferenz mit Attribut</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Cursor Range</source>
         <translation>Zeigerreichweite</translation>
     </message>

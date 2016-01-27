@@ -47,7 +47,7 @@ QCADを再起動してください。</translation>
         <translation>編集ツールの表示</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+22"/>
         <source>&amp;Edit</source>
         <translation>&amp;E 編集</translation>
     </message>

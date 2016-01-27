@@ -78,7 +78,7 @@
         <translation>Brez</translation>
     </message>
     <message>
-        <location line="+657"/>
+        <location line="+614"/>
         <source>Options</source>
         <translation>Nastavitve</translation>
     </message>

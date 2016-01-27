@@ -14,7 +14,7 @@
         <translation>Näytä lohkotyökalut</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+23"/>
         <source>&amp;Block</source>
         <translation>Lohko</translation>
     </message>

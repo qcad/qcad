@@ -107,7 +107,7 @@
        <item>
         <widget class="QCheckBox" name="SelectBlockWithAttribute">
          <property name="text">
-          <string>Select block reference with attribute</string>
+          <string>Select block references together with attributes</string>
          </property>
         </widget>
        </item>

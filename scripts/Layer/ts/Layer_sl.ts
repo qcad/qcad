@@ -14,7 +14,7 @@
         <translation>Prikaži orodja plasti</translation>
     </message>
     <message>
-        <location line="+22"/>
+        <location line="+23"/>
         <source>&amp;Layer</source>
         <translation>P&amp;last</translation>
     </message>
