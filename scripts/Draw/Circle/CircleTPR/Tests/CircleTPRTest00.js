@@ -35,6 +35,8 @@ CircleTPRTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::CircleToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::CircleToolsPanel::CircleTPRButton');
+    this.setToolOption('CircleTPR/Radius', '25');
+    this.updateToolOptions();
     this.setZoom(10, new RVector(18.7, 8.7, 0, true));
     var p = new RVector(19.6, 14.7);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);

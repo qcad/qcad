@@ -27,6 +27,7 @@ include("../../Arc/ArcTPR/ArcTPR.js");
 function CircleTPR(guiAction) {
     ArcTPR.call(this, guiAction);
     this.fullCircle = true;
+    this.setUiOptions("CircleTPR.ui");
 }
 
 CircleTPR.prototype = new ArcTPR();
