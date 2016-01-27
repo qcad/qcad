@@ -33,16 +33,23 @@ Explode.getPreferencesCategory = function() {
 
 Explode.prototype.beginEvent = function() {
     Modify.prototype.beginEvent.call(this);
-
     var di = this.getDocumentInterface();
-    var document = this.getDocument();
+    Explode.explodeSelection(di, this);
+    this.terminate();
+};
+
+Explode.explodeSelection = function(di, action) {
+    var document = di.getDocument();
     var storage = document.getStorage();
     var ids = document.querySelectedEntities();
     var i, k, e, n;
     var polyline, shapes, shape;
 
     var op = new RAddObjectsOperation();
-    op.setText(this.getToolTitle());
+
+    if (!isNull(action)) {
+        op.setText(action.getToolTitle());
+    }
 
     for (i=0; i<ids.length; i++) {
         var id = ids[i];
@@ -262,7 +269,5 @@ Explode.prototype.beginEvent = function() {
     }
 
     di.applyOperation(op);
-
-    this.terminate();
 };
 
