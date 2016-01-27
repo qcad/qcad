@@ -116,6 +116,7 @@
 #include <QTimer>
 #include <QToolBar>
 #include <QToolButton>
+#include <QTreeView>
 #include <QTreeWidget>
 #include <QTreeWidgetItem>
 #include <QUrl>
@@ -272,6 +273,7 @@ Q_DECLARE_METATYPE(QTimer*)
 Q_DECLARE_METATYPE(QToolBar*)
 Q_DECLARE_METATYPE(QToolButton*)
 Q_DECLARE_METATYPE(QTransform*)
+Q_DECLARE_METATYPE(QTreeView*)
 Q_DECLARE_METATYPE(QTreeWidget*)
 Q_DECLARE_METATYPE(QTreeWidgetItem*)
 Q_DECLARE_METATYPE(const QTreeWidgetItem*)
