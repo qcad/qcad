@@ -294,6 +294,7 @@ Q_DECLARE_METATYPE(QXmlResultItems*)
 
 Q_DECLARE_METATYPE(QFlags<Qt::MouseButton>)
 Q_DECLARE_METATYPE(QFlags<Qt::KeyboardModifier>)
+Q_DECLARE_METATYPE(QFlags<Qt::Orientation>)
 Q_DECLARE_METATYPE(QFlags<QDir::Filter>*)
 
 Q_DECLARE_METATYPE(QList<int>)
