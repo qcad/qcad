@@ -17,7 +17,6 @@
  * along with QCAD.
  */
 #include <QEvent>
-#include <QMetaType>
 
 #include "RToolButton.h"
 

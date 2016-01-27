@@ -23,6 +23,7 @@
 #include "gui_global.h"
 
 #include <QToolButton>
+#include <QMetaType>
 
 /**
  * \ingroup gui

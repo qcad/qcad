@@ -34,11 +34,11 @@
 
 #include "gui_global.h"
 
-#include <QWidget>
+#include <QItemDelegate>
+#include <QMetaType>
 #include <QTreeWidget>
 #include <QTreeWidgetItem>
-#include <QItemDelegate>
-#include <QtDebug>
+#include <QWidget>
 
 /**
  * Tree widget item delegate. Decorates root items of QTreeWidget tool matrices.
@@ -58,5 +58,7 @@ public:
 private:
     QTreeView* treeView;
 };
+
+Q_DECLARE_METATYPE(RToolMatrixItemDelegate*)
 
 #endif

@@ -63,6 +63,7 @@
 #include <QInputMethodEvent>
 #include <QImage>
 #include <QImageWriter>
+#include <QItemDelegate>
 #include <QKeyEvent>
 #include <QLayout>
 #include <QLayoutItem>
@@ -201,6 +202,7 @@ Q_DECLARE_METATYPE(QImage*)
 Q_DECLARE_METATYPE(QImageWriter*)
 Q_DECLARE_METATYPE(QInputEvent*)
 Q_DECLARE_METATYPE(QInputMethodEvent*)
+Q_DECLARE_METATYPE(QItemDelegate*)
 Q_DECLARE_METATYPE(QItemSelection*)
 Q_DECLARE_METATYPE(QKeyEvent*)
 Q_DECLARE_METATYPE(QKeySequence*)
