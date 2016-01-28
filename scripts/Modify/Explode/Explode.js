@@ -18,7 +18,6 @@
  */
 
 include("../Modify.js");
-include("scripts/Block/Block.js");
 include("scripts/ShapeAlgorithms.js");
 
 function Explode(guiAction) {
