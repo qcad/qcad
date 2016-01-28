@@ -177,8 +177,15 @@ RCadToolMatrixTree.prototype.handleItemPress = function(item) {
         return;
     }
 
-    if (QGuiApplication.mouseButtons().valueOf() !== Qt.LeftButton.valueOf()) {
-        return;
+    if (!isNull(QGuiApplication)) {
+        if (QGuiApplication.mouseButtons().valueOf() !== Qt.LeftButton.valueOf()) {
+            return;
+        }
+    }
+    else {
+        if (QApplication.mouseButtons().valueOf() !== Qt.LeftButton.valueOf()) {
+            return;
+        }
     }
 
     if (isNull(item.parent())) {
