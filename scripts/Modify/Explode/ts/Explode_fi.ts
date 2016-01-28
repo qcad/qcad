@@ -78,7 +78,7 @@
 <context>
     <name>Explode</name>
     <message>
-        <location filename="../Explode.js" line="+31"/>
+        <location filename="../Explode.js" line="+30"/>
         <source>Modify</source>
         <translation>Muokkaa</translation>
     </message>

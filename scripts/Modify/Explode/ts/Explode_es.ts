@@ -95,7 +95,7 @@ Sombreado/Relleno</translatorcomment>
         <translation>&amp;Explotar</translation>
     </message>
     <message>
-        <location filename="../Explode.js" line="+31"/>
+        <location filename="../Explode.js" line="+30"/>
         <source>Modify</source>
         <translation>Modificar</translation>
     </message>

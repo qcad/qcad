@@ -96,7 +96,7 @@ Combiner hachures</translatorcomment>
         <translation>Décompos&amp;er</translation>
     </message>
     <message>
-        <location filename="../Explode.js" line="+31"/>
+        <location filename="../Explode.js" line="+30"/>
         <source>Modify</source>
         <translation>Modifier</translation>
     </message>

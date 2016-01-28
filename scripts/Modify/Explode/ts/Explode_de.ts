@@ -83,7 +83,7 @@
         <translation>&amp;Aufbrechen</translation>
     </message>
     <message>
-        <location filename="../Explode.js" line="+31"/>
+        <location filename="../Explode.js" line="+30"/>
         <source>Modify</source>
         <translation>Modifizieren</translation>
     </message>

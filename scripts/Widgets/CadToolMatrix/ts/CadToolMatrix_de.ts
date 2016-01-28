@@ -4,7 +4,7 @@
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../CadToolMatrix.js" line="+343"/>
+        <location filename="../CadToolMatrix.js" line="+348"/>
         <source>Expand all</source>
         <translation>Alles aufklappen</translation>
     </message>

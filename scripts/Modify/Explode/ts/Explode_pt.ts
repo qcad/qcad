@@ -119,7 +119,7 @@ Oculte (congele) todos os carimbos</translatorcomment>
         <translation>&amp;Fragmente</translation>
     </message>
     <message>
-        <location filename="../Explode.js" line="+31"/>
+        <location filename="../Explode.js" line="+30"/>
         <source>Modify</source>
         <translation>Modifique</translation>
     </message>
