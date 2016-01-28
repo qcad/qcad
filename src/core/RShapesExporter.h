@@ -19,13 +19,15 @@
 #ifndef RSHAPESEXPORTER_H
 #define RSHAPESEXPORTER_H
 
+#include "core_global.h"
+
 #include "RShape.h"
 #include "RExporter.h"
 
 /**
  * Exports exploded polylines or splines as connected shapes with continuous line pattern.
  */
-class RShapesExporter : public RExporter {
+class QCADCORE_EXPORT RShapesExporter : public RExporter {
 public:
     RShapesExporter(RExporter& exporter, const QList<QSharedPointer<RShape> >& shapes, double offset);
     virtual void exportLineSegment(const RLine& line, double angle = RNANDOUBLE);

@@ -19,10 +19,12 @@
 #ifndef RARCEXPORTER_H
 #define RARCEXPORTER_H
 
+#include "core_global.h"
+
 #include "RArc.h"
 #include "RExporter.h"
 
-class RArcExporter : public RExporter {
+class QCADCORE_EXPORT RArcExporter : public RExporter {
 public:
     RArcExporter(RExporter& exporter, const RArc& arc, double offset);
     virtual void exportLineSegment(const RLine& line, double angle = RNANDOUBLE);

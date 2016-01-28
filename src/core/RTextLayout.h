@@ -20,6 +20,8 @@
 #ifndef RTEXTLAYOUT_H
 #define RTEXTLAYOUT_H
 
+#include "core_global.h"
+
 #include <QTextLayout>
 #include <QSharedPointer>
 #include <QList>
@@ -27,7 +29,7 @@
 
 #include "RPainterPath.h"
 
-class RTextLayout {
+class QCADCORE_EXPORT RTextLayout {
 public:
     RTextLayout() {}
     RTextLayout(QSharedPointer<QTextLayout> layout, const QTransform& transform, const QColor& color) : layout(layout), transform(transform), color(color) {}
