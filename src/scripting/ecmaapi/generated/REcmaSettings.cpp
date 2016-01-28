@@ -265,6 +265,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, isLayer0CompatibilityOn, "isLayer0CompatibilityOn");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getSelectBlockWithAttribute, "getSelectBlockWithAttribute");
+            
 
     // static properties:
     
@@ -4987,6 +4989,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::isLayer0CompatibilityOn", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getSelectBlockWithAttribute
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getSelectBlockWithAttribute", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getSelectBlockWithAttribute";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getSelectBlockWithAttribute();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getSelectBlockWithAttribute().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getSelectBlockWithAttribute", context, engine);
             return result;
         }
          QScriptValue REcmaSettings::toString

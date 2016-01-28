@@ -20,13 +20,15 @@
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RSHAPESEXPORTER_H</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RSHAPESEXPORTER_H</name></cpp:define>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
+
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RShape.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RExporter.h"</cpp:file></cpp:include>
 
 <comment type="block">/**
  * Exports exploded polylines or splines as connected shapes with continuous line pattern.
  */</comment>
-<class>class <name>RShapesExporter</name> <super>: <specifier>public</specifier> <name>RExporter</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RShapesExporter</name> <super>: <specifier>public</specifier> <name>RExporter</name></super> <block>{<private type="default">
 </private><public>public:
     <constructor_decl><name>RShapesExporter</name><parameter_list>(<param><decl><type><name>RExporter</name>&amp;</type> <name>exporter</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name>&amp;</type> <name>shapes</name></decl></param>, <param><decl><type><name>double</name></type> <name>offset</name></decl></param>)</parameter_list>;</constructor_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportLineSegment</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>line</name></decl></param>, <param><decl><type><name>double</name></type> <name>angle</name> =<init> <expr><name>RNANDOUBLE</name></expr></init></decl></param>)</parameter_list>;</function_decl>

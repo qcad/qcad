@@ -24,18 +24,20 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QToolButton&gt;</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
 
 <comment type="block">/**
- * \scriptable
  * \ingroup gui
  */</comment>
 <class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RToolButton</name><super>: <specifier>public</specifier> <name>QToolButton</name></super> <block>{<private type="default">
-
 <macro><name>Q_OBJECT</name></macro>
 
 </private><public>public:
     <constructor_decl><name>RToolButton</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>parent</name></decl></param>)</parameter_list>;</constructor_decl>
-</public>}</block>;</class>
+
+</public><protected>protected:
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>event</name><parameter_list>(<param><decl><type><name>QEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+</protected>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RToolButton*</argument>)</argument_list></macro>
 

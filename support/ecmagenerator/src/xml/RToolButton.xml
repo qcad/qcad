@@ -4,13 +4,6 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class name="RToolButton"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="true"
-  hasStreamOperator="false" isAbstract="false" isScriptable="true">
-    <baseClass name="QToolButton" specifier="public" />
-    <constructor>
-      <variant>
-        <arg type="QWidget *" typeName="QWidget *" name="parent"
-        isConst="false" />
-      </variant>
-    </constructor>
-  </class>
+  hasStreamOperator="false" isAbstract="false"
+  isScriptable="false" />
 </unit>

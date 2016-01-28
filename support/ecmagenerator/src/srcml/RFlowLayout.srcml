@@ -2,6 +2,8 @@
 <unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./gui" filename="RFlowLayout.h"><cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RFLOWLAYOUT_H</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RFLOWLAYOUT_H</name></cpp:define>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QLayout&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QMetaType&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QRect&gt;</cpp:file></cpp:include>
@@ -18,7 +20,7 @@
  * \scriptable
  * \generateScriptShell
  */</comment>
-<class>class <name>RFlowLayout</name> <super>: <specifier>public</specifier> <name>QLayout</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RFlowLayout</name> <super>: <specifier>public</specifier> <name>QLayout</name></super> <block>{<private type="default">
     <macro><name>Q_OBJECT</name></macro>
 
 </private><public>public:
