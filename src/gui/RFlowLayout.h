@@ -1,6 +1,8 @@
 #ifndef RFLOWLAYOUT_H
 #define RFLOWLAYOUT_H
 
+#include "gui_global.h"
+
 #include <QLayout>
 #include <QMetaType>
 #include <QRect>
@@ -17,7 +19,7 @@
  * \scriptable
  * \generateScriptShell
  */
-class RFlowLayout : public QLayout {
+class QCADGUI_EXPORT RFlowLayout : public QLayout {
     Q_OBJECT
 
 public:
