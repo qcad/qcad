@@ -30,6 +30,7 @@
  */
 
 #include <QAbstractItemModel>
+#include <QDebug>
 #include <QTreeView>
 #include <QStyle>
 #include <QPainter>
@@ -81,13 +82,13 @@ void RToolMatrixItemDelegate::paint(QPainter* painter, const QStyleOptionViewIte
         bool drawTopline = (index.row() > 0 && treeView->isExpanded(previousIndex));
         int highlightOffset = drawTopline ? 1 : 0;
 
-//        QLinearGradient gradient(option.rect.topLeft(), option.rect.bottomLeft());
-//        gradient.setColorAt(0, buttonColor.lighter(102));
-//        gradient.setColorAt(1, buttonColor.darker(106));
+        QLinearGradient gradient(option.rect.topLeft(), option.rect.bottomLeft());
+        gradient.setColorAt(0, buttonColor.lighter(102));
+        gradient.setColorAt(1, buttonColor.darker(106));
 
-//        painter->setPen(Qt::NoPen);
-//        painter->setBrush(gradient);
-//        painter->drawRect(option.rect);
+        painter->setPen(Qt::NoPen);
+        painter->setBrush(gradient);
+        painter->drawRect(option.rect);
         painter->setPen(highlightColor);
         painter->drawLine(option.rect.topLeft() + QPoint(0, highlightOffset),
                           option.rect.topRight() + QPoint(0, highlightOffset));
