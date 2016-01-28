@@ -86,7 +86,7 @@ Projection.getCadToolBarPanel = function() {
 };
 
 Projection.getToolMatrixPanel = function() {
-    return EAction.getToolMatrixPanel(Projection.getTitle(), "ProjectionMatrixPanel", 6000);
+    return EAction.getToolMatrixPanel(Projection.getTitle(), "ProjectionMatrixPanel", 3500);
 };
 
 Projection.getTitle = function() {

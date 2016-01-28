@@ -75,6 +75,7 @@ Draw.init = function() {
     Draw.getCadToolBarPanel();
     Draw.getToolMatrixPanel();
 
+    // add action for the sake of configurability (tool preferences):
     var appWin = EAction.getMainWindow();
     var action = new RGuiAction("", appWin);
     action.setScriptFile(Draw.includeBasePath + "/Draw.js");

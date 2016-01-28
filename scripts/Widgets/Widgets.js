@@ -67,4 +67,12 @@ Widgets.prototype.getTitle = function() {
 Widgets.init = function() {
     Widgets.getToolBar();
     Widgets.getToolMatrixPanel();
+
+    // add action for the sake of configurability (tool preferences):
+    var appWin = EAction.getMainWindow();
+    var action = new RGuiAction("", appWin);
+    action.setScriptFile(Widgets.includeBasePath + "/Widgets.js");
+    action.setGroupSortOrder(5);
+    action.setSortOrder(100);
+    action.setWidgetNames([]);
 };

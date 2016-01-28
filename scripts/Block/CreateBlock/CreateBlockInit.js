@@ -10,5 +10,5 @@ function init(basePath) {
     action.setGroupSortOrderOverride("MainToolsPanel", 40);
     action.setSortOrder(100);
     action.setSortOrderOverride("MainToolsPanel", 300);
-    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel", "MainToolsPanel"]);
+    action.setWidgetNames(["BlockMenu", "BlockToolBar", "BlockToolsPanel", "MainToolsPanel", "DrawMatrixPanel"]);
 }
