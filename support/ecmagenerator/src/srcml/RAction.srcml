@@ -254,6 +254,11 @@
      */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>propertyChangeEvent</name><parameter_list>(<param><decl><type><name>RPropertyEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
+    <comment type="block">/**
+     * Called when the zoom factor or offset changed in the given view.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>zoomChangeEvent</name><parameter_list>(<param><decl><type><name>RGraphicsView</name>&amp;</type> <name>view</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
     <comment type="line">//virtual void setMultiSnapPoints(const QList&lt;RVector&gt;&amp; points) = 0;</comment>
     <comment type="line">//virtual void setMultiSnapAngles(const QList&lt;double&gt;&amp; angles) = 0;</comment>
 

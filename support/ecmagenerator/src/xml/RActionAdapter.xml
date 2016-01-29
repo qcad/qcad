@@ -208,6 +208,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="" isConst="false" />
       </variant>
     </method>
+    <method name="zoomChangeEvent" cppName="zoomChangeEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
+        name="" isConst="false" />
+      </variant>
+    </method>
     <method name="updatePreview" cppName="updatePreview"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

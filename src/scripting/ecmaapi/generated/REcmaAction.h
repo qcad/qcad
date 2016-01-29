@@ -178,6 +178,9 @@
         propertyChangeEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        zoomChangeEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         updatePreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
