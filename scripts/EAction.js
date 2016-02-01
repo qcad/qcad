@@ -691,11 +691,6 @@ EAction.prototype.keyReleaseEvent = function(event) {
     event.ignore();
 };
 
-EAction.prototype.zoomChangeEvent = function(view) {
-    qDebug("EAction.prototype.zoomChangeEvent");
-    qDebug("action", this.getToolTitle());
-};
-
 /**
  * Sets the current cursor of the current document interface (all views attached
  * to it) to crosshair cursor.
