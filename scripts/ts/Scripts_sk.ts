@@ -51,7 +51,7 @@
     <message>
         <location line="+118"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="unfinished">Úprava bloku &apos;%1&apos;&lt;br&gt;Vybrať &lt;i&gt;Blok &gt; Návrat ku kresleniu &lt;/i&gt; keď bude hotové</translation>
+        <translation>Úprava bloku &apos;%1&apos;&lt;br&gt;Vybrať &lt;i&gt;Blok &gt; Návrat ku kresleniu &lt;/i&gt; keď bude hotové</translation>
     </message>
 </context>
 <context>
@@ -78,7 +78,7 @@
         <translation>Žiadne</translation>
     </message>
     <message>
-        <location line="+614"/>
+        <location line="+619"/>
         <source>Options</source>
         <translation>Možnosti</translation>
     </message>

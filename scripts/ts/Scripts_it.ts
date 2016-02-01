@@ -84,7 +84,7 @@
         <translation>Niente</translation>
     </message>
     <message>
-        <location line="+614"/>
+        <location line="+619"/>
         <source>Options</source>
         <translation>Opzioni</translation>
     </message>

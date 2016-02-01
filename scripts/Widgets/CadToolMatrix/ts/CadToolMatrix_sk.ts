@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../CadToolMatrix.js" line="+343"/>
+        <location filename="../CadToolMatrix.js" line="+355"/>
         <source>Expand all</source>
         <translation>Rozbaliť všetko</translation>
     </message>
