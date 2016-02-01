@@ -316,7 +316,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="autoClose" cppName="autoClose" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false" />
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
     <method name="getOrientation" cppName="getOrientation"
     specifier="public" isStatic="false" isVirtual="false"
