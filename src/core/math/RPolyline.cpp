@@ -451,17 +451,18 @@ bool RPolyline::isGeometricallyClosed(double tolerance) const {
     return isClosed() || getStartPoint().getDistanceTo(getEndPoint()) < tolerance;
 }
 
-void RPolyline::autoClose() {
+bool RPolyline::autoClose() {
     if (isClosed()) {
-        return;
+        return false;
     }
 
     if (!isGeometricallyClosed()) {
-        return;
+        return false;
     }
 
     removeLastVertex();
     setClosed(true);
+    return true;
 }
 
 RS::Orientation RPolyline::getOrientation() const {

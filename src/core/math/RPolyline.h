@@ -103,7 +103,7 @@ public:
     void setClosed(bool on);
     bool isClosed() const;
     bool isGeometricallyClosed(double tolerance=RS::PointTolerance) const;
-    void autoClose();
+    bool autoClose();
 
     RS::Orientation getOrientation() const;
 
