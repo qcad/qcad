@@ -3372,9 +3372,14 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'void'
-    
+    // return type 'bool'
+    bool cppResult =
+        
                self->autoClose();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
     } else
 
 

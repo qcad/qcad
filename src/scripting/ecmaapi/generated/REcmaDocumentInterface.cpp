@@ -97,6 +97,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, hasCurrentAction, "hasCurrentAction");
             
+            REcmaHelper::registerFunction(&engine, proto, getCurrentStatefulAction, "getCurrentStatefulAction");
+            
+            REcmaHelper::registerFunction(&engine, proto, hasCurrentStatefulAction, "hasCurrentStatefulAction");
+            
             REcmaHelper::registerFunction(&engine, proto, suspend, "suspend");
             
             REcmaHelper::registerFunction(&engine, proto, resume, "resume");
@@ -1279,6 +1283,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::hasCurrentAction", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::getCurrentStatefulAction
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::getCurrentStatefulAction", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::getCurrentStatefulAction";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("getCurrentStatefulAction", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RAction *'
+    RAction * cppResult =
+        
+               self->getCurrentStatefulAction();
+        // return type: RAction *
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.getCurrentStatefulAction().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::getCurrentStatefulAction", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::hasCurrentStatefulAction
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::hasCurrentStatefulAction", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::hasCurrentStatefulAction";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("hasCurrentStatefulAction", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasCurrentStatefulAction();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.hasCurrentStatefulAction().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::hasCurrentStatefulAction", context, engine);
             return result;
         }
          QScriptValue
