@@ -349,7 +349,7 @@ bool RDocumentInterface::hasCurrentAction() const {
 }
 
 RAction* RDocumentInterface::getCurrentStatefulAction() {
-    for (int i=currentActions.length()-1; i>=0; i--) {
+    for (int i=currentActions.size()-1; i>=0; i--) {
         if (!currentActions.at(i)->hasNoState()) {
             return currentActions.at(i);
         }
@@ -359,7 +359,7 @@ RAction* RDocumentInterface::getCurrentStatefulAction() {
 }
 
 bool RDocumentInterface::hasCurrentStatefulAction() const {
-    for (int i=currentActions.length()-1; i>=0; i--) {
+    for (int i=currentActions.size()-1; i>=0; i--) {
         if (!currentActions.at(i)->hasNoState()) {
             return true;
         }
