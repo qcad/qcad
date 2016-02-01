@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -44,7 +43,7 @@
     <message>
         <location line="+16"/>
         <source>Select block references together with attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybrať referencie bloku spolu s vlastnosťami</translation>
     </message>
     <message>
         <location line="-78"/>
@@ -68,7 +67,7 @@
     <message>
         <location line="+20"/>
         <source>Block Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Výber bloku</translation>
     </message>
     <message>
         <location line="+16"/>

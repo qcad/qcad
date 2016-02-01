@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
@@ -16,7 +15,7 @@
     <message>
         <location line="+14"/>
         <source>Incr:</source>
-        <translation type="unfinished">Rast:</translation>
+        <translation>Krokovanie:</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -36,7 +35,7 @@
     <message>
         <location line="+4"/>
         <source>Auto increment number</source>
-        <translation type="unfinished">Automaticky zvyšovať</translation>
+        <translation>Automaticky zvyšovať</translation>
     </message>
 </context>
 </TS>
