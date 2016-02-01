@@ -83,7 +83,7 @@ public:
     virtual void entityPickEvent(REntityPickEvent& /*event*/) {}
     virtual void entityPickEventPreview(REntityPickEvent& /*event)*/) {}
     virtual void propertyChangeEvent(RPropertyEvent& /*event*/) {}
-    virtual void zoomChangeEvent(RGraphicsView& /*view*/) { qDebug() << "RActionAdapter::zoomChangeEvent"; }
+    virtual void zoomChangeEvent(RGraphicsView& /*view*/) {}
     //virtual void setMultiSnapPoints(const QList<RVector>& /*points*/) {}
     //virtual void setMultiSnapAngles(const QList<double>& /*angles*/) {}
     virtual void updatePreview() {}
