@@ -656,7 +656,3 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
         }
     };
 };
-
-DefaultAction.prototype.zoomChangeEvent = function(view) {
-    qDebug("DefaultAction.prototype.zoomChangeEvent");
-};
