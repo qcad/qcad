@@ -157,8 +157,8 @@ public:
         return RPolyline::isClosed();
     }
 
-    bool isGeometricallyClosed() const {
-        return RPolyline::isGeometricallyClosed();
+    bool isGeometricallyClosed(double tolerance=RS::PointTolerance) const {
+        return RPolyline::isGeometricallyClosed(tolerance);
     }
 
     void autoClose() {
