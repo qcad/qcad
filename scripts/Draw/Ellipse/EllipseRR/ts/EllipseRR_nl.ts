@@ -7,13 +7,13 @@
         <location filename="../EllipseRR.ui" line="+17"/>
         <location filename="../EllipseRRDialog.ui" line="+129"/>
         <source>X Radius:</source>
-        <translation>X radius:</translation>
+        <translation>X straal:</translation>
     </message>
     <message>
         <location line="+23"/>
         <location filename="../EllipseRRDialog.ui" line="-10"/>
         <source>Y Radius:</source>
-        <translation>Y radius:</translation>
+        <translation>Y straal:</translation>
     </message>
     <message>
         <location line="+30"/>
@@ -29,12 +29,12 @@
     <message>
         <location filename="../EllipseRRInit.js" line="+2"/>
         <source>Ellipse with &amp;Radii</source>
-        <translation>Ellips met &amp;radiussen</translation>
+        <translation>Ellips met &amp;straalen</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Draw ellipse with position and radii</source>
-        <translation>Ellips met positie en radiussen</translation>
+        <translation>Ellips met positie en straalen</translation>
     </message>
 </context>
 </TS>

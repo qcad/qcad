@@ -53,17 +53,17 @@
     <message>
         <location filename="../CircleTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>&amp;Tangent, punt, radius</translation>
+        <translation>&amp;Tangent, punt, straal</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw circle tangential to entity, through point with radius</source>
-        <translation>Teken cirkel raakend aan object, door punt en met radius</translation>
+        <translation>Teken cirkel raakend aan object, door punt en met straal</translation>
     </message>
     <message>
         <location filename="../CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Straal:</translation>
     </message>
 </context>
 </TS>
