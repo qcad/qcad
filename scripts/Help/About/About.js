@@ -116,8 +116,11 @@ About.prototype.initAboutApp = function(textBrowser) {
             + "<p/>"
             + "<p>" + qsTr("All brand or product names are trademarks or registered trademarks of their respective holders.") + "</p>"
             + "<p/>"
-            + "<p>" + qsTr("Portions of this software © 2013 Digia Plc.") + "</p>"
-            + "<p>" + qsTr("Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).") + "</p>"
+            + "<p>" + qsTr("© 2011-2016 RibbonSoft GmbH.") + "</p>"
+            + "<p>" + qsTr("Portions of this software © 2008-2016 The Qt Company Ltd.") + "</p>"
+            //+ "<p>" + qsTr("Portions of this software © 2013 Digia Plc.") + "</p>"
+            //+ "<p>" + qsTr("Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).") + "</p>"
+            + "<p>" + qsTr("The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.") + "</p>"
             + "<p/>"
             + "</body></html>";
     textBrowser.setHtml(html);
