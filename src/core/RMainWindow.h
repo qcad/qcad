@@ -81,6 +81,9 @@ public:
      */
     virtual RDocument* getDocument() = 0;
 
+    virtual void disable() {}
+    virtual void enable() {}
+
     /**
      * \return Pointer to the document interface of the document that is
      *      currently open and has the focus or NULL if no document is open.
