@@ -358,6 +358,10 @@ ShapeAlgorithms.getOffsetEllipses = function(shape, distance, number, sidePositi
 
     center = shape.getCenter();
 
+    if (shape.isReversed()) {
+        shape.reverse();
+    }
+
     insides = [];
     if (isVector(sidePosition)) {
         a = center.getAngleTo(sidePosition) - shape.getAngle();
@@ -371,13 +375,11 @@ ShapeAlgorithms.getOffsetEllipses = function(shape, distance, number, sidePositi
             insides.push(false);
         }
         else {
-            if (!shape.isReversed()) {
-                if (sidePosition===RS.LeftHand) {
-                    insides.push(true);
-                }
-                else {
-                    insides.push(false);
-                }
+            if (sidePosition===RS.LeftHand) {
+                insides.push(true);
+            }
+            else {
+                insides.push(false);
             }
         }
     }
@@ -403,8 +405,13 @@ ShapeAlgorithms.getOffsetEllipses = function(shape, distance, number, sidePositi
             }
 
             var endParam = shape.getEndParam();
+            var startParam = shape.getStartParam();
             if (RMath.fuzzyCompare(endParam, 0.0)) {
                 endParam = 2*Math.PI;
+            }
+
+            if (endParam<startParam) {
+                endParam += 2*Math.PI;
             }
 
             var k = d*n;
@@ -414,7 +421,7 @@ ShapeAlgorithms.getOffsetEllipses = function(shape, distance, number, sidePositi
                 tMax = endParam;
             }
 
-            for (t=shape.getStartParam(); t<tMax; t+=0.1) {
+            for (t=startParam; t<tMax; t+=0.1) {
                 if (t>endParam) {
                     t = endParam;
                 }
