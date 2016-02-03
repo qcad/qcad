@@ -22,6 +22,8 @@
 #include "RBox.h"
 #include "RMath.h"
 
+REllipseProxy* REllipse::ellipseProxy = NULL;
+
 /**
  * Creates an ellipse shape with invalid
  */
@@ -116,6 +118,25 @@ void REllipse::moveEndPoint(const RVector& pos, bool changeAngleOnly) {
         majorPoint.scale(factor);
         majorPoint.rotate(angleDelta);
     }
+}
+
+double REllipse::getAngleAt(const RVector& pos) const {
+    RVector m = pos;
+    m.move(-getCenter());
+    m.rotate(-getAngle());
+
+    double angle;
+    if (RMath::fuzzyCompare(m.y, 0.0)) {
+        angle = M_PI/2;
+    }
+    else {
+        double slope = - (pow(getMinorRadius()*2, 2) * m.x) / (pow(getMajorRadius()*2, 2) * m.y);
+        angle = atan(slope);
+    }
+
+    angle += getAngle();
+
+    return RMath::getNormalizedAngle(angle);
 }
 
 // previously: getEllipseAngle
@@ -218,6 +239,10 @@ void REllipse::setRatio(double r) {
     correctMajorMinor();
 }
 
+/**
+ * \return Start parameter: the start angle of the circular arc
+ * resulting from transforming the ellipse into a circle.
+ */
 double REllipse::getStartParam() const {
     return startParam;
 }
@@ -226,6 +251,10 @@ void REllipse::setStartParam(double a) {
     startParam = a;
 }
 
+/**
+ * \return End parameter: the end angle of the circular arc
+ * resulting from transforming the ellipse into a circle.
+ */
 double REllipse::getEndParam() const {
     return endParam;
 }
@@ -234,6 +263,10 @@ void REllipse::setEndParam(double a) {
     endParam = a;
 }
 
+/**
+ * \return Start angle: the angle from the ellipse
+ * arc center to the ellipse arc start point.
+ */
 double REllipse::getStartAngle() const {
     return RMath::getNormalizedAngle(center.getAngleTo(getStartPoint()) - getAngle());
 }
@@ -246,6 +279,10 @@ void REllipse::setStartAngle(double a) {
     startParam = p;
 }
 
+/**
+ * \return End angle: the angle from the ellipse
+ * arc center to the ellipse arc end point.
+ */
 double REllipse::getEndAngle() const {
     return RMath::getNormalizedAngle(center.getAngleTo(getEndPoint()) - getAngle());
 }
@@ -1003,6 +1040,13 @@ QList<RLine> REllipse::getTangents(const RVector& point) const {
     }
 
     return ret;
+}
+
+QList<RSpline> REllipse::approximateWithSplines() const {
+    if (REllipse::hasProxy()) {
+        return REllipse::getEllipseProxy()->approximateWithSplines(*this);
+    }
+    return QList<RSpline>();
 }
 
 void REllipse::print(QDebug dbg) const {

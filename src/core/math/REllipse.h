@@ -23,7 +23,9 @@
 #include "../core_global.h"
 
 #include "RShape.h"
+#include "RSpline.h"
 #include "RDirected.h"
+#include "REllipseProxy.h"
 #include "RLine.h"
 #include "RVector.h"
 
@@ -98,6 +100,19 @@ public:
 
     double getAngleLength(bool allowForZeroLength = false) const;
 
+    bool isAngleWithinArc(double a) const {
+        if (isFullEllipse()) {
+            return true;
+        }
+        return RMath::isAngleBetween(a, getStartAngle(), getEndAngle(), reversed);
+    }
+    bool isParamWithinArc(double a) const {
+        if (isFullEllipse()) {
+            return true;
+        }
+        return RMath::isAngleBetween(a, getStartParam(), getEndParam(), reversed);
+    }
+
     bool isReversed() const;
     void setReversed(bool reversed);
 
@@ -121,6 +136,7 @@ public:
 
 //    virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;
 
+    double getAngleAt(const RVector& pos) const;
     double getParamTo(const RVector& pos) const;
     double getRadiusAt(double angle) const;
     RVector getPointAt(double angle) const;
@@ -145,6 +161,29 @@ public:
     QList<RVector> getBoxCorners();
 
     QList<RLine> getTangents(const RVector& point) const;
+
+    QList<RSpline> approximateWithSplines() const;
+
+    static bool hasProxy() {
+        return ellipseProxy!=NULL;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static void setEllipseProxy(REllipseProxy* p) {
+        if (ellipseProxy!=NULL) {
+            delete ellipseProxy;
+        }
+        ellipseProxy = p;
+    }
+
+    /**
+     * \nonscriptable
+     */
+    static REllipseProxy* getEllipseProxy() {
+        return ellipseProxy;
+    }
 
 protected:
     virtual void print(QDebug dbg) const;
@@ -180,6 +219,9 @@ public:
      * \setter{setReversed}
      */
     bool reversed;
+
+private:
+    static REllipseProxy* ellipseProxy;
 };
 
 Q_DECLARE_METATYPE(const REllipse*)
