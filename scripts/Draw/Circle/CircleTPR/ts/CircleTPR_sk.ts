@@ -21,7 +21,7 @@
     <message>
         <location filename="../CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>Polomer:</translation>
     </message>
 </context>
 </TS>

@@ -71,7 +71,7 @@
     <message>
         <location line="+14"/>
         <source>Arc with radius:</source>
-        <translation>Boog met radius:</translation>
+        <translation>Boog met straal:</translation>
     </message>
     <message>
         <location line="+3"/>

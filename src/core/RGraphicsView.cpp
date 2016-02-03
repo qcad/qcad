@@ -379,6 +379,10 @@ void RGraphicsView::setOffset(const RVector& offset, bool regen) {
 
     if (regen) {
         regenerate();
+        if (scene!=NULL) {
+            // notify actions about zoom change:
+            scene->getDocumentInterface().zoomChangeEvent(*this);
+        }
     }
     //viewportChangeEvent();
 }
@@ -403,6 +407,10 @@ void RGraphicsView::setFactor(double f, bool regen) {
 
     if (regen) {
         regenerate();
+        if (scene!=NULL) {
+            // notify actions about zoom change:
+            scene->getDocumentInterface().zoomChangeEvent(*this);
+        }
     }
     //viewportChangeEvent();
 }

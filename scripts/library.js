@@ -445,8 +445,13 @@ function isPolylineEntity(obj) {
 /**
  * \return true if the given object is a geometrically closed polyline entity.
  */
-function isClosedPolylineEntity(obj) {
-    return isPolylineEntity(obj) && obj.isGeometricallyClosed();
+function isClosedPolylineEntity(obj, tolerance) {
+    if (isNull(tolerance)) {
+        return isPolylineEntity(obj) && obj.isGeometricallyClosed();
+    }
+    else {
+        return isPolylineEntity(obj) && obj.isGeometricallyClosed(tolerance);
+    }
 }
 
 /**
@@ -483,6 +488,15 @@ function isViewportEntity(obj) {
  */
 function isSplineEntity(obj) {
     return isOfType(obj, RSplineEntity) || isOfType(obj, RSplineEntityPointer);
+}
+
+function isClosedSplineEntity(obj, tolerance) {
+    if (isNull(tolerance)) {
+        return isSplineEntity(obj) && obj.isGeometricallyClosed();
+    }
+    else {
+        return isSplineEntity(obj) && obj.isGeometricallyClosed(tolerance);
+    }
 }
 
 /**

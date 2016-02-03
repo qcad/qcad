@@ -27,17 +27,17 @@
     <message>
         <location filename="../ArcTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation>Radius:</translation>
+        <translation>Straal:</translation>
     </message>
     <message>
         <location filename="../ArcTPRInit.js" line="+2"/>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation>&amp;Tangent, punt en radius</translation>
+        <translation>&amp;Tangent, punt en straal</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation>Teken boog rakend aan object, door punt en met radius</translation>
+        <translation>Teken boog rakend aan object, door punt en met straal</translation>
     </message>
 </context>
 <context>

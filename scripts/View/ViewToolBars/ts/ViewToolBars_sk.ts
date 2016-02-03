@@ -10,7 +10,7 @@
     <message>
         <location filename="../ViewToolBarsPostInit.js" line="+6"/>
         <source>&amp;Toolbars and Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Panely nástrojov a Pomôcky</translation>
     </message>
 </context>
 </TS>

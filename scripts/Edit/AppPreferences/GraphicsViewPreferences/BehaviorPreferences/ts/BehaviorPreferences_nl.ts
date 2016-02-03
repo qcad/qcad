@@ -44,7 +44,7 @@
     <message>
         <location line="+16"/>
         <source>Select block references together with attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Blok referenties samen met hun attributen selecteren</translation>
     </message>
     <message>
         <location line="-78"/>
@@ -68,7 +68,7 @@
     <message>
         <location line="+20"/>
         <source>Block Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Blok selectie</translation>
     </message>
     <message>
         <location line="+16"/>

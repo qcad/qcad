@@ -141,6 +141,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, propertyChangeEvent, "propertyChangeEvent");
             
+            REcmaHelper::registerFunction(&engine, proto, zoomChangeEvent, "zoomChangeEvent");
+            
             REcmaHelper::registerFunction(&engine, proto, updatePreview, "updatePreview");
             
             REcmaHelper::registerFunction(&engine, proto, applyOperation, "applyOperation");
@@ -1795,6 +1797,71 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaActionAdapter::propertyChangeEvent", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaActionAdapter::zoomChangeEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaActionAdapter::zoomChangeEvent", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaActionAdapter::zoomChangeEvent";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RActionAdapter* self = 
+                        getSelf("zoomChangeEvent", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RGraphicsView */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RGraphicsView*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RGraphicsView*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RActionAdapter: Argument 0 is not of type RGraphicsView*.",
+                               context);                    
+                    }
+                    RGraphicsView& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->zoomChangeEvent(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RActionAdapter.zoomChangeEvent().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaActionAdapter::zoomChangeEvent", context, engine);
             return result;
         }
          QScriptValue

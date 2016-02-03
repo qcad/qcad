@@ -257,7 +257,7 @@ BreakOutGap.prototype.applyCommand = function(event, preview) {
     }
 
     switch (this.state) {
-        case CircleCR.State.SettingCenter:
+        case BreakOutGap.State.SettingPos:
             event.accept();
             if (preview) {
                 var r = this.offset;

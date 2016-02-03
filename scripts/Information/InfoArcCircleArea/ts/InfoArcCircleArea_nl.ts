@@ -62,7 +62,7 @@
     <message>
         <location line="-9"/>
         <source>Radius</source>
-        <translation>Radius</translation>
+        <translation>Straal</translation>
     </message>
     <message>
         <location line="-104"/>

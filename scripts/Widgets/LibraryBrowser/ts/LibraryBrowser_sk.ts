@@ -286,7 +286,7 @@ vo výsledku vyhľadania:</translation>
     <message>
         <location line="+60"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Hľadať</translation>
     </message>
     <message>
         <location line="+23"/>

@@ -142,7 +142,7 @@ bool RGraphicsSceneQt::beginPath() {
         currentPainterPath.setPen(localPen);
     }
     else {
-        if (entity!=NULL && entity->getCustomProperty("QCAD", "ScreenWeight", false)==true) {
+        if (entity!=NULL && entity->getCustomBoolProperty("QCAD", "ScreenWeight", false)==true) {
             QPen localPen = currentPen;
             localPen.setCosmetic(true);
             localPen.setWidthF(entity->getLineweight()/10);
@@ -156,6 +156,12 @@ bool RGraphicsSceneQt::beginPath() {
     currentPainterPath.setBrush(QBrush(Qt::NoBrush));
     currentPainterPath.setPixelSizeHint(pixelSizeHint);
     currentPainterPath.setPixelUnit(pixelUnit);
+
+    // experimental: allow entity display in pixel units:
+    // this would probably need an additional property to define the center of the entity...
+//    if (entity!=NULL && entity->getCustomBoolProperty("QCAD", "ScreenSize", false)==true) {
+//        currentPainterPath.setPixelUnit(true);
+//    }
 
     if (!exportToPreview) {
         if (entity!=NULL && entity->isSelected()) {

@@ -120,6 +120,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="getCurrentStatefulAction"
+    cppName="getCurrentStatefulAction" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RAction *" isPureVirtual="false" />
+    </method>
+    <method name="hasCurrentStatefulAction"
+    cppName="hasCurrentStatefulAction" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="suspend" cppName="suspend" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
@@ -284,6 +294,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString" name="ucsName"
         isConst="true" />
+      </variant>
+    </method>
+    <method name="zoomChangeEvent" cppName="zoomChangeEvent"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RGraphicsView &amp;" typeName="RGraphicsView"
+        name="view" isConst="false" />
       </variant>
     </method>
     <method name="enableUpdates" cppName="enableUpdates"

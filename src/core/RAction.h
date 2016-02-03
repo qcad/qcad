@@ -253,6 +253,11 @@ public:
      */
     virtual void propertyChangeEvent(RPropertyEvent& event) = 0;
 
+    /**
+     * Called when the zoom factor or offset changed in the given view.
+     */
+    virtual void zoomChangeEvent(RGraphicsView& view) = 0;
+
     //virtual void setMultiSnapPoints(const QList<RVector>& points) = 0;
     //virtual void setMultiSnapAngles(const QList<double>& angles) = 0;
 

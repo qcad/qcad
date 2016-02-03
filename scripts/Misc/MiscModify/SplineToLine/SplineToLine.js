@@ -42,7 +42,7 @@ SplineToLine.prototype.beginEvent = function() {
         ids = document.querySelectedEntities();
     }
     else {
-        ids = document.queryAllEntities(false, true);
+        ids = document.queryAllVisibleEntities();
     }
 
     for (var i=0; i<ids.length; i++) {

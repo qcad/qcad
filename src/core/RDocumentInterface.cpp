@@ -340,11 +340,30 @@ RAction* RDocumentInterface::getCurrentAction() {
 /**
  * \return True if at least one action is active.
  */
-bool RDocumentInterface::hasCurrentAction() {
+bool RDocumentInterface::hasCurrentAction() const {
     if (currentActions.size()>0) {
         return true;
     }
 
+    return false;
+}
+
+RAction* RDocumentInterface::getCurrentStatefulAction() {
+    for (int i=currentActions.size()-1; i>=0; i--) {
+        if (!currentActions.at(i)->hasNoState()) {
+            return currentActions.at(i);
+        }
+    }
+
+    return NULL;
+}
+
+bool RDocumentInterface::hasCurrentStatefulAction() const {
+    for (int i=currentActions.size()-1; i>=0; i--) {
+        if (!currentActions.at(i)->hasNoState()) {
+            return true;
+        }
+    }
     return false;
 }
 
@@ -948,13 +967,22 @@ void RDocumentInterface::propertyChangeEvent(RPropertyEvent& event) {
     }
 }
 
-
-
 /**
  * Called immediately after the user has activated a new UCS to be used as current UCS.
  */
 void RDocumentInterface::ucsSetEvent(const QString& ucsName) {
     setCurrentUcs(ucsName);
+}
+
+/**
+ * Called if the zoom (factor, offset) changed in the given view.
+ */
+void RDocumentInterface::zoomChangeEvent(RGraphicsView& view) {
+    if (hasCurrentStatefulAction()) {
+        getCurrentStatefulAction()->zoomChangeEvent(view);
+    } else if (defaultAction != NULL) {
+        defaultAction->zoomChangeEvent(view);
+    }
 }
 
 RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,

@@ -11,7 +11,7 @@
     <message>
         <location line="+7"/>
         <source>Major point of ellipse or major radius</source>
-        <translation>Eindpunt of radius van eerste as</translation>
+        <translation>Eindpunt of straal van eerste as</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -21,7 +21,7 @@
     <message>
         <location line="+5"/>
         <source>Minor point of ellipse or minor radius</source>
-        <translation>Eindpunt of radius van tweede as</translation>
+        <translation>Eindpunt of straal van tweede as</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -46,12 +46,12 @@
     <message>
         <location line="+264"/>
         <source>Invalid major radius.</source>
-        <translation>Ongeldig radius eerste as.</translation>
+        <translation>Ongeldig straal eerste as.</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Major radius:</source>
-        <translation>Radius eerste as:</translation>
+        <translation>Straal eerste as:</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -61,7 +61,7 @@
     <message>
         <location line="+13"/>
         <source>Minor radius:</source>
-        <translation>Radius tweede as:</translation>
+        <translation>Straal tweede as:</translation>
     </message>
     <message>
         <location line="+25"/>

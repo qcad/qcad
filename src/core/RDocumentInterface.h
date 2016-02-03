@@ -140,7 +140,9 @@ public:
     void killAllActions();
 
     RAction* getCurrentAction();
-    bool hasCurrentAction();
+    bool hasCurrentAction() const;
+    RAction* getCurrentStatefulAction();
+    bool hasCurrentStatefulAction() const;
 
     void suspend();
     void resume();
@@ -168,6 +170,7 @@ public:
 
     void propertyChangeEvent(RPropertyEvent& event);
     void ucsSetEvent(const QString& ucsName);
+    void zoomChangeEvent(RGraphicsView& view);
 
     void enableUpdates();
     void disableUpdates();

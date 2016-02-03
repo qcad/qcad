@@ -141,7 +141,9 @@
     <function_decl><type><name>void</name></type> <name>killAllActions</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>RAction</name>*</type> <name>getCurrentAction</name><parameter_list>()</parameter_list>;</function_decl>
-    <function_decl><type><name>bool</name></type> <name>hasCurrentAction</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>hasCurrentAction</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RAction</name>*</type> <name>getCurrentStatefulAction</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>bool</name></type> <name>hasCurrentStatefulAction</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>suspend</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>resume</name><parameter_list>()</parameter_list>;</function_decl>
@@ -169,6 +171,7 @@
 
     <function_decl><type><name>void</name></type> <name>propertyChangeEvent</name><parameter_list>(<param><decl><type><name>RPropertyEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>ucsSetEvent</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>ucsName</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>zoomChangeEvent</name><parameter_list>(<param><decl><type><name>RGraphicsView</name>&amp;</type> <name>view</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>enableUpdates</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>disableUpdates</name><parameter_list>()</parameter_list>;</function_decl>

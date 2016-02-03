@@ -91,6 +91,12 @@
         hasCurrentAction
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getCurrentStatefulAction
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasCurrentStatefulAction
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         suspend
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -155,6 +161,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         ucsSetEvent
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        zoomChangeEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         enableUpdates

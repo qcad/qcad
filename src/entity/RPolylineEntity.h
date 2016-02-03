@@ -203,8 +203,8 @@ public:
         return data.isClosed();
     }
 
-    bool isGeometricallyClosed() const {
-        return data.isGeometricallyClosed();
+    bool isGeometricallyClosed(double tolerance=RS::PointTolerance) const {
+        return data.isGeometricallyClosed(tolerance);
     }
 
     void autoClose() {

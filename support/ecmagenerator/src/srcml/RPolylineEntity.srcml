@@ -204,8 +204,8 @@
         <return>return <expr><name>data</name>.<call><name>isClosed</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>bool</name></type> <name>isGeometricallyClosed</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><name>data</name>.<call><name>isGeometricallyClosed</name><argument_list>()</argument_list></call></expr>;</return>
+    <function><type><name>bool</name></type> <name>isGeometricallyClosed</name><parameter_list>(<param><decl><type><name>double</name></type> <name>tolerance</name>=<init><expr><name><name>RS</name>::<name>PointTolerance</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>isGeometricallyClosed</name><argument_list>(<argument><expr><name>tolerance</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>void</name></type> <name>autoClose</name><parameter_list>()</parameter_list> <block>{

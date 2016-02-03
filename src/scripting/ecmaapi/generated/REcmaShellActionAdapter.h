@@ -189,6 +189,12 @@
         
     
     
+      void zoomChangeEvent(
+                RGraphicsView & arg1
+            );
+        
+    
+    
       void updatePreview(
                 
             );
