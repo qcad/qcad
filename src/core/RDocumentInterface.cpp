@@ -968,23 +968,40 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
     }
 #endif
 
+    RMainWindow* mainWindow = RMainWindow::getMainWindow();
+
     QNetworkAccessManager* manager = new QNetworkAccessManager();
     QNetworkReply* reply = manager->get(QNetworkRequest(url));
+    mainWindow->disable();
     do {
         // dangerous: processing events here allows user to 'interrupt'
         // by sending events (mouse moves, etc)
         QApplication::processEvents();
     } while (reply->isRunning());
+    mainWindow->enable();
     QByteArray data = reply->readAll();
 
     QString suffix = QFileInfo(url.path()).suffix();
 
-    QTemporaryFile file(QDir::tempPath() + QDir::separator() + "qcad_XXXXXX." + suffix);
-    if (file.open()) {
-        file.write(data);
-        file.close();
-        return importFile(file.fileName(), nameFilter, notify);
+
+    // QTemporaryFile would not work here since Teigha wouldn't be 
+    // able to open the locked file that is produced:
+    QTemporaryDir dir;
+    if (dir.isValid()) {
+        QFile file(dir.path() + "/downloaded_file.dxf");
+        if (file.open(QIODevice::WriteOnly)) {
+            file.write(data);
+            file.close();
+            return importFile(file.fileName(), nameFilter, notify);
+        }
+        else {
+            qWarning() << "cannot open file " << file.fileName();
+        }
     }
+    else {
+        qWarning() << "cannot create temporary directory";
+    }
+
     return RDocumentInterface::IoErrorGeneralImportUrlError;
 }
 
