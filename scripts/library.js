@@ -2182,7 +2182,7 @@ function getUrlsFromMimeData(mimeData) {
 function isUrl(urlString) {
     var url = new QUrl(urlString);
     var scheme = url.scheme();
-    return scheme==="file" || scheme==="http" || scheme==="ftp";
+    return scheme==="file" || scheme==="http" || scheme==="https" || scheme==="ftp";
 }
 
 // fix QPlainTextEdit API for Qt 5:
