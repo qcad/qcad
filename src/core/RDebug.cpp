@@ -73,11 +73,11 @@ int RDebug::stopTimer(int id, const QString& msg, int msThreshold) {
     uint64_t t = (* (uint64_t *) &elapsedNano);
     timerMac.remove(id);
 #else
-    int t = timer[id].elapsed() * 1000000;
+    unsigned long long t = timer[id].elapsed() * 1000000;
     timer.remove(id);
 #endif
 
-    if (t/1000000>=msThreshold) {
+    if (t/1000000>=(unsigned long long)msThreshold) {
         qDebug() << "TIMER: " << t << "ns (" << t/1000000 << "ms )" << " - " << msg;
     }
     return t;
