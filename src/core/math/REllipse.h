@@ -138,8 +138,8 @@ public:
 
     double getAngleAt(const RVector& pos) const;
     double getParamTo(const RVector& pos) const;
-    double getRadiusAt(double angle) const;
-    RVector getPointAt(double angle) const;
+    double getRadiusAt(double param) const;
+    RVector getPointAt(double param) const;
     RVector getMiddlePoint() const;
 
     virtual bool move(const RVector& offset);

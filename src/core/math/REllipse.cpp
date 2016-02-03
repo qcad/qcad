@@ -151,18 +151,18 @@ double REllipse::getParamTo(const RVector& pos) const {
 /**
  * \return Radius of ellipse at given ellipse angle.
  */
-double REllipse::getRadiusAt(double angle) const {
-    RVector v(cos(angle)*getMajorRadius(),
-              sin(angle)*getMinorRadius());
+double REllipse::getRadiusAt(double param) const {
+    RVector v(cos(param)*getMajorRadius(),
+              sin(param)*getMinorRadius());
     return v.getMagnitude();
 }
 
 /**
  * \return Point on ellipse at given ellipse angle.
  */
-RVector REllipse::getPointAt(double angle) const {
-    RVector v(cos(angle)*getMajorRadius(),
-              sin(angle)*getMinorRadius());
+RVector REllipse::getPointAt(double param) const {
+    RVector v(cos(param)*getMajorRadius(),
+              sin(param)*getMinorRadius());
     v.rotate(getAngle());
     v.move(center);
     return v;

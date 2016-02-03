@@ -350,6 +350,9 @@ ShapeAlgorithms.getOffsetArcs = function(shape, distance, number, sidePosition) 
     return ret;
 };
 
+/**
+ * \return Array of spline shapes representing the parallel curves to the given ellipse shape.
+ */
 ShapeAlgorithms.getOffsetEllipses = function(shape, distance, number, sidePosition) {
     var ret = [];
     var i, n;
