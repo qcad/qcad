@@ -72,6 +72,12 @@ public:
     virtual int getPositionY();
     virtual void resize(int width, int height);
     virtual void move(int x, int y);
+    virtual void disable() {
+        setEnabled(false);
+    }
+    virtual void enable() {
+        setEnabled(true);
+    }
     virtual RDocument* getDocument();
     virtual RDocumentInterface* getDocumentInterface();
 
