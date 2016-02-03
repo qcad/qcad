@@ -196,6 +196,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAngleLength, "getAngleLength");
             
+            REcmaHelper::registerFunction(&engine, proto, isAngleWithinArc, "isAngleWithinArc");
+            
+            REcmaHelper::registerFunction(&engine, proto, isParamWithinArc, "isParamWithinArc");
+            
             REcmaHelper::registerFunction(&engine, proto, isReversed, "isReversed");
             
             REcmaHelper::registerFunction(&engine, proto, setReversed, "setReversed");
@@ -227,6 +231,8 @@
             REcmaHelper::registerFunction(&engine, proto, getSimpsonLength, "getSimpsonLength");
             
             REcmaHelper::registerFunction(&engine, proto, contains, "contains");
+            
+            REcmaHelper::registerFunction(&engine, proto, getAngleAt, "getAngleAt");
             
             REcmaHelper::registerFunction(&engine, proto, getParamTo, "getParamTo");
             
@@ -262,6 +268,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getTangents, "getTangents");
             
+            REcmaHelper::registerFunction(&engine, proto, approximateWithSplines, "approximateWithSplines");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<REllipsePointer>(), *proto);
       
@@ -271,6 +279,8 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, hasProxy, "hasProxy");
+            
 
     // static properties:
     
@@ -2823,6 +2833,126 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerEllipse::isAngleWithinArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEllipse::isAngleWithinArc", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEllipse::isAngleWithinArc";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REllipse* self = 
+                        getSelf("isAngleWithinArc", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isAngleWithinArc(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.isAngleWithinArc().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEllipse::isAngleWithinArc", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEllipse::isParamWithinArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEllipse::isParamWithinArc", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEllipse::isParamWithinArc";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REllipse* self = 
+                        getSelf("isParamWithinArc", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isParamWithinArc(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.isParamWithinArc().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEllipse::isParamWithinArc", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerEllipse::isReversed
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -3686,6 +3816,78 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerEllipse::contains", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEllipse::getAngleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEllipse::getAngleAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEllipse::getAngleAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REllipse* self = 
+                        getSelf("getAngleAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("REllipse: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getAngleAt(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getAngleAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEllipse::getAngleAt", context, engine);
             return result;
         }
          QScriptValue
@@ -5021,6 +5223,94 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerEllipse::getTangents", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEllipse::approximateWithSplines
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEllipse::approximateWithSplines", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEllipse::approximateWithSplines";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REllipse* self = 
+                        getSelf("approximateWithSplines", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RSpline >'
+    QList < RSpline > cppResult =
+        
+               self->approximateWithSplines();
+        // return type: QList < RSpline >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.approximateWithSplines().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEllipse::approximateWithSplines", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEllipse::hasProxy
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEllipse::hasProxy", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEllipse::hasProxy";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        REllipse::
+       hasProxy();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.hasProxy().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEllipse::hasProxy", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerEllipse::toString

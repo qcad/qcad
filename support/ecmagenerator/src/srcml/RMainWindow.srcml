@@ -82,6 +82,9 @@
      */</comment>
     <function_decl><type><name>virtual</name> <name>RDocument</name>*</type> <name>getDocument</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
+    <function><type><name>virtual</name> <name>void</name></type> <name>disable</name><parameter_list>()</parameter_list> <block>{}</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>enable</name><parameter_list>()</parameter_list> <block>{}</block></function>
+
     <comment type="block">/**
      * \return Pointer to the document interface of the document that is
      *      currently open and has the focus or NULL if no document is open.

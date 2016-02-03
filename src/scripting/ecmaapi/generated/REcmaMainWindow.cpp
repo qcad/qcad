@@ -115,6 +115,10 @@
     
             REcmaHelper::registerFunction(&engine, proto, getDocument, "getDocument");
             
+            REcmaHelper::registerFunction(&engine, proto, disable, "disable");
+            
+            REcmaHelper::registerFunction(&engine, proto, enable, "enable");
+            
             REcmaHelper::registerFunction(&engine, proto, getDocumentInterface, "getDocumentInterface");
             
             REcmaHelper::registerFunction(&engine, proto, notifyListeners, "notifyListeners");
@@ -528,6 +532,94 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindow::getDocument", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindow::disable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindow::disable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::disable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindow* self = 
+                        getSelf("disable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->disable();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.disable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindow::disable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindow::enable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindow::enable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::enable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindow* self = 
+                        getSelf("enable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->enable();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.enable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindow::enable", context, engine);
             return result;
         }
          QScriptValue

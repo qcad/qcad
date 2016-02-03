@@ -246,6 +246,7 @@ HEADERS = \
     math/RCircle.h \
     math/RDirected.h \
     math/REllipse.h \
+    math/REllipseProxy.h \
     math/RExplodable.h \
     math/RLine.h \
     math/RMath.h \

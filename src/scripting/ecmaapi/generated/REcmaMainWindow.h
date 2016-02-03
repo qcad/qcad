@@ -67,6 +67,12 @@
         getDocument
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        disable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        enable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDocumentInterface
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -142,6 +142,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getPointAt, "getPointAt");
             
+            REcmaHelper::registerFunction(&engine, proto, approximateWithSplines, "approximateWithSplines");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<REllipseEntity*>(), *proto);
 
@@ -3149,6 +3151,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEllipseEntity::getPointAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEllipseEntity::approximateWithSplines
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEllipseEntity::approximateWithSplines", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEllipseEntity::approximateWithSplines";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REllipseEntity* self = 
+                        getSelf("approximateWithSplines", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RSpline >'
+    QList < RSpline > cppResult =
+        
+               self->approximateWithSplines();
+        // return type: QList < RSpline >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipseEntity.approximateWithSplines().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEllipseEntity::approximateWithSplines", context, engine);
             return result;
         }
          QScriptValue REcmaEllipseEntity::toString

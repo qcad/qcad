@@ -163,6 +163,12 @@
         getAngleLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isAngleWithinArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isParamWithinArc
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isReversed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -209,6 +215,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         contains
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAngleAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getParamTo
@@ -260,6 +269,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getTangents
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        approximateWithSplines
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasProxy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

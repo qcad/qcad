@@ -245,6 +245,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, move, "move");
             
+            REcmaHelper::registerFunction(&engine, proto, disable, "disable");
+            
+            REcmaHelper::registerFunction(&engine, proto, enable, "enable");
+            
             REcmaHelper::registerFunction(&engine, proto, getDocument, "getDocument");
             
             REcmaHelper::registerFunction(&engine, proto, getDocumentInterface, "getDocumentInterface");
@@ -4932,6 +4936,94 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindowQt::move", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::disable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::disable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::disable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("disable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->disable();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.disable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::disable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindowQt::enable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindowQt::enable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindowQt::enable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindowQt* self = 
+                        getSelf("enable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->enable();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindowQt.enable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindowQt::enable", context, engine);
             return result;
         }
          QScriptValue

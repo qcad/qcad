@@ -162,6 +162,9 @@
         ;static  QScriptValue
         getPointAt
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        approximateWithSplines
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

@@ -24,7 +24,9 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"../core_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RShape.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSpline.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDirected.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REllipseProxy.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLine.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
 
@@ -99,6 +101,19 @@
 
     <function_decl><type><name>double</name></type> <name>getAngleLength</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>allowForZeroLength</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function><type><name>bool</name></type> <name>isAngleWithinArc</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr><call><name>isFullEllipse</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>true</name></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><call><name><name>RMath</name>::<name>isAngleBetween</name></name><argument_list>(<argument><expr><name>a</name></expr></argument>, <argument><expr><call><name>getStartAngle</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><call><name>getEndAngle</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><name>reversed</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+    <function><type><name>bool</name></type> <name>isParamWithinArc</name><parameter_list>(<param><decl><type><name>double</name></type> <name>a</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <if>if <condition>(<expr><call><name>isFullEllipse</name><argument_list>()</argument_list></call></expr>)</condition><then> <block>{
+            <return>return <expr><name>true</name></expr>;</return>
+        }</block></then></if>
+        <return>return <expr><call><name><name>RMath</name>::<name>isAngleBetween</name></name><argument_list>(<argument><expr><name>a</name></expr></argument>, <argument><expr><call><name>getStartParam</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><call><name>getEndParam</name><argument_list>()</argument_list></call></expr></argument>, <argument><expr><name>reversed</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function_decl><type><name>bool</name></type> <name>isReversed</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setReversed</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>reversed</name></decl></param>)</parameter_list>;</function_decl>
 
@@ -122,6 +137,7 @@
 
 <comment type="line">//    virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;</comment>
 
+    <function_decl><type><name>double</name></type> <name>getAngleAt</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getParamTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getRadiusAt</name><parameter_list>(<param><decl><type><name>double</name></type> <name>angle</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>getPointAt</name><parameter_list>(<param><decl><type><name>double</name></type> <name>angle</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -146,6 +162,29 @@
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getBoxCorners</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RLine</name></argument>&gt;</argument_list></name></type> <name>getTangents</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RSpline</name></argument>&gt;</argument_list></name></type> <name>approximateWithSplines</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function><type><name>static</name> <name>bool</name></type> <name>hasProxy</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>ellipseProxy</name>!=<name>NULL</name></expr>;</return>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>static</name> <name>void</name></type> <name>setEllipseProxy</name><parameter_list>(<param><decl><type><name>REllipseProxy</name>*</type> <name>p</name></decl></param>)</parameter_list> <block>{
+        <if>if <condition>(<expr><name>ellipseProxy</name>!=<name>NULL</name></expr>)</condition><then> <block>{
+            <expr_stmt><expr>delete <name>ellipseProxy</name></expr>;</expr_stmt>
+        }</block></then></if>
+        <expr_stmt><expr><name>ellipseProxy</name> = <name>p</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <function><type><name>static</name> <name>REllipseProxy</name>*</type> <name>getEllipseProxy</name><parameter_list>()</parameter_list> <block>{
+        <return>return <expr><name>ellipseProxy</name></expr>;</return>
+    }</block></function>
 
 </public><protected>protected:
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>print</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
@@ -181,7 +220,10 @@
      * \setter{setReversed}
      */</comment>
     <decl_stmt><decl><type><name>bool</name></type> <name>reversed</name></decl>;</decl_stmt>
-</public>}</block>;</class>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>static</name> <name>REllipseProxy</name>*</type> <name>ellipseProxy</name></decl>;</decl_stmt>
+</private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>const REllipse*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>REllipse*</argument>)</argument_list></macro>
