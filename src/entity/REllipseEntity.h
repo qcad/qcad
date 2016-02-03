@@ -223,6 +223,10 @@ public:
         return data.getPointAt(angle);
     }
 
+    QList<RSpline> approximateWithSplines() const {
+        return data.approximateWithSplines();
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 
