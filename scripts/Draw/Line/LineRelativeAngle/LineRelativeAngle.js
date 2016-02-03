@@ -67,7 +67,7 @@ LineRelativeAngle.prototype.setState = function(state) {
     switch (this.state) {
     case LineRelativeAngle.State.ChoosingEntity:
         this.getDocumentInterface().setClickMode(RAction.PickEntity);
-        this.setLeftMouseTip(qsTr("Choose base entity"));
+        this.setLeftMouseTip(qsTr("Choose base line, arc, circle, ellipse or polyline"));
         this.setRightMouseTip(EAction.trCancel);
         this.entity = undefined;
         this.shape = undefined;
@@ -116,7 +116,8 @@ LineRelativeAngle.prototype.pickEntity = function(event, preview) {
     case LineRelativeAngle.State.ChoosingEntity:
         if (isArcShape(shape) ||
             isCircleShape(shape) ||
-            isLineBasedShape(shape)) {
+            isLineBasedShape(shape) ||
+            isEllipseShape(shape)) {
 
             this.entity = entity;
             this.shape = shape;
@@ -129,7 +130,7 @@ LineRelativeAngle.prototype.pickEntity = function(event, preview) {
         }
         else {
             if (!preview) {
-                EAction.warnNotLineArcCircle();
+                EAction.warnNotLineArcCircleEllipsePolyline();
             }
             this.entity = undefined;
             this.shape = undefined;
@@ -242,6 +243,10 @@ LineRelativeAngle.prototype.getAbsoluteAngle = function() {
     }
     else if (isArcShape(this.shape) || isCircleShape(this.shape)) {
         ret = this.shape.getCenter().getAngleTo(this.pos) + Math.PI/2.0;
+    }
+    else if (isEllipseShape(this.shape)) {
+        var p = this.shape.getClosestPointOnShape(this.pos, false);
+        ret = this.shape.getAngleAt(p);
     }
 
     ret += this.angle;
