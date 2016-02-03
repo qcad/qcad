@@ -409,7 +409,12 @@ ShapeAlgorithms.getOffsetEllipses = function(shape, distance, number, sidePositi
 
             var k = d*n;
             var root, v;
-            for (t=shape.getStartParam(); t<endParam+0.1; t+=0.1) {
+            var tMax = endParam+0.1;
+            if (isFullEllipseShape(shape)) {
+                tMax = endParam;
+            }
+
+            for (t=shape.getStartParam(); t<tMax; t+=0.1) {
                 if (t>endParam) {
                     t = endParam;
                 }
@@ -427,6 +432,11 @@ ShapeAlgorithms.getOffsetEllipses = function(shape, distance, number, sidePositi
                     spl.appendVertex(v);
                 }
             }
+
+            if (isFullEllipseShape(shape)) {
+                spl.setPeriodic(true);
+            }
+
             ret.push(spl);
         }
     }
