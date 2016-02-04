@@ -136,6 +136,7 @@ public:
 
     void setDefaultAction(RAction* action);
     void setCurrentAction(RAction* action);
+    void terminateCurrentAction();
     void queueAction(RAction* action);
     void killAllActions();
 

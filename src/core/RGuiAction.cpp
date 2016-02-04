@@ -53,14 +53,14 @@ RGuiAction::RGuiAction(const QString& text, QObject* parent)
     requiresRedoableTransaction(false),
     override(false),
     noState(false),
+    toggleable(false),
     iconDisabled(false),
     enabledOverride(-1),
     documentInterface(NULL) {
     
     initTexts();
     
-    connect(this, SIGNAL(triggered()),
-            this, SLOT(slotTrigger()));
+    connect(this, SIGNAL(triggered()), this, SLOT(slotTrigger()));
 
     setCheckable(true);
 
@@ -103,7 +103,7 @@ void RGuiAction::setDocumentInterface(RDocumentInterface* di) {
     documentInterface = di;
 }
 
-RDocumentInterface* RGuiAction::getDocumentInterface() {
+RDocumentInterface* RGuiAction::getDocumentInterface() const {
     return documentInterface;
 }
 
@@ -190,7 +190,7 @@ void RGuiAction::setShortcutText(const QString& text) {
     initTexts();
 }
 
-QString RGuiAction::getShortcutText() {
+QString RGuiAction::getShortcutText() const {
     return shortcutText;
 }
 
@@ -231,7 +231,7 @@ void RGuiAction::disableIcon() {
     iconDisabled = true;
 }
 
-bool RGuiAction::isIconDisabled() {
+bool RGuiAction::isIconDisabled() const {
     return iconDisabled;
 }
 
@@ -301,7 +301,7 @@ void RGuiAction::setChecked(bool on) {
     QAction::setChecked(on);
 }
 
-bool RGuiAction::isChecked() {
+bool RGuiAction::isChecked() const {
     return QAction::isChecked();
 }
 
@@ -375,7 +375,7 @@ void RGuiAction::setGroupSortOrderOverride(const QString& widgetName, int groupS
     setGroupSortOrderOverrideStatic(this, widgetName, groupSortOrder);
 }
 
-int RGuiAction::getGroupSortOrder(const QWidget* w) {
+int RGuiAction::getGroupSortOrder(const QWidget* w) const {
     return getGroupSortOrderStatic(this, w);
 }
 
@@ -387,7 +387,7 @@ void RGuiAction::setSortOrderOverride(const QString& widgetName, int sortOrder) 
     setSortOrderOverrideStatic(this, widgetName, sortOrder);
 }
 
-int RGuiAction::getSortOrder(const QWidget* w) {
+int RGuiAction::getSortOrder(const QWidget* w) const {
     return getSortOrderStatic(this, w);
 }
 
@@ -978,6 +978,12 @@ bool RGuiAction::slotTrigger(const QString& command) {
             }
             if (di == NULL) {
                 qWarning() << "This action requires a document to be open: " << scriptFile;
+                return true;
+            }
+
+            if (isToggleable() && !isChecked()) {
+                // if action is toggleable, terminate already running action:
+                di->terminateCurrentAction();
                 return true;
             }
 

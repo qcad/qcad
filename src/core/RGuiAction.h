@@ -86,8 +86,7 @@ public:
     QString getToolTip(const QString& oriText, const QString& shortcut);
 
     void setDocumentInterface(RDocumentInterface* di);
-    RDocumentInterface* getDocumentInterface();
-
+    RDocumentInterface* getDocumentInterface() const;
 
     /**
      * Sets the shortcut(s) for this action.
@@ -100,7 +99,7 @@ public:
     void setDefaultShortcuts(const QList<QKeySequence>& shortcuts);
     QList<QKeySequence> getDefaultShortcuts();
     void setShortcutText(const QString& oriText);
-    QString getShortcutText();
+    QString getShortcutText() const;
 
     static void setGroupSortOrderStatic(QAction* a, int sortOrder);
     static void setGroupSortOrderOverrideStatic(QAction* a, const QString& widgetName, int sortOrder);
@@ -112,11 +111,11 @@ public:
 
     void setGroupSortOrder(int sortOrder);
     void setGroupSortOrderOverride(const QString& widgetName, int sortOrder);
-    int getGroupSortOrder(const QWidget* w = NULL);
+    int getGroupSortOrder(const QWidget* w = NULL) const;
 
     void setSortOrder(int sortOrder);
     void setSortOrderOverride(const QString& widgetName, int sortOrder);
-    int getSortOrder(const QWidget* w = NULL);
+    int getSortOrder(const QWidget* w = NULL) const;
 
     void addToMenu(QMenu* menu);
     void addToToolBar(QToolBar* tb);
@@ -132,7 +131,7 @@ public:
     virtual void setIcon(const QString& iconFile);
 
     void disableIcon();
-    bool isIconDisabled();
+    bool isIconDisabled() const;
 
     /**
      * Sets the tooltip for this action. Tooltips are shown when the mouse cursor
@@ -167,7 +166,7 @@ public:
     /**
      * \return True if this action is checked.
      */
-    virtual bool isChecked();
+    virtual bool isChecked() const;
     
     /**
      * If \c on is true, this action requires a document to be open. The GUI element(s)
@@ -181,7 +180,7 @@ public:
      * \retval true This action requires an open document to be started.
      * \retval false This action does not require an open document to be started.
      */
-    bool getRequiresDocument() {
+    bool getRequiresDocument() const {
         return requiresDocument;
     }
 
@@ -195,7 +194,7 @@ public:
      * \retval true This action requires an selection to be started.
      * \retval false This action does not require a selection to be started.
      */
-    bool getRequiresSelection() {
+    bool getRequiresSelection() const {
         return requiresSelection;
     }
 
@@ -203,7 +202,7 @@ public:
         requiresUndoableTransaction = on;
     }
 
-    bool getRequiresUndoableTransaction() {
+    bool getRequiresUndoableTransaction() const {
         return requiresUndoableTransaction;
     }
 
@@ -211,7 +210,7 @@ public:
         requiresRedoableTransaction = on;
     }
 
-    bool getRequiresRedoableTransaction() {
+    bool getRequiresRedoableTransaction() const {
         return requiresRedoableTransaction;
     }
 
@@ -219,7 +218,7 @@ public:
         override = true;
     }
 
-    bool isOverride() {
+    bool isOverride() const {
         return override;
     }
 
@@ -228,15 +227,23 @@ public:
         setCheckable(checkable);
     }
 
-    bool hasNoState() {
+    bool hasNoState() const {
         return noState;
+    }
+
+    void setToggleable() {
+        toggleable = true;
+    }
+
+    bool isToggleable() const {
+        return toggleable;
     }
 
     void setUniqueGroup(const QString& ug) {
         uniqueGroup = ug;
     }
 
-    QString getUniqueGroup() {
+    QString getUniqueGroup() const {
         return uniqueGroup;
     }
 
@@ -245,14 +252,14 @@ public:
      *      full command (e.g. "line") rather than one of the abbreviated commands
      *      such as "ln".
      */
-    QString getMainCommand() {
+    QString getMainCommand() const {
         return mainCommand;
     }
 
     /**
      * \return Complete list of commands that may be used to trigger this action.
      */
-    QStringList getCommands() {
+    QStringList getCommands() const {
         return commandList;
     }
 
@@ -351,12 +358,14 @@ protected:
     QString group;
     bool groupDefault;
     
+    // TODO: refactor to use flags:
     bool requiresDocument;
     bool requiresSelection;
     bool requiresUndoableTransaction;
     bool requiresRedoableTransaction;
     bool override;
     bool noState;
+    bool toggleable;
     QString uniqueGroup;
     QStringList arguments;
 

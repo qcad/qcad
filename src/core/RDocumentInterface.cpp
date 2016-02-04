@@ -325,6 +325,13 @@ void RDocumentInterface::queueAction(RAction* action) {
     queuedActions.enqueue(action);
 }
 
+void RDocumentInterface::terminateCurrentAction() {
+    if (hasCurrentAction()) {
+        getCurrentAction()->escapeEvent();
+        deleteTerminatedActions();
+    }
+}
+
 /**
  * \return Pointer to the current action or NULL. Used by
  *      script interfaces.
@@ -348,6 +355,10 @@ bool RDocumentInterface::hasCurrentAction() const {
     return false;
 }
 
+/**
+ * \return First stateful action in action stack. This is the action that will
+ * receive zoom change events.
+ */
 RAction* RDocumentInterface::getCurrentStatefulAction() {
     for (int i=currentActions.size()-1; i>=0; i--) {
         if (!currentActions.at(i)->hasNoState()) {
@@ -358,6 +369,9 @@ RAction* RDocumentInterface::getCurrentStatefulAction() {
     return NULL;
 }
 
+/**
+ * \return true if there are any stateful actions in the action stack.
+ */
 bool RDocumentInterface::hasCurrentStatefulAction() const {
     for (int i=currentActions.size()-1; i>=0; i--) {
         if (!currentActions.at(i)->hasNoState()) {
