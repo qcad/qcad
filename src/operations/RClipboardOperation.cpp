@@ -81,7 +81,8 @@ void RClipboardOperation::copy(
     QSet<REntity::Id> attributeIds;
 
     // this part is used to insert ('paste') blocks from the part library
-    // as new blocks:
+    // as new blocks. this is only used if the library item document does NOT
+    // contain a block with the same name as the file name.
     QSharedPointer<RBlockReferenceEntity> refp;
     if (!blockName.isNull()) {
         QSharedPointer<RBlock> block;
