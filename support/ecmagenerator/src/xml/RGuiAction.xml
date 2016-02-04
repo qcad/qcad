@@ -443,6 +443,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="setToggleable" cppName="setToggleable"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="isToggleable" cppName="isToggleable"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
     <method name="setUniqueGroup" cppName="setUniqueGroup"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

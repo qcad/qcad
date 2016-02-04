@@ -189,6 +189,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, hasNoState, "hasNoState");
             
+            REcmaHelper::registerFunction(&engine, proto, setToggleable, "setToggleable");
+            
+            REcmaHelper::registerFunction(&engine, proto, isToggleable, "isToggleable");
+            
             REcmaHelper::registerFunction(&engine, proto, setUniqueGroup, "setUniqueGroup");
             
             REcmaHelper::registerFunction(&engine, proto, getUniqueGroup, "getUniqueGroup");
@@ -3749,6 +3753,99 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGuiAction::hasNoState", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::setToggleable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::setToggleable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setToggleable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGuiAction* self = 
+                        getSelf("setToggleable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setToggleable();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setToggleable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::setToggleable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGuiAction::isToggleable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGuiAction::isToggleable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::isToggleable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGuiAction* self = 
+                        getSelf("isToggleable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isToggleable();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.isToggleable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGuiAction::isToggleable", context, engine);
             return result;
         }
          QScriptValue

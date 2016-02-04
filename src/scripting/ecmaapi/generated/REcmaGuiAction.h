@@ -234,6 +234,12 @@
         hasNoState
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setToggleable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isToggleable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setUniqueGroup
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
