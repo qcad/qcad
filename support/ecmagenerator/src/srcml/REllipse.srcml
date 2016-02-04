@@ -139,8 +139,8 @@
 
     <function_decl><type><name>double</name></type> <name>getAngleAt</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>double</name></type> <name>getParamTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>double</name></type> <name>getRadiusAt</name><parameter_list>(<param><decl><type><name>double</name></type> <name>angle</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>RVector</name></type> <name>getPointAt</name><parameter_list>(<param><decl><type><name>double</name></type> <name>angle</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>double</name></type> <name>getRadiusAt</name><parameter_list>(<param><decl><type><name>double</name></type> <name>param</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RVector</name></type> <name>getPointAt</name><parameter_list>(<param><decl><type><name>double</name></type> <name>param</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>RVector</name></type> <name>getMiddlePoint</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>move</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list>;</function_decl>

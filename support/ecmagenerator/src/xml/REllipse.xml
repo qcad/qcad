@@ -359,7 +359,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">
-        <arg type="double" typeName="double" name="angle"
+        <arg type="double" typeName="double" name="param"
         isConst="false" />
       </variant>
     </method>
@@ -367,7 +367,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false">
-        <arg type="double" typeName="double" name="angle"
+        <arg type="double" typeName="double" name="param"
         isConst="false" />
       </variant>
     </method>
