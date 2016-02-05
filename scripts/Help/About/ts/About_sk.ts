@@ -19,7 +19,22 @@
         <translation>To znamená, že sa každý môže &lt;a href=&apos;%1&apos;&gt; zapojiť &lt;/a&gt; !</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+5"/>
+        <source>© 2011-2016 RibbonSoft GmbH.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>Plugins</source>
         <translation>Zásuvné moduly</translation>
     </message>
@@ -51,14 +66,14 @@
         <translation>Neznáme</translation>
     </message>
     <message>
-        <location line="-102"/>
-        <location line="+95"/>
+        <location line="-105"/>
+        <location line="+98"/>
         <source>Version:</source>
         <translation>Verzia:</translation>
     </message>
     <message>
-        <location line="-82"/>
-        <location line="+86"/>
+        <location line="-85"/>
+        <location line="+89"/>
         <source>Qt Version:</source>
         <translation>Qt Verzia:</translation>
     </message>
@@ -68,14 +83,14 @@
         <translation>Licencia:</translation>
     </message>
     <message>
-        <location line="-96"/>
-        <location line="+105"/>
+        <location line="-99"/>
+        <location line="+108"/>
         <location line="+12"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-115"/>
+        <location line="-118"/>
         <source>Build Date:</source>
         <translation>Dátum vytvorenia:</translation>
     </message>
@@ -110,17 +125,15 @@
         <translation>Všetky značky alebo názvy produktov sú ochrannými známkami alebo registrovanými ochrannými známkami príslušných vlastníkov.</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Portions of this software © 2013 Digia Plc.</source>
-        <translation>Súčasti tohto software © 2013 Digia s.r.o..</translation>
+        <translation type="vanished">Súčasti tohto software © 2013 Digia s.r.o..</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).</source>
-        <translation>Súčasti tohto softvéru © 2012 Spoločnosť Nokia a / alebo jej dcérske spoločnosti.</translation>
+        <translation type="vanished">Súčasti tohto softvéru © 2012 Spoločnosť Nokia a / alebo jej dcérske spoločnosti.</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>No plugins found.</source>
         <translation>Nenašiel sa žiadny modul</translation>
     </message>

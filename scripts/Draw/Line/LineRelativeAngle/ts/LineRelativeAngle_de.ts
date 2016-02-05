@@ -28,9 +28,13 @@
         <translation>R&amp;elativer Winkel</translation>
     </message>
     <message>
-        <location filename="../LineRelativeAngle.js" line="+70"/>
         <source>Choose base entity</source>
-        <translation>Basisobjekt wählen</translation>
+        <translation type="vanished">Basisobjekt wählen</translation>
+    </message>
+    <message>
+        <location filename="../LineRelativeAngle.js" line="+70"/>
+        <source>Choose base line, arc, circle, ellipse or polyline</source>
+        <translation>Basislinie, Bogen, Kreis, Ellipse oder Polylinie wählen</translation>
     </message>
     <message>
         <location line="+8"/>

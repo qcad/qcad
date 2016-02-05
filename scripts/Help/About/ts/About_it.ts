@@ -23,7 +23,22 @@
         <translation>Ciò significa che tutti &lt;a href=&apos;%1&apos;&gt;possono partecipare&lt;/a&gt;!</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+5"/>
+        <source>© 2011-2016 RibbonSoft GmbH.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
+        <translation>Porzioni di questo software © 2008-2016 The Qt Company Ltd.</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
+        <translation>Questo programma è distribuito nella speranza che sia utile, ma SENZA ALCUNA GARANZIA; senza neppure la garanzia implicita di NEGOZIABILITÀ o di APPLICABILITÀ PER UN PARTICOLARE SCOPO.</translation>
+    </message>
+    <message>
+        <location line="+12"/>
         <source>Plugins</source>
         <translation>Plugins</translation>
     </message>
@@ -55,14 +70,14 @@
         <translation>Sconosciuto</translation>
     </message>
     <message>
-        <location line="-102"/>
-        <location line="+95"/>
+        <location line="-105"/>
+        <location line="+98"/>
         <source>Version:</source>
         <translation>Versione:</translation>
     </message>
     <message>
-        <location line="-82"/>
-        <location line="+86"/>
+        <location line="-85"/>
+        <location line="+89"/>
         <source>Qt Version:</source>
         <translation>Qt Versione:</translation>
     </message>
@@ -72,14 +87,14 @@
         <translation>Licenza:</translation>
     </message>
     <message>
-        <location line="-96"/>
-        <location line="+105"/>
+        <location line="-99"/>
+        <location line="+108"/>
         <location line="+12"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-115"/>
+        <location line="-118"/>
         <source>Build Date:</source>
         <translation>Data corporatura:</translation>
     </message>
@@ -114,17 +129,15 @@
         <translation>Tutti i nomi di incendio o di prodotto sono marchi o marchi registrati dei rispettivi proprietari.</translation>
     </message>
     <message>
-        <location line="+2"/>
         <source>Portions of this software © 2013 Digia Plc.</source>
-        <translation>Porzioni di questo software © 2013 Digia Plc.</translation>
+        <translation type="vanished">Porzioni di questo software © 2013 Digia Plc.</translation>
     </message>
     <message>
-        <location line="+1"/>
         <source>Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).</source>
-        <translation>Porzioni di questo software © 2012 Nokia Corporation e / o della sua controllata(ies).</translation>
+        <translation type="vanished">Porzioni di questo software © 2012 Nokia Corporation e / o della sua controllata(ies).</translation>
     </message>
     <message>
-        <location line="+18"/>
+        <location line="+24"/>
         <source>No plugins found.</source>
         <translation>Nessun plugin trovato.</translation>
     </message>

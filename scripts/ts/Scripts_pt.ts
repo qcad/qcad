@@ -101,7 +101,7 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+619"/>
+        <location line="+614"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -217,7 +217,7 @@ Ferramentas CAD</translatorcomment>
         <translation>O Raio ficou abaixo de 0,0, após %1 arco(s) concêntrico(s).</translation>
     </message>
     <message>
-        <location line="+769"/>
+        <location line="+789"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -508,7 +508,7 @@ Carregando plugins...</translatorcomment>
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+733"/>
+        <location filename="../library.js" line="+747"/>
         <source>Objects</source>
         <translation>Objectos</translation>
     </message>

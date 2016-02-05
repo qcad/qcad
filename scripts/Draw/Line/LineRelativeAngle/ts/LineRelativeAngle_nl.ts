@@ -4,9 +4,13 @@
 <context>
     <name>LineRelativeAngle</name>
     <message>
-        <location filename="../LineRelativeAngle.js" line="+70"/>
         <source>Choose base entity</source>
-        <translation>Kies basis object</translation>
+        <translation type="vanished">Kies basis object</translation>
+    </message>
+    <message>
+        <location filename="../LineRelativeAngle.js" line="+70"/>
+        <source>Choose base line, arc, circle, ellipse or polyline</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+8"/>

@@ -10,19 +10,19 @@
     </message>
     <message>
         <location line="+33"/>
-        <location line="+95"/>
+        <location line="+98"/>
         <source>Version:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-88"/>
-        <location line="+105"/>
+        <location line="-91"/>
+        <location line="+108"/>
         <location line="+12"/>
         <source>Internet:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-115"/>
+        <location line="-118"/>
         <source>Build Date:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -33,12 +33,12 @@
     </message>
     <message>
         <location line="+2"/>
-        <location line="+86"/>
+        <location line="+89"/>
         <source>Qt Version:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-83"/>
+        <location line="-86"/>
         <source>Architecture:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -74,12 +74,17 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>Portions of this software © 2013 Digia Plc.</source>
+        <source>© 2011-2016 RibbonSoft GmbH.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).</source>
+        <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

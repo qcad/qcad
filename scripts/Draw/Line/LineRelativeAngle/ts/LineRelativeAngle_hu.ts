@@ -5,7 +5,7 @@
     <name>LineRelativeAngle</name>
     <message>
         <location filename="../LineRelativeAngle.js" line="+70"/>
-        <source>Choose base entity</source>
+        <source>Choose base line, arc, circle, ellipse or polyline</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

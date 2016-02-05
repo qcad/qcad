@@ -78,7 +78,7 @@
         <translation>Žiadne</translation>
     </message>
     <message>
-        <location line="+619"/>
+        <location line="+614"/>
         <source>Options</source>
         <translation>Možnosti</translation>
     </message>
@@ -175,7 +175,7 @@
         <translation>Polomer klesol pod 0.0 po %1 sústredných oblúkoch.</translation>
     </message>
     <message>
-        <location line="+769"/>
+        <location line="+789"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Minimálne dva body sú rovnaké.</translation>
@@ -381,7 +381,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+733"/>
+        <location filename="../library.js" line="+747"/>
         <source>Objects</source>
         <translation>Objekty</translation>
     </message>

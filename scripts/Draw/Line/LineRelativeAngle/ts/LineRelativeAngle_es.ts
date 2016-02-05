@@ -34,9 +34,13 @@
         <translation>Fin</translation>
     </message>
     <message>
-        <location filename="../LineRelativeAngle.js" line="+70"/>
         <source>Choose base entity</source>
-        <translation>Seleccionar entidad base</translation>
+        <translation type="vanished">Seleccionar entidad base</translation>
+    </message>
+    <message>
+        <location filename="../LineRelativeAngle.js" line="+70"/>
+        <source>Choose base line, arc, circle, ellipse or polyline</source>
+        <translation>Seleccionar línea, arco, círculo, elipse o polilínea</translation>
     </message>
     <message>
         <location line="+8"/>

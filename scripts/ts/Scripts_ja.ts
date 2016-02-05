@@ -78,7 +78,7 @@
         <translation>なし</translation>
     </message>
     <message>
-        <location line="+619"/>
+        <location line="+614"/>
         <source>Options</source>
         <translation>オプション</translation>
     </message>
@@ -175,7 +175,7 @@
         <translation>%1同心弧の半径が0.0を下回りました。</translation>
     </message>
     <message>
-        <location line="+769"/>
+        <location line="+789"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>少なくとも2点が同一です。</translation>
@@ -381,7 +381,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+733"/>
+        <location filename="../library.js" line="+747"/>
         <source>Objects</source>
         <translation type="unfinished"></translation>
     </message>

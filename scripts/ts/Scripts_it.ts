@@ -84,7 +84,7 @@
         <translation>Niente</translation>
     </message>
     <message>
-        <location line="+619"/>
+        <location line="+614"/>
         <source>Options</source>
         <translation>Opzioni</translation>
     </message>
@@ -193,7 +193,7 @@
         <translation>Raggio è sceso sotto 0,0 dopo %1 archi concentrici.</translation>
     </message>
     <message>
-        <location line="+769"/>
+        <location line="+789"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
@@ -444,7 +444,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+733"/>
+        <location filename="../library.js" line="+747"/>
         <source>Objects</source>
         <translation>Oggetti</translation>
     </message>

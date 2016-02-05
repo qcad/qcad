@@ -78,7 +78,7 @@
         <translation>Ei mitään</translation>
     </message>
     <message>
-        <location line="+619"/>
+        <location line="+614"/>
         <source>Options</source>
         <translation>Asetukset</translation>
     </message>
@@ -175,7 +175,7 @@
         <translation>Säde on pudonnut alle 0.0 arvon %1 samankeskisen kaaren (kaarien) jälkeen.</translation>
     </message>
     <message>
-        <location line="+769"/>
+        <location line="+789"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vähintään kaksi pistettä ovat samat.</translation>
@@ -381,7 +381,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+733"/>
+        <location filename="../library.js" line="+747"/>
         <source>Objects</source>
         <translation type="unfinished"></translation>
     </message>
