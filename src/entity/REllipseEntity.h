@@ -187,6 +187,14 @@ public:
         return data.isFullEllipse();
     }
 
+    double getDirection1() const {
+        return data.getDirection1();
+    }
+
+    double getDirection2() const {
+        return data.getDirection2();
+    }
+
     virtual bool reverse() {
         return data.reverse();
     }
