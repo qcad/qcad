@@ -199,9 +199,10 @@ void RClipboardOperation::copy(
                         overwriteLayers, overwriteBlocks,
                         blockName,
                         transaction,
-                        toModelSpaceBlock       // to model space: true for copy
-                        // (allow copy from inside any block definition),
-                        // false for paste
+                        toModelSpaceBlock,      // to model space: true for copy
+                                                // (allow copy from inside any block definition),
+                                                // false for paste
+                        attributes
                         );
         }
     }
@@ -285,7 +286,8 @@ void RClipboardOperation::copyEntity(
         bool overwriteBlocks,
         const QString& blockName,
         RTransaction& transaction,
-        bool toModelSpaceBlock) const {
+        bool toModelSpaceBlock,
+        const RQMapQStringQString& attributes) const {
 
     bool overwriteLinetypes = false;
 
@@ -342,7 +344,8 @@ void RClipboardOperation::copyEntity(
                     overwriteLayers, first && overwriteBlocks,
                     QString(),
                     transaction,
-                    false         // not to model space but actual block
+                    false,         // not to model space but actual block
+                    attributes
                 );
                 first = false;
             }
@@ -354,6 +357,18 @@ void RClipboardOperation::copyEntity(
     //dest.getStorage().setObjectId(*destEntity.data(), RObject::INVALID_ID);
     dest.getStorage().setObjectHandle(*destEntity.data(), RObject::INVALID_HANDLE);
     destEntity->setSelected(false);
+
+    // apply attribute values:
+    // create attribute for each attribute definition in block with
+    // invalid parent ID (fixed later, when block reference ID is known):
+    QSharedPointer<RAttributeEntity> att = destEntity.dynamicCast<RAttributeEntity>();
+    if (!att.isNull()) {
+        // assign values to attributes:
+        QString tag = att->getTag();
+        if (attributes.contains(tag)) {
+            att->setText(attributes[tag]);
+        }
+    }
 
     // apply transformations:
     if (flipHorizontal) {

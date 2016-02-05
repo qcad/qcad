@@ -88,7 +88,8 @@ public:
         bool overwriteBlocks,
         const QString& blockName,
         RTransaction& transaction,
-        bool toModelSpaceBlock
+        bool toModelSpaceBlock,
+        const RQMapQStringQString& attributes = RDEFAULT_QMAP_QSTRING_QSTRING
     ) const;
 
     QSharedPointer<RBlock> copyEntityBlock(
