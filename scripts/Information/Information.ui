@@ -31,7 +31,7 @@
       <bool>false</bool>
      </property>
      <property name="text">
-      <string>Text Height:</string>
+      <string>Text height:</string>
      </property>
     </widget>
    </item>

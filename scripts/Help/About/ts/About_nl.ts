@@ -19,19 +19,14 @@
         <translation>Dit betekent dat iedereen kan &lt;a href=&apos;%1&apos;&gt;meedoen&lt;/a&gt;!</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>© 2011-2016 RibbonSoft GmbH.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+6"/>
         <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
-        <translation type="unfinished"></translation>
+        <translation>Delen van deze software © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
-        <translation type="unfinished"></translation>
+        <translation>De software wordt verspreid in de hoop dat deze nuttig is maar ZONDER ENIGE GARANTIE, zelfs zonder impliciete garantie van VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL.</translation>
     </message>
     <message>
         <location line="+12"/>

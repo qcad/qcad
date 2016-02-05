@@ -63,7 +63,7 @@
     <message>
         <location filename="../CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished">Straal:</translation>
+        <translation>Straal:</translation>
     </message>
 </context>
 </TS>

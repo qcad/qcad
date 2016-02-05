@@ -6,22 +6,22 @@
     <message>
         <location filename="../Misc.js" line="+60"/>
         <source>Misc Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Diverse gereedschappen</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show misc tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Diverse gereedschappen tonen</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Diverse</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>&amp;Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Diverse</translation>
     </message>
 </context>
 </TS>

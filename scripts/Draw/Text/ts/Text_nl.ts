@@ -202,7 +202,7 @@
     <message>
         <location line="+7"/>
         <source>Text Height in Drawing Units</source>
-        <translation>Tekst hoogte</translation>
+        <translation>Teksthoogte</translation>
     </message>
     <message>
         <location line="+18"/>

@@ -6,17 +6,17 @@
     <message>
         <location filename="../AddLayerInit.js" line="+2"/>
         <source>&amp;Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Laag &amp;toevoegen</translation>
     </message>
     <message>
         <location filename="../AddLayer.js" line="+35"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Laag</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Add Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Laag toevoegen</translation>
     </message>
 </context>
 <context>
@@ -24,7 +24,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+19"/>
         <source>Default lineweight for new layers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaard lijndikte voor nieuwe lagen:</translation>
     </message>
 </context>
 </TS>

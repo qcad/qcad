@@ -6,7 +6,7 @@
     <message>
         <location filename="../InfoPositionPolInit.js" line="+2"/>
         <source>&amp;Polar Position</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Polaire positie</translation>
     </message>
 </context>
 </TS>

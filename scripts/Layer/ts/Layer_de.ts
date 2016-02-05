@@ -53,7 +53,7 @@
     <message>
         <location line="-104"/>
         <source>Layer Data</source>
-        <translation>Layer Data</translation>
+        <translation>Layer</translation>
     </message>
     <message>
         <location filename="../LayerDialog.js" line="+145"/>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../DeselectLayerInit.js" line="+2"/>
         <source>&amp;Deselect Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Laag &amp;deselecteren</translation>
     </message>
 </context>
 </TS>

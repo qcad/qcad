@@ -709,7 +709,7 @@
     </message>
     <message>
         <source>Text Height</source>
-        <translation type="vanished">Tekst hoogte</translation>
+        <translation type="vanished">Teksthoogte</translation>
     </message>
     <message>
         <source>Text Angle</source>

@@ -6,17 +6,17 @@
     <message>
         <location filename="../Layer.js" line="+66"/>
         <source>Layer Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Laag gereedschappen</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show layer tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Laag gereedschappen tonen</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Laag</translation>
     </message>
 </context>
 <context>
@@ -24,47 +24,47 @@
     <message>
         <location filename="../LayerDialog.js" line="+145"/>
         <source>Leading or trailing spaces.</source>
-        <translation type="unfinished"></translation>
+        <translation>Spaties voor of na.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Layer name is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Naam van de laag is leeg.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Layer already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Laag bestaat al.</translation>
     </message>
     <message>
         <location filename="../LayerDialog.ui" line="+17"/>
         <source>Layer Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Laag</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Layer name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Naam van de laag:</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Attributen</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kleur:</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>Lineweight:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijndikte:</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Linetype:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijntype:</translation>
     </message>
 </context>
 </TS>

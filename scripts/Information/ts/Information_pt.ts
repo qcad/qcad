@@ -30,8 +30,12 @@
     </message>
     <message>
         <location line="+17"/>
+        <source>Text height:</source>
+        <translation>Altura do texto:</translation>
+    </message>
+    <message>
         <source>Text Height:</source>
-        <translation>Altura do Texto:</translation>
+        <translation type="vanished">Altura do Texto:</translation>
     </message>
 </context>
 </TS>

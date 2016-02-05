@@ -455,7 +455,7 @@
     <message>
         <location line="+1"/>
         <source>Text Height</source>
-        <translation>Tekst hoogte</translation>
+        <translation>Teksthoogte</translation>
     </message>
     <message>
         <location line="+1"/>

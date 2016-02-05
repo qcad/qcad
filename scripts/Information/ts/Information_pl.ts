@@ -30,7 +30,7 @@
     </message>
     <message>
         <location line="+17"/>
-        <source>Text Height:</source>
+        <source>Text height:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

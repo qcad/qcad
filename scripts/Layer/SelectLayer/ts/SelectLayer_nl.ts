@@ -6,7 +6,7 @@
     <message>
         <location filename="../SelectLayerInit.js" line="+2"/>
         <source>&amp;Select Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Laag &amp;selecteren</translation>
     </message>
 </context>
 </TS>

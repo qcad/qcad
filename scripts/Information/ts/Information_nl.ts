@@ -6,27 +6,31 @@
     <message>
         <location filename="../Information.js" line="+261"/>
         <source>Information Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Informatie gereedschappen</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show information tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Informatie gereedschappen tonen</translation>
     </message>
     <message>
         <location line="+22"/>
         <source>&amp;Info</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Informatie</translation>
     </message>
     <message>
         <location filename="../Information.ui" line="+17"/>
         <source>Add measurement to drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Meting toevoegen aan tekening</translation>
     </message>
     <message>
         <location line="+17"/>
+        <source>Text height:</source>
+        <translation>Teksthoogte:</translation>
+    </message>
+    <message>
         <source>Text Height:</source>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Teksthoogte:</translation>
     </message>
 </context>
 </TS>

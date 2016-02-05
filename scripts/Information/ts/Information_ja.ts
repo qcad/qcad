@@ -25,8 +25,12 @@
     </message>
     <message>
         <location line="+17"/>
+        <source>Text height:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Text Height:</source>
-        <translation>テキストの高さ:</translation>
+        <translation type="vanished">テキストの高さ:</translation>
     </message>
 </context>
 </TS>

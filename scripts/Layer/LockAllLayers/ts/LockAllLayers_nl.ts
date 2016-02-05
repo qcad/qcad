@@ -6,7 +6,7 @@
     <message>
         <location filename="../LockAllLayersInit.js" line="+2"/>
         <source>&amp;Lock All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle lagen &amp;vergrendelen</translation>
     </message>
 </context>
 </TS>

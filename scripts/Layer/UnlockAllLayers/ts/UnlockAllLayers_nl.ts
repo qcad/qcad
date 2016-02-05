@@ -6,7 +6,7 @@
     <message>
         <location filename="../UnlockAllLayersInit.js" line="+2"/>
         <source>&amp;Unlock All Layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle lagen &amp;ontgrendelen</translation>
     </message>
 </context>
 </TS>

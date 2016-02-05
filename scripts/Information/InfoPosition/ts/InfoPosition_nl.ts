@@ -6,12 +6,12 @@
     <message>
         <location filename="../InfoPosition.js" line="+55"/>
         <source>Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Punt</translation>
     </message>
     <message>
         <location filename="../InfoPositionInit.js" line="+2"/>
         <source>&amp;Position</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Positie</translation>
     </message>
 </context>
 </TS>

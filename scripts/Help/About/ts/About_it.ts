@@ -23,12 +23,7 @@
         <translation>Ciò significa che tutti &lt;a href=&apos;%1&apos;&gt;possono partecipare&lt;/a&gt;!</translation>
     </message>
     <message>
-        <location line="+5"/>
-        <source>© 2011-2016 RibbonSoft GmbH.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+1"/>
+        <location line="+6"/>
         <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
         <translation>Porzioni di questo software © 2008-2016 The Qt Company Ltd.</translation>
     </message>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../AutoTrimInit.js" line="+2"/>
         <source>Auto &amp;Trim</source>
-        <translation type="unfinished"></translation>
+        <translation>Auto &amp;trimmen</translation>
     </message>
 </context>
 </TS>

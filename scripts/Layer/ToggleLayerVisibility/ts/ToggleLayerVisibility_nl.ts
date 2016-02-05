@@ -6,7 +6,7 @@
     <message>
         <location filename="../ToggleLayerVisibilityInit.js" line="+2"/>
         <source>&amp;Toggle Visibility</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zichtbaarheid schakelen</translation>
     </message>
 </context>
 </TS>

@@ -92,7 +92,7 @@
     <message>
         <location line="+12"/>
         <source>Text height:</source>
-        <translation>Tekst hoogte:</translation>
+        <translation>Teksthoogte:</translation>
     </message>
     <message>
         <location line="+17"/>
