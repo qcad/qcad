@@ -88,6 +88,8 @@ QScriptValue RExamplePlugin::createMyClass(QScriptContext* context, QScriptEngin
  * MyClass::toString
  */
 QScriptValue RExamplePlugin::myClassToString(QScriptContext *context, QScriptEngine *engine) {
+    Q_UNUSED(engine)
+
     MyClass* self = getSelfMyClass("toString", context);
     return QScriptValue(QString("MyClass(0x%1)").arg((unsigned long int)self, 0, 16));
 }
