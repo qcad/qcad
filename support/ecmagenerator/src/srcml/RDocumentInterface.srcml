@@ -137,6 +137,7 @@
 
     <function_decl><type><name>void</name></type> <name>setDefaultAction</name><parameter_list>(<param><decl><type><name>RAction</name>*</type> <name>action</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setCurrentAction</name><parameter_list>(<param><decl><type><name>RAction</name>*</type> <name>action</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>terminateCurrentAction</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>queueAction</name><parameter_list>(<param><decl><type><name>RAction</name>*</type> <name>action</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>killAllActions</name><parameter_list>()</parameter_list>;</function_decl>
 

@@ -188,6 +188,14 @@
         <return>return <expr><name>data</name>.<call><name>isFullEllipse</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>double</name></type> <name>getDirection1</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getDirection1</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getDirection2</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getDirection2</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function><type><name>virtual</name> <name>bool</name></type> <name>reverse</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>data</name>.<call><name>reverse</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>

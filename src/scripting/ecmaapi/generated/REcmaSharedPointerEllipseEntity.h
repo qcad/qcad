@@ -136,6 +136,12 @@
         isFullEllipse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getDirection1
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDirection2
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         reverse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

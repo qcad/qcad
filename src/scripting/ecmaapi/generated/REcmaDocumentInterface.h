@@ -79,6 +79,9 @@
         setCurrentAction
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        terminateCurrentAction
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queueAction
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

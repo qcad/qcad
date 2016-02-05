@@ -126,6 +126,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, isFullEllipse, "isFullEllipse");
             
+            REcmaHelper::registerFunction(&engine, proto, getDirection1, "getDirection1");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDirection2, "getDirection2");
+            
             REcmaHelper::registerFunction(&engine, proto, reverse, "reverse");
             
             REcmaHelper::registerFunction(&engine, proto, getSideOfPoint, "getSideOfPoint");
@@ -2442,6 +2446,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerEllipseEntity::isFullEllipse", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEllipseEntity::getDirection1
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEllipseEntity::getDirection1", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEllipseEntity::getDirection1";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REllipseEntity* self = 
+                        getSelf("getDirection1", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDirection1();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipseEntity.getDirection1().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEllipseEntity::getDirection1", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEllipseEntity::getDirection2
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEllipseEntity::getDirection2", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEllipseEntity::getDirection2";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REllipseEntity* self = 
+                        getSelf("getDirection2", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getDirection2();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipseEntity.getDirection2().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEllipseEntity::getDirection2", context, engine);
             return result;
         }
          QScriptValue

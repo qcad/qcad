@@ -89,6 +89,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setCurrentAction, "setCurrentAction");
             
+            REcmaHelper::registerFunction(&engine, proto, terminateCurrentAction, "terminateCurrentAction");
+            
             REcmaHelper::registerFunction(&engine, proto, queueAction, "queueAction");
             
             REcmaHelper::registerFunction(&engine, proto, killAllActions, "killAllActions");
@@ -1079,6 +1081,50 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::setCurrentAction", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::terminateCurrentAction
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::terminateCurrentAction", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::terminateCurrentAction";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("terminateCurrentAction", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->terminateCurrentAction();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.terminateCurrentAction().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::terminateCurrentAction", context, engine);
             return result;
         }
          QScriptValue
