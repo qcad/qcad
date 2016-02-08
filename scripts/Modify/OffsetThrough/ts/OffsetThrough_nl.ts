@@ -6,22 +6,22 @@
     <message>
         <location filename="../OffsetThrough.js" line="+67"/>
         <source>Specify point</source>
-        <translation type="unfinished"></translation>
+        <translation>Punt kiezen</translation>
     </message>
     <message>
         <location filename="../OffsetThrough.ui" line="+17"/>
         <source>Number:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aantal:</translation>
     </message>
     <message>
         <location filename="../OffsetThroughInit.js" line="+2"/>
         <source>Offset (through Point)</source>
-        <translation type="unfinished"></translation>
+        <translation>Afzet (door punt)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijn, boog, cirkel of ellips afzetten door punt</translation>
     </message>
 </context>
 </TS>

@@ -6,32 +6,32 @@
     <message>
         <location filename="../Rotate2.js" line="+67"/>
         <source>Center of primary rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Centrum van de primaire rotatie</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Center of secondary rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Centrum van de secundaire rotatie</translation>
     </message>
     <message>
         <location filename="../Rotate2Init.js" line="+2"/>
         <source>Rotate T&amp;wo</source>
-        <translation type="unfinished"></translation>
+        <translation>Roteren t&amp;wee</translation>
     </message>
     <message>
         <location filename="../Rotate2.ui" line="+17"/>
         <source>Primary Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Primaire hoek:</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Secondary Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Secundaire hoek:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Copies:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopieën:</translation>
     </message>
 </context>
 <context>

@@ -44,7 +44,7 @@
     <message>
         <location line="+4"/>
         <source>Offset line, arc, circle or ellipse through point</source>
-        <translation>Linie, Bogen, Kreis oder Ellipse versetzen</translation>
+        <translation>Linie, Bogen, Kreis oder Ellipse versetzen durch Punkt</translation>
     </message>
 </context>
 </TS>

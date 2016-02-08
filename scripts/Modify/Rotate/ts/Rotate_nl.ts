@@ -6,22 +6,22 @@
     <message>
         <location filename="../Rotate.js" line="+70"/>
         <source>Center point</source>
-        <translation type="unfinished"></translation>
+        <translation>Centrum</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Referentiepunt</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Target point</source>
-        <translation type="unfinished"></translation>
+        <translation>Doelpunt</translation>
     </message>
     <message>
         <location filename="../RotateInit.js" line="+2"/>
         <source>&amp;Rotate</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Roteer</translation>
     </message>
 </context>
 <context>
@@ -29,37 +29,37 @@
     <message>
         <location filename="../RotateDialog.ui" line="+14"/>
         <source>Rotate Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Roteren opties</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation>Aantal kopieën</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Origineel verwijderen</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Meerdere kopieën</translation>
     </message>
     <message>
         <location line="+110"/>
         <source>&amp;Angle (a):</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hoek (a):</translation>
     </message>
     <message>
         <location line="+33"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebruik huidige laag en &amp;attributen</translation>
     </message>
 </context>
 </TS>
