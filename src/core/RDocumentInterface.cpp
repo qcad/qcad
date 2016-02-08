@@ -18,6 +18,7 @@
  */
 
 #include <QtNetwork>
+#include <QTemporaryDir>
 
 #include "RArc.h"
 #include "RCircle.h"
