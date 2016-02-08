@@ -124,17 +124,18 @@
 #include <QValidator>
 #include <QVariant>
 #include <QVector>
-#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
-#  if QT_VERSION <= 0x050500
-#    include <QWebView>
-#  endif
-#endif
 #include <QWheelEvent>
 #include <QWidget>
 #include <QXmlContentHandler>
 #include <QXmlResultItems>
 #include <QXmlStreamWriter>
 #include <QXmlQuery>
+
+#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
+#  if QT_VERSION <= 0x050500
+#    include <QWebView>
+#  endif
+#endif
 
 #include "RSingleApplication.h"
 
@@ -266,7 +267,6 @@ Q_DECLARE_METATYPE(QSwipeGesture*)
 Q_DECLARE_METATYPE(QTextDocument*)
 Q_DECLARE_METATYPE(QTabBar*)
 Q_DECLARE_METATYPE(QTabletEvent*)
-Q_DECLARE_METATYPE(QTemporaryDir*)
 Q_DECLARE_METATYPE(QTemporaryFile*)
 Q_DECLARE_METATYPE(QTextBrowser*)
 Q_DECLARE_METATYPE(QTextCodec*)

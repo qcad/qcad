@@ -18,7 +18,9 @@
  */
 
 #include <QtNetwork>
+#if QT_VERSION >= 0x050000
 #include <QTemporaryDir>
+#endif
 
 #include "RArc.h"
 #include "RCircle.h"
@@ -1024,28 +1026,45 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
     mainWindow->enable();
     QByteArray data = reply->readAll();
 
-    QString suffix = QFileInfo(url.path()).suffix();
+    //QString suffix = QFileInfo(url.path()).suffix();
 
 
-    // QTemporaryFile would not work here since Teigha wouldn't be 
+    QString fileName;
+#if QT_VERSION >= 0x050000
+    // QTemporaryFile would not work here since Teigha wouldn't be
     // able to open the locked file that is produced:
     QTemporaryDir dir;
+    fileName = "qcad_downloaded_file.dxf";
+#else
+    // Clumsy port to Qt 4:
+    QDir dir(RSettings::getTempLocation());
+    qint64 ts = QDateTime::currentMSecsSinceEpoch();
+    fileName = QString("qcad%1.dxf").arg(ts);
+#endif
+
+    RDocumentInterface::IoErrorCode ret = RDocumentInterface::IoErrorGeneralImportUrlError;
+
     if (dir.isValid()) {
-        QFile file(dir.path() + "/downloaded_file.dxf");
-        if (file.open(QIODevice::WriteOnly)) {
-            file.write(data);
-            file.close();
-            return importFile(file.fileName(), nameFilter, notify);
-        }
-        else {
-            qWarning() << "cannot open file " << file.fileName();
+        QFile file(dir.path() + QDir::separator() + fileName);
+        if (file.setPermissions(QFile::ReadOwner | QFile::WriteOwner)) {
+            if (file.open(QIODevice::WriteOnly)) {
+                file.write(data);
+                file.close();
+                ret = importFile(file.fileName(), nameFilter, notify);
+                if (!file.remove()) {
+                    qWarning() << "cannot remove file " << file.fileName();
+                }
+            }
+            else {
+                qWarning() << "cannot open file " << file.fileName();
+            }
         }
     }
     else {
         qWarning() << "cannot create temporary directory";
     }
 
-    return RDocumentInterface::IoErrorGeneralImportUrlError;
+    return ret;
 }
 
 /**
