@@ -6,7 +6,7 @@
     <message>
         <location filename="../FlipVerticalInit.js" line="+2"/>
         <source>Flip Verti&amp;cal</source>
-        <translation type="unfinished"></translation>
+        <translation>Verti&amp;caal spiegelen</translation>
     </message>
 </context>
 </TS>

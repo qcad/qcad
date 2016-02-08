@@ -6,22 +6,22 @@
     <message>
         <location filename="../Lengthen.js" line="+60"/>
         <source>Choose line or arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijn of book kiezen</translation>
     </message>
     <message>
         <location filename="../Lengthen.ui" line="+17"/>
         <source>Amount:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bedrag:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Amount to lengthen or shorten (negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Bedrag om te verlengen of in te korten (negatief)</translation>
     </message>
     <message>
         <location filename="../LengthenInit.js" line="+2"/>
         <source>&amp;Lengthen / Shorten</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Verlengen / inkorten</translation>
     </message>
 </context>
 </TS>

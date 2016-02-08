@@ -6,17 +6,17 @@
     <message>
         <location filename="../Mirror.js" line="+62"/>
         <source>First point of symmetry axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Eerste punt van de symmetrie-as</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second point of symmetry axis</source>
-        <translation type="unfinished"></translation>
+        <translation>Tweede punt van de symmetrie-as</translation>
     </message>
     <message>
         <location filename="../MirrorInit.js" line="+2"/>
         <source>&amp;Mirror</source>
-        <translation type="unfinished"></translation>
+        <translation>S&amp;piegelen</translation>
     </message>
 </context>
 <context>
@@ -24,27 +24,27 @@
     <message>
         <location filename="../MirrorDialog.ui" line="+14"/>
         <source>Mirror Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Spiegelen opties</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation>Aantal kopieën</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Origineel verwijderen</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
         <location line="+95"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebruik huidige laag en &amp;attributen</translation>
     </message>
 </context>
 </TS>

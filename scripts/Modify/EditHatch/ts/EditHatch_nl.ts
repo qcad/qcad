@@ -6,12 +6,12 @@
     <message>
         <location filename="../EditHatch.js" line="+61"/>
         <source>Choose hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Arcering kiezen</translation>
     </message>
     <message>
         <location filename="../EditHatchInit.js" line="+2"/>
         <source>Edit &amp;Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Arcering bewerken</translation>
     </message>
 </context>
 </TS>

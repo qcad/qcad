@@ -6,27 +6,27 @@
     <message>
         <location filename="../Divide.js" line="+66"/>
         <source>Choose line, arc, circle, ellipse, spline or polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Kies lijn, boog, cirkel, ellips, spline of polylijn</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Kies lijn, boog, cirkel of ellips</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Specify point</source>
-        <translation type="unfinished"></translation>
+        <translation>Punt kiezen</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Specify second point</source>
-        <translation type="unfinished"></translation>
+        <translation>Tweede punt kiezen</translation>
     </message>
     <message>
         <location filename="../DivideInit.js" line="+2"/>
         <source>&amp;Divide</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Splitsen</translation>
     </message>
 </context>
 </TS>
