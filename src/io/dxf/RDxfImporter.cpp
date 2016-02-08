@@ -586,14 +586,8 @@ void RDxfImporter::addVertex(const DL_VertexData& data) {
 }
 
 void RDxfImporter::addSpline(const DL_SplineData& data) {
-    if (data.degree<=1 || data.degree>3) {
-        qWarning() << "RDxfImporter::addSpline: invalid spline degree: " << data.degree;
-        return;
-    }
-
     spline.setDegree(data.degree);
     spline.setPeriodic(data.flags&0x2);
-//    spline.setPeriodic(false);
     RVector tanS(data.tangentStartX, data.tangentStartY, data.tangentStartZ);
     RVector tanE(data.tangentEndX, data.tangentEndY, data.tangentEndZ);
     if (tanS.getMagnitude()>RS::PointTolerance) {
