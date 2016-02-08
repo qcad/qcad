@@ -6,22 +6,22 @@
     <message>
         <location filename="../DefaultNavigation.js" line="+46"/>
         <source>Graphics View</source>
-        <translation type="unfinished"></translation>
+        <translation>Grafische weergave</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Navigation</source>
-        <translation type="unfinished"></translation>
+        <translation>Navigatie</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Zoom (Wheel Mouse)</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom (wielmuis)</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Scroll (Trackpad, Multi-Touch Mouse)</source>
-        <translation type="unfinished"></translation>
+        <translation>Scrollen (trackpad, multi-touch muis)</translation>
     </message>
 </context>
 <context>
@@ -29,27 +29,27 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+32"/>
         <source>Mouse wheel / two finger swipe:</source>
-        <translation type="unfinished"></translation>
+        <translation>Muiswiel / twee vingerbeweging:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Enable pan gesture</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebaar om te verplaatsen inschakelen</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Reverse mouse wheel direction for zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Muiswiel richting voor zoomen omkeren</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Mouse wheel zoom factor:</source>
-        <translation type="unfinished"></translation>
+        <translation>Muiswiel vergrotingsfactor:</translation>
     </message>
     <message>
         <location line="-34"/>
         <source>Limit zoom and scroll to prevent overflows</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoomen en scrollen beperken om overflows te voorkomen</translation>
     </message>
 </context>
 </TS>

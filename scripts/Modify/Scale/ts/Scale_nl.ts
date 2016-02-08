@@ -6,22 +6,22 @@
     <message>
         <location filename="../Scale.js" line="+71"/>
         <source>Focus point</source>
-        <translation type="unfinished"></translation>
+        <translation>Basispunt</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Referentiepunt</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Target point</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestemmingspunt</translation>
     </message>
     <message>
         <location filename="../ScaleInit.js" line="+2"/>
         <source>&amp;Scale</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Schalen</translation>
     </message>
 </context>
 <context>
@@ -29,47 +29,47 @@
     <message>
         <location filename="../ScaleDialog.ui" line="+14"/>
         <source>Scale Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Schalen opties</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Number of Copies</source>
-        <translation type="unfinished"></translation>
+        <translation>Aantal kopieën</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Delete original</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Origineel verwijderen</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Keep original</source>
-        <translation type="unfinished"></translation>
+        <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>&amp;Multiple copies</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Meerdere kopieën</translation>
     </message>
     <message>
         <location line="+119"/>
         <source>Factor &amp;x:</source>
-        <translation type="unfinished"></translation>
+        <translation>Factor &amp;x:</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Proportional</source>
-        <translation type="unfinished"></translation>
+        <translation>Proportioneel</translation>
     </message>
     <message>
         <location line="+26"/>
         <source>Factor &amp;y:</source>
-        <translation type="unfinished"></translation>
+        <translation>Factor &amp;y:</translation>
     </message>
     <message>
         <location line="+57"/>
         <source>Use current layer and &amp;attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebruik huidige laag en &amp;attributen</translation>
     </message>
 </context>
 </TS>

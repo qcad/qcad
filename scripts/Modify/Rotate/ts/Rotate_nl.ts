@@ -16,7 +16,7 @@
     <message>
         <location line="+9"/>
         <source>Target point</source>
-        <translation>Doelpunt</translation>
+        <translation>Bestemmingspunt</translation>
     </message>
     <message>
         <location filename="../RotateInit.js" line="+2"/>
