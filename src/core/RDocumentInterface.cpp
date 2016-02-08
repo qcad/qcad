@@ -1035,6 +1035,10 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
     // able to open the locked file that is produced:
     QTemporaryDir dir;
     fileName = "qcad_downloaded_file.dxf";
+    if (!dir.isValid()) {
+        qWarning() << "cannot create temporary directory";
+        return RDocumentInterface::IoErrorGeneralImportUrlError;
+    }
 #else
     // Clumsy port to Qt 4:
     QDir dir(RSettings::getTempLocation());
@@ -1044,24 +1048,19 @@ RDocumentInterface::IoErrorCode RDocumentInterface::importUrl(const QUrl& url,
 
     RDocumentInterface::IoErrorCode ret = RDocumentInterface::IoErrorGeneralImportUrlError;
 
-    if (dir.isValid()) {
-        QFile file(dir.path() + QDir::separator() + fileName);
-        if (file.setPermissions(QFile::ReadOwner | QFile::WriteOwner)) {
-            if (file.open(QIODevice::WriteOnly)) {
-                file.write(data);
-                file.close();
-                ret = importFile(file.fileName(), nameFilter, notify);
-                if (!file.remove()) {
-                    qWarning() << "cannot remove file " << file.fileName();
-                }
-            }
-            else {
-                qWarning() << "cannot open file " << file.fileName();
+    QFile file(dir.path() + QDir::separator() + fileName);
+    if (file.setPermissions(QFile::ReadOwner | QFile::WriteOwner)) {
+        if (file.open(QIODevice::WriteOnly)) {
+            file.write(data);
+            file.close();
+            ret = importFile(file.fileName(), nameFilter, notify);
+            if (!file.remove()) {
+                qWarning() << "cannot remove file " << file.fileName();
             }
         }
-    }
-    else {
-        qWarning() << "cannot create temporary directory";
+        else {
+            qWarning() << "cannot open file " << file.fileName();
+        }
     }
 
     return ret;
