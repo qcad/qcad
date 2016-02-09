@@ -193,6 +193,11 @@ QList<RVector> REntity::getIntersectionPoints(
         if (pl!=NULL) {
             same = true;
         }
+
+        // if entity is not interpolated and not a polyline, there are no intersections in entity self:
+        if (!same) {
+            return QList<RVector>();
+        }
     }
 
     return getData().getIntersectionPoints(other.getData(), limited, same, queryBox, ignoreComplex);
