@@ -795,7 +795,6 @@ QList<RVector> RShape::getIntersectionPointsLX(const RLine& line1,
     QList<QSharedPointer<RShape> > sub = explodable2.getExploded();
     QList<QSharedPointer<RShape> >::iterator it;
     for (it=sub.begin(); it!=sub.end(); ++it) {
-        // TODO: limited true for line1, not for line2:
         QSharedPointer<RLine> pLine2 = (*it).dynamicCast<RLine>();
         if (!pLine2.isNull()) {
             RLine line2 = *pLine2.data();
