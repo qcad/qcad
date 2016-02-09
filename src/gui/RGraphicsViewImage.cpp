@@ -919,10 +919,10 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         // highlighted:
         if (!isPrinting() && path.isHighlighted()) {
             if (pen.style() != Qt::NoPen) {
-                pen.setColor(RColor::getHighlighted(pen.color(), bgColorLightness));
+                pen.setColor(RColor::getHighlighted(pen.color(), bgColorLightness, 100));
             }
             if (brush.style() != Qt::NoBrush) {
-                RColor ch = RColor::getHighlighted(brush.color(), bgColorLightness);
+                RColor ch = RColor::getHighlighted(brush.color(), bgColorLightness, 100);
                 ch.setAlpha(128);
                 brush.setColor(ch);
             }
