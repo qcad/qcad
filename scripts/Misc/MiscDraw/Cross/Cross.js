@@ -28,6 +28,8 @@ include("scripts/ShapeAlgorithms.js");
 function Cross(guiAction) {
     EAction.call(this, guiAction);
 
+    this.shape = undefined;
+
     this.setUiOptions("Cross.ui");
 }
 
@@ -50,6 +52,7 @@ Cross.prototype.setState = function(state) {
     this.setCrosshairCursor();
 
     var appWin = RMainWindowQt.getMainWindow();
+    this.shape = undefined;
     var trEntity = qsTr("Select arc, circle, ellipse or elliptical arc");
     this.setCommandPrompt(trEntity);
     this.setLeftMouseTip(trEntity);
@@ -58,8 +61,8 @@ Cross.prototype.setState = function(state) {
 };
 
 Cross.prototype.pickEntity = function(event, preview) {
-    //var di = this.getDocumentInterface();
     var doc = this.getDocument();
+    var di = this.getDocumentInterface();
     var entityId = event.getEntityId();
     var entity = doc.queryEntity(entityId);
     var pos = event.getModelPosition();
@@ -70,47 +73,54 @@ Cross.prototype.pickEntity = function(event, preview) {
 
     var shape = entity.getClosestSimpleShape(pos);
     if (!isArcShape(shape) &&
-            !isCircleShape(shape) &&
-            !isEllipseShape(shape) &&
-            !isEllipseArcShape(shape)) {
+        !isCircleShape(shape) &&
+        !isEllipseShape(shape) &&
+        !isEllipseArcShape(shape)) {
 
         if (!preview) {
             EAction.warnNotArcCircleEllipse();
         }
         return;
     }
-    if (!preview) {
-        this.drawCross(shape);
+    else {
+        this.shape = shape;
+    }
+
+    if (preview) {
+        this.updatePreview();
+    }
+    else {
+        this.applyOperation();
     }
 };
 
-Cross.prototype.drawCross = function(shape) {
+Cross.prototype.getOperation = function() {
     var lengthX, lengthY;
 
     var ellipseangle = 0.0;
-    var cp = shape.getCenter();
+    var cp = this.shape.getCenter();
     var ex = objectFromPath("MainWindow::Options::ExtendX");
     var ey = objectFromPath("MainWindow::Options::ExtendY");
     var mode = objectFromPath("MainWindow::Options::Mode");
     var or = objectFromPath("MainWindow::Options::Orientation");
-    var orient = or.value;
+    var orient = or.getValue();
     if (mode.currentIndex === 0) {      //Extend
-        if (isArcShape(shape) || isCircleShape(shape)) {
-            lengthX = shape.getRadius() + RMath.eval(ex.text);
+        if (isArcShape(this.shape) || isCircleShape(this.shape)) {
+            lengthX = this.shape.getRadius() + RMath.eval(ex.text);
             if (ey.text === "") {
                 lengthY = lengthX;
             } else {
-                lengthY = shape.getRadius() + RMath.eval(ey.text);
+                lengthY = this.shape.getRadius() + RMath.eval(ey.text);
             }
             ellipseangle = 0.0;
-        } else if (isEllipseShape(shape) || isEllipseArcShape(shape)) {
-            lengthX = shape.getMajorRadius() + RMath.eval(ex.text);
+        } else if (isEllipseShape(this.shape) || isEllipseArcShape(this.shape)) {
+            lengthX = this.shape.getMajorRadius() + RMath.eval(ex.text);
             if (ey.text === "") {
-                lengthY = shape.getMinorRadius() + RMath.eval(ex.text);
+                lengthY = this.shape.getMinorRadius() + RMath.eval(ex.text);
             } else {
-                lengthY = shape.getMinorRadius() + RMath.eval(ey.text);
+                lengthY = this.shape.getMinorRadius() + RMath.eval(ey.text);
             }
-            ellipseangle = shape.getAngle();
+            ellipseangle = this.shape.getAngle();
         }
     } else if (mode.currentIndex === 1) {       //Length
             // divide length by 2 because cp.operator_add(v) (see below)
@@ -121,28 +131,28 @@ Cross.prototype.drawCross = function(shape) {
             } else {
                 lengthY = RMath.eval(ey.text) / 2;
             }
-            if (isEllipseShape(shape) || isEllipseArcShape(shape)) {
-                ellipseangle = shape.getAngle();
+            if (isEllipseShape(this.shape) || isEllipseArcShape(this.shape)) {
+                ellipseangle = this.shape.getAngle();
             } else {
                 ellipseangle = 0.0;
             }
     } else if (mode.currentIndex === 2) {       //Percent
-        if (isArcShape(shape) || isCircleShape(shape)) {
-            lengthX = shape.getRadius() * RMath.eval(ex.text) / 100;
+        if (isArcShape(this.shape) || isCircleShape(this.shape)) {
+            lengthX = this.shape.getRadius() * RMath.eval(ex.text) / 100;
             if (ey.text === "") {
                 lengthY = lengthX;
             } else {
-                lengthY = shape.getRadius() * RMath.eval(ey.text) / 100;
+                lengthY = this.shape.getRadius() * RMath.eval(ey.text) / 100;
             }
             ellipseangle = 0.0;
-        } else if (isEllipseShape(shape) || isEllipseArcShape(shape)) {
-            lengthX = shape.getMajorRadius() * RMath.eval(ex.text) / 100;
+        } else if (isEllipseShape(this.shape) || isEllipseArcShape(this.shape)) {
+            lengthX = this.shape.getMajorRadius() * RMath.eval(ex.text) / 100;
             if (ey.text === "") {
-                lengthY = shape.getMinorRadius() * RMath.eval(ex.text) / 100;
+                lengthY = this.shape.getMinorRadius() * RMath.eval(ex.text) / 100;
             } else {
-                lengthY = shape.getMinorRadius() * RMath.eval(ey.text) / 100;
+                lengthY = this.shape.getMinorRadius() * RMath.eval(ey.text) / 100;
             }
-            ellipseangle = shape.getAngle();
+            ellipseangle = this.shape.getAngle();
         }
     }
 
@@ -152,9 +162,9 @@ Cross.prototype.drawCross = function(shape) {
         var point1 = cp;
         var point2 = cp
     } else {
-        v.setPolar(lengthX, RMath.deg2rad(orient + 180) + ellipseangle);
+        v.setPolar(lengthX, orient + Math.PI + ellipseangle);
         point1 = cp.operator_add(v);
-        v.setPolar(lengthX, RMath.deg2rad(orient) + ellipseangle);
+        v.setPolar(lengthX, orient + ellipseangle);
         point2 = cp.operator_add(v);
     }
     if (lengthY <= 0.0) {
@@ -162,9 +172,9 @@ Cross.prototype.drawCross = function(shape) {
         var point3 = cp;
         var point4 = cp;
     } else {
-        v.setPolar(lengthY, RMath.deg2rad(orient - 90) + ellipseangle);
+        v.setPolar(lengthY, orient - Math.PI/2 + ellipseangle);
         point3 = cp.operator_add(v);
-        v.setPolar(lengthY, RMath.deg2rad(orient + 90) + ellipseangle);
+        v.setPolar(lengthY, orient + Math.PI/2 + ellipseangle);
         point4 = cp.operator_add(v);
     }
 
@@ -192,6 +202,6 @@ Cross.prototype.drawCross = function(shape) {
     }
 
     if (!empty) {
-        this.getDocumentInterface().applyOperation(op);
+        return op;
     }
 };

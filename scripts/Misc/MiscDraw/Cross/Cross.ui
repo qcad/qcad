@@ -133,14 +133,17 @@
     </widget>
    </item>
    <item>
-    <widget class="QDoubleSpinBox" name="Orientation">
-     <property name="decimals">
-      <number>1</number>
-     </property>
-     <property name="maximum">
-      <double>180.000000000000000</double>
-     </property>
-    </widget>
+   <widget class="RMathLineEdit" name="Orientation">
+    <property name="text">
+     <string notr="true">0</string>
+    </property>
+    <property name="angle" stdset="0">
+     <bool>true</bool>
+    </property>
+    <property name="defaultValue" stdset="0">
+     <double>0</double>
+    </property>
+   </widget>
    </item>
   </layout>
  </widget>
