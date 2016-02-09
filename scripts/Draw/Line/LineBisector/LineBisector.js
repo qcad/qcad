@@ -90,15 +90,7 @@ LineBisector.prototype.finishEvent = function() {
     EAction.prototype.finishEvent.call(this);
 };
 
-LineBisector.prototype.entityPickEvent = function(event) {
-    this.pick(event, false);
-};
-
-LineBisector.prototype.entityPickEventPreview = function(event) {
-    this.pick(event, true);
-};
-
-LineBisector.prototype.pick = function(event, preview) {
+LineBisector.prototype.pickEntity = function(event, preview) {
     var di = this.getDocumentInterface();
     var doc = this.getDocument();
     var pos = event.getModelPosition();
