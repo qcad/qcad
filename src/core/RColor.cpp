@@ -100,45 +100,34 @@ RColor RColor::getHighlighted(const RColor& color, const QColor& bgColor, int mi
     int vColor = color.value();
     int vBgColor = bgColor.value();
 
-    if (vBgColor > vColor) {
-        if (vColor+minDist <= vBgColor-minDist) {
-            ret.setHsv(color.hue(), color.saturation(), qMin(255, vColor+minDist));
-            return ret;
-        }
-        if (vColor-minDist >= minDist) {
-            ret.setHsv(color.hue(), color.saturation(), qMax(0, vColor-minDist));
-            return ret;
-        }
-        else {
-            ret.setHsv(color.hue(), color.saturation(), qMin(255, vBgColor+minDist));
-            return ret;
-        }
+    // 0     vColor                      vBgColor              255
+    // |--------^----------------------------^------------------|
+    // |<--d1-->|<------------d2------------>|<-------d3------->|
+    int d1 = qMin(vColor, vBgColor);
+    //int d2 = qAbs(vColor - vBgColor);
+    int d3 = 255 - qMax(vColor, vBgColor);
+
+    // d3 is big enough: set value to max (highlight):
+    if (d3>=minDist) {
+        ret.setHsv(color.hue(), color.saturation(), 255);
     }
 
-    else if (vBgColor < vColor) {
-        if (vColor-minDist >= vBgColor+minDist) {
-            ret.setHsv(color.hue(), color.saturation(), qMax(0, vColor-minDist));
-            return ret;
-        }
-        if (vColor+minDist <= 255) {
-            ret.setHsv(color.hue(), color.saturation(), qMin(255, vColor+minDist));
-            return ret;
-        }
-        else {
-            ret.setHsv(color.hue(), color.saturation(), qMax(0, vBgColor-minDist));
-            return ret;
-        }
+    // d1 is big enough: set value to half (lowlight):
+    else if (d1>=minDist) {
+        ret.setHsv(color.hue(), color.saturation(), qMin(vColor, vBgColor)/2);
     }
 
-    else if (vBgColor == vColor) {
-        if (vColor+minDist <= 255-minDist) {
-            ret.setHsv(color.hue(), color.saturation(), qMin(255, vColor+minDist));
-            return ret;
-        }
-        else {
-            ret.setHsv(color.hue(), color.saturation(), qMax(0, vColor-minDist));
-            return ret;
-        }
+    // black on white:
+    else if (vColor<32 && vBgColor>224) {
+        ret.setHsv(color.hue(), color.saturation(), 160);
+    }
+
+    // d2 is the only significant distance, set value to medium:
+    else if (vColor<vBgColor) {
+        ret.setHsv(color.hue(), color.saturation(), qMin(vColor+minDist, 255));
+    }
+    else {
+        ret.setHsv(color.hue(), color.saturation(), qMax(vColor-minDist, 0));
     }
 
     return ret;
