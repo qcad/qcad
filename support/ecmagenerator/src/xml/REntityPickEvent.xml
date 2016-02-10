@@ -25,6 +25,21 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="REntity::Id" isPureVirtual="false" />
     </method>
+    <method name="setModifiers" cppName="setModifiers"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="Qt::KeyboardModifiers"
+        typeName="Qt::KeyboardModifiers" name="m"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getModifiers" cppName="getModifiers"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="Qt::KeyboardModifiers"
+      isPureVirtual="false" />
+    </method>
     <method name="isValid" cppName="isValid" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />

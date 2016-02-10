@@ -52,6 +52,13 @@
         <return>return <expr><name>entityId</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setModifiers</name><parameter_list>(<param><decl><type><name><name>Qt</name>::<name>KeyboardModifiers</name></name></type> <name>m</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>mods</name> = <name>m</name></expr>;</expr_stmt>
+    }</block></function>
+    <function><type><name><name>Qt</name>::<name>KeyboardModifiers</name></name></type> <name>getModifiers</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>mods</name></expr>;</return>
+    }</block></function>
+
     <comment type="block">/**
      * \return true If the entity ID of the event is valid.
      */</comment>
@@ -61,6 +68,7 @@
 
 </public><private>private:
     <decl_stmt><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>Qt</name>::<name>KeyboardModifiers</name></name></type> <name>mods</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>REntityPickEvent*</argument>)</argument_list></macro>

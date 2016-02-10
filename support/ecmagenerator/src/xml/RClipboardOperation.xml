@@ -18,44 +18,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
-    <method name="copyEntity" cppName="copyEntity"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="REntity &amp;" typeName="REntity" name="entity"
-        isConst="false" />
-        <arg type="RDocument &amp;" typeName="RDocument" name="src"
-        isConst="false" />
-        <arg type="RDocument &amp;" typeName="RDocument"
-        name="dest" isConst="false" />
-        <arg type="RVector &amp;" typeName="RVector" name="offset"
-        isConst="true" />
-        <arg type="double" typeName="double" name="scale"
-        isConst="false" />
-        <arg type="double" typeName="double" name="unitScale"
-        isConst="false" />
-        <arg type="double" typeName="double" name="rotation"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="flipHorizontal"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="flipVertical"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="toCurrentLayer"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="toCurrentBlock"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="overwriteLayers"
-        isConst="false" />
-        <arg type="bool" typeName="bool" name="overwriteBlocks"
-        isConst="false" />
-        <arg type="QString &amp;" typeName="QString"
-        name="blockName" isConst="true" />
-        <arg type="RTransaction &amp;" typeName="RTransaction"
-        name="transaction" isConst="false" />
-        <arg type="bool" typeName="bool" name="toModelSpaceBlock"
-        isConst="false" />
-      </variant>
-    </method>
     <method name="copyEntityBlock" cppName="copyEntityBlock"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

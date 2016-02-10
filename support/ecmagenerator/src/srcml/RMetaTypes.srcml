@@ -125,17 +125,18 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QValidator&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QVariant&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QVector&gt;</cpp:file></cpp:include>
-<cpp:if>#<cpp:directive>if</cpp:directive> <expr>!<call><name>defined</name><argument_list>(<argument><expr><name>Q_OS_ANDROID</name></expr></argument>)</argument_list></call> &amp;&amp; !<call><name>defined</name><argument_list>(<argument><expr><name>Q_OS_IOS</name></expr></argument>)</argument_list></call></expr></cpp:if>
-<cpp:if>#  <cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &lt;= 0x050500</expr></cpp:if>
-<cpp:include>#    <cpp:directive>include</cpp:directive> <cpp:file>&lt;QWebView&gt;</cpp:file></cpp:include>
-<cpp:endif>#  <cpp:directive>endif</cpp:directive></cpp:endif>
-<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QWheelEvent&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QWidget&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QXmlContentHandler&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QXmlResultItems&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QXmlStreamWriter&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QXmlQuery&gt;</cpp:file></cpp:include>
+
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr>!<call><name>defined</name><argument_list>(<argument><expr><name>Q_OS_ANDROID</name></expr></argument>)</argument_list></call> &amp;&amp; !<call><name>defined</name><argument_list>(<argument><expr><name>Q_OS_IOS</name></expr></argument>)</argument_list></call></expr></cpp:if>
+<cpp:if>#  <cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &lt;= 0x050500</expr></cpp:if>
+<cpp:include>#    <cpp:directive>include</cpp:directive> <cpp:file>&lt;QWebView&gt;</cpp:file></cpp:include>
+<cpp:endif>#  <cpp:directive>endif</cpp:directive></cpp:endif>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RSingleApplication.h"</cpp:file></cpp:include>
 
