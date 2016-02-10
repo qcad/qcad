@@ -51,7 +51,6 @@ SnapIntersectionManual.prototype.beginEvent = function() {
     this.base = this.getOverrideBase();
     if (isNull(this.base)) {
         qWarning("No base action to override");
-        //this.di.setCursorOverride(false);
         this.terminate();
         return;
     }
@@ -75,15 +74,16 @@ SnapIntersectionManual.prototype.entityPickEvent = function(event) {
     var pos = event.getModelPosition();
 
     if (this.state===this.State.PickingEntity1) {
-        this.entity1 = doc.queryEntity(event.getEntityId());
+        var id = EAction.getEntityId(this.di, this, event, true);
+        this.entity1 = doc.queryEntity(id);
         if (!this.entity1.isNull()) {
             this.shape1 = this.entity1.getClosestSimpleShape(pos);
-            this.entityId1 = event.getEntityId();
+            this.entityId1 = EAction.prototype.getEntityId.call(this, event, false);
             this.state = this.State.PickingEntity2;
         }
     }
     else {
-        var ip = this.getIntersection(event);
+        var ip = this.getIntersection(event, false);
 
         if (!isNull(this.base) && ip.isValid()) {
             ip = this.restrict(ip);
@@ -95,7 +95,6 @@ SnapIntersectionManual.prototype.entityPickEvent = function(event) {
                 )
             );
         }
-        //this.di.setCursorOverride(false);
         this.terminate();
     }
 };
@@ -116,7 +115,7 @@ SnapIntersectionManual.prototype.entityPickEventPreview = function(event) {
             this.di.highlightEntity(event.getEntityId());
         }
 
-        var ip = this.getIntersection(event);
+        var ip = this.getIntersection(event, true);
         if (!isNull(this.base) && ip.isValid()) {
             ip = this.restrict(ip);
             this.base.coordinateEventPreview(
@@ -133,9 +132,10 @@ SnapIntersectionManual.prototype.entityPickEventPreview = function(event) {
     }
 };
 
-SnapIntersectionManual.prototype.getIntersection = function(event) {
+SnapIntersectionManual.prototype.getIntersection = function(event, preview) {
     var position = event.getModelPosition();
-    var entity2 = this.getDocument().queryEntity(event.getEntityId());
+    var id = EAction.getEntityId(this.getDocumentInterface(), this, event, preview);
+    var entity2 = this.getDocument().queryEntity(id);
     if (entity2.isNull()) {
         return RVector.invalid;
     }
@@ -149,4 +149,3 @@ SnapIntersectionManual.prototype.getIntersection = function(event) {
 
     return position.getClosest(ips);
 };
-
