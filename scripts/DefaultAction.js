@@ -277,7 +277,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
     var persistentSelection = RSettings.getBoolValue("GraphicsView/PersistentSelection", false);
     var view, range, strictRange, entityId;
 
-    var shiftPressed = (event.modifiers() & Qt.ShiftModifier) || (event.modifiers() & Qt.ControlModifier) || persistentSelection===true;
+    var shiftPressed = (event.modifiers() & Qt.ShiftModifier) > 0 || (event.modifiers() & Qt.ControlModifier) > 0 || persistentSelection===true;
 
     if (event.button() === Qt.LeftButton) {
         switch (this.state) {
