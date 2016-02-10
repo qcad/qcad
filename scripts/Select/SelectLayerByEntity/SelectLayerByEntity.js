@@ -67,16 +67,15 @@ SelectLayerByEntity.prototype.setState = function(state) {
     var appWin = RMainWindowQt.getMainWindow();
     this.setLeftMouseTip(qsTr("Choose entity on layer"));
     this.setRightMouseTip(EAction.trCancel);
-    //EAction.showSnapTools();
 };
 
 SelectLayerByEntity.prototype.entityPickEvent = function(event) {
     this.matchingEntities = [];
-    this.selectEntities(event.getEntityId());
+    this.selectEntities(this.getEntityId(event, false));
     this.selectWithMode(this.matchingEntities);
 };
 
 SelectLayerByEntity.prototype.entityPickEventPreview = function(event) {
-    this.di.highlightEntity(event.getEntityId());
+    this.di.highlightEntity(this.getEntityId(event, true));
 };
 
