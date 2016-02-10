@@ -55,7 +55,7 @@ SelectContour.prototype.setState = function(state) {
 };
 
 SelectContour.prototype.entityPickEvent = function(event) {
-    this.selectEntities(event.getEntityId());
+    this.selectEntities(this.getEntityId(event, false));
 };
 
 SelectContour.prototype.selectEntities = function(entityId) {
@@ -65,7 +65,8 @@ SelectContour.prototype.selectEntities = function(entityId) {
 
 SelectContour.prototype.entityPickEventPreview = function(event) {
     var di = this.getDocumentInterface();
-    di.highlightEntity(event.getEntityId());
+    var id = this.getEntityId(event, true);
+    di.highlightEntity(id);
 };
 
 SelectContour.prototype.slotToleranceChanged = function(value) {
