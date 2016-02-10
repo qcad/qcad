@@ -1975,7 +1975,12 @@ EAction.prototype.getEntityId = function(event, preview) {
 
     var altPressed = (mod & Qt.AltModifier)!==0;
     if (!altPressed || preview) {
-        return this.getEntityIdUnderCursor(event);
+        if (!isNull(this.idFromContextMenu)) {
+            return this.idFromContextMenu;
+        }
+        else {
+            return this.getEntityIdUnderCursor(event);
+        }
     }
 
     var entityIds = this.getEntityIdsUnderCursor(event);
@@ -1993,7 +1998,7 @@ EAction.prototype.getEntityId = function(event, preview) {
     // multiple entities under cursor, offer context menu:
     var ret = RObject.INVALID_ID;
     var doc = di.getDocument();
-    var defaultAction = this;
+    var action = this;
     var menu = new QMenu(EAction.getGraphicsView());
     var a, r;
     menu.objectName = "EntityContextMenu";
@@ -2008,23 +2013,27 @@ EAction.prototype.getEntityId = function(event, preview) {
     Reactor.prototype.hover = function() {
         di.clearPreview();
         di.highlightEntity(this.id);
-        di.repaintViews();
+        action.idFromContextMenu = this.id;
+        action.pickEntity(event, true);
+        action.idFromContextMenu = undefined;
     };
 
     // invalid entity id is used to to cancel:
     entityIds.push(RObject.INVALID_ID);
 
-    for (var i=0; i<entityIds.length; i++) {
+    for (var i=0; i<entityIds.length && i<20; i++) {
         var id = entityIds[i];
         var str;
+        var icon = undefined;
         if (id!==RObject.INVALID_ID) {
             var e = doc.queryEntityDirect(id);
             str = entityTypeToString(e.getType(), false);
-            str += " / " + e.getProperty(REntity.PropertyDisplayedColor)[0].getName();
+            //str += " / " + e.getProperty(REntity.PropertyDisplayedColor)[0].getName();
             str += " / " + e.getLayerName();
             if  (isFunction(e.getLength)) {
                 str += " / " + qsTr("Length:") + " " + numberToString(e.getLength(), 3);
             }
+            icon = RColor.getIcon(e.getProperty(REntity.PropertyDisplayedColor)[0], new QSize(16,16));
         }
         else {
             str = qsTr("Cancel");
@@ -2033,6 +2042,9 @@ EAction.prototype.getEntityId = function(event, preview) {
 
         // add menu entry in format [Type] / [Layer] / [Color] / [Length]
         a = menu.addAction(str);
+        if (!isNull(icon)) {
+            a.icon = icon;
+        }
 
         r = new Reactor(id);
         a.triggered.connect(r, "trigger");
@@ -2041,7 +2053,9 @@ EAction.prototype.getEntityId = function(event, preview) {
 
     // show context menu:
     if (!menu.isEmpty()) {
-        menu.exec(QCursor.pos());
+        QCoreApplication.setAttribute(Qt.AA_DontShowIconsInMenus, false);
+        menu.exec(new QPoint(QCursor.pos().x(), QCursor.pos().y()+10));
+        QCoreApplication.setAttribute(Qt.AA_DontShowIconsInMenus, true);
         di.clearPreview();
     }
 
