@@ -53,9 +53,6 @@
         apply
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        copyEntity
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         copyEntityBlock
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

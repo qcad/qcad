@@ -73,6 +73,9 @@ public:
         const RQMapQStringQString& attributes = RDEFAULT_QMAP_QSTRING_QSTRING
     ) const;
 
+    /**
+     * \nonscriptable
+     */
     void copyEntity(
         REntity& entity,
         RDocument& src, RDocument& dest,
