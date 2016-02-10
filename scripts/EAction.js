@@ -2003,7 +2003,6 @@ EAction.getEntityId = function(di, action, event, preview) {
     // multiple entities under cursor, offer context menu:
     var ret = RObject.INVALID_ID;
     var doc = di.getDocument();
-    //var action = this;
     var menu = new QMenu(EAction.getGraphicsView());
     var a, r;
     menu.objectName = "EntityContextMenu";
@@ -2021,6 +2020,7 @@ EAction.getEntityId = function(di, action, event, preview) {
         action.idFromContextMenu = this.id;
         action.entityPickEventPreview(event);
         action.idFromContextMenu = undefined;
+        di.repaintViews();
     };
 
     // invalid entity id is used to to cancel:
