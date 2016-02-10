@@ -342,7 +342,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
         else if (this.state===DefaultAction.State.Neutral) {
             var appWin = EAction.getMainWindow();
             var rightClickRange = RSettings.getIntValue("GraphicsView/RightClickRange", 10);
-            entityId = this.getEntityIdUnderCursor(event, rightClickRange);
+            entityId = EAction.getEntityIdUnderCursor(this.di, event, rightClickRange);
 
             var rightClickToDeselect = RSettings.getBoolValue("GraphicsView/RightClickToDeselect", false);
 
