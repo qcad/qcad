@@ -1907,6 +1907,148 @@ EAction.enableCoordinateWidget = function(enable) {
 };
 
 /**
+ * \return ID of entity closest to the mouse cursor. No handling of ambiguous results.
+ * \param event RRInputEvent
+ * \param range Cursor range in pixels
+ */
+EAction.prototype.getEntityIdUnderCursor = function(event, range) {
+    var di = this.getDocumentInterface();
+    if (isNull(di)) {
+        return [];
+    }
+
+    var view = event.getGraphicsView();
+    if (isNull(range)) {
+        range = RSettings.getPickRange();
+    }
+
+    range = view.mapDistanceFromView(range);
+
+    var strictRange = view.mapDistanceFromView(10);
+    return di.getClosestEntity(event.getModelPosition(), range, strictRange, false);
+};
+
+/**
+ * \return Array of entity IDs of entities closest to the mouse cursor.
+ * \param event RRInputEvent
+ * \param range Cursor range in pixels
+ */
+EAction.prototype.getEntityIdsUnderCursor = function(event, range) {
+    var di = this.getDocumentInterface();
+    if (isNull(di)) {
+        return [];
+    }
+
+    var view = event.getGraphicsView();
+    if (isNull(range)) {
+        range = RSettings.getPickRange();
+    }
+
+    range = view.mapDistanceFromView(range);
+
+    var doc = di.getDocument();
+    return doc.queryIntersectedEntitiesXY(new RBox(event.getModelPosition(), range), true, false);
+};
+
+/**
+ * \return Entity ID under the mouse cursor. User may choose between multiple candidates if
+ * result is ambiguous and Alt key is pressed.
+ * \param event RRInputEvent
+ */
+EAction.prototype.getEntityId = function(event, preview) {
+    if (isNull(preview)) {
+        preview = false;
+    }
+
+    var di = this.getDocumentInterface();
+    if (isNull(di)) {
+        return RObject.INVALID_ID;
+    }
+
+    var mod;
+    if (isFunction(event.getModifiers)) {
+        mod = event.getModifiers();
+    }
+    else {
+        mod = event.modifiers();
+    }
+
+    var altPressed = (mod & Qt.AltModifier)!==0;
+    if (!altPressed || preview) {
+        return this.getEntityIdUnderCursor(event);
+    }
+
+    var entityIds = this.getEntityIdsUnderCursor(event);
+    entityIds = di.getStorage().orderBackToFront(entityIds);
+    if (entityIds.length===0) {
+        // no entity under cursor:
+        return RObject.INVALID_ID;
+    }
+
+    if (entityIds.length===1) {
+        // one single entity under cursor:
+        return entityIds[0];
+    }
+
+    // multiple entities under cursor, offer context menu:
+    var ret = RObject.INVALID_ID;
+    var doc = di.getDocument();
+    var defaultAction = this;
+    var menu = new QMenu(EAction.getGraphicsView());
+    var a, r;
+    menu.objectName = "EntityContextMenu";
+
+    // reacts to hovering and clicking of context menu items:
+    function Reactor(id) {
+        this.id = id;
+    }
+    Reactor.prototype.trigger = function() {
+        ret = this.id;
+    };
+    Reactor.prototype.hover = function() {
+        di.clearPreview();
+        di.highlightEntity(this.id);
+        di.repaintViews();
+    };
+
+    // invalid entity id is used to to cancel:
+    entityIds.push(RObject.INVALID_ID);
+
+    for (var i=0; i<entityIds.length; i++) {
+        var id = entityIds[i];
+        var str;
+        if (id!==RObject.INVALID_ID) {
+            var e = doc.queryEntityDirect(id);
+            str = entityTypeToString(e.getType(), false);
+            str += " / " + e.getProperty(REntity.PropertyDisplayedColor)[0].getName();
+            str += " / " + e.getLayerName();
+            if  (isFunction(e.getLength)) {
+                str += " / " + qsTr("Length:") + " " + numberToString(e.getLength(), 3);
+            }
+        }
+        else {
+            str = qsTr("Cancel");
+            menu.addSeparator();
+        }
+
+        // add menu entry in format [Type] / [Layer] / [Color] / [Length]
+        a = menu.addAction(str);
+
+        r = new Reactor(id);
+        a.triggered.connect(r, "trigger");
+        a.hovered.connect(r, "hover");
+    }
+
+    // show context menu:
+    if (!menu.isEmpty()) {
+        menu.exec(QCursor.pos());
+        di.clearPreview();
+    }
+
+    return ret;
+};
+
+/**
  * Some common, shared translated warnings:
  */
 EAction.warnNotBlockReference = function() {

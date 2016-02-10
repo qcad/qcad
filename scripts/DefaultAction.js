@@ -273,44 +273,26 @@ DefaultAction.prototype.mouseMoveEvent = function(event) {
     }
 };
 
-DefaultAction.prototype.getEntityIdUnderCursor = function(event, range) {
-    var view = event.getGraphicsView();
-    if (isNull(range)) {
-        range = this.pickRangePixels;
-    }
-
-    range = view.mapDistanceFromView(range);
-
-    var strictRange = view.mapDistanceFromView(10);
-    return this.di.getClosestEntity(event.getModelPosition(), range, strictRange, false);
-};
-
 DefaultAction.prototype.mouseReleaseEvent = function(event) {
     var persistentSelection = RSettings.getBoolValue("GraphicsView/PersistentSelection", false);
     var view, range, strictRange, entityId;
 
-    var add = false;
-    if ((event.modifiers().valueOf() === Qt.ShiftModifier.valueOf()) ||
-            (event.modifiers().valueOf() === Qt.ControlModifier.valueOf()) ||
-            persistentSelection===true) {
-
-        add = true;
-    }
+    var shiftPressed = (event.modifiers() & Qt.ShiftModifier) || (event.modifiers() & Qt.ControlModifier) || persistentSelection===true;
 
     if (event.button() === Qt.LeftButton) {
         switch (this.state) {
         case DefaultAction.State.Dragging:
-            entityId = this.getEntityIdUnderCursor(event);
-            //qDebug("entity id: ", entityId);
+            entityId = this.getEntityId(event);
+
             if (entityId !== -1) {
-                if (add && this.document.isSelected(entityId)) {
+                if (shiftPressed && this.document.isSelected(entityId)) {
                     this.deselectEntity(entityId);
                 }
                 else {
-                    this.selectEntity(entityId, add);
+                    this.selectEntity(entityId, shiftPressed);
                 }
             } else {
-                if (!add) {
+                if (!shiftPressed) {
                     if (persistentSelection===false) {
                         this.di.clearSelection();
                     }
@@ -376,7 +358,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
 
                 // use right-click on entity to select entity:
                 if (rightClickToDeselect) {
-                    this.selectEntity(entityId, add);
+                    this.selectEntity(entityId, shiftPressed);
                     handled = true;
                 }
             }
