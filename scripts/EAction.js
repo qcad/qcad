@@ -1911,8 +1911,7 @@ EAction.enableCoordinateWidget = function(enable) {
  * \param event RRInputEvent
  * \param range Cursor range in pixels
  */
-EAction.prototype.getEntityIdUnderCursor = function(event, range) {
-    var di = this.getDocumentInterface();
+EAction.getEntityIdUnderCursor = function(di, event, range) {
     if (isNull(di)) {
         return [];
     }
@@ -1933,8 +1932,7 @@ EAction.prototype.getEntityIdUnderCursor = function(event, range) {
  * \param event RRInputEvent
  * \param range Cursor range in pixels
  */
-EAction.prototype.getEntityIdsUnderCursor = function(event, range) {
-    var di = this.getDocumentInterface();
+EAction.getEntityIdsUnderCursor = function(di, event, range) {
     if (isNull(di)) {
         return [];
     }
@@ -1959,10 +1957,17 @@ EAction.prototype.getEntityId = function(event, preview) {
     if (isNull(preview)) {
         preview = false;
     }
-
     var di = this.getDocumentInterface();
     if (isNull(di)) {
         return RObject.INVALID_ID;
+    }
+
+    return EAction.getEntityId(di, this, event, preview);
+};
+
+EAction.getEntityId = function(di, action, event, preview) {
+    if (isNull(preview)) {
+        preview = false;
     }
 
     var mod;
@@ -1975,15 +1980,15 @@ EAction.prototype.getEntityId = function(event, preview) {
 
     var altPressed = (mod & Qt.AltModifier)!==0;
     if (!altPressed || preview) {
-        if (!isNull(this.idFromContextMenu)) {
-            return this.idFromContextMenu;
+        if (!isNull(action.idFromContextMenu)) {
+            return action.idFromContextMenu;
         }
         else {
-            return this.getEntityIdUnderCursor(event);
+            return EAction.getEntityIdUnderCursor(di, event);
         }
     }
 
-    var entityIds = this.getEntityIdsUnderCursor(event);
+    var entityIds = EAction.getEntityIdsUnderCursor(di, event);
     entityIds = di.getStorage().orderBackToFront(entityIds);
     if (entityIds.length===0) {
         // no entity under cursor:
@@ -1998,7 +2003,7 @@ EAction.prototype.getEntityId = function(event, preview) {
     // multiple entities under cursor, offer context menu:
     var ret = RObject.INVALID_ID;
     var doc = di.getDocument();
-    var action = this;
+    //var action = this;
     var menu = new QMenu(EAction.getGraphicsView());
     var a, r;
     menu.objectName = "EntityContextMenu";
@@ -2014,7 +2019,7 @@ EAction.prototype.getEntityId = function(event, preview) {
         di.clearPreview();
         di.highlightEntity(this.id);
         action.idFromContextMenu = this.id;
-        action.pickEntity(event, true);
+        action.entityPickEventPreview(event);
         action.idFromContextMenu = undefined;
     };
 
