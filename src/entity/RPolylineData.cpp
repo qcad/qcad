@@ -114,47 +114,20 @@ QList<RVector> RPolylineData::getIntersectionPoints(
 
     QList<RVector> ret;
 
-    QList<QSharedPointer<RShape> > shapes1All = getExploded();
-    QList<QSharedPointer<RShape> > shapes2All;
+    QList<QSharedPointer<RShape> > shapes1 = getShapes(queryBox, true); //getExploded();
+    QList<QSharedPointer<RShape> > shapes2;
     if (same) {
-        shapes2All = shapes1All;
+        shapes2 = shapes1;
     }
     else {
         const RPolylineData* otherPl = dynamic_cast<const RPolylineData*>(&other);
         if (otherPl!=NULL) {
-            shapes2All = otherPl->getExploded();
+            //shapes2All = otherPl->getExploded();
+            shapes2 = other.getShapes(queryBox, true);
         }
         else {
-            shapes2All = other.getShapes(queryBox);
+            shapes2 = other.getShapes(queryBox);
         }
-    }
-
-    QList<QSharedPointer<RShape> > shapes1;
-    QList<QSharedPointer<RShape> > shapes2;
-
-    // filter out shapes that are not in query box:
-    if (queryBox.isValid()) {
-        for (int i1=0; i1<shapes1All.size(); i1++) {
-            QSharedPointer<RShape> shape1 = shapes1All.at(i1);
-            if (queryBox.intersects(shape1->getBoundingBox())) {
-                shapes1.append(shape1);
-            }
-        }
-        if (same) {
-           shapes2 = shapes1;
-        }
-        else {
-            for (int i2=0; i2<shapes2All.size(); i2++) {
-                QSharedPointer<RShape> shape2 = shapes2All.at(i2);
-                if (queryBox.intersects(shape2->getBoundingBox())) {
-                    shapes2.append(shape2);
-                }
-            }
-        }
-    }
-    else {
-        shapes1 = shapes1All;
-        shapes2 = shapes2All;
     }
 
     for (int i1=0; i1<shapes1.size(); i1++) {
@@ -172,7 +145,7 @@ QList<RVector> RPolylineData::getIntersectionPoints(
             QSharedPointer<RShape> shape2 = shapes2.at(i2);
             QList<RVector> candidates = shape1->getIntersectionPoints(*shape2, limited, false);
             if (same) {
-                // polygon internal intersections:
+                // polyline internal intersections:
                 QSharedPointer<RDirected> dir1 = shape1.dynamicCast<RDirected>();
                 QSharedPointer<RDirected> dir2 = shape2.dynamicCast<RDirected>();
                 if (!dir1.isNull() && !dir2.isNull()) {
