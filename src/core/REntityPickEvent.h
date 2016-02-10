@@ -51,6 +51,13 @@ public:
         return entityId;
     }
 
+    void setModifiers(Qt::KeyboardModifiers m) {
+        mods = m;
+    }
+    Qt::KeyboardModifiers getModifiers() const {
+        return mods;
+    }
+
     /**
      * \return true If the entity ID of the event is valid.
      */
@@ -60,6 +67,7 @@ public:
 
 private:
     REntity::Id entityId;
+    Qt::KeyboardModifiers mods;
 };
 
 Q_DECLARE_METATYPE(REntityPickEvent*)

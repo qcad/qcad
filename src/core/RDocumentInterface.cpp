@@ -826,7 +826,7 @@ void RDocumentInterface::commandEventPreview(RCommandEvent& event) {
  * The event type depends on the action's current \ref ClickMode.
  */
 void RDocumentInterface::handleClickEvent(RAction& action, RMouseEvent& event) {
-    if (event.button() == Qt::LeftButton && event.modifiers() == Qt::NoModifier) {
+    if (event.button() == Qt::LeftButton && (event.modifiers() == Qt::NoModifier || event.modifiers() == Qt::AltModifier)) {
         switch (action.getClickMode()) {
         case RAction::PickCoordinate:
         case RAction::PickCoordinateNoSnap: {
@@ -849,6 +849,7 @@ void RDocumentInterface::handleClickEvent(RAction& action, RMouseEvent& event) {
                 REntity::Id entityId = getClosestEntity(event);
                 REntityPickEvent pe(entityId, event.getModelPosition(),
                     event.getGraphicsScene(), event.getGraphicsView());
+                pe.setModifiers(event.modifiers());
                 action.entityPickEvent(pe);
             }
             break;
@@ -894,6 +895,7 @@ void RDocumentInterface::previewClickEvent(RAction& action, RMouseEvent& event) 
             // trigger event even if entity ID is invalid:
             REntityPickEvent pe(entityId, event.getModelPosition(),
                 event.getGraphicsScene(), event.getGraphicsView());
+            pe.setModifiers(event.modifiers());
             action.entityPickEventPreview(pe);
 
             if (RMainWindow::hasMainWindow()) {
