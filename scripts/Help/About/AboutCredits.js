@@ -14,6 +14,7 @@ var credits =
         [ "Norbert K.",       "Modify > Break out Gap<br>"
                               ],
         [ "Robert S.",        "Direct distance entry<br>" +
+                              "Selecting overlapping entities<br>" +
                               "Snap > X/Y from Points<br>" +
                               "Snap > Y/X from Points<br>" +
                               "Snap > Distance Manual<br>" +

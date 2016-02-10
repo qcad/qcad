@@ -67,7 +67,7 @@ EditText.prototype.setState = function(state) {
 
 EditText.prototype.pickEntity = function(event, preview) {
     var doc = this.getDocument();
-    var entityId = event.getEntityId();
+    var entityId = this.getEntityId(event, preview);
     var entity = doc.queryEntity(entityId);
 
     if (isNull(entity)) {

@@ -63,7 +63,7 @@ Cross.prototype.setState = function(state) {
 Cross.prototype.pickEntity = function(event, preview) {
     var doc = this.getDocument();
     var di = this.getDocumentInterface();
-    var entityId = event.getEntityId();
+    var entityId = this.getEntityId(event, preview);
     var entity = doc.queryEntity(entityId);
     var pos = event.getModelPosition();
 

@@ -76,7 +76,7 @@ Lengthen.prototype.pickEntity = function(event, preview) {
     this.error = "";
     var di = this.getDocumentInterface();
     var doc = this.getDocument();
-    var entityId = event.getEntityId();
+    var entityId = this.getEntityId(event, preview);
     var entity = doc.queryEntity(entityId);
     var pos = event.getModelPosition();
 

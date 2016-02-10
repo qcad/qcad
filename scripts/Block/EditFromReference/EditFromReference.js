@@ -70,7 +70,7 @@ EditFromReference.prototype.escapeEvent = function() {
 EditFromReference.prototype.pickEntity = function(event, preview) {
     var di = this.getDocumentInterface();
     var doc = this.getDocument();
-    var entityId = event.getEntityId();
+    var entityId = this.getEntityId(event, preview);
     var entity = doc.queryEntity(entityId);
 
     if (isNull(entity)) {
