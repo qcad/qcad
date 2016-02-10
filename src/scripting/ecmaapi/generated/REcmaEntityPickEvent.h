@@ -51,6 +51,12 @@
         getEntityId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setModifiers
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getModifiers
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isValid
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

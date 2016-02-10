@@ -71,6 +71,10 @@
     
             REcmaHelper::registerFunction(&engine, proto, getEntityId, "getEntityId");
             
+            REcmaHelper::registerFunction(&engine, proto, setModifiers, "setModifiers");
+            
+            REcmaHelper::registerFunction(&engine, proto, getModifiers, "getModifiers");
+            
             REcmaHelper::registerFunction(&engine, proto, isValid, "isValid");
             
         engine.setDefaultPrototype(
@@ -355,6 +359,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEntityPickEvent::getEntityId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntityPickEvent::setModifiers
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntityPickEvent::setModifiers", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntityPickEvent::setModifiers";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntityPickEvent* self = 
+                        getSelf("setModifiers", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: Qt::KeyboardModifiers */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    Qt::KeyboardModifiers
+                    a0 =
+                    (Qt::KeyboardModifiers)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setModifiers(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntityPickEvent.setModifiers().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntityPickEvent::setModifiers", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntityPickEvent::getModifiers
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntityPickEvent::getModifiers", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntityPickEvent::getModifiers";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntityPickEvent* self = 
+                        getSelf("getModifiers", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'Qt::KeyboardModifiers'
+    Qt::KeyboardModifiers cppResult =
+        
+               self->getModifiers();
+        // return type: Qt::KeyboardModifiers
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntityPickEvent.getModifiers().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntityPickEvent::getModifiers", context, engine);
             return result;
         }
          QScriptValue
