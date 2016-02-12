@@ -48,6 +48,23 @@ OptionsToolBar.normalizeSeparators = function(action) {
     }
 };
 
+OptionsToolBar.getFirstInputWidget = function() {
+    var optionsToolBar = EAction.getOptionsToolBar();
+    var widgets = getWidgets(optionsToolBar);
+    for (var p in widgets) {
+        var w = widgets[p];
+        if (isOfType(w, QLineEdit) ||
+            isOfType(w, RMathLineEdit) ||
+            isOfType(w, QSpinBox) ||
+            isOfType(w, QComboBox)) {
+
+            return w;
+        }
+    }
+
+    return undefined;
+};
+
 OptionsToolBar.init = function(basePath) {
     // make sure that the options tool bar is initialized before 
     // positions are restored from the config file:

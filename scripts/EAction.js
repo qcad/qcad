@@ -679,9 +679,21 @@ EAction.prototype.escapeEvent = function() {
  * Called when the user presses a key. By default, the event is ignored.
  */
 EAction.prototype.keyPressEvent = function(event) {
-    if (!isNull(event)) {
-        event.ignore();
+    if (isNull(event)) {
+        return;
     }
+
+    if ((event.key() >= Qt.Key_0.valueOf()) && (event.key() <= Qt.Key_9.valueOf())) {
+        // number entered: give focus to first input widget in options tool bar and set text to number entered:
+        var w = OptionsToolBar.getFirstInputWidget();
+        if (!isNull(w)) {
+            w.setFocus(Qt.OtherFocusReason);
+            w.text = String.fromCharCode(event.key());
+            return;
+        }
+    }
+
+    event.ignore();
 };
 
 /**

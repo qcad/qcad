@@ -18,6 +18,7 @@
  */
 
 include("scripts/View/View.js");
+include("scripts/Widgets/OptionsToolBar/OptionsToolBar.js");
 
 function OptionsToolBarFocus(guiAction) {
     View.call(this, guiAction);
@@ -28,19 +29,9 @@ OptionsToolBarFocus.prototype = new View();
 OptionsToolBarFocus.prototype.beginEvent = function() {
     View.prototype.beginEvent.call(this);
 
-    var appWin = EAction.getMainWindow();
-    var ot = EAction.getOptionsToolBar();
-    var widgets = getWidgets(ot);
-    for (var p in widgets) {
-        var w = widgets[p];
-        if (isOfType(w, QLineEdit) ||
-            isOfType(w, RMathLineEdit) ||
-            isOfType(w, QSpinBox) ||
-            isOfType(w, QComboBox)) {
-
-            w.setFocus(Qt.OtherFocusReason);
-            break;
-        }
+    var w = OptionsToolBar.getFirstInputWidget();
+    if (!isNull(w)) {
+        w.setFocus(Qt.OtherFocusReason);
     }
 
     this.terminate();
