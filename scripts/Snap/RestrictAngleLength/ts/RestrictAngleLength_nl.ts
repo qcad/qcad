@@ -6,23 +6,23 @@
     <message>
         <location filename="../RestrictAngleLength.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoek:</translation>
     </message>
     <message>
         <location line="+20"/>
         <location line="+47"/>
         <source>Base:</source>
-        <translation type="unfinished"></translation>
+        <translation>Basis:</translation>
     </message>
     <message>
         <location line="-20"/>
         <source>Distance:</source>
-        <translation type="unfinished"></translation>
+        <translation>Afstand:</translation>
     </message>
     <message>
         <location filename="../RestrictAngleLengthInit.js" line="+2"/>
         <source>Restrict &amp;Angle or Length</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hoek of lengte beperken</translation>
     </message>
 </context>
 </TS>

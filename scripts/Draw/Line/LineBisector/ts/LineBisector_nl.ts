@@ -14,7 +14,7 @@
         <translation>Tweede lijn</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+69"/>
         <source>Lines don&apos;t intersect.</source>
         <translation>Lijnen snijden elkaar niet.</translation>
     </message>

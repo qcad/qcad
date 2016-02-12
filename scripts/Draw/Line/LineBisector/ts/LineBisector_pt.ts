@@ -22,7 +22,7 @@ Selecione a segunda linha [comprimento/número]</translatorcomment>
         <translation>Segunda linha</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+69"/>
         <source>Lines don&apos;t intersect.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>As linhas não se cruzam</translation>

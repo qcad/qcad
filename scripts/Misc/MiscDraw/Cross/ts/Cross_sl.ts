@@ -12,7 +12,7 @@
         <translation type="obsolete">Nariši križ središčnice loku, krogu ali elipsi</translation>
     </message>
     <message>
-        <location filename="../Cross.js" line="+53"/>
+        <location filename="../Cross.js" line="+56"/>
         <source>Select arc, circle, ellipse or elliptical arc</source>
         <translation>Izberi lok, krog, elipso ali lok elipse</translation>
     </message>

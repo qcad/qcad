@@ -29,7 +29,7 @@
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Дважды щёлкните для изменения штриховки</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -44,7 +44,7 @@
     <message>
         <location line="+16"/>
         <source>Select block references together with attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Выберите ссылки блоков вместе с атрибутами</translation>
     </message>
     <message>
         <location line="-78"/>
@@ -68,7 +68,7 @@
     <message>
         <location line="+20"/>
         <source>Block Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Блочное выделение</translation>
     </message>
     <message>
         <location line="+16"/>

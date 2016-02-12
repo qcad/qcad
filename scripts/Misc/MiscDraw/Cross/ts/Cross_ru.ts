@@ -4,7 +4,7 @@
 <context>
     <name>Cross</name>
     <message>
-        <location filename="../Cross.js" line="+53"/>
+        <location filename="../Cross.js" line="+56"/>
         <source>Select arc, circle, ellipse or elliptical arc</source>
         <translation>Выберите дугу, окружность, эллипс или эллиптическую дугу</translation>
     </message>

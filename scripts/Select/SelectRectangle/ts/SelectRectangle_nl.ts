@@ -6,27 +6,27 @@
     <message>
         <location filename="../SelectRectangle.js" line="+73"/>
         <source>First corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Eerste hoekpunt</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Second corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Tweede hoekpunt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaar</translation>
     </message>
     <message>
         <location filename="../SelectRectangle.ui" line="+17"/>
         <source>Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Modus:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Replace the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Vervang huidige selectie</translation>
     </message>
     <message>
         <location line="+16"/>
@@ -34,37 +34,37 @@
         <location line="+20"/>
         <location line="+20"/>
         <source>SelectionMode</source>
-        <translation type="unfinished"></translation>
+        <translation>SelectionMode</translation>
     </message>
     <message>
         <location line="-53"/>
         <source>Add to the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Toevoegen aan huidige selectie</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Subtract from the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Verwijderen uit de huidige selectie</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Intersect with the current selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Kruisen met de huidige selectie</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Cross Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Kruis selectie</translation>
     </message>
     <message>
         <location filename="../SelectRectangleInit.js" line="+2"/>
         <source>(De-)Select &amp;Rectangular Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechthoekige &amp;gebied (de-)selecteren</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>(De-)Select all entities inside a rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle objecten in een rechthoekige gebied (de-)selecteren</translation>
     </message>
 </context>
 </TS>

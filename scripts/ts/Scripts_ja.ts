@@ -34,7 +34,7 @@
         <translation>希望の位置にエンティティを移動</translation>
     </message>
     <message>
-        <location line="+343"/>
+        <location line="+325"/>
         <source>Move Reference Point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -63,11 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <location line="+1981"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>
     <message>
-        <location line="+273"/>
+        <location line="-1708"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>アクティブツール:</translation>
@@ -102,7 +103,12 @@
         <translation>エンティティはロックされた画層にあります。</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+211"/>
+        <source>Length:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>Entity is not a block reference.</source>
         <translation>エンティティはブロック参照ではありません。</translation>
     </message>

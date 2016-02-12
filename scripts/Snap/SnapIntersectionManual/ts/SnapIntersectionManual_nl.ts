@@ -6,7 +6,7 @@
     <message>
         <location filename="../SnapIntersectionManualInit.js" line="+2"/>
         <source>&amp;Intersection Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Intersectie manueel</translation>
     </message>
 </context>
 </TS>

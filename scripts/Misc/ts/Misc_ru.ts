@@ -16,7 +16,7 @@
     <message>
         <location line="+17"/>
         <source>Misc</source>
-        <translation type="unfinished"></translation>
+        <translation>Разное</translation>
     </message>
     <message>
         <location line="+4"/>

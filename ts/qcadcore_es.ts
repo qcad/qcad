@@ -183,7 +183,7 @@ Parsec</translatorcomment>
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="+298"/>
+        <location filename="../src/core/RColor.cpp" line="+287"/>
         <source>By Layer</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_es.ts--

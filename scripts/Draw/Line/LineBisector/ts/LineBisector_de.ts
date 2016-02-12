@@ -28,7 +28,7 @@
         <translation>Erste Linie</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+73"/>
         <source>Lines don&apos;t intersect.</source>
         <translation>Linien schneiden sich nicht.</translation>
     </message>

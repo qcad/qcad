@@ -286,7 +286,7 @@ shown in search results:</source>
     <message>
         <location line="+60"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Поиск</translation>
     </message>
     <message>
         <location line="+23"/>

@@ -6,7 +6,7 @@
     <message>
         <location filename="../SnapEndInit.js" line="+2"/>
         <source>&amp;End</source>
-        <translation>Ende</translation>
+        <translation>&amp;Ende</translation>
     </message>
 </context>
 </TS>

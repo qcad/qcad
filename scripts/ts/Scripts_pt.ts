@@ -39,7 +39,7 @@
         <translation>Mova a entidade para a localização desejada</translation>
     </message>
     <message>
-        <location line="+343"/>
+        <location line="+325"/>
         <source>Move Reference Point</source>
         <translation>Mova o Ponto de Referência</translation>
     </message>
@@ -72,6 +72,7 @@ Retorna ao último menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <location line="+1981"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -80,7 +81,7 @@ Cancelar
         <translation>Cancele</translation>
     </message>
     <message>
-        <location line="+273"/>
+        <location line="-1708"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Ferramenta Ativa:</translation>
@@ -135,7 +136,12 @@ Ferramentas CAD</translatorcomment>
         <translation>A entidade está em uma camada bloqueada.</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+211"/>
+        <source>Length:</source>
+        <translation>Comprimento:</translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>A entidade não é uma referência de Bloco.</translation>

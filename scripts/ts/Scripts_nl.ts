@@ -6,52 +6,52 @@
     <message>
         <location filename="../DefaultAction.js" line="+89"/>
         <source>Select entity or region</source>
-        <translation type="unfinished"></translation>
+        <translation>Object of gebied selecteren</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Move entity or reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Object of referentiepunt verplaatsen</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Set second corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Tweede hoekpunt kiezen</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Specify target point of reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestemmingspunt voor referentiepunt kiezen</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Specify target point of selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestemmingspunt voor selectie kiezen</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Move entity to desired location</source>
-        <translation type="unfinished"></translation>
+        <translation>Object verplaatsen</translation>
     </message>
     <message>
-        <location line="+343"/>
+        <location line="+325"/>
         <source>Move Reference Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Referentiepunt verplaatsen</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Selectie verplaatsen</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Move Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Object verplaatsen</translation>
     </message>
     <message>
         <location line="+118"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="unfinished"></translation>
+        <translation>Bewerken van blok &apos;%1&apos;&lt;br&gt;Kies &lt;i&gt;Blok &gt; Terug naar hoofdtekening&lt;/i&gt; als u klaar bent</translation>
     </message>
 </context>
 <context>
@@ -59,28 +59,29 @@
     <message>
         <location filename="../EAction.js" line="+62"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation>Terug</translation>
     </message>
     <message>
         <location line="+1"/>
+        <location line="+1981"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="+273"/>
+        <location line="-1708"/>
         <location line="+136"/>
         <source>Active Tool:</source>
-        <translation type="unfinished"></translation>
+        <translation>Actief gereedschap</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>None</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen</translation>
     </message>
     <message>
         <location line="+614"/>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opties</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -98,7 +99,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+211"/>
+        <source>Length:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>Entity is not a block reference.</source>
         <translation type="unfinished"></translation>
     </message>

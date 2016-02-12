@@ -6,12 +6,12 @@
     <message>
         <location filename="../ResetInit.js" line="+5"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation>Reset</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Reset / Idle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Reset / neutraal</translation>
     </message>
 </context>
 </TS>

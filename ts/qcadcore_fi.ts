@@ -112,7 +112,7 @@
 <context>
     <name>RColor</name>
     <message>
-        <location filename="../src/core/RColor.cpp" line="+298"/>
+        <location filename="../src/core/RColor.cpp" line="+287"/>
         <source>By Layer</source>
         <translation>Tason mukaan</translation>
     </message>

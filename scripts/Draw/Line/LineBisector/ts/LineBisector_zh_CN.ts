@@ -14,7 +14,7 @@
         <translation>第二条线</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+69"/>
         <source>Lines don&apos;t intersect.</source>
         <translation>线不交叉.</translation>
     </message>

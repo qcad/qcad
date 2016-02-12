@@ -14,7 +14,7 @@
         <translation>Вторая линия</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+69"/>
         <source>Lines don&apos;t intersect.</source>
         <translation>Линии не пересекаются.</translation>
     </message>

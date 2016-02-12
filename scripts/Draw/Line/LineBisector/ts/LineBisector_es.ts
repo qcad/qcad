@@ -24,7 +24,7 @@
         <translation>Segunda línea</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+69"/>
         <source>Lines don&apos;t intersect.</source>
         <translation>Las líneas no se cruzan.</translation>
     </message>

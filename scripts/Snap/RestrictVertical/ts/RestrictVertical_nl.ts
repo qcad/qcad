@@ -6,7 +6,7 @@
     <message>
         <location filename="../RestrictVerticalInit.js" line="+2"/>
         <source>Restrict &amp;Vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vertikaal beperken</translation>
     </message>
 </context>
 </TS>

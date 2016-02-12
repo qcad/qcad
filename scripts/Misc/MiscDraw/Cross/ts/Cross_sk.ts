@@ -9,7 +9,7 @@
         <translation>Nakreslite stredové osi v kružnici, elipse alebo oblúku</translation>
     </message>
     <message>
-        <location filename="../Cross.js" line="+53"/>
+        <location filename="../Cross.js" line="+56"/>
         <source>Select arc, circle, ellipse or elliptical arc</source>
         <translation>Zvolte oblúk, kružnicu, elipsu alebo elipsovitý oblúk</translation>
     </message>

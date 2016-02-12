@@ -6,7 +6,7 @@
     <message>
         <location filename="../SnapGridInit.js" line="+2"/>
         <source>&amp;Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>R&amp;aster</translation>
     </message>
 </context>
 </TS>

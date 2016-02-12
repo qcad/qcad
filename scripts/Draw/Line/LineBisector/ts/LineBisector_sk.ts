@@ -14,7 +14,7 @@
         <translation>Druhá úsečka</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+69"/>
         <source>Lines don&apos;t intersect.</source>
         <translation>Čiary sa nikdy nepretnú, sú rovnobežné.</translation>
     </message>

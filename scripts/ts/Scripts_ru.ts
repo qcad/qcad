@@ -34,7 +34,7 @@
         <translation>Переместите объект в нужное место</translation>
     </message>
     <message>
-        <location line="+343"/>
+        <location line="+325"/>
         <source>Move Reference Point</source>
         <translation>Переместить точку привязки</translation>
     </message>
@@ -51,7 +51,7 @@
     <message>
         <location line="+118"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="unfinished"></translation>
+        <translation>Редактируя блок &apos;%1&apos;,&lt;br&gt;Выберите &lt;i&gt;Блок &gt; Возврат к главному рисованию&lt;/i&gt;, когда закончите</translation>
     </message>
 </context>
 <context>
@@ -63,11 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <location line="+1981"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location line="+273"/>
+        <location line="-1708"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Активный инструмент:</translation>
@@ -102,7 +103,12 @@
         <translation>Объект находится на заблокированном слое.</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+211"/>
+        <source>Length:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>Entity is not a block reference.</source>
         <translation>Объект не является привязкой блока.</translation>
     </message>

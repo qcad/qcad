@@ -39,7 +39,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+343"/>
+        <location line="+325"/>
         <source>Move Reference Point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -72,6 +72,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <location line="+1981"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -80,7 +81,7 @@ Anuluj
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location line="+273"/>
+        <location line="-1708"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -130,7 +131,12 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished">Jednostka jest na zablokowanej warstwie.</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+211"/>
+        <source>Length:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka nie odniesienia do bloku jest.</translation>

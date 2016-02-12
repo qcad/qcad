@@ -34,7 +34,7 @@
         <translation>Presunúť prvok na požadované miesto</translation>
     </message>
     <message>
-        <location line="+343"/>
+        <location line="+325"/>
         <source>Move Reference Point</source>
         <translation>Presunúť referenčný bod</translation>
     </message>
@@ -63,11 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
+        <location line="+1981"/>
         <source>Cancel</source>
         <translation>Zrušiť</translation>
     </message>
     <message>
-        <location line="+273"/>
+        <location line="-1708"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktívny Nástroj:</translation>
@@ -102,7 +103,12 @@
         <translation>Prvok je na zamknutej vrstve.</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+211"/>
+        <source>Length:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+35"/>
         <source>Entity is not a block reference.</source>
         <translation>Prvok nie je blok.</translation>
     </message>

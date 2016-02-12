@@ -6,7 +6,7 @@
     <message>
         <location filename="../SnapSelectionCenterInit.js" line="+2"/>
         <source>Center of &amp;Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Centrum van &amp;selectie</translation>
     </message>
 </context>
 </TS>

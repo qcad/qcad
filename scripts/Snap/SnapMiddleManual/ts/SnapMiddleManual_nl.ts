@@ -6,7 +6,7 @@
     <message>
         <location filename="../SnapMiddleManualInit.js" line="+2"/>
         <source>&amp;Middle Manual</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Middenpunt manueel</translation>
     </message>
 </context>
 </TS>

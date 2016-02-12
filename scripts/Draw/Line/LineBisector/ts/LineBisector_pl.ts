@@ -22,7 +22,7 @@ Wskaż drugą linie</translatorcomment>
         <translation type="unfinished">Druga linia</translation>
     </message>
     <message>
-        <location line="+77"/>
+        <location line="+69"/>
         <source>Lines don&apos;t intersect.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Linie nie przecinają się.</translation>
