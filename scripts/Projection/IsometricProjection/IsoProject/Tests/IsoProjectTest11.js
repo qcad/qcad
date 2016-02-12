@@ -62,6 +62,8 @@ IsoProjectTest11.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.RightButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::EllipseToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::EllipseToolsPanel::EllipseArcCPPAButton');
+    this.setToolOption('EllipseArcCPPA/Direction', 'CounterClockwise');
+    this.updateToolOptions();
     this.setZoom(12.413102687059721, new RVector(2.139, 2.60251, 0, true));
     var p = new RVector(30.085014, 9.481497);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
