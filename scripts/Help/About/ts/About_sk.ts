@@ -21,7 +21,7 @@
     <message>
         <location line="+6"/>
         <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
-        <translation type="unfinished"></translation>
+        <translation>Súčasti tohto software © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -130,7 +130,7 @@
     <message>
         <location line="+24"/>
         <source>No plugins found.</source>
-        <translation>Nenašiel sa žiadny modul</translation>
+        <translation>Nenašiel sa žiadny modul.</translation>
     </message>
     <message>
         <location line="+88"/>

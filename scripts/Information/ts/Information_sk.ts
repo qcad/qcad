@@ -26,7 +26,7 @@
     <message>
         <location line="+17"/>
         <source>Text height:</source>
-        <translation type="unfinished"></translation>
+        <translation>Výška Textu:</translation>
     </message>
     <message>
         <source>Text Height:</source>

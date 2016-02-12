@@ -105,7 +105,7 @@
     <message>
         <location line="+211"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Длина:</translation>
     </message>
     <message>
         <location line="+35"/>

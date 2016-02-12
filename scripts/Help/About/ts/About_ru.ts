@@ -21,7 +21,7 @@
     <message>
         <location line="+6"/>
         <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
-        <translation type="unfinished"></translation>
+        <translation>Фрагменты этой программы © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+3"/>
