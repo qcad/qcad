@@ -18,16 +18,16 @@
  */
 
 /**
- * \return The argument after the first one of the given flags or undefined.
+ * \return The argument after the first one of the given flags or the given default value.
  *
  * \param args Array of strings (program arguments)
  * \param shortFlag E.g. "-o"
  * \param longFlag E.g. "-output"
  */
-function getArgument(args, shortFlag, longFlag) {
+function getArgument(args, shortFlag, longFlag, def) {
     var ret = getArguments(args, shortFlag, longFlag);
     if (ret.length===0) {
-        return undefined;
+        return def;
     }
     return ret[0];
 }
