@@ -130,7 +130,7 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
                 if (s.isNull()) {
                     continue;
                 }
-                ret = ret && prependShape(*s);
+                ret = prependShape(*s) && ret;
                 setStartWidthAt(0, pl->getStartWidthAt(i));
                 setEndWidthAt(0, pl->getEndWidthAt(i));
             }
@@ -143,7 +143,7 @@ bool RPolyline::appendShape(const RShape& shape, bool prepend) {
                 }
                 setStartWidthAt(vertices.length()-1, pl->getStartWidthAt(i));
                 setEndWidthAt(vertices.length()-1, pl->getEndWidthAt(i));
-                ret = ret && appendShape(*s);
+                ret = appendShape(*s) && ret;
             }
         }
         return ret;
