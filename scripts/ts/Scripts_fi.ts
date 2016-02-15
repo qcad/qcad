@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1981"/>
+        <location line="+1993"/>
         <source>Cancel</source>
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="-1708"/>
+        <location line="-1720"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktiivinen työkalu:</translation>
@@ -79,7 +79,7 @@
         <translation>Ei mitään</translation>
     </message>
     <message>
-        <location line="+614"/>
+        <location line="+626"/>
         <source>Options</source>
         <translation>Asetukset</translation>
     </message>
