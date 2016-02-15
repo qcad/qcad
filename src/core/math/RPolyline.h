@@ -37,6 +37,10 @@ class RBox;
 #define RDEFAULT_MIN1 -1
 #endif
 
+#ifndef M_PI_4
+#define M_PI_4 0.785398163397448309615660845819875721
+#endif
+
 /**
  * Low-level mathematical representation of an open polyline or
  * closed polyline (= polygon).
