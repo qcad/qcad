@@ -7,7 +7,7 @@ function init(basePath) {
     action.setDefaultCommands([".y"]);
     action.setOverride();
     action.setNoState();
-    action.setGroupSortOrder(15700);
+    action.setGroupSortOrder(15550);
     action.setSortOrder(200);
     action.setWidgetNames(["SnapMenu", "SnapToolBar", "SnapToolsPanel", "SnapMatrixPanel"]);
 };
