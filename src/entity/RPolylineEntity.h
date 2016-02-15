@@ -231,8 +231,8 @@ public:
         data.simplify(angleTolerance);
     }
 
-    QList<RVector> verifyTangency(double tolerance = RS::AngleTolerance) {
-        return data.verifyTangency(tolerance);
+    QList<RVector> verifyTangency(double toleranceMin = RS::AngleTolerance, double toleranceMax = M_PI_4) {
+        return data.verifyTangency(toleranceMin, toleranceMax);
     }
 
     void setPolylineGen(bool on) {

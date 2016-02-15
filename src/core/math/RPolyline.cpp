@@ -1418,9 +1418,9 @@ bool RPolyline::simplify(double angleTolerance) {
 /**
  * Verifies the tangency of this polyline.
  */
-QList<RVector> RPolyline::verifyTangency(double tolerance) {
+QList<RVector> RPolyline::verifyTangency(double toleranceMin, double toleranceMax) {
     if (RPolyline::hasProxy()) {
-        return RPolyline::getPolylineProxy()->verifyTangency(*this, tolerance);
+        return RPolyline::getPolylineProxy()->verifyTangency(*this, toleranceMin, toleranceMax);
     }
     else {
         return QList<RVector>();

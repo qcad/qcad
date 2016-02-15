@@ -177,8 +177,8 @@ public:
         RPolyline::simplify(angleTolerance);
     }
 
-    QList<RVector> verifyTangency(double tolerance = RS::AngleTolerance) {
-        return RPolyline::verifyTangency(tolerance);
+    QList<RVector> verifyTangency(double toleranceMin = RS::AngleTolerance, double toleranceMax = M_PI_4) {
+        return RPolyline::verifyTangency(toleranceMin, toleranceMax);
     }
 
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const;

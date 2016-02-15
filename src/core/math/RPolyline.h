@@ -167,7 +167,7 @@ public:
     RPainterPath toPainterPath() const;
 
     bool simplify(double angleTolerance = RS::AngleTolerance);
-    QList<RVector> verifyTangency(double tolerance = RS::AngleTolerance);
+    QList<RVector> verifyTangency(double toleranceMin = RS::AngleTolerance, double toleranceMax = M_PI_4);
 
     void stripWidths();
 
