@@ -27,7 +27,7 @@
 
 
 REntityPickEvent::REntityPickEvent(REntity::Id entityId, const RVector& position,
-   RGraphicsScene& s, RGraphicsView& v) : RInputEvent(position, s, v) {
+   RGraphicsScene& s, RGraphicsView& v) : RInputEvent(position, s, v), mods(Qt::NoModifier) {
     this->entityId = entityId;
     modelPosition = position;
     screenPosition = v.mapToView(position);

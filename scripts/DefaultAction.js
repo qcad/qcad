@@ -428,11 +428,34 @@ DefaultAction.prototype.escapeEvent = function(event) {
 DefaultAction.prototype.pickCoordinate = function(event, preview) {
     var op;
 
+    var shiftPressed = (event.getModifiers() & Qt.ShiftModifier) > 0;
+    var doc = this.getDocument();
+
     switch (this.state) {
     case DefaultAction.State.MovingReference:
     case DefaultAction.State.SettingReference:
+
+        // find reference shape for lengthen, shorten when shift is pressed:
+        var referenceShape = undefined;
+        var d2 = event.getModelPosition();
+        if (shiftPressed) {
+            var view = event.getGraphicsView();
+            var referenceEntityId = view.getClosestEntity(this.d1Screen, this.minPickRangePixels, 10, false);
+            if (referenceEntityId!==RObject.INVALID_ID) {
+                var e = doc.queryEntity(referenceEntityId);
+                if (!isNull(e)) {
+                    referenceShape = e.getClosestSimpleShape(this.d1Model);
+                }
+            }
+
+            if (!isNull(referenceShape)) {
+                d2 = referenceShape.getClosestPointOnShape(d2, false);
+                this.di.addAuxShapeToPreview(new RLine(this.d2Model, event.getModelPosition()));
+            }
+        }
+
         if (preview) {
-            this.d2Model = event.getModelPosition();
+            this.d2Model = d2;
             op = new RMoveReferencePointOperation(this.d1Model, this.d2Model);
             this.di.previewOperation(op);
         }
@@ -441,7 +464,7 @@ DefaultAction.prototype.pickCoordinate = function(event, preview) {
                 this.setState(DefaultAction.State.SettingReference);
             }
             else {
-                this.d2Model = event.getModelPosition();
+                this.d2Model = d2;
                 op = new RMoveReferencePointOperation(this.d1Model, this.d2Model);
                 op.setText(qsTr("Move Reference Point"));
                 this.di.applyOperation(op);

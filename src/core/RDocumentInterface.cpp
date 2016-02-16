@@ -826,11 +826,16 @@ void RDocumentInterface::commandEventPreview(RCommandEvent& event) {
  * The event type depends on the action's current \ref ClickMode.
  */
 void RDocumentInterface::handleClickEvent(RAction& action, RMouseEvent& event) {
-    if (event.button() == Qt::LeftButton && (event.modifiers() == Qt::NoModifier || event.modifiers() == Qt::AltModifier)) {
+    if (event.button() == Qt::LeftButton &&
+        (event.modifiers() == Qt::NoModifier ||
+         event.modifiers() == Qt::AltModifier ||
+         event.modifiers() == Qt::ShiftModifier)) {
+
         switch (action.getClickMode()) {
         case RAction::PickCoordinate:
         case RAction::PickCoordinateNoSnap: {
                 RCoordinateEvent ce(RVector(), event.getGraphicsScene(), event.getGraphicsView());
+                ce.setModifiers(event.modifiers());
                 if (action.getClickMode()==RAction::PickCoordinateNoSnap) {
                     ce.setModelPosition(event.getModelPosition());
                 }
@@ -872,6 +877,7 @@ void RDocumentInterface::previewClickEvent(RAction& action, RMouseEvent& event) 
         case RAction::PickCoordinate:
         case RAction::PickCoordinateNoSnap: {
             RCoordinateEvent ce(RVector(), event.getGraphicsScene(), event.getGraphicsView());
+            ce.setModifiers(event.modifiers());
             if (action.getClickMode()==RAction::PickCoordinateNoSnap) {
                 ce.setModelPosition(event.getModelPosition());
             }
