@@ -40,6 +40,10 @@
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>M_PI_2</name>      1.57079632679489661923132169163975144</cpp:define>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>M_PI_4</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>M_PI_4</name>      0.785398163397448309615660845819875721</cpp:define>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>M_LN10</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>M_LN10</name>      2.30258509299404568401799145468436421</cpp:define>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
