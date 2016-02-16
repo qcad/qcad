@@ -41,6 +41,16 @@ public:
      */
     RCoordinateEvent(const RVector& position,
        RGraphicsScene& s, RGraphicsView& v);
+
+    void setModifiers(Qt::KeyboardModifiers m) {
+        mods = m;
+    }
+    Qt::KeyboardModifiers getModifiers() const {
+        return mods;
+    }
+
+private:
+    Qt::KeyboardModifiers mods;
 };
 
 Q_DECLARE_METATYPE(RCoordinateEvent*)
