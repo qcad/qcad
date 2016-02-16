@@ -62,7 +62,7 @@
     <message>
         <location line="+18"/>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation>Projektion in Originalgrösse (&apos;Isometrische Zeichnung&apos;)</translation>
+        <translation>Projektion in Originalgrösse (&quot;Isometrische Zeichnung&quot;)</translation>
     </message>
     <message>
         <location line="+3"/>

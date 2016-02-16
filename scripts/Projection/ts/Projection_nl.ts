@@ -6,27 +6,27 @@
     <message>
         <location filename="../Projection.js" line="+70"/>
         <source>Projection Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Projectie gereedschappen</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show projection tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Projectie gereedschappen tonen</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>&amp;Projection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Projectie</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Reference point</source>
-        <translation type="unfinished"></translation>
+        <translation>Referentiepunt</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Target point</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestemmingspunt</translation>
     </message>
 </context>
 </TS>

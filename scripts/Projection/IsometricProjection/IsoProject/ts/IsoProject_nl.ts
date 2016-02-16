@@ -6,57 +6,57 @@
     <message>
         <location filename="../IsoProject.ui" line="+17"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Boven</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Onderkant</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Links</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Left back</source>
-        <translation type="unfinished"></translation>
+        <translation>Links achter</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechts</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Right back</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechts achter</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Rotate selection counter-clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation>Draai selectie tegen de klok voor projectie</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Rotate selection clockwise before projection</source>
-        <translation type="unfinished"></translation>
+        <translation>Draai selectie met de klok voor projectie</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Scale projection to original size (&apos;isometric drawing&apos;)</source>
-        <translation type="unfinished"></translation>
+        <translation>Schaal projectie op oorspronkelijke grootte (&quot;isometrische tekening&quot;)</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>True scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Ware grootte</translation>
     </message>
     <message>
         <location filename="../IsoProjectInit.js" line="+2"/>
         <source>&amp;Isometric Projection</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Isometrische projectie</translation>
     </message>
 </context>
 </TS>

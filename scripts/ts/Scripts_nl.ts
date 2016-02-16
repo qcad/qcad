@@ -71,7 +71,7 @@
         <location line="-1720"/>
         <location line="+136"/>
         <source>Active Tool:</source>
-        <translation>Actief gereedschap</translation>
+        <translation>Actief gereedschap:</translation>
     </message>
     <message>
         <location line="+0"/>
