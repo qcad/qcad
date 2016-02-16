@@ -87,7 +87,8 @@ public:
         double range,
         bool draft,
         double strictRange = RMAXDOUBLE,
-        bool includeLockedLayers = true
+        bool includeLockedLayers = true,
+        bool selectedOnly = false
     );
     REntity::Id queryClosestXY(
         QSet<REntity::Id>& candidates,
@@ -124,7 +125,8 @@ public:
             bool checkBoundingBoxOnly=false,
             bool includeLockedLayers=true,
             RBlock::Id blockId = RBlock::INVALID_ID,
-            const QList<RS::EntityType>& filter = RDEFAULT_QLIST_RS_ENTITYTYPE
+            const QList<RS::EntityType>& filter = RDEFAULT_QLIST_RS_ENTITYTYPE,
+            bool selectedOnly = false
     );
 
     QMap<REntity::Id, QSet<int> > queryIntersectedShapesXY(
@@ -132,7 +134,8 @@ public:
         bool checkBoundingBoxOnly=false,
         bool includeLockedLayers=true,
         RBlock::Id blockId = RBlock::INVALID_ID,
-        const QList<RS::EntityType>& filter = RDEFAULT_QLIST_RS_ENTITYTYPE
+        const QList<RS::EntityType>& filter = RDEFAULT_QLIST_RS_ENTITYTYPE,
+        bool selectedOnly = false
     );
 
     QSet<REntity::Id> queryContainedEntitiesXY(

@@ -1336,7 +1336,7 @@ REntity::Id RDocumentInterface::getClosestEntity(RMouseEvent& event) {
     RVector modelPosition = event.getModelPosition();
 
     // range is 10 pixels in model units:
-    double modelRange = view.mapDistanceFromView(10);
+    double modelRange = view.mapDistanceFromView(RSettings::getPickRange());
 
     return getClosestEntity(modelPosition, modelRange);
 }
@@ -1344,7 +1344,7 @@ REntity::Id RDocumentInterface::getClosestEntity(RMouseEvent& event) {
 
 
 REntity::Id RDocumentInterface::getClosestEntity(const RVector& position,
-        double range, double strictRange, bool includeLockedLayers) {
+        double range, double strictRange, bool includeLockedLayers, bool selectedOnly) {
 
     RGraphicsView* view = getLastKnownViewWithFocus();
     bool draft = false;
@@ -1355,7 +1355,7 @@ REntity::Id RDocumentInterface::getClosestEntity(const RVector& position,
         }
     }
 
-    return document.queryClosestXY(position, range, draft, strictRange, includeLockedLayers);
+    return document.queryClosestXY(position, range, draft, strictRange, includeLockedLayers, selectedOnly);
 }
 
 /**

@@ -69,6 +69,10 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, setModifiers, "setModifiers");
+            
+            REcmaHelper::registerFunction(&engine, proto, getModifiers, "getModifiers");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RCoordinateEvent*>(), *proto);
 
@@ -287,7 +291,111 @@
     
 
     // public methods:
-     QScriptValue REcmaCoordinateEvent::toString
+     QScriptValue
+        REcmaCoordinateEvent::setModifiers
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCoordinateEvent::setModifiers", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCoordinateEvent::setModifiers";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCoordinateEvent* self = 
+                        getSelf("setModifiers", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: Qt::KeyboardModifiers */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    Qt::KeyboardModifiers
+                    a0 =
+                    (Qt::KeyboardModifiers)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setModifiers(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCoordinateEvent.setModifiers().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCoordinateEvent::setModifiers", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCoordinateEvent::getModifiers
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCoordinateEvent::getModifiers", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCoordinateEvent::getModifiers";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCoordinateEvent* self = 
+                        getSelf("getModifiers", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'Qt::KeyboardModifiers'
+    Qt::KeyboardModifiers cppResult =
+        
+               self->getModifiers();
+        // return type: Qt::KeyboardModifiers
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCoordinateEvent.getModifiers().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCoordinateEvent::getModifiers", context, engine);
+            return result;
+        }
+         QScriptValue REcmaCoordinateEvent::toString
     (QScriptContext *context, QScriptEngine *engine)
     
     {

@@ -1017,7 +1017,8 @@ REntity::Id RDocument::queryClosestXY(
     double range,
     bool draft,
     double strictRange,
-    bool includeLockedLayers) {
+    bool includeLockedLayers,
+    bool selectedOnly) {
 
     RVector rangeV(
         range,
@@ -1032,7 +1033,9 @@ REntity::Id RDocument::queryClosestXY(
                 wcsPosition - rangeV,
                 wcsPosition + rangeV
             ),
-            true, includeLockedLayers
+            true, includeLockedLayers,
+            RBlock::INVALID_ID, RDEFAULT_QLIST_RS_ENTITYTYPE,
+            selectedOnly
         );
 
     if (candidates.isEmpty()) {
@@ -1108,14 +1111,14 @@ QSet<REntity::Id> RDocument::queryContainedEntities(const RBox& box) {
 
 QSet<REntity::Id> RDocument::queryIntersectedEntitiesXY(
         const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
-        const QList<RS::EntityType>& filter) {
+        const QList<RS::EntityType>& filter, bool selectedOnly) {
 
-    return queryIntersectedShapesXY(box, checkBoundingBoxOnly, includeLockedLayers, blockId, filter).keys().toSet();
+    return queryIntersectedShapesXY(box, checkBoundingBoxOnly, includeLockedLayers, blockId, filter, selectedOnly).keys().toSet();
 }
 
 QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         const RBox& box, bool checkBoundingBoxOnly, bool includeLockedLayers, RBlock::Id blockId,
-        const QList<RS::EntityType>& filter) {
+        const QList<RS::EntityType>& filter, bool selectedOnly) {
 
     RBox boxExpanded = box;
     boxExpanded.c1.z = RMINDOUBLE;
@@ -1189,6 +1192,12 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
         // not on current or given block:
         if (entity->getBlockId() != blockId) {
             continue;
+        }
+
+        if (selectedOnly) {
+            if (!entity->isSelected()) {
+                continue;
+            }
         }
 
         // layer is off:

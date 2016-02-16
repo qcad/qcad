@@ -8901,7 +8901,7 @@
         
     
       REntity::Id REcmaShellGraphicsViewImage::getClosestEntity(
-                const RVector & screenPosition, int range, int strictRange, bool includeLockedLayers
+                const RVector & screenPosition, int range, int strictRange, bool includeLockedLayers, bool selectedOnly
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::getClosestEntity", engine);
@@ -8914,7 +8914,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=4*/
+                    || _q_function.property("length").toInt32()!=5*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RGraphicsViewImage::getClosestEntity";
@@ -8928,7 +8928,7 @@
                         //}
                         REntity::Id ret =
                         RGraphicsViewImage::getClosestEntity(
-                            screenPosition, range, strictRange, includeLockedLayers
+                            screenPosition, range, strictRange, includeLockedLayers, selectedOnly
                         );
 
                         // block recursion again:
@@ -8989,6 +8989,15 @@
         << qScriptValueFromValue(engine, 
 
         includeLockedLayers
+        )
+      
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        selectedOnly
         )
       
                             )

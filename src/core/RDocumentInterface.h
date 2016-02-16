@@ -224,7 +224,8 @@ public:
     REntity::Id getClosestEntity(RMouseEvent& event);
     REntity::Id getClosestEntity(const RVector& position,
         double range, double strictRange = RMAXDOUBLE,
-        bool includeLockedLayers = true);
+        bool includeLockedLayers = true,
+        bool selectedOnly = false);
     void highlightEntity(REntity::Id entityId);
     void highlightReferencePoint(const RVector& position);
     void selectEntities(const QSet<REntity::Id>& entityIds, bool add = false);

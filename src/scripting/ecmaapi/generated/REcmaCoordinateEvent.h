@@ -47,7 +47,13 @@
     
 
     // public methods:
-    static  QScriptValue toString
+    static  QScriptValue
+        setModifiers
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getModifiers
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RCoordinateEvent* getSelf(const QString& fName, QScriptContext* context)
