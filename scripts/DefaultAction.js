@@ -440,7 +440,7 @@ DefaultAction.prototype.pickCoordinate = function(event, preview) {
         var d2 = event.getModelPosition();
         if (shiftPressed) {
             var view = event.getGraphicsView();
-            var referenceEntityId = view.getClosestEntity(this.d1Screen, this.minPickRangePixels, 10, false);
+            var referenceEntityId = view.getClosestEntity(this.d1Screen, this.minPickRangePixels, 10, false, true);
             if (referenceEntityId!==RObject.INVALID_ID) {
                 var e = doc.queryEntity(referenceEntityId);
                 if (!isNull(e)) {
