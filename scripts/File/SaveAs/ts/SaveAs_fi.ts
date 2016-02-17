@@ -4,12 +4,27 @@
 <context>
     <name>SaveAs</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>File Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Use system file dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Saving</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Default format:</source>
         <translation>Oletusmuoto:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
         <translation>Näytä varoitus, kun tallennetaan tiedostomuotoon, joka ei tue 24bittisiä värejä</translation>
     </message>
@@ -19,13 +34,17 @@
         <translation>Lataa/tallenna</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Save as</source>
-        <translation>Tallenna nimellä</translation>
+        <translation type="vanished">Tallenna nimellä</translation>
     </message>
     <message>
         <source>No export filters</source>
         <translation type="vanished">Ei vientisuodattimia</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>File</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
@@ -33,7 +52,7 @@
         <translation>Vientisuodattimia ei löydetty. Keskeytetään...</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+65"/>
         <source>Format:</source>
         <translation>Muoto:</translation>
     </message>

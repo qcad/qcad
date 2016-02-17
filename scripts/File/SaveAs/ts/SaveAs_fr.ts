@@ -9,13 +9,17 @@
         <translation>Charger/Enregistrer</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Save as</source>
-        <translation>Enregistrer sous</translation>
+        <translation type="vanished">Enregistrer sous</translation>
     </message>
     <message>
         <source>No export filters</source>
         <translation type="vanished">Pas de filtres d&apos;exportation</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>File</source>
+        <translation>Fichier</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -23,7 +27,7 @@
         <translation>Pas de filtres d&apos;exportation ont été trouvés. Abandon...</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+65"/>
         <source>Format:</source>
         <translation>Format :</translation>
     </message>
@@ -33,12 +37,27 @@
         <translation>Enregistrer &amp;sous...</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>File Dialog</source>
+        <translation>Dialogue de fichier</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Use system file dialog</source>
+        <translation>Utilisez dialogue de fichier du système</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Saving</source>
+        <translation>Enregistrer</translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Default format:</source>
         <translation>Format par défaut:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
         <translation>Afficher un avertissement lors de l&apos;enregistrement d&apos;un format de fichier qui ne prend pas en charge les couleurs 24 bits</translation>
     </message>

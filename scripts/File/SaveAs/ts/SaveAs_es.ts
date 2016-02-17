@@ -9,13 +9,17 @@
         <translation>Cargar/Guardar</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Save as</source>
-        <translation>Guardar como</translation>
+        <translation type="vanished">Guardar como</translation>
     </message>
     <message>
         <source>No export filters</source>
         <translation type="vanished">No hay filtros de exportación</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>File</source>
+        <translation>Fichero</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -23,7 +27,7 @@
         <translation>No se han encontrado filtros de exportación. Anulando...</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+65"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>
@@ -33,12 +37,27 @@
         <translation>Guardar &amp;como...</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>File Dialog</source>
+        <translation>Diálogo de archivo</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Use system file dialog</source>
+        <translation>Usar diálogo de archivos del sistema</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Saving</source>
+        <translation>Guardar</translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Default format:</source>
         <translation>Formato por defecto:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
         <translation>Mostrar advertencia al guardar en un formato de archivo que no es compatible con los colores de 24 bits</translation>
     </message>

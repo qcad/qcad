@@ -9,13 +9,17 @@
         <translation>Carico/Salvare</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Save as</source>
-        <translation>Salva come</translation>
+        <translation type="vanished">Salva come</translation>
     </message>
     <message>
         <source>No export filters</source>
         <translation type="vanished">Nessun filtri di exportazione</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>File</source>
+        <translation>File</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -23,7 +27,7 @@
         <translation>Non sono stati trovati filtri di exportazione. Interruzione...</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+65"/>
         <source>Format:</source>
         <translation>Formato:</translation>
     </message>
@@ -33,12 +37,27 @@
         <translation>Salva &amp;con nome...</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>File Dialog</source>
+        <translation>Finestra di dialogo file</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Use system file dialog</source>
+        <translation>Utilizzare finestra di dialogo file del sistema</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Saving</source>
+        <translation>Salva</translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Default format:</source>
         <translation>Formato predefinito:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
         <translation>Mostra di avviso quando si salva in un formato di file che non supporta i colori a 24bit</translation>
     </message>

@@ -4,12 +4,27 @@
 <context>
     <name>SaveAs</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>File Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Use system file dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Saving</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Default format:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20,7 +35,7 @@
     </message>
     <message>
         <location line="+0"/>
-        <source>Save as</source>
+        <source>File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -29,7 +44,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+65"/>
         <source>Format:</source>
         <translation type="unfinished"></translation>
     </message>

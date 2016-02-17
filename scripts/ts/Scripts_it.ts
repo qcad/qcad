@@ -39,7 +39,7 @@
         <translation>Spostare entità</translation>
     </message>
     <message>
-        <location line="+325"/>
+        <location line="+348"/>
         <source>Move Reference Point</source>
         <translation>Spostare riferimento</translation>
     </message>
@@ -68,12 +68,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1993"/>
+        <location line="+1994"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="-1720"/>
+        <location line="-1721"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -112,12 +112,12 @@
         <translation>Entità è su un layer bloccato.</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+212"/>
         <source>Length:</source>
         <translation>Lunghezza:</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+36"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entità non è un riferimento di blocco.</translation>

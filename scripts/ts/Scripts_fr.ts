@@ -39,7 +39,7 @@
         <translation>Déplacer entité</translation>
     </message>
     <message>
-        <location line="+325"/>
+        <location line="+348"/>
         <source>Move Reference Point</source>
         <translation>Déplacer référence</translation>
     </message>
@@ -68,12 +68,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1993"/>
+        <location line="+1994"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="-1720"/>
+        <location line="-1721"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Outil actif:</translation>
@@ -116,12 +116,12 @@
         <translation>Entité est sur un calque verrouillé.</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+212"/>
         <source>Length:</source>
         <translation>Longueur :</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+36"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Entité n&apos;est pas une référence de bloc.</translation>

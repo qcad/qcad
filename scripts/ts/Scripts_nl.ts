@@ -34,7 +34,7 @@
         <translation>Object verplaatsen</translation>
     </message>
     <message>
-        <location line="+325"/>
+        <location line="+348"/>
         <source>Move Reference Point</source>
         <translation>Referentiepunt verplaatsen</translation>
     </message>
@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1993"/>
+        <location line="+1994"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-1720"/>
+        <location line="-1721"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Actief gereedschap:</translation>
@@ -99,12 +99,12 @@
         <translation>Object is op een vergrendelde laag.</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+212"/>
         <source>Length:</source>
         <translation>Lengte:</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+36"/>
         <source>Entity is not a block reference.</source>
         <translation>Object is niet een blok referentie.</translation>
     </message>

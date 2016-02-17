@@ -34,7 +34,7 @@
         <translation>Siirrä kohde haluttuun paikkaan</translation>
     </message>
     <message>
-        <location line="+325"/>
+        <location line="+348"/>
         <source>Move Reference Point</source>
         <translation>Siirrä viite</translation>
     </message>
@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1993"/>
+        <location line="+1994"/>
         <source>Cancel</source>
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="-1720"/>
+        <location line="-1721"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktiivinen työkalu:</translation>
@@ -103,12 +103,12 @@
         <translation>Kohde on lukitussa tasossa.</translation>
     </message>
     <message>
-        <location line="+211"/>
+        <location line="+212"/>
         <source>Length:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+36"/>
         <source>Entity is not a block reference.</source>
         <translation>Kohde ei ole lohkoviite.</translation>
     </message>

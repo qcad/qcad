@@ -4,13 +4,28 @@
 <context>
     <name>SaveAs</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>File Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Use system file dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Saving</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Default format:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Domyślny format:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Pokaż ostrzeżenie podczas zapisywania w formacie pliku, który nie obsługuje 24bit kolory</translation>
@@ -22,7 +37,6 @@
         <translation type="unfinished">Load / Save</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Save as</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--
@@ -30,7 +44,12 @@ Zapisz jako...
 Zapisz jako..
 Zachowaj jako...
 Zachowaj jako &amp;szablon...</translatorcomment>
-        <translation type="unfinished">Zachowaj jako</translation>
+        <translation type="obsolete">Zachowaj jako</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>File</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+24"/>
@@ -38,7 +57,7 @@ Zachowaj jako &amp;szablon...</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+65"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

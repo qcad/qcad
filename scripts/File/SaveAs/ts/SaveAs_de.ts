@@ -9,13 +9,17 @@
         <translation>Laden/Speichern</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Save as</source>
-        <translation>Speichern unter</translation>
+        <translation type="vanished">Speichern unter</translation>
     </message>
     <message>
         <source>No export filters</source>
         <translation type="vanished">Keine Exportfilter</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>File</source>
+        <translation>Datei</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -23,7 +27,7 @@
         <translation>Keine Exportfilter wurden gefunden. Abbruch...</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+65"/>
         <source>Format:</source>
         <translation>Format:</translation>
     </message>
@@ -37,12 +41,27 @@
         <translation type="obsolete">Speichern &amp;unter</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>File Dialog</source>
+        <translation>Dateidialog</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Use system file dialog</source>
+        <translation>Dateidialog des Systems verwenden</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Saving</source>
+        <translation>Speichern</translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Default format:</source>
         <translation>Standardformat:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
         <translation>Warnung anzeigen beim Speichern in einem Dateiformat, welches keine 24bit Farben unterstützt</translation>
     </message>

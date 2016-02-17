@@ -9,13 +9,17 @@
         <translation>Carregue/Grave</translation>
     </message>
     <message>
-        <location line="+0"/>
         <source>Save as</source>
-        <translation>Grave como</translation>
+        <translation type="vanished">Grave como</translation>
     </message>
     <message>
         <source>No export filters</source>
         <translation type="vanished">Não há filtros de exportação</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>File</source>
+        <translation>Ficheiro</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -23,7 +27,7 @@
         <translation>Nenhum filtro de exportação foi encontrado. Abortando...</translation>
     </message>
     <message>
-        <location line="+69"/>
+        <location line="+65"/>
         <source>Format:</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -40,12 +44,27 @@ Salve &amp;Como...</translatorcomment>
         <translation>Grave &amp;Como...</translation>
     </message>
     <message>
-        <location filename="../PreferencesPage.ui" line="+32"/>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>File Dialog</source>
+        <translation>Diálogo de arquivo</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Use system file dialog</source>
+        <translation>Use de diálogo do sistema de arquivos</translation>
+    </message>
+    <message>
+        <location line="+13"/>
+        <source>Saving</source>
+        <translation>Grave</translation>
+    </message>
+    <message>
+        <location line="+8"/>
         <source>Default format:</source>
         <translation>Formato padrão:</translation>
     </message>
     <message>
-        <location line="+50"/>
+        <location line="+37"/>
         <source>Show warning when saving to a file format that does not support 24bit colors</source>
         <translation>Exiba aviso ao salvar em um formato de arquivo que não suporte cores de 24bits</translation>
     </message>
