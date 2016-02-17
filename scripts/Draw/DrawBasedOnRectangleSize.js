@@ -128,13 +128,17 @@ DrawBasedOnRectangleSize.prototype.initUiOptions = function(resume, restoreFromS
     }
 
     for (var i=0; i<this.referencePoints.length; i++) {
-        var str = "%1".arg(i+1);
+        var shortcut = "Ctrl+%1".arg(i+1);
+        var shortcutLabel = shortcut;
+        if (RS.getSystemId()==="osx") {
+            shortcutLabel = shortcutLabel.replace("Ctrl+", "\u2318");
+        }
         refPointCombo.addItem(
-            "[" + str + "] " + this.referencePoints[i][1],
+            this.referencePoints[i][1] + " (" + shortcutLabel + ")",
             this.referencePoints[i][2]
         );
         if (isNull(this.shortcuts[i])) {
-            this.shortcuts[i] = new QShortcut(new QKeySequence(str), refPointCombo, 0, 0, Qt.WindowShortcut);
+            this.shortcuts[i] = new QShortcut(new QKeySequence(shortcut), refPointCombo, 0, 0, Qt.WindowShortcut);
             this.shortcuts[i].activated.connect(new KeyReactor(i), "activated");
         }
     }
