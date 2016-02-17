@@ -86,82 +86,82 @@
     <message>
         <location line="+31"/>
         <source>Main Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoofd gereedschappen</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>CAD Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>CAD gereedschappen</translation>
     </message>
     <message>
         <location line="+686"/>
         <source>Entity is on a locked layer.</source>
-        <translation type="unfinished"></translation>
+        <translation>Object is op een vergrendelde laag.</translation>
     </message>
     <message>
         <location line="+211"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lengte:</translation>
     </message>
     <message>
         <location line="+35"/>
         <source>Entity is not a block reference.</source>
-        <translation type="unfinished"></translation>
+        <translation>Object is niet een blok referentie.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line or arc.</source>
-        <translation type="unfinished"></translation>
+        <translation>Object is niet een lijn of boog.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Entiteit is niet een lijn, boog of polylijn.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line.</source>
-        <translation type="unfinished"></translation>
+        <translation>Object is niet een lijn.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc or circle.</source>
-        <translation type="unfinished"></translation>
+        <translation>Object is niet een boog of een cirkel.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc or circle.</source>
-        <translation type="unfinished"></translation>
+        <translation>Object is niet een lijn, boog of cirkel.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not an arc, circle or ellipse.</source>
-        <translation type="unfinished"></translation>
+        <translation>Object is niet een boog, cirkel of ellips.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle or ellipse.</source>
-        <translation type="unfinished"></translation>
+        <translation>Object is niet een lijn, boog, cirkel of ellips.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Object is niet een lijn, boog, cirkel, ellips of polylijn.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse or spline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Object is niet een lijn, boog, cirkel, ellips of spline.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Object is niet een lijn, boog, cirkel, ellips, spline of polylijn.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Entity is not a polyline.</source>
-        <translation type="unfinished"></translation>
+        <translation>Object is niet een polylijn.</translation>
     </message>
 </context>
 <context>
@@ -169,38 +169,38 @@
     <message>
         <location filename="../ShapeAlgorithms.js" line="+335"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>Radius gedaald tot onder 0 na %1 concentrische cirkel(s).</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Radius dropped below 0.0 after %1 concentric arc(s).</source>
-        <translation type="unfinished"></translation>
+        <translation>Radius gedaald tot onder 0 na %1 concentrische boog(en).</translation>
     </message>
     <message>
         <location line="+789"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ten minste twee punten zijn identiek.</translation>
     </message>
     <message>
         <location line="-22"/>
         <source>No circle possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen cirkel mogelijk.</translation>
     </message>
     <message>
         <location line="+29"/>
         <source>No arc possible.</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen boog mogelijk.</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Invalid number of segments: %1.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ongeldig aantal segmenten: %1.</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Invalid ellipse major / minor: %1 / %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ongeldige ellips major / minor ratio: %1 / %2.</translation>
     </message>
 </context>
 <context>
@@ -208,148 +208,148 @@
     <message>
         <location filename="../WidgetFactory.js" line="+966"/>
         <source>Restore defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaardinstellingen herstellen</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Insert Symbol</source>
-        <translation type="unfinished"></translation>
+        <translation>Symbool invoegen</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Diameter</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Degree</source>
-        <translation type="unfinished"></translation>
+        <translation>Graad</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Plus/Minus</source>
-        <translation type="unfinished"></translation>
+        <translation>Plus/Minus</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Almost equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Bijna gelijk aan</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Asymptotically equal to</source>
-        <translation type="unfinished"></translation>
+        <translation>Asymptotisch gelijk aan</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Pi</source>
-        <translation type="unfinished"></translation>
+        <translation>Pi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square root</source>
-        <translation type="unfinished"></translation>
+        <translation>Vierkantswortel</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Phi</source>
-        <translation type="unfinished"></translation>
+        <translation>Phi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>phi</source>
-        <translation type="unfinished"></translation>
+        <translation>phi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Alt phi</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt phi</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Ohm</source>
-        <translation type="unfinished"></translation>
+        <translation>Ohm</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>omega</source>
-        <translation type="unfinished"></translation>
+        <translation>omega</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Multiplication</source>
-        <translation type="unfinished"></translation>
+        <translation>Vermenigvuldiging</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Division</source>
-        <translation type="unfinished"></translation>
+        <translation>Divisie</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Square</source>
-        <translation type="unfinished"></translation>
+        <translation>Kwadraat</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Delta</source>
-        <translation type="unfinished"></translation>
+        <translation>Delta</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Stacked text</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestapelde tekst</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Measured value</source>
-        <translation type="unfinished"></translation>
+        <translation>Gemeten waarde</translation>
     </message>
     <message>
         <location line="+114"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Links</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Middelpunt</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechts</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Aligned</source>
-        <translation type="unfinished"></translation>
+        <translation>Uitgelijnd</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+7"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Midden</translation>
     </message>
     <message>
         <location line="-6"/>
         <source>Fit</source>
-        <translation type="unfinished"></translation>
+        <translation>Passen</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Top</source>
-        <translation type="unfinished"></translation>
+        <translation>Bovenkant</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Base</source>
-        <translation type="unfinished"></translation>
+        <translation>Basis</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <translation>Onderkant</translation>
     </message>
 </context>
 <context>
@@ -357,27 +357,27 @@
     <message>
         <location filename="../autostart.js" line="+321"/>
         <source>Loading add-on translations...</source>
-        <translation type="unfinished"></translation>
+        <translation>Laden van add-on vertalingen...</translation>
     </message>
     <message>
         <location line="+31"/>
         <source>Loading add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Laden van add-ons...</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Initializing add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Initialiseren van add-ons...</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Initializing add-ons:</source>
-        <translation type="unfinished"></translation>
+        <translation>Initialiseren van add-ons:</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Post-initializing add-ons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Post-initialiseren van add-ons...</translation>
     </message>
 </context>
 <context>
@@ -385,17 +385,17 @@
     <message>
         <location filename="../library.js" line="+747"/>
         <source>Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Objecten tonen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Object</source>
-        <translation type="unfinished"></translation>
+        <translation>Object</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Unknown Objects</source>
-        <translation type="unfinished"></translation>
+        <translation>Onbekende objecten</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -405,12 +405,12 @@
     <message>
         <location line="+2"/>
         <source>Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Blokken</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Blok</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -420,17 +420,17 @@
     <message>
         <location line="+0"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Laag</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Linetypes</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijntypen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Linetype</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijntype</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -440,12 +440,12 @@
     <message>
         <location line="+0"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation>Beeld</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Object</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -485,17 +485,17 @@
     <message>
         <location line="+2"/>
         <source>Arcs</source>
-        <translation type="unfinished"></translation>
+        <translation>Bogen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Boog</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Attributen</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -515,22 +515,22 @@
     <message>
         <location line="+2"/>
         <source>Circles</source>
-        <translation type="unfinished"></translation>
+        <translation>Cirkels</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Circle</source>
-        <translation type="unfinished"></translation>
+        <translation>Cirkel</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Bematingen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Bemating</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -540,17 +540,17 @@
     <message>
         <location line="+0"/>
         <source>Aligned Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Uitgelijnde Maat</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Angular Dimensions</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoek bemating</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Angular Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Hoek Maat</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -560,7 +560,7 @@
     <message>
         <location line="+0"/>
         <source>Diametric Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Diametrische Maat</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -590,37 +590,37 @@
     <message>
         <location line="+0"/>
         <source>Radial Dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>Radiale Maat</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Ellipses</source>
-        <translation type="unfinished"></translation>
+        <translation>Ovaalen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>Ovaal</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Hatches</source>
-        <translation type="unfinished"></translation>
+        <translation>Arceringen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Arcering</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Images</source>
-        <translation type="unfinished"></translation>
+        <translation>Afbeeldingen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Image</source>
-        <translation type="unfinished"></translation>
+        <translation>Afbeelding</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -630,17 +630,17 @@
     <message>
         <location line="+0"/>
         <source>Leader</source>
-        <translation type="unfinished"></translation>
+        <translation>Aanhaling</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Lines</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijnen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijn</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -650,7 +650,7 @@
     <message>
         <location line="+0"/>
         <source>Infinite Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Oneindig lijn</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -660,27 +660,27 @@
     <message>
         <location line="+0"/>
         <source>Ray</source>
-        <translation type="unfinished"></translation>
+        <translation>Straal</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Punten</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Point</source>
-        <translation type="unfinished"></translation>
+        <translation>Punt</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Polylines</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrije vormen</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Polylijn</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -690,7 +690,7 @@
     <message>
         <location line="+0"/>
         <source>Solid</source>
-        <translation type="unfinished"></translation>
+        <translation>Gevuld</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -705,12 +705,12 @@
     <message>
         <location line="+2"/>
         <source>Splines</source>
-        <translation type="unfinished"></translation>
+        <translation>Splines</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Spline</source>
-        <translation type="unfinished"></translation>
+        <translation>Spline</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -720,22 +720,22 @@
     <message>
         <location line="+2"/>
         <source>Texts</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Text</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekst</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Viewports</source>
-        <translation type="unfinished"></translation>
+        <translation>Weergaven</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Viewport</source>
-        <translation type="unfinished"></translation>
+        <translation>Weergavegebied</translation>
     </message>
     <message>
         <location line="+3"/>

@@ -164,7 +164,7 @@
     <message>
         <location line="+4"/>
         <source>Entity is not a line, arc, circle, ellipse, spline or polyline.</source>
-        <translation>Objekt ist keine Linie, kein Bogen oder Kreis und keine Ellipse, Spline oder Polylinie.</translation>
+        <translation>Element ist keine Linie, kein Bogen oder Kreis und keine Ellipse, Spline oder Polylinie.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -177,7 +177,7 @@
     <message>
         <location filename="../ShapeAlgorithms.js" line="+335"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
-        <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreisen.</translation>
+        <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreis(en).</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -406,7 +406,7 @@
     <message>
         <location line="+31"/>
         <source>Loading add-ons...</source>
-        <translation>Lade Add-ons ...</translation>
+        <translation>Lade Add-ons...</translation>
     </message>
     <message>
         <location line="+15"/>

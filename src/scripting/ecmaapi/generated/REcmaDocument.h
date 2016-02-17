@@ -300,6 +300,9 @@
         getCurrentLayerId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getCurrentLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setCurrentColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

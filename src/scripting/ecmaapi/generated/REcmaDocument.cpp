@@ -239,6 +239,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getCurrentLayerId, "getCurrentLayerId");
             
+            REcmaHelper::registerFunction(&engine, proto, getCurrentLayerName, "getCurrentLayerName");
+            
             REcmaHelper::registerFunction(&engine, proto, setCurrentColor, "setCurrentColor");
             
             REcmaHelper::registerFunction(&engine, proto, getCurrentColor, "getCurrentColor");
@@ -7633,6 +7635,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::getCurrentLayerId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getCurrentLayerName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getCurrentLayerName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getCurrentLayerName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getCurrentLayerName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getCurrentLayerName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getCurrentLayerName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getCurrentLayerName", context, engine);
             return result;
         }
          QScriptValue

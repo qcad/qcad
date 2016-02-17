@@ -753,6 +753,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RLayer::Id" isPureVirtual="false" />
     </method>
+    <method name="getCurrentLayerName"
+    cppName="getCurrentLayerName" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="setCurrentColor" cppName="setCurrentColor"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

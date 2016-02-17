@@ -241,7 +241,8 @@
 <comment type="line">//    void setCurrentLayer(RTransaction&amp; transaction, const QString&amp; layerName);</comment>
     <function_decl><type><name>void</name></type> <name>setCurrentLayer</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setCurrentLayer</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>layerName</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>getCurrentLayerId</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>getCurrentLayerId</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>QString</name></type> <name>getCurrentLayerName</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>setCurrentColor</name><parameter_list>(<param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>color</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>RColor</name></type> <name>getCurrentColor</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
