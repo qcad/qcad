@@ -2000,7 +2000,8 @@ EAction.getEntityId = function(di, action, event, preview) {
         }
     }
 
-    var entityIds = EAction.getEntityIdsUnderCursor(di, event);
+    // fixed range, we never want to show a lot of entities in the context menu:
+    var entityIds = EAction.getEntityIdsUnderCursor(di, event, 10);
     entityIds = di.getStorage().orderBackToFront(entityIds);
     if (entityIds.length===0) {
         // no entity under cursor:
@@ -2070,9 +2071,10 @@ EAction.getEntityId = function(di, action, event, preview) {
 
     // show context menu:
     if (!menu.isEmpty()) {
+        var prev = QCoreApplication.testAttribute(Qt.AA_DontShowIconsInMenus);
         QCoreApplication.setAttribute(Qt.AA_DontShowIconsInMenus, false);
         menu.exec(new QPoint(QCursor.pos().x(), QCursor.pos().y()+10));
-        QCoreApplication.setAttribute(Qt.AA_DontShowIconsInMenus, true);
+        QCoreApplication.setAttribute(Qt.AA_DontShowIconsInMenus, prev);
         di.clearPreview();
     }
 
