@@ -72,7 +72,7 @@ ExXmlImport.prototype.beginEvent = function() {
     var fileDialog = new QFileDialog(appWin, qsTr("Import XML"), initialPath, "");
     fileDialog.setNameFilters([ filterAll ]);
     fileDialog.selectNameFilter(filterAll);
-    fileDialog.setOption(QFileDialog.DontUseNativeDialog, false);
+    fileDialog.setOption(QFileDialog.DontUseNativeDialog, getDontUseNativeDialog());
     fileDialog.fileMode = QFileDialog.ExistingFiles;
     if (!fileDialog.exec()) {
         fileDialog.destroy();

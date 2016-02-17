@@ -120,7 +120,7 @@ File.getSaveFileName = function(parentWidget, caption, dir, filterStrings) {
     var fileDialog = new QFileDialog(parentWidget);
     
     // use native dialog:
-    fileDialog.setOption(QFileDialog.DontUseNativeDialog, false);
+    fileDialog.setOption(QFileDialog.DontUseNativeDialog, getDontUseNativeDialog());
 
     // overwrite is handled after extension has been added:
     fileDialog.setOption(QFileDialog.DontConfirmOverwrite, true);

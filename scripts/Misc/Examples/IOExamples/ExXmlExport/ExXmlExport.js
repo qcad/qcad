@@ -38,7 +38,7 @@ ExXmlExport.prototype.beginEvent = function() {
     var fileDialog = new QFileDialog(appWin, qsTr("Export XML"), initialPath, "");
     fileDialog.setNameFilters([ filterAll ]);
     fileDialog.selectNameFilter(filterAll);
-    fileDialog.setOption(QFileDialog.DontUseNativeDialog, false);
+    fileDialog.setOption(QFileDialog.DontUseNativeDialog, getDontUseNativeDialog());
     fileDialog.setOption(QFileDialog.DontConfirmOverwrite, true);
     fileDialog.fileMode = QFileDialog.AnyFile;
     fileDialog.acceptMode = QFileDialog.AcceptSave;

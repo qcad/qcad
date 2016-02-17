@@ -2199,6 +2199,11 @@ function isUrl(urlString) {
     return scheme==="file" || scheme==="http" || scheme==="https" || scheme==="ftp";
 }
 
+function getDontUseNativeDialog() {
+    // don't use KDE file dialog (workaround for file type filter bug):
+    return RS.getWindowManagerId()==="kde" || RSettings.getBoolValue("SaveAs/UseSystemFileDialog", true)===false;
+};
+
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {

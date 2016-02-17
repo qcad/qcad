@@ -76,7 +76,7 @@ OpenFile.prototype.beginEvent = function() {
     filters = new Array(qsTr("All Files") + " (*)").concat(filters);
     fileDialog.setNameFilters(filters);
     fileDialog.selectNameFilter(allFilter);
-    fileDialog.setOption(QFileDialog.DontUseNativeDialog, false);
+    fileDialog.setOption(QFileDialog.DontUseNativeDialog, getDontUseNativeDialog());
     if (!isNull(QFileDialog.DontUseCustomDirectoryIcons)) {
         fileDialog.setOption(QFileDialog.DontUseCustomDirectoryIcons, true);
     }

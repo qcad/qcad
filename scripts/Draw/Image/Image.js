@@ -159,7 +159,7 @@ Image.prototype.getFileName = function() {
     var fileDialog = new QFileDialog(appWin, qsTr("Import Bitmap"), lastOpenFileDir, "");
     fileDialog.setNameFilters(filters);
     fileDialog.selectNameFilter(allFilter);
-    fileDialog.setOption(QFileDialog.DontUseNativeDialog, false);
+    fileDialog.setOption(QFileDialog.DontUseNativeDialog, getDontUseNativeDialog());
     if (!isNull(QFileDialog.DontUseCustomDirectoryIcons)) {
         fileDialog.setOption(QFileDialog.DontUseCustomDirectoryIcons, true);
     }

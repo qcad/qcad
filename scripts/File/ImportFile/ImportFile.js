@@ -78,7 +78,7 @@ ImportFile.prototype.getFileName = function() {
     var allFilter = filters[0];
     fileDialog.setNameFilters(filters);
     fileDialog.selectNameFilter(allFilter);
-    fileDialog.setOption(QFileDialog.DontUseNativeDialog, false);
+    fileDialog.setOption(QFileDialog.DontUseNativeDialog, getDontUseNativeDialog());
     if (!isNull(QFileDialog.DontUseCustomDirectoryIcons)) {
         fileDialog.setOption(QFileDialog.DontUseCustomDirectoryIcons, true);
     }

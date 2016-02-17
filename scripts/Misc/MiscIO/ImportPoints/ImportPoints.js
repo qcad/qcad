@@ -40,7 +40,7 @@ ImportPoints.prototype.beginEvent = function() {
     var fileDialog = new QFileDialog(appWin, qsTr("Import Points"), initialPath, "");
     fileDialog.setNameFilters([ filterAll ]);
     fileDialog.selectNameFilter(filterAll);
-    fileDialog.setOption(QFileDialog.DontUseNativeDialog, false);
+    fileDialog.setOption(QFileDialog.DontUseNativeDialog, getDontUseNativeDialog());
     if (!isNull(QFileDialog.DontUseCustomDirectoryIcons)) {
         fileDialog.setOption(QFileDialog.DontUseCustomDirectoryIcons, true);
     }
