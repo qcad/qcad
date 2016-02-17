@@ -240,7 +240,8 @@ public:
 //    void setCurrentLayer(RTransaction& transaction, const QString& layerName);
     void setCurrentLayer(RLayer::Id layerId, RTransaction* transaction=NULL);
     void setCurrentLayer(const QString& layerName, RTransaction* transaction=NULL);
-    RLayer::Id getCurrentLayerId();
+    RLayer::Id getCurrentLayerId() const;
+    QString getCurrentLayerName() const;
 
     void setCurrentColor(const RColor& color);
     RColor getCurrentColor() const;

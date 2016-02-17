@@ -587,10 +587,14 @@ QSharedPointer<RLayer> RDocument::queryCurrentLayer() {
     return storage.queryCurrentLayer();
 }
 
-RLayer::Id RDocument::getCurrentLayerId() {
+RLayer::Id RDocument::getCurrentLayerId() const {
     return storage.getCurrentLayerId();
 //    QSharedPointer<RDocumentVariables> v = queryDocumentVariablesDirect();
 //    v->getCurrentLayerId();
+}
+
+QString RDocument::getCurrentLayerName() const {
+    return getLayerName(storage.getCurrentLayerId());
 }
 
 void RDocument::setCurrentColor(const RColor& color) {
