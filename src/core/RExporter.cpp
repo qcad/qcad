@@ -426,9 +426,14 @@ void RExporter::startExport() {
 
 /**
  * Called at the end of a completed export.
- * The default implementation does nothing.
+ * The default implementation notifies listeners.
  */
 void RExporter::endExport() {
+    RMainWindow* mainWindow = RMainWindow::getMainWindow();
+
+    if (mainWindow!=NULL) {
+        mainWindow->notifyExportListenersEnd(this);
+    }
 }
 
 /**
@@ -467,6 +472,12 @@ bool RExporter::exportDocumentSettings() {
     }
 
     return true;
+}
+
+void RExporter::exportDocumentSetting(const QString& key, const QVariant& value, const QString& dictionaryName) {
+    Q_UNUSED(key)
+    Q_UNUSED(value)
+    Q_UNUSED(dictionaryName)
 }
 
 void RExporter::exportEntities(bool allBlocks, bool undone) {

@@ -25,8 +25,7 @@
 #include "core_global.h"
 
 class RDocumentInterface;
-
-
+class RExporter;
 
 /**
  * \brief Abstract base class for classes that are interested in 
@@ -48,6 +47,11 @@ public:
      * Called by the document whenever a document has been exported.
      */
     virtual void postExportEvent(RDocumentInterface* documentInterface) = 0;
+
+    /**
+     * Called by the exporter just before the export finishes.
+     */
+    virtual void endOfExportEvent(RExporter* exporter) = 0;
 };
 
 Q_DECLARE_METATYPE(RExportListener*)

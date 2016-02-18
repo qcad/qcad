@@ -277,6 +277,16 @@ void RMainWindow::notifyExportListenersPost(RDocumentInterface* documentInterfac
     }
 }
 
+/**
+ * Notifies all Export listeners about end of export event.
+ */
+void RMainWindow::notifyExportListenersEnd(RExporter* exporter) {
+    QList<RExportListener*>::iterator it;
+    for (it = exportListeners.begin(); it != exportListeners.end(); ++it) {
+        (*it)->endOfExportEvent(exporter);
+    }
+}
+
 void RMainWindow::addEntityExportListener(REntityExportListener* l) {
     if (l != NULL) {
         entityExportListeners.push_back(l);

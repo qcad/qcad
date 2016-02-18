@@ -41,10 +41,14 @@ public:
     virtual void postExportEvent(RDocumentInterface* documentInterface) {
         emit postExport(documentInterface);
     }
+    virtual void endOfExportEvent(RExporter* exporter) {
+        emit endOfExport(exporter);
+    }
 
 signals:
     void preExport(RDocumentInterface* documentInterface);
     void postExport(RDocumentInterface* documentInterface);
+    void endOfExport(RExporter* exporter);
 };
 
 Q_DECLARE_METATYPE(RExportListenerAdapter*)

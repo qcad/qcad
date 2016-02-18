@@ -128,6 +128,7 @@ public:
     void removeExportListener(RExportListener* l);
     void notifyExportListenersPre(RDocumentInterface* documentInterface);
     void notifyExportListenersPost(RDocumentInterface* documentInterface);
+    void notifyExportListenersEnd(RExporter* exporter);
 
     void addEntityExportListener(REntityExportListener* l);
     void removeEntityExportListener(REntityExportListener* l);
