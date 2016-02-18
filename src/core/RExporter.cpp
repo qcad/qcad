@@ -480,6 +480,13 @@ void RExporter::exportDocumentSetting(const QString& key, const QVariant& value,
     Q_UNUSED(dictionaryName)
 }
 
+void RExporter::exportIntListWithName(const QString& dictionaryName, const QString& name, const QString& listName, QList<int64_t>& values) {
+    Q_UNUSED(dictionaryName)
+    Q_UNUSED(name)
+    Q_UNUSED(listName)
+    Q_UNUSED(values)
+}
+
 void RExporter::exportEntities(bool allBlocks, bool undone) {
     QSet<REntity::Id> ids = document->queryAllEntities(undone, allBlocks);
 

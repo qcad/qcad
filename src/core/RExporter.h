@@ -132,6 +132,8 @@ public:
     virtual bool exportDocumentSettings();
     virtual void exportDocumentSetting(const QString& key, const QVariant& value, const QString& dictionaryName = "QCAD_OBJECTS");
 
+    virtual void exportIntListWithName(const QString& dictionaryName, const QString& name, const QString& listName, QList<int64_t>& values);
+
     virtual void exportLayers();
     virtual void exportBlocks();
     virtual void exportViews();
