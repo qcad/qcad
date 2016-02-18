@@ -474,7 +474,6 @@ QList<QSharedPointer<RShape> > RTextBasedData::getExploded() const {
 }
 
 void RTextBasedData::update(bool layout) const {
-    //qDebug() << "update text";
     dirty = true;
     if (layout) {
         textLayouts.clear();
