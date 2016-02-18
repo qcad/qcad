@@ -142,6 +142,9 @@
         exportDocumentSetting
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        exportIntListWithName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         exportLayers
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

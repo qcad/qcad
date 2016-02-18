@@ -2975,7 +2975,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportDocumentSetting(
-                const QString & arg1, const QVariant & arg2
+                const QString & key, const QVariant & value, const QString & dictionaryName
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportDocumentSetting", engine);
@@ -2988,7 +2988,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=2*/
+                    || _q_function.property("length").toInt32()!=3*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::exportDocumentSetting";
@@ -3001,7 +3001,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RFileExporterAdapter::exportDocumentSetting(
-                            arg1, arg2
+                            key, value, dictionaryName
                         );
 
                         // block recursion again:
@@ -3027,7 +3027,7 @@
     // type: QString &, copyable: true
         << qScriptValueFromValue(engine, 
 
-        arg1
+        key
         )
       
 
@@ -3038,7 +3038,16 @@
 
         
             // const reference argument - make a new object:
-            new QVariant(arg2)
+            new QVariant(value)
+        )
+      
+
+
+
+    // type: QString &, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        dictionaryName
         )
       
                             )
@@ -3047,6 +3056,100 @@
                     _q_function.setData(QScriptValue(engine, prev));
 
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportDocumentSetting", engine);
+
+                    
+            }
+        
+    
+      void REcmaShellFileExporterAdapter::exportIntListWithName(
+                const QString & dictionaryName, const QString & name, const QString & listName, QList < int64_t > & values
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportIntListWithName", engine);
+                QScriptValue _q_function = __qtscript_self.property("exportIntListWithName");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=4*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RFileExporterAdapter::exportIntListWithName";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RFileExporterAdapter::exportIntListWithName(
+                            dictionaryName, name, listName, values
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportIntListWithName", engine);
+
+                        
+                            return;
+                          
+                }
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: QString &, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        dictionaryName
+        )
+      
+
+
+
+    // type: QString &, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        name
+        )
+      
+
+
+
+    // type: QString &, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        listName
+        )
+      
+
+
+
+    // type: QList < int64_t > &, copyable: false
+        // List of ...:
+        << REcmaHelper::listToScriptValue(engine, 
+          values
+        )
+      
+                            )
+                        
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportIntListWithName", engine);
 
                     
             }

@@ -264,7 +264,13 @@
         
     
       void exportDocumentSetting(
-                const QString & arg1, const QVariant & arg2
+                const QString & key, const QVariant & value, const QString & dictionaryName
+        = "QCAD_OBJECTS"
+            );
+        
+    
+      void exportIntListWithName(
+                const QString & dictionaryName, const QString & name, const QString & listName, QList < int64_t > & values
             );
         
     

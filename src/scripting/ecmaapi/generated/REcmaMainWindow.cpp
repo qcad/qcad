@@ -155,6 +155,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, notifyExportListenersPost, "notifyExportListenersPost");
             
+            REcmaHelper::registerFunction(&engine, proto, notifyExportListenersEnd, "notifyExportListenersEnd");
+            
             REcmaHelper::registerFunction(&engine, proto, addEntityExportListener, "addEntityExportListener");
             
             REcmaHelper::registerFunction(&engine, proto, removeEntityExportListener, "removeEntityExportListener");
@@ -2040,6 +2042,68 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindow::notifyExportListenersPost", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindow::notifyExportListenersEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindow::notifyExportListenersEnd", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyExportListenersEnd";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindow* self = 
+                        getSelf("notifyExportListenersEnd", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RExporter * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RExporter * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RExporter >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RExporter *RExporter *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->notifyExportListenersEnd(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyExportListenersEnd().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindow::notifyExportListenersEnd", context, engine);
             return result;
         }
          QScriptValue

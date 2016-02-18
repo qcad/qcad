@@ -145,6 +145,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportDocumentSetting, "exportDocumentSetting");
             
+            REcmaHelper::registerFunction(&engine, proto, exportIntListWithName, "exportIntListWithName");
+            
             REcmaHelper::registerFunction(&engine, proto, exportLayers, "exportLayers");
             
             REcmaHelper::registerFunction(&engine, proto, exportBlocks, "exportBlocks");
@@ -2276,11 +2278,169 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNumber() || 
+            context->argument(1).isString() || 
+            context->argument(1).isBool() || 
+            context->argument(1).isArray() || 
+            context->argument(1).isNull() || 
+            context->argument(1).isUndefined()
+        ) /* type: QVariant */
+     && (
+            context->argument(2).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isCopyable or pointer
+                    QVariant
+                    a1 =
+                    qscriptvalue_cast<
+                    QVariant
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                
+                    // argument isStandardType
+                    QString
+                    a2 =
+                    (QString)
+                    
+                    context->argument( 2 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportDocumentSetting(a0
+        ,
+    a1
+        ,
+    a2);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.exportDocumentSetting().",
                    context);
             }
             //REcmaHelper::functionEnd("REcmaExporter::exportDocumentSetting", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaExporter::exportIntListWithName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaExporter::exportIntListWithName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaExporter::exportIntListWithName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RExporter* self = 
+                        getSelf("exportIntListWithName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+     && (
+            context->argument(1).isString()
+        ) /* type: QString */
+     && (
+            context->argument(2).isString()
+        ) /* type: QString */
+     && (
+            context->argument(3).isArray()
+        ) /* type: QList < int64_t > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a1 =
+                    (QString)
+                    
+                    context->argument( 1 ).
+                    toString();
+                
+                    // argument isStandardType
+                    QString
+                    a2 =
+                    (QString)
+                    
+                    context->argument( 2 ).
+                    toString();
+                
+                    // argument isArray
+                    QList < int64_t >
+                    a3;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(3),
+                        a3
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->exportIntListWithName(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RExporter.exportIntListWithName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaExporter::exportIntListWithName", context, engine);
             return result;
         }
          QScriptValue
