@@ -725,6 +725,10 @@ function main() {
     RPluginLoader.postInitPlugins(RPluginInterface.AllDone);
 
     appWin.setFocus();
+    var w = appWin.getMdiChild();
+    if (!isNull(w)) {
+        w.setFocus();
+    }
 
     if (!RSettings.hasQuitFlag()) {
         // start and enter the main application loop:

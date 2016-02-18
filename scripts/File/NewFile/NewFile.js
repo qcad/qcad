@@ -84,7 +84,10 @@ NewFile.removePostOpenAction = function(scriptFile) {
 NewFile.prototype.beginEvent = function() {
     File.prototype.beginEvent.call(this);
 
-    NewFile.createMdiChild();
+    var w = NewFile.createMdiChild();
+    if (!isNull(w)) {
+        w.setFocus();
+    }
 };
 
 /**
