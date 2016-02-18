@@ -42,10 +42,14 @@
     <function><type><name>virtual</name> <name>void</name></type> <name>postExportEvent</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list> <block>{
         <function_decl><type><name>emit</name></type> <name>postExport</name><parameter_list>(<param><decl><type><name>documentInterface</name></type></decl></param>)</parameter_list>;</function_decl>
     }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>endOfExportEvent</name><parameter_list>(<param><decl><type><name>RExporter</name>*</type> <name>exporter</name></decl></param>)</parameter_list> <block>{
+        <function_decl><type><name>emit</name></type> <name>endOfExport</name><parameter_list>(<param><decl><type><name>exporter</name></type></decl></param>)</parameter_list>;</function_decl>
+    }</block></function>
 
 <label><name>signals</name>:</label>
     <function_decl><type><name>void</name></type> <name>preExport</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>postExport</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>endOfExport</name><parameter_list>(<param><decl><type><name>RExporter</name>*</type> <name>exporter</name></decl></param>)</parameter_list>;</function_decl>
 </public>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RExportListenerAdapter*</argument>)</argument_list></macro>

@@ -129,6 +129,7 @@
     <function_decl><type><name>void</name></type> <name>removeExportListener</name><parameter_list>(<param><decl><type><name>RExportListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>notifyExportListenersPre</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>notifyExportListenersPost</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>notifyExportListenersEnd</name><parameter_list>(<param><decl><type><name>RExporter</name>*</type> <name>exporter</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>addEntityExportListener</name><parameter_list>(<param><decl><type><name>REntityExportListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removeEntityExportListener</name><parameter_list>(<param><decl><type><name>REntityExportListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>

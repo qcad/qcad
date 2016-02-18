@@ -26,8 +26,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
 <class_decl>class <name>RDocumentInterface</name>;</class_decl>
-
-
+<class_decl>class <name>RExporter</name>;</class_decl>
 
 <comment type="block">/**
  * \brief Abstract base class for classes that are interested in 
@@ -49,6 +48,11 @@
      * Called by the document whenever a document has been exported.
      */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>postExportEvent</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
+     * Called by the exporter just before the export finishes.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>endOfExportEvent</name><parameter_list>(<param><decl><type><name>RExporter</name>*</type> <name>exporter</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 </public>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RExportListener*</argument>)</argument_list></macro>

@@ -254,10 +254,28 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="exportDocumentSetting" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="QString &amp;" typeName="QString" name=""
+        <arg type="QString &amp;" typeName="QString" name="key"
         isConst="true" />
-        <arg type="QVariant &amp;" typeName="QVariant" name=""
+        <arg type="QVariant &amp;" typeName="QVariant" name="value"
         isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="dictionaryName" hasDefault="true"
+        default="&quot;QCAD_OBJECTS&quot;" isConst="true" />
+      </variant>
+    </method>
+    <method name="exportIntListWithName"
+    cppName="exportIntListWithName" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="dictionaryName" isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="name"
+        isConst="true" />
+        <arg type="QString &amp;" typeName="QString"
+        name="listName" isConst="true" />
+        <arg type="QList &lt; int64_t &gt; &amp;"
+        typeName="QList &lt; int64_t &gt;" name="values"
+        isConst="false" />
       </variant>
     </method>
     <method name="exportLayers" cppName="exportLayers"

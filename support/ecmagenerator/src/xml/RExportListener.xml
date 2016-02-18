@@ -2,6 +2,7 @@
 <unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocumentInterface" />
+  <class_decl name="RExporter" />
   <class name="RExportListener"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
@@ -22,6 +23,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocumentInterface *"
         typeName="RDocumentInterface *" name="documentInterface"
         isConst="false" />
+      </variant>
+    </method>
+    <method name="endOfExportEvent" cppName="endOfExportEvent"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="RExporter *" typeName="RExporter *"
+        name="exporter" isConst="false" />
       </variant>
     </method>
   </class>

@@ -131,8 +131,9 @@
 
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>exportDocument</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>exportDocumentSettings</name><parameter_list>()</parameter_list>;</function_decl>
-    <function><type><name>virtual</name> <name>void</name></type> <name>exportDocumentSetting</name><parameter_list>(
-            <param><decl><type><name>const</name> <name>QString</name>&amp;</type></decl></param> <comment type="block">/*key*/</comment>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type></decl></param> <comment type="block">/*value*/</comment>)</parameter_list> <block>{}</block></function>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportDocumentSetting</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>, <param><decl><type><name>const</name> <name>QVariant</name>&amp;</type> <name>value</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>dictionaryName</name> =<init> <expr>"QCAD_OBJECTS"</expr></init></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportIntListWithName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>dictionaryName</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>name</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>listName</name></decl></param>, <param><decl><type><name>QList<argument_list>&lt;<argument><name>int64_t</name></argument>&gt;</argument_list></name>&amp;</type> <name>values</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportLayers</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportBlocks</name><parameter_list>()</parameter_list>;</function_decl>
