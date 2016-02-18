@@ -22,24 +22,28 @@ include("../LayerExamples.js");
 /**
  * This action adds a custom property to layer '0'.
  */
-function ExLayerCustomProperty(guiAction) {
+function ExLayerAdd(guiAction) {
     LayerExamples.call(this, guiAction);
 }
 
-ExLayerCustomProperty.prototype = new LayerExamples();
+ExLayerAdd.prototype = new LayerExamples();
 
-ExLayerCustomProperty.prototype.beginEvent = function() {
+ExLayerAdd.prototype.beginEvent = function() {
     LayerExamples.prototype.beginEvent.call(this);
 
     var di = this.getDocumentInterface();
     var document = this.getDocument();
 
+    // add layer:
     var op = new RModifyObjectsOperation();
-    var layer = document.queryLayer("0");
-    layer.setCustomProperty(RSettings.getAppId(), "MyCustomProperty", "Custom Property Value");
+    var linetypeId = document.getLinetypeId("CONTINUOUS");
+    var layer = new RLayer(document, "MyLayer", false, false, new RColor("red"), linetypeId, RLineweight.Weight000);
     op.addObject(layer);
-    EAction.handleUserMessage(qsTr("Added custom property 'MyCustomProperty' to layer '0'."));
+    EAction.handleUserMessage(qsTr("Added layer 'MyLayer'"));
     di.applyOperation(op);
+
+    // make the new layer the current layer:
+    di.setCurrentLayer("MyLayer");
 
     this.terminate();
 };
@@ -47,11 +51,11 @@ ExLayerCustomProperty.prototype.beginEvent = function() {
 /**
  * Adds a menu for this action.
  */
-ExLayerCustomProperty.init = function(basePath) {
-    var action = new RGuiAction(qsTr("Add custom property to a layer"), RMainWindowQt.getMainWindow());
+ExLayerAdd.init = function(basePath) {
+    var action = new RGuiAction(qsTr("Add layer"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
-    action.setScriptFile(basePath + "/ExLayerCustomProperty.js");
+    action.setScriptFile(basePath + "/ExLayerAdd.js");
     action.setGroupSortOrder(78100);
-    action.setSortOrder(100);
+    action.setSortOrder(50);
     action.setWidgetNames(["LayerExamplesMenu"]);
 };
