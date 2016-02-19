@@ -222,7 +222,7 @@ ShapeAlgorithms.getOrthogonalTangents = function(line, circle) {
  * \param distance Distance of first parallel or concentric arc or circle.
  * \param number Number of offset shapes to generate.
  * \param sidePosition RVector indicating what side of the shape the parallels
- *         should be or RS.LeftHand or RS.RightHand or RS.BothSides.
+ *         should be RS.LeftHand or RS.RightHand or RS.BothSides.
  */
 ShapeAlgorithms.getOffsetShapes = function(shape, distance, number, sidePosition) {
     ShapeAlgorithms.error = undefined;
@@ -309,6 +309,14 @@ ShapeAlgorithms.getOffsetArcs = function(shape, distance, number, sidePosition) 
         else {
             if (isCircleShape(shape) || !shape.isReversed()) {
                 if (sidePosition===RS.LeftHand) {
+                    insides.push(true);
+                }
+                else {
+                    insides.push(false);
+                }
+            }
+            else {
+                if (sidePosition===RS.RightHand) {
                     insides.push(true);
                 }
                 else {
