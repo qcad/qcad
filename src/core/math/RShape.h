@@ -129,6 +129,22 @@ public:
     virtual QList<RVector> getPointsWithDistanceToEnd(
         double distance, RS::From from = RS::FromAny) const = 0;
 
+    virtual RVector getPointWithDistanceToStart(double distance) {
+        QList<RVector> res = getPointsWithDistanceToEnd(distance, RS::FromStart);
+        if (res.isEmpty()) {
+            return RVector::invalid;
+        }
+        return res[0];
+    }
+
+    virtual RVector getPointWithDistanceToEnd(double distance) {
+        QList<RVector> res = getPointsWithDistanceToEnd(distance, RS::FromEnd);
+        if (res.isEmpty()) {
+            return RVector::invalid;
+        }
+        return res[0];
+    }
+
     /**
      * \return Angle on the entity at the given distance from the start point.
      */
