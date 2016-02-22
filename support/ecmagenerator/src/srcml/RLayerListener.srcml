@@ -46,6 +46,11 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateLayers</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <comment type="block">/**
+     * This method is called when a different layer becomes the new current layer.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setCurrentLayer</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
      * This method is called to signal that no document is currently active.
      */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>clearLayers</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>

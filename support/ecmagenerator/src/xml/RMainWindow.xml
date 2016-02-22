@@ -509,6 +509,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="notifyLayerListenersCurrentLayer"
+    cppName="notifyLayerListenersCurrentLayer" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="addBlockListener" cppName="addBlockListener"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

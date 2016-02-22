@@ -22,6 +22,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="setCurrentLayer" cppName="setCurrentLayer"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="clearLayers" cppName="clearLayers"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
