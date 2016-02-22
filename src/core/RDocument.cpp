@@ -169,14 +169,15 @@ void RDocument::init() {
         docVars->setKnownVariable(RS::DIMASZ, RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5));
         docVars->setKnownVariable(RS::DIMSCALE, RSettings::getDoubleValue("DimensionSettings/DIMSCALE", 1.0));
 
-        // arch tick head:
+        // arrow head:
         if (RSettings::getStringValue("DimensionSettings/ArrowStyle", "Arrow")=="Arrow") {
+            // tick size is 0 for arrows:
             docVars->setKnownVariable(RS::DIMTSZ, 0.0);
         }
 
-        // arrow head:
+        // arch tick head:
         else {
-            docVars->setKnownVariable(RS::DIMTSZ, getKnownVariable(RS::DIMASZ));
+            docVars->setKnownVariable(RS::DIMTSZ, RSettings::getDoubleValue("DimensionSettings/DIMASZ", 2.5));
         }
 
         docVars->setKnownVariable(RS::DIMLUNIT, RSettings::getIntValue("DimensionSettings/LinearFormat", RS::Decimal));
