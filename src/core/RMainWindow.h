@@ -172,6 +172,7 @@ public:
     void addLayerListener(RLayerListener* l);
     void removeLayerListener(RLayerListener* l);
     void notifyLayerListeners(RDocumentInterface* documentInterface);
+    void notifyLayerListenersCurrentLayer(RDocumentInterface* documentInterface);
 
     void addBlockListener(RBlockListener* l);
     void removeBlockListener(RBlockListener* l);

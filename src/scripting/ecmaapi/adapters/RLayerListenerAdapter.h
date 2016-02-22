@@ -40,12 +40,17 @@ public:
         emit layersUpdated(documentInterface);
     }
 
+    virtual void setCurrentLayer(RDocumentInterface* documentInterface) {
+        emit currentLayerSet(documentInterface);
+    }
+
     virtual void clearLayers() {
         emit layersCleared();
     }
 
 signals:
     void layersUpdated(RDocumentInterface* documentInterface);
+    void currentLayerSet(RDocumentInterface* documentInterface);
     void layersCleared();
 };
 

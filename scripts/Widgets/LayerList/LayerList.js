@@ -31,6 +31,7 @@ function RLayerListQt(parent) {
     var adapter = new RLayerListenerAdapter();
     appWin.addLayerListener(adapter);
     adapter.layersUpdated.connect(this, "updateLayers");
+    adapter.currentLayerSet.connect(this, "updateLayers");
     adapter.layersCleared.connect(this, "clearLayers");
     this.setProperty("listener", adapter);
 

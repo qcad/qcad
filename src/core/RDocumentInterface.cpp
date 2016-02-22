@@ -2052,14 +2052,14 @@ RLinetypePattern RDocumentInterface::getCurrentLinetypePattern() {
 void RDocumentInterface::setCurrentLayer(const QString& layerName) {
     document.setCurrentLayer(layerName);
     if (RMainWindow::hasMainWindow() && notifyListeners) {
-        RMainWindow::getMainWindow()->notifyLayerListeners(this);
+        RMainWindow::getMainWindow()->notifyLayerListenersCurrentLayer(this);
     }
 }
 
 void RDocumentInterface::setCurrentLayer(RLayer::Id layerId) {
     document.setCurrentLayer(layerId);
     if (RMainWindow::hasMainWindow() && notifyListeners) {
-        RMainWindow::getMainWindow()->notifyLayerListeners(this);
+        RMainWindow::getMainWindow()->notifyLayerListenersCurrentLayer(this);
     }
 }
 

@@ -594,6 +594,13 @@ void RMainWindow::notifyLayerListeners(RDocumentInterface* documentInterface) {
     }
 }
 
+void RMainWindow::notifyLayerListenersCurrentLayer(RDocumentInterface* documentInterface) {
+    QList<RLayerListener*>::iterator it;
+    for (it = layerListeners.begin(); it != layerListeners.end(); ++it) {
+        (*it)->setCurrentLayer(documentInterface);
+    }
+}
+
 /**
  * Adds a listener for block change / add / remove events.
  */

@@ -45,6 +45,11 @@ public:
     virtual void updateLayers(RDocumentInterface* documentInterface) = 0;
 
     /**
+     * This method is called when a different layer becomes the new current layer.
+     */
+    virtual void setCurrentLayer(RDocumentInterface* documentInterface) = 0;
+
+    /**
      * This method is called to signal that no document is currently active.
      */
     virtual void clearLayers() = 0;
