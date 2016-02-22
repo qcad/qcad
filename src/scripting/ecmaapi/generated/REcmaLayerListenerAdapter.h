@@ -58,6 +58,9 @@
         updateLayers
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setCurrentLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clearLayers
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

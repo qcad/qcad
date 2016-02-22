@@ -101,6 +101,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getPointsWithDistanceToEnd, "getPointsWithDistanceToEnd");
             
+            REcmaHelper::registerFunction(&engine, proto, getPointWithDistanceToStart, "getPointWithDistanceToStart");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPointWithDistanceToEnd, "getPointWithDistanceToEnd");
+            
             REcmaHelper::registerFunction(&engine, proto, getAngleAt, "getAngleAt");
             
             REcmaHelper::registerFunction(&engine, proto, getPointAtPercent, "getPointAtPercent");
@@ -1759,6 +1763,126 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerShape::getPointsWithDistanceToEnd", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerShape::getPointWithDistanceToStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerShape::getPointWithDistanceToStart", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerShape::getPointWithDistanceToStart";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RShape* self = 
+                        getSelf("getPointWithDistanceToStart", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getPointWithDistanceToStart(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.getPointWithDistanceToStart().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerShape::getPointWithDistanceToStart", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerShape::getPointWithDistanceToEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerShape::getPointWithDistanceToEnd", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerShape::getPointWithDistanceToEnd";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RShape* self = 
+                        getSelf("getPointWithDistanceToEnd", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getPointWithDistanceToEnd(a0);
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.getPointWithDistanceToEnd().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerShape::getPointWithDistanceToEnd", context, engine);
             return result;
         }
          QScriptValue

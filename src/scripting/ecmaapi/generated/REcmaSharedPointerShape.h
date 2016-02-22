@@ -93,6 +93,12 @@
         getPointsWithDistanceToEnd
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPointWithDistanceToStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPointWithDistanceToEnd
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getAngleAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

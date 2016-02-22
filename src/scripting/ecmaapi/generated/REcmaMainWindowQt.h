@@ -203,6 +203,9 @@
         notifyLayerListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        notifyLayerListenersCurrentLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addBlockListener
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
