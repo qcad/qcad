@@ -56,14 +56,14 @@
     <message>
         <location line="+3"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+1152"/>
         <location filename="../LibraryBrowserInit.js" line="+19"/>
         <source>Library Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Bibliotheekbrowser</translation>
     </message>
     <message>
         <location line="-1144"/>

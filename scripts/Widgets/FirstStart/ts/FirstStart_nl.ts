@@ -7,52 +7,52 @@
         <location filename="../FirstStart.js" line="+35"/>
         <location line="+206"/>
         <source>%1 First Start</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 eerste start</translation>
     </message>
     <message>
         <location line="-5"/>
         <source>Black</source>
-        <translation type="unfinished"></translation>
+        <translation>Zwart</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>White</source>
-        <translation type="unfinished"></translation>
+        <translation>Wit</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Language:</source>
-        <translation type="unfinished"></translation>
+        <translation>Taal:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Welcome to %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Welcom bij %1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Please choose the settings used for new drawings. All these settings can be changed later in the Preference Dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kies de instellingen voor nieuwe tekeningen. Al deze instellingen kunnen later worden gewijzigd in de programmavoorkeuren.</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Unit:</source>
-        <translation type="unfinished"></translation>
+        <translation>Eenheid:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Default Paper Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Standaard papierformaat:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Decimal Point:</source>
-        <translation type="unfinished"></translation>
+        <translation>Decimale punt:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Background Color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Achtergrondkleur:</translation>
     </message>
 </context>
 </TS>

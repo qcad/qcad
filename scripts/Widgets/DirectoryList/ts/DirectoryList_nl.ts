@@ -8,12 +8,14 @@
         <source>The folder
 &apos;%1&apos;
 is already in the list.</source>
-        <translation type="unfinished"></translation>
+        <translation>De map
+&apos;%1&apos;
+is al in de lijst.</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Folder not added</source>
-        <translation type="unfinished"></translation>
+        <translation>Map niet toegevoegd</translation>
     </message>
 </context>
 </TS>

@@ -6,22 +6,22 @@
     <message>
         <location filename="../CoordinateDisplay.ui" line="+72"/>
         <source>Absolute Cartesian Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Absolute Kartesische coördinaten</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Absolute Polar Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Absolute polaire coördinaaten</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Cartesian Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Relatieve Kartesische coördinaten</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Relative Polar Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Relatieve polaire coördinaaten</translation>
     </message>
 </context>
 </TS>
