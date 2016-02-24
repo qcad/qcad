@@ -173,8 +173,12 @@ QPair<QVariant, RPropertyAttributes> RSplineEntity::getProperty(
         attr.setNumericallySorted(true);
         return qMakePair(QVariant(QString("%1").arg(data.degree)), attr);
     }
-    else if (propertyTypeId==PropertyLength) {
-        return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
+
+    // human readable properties (not relevant for transactions):
+    if (humanReadable) {
+        if (propertyTypeId==PropertyLength) {
+            return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
+        }
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);

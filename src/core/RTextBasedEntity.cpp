@@ -128,7 +128,7 @@ QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
     } else if (propertyTypeId == PropertyText) {
         return qMakePair(QVariant(getData().text),
             RPropertyAttributes(RPropertyAttributes::RichText|RPropertyAttributes::Label));
-    } else if (propertyTypeId == PropertyPlainText) {
+    } else if (humanReadable && propertyTypeId == PropertyPlainText) {
         return qMakePair(QVariant(getData().getPlainText()),
                          RPropertyAttributes(RPropertyAttributes::Label|RPropertyAttributes::ReadOnly));
     } else if (propertyTypeId == PropertyFontName) {

@@ -154,20 +154,25 @@ QPair<QVariant, RPropertyAttributes> REllipseEntity::getProperty(
         return qMakePair(QVariant(data.getEndAngle()), RPropertyAttributes(RPropertyAttributes::Angle));
     } else if (propertyTypeId == PropertyReversed) {
         return qMakePair(QVariant(data.reversed), RPropertyAttributes());
-    } else if (propertyTypeId == PropertyStartPointX) {
-        return qMakePair(QVariant(data.getStartPoint().x), RPropertyAttributes(RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyStartPointY) {
-        return qMakePair(QVariant(data.getStartPoint().y), RPropertyAttributes(RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyStartPointZ) {
-        return qMakePair(QVariant(data.getStartPoint().z), RPropertyAttributes(RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyEndPointX) {
-        return qMakePair(QVariant(data.getEndPoint().x), RPropertyAttributes(RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyEndPointY) {
-        return qMakePair(QVariant(data.getEndPoint().y), RPropertyAttributes(RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyEndPointZ) {
-        return qMakePair(QVariant(data.getEndPoint().z), RPropertyAttributes(RPropertyAttributes::ReadOnly));
-    } else if (propertyTypeId == PropertyCircumference) {
-        return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    }
+
+    // human readable properties (not relevant for transactions):
+    if (humanReadable) {
+        if (propertyTypeId == PropertyStartPointX) {
+            return qMakePair(QVariant(data.getStartPoint().x), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+        } else if (propertyTypeId == PropertyStartPointY) {
+            return qMakePair(QVariant(data.getStartPoint().y), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+        } else if (propertyTypeId == PropertyStartPointZ) {
+            return qMakePair(QVariant(data.getStartPoint().z), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+        } else if (propertyTypeId == PropertyEndPointX) {
+            return qMakePair(QVariant(data.getEndPoint().x), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+        } else if (propertyTypeId == PropertyEndPointY) {
+            return qMakePair(QVariant(data.getEndPoint().y), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+        } else if (propertyTypeId == PropertyEndPointZ) {
+            return qMakePair(QVariant(data.getEndPoint().z), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+        } else if (propertyTypeId == PropertyCircumference) {
+            return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+        }
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);

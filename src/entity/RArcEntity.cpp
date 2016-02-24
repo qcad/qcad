@@ -151,14 +151,19 @@ QPair<QVariant, RPropertyAttributes> RArcEntity::getProperty(
         return qMakePair(QVariant(data.endAngle), RPropertyAttributes(RPropertyAttributes::Angle));
     } else if (propertyTypeId == PropertyReversed) {
         return qMakePair(QVariant(data.reversed), RPropertyAttributes());
-    } else if (propertyTypeId == PropertyDiameter) {
-        return qMakePair(QVariant(data.getDiameter()), RPropertyAttributes(RPropertyAttributes::Redundant));
-    } else if (propertyTypeId == PropertyLength) {
-        return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::Redundant));
-    } else if (propertyTypeId == PropertySweepAngle) {
-        return qMakePair(QVariant(data.getSweep()), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::Angle));
-    } else if (propertyTypeId == PropertyArea) {
-        return qMakePair(QVariant(data.getArea()), RPropertyAttributes(RPropertyAttributes::Redundant));
+    }
+
+    // human readable properties (not relevant for transactions):
+    if (humanReadable) {
+        if (propertyTypeId == PropertyDiameter) {
+            return qMakePair(QVariant(data.getDiameter()), RPropertyAttributes(RPropertyAttributes::Redundant));
+        } else if (propertyTypeId == PropertyLength) {
+            return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::Redundant));
+        } else if (propertyTypeId == PropertySweepAngle) {
+            return qMakePair(QVariant(data.getSweep()), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::Angle));
+        } else if (propertyTypeId == PropertyArea) {
+            return qMakePair(QVariant(data.getArea()), RPropertyAttributes(RPropertyAttributes::Redundant));
+        }
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
