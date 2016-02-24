@@ -269,6 +269,10 @@
                 qScriptValueFromValue(&engine, RPolylineEntity::PropertyLength),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyArea",
+                qScriptValueFromValue(&engine, RPolylineEntity::PropertyArea),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     
