@@ -963,6 +963,13 @@ RBox RPolyline::getBoundingBox() const {
     return ret;
 }
 
+double RPolyline::getArea(double segmentLength) const {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->getArea(*this, segmentLength);
+    }
+    return 0.0;
+}
+
 double RPolyline::getLength() const {
     double ret = 0.0;
 
