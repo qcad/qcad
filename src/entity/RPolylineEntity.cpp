@@ -45,6 +45,7 @@ RPropertyTypeId RPolylineEntity::PropertyEndWidthN;
 RPropertyTypeId RPolylineEntity::PropertyGlobalWidth;
 
 RPropertyTypeId RPolylineEntity::PropertyLength;
+RPropertyTypeId RPolylineEntity::PropertyArea;
 
 RPolylineEntity::RPolylineEntity(RDocument* document, const RPolylineData& data,
         RObject::Id objectId) :
@@ -96,6 +97,7 @@ void RPolylineEntity::init() {
     RPolylineEntity::PropertyGlobalWidth.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Global Width"));
 
     RPolylineEntity::PropertyLength.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+    RPolylineEntity::PropertyArea.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Area"));
 }
 
 bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -157,25 +159,37 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
         QVariant v;
         v.setValue(data.endWidths);
         return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
-    } else if (RPolyline::hasProxy() && propertyTypeId == PropertyGlobalWidth) {
-        QVariant v;
-        double val = -1.0;
-        for (int i=0; i<data.startWidths.length() && i<data.endWidths.length(); i++) {
-            if (val<0.0) {
-                val = data.startWidths[i];
-                v.setValue(val);
-            }
+    }
 
-            if (!RMath::fuzzyCompare(data.startWidths[i], val) || !RMath::fuzzyCompare(data.endWidths[i], val)) {
-                v.setValue(QString());
-                break;
+
+    // human readable properties (not relevant for transactions):
+    if (humanReadable) {
+        if (RPolyline::hasProxy() && propertyTypeId == PropertyGlobalWidth) {
+            QVariant v;
+            double val = -1.0;
+            for (int i=0; i<data.startWidths.length() && i<data.endWidths.length(); i++) {
+                if (val<0.0) {
+                    val = data.startWidths[i];
+                    v.setValue(val);
+                }
+
+                if (!RMath::fuzzyCompare(data.startWidths[i], val) || !RMath::fuzzyCompare(data.endWidths[i], val)) {
+                    v.setValue(QString());
+                    break;
+                }
             }
+            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant));
+        } else if (propertyTypeId == PropertyLength) {
+            QVariant v;
+            v.setValue(data.getLength());
+            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));
+        } else if (RPolyline::hasProxy() && propertyTypeId == PropertyArea) {
+            RBox bb = getBoundingBox();
+            double s = qMax(bb.getWidth(), bb.getHeight());
+            QVariant v;
+            v.setValue(data.getArea(s/100));
+            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));
         }
-        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant));
-    } else if (propertyTypeId == PropertyLength) {
-        QVariant v;
-        v.setValue(data.getLength());
-        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
