@@ -72,7 +72,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="trimStartPoint" cppName="trimStartPoint"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
+      <variant returnType="bool" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector"
         name="trimPoint" isConst="true" />
         <arg type="RVector &amp;" typeName="RVector"
@@ -83,7 +83,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="trimEndPoint" cppName="trimEndPoint"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
+      <variant returnType="bool" isPureVirtual="false">
         <arg type="RVector &amp;" typeName="RVector"
         name="trimPoint" isConst="true" />
         <arg type="RVector &amp;" typeName="RVector"

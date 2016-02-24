@@ -859,9 +859,14 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'void'
-    
+    // return type 'bool'
+    bool cppResult =
+        
                self->trimStartPoint(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
     } else
 
 
@@ -921,11 +926,16 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'void'
-    
+    // return type 'bool'
+    bool cppResult =
+        
                self->trimStartPoint(a0
         ,
     a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
     } else
 
 
@@ -990,9 +1000,14 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'void'
-    
+    // return type 'bool'
+    bool cppResult =
+        
                self->trimEndPoint(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
     } else
 
 
@@ -1052,11 +1067,16 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'void'
-    
+    // return type 'bool'
+    bool cppResult =
+        
                self->trimEndPoint(a0
         ,
     a1);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
     } else
 
 
