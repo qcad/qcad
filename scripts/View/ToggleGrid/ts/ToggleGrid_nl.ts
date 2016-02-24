@@ -6,7 +6,7 @@
     <message>
         <location filename="../ToggleGrid.js" line="+90"/>
         <source>&amp;Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Raster</translation>
     </message>
 </context>
 </TS>

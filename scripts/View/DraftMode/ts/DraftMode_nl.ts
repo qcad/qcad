@@ -6,7 +6,7 @@
     <message>
         <location filename="../DraftMode.js" line="+86"/>
         <source>&amp;Draft Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ontwerpweergave</translation>
     </message>
 </context>
 </TS>

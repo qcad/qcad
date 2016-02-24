@@ -6,7 +6,7 @@
     <message>
         <location filename="../LinetypeMode.js" line="+86"/>
         <source>Screen-based Line&amp;types</source>
-        <translation type="unfinished"></translation>
+        <translation>Scherm-gebaseerde lijn&amp;typen</translation>
     </message>
 </context>
 </TS>

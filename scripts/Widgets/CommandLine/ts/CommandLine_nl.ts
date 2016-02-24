@@ -13,12 +13,12 @@
         <location line="+45"/>
         <location filename="../CommandLine.ui" line="+20"/>
         <source>Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Comando regel</translation>
     </message>
     <message>
         <location line="-16"/>
         <source>&amp;Command Line</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Comando regel</translation>
     </message>
     <message>
         <location line="+144"/>
@@ -53,37 +53,37 @@
     <message>
         <location line="+5"/>
         <source>Warning</source>
-        <translation type="unfinished"></translation>
+        <translation>Waarschuwing</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Info</translation>
     </message>
     <message>
         <location line="+15"/>
         <source>Coordinate</source>
-        <translation type="unfinished"></translation>
+        <translation>Coördinaat</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Command</source>
-        <translation type="unfinished"></translation>
+        <translation>Commando</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Command:</source>
-        <translation type="unfinished"></translation>
+        <translation>Commando:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>: </source>
-        <translation type="unfinished"></translation>
+        <translation>: </translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>History Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Geschiedenis grootte:</translation>
     </message>
     <message>
         <location line="+14"/>

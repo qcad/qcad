@@ -6,22 +6,22 @@
     <message>
         <location filename="../Zoom.js" line="+51"/>
         <source>Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoomen</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Zoom Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom gereedschappen</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show zoom tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom gereedschappen tonen</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Zoom</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zoomen</translation>
     </message>
 </context>
 </TS>

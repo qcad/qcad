@@ -6,53 +6,53 @@
     <message>
         <location filename="../CadToolMatrix.js" line="+355"/>
         <source>Expand all</source>
-        <translation type="unfinished"></translation>
+        <translation>Alles uitvouwen</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Collapse all</source>
-        <translation type="unfinished"></translation>
+        <translation>Alles samenvouwen</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>List View</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijstaanzicht</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Icon View</source>
-        <translation type="unfinished"></translation>
+        <translation>Pictogramaanzicht</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <location line="+48"/>
         <source>Tool Matrix</source>
-        <translation type="unfinished"></translation>
+        <translation>Gereedschap matrix</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Icon Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pictogramgrootte:</translation>
     </message>
     <message>
         <location line="+96"/>
         <source>Pixel</source>
-        <translation type="unfinished"></translation>
+        <translation>Pixel</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>px</source>
-        <translation type="unfinished"></translation>
+        <translation>px</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>List view</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijstaanzicht</translation>
     </message>
 </context>
 <context>
@@ -60,7 +60,7 @@
     <message>
         <location filename="../CadToolMatrix.ui" line="+37"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filter</translation>
     </message>
 </context>
 </TS>

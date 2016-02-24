@@ -6,12 +6,12 @@
     <message>
         <location filename="../ZoomToSelection.js" line="+31"/>
         <source>No selection found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Geen selectie gevonden.</translation>
     </message>
     <message>
         <location filename="../ZoomToSelectionInit.js" line="+2"/>
         <source>Zoom to &amp;Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoom naar &amp;selectie</translation>
     </message>
 </context>
 </TS>

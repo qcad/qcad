@@ -6,7 +6,7 @@
     <message>
         <location filename="../IsometricView.js" line="+44"/>
         <source>&amp;Isometric View</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Isometrische weergave</translation>
     </message>
 </context>
 </TS>
