@@ -67,13 +67,16 @@ void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
 
         // existing property in existing group:
         if (propertyMap.count(propertyTitle) > 0) {
-            QPair<QVariant, RPropertyAttributes> property =
-                object.getProperty(pid, true, true);
+            // only query property if combined property is NOT already mixed:
+            if (!propertyMap[propertyTitle].second.isMixed()) {
+                QPair<QVariant, RPropertyAttributes> property =
+                    object.getProperty(pid, true, true);
 
-            // mixed value:
-            if (!RS::compare(propertyMap[propertyTitle], property)) {
-                propertyMap[propertyTitle].first = property.first;
-                propertyMap[propertyTitle].second.setMixed(true);
+                // mixed value:
+                if (!RS::compare(propertyMap[propertyTitle], property)) {
+                    propertyMap[propertyTitle].first = property.first;
+                    propertyMap[propertyTitle].second.setMixed(true);
+                }
             }
         } else {
             // new property in existing group:
