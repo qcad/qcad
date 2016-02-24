@@ -76,10 +76,14 @@ RLine RRay::getClippedLine(const RBox& box) const {
     return ret;
 }
 
-void RRay::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RRay::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
     Q_UNUSED(clickPoint)
     RVector tp = getClosestPointOnShape(trimPoint, false);
+    if (!tp.isValid()) {
+        return false;
+    }
     directionVector = tp - basePoint;
+    return true;
 }
 
 QList<RVector> RRay::getPointsWithDistanceToEnd(double distance, RS::From from) const {

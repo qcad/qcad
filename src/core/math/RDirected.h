@@ -51,13 +51,13 @@ public:
      * \param trimPoint Trim start point or end point to this coordinate.
      * \param clickPoint Point that was clicked by user.
      */
-    virtual void trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) = 0;
+    virtual bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) = 0;
 
     /**
      * \param trimPoint Trim start point or end point to this coordinate.
      * \param clickPoint Point that was clicked by user.
      */
-    virtual void trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) = 0;
+    virtual bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) = 0;
 
     /**
      * \param trimPoint Trim start point or end point to this coordinate.

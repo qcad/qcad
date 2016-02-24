@@ -922,14 +922,16 @@ RS::Ending REllipse::getTrimEnd(const RVector& trimPoint, const RVector& clickPo
     }
 }
 
-void REllipse::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool REllipse::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
     Q_UNUSED(clickPoint)
     setStartParam(getParamTo(trimPoint));
+    return true;
 }
 
-void REllipse::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool REllipse::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
     Q_UNUSED(clickPoint)
     setEndParam(getParamTo(trimPoint));
+    return true;
 }
 
 void REllipse::correctMajorMinor() {

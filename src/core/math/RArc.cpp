@@ -64,10 +64,10 @@ bool RArc::isValid() const {
     return center.isValid() && radius>0.0;
 }
 
-bool RArc::isFullCircle() const {
+bool RArc::isFullCircle(double tolerance) const {
     return fabs(RMath::getAngleDifference180(
                     RMath::getNormalizedAngle(startAngle),
-                    RMath::getNormalizedAngle(endAngle))) < RS::AngleTolerance;
+                    RMath::getNormalizedAngle(endAngle))) < tolerance;
 }
 
 /**
@@ -752,14 +752,16 @@ RS::Ending RArc::getTrimEnd(const RVector& trimPoint, const RVector& clickPoint)
     }
 }
 
-void RArc::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RArc::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
     Q_UNUSED(clickPoint)
     startAngle = center.getAngleTo(trimPoint);
+    return true;
 }
 
-void RArc::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RArc::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
     Q_UNUSED(clickPoint)
     endAngle = center.getAngleTo(trimPoint);
+    return true;
 }
 
 double RArc::getDistanceFromStart(const RVector& p) const {

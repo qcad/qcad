@@ -143,10 +143,10 @@ public:
         return data.getTrimEnd(trimPoint, clickPoint);
     }
 
-    void trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+    bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
         return data.trimStartPoint(trimPoint, clickPoint);
     }
-    void trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+    bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
         return data.trimEndPoint(trimPoint, clickPoint);
     }
 

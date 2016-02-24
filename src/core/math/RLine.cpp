@@ -369,22 +369,24 @@ RS::Ending RLine::getTrimEnd(const RVector& trimPoint, const RVector& clickPoint
     }
 }
 
-void RLine::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RLine::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
     Q_UNUSED(clickPoint)
     RVector tp = getClosestPointOnShape(trimPoint, false);
     if (!tp.isValid()) {
-        return;
+        return false;
     }
     setStartPoint(tp);
+    return true;
 }
 
-void RLine::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RLine::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
     Q_UNUSED(clickPoint)
     RVector tp = getClosestPointOnShape(trimPoint, false);
     if (!tp.isValid()) {
-        return;
+        return false;
     }
     setEndPoint(tp);
+    return true;
 }
 
 double RLine::getDistanceFromStart(const RVector& p) const {

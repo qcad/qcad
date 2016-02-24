@@ -106,10 +106,10 @@ public:
     RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
         return RSpline::getTrimEnd(trimPoint, clickPoint);
     }
-    void trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+    bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
         return RSpline::trimStartPoint(trimPoint, clickPoint);
     }
-    void trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+    bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
         return RSpline::trimEndPoint(trimPoint, clickPoint);
     }
 

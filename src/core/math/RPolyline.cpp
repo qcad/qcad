@@ -1324,16 +1324,18 @@ RS::Ending RPolyline::getTrimEnd(const RVector& trimPoint, const RVector& clickP
     return RS::EndingNone;
 }
 
-void RPolyline::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RPolyline::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
     if (polylineProxy!=NULL) {
-        polylineProxy->trimStartPoint(*this, trimPoint, clickPoint);
+        return polylineProxy->trimStartPoint(*this, trimPoint, clickPoint);
     }
+    return false;
 }
 
-void RPolyline::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RPolyline::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
     if (polylineProxy!=NULL) {
-        polylineProxy->trimEndPoint(*this, trimPoint, clickPoint);
+        return polylineProxy->trimEndPoint(*this, trimPoint, clickPoint);
     }
+    return false;
 }
 
 void RPolyline::print(QDebug dbg) const {

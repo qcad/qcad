@@ -1482,17 +1482,17 @@ RS::Ending RSpline::getTrimEnd(const RVector& trimPoint, const RVector& clickPoi
     }
 }
 
-void RSpline::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RSpline::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
     Q_UNUSED(clickPoint)
     if (!isValid()) {
-        return;
+        return false;
     }
     if (trimPoint.equalsFuzzy(getStartPoint())) {
-        return;
+        return true;
     }
     if (trimPoint.equalsFuzzy(getEndPoint())) {
         this->invalidate();
-        return;
+        return true;
     }
 
     QList<RSpline> splines = splitAtPoints(QList<RVector>() << trimPoint);
@@ -1500,19 +1500,20 @@ void RSpline::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint
         copySpline(splines[1]);
     }
     update();
+    return true;
 }
 
-void RSpline::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RSpline::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
     Q_UNUSED(clickPoint)
     if (!isValid()) {
-        return;
+        return false;
     }
     if (trimPoint.equalsFuzzy(getStartPoint())) {
         this->invalidate();
-        return;
+        return true;
     }
     if (trimPoint.equalsFuzzy(getEndPoint())) {
-        return;
+        return true;
     }
 
     QList<RSpline> splines = splitAtPoints(QList<RVector>() << trimPoint);
@@ -1520,6 +1521,7 @@ void RSpline::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) 
         copySpline(splines[0]);
     }
     update();
+    return true;
 }
 
 QList<RSpline> RSpline::splitAtPoints(const QList<RVector>& points) const {

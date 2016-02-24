@@ -152,8 +152,8 @@ public:
     virtual QSharedPointer<RShape> getTransformed(const QTransform& transform) const;
 
     virtual RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint);
-    virtual void trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid);
-    virtual void trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid);
+    virtual bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid);
+    virtual bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid);
 
     void correctMajorMinor();
     double getSweep() const;
