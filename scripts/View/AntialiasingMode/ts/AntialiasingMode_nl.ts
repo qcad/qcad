@@ -6,7 +6,7 @@
     <message>
         <location filename="../AntialiasingMode.js" line="+74"/>
         <source>&amp;Anti-aliasing</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Antialiasing</translation>
     </message>
 </context>
 </TS>

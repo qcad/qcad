@@ -6,7 +6,7 @@
     <message>
         <location filename="../CommandLineFocusInit.js" line="+2"/>
         <source>&amp;Focus on Command Line</source>
-        <translation>Fokus auf Eingabezeile</translation>
+        <translation>&amp;Fokus auf Eingabezeile</translation>
     </message>
 </context>
 </TS>

@@ -6,17 +6,17 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandsdialoog</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebruik systeem bestandsdialoog</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Saving</source>
-        <translation type="unfinished"></translation>
+        <translation>Opslaan</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -40,7 +40,7 @@
     <message>
         <location line="+0"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestand</translation>
     </message>
     <message>
         <location line="+24"/>
