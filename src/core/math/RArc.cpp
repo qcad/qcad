@@ -779,13 +779,20 @@ RPolyline RArc::approximateWithLines(double segmentLength) {
     RPolyline polyline;
 
     // avoid a segment length of 0:
-    if (segmentLength<1.0e-6) {
+    if (segmentLength>0.0 && segmentLength<1.0e-6) {
         segmentLength = 1.0e-6;
     }
 
     double a1 = getStartAngle();
     double a2 = getEndAngle();
-    double aStep = segmentLength / radius;
+    double aStep;
+    if (segmentLength>0.0) {
+        aStep = segmentLength / radius;
+    }
+    else {
+        // negative segment length: auto:
+        aStep = 1.0;
+    }
     double a, cix, ciy;
 
     polyline.appendVertex(getStartPoint());
