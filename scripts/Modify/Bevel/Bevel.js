@@ -93,7 +93,7 @@ Bevel.bevel = function(op, entity1, clickPos1, entity2, clickPos2, trim, distanc
     }
 
     // add new trimmed entities:
-    if (!modifyEntity(op, entity1, newShapes[0])) {
+    if (trim && !modifyEntity(op, entity1, newShapes[0])) {
         if (!preview) {
             EAction.handleUserWarning(qsTr("First entity cannot be trimmed."));
         }
@@ -104,7 +104,7 @@ Bevel.bevel = function(op, entity1, clickPos1, entity2, clickPos2, trim, distanc
         return true;
     }
 
-    if (!modifyEntity(op, entity2, newShapes[2])) {
+    if (trim && !modifyEntity(op, entity2, newShapes[2])) {
         if (!preview) {
             EAction.handleUserWarning(qsTr("Second entity cannot be trimmed."));
         }
