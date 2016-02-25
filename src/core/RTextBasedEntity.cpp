@@ -126,19 +126,15 @@ QPair<QVariant, RPropertyAttributes> RTextBasedEntity::getProperty(
     } else if (propertyTypeId == PropertyPositionZ) {
         return qMakePair(QVariant(getData().alignmentPoint.z), RPropertyAttributes());
     } else if (propertyTypeId == PropertyText) {
-        return qMakePair(QVariant(getData().text),
-            RPropertyAttributes(RPropertyAttributes::RichText|RPropertyAttributes::Label));
+        return qMakePair(QVariant(getData().text), RPropertyAttributes(RPropertyAttributes::RichText|RPropertyAttributes::Label));
     } else if (humanReadable && propertyTypeId == PropertyPlainText) {
-        return qMakePair(QVariant(getData().getPlainText()),
-                         RPropertyAttributes(RPropertyAttributes::Label|RPropertyAttributes::ReadOnly));
+        return qMakePair(QVariant(getData().getPlainText()), RPropertyAttributes(RPropertyAttributes::Label|RPropertyAttributes::ReadOnly));
     } else if (propertyTypeId == PropertyFontName) {
-        return qMakePair(QVariant(getData().fontName),
-            RPropertyAttributes(RPropertyAttributes::Style));
+        return qMakePair(QVariant(getData().fontName), RPropertyAttributes(RPropertyAttributes::Style));
     } else if (propertyTypeId == PropertyHeight) {
         return qMakePair(QVariant(getData().textHeight), RPropertyAttributes());
     } else if (propertyTypeId == PropertyAngle) {
-        return qMakePair(QVariant(getData().angle), RPropertyAttributes(
-            RPropertyAttributes::Angle));
+        return qMakePair(QVariant(getData().angle), RPropertyAttributes(RPropertyAttributes::Angle));
     } else if (propertyTypeId == PropertyXScale) {
         return qMakePair(QVariant(getData().xScale), RPropertyAttributes());
     } else if (propertyTypeId == PropertyBold) {
