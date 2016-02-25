@@ -44,7 +44,6 @@ function RCadToolMatrixTreePanel(parent, objectName) {
         + "}"
         + RCadToolMatrixTreePanel.getCheckedStyle()
         + RCadToolMatrixTreePanel.getPressedStyle();
-
 }
 
 RCadToolMatrixTreePanel.prototype = new QWidget();
@@ -190,6 +189,15 @@ RCadToolMatrixTree.prototype.handleItemPress = function(item) {
 
     if (isNull(item.parent())) {
         item.setExpanded(!item.isExpanded());
+    }
+
+    // set focus to mdiChild
+    var appWin = RMainWindowQt.getMainWindow();
+    if (!isNull(appWin)) {
+        var w = appWin.getMdiChild();
+        if (!isNull(w)) {
+            w.setFocus();
+        }
     }
 };
 
