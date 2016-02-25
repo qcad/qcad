@@ -85,9 +85,6 @@ NewFile.prototype.beginEvent = function() {
     File.prototype.beginEvent.call(this);
 
     var w = NewFile.createMdiChild();
-    if (!isNull(w)) {
-        w.setFocus();
-    }
 };
 
 /**
@@ -266,6 +263,10 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
                 }
             }
         }
+    }
+
+    if (!isNull(mdiChild) && !isDeleted(mdiChild)) {
+        mdiChild.setFocus();
     }
 
     return mdiChild;
