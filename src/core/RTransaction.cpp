@@ -721,7 +721,6 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
             QPair<QVariant, RPropertyAttributes> oldProperty =
                 oldObject->getProperty(pid);
 
-//            RPropertyChange pc(*it, oldProperty.first, newProperty.first);
 //            if (pid==RObject::PropertyProtected) {
 //                qDebug() << "pid: " << pid;
 //                qDebug() << "old property: " << oldProperty.first;
