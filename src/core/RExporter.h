@@ -20,6 +20,8 @@
 #ifndef REXPORTER_H
 #define REXPORTER_H
 
+#include <stdint.h>
+
 #include "core_global.h"
 
 #include <QBrush>
