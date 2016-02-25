@@ -24,7 +24,7 @@
    <item>
     <layout class="QFormLayout" name="Layout">
      <item row="0" column="0">
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="LayerNameLabel">
        <property name="text">
         <string>Layer name:</string>
        </property>
@@ -45,7 +45,7 @@
         </size>
        </property>
        <property name="text">
-        <string notr="true">layer 1</string>
+        <string notr="true"/>
        </property>
       </widget>
      </item>
@@ -168,14 +168,14 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>RLineweightCombo</class>
-   <extends>QComboBox</extends>
-   <header>RLineweightCombo.h</header>
-  </customwidget>
-  <customwidget>
    <class>RColorCombo</class>
    <extends>QComboBox</extends>
    <header>RColorCombo.h</header>
+  </customwidget>
+  <customwidget>
+   <class>RLineweightCombo</class>
+   <extends>QComboBox</extends>
+   <header>RLineweightCombo.h</header>
   </customwidget>
   <customwidget>
    <class>RLinetypeCombo</class>

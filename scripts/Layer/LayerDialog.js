@@ -32,6 +32,8 @@ function LayerDialog(document, layer) {
     this.dialog = null;
     this.document = document;
     this.layer = layer;
+    this.prefix = undefined;
+    this.defaultName = "layer %1";
 }
 
 /**
@@ -51,6 +53,9 @@ LayerDialog.prototype.initLayer = function(dialog, layer) {
  */
 LayerDialog.prototype.getLayerName = function(dialog) {
     var leLayerName = dialog.findChild("LayerName");
+    if (!isNull(this.prefix)) {
+        return this.prefix + leLayerName.text;
+    }
     return leLayerName.text;
 };
 
@@ -59,23 +64,36 @@ LayerDialog.prototype.show = function() {
     //this.dialog.windowIcon = new QIcon("scripts/Layer/EditLayer/EditLayer.svg");
 
     var widgets = getWidgets(this.dialog);
-    var layerName = widgets["LayerName"];
-    layerName.selectAll();
+    var leLayerName = widgets["LayerName"];
+    leLayerName.selectAll();
     var rx = new RegExp("[^<>/\\\\\":;\?\*|,=`]{1,255}");
-    this.validator = new QRegExpValidator(rx, layerName);
-    layerName.setValidator(this.validator);
+    this.validator = new QRegExpValidator(rx, leLayerName);
+    leLayerName.setValidator(this.validator);
     var cbColor = widgets["Color"];
     var cbLineweight = widgets["Lineweight"];
     cbLineweight.setLineweight(RSettings.getIntValue("Layer/DefaultLineweight", RLineweight.Weight025));
     var cbLinetype = widgets["Linetype"];
     cbLinetype.init(this.document);
 
+    var prefixed = true;
+
     // init from existing layer:
     if (!isNull(this.layer)) {
-        layerName.text = this.layer.getName();
-        if (layerName.text === "0") {
-            layerName.enabled = false;
+        leLayerName.text = this.layer.getName();
+
+        if (leLayerName.text === "0") {
+            leLayerName.enabled = false;
         }
+        else {
+            // only allow user to edit part after prefix:
+            if (!isNull(this.prefix)) {
+                if (leLayerName.text.startsWith(this.prefix)) {
+                    prefixed = true;
+                    leLayerName.text = leLayerName.text.substring(this.prefix.length);
+                }
+            }
+        }
+
         // TODO: undeletable layers
         cbColor.setColor(this.layer.getColor());
         cbLineweight.setLineweight(this.layer.getLineweight());
@@ -86,16 +104,29 @@ LayerDialog.prototype.show = function() {
         }
     }
 
-    layerName.textChanged.connect(this, "validate");
+    if (prefixed) {
+        // show prefix as part of the layer name label:
+        var lLayerName = widgets["LayerNameLabel"];
+        if (!isNull(this.prefix)) {
+            lLayerName.text = lLayerName.text + " " + this.prefix;
+        }
+    }
+
+    leLayerName.textChanged.connect(this, "validate");
 
     this.initDialog(this.dialog, this.layer);
 
     this.dialog.show();
 
-    var c = 0;
-    while (!this.validate()) {
-        ++c;
-        layerName.text = "layer " + c;
+    if (isNull(this.layer)) {
+        var c = 1;
+        do {
+            leLayerName.text = this.defaultName.arg(c);
+            ++c;
+        } while (!this.validate());
+    }
+    else {
+        this.validate();
     }
 
     if (!this.dialog.exec()) {
@@ -104,7 +135,10 @@ LayerDialog.prototype.show = function() {
         return undefined;
     }
 
-    var text = layerName.text.trim();
+    var text = leLayerName.text.trim();
+    if (!isNull(this.prefix)) {
+        text = this.prefix + text;
+    }
     var clr = cbColor.getColor();
     var lw = cbLineweight.getLineweight();
     var lt = cbLinetype.getLinetypePattern();
