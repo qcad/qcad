@@ -514,7 +514,7 @@ function main() {
         if (fi.exists()) {
             var configPath = fi.absolutePath();
             var configBak = configPath + QDir.separator + "QCAD3_old." + fi.suffix();
-            qDebug("Renaming old unversioned config file from '" + configPath + "' to '"+ configBak + "'");
+            qDebug("Renaming old unversioned config file from '" + configFile + "' to '"+ configBak + "'");
             QFile.remove(configBak);
             QFile.rename(configFile, configBak);
         }
