@@ -174,6 +174,10 @@ double RCircle::getAngleAt(double distance, RS::From from) const {
     return RNANDOUBLE;
 }
 
+RVector RCircle::getPointAtAngle(double a) const {
+    return RVector(center.x + cos(a) * radius, center.y + sin(a) * radius);
+}
+
 RVector RCircle::getVectorTo(const RVector& point, bool limited, double strictRange) const {
     Q_UNUSED(limited)
     Q_UNUSED(strictRange)

@@ -112,7 +112,7 @@ public:
 
     virtual RVector getStartPoint() const;
     virtual RVector getEndPoint() const;
-    virtual RVector getPointAtAngle(double a) const;
+    RVector getPointAtAngle(double a) const;
     virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;
     RVector getMiddlePoint() const;
 

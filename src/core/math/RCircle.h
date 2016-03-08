@@ -66,6 +66,7 @@ public:
         double distance, RS::From from = RS::FromAny) const;
 
     virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;
+    RVector getPointAtAngle(double a) const;
 
     virtual RVector getVectorTo(const RVector& point,
             bool limited = true, double strictRange = RMAXDOUBLE) const;
