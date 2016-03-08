@@ -21,6 +21,8 @@
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>REXPORTER_H</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>REXPORTER_H</name></cpp:define>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;stdint.h&gt;</cpp:file></cpp:include>
+
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"core_global.h"</cpp:file></cpp:include>
 
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QBrush&gt;</cpp:file></cpp:include>
