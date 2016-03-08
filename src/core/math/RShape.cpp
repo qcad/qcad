@@ -947,30 +947,36 @@ QList<RVector> RShape::getIntersectionPointsAX(const RArc& arc1,
     return res;
 }
 
-QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1,
-        const RCircle& circle2) {
+QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1, const RCircle& circle2) {
+    double r1 = circle1.getRadius();
+    double r2 = circle2.getRadius();
+    if (r1<r2) {
+        // make sure circle 1 is the larger one (for tangency detection):
+        return getIntersectionPointsCC(circle2, circle1);
+    }
 
     QList<RVector> res;
-    bool tangent = false;
+    //bool tangent = false;
 
     RVector c1 = circle1.getCenter();
     RVector c2 = circle2.getCenter();
 
-    double r1 = circle1.getRadius();
-    double r2 = circle2.getRadius();
 
     RVector u = c2 - c1;
+    double uMag = u.getMagnitude();
 
-    // the two circles (almost) touch in one point (tangent):
-    if (RMath::fuzzyCompare(u.getMagnitude(), r1+r2, 1.0e-6)) {
+    // the two circles (almost) touch externally / internally in one point (tangent):
+    if (RMath::fuzzyCompare(uMag, r1+r2, 1.0e-6) ||
+        RMath::fuzzyCompare(uMag, fabs(r1-r2), 1.0e-6)) {
+
         u.setMagnitude2d(r1);
         res.append(c1 + u);
-        tangent = true;
+        //tangent = true;
         return res;
     }
 
     // concentric
-    if (u.getMagnitude() < RS::PointTolerance) {
+    if (uMag < RS::PointTolerance) {
         return res;
     }
 
@@ -978,9 +984,9 @@ QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1,
 
     double s, t1, t2, term;
 
-    s = 1.0/2.0 * ((r1*r1 - r2*r2)/(RMath::pow(u.getMagnitude(), 2.0)) + 1.0);
+    s = 1.0/2.0 * ((r1*r1 - r2*r2)/(RMath::pow(uMag, 2.0)) + 1.0);
 
-    term = (r1*r1)/(RMath::pow(u.getMagnitude(), 2.0)) - s*s;
+    term = (r1*r1)/(RMath::pow(uMag, 2.0)) - s*s;
 
     // no intersection:
     if (term < 0.0) {
@@ -996,7 +1002,7 @@ QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1,
 
     if (sol1.equalsFuzzy(sol2, 1.0e-4)) {
         res.append(sol1);
-        tangent = true;
+        //tangent = true;
     }
     else {
         res.append(sol1);
