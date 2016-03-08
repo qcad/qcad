@@ -573,7 +573,7 @@ EAction.prototype.enterEvent = function() {
  */
 EAction.prototype.showDialog = function() {
     if (!this.useDialog) {
-        return;
+        return QDialog.Rejected;
     }
 
     var di = this.getDocumentInterface();
@@ -590,7 +590,7 @@ EAction.prototype.showDialog = function() {
     // show dialog and move tool bar widgets to its layout:
     var formLayout = undefined;
     if (isNull(this.dialogUiFile)) {
-        return;
+        return QDialog.Rejected;
     }
 
     this.dialog = WidgetFactory.createDialog(this.includeBasePath, this.dialogUiFile, EAction.getMainWindow());
@@ -612,6 +612,8 @@ EAction.prototype.showDialog = function() {
             break;
         }
     }
+
+    this.initDialog(this.dialog);
 
     var ret = this.dialog.exec();
 
@@ -646,6 +648,12 @@ EAction.prototype.showDialog = function() {
     //this.updatePreview(true);
 
     return ret;
+};
+
+/**
+ * Called before dialog is shown. Default implementation does nothing.
+ */
+EAction.prototype.initDialog = function(dialog) {
 };
 
 /**
