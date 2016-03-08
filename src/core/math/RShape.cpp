@@ -956,11 +956,9 @@ QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1, const RCi
     }
 
     QList<RVector> res;
-    //bool tangent = false;
 
     RVector c1 = circle1.getCenter();
     RVector c2 = circle2.getCenter();
-
 
     RVector u = c2 - c1;
     double uMag = u.getMagnitude();
@@ -971,7 +969,6 @@ QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1, const RCi
 
         u.setMagnitude2d(r1);
         res.append(c1 + u);
-        //tangent = true;
         return res;
     }
 
@@ -1002,7 +999,6 @@ QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1, const RCi
 
     if (sol1.equalsFuzzy(sol2, 1.0e-4)) {
         res.append(sol1);
-        //tangent = true;
     }
     else {
         res.append(sol1);
