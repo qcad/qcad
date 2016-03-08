@@ -90,6 +90,9 @@
         getAngleAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getPointAtAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getVectorTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
