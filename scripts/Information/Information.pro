@@ -4,6 +4,7 @@ SUBDIRS = \
     InfoAngle \
     InfoArcCircleArea \
     InfoArea \
+    InfoDistanceEE \
     InfoDistanceEP \
     InfoDistancePP \
     InfoPosition \
