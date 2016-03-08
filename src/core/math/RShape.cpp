@@ -966,8 +966,8 @@ QList<RVector> RShape::getIntersectionPointsCC(const RCircle& circle1, const RCi
     double uMag = u.getMagnitude();
 
     // the two circles (almost) touch externally / internally in one point (tangent):
-    if (RMath::fuzzyCompare(uMag, r1+r2, 1.0e-6) ||
-        RMath::fuzzyCompare(uMag, fabs(r1-r2), 1.0e-6)) {
+    if (RMath::fuzzyCompare(uMag, r1+r2, 1.0e-4) ||
+        RMath::fuzzyCompare(uMag, fabs(r1-r2), 1.0e-4)) {
 
         u.setMagnitude2d(r1);
         res.append(c1 + u);
