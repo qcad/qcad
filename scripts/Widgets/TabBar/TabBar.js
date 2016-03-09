@@ -20,23 +20,52 @@
 function TabBar() {
 }
 
-TabBar.init = function(basePath) {
+TabBar.getPreferencesCategory = function() {
+    return [ qsTr("Widgets"), qsTr("Tab Bar") ];
+};
+
+TabBar.applyPreferences = function(doc, mdiChild) {
     var appWin = RMainWindowQt.getMainWindow();
-
-    if (appWin.getMdiArea()) {
-        appWin.getMdiArea().documentMode = true;
-    }
-
-    var tabBar = appWin.getTabBar();
-    if (isNull(tabBar)) {
-        return;
-    }
-
     var mdiArea = appWin.getMdiArea();
     if (isNull(mdiArea)) {
         return;
     }
 
+    if (RSettings.getBoolValue("TabBar/ShowTabBar", true)===false) {
+        mdiArea.viewMode = QMdiArea.SubWindowView;
+        if (!isNull(mdiChild)) {
+            mdiChild.showMaximized();
+        }
+    }
+    else {
+        mdiArea.viewMode = QMdiArea.TabbedView;
+        TabBar.initTabBar();
+    }
+};
+
+TabBar.init = function(basePath) {
+    var appWin = RMainWindowQt.getMainWindow();
+    var mdiArea = appWin.getMdiArea();
+    if (isNull(mdiArea)) {
+        return;
+    }
+
+    mdiArea.documentMode = true;
+    if (RSettings.getBoolValue("TabBar/ShowTabBar", true)===false) {
+        mdiArea.viewMode = QMdiArea.SubWindowView;
+    }
+    else {
+        mdiArea.viewMode = QMdiArea.TabbedView;
+        TabBar.initTabBar();
+    }
+};
+
+TabBar.initTabBar = function() {
+    var appWin = RMainWindowQt.getMainWindow();
+    var tabBar = appWin.getTabBar();
+    if (isNull(tabBar)) {
+        return;
+    }
     tabBar.elideMode = Qt.ElideRight;
     tabBar.tabsClosable = true;
     tabBar.usesScrollButtons = true;
@@ -53,7 +82,7 @@ TabBar.init = function(basePath) {
         });
     }
 
-    if (RSettings.getBoolValue("Appearance/ShowAddTabButton", false)) {
+    if (RSettings.getBoolValue("TabBar/ShowAddTabButton", false)) {
         var button = mdiArea.getAddTabButton();
         button.styleSheet = "border:0px";
 

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>567</width>
-    <height>802</height>
+    <height>886</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,8 +21,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>550</width>
-     <height>829</height>
+     <width>565</width>
+     <height>884</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -662,8 +662,8 @@
       <property name="title">
        <string>Selection</string>
       </property>
-      <layout class="QFormLayout" name="formLayout_4">
-       <item row="0" column="0">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
         <widget class="QCheckBox" name="PersistentSelection">
          <property name="text">
           <string>Persistent Selection</string>

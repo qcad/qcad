@@ -206,6 +206,8 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
     mdiArea.addSubWindow(mdiChild);
     mdiChild.updatesEnabled = false;
     mdiChild.showMaximized();
+    var flags = new Qt.WindowFlags(Qt.FramelessWindowHint);
+    mdiChild.setWindowFlags(flags);
 
     // load ui file and set the MDI content widget:
     //qDebug("initMdiChild");
