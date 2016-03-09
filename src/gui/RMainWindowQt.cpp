@@ -51,7 +51,6 @@ RMainWindowQt::RMainWindowQt(QWidget* parent, bool hasMdiArea) :
 
     if (hasMdiArea) {
         mdiArea = new RMdiArea(this);
-        mdiArea->setViewMode(QMdiArea::TabbedView);
         mdiArea->setObjectName("MdiArea");
         setCentralWidget(mdiArea);
 
@@ -65,7 +64,7 @@ RMainWindowQt::RMainWindowQt(QWidget* parent, bool hasMdiArea) :
         if (tabBar!=NULL) {
             connect(tabBar, SIGNAL(currentChanged(int)),
                 this, SLOT(currentTabChanged(int)));
-            if (RSettings::getBoolValue("Appearance/ShowAddTabButton", false)) {
+            if (RSettings::getBoolValue("TabBar/ShowAddTabButton", false)) {
                 tabBar->hide();
             }
         }
@@ -112,7 +111,7 @@ void RMainWindowQt::subWindowActivated(QMdiSubWindow* sw) {
     updateGuiActions(sw);
     notifyListenersSlot(sw);
     suspendAndResume(sw);
-    if (RSettings::getBoolValue("Appearance/ShowAddTabButton", false)) {
+    if (RSettings::getBoolValue("TabBar/ShowAddTabButton", false)) {
         mdiArea->updateTabBar();
     }
 }
@@ -577,7 +576,7 @@ bool RMainWindowQt::event(QEvent* e) {
             qDebug() << "RMainWindowQt::event: closing active subwindow";
             mdiArea->closeActiveSubWindow();
         }
-        if (RSettings::getBoolValue("Appearance/ShowAddTabButton", false)) {
+        if (RSettings::getBoolValue("TabBar/ShowAddTabButton", false)) {
             mdiArea->updateTabBar();
         }
         return true;

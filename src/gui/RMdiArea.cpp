@@ -34,7 +34,7 @@
 RMdiArea::RMdiArea(QWidget* parent) :
     QMdiArea(parent), tabBarOri(NULL), tabBar(NULL), addTabButton(NULL) {
 
-    if (RSettings::getBoolValue("Appearance/ShowAddTabButton", false)) {
+    if (RSettings::getBoolValue("TabBar/ShowAddTabButton", false)) {
         addTabButton = new QToolButton(this);
         addTabButton->hide();
     }
@@ -49,7 +49,7 @@ RMdiArea::~RMdiArea() {
 void RMdiArea::resizeEvent(QResizeEvent* event) {
     QMdiArea::resizeEvent(event);
 
-    if (!RSettings::getBoolValue("Appearance/ShowAddTabButton", false)) {
+    if (!RSettings::getBoolValue("TabBar/ShowAddTabButton", false)) {
         return;
     }
 
