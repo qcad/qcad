@@ -461,6 +461,8 @@ function main() {
     // app name for ini file differs to avoid conflict with
     // older QCAD versions:
     RSettings.setApplicationName("QCAD3");
+    // make sure settings file path is reinitialized:
+    RSettings.uninit();
 
     // alternative path for QCAD3.ini:
     for (i=1; i<args.length; ++i) {
