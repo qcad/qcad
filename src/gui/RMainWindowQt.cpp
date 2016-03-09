@@ -68,9 +68,6 @@ RMainWindowQt::RMainWindowQt(QWidget* parent, bool hasMdiArea) :
                 tabBar->hide();
             }
         }
-        else {
-            qDebug() << "tabBar is NULL";
-        }
     }
     setWindowTitle("RMainWindowQt");
 
