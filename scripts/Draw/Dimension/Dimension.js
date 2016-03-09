@@ -64,6 +64,7 @@ Dimension.prototype.initUiOptions = function(resume, optionsToolBar) {
     prefixCombo.addItem("R (" + qsTr("Radius") + ")");
     prefixCombo.addItem("M (" + qsTr("Metric screw") + ")");
     prefixCombo.addItem("\u00F8 (" + qsTr("Diameter") + ")");
+    prefixCombo.addItem("\u2312 (" + qsTr("Arc") + ")");
     prefixCombo.addItem("\u00B1 (" + qsTr("Plus/Minus") + ")");
     prefixCombo.addItem("\u2248 (" + qsTr("Almost equal to") + ")");
     prefixCombo.addItem("\u2243 (" + qsTr("Asymptotically equal to") + ")");

@@ -988,6 +988,7 @@ WidgetFactory.initLineEdit = function(lineEdit, dimension) {
         // TODO: split into submenus (math, greek, ...):
         var symbols = [
                 ["\u00F8", qsTr("Diameter")],
+                ["\u2312", qsTr("Arc")],
                 ["\u00B0", qsTr("Degree")],
                 ["\u00B1", qsTr("Plus/Minus")],
                 ["\u2248", qsTr("Almost equal to")],
