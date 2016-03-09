@@ -82,7 +82,9 @@ ToolBarContextMenu.createMenu = function(menu) {
         cat.unshift(qsTr("Widgets"));
         a = dw.toggleViewAction();
         m = ToolBarContextMenu.getSubMenu(menu, cat);
-        RGuiAction.addToWidget(a, m);
+        if (!isNull(m)) {
+            RGuiAction.addToWidget(a, m);
+        }
     }
 
     for (i = 0; i<tbs.length; i++) {
@@ -94,7 +96,9 @@ ToolBarContextMenu.createMenu = function(menu) {
         cat.unshift(qsTr("Toolbars"));
         a = tb.toggleViewAction();
         m = ToolBarContextMenu.getSubMenu(menu, cat);
-        RGuiAction.addToWidget(a, m);
+        if (!isNull(m)) {
+            RGuiAction.addToWidget(a, m);
+        }
     }
 
 //    QList<QDockWidget *> dockwidgets = findChildren<QDockWidget *>();
