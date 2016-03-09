@@ -144,8 +144,9 @@ Save.prototype.save = function(fileName, fileVersion, overwriteWarning) {
     }
 
     var tabBar = appWin.getTabBar();
-    var menuBar = appWin.menuBar();
-    tabBar.setTabToolTip(tabBar.currentIndex, fileName);
+    if (!isNull(tabBar)) {
+        tabBar.setTabToolTip(tabBar.currentIndex, fileName);
+    }
 
     appWin.setProgressText();
 
