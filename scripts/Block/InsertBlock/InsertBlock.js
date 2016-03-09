@@ -200,11 +200,13 @@ InsertBlock.prototype.getOperation = function(preview) {
 
 InsertBlock.prototype.slotKeepProportionsChanged = function(value) {
     var optionsToolBar = EAction.getOptionsToolBar();
+    var scaleXCombo = optionsToolBar.findChild("ScaleX");
     var scaleYCombo = optionsToolBar.findChild("ScaleY");
     var scaleYLabel = optionsToolBar.findChild("ScaleYLabel");
     var keepProportionsSwitch = optionsToolBar.findChild("KeepProportions");
 
     if (value===true) {
+        scaleYCombo.currentText = scaleXCombo.currentText;
         scaleYCombo.enabled = false;
         scaleYLabel.enabled = false;
         keepProportionsSwitch.icon = new QIcon(InsertBlock.includeBasePath + "/KeepProportionsOn.svg");
