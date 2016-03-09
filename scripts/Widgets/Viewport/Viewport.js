@@ -169,7 +169,7 @@ Viewport.prototype.init = function() {
     if (!isNull(this.vsb)) {
         this.vsb.singleStep = 50;
     }
-    if (RSettings.getBoolValue("GraphicsView/ShowScrollbars", true)===false) {
+    if (RSettings.getBoolValue("GraphicsView/ShowScrollBars", true)===false) {
         var infoLabel = this.vpWidget.findChild("InfoLabel");
         infoLabel.hide();
         if (!isNull(this.hsb)) {
