@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="17"/>
         <source>Show tabs</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar fichas</translation>
     </message>
 </context>
 </TS>
