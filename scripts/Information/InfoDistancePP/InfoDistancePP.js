@@ -30,10 +30,11 @@ function InfoDistancePP(guiAction) {
     this.point1 = undefined;
     this.point2 = undefined;
 
-    this.setUiOptions("../Information.ui");
+    this.setUiOptions(InfoDistancePP.includeBasePath + "/../Information.ui");
 }
 
 InfoDistancePP.prototype = new Information();
+InfoDistancePP.includeBasePath = includeBasePath;
 
 InfoDistancePP.State = {
     SettingFirstPoint : 0,
