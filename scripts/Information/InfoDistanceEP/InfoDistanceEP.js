@@ -32,10 +32,11 @@ function InfoDistanceEP(guiAction) {
     this.point1 = undefined;
     this.point2 = undefined;
 
-    this.setUiOptions("../Information.ui");
+    this.setUiOptions(InfoDistanceEP.includeBasePath + "/../Information.ui");
 }
 
 InfoDistanceEP.prototype = new Information();
+InfoDistanceEP.includeBasePath = includeBasePath;
 
 InfoDistanceEP.State = {
     SettingShape : 0,

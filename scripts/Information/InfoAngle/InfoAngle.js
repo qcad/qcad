@@ -38,10 +38,11 @@ function InfoAngle(guiAction) {
     this.arc = undefined;
     this.position = undefined;
 
-    this.setUiOptions("../Information.ui");
+    this.setUiOptions(InfoAngle.includeBasePath + "/../Information.ui");
 }
 
 InfoAngle.prototype = new Information();
+InfoAngle.includeBasePath = includeBasePath;
 
 InfoAngle.State = {
     SettingFirstShape : 0,
