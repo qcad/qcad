@@ -518,7 +518,9 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
                         gridLayout = gridLayoutChild;
                         groupBox = this.childGroup;
                         // only show group with dependent entities if needed:
-                        this.childGroup.visible = true;
+                        if (!isNull(this.childGroup)) {
+                            this.childGroup.visible = true;
+                        }
                     }
                     // custom properties:
                     else {
