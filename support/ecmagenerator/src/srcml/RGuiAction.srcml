@@ -232,8 +232,11 @@
         <return>return <expr><name>noState</name></expr>;</return>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>setToggleable</name><parameter_list>()</parameter_list> <block>{
-        <expr_stmt><expr><name>toggleable</name> = <name>true</name></expr>;</expr_stmt>
+    <comment type="block">/**
+     * If enabled, action terminates when activated and already running.
+     */</comment>
+    <function><type><name>void</name></type> <name>setToggleable</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>toggleable</name> = <name>on</name></expr>;</expr_stmt>
     }</block></function>
 
     <function><type><name>bool</name></type> <name>isToggleable</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{

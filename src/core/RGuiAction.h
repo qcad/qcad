@@ -231,8 +231,11 @@ public:
         return noState;
     }
 
-    void setToggleable() {
-        toggleable = true;
+    /**
+     * If enabled, action terminates when activated and already running.
+     */
+    void setToggleable(bool on = true) {
+        toggleable = on;
     }
 
     bool isToggleable() const {
