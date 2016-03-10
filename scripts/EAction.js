@@ -691,8 +691,8 @@ EAction.prototype.keyPressEvent = function(event) {
         return;
     }
 
-    if ((event.key() >= Qt.Key_0.valueOf()) && (event.key() <= Qt.Key_9.valueOf())) {
-        // number entered: give focus to first input widget in options tool bar and set text to number entered:
+    if ((event.key() >= Qt.Key_0.valueOf() && event.key() <= Qt.Key_9.valueOf()) || event.key() === Qt.Key_Period.valueOf()) {
+        // number or dot entered: give focus to first input widget in options tool bar and set text to number entered:
         var w = OptionsToolBar.getFirstInputWidget();
         if (!isNull(w)) {
             w.setFocus(Qt.OtherFocusReason);
