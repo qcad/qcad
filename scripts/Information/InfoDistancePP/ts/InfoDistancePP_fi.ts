@@ -4,7 +4,7 @@
 <context>
     <name>InfoDistancePP</name>
     <message>
-        <location filename="../InfoDistancePP.js" line="+58"/>
+        <location filename="../InfoDistancePP.js" line="+59"/>
         <source>First point</source>
         <translation>Ensimmäinen piste</translation>
     </message>

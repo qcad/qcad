@@ -4,7 +4,7 @@
 <context>
     <name>InfoDistanceEP</name>
     <message>
-        <location filename="../InfoDistanceEP.js" line="+58"/>
+        <location filename="../InfoDistanceEP.js" line="+59"/>
         <source>Specify entity</source>
         <translation>Scegli entità</translation>
     </message>

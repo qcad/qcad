@@ -36,7 +36,7 @@
         <translation>Personnalisé</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+166"/>
         <source>Index</source>
         <translation>Index</translation>
     </message>
@@ -86,7 +86,7 @@
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1117"/>
+        <location line="-1119"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--
@@ -111,7 +111,7 @@ Dessin enregistré : %1</translatorcomment>
         <translation>Entités dépendantes</translation>
     </message>
     <message>
-        <location line="+308"/>
+        <location line="+310"/>
         <source>All</source>
         <translatorcomment>--google--
 Partage &amp;Horizontal

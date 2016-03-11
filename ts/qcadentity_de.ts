@@ -40,7 +40,7 @@
         <location filename="../src/entity/RLineEntity.cpp" line="+82"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+70"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+88"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+89"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+78"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -387,6 +387,7 @@
     <message>
         <location filename="../src/entity/RArcEntity.cpp" line="+3"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Area</source>
         <translation>Fläche</translation>
     </message>
@@ -413,7 +414,7 @@
         <translation>End Parameter</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-12"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-13"/>
         <source>Polyline Pattern</source>
         <translation>Polylinienmuster</translation>
     </message>

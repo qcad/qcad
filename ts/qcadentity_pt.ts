@@ -60,7 +60,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location filename="../src/entity/RLineEntity.cpp" line="+82"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+70"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+88"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+89"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+78"/>
         <location line="+3"/>
         <location line="+4"/>
@@ -278,6 +278,7 @@ Indique o ângulo de fim ou [Ângulo/Comprimento da corda]</translatorcomment>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Area</source>
         <translatorcomment>--exact match--
 --file: pt.po--
@@ -658,7 +659,7 @@ Escalone entidades</translatorcomment>
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-10"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-11"/>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>

@@ -38,7 +38,7 @@ Tipo de línea:</translatorcomment>
         <translation type="vanished">Geometría</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+704"/>
+        <location filename="../PropertyEditor.js" line="+706"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
@@ -73,7 +73,7 @@ Tipo de línea:</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1117"/>
+        <location line="-1119"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -106,7 +106,7 @@ Seleccin nula</translatorcomment>
         <translation>Personalizado</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+166"/>
         <source>Index</source>
         <translatorcomment>--exact match--
 --file: qgis_es.ts--

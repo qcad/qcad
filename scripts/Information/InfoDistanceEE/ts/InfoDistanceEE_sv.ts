@@ -2,15 +2,15 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="sv_SE">
 <context>
-    <name>InfoDistanceEP</name>
+    <name>InfoDistanceEE</name>
     <message>
-        <location filename="../InfoDistanceEP.js" line="+58"/>
-        <source>Specify entity</source>
+        <location filename="../InfoDistanceEE.js" line="+62"/>
+        <source>Specify first entity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+8"/>
-        <source>Specify point</source>
+        <location line="+9"/>
+        <source>Specify second entity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -19,13 +19,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+92"/>
         <source>Distance:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEPInit.js" line="+2"/>
-        <source>Distance &amp;Entity to Point</source>
+        <location filename="../InfoDistanceEEInit.js" line="+2"/>
+        <source>Distance &amp;Entity to Entity</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

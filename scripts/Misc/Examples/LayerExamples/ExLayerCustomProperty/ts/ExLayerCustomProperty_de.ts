@@ -9,7 +9,7 @@
         <translation>Benutzerdefinierte Eigenschaft &quot;MyCustomProperty&quot; zu Layer &apos;0&apos; hinzugefügt.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
         <source>Add custom property to a layer</source>
         <translation>Benutzerdefinierte Eigenschaft zu Layer hinzufügen</translation>
     </message>

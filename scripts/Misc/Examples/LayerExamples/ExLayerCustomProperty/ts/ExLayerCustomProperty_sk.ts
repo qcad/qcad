@@ -9,7 +9,7 @@
         <translation>Pridané vlastné vlastnosť &apos;Vlastné&apos; na vrstve &apos;0&apos;.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
         <source>Add custom property to a layer</source>
         <translation>Pridajte vlastnú vlastnosť na vrstvu</translation>
     </message>

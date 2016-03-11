@@ -34,7 +34,7 @@
         <translation>Siirrä kohde haluttuun paikkaan</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Move Reference Point</source>
         <translation>Siirrä viite</translation>
     </message>
@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1994"/>
+        <location line="+2002"/>
         <source>Cancel</source>
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="-1721"/>
+        <location line="-1729"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktiivinen työkalu:</translation>
@@ -79,7 +79,7 @@
         <translation>Ei mitään</translation>
     </message>
     <message>
-        <location line="+626"/>
+        <location line="+634"/>
         <source>Options</source>
         <translation>Asetukset</translation>
     </message>
@@ -171,7 +171,7 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+335"/>
+        <location filename="../ShapeAlgorithms.js" line="+343"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translation>Säde on pudonnut alle 0.0 arvon %1 samankeskisen ympyrän (ympyröiden) jälkeen.</translation>
     </message>
@@ -223,6 +223,11 @@
         <location line="+4"/>
         <source>Diameter</source>
         <translation>Halkaisija</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arc</source>
+        <translation type="unfinished">Kaari</translation>
     </message>
     <message>
         <location line="+1"/>

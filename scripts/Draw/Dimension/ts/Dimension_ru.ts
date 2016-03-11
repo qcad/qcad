@@ -25,6 +25,11 @@
     </message>
     <message>
         <location line="+1"/>
+        <source>Arc</source>
+        <translation>Дуга</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Plus/Minus</source>
         <translation>Плюс/Минус</translation>
     </message>

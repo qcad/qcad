@@ -4,7 +4,7 @@
 <context>
     <name>InfoAngle</name>
     <message>
-        <location filename="../InfoAngle.js" line="+66"/>
+        <location filename="../InfoAngle.js" line="+67"/>
         <source>Specify first line</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--

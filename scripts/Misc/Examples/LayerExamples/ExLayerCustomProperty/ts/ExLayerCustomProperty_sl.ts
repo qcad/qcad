@@ -9,7 +9,7 @@
         <translation>Dodana prilagojena lasnost &apos;MyCustomProperty&apos; na plast 0.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
         <source>Add custom property to a layer</source>
         <translation>Dodaj prilagojeno lasnost na plast</translation>
     </message>

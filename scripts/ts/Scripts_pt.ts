@@ -39,7 +39,7 @@
         <translation>Mova a entidade para a localização desejada</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Move Reference Point</source>
         <translation>Mova o Ponto de Referência</translation>
     </message>
@@ -72,7 +72,7 @@ Retorna ao último menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1994"/>
+        <location line="+2002"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -81,7 +81,7 @@ Cancelar
         <translation>Cancele</translation>
     </message>
     <message>
-        <location line="-1721"/>
+        <location line="-1729"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Ferramenta Ativa:</translation>
@@ -102,7 +102,7 @@ Nenhuma das entidades selecionadas pode ser dividida.</translatorcomment>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location line="+626"/>
+        <location line="+634"/>
         <source>Options</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -211,7 +211,7 @@ Ferramentas CAD</translatorcomment>
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+335"/>
+        <location filename="../ShapeAlgorithms.js" line="+343"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>O Raio ficou abaixo de 0,0, após %1 círculo(s) concêntrico(s).</translation>
@@ -282,6 +282,11 @@ Insere Símbolo</translatorcomment>
 Comute o símbolo de diâmetro
 Diâmetro (ø)</translatorcomment>
         <translation>Diâmetro</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arc</source>
+        <translation>Arco</translation>
     </message>
     <message>
         <location line="+1"/>

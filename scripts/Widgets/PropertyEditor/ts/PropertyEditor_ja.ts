@@ -22,12 +22,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1307"/>
+        <location filename="../PropertyEditor.js" line="+1309"/>
         <source>*VARIES*</source>
         <translation>*VARIES*</translation>
     </message>
     <message>
-        <location line="-1117"/>
+        <location line="-1119"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -56,7 +56,7 @@
         <translation>カスタム</translation>
     </message>
     <message>
-        <location line="+164"/>
+        <location line="+166"/>
         <source>Index</source>
         <translation>目次</translation>
     </message>

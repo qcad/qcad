@@ -2,31 +2,54 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="fi">
 <context>
-    <name>InfoDistanceEP</name>
+    <name>InfoDistanceEE</name>
     <message>
-        <location filename="../InfoDistanceEP.js" line="+58"/>
-        <source>Specify entity</source>
-        <translation>Määrittele kohde</translation>
+        <location filename="../InfoDistanceEE.js" line="+62"/>
+        <source>Specify first entity</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+8"/>
-        <source>Specify point</source>
-        <translation>Määrittele piste</translation>
+        <location line="+9"/>
+        <source>Specify second entity</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation>Valmis</translation>
+        <translation type="unfinished">Valmis</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+92"/>
         <source>Distance:</source>
-        <translation>Etäisyys:</translation>
+        <translation type="unfinished">Etäisyys:</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEPInit.js" line="+2"/>
+        <location filename="../InfoDistanceEEInit.js" line="+2"/>
+        <source>Distance &amp;Entity to Entity</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>InfoDistanceEP</name>
+    <message>
+        <source>Specify entity</source>
+        <translation type="vanished">Määrittele kohde</translation>
+    </message>
+    <message>
+        <source>Specify point</source>
+        <translation type="vanished">Määrittele piste</translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation type="vanished">Valmis</translation>
+    </message>
+    <message>
+        <source>Distance:</source>
+        <translation type="vanished">Etäisyys:</translation>
+    </message>
+    <message>
         <source>Distance &amp;Entity to Point</source>
-        <translation>Kohteen etäisyys pisteeseen</translation>
+        <translation type="vanished">Kohteen etäisyys pisteeseen</translation>
     </message>
 </context>
 </TS>

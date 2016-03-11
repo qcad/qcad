@@ -34,6 +34,11 @@ Diâmetro (ø)</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
+        <source>Arc</source>
+        <translation>Arco</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Plus/Minus</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Mais/Menos</translation>

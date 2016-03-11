@@ -39,7 +39,7 @@
         <translation>Déplacer entité</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Move Reference Point</source>
         <translation>Déplacer référence</translation>
     </message>
@@ -68,12 +68,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1994"/>
+        <location line="+2002"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="-1721"/>
+        <location line="-1729"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Outil actif:</translation>
@@ -89,7 +89,7 @@
         <translation>Aucun</translation>
     </message>
     <message>
-        <location line="+626"/>
+        <location line="+634"/>
         <source>Options</source>
         <translation>Options</translation>
     </message>
@@ -191,7 +191,7 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+335"/>
+        <location filename="../ShapeAlgorithms.js" line="+343"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Rayon chuté en dessous de zéro après %1 cercle(s) concentrique(s).</translation>
@@ -249,6 +249,11 @@
         <location line="+4"/>
         <source>Diameter</source>
         <translation>Diamètre</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arc</source>
+        <translation>Arc</translation>
     </message>
     <message>
         <location line="+1"/>

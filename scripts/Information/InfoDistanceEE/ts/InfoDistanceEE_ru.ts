@@ -2,16 +2,16 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ru">
 <context>
-    <name>InfoDistanceEP</name>
+    <name>InfoDistanceEE</name>
     <message>
-        <location filename="../InfoDistanceEP.js" line="+58"/>
-        <source>Specify entity</source>
-        <translation>Укажите объект</translation>
+        <location filename="../InfoDistanceEE.js" line="+62"/>
+        <source>Specify first entity</source>
+        <translation>Укажите первый объект</translation>
     </message>
     <message>
-        <location line="+8"/>
-        <source>Specify point</source>
-        <translation>Укажите точку</translation>
+        <location line="+9"/>
+        <source>Specify second entity</source>
+        <translation>Укажите второй объект</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -19,14 +19,37 @@
         <translation>Завершено</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+92"/>
         <source>Distance:</source>
         <translation>Расстояние:</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEPInit.js" line="+2"/>
+        <location filename="../InfoDistanceEEInit.js" line="+2"/>
+        <source>Distance &amp;Entity to Entity</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>InfoDistanceEP</name>
+    <message>
+        <source>Specify entity</source>
+        <translation type="vanished">Укажите объект</translation>
+    </message>
+    <message>
+        <source>Specify point</source>
+        <translation type="vanished">Укажите точку</translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation type="vanished">Завершено</translation>
+    </message>
+    <message>
+        <source>Distance:</source>
+        <translation type="vanished">Расстояние:</translation>
+    </message>
+    <message>
         <source>Distance &amp;Entity to Point</source>
-        <translation>Расстояние от об&amp;ъекта до точки</translation>
+        <translation type="vanished">Расстояние от об&amp;ъекта до точки</translation>
     </message>
 </context>
 </TS>

@@ -34,7 +34,7 @@
         <translation>Premakni entiteto na željeno lokacijo</translation>
     </message>
     <message>
-        <location line="+348"/>
+        <location line="+349"/>
         <source>Move Reference Point</source>
         <translation>Premakni referenčno točko</translation>
     </message>
@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+1994"/>
+        <location line="+2002"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="-1721"/>
+        <location line="-1729"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktivno orodje:</translation>
@@ -79,7 +79,7 @@
         <translation>Brez</translation>
     </message>
     <message>
-        <location line="+626"/>
+        <location line="+634"/>
         <source>Options</source>
         <translation>Nastavitve</translation>
     </message>
@@ -171,7 +171,7 @@
 <context>
     <name>ShapeAlgorithms</name>
     <message>
-        <location filename="../ShapeAlgorithms.js" line="+335"/>
+        <location filename="../ShapeAlgorithms.js" line="+343"/>
         <source>Radius dropped below 0.0 after %1 concentric circle(s).</source>
         <translation>Radius je padel pod 0.0 po %1 kocentričnih krogih.</translation>
     </message>
@@ -223,6 +223,11 @@
         <location line="+4"/>
         <source>Diameter</source>
         <translation>Premer</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Arc</source>
+        <translation type="unfinished">Lok</translation>
     </message>
     <message>
         <location line="+1"/>

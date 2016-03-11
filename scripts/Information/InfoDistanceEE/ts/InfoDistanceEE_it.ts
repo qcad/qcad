@@ -2,16 +2,16 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="it_IT">
 <context>
-    <name>InfoDistanceEP</name>
+    <name>InfoDistanceEE</name>
     <message>
-        <location filename="../InfoDistanceEP.js" line="+58"/>
-        <source>Specify entity</source>
-        <translation>Scegli entità</translation>
+        <location filename="../InfoDistanceEE.js" line="+62"/>
+        <source>Specify first entity</source>
+        <translation>Primo oggetto</translation>
     </message>
     <message>
-        <location line="+8"/>
-        <source>Specify point</source>
-        <translation>Punto</translation>
+        <location line="+9"/>
+        <source>Specify second entity</source>
+        <translation>Secondo oggetto</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -19,14 +19,37 @@
         <translation>Fatto</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+92"/>
         <source>Distance:</source>
         <translation>Distanza:</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEPInit.js" line="+2"/>
+        <location filename="../InfoDistanceEEInit.js" line="+2"/>
+        <source>Distance &amp;Entity to Entity</source>
+        <translation>Distanza da &amp;entità a entità</translation>
+    </message>
+</context>
+<context>
+    <name>InfoDistanceEP</name>
+    <message>
+        <source>Specify entity</source>
+        <translation type="vanished">Scegli entità</translation>
+    </message>
+    <message>
+        <source>Specify point</source>
+        <translation type="vanished">Punto</translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation type="vanished">Fatto</translation>
+    </message>
+    <message>
+        <source>Distance:</source>
+        <translation type="vanished">Distanza:</translation>
+    </message>
+    <message>
         <source>Distance &amp;Entity to Point</source>
-        <translation>Distanza da &amp;entità a punto</translation>
+        <translation type="vanished">Distanza da &amp;entità a punto</translation>
     </message>
     <message>
         <source>Distance Entity to Point</source>

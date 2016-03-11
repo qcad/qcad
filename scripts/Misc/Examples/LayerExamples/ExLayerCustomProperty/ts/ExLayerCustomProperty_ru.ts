@@ -9,7 +9,7 @@
         <translation>Добавлено пользовательское свойство &apos;MyCustomProperty&apos; к слою &apos;0&apos;.</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+10"/>
         <source>Add custom property to a layer</source>
         <translation>Добавить пользовательское свойство к слою</translation>
     </message>

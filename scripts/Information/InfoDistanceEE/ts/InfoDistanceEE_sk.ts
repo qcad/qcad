@@ -2,31 +2,54 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="sk">
 <context>
-    <name>InfoDistanceEP</name>
+    <name>InfoDistanceEE</name>
     <message>
-        <location filename="../InfoDistanceEP.js" line="+58"/>
-        <source>Specify entity</source>
-        <translation>Zvoľte prvok</translation>
+        <location filename="../InfoDistanceEE.js" line="+62"/>
+        <source>Specify first entity</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+8"/>
-        <source>Specify point</source>
-        <translation>Zvoľte bod</translation>
+        <location line="+9"/>
+        <source>Specify second entity</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation>Hotovo</translation>
+        <translation type="unfinished">Hotovo</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+92"/>
         <source>Distance:</source>
-        <translation>Vzdialenosť:</translation>
+        <translation type="unfinished">Vzdialenosť:</translation>
     </message>
     <message>
-        <location filename="../InfoDistanceEPInit.js" line="+2"/>
+        <location filename="../InfoDistanceEEInit.js" line="+2"/>
+        <source>Distance &amp;Entity to Entity</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>InfoDistanceEP</name>
+    <message>
+        <source>Specify entity</source>
+        <translation type="vanished">Zvoľte prvok</translation>
+    </message>
+    <message>
+        <source>Specify point</source>
+        <translation type="vanished">Zvoľte bod</translation>
+    </message>
+    <message>
+        <source>Done</source>
+        <translation type="vanished">Hotovo</translation>
+    </message>
+    <message>
+        <source>Distance:</source>
+        <translation type="vanished">Vzdialenosť:</translation>
+    </message>
+    <message>
         <source>Distance &amp;Entity to Point</source>
-        <translation>Vzdialen&amp;osť Prvku k Bodu</translation>
+        <translation type="vanished">Vzdialen&amp;osť Prvku k Bodu</translation>
     </message>
 </context>
 </TS>
