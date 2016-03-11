@@ -46,15 +46,15 @@ Circle2TPTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setZoom(10, new RVector(5, 5, 0, true));
-    var p = new RVector(26.8, 16.5);
+    var p = new RVector(30, 20);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setZoom(10, new RVector(5, 5, 0, true));
-    var p = new RVector(30, 30);
+    var p = new RVector(20, 30);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.setZoom(10, new RVector(5, 5, 0, true));
-    var p = new RVector(30, 26.4);
+    var p = new RVector(30, 25);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     var p = new RVector(25.2, 23.3);
