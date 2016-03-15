@@ -123,6 +123,18 @@
                 qScriptValueFromValue(&engine, RBlock::PropertyFrozen),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyOriginX",
+                qScriptValueFromValue(&engine, RBlock::PropertyOriginX),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyOriginY",
+                qScriptValueFromValue(&engine, RBlock::PropertyOriginY),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyOriginZ",
+                qScriptValueFromValue(&engine, RBlock::PropertyOriginZ),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("modelSpaceName",
                 qScriptValueFromValue(&engine, RBlock::modelSpaceName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
