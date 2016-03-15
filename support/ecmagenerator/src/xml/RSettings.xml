@@ -618,19 +618,6 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
-    <method name="setNextVersionEnabled"
-    cppName="setNextVersionEnabled" specifier="public"
-    isStatic="true" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="on"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="isNextVersionEnabled"
-    cppName="isNextVersionEnabled" specifier="public"
-    isStatic="true" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
-    </method>
     <method name="getAutoScaleLinetypePatterns"
     cppName="getAutoScaleLinetypePatterns" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

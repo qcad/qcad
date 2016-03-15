@@ -142,10 +142,10 @@
      * and 44 the build version.
      */</comment>
     <function><type><name>static</name> <name>int</name></type> <name>getCurrentVersion</name><parameter_list>()</parameter_list> <block>{
-        <return>return <expr><name>R_QCAD_VERSION_MAJOR</name>*1000000 +
-               <name>R_QCAD_VERSION_MINOR</name>*10000 +
-               <name>R_QCAD_VERSION_RELEASE</name>*100 +
-               <name>R_QCAD_VERSION_BUILD</name></expr>;</return>
+        <return>return <expr><call><name>getMajorVersion</name><argument_list>()</argument_list></call>*1000000 +
+               <call><name>getMinorVersion</name><argument_list>()</argument_list></call>*10000 +
+               <call><name>getRevisionVersion</name><argument_list>()</argument_list></call>*100 +
+               <call><name>getBuildVersion</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
     <function><type><name>static</name> <name>int</name></type> <name>getPreviousVersion</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>previousVersion</name></expr>;</return>
@@ -197,8 +197,8 @@
     <function_decl><type><name>static</name> <name>void</name></type> <name>setXDataEnabled</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isXDataEnabled</name><parameter_list>()</parameter_list>;</function_decl>
 
-    <function_decl><type><name>static</name> <name>void</name></type> <name>setNextVersionEnabled</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>static</name> <name>bool</name></type> <name>isNextVersionEnabled</name><parameter_list>()</parameter_list>;</function_decl>
+    <comment type="line">//static void setNextVersionEnabled(bool on);</comment>
+    <comment type="line">//static bool isNextVersionEnabled();</comment>
 
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getAutoScaleLinetypePatterns</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getUseSecondarySelectionColor</name><parameter_list>()</parameter_list>;</function_decl>
@@ -262,7 +262,7 @@
     <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>quitFlag</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>xDataEnabled</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>nextVersionEnabled</name></decl>;</decl_stmt>
+    <comment type="line">//static bool nextVersionEnabled;</comment>
 
     <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>firstStart</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>bool</name></type> <name>newVersion</name></decl>;</decl_stmt>

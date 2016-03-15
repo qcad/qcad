@@ -115,6 +115,12 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyFrozen" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyOriginX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyOriginY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyOriginZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="modelSpaceName" type="QString" isConst="true"
     isStatic="true" />
   </class>
