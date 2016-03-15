@@ -6,52 +6,52 @@
     <message>
         <location filename="../LibraryBrowser.js" line="+71"/>
         <source>audience</source>
-        <translation type="unfinished"></translation>
+        <translation>audience</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>creator</source>
-        <translation type="unfinished"></translation>
+        <translation>creator</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>dimension</source>
-        <translation type="unfinished"></translation>
+        <translation>dimension</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>levelOfDetail</source>
-        <translation type="unfinished"></translation>
+        <translation>levelOfDetail</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>license</source>
-        <translation type="unfinished"></translation>
+        <translation>license</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>perspective</source>
-        <translation type="unfinished"></translation>
+        <translation>perspective</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>presentation</source>
-        <translation type="unfinished"></translation>
+        <translation>presentation</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>publisher</source>
-        <translation type="unfinished"></translation>
+        <translation>publisher</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>subject</source>
-        <translation type="unfinished"></translation>
+        <translation>subject</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>title</source>
-        <translation type="unfinished"></translation>
+        <translation>title</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -68,68 +68,68 @@
     <message>
         <location line="-1144"/>
         <source>Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>Pictogram</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>List</source>
-        <translation type="unfinished"></translation>
+        <translation>Lijst</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Choose Source Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Kies map</translation>
     </message>
     <message>
         <location line="+684"/>
         <source>Page %1 of %2</source>
-        <translation type="unfinished"></translation>
+        <translation>Pagina %1 van %2</translation>
     </message>
     <message>
         <location line="+235"/>
         <source>Updating icons...</source>
-        <translation type="unfinished"></translation>
+        <translation>Pictogrammen worden bijgewerkt...</translation>
     </message>
     <message>
         <location line="+1"/>
         <location line="+219"/>
         <source>Abort</source>
-        <translation type="unfinished"></translation>
+        <translation>Afbreken</translation>
     </message>
     <message>
         <location line="-27"/>
         <source>File:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestand:</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Folder:</source>
-        <translation type="unfinished"></translation>
+        <translation>Map:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>License:</source>
-        <translation type="unfinished"></translation>
+        <translation>Licentie:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Attribute as:</source>
-        <translation type="unfinished"></translation>
+        <translation>Toeschrijven als:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Creator:</source>
-        <translation type="unfinished"></translation>
+        <translation>Auteur:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Updating library index:</source>
-        <translation type="unfinished"></translation>
+        <translation>Index bijwerken:</translation>
     </message>
     <message>
         <location line="+30"/>
         <source>DB error</source>
-        <translation type="unfinished"></translation>
+        <translation>DB fout</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -138,133 +138,138 @@ Driver error: %1
 Database error: %2
 Database file: %3
 Library browser will not be available.</source>
-        <translation type="unfinished"></translation>
+        <translation>Plugin LibraryBrowser: cannot connect to DB.
+Driver error: %1
+Database error: %2
+Database file: %3
+Library browser will not be available.</translation>
     </message>
     <message>
         <location line="+43"/>
         <source>Source removed from part library: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Bron verwijderd uit bibliotheek: %1</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Force database update.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gedwongen bijwerking van databank.</translation>
     </message>
     <message>
         <location line="+393"/>
         <source>&amp;Insert</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Invoegen</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>&amp;Edit Script File...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Script bestand bijwerken...</translation>
     </message>
     <message>
         <location line="+8"/>
         <source>Open &amp;SVG File...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;SVG bestand openen...</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>&amp;Open...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Open...</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Edit...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bewerken...</translation>
     </message>
     <message>
         <location line="+25"/>
         <source>File Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandsbrowser</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>&amp;Show in %1...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tonen in %1...</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>&amp;Remove from Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Verwijderen van favorieten</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>&amp;Add to Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Toevoegen aan favorieten</translation>
     </message>
     <message>
         <location line="+34"/>
         <source>&amp;Regenerate Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pictogram bijwerken</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Regenerate Icons</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Pictogrammen bijwerken</translation>
     </message>
     <message>
         <location filename="../LibraryBrowserInit.js" line="-11"/>
         <source>&amp;Library Browser</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bibliotheekbrowser</translation>
     </message>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Synchronization</source>
-        <translation type="unfinished"></translation>
+        <translation>Synchronisatie</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Update search index on startup</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoekindex bijwerken bij het opstarten</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Display Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Weergaveopties</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Icon Size:</source>
-        <translation type="unfinished"></translation>
+        <translation>Pictogramgrootte:</translation>
     </message>
     <message>
         <location line="+44"/>
         <source>View Mode:</source>
-        <translation type="unfinished"></translation>
+        <translation>Weergave:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Number of items
 shown in search results:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aantal items
+getoond in zoekresultaten:</translation>
     </message>
     <message>
         <location line="+18"/>
         <source>Library Sources</source>
-        <translation type="unfinished"></translation>
+        <translation>Bibliotheekbronnen</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Add...</source>
-        <translation type="unfinished"></translation>
+        <translation>Toevoegen...</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Verwijderen</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Omhoog</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Omlaag</translation>
     </message>
 </context>
 <context>
@@ -272,52 +277,52 @@ shown in search results:</source>
     <message>
         <location filename="../LibraryBrowser.ui" line="+28"/>
         <source>File System</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestandssysteem</translation>
     </message>
     <message>
         <location line="+60"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoeken</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>Look for:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoeken:</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Clear</source>
-        <translation type="unfinished"></translation>
+        <translation>Wissen</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Find</source>
-        <translation type="unfinished"></translation>
+        <translation>Zoeken</translation>
     </message>
     <message>
         <location line="+21"/>
         <source>Reset tag selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Tag selectie herstellen</translation>
     </message>
     <message>
         <location line="+126"/>
         <source>Favorites</source>
-        <translation type="unfinished"></translation>
+        <translation>Favorieten</translation>
     </message>
     <message>
         <location line="+36"/>
         <source>Insert selected item into drawing</source>
-        <translation type="unfinished"></translation>
+        <translation>Geselecteerde object in de tekening invoegen</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Update DB from file system</source>
-        <translation type="unfinished"></translation>
+        <translation>Bijwerken van bestandssysteem</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation>0</translation>
     </message>
 </context>
 </TS>

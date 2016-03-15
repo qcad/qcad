@@ -6,47 +6,47 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+47"/>
         <source>Status Bar Font:</source>
-        <translation type="unfinished"></translation>
+        <translation>Lettertype van de statusbalk:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Status Bar Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Statusbalk widgets</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Coordinate display</source>
-        <translation type="unfinished"></translation>
+        <translation>Coördinaatenweergave</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Mouse display</source>
-        <translation type="unfinished"></translation>
+        <translation>Muisweergave</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Selection display</source>
-        <translation type="unfinished"></translation>
+        <translation>Selectieweergave</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Progress display</source>
-        <translation type="unfinished"></translation>
+        <translation>Voortgangweergave</translation>
     </message>
     <message>
         <location filename="../StatusBar.js" line="+32"/>
         <source>Widgets</source>
-        <translation type="unfinished"></translation>
+        <translation>Widgets</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Status Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Statusbalk</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>&amp;Status Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Statusbalk</translation>
     </message>
 </context>
 </TS>

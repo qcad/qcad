@@ -223,7 +223,7 @@
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation type="unfinished">Boog</translation>
+        <translation>Boog</translation>
     </message>
     <message>
         <location line="+1"/>

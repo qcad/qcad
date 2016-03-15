@@ -180,12 +180,12 @@
     <message>
         <location line="+3"/>
         <source>Center</source>
-        <translation>Mittellinien</translation>
+        <translation>Zentrum</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation>Mittelpunkt</translation>
+        <translation>Mitte</translation>
     </message>
     <message>
         <location line="+3"/>

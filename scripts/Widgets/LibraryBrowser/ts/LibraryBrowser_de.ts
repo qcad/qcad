@@ -197,7 +197,7 @@ Library browser will not be available.</translation>
     <message>
         <location line="+25"/>
         <source>File Browser</source>
-        <translation>Ordner</translation>
+        <translation>Dateibrowser</translation>
     </message>
     <message>
         <location line="+2"/>
