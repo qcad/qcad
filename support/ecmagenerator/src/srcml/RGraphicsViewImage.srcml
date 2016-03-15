@@ -267,6 +267,10 @@
         <return>return <expr><name>colorCorrectionOverride</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setMinimumLineweight</name><parameter_list>(<param><decl><type><name>double</name></type> <name>lw</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>minimumLineweight</name> = <name>lw</name></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>setPaintOffset</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>paintOffset</name> = <name>offset</name></expr>;</expr_stmt>
     }</block></function>
@@ -285,6 +289,7 @@
 
 </public><protected>protected:
     <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getTextLayoutsPainterPaths</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>text</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RTextLayout</name></argument>&gt;</argument_list></name>&amp;</type> <name>textLayouts</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>applyMinimumLineweight</name><parameter_list>(<param><decl><type><name>QPen</name>&amp;</type> <name>pen</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>applyColorCorrection</name><parameter_list>(<param><decl><type><name>QPen</name>&amp;</type> <name>pen</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>applyColorCorrection</name><parameter_list>(<param><decl><type><name>QBrush</name>&amp;</type> <name>brush</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>applyColorMode</name><parameter_list>(<param><decl><type><name>QPen</name>&amp;</type> <name>pen</name></decl></param>)</parameter_list>;</function_decl>
@@ -345,6 +350,8 @@
     <decl_stmt><decl><type><name>bool</name></type> <name>colorCorrectionOverride</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>colorCorrection</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>int</name></type> <name>colorThreshold</name></decl>;</decl_stmt>
+
+    <decl_stmt><decl><type><name>double</name></type> <name>minimumLineweight</name></decl>;</decl_stmt>
 
 <comment type="line">//    int textHeightThresholdOverride;</comment>
 <comment type="line">//    int textHeightThreshold;</comment>

@@ -500,6 +500,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="setMinimumLineweight"
+    cppName="setMinimumLineweight" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="lw"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="setPaintOffset" cppName="setPaintOffset"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -536,6 +544,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QList &lt; RTextLayout &gt; &amp;"
         typeName="QList &lt; RTextLayout &gt;" name="textLayouts"
         isConst="true" />
+      </variant>
+    </method>
+    <method name="applyMinimumLineweight"
+    cppName="applyMinimumLineweight" specifier="protected"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPen &amp;" typeName="QPen" name="pen"
+        isConst="false" />
       </variant>
     </method>
     <method name="applyColorCorrection"
