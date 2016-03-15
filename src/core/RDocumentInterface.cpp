@@ -1335,7 +1335,7 @@ REntity::Id RDocumentInterface::getClosestEntity(RMouseEvent& event) {
     RGraphicsView& view = event.getGraphicsView();
     RVector modelPosition = event.getModelPosition();
 
-    // range is 10 pixels in model units:
+    // range is N pixels in model units:
     double modelRange = view.mapDistanceFromView(RSettings::getPickRange());
 
     return getClosestEntity(modelPosition, modelRange);
