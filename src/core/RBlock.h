@@ -45,6 +45,9 @@ public:
     static RPropertyTypeId PropertyCustom;
     static RPropertyTypeId PropertyName;
     static RPropertyTypeId PropertyFrozen;
+    static RPropertyTypeId PropertyOriginX;
+    static RPropertyTypeId PropertyOriginY;
+    static RPropertyTypeId PropertyOriginZ;
 
 public:
     RBlock();
