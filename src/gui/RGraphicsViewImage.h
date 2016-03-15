@@ -266,6 +266,10 @@ public:
         return colorCorrectionOverride;
     }
 
+    void setZeroWeightCorrection(double zw) {
+        zeroWeightCorrection = zw;
+    }
+
     void setPaintOffset(const RVector& offset) {
         paintOffset = offset;
     }
@@ -284,6 +288,7 @@ public:
 
 protected:
     QList<RPainterPath> getTextLayoutsPainterPaths(const RTextBasedData& text, const QList<RTextLayout>& textLayouts);
+    void applyZeroWeightCorrection(QPen& pen);
     void applyColorCorrection(QPen& pen);
     void applyColorCorrection(QBrush& brush);
     void applyColorMode(QPen& pen);
@@ -344,6 +349,8 @@ protected:
     bool colorCorrectionOverride;
     bool colorCorrection;
     int colorThreshold;
+
+    double zeroWeightCorrection;
 
 //    int textHeightThresholdOverride;
 //    int textHeightThreshold;
