@@ -611,10 +611,10 @@ function main() {
     appWin.windowTitle = qApp.applicationName;
 
     // save first start information:
-    appWin.setProperty("FirstStart", isFirstStart);
+    RSettings.setFirstStart(isFirstStart);
     // save new version information:
-    appWin.setProperty("NewVersion", newVersion);
-    appWin.setProperty("PreviousVersion", previousVersion);
+    RSettings.setNewVersion(newVersion);
+    RSettings.setPreviousVersion(parseInt(previousVersion, 10));
 
     // save locale
     appWin.setProperty("Locale", RSettings.getLocale());

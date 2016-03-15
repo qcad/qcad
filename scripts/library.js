@@ -2204,38 +2204,6 @@ function getDontUseNativeDialog() {
     return RS.getWindowManagerId()==="kde" || RSettings.getBoolValue("SaveAs/UseSystemFileDialog", true)===false;
 };
 
-/**
- * \return True if a new version is started for the first time
- */
-function isNewVersion() {
-    var appWin = RMainWindowQt.getMainWindow();
-    var newVersion = appWin.property("NewVersion");
-    if (isNull(newVersion)) {
-        newVersion = true;
-    }
-    return newVersion;
-}
-
-/**
- * \return Current version as number in format 3010101 for 3.1.1.1.
- */
-function getCurrentVersion() {
-    var currentVersion = RSettings.getNumericalVersionString();
-    return parseInt(currentVersion, 10);
-}
-
-/**
- * \return Previous version as number in format 3010101 for 3.1.1.1.
- */
-function getPreviousVersion() {
-    var appWin = RMainWindowQt.getMainWindow();
-    var previousVersion = appWin.property("PreviousVersion");
-    if (isNull(previousVersion)) {
-        previousVersion = "0";
-    }
-    return parseInt(previousVersion, 10);
-}
-
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {

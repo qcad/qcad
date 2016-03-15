@@ -120,6 +120,36 @@ public:
     static int getRevisionVersion();
     static int getBuildVersion();
     static QString getRevisionString();
+    static void setFirstStart(bool on) {
+        firstStart = on;
+    }
+    static bool isFirstStart() {
+        return firstStart;
+    }
+    static void setNewVersion(bool on) {
+        newVersion = on;
+    }
+    static bool isNewVersion() {
+        return newVersion;
+    }
+    static void setPreviousVersion(int pv) {
+        previousVersion = pv;
+    }
+    /**
+     * \return Current version as int in format 11223344 where
+     * 11 is the major version, 22 the minor version, 33 the revision
+     * and 44 the build version.
+     */
+    static int getCurrentVersion() {
+        return getMajorVersion()*1000000 +
+               getMinorVersion()*10000 +
+               getRevisionVersion()*100 +
+               getBuildVersion();
+    }
+    static int getPreviousVersion() {
+        return previousVersion;
+    }
+
     static int getSnapRange();
     static int getPickRange();
     static int getZeroWeightWeight();
@@ -232,6 +262,10 @@ private:
 
     static bool xDataEnabled;
     static bool nextVersionEnabled;
+
+    static bool firstStart;
+    static bool newVersion;
+    static int previousVersion;
 };
 
 Q_DECLARE_METATYPE(RSettings*)

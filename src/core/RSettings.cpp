@@ -76,6 +76,10 @@ bool RSettings::quitFlag = false;
 bool RSettings::xDataEnabled = false;
 bool RSettings::nextVersionEnabled = false;
 
+bool RSettings::firstStart = false;
+bool RSettings::newVersion = false;
+int RSettings::previousVersion = 0;
+
 QString RSettings::getAppId() {
     QString ret = qApp->applicationName();
     ret.replace(QRegExp("[^a-zA-Z0-9]"), "");
