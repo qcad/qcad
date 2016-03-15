@@ -252,7 +252,8 @@
         <translation>位置</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location filename="../src/core/RBlock.cpp" line="+54"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
@@ -262,7 +263,15 @@
         <translation>X</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="+0"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Origin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-1"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
@@ -272,7 +281,8 @@
         <translation>Y</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="+1"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
@@ -281,7 +291,7 @@
         <translation>Z</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-5"/>
@@ -517,7 +527,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+49"/>
+        <location filename="../src/core/RBlock.cpp" line="-4"/>
         <location filename="../src/core/RLayer.cpp" line="-3"/>
         <source>Name</source>
         <translation type="unfinished"></translation>

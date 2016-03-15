@@ -138,5 +138,10 @@
         <source>Display Z coordinates</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Display properties of current block and current layer</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

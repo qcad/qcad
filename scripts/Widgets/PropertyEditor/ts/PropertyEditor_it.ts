@@ -217,5 +217,10 @@ Specifica la base</translatorcomment>
         <source>Display Z coordinates</source>
         <translation>Visualizzare coordinate z</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Display properties of current block and current layer</source>
+        <translation>Mostra proprietà del blocco corrente e livello corrente</translation>
+    </message>
 </context>
 </TS>

@@ -369,7 +369,8 @@ Liste des blocs</translatorcomment>
         <translation type="obsolete">Bloc référencé</translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location filename="../src/core/RBlock.cpp" line="+54"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="+1"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
         <location filename="../src/core/RViewportEntity.cpp" line="+70"/>
@@ -384,7 +385,7 @@ Exportation du dessin...</translatorcomment>
         <translation>X</translation>
     </message>
     <message>
-        <location line="-3"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-3"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-8"/>
@@ -399,7 +400,15 @@ Indiquer la position [angle/longueur]</translatorcomment>
         <translation>Position</translation>
     </message>
     <message>
+        <location filename="../src/core/RBlock.cpp" line="+0"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Origin</source>
+        <translation>Origine</translation>
+    </message>
+    <message>
         <location line="-1"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-1"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-1"/>
@@ -414,7 +423,8 @@ Modifier
         <translation>Y</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location line="+1"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
@@ -427,7 +437,7 @@ Partage Horizontal
         <translation>Z</translation>
     </message>
     <message>
-        <location line="-2"/>
+        <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-5"/>
@@ -686,7 +696,7 @@ Ouvrir la boîte de dialogue des couleurs</translatorcomment>
         <translation>Affichage cible</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+49"/>
+        <location filename="../src/core/RBlock.cpp" line="-4"/>
         <location filename="../src/core/RLayer.cpp" line="-3"/>
         <source>Name</source>
         <translation>Nom</translation>

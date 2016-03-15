@@ -303,5 +303,10 @@ Preferências Gerais do Aplicativo
         <source>Display Z coordinates</source>
         <translation>Exiba coordenadas Z</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Display properties of current block and current layer</source>
+        <translation>Exibição de propriedades de bloco atual e camada atual</translation>
+    </message>
 </context>
 </TS>

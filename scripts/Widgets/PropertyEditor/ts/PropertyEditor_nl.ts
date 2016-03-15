@@ -106,7 +106,7 @@
     <message>
         <location filename="../PropertyEditor.ui" line="+40"/>
         <source>Selection:</source>
-        <translation>Selectie</translation>
+        <translation>Selectie:</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -137,6 +137,11 @@
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Display Z coordinates</source>
         <translation>Z-coördinaat tonen</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>Display properties of current block and current layer</source>
+        <translation>Eigenschappen van het huidige blok en de huidige laag weergeven</translation>
     </message>
 </context>
 </TS>

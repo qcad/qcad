@@ -227,5 +227,10 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <source>Display Z coordinates</source>
         <translation>Afficher coordonnées z</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Display properties of current block and current layer</source>
+        <translation>Afficher les propriétés de bloc actuel et du calque actuel</translation>
+    </message>
 </context>
 </TS>

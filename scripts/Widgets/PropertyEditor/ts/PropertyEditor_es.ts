@@ -236,5 +236,10 @@ Seleccione entidad base</translatorcomment>
         <source>Display Z coordinates</source>
         <translation>Visualizar coordenadas z</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Display properties of current block and current layer</source>
+        <translation>Mostrar las propiedades del bloque actual y la capa actual</translation>
+    </message>
 </context>
 </TS>

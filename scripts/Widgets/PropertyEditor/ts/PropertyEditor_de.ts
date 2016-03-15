@@ -214,5 +214,10 @@
         <source>Display Z coordinates</source>
         <translation>Z Koordinaten anzeigen</translation>
     </message>
+    <message>
+        <location line="+10"/>
+        <source>Display properties of current block and current layer</source>
+        <translation>Eigenschaften des aktuellen Blocks und des aktuallen Layers anzeigen</translation>
+    </message>
 </context>
 </TS>

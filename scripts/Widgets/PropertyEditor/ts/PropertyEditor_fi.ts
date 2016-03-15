@@ -27,6 +27,11 @@
         <translation>Näytä Z koordinaatit</translation>
     </message>
     <message>
+        <location line="+10"/>
+        <source>Display properties of current block and current layer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../PropertyEditor.js" line="+1309"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
