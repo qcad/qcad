@@ -220,6 +220,27 @@
         getRevisionString
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setFirstStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isFirstStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setNewVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isNewVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPreviousVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getCurrentVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPreviousVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getSnapRange
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

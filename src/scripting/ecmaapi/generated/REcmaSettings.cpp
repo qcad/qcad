@@ -173,6 +173,20 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getRevisionString, "getRevisionString");
             
+            REcmaHelper::registerFunction(&engine, &ctor, setFirstStart, "setFirstStart");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isFirstStart, "isFirstStart");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setNewVersion, "setNewVersion");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isNewVersion, "isNewVersion");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, setPreviousVersion, "setPreviousVersion");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getCurrentVersion, "getCurrentVersion");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, getPreviousVersion, "getPreviousVersion");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getSnapRange, "getSnapRange");
             
             REcmaHelper::registerFunction(&engine, &ctor, getPickRange, "getPickRange");
@@ -2745,6 +2759,297 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getRevisionString", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::setFirstStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::setFirstStart", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::setFirstStart";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       setFirstStart(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.setFirstStart().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::setFirstStart", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::isFirstStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::isFirstStart", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::isFirstStart";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       isFirstStart();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.isFirstStart().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::isFirstStart", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::setNewVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::setNewVersion", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::setNewVersion";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       setNewVersion(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.setNewVersion().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::setNewVersion", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::isNewVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::isNewVersion", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::isNewVersion";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       isNewVersion();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.isNewVersion().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::isNewVersion", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::setPreviousVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::setPreviousVersion", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::setPreviousVersion";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       setPreviousVersion(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.setPreviousVersion().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::setPreviousVersion", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getCurrentVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getCurrentVersion", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getCurrentVersion";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RSettings::
+       getCurrentVersion();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getCurrentVersion().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getCurrentVersion", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getPreviousVersion
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getPreviousVersion", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getPreviousVersion";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        RSettings::
+       getPreviousVersion();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getPreviousVersion().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getPreviousVersion", context, engine);
             return result;
         }
          QScriptValue
