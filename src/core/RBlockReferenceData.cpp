@@ -438,6 +438,12 @@ RBox RBlockReferenceData::getQueryBoxInBlockCoordinates(const RBox& box) const {
     RVector::moveList(corners, -position);
     RVector::rotateList(corners, -rotation);
     RVector::scaleList(corners, RVector(1.0/scaleFactors.x, 1.0/scaleFactors.y));
+    if (document!=NULL) {
+        QSharedPointer<RBlock> block = document->queryBlockDirect(referencedBlockId);
+        if (!block.isNull()) {
+            RVector::moveList(corners, block->getOrigin());
+        }
+    }
     return RBox(RVector::getMinimum(corners), RVector::getMaximum(corners));
 }
 
