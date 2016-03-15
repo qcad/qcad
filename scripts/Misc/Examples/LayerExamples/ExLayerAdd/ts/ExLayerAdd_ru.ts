@@ -11,7 +11,7 @@
     <message>
         <location line="+13"/>
         <source>Add layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Добавить слой</translation>
     </message>
 </context>
 </TS>

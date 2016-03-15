@@ -227,7 +227,7 @@
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation type="unfinished">Oblúk</translation>
+        <translation>Oblúk</translation>
     </message>
     <message>
         <location line="+1"/>
