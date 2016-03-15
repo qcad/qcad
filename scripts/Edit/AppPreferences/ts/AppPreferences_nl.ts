@@ -6,7 +6,7 @@
     <message>
         <location filename="../AppPreferences.js" line="+64"/>
         <source>Application &amp;Preferences</source>
-        <translation>&amp;Programma Voorkeursinstellingen</translation>
+        <translation>&amp;Programma voorkeursinstellingen</translation>
     </message>
 </context>
 </TS>

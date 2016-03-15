@@ -96,7 +96,7 @@
         <location line="+56"/>
         <location line="+11"/>
         <source>Property Editor</source>
-        <translation>Eigenschappen editor</translation>
+        <translation>Eigenschappen-editor</translation>
     </message>
     <message>
         <location line="-67"/>
