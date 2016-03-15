@@ -54,7 +54,7 @@ RGraphicsViewImage::RGraphicsViewImage()
       colorCorrectionOverride(false),
       colorCorrection(false),
       colorThreshold(10),
-      zeroWeightCorrection(0.0),
+      minimumLineweight(0.0),
       drawingScale(1.0),
       alphaEnabled(false) {
 
@@ -916,7 +916,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         // prevent black on black / white on white drawing
         applyColorCorrection(pen);
         applyColorCorrection(brush);
-        applyZeroWeightCorrection(pen);
+        applyMinimumLineweight(pen);
 
         // highlighted:
         if (!isPrinting() && path.isHighlighted()) {
@@ -1097,9 +1097,9 @@ QList<RPainterPath> RGraphicsViewImage::getTextLayoutsPainterPaths(const RTextBa
     return ret;
 }
 
-void RGraphicsViewImage::applyZeroWeightCorrection(QPen& pen) {
-    if (zeroWeightCorrection>1.0e-6 && pen.widthF()<1.0e-6) {
-        pen.setWidthF(zeroWeightCorrection);
+void RGraphicsViewImage::applyMinimumLineweight(QPen& pen) {
+    if (minimumLineweight>1.0e-6 && pen.widthF()<minimumLineweight) {
+        pen.setWidthF(minimumLineweight);
     }
 }
 
