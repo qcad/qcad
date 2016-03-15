@@ -4926,6 +4926,74 @@
         
     
     
+      void REcmaShellGraphicsViewImage::setMinimumLineweight(
+                double lw
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::setMinimumLineweight", engine);
+                QScriptValue _q_function = __qtscript_self.property("setMinimumLineweight");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=1*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RGraphicsViewImage::setMinimumLineweight";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RGraphicsViewImage::setMinimumLineweight(
+                            lw
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setMinimumLineweight", engine);
+
+                        
+                            return;
+                          
+                }
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: double, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        lw
+        )
+      
+                            )
+                        
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setMinimumLineweight", engine);
+
+                    
+            }
+        
+    
+    
       void REcmaShellGraphicsViewImage::setPaintOffset(
                 const RVector & offset
             ) {
@@ -5285,6 +5353,78 @@
                     
                             return res;
                           
+            }
+        
+    
+    
+      void REcmaShellGraphicsViewImage::applyMinimumLineweight(
+                QPen & pen
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::applyMinimumLineweight", engine);
+                QScriptValue _q_function = __qtscript_self.property("applyMinimumLineweight");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=1*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RGraphicsViewImage::applyMinimumLineweight";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RGraphicsViewImage::applyMinimumLineweight(
+                            pen
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::applyMinimumLineweight", engine);
+
+                        
+                            return;
+                          
+                }
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                        // temporary make protected function scriptable, only from the context of this function call:
+                        QScriptValue proto = engine->defaultPrototype(qMetaTypeId<RGraphicsViewImage*>());
+                        REcmaHelper::registerFunction(engine, &proto, applyMinimumLineweight, "applyMinimumLineweight");
+                        
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: QPen &, copyable: false
+        << qScriptValueFromValue(engine, 
+
+        &pen
+        )
+      
+                            )
+                        
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::applyMinimumLineweight", engine);
+
+                    
             }
         
     
@@ -10015,6 +10155,71 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaShellGraphicsViewImage::getTextLayoutsPainterPaths", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShellGraphicsViewImage::applyMinimumLineweight
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShellGraphicsViewImage::applyMinimumLineweight", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShellGraphicsViewImage::applyMinimumLineweight";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // protected function: can only be called from ECMA shell:
+                    REcmaShellGraphicsViewImage* self = 
+                        getSelfShell("", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QPen */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QPen*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QPen*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type QPen*.",
+                               context);                    
+                    }
+                    QPen& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->RGraphicsViewImage::applyMinimumLineweight(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.applyMinimumLineweight().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShellGraphicsViewImage::applyMinimumLineweight", context, engine);
             return result;
         }
          QScriptValue

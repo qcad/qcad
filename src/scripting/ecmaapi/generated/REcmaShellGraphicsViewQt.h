@@ -567,6 +567,11 @@
             );
         
     
+      void setMinimumLineweight(
+                double lw
+            );
+        
+    
       void setPaintOffset(
                 const RVector & offset
             );

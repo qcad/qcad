@@ -234,6 +234,9 @@
         getColorCorrectionOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setMinimumLineweight
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setPaintOffset
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

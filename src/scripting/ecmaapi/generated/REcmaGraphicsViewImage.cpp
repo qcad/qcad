@@ -219,6 +219,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getColorCorrectionOverride, "getColorCorrectionOverride");
             
+            REcmaHelper::registerFunction(&engine, proto, setMinimumLineweight, "setMinimumLineweight");
+            
             REcmaHelper::registerFunction(&engine, proto, setPaintOffset, "setPaintOffset");
             
             REcmaHelper::registerFunction(&engine, proto, getPaintOffset, "getPaintOffset");
@@ -4751,6 +4753,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewImage::getColorCorrectionOverride", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewImage::setMinimumLineweight
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewImage::setMinimumLineweight", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewImage::setMinimumLineweight";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewImage* self = 
+                        getSelf("setMinimumLineweight", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setMinimumLineweight(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewImage.setMinimumLineweight().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewImage::setMinimumLineweight", context, engine);
             return result;
         }
          QScriptValue
