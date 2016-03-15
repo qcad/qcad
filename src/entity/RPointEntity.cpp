@@ -75,12 +75,9 @@ void RPointEntity::init() {
 bool RPointEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
     bool ret = REntity::setProperty(propertyTypeId, value, transaction);
-    ret = ret || RObject::setMember(data.position.x, value, PropertyPositionX
-            == propertyTypeId);
-    ret = ret || RObject::setMember(data.position.y, value, PropertyPositionY
-            == propertyTypeId);
-    ret = ret || RObject::setMember(data.position.z, value, PropertyPositionZ
-            == propertyTypeId);
+    ret = ret || RObject::setMember(data.position.x, value, PropertyPositionX == propertyTypeId);
+    ret = ret || RObject::setMember(data.position.y, value, PropertyPositionY == propertyTypeId);
+    ret = ret || RObject::setMember(data.position.z, value, PropertyPositionZ == propertyTypeId);
     return ret;
 }
 
