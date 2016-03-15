@@ -1351,7 +1351,7 @@ QSet<REntity::Id> RDocument::querySelectedEntities() {
 QSet<RObject::Id> RDocument::queryPropertyEditorObjects() {
     QSet<RObject::Id> objectIds = querySelectedEntities();
 
-    if (RSettings::isNextVersionEnabled()) {
+    if (RSettings::getBoolValue("PropertyEditor/ShowBlockLayer", false)==true) {
         // no entities selected:
         if (objectIds.isEmpty()) {
             // expose properties of current layer:
