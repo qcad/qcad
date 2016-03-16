@@ -28,8 +28,8 @@ function WindowZoom(guiAction) {
     this.s1 = RVector.invalid;
     this.s2 = RVector.invalid;
 
-    var bitmap = new QBitmap("scripts/View/WindowZoom/WindowZoomCursor.png", "PNG");
-    var mask = new QBitmap("scripts/View/WindowZoom/WindowZoomCursorMask.png", "PNG");
+    var bitmap = new QBitmap("scripts/View/Zoom/WindowZoom/WindowZoomCursor.png", "PNG");
+    var mask = new QBitmap("scripts/View/Zoom/WindowZoom/WindowZoomCursorMask.png", "PNG");
     this.cursor = new QCursor(bitmap, mask, 12, 12);
 }
 
