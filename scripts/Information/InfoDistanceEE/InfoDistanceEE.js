@@ -214,7 +214,7 @@ InfoDistanceEE.prototype.getCandidatePoints = function(shape1, shape2) {
 //        s2 = d;
 //    }
 
-    // add start and end point for lines and arcs:
+    // add start and end point for lines, xlines and arcs:
     // line <-> line
     // line <-> arc
     if (isLineShape(shape1) || isXLineShape(shape1) || isArcShape(shape1)) {
@@ -258,6 +258,10 @@ InfoDistanceEE.prototype.getCandidatePoints = function(shape1, shape2) {
             ret.push(p);
         }
     }
+
+    // add intersection points:
+    var ips = shape1.getIntersectionPoints(shape2.data());
+    ret = ret.concat(ips);
 
     // line <-> arc / circle
 //    if (isLineBasedShape(shape1) && (isArcShape(shape2) || isCircleShape(shape2))) {
