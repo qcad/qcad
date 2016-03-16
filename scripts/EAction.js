@@ -2057,7 +2057,10 @@ EAction.getEntityId = function(di, action, event, preview) {
             //str += " / " + e.getProperty(REntity.PropertyDisplayedColor)[0].getName();
             str += " / " + e.getLayerName();
             if  (isFunction(e.getLength)) {
-                str += " / " + qsTr("Length:") + " " + numberToString(e.getLength(), 3);
+                var l = e.getLength();
+                if (isNumber(l)) {
+                    str += " / " + qsTr("Length:") + " " + numberToString(e.getLength(), 3);
+                }
             }
             var col = e.getProperty(REntity.PropertyDisplayedColor, true)[0];
             if (!isNull(col)) {
