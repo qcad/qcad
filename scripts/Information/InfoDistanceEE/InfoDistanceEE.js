@@ -217,7 +217,7 @@ InfoDistanceEE.prototype.getCandidatePoints = function(shape1, shape2) {
     // add start and end point for lines and arcs:
     // line <-> line
     // line <-> arc
-    if (isLineShape(shape1) || isArcShape(shape1)) {
+    if (isLineShape(shape1) || isXLineShape(shape1) || isArcShape(shape1)) {
         ret.push(shape1.getStartPoint());
         ret.push(shape1.getEndPoint());
     }
