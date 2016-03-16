@@ -16,6 +16,9 @@ InfoDistanceEETest00.prototype.test00 = function() {
     this.setUp();
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::MainToolsPanel::LineToolsPanelButton');
     TdbTest.clickOnWidget('MainWindow::CadQToolBar::CadToolBar::LineToolsPanel::Line2PButton');
+    this.setToolOption('Line/Type', 'TypeSegment');
+    this.setToolOption('Line2P/Restrict', 'false');
+    this.updateToolOptions();
     this.setZoom(10, new RVector(5, 5, 0, true));
     var p = new RVector(9.9, 30.2);
     this.sendMouseEventModelPos(QEvent.MouseButtonPress, p, Qt.LeftButton, 1, 0);
