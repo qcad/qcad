@@ -2059,7 +2059,10 @@ EAction.getEntityId = function(di, action, event, preview) {
             if  (isFunction(e.getLength)) {
                 str += " / " + qsTr("Length:") + " " + numberToString(e.getLength(), 3);
             }
-            icon = RColor.getIcon(e.getProperty(REntity.PropertyDisplayedColor)[0], new QSize(16,16));
+            var col = e.getProperty(REntity.PropertyDisplayedColor, true)[0];
+            if (!isNull(col)) {
+                icon = RColor.getIcon(col, new QSize(16,16));
+            }
         }
         else {
             str = qsTr("Cancel");
