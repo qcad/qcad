@@ -551,12 +551,27 @@ function main() {
     var splash = undefined;
     if (RSettings.getBoolValue("Start/EnableSplashScreen", true)) {
         var fn;
+        var key;
         if (RSettings.getDevicePixelRatio()===2) {
+            key = "SplashOverride@2x";
             fn = "scripts/splashscreen@2x.png";
         }
         else {
+            key = "SplashOverride";
             fn = "scripts/splashscreen.png";
         }
+
+        // look up slash screen override:
+        var numPlugins = RPluginLoader.countPlugins();
+        for (var i=0; i<numPlugins; i++) {
+            var pluginInfo = RPluginLoader.getPluginInfo(i);
+            var s = pluginInfo.get(key);
+            if (!isNull(s)) {
+                fn = s;
+                qDebug("splash override: ", fn);
+            }
+        }
+
         var pixmap = new QPixmap(fn);
         splash = new QSplashScreen(pixmap);
         if (!QCoreApplication.arguments().contains("-no-show")) {
