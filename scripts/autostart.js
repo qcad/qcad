@@ -546,6 +546,18 @@ function main() {
             RSettings.setValue("LibraryBrowser/SourceList", librarySources);
         }
     }
+
+    var numPlugins = RPluginLoader.countPlugins();
+    var pluginInfo;
+
+    // look up app name override:
+    for (i=0; i<numPlugins; i++) {
+        pluginInfo = RPluginLoader.getPluginInfo(i);
+        var n = pluginInfo.get("NameOverride");
+        if (!isNull(n)) {
+            qApp.applicationName = n;
+        }
+    }
     
     // splash:
     var splash = undefined;
@@ -562,9 +574,8 @@ function main() {
         }
 
         // look up slash screen override:
-        var numPlugins = RPluginLoader.countPlugins();
-        for (var i=0; i<numPlugins; i++) {
-            var pluginInfo = RPluginLoader.getPluginInfo(i);
+        for (i=0; i<numPlugins; i++) {
+            pluginInfo = RPluginLoader.getPluginInfo(i);
             var s = pluginInfo.get(key);
             if (!isNull(s)) {
                 fn = s;
