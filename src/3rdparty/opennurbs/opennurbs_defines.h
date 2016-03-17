@@ -979,7 +979,7 @@ public:
     os_point         = 0x08000000,
     // andrew: case value evaluates to 4294967295, which cannot be narrowed to type 'int' [-Wc++11-narrowing]
     //os_all_snaps     = 0xFFFFFFFF
-    os_all_snaps     = (long)0xFFFFFFFF
+    os_all_snaps     = 0xFFFFFFF
   };
   static osnap_mode OSnapMode(int); // convert integer to osnap_mode enum
 
@@ -1077,7 +1077,7 @@ public:
 
     // andrew: case value evaluates to 4294967295, which cannot be narrowed to type 'int' [-Wc++11-narrowing]
     //no_type           = 0xFFFFFFFF
-    no_type           = (long)0xFFFFFFFF
+    no_type           = 0xFFFFFFF
   };
 
   /*

@@ -171,7 +171,7 @@ public:
 
     // andrew: case value evaluates to 4294967295, which cannot be narrowed to type 'int' [-Wc++11-narrowing]
     //force_32bit_texture_type = 0xFFFFFFFF
-    force_32bit_texture_type = (long)0xFFFFFFFF
+    force_32bit_texture_type = 0xFFFFFFF
   };
 
   TYPE m_type;
@@ -187,7 +187,7 @@ public:
                            // To "add" a texture, set m_blend_amount = +1
                            // To "subtract" a texture, set m_blend_amount = -1
 
-    force_32bit_texture_mode = (long)0xFFFFFFFF
+    force_32bit_texture_mode = 0xFFFFFFF
   };
 
   MODE m_mode;
@@ -197,7 +197,7 @@ public:
     nearest_filter = 0, // nearest texture pixel is used
     linear_filter  = 1, // weighted average of corresponding texture pixels
 
-    force_32bit_texture_filter = (long)0xFFFFFFFF
+    force_32bit_texture_filter = 0xFFFFFFF
   };
   
   // The value of m_minfilter determines how the color
@@ -215,7 +215,7 @@ public:
     repeat_wrap      = 0,
     clamp_wrap       = 1,
 
-    force_32bit_texture_wrap = (long)0xFFFFFFFF
+    force_32bit_texture_wrap = 0xFFFFFFF
   };
 
   WRAP m_wrapu;

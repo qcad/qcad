@@ -12,9 +12,9 @@ SUBDIRS = qtscript_core \
           qtscript_xmlpatterns
 
 !r_mobile {
-    SUBDIRS += \
-          qtscript_webkit \
-          qtscript_webkitwidgets
+    #SUBDIRS += \
+          #qtscript_webkit \
+          #qtscript_webkitwidgets
 }
 
 #          qs_eval

@@ -43,7 +43,7 @@ public:
 
     // andrew: case value evaluates to 4294967295, which cannot be narrowed to type 'int' [-Wc++11-narrowing]
     //force_32bit_enum = 0xFFFFFFFF
-    force_32bit_enum = (long)0xFFFFFFFF
+    force_32bit_enum = 0xFFFFFFF
   };
 
   static

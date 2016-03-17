@@ -79,7 +79,7 @@ static QScriptValue qtscript_QUdpSocket_throw_ambiguity_error_helper(
 Q_DECLARE_METATYPE(QUdpSocket*)
 Q_DECLARE_METATYPE(QtScriptShell_QUdpSocket*)
 Q_DECLARE_METATYPE(QHostAddress)
-Q_DECLARE_METATYPE(QNetworkInterface)
+//Q_DECLARE_METATYPE(QNetworkInterface)
 Q_DECLARE_METATYPE(char*)
 Q_DECLARE_METATYPE(QHostAddress*)
 Q_DECLARE_METATYPE(unsigned short*)
