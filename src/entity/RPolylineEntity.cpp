@@ -159,27 +159,26 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
         QVariant v;
         v.setValue(data.endWidths);
         return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
-    }
+    } else if (RPolyline::hasProxy() && propertyTypeId == PropertyGlobalWidth) {
+        QVariant v;
+        double val = -1.0;
+        for (int i=0; i<data.startWidths.length() && i<data.endWidths.length(); i++) {
+            if (val<0.0) {
+                val = data.startWidths[i];
+                v.setValue(val);
+            }
 
+            if (!RMath::fuzzyCompare(data.startWidths[i], val) || !RMath::fuzzyCompare(data.endWidths[i], val)) {
+                v.setValue(QString());
+                break;
+            }
+        }
+        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant));
+    }
 
     // human readable properties (not relevant for transactions):
     if (humanReadable) {
-        if (RPolyline::hasProxy() && propertyTypeId == PropertyGlobalWidth) {
-            QVariant v;
-            double val = -1.0;
-            for (int i=0; i<data.startWidths.length() && i<data.endWidths.length(); i++) {
-                if (val<0.0) {
-                    val = data.startWidths[i];
-                    v.setValue(val);
-                }
-
-                if (!RMath::fuzzyCompare(data.startWidths[i], val) || !RMath::fuzzyCompare(data.endWidths[i], val)) {
-                    v.setValue(QString());
-                    break;
-                }
-            }
-            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Redundant));
-        } else if (propertyTypeId == PropertyLength) {
+        if (propertyTypeId == PropertyLength) {
             QVariant v;
             v.setValue(data.getLength());
             return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));

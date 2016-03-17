@@ -93,18 +93,13 @@ void RLineEntity::init() {
 bool RLineEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
     bool ret = REntity::setProperty(propertyTypeId, value, transaction);
-    ret = ret || RObject::setMember(data.startPoint.x, value, PropertyStartPointX
-            == propertyTypeId);
-    ret = ret || RObject::setMember(data.startPoint.y, value, PropertyStartPointY
-            == propertyTypeId);
-    ret = ret || RObject::setMember(data.startPoint.z, value, PropertyStartPointZ
-            == propertyTypeId);
-    ret = ret || RObject::setMember(data.endPoint.x, value, PropertyEndPointX
-            == propertyTypeId);
-    ret = ret || RObject::setMember(data.endPoint.y, value, PropertyEndPointY
-            == propertyTypeId);
-    ret = ret || RObject::setMember(data.endPoint.z, value, PropertyEndPointZ
-            == propertyTypeId);
+
+    ret = ret || RObject::setMember(data.startPoint.x, value, PropertyStartPointX == propertyTypeId);
+    ret = ret || RObject::setMember(data.startPoint.y, value, PropertyStartPointY == propertyTypeId);
+    ret = ret || RObject::setMember(data.startPoint.z, value, PropertyStartPointZ == propertyTypeId);
+    ret = ret || RObject::setMember(data.endPoint.x, value, PropertyEndPointX == propertyTypeId);
+    ret = ret || RObject::setMember(data.endPoint.y, value, PropertyEndPointY == propertyTypeId);
+    ret = ret || RObject::setMember(data.endPoint.z, value, PropertyEndPointZ == propertyTypeId);
 
     if (propertyTypeId==PropertyAngle) {
         data.setAngle(value.toDouble());
@@ -121,6 +116,7 @@ bool RLineEntity::setProperty(RPropertyTypeId propertyTypeId,
 QPair<QVariant, RPropertyAttributes> RLineEntity::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable,
         bool noAttributes) {
+
     if (propertyTypeId == PropertyStartPointX) {
         return qMakePair(QVariant(data.startPoint.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyStartPointY) {
@@ -133,15 +129,10 @@ QPair<QVariant, RPropertyAttributes> RLineEntity::getProperty(
         return qMakePair(QVariant(data.endPoint.y), RPropertyAttributes());
     } else if (propertyTypeId == PropertyEndPointZ) {
         return qMakePair(QVariant(data.endPoint.z), RPropertyAttributes());
-    }
-
-    // human readable properties (not relevant for transactions):
-    if (humanReadable) {
-        if (propertyTypeId==PropertyAngle) {
-            return qMakePair(QVariant(data.getAngle()), RPropertyAttributes(RPropertyAttributes::Angle|RPropertyAttributes::Redundant));
-        } else if (propertyTypeId==PropertyLength) {
-            return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::Redundant));
-        }
+    } else if (propertyTypeId==PropertyAngle) {
+        return qMakePair(QVariant(data.getAngle()), RPropertyAttributes(RPropertyAttributes::Angle|RPropertyAttributes::Redundant));
+    } else if (propertyTypeId==PropertyLength) {
+        return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::Redundant));
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);

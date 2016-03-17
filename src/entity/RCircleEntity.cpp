@@ -86,14 +86,11 @@ void RCircleEntity::init() {
 bool RCircleEntity::setProperty(RPropertyTypeId propertyTypeId,
         const QVariant& value, RTransaction* transaction) {
     bool ret = REntity::setProperty(propertyTypeId, value, transaction);
-    ret = ret || RObject::setMember(data.center.x, value, PropertyCenterX
-            == propertyTypeId);
-    ret = ret || RObject::setMember(data.center.y, value, PropertyCenterY
-            == propertyTypeId);
-    ret = ret || RObject::setMember(data.center.z, value, PropertyCenterZ
-            == propertyTypeId);
-    ret = ret || RObject::setMember(data.radius, value, PropertyRadius
-            == propertyTypeId);
+
+    ret = ret || RObject::setMember(data.center.x, value, PropertyCenterX == propertyTypeId);
+    ret = ret || RObject::setMember(data.center.y, value, PropertyCenterY == propertyTypeId);
+    ret = ret || RObject::setMember(data.center.z, value, PropertyCenterZ == propertyTypeId);
+    ret = ret || RObject::setMember(data.radius, value, PropertyRadius == propertyTypeId);
 
     if (propertyTypeId==PropertyDiameter) {
         data.setDiameter(value.toDouble());
@@ -113,6 +110,7 @@ bool RCircleEntity::setProperty(RPropertyTypeId propertyTypeId,
 
 QPair<QVariant, RPropertyAttributes> RCircleEntity::getProperty(
         RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
+
     if (propertyTypeId == PropertyCenterX) {
         return qMakePair(QVariant(data.center.x), RPropertyAttributes());
     } else if (propertyTypeId == PropertyCenterY) {
@@ -121,17 +119,12 @@ QPair<QVariant, RPropertyAttributes> RCircleEntity::getProperty(
         return qMakePair(QVariant(data.center.z), RPropertyAttributes());
     } else if (propertyTypeId == PropertyRadius) {
         return qMakePair(QVariant(data.radius), RPropertyAttributes());
-    }
-
-    // human readable properties (not relevant for transactions):
-    if (humanReadable) {
-        if (propertyTypeId == PropertyDiameter) {
-            return qMakePair(QVariant(data.getDiameter()), RPropertyAttributes(RPropertyAttributes::Redundant));
-        } else if (humanReadable && propertyTypeId == PropertyCircumference) {
-            return qMakePair(QVariant(data.getCircumference()), RPropertyAttributes(RPropertyAttributes::Redundant));
-        } else if (propertyTypeId == PropertyArea) {
-            return qMakePair(QVariant(data.getArea()), RPropertyAttributes(RPropertyAttributes::Redundant));
-        }
+    } else if (propertyTypeId == PropertyDiameter) {
+        return qMakePair(QVariant(data.getDiameter()), RPropertyAttributes(RPropertyAttributes::Redundant));
+    } else if (propertyTypeId == PropertyCircumference) {
+        return qMakePair(QVariant(data.getCircumference()), RPropertyAttributes(RPropertyAttributes::Redundant));
+    } else if (propertyTypeId == PropertyArea) {
+        return qMakePair(QVariant(data.getArea()), RPropertyAttributes(RPropertyAttributes::Redundant));
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
