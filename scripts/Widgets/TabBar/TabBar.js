@@ -83,20 +83,23 @@ TabBar.initTabBar = function() {
     }
 
     if (RSettings.getBoolValue("TabBar/ShowAddTabButton", false)) {
-        var button = mdiArea.getAddTabButton();
-        button.styleSheet = "border:0px";
+        var mdiArea = appWin.getMdiArea();
+        if (!isNull(mdiArea)) {
+            var button = mdiArea.getAddTabButton();
+            button.styleSheet = "border:0px";
 
-        var fileNewAction = RGuiAction.getByScriptFile("scripts/File/NewFile/NewFile.js");
-        //action.icon = new QIcon("scripts/Widgets/TabBar/AddTab.svg");
-        //button.icon = new QIcon("scripts/Widgets/TabBar/AddTab.svg");
+            var fileNewAction = RGuiAction.getByScriptFile("scripts/File/NewFile/NewFile.js");
+            //action.icon = new QIcon("scripts/Widgets/TabBar/AddTab.svg");
+            //button.icon = new QIcon("scripts/Widgets/TabBar/AddTab.svg");
 
-        var action = new RGuiAction(fileNewAction.text, RMainWindowQt.getMainWindow());
-        action.setProperty("Configurable", false);
-        action.setRequiresDocument(false);
-        action.setScriptFile(fileNewAction.getScriptFile(), true);
-        action.setIcon("scripts/Widgets/TabBar/AddTab.svg");
-        action.setNoState();
+            var action = new RGuiAction(fileNewAction.text, RMainWindowQt.getMainWindow());
+            action.setProperty("Configurable", false);
+            action.setRequiresDocument(false);
+            action.setScriptFile(fileNewAction.getScriptFile(), true);
+            action.setIcon("scripts/Widgets/TabBar/AddTab.svg");
+            action.setNoState();
 
-        button.setDefaultAction(action);
+            button.setDefaultAction(action);
+        }
     }
 };
