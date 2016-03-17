@@ -26,13 +26,7 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QLabel" name="label">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
+        <widget class="QToolButton" name="toolButton">
          <property name="minimumSize">
           <size>
            <width>128</width>
@@ -45,14 +39,18 @@
            <height>128</height>
           </size>
          </property>
-         <property name="pixmap">
-          <pixmap>../../qcad_icon.png</pixmap>
+         <property name="styleSheet">
+          <string notr="true">border: none;</string>
          </property>
-         <property name="scaledContents">
-          <bool>true</bool>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../qcad_icon.png</normaloff>../../qcad_icon.png</iconset>
          </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
+         <property name="iconSize">
+          <size>
+           <width>128</width>
+           <height>128</height>
+          </size>
          </property>
         </widget>
        </item>

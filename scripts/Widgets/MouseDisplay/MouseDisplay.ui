@@ -69,33 +69,28 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="MouseIcon">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
+    <widget class="QToolButton" name="toolButton">
      <property name="minimumSize">
       <size>
        <width>32</width>
        <height>32</height>
       </size>
      </property>
-     <property name="maximumSize">
+     <property name="styleSheet">
+      <string notr="true">border: none;</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>Mouse.svg</normaloff>Mouse.svg</iconset>
+     </property>
+     <property name="iconSize">
       <size>
        <width>32</width>
        <height>32</height>
       </size>
      </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="pixmap">
-      <pixmap>Mouse.svg</pixmap>
-     </property>
-     <property name="scaledContents">
-      <bool>true</bool>
+     <property name="autoRaise">
+      <bool>false</bool>
      </property>
     </widget>
    </item>
