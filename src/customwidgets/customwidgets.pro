@@ -30,11 +30,11 @@ HEADERS = RShortcutLineEditPlugin.h \
     RMathLineEditPlugin.h \
     RGraphicsViewQtPlugin.h \
     RListViewPlugin.h
-contains(QT_VERSION, ^5\\.[1-5]\\..*) || contains(QT_VERSION, ^4\\..*\\..*) {
-    # Qt < 5.6:
-    SOURCES += RWebViewPlugin.cpp
-    HEADERS += RWebViewPlugin.h
-}
+#contains(QT_VERSION, ^5\\.[1-5]\\..*) || contains(QT_VERSION, ^4\\..*\\..*) {
+#    # Qt < 5.6:
+#    SOURCES += RWebViewPlugin.cpp
+#    HEADERS += RWebViewPlugin.h
+#}
 TEMPLATE = lib
 LIBS += -lqcadgui -lqcadcore
 DESTDIR = ../../plugins/designer

@@ -16,62 +16,62 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QtPlugin>
+//#include <QtPlugin>
 
-#include "RWebView.h"
-#include "RWebViewPlugin.h"
+//#include "RWebView.h"
+//#include "RWebViewPlugin.h"
 
-RWebViewPlugin::RWebViewPlugin(QObject *parent) :
-    QObject(parent) {
-    initialized = false;
-}
+//RWebViewPlugin::RWebViewPlugin(QObject *parent) :
+//    QObject(parent) {
+//    initialized = false;
+//}
 
-void RWebViewPlugin::initialize(QDesignerFormEditorInterface * /* core */) {
-    if (initialized) {
-        return;
-    }
-    initialized = true;
-}
+//void RWebViewPlugin::initialize(QDesignerFormEditorInterface * /* core */) {
+//    if (initialized) {
+//        return;
+//    }
+//    initialized = true;
+//}
 
-bool RWebViewPlugin::isInitialized() const {
-    return initialized;
-}
+//bool RWebViewPlugin::isInitialized() const {
+//    return initialized;
+//}
 
-QWidget *RWebViewPlugin::createWidget(QWidget *parent) {
-    return new RWebView(parent);
-}
+//QWidget *RWebViewPlugin::createWidget(QWidget *parent) {
+//    return new RWebView(parent);
+//}
 
-QString RWebViewPlugin::name() const {
-    return "RWebView";
-}
+//QString RWebViewPlugin::name() const {
+//    return "RWebView";
+//}
 
-QString RWebViewPlugin::group() const {
-    return "RCustomWidgets";
-}
+//QString RWebViewPlugin::group() const {
+//    return "RCustomWidgets";
+//}
 
-QIcon RWebViewPlugin::icon() const {
-    return QIcon();
-}
+//QIcon RWebViewPlugin::icon() const {
+//    return QIcon();
+//}
 
-QString RWebViewPlugin::toolTip() const {
-    return "";
-}
+//QString RWebViewPlugin::toolTip() const {
+//    return "";
+//}
 
-QString RWebViewPlugin::whatsThis() const {
-    return "";
-}
+//QString RWebViewPlugin::whatsThis() const {
+//    return "";
+//}
 
-bool RWebViewPlugin::isContainer() const {
-    return false;
-}
+//bool RWebViewPlugin::isContainer() const {
+//    return false;
+//}
 
-QString RWebViewPlugin::domXml() const {
-    return "<ui language=\"c++\">\n"
-        " <widget class=\"RWebView\" name=\"webView\">\n"
-        " </widget>\n"
-        "</ui>\n";
-}
+//QString RWebViewPlugin::domXml() const {
+//    return "<ui language=\"c++\">\n"
+//        " <widget class=\"RWebView\" name=\"webView\">\n"
+//        " </widget>\n"
+//        "</ui>\n";
+//}
 
-QString RWebViewPlugin::includeFile() const {
-    return "RWebView.h";
-}
+//QString RWebViewPlugin::includeFile() const {
+//    return "RWebView.h";
+//}

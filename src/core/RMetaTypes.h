@@ -131,11 +131,11 @@
 #include <QXmlStreamWriter>
 #include <QXmlQuery>
 
-#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
-#  if QT_VERSION <= 0x050500
-#    include <QWebView>
-#  endif
-#endif
+//#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
+//#  if QT_VERSION <= 0x050500
+//#    include <QWebView>
+//#  endif
+//#endif
 
 #include "RSingleApplication.h"
 
@@ -284,11 +284,11 @@ Q_DECLARE_METATYPE(QUrl*)
 Q_DECLARE_METATYPE(QValidator*)
 Q_DECLARE_METATYPE(const QValidator*)
 Q_DECLARE_METATYPE(QVariant*)
-#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
-#  if QT_VERSION <= 0x050500
-Q_DECLARE_METATYPE(QWebView*)
-#  endif
-#endif
+//#if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
+//#  if QT_VERSION <= 0x050500
+//Q_DECLARE_METATYPE(QWebView*)
+//#  endif
+//#endif
 Q_DECLARE_METATYPE(QWheelEvent*)
 Q_DECLARE_METATYPE(QWidget*)
 Q_DECLARE_METATYPE(QXmlQuery)

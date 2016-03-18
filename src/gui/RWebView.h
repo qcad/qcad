@@ -20,37 +20,37 @@
 #ifndef RWEBVIEW_H_
 #define RWEBVIEW_H_
 
-#include "gui_global.h"
+//#include "gui_global.h"
 
-#include <QWebView>
+//#include <QWebView>
 
-/**
- * \scriptable
- * \ingroup gui
- */
-class QCADGUI_EXPORT RWebView: public QWebView {
+///**
+// * \scriptable
+// * \ingroup gui
+// */
+//class QCADGUI_EXPORT RWebView: public QWebView {
 
-Q_OBJECT
+//Q_OBJECT
 
-public:
-    RWebView(QWidget* parent);
-    virtual ~RWebView();
-    virtual QSize sizeHint() const;
-    virtual QSize minimumSizeHint() const;
+//public:
+//    RWebView(QWidget* parent);
+//    virtual ~RWebView();
+//    virtual QSize sizeHint() const;
+//    virtual QSize minimumSizeHint() const;
 
-    void installEventFilter(QObject* filterObj) {
-        QWebView::installEventFilter(filterObj);
-    }
+//    void installEventFilter(QObject* filterObj) {
+//        QWebView::installEventFilter(filterObj);
+//    }
 
-    void setAttribute(Qt::WidgetAttribute attribute, bool on = true) {
-        QWebView::setAttribute(attribute, on);
-    }
+//    void setAttribute(Qt::WidgetAttribute attribute, bool on = true) {
+//        QWebView::setAttribute(attribute, on);
+//    }
 
-    QObject* parent() const {
-        return QWebView::parent();
-    }
-};
+//    QObject* parent() const {
+//        return QWebView::parent();
+//    }
+//};
 
-Q_DECLARE_METATYPE(RWebView*)
+//Q_DECLARE_METATYPE(RWebView*)
 
 #endif
