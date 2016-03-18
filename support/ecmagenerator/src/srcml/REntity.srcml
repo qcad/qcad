@@ -394,7 +394,6 @@
      * \copydoc REntityData::getDistanceTo(const RVector&amp; point)
      */</comment>
     <function><type><name>virtual</name> <name>double</name></type> <name>getDistanceTo</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>, <param><decl><type><name>bool</name></type> <name>limited</name> =<init> <expr><name>true</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>range</name> =<init> <expr>0.0</expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>draft</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>strictRange</name> =<init> <expr><name>RMAXDOUBLE</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
-        <expr_stmt><expr><call><name>qDebug</name><argument_list>()</argument_list></call> &lt;&lt; "REntity::getDistanceTo"</expr>;</expr_stmt>
         <return>return <expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>getDistanceTo</name><argument_list>(<argument><expr><name>point</name></expr></argument>, <argument><expr><name>limited</name></expr></argument>, <argument><expr><name>range</name></expr></argument>, <argument><expr><name>draft</name></expr></argument>, <argument><expr><name>strictRange</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 

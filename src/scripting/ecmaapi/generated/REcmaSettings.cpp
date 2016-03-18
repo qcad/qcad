@@ -259,6 +259,10 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, isXDataEnabled, "isXDataEnabled");
             
+            REcmaHelper::registerFunction(&engine, &ctor, setNextVersionEnabled, "setNextVersionEnabled");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isNextVersionEnabled, "isNextVersionEnabled");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getAutoScaleLinetypePatterns, "getAutoScaleLinetypePatterns");
             
             REcmaHelper::registerFunction(&engine, &ctor, getUseSecondarySelectionColor, "getUseSecondarySelectionColor");
@@ -4894,6 +4898,90 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::isXDataEnabled", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::setNextVersionEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::setNextVersionEnabled", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::setNextVersionEnabled";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       setNextVersionEnabled(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.setNextVersionEnabled().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::setNextVersionEnabled", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::isNextVersionEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::isNextVersionEnabled", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::isNextVersionEnabled";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       isNextVersionEnabled();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.isNextVersionEnabled().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::isNextVersionEnabled", context, engine);
             return result;
         }
          QScriptValue

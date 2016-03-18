@@ -21,38 +21,38 @@
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RWEBVIEW_H_</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RWEBVIEW_H_</name></cpp:define>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+<comment type="line">//#include "gui_global.h"</comment>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QWebView&gt;</cpp:file></cpp:include>
+<comment type="line">//#include &lt;QWebView&gt;</comment>
 
-<comment type="block">/**
- * \scriptable
- * \ingroup gui
- */</comment>
-<class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RWebView</name><super>: <specifier>public</specifier> <name>QWebView</name></super> <block>{<private type="default">
+<comment type="line">///**</comment>
+<comment type="line">// * \scriptable</comment>
+<comment type="line">// * \ingroup gui</comment>
+<comment type="line">// */</comment>
+<comment type="line">//class QCADGUI_EXPORT RWebView: public QWebView {</comment>
 
-<macro><name>Q_OBJECT</name></macro>
+<comment type="line">//Q_OBJECT</comment>
 
-</private><public>public:
-    <constructor_decl><name>RWebView</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>parent</name></decl></param>)</parameter_list>;</constructor_decl>
-    <destructor_decl><specifier>virtual</specifier> <name>~RWebView</name><parameter_list>()</parameter_list>;</destructor_decl>
-    <function_decl><type><name>virtual</name> <name>QSize</name></type> <name>sizeHint</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>QSize</name></type> <name>minimumSizeHint</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+<comment type="line">//public:</comment>
+<comment type="line">//    RWebView(QWidget* parent);</comment>
+<comment type="line">//    virtual ~RWebView();</comment>
+<comment type="line">//    virtual QSize sizeHint() const;</comment>
+<comment type="line">//    virtual QSize minimumSizeHint() const;</comment>
 
-    <function><type><name>void</name></type> <name>installEventFilter</name><parameter_list>(<param><decl><type><name>QObject</name>*</type> <name>filterObj</name></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>QWebView::installEventFilter</name><parameter_list>(<param><decl><type><name>filterObj</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void installEventFilter(QObject* filterObj) {</comment>
+<comment type="line">//        QWebView::installEventFilter(filterObj);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>void</name></type> <name>setAttribute</name><parameter_list>(<param><decl><type><name><name>Qt</name>::<name>WidgetAttribute</name></name></type> <name>attribute</name></decl></param>, <param><decl><type><name>bool</name></type> <name>on</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <block>{
-        <constructor_decl><name>QWebView::setAttribute</name><parameter_list>(<param><decl><type><name>attribute</name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
-    }</block></function>
+<comment type="line">//    void setAttribute(Qt::WidgetAttribute attribute, bool on = true) {</comment>
+<comment type="line">//        QWebView::setAttribute(attribute, on);</comment>
+<comment type="line">//    }</comment>
 
-    <function><type><name>QObject</name>*</type> <name>parent</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
-        <return>return <expr><call><name><name>QWebView</name>::<name>parent</name></name><argument_list>()</argument_list></call></expr>;</return>
-    }</block></function>
-</public>}</block>;</class>
+<comment type="line">//    QObject* parent() const {</comment>
+<comment type="line">//        return QWebView::parent();</comment>
+<comment type="line">//    }</comment>
+<comment type="line">//};</comment>
 
-<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RWebView*</argument>)</argument_list></macro>
+<comment type="line">//Q_DECLARE_METATYPE(RWebView*)</comment>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>
