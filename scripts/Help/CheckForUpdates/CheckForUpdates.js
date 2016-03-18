@@ -55,23 +55,23 @@ CheckForUpdates.prototype.beginEvent = function() {
     // set up dialog:
     var appWin = EAction.getMainWindow();
     var dialog = WidgetFactory.createDialog(CheckForUpdates.includeBasePath, "CheckForUpdatesDialog.ui", appWin);
-    var webView = dialog.findChild("WebView");
-    WidgetFactory.initTextBrowser(webView, this, "openUrl");
+    var textBrowser = dialog.findChild("TextBrowser");
+    WidgetFactory.initTextBrowser(textBrowser, this, "openUrl");
 
     // load version info from qcad.org:
-    webView.setHtml("<p>" + qsTr("Checking for Updates...") + "</p>");
+    textBrowser.setHtml("<p>" + qsTr("Checking for Updates...") + "</p>");
 
     if (downloadToFile(url, RSettings.getDataLocation(), "updates.html", 10000)) {
         var fn = RSettings.getDataLocation() + "/updates.html";
         if (new QFileInfo(fn).exists()) {
-            webView.setSource(QUrl.fromLocalFile(fn));
+            textBrowser.setSource(QUrl.fromLocalFile(fn));
         }
         else {
-            webView.setHtml("<p>" + qsTr("Version information not found.") + "</p>");
+            textBrowser.setHtml("<p>" + qsTr("Version information not found.") + "</p>");
         }
     }
     else {
-        webView.setHtml("<p>" + qsTr("No connection to server or file not found. Please try again later.") + "</p>");
+        textBrowser.setHtml("<p>" + qsTr("No connection to server or file not found. Please try again later.") + "</p>");
     }
 
     WidgetFactory.restoreState(dialog);

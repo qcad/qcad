@@ -343,11 +343,11 @@
 #include "REcmaXLineEntity.h"
 #include "REcmaZip.h"
 
-#if QT_VERSION < 0x050600
-#  if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
-#    include "REcmaWebView.h"
-#  endif
-#endif
+//#if QT_VERSION < 0x050600
+//#  if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
+//#    include "REcmaWebView.h"
+//#  endif
+//#endif
 
 bool RScriptHandlerEcma::alwaysLoadScripts = false;
 bool RScriptHandlerEcma::translatorInstalled = false;
@@ -883,11 +883,11 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaFileSystemModel::initEcma(*engine);
 
-#if QT_VERSION < 0x050600
-#  if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
-    REcmaWebView::initEcma(*engine);
-#  endif
-#endif
+//#if QT_VERSION < 0x050600
+//#  if !defined(Q_OS_ANDROID) && !defined(Q_OS_IOS)
+//    REcmaWebView::initEcma(*engine);
+//#  endif
+//#endif
 
     REcmaFocusListener::initEcma(*engine);
     REcmaFocusListenerAdapter::initEcma(*engine);

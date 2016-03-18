@@ -34,10 +34,14 @@ NextWindow.prototype.beginEvent = function() {
     //mdiArea.activateNextSubWindow();
     var windows = mdiArea.subWindowList();
     var activeWindow = mdiArea.activeSubWindow();
-    var i = windows.indexOf(activeWindow);
-    i = (i+1)%windows.length;
-    windows[i].show();
-    mdiArea.setActiveSubWindow(windows[i]);
+    if (!isNull(activeWindow)) {
+        var i = windows.indexOf(activeWindow);
+        i = (i+1)%windows.length;
+        if (!isNull(windows[i])) {
+            windows[i].show();
+            mdiArea.setActiveSubWindow(windows[i]);
+        }
+    }
 
     this.terminate();
 };

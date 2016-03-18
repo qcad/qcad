@@ -33,11 +33,15 @@ PreviousWindow.prototype.beginEvent = function() {
     // mdiArea.activatePreviousSubWindow();
     var windows = mdiArea.subWindowList();
     var activeWindow = mdiArea.activeSubWindow();
-    var i = windows.indexOf(activeWindow);
-    i--;
-    i = i.mod(windows.length);
-    windows[i].show();
-    mdiArea.setActiveSubWindow(windows[i]);
+    if (!isNull(activeWindow)) {
+        var i = windows.indexOf(activeWindow);
+        i--;
+        i = i.mod(windows.length);
+        if (!isNull(windows[i])) {
+            windows[i].show();
+            mdiArea.setActiveSubWindow(windows[i]);
+        }
+    }
     this.terminate();
 };
 

@@ -58,15 +58,15 @@ HEADERS += \
     RToolMatrixItemDelegate.h \
     RTreeWidget.h
 
-!r_mobile {
-    contains(QT_VERSION, ^5\\.[1-5]\\..*) || contains(QT_VERSION, ^4\\..*\\..*) {
-        # Qt < 5.6:
-        SOURCES += \
-            RWebView.cpp
-        HEADERS += \
-            RWebView.h
-    }
-}
+#!r_mobile {
+#    contains(QT_VERSION, ^5\\.[1-5]\\..*) || contains(QT_VERSION, ^4\\..*\\..*) {
+#        # Qt < 5.6:
+#        SOURCES += \
+#            RWebView.cpp
+#        HEADERS += \
+#            RWebView.h
+#    }
+#}
 
 TEMPLATE = lib
 r_static_libs {

@@ -1048,25 +1048,25 @@ WidgetFactory.initTextBrowser = function(textBrowser, linkHandler, slot) {
     textBrowser.anchorClicked.connect(linkHandler, slot);
 };
 
-WidgetFactory.initWebView = function(webView, linkHandler, slot) {
-    var webPage = webView.page();
-    webPage.linkDelegationPolicy = QWebPage.DelegateExternalLinks;
-    webPage.linkClicked.connect(linkHandler, slot);
-    var webSettings = webView.settings();
-    webSettings.setFontFamily(QWebSettings.StandardFont, EAction.getMainWindow().font.family());
-    if (RS.getSystemId()==="osx") {
-        webSettings.setFontSize(QWebSettings.DefaultFontSize, EAction.getMainWindow().font.pointSize());
-    }
+//WidgetFactory.initWebView = function(webView, linkHandler, slot) {
+//    var webPage = webView.page();
+//    webPage.linkDelegationPolicy = QWebPage.DelegateExternalLinks;
+//    webPage.linkClicked.connect(linkHandler, slot);
+//    var webSettings = webView.settings();
+//    webSettings.setFontFamily(QWebSettings.StandardFont, EAction.getMainWindow().font.family());
+//    if (RS.getSystemId()==="osx") {
+//        webSettings.setFontSize(QWebSettings.DefaultFontSize, EAction.getMainWindow().font.pointSize());
+//    }
 
-    if (!RSettings.isQt(5)) {
-        // make web view transparent:
-        var palette = webView.palette;
-        palette.setBrush(QPalette.Base, new QColor(0,0,0,0));
-        webPage.palette = palette;
+//    if (!RSettings.isQt(5)) {
+//        // make web view transparent:
+//        var palette = webView.palette;
+//        palette.setBrush(QPalette.Base, new QColor(0,0,0,0));
+//        webPage.palette = palette;
 
-        webView.setAttribute(Qt.WA_OpaquePaintEvent, false);
-    }
-};
+//        webView.setAttribute(Qt.WA_OpaquePaintEvent, false);
+//    }
+//};
 
 WidgetFactory.initLayerCombo = function(comboBox, doc) {
     if (isNull(doc)) {

@@ -18,7 +18,7 @@
   </property>
   <layout class="QVBoxLayout">
    <item>
-    <widget class="QTextBrowser" name="WebView">
+    <widget class="QTextBrowser" name="TextBrowser">
      <property name="palette">
       <palette>
        <active>

@@ -20,19 +20,19 @@
 #include <QPainter>
 #include <QSize>
 
-#include "RWebView.h"
-#include "RDebug.h"
+//#include "RWebView.h"
+//#include "RDebug.h"
 
-RWebView::RWebView(QWidget* parent) :
-    QWebView(parent) {
-}
+//RWebView::RWebView(QWidget* parent) :
+//    QWebView(parent) {
+//}
 
-RWebView::~RWebView() {}
+//RWebView::~RWebView() {}
 
-QSize RWebView::sizeHint() const {
-    return QSize(50, 50);
-}
+//QSize RWebView::sizeHint() const {
+//    return QSize(50, 50);
+//}
 
-QSize RWebView::minimumSizeHint() const {
-    return QSize(20, 20);
-}
+//QSize RWebView::minimumSizeHint() const {
+//    return QSize(20, 20);
+//}

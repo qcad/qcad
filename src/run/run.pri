@@ -38,8 +38,8 @@ else {
 # copy Qt plugins to QCAD plugin folder:
 !build_pass {
     macx {
+        #designer/libqwebview.dylib \
         FILES = \
-            designer/libqwebview.dylib \
             imageformats/libqgif.dylib \
             imageformats/libqico.dylib \
             imageformats/libqjpeg.dylib \
@@ -74,8 +74,8 @@ else {
     }
 
     else:unix {
+        #designer/libqwebview.so \
         FILES = \
-            designer/libqwebview.so \
             imageformats/libqgif.so \
             imageformats/libqico.so \
             imageformats/libqjpeg.so \
@@ -108,8 +108,8 @@ else {
 
     else:win32 {
         greaterThan(QT_MAJOR_VERSION, 4) {
+            #designer\\qwebview.dll \
             FILES += \
-                designer\\qwebview.dll \
                 imageformats\\qgif.dll \
                 imageformats\\qico.dll \
                 imageformats\\qjpeg.dll \
@@ -123,8 +123,8 @@ else {
         }
 
         contains(QT_VERSION, ^4\\..*\\..*) {
+            #designer\\qwebview.dll \
             FILES += \
-                designer\\qwebview.dll \
                 imageformats\\qgif4.dll \
                 imageformats\\qico4.dll \
                 imageformats\\qjpeg4.dll \
