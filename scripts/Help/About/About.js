@@ -108,9 +108,9 @@ About.prototype.initAboutApp = function(textBrowser) {
             html += "<td><b>" + qsTr("Compiler:") + "</b> </td><td>%1</td>".arg(RSettings.getCompilerVersion())
             + "</tr></table>"
             + "<hr/>"
-            + "<p>" + qsTr("%1 is an application for computer-aided design (CAD).").arg(qApp.applicationName) + "</p>"
+            + "<p>" + qsTr("%1 is an application for computer-aided design (CAD).").arg("QCAD") + "</p>"
             + "<p/>"
-            + "<p>" + qsTr("%1 is free (open source) software.").arg(qApp.applicationName) + "<br/>"
+            + "<p>" + qsTr("%1 is free (open source) software.").arg("QCAD") + "<br/>"
             + "" + qsTr("This means that everyone can <a href='%1'>get involved</a>!").arg("http://www.qcad.org/contribute") + "</p>"
             + "<p>" + qsTr("Plugins and script add-ons are subject to their respective license (see 'Plugins' tab).") + "</p>"
             + "<p/>"
@@ -270,7 +270,7 @@ About.prototype.initAboutPlugins = function(textBrowser) {
         }
     }
 
-    if (this.applicationName===qApp.applicationName) {
+    if (this.applicationName==="QCAD") {
         this.applicationName = qApp.applicationName + " Community Edition";
     }
 
