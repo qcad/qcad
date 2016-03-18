@@ -38,12 +38,10 @@ else {
 # copy Qt plugins to QCAD plugin folder:
 !build_pass {
     macx {
-        #designer/libqwebview.dylib \
         FILES = \
             imageformats/libqgif.dylib \
             imageformats/libqico.dylib \
             imageformats/libqjpeg.dylib \
-            imageformats/libqmng.dylib \
             imageformats/libqsvg.dylib \
             imageformats/libqtiff.dylib \
             sqldrivers/libqsqlite.dylib \
@@ -74,12 +72,10 @@ else {
     }
 
     else:unix {
-        #designer/libqwebview.so \
         FILES = \
             imageformats/libqgif.so \
             imageformats/libqico.so \
             imageformats/libqjpeg.so \
-            imageformats/libqmng.so \
             imageformats/libqsvg.so \
             imageformats/libqtiff.so \
             sqldrivers/libqsqlite.so
@@ -108,12 +104,10 @@ else {
 
     else:win32 {
         greaterThan(QT_MAJOR_VERSION, 4) {
-            #designer\\qwebview.dll \
             FILES += \
                 imageformats\\qgif.dll \
                 imageformats\\qico.dll \
                 imageformats\\qjpeg.dll \
-                imageformats\\qmng.dll \
                 imageformats\\qsvg.dll \
                 imageformats\\qtga.dll \
                 imageformats\\qtiff.dll \
@@ -123,12 +117,10 @@ else {
         }
 
         contains(QT_VERSION, ^4\\..*\\..*) {
-            #designer\\qwebview.dll \
             FILES += \
                 imageformats\\qgif4.dll \
                 imageformats\\qico4.dll \
                 imageformats\\qjpeg4.dll \
-                imageformats\\qmng4.dll \
                 imageformats\\qsvg4.dll \
                 imageformats\\qtiff4.dll \
                 sqldrivers\\qsqlite4.dll \
