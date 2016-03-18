@@ -101,7 +101,12 @@ int main(int argc, char *argv[]) {
 
     // Auto scale up user interface for high res displays under Windows:
 #ifdef Q_OS_WIN
+#if QT_VERSION >= 0x050600
+    //_putenv_s("QT_SCALE_FACTOR", "auto");
+    _putenv_s("QT_AUTO_SCREEN_SCALE_FACTOR", "1");
+#else
     _putenv_s("QT_DEVICE_PIXEL_RATIO", "auto");
+#endif
 #endif
 
     // these are defaults:

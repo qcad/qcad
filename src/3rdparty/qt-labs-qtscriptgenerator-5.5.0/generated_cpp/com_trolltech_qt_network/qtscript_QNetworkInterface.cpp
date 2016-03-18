@@ -80,11 +80,15 @@ static QScriptValue qtscript_QNetworkInterface_throw_ambiguity_error_helper(
         .arg(functionName).arg(fullSignatures.join(QLatin1String("\n"))));
 }
 
-//Q_DECLARE_METATYPE(QNetworkInterface)
+#if QT_VERSION < 0x050600
+Q_DECLARE_METATYPE(QNetworkInterface)
+#endif
 Q_DECLARE_METATYPE(QNetworkInterface*)
 Q_DECLARE_METATYPE(QNetworkInterface::InterfaceFlag)
 Q_DECLARE_METATYPE(QFlags<QNetworkInterface::InterfaceFlag>)
-//Q_DECLARE_METATYPE(QNetworkAddressEntry)
+#if QT_VERSION < 0x050600
+Q_DECLARE_METATYPE(QNetworkAddressEntry)
+#endif
 Q_DECLARE_METATYPE(QList<QNetworkAddressEntry >)
 Q_DECLARE_METATYPE(QHostAddress)
 Q_DECLARE_METATYPE(QList<QHostAddress >)
