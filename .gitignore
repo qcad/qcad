@@ -42,6 +42,7 @@ _CL_*
 *.tmp
 *.pdb
 *.ilk
+*.opt
 
 # Output folders:
 debug
