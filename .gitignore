@@ -33,6 +33,7 @@ Makefile.SimulatorRelease
 .qmake.cache
 .qmake.stash
 *.xcodeproj
+*.opt
 
 # Mac:
 .DS_Store
@@ -42,7 +43,6 @@ _CL_*
 *.tmp
 *.pdb
 *.ilk
-*.opt
 
 # Output folders:
 debug
