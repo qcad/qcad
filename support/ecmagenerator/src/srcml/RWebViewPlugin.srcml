@@ -21,31 +21,31 @@
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RWEBVIEWPLUGIN_H_</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RWEBVIEWPLUGIN_H_</name></cpp:define>
 
-<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDesignerCustomWidgetInterface&gt;</cpp:file></cpp:include>
+<comment type="line">//#include &lt;QDesignerCustomWidgetInterface&gt;</comment>
 
-<class>class <name>RWebViewPlugin</name><super>: <specifier>public</specifier> <name>QObject</name>, <specifier>public</specifier> <name>QDesignerCustomWidgetInterface</name></super> <block>{<private type="default">
+<comment type="line">//class RWebViewPlugin: public QObject, public QDesignerCustomWidgetInterface {</comment>
 
-    <decl_stmt><decl><type><name>Q_OBJECT</name></type>
-    <name>Q_INTERFACES</name><argument_list>(<argument><expr><name>QDesignerCustomWidgetInterface</name></expr></argument>)</argument_list>
+<comment type="line">//    Q_OBJECT</comment>
+<comment type="line">//    Q_INTERFACES(QDesignerCustomWidgetInterface)</comment>
 
-public</decl></decl_stmt>:
-    <constructor_decl><name>RWebViewPlugin</name><parameter_list>(<param><decl><type><name>QObject</name> *</type><name>parent</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
+<comment type="line">//public:</comment>
+<comment type="line">//    RWebViewPlugin(QObject *parent = 0);</comment>
 
-    <function_decl><type><name>bool</name></type> <name>isContainer</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>bool</name></type> <name>isInitialized</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>QIcon</name></type> <name>icon</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>QString</name></type> <name>domXml</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>QString</name></type> <name>group</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>QString</name></type> <name>includeFile</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>QString</name></type> <name>name</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>QString</name></type> <name>toolTip</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>QString</name></type> <name>whatsThis</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>QWidget</name> *</type><name>createWidget</name><parameter_list>(<param><decl><type><name>QWidget</name> *</type><name>parent</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>initialize</name><parameter_list>(<param><decl><type><name>QDesignerFormEditorInterface</name> *</type><name>core</name></decl></param>)</parameter_list>;</function_decl>
+<comment type="line">//    bool isContainer() const;</comment>
+<comment type="line">//    bool isInitialized() const;</comment>
+<comment type="line">//    QIcon icon() const;</comment>
+<comment type="line">//    QString domXml() const;</comment>
+<comment type="line">//    QString group() const;</comment>
+<comment type="line">//    QString includeFile() const;</comment>
+<comment type="line">//    QString name() const;</comment>
+<comment type="line">//    QString toolTip() const;</comment>
+<comment type="line">//    QString whatsThis() const;</comment>
+<comment type="line">//    QWidget *createWidget(QWidget *parent);</comment>
+<comment type="line">//    void initialize(QDesignerFormEditorInterface *core);</comment>
 
-</private><private>private:
-    <decl_stmt><decl><type><name>bool</name></type> <name>initialized</name></decl>;</decl_stmt>
-</private>}</block>;</class>
+<comment type="line">//private:</comment>
+<comment type="line">//    bool initialized;</comment>
+<comment type="line">//};</comment>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

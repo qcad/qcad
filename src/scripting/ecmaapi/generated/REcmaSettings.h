@@ -349,6 +349,12 @@
         isXDataEnabled
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setNextVersionEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isNextVersionEnabled
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getAutoScaleLinetypePatterns
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
