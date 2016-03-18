@@ -205,13 +205,13 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
     mdiChild.setDocumentInterface(documentInterface);
     mdiArea.addSubWindow(mdiChild);
     mdiChild.updatesEnabled = false;
-    mdiChild.showMaximized();
     var flags = new Qt.WindowFlags(Qt.FramelessWindowHint);
     mdiChild.setWindowFlags(flags);
 
     // load ui file and set the MDI content widget:
     //qDebug("initMdiChild");
     Viewport.initMdiChild(mdiChild, uiFileName);
+    mdiChild.showMaximized();
 
     var viewports = Viewport.getViewports(mdiChild, documentInterface);
     mdiChild.viewports = viewports;
