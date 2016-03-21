@@ -51,6 +51,7 @@ Round.prototype.getOperation = function(preview) {
             this.entity2.clone(), this.clickPos2,
             this.trim,
             this.radius,
+            this.posSolution,
             preview);
 
     if (!success && !preview) {
@@ -71,9 +72,10 @@ Round.prototype.getOperation = function(preview) {
  * \param clickPos2 Coordinate that was clicked when the user selected entity2.
  * \param trim true: Trim both entities to rounding arc.
  * \param radius Radius of rounding.
+ * \param solutionPos Position that determines which solution to apply (optional, defaults to clickPos1)
  * \param preview Operation is used for preview.
  */
-Round.round = function(op, entity1, clickPos1, entity2, clickPos2, trim, radius, preview) {
+Round.round = function(op, entity1, clickPos1, entity2, clickPos2, trim, radius, solutionPos, preview) {
     if (!isEntity(entity1) || !isValidVector(clickPos1) ||
         !isEntity(entity2) || !isValidVector(clickPos2) ||
         !isBoolean(trim)) {
@@ -87,7 +89,7 @@ Round.round = function(op, entity1, clickPos1, entity2, clickPos2, trim, radius,
     var shape1 = shape1P.data();
     var shape2 = shape2P.data();
 
-    var newShapes = Round.roundShapes(shape1, clickPos1, shape2, clickPos2, trim, samePolyline, radius);
+    var newShapes = Round.roundShapes(shape1, clickPos1, shape2, clickPos2, trim, samePolyline, radius, solutionPos);
 
     if (newShapes.length===0) {
         return false;
@@ -126,15 +128,20 @@ Round.round = function(op, entity1, clickPos1, entity2, clickPos2, trim, radius,
  * \param clickPos2 Coordinate that was clicked when the user selected shape2.
  * \param trim true: Trim both shape to rounding arc.
  * \param radius Radius of rounding.
+ * \param solutionPos Position that determines which solution to apply (optional, defaults to clickPos1)
  *
  * \return Array of three shapes: shape1 (trimmed), rounding, shape2 (trimmed)
  * or emtpy array.
  */
-Round.roundShapes = function(shape1, clickPos1, shape2, clickPos2, trim, samePolyline, radius) {
+Round.roundShapes = function(shape1, clickPos1, shape2, clickPos2, trim, samePolyline, radius, solutionPos) {
     if (!isShape(shape1) || !isValidVector(clickPos1) ||
         !isShape(shape2) || !isValidVector(clickPos2) ||
         !isBoolean(trim)) {
         return [];
+    }
+
+    if (isNull(solutionPos)) {
+        solutionPos = clickPos2;
     }
 
     // convert circles to arcs:
@@ -166,8 +173,8 @@ Round.roundShapes = function(shape1, clickPos1, shape2, clickPos2, trim, samePol
     }
 
     // create two temporary parallels:
-    var par1 = ShapeAlgorithms.getOffsetShapes(simpleShape1, radius, 1, clickPos2);
-    var par2 = ShapeAlgorithms.getOffsetShapes(simpleShape2, radius, 1, clickPos2);
+    var par1 = ShapeAlgorithms.getOffsetShapes(simpleShape1, radius, 1, solutionPos);
+    var par2 = ShapeAlgorithms.getOffsetShapes(simpleShape2, radius, 1, solutionPos);
 
     if (par1.length!==1 || par2.length!==1) {
         return [];
@@ -184,7 +191,7 @@ Round.roundShapes = function(shape1, clickPos1, shape2, clickPos2, trim, samePol
     }
 
     // there might be two intersections: choose the closest:
-    var ip = clickPos2.getClosest(ipParallel);
+    var ip = solutionPos.getClosest(ipParallel);
     var p1 = simpleShape1.getClosestPointOnShape(ip, false);
     var p2 = simpleShape2.getClosestPointOnShape(ip, false);
     var ang1 = ip.getAngleTo(p1);
