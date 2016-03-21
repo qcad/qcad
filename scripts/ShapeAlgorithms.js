@@ -452,7 +452,13 @@ ShapeAlgorithms.getOffsetEllipses = function(shape, distance, number, sidePositi
             }
 
             if (isFullEllipseShape(shape)) {
-                spl.setPeriodic(true);
+                if (isSplineShape(spl)) {
+                    spl.setPeriodic(true);
+                }
+                else {
+                    // no ellipse proxy: offset curve is polyline:
+                    spl.setClosed(true);
+                }
             }
 
             ret.push(spl);
