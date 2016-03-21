@@ -1326,7 +1326,7 @@ RVector RDocumentInterface::snap(RMouseEvent& event, bool preview) {
 
 /**
  * \return ID of the entity that is the closest to the mouse cursor
- *      of the given event.
+ *      of the given event or -1 if no entity is within range.
  *
  * The event is also used to determine the maximum distance from the
  * cursor to the entity in the view in which the event originated.
@@ -1342,7 +1342,15 @@ REntity::Id RDocumentInterface::getClosestEntity(RMouseEvent& event) {
 }
 
 
-
+/**
+ * \return Entity closest to the given position within the given range.
+ *
+ * \param range Maximum range in drawing units.
+ * \param strictRange Maximum range from either end point of the entity.
+ *   Zero to only return distances that are strictly orthogonal to the entity.
+ * \param includeLockedLayers Return entities on locked layers.
+ * \param selectedOnly Only return selected entities.
+ */
 REntity::Id RDocumentInterface::getClosestEntity(const RVector& position,
         double range, double strictRange, bool includeLockedLayers, bool selectedOnly) {
 
