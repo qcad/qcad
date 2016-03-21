@@ -546,6 +546,11 @@ void RDxfImporter::addArc(const DL_ArcData& data) {
                 false)
         )
     );
+
+    if (getExtrusion()->getDirection()[2]<0.0) {
+        entity->flipHorizontal();
+    }
+
     importEntity(entity);
 }
 
