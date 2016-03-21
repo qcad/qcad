@@ -427,6 +427,8 @@ void RDocumentInterface::deleteTerminatedActions() {
     bool removed = false;
     bool removedHadNoState = false;
 
+    RVector cp = cursorPosition;
+
     while (currentActions.size()>0 && currentActions.top()->isTerminated()) {
         cursorPosition = RVector::invalid;
         RAction* currentAction = currentActions.top();
@@ -453,6 +455,9 @@ void RDocumentInterface::deleteTerminatedActions() {
         }
         removed = true;
     }
+
+    // restore cursor position (e.g. for direct distance entry):
+    cursorPosition = cp;
 
     // if one or more actions (with state) have been terminated, resume previous action
     // or default action:
