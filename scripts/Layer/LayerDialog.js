@@ -65,7 +65,6 @@ LayerDialog.prototype.show = function() {
 
     var widgets = getWidgets(this.dialog);
     var leLayerName = widgets["LayerName"];
-    leLayerName.selectAll();
     var rx = new RegExp("[^<>/\\\\\":;\?\*|,=`]{1,255}");
     this.validator = new QRegExpValidator(rx, leLayerName);
     leLayerName.setValidator(this.validator);
@@ -128,6 +127,8 @@ LayerDialog.prototype.show = function() {
     else {
         this.validate();
     }
+
+    leLayerName.selectAll();
 
     if (!this.dialog.exec()) {
         this.dialog.destroy();
