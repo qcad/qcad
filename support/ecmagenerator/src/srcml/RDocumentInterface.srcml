@@ -222,7 +222,7 @@
 
     <function_decl><type><name>RVector</name></type> <name>snap</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>, <param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>getClosestEntity</name><parameter_list>(<param><decl><type><name>RMouseEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>getClosestEntity</name><parameter_list>(<param><decl><type><name>RInputEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>getClosestEntity</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>,
         <param><decl><type><name>double</name></type> <name>range</name></decl></param>, <param><decl><type><name>double</name></type> <name>strictRange</name> =<init> <expr><name>RMAXDOUBLE</name></expr></init></decl></param>,
         <param><decl><type><name>bool</name></type> <name>includeLockedLayers</name> =<init> <expr><name>true</name></expr></init></decl></param>,

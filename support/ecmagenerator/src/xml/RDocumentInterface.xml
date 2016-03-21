@@ -531,7 +531,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="REntity::Id" isPureVirtual="false">
-        <arg type="RMouseEvent &amp;" typeName="RMouseEvent"
+        <arg type="RInputEvent &amp;" typeName="RInputEvent"
         name="event" isConst="false" />
       </variant>
       <variant returnType="REntity::Id" isPureVirtual="false">
