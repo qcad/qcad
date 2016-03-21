@@ -73,7 +73,9 @@ static QScriptValue qtscript_QNetworkAddressEntry_throw_ambiguity_error_helper(
         .arg(functionName).arg(fullSignatures.join(QLatin1String("\n"))));
 }
 
-//Q_DECLARE_METATYPE(QNetworkAddressEntry)
+#if QT_VERSION < 0x050600
+Q_DECLARE_METATYPE(QNetworkAddressEntry)
+#endif
 Q_DECLARE_METATYPE(QNetworkAddressEntry*)
 Q_DECLARE_METATYPE(QHostAddress)
 
