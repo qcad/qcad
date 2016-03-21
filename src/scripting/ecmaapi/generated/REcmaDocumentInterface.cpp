@@ -4943,26 +4943,26 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: RMouseEvent */
+        ) /* type: RInputEvent */
     
     ){
     // prepare arguments:
     
                     // argument is reference
-                    RMouseEvent*
+                    RInputEvent*
                     ap0 =
                     qscriptvalue_cast<
-                    RMouseEvent*
+                    RInputEvent*
                         >(
                         context->argument(
                         0
                         )
                     );
                     if( ap0 == NULL ){
-                           return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type RMouseEvent*.",
+                           return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type RInputEvent*.",
                                context);                    
                     }
-                    RMouseEvent& a0 = *ap0;
+                    RInputEvent& a0 = *ap0;
                 
     // end of arguments
 
