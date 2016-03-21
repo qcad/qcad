@@ -221,7 +221,7 @@ public:
 
     RVector snap(RMouseEvent& event, bool preview = false);
 
-    REntity::Id getClosestEntity(RMouseEvent& event);
+    REntity::Id getClosestEntity(RInputEvent& event);
     REntity::Id getClosestEntity(const RVector& position,
         double range, double strictRange = RMAXDOUBLE,
         bool includeLockedLayers = true,

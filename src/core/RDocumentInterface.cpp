@@ -1336,7 +1336,7 @@ RVector RDocumentInterface::snap(RMouseEvent& event, bool preview) {
  * The event is also used to determine the maximum distance from the
  * cursor to the entity in the view in which the event originated.
  */
-REntity::Id RDocumentInterface::getClosestEntity(RMouseEvent& event) {
+REntity::Id RDocumentInterface::getClosestEntity(RInputEvent& event) {
     RGraphicsView& view = event.getGraphicsView();
     RVector modelPosition = event.getModelPosition();
 
