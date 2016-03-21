@@ -27,35 +27,49 @@ include("Modify.js");
 function ModifyCorner(guiAction) {
     Modify.call(this, guiAction);
 
+    // position clicked to choose corner:
+    this.posCorner = undefined;
+
+    // entity / position chosen as first edge:
     this.entity1 = undefined;
     this.shape1 = undefined;
     this.clickPos1 = undefined;
 
+    // entity / position chosen as second edge:
     this.entity2 = undefined;
     this.shape2 = undefined;
     this.clickPos2 = undefined;
 
+    // trimming on / off:
     this.trim = true;
 
+    // tool requires additional point (e.g. radius position):
     this.requiresPoint = false;
-    this.chooseSolution = false;
     this.posPoint = undefined;
+
     this.posSolution = undefined;
+
+    // tool requires user to choose one of multiple solutions:
+//    this.chooseSolution = false;
+//    this.posSolution = undefined;
 }
 
 ModifyCorner.prototype = new Modify();
 
 ModifyCorner.State = {
-    ChoosingEntity1 : 0,
-    ChoosingEntity2 : 1,
-    SettingPoint : 2,
-    ChoosingSolution : 3
+    ChoosingCorner : 0,
+    ChoosingEntity1 : 1,
+    ChoosingEntity2 : 2,
+    SettingPoint : 3,
+    //ChoosingSolution : 4,
 };
 
 ModifyCorner.prototype.beginEvent = function() {
     Modify.prototype.beginEvent.call(this);
 
-    this.setState(ModifyCorner.State.ChoosingEntity1);
+    var optionsToolBar = EAction.getOptionsToolBar();
+    this.slotIndividualEdgesChanged(optionsToolBar.findChild("IndividualEdges").checked);
+    //this.setState(ModifyCorner.State.ChoosingEntity1);
 };
 
 ModifyCorner.prototype.setState = function(state) {
@@ -65,15 +79,33 @@ ModifyCorner.prototype.setState = function(state) {
 
     var appWin = RMainWindowQt.getMainWindow();
     switch (this.state) {
-    case ModifyCorner.State.ChoosingEntity1:
-        this.getDocumentInterface().setClickMode(RAction.PickEntity);
+    case ModifyCorner.State.ChoosingCorner:
+        this.getDocumentInterface().setClickMode(RAction.PickCoordinateNoSnap);
+        this.posCorner = undefined;
         this.entity1 = undefined;
         this.shape1 = undefined;
         this.clickPos1 = undefined;
         this.entity2 = undefined;
         this.shape2 = undefined;
         this.clickPos2 = undefined;
-        this.posSolution = undefined;
+//        this.posSolution = undefined;
+        this.posPoint = undefined;
+        var trCorner = qsTr("Choose corner");
+        this.setCommandPrompt(trCorner);
+        this.setLeftMouseTip(trCorner);
+        this.setRightMouseTip(EAction.trCancel);
+        break;
+
+    case ModifyCorner.State.ChoosingEntity1:
+        this.getDocumentInterface().setClickMode(RAction.PickEntity);
+        this.posCorner = undefined;
+        this.entity1 = undefined;
+        this.shape1 = undefined;
+        this.clickPos1 = undefined;
+        this.entity2 = undefined;
+        this.shape2 = undefined;
+        this.clickPos2 = undefined;
+//        this.posSolution = undefined;
         this.posPoint = undefined;
         var trEntity1 = qsTr("Choose first entity");
         this.setCommandPrompt(trEntity1);
@@ -94,7 +126,7 @@ ModifyCorner.prototype.setState = function(state) {
 
     case ModifyCorner.State.SettingPoint:
         this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
-        this.posSolution = undefined;
+//        this.posSolution = undefined;
         this.posPoint = undefined;
         var trPoint = qsTr("Set point");
         this.setCommandPrompt(trPoint);
@@ -102,14 +134,14 @@ ModifyCorner.prototype.setState = function(state) {
         this.setRightMouseTip(EAction.trBack);
         break;
 
-    case ModifyCorner.State.ChoosingSolution:
-        this.getDocumentInterface().setClickMode(RAction.PickEntity);
-        this.posSolution = undefined;
-        var trSolution = qsTr("Choose solution");
-        this.setCommandPrompt(trSolution);
-        this.setLeftMouseTip(trSolution);
-        this.setRightMouseTip(EAction.trBack);
-        break;
+//    case ModifyCorner.State.ChoosingSolution:
+//        this.getDocumentInterface().setClickMode(RAction.PickEntity);
+//        this.posSolution = undefined;
+//        var trSolution = qsTr("Choose solution");
+//        this.setCommandPrompt(trSolution);
+//        this.setLeftMouseTip(trSolution);
+//        this.setRightMouseTip(EAction.trBack);
+//        break;
     }
 
     this.simulateMouseMoveEvent();
@@ -117,6 +149,10 @@ ModifyCorner.prototype.setState = function(state) {
 
 ModifyCorner.prototype.escapeEvent = function() {
     switch (this.state) {
+    case ModifyCorner.State.ChoosingCorner:
+        Modify.prototype.escapeEvent.call(this);
+        break;
+
     case ModifyCorner.State.ChoosingEntity1:
         Modify.prototype.escapeEvent.call(this);
         break;
@@ -129,14 +165,14 @@ ModifyCorner.prototype.escapeEvent = function() {
         this.setState(ModifyCorner.State.ChoosingEntity2);
         break;
 
-    case ModifyCorner.State.ChoosingSolution:
-        if (this.requiresPoint) {
-            this.setState(ModifyCorner.State.SettingPoint);
-        }
-        else {
-            this.setState(ModifyCorner.State.ChoosingEntity2);
-        }
-        break;
+//    case ModifyCorner.State.ChoosingSolution:
+//        if (this.requiresPoint) {
+//            this.setState(ModifyCorner.State.SettingPoint);
+//        }
+//        else {
+//            this.setState(ModifyCorner.State.ChoosingEntity2);
+//        }
+//        break;
     }
 };
 
@@ -208,9 +244,9 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
                 if (this.requiresPoint) {
                     this.setState(ModifyCorner.State.SettingPoint);
                 }
-                else if (this.chooseSolution) {
-                    this.setState(ModifyCorner.State.ChoosingSolution);
-                }
+//                else if (this.chooseSolution) {
+//                    this.setState(ModifyCorner.State.ChoosingSolution);
+//                }
                 else {
                     op = this.getOperation(false);
                     if (!isNull(op)) {
@@ -232,19 +268,19 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
         }
         break;
 
-    case ModifyCorner.State.ChoosingSolution:
-        this.posSolution = event.getModelPosition();
-        if (preview) {
-            this.updatePreview();
-        }
-        else {
-            op = this.getOperation(false);
-            if (!isNull(op)) {
-                di.applyOperation(op);
-                this.setState(ModifyCorner.State.ChoosingEntity1);
-            }
-        }
-        break;
+//    case ModifyCorner.State.ChoosingSolution:
+//        this.posSolution = event.getModelPosition();
+//        if (preview) {
+//            this.updatePreview();
+//        }
+//        else {
+//            op = this.getOperation(false);
+//            if (!isNull(op)) {
+//                di.applyOperation(op);
+//                this.setState(ModifyCorner.State.ChoosingEntity1);
+//            }
+//        }
+//        break;
     }
 };
 
@@ -259,7 +295,26 @@ ModifyCorner.prototype.warnUnsupportedShape = function() {
 ModifyCorner.prototype.pickCoordinate = function(event, preview) {
     var di = this.getDocumentInterface();
 
+    var op;
+
     switch (this.state) {
+    case ModifyCorner.State.ChoosingCorner:
+        this.posCorner = event.getModelPosition();
+        var ok = this.pickCorner(event);
+        if (preview) {
+            this.updatePreview();
+        }
+        else {
+            if (ok) {
+                op = this.getOperation(false);
+                if (!isNull(op)) {
+                    di.applyOperation(op);
+                }
+                this.setState(ModifyCorner.State.ChoosingCorner);
+            }
+        }
+        break;
+
     case ModifyCorner.State.SettingPoint:
         this.posPoint = event.getModelPosition();
 
@@ -267,19 +322,66 @@ ModifyCorner.prototype.pickCoordinate = function(event, preview) {
             this.updatePreview();
         }
         else {
-            if (this.chooseSolution) {
-                this.setState(ModifyCorner.State.ChoosingSolution);
-            }
-            else {
-                var op = this.getOperation(false);
+//            if (this.chooseSolution) {
+//                this.setState(ModifyCorner.State.ChoosingSolution);
+//            }
+//            else {
+                op = this.getOperation(false);
                 if (!isNull(op)) {
                     di.applyOperation(op);
                 }
                 this.setState(ModifyCorner.State.ChoosingEntity1);
-            }
+//            }
         }
         break;
     }
+};
+
+ModifyCorner.prototype.pickCorner = function(event) {
+    this.entity1 = undefined;
+    this.entity2 = undefined;
+
+    var di = this.getDocumentInterface();
+    var doc = this.getDocument();
+
+    // get closest entity:
+    var entityId1 = di.getClosestEntity(event);
+    if (entityId1===RObject.INVALID_ID) {
+        return false;
+    }
+
+    this.entity1 = doc.queryEntity(entityId1);
+    if (isNull(this.entity1)) {
+        return false;
+    }
+
+    this.clickPos1 = this.entity1.getClosestPointOnEntity(this.posCorner);
+
+    // ids of entities potentially intersecting entity1:
+    var entityIds = doc.queryIntersectedEntitiesXY(this.entity1.getBoundingBox(), true);
+
+    // find intersection points on entity1:
+    var minDist = undefined;
+    for (var i=0; i<entityIds.length; i++) {
+        var entityId = entityIds[i];
+        var entity2 = doc.queryEntity(entityId);
+
+        // intersection points between entity1 and entity2:
+        var ips = this.entity1.getIntersectionPoints(entity2.data());
+        for (var k=0; k<ips.length; k++) {
+            var ip = ips[k];
+            var dist = this.clickPos1.getDistanceTo(ip);
+            if (isNull(minDist) || dist<minDist) {
+                minDist = dist;
+                this.entity2 = entity2;
+                this.clickPos2 = ip;
+            }
+        }
+    }
+
+    this.posSolution = event.getModelPosition();
+
+    return true;
 };
 
 ModifyCorner.prototype.getHighlightedEntities = function() {
@@ -295,4 +397,13 @@ ModifyCorner.prototype.getHighlightedEntities = function() {
 
 ModifyCorner.prototype.slotTrimChanged = function(value) {
     this.trim = value;
+};
+
+ModifyCorner.prototype.slotIndividualEdgesChanged = function(value) {
+    if (value===true) {
+        this.setState(ModifyCorner.State.ChoosingEntity1);
+    }
+    else {
+        this.setState(ModifyCorner.State.ChoosingCorner);
+    }
 };
