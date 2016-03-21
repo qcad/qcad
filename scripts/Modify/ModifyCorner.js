@@ -370,16 +370,30 @@ ModifyCorner.prototype.pickCorner = function(event) {
         var ips = this.entity1.getIntersectionPoints(entity2.data());
         for (var k=0; k<ips.length; k++) {
             var ip = ips[k];
+
+            var axis = new RLine(ip, this.posCorner);
+            var side1 = axis.getSideOfPoint(this.clickPos1);
+
             var dist = this.clickPos1.getDistanceTo(ip);
             if (isNull(minDist) || dist<minDist) {
-                minDist = dist;
-                this.entity2 = entity2;
-                this.clickPos2 = ip;
+
+                var p = entity2.getClosestPointOnEntity(this.posCorner);
+                var side2 = axis.getSideOfPoint(p);
+
+                qDebug("s1:", side1);
+                qDebug("s2:", side2);
+
+                if (side1!==side2) {
+                    // potential closest intersection point found:
+                    minDist = dist;
+                    this.entity2 = entity2;
+                    this.clickPos2 = p;
+                }
             }
         }
     }
 
-    this.posSolution = event.getModelPosition();
+    this.posSolution = this.posCorner;
 
     return true;
 };
