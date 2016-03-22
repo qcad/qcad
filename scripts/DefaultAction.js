@@ -604,6 +604,7 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
     }
     else if (isBlockReferenceEntity(entity)) {
         // in block text editing with double-click:
+        /*
         var blockId = entity.getReferencedBlockId();
         var block = this.document.queryBlock(blockId);
         if (!isNull(block)) {
@@ -630,6 +631,7 @@ DefaultAction.prototype.entityDoubleClicked = function(entityId, event) {
                 return;
             }
         }
+        */
 
         if (RSettings.getBoolValue("GraphicsView/DoubleClickEditBlock", true)===true) {
             include("scripts/Block/Block.js");
