@@ -33,8 +33,16 @@ FirstStart.prototype.showDialog = function() {
 
     var pathFi = new QFileInfo(this.path);
     this.dialog.windowTitle = qsTr("%1 First Start").arg(qApp.applicationName);
-    this.dialog.styleSheet =
-        "QDialog{ background-image: url(" + pathFi.absoluteFilePath() + "/firststart.png) }";
+    if (qApp.applicationName.contains("QCAD")) {
+        this.dialog.styleSheet =
+            "QDialog{ background-image: url(" + pathFi.absoluteFilePath() + "/firststart.png) }";
+    }
+    else {
+        this.dialog.findChild("LanguageBackground").styleSheet = "";
+        this.dialog.findChild("Background").styleSheet = "";
+        this.dialog.findChild("Left").minimumSize = 0;
+    }
+
     this.widgets = getWidgets(this.dialog);
 
     // language combo

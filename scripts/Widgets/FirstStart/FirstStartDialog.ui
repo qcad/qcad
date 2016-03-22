@@ -36,7 +36,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
-    <widget class="QWidget" name="widget_3" native="true">
+    <widget class="QWidget" name="LanguageBackground" native="true">
      <property name="styleSheet">
       <string notr="true">.QWidget{background-color: rgba(255, 255, 255, 200);}</string>
      </property>
@@ -64,7 +64,7 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QWidget" name="widget" native="true">
+      <widget class="QWidget" name="Left" native="true">
        <property name="minimumSize">
         <size>
          <width>100</width>
@@ -74,7 +74,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QWidget" name="Container" native="true">
+      <widget class="QWidget" name="Background" native="true">
        <property name="styleSheet">
         <string notr="true">.QWidget{background-color: rgba(255, 255, 255, 200);}</string>
        </property>
