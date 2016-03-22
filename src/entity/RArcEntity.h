@@ -167,6 +167,10 @@ public:
         return data.reverse();
     }
 
+    RS::Side getSideOfPoint(const RVector& point) const {
+        return data.getSideOfPoint(point);
+    }
+
     RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
         return data.getTrimEnd(trimPoint, clickPoint);
     }
