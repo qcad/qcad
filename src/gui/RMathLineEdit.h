@@ -94,6 +94,7 @@ signals:
     void valueChanged(double value, const QString& error);
     void upKeyPressed();
     void downKeyPressed();
+    void enterKeyPressed();
 
 private:
     QPalette oriPalette;

@@ -256,6 +256,9 @@ void RMathLineEdit::keyPressEvent(QKeyEvent* event) {
     else if (event->key()==Qt::Key_Down) {
         emit downKeyPressed();
     }
+    else if (event->key()==Qt::Key_Enter || event->key()==Qt::Key_Return) {
+        emit enterKeyPressed();
+    }
     else {
         QLineEdit::keyPressEvent(event);
     }
