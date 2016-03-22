@@ -125,6 +125,9 @@
         reverse
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSideOfPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getTrimEnd
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
