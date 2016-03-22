@@ -67,9 +67,7 @@ ModifyCorner.State = {
 ModifyCorner.prototype.beginEvent = function() {
     Modify.prototype.beginEvent.call(this);
 
-    var optionsToolBar = EAction.getOptionsToolBar();
-    this.slotIndividualEdgesChanged(optionsToolBar.findChild("IndividualEdges").checked);
-    //this.setState(ModifyCorner.State.ChoosingEntity1);
+    this.setState(ModifyCorner.State.ChoosingEntity1);
 };
 
 ModifyCorner.prototype.setState = function(state) {
@@ -88,7 +86,7 @@ ModifyCorner.prototype.setState = function(state) {
         this.entity2 = undefined;
         this.shape2 = undefined;
         this.clickPos2 = undefined;
-//        this.posSolution = undefined;
+        this.posSolution = undefined;
         this.posPoint = undefined;
         var trCorner = qsTr("Choose corner");
         this.setCommandPrompt(trCorner);
@@ -105,7 +103,7 @@ ModifyCorner.prototype.setState = function(state) {
         this.entity2 = undefined;
         this.shape2 = undefined;
         this.clickPos2 = undefined;
-//        this.posSolution = undefined;
+        this.posSolution = undefined;
         this.posPoint = undefined;
         var trEntity1 = qsTr("Choose first entity");
         this.setCommandPrompt(trEntity1);
@@ -126,7 +124,7 @@ ModifyCorner.prototype.setState = function(state) {
 
     case ModifyCorner.State.SettingPoint:
         this.getDocumentInterface().setClickMode(RAction.PickCoordinate);
-//        this.posSolution = undefined;
+        this.posSolution = undefined;
         this.posPoint = undefined;
         var trPoint = qsTr("Set point");
         this.setCommandPrompt(trPoint);
@@ -362,32 +360,38 @@ ModifyCorner.prototype.pickCorner = function(event) {
 
     // find intersection points on entity1:
     var minDist = undefined;
+    //var minDist2 = undefined;
     for (var i=0; i<entityIds.length; i++) {
         var entityId = entityIds[i];
-        var entity2 = doc.queryEntity(entityId);
+        var entity2Candidate = doc.queryEntity(entityId);
 
         // intersection points between entity1 and entity2:
-        var ips = this.entity1.getIntersectionPoints(entity2.data());
+        var ips = this.entity1.getIntersectionPoints(entity2Candidate.data());
         for (var k=0; k<ips.length; k++) {
             var ip = ips[k];
 
-            var axis = new RLine(ip, this.posCorner);
-            var side1 = axis.getSideOfPoint(this.clickPos1);
+            //var axis = new RLine(ip, this.clickPos1);
+            var side1 = this.entity1.getSideOfPoint(this.posCorner);
+            //var side1 = axis.getSideOfPoint(this.clickPos1);
+            //var side1 = axis.getSideOfPoint(this.posCorner);
 
             var dist = this.clickPos1.getDistanceTo(ip);
+            //var dist2 = entity2.getDistanceTo(this.posCorner);
             if (isNull(minDist) || dist<minDist) {
+                //|| (RMath.fuzzyCompare(dist, minDist) && (isNull(minDist2) || dist2<minDist2))) {
 
-                var p = entity2.getClosestPointOnEntity(this.posCorner);
-                var side2 = axis.getSideOfPoint(p);
+                var clickPos2Candidate = entity2Candidate.getClosestPointOnEntity(this.posCorner);
+                //axis = new RLine(ip, clickPos2Candidate);
+                //var side2 = axis.getSideOfPoint(p);
+                //var side2 = axis.getSideOfPoint(clickPos2Candidate);
+                var side2 = this.entity1.getSideOfPoint(clickPos2Candidate);
 
-                qDebug("s1:", side1);
-                qDebug("s2:", side2);
-
-                if (side1!==side2) {
+                if (side1===side2) {
                     // potential closest intersection point found:
                     minDist = dist;
-                    this.entity2 = entity2;
-                    this.clickPos2 = p;
+                    //minDist2 = dist2;
+                    this.entity2 = entity2Candidate;
+                    this.clickPos2 = clickPos2Candidate;
                 }
             }
         }
