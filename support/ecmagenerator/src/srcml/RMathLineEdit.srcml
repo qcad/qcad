@@ -95,6 +95,7 @@
     <function_decl><type><name>void</name></type> <name>valueChanged</name><parameter_list>(<param><decl><type><name>double</name></type> <name>value</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>error</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>upKeyPressed</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>downKeyPressed</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>enterKeyPressed</name><parameter_list>()</parameter_list>;</function_decl>
 
 </public><private>private:
     <decl_stmt><decl><type><name>QPalette</name></type> <name>oriPalette</name></decl>;</decl_stmt>
