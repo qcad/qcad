@@ -526,6 +526,18 @@ function main() {
     var fiSettings = new QFileInfo(RSettings.getQSettings().fileName());
     var isFirstStart = !fiSettings.exists();
 
+    var numPlugins = RPluginLoader.countPlugins();
+    var pluginInfo;
+
+    // look up app name override:
+    for (i=0; i<numPlugins; i++) {
+        pluginInfo = RPluginLoader.getPluginInfo(i);
+        var n = pluginInfo.get("NameOverride");
+        if (!isNull(n)) {
+            qApp.applicationName = n;
+        }
+    }
+
     // if locale is given, don't show first start dialog:
     if (isFirstStart && !QCoreApplication.arguments().contains("-locale")) {
         include("Widgets/FirstStart/FirstStart.js");
@@ -547,18 +559,6 @@ function main() {
         }
     }
 
-    var numPlugins = RPluginLoader.countPlugins();
-    var pluginInfo;
-
-    // look up app name override:
-    for (i=0; i<numPlugins; i++) {
-        pluginInfo = RPluginLoader.getPluginInfo(i);
-        var n = pluginInfo.get("NameOverride");
-        if (!isNull(n)) {
-            qApp.applicationName = n;
-        }
-    }
-    
     // splash:
     var splash = undefined;
     if (RSettings.getBoolValue("Start/EnableSplashScreen", true)) {
