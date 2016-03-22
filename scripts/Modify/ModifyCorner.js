@@ -48,10 +48,6 @@ function ModifyCorner(guiAction) {
     this.posPoint = undefined;
 
     this.posSolution = undefined;
-
-    // tool requires user to choose one of multiple solutions:
-//    this.chooseSolution = false;
-//    this.posSolution = undefined;
 }
 
 ModifyCorner.prototype = new Modify();
@@ -61,7 +57,6 @@ ModifyCorner.State = {
     ChoosingEntity1 : 1,
     ChoosingEntity2 : 2,
     SettingPoint : 3,
-    //ChoosingSolution : 4,
 };
 
 ModifyCorner.prototype.beginEvent = function() {
@@ -131,15 +126,6 @@ ModifyCorner.prototype.setState = function(state) {
         this.setLeftMouseTip(trPoint);
         this.setRightMouseTip(EAction.trBack);
         break;
-
-//    case ModifyCorner.State.ChoosingSolution:
-//        this.getDocumentInterface().setClickMode(RAction.PickEntity);
-//        this.posSolution = undefined;
-//        var trSolution = qsTr("Choose solution");
-//        this.setCommandPrompt(trSolution);
-//        this.setLeftMouseTip(trSolution);
-//        this.setRightMouseTip(EAction.trBack);
-//        break;
     }
 
     this.simulateMouseMoveEvent();
@@ -162,15 +148,6 @@ ModifyCorner.prototype.escapeEvent = function() {
     case ModifyCorner.State.SettingPoint:
         this.setState(ModifyCorner.State.ChoosingEntity2);
         break;
-
-//    case ModifyCorner.State.ChoosingSolution:
-//        if (this.requiresPoint) {
-//            this.setState(ModifyCorner.State.SettingPoint);
-//        }
-//        else {
-//            this.setState(ModifyCorner.State.ChoosingEntity2);
-//        }
-//        break;
     }
 };
 
@@ -196,9 +173,6 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
         var shape = entity.getClosestSimpleShape(pos);
 
         if (this.isShapeSupported(shape)) {
-
-            //qDebug("entity1:", entity);
-            //qDebug("entity1:", entity.getId());
             this.entity1 = entity;
             this.shape1 = shape;
             this.clickPos1 = pos;
@@ -242,9 +216,6 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
                 if (this.requiresPoint) {
                     this.setState(ModifyCorner.State.SettingPoint);
                 }
-//                else if (this.chooseSolution) {
-//                    this.setState(ModifyCorner.State.ChoosingSolution);
-//                }
                 else {
                     op = this.getOperation(false);
                     if (!isNull(op)) {
@@ -265,20 +236,6 @@ ModifyCorner.prototype.pickEntity = function(event, preview) {
             }
         }
         break;
-
-//    case ModifyCorner.State.ChoosingSolution:
-//        this.posSolution = event.getModelPosition();
-//        if (preview) {
-//            this.updatePreview();
-//        }
-//        else {
-//            op = this.getOperation(false);
-//            if (!isNull(op)) {
-//                di.applyOperation(op);
-//                this.setState(ModifyCorner.State.ChoosingEntity1);
-//            }
-//        }
-//        break;
     }
 };
 
@@ -320,16 +277,11 @@ ModifyCorner.prototype.pickCoordinate = function(event, preview) {
             this.updatePreview();
         }
         else {
-//            if (this.chooseSolution) {
-//                this.setState(ModifyCorner.State.ChoosingSolution);
-//            }
-//            else {
-                op = this.getOperation(false);
-                if (!isNull(op)) {
-                    di.applyOperation(op);
-                }
-                this.setState(ModifyCorner.State.ChoosingEntity1);
-//            }
+            op = this.getOperation(false);
+            if (!isNull(op)) {
+                di.applyOperation(op);
+            }
+            this.setState(ModifyCorner.State.ChoosingEntity1);
         }
         break;
     }
@@ -360,7 +312,6 @@ ModifyCorner.prototype.pickCorner = function(event) {
 
     // find intersection points on entity1:
     var minDist = undefined;
-    //var minDist2 = undefined;
     for (var i=0; i<entityIds.length; i++) {
         var entityId = entityIds[i];
         var entity2Candidate = doc.queryEntity(entityId);
@@ -369,27 +320,17 @@ ModifyCorner.prototype.pickCorner = function(event) {
         var ips = this.entity1.getIntersectionPoints(entity2Candidate.data());
         for (var k=0; k<ips.length; k++) {
             var ip = ips[k];
-
-            //var axis = new RLine(ip, this.clickPos1);
             var side1 = this.entity1.getSideOfPoint(this.posCorner);
-            //var side1 = axis.getSideOfPoint(this.clickPos1);
-            //var side1 = axis.getSideOfPoint(this.posCorner);
 
             var dist = this.clickPos1.getDistanceTo(ip);
-            //var dist2 = entity2.getDistanceTo(this.posCorner);
             if (isNull(minDist) || dist<minDist) {
-                //|| (RMath.fuzzyCompare(dist, minDist) && (isNull(minDist2) || dist2<minDist2))) {
 
                 var clickPos2Candidate = entity2Candidate.getClosestPointOnEntity(this.posCorner);
-                //axis = new RLine(ip, clickPos2Candidate);
-                //var side2 = axis.getSideOfPoint(p);
-                //var side2 = axis.getSideOfPoint(clickPos2Candidate);
                 var side2 = this.entity1.getSideOfPoint(clickPos2Candidate);
 
                 if (side1===side2) {
                     // potential closest intersection point found:
                     minDist = dist;
-                    //minDist2 = dist2;
                     this.entity2 = entity2Candidate;
                     this.clickPos2 = clickPos2Candidate;
                 }
