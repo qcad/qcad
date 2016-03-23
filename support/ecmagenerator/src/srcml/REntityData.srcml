@@ -198,6 +198,9 @@
         <expr_stmt><expr><name>this</name>-&gt;<name>parentId</name> = <name>parentId</name></expr>;</expr_stmt>
     }</block></function>
 
+    <comment type="block">/**
+     * \return ID of parent entity (block reference for block attribute).
+     */</comment>
     <function><type><name><name>RObject</name>::<name>Id</name></name></type> <name>getParentId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>parentId</name></expr>;</return>
     }</block></function>
