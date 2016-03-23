@@ -197,6 +197,9 @@ public:
         this->parentId = parentId;
     }
 
+    /**
+     * \return ID of parent entity (block reference for block attribute).
+     */
     RObject::Id getParentId() const {
         return parentId;
     }
