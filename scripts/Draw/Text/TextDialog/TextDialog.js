@@ -842,26 +842,24 @@ TextDialog.prototype.textColor = function() {
     }
 
     var chosenColor = chosenAction.property("color");
-    if (!chosenColor.isValid()) {
-        // others: color dialog:
+    if (chosenColor.isValid()) {
+        if (chosenColor.isByLayer()) {
+            chosenColor = RColor.CompatByLayer;
+        }
+        else if (chosenColor.isByBlock()) {
+            chosenColor = RColor.CompatByBlock;
+        }
+        else {
+            chosenColor = new QColor(chosenColor.red(), chosenColor.green(), chosenColor.blue(), chosenColor.alpha());
+        }
+    }
+    else {
+        // custom color: show color dialog:
         chosenColor = QColorDialog.getColor(this.textEdit.textColor(), this.dialog);
         if (!chosenColor.isValid()) {
             // color dialog canceled:
             return;
         }
-    }
-
-    //qDebug("chosenColor: ", chosenColor);
-
-    if (chosenColor.isByLayer()) {
-        chosenColor = RColor.CompatByLayer;
-    }
-    else if (chosenColor.isByBlock()) {
-        chosenColor = RColor.CompatByBlock;
-        //qDebug("chosen QColor: ", chosenColor);
-    }
-    else {
-        chosenColor = new QColor(chosenColor.red(), chosenColor.green(), chosenColor.blue(), chosenColor.alpha());
     }
 
     var fmt = new QTextCharFormat();
