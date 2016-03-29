@@ -185,6 +185,7 @@ double RMath::eval(const QString& expression, bool* ok) {
             ")"
             "\\b",
             Qt::CaseInsensitive, QRegExp::RegExp2);
+
         do {
             idx = re.indexIn(expr);
             if (idx==-1) {
@@ -282,16 +283,33 @@ double RMath::eval(const QString& expression, bool* ok) {
 
     // convert explicitely indicated degree angles (e.g. "90d") to degrees:
     {
-        QRegExp re("((?:\\.\\d+)|(?:\\d+\\.\\d*)|(?:\\d+))d\\b", Qt::CaseInsensitive, QRegExp::RegExp2);
+        QRegExp re(
+            "("
+              "(?:(\\d*\\.?\\d*)[d°])"  // degrees
+              "(?:(\\d*\\.?\\d*)')?"    // minutes
+              "(?:(\\d*\\.?\\d*)\")?"   // seconds
+            ")"
+            "(?:[^\\d]|$)",             // followed by not a number or end
+            Qt::CaseInsensitive, QRegExp::RegExp2);
         do {
             idx = re.indexIn(expr);
+            qDebug() << "deg,min,sec found at: " << idx;
             if (idx==-1) {
                 break;
             }
-            QString match = re.cap(1);
+
+            double degrees = 0.0;
+            double minutes = 0.0;
+            double seconds = 0.0;
+            degrees = re.cap(2).toDouble(ok);
+            minutes = re.cap(3).toDouble(ok);
+            seconds = re.cap(4).toDouble(ok);
+
+            double angle = degrees + minutes/60.0 + seconds/3600.0;
+
             expr.replace(
-                re,
-                QString("%1").arg(match.toDouble(ok), 0, 'g', 16)
+                re.cap(1),
+                QString("%1").arg(angle, 0, 'g', 16)
             );
         } while(idx!=-1);
     }
