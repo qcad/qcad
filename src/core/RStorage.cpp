@@ -24,7 +24,7 @@
 RStorage::RStorage() :
     document(NULL),
     modified(false),
-    maxDrawOrder(1),
+    maxDrawOrder(0),
     idCounter(0),
     handleCounter(0),
     currentColor(RColor::ByLayer),
@@ -39,7 +39,7 @@ RStorage::RStorage() :
 
 void RStorage::clear() {
     modified = false;
-    maxDrawOrder = 1;
+    maxDrawOrder = 0;
     idCounter = 0;
     handleCounter = 0;
     currentColor = RColor::ByLayer;
