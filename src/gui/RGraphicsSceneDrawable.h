@@ -30,7 +30,7 @@
  * \scriptable
  * \copyable
  */
-class RGraphicsSceneDrawable {
+class QCADGUI_EXPORT RGraphicsSceneDrawable {
 public:
     enum Type {
         Invalid,
@@ -96,7 +96,7 @@ protected:
     //};
 };
 
-QDebug operator<<(QDebug dbg, const RGraphicsSceneDrawable& d);
+QCADGUI_EXPORT QDebug operator<<(QDebug dbg, const RGraphicsSceneDrawable& d);
 
 Q_DECLARE_METATYPE(RGraphicsSceneDrawable)
 Q_DECLARE_METATYPE(RGraphicsSceneDrawable*)
