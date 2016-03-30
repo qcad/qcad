@@ -27,7 +27,7 @@ REntityData::REntityData(RDocument* document) :
     document(document),
     updatesEnabled(true),
     selectionStatus(false), 
-    drawOrder(-1),
+    drawOrder(RMININT),
     layerId(RLayer::INVALID_ID), 
     blockId(RBlock::INVALID_ID), 
     parentId(REntity::INVALID_ID),
