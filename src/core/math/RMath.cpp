@@ -147,6 +147,11 @@ double RMath::eval(const QString& expression, bool* ok) {
         return RNANDOUBLE;
     }
 
+    // handle *VARIES* from property editor efficiently:
+    if (expression.startsWith("*") && expression.endsWith("*")) {
+        return RNANDOUBLE;
+    }
+
     if (ok!=NULL) {
         *ok = true;
     }
