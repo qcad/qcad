@@ -764,40 +764,41 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
     }
 
     // paint image for raster image entity:
-    if (sceneQt->hasImageFor(id)) {
-        QList<RImageData> images = sceneQt->getImages(id);
-        for (int i=0; i<images.length(); i++) {
-            images[i].move(paintOffset);
-            paintImage(painter, images[i]);
-        }
-    }
+//    if (sceneQt->hasImageFor(id)) {
+//        QList<RImageData> images = sceneQt->getImages(id);
+//        for (int i=0; i<images.length(); i++) {
+//            images[i].move(paintOffset);
+//            paintImage(painter, images[i]);
+//        }
+//    }
 
     // paint text for text layout based entity:
-    QList<RTextBasedData> texts;
-    if (preview) {
-        // preview text:
-        //TODO if (sceneQt->hasPreviewTextsFor(id)) {
-            texts = sceneQt->getPreviewTexts(id);
-        //}
-    }
-    else {
-        if (sceneQt->hasTextsFor(id)) {
-            texts = sceneQt->getTexts(id);
-        }
-    }
-    for (int k=0; k<texts.length(); k++) {
-        texts[k].move(paintOffset);
-        paintText(painter, texts[k]);
-    }
+//    QList<RTextBasedData> texts;
+//    if (preview) {
+//        // preview text:
+//        //TODO if (sceneQt->hasPreviewTextsFor(id)) {
+//            texts = sceneQt->getPreviewTexts(id);
+//        //}
+//    }
+//    else {
+//        if (sceneQt->hasTextsFor(id)) {
+//            texts = sceneQt->getTexts(id);
+//        }
+//    }
+//    for (int k=0; k<texts.length(); k++) {
+//        texts[k].move(paintOffset);
+//        //qDebug() << texts[k].getDrawOrder();
+//        paintText(painter, texts[k]);
+//    }
 
     // get painter paths for vector graphics entity:
-    QList<RPainterPath> painterPaths;
+    QList<RGraphicsSceneDrawable> painterPaths;
     if (preview) {
         // get painter paths of the current preview:
-        painterPaths = sceneQt->getPreviewPainterPaths(id);
+        painterPaths = sceneQt->getPreviewDrawables(id);
     } else {
         // get painter paths of the given entity:
-        painterPaths = sceneQt->getPainterPaths(id);
+        painterPaths = sceneQt->getDrawables(id);
 
         // if at least one arc path is too detailed or not detailed enough,
         // or the path is an XLine or Ray, regen:
@@ -811,16 +812,18 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         // do we need to regen:
         bool regen = false;
         for (int p=0; p<painterPaths.size(); p++) {
-            if (painterPaths[p].getAlwaysRegen()==true) {
-                regen = true;
-                break;
-            }
-            if (painterPaths[p].getAutoRegen()==true) {
-                if (painterPaths[p].getPixelSizeHint()>RS::PointTolerance &&
-                    (painterPaths[p].getPixelSizeHint()<ps/5 || painterPaths[p].getPixelSizeHint()>ps*5)) {
-
+            if (painterPaths[p].getType()==RGraphicsSceneDrawable::PainterPath) {
+                if (painterPaths[p].getPainterPath().getAlwaysRegen()==true) {
                     regen = true;
                     break;
+                }
+                if (painterPaths[p].getPainterPath().getAutoRegen()==true) {
+                    if (painterPaths[p].getPainterPath().getPixelSizeHint()>RS::PointTolerance &&
+                        (painterPaths[p].getPainterPath().getPixelSizeHint()<ps/5 || painterPaths[p].getPainterPath().getPixelSizeHint()>ps*5)) {
+
+                        regen = true;
+                        break;
+                    }
                 }
             }
         }
@@ -828,15 +831,35 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         // regen:
         if (regen) {
             sceneQt->exportEntity(id, true);
-            painterPaths = sceneQt->getPainterPaths(id);
+            painterPaths = sceneQt->getDrawables(id);
         }
     }
 
     // paint painter paths:
-    QListIterator<RPainterPath> i(painterPaths);
+    QListIterator<RGraphicsSceneDrawable> i(painterPaths);
     while (i.hasNext()) {
-        RPainterPath path = i.next();
+        RGraphicsSceneDrawable drawable = i.next();
 
+        // image:
+        if (drawable.getType()==RGraphicsSceneDrawable::Image) {
+            RImageData image = drawable.getImage();
+            image.move(paintOffset);
+            paintImage(painter, image);
+        }
+
+        // text:
+        if (drawable.getType()==RGraphicsSceneDrawable::Text) {
+            RTextBasedData text = drawable.getText();
+            text.move(paintOffset);
+            paintText(painter, text);
+        }
+
+        // unknown drawable:
+        if (drawable.getType()!=RGraphicsSceneDrawable::PainterPath) {
+            continue;
+        }
+
+        RPainterPath path = drawable.getPainterPath();
         if (!path.isSane()) {
             continue;
         }

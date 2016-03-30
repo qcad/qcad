@@ -135,6 +135,7 @@
 #include "REcmaFontList.h"
 #include "REcmaGraphicsScene.h"
 #include "REcmaGraphicsSceneQt.h"
+#include "REcmaGraphicsSceneDrawable.h"
 #include "REcmaGraphicsView.h"
 #include "REcmaGraphicsViewImage.h"
 #include "REcmaGraphicsViewQt.h"
@@ -612,6 +613,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
 
     REcmaGraphicsScene::initEcma(*engine);
     REcmaGraphicsSceneQt::initEcma(*engine);
+    REcmaGraphicsSceneDrawable::initEcma(*engine);
     REcmaPainterPath::initEcma(*engine);
     REcmaPainterPathDevice::initEcma(*engine);
 

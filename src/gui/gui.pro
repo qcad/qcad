@@ -11,6 +11,7 @@ SOURCES += \
     RFlowLayout.cpp \
     RFocusFrame.cpp \
     RFontChooserWidget.cpp \
+    RGraphicsSceneDrawable.cpp \
     RGraphicsSceneQt.cpp \
     RGraphicsViewImage.cpp \
     RGraphicsViewQt.cpp \
@@ -40,6 +41,7 @@ HEADERS += \
     RFlowLayout.h \
     RFocusFrame.h \
     RFontChooserWidget.h \
+    RGraphicsSceneDrawable.h \
     RGraphicsSceneQt.h \
     RGraphicsViewImage.h \
     RGraphicsViewQt.h \
