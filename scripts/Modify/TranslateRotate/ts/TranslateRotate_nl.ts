@@ -42,7 +42,7 @@
         <translation>&amp;Meerdere kopieën</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+94"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Hoek (a):</translation>
     </message>

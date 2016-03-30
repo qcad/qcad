@@ -42,7 +42,7 @@
         <translation>&amp;Viac kópií</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+94"/>
         <source>&amp;Angle (a):</source>
         <translation>Uhol (&amp;a):</translation>
     </message>

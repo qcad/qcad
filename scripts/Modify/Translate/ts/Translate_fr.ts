@@ -113,7 +113,7 @@ Indiquer le point cible</translatorcomment>
         <translation>Copies &amp;multiples</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+86"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Utiliser calque et &amp;attributs actuel</translation>
     </message>

@@ -52,7 +52,7 @@
         <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+94"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;A 角度(a):</translation>
     </message>

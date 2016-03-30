@@ -42,7 +42,7 @@
         <translation>&amp;Več kopij</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+94"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Kot (a):</translation>
     </message>

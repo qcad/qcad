@@ -86,7 +86,7 @@ Entre o número de cópias</translatorcomment>
         <translation>&amp;Mantenha o original</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+79"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Use a camada e os &amp;atributos atuais</translation>
     </message>

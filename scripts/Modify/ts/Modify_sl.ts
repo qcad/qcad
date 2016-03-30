@@ -22,7 +22,12 @@
 <context>
     <name>ModifyCorner</name>
     <message>
-        <location filename="../ModifyCorner.js" line="+78"/>
+        <location filename="../ModifyCorner.js" line="+86"/>
+        <source>Choose corner</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Choose first entity</source>
         <translation>Izberi prvo entiteto</translation>
     </message>
@@ -37,9 +42,8 @@
         <translation>Nastavi točko</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Choose solution</source>
-        <translation>Izberi rešitev</translation>
+        <translation type="vanished">Izberi rešitev</translation>
     </message>
 </context>
 <context>

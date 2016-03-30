@@ -142,7 +142,7 @@ Use camada e &amp;atributos atual</translatorcomment>
         <translation>Cópias &amp;múltiplas</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+86"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Use a camada e os &amp;atributos atuais</translation>
     </message>

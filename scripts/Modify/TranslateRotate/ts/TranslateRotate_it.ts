@@ -76,7 +76,7 @@ Usa layer e gli &amp;attributi corrente</translatorcomment>
         <translation>Copie &amp;Multiple</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+94"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Angolo (a):</translation>
     </message>

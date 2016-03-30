@@ -42,7 +42,7 @@
         <translation>С&amp;охранить оригинал</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+79"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>

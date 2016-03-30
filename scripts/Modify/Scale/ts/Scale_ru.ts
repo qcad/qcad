@@ -52,7 +52,7 @@
         <translation>&amp;Несколько копий</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+112"/>
         <source>Factor &amp;x:</source>
         <translation>Коэффициент &amp;x:</translation>
     </message>
@@ -67,7 +67,7 @@
         <translation>Коэффициент &amp;y:</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+66"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Использовать текущий с&amp;лой и атрибуты</translation>
     </message>

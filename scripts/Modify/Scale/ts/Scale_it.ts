@@ -95,7 +95,7 @@ Usa layer e gli &amp;attributi corrente</translatorcomment>
         <translation>Copie &amp;multiple</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+112"/>
         <source>Factor &amp;x:</source>
         <translation>Fattore &amp;x:</translation>
     </message>
@@ -110,7 +110,7 @@ Usa layer e gli &amp;attributi corrente</translatorcomment>
         <translation>Fattore &amp;y:</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+66"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Usa layer e gli &amp;attributi corrente</translation>
     </message>

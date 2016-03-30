@@ -105,7 +105,7 @@
         <translation>&amp;Специальные символы...</translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+310"/>
         <source>Others...</source>
         <translation>Другие...</translation>
     </message>

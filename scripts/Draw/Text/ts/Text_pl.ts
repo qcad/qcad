@@ -152,7 +152,7 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation type="unfinished">Znaki specjalne ...</translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+310"/>
         <source>Others...</source>
         <translatorcomment>--ignored ...--
 --file: qcadguiqt_pl.ts--</translatorcomment>

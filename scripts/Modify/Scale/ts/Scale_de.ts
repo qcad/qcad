@@ -95,7 +95,7 @@
         <translation>&amp;Mehrere Kopien</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+112"/>
         <source>Factor &amp;x:</source>
         <translation>Faktor &amp;X:</translation>
     </message>
@@ -110,7 +110,7 @@
         <translation>Faktor &amp;Y:</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+66"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Aktueller Layer / &amp;Attribute</translation>
     </message>

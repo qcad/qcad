@@ -42,7 +42,7 @@
         <translation>&amp;Несколько копий</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+94"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Угол (a):</translation>
     </message>

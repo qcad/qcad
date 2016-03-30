@@ -42,7 +42,7 @@
         <translation>Origineel &amp;bewaren</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+79"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Gebruik huidige laag en &amp;attributen</translation>
     </message>

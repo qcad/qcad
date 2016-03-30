@@ -42,7 +42,7 @@
         <translation>P&amp;onechať originál</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+79"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Použiť aktuálnu vrstvu a vl&amp;astnosti</translation>
     </message>

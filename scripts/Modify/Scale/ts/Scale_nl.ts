@@ -52,7 +52,7 @@
         <translation>&amp;Meerdere kopieën</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+112"/>
         <source>Factor &amp;x:</source>
         <translation>Factor &amp;x:</translation>
     </message>
@@ -67,7 +67,7 @@
         <translation>Factor &amp;y:</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+66"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Gebruik huidige laag en &amp;attributen</translation>
     </message>

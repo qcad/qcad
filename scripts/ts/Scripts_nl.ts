@@ -34,7 +34,7 @@
         <translation>Object verplaatsen</translation>
     </message>
     <message>
-        <location line="+349"/>
+        <location line="+350"/>
         <source>Move Reference Point</source>
         <translation>Referentiepunt verplaatsen</translation>
     </message>
@@ -49,7 +49,7 @@
         <translation>Object verplaatsen</translation>
     </message>
     <message>
-        <location line="+118"/>
+        <location line="+120"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation>Bewerken van blok &apos;%1&apos;&lt;br&gt;Kies &lt;i&gt;Blok &gt; Terug naar hoofdtekening&lt;/i&gt; als u klaar bent</translation>
     </message>
@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2002"/>
+        <location line="+2005"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>
     <message>
-        <location line="-1729"/>
+        <location line="-1732"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Actief gereedschap:</translation>
@@ -84,7 +84,7 @@
         <translation>Opties</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+28"/>
         <source>Main Tools</source>
         <translation>Hoofd gereedschappen</translation>
     </message>
@@ -99,12 +99,12 @@
         <translation>Object is op een vergrendelde laag.</translation>
     </message>
     <message>
-        <location line="+212"/>
+        <location line="+214"/>
         <source>Length:</source>
         <translation>Lengte:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+40"/>
         <source>Entity is not a block reference.</source>
         <translation>Object is niet een blok referentie.</translation>
     </message>
@@ -177,7 +177,7 @@
         <translation>Radius gedaald tot onder 0 na %1 concentrische boog(en).</translation>
     </message>
     <message>
-        <location line="+789"/>
+        <location line="+795"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Ten minste twee punten zijn identiek.</translation>

@@ -145,7 +145,7 @@
     <message>
         <location line="+10"/>
         <source>Display properties of current block and current layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Отображать свойства текущего блока и текущего слоя</translation>
     </message>
 </context>
 </TS>

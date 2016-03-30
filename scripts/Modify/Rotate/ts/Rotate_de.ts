@@ -56,7 +56,7 @@
         <translation type="obsolete">10</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+94"/>
         <source>&amp;Angle (a):</source>
         <translation>&amp;Winkel (a):</translation>
     </message>

@@ -62,7 +62,7 @@
         <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+94"/>
         <source>Angle (&amp;a):</source>
         <translation>角度(&amp;a):</translation>
     </message>

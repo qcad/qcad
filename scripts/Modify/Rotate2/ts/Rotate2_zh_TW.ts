@@ -62,7 +62,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+94"/>
         <source>Angle (&amp;a):</source>
         <translation type="unfinished"></translation>
     </message>

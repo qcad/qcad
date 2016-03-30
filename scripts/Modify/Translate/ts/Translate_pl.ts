@@ -109,7 +109,7 @@ Kopie &amp;wielokrotne:</translatorcomment>
         <translation type="unfinished">Kopie &amp;wielokrotne</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+86"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Użyj bieżącej warstwy i atrybuty</translation>

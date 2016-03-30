@@ -82,7 +82,7 @@
         <translation>&amp;Useita kopioita</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+86"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
     </message>

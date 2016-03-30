@@ -86,7 +86,7 @@ Cópias &amp;Múltiplas</translatorcomment>
         <translation>Cópias &amp;múltiplas</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+94"/>
         <source>&amp;Angle (a):</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--

@@ -87,7 +87,7 @@
         <translation>Ein&amp;fügen</translation>
     </message>
     <message>
-        <location line="+510"/>
+        <location line="+508"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
@@ -273,7 +273,7 @@
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="-517"/>
+        <location filename="../TextDialog/TextDialog.js" line="-515"/>
         <source>&amp;Bold</source>
         <translation>&amp;Fett</translation>
     </message>
@@ -303,7 +303,7 @@
         <translation>&amp;Sonderzeichen...</translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+310"/>
         <source>Others...</source>
         <translation>Andere...</translation>
     </message>

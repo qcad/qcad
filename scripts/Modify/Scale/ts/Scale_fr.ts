@@ -91,7 +91,7 @@ Indiquer le point cible</translatorcomment>
         <translation>Copies &amp;multiples</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+112"/>
         <source>Factor &amp;x:</source>
         <translation>Facteur &amp;x :</translation>
     </message>
@@ -106,7 +106,7 @@ Indiquer le point cible</translatorcomment>
         <translation>Facteur &amp;y :</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+66"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Utiliser calque et &amp;attributs actuel</translation>
     </message>

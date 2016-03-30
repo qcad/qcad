@@ -268,7 +268,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>Начало координат</translation>
     </message>
     <message>
         <location line="-1"/>

@@ -42,7 +42,7 @@
         <translation>&amp;Ohrani original</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+79"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Uporabi trenutno plast in &amp;atribute</translation>
     </message>

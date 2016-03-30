@@ -52,7 +52,7 @@
         <translation>&amp;Več kopij</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+112"/>
         <source>Factor &amp;x:</source>
         <translation>Faktor &amp;x:</translation>
     </message>
@@ -67,7 +67,7 @@
         <translation>Faktor &amp;y:</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+66"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Uporabi trenutno plast in &amp;atribute</translation>
     </message>

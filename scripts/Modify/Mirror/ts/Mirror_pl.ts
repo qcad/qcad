@@ -62,7 +62,7 @@ Wprowadź liczbę kopii</translatorcomment>
         <translation type="unfinished">&amp;Zachowaj oryginał</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+79"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Użyj bieżącej warstwy i atrybuty</translation>

@@ -70,7 +70,7 @@ Indiquer le second point de l&apos;axe de symétrie</translatorcomment>
         <translation>&amp;Garder original</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+79"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Utiliser calque et &amp;attributs actuel</translation>
     </message>

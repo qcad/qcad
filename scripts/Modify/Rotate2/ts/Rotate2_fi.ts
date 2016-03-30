@@ -62,7 +62,7 @@
         <translation>&amp;Useita kopioita</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+94"/>
         <source>Angle (&amp;a):</source>
         <translation>Kulma (&amp;a):</translation>
     </message>

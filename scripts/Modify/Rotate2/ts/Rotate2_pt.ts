@@ -129,7 +129,7 @@ Use camada e &amp;atributos atual</translatorcomment>
         <translation>Cópias &amp;múltiplas</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+94"/>
         <source>Angle (&amp;a):</source>
         <translation>Ângulo (&amp;a):</translation>
     </message>

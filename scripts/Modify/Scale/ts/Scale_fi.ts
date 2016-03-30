@@ -52,7 +52,7 @@
         <translation>&amp;Useita kopioita</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+112"/>
         <source>Factor &amp;x:</source>
         <translation>Kerroin &amp;x:</translation>
     </message>
@@ -67,7 +67,7 @@
         <translation>Kerroin &amp;y:</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+66"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Käytä nykyistä tasoa ja &amp;ominaisuuksia</translation>
     </message>

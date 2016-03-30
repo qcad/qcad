@@ -105,7 +105,7 @@
         <translation>&amp;S 特殊文字...</translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+310"/>
         <source>Others...</source>
         <translation>その他...</translation>
     </message>

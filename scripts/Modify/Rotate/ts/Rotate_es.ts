@@ -60,7 +60,7 @@ Punto objetivo</translatorcomment>
         <translation>Copias &amp;múltiples</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+94"/>
         <source>&amp;Angle (a):</source>
         <translation>Á&amp;ngulo (a):</translation>
     </message>

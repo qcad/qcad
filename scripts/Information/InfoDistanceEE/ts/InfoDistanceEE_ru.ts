@@ -26,7 +26,7 @@
     <message>
         <location filename="../InfoDistanceEEInit.js" line="+2"/>
         <source>Distance &amp;Entity to Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Расстояние &amp;объекта до объекта</translation>
     </message>
 </context>
 <context>

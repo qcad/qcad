@@ -24,7 +24,12 @@
 <context>
     <name>ModifyCorner</name>
     <message>
-        <location filename="../ModifyCorner.js" line="+78"/>
+        <location filename="../ModifyCorner.js" line="+86"/>
+        <source>Choose corner</source>
+        <translation>Elija la esquina</translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Choose first entity</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Elija la entidad primera</translation>
@@ -41,9 +46,8 @@
         <translation>Establecer punto</translation>
     </message>
     <message>
-        <location line="+9"/>
         <source>Choose solution</source>
-        <translation>Seleccionar solución</translation>
+        <translation type="vanished">Seleccionar solución</translation>
     </message>
 </context>
 <context>

@@ -4,13 +4,13 @@
 <context>
     <name>Round</name>
     <message>
-        <location filename="../Round.js" line="+57"/>
+        <location filename="../Round.js" line="+58"/>
         <source>The two entities cannot be rounded.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Le due entità non possono essere arrotondati.</translation>
     </message>
     <message>
-        <location line="+42"/>
+        <location line="+43"/>
         <source>First entity cannot be trimmed.</source>
         <translatorcomment>--exact match--
 --file: Bevel_it.ts--

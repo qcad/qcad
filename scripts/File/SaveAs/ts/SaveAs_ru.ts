@@ -6,12 +6,12 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Файловый диалог</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Использовать системный файловый диалог</translation>
     </message>
     <message>
         <location line="+13"/>

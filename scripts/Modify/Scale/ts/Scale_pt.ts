@@ -128,7 +128,7 @@ Use camada e &amp;atributos atual</translatorcomment>
         <translation>Cópias &amp;múltiplas</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+112"/>
         <source>Factor &amp;x:</source>
         <translation>Fator &amp;x:</translation>
     </message>
@@ -143,7 +143,7 @@ Use camada e &amp;atributos atual</translatorcomment>
         <translation>Fator &amp;y:</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+66"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Use a camada e os &amp;atributos atuais</translation>
     </message>

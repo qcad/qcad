@@ -34,7 +34,7 @@
         <translation>Objekt verschieben</translation>
     </message>
     <message>
-        <location line="+349"/>
+        <location line="+350"/>
         <source>Move Reference Point</source>
         <translation>Referenzpunkt verschieben</translation>
     </message>
@@ -49,7 +49,7 @@
         <translation>Objekt verschieben</translation>
     </message>
     <message>
-        <location line="+118"/>
+        <location line="+120"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation>Block &apos;%1&apos; bearbeiten&lt;br&gt;Wählen Sie &lt;i&gt;Block &gt; Zurück zur Hauptzeichnung&lt;/i&gt;, um zur Hauptzeichnung zurückzukehren</translation>
     </message>
@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2002"/>
+        <location line="+2005"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-1729"/>
+        <location line="-1732"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
@@ -92,7 +92,7 @@
         <translation type="vanished">Blockoptionen</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+28"/>
         <source>Main Tools</source>
         <translation>Hauptwerkzeuge</translation>
     </message>
@@ -107,12 +107,12 @@
         <translation>Element ist auf gesperrtem Layer.</translation>
     </message>
     <message>
-        <location line="+212"/>
+        <location line="+214"/>
         <source>Length:</source>
         <translation>Länge:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+40"/>
         <source>Entity is not a block reference.</source>
         <translation>Element ist keine Block Referenz.</translation>
     </message>
@@ -185,7 +185,7 @@
         <translation>Radius kleiner als 0.0 nach %1 konzentrischen Kreisbögen.</translation>
     </message>
     <message>
-        <location line="+796"/>
+        <location line="+802"/>
         <source>No circle possible.</source>
         <translation>Kein Kreis möglich.</translation>
     </message>

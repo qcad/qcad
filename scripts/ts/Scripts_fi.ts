@@ -34,7 +34,7 @@
         <translation>Siirrä kohde haluttuun paikkaan</translation>
     </message>
     <message>
-        <location line="+349"/>
+        <location line="+350"/>
         <source>Move Reference Point</source>
         <translation>Siirrä viite</translation>
     </message>
@@ -49,7 +49,7 @@
         <translation>Siirrä kohde</translation>
     </message>
     <message>
-        <location line="+118"/>
+        <location line="+120"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation type="unfinished"></translation>
     </message>
@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2002"/>
+        <location line="+2005"/>
         <source>Cancel</source>
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="-1729"/>
+        <location line="-1732"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Aktiivinen työkalu:</translation>
@@ -88,7 +88,7 @@
         <translation type="vanished">Lohkoasetukset</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+28"/>
         <source>Main Tools</source>
         <translation>Päätyökalut</translation>
     </message>
@@ -103,12 +103,12 @@
         <translation>Kohde on lukitussa tasossa.</translation>
     </message>
     <message>
-        <location line="+212"/>
+        <location line="+214"/>
         <source>Length:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+40"/>
         <source>Entity is not a block reference.</source>
         <translation>Kohde ei ole lohkoviite.</translation>
     </message>
@@ -181,7 +181,7 @@
         <translation>Säde on pudonnut alle 0.0 arvon %1 samankeskisen kaaren (kaarien) jälkeen.</translation>
     </message>
     <message>
-        <location line="+789"/>
+        <location line="+795"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translation>Vähintään kaksi pistettä ovat samat.</translation>

@@ -56,7 +56,7 @@
         <translation>Layer</translation>
     </message>
     <message>
-        <location filename="../LayerDialog.js" line="+179"/>
+        <location filename="../LayerDialog.js" line="+180"/>
         <source>Leading or trailing spaces.</source>
         <translation>Führende oder nachfolgende Leerzeichen.</translation>
     </message>

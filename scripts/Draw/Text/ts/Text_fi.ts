@@ -105,7 +105,7 @@
         <translation>&amp;Erikoismerkit...</translation>
     </message>
     <message>
-        <location line="+312"/>
+        <location line="+310"/>
         <source>Others...</source>
         <translation>Muut...</translation>
     </message>

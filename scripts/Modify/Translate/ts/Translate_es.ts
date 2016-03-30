@@ -117,7 +117,7 @@ Usar capa y los &amp;atributos actual</translatorcomment>
         <translation>Copias &amp;múltiples</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+86"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Usar capa y los &amp;atributos actual</translation>
     </message>

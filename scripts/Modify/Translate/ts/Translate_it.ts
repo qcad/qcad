@@ -117,7 +117,7 @@ Usa layer e gli &amp;attributi corrente</translatorcomment>
         <translation>Copie &amp;Multiple</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+86"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Usa layer e gli &amp;attributi corrente</translation>
     </message>

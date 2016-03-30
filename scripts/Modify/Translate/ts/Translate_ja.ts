@@ -82,7 +82,7 @@
         <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+86"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>&amp;a 現在の画層と属性を使用</translation>
     </message>

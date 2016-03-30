@@ -82,7 +82,7 @@
         <translation>&amp;Meerdere kopieën</translation>
     </message>
     <message>
-        <location line="+108"/>
+        <location line="+86"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Gebruik huidige laag en &amp;attributen</translation>
     </message>

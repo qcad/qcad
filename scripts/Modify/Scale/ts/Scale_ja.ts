@@ -52,7 +52,7 @@
         <translation>&amp;M 多重コピー</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+112"/>
         <source>Factor &amp;x:</source>
         <translation>係数&amp;x:</translation>
     </message>
@@ -67,7 +67,7 @@
         <translation>係数&amp;y:</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+66"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>&amp;a 現在の画層と属性を使用</translation>
     </message>

@@ -79,7 +79,7 @@ Kopie &amp;wielokrotne:</translatorcomment>
         <translation type="unfinished">Kopie &amp;wielokrotne</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+112"/>
         <source>Factor &amp;x:</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -100,7 +100,7 @@ Mnożnik &amp;Y:</translatorcomment>
         <translation type="unfinished">Mnożnik &amp;Y:</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+66"/>
         <source>Use current layer and &amp;attributes</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Użyj bieżącej warstwy i atrybuty</translation>

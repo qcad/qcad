@@ -84,7 +84,7 @@ Kopie &amp;wielokrotne:</translatorcomment>
         <translation type="unfinished">Kopie &amp;wielokrotne</translation>
     </message>
     <message>
-        <location line="+110"/>
+        <location line="+94"/>
         <source>Angle (&amp;a):</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

@@ -95,7 +95,7 @@ Usar capa y los &amp;atributos actual</translatorcomment>
         <translation>Copias &amp;múltiples</translation>
     </message>
     <message>
-        <location line="+119"/>
+        <location line="+112"/>
         <source>Factor &amp;x:</source>
         <translation>Factor &amp;x:</translation>
     </message>
@@ -110,7 +110,7 @@ Usar capa y los &amp;atributos actual</translatorcomment>
         <translation>Factor &amp;y:</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+66"/>
         <source>Use current layer and &amp;attributes</source>
         <translation>Usar capa y los &amp;atributos actual</translation>
     </message>

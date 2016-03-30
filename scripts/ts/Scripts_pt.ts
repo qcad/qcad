@@ -39,7 +39,7 @@
         <translation>Mova a entidade para a localização desejada</translation>
     </message>
     <message>
-        <location line="+349"/>
+        <location line="+350"/>
         <source>Move Reference Point</source>
         <translation>Mova o Ponto de Referência</translation>
     </message>
@@ -54,7 +54,7 @@
         <translation>Mova a Entidade</translation>
     </message>
     <message>
-        <location line="+118"/>
+        <location line="+120"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
         <translation>Edição bloco &apos;%1&apos;&lt;br&gt;Escolha &lt;i&gt;Bloco &gt; Retorne ao Desenho Principal&lt;/i&gt; quando feito</translation>
     </message>
@@ -72,7 +72,7 @@ Retorna ao último menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2002"/>
+        <location line="+2005"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -81,7 +81,7 @@ Cancelar
         <translation>Cancele</translation>
     </message>
     <message>
-        <location line="-1729"/>
+        <location line="-1732"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Ferramenta Ativa:</translation>
@@ -116,7 +116,7 @@ Opções de Biselamento</translatorcomment>
         <translation type="vanished">Opções de Bloco</translation>
     </message>
     <message>
-        <location line="+31"/>
+        <location line="+28"/>
         <source>Main Tools</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Ferramentas Principais</translation>
@@ -136,12 +136,12 @@ Ferramentas CAD</translatorcomment>
         <translation>A entidade está em uma camada bloqueada.</translation>
     </message>
     <message>
-        <location line="+212"/>
+        <location line="+214"/>
         <source>Length:</source>
         <translation>Comprimento:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+40"/>
         <source>Entity is not a block reference.</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>A entidade não é uma referência de Bloco.</translation>
@@ -223,7 +223,7 @@ Ferramentas CAD</translatorcomment>
         <translation>O Raio ficou abaixo de 0,0, após %1 arco(s) concêntrico(s).</translation>
     </message>
     <message>
-        <location line="+789"/>
+        <location line="+795"/>
         <location line="+29"/>
         <source>At least two points are identical.</source>
         <translatorcomment>--google--</translatorcomment>
