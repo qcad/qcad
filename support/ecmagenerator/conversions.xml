@@ -15,6 +15,7 @@
 
 	<entry key="RAction::ClickMode" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RGraphicsView::ColorMode" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RGraphicsSceneDrawable::Type" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RColor::Mode" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RObject::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RObject::Handle" value="toNumber()" testFunction="isNumber()" cast="int" />

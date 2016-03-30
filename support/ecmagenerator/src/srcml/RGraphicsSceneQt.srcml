@@ -32,6 +32,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RDocumentInterface.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"REllipse.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGraphicsScene.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGraphicsSceneDrawable.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RImageData.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLine.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
@@ -102,25 +103,27 @@
     
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>highlightEntity</name><parameter_list>(<param><decl><type><name>REntity</name>&amp;</type> <name>entity</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name>void</name></type> <name>deletePainterPaths</name><parameter_list>()</parameter_list>;</function_decl>
-    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPaths</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>deleteDrawables</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RGraphicsSceneDrawable</name></argument>&gt;</argument_list></name></type> <name>getDrawables</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>bool</name></type> <name>hasPreview</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>QList<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>getPreviewEntityIds</name><parameter_list>()</parameter_list>;</function_decl>
-    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPreviewPainterPaths</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RTextBasedData</name></argument>&gt;</argument_list></name></type> <name>getPreviewTexts</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>addToPreview</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name>&amp;</type> <name>painterPaths</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>void</name></type> <name>addToPreview</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>painterPath</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RGraphicsSceneDrawable</name></argument>&gt;</argument_list></name></type> <name>getPreviewDrawables</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="line">//QList&lt;RTextBasedData&gt; getPreviewTexts(REntity::Id entityId);</comment>
+    <function_decl><type><name>void</name></type> <name>addToPreview</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RGraphicsSceneDrawable</name></argument>&gt;</argument_list></name>&amp;</type> <name>drawables</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>addToPreview</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>const</name> <name>RGraphicsSceneDrawable</name>&amp;</type> <name>drawable</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>addTextToPreview</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>text</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name>bool</name></type> <name>hasImageFor</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RImageData</name></argument>&gt;</argument_list></name></type> <name>getImages</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>bool</name></type> <name>hasTextsFor</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>QList<argument_list>&lt;<argument><name>RTextBasedData</name></argument>&gt;</argument_list></name></type> <name>getTexts</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
+    <comment type="block">/*
+    bool hasImageFor(REntity::Id entityId);
+    QList&lt;RImageData&gt; getImages(REntity::Id entityId);
+    bool hasTextsFor(REntity::Id entityId);
+    QList&lt;RTextBasedData&gt; getTexts(REntity::Id entityId);
+    */</comment>
     <function_decl><type><name>bool</name></type> <name>hasClipRectangleFor</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>RBox</name></type> <name>getClipRectangle</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name>void</name></type> <name>addPath</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>, <param><decl><type><name>bool</name></type> <name>draft</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>addPath</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>const</name> <name>RGraphicsSceneDrawable</name>&amp;</type> <name>path</name></decl></param>, <param><decl><type><name>bool</name></type> <name>draft</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>startEntity</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>topLevelEntity</name></decl></param>)</parameter_list>;</function_decl>
 
@@ -136,17 +139,19 @@
 </public><private>private:
     <decl_stmt><decl><type><name>RPainterPath</name></type> <name>currentPainterPath</name></decl>;</decl_stmt>
 
-    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>painterPaths</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RImageData</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>images</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RTextBasedData</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>texts</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RGraphicsSceneDrawable</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>drawables</name></decl>;</decl_stmt>
+    <comment type="line">//QMap&lt;REntity::Id, QList&lt;RGraphicsSceneDrawable&gt; &gt; painterPaths;</comment>
+    <comment type="line">//QMap&lt;REntity::Id, QList&lt;RImageData&gt; &gt; images;</comment>
+    <comment type="line">//QMap&lt;REntity::Id, QList&lt;RTextBasedData&gt; &gt; texts;</comment>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>RBox</name></argument>&gt;</argument_list></name></type> <name>clipRectangles</name></decl>;</decl_stmt>
 
     <comment type="line">//QList&lt;RPainterPath&gt; previewPainterPaths;</comment>
     <comment type="line">//QList&lt;RTextBasedData&gt; previewTexts;</comment>
 
-    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>previewPainterPaths</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RImageData</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>previewImages</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RTextBasedData</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>previewTexts</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>QList<argument_list>&lt;<argument><name>RGraphicsSceneDrawable</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>previewDrawables</name></decl>;</decl_stmt>
+    <comment type="line">//QMap&lt;REntity::Id, QList&lt;RPainterPath&gt; &gt; previewPainterPaths;</comment>
+    <comment type="line">//QMap&lt;REntity::Id, QList&lt;RImageData&gt; &gt; previewImages;</comment>
+    <comment type="line">//QMap&lt;REntity::Id, QList&lt;RTextBasedData&gt; &gt; previewTexts;</comment>
     <decl_stmt><decl><type><name>QMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>RBox</name></argument>&gt;</argument_list></name></type> <name>previewClipRectangles</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>bool</name></type> <name>decorating</name></decl>;</decl_stmt>

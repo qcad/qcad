@@ -93,6 +93,7 @@ HEADERS += \
     $$PWD/REcmaFontDatabase.h \
     $$PWD/REcmaFontList.h \
     $$PWD/REcmaGraphicsScene.h \
+    $$PWD/REcmaGraphicsSceneDrawable.h \
     $$PWD/REcmaGraphicsSceneQt.h \
     $$PWD/REcmaGraphicsView.h \
     $$PWD/REcmaGraphicsViewImage.h \
@@ -438,6 +439,7 @@ SOURCES += \
     $$PWD/REcmaFontDatabase.cpp \
     $$PWD/REcmaFontList.cpp \
     $$PWD/REcmaGraphicsScene.cpp \
+    $$PWD/REcmaGraphicsSceneDrawable.cpp \
     $$PWD/REcmaGraphicsSceneQt.cpp \
     $$PWD/REcmaGraphicsView.cpp \
     $$PWD/REcmaGraphicsViewImage.cpp \

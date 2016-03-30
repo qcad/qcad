@@ -2,7 +2,7 @@
 
 echo "srcml to xml ..."
 
-maxThreads=128
+maxThreads=32
 SPATH=$(pwd)
 if [ -z $1 ]; then
     scope="src"
@@ -34,6 +34,7 @@ do
         let threads=threads+1
         if [ $threads -eq $maxThreads ]; then
             echo "waiting for threads to finish..."
+            sleep 0.01
             wait
             threads=0
         fi

@@ -124,29 +124,19 @@
             
             REcmaHelper::registerFunction(&engine, proto, highlightEntity, "highlightEntity");
             
-            REcmaHelper::registerFunction(&engine, proto, deletePainterPaths, "deletePainterPaths");
+            REcmaHelper::registerFunction(&engine, proto, deleteDrawables, "deleteDrawables");
             
-            REcmaHelper::registerFunction(&engine, proto, getPainterPaths, "getPainterPaths");
+            REcmaHelper::registerFunction(&engine, proto, getDrawables, "getDrawables");
             
             REcmaHelper::registerFunction(&engine, proto, hasPreview, "hasPreview");
             
             REcmaHelper::registerFunction(&engine, proto, getPreviewEntityIds, "getPreviewEntityIds");
             
-            REcmaHelper::registerFunction(&engine, proto, getPreviewPainterPaths, "getPreviewPainterPaths");
-            
-            REcmaHelper::registerFunction(&engine, proto, getPreviewTexts, "getPreviewTexts");
+            REcmaHelper::registerFunction(&engine, proto, getPreviewDrawables, "getPreviewDrawables");
             
             REcmaHelper::registerFunction(&engine, proto, addToPreview, "addToPreview");
             
             REcmaHelper::registerFunction(&engine, proto, addTextToPreview, "addTextToPreview");
-            
-            REcmaHelper::registerFunction(&engine, proto, hasImageFor, "hasImageFor");
-            
-            REcmaHelper::registerFunction(&engine, proto, getImages, "getImages");
-            
-            REcmaHelper::registerFunction(&engine, proto, hasTextsFor, "hasTextsFor");
-            
-            REcmaHelper::registerFunction(&engine, proto, getTexts, "getTexts");
             
             REcmaHelper::registerFunction(&engine, proto, hasClipRectangleFor, "hasClipRectangleFor");
             
@@ -2632,19 +2622,19 @@
             return result;
         }
          QScriptValue
-        REcmaGraphicsSceneQt::deletePainterPaths
+        REcmaGraphicsSceneQt::deleteDrawables
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::deletePainterPaths", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::deletePainterPaths";
+            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::deleteDrawables", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::deleteDrawables";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RGraphicsSceneQt* self = 
-                        getSelf("deletePainterPaths", context);
+                        getSelf("deleteDrawables", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2663,32 +2653,32 @@
     // call C++ function:
     // return type 'void'
     
-               self->deletePainterPaths();
+               self->deleteDrawables();
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.deletePainterPaths().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.deleteDrawables().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::deletePainterPaths", context, engine);
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::deleteDrawables", context, engine);
             return result;
         }
          QScriptValue
-        REcmaGraphicsSceneQt::getPainterPaths
+        REcmaGraphicsSceneQt::getDrawables
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::getPainterPaths", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::getPainterPaths";
+            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::getDrawables", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::getDrawables";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RGraphicsSceneQt* self = 
-                        getSelf("getPainterPaths", context);
+                        getSelf("getDrawables", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2716,11 +2706,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QList < RPainterPath >'
-    QList < RPainterPath > cppResult =
+    // return type 'QList < RGraphicsSceneDrawable >'
+    QList < RGraphicsSceneDrawable > cppResult =
         
-               self->getPainterPaths(a0);
-        // return type: QList < RPainterPath >
+               self->getDrawables(a0);
+        // return type: QList < RGraphicsSceneDrawable >
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);
             
@@ -2729,10 +2719,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.getPainterPaths().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.getDrawables().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::getPainterPaths", context, engine);
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::getDrawables", context, engine);
             return result;
         }
          QScriptValue
@@ -2834,19 +2824,19 @@
             return result;
         }
          QScriptValue
-        REcmaGraphicsSceneQt::getPreviewPainterPaths
+        REcmaGraphicsSceneQt::getPreviewDrawables
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::getPreviewPainterPaths", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::getPreviewPainterPaths";
+            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::getPreviewDrawables", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::getPreviewDrawables";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
             
                     // public function: can be called from ECMA wrapper of ECMA shell:
                     RGraphicsSceneQt* self = 
-                        getSelf("getPreviewPainterPaths", context);
+                        getSelf("getPreviewDrawables", context);
                   
 
                 //Q_ASSERT(self!=NULL);
@@ -2874,11 +2864,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QList < RPainterPath >'
-    QList < RPainterPath > cppResult =
+    // return type 'QList < RGraphicsSceneDrawable >'
+    QList < RGraphicsSceneDrawable > cppResult =
         
-               self->getPreviewPainterPaths(a0);
-        // return type: QList < RPainterPath >
+               self->getPreviewDrawables(a0);
+        // return type: QList < RGraphicsSceneDrawable >
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);
             
@@ -2887,70 +2877,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.getPreviewPainterPaths().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.getPreviewDrawables().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::getPreviewPainterPaths", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGraphicsSceneQt::getPreviewTexts
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::getPreviewTexts", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::getPreviewTexts";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsSceneQt* self = 
-                        getSelf("getPreviewTexts", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: REntity::Id */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    REntity::Id
-                    a0 =
-                    (REntity::Id)
-                    (int)
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QList < RTextBasedData >'
-    QList < RTextBasedData > cppResult =
-        
-               self->getPreviewTexts(a0);
-        // return type: QList < RTextBasedData >
-                // List of ...:
-                result = REcmaHelper::listToScriptValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.getPreviewTexts().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::getPreviewTexts", context, engine);
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::getPreviewDrawables", context, engine);
             return result;
         }
          QScriptValue
@@ -2981,7 +2911,7 @@
         ) /* type: REntity::Id */
      && (
             context->argument(1).isArray()
-        ) /* type: QList < RPainterPath > */
+        ) /* type: QList < RGraphicsSceneDrawable > */
     
     ){
     // prepare arguments:
@@ -2995,7 +2925,7 @@
                     toNumber();
                 
                     // argument isArray
-                    QList < RPainterPath >
+                    QList < RGraphicsSceneDrawable >
                     a1;
                     REcmaHelper::fromScriptValue(
                         engine,
@@ -3024,7 +2954,7 @@
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
             context->argument(1).isNull()
-        ) /* type: RPainterPath */
+        ) /* type: RGraphicsSceneDrawable */
     
     ){
     // prepare arguments:
@@ -3038,20 +2968,20 @@
                     toNumber();
                 
                     // argument isCopyable and has default constructor and isSimpleClass 
-                    RPainterPath*
+                    RGraphicsSceneDrawable*
                     ap1 =
                     qscriptvalue_cast<
-                    RPainterPath*
+                    RGraphicsSceneDrawable*
                         >(
                         context->argument(
                         1
                         )
                     );
                     if (ap1 == NULL) {
-                           return REcmaHelper::throwError("RGraphicsSceneQt: Argument 1 is not of type RPainterPath.",
+                           return REcmaHelper::throwError("RGraphicsSceneQt: Argument 1 is not of type RGraphicsSceneDrawable.",
                                context);                    
                     }
-                    RPainterPath 
+                    RGraphicsSceneDrawable 
                     a1 = 
                     *ap1;
                 
@@ -3139,246 +3069,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::addTextToPreview", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGraphicsSceneQt::hasImageFor
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::hasImageFor", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::hasImageFor";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsSceneQt* self = 
-                        getSelf("hasImageFor", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: REntity::Id */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    REntity::Id
-                    a0 =
-                    (REntity::Id)
-                    (int)
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->hasImageFor(a0);
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.hasImageFor().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::hasImageFor", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGraphicsSceneQt::getImages
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::getImages", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::getImages";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsSceneQt* self = 
-                        getSelf("getImages", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: REntity::Id */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    REntity::Id
-                    a0 =
-                    (REntity::Id)
-                    (int)
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QList < RImageData >'
-    QList < RImageData > cppResult =
-        
-               self->getImages(a0);
-        // return type: QList < RImageData >
-                // List of ...:
-                result = REcmaHelper::listToScriptValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.getImages().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::getImages", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGraphicsSceneQt::hasTextsFor
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::hasTextsFor", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::hasTextsFor";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsSceneQt* self = 
-                        getSelf("hasTextsFor", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: REntity::Id */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    REntity::Id
-                    a0 =
-                    (REntity::Id)
-                    (int)
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'bool'
-    bool cppResult =
-        
-               self->hasTextsFor(a0);
-        // return type: bool
-                // standard Type
-                result = QScriptValue(cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.hasTextsFor().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::hasTextsFor", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGraphicsSceneQt::getTexts
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::getTexts", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::getTexts";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsSceneQt* self = 
-                        getSelf("getTexts", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isNumber()
-        ) /* type: REntity::Id */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isStandardType
-                    REntity::Id
-                    a0 =
-                    (REntity::Id)
-                    (int)
-                    context->argument( 0 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'QList < RTextBasedData >'
-    QList < RTextBasedData > cppResult =
-        
-               self->getTexts(a0);
-        // return type: QList < RTextBasedData >
-                // List of ...:
-                result = REcmaHelper::listToScriptValue(engine, cppResult);
-            
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.getTexts().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::getTexts", context, engine);
             return result;
         }
          QScriptValue
@@ -3531,7 +3221,7 @@
             context->argument(1).isVariant() || 
             context->argument(1).isQObject() || 
             context->argument(1).isNull()
-        ) /* type: RPainterPath */
+        ) /* type: RGraphicsSceneDrawable */
      && (
             context->argument(2).isBool()
         ) /* type: bool */
@@ -3548,20 +3238,20 @@
                     toNumber();
                 
                     // argument isCopyable and has default constructor and isSimpleClass 
-                    RPainterPath*
+                    RGraphicsSceneDrawable*
                     ap1 =
                     qscriptvalue_cast<
-                    RPainterPath*
+                    RGraphicsSceneDrawable*
                         >(
                         context->argument(
                         1
                         )
                     );
                     if (ap1 == NULL) {
-                           return REcmaHelper::throwError("RGraphicsSceneQt: Argument 1 is not of type RPainterPath.",
+                           return REcmaHelper::throwError("RGraphicsSceneQt: Argument 1 is not of type RGraphicsSceneDrawable.",
                                context);                    
                     }
-                    RPainterPath 
+                    RGraphicsSceneDrawable 
                     a1 = 
                     *ap1;
                 

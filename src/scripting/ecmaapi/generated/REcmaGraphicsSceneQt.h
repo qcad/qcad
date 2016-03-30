@@ -131,10 +131,10 @@
         highlightEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        deletePainterPaths
+        deleteDrawables
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getPainterPaths
+        getDrawables
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasPreview
@@ -143,28 +143,13 @@
         getPreviewEntityIds
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getPreviewPainterPaths
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getPreviewTexts
+        getPreviewDrawables
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addToPreview
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         addTextToPreview
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        hasImageFor
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getImages
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        hasTextsFor
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getTexts
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasClipRectangleFor

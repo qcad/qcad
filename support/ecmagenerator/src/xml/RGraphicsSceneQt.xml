@@ -240,15 +240,15 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
-    <method name="deletePainterPaths" cppName="deletePainterPaths"
+    <method name="deleteDrawables" cppName="deleteDrawables"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
-    <method name="getPainterPaths" cppName="getPainterPaths"
+    <method name="getDrawables" cppName="getDrawables"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="QList &lt; RPainterPath &gt;"
+      <variant returnType="QList &lt; RGraphicsSceneDrawable &gt;"
       isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
@@ -265,19 +265,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QList &lt; REntity::Id &gt;"
       isPureVirtual="false" />
     </method>
-    <method name="getPreviewPainterPaths"
-    cppName="getPreviewPainterPaths" specifier="public"
+    <method name="getPreviewDrawables"
+    cppName="getPreviewDrawables" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="QList &lt; RPainterPath &gt;"
-      isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
-        name="entityId" isConst="false" />
-      </variant>
-    </method>
-    <method name="getPreviewTexts" cppName="getPreviewTexts"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="QList &lt; RTextBasedData &gt;"
+      <variant returnType="QList &lt; RGraphicsSceneDrawable &gt;"
       isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
@@ -289,15 +280,16 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
-        <arg type="QList &lt; RPainterPath &gt; &amp;"
-        typeName="QList &lt; RPainterPath &gt;" name="painterPaths"
-        isConst="true" />
+        <arg type="QList &lt; RGraphicsSceneDrawable &gt; &amp;"
+        typeName="QList &lt; RGraphicsSceneDrawable &gt;"
+        name="drawables" isConst="true" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
-        <arg type="RPainterPath &amp;" typeName="RPainterPath"
-        name="painterPath" isConst="true" />
+        <arg type="RGraphicsSceneDrawable &amp;"
+        typeName="RGraphicsSceneDrawable" name="drawable"
+        isConst="true" />
       </variant>
     </method>
     <method name="addTextToPreview" cppName="addTextToPreview"
@@ -306,38 +298,6 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RTextBasedData &amp;" typeName="RTextBasedData"
         name="text" isConst="true" />
-      </variant>
-    </method>
-    <method name="hasImageFor" cppName="hasImageFor"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
-        name="entityId" isConst="false" />
-      </variant>
-    </method>
-    <method name="getImages" cppName="getImages" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="QList &lt; RImageData &gt;"
-      isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
-        name="entityId" isConst="false" />
-      </variant>
-    </method>
-    <method name="hasTextsFor" cppName="hasTextsFor"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
-        name="entityId" isConst="false" />
-      </variant>
-    </method>
-    <method name="getTexts" cppName="getTexts" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="QList &lt; RTextBasedData &gt;"
-      isPureVirtual="false">
-        <arg type="REntity::Id" typeName="REntity::Id"
-        name="entityId" isConst="false" />
       </variant>
     </method>
     <method name="hasClipRectangleFor"
@@ -361,8 +321,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="REntity::Id" typeName="REntity::Id"
         name="entityId" isConst="false" />
-        <arg type="RPainterPath &amp;" typeName="RPainterPath"
-        name="path" isConst="true" />
+        <arg type="RGraphicsSceneDrawable &amp;"
+        typeName="RGraphicsSceneDrawable" name="path"
+        isConst="true" />
         <arg type="bool" typeName="bool" name="draft"
         isConst="false" />
       </variant>

@@ -10,7 +10,7 @@ else
     exit 0
 fi
 
-maxThreads=256
+maxThreads=16
 
 src2srcml_output=`src2srcml -h | grep \\\-\\\-output`
 
@@ -46,7 +46,7 @@ do
         fi
         #if [ $f -nt "$SPATH/$srcmlfile" ]; then
             echo "processing $cppfile ..."
-            (
+            #(
                 src2srcml "$f" "$SPATH/$srcmlfile"
                 #if [ `uname` == "Darwin" ]
                 #then
@@ -55,12 +55,13 @@ do
                 #    LD_LIBRARY_PATH=$srcmlpath srcml "$f" -o "$SPATH/$srcmlfile"
                 #fi
                 #tidy -q -i -xml -m "$SPATH/$srcmlfile" # tidy messes up things
-            ) &
+            #) &
         #fi
 
         let threads=threads+1
         if [ $threads -eq $maxThreads ]; then
             echo "waiting for threads to finish..."
+            sleep 0.1
             wait
             threads=0
         fi
