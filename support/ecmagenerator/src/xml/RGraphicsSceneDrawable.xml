@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RGraphicsSceneDrawable"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="true" isAbstract="false" isScriptable="true">
+    <enum name="Type">
+      <value name="Invalid" />
+      <value name="PainterPath" />
+      <value name="Image" />
+      <value name="Text" />
+    </enum>
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="RGraphicsSceneDrawable &amp;"
+        typeName="RGraphicsSceneDrawable" name="other"
+        isConst="true" />
+      </variant>
+    </constructor>
+    <method name="createFromPainterPath"
+    cppName="createFromPainterPath" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RGraphicsSceneDrawable"
+      isPureVirtual="false">
+        <arg type="RPainterPath &amp;" typeName="RPainterPath"
+        name="pp" isConst="true" />
+      </variant>
+    </method>
+    <method name="createFromImage" cppName="createFromImage"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RGraphicsSceneDrawable"
+      isPureVirtual="false">
+        <arg type="RImageData &amp;" typeName="RImageData"
+        name="img" isConst="true" />
+      </variant>
+    </method>
+    <method name="createFromText" cppName="createFromText"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RGraphicsSceneDrawable"
+      isPureVirtual="false">
+        <arg type="RTextBasedData &amp;" typeName="RTextBasedData"
+        name="txt" isConst="true" />
+      </variant>
+    </method>
+    <method name="uninit" cppName="uninit" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getType" cppName="getType" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RGraphicsSceneDrawable::Type"
+      isPureVirtual="false" />
+    </method>
+    <method name="getPainterPath" cppName="getPainterPath"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RPainterPath" isPureVirtual="false" />
+    </method>
+    <method name="getImage" cppName="getImage" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RImageData" isPureVirtual="false" />
+    </method>
+    <method name="getText" cppName="getText" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RTextBasedData" isPureVirtual="false" />
+    </method>
+    <method name="operator=" cppName="operator=" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RGraphicsSceneDrawable &amp;"
+      isPureVirtual="false">
+        <arg type="RGraphicsSceneDrawable &amp;"
+        typeName="RGraphicsSceneDrawable" name="other"
+        isConst="true" />
+      </variant>
+    </method>
+  </class>
+</unit>

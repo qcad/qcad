@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./gui" filename="RGraphicsSceneDrawable.h"><comment type="block">/**
+ * Copyright (c) 2011-2016 by Andrew Mustun. All rights reserved.
+ *
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RGRAPHICSSCENEDRAWABLE_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RGRAPHICSSCENEDRAWABLE_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RPainterPath.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RImageData.h"</cpp:file></cpp:include>
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RTextBasedData.h"</cpp:file></cpp:include>
+
+<comment type="block">/**
+ * \scriptable
+ * \copyable
+ */</comment>
+<class>class <name>RGraphicsSceneDrawable</name> <block>{<private type="default">
+</private><public>public:
+    <enum>enum <name>Type</name> <block>{
+        <expr><name>Invalid</name></expr>,
+        <expr><name>PainterPath</name></expr>,
+        <expr><name>Image</name></expr>,
+        <expr><name>Text</name></expr>
+    }</block>;</enum>
+
+    <constructor><name>RGraphicsSceneDrawable</name><parameter_list>()</parameter_list> <member_list>: <call><name>type</name><argument_list>(<argument><expr><name>Invalid</name></expr></argument>)</argument_list></call>, <call><name>painterPath</name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call>, <call><name>image</name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call>, <call><name>text</name><argument_list>(<argument><expr><name>NULL</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
+    <constructor_decl><name>RGraphicsSceneDrawable</name><parameter_list>(<param><decl><type><name>const</name> <name>RGraphicsSceneDrawable</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <constructor_decl><name>RGraphicsSceneDrawable</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>pp</name></decl></param>)</parameter_list>;</constructor_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <constructor_decl><name>RGraphicsSceneDrawable</name><parameter_list>(<param><decl><type><name>const</name> <name>RImageData</name>&amp;</type> <name>img</name></decl></param>)</parameter_list>;</constructor_decl>
+
+    <comment type="block">/**
+     * \nonscriptable
+     */</comment>
+    <constructor_decl><name>RGraphicsSceneDrawable</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>txt</name></decl></param>)</parameter_list>;</constructor_decl>
+
+    <destructor_decl><name>~RGraphicsSceneDrawable</name><parameter_list>()</parameter_list>;</destructor_decl>
+
+    <function><type><name>static</name> <name>RGraphicsSceneDrawable</name></type> <name>createFromPainterPath</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>pp</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name>RGraphicsSceneDrawable</name><argument_list>(<argument><expr><name>pp</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>RGraphicsSceneDrawable</name></type> <name>createFromImage</name><parameter_list>(<param><decl><type><name>const</name> <name>RImageData</name>&amp;</type> <name>img</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name>RGraphicsSceneDrawable</name><argument_list>(<argument><expr><name>img</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>static</name> <name>RGraphicsSceneDrawable</name></type> <name>createFromText</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>txt</name></decl></param>)</parameter_list> <block>{
+        <return>return <expr><call><name>RGraphicsSceneDrawable</name><argument_list>(<argument><expr><name>txt</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>void</name></type> <name>uninit</name><parameter_list>()</parameter_list>;</function_decl>
+
+    <function><type><name><name>RGraphicsSceneDrawable</name>::<name>Type</name></name></type> <name>getType</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>type</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RPainterPath</name></type> <name>getPainterPath</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <expr_stmt><expr><call><name>Q_ASSERT</name><argument_list>(<argument><expr><name>painterPath</name>!=<name>NULL</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <return>return <expr>*<name>painterPath</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RImageData</name></type> <name>getImage</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <expr_stmt><expr><call><name>Q_ASSERT</name><argument_list>(<argument><expr><name>image</name>!=<name>NULL</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <return>return <expr>*<name>image</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RTextBasedData</name></type> <name>getText</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <expr_stmt><expr><call><name>Q_ASSERT</name><argument_list>(<argument><expr><name>text</name>!=<name>NULL</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+        <return>return <expr>*<name>text</name></expr>;</return>
+    }</block></function>
+
+    <function_decl><type><name>RGraphicsSceneDrawable</name>&amp;</type> <name>operator=</name><parameter_list>(<param><decl><type><name>const</name> <name>RGraphicsSceneDrawable</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><protected>protected:
+     <decl_stmt><decl><type><name>Type</name></type> <name>type</name></decl>;</decl_stmt>
+
+    <comment type="line">//union {</comment>
+        <decl_stmt><decl><type><name>RPainterPath</name>*</type> <name>painterPath</name></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>RImageData</name>*</type> <name>image</name></decl>;</decl_stmt>
+        <decl_stmt><decl><type><name>RTextBasedData</name>*</type> <name>text</name></decl>;</decl_stmt>
+    <comment type="line">//};</comment>
+</protected>}</block>;</class>
+
+<function_decl><type><name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>const</name> <name>RGraphicsSceneDrawable</name>&amp;</type> <name>d</name></decl></param>)</parameter_list>;</function_decl>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsSceneDrawable</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsSceneDrawable*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsSceneDrawable::Type</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>
