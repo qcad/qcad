@@ -283,6 +283,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
         switch (this.state) {
         case DefaultAction.State.Dragging:
             entityId = this.getEntityId(event);
+            //qDebug("entityId: ", entityId);
 
             if (entityId !== -1) {
                 if (shiftPressed && this.document.isSelected(entityId)) {
