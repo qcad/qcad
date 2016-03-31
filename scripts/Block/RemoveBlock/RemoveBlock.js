@@ -47,7 +47,7 @@ RemoveBlock.prototype.beginEvent = function() {
         return;
     }
 
-    var block = this.getDocument().queryBlock(item.text(BlockList.colName));
+    var block = this.getDocument().queryBlock(item.data(BlockList.colName, Qt.UserRole));
 
     if (isNull(block)) {
         this.terminate();

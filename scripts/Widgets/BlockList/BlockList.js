@@ -178,7 +178,19 @@ RBlockListQt.prototype.getBlockItem = function(block) {
     var flags = new Qt.ItemFlags(Qt.ItemIsSelectable|Qt.ItemIsEnabled);
     item.setFlags(flags);
 
-    item.setText(BlockList.colName, name);
+    var title = name;
+    if (block.isLayout()) {
+        var layoutId = block.getLayoutId();
+        var doc = block.getDocument();
+        if (!isNull(doc)) {
+            var layout = doc.queryLayout(layoutId);
+            if (!isNull(layout)) {
+                title = layout.getName() + " (" + title + ")";
+            }
+        }
+    }
+
+    item.setText(BlockList.colName, title);
 
     item.setData(BlockList.colName, Qt.UserRole, name);
 
@@ -277,7 +289,7 @@ RBlockListQt.prototype.blockActivated = function() {
  * \return The block name for the given tree widget item.
  */
 RBlockListQt.prototype.getBlockName = function(item) {
-    return item.text(BlockList.colName);
+    return item.data(BlockList.colName, Qt.UserRole);
 };
 
 /**

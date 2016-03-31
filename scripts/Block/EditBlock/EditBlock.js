@@ -50,7 +50,7 @@ EditBlock.prototype.beginEvent = function() {
     // don't display another block when activating one:
     blockList.blockSignals(true);
 
-    this.editBlock(item.text(BlockList.colName));
+    this.editBlock(item.data(BlockList.colName, Qt.UserRole));
 
     blockList.blockSignals(false);
 

@@ -49,7 +49,7 @@ SelectBlockReferences.prototype.beginEvent = function() {
         return;
     }
 
-    var blockId = doc.getBlockId(item.text(BlockList.colName));
+    var blockId = doc.getBlockId(item.data(BlockList.colName, Qt.UserRole));
     if (blockId===RObject.INVALID_ID) {
         this.terminate();
         return;

@@ -126,7 +126,7 @@ Block.getActiveBlockId = function() {
         return RObject.INVALID_ID;
     }
 
-    var blockId = document.getBlockId(item.text(BlockList.colName));
+    var blockId = document.getBlockId(item.data(BlockList.colName, Qt.UserRole));
 
     return blockId;
 };
