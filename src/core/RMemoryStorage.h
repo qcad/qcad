@@ -77,6 +77,8 @@ public:
     virtual QSharedPointer<REntity> queryEntity(REntity::Id objectId) const;
     virtual QSharedPointer<RLayer> queryLayer(RLayer::Id layerId) const;
     virtual QSharedPointer<RLayer> queryLayer(const QString& layerName) const;
+    virtual QSharedPointer<RLayout> queryLayout(RLayout::Id layoutId) const;
+    virtual QSharedPointer<RLayout> queryLayout(const QString& layoutName) const;
     virtual QSharedPointer<RBlock> queryBlock(RBlock::Id blockId) const;
     virtual QSharedPointer<RBlock> queryBlock(const QString& blockName) const;
     virtual QSharedPointer<RView> queryView(RView::Id viewId) const;
@@ -141,6 +143,10 @@ public:
     virtual QSet<QString> getLayerNames(const QString& rxStr = RDEFAULT_QSTRING) const;
     virtual RLayer::Id getLayerId(const QString& layerName) const;
 
+    virtual QString getLayoutName(RLayout::Id layoutId) const;
+    virtual QSet<QString> getLayoutNames(const QString& rxStr = RDEFAULT_QSTRING) const;
+    virtual RLayout::Id getLayoutId(const QString& layoutName) const;
+
     virtual QString getBlockName(RBlock::Id blockId) const;
     virtual QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING) const;
     virtual RBlock::Id getBlockId(const QString& blockName) const;
@@ -160,6 +166,7 @@ public:
     virtual QSharedPointer<REntity> queryEntityDirect(REntity::Id objectId) const;
     virtual QSharedPointer<RUcs> queryUcsDirect(RUcs::Id ucsId) const;
     virtual QSharedPointer<RLayer> queryLayerDirect(RLayer::Id layerId) const;
+    virtual QSharedPointer<RLayout> queryLayoutDirect(RLayout::Id layoutId) const;
     virtual QSharedPointer<RBlock> queryBlockDirect(RBlock::Id blockId) const;
 
     virtual void setLastTransactionId(int transactionId);
@@ -194,7 +201,8 @@ protected:
     QMultiHash<RBlock::Id, QSharedPointer<REntity> > blockEntityMap;
     QHash<RBlock::Id, QSharedPointer<RBlock> > blockMap;
     QHash<RLayer::Id, QSharedPointer<RLayer> > layerMap;
-    QHash<RLayer::Id, QSharedPointer<RLinetype> > linetypeMap;
+    QHash<RLayout::Id, QSharedPointer<RLayout> > layoutMap;
+    QHash<RLinetype::Id, QSharedPointer<RLinetype> > linetypeMap;
     QHash<int, RTransaction> transactionMap;
 
     // document wide variables are stored as custom properties in this object:

@@ -197,6 +197,11 @@ bool RStorage::hasLayer(const QString& layerName) const {
     return sl.contains(layerName, Qt::CaseInsensitive);
 }
 
+bool RStorage::hasLayout(const QString& layoutName) const {
+    QStringList sl = getLayoutNames().toList();
+    return sl.contains(layoutName, Qt::CaseInsensitive);
+}
+
 bool RStorage::hasBlock(const QString& blockName) const {
     QStringList sl = getBlockNames().toList();
     return sl.contains(blockName, Qt::CaseInsensitive);

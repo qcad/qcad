@@ -81,6 +81,7 @@ public:
         ObjectLayer,
         ObjectLinetype,
         ObjectView,
+        ObjectLayout,
 
         EntityAll,          /**< All entities (for filters) */
         EntityUnknown,      /**< Unknown entity */

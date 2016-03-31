@@ -27,12 +27,14 @@ RPropertyTypeId RBlock::PropertyFrozen;
 RPropertyTypeId RBlock::PropertyOriginX;
 RPropertyTypeId RBlock::PropertyOriginY;
 RPropertyTypeId RBlock::PropertyOriginZ;
+RPropertyTypeId RBlock::PropertyLayout;
 
 RBlock::RBlock() :
     RObject(),
     frozen(false),
     anonymous(false),
-    origin(RVector::invalid) {
+    origin(RVector::invalid),
+    layoutId(RLayout::INVALID_ID) {
 }
 
 RBlock::RBlock(RDocument* document, const QString& name,
@@ -41,7 +43,8 @@ RBlock::RBlock(RDocument* document, const QString& name,
     name(name.trimmed()),
     frozen(false),
     anonymous(false),
-    origin(origin) {
+    origin(origin),
+    layoutId(RLayout::INVALID_ID) {
 }
 
 RBlock::~RBlock() {
@@ -54,6 +57,7 @@ void RBlock::init() {
     RBlock::PropertyOriginX.generateId(typeid(RBlock), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "X"));
     RBlock::PropertyOriginY.generateId(typeid(RBlock), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RBlock::PropertyOriginZ.generateId(typeid(RBlock), QT_TRANSLATE_NOOP("REntity", "Origin"), QT_TRANSLATE_NOOP("REntity", "Z"));
+    RBlock::PropertyLayout.generateId(typeid(RBlock), "", QT_TRANSLATE_NOOP("REntity", "Layout"));
 }
 
 RBlock* RBlock::clone() const {
@@ -85,6 +89,7 @@ bool RBlock::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(origin.x, value, PropertyOriginX == propertyTypeId);
     ret = ret || RObject::setMember(origin.y, value, PropertyOriginY == propertyTypeId);
     ret = ret || RObject::setMember(origin.z, value, PropertyOriginZ == propertyTypeId);
+    ret = ret || RObject::setMember(layoutId, value.toInt(), propertyTypeId == PropertyLayout);
 
     return ret;
 }
@@ -107,6 +112,14 @@ QPair<QVariant, RPropertyAttributes> RBlock::getProperty(
     }
     else if (propertyTypeId == PropertyOriginZ) {
         return qMakePair(QVariant(origin.z), RPropertyAttributes());
+    }
+    else if (propertyTypeId == PropertyLayout) {
+        if (humanReadable) {
+            if (getDocument() != NULL) {
+                return qMakePair(QVariant(getDocument()->getLayoutName(layoutId)), RPropertyAttributes());
+            }
+        }
+        return qMakePair(QVariant(layoutId), RPropertyAttributes());
     }
 
     return RObject::getProperty(propertyTypeId, humanReadable, noAttributes);

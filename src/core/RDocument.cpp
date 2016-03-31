@@ -766,6 +766,10 @@ QSet<QString> RDocument::getLayerNames(const QString& rxStr) const {
     return storage.getLayerNames(rxStr);
 }
 
+QString RDocument::getLayoutName(RLayout::Id layoutId) const {
+    return storage.getLayoutName(layoutId);
+}
+
 QSet<QString> RDocument::getViewNames() const {
     return storage.getViewNames();
 }
@@ -1364,6 +1368,8 @@ QSet<RObject::Id> RDocument::queryPropertyEditorObjects() {
             // expose properties of selected block:
             RBlock::Id blockId = getCurrentBlockId();
             objectIds.insert(blockId);
+
+            // TODO: expose properties of layout associated with current block:
         }
     }
 
@@ -1470,6 +1476,33 @@ QSharedPointer<RLayer> RDocument::queryLayerDirect(RLayer::Id layerId) const {
  */
 QSharedPointer<RLayer> RDocument::queryLayer(const QString& layerName) const {
     return storage.queryLayer(layerName);
+}
+
+/**
+ * Queries the layout with the given ID.
+ *
+ * \return Pointer to the layout or NULL.
+ */
+QSharedPointer<RLayout> RDocument::queryLayout(RLayout::Id layoutId) const {
+    return storage.queryLayout(layoutId);
+}
+
+/**
+ * Queries the layout with the given ID direct (no cloning).
+ *
+ * \return Pointer to the layout or NULL.
+ */
+QSharedPointer<RLayout> RDocument::queryLayoutDirect(RLayout::Id layoutId) const {
+    return storage.queryLayoutDirect(layoutId);
+}
+
+/**
+ * Queries the layout with the given name.
+ *
+ * \return Pointer to the layout or NULL.
+ */
+QSharedPointer<RLayout> RDocument::queryLayout(const QString& layoutName) const {
+    return storage.queryLayout(layoutName);
 }
 
 QSharedPointer<RBlock> RDocument::queryBlockDirect(RBlock::Id blockId) const {

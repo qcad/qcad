@@ -54,6 +54,7 @@ void RMemoryStorage::clear() {
     blockEntityMap.clear();
     blockMap.clear();
     layerMap.clear();
+    layoutMap.clear();
     linetypeMap.clear();
     transactionMap.clear();
     documentVariables.clear();
@@ -568,6 +569,40 @@ QSharedPointer<RLayer> RMemoryStorage::queryLayer(const QString& layerName) cons
     return QSharedPointer<RLayer>();
 }
 
+QSharedPointer<RLayout> RMemoryStorage::queryLayoutDirect(RLayout::Id layoutId) const {
+    if (!layoutMap.contains(layoutId)) {
+        return QSharedPointer<RLayout>();
+    }
+    return layoutMap[layoutId].dynamicCast<RLayout>();
+}
+
+QSharedPointer<RLayout> RMemoryStorage::queryLayout(RLayout::Id layoutId) const {
+    if (!layoutMap.contains(layoutId)) {
+        return QSharedPointer<RLayout> ();
+    }
+    if (layoutMap[layoutId].isNull()) {
+        return QSharedPointer<RLayout> ();
+    }
+    if (!layoutMap[layoutId].dynamicCast<RLayout>().isNull()) {
+        return QSharedPointer<RLayout>((RLayout*)layoutMap[layoutId]->clone());
+    }
+
+    qWarning() << "RMemoryStorage::queryLayout: should never be reached: " << layoutId;
+    qWarning() << "RMemoryStorage::queryLayout: found object but not layout: " << *layoutMap[layoutId];
+    return QSharedPointer<RLayout>();
+}
+
+QSharedPointer<RLayout> RMemoryStorage::queryLayout(const QString& layoutName) const {
+    QHash<RObject::Id, QSharedPointer<RLayout> >::const_iterator it;
+    for (it = layoutMap.constBegin(); it != layoutMap.constEnd(); ++it) {
+        QSharedPointer<RLayout> l = *it;
+        if (!l.isNull() && l->getName().compare(layoutName, Qt::CaseInsensitive)==0 && !l->isUndone()) {
+            return QSharedPointer<RLayout> (l->clone());
+        }
+    }
+    return QSharedPointer<RLayout>();
+}
+
 QSharedPointer<RBlock> RMemoryStorage::queryBlock(RBlock::Id blockId) const {
     if (!blockMap.contains(blockId)) {
         return QSharedPointer<RBlock> ();
@@ -999,6 +1034,15 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
         }
     }
 
+    // never allow two layouts with identical names, update layout instead:
+    QSharedPointer<RLayout> layout = object.dynamicCast<RLayout> ();
+    if (!layout.isNull()) {
+        RLayout::Id id = getLayoutId(layout->getName());
+        if (id != RLayout::INVALID_ID && id != layout->getId()) {
+            setObjectId(*layout, id);
+        }
+    }
+
     // never allow two blocks with identical names, update block instead:
     QSharedPointer<RBlock> block = object.dynamicCast<RBlock> ();
     if (!block.isNull()) {
@@ -1074,6 +1118,10 @@ bool RMemoryStorage::saveObject(QSharedPointer<RObject> object, bool checkBlockR
 
     if (!layer.isNull()) {
         layerMap[object->getId()] = layer;
+    }
+
+    if (!layout.isNull()) {
+        layoutMap[object->getId()] = layout;
     }
 
     if (!block.isNull()) {
@@ -1360,6 +1408,37 @@ RLayer::Id RMemoryStorage::getLayerId(const QString& layerName) const {
     QSharedPointer<RLayer> l = queryLayer(layerName);
     if (l.isNull()) {
         return RLayer::INVALID_ID;
+    }
+    return l->getId();
+}
+
+QString RMemoryStorage::getLayoutName(RLayout::Id layoutId) const {
+    QSharedPointer<RLayout> l = queryLayout(layoutId);
+    if (l.isNull()) {
+        return QString();
+    }
+    return l->getName();
+}
+
+QSet<QString> RMemoryStorage::getLayoutNames(const QString& rxStr) const {
+    QRegExp rx(rxStr);
+    QSet<QString> ret;
+    QHash<RObject::Id, QSharedPointer<RLayout> >::const_iterator it;
+    for (it = layoutMap.constBegin(); it != layoutMap.constEnd(); ++it) {
+        QSharedPointer<RLayout> l = *it;
+        if (!l.isNull() && !l->isUndone()) {
+            if (rx.isEmpty() || rx.exactMatch(l->getName())) {
+                ret.insert(l->getName());
+            }
+        }
+    }
+    return ret;
+}
+
+RLayout::Id RMemoryStorage::getLayoutId(const QString& layoutName) const {
+    QSharedPointer<RLayout> l = queryLayout(layoutName);
+    if (l.isNull()) {
+        return RLayout::INVALID_ID;
     }
     return l->getId();
 }

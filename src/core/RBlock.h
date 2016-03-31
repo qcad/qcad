@@ -25,6 +25,7 @@
 #include <QString>
 #include <QDebug>
 
+#include "RLayout.h"
 #include "RGlobal.h"
 #include "RObject.h"
 #include "RVector.h"
@@ -48,6 +49,7 @@ public:
     static RPropertyTypeId PropertyOriginX;
     static RPropertyTypeId PropertyOriginY;
     static RPropertyTypeId PropertyOriginZ;
+    static RPropertyTypeId PropertyLayout;
 
 public:
     RBlock();
@@ -98,6 +100,18 @@ public:
         return origin;
     }
 
+    bool isLayout() const {
+        return layoutId!=RLayout::INVALID_ID;
+    }
+
+    void setLayoutId(RLayout::Id layoutId) {
+        this->layoutId = layoutId;
+    }
+
+    RLayout::Id getLayoutId() const {
+        return layoutId;
+    }
+
     virtual QPair<QVariant, RPropertyAttributes> getProperty(RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false);
     virtual bool setProperty(RPropertyTypeId propertyTypeId,
@@ -119,6 +133,7 @@ private:
     bool frozen;
     bool anonymous;
     RVector origin;
+    RLayout::Id layoutId;
 };
 
 

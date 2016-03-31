@@ -242,6 +242,22 @@ public:
         return queryLayer(getCurrentLayerId());
     }
 
+    /**
+     * \return A pointer to the layout with the given \c layoutId
+     *      or NULL if no such layout exists.
+     */
+    virtual QSharedPointer<RLayout> queryLayout(RLayout::Id layoutId) const = 0;
+
+    virtual QSharedPointer<RLayout> queryLayoutDirect(RLayout::Id layoutId) const {
+        return queryLayout(layoutId);
+    }
+
+    /**
+     * \return A pointer to the layout with the given \c layoutName
+     *      or NULL if no such layout exists.
+     */
+    virtual QSharedPointer<RLayout> queryLayout(const QString& layoutName) const = 0;
+
     virtual QSharedPointer<RView> queryCurrentView() {
         return queryView(getCurrentViewId());
     }
@@ -346,6 +362,11 @@ public:
     virtual QSet<QString> getLayerNames(const QString& rxStr = RDEFAULT_QSTRING) const = 0;
     virtual RLayer::Id getLayerId(const QString& layerName) const = 0;
     virtual bool hasLayer(const QString& layerName) const;
+
+    virtual QString getLayoutName(RLayout::Id layoutId) const = 0;
+    virtual QSet<QString> getLayoutNames(const QString& rxStr = RDEFAULT_QSTRING) const = 0;
+    virtual RLayout::Id getLayoutId(const QString& layoutName) const = 0;
+    virtual bool hasLayout(const QString& layoutName) const;
 
     virtual QString getLinetypeName(RLinetype::Id linetypeId) const = 0;
     virtual QString getLinetypeDescription(RLinetype::Id linetypeId) const = 0;

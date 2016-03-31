@@ -157,6 +157,9 @@ public:
     QSharedPointer<RLayer> queryLayer(RLayer::Id layerId) const;
     QSharedPointer<RLayer> queryLayerDirect(RLayer::Id layerId) const;
     QSharedPointer<RLayer> queryLayer(const QString& layerName) const;
+    QSharedPointer<RLayout> queryLayout(RLayout::Id layoutId) const;
+    QSharedPointer<RLayout> queryLayoutDirect(RLayout::Id layoutId) const;
+    QSharedPointer<RLayout> queryLayout(const QString& layoutName) const;
     QSharedPointer<RBlock> queryBlock(RBlock::Id blockId) const;
     QSharedPointer<RBlock> queryBlockDirect(RBlock::Id blockId) const;
     QSharedPointer<RBlock> queryBlock(const QString& blockName) const;
@@ -275,6 +278,7 @@ public:
     QSet<QString> getBlockNames(const QString& rxStr = RDEFAULT_QSTRING) const;
     QString getLayerName(RLayer::Id layerId) const;
     QSet<QString> getLayerNames(const QString& rxStr = RDEFAULT_QSTRING) const;
+    QString getLayoutName(RLayout::Id layoutId) const;
     QSet<QString> getViewNames() const;
 
     bool hasLayer(const QString& layerName) const;

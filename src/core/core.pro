@@ -30,6 +30,7 @@ SOURCES += \
     RImporter.cpp \
     RInputEvent.cpp \
     RLayer.cpp \
+    RLayout.cpp \
     RLinetype.cpp \
     RLinetypeList.cpp \
     RLinetypeListImperial.cpp \
@@ -156,6 +157,7 @@ HEADERS = \
     RInterTransactionListener.h \
     RInputEvent.h \
     RLayer.h \
+    RLayout.h \
     RLayerListener.h \
     RLinetype.h \
     RLinetypeList.h \

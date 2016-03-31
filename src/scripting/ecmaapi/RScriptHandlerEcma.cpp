@@ -154,6 +154,7 @@
 #include "REcmaLayer.h"
 #include "REcmaLayerListener.h"
 #include "REcmaLayerListenerAdapter.h"
+#include "REcmaLayout.h"
 #include "REcmaLeaderData.h"
 #include "REcmaLeaderEntity.h"
 #include "REcmaLine.h"
@@ -252,6 +253,7 @@
 #include "REcmaSharedPointerHatchEntity.h"
 #include "REcmaSharedPointerImageEntity.h"
 #include "REcmaSharedPointerLayer.h"
+#include "REcmaSharedPointerLayout.h"
 #include "REcmaSharedPointerLeaderEntity.h"
 #include "REcmaSharedPointerLine.h"
 #include "REcmaSharedPointerLineEntity.h"
@@ -681,6 +683,8 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaSharedPointerEntity::initEcma(*engine);
     REcmaLayer::initEcma(*engine);
     REcmaSharedPointerLayer::initEcma(*engine);
+    REcmaLayout::initEcma(*engine);
+    REcmaSharedPointerLayout::initEcma(*engine);
     REcmaBlock::initEcma(*engine);
     REcmaSharedPointerBlock::initEcma(*engine);
     REcmaView::initEcma(*engine);

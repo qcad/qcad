@@ -198,6 +198,28 @@ QSharedPointer<RLayer> RLinkedStorage::queryLayer(const QString& layerName) cons
     return ret;
 }
 
+QSharedPointer<RLayout> RLinkedStorage::queryLayoutDirect(RLayout::Id layoutId) const {
+    if (!layoutMap.contains(layoutId)) {
+        return backStorage->queryLayoutDirect(layoutId);
+    }
+    return RMemoryStorage::queryLayoutDirect(layoutId);
+}
+
+QSharedPointer<RLayout> RLinkedStorage::queryLayout(RLayout::Id layoutId) const {
+    if (!layoutMap.contains(layoutId)) {
+        return backStorage->queryLayout(layoutId);
+    }
+    return RMemoryStorage::queryLayout(layoutId);
+}
+
+QSharedPointer<RLayout> RLinkedStorage::queryLayout(const QString& layoutName) const {
+    QSharedPointer<RLayout> ret = RMemoryStorage::queryLayout(layoutName);
+    if (ret.isNull()) {
+        ret = backStorage->queryLayout(layoutName);
+    }
+    return ret;
+}
+
 QSharedPointer<RBlock> RLinkedStorage::queryBlockDirect(RBlock::Id blockId) const {
     if (!blockMap.contains(blockId)) {
         return backStorage->queryBlockDirect(blockId);
@@ -311,6 +333,22 @@ RLayer::Id RLinkedStorage::getLayerId(const QString& layerName) const {
     return ret;
 }
 
+QString RLinkedStorage::getLayoutName(RLayout::Id layoutId) const {
+    QString ret = RMemoryStorage::getLayoutName(layoutId);
+    if (ret.isNull()) {
+        ret = backStorage->getLayoutName(layoutId);
+    }
+    return ret;
+}
+
+RLayout::Id RLinkedStorage::getLayoutId(const QString& layoutName) const {
+    RLayout::Id ret = RMemoryStorage::getLayoutId(layoutName);
+    if (ret==RLayout::INVALID_ID) {
+        ret = backStorage->getLayoutId(layoutName);
+    }
+    return ret;
+}
+
 RBlock::Id RLinkedStorage::getBlockId(const QString& blockName) const {
     RBlock::Id ret = RMemoryStorage::getBlockId(blockName);
     if (ret==RBlock::INVALID_ID) {
@@ -412,6 +450,10 @@ QSet<QString> RLinkedStorage::getViewNames() const {
 
 QSet<QString> RLinkedStorage::getLayerNames(const QString& rxStr) const {
     return RMemoryStorage::getLayerNames(rxStr).unite(backStorage->getLayerNames(rxStr));
+}
+
+QSet<QString> RLinkedStorage::getLayoutNames(const QString& rxStr) const {
+    return RMemoryStorage::getLayoutNames(rxStr).unite(backStorage->getLayoutNames(rxStr));
 }
 
 QSet<QString> RLinkedStorage::getLinetypeNames() const {
