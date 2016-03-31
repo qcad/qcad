@@ -155,6 +155,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryLayerDirect, "queryLayerDirect");
             
+            REcmaHelper::registerFunction(&engine, proto, queryLayout, "queryLayout");
+            
+            REcmaHelper::registerFunction(&engine, proto, queryLayoutDirect, "queryLayoutDirect");
+            
             REcmaHelper::registerFunction(&engine, proto, queryBlock, "queryBlock");
             
             REcmaHelper::registerFunction(&engine, proto, queryBlockDirect, "queryBlockDirect");
@@ -263,6 +267,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getCurrentBlockId, "getCurrentBlockId");
             
+            REcmaHelper::registerFunction(&engine, proto, getCurrentBlockName, "getCurrentBlockName");
+            
             REcmaHelper::registerFunction(&engine, proto, queryCurrentView, "queryCurrentView");
             
             REcmaHelper::registerFunction(&engine, proto, setCurrentView, "setCurrentView");
@@ -278,6 +284,8 @@
             REcmaHelper::registerFunction(&engine, proto, getLayerName, "getLayerName");
             
             REcmaHelper::registerFunction(&engine, proto, getLayerNames, "getLayerNames");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLayoutName, "getLayoutName");
             
             REcmaHelper::registerFunction(&engine, proto, getViewNames, "getViewNames");
             
@@ -4604,6 +4612,158 @@
             return result;
         }
          QScriptValue
+        REcmaDocument::queryLayout
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::queryLayout", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::queryLayout";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("queryLayout", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayout::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayout::Id
+                    a0 =
+                    (RLayout::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLayout >'
+    QSharedPointer < RLayout > cppResult =
+        
+               self->queryLayout(a0);
+        // return type: QSharedPointer < RLayout >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLayout >'
+    QSharedPointer < RLayout > cppResult =
+        
+               self->queryLayout(a0);
+        // return type: QSharedPointer < RLayout >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.queryLayout().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::queryLayout", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::queryLayoutDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::queryLayoutDirect", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::queryLayoutDirect";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("queryLayoutDirect", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayout::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayout::Id
+                    a0 =
+                    (RLayout::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLayout >'
+    QSharedPointer < RLayout > cppResult =
+        
+               self->queryLayoutDirect(a0);
+        // return type: QSharedPointer < RLayout >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.queryLayoutDirect().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::queryLayoutDirect", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDocument::queryBlock
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -8334,6 +8494,55 @@
             return result;
         }
          QScriptValue
+        REcmaDocument::getCurrentBlockName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getCurrentBlockName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getCurrentBlockName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getCurrentBlockName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getCurrentBlockName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getCurrentBlockName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getCurrentBlockName", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaDocument::queryCurrentView
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -8846,6 +9055,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::getLayerNames", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::getLayoutName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::getLayoutName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::getLayoutName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("getLayoutName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayout::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayout::Id
+                    a0 =
+                    (RLayout::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getLayoutName(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.getLayoutName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::getLayoutName", context, engine);
             return result;
         }
          QScriptValue

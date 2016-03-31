@@ -156,6 +156,12 @@
         queryCurrentLayer
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryLayout
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryLayoutDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryCurrentView
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -292,6 +298,18 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLayoutName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLayoutNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLayoutId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasLayout
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLinetypeName

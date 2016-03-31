@@ -3,10 +3,10 @@
 xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RDocument" />
   <class_decl name="RTransaction" />
-  <class name="RBlock" xsi:noNamespaceSchemaLocation="../class.xsd"
-  isCopyable="false" hasShell="false" sharedPointerSupport="true"
-  isQObject="false" hasStreamOperator="false" isAbstract="false"
-  isScriptable="true">
+  <class name="RLayout"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="false" sharedPointerSupport="true" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="RObject" specifier="public" />
     <constructor>
       <variant />
@@ -14,8 +14,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocument *" typeName="RDocument *"
         name="document" isConst="false" />
         <arg type="QString &amp;" typeName="QString" name="name"
-        isConst="true" />
-        <arg type="RVector &amp;" typeName="RVector" name="origin"
         isConst="true" />
       </variant>
     </constructor>
@@ -29,7 +27,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
-      <variant returnType="RBlock *" isPureVirtual="false" />
+      <variant returnType="RLayout *" isPureVirtual="false" />
     </method>
     <method name="getName" cppName="getName" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -42,57 +40,82 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="isFrozen" cppName="isFrozen" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
-    </method>
-    <method name="setFrozen" cppName="setFrozen" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="on"
-        isConst="false" />
-      </variant>
-    </method>
-    <method name="isAnonymous" cppName="isAnonymous"
+    <method name="getTabOrder" cppName="getTabOrder"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
+      <variant returnType="int" isPureVirtual="false" />
     </method>
-    <method name="setAnonymous" cppName="setAnonymous"
+    <method name="setTabOrder" cppName="setTabOrder"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="bool" typeName="bool" name="on"
-        isConst="false" />
+        <arg type="int" typeName="int" name="to" isConst="false" />
       </variant>
     </method>
-    <method name="setOrigin" cppName="setOrigin" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    <method name="setMinLimits" cppName="setMinLimits"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RVector &amp;" typeName="RVector" name="origin"
-        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="minLimits" isConst="true" />
       </variant>
     </method>
-    <method name="getOrigin" cppName="getOrigin" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    <method name="getMinLimits" cppName="getMinLimits"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
-    <method name="isLayout" cppName="isLayout" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="bool" isPureVirtual="false" />
-    </method>
-    <method name="setLayoutId" cppName="setLayoutId"
+    <method name="setMaxLimits" cppName="setMaxLimits"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RLayout::Id" typeName="RLayout::Id"
-        name="layoutId" isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="maxLimits" isConst="true" />
       </variant>
     </method>
-    <method name="getLayoutId" cppName="getLayoutId"
+    <method name="getMaxLimits" cppName="getMaxLimits"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="RLayout::Id" isPureVirtual="false" />
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setInsertionBase" cppName="setInsertionBase"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="insertionBase" isConst="true" />
+      </variant>
+    </method>
+    <method name="getInsertionBase" cppName="getInsertionBase"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setMinExtents" cppName="setMinExtents"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="minExtents" isConst="true" />
+      </variant>
+    </method>
+    <method name="getMinExtents" cppName="getMinExtents"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setMaxExtents" cppName="setMaxExtents"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector"
+        name="maxExtents" isConst="true" />
+      </variant>
+    </method>
+    <method name="getMaxExtents" cppName="getMaxExtents"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
     </method>
     <method name="getProperty" cppName="getProperty"
     specifier="public" isStatic="false" isVirtual="true"
@@ -130,17 +153,37 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyName" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
-    <property name="PropertyFrozen" type="RPropertyTypeId"
+    <property name="PropertyTabOrder" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
-    <property name="PropertyOriginX" type="RPropertyTypeId"
+    <property name="PropertyMinLimitsX" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
-    <property name="PropertyOriginY" type="RPropertyTypeId"
+    <property name="PropertyMinLimitsY" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
-    <property name="PropertyOriginZ" type="RPropertyTypeId"
+    <property name="PropertyMinLimitsZ" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
-    <property name="PropertyLayout" type="RPropertyTypeId"
+    <property name="PropertyMaxLimitsX" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
-    <property name="modelSpaceName" type="QString" isConst="true"
-    isStatic="true" />
+    <property name="PropertyMaxLimitsY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMaxLimitsZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyInsertionBaseX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyInsertionBaseY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyInsertionBaseZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMinExtentsX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMinExtentsY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMinExtentsZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMaxExtentsX" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMaxExtentsY" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyMaxExtentsZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
   </class>
 </unit>

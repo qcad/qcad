@@ -141,6 +141,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryCurrentLayer, "queryCurrentLayer");
             
+            REcmaHelper::registerFunction(&engine, proto, queryLayout, "queryLayout");
+            
+            REcmaHelper::registerFunction(&engine, proto, queryLayoutDirect, "queryLayoutDirect");
+            
             REcmaHelper::registerFunction(&engine, proto, queryCurrentView, "queryCurrentView");
             
             REcmaHelper::registerFunction(&engine, proto, queryLinetypeDirect, "queryLinetypeDirect");
@@ -232,6 +236,14 @@
             REcmaHelper::registerFunction(&engine, proto, getLayerId, "getLayerId");
             
             REcmaHelper::registerFunction(&engine, proto, hasLayer, "hasLayer");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLayoutName, "getLayoutName");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLayoutNames, "getLayoutNames");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLayoutId, "getLayoutId");
+            
+            REcmaHelper::registerFunction(&engine, proto, hasLayout, "hasLayout");
             
             REcmaHelper::registerFunction(&engine, proto, getLinetypeName, "getLinetypeName");
             
@@ -2777,6 +2789,158 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::queryCurrentLayer", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::queryLayout
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::queryLayout", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::queryLayout";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("queryLayout", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayout::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayout::Id
+                    a0 =
+                    (RLayout::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLayout >'
+    QSharedPointer < RLayout > cppResult =
+        
+               self->queryLayout(a0);
+        // return type: QSharedPointer < RLayout >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLayout >'
+    QSharedPointer < RLayout > cppResult =
+        
+               self->queryLayout(a0);
+        // return type: QSharedPointer < RLayout >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.queryLayout().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::queryLayout", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::queryLayoutDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::queryLayoutDirect", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::queryLayoutDirect";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("queryLayoutDirect", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayout::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayout::Id
+                    a0 =
+                    (RLayout::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RLayout >'
+    QSharedPointer < RLayout > cppResult =
+        
+               self->queryLayoutDirect(a0);
+        // return type: QSharedPointer < RLayout >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.queryLayoutDirect().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::queryLayoutDirect", context, engine);
             return result;
         }
          QScriptValue
@@ -5937,6 +6101,269 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::hasLayer", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getLayoutName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getLayoutName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getLayoutName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getLayoutName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayout::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayout::Id
+                    a0 =
+                    (RLayout::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getLayoutName(a0);
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getLayoutName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getLayoutName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getLayoutNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getLayoutNames", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getLayoutNames";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getLayoutNames", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < QString >'
+    QSet < QString > cppResult =
+        
+               self->getLayoutNames();
+        // return type: QSet < QString >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < QString >'
+    QSet < QString > cppResult =
+        
+               self->getLayoutNames(a0);
+        // return type: QSet < QString >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getLayoutNames().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getLayoutNames", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::getLayoutId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::getLayoutId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::getLayoutId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("getLayoutId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLayout::Id'
+    RLayout::Id cppResult =
+        
+               self->getLayoutId(a0);
+        // return type: RLayout::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.getLayoutId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::getLayoutId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::hasLayout
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::hasLayout", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::hasLayout";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("hasLayout", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasLayout(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.hasLayout().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::hasLayout", context, engine);
             return result;
         }
          QScriptValue

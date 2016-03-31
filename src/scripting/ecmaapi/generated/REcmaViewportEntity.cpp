@@ -116,6 +116,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, setScale, "setScale");
             
+            REcmaHelper::registerFunction(&engine, proto, isOverall, "isOverall");
+            
+            REcmaHelper::registerFunction(&engine, proto, setOverall, "setOverall");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RViewportEntity*>(), *proto);
 
@@ -219,6 +223,10 @@
             
             ctor.setProperty("PropertyViewTargetZ",
                 qScriptValueFromValue(&engine, RViewportEntity::PropertyViewTargetZ),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyOverall",
+                qScriptValueFromValue(&engine, RViewportEntity::PropertyOverall),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
 
@@ -2223,6 +2231,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaViewportEntity::setScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::isOverall
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::isOverall", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::isOverall";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("isOverall", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isOverall();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.isOverall().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::isOverall", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaViewportEntity::setOverall
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaViewportEntity::setOverall", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaViewportEntity::setOverall";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RViewportEntity* self = 
+                        getSelf("setOverall", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setOverall(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RViewportEntity.setOverall().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaViewportEntity::setOverall", context, engine);
             return result;
         }
          QScriptValue REcmaViewportEntity::toString

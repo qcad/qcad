@@ -401,6 +401,29 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="queryLayout" cppName="queryLayout"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RLayout &gt;"
+      isPureVirtual="false">
+        <arg type="RLayout::Id" typeName="RLayout::Id"
+        name="layoutId" isConst="false" />
+      </variant>
+      <variant returnType="QSharedPointer &lt; RLayout &gt;"
+      isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="layoutName" isConst="true" />
+      </variant>
+    </method>
+    <method name="queryLayoutDirect" cppName="queryLayoutDirect"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RLayout &gt;"
+      isPureVirtual="false">
+        <arg type="RLayout::Id" typeName="RLayout::Id"
+        name="layoutId" isConst="false" />
+      </variant>
+    </method>
     <method name="queryBlock" cppName="queryBlock"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -840,6 +863,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RBlock::Id" isPureVirtual="false" />
     </method>
+    <method name="getCurrentBlockName"
+    cppName="getCurrentBlockName" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="queryCurrentView" cppName="queryCurrentView"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -902,6 +930,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QString &amp;" typeName="QString" name="rxStr"
         hasDefault="true" default="RDEFAULT_QSTRING"
         isConst="true" />
+      </variant>
+    </method>
+    <method name="getLayoutName" cppName="getLayoutName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false">
+        <arg type="RLayout::Id" typeName="RLayout::Id"
+        name="layoutId" isConst="false" />
       </variant>
     </method>
     <method name="getViewNames" cppName="getViewNames"

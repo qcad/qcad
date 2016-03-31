@@ -113,6 +113,7 @@ HEADERS += \
     $$PWD/REcmaLayer.h \
     $$PWD/REcmaLayerListener.h \
     $$PWD/REcmaLayerListenerAdapter.h \
+    $$PWD/REcmaLayout.h \
     $$PWD/REcmaLeaderData.h \
     $$PWD/REcmaLeaderEntity.h \
     $$PWD/REcmaLine.h \
@@ -226,6 +227,7 @@ HEADERS += \
     $$PWD/REcmaSharedPointerHatchEntity.h \
     $$PWD/REcmaSharedPointerImageEntity.h \
     $$PWD/REcmaSharedPointerLayer.h \
+    $$PWD/REcmaSharedPointerLayout.h \
     $$PWD/REcmaSharedPointerLeaderEntity.h \
     $$PWD/REcmaSharedPointerLine.h \
     $$PWD/REcmaSharedPointerLineEntity.h \
@@ -459,6 +461,7 @@ SOURCES += \
     $$PWD/REcmaLayer.cpp \
     $$PWD/REcmaLayerListener.cpp \
     $$PWD/REcmaLayerListenerAdapter.cpp \
+    $$PWD/REcmaLayout.cpp \
     $$PWD/REcmaLeaderData.cpp \
     $$PWD/REcmaLeaderEntity.cpp \
     $$PWD/REcmaLine.cpp \
@@ -572,6 +575,7 @@ SOURCES += \
     $$PWD/REcmaSharedPointerHatchEntity.cpp \
     $$PWD/REcmaSharedPointerImageEntity.cpp \
     $$PWD/REcmaSharedPointerLayer.cpp \
+    $$PWD/REcmaSharedPointerLayout.cpp \
     $$PWD/REcmaSharedPointerLeaderEntity.cpp \
     $$PWD/REcmaSharedPointerLine.cpp \
     $$PWD/REcmaSharedPointerLineEntity.cpp \

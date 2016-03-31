@@ -25,6 +25,8 @@
 	<entry key="RBlockReferenceEntity::Handle" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RLayer::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RLayer::Handle" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RLayout::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
+	<entry key="RLayout::Handle" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RBlock::Id" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RBlock::Handle" value="toNumber()" testFunction="isNumber()" cast="int" />
 	<entry key="RView::Id" value="toNumber()" testFunction="isNumber()" cast="int" />

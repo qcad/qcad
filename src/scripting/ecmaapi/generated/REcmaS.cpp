@@ -153,6 +153,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("ObjectLayout",
+    QScriptValue(RS::ObjectLayout),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("EntityAll",
     QScriptValue(RS::EntityAll),
     QScriptValue::ReadOnly);

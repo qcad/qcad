@@ -174,6 +174,12 @@
         queryLayerDirect
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryLayout
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        queryLayoutDirect
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryBlock
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -336,6 +342,9 @@
         getCurrentBlockId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getCurrentBlockName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryCurrentView
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -358,6 +367,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getLayerNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLayoutName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getViewNames

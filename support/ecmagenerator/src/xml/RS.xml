@@ -21,6 +21,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="ObjectLayer" />
       <value name="ObjectLinetype" />
       <value name="ObjectView" />
+      <value name="ObjectLayout" />
       <value name="EntityAll" />
       <value name="EntityUnknown" />
       <value name="EntityAttribute" />

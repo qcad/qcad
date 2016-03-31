@@ -26,6 +26,7 @@
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QString&gt;</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QDebug&gt;</cpp:file></cpp:include>
 
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RLayout.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RGlobal.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RObject.h"</cpp:file></cpp:include>
 <cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"RVector.h"</cpp:file></cpp:include>
@@ -49,6 +50,7 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyOriginX</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyOriginY</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyOriginZ</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLayout</name></decl>;</decl_stmt>
 
 </public><public>public:
     <constructor_decl><name>RBlock</name><parameter_list>()</parameter_list>;</constructor_decl>
@@ -99,6 +101,18 @@
         <return>return <expr><name>origin</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>bool</name></type> <name>isLayout</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>layoutId</name>!=<name><name>RLayout</name>::<name>INVALID_ID</name></name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setLayoutId</name><parameter_list>(<param><decl><type><name><name>RLayout</name>::<name>Id</name></name></type> <name>layoutId</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>this</name>-&gt;<name>layoutId</name> = <name>layoutId</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name><name>RLayout</name>::<name>Id</name></name></type> <name>getLayoutId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>layoutId</name></expr>;</return>
+    }</block></function>
+
     <function_decl><type><name>virtual</name> <name>QPair<argument_list>&lt;<argument><name>QVariant</name></argument>, <argument><name>RPropertyAttributes</name></argument>&gt;</argument_list></name></type> <name>getProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>,
             <param><decl><type><name>bool</name></type> <name>humanReadable</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>noAttributes</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>setProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>,
@@ -120,6 +134,7 @@
     <decl_stmt><decl><type><name>bool</name></type> <name>frozen</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>anonymous</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>origin</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name><name>RLayout</name>::<name>Id</name></name></type> <name>layoutId</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 

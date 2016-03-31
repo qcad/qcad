@@ -31,7 +31,7 @@
  * \scriptable
  * \copyable
  */</comment>
-<class>class <name>RGraphicsSceneDrawable</name> <block>{<private type="default">
+<class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>RGraphicsSceneDrawable</name> <block>{<private type="default">
 </private><public>public:
     <enum>enum <name>Type</name> <block>{
         <expr><name>Invalid</name></expr>,
@@ -60,17 +60,9 @@
 
     <destructor_decl><name>~RGraphicsSceneDrawable</name><parameter_list>()</parameter_list>;</destructor_decl>
 
-    <function><type><name>static</name> <name>RGraphicsSceneDrawable</name></type> <name>createFromPainterPath</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>pp</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><call><name>RGraphicsSceneDrawable</name><argument_list>(<argument><expr><name>pp</name></expr></argument>)</argument_list></call></expr>;</return>
-    }</block></function>
-
-    <function><type><name>static</name> <name>RGraphicsSceneDrawable</name></type> <name>createFromImage</name><parameter_list>(<param><decl><type><name>const</name> <name>RImageData</name>&amp;</type> <name>img</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><call><name>RGraphicsSceneDrawable</name><argument_list>(<argument><expr><name>img</name></expr></argument>)</argument_list></call></expr>;</return>
-    }</block></function>
-
-    <function><type><name>static</name> <name>RGraphicsSceneDrawable</name></type> <name>createFromText</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>txt</name></decl></param>)</parameter_list> <block>{
-        <return>return <expr><call><name>RGraphicsSceneDrawable</name><argument_list>(<argument><expr><name>txt</name></expr></argument>)</argument_list></call></expr>;</return>
-    }</block></function>
+    <function_decl><type><name>static</name> <name>RGraphicsSceneDrawable</name></type> <name>createFromPainterPath</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>pp</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RGraphicsSceneDrawable</name></type> <name>createFromImage</name><parameter_list>(<param><decl><type><name>const</name> <name>RImageData</name>&amp;</type> <name>img</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RGraphicsSceneDrawable</name></type> <name>createFromText</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>txt</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>uninit</name><parameter_list>()</parameter_list>;</function_decl>
 
@@ -105,7 +97,7 @@
     <comment type="line">//};</comment>
 </protected>}</block>;</class>
 
-<function_decl><type><name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>const</name> <name>RGraphicsSceneDrawable</name>&amp;</type> <name>d</name></decl></param>)</parameter_list>;</function_decl>
+<function_decl><type><name>QCADGUI_EXPORT</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>const</name> <name>RGraphicsSceneDrawable</name>&amp;</type> <name>d</name></decl></param>)</parameter_list>;</function_decl>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsSceneDrawable</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RGraphicsSceneDrawable*</argument>)</argument_list></macro>

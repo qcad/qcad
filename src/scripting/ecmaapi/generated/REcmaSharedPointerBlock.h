@@ -83,6 +83,15 @@
         getOrigin
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isLayout
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setLayoutId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getLayoutId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

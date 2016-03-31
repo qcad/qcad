@@ -91,6 +91,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, getOrigin, "getOrigin");
             
+            REcmaHelper::registerFunction(&engine, proto, isLayout, "isLayout");
+            
+            REcmaHelper::registerFunction(&engine, proto, setLayoutId, "setLayoutId");
+            
+            REcmaHelper::registerFunction(&engine, proto, getLayoutId, "getLayoutId");
+            
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
             
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
@@ -133,6 +139,10 @@
             
             ctor.setProperty("PropertyOriginZ",
                 qScriptValueFromValue(&engine, RBlock::PropertyOriginZ),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyLayout",
+                qScriptValueFromValue(&engine, RBlock::PropertyLayout),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
             ctor.setProperty("modelSpaceName",
@@ -902,6 +912,159 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerBlock::getOrigin", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlock::isLayout
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlock::isLayout", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlock::isLayout";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlock* self = 
+                        getSelf("isLayout", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isLayout();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.isLayout().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlock::isLayout", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlock::setLayoutId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlock::setLayoutId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlock::setLayoutId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlock* self = 
+                        getSelf("setLayoutId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RLayout::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RLayout::Id
+                    a0 =
+                    (RLayout::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLayoutId(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.setLayoutId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlock::setLayoutId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBlock::getLayoutId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBlock::getLayoutId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlock::getLayoutId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlock* self = 
+                        getSelf("getLayoutId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RLayout::Id'
+    RLayout::Id cppResult =
+        
+               self->getLayoutId();
+        // return type: RLayout::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.getLayoutId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlock::getLayoutId", context, engine);
             return result;
         }
          QScriptValue

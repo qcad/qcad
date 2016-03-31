@@ -121,6 +121,12 @@
         ;static  QScriptValue
         setScale
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isOverall
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setOverall
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

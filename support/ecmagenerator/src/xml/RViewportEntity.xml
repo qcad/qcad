@@ -176,6 +176,18 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </method>
+    <method name="isOverall" cppName="isOverall" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setOverall" cppName="setOverall"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="print" cppName="print" specifier="protected"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -226,6 +238,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     <property name="PropertyViewTargetY" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyViewTargetZ" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyOverall" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>
