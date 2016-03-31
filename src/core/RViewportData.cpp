@@ -18,7 +18,13 @@
  */
 #include "RViewportData.h"
 
-RViewportData::RViewportData() {
+RViewportData::RViewportData()
+    : viewportId(RObject::INVALID_ID),
+      status(0),
+      width(0.0),
+      height(0.0),
+      scale(1.0),
+      overall(false) {
 }
 
 RViewportData::RViewportData(RDocument* document, const RViewportData& data)

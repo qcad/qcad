@@ -62,6 +62,8 @@ public:
     static RPropertyTypeId PropertyViewTargetY;
     static RPropertyTypeId PropertyViewTargetZ;
 
+    static RPropertyTypeId PropertyOverall;
+
 public:
     RViewportEntity(RDocument* document, const RViewportData& data,
         RObject::Id objectId = RObject::INVALID_ID);
@@ -159,6 +161,14 @@ public:
 
     void setScale(double s) {
         data.setScale(s);
+    }
+
+    bool isOverall() const {
+        return data.isOverall();
+    }
+
+    void setOverall(bool on) {
+        data.setOverall(on);
     }
 
 protected:

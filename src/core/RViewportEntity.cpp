@@ -45,6 +45,8 @@ RPropertyTypeId RViewportEntity::PropertyViewTargetX;
 RPropertyTypeId RViewportEntity::PropertyViewTargetY;
 RPropertyTypeId RViewportEntity::PropertyViewTargetZ;
 
+RPropertyTypeId RViewportEntity::PropertyOverall;
+
 
 RViewportEntity::RViewportEntity(RDocument* document, const RViewportData& data,
         RObject::Id objectId) :
@@ -78,6 +80,8 @@ void RViewportEntity::init() {
     RViewportEntity::PropertyViewTargetX.generateId(typeid(RViewportEntity), QT_TRANSLATE_NOOP("REntity", "View Target"), QT_TRANSLATE_NOOP("REntity", "X"));
     RViewportEntity::PropertyViewTargetY.generateId(typeid(RViewportEntity), QT_TRANSLATE_NOOP("REntity", "View Target"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RViewportEntity::PropertyViewTargetZ.generateId(typeid(RViewportEntity), QT_TRANSLATE_NOOP("REntity", "View Target"), QT_TRANSLATE_NOOP("REntity", "Z"));
+
+    RViewportEntity::PropertyOverall.generateId(typeid(RViewportEntity), "", QT_TRANSLATE_NOOP("REntity", "Overall"));
 }
 
 bool RViewportEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -94,6 +98,7 @@ bool RViewportEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(data.viewTarget.x, value, PropertyViewTargetX == propertyTypeId);
     ret = ret || RObject::setMember(data.viewTarget.y, value, PropertyViewTargetY == propertyTypeId);
     ret = ret || RObject::setMember(data.viewTarget.z, value, PropertyViewTargetZ == propertyTypeId);
+    ret = ret || RObject::setMember(data.overall, value, PropertyOverall == propertyTypeId);
     return ret;
 }
 
@@ -121,6 +126,8 @@ QPair<QVariant, RPropertyAttributes> RViewportEntity::getProperty(
         return qMakePair(QVariant(data.viewTarget.y), RPropertyAttributes());
     } else if (propertyTypeId == PropertyViewTargetZ) {
         return qMakePair(QVariant(data.viewTarget.z), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyOverall) {
+        return qMakePair(QVariant(data.overall), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     }
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }

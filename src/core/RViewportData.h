@@ -124,6 +124,14 @@ public:
         scale = s;
     }
 
+    bool isOverall() const {
+        return overall;
+    }
+
+    void setOverall(bool on) {
+        overall = on;
+    }
+
     virtual QList<RVector> getReferencePoints(
         RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 
@@ -141,6 +149,8 @@ private:
 
     RVector viewCenter;
     RVector viewTarget;
+
+    bool overall;
 };
 
 Q_DECLARE_METATYPE(RViewportData)
