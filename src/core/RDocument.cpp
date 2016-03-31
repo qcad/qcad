@@ -683,6 +683,10 @@ RBlock::Id RDocument::getCurrentBlockId() const {
     return storage.getCurrentBlockId();
 }
 
+QString RDocument::getCurrentBlockName() const {
+    return getBlockName(storage.getCurrentBlockId());
+}
+
 void RDocument::setCurrentBlock(RBlock::Id blockId) {
     RBlock::Id prevBlockId = getCurrentBlockId();
 

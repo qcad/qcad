@@ -259,6 +259,7 @@ public:
     void setCurrentBlock(RBlock::Id blockId);
     void setCurrentBlock(const QString& blockName);
     RBlock::Id getCurrentBlockId() const;
+    QString getCurrentBlockName() const;
 
 //    void setSelectedBlock(RBlock::Id blockId);
 //    void setSelectedBlock(const QString& blockName);
