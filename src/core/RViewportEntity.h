@@ -99,6 +99,8 @@ public:
         return data;
     }
 
+    void setData(RViewportData& d);
+
     int getViewportId() const {
        return data.getViewportId();
     }

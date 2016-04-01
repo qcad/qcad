@@ -132,9 +132,12 @@ QPair<QVariant, RPropertyAttributes> RViewportEntity::getProperty(
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 
+void RViewportEntity::setData(RViewportData& d) {
+    data = d;
+    data.setDocument(getDocument());
+}
 
 void RViewportEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
-    qDebug() << "RViewportEntity::exportEntity";
     Q_UNUSED(preview);
     Q_UNUSED(forceSelected);
 
