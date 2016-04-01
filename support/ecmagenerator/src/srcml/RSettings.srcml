@@ -187,6 +187,7 @@
     <function_decl><type><name>static</name> <name>void</name></type> <name>removeValue</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>key</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>setApplicationName</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>n</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>hasApplicationNameOverride</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>QStringList</name></type> <name>getAllKeys</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>group</name></decl></param>)</parameter_list>;</function_decl>
 

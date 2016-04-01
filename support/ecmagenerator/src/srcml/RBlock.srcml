@@ -122,6 +122,7 @@
 
 </public><public>public:
     <decl_stmt><decl><type><name>static</name> <name>const</name> <name>QString</name></type> <name>modelSpaceName</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>const</name> <name>QString</name></type> <name>paperSpaceName</name></decl>;</decl_stmt>
 
 </public><protected>protected:
     <comment type="block">/**

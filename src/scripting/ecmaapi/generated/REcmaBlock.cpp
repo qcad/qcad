@@ -148,6 +148,10 @@
                 qScriptValueFromValue(&engine, RBlock::modelSpaceName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("paperSpaceName",
+                qScriptValueFromValue(&engine, RBlock::paperSpaceName),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     

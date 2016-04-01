@@ -74,6 +74,9 @@
         getData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setData
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getViewportId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -334,6 +334,9 @@
         setApplicationName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasApplicationNameOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getAllKeys
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

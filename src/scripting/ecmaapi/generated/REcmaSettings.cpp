@@ -249,6 +249,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, setApplicationName, "setApplicationName");
             
+            REcmaHelper::registerFunction(&engine, &ctor, hasApplicationNameOverride, "hasApplicationNameOverride");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getAllKeys, "getAllKeys");
             
             REcmaHelper::registerFunction(&engine, &ctor, getQSettings, "getQSettings");
@@ -4691,6 +4693,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::setApplicationName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::hasApplicationNameOverride
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::hasApplicationNameOverride", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::hasApplicationNameOverride";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       hasApplicationNameOverride();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.hasApplicationNameOverride().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::hasApplicationNameOverride", context, engine);
             return result;
         }
          QScriptValue

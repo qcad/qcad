@@ -142,5 +142,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="modelSpaceName" type="QString" isConst="true"
     isStatic="true" />
+    <property name="paperSpaceName" type="QString" isConst="true"
+    isStatic="true" />
   </class>
 </unit>

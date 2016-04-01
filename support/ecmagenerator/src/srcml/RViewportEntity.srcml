@@ -100,6 +100,8 @@
         <return>return <expr><name>data</name></expr>;</return>
     }</block></function>
 
+    <function_decl><type><name>void</name></type> <name>setData</name><parameter_list>(<param><decl><type><name>RViewportData</name>&amp;</type> <name>d</name></decl></param>)</parameter_list>;</function_decl>
+
     <function><type><name>int</name></type> <name>getViewportId</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
        <return>return <expr><name>data</name>.<call><name>getViewportId</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
