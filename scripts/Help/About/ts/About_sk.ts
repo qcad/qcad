@@ -26,7 +26,7 @@
     <message>
         <location line="+3"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
-        <translation type="unfinished"></translation>
+        <translation>Tento program je šírený v nádeji, že bude užitočný, ale BEZ ZÁRUKY - dokonca bez predpokladanej záruky obchodovateľnosti na konkrétny účel.</translation>
     </message>
     <message>
         <location line="+12"/>

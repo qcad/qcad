@@ -500,6 +500,16 @@
     </message>
     <message>
         <location line="+2"/>
+        <source>Layouts</source>
+        <translation>Présentations</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Layout</source>
+        <translation>Présentation</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Linetypes</source>
         <translation>Types de ligne</translation>
     </message>

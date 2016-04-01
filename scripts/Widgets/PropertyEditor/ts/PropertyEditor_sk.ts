@@ -29,7 +29,7 @@
     <message>
         <location line="+10"/>
         <source>Display properties of current block and current layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazenie vlastností aktuálneho bloku a aktuálnej vrstvy</translation>
     </message>
     <message>
         <location filename="../PropertyEditor.js" line="+1309"/>

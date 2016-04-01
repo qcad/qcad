@@ -246,15 +246,20 @@
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+70"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+72"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
         <translation>Sijainti</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+54"/>
+        <location filename="../src/core/RBlock.cpp" line="+57"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
+        <location line="+3"/>
+        <location filename="../src/core/RLayout.cpp" line="+59"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
@@ -274,6 +279,11 @@
         <location line="-1"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RLayout.cpp" line="-11"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <location line="+6"/>
@@ -285,11 +295,21 @@
         <location line="+1"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RLayout.cpp" line="-11"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <location line="+8"/>
         <source>Z</source>
         <translation>Z</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Layout</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
@@ -522,8 +542,14 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="-4"/>
+        <location line="+2"/>
+        <source>Overall</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/RBlock.cpp" line="-5"/>
         <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <location filename="../src/core/RLayout.cpp" line="-16"/>
         <source>Name</source>
         <translation type="unfinished">Nimi</translation>
     </message>
@@ -537,6 +563,46 @@
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Locked</source>
         <translation type="unfinished">Lukittu</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayout.cpp" line="+1"/>
+        <source>Tab Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Min Limits</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Max Limits</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Insertion Base</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Min Extents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Max Extents</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

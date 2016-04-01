@@ -527,6 +527,16 @@ Dzielenie (÷)</translatorcomment>
     </message>
     <message>
         <location line="+2"/>
+        <source>Layouts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Layout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Linetypes</source>
         <translation type="unfinished"></translation>
     </message>

@@ -374,11 +374,16 @@ Lista de bloques</translatorcomment>
         <translation type="obsolete">Bloque</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+54"/>
+        <location filename="../src/core/RBlock.cpp" line="+57"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+1"/>
         <location line="+3"/>
+        <location filename="../src/core/RLayout.cpp" line="+59"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+70"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+72"/>
         <location line="+6"/>
         <location line="+2"/>
         <source>X</source>
@@ -415,6 +420,11 @@ Especifique posición</translatorcomment>
         <location line="-1"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-1"/>
         <location line="+3"/>
+        <location filename="../src/core/RLayout.cpp" line="-11"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-1"/>
         <location line="+6"/>
@@ -431,6 +441,11 @@ Ubicando las Bibliotecas
         <location line="+1"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RLayout.cpp" line="-11"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <location line="+8"/>
@@ -441,6 +456,11 @@ Mosaico &amp;horizontal
 Mosaico horizontal
 Ocultar todo</translatorcomment>
         <translation>Z</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Layout</source>
+        <translation>Presentación</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
@@ -702,8 +722,14 @@ Colores
         <translation>Vista objetivo</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="-4"/>
+        <location line="+2"/>
+        <source>Overall</source>
+        <translation>Overall</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RBlock.cpp" line="-5"/>
         <location filename="../src/core/RLayer.cpp" line="-3"/>
+        <location filename="../src/core/RLayout.cpp" line="-16"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
@@ -717,6 +743,46 @@ Colores
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Locked</source>
         <translation>Bloqueado</translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayout.cpp" line="+1"/>
+        <source>Tab Order</source>
+        <translation>Orden de tabulación</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Min Limits</source>
+        <translation>Min límites</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Max Limits</source>
+        <translation>Max límites</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Insertion Base</source>
+        <translation>Base de inserción</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Min Extents</source>
+        <translation>Min extensión</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Max Extents</source>
+        <translation>Max extensión</translation>
     </message>
 </context>
 <context>

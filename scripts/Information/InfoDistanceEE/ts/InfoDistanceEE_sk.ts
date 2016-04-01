@@ -6,27 +6,27 @@
     <message>
         <location filename="../InfoDistanceEE.js" line="+62"/>
         <source>Specify first entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Určte prvý prvok</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Specify second entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Určte druhý prvok</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished">Hotovo</translation>
+        <translation>Hotovo</translation>
     </message>
     <message>
         <location line="+92"/>
         <source>Distance:</source>
-        <translation type="unfinished">Vzdialenosť:</translation>
+        <translation>Vzdialenosť:</translation>
     </message>
     <message>
         <location filename="../InfoDistanceEEInit.js" line="+2"/>
         <source>Distance &amp;Entity to Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Vzdialenosť &amp;prvka k prvku</translation>
     </message>
 </context>
 <context>

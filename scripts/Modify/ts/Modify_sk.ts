@@ -24,7 +24,7 @@
     <message>
         <location filename="../ModifyCorner.js" line="+86"/>
         <source>Choose corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte roh</translation>
     </message>
     <message>
         <location line="+17"/>

@@ -1018,6 +1018,11 @@ PropertyEditorImpl.prototype.initBooleanControls = function(objectName, property
         control.currentIndex = control.findData(value);
     }
 
+    // read only:
+    if (attributes.isReadOnly()) {
+        control.enabled = false;
+    }
+
     if (!onlyChanges) {
         control['activated(int)'].connect(
                     new PropertyWatcher(this, control, propertyTypeId),

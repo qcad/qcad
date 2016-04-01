@@ -489,6 +489,16 @@
     </message>
     <message>
         <location line="+2"/>
+        <source>Layouts</source>
+        <translation>Layouts</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Layout</source>
+        <translation>Layout</translation>
+    </message>
+    <message>
+        <location line="+2"/>
         <source>Linetypes</source>
         <translation>Linientypen</translation>
     </message>

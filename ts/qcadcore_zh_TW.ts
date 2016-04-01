@@ -238,8 +238,9 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+52"/>
+        <location filename="../src/core/RBlock.cpp" line="+55"/>
         <location filename="../src/core/RLayer.cpp" line="+74"/>
+        <location filename="../src/core/RLayout.cpp" line="+57"/>
         <source>Name</source>
         <translation>名稱</translation>
     </message>
@@ -258,7 +259,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+70"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+72"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Position</source>
@@ -267,6 +268,11 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="+1"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
+        <location line="+3"/>
+        <location filename="../src/core/RLayout.cpp" line="+2"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-2"/>
@@ -286,6 +292,11 @@
         <location line="-1"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RLayout.cpp" line="-11"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <location line="+6"/>
@@ -297,10 +308,20 @@
         <location line="+1"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
         <location line="+3"/>
+        <location filename="../src/core/RLayout.cpp" line="-11"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+1"/>
         <location filename="../src/core/RViewportEntity.cpp" line="-7"/>
         <location line="+8"/>
         <source>Z</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <source>Layout</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -536,6 +557,51 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>View Target</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Overall</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/core/RLayout.cpp" line="-15"/>
+        <source>Tab Order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Min Limits</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Max Limits</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Insertion Base</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Min Extents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <source>Max Extents</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

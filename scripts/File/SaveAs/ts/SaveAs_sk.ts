@@ -6,12 +6,12 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Dialógové okno súboru</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Použiť systémové súborové okno</translation>
     </message>
     <message>
         <location line="+13"/>
