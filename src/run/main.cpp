@@ -254,6 +254,7 @@ int main(int argc, char *argv[]) {
 
     RUcs::init();
     RLayer::init();
+    RLayout::init();
     RLinetype::init();
     RBlock::init();
     RView::init();
