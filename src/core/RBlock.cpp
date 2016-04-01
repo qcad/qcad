@@ -20,6 +20,7 @@
 #include "RDocument.h"
 
 const QString RBlock::modelSpaceName = "*Model_Space";
+const QString RBlock::paperSpaceName = "*Paper_Space";
 
 RPropertyTypeId RBlock::PropertyCustom;
 RPropertyTypeId RBlock::PropertyName;

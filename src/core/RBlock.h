@@ -121,6 +121,7 @@ public:
 
 public:
     static const QString modelSpaceName;
+    static const QString paperSpaceName;
 
 protected:
     /**
