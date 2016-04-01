@@ -33,6 +33,7 @@
 #include "RUcs.h"
 #include "RUnit.h"
 #include "RPolyline.h"
+#include "RViewportEntity.h"
 //#include "RLinetypePatternMap.h"
 
 RDocument* RDocument::clipboard = NULL;
@@ -109,9 +110,8 @@ void RDocument::init() {
     }
 
     // add default layer:
-    QSharedPointer<RLayer> layer0;
     if (!storageIsLinked && queryLayer("0").isNull()) {
-        layer0 = QSharedPointer<RLayer>(
+        QSharedPointer<RLayer> layer0 = QSharedPointer<RLayer>(
             new RLayer(
                 this, "0", false, false,
                 RColor(Qt::white), getLinetypeId("CONTINUOUS"),
@@ -122,14 +122,56 @@ void RDocument::init() {
         //qDebug() << "id of layer 0: " << getLayerId("0");
     }
 
-    // add default block:
+    // add model space block with layout:
     if (!storageIsLinked && queryBlock(RBlock::modelSpaceName).isNull()) {
+        QSharedPointer<RLayout> modelLayout(
+            new RLayout(
+                this, "Model"
+            )
+        );
+        transaction.addObject(modelLayout);
+
         QSharedPointer<RBlock> modelSpace(
             new RBlock(
                 this, RBlock::modelSpaceName, RVector()
             )
         );
         transaction.addObject(modelSpace);
+        modelSpace->setLayoutId(modelLayout->getId());
+    }
+
+    // add first default paper space with layout and viewport:
+    if (!storageIsLinked && queryBlock(RBlock::paperSpaceName).isNull()) {
+        QSharedPointer<RLayout> paperLayout(
+            new RLayout(
+                this, "Layout1"
+            )
+        );
+        transaction.addObject(paperLayout);
+
+        QSharedPointer<RBlock> paperSpace(
+            new RBlock(
+                this, RBlock::paperSpaceName, RVector()
+            )
+        );
+        transaction.addObject(paperSpace);
+        paperSpace->setLayoutId(paperLayout->getId());
+
+        QSharedPointer<RViewportEntity> viewport(
+            new RViewportEntity(
+                this, RViewportData()
+            )
+        );
+        viewport->setCenter(RVector(128.5, 97.5));
+        viewport->setViewCenter(RVector(128.5, 97.5));
+        viewport->setViewTarget(RVector(0,0));
+        viewport->setWidth(314.226);
+        viewport->setHeight(222.18);
+        viewport->setOverall(true);
+        viewport->setBlockId(paperSpace->getId());
+        viewport->setLayerId(getLayerId("0"));
+
+        transaction.addObject(viewport, false);
     }
 
     storage.setModelSpaceBlockId(getBlockId(RBlock::modelSpaceName));
@@ -1369,7 +1411,18 @@ QSet<RObject::Id> RDocument::queryPropertyEditorObjects() {
             RBlock::Id blockId = getCurrentBlockId();
             objectIds.insert(blockId);
 
-            // TODO: expose properties of layout associated with current block:
+            // expose properties of layout associated with current block:
+            QSharedPointer<RBlock> block = queryBlock(blockId);
+            if (!block.isNull()) {
+                if (block->isLayout()) {
+                    RLayout::Id layoutId = block->getLayoutId();
+                    objectIds.insert(layoutId);
+//                    QSharedPointer<RLayout> layout = queryLayout(layoutId);
+//                    if (!layout.isNull()) {
+
+//                    }
+                }
+            }
         }
     }
 
