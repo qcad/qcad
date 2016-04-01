@@ -52,8 +52,8 @@ function usage() {
           + "                                 scripts/autostart.js. Note that with this option,\n"
           + "                                 QCAD is not started but rather the application \n"
           + "                                 implemented in the given script.\n"
-          + "-config [path]                   Reads and stores settings to QCAD3.ini at the given\n"
-          + "                                 location instead of the default location.\n"
+          + "-config [path]                   Reads and stores settings in a configuration file\n"
+          + "                                 at the given location instead of the default location.\n"
           + "-enable-script-debugger          Enables the script debugger.\n"
           + "                                 NOT recommended as this may cause unexpected\n"
           + "                                 behavior when using QCAD.\n"
@@ -460,7 +460,10 @@ function main() {
 
     // app name for ini file differs to avoid conflict with
     // older QCAD versions:
-    RSettings.setApplicationName("QCAD3");
+    // note that a plugin might have set a name override already:
+    if (!RSettings.hasApplicationNameOverride()) {
+        RSettings.setApplicationName("QCAD3");
+    }
     // make sure settings file path is reinitialized:
     RSettings.uninit();
 
