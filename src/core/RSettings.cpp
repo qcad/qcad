@@ -939,6 +939,10 @@ void RSettings::setApplicationName(const QString& n) {
     applicationNameOverride = n;
 }
 
+bool RSettings::hasApplicationNameOverride() {
+    return !applicationNameOverride.isEmpty();
+}
+
 void RSettings::setXDataEnabled(bool on) {
     xDataEnabled = on;
 }
