@@ -51,7 +51,7 @@
         <translation>Ajouter une propriété personnalisée pour les objets sélectionnés</translation>
     </message>
     <message>
-        <location line="+606"/>
+        <location line="+611"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -86,7 +86,7 @@
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1119"/>
+        <location line="-1124"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--
@@ -174,7 +174,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+314"/>
         <location line="+56"/>
         <location line="+11"/>
         <source>Property Editor</source>

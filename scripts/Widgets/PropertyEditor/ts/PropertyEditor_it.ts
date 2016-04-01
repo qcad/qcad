@@ -60,13 +60,13 @@
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+603"/>
+        <location line="+608"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1119"/>
+        <location line="-1124"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: Arduino_it_IT.po--
@@ -113,7 +113,7 @@ Nessuna selezione</translatorcomment>
         <translation>Tutto</translation>
     </message>
     <message>
-        <location line="+628"/>
+        <location line="+633"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -143,7 +143,7 @@ Specifica la base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-470"/>
+        <location line="-475"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -164,7 +164,7 @@ Specifica la base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+314"/>
         <location line="+56"/>
         <location line="+11"/>
         <source>Property Editor</source>

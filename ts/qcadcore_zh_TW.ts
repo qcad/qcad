@@ -238,7 +238,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+55"/>
+        <location filename="../src/core/RBlock.cpp" line="+56"/>
         <location filename="../src/core/RLayer.cpp" line="+74"/>
         <location filename="../src/core/RLayout.cpp" line="+57"/>
         <source>Name</source>

@@ -32,12 +32,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+1309"/>
+        <location filename="../PropertyEditor.js" line="+1314"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1119"/>
+        <location line="-1124"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -106,7 +106,7 @@
         <translation>Ei</translation>
     </message>
     <message>
-        <location line="+309"/>
+        <location line="+314"/>
         <source>Widgets</source>
         <translation>Pienoisohjelmat</translation>
     </message>
