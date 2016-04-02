@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>ArcTPR</name>
     <message>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation type="vanished">Izberi črto, lok, krog ali elipso</translation>
+        <translation>Izberi črto, lok, krog ali elipso</translation>
     </message>
     <message>
         <source>Point on arc</source>
-        <translation type="vanished">Točka na loku</translation>
+        <translation>Točka na loku</translation>
     </message>
     <message>
         <source>Choose solution</source>
-        <translation type="vanished">Izberite rešitev</translation>
+        <translation>Izberite rešitev</translation>
     </message>
     <message>
         <source>No solution</source>
-        <translation type="vanished">Ni rešitve</translation>
+        <translation>Ni rešitve</translation>
     </message>
     <message>
         <source>Radius:</source>
-        <translation type="vanished">Polmer:</translation>
+        <translation>Polmer:</translation>
     </message>
     <message>
         <source>&amp;Tangent, Point, Radius</source>
-        <translation type="vanished">&amp;Tangenta, Točka, Polmer</translation>
+        <translation>&amp;Tangenta, Točka, Polmer</translation>
     </message>
     <message>
         <source>Draw arc tangential to entity, through point with radius</source>
-        <translation type="vanished">Nariši lok tangencialno na entiteto, skozi točko s polmerom</translation>
+        <translation>Nariši lok tangencialno na entiteto, skozi točko s polmerom</translation>
     </message>
 </context>
 <context>
@@ -83,7 +83,7 @@
     <message>
         <location filename="../CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished">Polmer:</translation>
+        <translation>Polmer:</translation>
     </message>
 </context>
 </TS>

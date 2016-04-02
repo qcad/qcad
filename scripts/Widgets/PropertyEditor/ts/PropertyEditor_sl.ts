@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -38,7 +38,7 @@
     </message>
     <message>
         <source>Geometry</source>
-        <translation type="vanished">Geometrija</translation>
+        <translation>Geometrija</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -150,7 +150,7 @@
     </message>
     <message>
         <source>General</source>
-        <translation type="vanished">Splošno</translation>
+        <translation>Splošno</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -164,7 +164,7 @@
     </message>
     <message>
         <source>Move Selection to a New Layer</source>
-        <translation type="vanished">Premakni izbrano na drugo plast</translation>
+        <translation>Premakni izbrano na drugo plast</translation>
     </message>
     <message>
         <location line="+104"/>
@@ -189,7 +189,7 @@
     <message>
         <location line="+10"/>
         <source>Display properties of current block and current layer</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži lastnosti trenutnega bloka in trenutne plasti</translation>
     </message>
 </context>
 </TS>

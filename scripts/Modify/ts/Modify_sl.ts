@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>Modify</name>
     <message>
@@ -24,7 +24,7 @@
     <message>
         <location filename="../ModifyCorner.js" line="+86"/>
         <source>Choose corner</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberi vogal</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -43,7 +43,7 @@
     </message>
     <message>
         <source>Choose solution</source>
-        <translation type="vanished">Izberi rešitev</translation>
+        <translation>Izberi rešitev</translation>
     </message>
 </context>
 <context>
