@@ -168,11 +168,6 @@ bool RGraphicsSceneQt::beginPath() {
             currentPainterPath.setSelected(true);
         }
     }
-//    else {
-//        if (entity!=NULL && entity->getCustomProperty("QCADCAM", "simulation", false)==true) {
-//            currentPainterPath.setHighlighted(true);
-//        }
-//    }
 
     return true;
 }
@@ -510,10 +505,6 @@ void RGraphicsSceneQt::exportRectangle(const RVector& p1, const RVector& p2) {
     }
 }
 
-//void RGraphicsSceneQt::exportPainterPathSource(const RPainterPathSource& pathSource) {
-//    exportPainterPaths(pathSource.getPainterPaths(false));
-//}
-
 void RGraphicsSceneQt::exportPainterPaths(const QList<RPainterPath>& paths) {
     if (getEntity() == NULL && !exportToPreview) {
         qWarning("RGraphicsSceneQt::exportPainterPaths: entity is NULL");
@@ -570,11 +561,9 @@ void RGraphicsSceneQt::exportImage(const RImageData& image, bool forceSelected) 
     else {
         REntity::Id id = getBlockRefOrEntityId();
         if (drawables.contains(id)) {
-            //images[getBlockRefOrEntityId()].append(image);
             drawables[id].append(image);
         }
         else {
-            //images.insert(getBlockRefOrEntityId(), QList<RImageData>() << image);
             drawables.insert(id, QList<RGraphicsSceneDrawable>() << image);
         }
     }
@@ -602,11 +591,9 @@ QList<RPainterPath> RGraphicsSceneQt::exportText(const RTextBasedData& text, boo
     else {
         REntity::Id id = getBlockRefOrEntityId();
         if (drawables.contains(id)) {
-            //texts[getBlockRefOrEntityId()].append(textCopy);
             drawables[id].append(textCopy);
         }
         else {
-            //texts.insert(getBlockRefOrEntityId(), QList<RTextBasedData>() << textCopy);
             drawables.insert(id, QList<RGraphicsSceneDrawable>() << textCopy);
         }
     }
@@ -667,21 +654,15 @@ double RGraphicsSceneQt::getLineTypePatternScale(const RLinetypePattern& p) cons
 void RGraphicsSceneQt::unexportEntity(REntity::Id entityId) {
     if (!exportToPreview) {
         drawables.remove(entityId);
-        //images.remove(entityId);
-        //texts.remove(entityId);
         clipRectangles.remove(entityId);
     }
 }
 
 void RGraphicsSceneQt::deleteDrawables() {
     drawables.clear();
-    //images.clear();
-    //texts.clear();
     clipRectangles.clear();
 
     previewDrawables.clear();
-    //previewTexts.clear();
-    //previewImages.clear();
     previewClipRectangles.clear();
 }
 
@@ -696,57 +677,6 @@ QList<RGraphicsSceneDrawable> RGraphicsSceneQt::getDrawables(REntity::Id entityI
 
     return QList<RGraphicsSceneDrawable>();
 }
-
-/*
-bool RGraphicsSceneQt::hasImageFor(REntity::Id entityId) {
-    //return images.contains(entityId);
-
-    if (!painterPaths.contains(entityId)) {
-        return false;
-    }
-
-    for (int i=0; i<painterPaths[entityId].length(); i++) {
-        if (painterPaths[entityId][i].type==RGraphicsSceneDrawable::Image) {
-            return true;
-        }
-    }
-
-    return false;
-}
-
-QList<RImageData> RGraphicsSceneQt::getImages(REntity::Id entityId) {
-//    if (images.contains(entityId)) {
-//        return images.value(entityId);
-//    }
-
-//    return QList<RImageData>();
-    QList<RImageData> ret;
-
-    if (!painterPaths.contains(entityId)) {
-        return false;
-    }
-
-    for (int i=0; i<painterPaths[entityId].length(); i++) {
-        if (painterPaths[entityId][i].type==RGraphicsSceneDrawable::Image) {
-            ret.append(painterPaths[entityId][i].image);
-        }
-    }
-
-    return ret;
-}
-
-bool RGraphicsSceneQt::hasTextsFor(REntity::Id entityId) {
-    return texts.contains(entityId);
-}
-
-QList<RTextBasedData> RGraphicsSceneQt::getTexts(REntity::Id entityId) {
-    if (texts.contains(entityId)) {
-        return texts.value(entityId);
-    }
-
-    return QList<RTextBasedData>();
-}
-*/
 
 bool RGraphicsSceneQt::hasClipRectangleFor(REntity::Id entityId) {
     return clipRectangles.contains(entityId);
@@ -771,13 +701,11 @@ void RGraphicsSceneQt::addPath(REntity::Id entityId, const RGraphicsSceneDrawabl
 }
 
 bool RGraphicsSceneQt::hasPreview() const {
-    return !previewDrawables.isEmpty() /*|| !previewTexts.isEmpty() || !previewImages.isEmpty()*/;
+    return !previewDrawables.isEmpty();
 }
 
 QList<REntity::Id> RGraphicsSceneQt::getPreviewEntityIds() {
     QList<REntity::Id> ret = previewDrawables.keys();
-    //ret.append(previewTexts.keys());
-    //ret.append(previewImages.keys());
     ret.append(previewClipRectangles.keys());
     ret = ret.toSet().toList();
     return ret;
@@ -790,17 +718,9 @@ QList<RGraphicsSceneDrawable> RGraphicsSceneQt::getPreviewDrawables(RObject::Id 
     return QList<RGraphicsSceneDrawable>();
 }
 
-//QList<RTextBasedData> RGraphicsSceneQt::getPreviewTexts(REntity::Id entityId) {
-//    if (previewTexts.contains(entityId)) {
-//        return previewTexts[entityId];
-//    }
-//    return QList<RTextBasedData>();
-//}
-
 void RGraphicsSceneQt::clearPreview() {
     RGraphicsScene::clearPreview();
     previewDrawables.clear();
-    //previewTexts.clear();
 }
     
 void RGraphicsSceneQt::addToPreview(REntity::Id entityId, const RGraphicsSceneDrawable& drawable) {
@@ -824,11 +744,9 @@ void RGraphicsSceneQt::addToPreview(REntity::Id entityId, const QList<RGraphicsS
 void RGraphicsSceneQt::addTextToPreview(const RTextBasedData& text) {
     REntity::Id entityId = getBlockRefOrEntityId();
     if (previewDrawables.contains(entityId)) {
-        //previewTexts[entityId].append(text);
         previewDrawables[entityId].append(text);
     }
     else {
-        //previewTexts.insert(entityId, QList<RTextBasedData>() << text);
         previewDrawables.insert(entityId, QList<RGraphicsSceneDrawable>() << text);
     }
 }
@@ -857,8 +775,6 @@ void RGraphicsSceneQt::startEntity(bool topLevelEntity) {
         if (topLevelEntity) {
             // top level entity (i.e. not entity in block ref): remove previous graphical representations:
             drawables.remove(getEntity()->getId());
-            //images.remove(getEntity()->getId());
-            //texts.remove(getEntity()->getId());
         }
     }
 }
