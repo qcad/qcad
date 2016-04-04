@@ -91,9 +91,7 @@ void RObject::setUndone(bool on) {
     }
 }
 
-QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& propertyTypeId,
-        bool humanReadable, bool noAttributes) {
-
+QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
     Q_UNUSED(humanReadable)
     Q_UNUSED(noAttributes)
 
@@ -128,9 +126,7 @@ QPair<QVariant, RPropertyAttributes> RObject::getProperty(RPropertyTypeId& prope
     return qMakePair(QVariant(), RPropertyAttributes());
 }
 
-bool RObject::setProperty(RPropertyTypeId propertyTypeId,
-    const QVariant& value, RTransaction* transaction) {
-
+bool RObject::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction) {
     Q_UNUSED(transaction)
 
     bool ret = false;
