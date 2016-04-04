@@ -66,8 +66,7 @@ public:
      * only the properties of that entity should be displayed, so that the user
      * can adjust properties before or while drawing the entity.
      */
-    virtual void updateFromObject(RObject* object,
-            RDocument* document = NULL) = 0;
+    virtual void updateFromObject(RObject* object, RDocument* document = NULL) = 0;
 
     /**
      * This method is called to signal that no properties are currently 
