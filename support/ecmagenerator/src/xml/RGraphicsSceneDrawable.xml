@@ -58,15 +58,34 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getPainterPath" cppName="getPainterPath"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="RPainterPath" isPureVirtual="false" />
+      <variant returnType="RPainterPath &amp;"
+      isPureVirtual="false" />
     </method>
     <method name="getImage" cppName="getImage" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="RImageData" isPureVirtual="false" />
+      <variant returnType="RImageData &amp;"
+      isPureVirtual="false" />
     </method>
     <method name="getText" cppName="getText" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="RTextBasedData" isPureVirtual="false" />
+      <variant returnType="RTextBasedData &amp;"
+      isPureVirtual="false" />
+    </method>
+    <method name="setSelected" cppName="setSelected"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setHighlighted" cppName="setHighlighted"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
     </method>
     <method name="operator=" cppName="operator=" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

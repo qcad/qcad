@@ -117,6 +117,10 @@
 
     // static properties:
     
+            ctor.setProperty("PropertyCustom",
+                qScriptValueFromValue(&engine, RLayer::PropertyCustom),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyType",
                 qScriptValueFromValue(&engine, RLayer::PropertyType),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

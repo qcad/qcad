@@ -33,6 +33,8 @@
     // conversion functions for base classes:
     static  QScriptValue getRPropertyListener(QScriptContext *context,
             QScriptEngine *engine)
+        ;static  QScriptValue getRLayerListener(QScriptContext *context,
+            QScriptEngine *engine)
         ;
 
     // returns class name:
@@ -42,6 +44,11 @@
     // returns all base classes (in case of multiple inheritance):
     static  QScriptValue getBaseClasses(QScriptContext *context, QScriptEngine *engine) 
         ;
+        // properties of secondary base class RLayerListener:
+        
+
+        // methods of secondary base class RLayerListener:
+        
 
     // properties:
     
@@ -55,6 +62,15 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         clearEditor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        updateLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCurrentLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        clearLayers
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         propertyChanged
@@ -79,6 +95,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getTypeCount
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setEntityTypeFilter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getEntityTypeFilter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         checkType

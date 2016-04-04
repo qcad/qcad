@@ -70,20 +70,23 @@
         <return>return <expr><name>type</name></expr>;</return>
     }</block></function>
 
-    <function><type><name>RPainterPath</name></type> <name>getPainterPath</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>RPainterPath</name>&amp;</type> <name>getPainterPath</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <expr_stmt><expr><call><name>Q_ASSERT</name><argument_list>(<argument><expr><name>painterPath</name>!=<name>NULL</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
         <return>return <expr>*<name>painterPath</name></expr>;</return>
     }</block></function>
 
-    <function><type><name>RImageData</name></type> <name>getImage</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>RImageData</name>&amp;</type> <name>getImage</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <expr_stmt><expr><call><name>Q_ASSERT</name><argument_list>(<argument><expr><name>image</name>!=<name>NULL</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
         <return>return <expr>*<name>image</name></expr>;</return>
     }</block></function>
 
-    <function><type><name>RTextBasedData</name></type> <name>getText</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+    <function><type><name>RTextBasedData</name>&amp;</type> <name>getText</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <expr_stmt><expr><call><name>Q_ASSERT</name><argument_list>(<argument><expr><name>text</name>!=<name>NULL</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
         <return>return <expr>*<name>text</name></expr>;</return>
     }</block></function>
+
+    <function_decl><type><name>void</name></type> <name>setSelected</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setHighlighted</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>RGraphicsSceneDrawable</name>&amp;</type> <name>operator=</name><parameter_list>(<param><decl><type><name>const</name> <name>RGraphicsSceneDrawable</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</function_decl>
 

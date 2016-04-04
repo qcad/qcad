@@ -260,6 +260,19 @@
         <return>return <expr><name>dimensionLabel</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setSelected</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>REntityData::setSelected</name><parameter_list>(<param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+        <constructor_decl><name>update</name><parameter_list>()</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setHighlighted</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>highlighted</name> = <name>on</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isHighlighted</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>highlighted</name></expr>;</return>
+    }</block></function>
+
     <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>getReferencePoints</name><parameter_list>(
         <param><decl><type><name><name>RS</name>::<name>ProjectionRenderingHint</name></name></type> <name>hint</name> =<init> <expr><name><name>RS</name>::<name>RenderTop</name></name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
@@ -334,6 +347,7 @@
     <decl_stmt><decl><type><name>double</name></type> <name>xScale</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>simple</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>dimensionLabel</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>bool</name></type> <name>highlighted</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>mutable</name> <name>double</name></type> <name>height</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>double</name></type> <name>width</name></decl>;</decl_stmt>

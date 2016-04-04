@@ -177,7 +177,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
         <arg type="RS::EntityType" typeName="RS::EntityType"
         name="entityTypeFilter" hasDefault="true"
-        default="RS :: EntityAll" isConst="false" />
+        default="RS :: EntityUnknown" isConst="false" />
       </variant>
       <variant returnType="void" isPureVirtual="false">
         <arg type="RDocument &amp;" typeName="RDocument"

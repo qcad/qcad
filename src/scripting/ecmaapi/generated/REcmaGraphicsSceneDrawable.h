@@ -70,6 +70,12 @@
         getText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setSelected
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setHighlighted
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         operator_assign
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

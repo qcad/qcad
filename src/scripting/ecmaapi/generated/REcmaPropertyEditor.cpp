@@ -11,6 +11,8 @@
         // includes for base ecma wrapper classes
         
                   #include "REcmaPropertyListener.h"
+                
+                  #include "REcmaLayerListener.h"
                  void REcmaPropertyEditor::initEcma(QScriptEngine& engine, QScriptValue* proto 
     
     ) 
@@ -35,7 +37,8 @@
             }
           
         /*
-        
+        REcmaLayerListener::initEcma(engine, proto);
+          
         */
     
 
@@ -51,6 +54,9 @@
         // conversion for base class RPropertyListener
         REcmaHelper::registerFunction(&engine, proto, getRPropertyListener, "getRPropertyListener");
         
+        // conversion for base class RLayerListener
+        REcmaHelper::registerFunction(&engine, proto, getRLayerListener, "getRLayerListener");
+        
 
     // get class name
     REcmaHelper::registerFunction(&engine, proto, getClassName, "getClassName");
@@ -59,6 +65,12 @@
     // conversion to all base classes (multiple inheritance):
     REcmaHelper::registerFunction(&engine, proto, getBaseClasses, "getBaseClasses");
     
+
+        // properties of secondary base class RLayerListener:
+        
+
+        // methods of secondary base class RLayerListener:
+        
 
     // properties:
     
@@ -70,6 +82,12 @@
             REcmaHelper::registerFunction(&engine, proto, updateFromObject, "updateFromObject");
             
             REcmaHelper::registerFunction(&engine, proto, clearEditor, "clearEditor");
+            
+            REcmaHelper::registerFunction(&engine, proto, updateLayers, "updateLayers");
+            
+            REcmaHelper::registerFunction(&engine, proto, setCurrentLayer, "setCurrentLayer");
+            
+            REcmaHelper::registerFunction(&engine, proto, clearLayers, "clearLayers");
             
             REcmaHelper::registerFunction(&engine, proto, propertyChanged, "propertyChanged");
             
@@ -86,6 +104,10 @@
             REcmaHelper::registerFunction(&engine, proto, getTypes, "getTypes");
             
             REcmaHelper::registerFunction(&engine, proto, getTypeCount, "getTypeCount");
+            
+            REcmaHelper::registerFunction(&engine, proto, setEntityTypeFilter, "setEntityTypeFilter");
+            
+            REcmaHelper::registerFunction(&engine, proto, getEntityTypeFilter, "getEntityTypeFilter");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RPropertyEditor*>(), *proto);
@@ -175,6 +197,15 @@
                 QScriptValue result = qScriptValueFromValue(engine, cppResult);
                 return result;
             }
+             QScriptValue REcmaPropertyEditor::getRLayerListener(QScriptContext *context,
+            QScriptEngine *engine)
+        
+            {
+                RLayerListener* cppResult =
+                    qscriptvalue_cast<RPropertyEditor*> (context->thisObject());
+                QScriptValue result = qScriptValueFromValue(engine, cppResult);
+                return result;
+            }
             
 
     // returns class name:
@@ -193,10 +224,17 @@
         
         list.append("RPropertyListener");
     
+        list.append("RLayerListener");
+    
 
         return qScriptValueFromSequence(engine, list);
     }
     
+        // properties of secondary base class RLayerListener:
+        
+
+        // methods of secondary base class RLayerListener:
+        
 
     // properties:
     
@@ -571,6 +609,174 @@
             return result;
         }
          QScriptValue
+        REcmaPropertyEditor::updateLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyEditor::updateLayers", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyEditor::updateLayers";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyEditor* self = 
+                        getSelf("updateLayers", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocumentInterface * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RDocumentInterface * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocumentInterface >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RDocumentInterface *RDocumentInterface *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->updateLayers(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEditor.updateLayers().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyEditor::updateLayers", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyEditor::setCurrentLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyEditor::setCurrentLayer", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyEditor::setCurrentLayer";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyEditor* self = 
+                        getSelf("setCurrentLayer", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocumentInterface * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RDocumentInterface * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocumentInterface >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RDocumentInterface *RDocumentInterface *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setCurrentLayer(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEditor.setCurrentLayer().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyEditor::setCurrentLayer", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyEditor::clearLayers
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyEditor::clearLayers", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyEditor::clearLayers";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyEditor* self = 
+                        getSelf("clearLayers", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->clearLayers();
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEditor.clearLayers().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyEditor::clearLayers", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPropertyEditor::propertyChanged
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -672,84 +878,6 @@
         ) /* type: QVariant */
      && (
             context->argument(2).isNumber()
-        ) /* type: RS::EntityType */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RPropertyTypeId*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RPropertyTypeId*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyTypeId.",
-                               context);                    
-                    }
-                    RPropertyTypeId 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isCopyable or pointer
-                    QVariant
-                    a1 =
-                    qscriptvalue_cast<
-                    QVariant
-                        >(
-                        context->argument(
-                        1
-                        )
-                    );
-                
-                    // argument isStandardType
-                    RS::EntityType
-                    a2 =
-                    (RS::EntityType)
-                    (int)
-                    context->argument( 2 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->propertyChanged(a0
-        ,
-    a1
-        ,
-    a2);
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    4 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RPropertyTypeId */
-     && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNumber() || 
-            context->argument(1).isString() || 
-            context->argument(1).isBool() || 
-            context->argument(1).isArray() || 
-            context->argument(1).isNull() || 
-            context->argument(1).isUndefined()
-        ) /* type: QVariant */
-     && (
-            context->argument(2).isNumber()
-        ) /* type: RS::EntityType */
-     && (
-            context->argument(3).isNumber()
         ) /* type: QVariant::Type */
     
     ){
@@ -785,19 +913,11 @@
                     );
                 
                     // argument isStandardType
-                    RS::EntityType
-                    a2 =
-                    (RS::EntityType)
-                    (int)
-                    context->argument( 2 ).
-                    toNumber();
-                
-                    // argument isStandardType
                     QVariant::Type
-                    a3 =
+                    a2 =
                     (QVariant::Type)
                     (int)
-                    context->argument( 3 ).
+                    context->argument( 2 ).
                     toNumber();
                 
     // end of arguments
@@ -809,9 +929,7 @@
         ,
     a1
         ,
-    a2
-        ,
-    a3);
+    a2);
     } else
 
 
@@ -915,94 +1033,6 @@
     a1
         ,
     a2);
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    4 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: RPropertyTypeId */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: int */
-     && (
-            context->argument(2).isVariant() || 
-            context->argument(2).isQObject() || 
-            context->argument(2).isNumber() || 
-            context->argument(2).isString() || 
-            context->argument(2).isBool() || 
-            context->argument(2).isArray() || 
-            context->argument(2).isNull() || 
-            context->argument(2).isUndefined()
-        ) /* type: QVariant */
-     && (
-            context->argument(3).isNumber()
-        ) /* type: RS::EntityType */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RPropertyTypeId*
-                    ap0 =
-                    qscriptvalue_cast<
-                    RPropertyTypeId*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RPropertyEditor: Argument 0 is not of type RPropertyTypeId.",
-                               context);                    
-                    }
-                    RPropertyTypeId 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isStandardType
-                    int
-                    a1 =
-                    (int)
-                    
-                    context->argument( 1 ).
-                    toNumber();
-                
-                    // argument isCopyable or pointer
-                    QVariant
-                    a2 =
-                    qscriptvalue_cast<
-                    QVariant
-                        >(
-                        context->argument(
-                        2
-                        )
-                    );
-                
-                    // argument isStandardType
-                    RS::EntityType
-                    a3 =
-                    (RS::EntityType)
-                    (int)
-                    context->argument( 3 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->listPropertyChanged(a0
-        ,
-    a1
-        ,
-    a2
-        ,
-    a3);
     } else
 
 
@@ -1464,6 +1494,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPropertyEditor::getTypeCount", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyEditor::setEntityTypeFilter
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyEditor::setEntityTypeFilter", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyEditor::setEntityTypeFilter";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyEditor* self = 
+                        getSelf("setEntityTypeFilter", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::EntityType */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::EntityType
+                    a0 =
+                    (RS::EntityType)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setEntityTypeFilter(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEditor.setEntityTypeFilter().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyEditor::setEntityTypeFilter", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPropertyEditor::getEntityTypeFilter
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPropertyEditor::getEntityTypeFilter", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPropertyEditor::getEntityTypeFilter";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPropertyEditor* self = 
+                        getSelf("getEntityTypeFilter", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::EntityType'
+    RS::EntityType cppResult =
+        
+               self->getEntityTypeFilter();
+        // return type: RS::EntityType
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEditor.getEntityTypeFilter().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPropertyEditor::getEntityTypeFilter", context, engine);
             return result;
         }
          QScriptValue

@@ -6,6 +6,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   hasShell="true" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
     <baseClass name="RPropertyListener" specifier="public" />
+    <baseClass name="RLayerListener" specifier="public" />
     <constructor>
       <variant />
     </constructor>
@@ -18,8 +19,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="onlyChanges"
         isConst="false" />
         <arg type="RS::EntityType" typeName="RS::EntityType"
-        name="entityTypeFilter" hasDefault="true"
-        default="RS :: EntityAll" isConst="false" />
+        name="filter" hasDefault="true"
+        default="RS :: EntityUnknown" isConst="false" />
         <arg type="bool" typeName="bool" name="manual"
         hasDefault="true" default="false" isConst="false" />
       </variant>
@@ -40,6 +41,29 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
     </method>
+    <method name="updateLayers" cppName="updateLayers"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="setCurrentLayer" cppName="setCurrentLayer"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="clearLayers" cppName="clearLayers"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
     <method name="propertyChanged" cppName="propertyChanged"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -48,9 +72,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="propertyTypeId" isConst="false" />
         <arg type="QVariant" typeName="QVariant"
         name="propertyValue" isConst="false" />
-        <arg type="RS::EntityType" typeName="RS::EntityType"
-        name="entityTypeFilter" hasDefault="true"
-        default="RS :: EntityAll" isConst="false" />
         <arg type="QVariant::Type" typeName="QVariant::Type"
         name="typeHint" hasDefault="true"
         default="QVariant :: Invalid" isConst="false" />
@@ -66,9 +87,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
         <arg type="QVariant" typeName="QVariant"
         name="propertyValue" isConst="false" />
-        <arg type="RS::EntityType" typeName="RS::EntityType"
-        name="entityTypeFilter" hasDefault="true"
-        default="RS :: EntityAll" isConst="false" />
       </variant>
     </method>
     <method name="getGroupTitles" cppName="getGroupTitles"
@@ -129,6 +147,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="type" isConst="false" />
       </variant>
     </method>
+    <method name="setEntityTypeFilter"
+    cppName="setEntityTypeFilter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RS::EntityType" typeName="RS::EntityType"
+        name="type" isConst="false" />
+      </variant>
+    </method>
+    <method name="getEntityTypeFilter"
+    cppName="getEntityTypeFilter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RS::EntityType" isPureVirtual="false" />
+    </method>
     <method name="checkType" cppName="checkType" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false">
@@ -157,9 +188,6 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="onlyChanges"
         hasDefault="true" default="false" isConst="false" />
-        <arg type="RS::EntityType" typeName="RS::EntityType"
-        name="entityTypeFilter" hasDefault="true"
-        default="RS :: EntityAll" isConst="false" />
       </variant>
     </method>
     <method name="updateProperty" cppName="updateProperty"

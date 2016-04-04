@@ -120,7 +120,7 @@
     <function_decl><type><name>void</name></type> <name>notifyPropertyListeners</name><parameter_list>(
         <param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>,
         <param><decl><type><name>bool</name></type> <name>onlyChanges</name>=<init><expr><name>false</name></expr></init></decl></param>,
-        <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityAll</name></name></expr></init></decl></param>
+        <param><decl><type><name><name>RS</name>::<name>EntityType</name></name></type> <name>entityTypeFilter</name> =<init> <expr><name><name>RS</name>::<name>EntityUnknown</name></name></expr></init></decl></param>
     )</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>notifyPropertyListeners</name><parameter_list>(<param><decl><type><name>RDocument</name>&amp;</type> <name>document</name></decl></param>, <param><decl><type><name>REntity</name>&amp;</type> <name>entity</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>notifyPropertyListeners</name><parameter_list>()</parameter_list>;</function_decl>

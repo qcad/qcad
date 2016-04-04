@@ -67,8 +67,7 @@
      * only the properties of that entity should be displayed, so that the user
      * can adjust properties before or while drawing the entity.
      */</comment>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateFromObject</name><parameter_list>(<param><decl><type><name>RObject</name>*</type> <name>object</name></decl></param>,
-            <param><decl><type><name>RDocument</name>*</type> <name>document</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateFromObject</name><parameter_list>(<param><decl><type><name>RObject</name>*</type> <name>object</name></decl></param>, <param><decl><type><name>RDocument</name>*</type> <name>document</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <comment type="block">/**
      * This method is called to signal that no properties are currently 

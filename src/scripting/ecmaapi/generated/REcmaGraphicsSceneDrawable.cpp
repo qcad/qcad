@@ -60,6 +60,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getText, "getText");
             
+            REcmaHelper::registerFunction(&engine, proto, setSelected, "setSelected");
+            
+            REcmaHelper::registerFunction(&engine, proto, setHighlighted, "setHighlighted");
+            
             REcmaHelper::registerFunction(&engine, proto, operator_assign, "operator_assign");
             
         engine.setDefaultPrototype(
@@ -560,13 +564,14 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RPainterPath'
-    RPainterPath cppResult =
+    // return type 'RPainterPath &'
+    RPainterPath & cppResult =
         
                self->getPainterPath();
-        // return type: RPainterPath
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: RPainterPath &
+                // reference
+                result = engine->newVariant(
+                QVariant::fromValue(&cppResult));
             
     } else
 
@@ -609,13 +614,14 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RImageData'
-    RImageData cppResult =
+    // return type 'RImageData &'
+    RImageData & cppResult =
         
                self->getImage();
-        // return type: RImageData
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: RImageData &
+                // reference
+                result = engine->newVariant(
+                QVariant::fromValue(&cppResult));
             
     } else
 
@@ -658,13 +664,14 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RTextBasedData'
-    RTextBasedData cppResult =
+    // return type 'RTextBasedData &'
+    RTextBasedData & cppResult =
         
                self->getText();
-        // return type: RTextBasedData
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+        // return type: RTextBasedData &
+                // reference
+                result = engine->newVariant(
+                QVariant::fromValue(&cppResult));
             
     } else
 
@@ -675,6 +682,116 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsSceneDrawable::getText", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsSceneDrawable::setSelected
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsSceneDrawable::setSelected", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneDrawable::setSelected";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsSceneDrawable* self = 
+                        getSelf("setSelected", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSelected(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneDrawable.setSelected().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneDrawable::setSelected", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsSceneDrawable::setHighlighted
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsSceneDrawable::setHighlighted", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneDrawable::setHighlighted";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsSceneDrawable* self = 
+                        getSelf("setHighlighted", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setHighlighted(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneDrawable.setHighlighted().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsSceneDrawable::setHighlighted", context, engine);
             return result;
         }
          QScriptValue

@@ -176,6 +176,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, isDimensionLabel, "isDimensionLabel");
             
+            REcmaHelper::registerFunction(&engine, proto, setSelected, "setSelected");
+            
+            REcmaHelper::registerFunction(&engine, proto, setHighlighted, "setHighlighted");
+            
+            REcmaHelper::registerFunction(&engine, proto, isHighlighted, "isHighlighted");
+            
             REcmaHelper::registerFunction(&engine, proto, getReferencePoints, "getReferencePoints");
             
             REcmaHelper::registerFunction(&engine, proto, moveReferencePoint, "moveReferencePoint");
@@ -3806,6 +3812,165 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaTextBasedData::isDimensionLabel", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextBasedData::setSelected
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedData::setSelected", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedData::setSelected";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("setSelected", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSelected(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setSelected().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedData::setSelected", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextBasedData::setHighlighted
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedData::setHighlighted", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedData::setHighlighted";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("setHighlighted", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setHighlighted(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setHighlighted().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedData::setHighlighted", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaTextBasedData::isHighlighted
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaTextBasedData::isHighlighted", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaTextBasedData::isHighlighted";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTextBasedData* self = 
+                        getSelf("isHighlighted", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isHighlighted();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.isHighlighted().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaTextBasedData::isHighlighted", context, engine);
             return result;
         }
          QScriptValue
