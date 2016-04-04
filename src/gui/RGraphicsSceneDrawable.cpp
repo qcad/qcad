@@ -49,6 +49,37 @@ void RGraphicsSceneDrawable::uninit() {
     type = Invalid;
 }
 
+void RGraphicsSceneDrawable::setSelected(bool on) {
+    switch (type) {
+    case PainterPath:
+        painterPath->setSelected(on);
+        break;
+    case Image:
+        image->setSelected(on);
+        break;
+    case Text:
+        text->setSelected(on);
+        break;
+    default:
+        break;
+    }
+}
+
+void RGraphicsSceneDrawable::setHighlighted(bool on) {
+    switch (type) {
+    case PainterPath:
+        painterPath->setHighlighted(on);
+        break;
+    case Image:
+        break;
+    case Text:
+        text->setHighlighted(on);
+        break;
+    default:
+        break;
+    }
+}
+
 RGraphicsSceneDrawable& RGraphicsSceneDrawable::operator=(const RGraphicsSceneDrawable& other) {
     uninit();
 

@@ -69,20 +69,23 @@ public:
         return type;
     }
 
-    RPainterPath getPainterPath() const {
+    RPainterPath& getPainterPath() const {
         Q_ASSERT(painterPath!=NULL);
         return *painterPath;
     }
 
-    RImageData getImage() const {
+    RImageData& getImage() const {
         Q_ASSERT(image!=NULL);
         return *image;
     }
 
-    RTextBasedData getText() const {
+    RTextBasedData& getText() const {
         Q_ASSERT(text!=NULL);
         return *text;
     }
+
+    void setSelected(bool on);
+    void setHighlighted(bool on);
 
     RGraphicsSceneDrawable& operator=(const RGraphicsSceneDrawable& other);
 
