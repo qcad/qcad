@@ -603,11 +603,11 @@ QList<RPainterPath> RGraphicsSceneQt::exportText(const RTextBasedData& text, boo
         REntity::Id id = getBlockRefOrEntityId();
         if (drawables.contains(id)) {
             //texts[getBlockRefOrEntityId()].append(textCopy);
-            drawables[id].append(text);
+            drawables[id].append(textCopy);
         }
         else {
             //texts.insert(getBlockRefOrEntityId(), QList<RTextBasedData>() << textCopy);
-            drawables.insert(id, QList<RGraphicsSceneDrawable>() << text);
+            drawables.insert(id, QList<RGraphicsSceneDrawable>() << textCopy);
         }
     }
 
@@ -836,14 +836,13 @@ void RGraphicsSceneQt::addTextToPreview(const RTextBasedData& text) {
 void RGraphicsSceneQt::highlightEntity(REntity& entity) {
     beginPreview();
     // get painter paths for closest entity:
-    QList<RGraphicsSceneDrawable> painterPaths = getDrawables(entity.getId());
-    for (int i = 0; i < painterPaths.size(); ++i) {
-        if (painterPaths[i].getType()==RGraphicsSceneDrawable::PainterPath) {
-            painterPaths[i].getPainterPath().setSelected(entity.isSelected());
-            painterPaths[i].getPainterPath().setHighlighted(true);
-        }
+    QList<RGraphicsSceneDrawable> drawables = getDrawables(entity.getId());
+    for (int i = 0; i < drawables.size(); ++i) {
+        drawables[i].setSelected(entity.isSelected());
+        drawables[i].setHighlighted(true);
     }
-    addToPreview(entity.getId(), painterPaths);
+    // highlighted entities are previews on top of original entities:
+    addToPreview(entity.getId(), drawables);
     endPreview();
 }
 
