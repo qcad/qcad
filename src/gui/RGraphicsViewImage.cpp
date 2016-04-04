@@ -266,6 +266,7 @@ void RGraphicsViewImage::updateImage() {
 //    }
 
     // draws the current preview on top of the buffer:
+    // highlighted entities are also part of the preview
     if (sceneQt->hasPreview()) {
         QPainter* painter = initPainter(graphicsBufferWithPreview, false);
         bgColorLightness = getBackgroundColor().lightness();
@@ -792,13 +793,13 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
 //    }
 
     // get painter paths for vector graphics entity:
-    QList<RGraphicsSceneDrawable> painterPaths;
+    QList<RGraphicsSceneDrawable> drawables;
     if (preview) {
         // get painter paths of the current preview:
-        painterPaths = sceneQt->getPreviewDrawables(id);
+        drawables = sceneQt->getPreviewDrawables(id);
     } else {
         // get painter paths of the given entity:
-        painterPaths = sceneQt->getDrawables(id);
+        drawables = sceneQt->getDrawables(id);
 
         // if at least one arc path is too detailed or not detailed enough,
         // or the path is an XLine or Ray, regen:
@@ -811,15 +812,15 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
 
         // do we need to regen:
         bool regen = false;
-        for (int p=0; p<painterPaths.size(); p++) {
-            if (painterPaths[p].getType()==RGraphicsSceneDrawable::PainterPath) {
-                if (painterPaths[p].getPainterPath().getAlwaysRegen()==true) {
+        for (int p=0; p<drawables.size(); p++) {
+            if (drawables[p].getType()==RGraphicsSceneDrawable::PainterPath) {
+                if (drawables[p].getPainterPath().getAlwaysRegen()==true) {
                     regen = true;
                     break;
                 }
-                if (painterPaths[p].getPainterPath().getAutoRegen()==true) {
-                    if (painterPaths[p].getPainterPath().getPixelSizeHint()>RS::PointTolerance &&
-                        (painterPaths[p].getPainterPath().getPixelSizeHint()<ps/5 || painterPaths[p].getPainterPath().getPixelSizeHint()>ps*5)) {
+                if (drawables[p].getPainterPath().getAutoRegen()==true) {
+                    if (drawables[p].getPainterPath().getPixelSizeHint()>RS::PointTolerance &&
+                        (drawables[p].getPainterPath().getPixelSizeHint()<ps/5 || drawables[p].getPainterPath().getPixelSizeHint()>ps*5)) {
 
                         regen = true;
                         break;
@@ -831,12 +832,12 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         // regen:
         if (regen) {
             sceneQt->exportEntity(id, true);
-            painterPaths = sceneQt->getDrawables(id);
+            drawables = sceneQt->getDrawables(id);
         }
     }
 
-    // paint painter paths:
-    QListIterator<RGraphicsSceneDrawable> i(painterPaths);
+    // paint drawables (painter paths, texts, images):
+    QListIterator<RGraphicsSceneDrawable> i(drawables);
     while (i.hasNext()) {
         RGraphicsSceneDrawable drawable = i.next();
 
@@ -1421,6 +1422,11 @@ void RGraphicsViewImage::paintText(QPainter* painter, RTextBasedData& text) {
                 }
                 applyColorCorrection(pen);
                 applyColorMode(pen);
+
+                if (text.isHighlighted()) {
+                    pen.setColor(RColor::getHighlighted(pen.color(), bgColorLightness, 100));
+                }
+
                 painter->setPen(pen);
             }
             textLayouts[i].layout->setTextOption(o);
