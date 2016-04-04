@@ -46,6 +46,7 @@ class RDocument;
  */
 class QCADCORE_EXPORT RLayer: public RObject {
 public:
+    static RPropertyTypeId PropertyCustom;
     static RPropertyTypeId PropertyType;
     static RPropertyTypeId PropertyHandle;
     static RPropertyTypeId PropertyProtected;

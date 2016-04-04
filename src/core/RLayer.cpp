@@ -19,6 +19,7 @@
 #include "RLayer.h"
 #include "RDocument.h"
 
+RPropertyTypeId RLayer::PropertyCustom;
 RPropertyTypeId RLayer::PropertyType;
 RPropertyTypeId RLayer::PropertyHandle;
 RPropertyTypeId RLayer::PropertyProtected;
@@ -67,6 +68,7 @@ RLayer::~RLayer() {
 }
 
 void RLayer::init() {
+    RLayer::PropertyCustom.generateId(typeid(RLayer), RObject::PropertyCustom);
     RLayer::PropertyType.generateId(typeid(RLayer), RObject::PropertyType);
     RLayer::PropertyHandle.generateId(typeid(RLayer), RObject::PropertyHandle);
     RLayer::PropertyProtected.generateId(typeid(RLayer), RObject::PropertyProtected);
@@ -90,12 +92,8 @@ void RLayer::setName(const QString& n) {
     name = n.trimmed();
 }
 
-bool RLayer::setProperty(RPropertyTypeId propertyTypeId,
-    const QVariant& value, RTransaction* transaction) {
-
-    Q_UNUSED(transaction)
-
-    bool ret = false;
+bool RLayer::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction) {
+    bool ret = RObject::setProperty(propertyTypeId, value, transaction);
 
     if (PropertyName == propertyTypeId) {
         // never change name of layer 0:
@@ -108,7 +106,7 @@ bool RLayer::setProperty(RPropertyTypeId propertyTypeId,
         }
     }
 
-    ret = RObject::setMember(name, value.toString().trimmed(), PropertyName == propertyTypeId);
+    ret = ret || RObject::setMember(name, value.toString().trimmed(), PropertyName == propertyTypeId);
     ret = ret || RObject::setMember(frozen, value, PropertyFrozen == propertyTypeId);
     ret = ret || RObject::setMember(locked, value, PropertyLocked == propertyTypeId);
     ret = ret || RObject::setMember(color, value, PropertyColor == propertyTypeId);
@@ -139,10 +137,7 @@ bool RLayer::setProperty(RPropertyTypeId propertyTypeId,
     return ret;
 }
 
-QPair<QVariant, RPropertyAttributes> RLayer::getProperty(
-        RPropertyTypeId& propertyTypeId, bool humanReadable,
-        bool noAttributes) {
-
+QPair<QVariant, RPropertyAttributes> RLayer::getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
     if (propertyTypeId == PropertyName) {
         return qMakePair(QVariant(name), RPropertyAttributes());
     }
