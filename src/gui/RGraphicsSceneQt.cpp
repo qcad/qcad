@@ -168,11 +168,11 @@ bool RGraphicsSceneQt::beginPath() {
             currentPainterPath.setSelected(true);
         }
     }
-    else {
-        if (entity!=NULL && entity->getCustomProperty("QCADCAM", "simulation", false)==true) {
-            currentPainterPath.setHighlighted(true);
-        }
-    }
+//    else {
+//        if (entity!=NULL && entity->getCustomProperty("QCADCAM", "simulation", false)==true) {
+//            currentPainterPath.setHighlighted(true);
+//        }
+//    }
 
     return true;
 }
