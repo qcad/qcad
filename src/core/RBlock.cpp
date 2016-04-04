@@ -69,9 +69,7 @@ void RBlock::setName(const QString& n) {
     name = n.trimmed();
 }
 
-bool RBlock::setProperty(RPropertyTypeId propertyTypeId,
-    const QVariant& value, RTransaction* transaction) {
-
+bool RBlock::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction) {
     bool ret = RObject::setProperty(propertyTypeId, value, transaction);
 
     if (PropertyName == propertyTypeId) {
@@ -95,10 +93,7 @@ bool RBlock::setProperty(RPropertyTypeId propertyTypeId,
     return ret;
 }
 
-QPair<QVariant, RPropertyAttributes> RBlock::getProperty(
-        RPropertyTypeId& propertyTypeId,
-        bool humanReadable, bool noAttributes) {
-
+QPair<QVariant, RPropertyAttributes> RBlock::getProperty(RPropertyTypeId& propertyTypeId, bool humanReadable, bool noAttributes) {
     if (propertyTypeId == PropertyName) {
         return qMakePair(QVariant(name), RPropertyAttributes());
     }
