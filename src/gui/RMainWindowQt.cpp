@@ -546,7 +546,7 @@ bool RMainWindowQt::event(QEvent* e) {
     RTransactionEvent* te = dynamic_cast<RTransactionEvent*>(e);
     if (te!=NULL) {
         // combined properties might have changed (deleted entities):
-        notifyPropertyListeners(getDocument(), te->hasOnlyChanges(), te->getEntityTypeFilter());
+        notifyPropertyListeners(getDocument(), te->hasOnlyChanges());
         // selection might have changed (deleted entities):
         notifySelectionListeners(getDocumentInterface());
         // notify transaction listeners:
