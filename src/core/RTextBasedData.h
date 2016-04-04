@@ -259,6 +259,19 @@ public:
         return dimensionLabel;
     }
 
+    void setSelected(bool on) {
+        REntityData::setSelected(on);
+        update();
+    }
+
+    void setHighlighted(bool on) {
+        highlighted = on;
+    }
+
+    bool isHighlighted() const {
+        return highlighted;
+    }
+
     virtual QList<RVector> getReferencePoints(
         RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 
@@ -333,6 +346,7 @@ protected:
     double xScale;
     bool simple;
     bool dimensionLabel;
+    bool highlighted;
 
     mutable double height;
     mutable double width;

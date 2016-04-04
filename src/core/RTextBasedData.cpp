@@ -48,6 +48,7 @@ RTextBasedData::RTextBasedData(RDocument *document)
    xScale(1.0),
    simple(false),
    dimensionLabel(false),
+   highlighted(false),
    height(RNANDOUBLE), width(RNANDOUBLE), dirty(true), gotDraft(false) {
 }
 
@@ -105,6 +106,7 @@ RTextBasedData::RTextBasedData(const RVector& position,
       xScale(1.0),
       simple(simple),
       dimensionLabel(false),
+      highlighted(false),
       height(RNANDOUBLE), width(RNANDOUBLE),
       dirty(true), gotDraft(false) {
 
