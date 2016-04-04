@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>BehaviorPreferences</name>
     <message>
@@ -29,7 +29,7 @@
     <message>
         <location line="+10"/>
         <source>Double-click to edit hatch</source>
-        <translation type="unfinished"></translation>
+        <translation>Dvoklik za urejanje šrafure</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -44,7 +44,7 @@
     <message>
         <location line="+16"/>
         <source>Select block references together with attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Izberi blokovne reference skupaj z atributi</translation>
     </message>
     <message>
         <location line="-78"/>
@@ -58,7 +58,7 @@
     </message>
     <message>
         <source>Right-click on entity shows context menu</source>
-        <translation type="vanished">Desni klik na entiteto prikaže kontekstni meni</translation>
+        <translation>Desni klik na entiteto prikaže kontekstni meni</translation>
     </message>
     <message>
         <location line="+46"/>
@@ -68,7 +68,7 @@
     <message>
         <location line="+20"/>
         <source>Block Selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Blokovni izbor</translation>
     </message>
     <message>
         <location line="+16"/>

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>SaveAs</name>
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>File Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Datotečni vmesnik</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Use system file dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Uporabi sistemski datotečni vmesnik</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Saving</source>
-        <translation type="unfinished"></translation>
+        <translation>Shranjevanje</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -35,16 +35,16 @@
     </message>
     <message>
         <source>Save as</source>
-        <translation type="vanished">Shrani kot</translation>
+        <translation>Shrani kot</translation>
     </message>
     <message>
         <source>No export filters</source>
-        <translation type="vanished">Ni filtrov za izvoz</translation>
+        <translation>Ni filtrov za izvoz</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteka</translation>
     </message>
     <message>
         <location line="+24"/>

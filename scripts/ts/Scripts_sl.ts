@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>DefaultAction</name>
     <message>
@@ -51,7 +51,7 @@
     <message>
         <location line="+120"/>
         <source>Editing block &apos;%1&apos;&lt;br&gt;Choose &lt;i&gt;Block &gt; Return to Main Drawing&lt;/i&gt; when done</source>
-        <translation type="unfinished"></translation>
+        <translation>Urejanje gradnika &apos;%1&lt;br&gt;Ko boste končali, izberite&lt;i&gt;Gradnik &gt; Vrnitev na glasvno risbo&lt;/i&gt;</translation>
     </message>
 </context>
 <context>
@@ -85,7 +85,7 @@
     </message>
     <message>
         <source>Block Options</source>
-        <translation type="vanished">Nastavitve bloka</translation>
+        <translation>Nastavitve bloka</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -105,7 +105,7 @@
     <message>
         <location line="+214"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>Dolžina:</translation>
     </message>
     <message>
         <location line="+40"/>
@@ -227,7 +227,7 @@
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation type="unfinished">Lok</translation>
+        <translation>Lok</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -434,12 +434,12 @@
     <message>
         <location line="+2"/>
         <source>Layouts</source>
-        <translation type="unfinished"></translation>
+        <translation>Razporeditve</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Razporeditev</translation>
     </message>
     <message>
         <location line="+2"/>

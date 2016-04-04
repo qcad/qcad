@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>LibraryBrowser</name>
     <message>
@@ -281,12 +281,12 @@ shown in search results:</source>
     </message>
     <message>
         <source>Tags</source>
-        <translation type="vanished">Značke</translation>
+        <translation>Značke</translation>
     </message>
     <message>
         <location line="+60"/>
         <source>Search</source>
-        <translation type="unfinished"></translation>
+        <translation>Išči</translation>
     </message>
     <message>
         <location line="+23"/>
@@ -310,7 +310,7 @@ shown in search results:</source>
     </message>
     <message>
         <source>about:blank</source>
-        <translation type="vanished">o:nedoločeno</translation>
+        <translation>o:nedoločeno</translation>
     </message>
     <message>
         <location line="+126"/>

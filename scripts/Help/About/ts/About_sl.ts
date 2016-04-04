@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl_SI">
+<TS version="2.0" language="sl_SI">
 <context>
     <name>About</name>
     <message>
@@ -21,12 +21,12 @@
     <message>
         <location line="+6"/>
         <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
-        <translation type="unfinished"></translation>
+        <translation>Del tega programa © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
-        <translation type="unfinished"></translation>
+        <translation>Program je nuden KOT JE to je BREZ KAKRŠNE KOLI GARANCIJE, KAR VKLUČUJE GARANCIJO OBLIKE, STROJNO OBDELOVALNOST TER USKLAJENOST ZA DOLOČENI NAMEN.</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -121,11 +121,11 @@
     </message>
     <message>
         <source>Portions of this software © 2013 Digia Plc.</source>
-        <translation type="vanished">Del tega programa  © 2013 Digia Plc.</translation>
+        <translation>Del tega programa  © 2013 Digia Plc.</translation>
     </message>
     <message>
         <source>Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).</source>
-        <translation type="vanished">Del tega programa © 2012 Nokia Corporation ter/ali njihovih podružnic.</translation>
+        <translation>Del tega programa © 2012 Nokia Corporation ter/ali njihovih podružnic.</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -210,7 +210,7 @@
     </message>
     <message>
         <source>about:blank</source>
-        <translation type="vanished">o:prazno</translation>
+        <translation>o:prazno</translation>
     </message>
     <message>
         <location line="+67"/>
