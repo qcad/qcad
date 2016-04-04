@@ -537,7 +537,8 @@ bool RMainWindowQt::event(QEvent* e) {
 
     RSelectionChangedEvent* sce = dynamic_cast<RSelectionChangedEvent*>(e);
     if (sce!=NULL) {
-        notifyPropertyListeners(getDocument());
+        // selection changed: reset property editor filter to show all entities:
+        notifyPropertyListeners(getDocument(), false, RS::EntityAll);
         notifySelectionListeners(getDocumentInterface());
         return true;
     }

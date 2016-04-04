@@ -119,7 +119,7 @@ public:
     void notifyPropertyListeners(
         RDocument* document,
         bool onlyChanges=false,
-        RS::EntityType entityTypeFilter = RS::EntityAll
+        RS::EntityType entityTypeFilter = RS::EntityUnknown
     );
     void notifyPropertyListeners(RDocument& document, REntity& entity);
     void notifyPropertyListeners();

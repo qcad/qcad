@@ -16,23 +16,22 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include "RGlobal.h"
+#include "RColor.h"
 #include "RDebug.h"
-#include "RMetaTypes.h"
+#include "RGlobal.h"
 #include "RMath.h"
 #include "RMainWindow.h"
+#include "RMetaTypes.h"
 #include "RPropertyEditor.h"
 #include "RPropertyEvent.h"
-#include "RDocument.h"
-#include "RObject.h"
-#include "RColor.h"
 
 /**
  * Default Constructor.
  */
-RPropertyEditor::RPropertyEditor() {
-    guiUpToDate = false;
-    updatesDisabled = false;
+RPropertyEditor::RPropertyEditor()
+    : guiUpToDate(false),
+      updatesDisabled(false),
+      entityTypeFilter(RS::EntityAll) {
 }
 
 /**
@@ -168,10 +167,11 @@ void RPropertyEditor::removeAllButThese(
 /**
  * Updates the property editor to contain the properties of the
  * objects that are selected for editing in the given document.
+ *
+ * \param filter RS::EntityUnknown to use same filter as previously used,
+ * any other value to change filter.
  */
-void RPropertyEditor::updateFromDocument(RDocument* document,
-    bool onlyChanges, RS::EntityType entityTypeFilter, bool manual) {
-
+void RPropertyEditor::updateFromDocument(RDocument* document, bool onlyChanges, RS::EntityType filter, bool manual) {
     if (updatesDisabled) {
         return;
     }
@@ -179,6 +179,10 @@ void RPropertyEditor::updateFromDocument(RDocument* document,
     if (document == NULL) {
         clearEditor();
         return;
+    }
+
+    if (filter!=RS::EntityUnknown) {
+        setEntityTypeFilter(filter);
     }
 
     combinedProperties.clear();
@@ -305,7 +309,7 @@ void RPropertyEditor::updateFromDocument(RDocument* document,
         }
     }
 
-    updateGui(onlyChanges, entityTypeFilter);
+    updateGui(onlyChanges);
 
     updatesDisabled = false;
 }
@@ -342,10 +346,25 @@ void RPropertyEditor::clearEditor() {
     updateGui();
 }
 
+void RPropertyEditor::updateLayers(RDocumentInterface* documentInterface) {
+    if (documentInterface==NULL) {
+        updateFromDocument(NULL, false);
+    }
+    else {
+        updateFromDocument(&documentInterface->getDocument(), false);
+    }
+}
+
+void RPropertyEditor::setCurrentLayer(RDocumentInterface* documentInterface) {
+    updateLayers(documentInterface);
+}
+
+void RPropertyEditor::clearLayers() {
+    // do nothing
+}
 
 void RPropertyEditor::propertyChanged(RPropertyTypeId propertyTypeId,
                                       QVariant propertyValue,
-                                      RS::EntityType entityTypeFilter,
                                       QVariant::Type typeHint) {
 
     if (RMainWindow::getMainWindow() == NULL) {
@@ -366,15 +385,14 @@ void RPropertyEditor::propertyChanged(RPropertyTypeId propertyTypeId,
 }
 
 void RPropertyEditor::listPropertyChanged(RPropertyTypeId propertyTypeId,
-                     int index, QVariant propertyValue,
-                     RS::EntityType entityTypeFilter) {
+                     int index, QVariant propertyValue) {
 
     QVariant v;
     QList<QPair<int, double> > list;
     list.append(QPair<int, double>(index, propertyValue.toDouble()));
     v.setValue(list);
 
-    propertyChanged(propertyTypeId, v, entityTypeFilter);
+    propertyChanged(propertyTypeId, v);
 }
 
 /**

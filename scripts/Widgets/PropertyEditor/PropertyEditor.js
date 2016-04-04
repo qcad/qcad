@@ -49,8 +49,7 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
         if (!isNumber(value)) {
             return;
         }
-        this.propertyEditor.listPropertyChanged(this.propertyType, index, value,
-                                                this.propertyEditor.entityTypeFilter);
+        this.propertyEditor.listPropertyChanged(this.propertyType, index, value);
         return;
     }
 
@@ -63,8 +62,7 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
                 return;
             }
             this.propertyEditor.propertyChanged(this.propertyType,
-                                                this.sender.itemData(value),
-                                                this.propertyEditor.entityTypeFilter);
+                                                this.sender.itemData(value));
             return;
         }
 
@@ -97,7 +95,7 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
         }
     }
 
-    this.propertyEditor.propertyChanged(this.propertyType, value, this.propertyEditor.entityTypeFilter, typeHint);
+    this.propertyEditor.propertyChanged(this.propertyType, value, typeHint);
 };
 
 /**
@@ -106,7 +104,7 @@ PropertyWatcher.prototype.propertyChanged = function(value) {
  * that match the current entity type filter.
  */
 PropertyWatcher.prototype.propertyRemoved = function() {
-    this.propertyEditor.propertyChanged(this.propertyType, null, this.propertyEditor.entityTypeFilter);
+    this.propertyEditor.propertyChanged(this.propertyType, null);
     this.propertyEditor.onlyChangesOverride = false;
 };
 
@@ -183,7 +181,7 @@ IndexWatcher.prototype.indexChanged = function(index) {
 function PropertyEditorImpl(basePath) {
     RPropertyEditor.call(this);
 
-    this.entityTypeFilter = RS.EntityAll;
+    this.setEntityTypeFilter(RS.EntityAll);
     this.widget = WidgetFactory.createWidget(basePath, "PropertyEditor.ui");
     this.basePath = basePath;
 
@@ -270,16 +268,16 @@ PropertyEditorImpl.prototype = new RPropertyEditor();
 /**
  * Implementation from RPropertyEditor to update the property editor GUI.
  */
-PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter) {
+PropertyEditorImpl.prototype.updateGui = function(onlyChanges) {
     var row;
     
-    if (!isNull(entityTypeFilter)) {
-        this.entityTypeFilter=entityTypeFilter;
-    }
+//    if (!isNull(entityTypeFilter)) {
+//        this.entityTypeFilter=entityTypeFilter;
+//    }
 
-    if (isNull(this.entityTypeFilter)) {
-        debugger;
-    }
+//    if (isNull(this.entityTypeFilter)) {
+//        debugger;
+//    }
 
     if (!isNull(this.onlyChangesOverride)) {
         onlyChanges = this.onlyChangesOverride;
@@ -681,10 +679,10 @@ PropertyEditorImpl.prototype.updateGui = function(onlyChanges, entityTypeFilter)
         }
         if (types.length!==1) {
             // TODO: add at 0 if 'no selection' item present at 0:
-            selectionCombo.insertItem(0, qsTr("All") + " (" + totalCount + ")", RS.EntityAllManual);
+            selectionCombo.insertItem(0, qsTr("All") + " (" + totalCount + ")", RS.EntityAll);
         }
 
-        var index = selectionCombo.findData(this.entityTypeFilter);
+        var index = selectionCombo.findData(this.getEntityTypeFilter());
         if (index===-1) {
             // TODO: change to 1 if 'no selection' item present at 0:
             selectionCombo.currentIndex = 0;
@@ -1214,14 +1212,20 @@ PropertyEditorImpl.prototype.filterChanged = function() {
     }
 
     var selectionCombo = this.widget.findChild("Selection");
-    this.entityTypeFilter = selectionCombo.itemData(selectionCombo.currentIndex);
+    var entityTypeFilter = selectionCombo.itemData(selectionCombo.currentIndex);
+//    if (!isNull(entityTypeFilter)) {
+//        this.setEntityTypeFilter(entityTypeFilter);
+//    }
+//    else {
+//        this.setEntityTypeFilter(RS.EntityAll);
+//    }
 
-    if (!isNumber(this.entityTypeFilter)) {
-        this.updateFromDocument(doc, false, RS.EntityAll, true);
-    }
-    else {
-        this.updateFromDocument(doc, false, this.entityTypeFilter, true);
-    }
+//    if (!isNumber(this.entityTypeFilter)) {
+//        this.updateFromDocument(doc, false, RS.EntityAll, true);
+//    }
+//    else {
+        this.updateFromDocument(doc, false, entityTypeFilter, true);
+//    }
 };
 
 PropertyEditorImpl.prototype.getAdjustedPropertyValue = function(propertyTypeId) {
@@ -1296,7 +1300,7 @@ PropertyEditorImpl.prototype.addCustomProperty = function() {
     var value = valueEdit.text;
 
     // trigger change property operation for custom property:
-    this.propertyChanged(new RPropertyTypeId(RSettings.getAppId(), name), value, this.entityTypeFilter);
+    this.propertyChanged(new RPropertyTypeId(RSettings.getAppId(), name), value, this.getEntityTypeFilter());
     this.onlyChangesOverride = false;
 
     dialog.destroy();
@@ -1385,6 +1389,7 @@ PropertyEditor.init = function(basePath) {
     dock.objectName = "PropertyEditorDock";
     dock.setWidget(pe.widget);
     appWin.addPropertyListener(pe);
+    appWin.addLayerListener(pe.getRLayerListener());
     appWin.addDockWidget(Qt.RightDockWidgetArea, dock);
     PropertyEditor.instance = pe;
 

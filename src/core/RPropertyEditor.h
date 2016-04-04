@@ -29,6 +29,8 @@
 #include <QStringList>
 
 #include "RDocument.h"
+#include "RDocumentInterface.h"
+#include "RLayerListener.h"
 #include "RObject.h"
 #include "RPropertyListener.h"
 
@@ -41,7 +43,7 @@
  * \scriptable
  * \generateScriptShell
  */
-class QCADCORE_EXPORT RPropertyEditor: public RPropertyListener {
+class QCADCORE_EXPORT RPropertyEditor: public RPropertyListener, public RLayerListener {
 
     Q_DECLARE_TR_FUNCTIONS(RPropertyEditor)
 
@@ -50,16 +52,18 @@ public:
     virtual ~RPropertyEditor();
 
     // from RPropertyListener interface:
-    virtual void updateFromDocument(RDocument* document, bool onlyChanges,
-            RS::EntityType entityTypeFilter = RS::EntityAll, bool manual = false);
+    virtual void updateFromDocument(RDocument* document, bool onlyChanges, RS::EntityType filter = RS::EntityUnknown, bool manual = false);
     virtual void updateFromObject(RObject* object, RDocument* document = NULL);
     virtual void clearEditor();
+
+    virtual void updateLayers(RDocumentInterface* documentInterface);
+    virtual void setCurrentLayer(RDocumentInterface* documentInterface);
+    virtual void clearLayers();
+
     void propertyChanged(RPropertyTypeId propertyTypeId, QVariant propertyValue,
-                         RS::EntityType entityTypeFilter = RS::EntityAll,
                          QVariant::Type typeHint = QVariant::Invalid);
     void listPropertyChanged(RPropertyTypeId propertyTypeId,
-                         int index, QVariant propertyValue,
-                         RS::EntityType entityTypeFilter = RS::EntityAll);
+                         int index, QVariant propertyValue);
 
     QStringList getGroupTitles();
     QStringList getPropertyTitles(const QString& group);
@@ -70,27 +74,29 @@ public:
     QList<RS::EntityType> getTypes();
     int getTypeCount(RS::EntityType type);
 
+    void setEntityTypeFilter(RS::EntityType type) {
+        entityTypeFilter = type;
+    }
+
+    RS::EntityType getEntityTypeFilter() const {
+        return entityTypeFilter;
+    }
+
     static bool checkType(RS::EntityType type, RS::EntityType filter);
 
 protected:
-    virtual void updateEditor(RObject& object, bool doUpdateGui,
-            RDocument* document = NULL);
+    virtual void updateEditor(RObject& object, bool doUpdateGui, RDocument* document = NULL);
 
     /**
      * Updates the user interface of this property editor. This is the
      * only part of the property editor that depends on the user interface
      * and GUI toolkit that is available.
      */
-    virtual void updateGui(
-        bool onlyChanges = false,
-        RS::EntityType entityTypeFilter = RS::EntityAll) {
-
+    virtual void updateGui(bool onlyChanges = false) {
         Q_UNUSED(onlyChanges)
-        Q_UNUSED(entityTypeFilter)
     }
 
-    void updateProperty(const RPropertyTypeId& propertyTypeId, RObject& object,
-            RDocument* document);
+    void updateProperty(const RPropertyTypeId& propertyTypeId, RObject& object, RDocument* document);
     void removeAllButThese(const QMultiMap<QString, QString>& propertyTitles, bool customOnly=false);
 
 protected:
@@ -105,6 +111,8 @@ protected:
     QMap<RS::EntityType, int> combinedTypes;
     bool guiUpToDate;
     bool updatesDisabled;
+
+    RS::EntityType entityTypeFilter;
 };
 
 Q_DECLARE_METATYPE(RPropertyEditor*)
