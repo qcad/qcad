@@ -113,8 +113,8 @@ public:
         return data;
     }
 
-    QList<RPainterPath> getPainterPaths(bool draft = false) const {
-        return data.getPainterPaths(draft);
+    QList<RPainterPath> getPainterPaths(bool draft = false, double pixelSizeHint = 0.0) const {
+        return data.getPainterPaths(draft, pixelSizeHint);
     }
 
     virtual int getComplexity() const {

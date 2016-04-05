@@ -40,7 +40,7 @@ RHatchData::RHatchData() :
     scaleFactor(1.0),
     angle(0.0),
     patternName("SOLID"),
-    dirty(true), gotDraft(false) {
+    dirty(true), gotDraft(false), gotPixelSizeHint(0.0) {
 }
 
 RHatchData::RHatchData(RDocument* document, const RHatchData& data)
@@ -77,6 +77,7 @@ RHatchData& RHatchData::operator =(const RHatchData& other) {
     boundaryPath = other.boundaryPath;
     gotDraft = other.gotDraft;
     pattern = other.pattern;
+    gotPixelSizeHint = other.gotPixelSizeHint;
 
     boundary.clear();
 
@@ -521,27 +522,32 @@ void RHatchData::addBoundary(QSharedPointer<RShape> shape) {
             }
         }
 
+        // 20160405: disabled, handled in getBoundaryPath at rendering time instead:
         // avoid arc boundaries with huge radius:
-        QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
-        if (!arc.isNull() && fabs(arc->getSweep())<RMath::deg2rad(2)) {
-            boundary.last().append(QSharedPointer<RShape>(new RLine(arc->getStartPoint(), arc->getEndPoint())));
-        }
-        else {
+//        QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
+//        if (!arc.isNull() && fabs(arc->getSweep())<RMath::deg2rad(2)) {
+//            boundary.last().append(QSharedPointer<RShape>(new RLine(arc->getStartPoint(), arc->getEndPoint())));
+//        }
+//        else {
             boundary.last().append(shape);
-        }
+//        }
     }
 
     update();
 }
 
-QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
+/**
+ * \param pixelSizeHint Pixel size hint for rendering arcs.
+ * Negative if it does not matter (current cached painter paths are returned).
+ */
+QList<RPainterPath> RHatchData::getPainterPaths(bool draft, double pixelSizeHint) const {
     if (!updatesEnabled) {
         return painterPaths;
     }
 
     if (!dirty) {
         // cached painter path represents hatch in current draft mode (draft or normal):
-        if (draft==gotDraft) {
+        if (draft==gotDraft && (RMath::fuzzyCompare(pixelSizeHint, gotPixelSizeHint) || pixelSizeHint<0.0)) {
             return painterPaths;
         }
     }
@@ -551,7 +557,7 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
     // for solids, return boundary path, which can be filled:
     // in draft mode, return boundary path to be shown without fill:
     if (isSolid() || draft) {
-        getBoundaryPath();
+        getBoundaryPath(pixelSizeHint);
         if (draft) {
             boundaryPath.setPen(QPen(Qt::SolidLine));
             boundaryPath.setBrush(QBrush(Qt::NoBrush));
@@ -560,6 +566,7 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
             boundaryPath.setPen(QPen(Qt::NoPen));
             boundaryPath.setBrush(QBrush(Qt::SolidPattern));
         }
+        boundaryPath.setAutoRegen(true);
         painterPaths.append(boundaryPath);
         dirty = false;
         gotDraft = draft;
@@ -605,7 +612,7 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
         return painterPaths;
     }
 
-    getBoundaryPath();
+    getBoundaryPath(pixelSizeHint);
 
     RPattern localPattern = *p;
 
@@ -824,12 +831,14 @@ QList<RPainterPath> RHatchData::getPainterPaths(bool draft) const {
 /**
  * \return Painter path that represents this hatch boundary.
  */
-RPainterPath RHatchData::getBoundaryPath() const {
-    if (!dirty) {
+RPainterPath RHatchData::getBoundaryPath(double pixelSizeHint) const {
+    if (!dirty && (RMath::fuzzyCompare(gotPixelSizeHint, pixelSizeHint) || pixelSizeHint<0.0)) {
         return boundaryPath;
     }
 
     boundaryPath = RPainterPath();
+    gotPixelSizeHint = pixelSizeHint;
+    boundaryPath.setPixelSizeHint(pixelSizeHint);
 
     for (int i=0; i<boundary.size(); ++i) {
         QList<QSharedPointer<RShape> > loop = boundary.at(i);
@@ -878,11 +887,12 @@ RPainterPath RHatchData::getBoundaryPath() const {
                     }
                 }
 
-                RBox box(arc->getCenter() - RVector(arc->getRadius(), arc->getRadius()),
-                         arc->getCenter() + RVector(arc->getRadius(), arc->getRadius()));
-                boundaryPath.arcTo(box.toQRectF(),
-                           360.0 - RMath::rad2deg(arc->getStartAngle()),
-                           -RMath::rad2deg(arc->getSweep()));
+                RPainterPathExporter exp;
+                exp.setExportZeroLinesAsPoints(false);
+                exp.setPixelSizeHint(pixelSizeHint);
+                exp.exportArcSegment(*arc);
+                RPainterPath p = exp.getPainterPath();
+                boundaryPath.addPath(p);
                 cursor = arc->getEndPoint();
                 continue;
             }
@@ -939,6 +949,8 @@ RPainterPath RHatchData::getBoundaryPath() const {
                 RBox box(-RVector(ellipseArcNorm.getMajorRadius(), ellipseArcNorm.getMinorRadius()),
                          RVector(ellipseArcNorm.getMajorRadius(), ellipseArcNorm.getMinorRadius()));
                 ePath.moveTo(ellipseArcNorm.getStartPoint());
+
+                // TODO: interpolate as line segments:
                 ePath.arcTo(box.toQRectF(),
                             360 - RMath::rad2deg(ellipseArcNorm.getStartParam()),
                             -RMath::rad2deg(ellipseArcNorm.getSweep()));

@@ -146,8 +146,8 @@ public:
     void newLoop();
     void cancelLoop();
     void addBoundary(QSharedPointer<RShape> shape);
-    RPainterPath getBoundaryPath() const;
-    virtual QList<RPainterPath> getPainterPaths(bool draft = false) const;
+    RPainterPath getBoundaryPath(double pixelSizeHint = -1.0) const;
+    virtual QList<RPainterPath> getPainterPaths(bool draft = false, double pixelSizeHint = -1.0) const;
 
     QList<QList<QSharedPointer<RShape> > > getBoundary() const {
         return boundary;
@@ -218,6 +218,7 @@ private:
     mutable QList<RPainterPath> painterPaths;
     mutable bool dirty;
     mutable bool gotDraft;
+    mutable double gotPixelSizeHint;
 
     static RHatchProxy* hatchProxy;
 };
