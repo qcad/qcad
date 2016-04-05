@@ -157,21 +157,21 @@ void RDocument::init() {
         transaction.addObject(paperSpace);
         paperSpace->setLayoutId(paperLayout->getId());
 
-        QSharedPointer<RViewportEntity> viewport(
-            new RViewportEntity(
-                this, RViewportData()
-            )
-        );
-        viewport->setCenter(RVector(128.5, 97.5));
-        viewport->setViewCenter(RVector(128.5, 97.5));
-        viewport->setViewTarget(RVector(0,0));
-        viewport->setWidth(314.226);
-        viewport->setHeight(222.18);
-        viewport->setOverall(true);
-        viewport->setBlockId(paperSpace->getId());
-        viewport->setLayerId(getLayerId("0"));
+//        QSharedPointer<RViewportEntity> viewport(
+//            new RViewportEntity(
+//                this, RViewportData()
+//            )
+//        );
+//        viewport->setCenter(RVector(128.5, 97.5));
+//        viewport->setViewCenter(RVector(128.5, 97.5));
+//        viewport->setViewTarget(RVector(0,0));
+//        viewport->setWidth(314.226);
+//        viewport->setHeight(222.18);
+//        viewport->setOverall(true);
+//        viewport->setBlockId(paperSpace->getId());
+//        viewport->setLayerId(getLayerId("0"));
 
-        transaction.addObject(viewport, false);
+//        transaction.addObject(viewport, false);
     }
 
     storage.setModelSpaceBlockId(getBlockId(RBlock::modelSpaceName));
