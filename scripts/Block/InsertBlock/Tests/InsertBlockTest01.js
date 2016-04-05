@@ -55,9 +55,9 @@ InsertBlockTest01.prototype.test00 = function() {
     this.dlgEnd();
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     var w = objectFromPath('MainWindow::BlockListDock::BlockListWidget::BlockList::qt_scrollarea_viewport');
-    this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(87, 31), Qt.LeftButton, 1, 0);
+    this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(87, 51), Qt.LeftButton, 1, 0);
     var w = objectFromPath('MainWindow::BlockListDock::BlockListWidget::BlockList::qt_scrollarea_viewport');
-    this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(87, 31), Qt.LeftButton, 0, 0);
+    this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(87, 51), Qt.LeftButton, 0, 0);
     this.dlgStart();
     this.dlgAppendCode('var map = new Map()');
     this.dlgAppendCode("map.put('DialogOpenedByTdb/ColumnCount', '5')");

@@ -56,9 +56,9 @@ RemoveBlockTest00.prototype.test00 = function() {
     this.sendMouseEventModelPos(QEvent.MouseButtonRelease, p, Qt.LeftButton, 0, 0);
     this.verifyDrawing('RemoveBlockTest00_000.dxf');
     var w = objectFromPath('MainWindow::BlockListDock::BlockListWidget::BlockList::qt_scrollarea_viewport');
-    this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(66, 33), Qt.LeftButton, 1, 0);
+    this.sendMouseEvent(w, QEvent.MouseButtonPress, new QPoint(66, 53), Qt.LeftButton, 1, 0);
     var w = objectFromPath('MainWindow::BlockListDock::BlockListWidget::BlockList::qt_scrollarea_viewport');
-    this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(66, 33), Qt.LeftButton, 0, 0);
+    this.sendMouseEvent(w, QEvent.MouseButtonRelease, new QPoint(66, 53), Qt.LeftButton, 0, 0);
     TdbTest.clickOnWidget('MainWindow::BlockListDock::BlockListWidget::RemoveBlock');
     this.verifyDrawing('RemoveBlockTest00_001.dxf');
     this.tearDown();
