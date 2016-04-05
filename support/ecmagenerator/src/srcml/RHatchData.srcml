@@ -147,8 +147,8 @@
     <function_decl><type><name>void</name></type> <name>newLoop</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>cancelLoop</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>addBoundary</name><parameter_list>(<param><decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></type> <name>shape</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>RPainterPath</name></type> <name>getBoundaryPath</name><parameter_list>(<param><decl><type><name>double</name></type> <name>pixelSizeHint</name> =<init> <expr>0.0</expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
-    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPaths</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>draft</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>pixelSizeHint</name> =<init> <expr>0.0</expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>RPainterPath</name></type> <name>getBoundaryPath</name><parameter_list>(<param><decl><type><name>double</name></type> <name>pixelSizeHint</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>getPainterPaths</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>draft</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>double</name></type> <name>pixelSizeHint</name> =<init> <expr><name>RDEFAULT_MIN1</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
 
     <function><type><name>QList<argument_list>&lt;<argument><name>QList<argument_list>&lt;<argument><name>QSharedPointer<argument_list>&lt;<argument><name>RShape</name></argument>&gt;</argument_list></name></argument> &gt;</argument_list></name></argument> &gt;</argument_list></name></type> <name>getBoundary</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>boundary</name></expr>;</return>
@@ -219,6 +219,7 @@
     <decl_stmt><decl><type><name>mutable</name> <name>QList<argument_list>&lt;<argument><name>RPainterPath</name></argument>&gt;</argument_list></name></type> <name>painterPaths</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>bool</name></type> <name>dirty</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>bool</name></type> <name>gotDraft</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>mutable</name> <name>double</name></type> <name>gotPixelSizeHint</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>static</name> <name>RHatchProxy</name>*</type> <name>hatchProxy</name></decl>;</decl_stmt>
 </private>}</block>;</class>

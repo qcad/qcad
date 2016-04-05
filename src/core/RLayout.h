@@ -203,11 +203,11 @@ public:
         denominatorCustomScale = v;
     }
 
-    void setPlotPaperUnits(PlotPaperUnits v) {
+    void setPlotPaperUnits(RLayout::PlotPaperUnits v) {
         plotPaperUnits = v;
     }
 
-    void setPlotRotation(PlotRotation v) {
+    void setPlotRotation(RLayout::PlotRotation v) {
         plotRotation = v;
     }
 
@@ -251,11 +251,11 @@ public:
         return denominatorCustomScale;
     }
 
-    PlotPaperUnits getPlotPaperUnits() const {
+    RLayout::PlotPaperUnits getPlotPaperUnits() const {
         return plotPaperUnits;
     }
 
-    PlotRotation getPlotRotation() const {
+    RLayout::PlotRotation getPlotRotation() const {
         return plotRotation;
     }
 
@@ -305,6 +305,8 @@ Q_DECLARE_METATYPE(QSharedPointer<RLayout>*)
 Q_DECLARE_METATYPE(RLayout)
 Q_DECLARE_METATYPE(RLayout*)
 Q_DECLARE_METATYPE(RLayout::PlotPaperUnits)
+Q_DECLARE_METATYPE(RLayout::PlotPaperUnits*)
 Q_DECLARE_METATYPE(RLayout::PlotRotation)
+Q_DECLARE_METATYPE(RLayout::PlotRotation*)
 
 #endif

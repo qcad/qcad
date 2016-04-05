@@ -63,6 +63,38 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyMaxExtentsY</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyMaxExtentsZ</name></decl>;</decl_stmt>
 
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotPaperMarginLeftMM</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotPaperMarginBottomMM</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotPaperMarginRightMM</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotPaperMarginTopMM</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotPaperSizeWidth</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotPaperSizeHeight</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotOriginX</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotOriginY</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotWindowAreaMinX</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotWindowAreaMinY</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotWindowAreaMaxX</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotWindowAreaMaxY</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyNumeratorCustomScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDenominatorCustomScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotPaperUnits</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyPlotRotation</name></decl>;</decl_stmt>
+
+    <enum>enum <name>PlotPaperUnits</name>
+    <block>{
+      <expr><name>Inches</name>         = 0</expr>,   <comment type="line">// Inches</comment>
+      <expr><name>Millimeters</name>    = 1</expr>,   <comment type="line">// Millimeters</comment>
+      <expr><name>Pixels</name>         = 2</expr>    <comment type="line">// Pixels</comment>
+    }</block>;</enum>
+
+    <enum>enum <name>PlotRotation</name>
+    <block>{
+      <expr><name>Zero</name>              = 0</expr>,   <comment type="line">// No rotation (0)</comment>
+      <expr><name>CounterClockWise</name>  = 1</expr>,   <comment type="line">// 90 CCW      (90)</comment>
+      <expr><name>Inverted</name>          = 2</expr>,   <comment type="line">// Inverted    (180)</comment>
+      <expr><name>ClockWise</name>         = 3</expr>    <comment type="line">// 90 CW       (270)</comment>
+    }</block>;</enum>
+
 </public><public>public:
     <constructor_decl><name>RLayout</name><parameter_list>()</parameter_list>;</constructor_decl>
 
@@ -132,6 +164,104 @@
         <return>return <expr><name>maxExtents</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setPlotPaperMarginLeftMM</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotPaperMarginLeftMM</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setPlotPaperMarginBottomMM</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotPaperMarginBottomMM</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setPlotPaperMarginRightMM</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotPaperMarginRightMM</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setPlotPaperMarginTopMM</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotPaperMarginTopMM</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setPlotPaperSize</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotPaperSize</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setPlotOrigin</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotOrigin</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setPlotWindowAreaMin</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotWindowAreaMin</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setPlotWindowAreaMax</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotWindowAreaMax</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setNumeratorCustomScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>numeratorCustomScale</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setDenominatorCustomScale</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>denominatorCustomScale</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setPlotPaperUnits</name><parameter_list>(<param><decl><type><name><name>RLayout</name>::<name>PlotPaperUnits</name></name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotPaperUnits</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setPlotRotation</name><parameter_list>(<param><decl><type><name><name>RLayout</name>::<name>PlotRotation</name></name></type> <name>v</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>plotRotation</name> = <name>v</name></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getPlotPaperMarginLeftMM</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotPaperMarginLeftMM</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getPlotPaperMarginBottomMM</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotPaperMarginBottomMM</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getPlotPaperMarginRightMM</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotPaperMarginRightMM</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getPlotPaperMarginTopMM</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotPaperMarginTopMM</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getPlotPaperSize</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotPaperSize</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getPlotOrigin</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotOrigin</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getPlotWindowAreaMin</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotWindowAreaMin</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>RVector</name></type> <name>getPlotWindowAreaMax</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotWindowAreaMax</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getNumeratorCustomScale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>numeratorCustomScale</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>double</name></type> <name>getDenominatorCustomScale</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>denominatorCustomScale</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name><name>RLayout</name>::<name>PlotPaperUnits</name></name></type> <name>getPlotPaperUnits</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotPaperUnits</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name><name>RLayout</name>::<name>PlotRotation</name></name></type> <name>getPlotRotation</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>plotRotation</name></expr>;</return>
+    }</block></function>
+
+
+
     <function_decl><type><name>virtual</name> <name>QPair<argument_list>&lt;<argument><name>QVariant</name></argument>, <argument><name>RPropertyAttributes</name></argument>&gt;</argument_list></name></type> <name>getProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name>&amp;</type> <name>propertyTypeId</name></decl></param>,
             <param><decl><type><name>bool</name></type> <name>humanReadable</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>noAttributes</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>setProperty</name><parameter_list>(<param><decl><type><name>RPropertyTypeId</name></type> <name>propertyTypeId</name></decl></param>,
@@ -154,6 +284,20 @@
     <decl_stmt><decl><type><name>RVector</name></type> <name>insertionBase</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>minExtents</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>maxExtents</name></decl>;</decl_stmt>
+
+    <comment type="line">// TODO: split into base class 'RPlotSettings':</comment>
+    <decl_stmt><decl><type><name>double</name></type> <name>plotPaperMarginLeftMM</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>plotPaperMarginBottomMM</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>plotPaperMarginRightMM</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>plotPaperMarginTopMM</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>plotPaperSize</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>plotOrigin</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>plotWindowAreaMin</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RVector</name></type> <name>plotWindowAreaMax</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>numeratorCustomScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>double</name></type> <name>denominatorCustomScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>PlotPaperUnits</name></type> <name>plotPaperUnits</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>PlotRotation</name></type> <name>plotRotation</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 
@@ -161,6 +305,10 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QSharedPointer&lt;RLayout&gt;*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLayout</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLayout*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLayout::PlotPaperUnits</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLayout::PlotPaperUnits*</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLayout::PlotRotation</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLayout::PlotRotation*</argument>)</argument_list></macro>
 
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 </unit>

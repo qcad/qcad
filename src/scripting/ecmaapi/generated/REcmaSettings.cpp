@@ -283,6 +283,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getSelectBlockWithAttribute, "getSelectBlockWithAttribute");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getHideAttributeWithBlock, "getHideAttributeWithBlock");
+            
 
     // static properties:
     
@@ -5374,6 +5376,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getSelectBlockWithAttribute", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getHideAttributeWithBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getHideAttributeWithBlock", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getHideAttributeWithBlock";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getHideAttributeWithBlock();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getHideAttributeWithBlock().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getHideAttributeWithBlock", context, engine);
             return result;
         }
          QScriptValue REcmaSettings::toString

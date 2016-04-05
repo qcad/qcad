@@ -175,6 +175,12 @@
         exportEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getEntityLayer
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isVisible
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         startEntity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

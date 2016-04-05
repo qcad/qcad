@@ -343,7 +343,7 @@
         
     
       void exportEntity(
-                REntity & e, bool preview
+                REntity & entity, bool preview
         = false, bool allBlocks
         = true, bool forceSelected
         = false
@@ -353,6 +353,16 @@
                 REntity::Id entityId, bool allBlocks
         = true, bool forceSelected
         = false
+            );
+        
+    
+      QSharedPointer < RLayer > getEntityLayer(
+                REntity & entity
+            );
+        
+    
+      bool isVisible(
+                REntity & entity
             );
         
     

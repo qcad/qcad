@@ -26,6 +26,10 @@
 
 #include "RPainterPath.h"
 
+#ifndef RDEFAULT_MIN1
+#define RDEFAULT_MIN1 -1
+#endif
+
 /**
  * Interface for entity data classes that can deliver painter paths.
  *
@@ -36,7 +40,7 @@
 class QCADCORE_EXPORT RPainterPathSource {
 public:
     virtual ~RPainterPathSource();
-    virtual QList<RPainterPath> getPainterPaths(bool draft = false, double pixelSizeHint = -1.0) const = 0;
+    virtual QList<RPainterPath> getPainterPaths(bool draft = false, double pixelSizeHint = RDEFAULT_MIN1) const = 0;
 };
 
 Q_DECLARE_METATYPE(RPainterPathSource*)

@@ -4061,7 +4061,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportEntity(
-                REntity & e, bool preview, bool allBlocks, bool forceSelected
+                REntity & entity, bool preview, bool allBlocks, bool forceSelected
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportEntity", engine);
@@ -4087,7 +4087,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RFileExporterAdapter::exportEntity(
-                            e, preview, allBlocks, forceSelected
+                            entity, preview, allBlocks, forceSelected
                         );
 
                         // block recursion again:
@@ -4113,7 +4113,7 @@
     // type: REntity &, copyable: false
         // REntity &:
         << REcmaHelper::toScriptValue(engine, 
-          &e
+          &entity
         )
       
 
@@ -4235,6 +4235,160 @@
                     //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::exportEntity", engine);
 
                     
+            }
+        
+    
+      QSharedPointer < RLayer > REcmaShellFileExporterAdapter::getEntityLayer(
+                REntity & entity
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::getEntityLayer", engine);
+                QScriptValue _q_function = __qtscript_self.property("getEntityLayer");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=1*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RFileExporterAdapter::getEntityLayer";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        QSharedPointer < RLayer > ret =
+                        RFileExporterAdapter::getEntityLayer(
+                            entity
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getEntityLayer", engine);
+
+                        
+                            return ret;
+                          
+                }
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    QSharedPointer < RLayer > res;
+                      
+                          res = qscriptvalue_cast< 
+                            QSharedPointer < RLayer >
+                          >(
+                        
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: REntity &, copyable: false
+        // REntity &:
+        << REcmaHelper::toScriptValue(engine, 
+          &entity
+        )
+      
+                            )
+                        
+                      )
+                    
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::getEntityLayer", engine);
+
+                    
+                            return res;
+                          
+            }
+        
+    
+      bool REcmaShellFileExporterAdapter::isVisible(
+                REntity & entity
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::isVisible", engine);
+                QScriptValue _q_function = __qtscript_self.property("isVisible");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=1*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RFileExporterAdapter::isVisible";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        bool ret =
+                        RFileExporterAdapter::isVisible(
+                            entity
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::isVisible", engine);
+
+                        
+                            return ret;
+                          
+                }
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    bool res;
+                      
+                          res = qscriptvalue_cast< 
+                            bool
+                          >(
+                        
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: REntity &, copyable: false
+        // REntity &:
+        << REcmaHelper::toScriptValue(engine, 
+          &entity
+        )
+      
+                            )
+                        
+                      )
+                    
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellFileExporterAdapter::isVisible", engine);
+
+                    
+                            return res;
+                          
             }
         
     

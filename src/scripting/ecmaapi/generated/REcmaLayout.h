@@ -99,6 +99,78 @@
         getMaxExtents
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setPlotPaperMarginLeftMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotPaperMarginBottomMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotPaperMarginRightMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotPaperMarginTopMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotPaperSize
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotOrigin
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotWindowAreaMin
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotWindowAreaMax
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setNumeratorCustomScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDenominatorCustomScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotPaperUnits
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setPlotRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotPaperMarginLeftMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotPaperMarginBottomMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotPaperMarginRightMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotPaperMarginTopMM
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotPaperSize
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotOrigin
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotWindowAreaMin
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotWindowAreaMax
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getNumeratorCustomScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDenominatorCustomScale
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotPaperUnits
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPlotRotation
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -112,6 +184,10 @@
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RLayout* getSelf(const QString& fName, QScriptContext* context)
     ;static RLayout* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static  QScriptValue toScriptValueEnumPlotPaperUnits(QScriptEngine* engine, const RLayout::PlotPaperUnits& value)
+    ;static  void fromScriptValueEnumPlotPaperUnits(const QScriptValue& value, RLayout::PlotPaperUnits& out)
+    ;static  QScriptValue toScriptValueEnumPlotRotation(QScriptEngine* engine, const RLayout::PlotRotation& value)
+    ;static  void fromScriptValueEnumPlotRotation(const QScriptValue& value, RLayout::PlotRotation& out)
     ;};
     #endif
     

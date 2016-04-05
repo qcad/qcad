@@ -506,7 +506,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="bool" typeName="bool" name="draft"
         hasDefault="true" default="false" isConst="false" />
         <arg type="double" typeName="double" name="pixelSizeHint"
-        hasDefault="true" default="0.0" isConst="false" />
+        hasDefault="true" default="RDEFAULT_MIN1"
+        isConst="false" />
       </variant>
     </method>
     <method name="getShapes" cppName="getShapes" specifier="public"
