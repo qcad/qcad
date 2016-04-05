@@ -1917,6 +1917,7 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
     bool linetypeHasChanged = false;
     bool layerHasChanged = false;
     bool blockHasChanged = false;
+    bool layoutHasChanged = false;
     bool viewHasChanged = false;
     bool entityHasChanged = false;
 
@@ -1935,6 +1936,7 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
             linetypeHasChanged = true;
             layerHasChanged = true;
             blockHasChanged = true;
+            layoutHasChanged = true;
             viewHasChanged = true;
             continue;
         }
@@ -1985,6 +1987,12 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
             continue;
         }
 
+        QSharedPointer<RLayout> layout = object.dynamicCast<RLayout> ();
+        if (!layout.isNull()) {
+            layoutHasChanged = true;
+            continue;
+        }
+
         QSharedPointer<RView> view = object.dynamicCast<RView> ();
         if (!view.isNull()) {
             viewHasChanged = true;
@@ -2004,7 +2012,7 @@ void RDocumentInterface::objectChangeEvent(QList<RObject::Id>& objectIds) {
         if (layerHasChanged) {
             RMainWindow::getMainWindow()->notifyLayerListeners(this);
         }
-        if (blockHasChanged) {
+        if (blockHasChanged || layoutHasChanged) {
             RMainWindow::getMainWindow()->notifyBlockListeners(this);
         }
         if (viewHasChanged) {
