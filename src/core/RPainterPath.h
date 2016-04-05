@@ -149,6 +149,7 @@ public:
         return QPainterPath::contains(QPointF(v.x, v.y));
     }
 
+    void addPolyline(const RPolyline& pl);
     void addPath(const RPainterPath& path);
     void addLine(const RLine& line);
     void addArc(const RArc& arc);

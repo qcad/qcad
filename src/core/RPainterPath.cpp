@@ -82,6 +82,25 @@ void RPainterPath::addLine(const RLine& line) {
     lineTo(line.endPoint);
 }
 
+void RPainterPath::addPolyline(const RPolyline& pl) {
+    //moveToOrNop(line.startPoint);
+    for (int i=0; i<pl.countSegments(); i++) {
+        QSharedPointer<RShape> segment = pl.getSegmentAt(i);
+
+        QSharedPointer<RLine> line = segment.dynamicCast<RLine>();
+        if (!line.isNull()) {
+            addLine(*line);
+            continue;
+        }
+
+        QSharedPointer<RArc> arc = segment.dynamicCast<RArc>();
+        if (!arc.isNull()) {
+            addArc(*arc);
+            continue;
+        }
+    }
+}
+
 void RPainterPath::addArc(const RArc& arc) {
     //moveToOrNop(arc.getStartPoint());
 
@@ -571,6 +590,7 @@ QDebug operator<<(QDebug dbg, RPainterPath& p) {
             << "\n\tfixedPenColor: " << p.isFixedPenColor()
             << "\n\tfixedBrushColor: " << p.isFixedBrushColor()
             << "\n\tfeatureSize: " << p.getFeatureSize()
+            << "\n\tpixelSizeHint: " << p.getPixelSizeHint()
             << "\n\t" << p.getPen()
             << "\n\t" << p.getBrush()
             << "\n\tpoints: " << p.getPoints()
