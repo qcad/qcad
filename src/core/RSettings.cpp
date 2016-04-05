@@ -65,6 +65,7 @@ int RSettings::dashThreshold = -1;
 int RSettings::textRenderedAsText = -1;
 int RSettings::layer0CompatibilityOn = -1;
 int RSettings::selectBlockWithAttribute = -1;
+int RSettings::hideAttributeWithBlock = -1;
 QStringList RSettings::recentFiles;
 QLocale* RSettings::numberLocale = NULL;
 QString RSettings::applicationNameOverride;
@@ -536,6 +537,13 @@ bool RSettings::getSelectBlockWithAttribute() {
         selectBlockWithAttribute = getBoolValue("GraphicsView/SelectBlockWithAttribute", false);
     }
     return selectBlockWithAttribute;
+}
+
+bool RSettings::getHideAttributeWithBlock() {
+    if (hideAttributeWithBlock==-1) {
+        hideAttributeWithBlock = getBoolValue("GraphicsView/HideAttributeWithBlock", false);
+    }
+    return hideAttributeWithBlock;
 }
 
 int RSettings::getQtVersion() {
@@ -1037,6 +1045,7 @@ void RSettings::resetCache() {
     textRenderedAsText = -1;
     layer0CompatibilityOn = -1;
     selectBlockWithAttribute = -1;
+    hideAttributeWithBlock = -1;
     mouseThreshold = -1;
     cache.clear();
 }

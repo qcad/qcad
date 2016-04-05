@@ -101,13 +101,20 @@
     <item>
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
-       <string>Block Selection</string>
+       <string>Blocks</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
         <widget class="QCheckBox" name="SelectBlockWithAttribute">
          <property name="text">
           <string>Select block references together with attributes</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="HideAttributeWithBlock">
+         <property name="text">
+          <string>Hide attributes when block references are hidden</string>
          </property>
         </widget>
        </item>

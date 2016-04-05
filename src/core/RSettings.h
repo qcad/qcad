@@ -211,6 +211,7 @@ public:
     static bool isTextRenderedAsText();
     static bool isLayer0CompatibilityOn();
     static bool getSelectBlockWithAttribute();
+    static bool getHideAttributeWithBlock();
 
 private:
     static bool isInitialized();
@@ -248,6 +249,7 @@ private:
     static int textRenderedAsText;
     static int layer0CompatibilityOn;
     static int selectBlockWithAttribute;
+    static int hideAttributeWithBlock;
     static QStringList recentFiles;
     static QLocale* numberLocale;
 
