@@ -253,7 +253,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getBoundaryPath" cppName="getBoundaryPath"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="RPainterPath" isPureVirtual="false" />
+      <variant returnType="RPainterPath" isPureVirtual="false">
+        <arg type="double" typeName="double" name="pixelSizeHint"
+        hasDefault="true" default="0.0" isConst="false" />
+      </variant>
     </method>
     <method name="getPainterPaths" cppName="getPainterPaths"
     specifier="public" isStatic="false" isVirtual="true"
@@ -262,6 +265,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="draft"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="double" typeName="double" name="pixelSizeHint"
+        hasDefault="true" default="0.0" isConst="false" />
       </variant>
     </method>
     <method name="getBoundary" cppName="getBoundary"

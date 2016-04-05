@@ -12,6 +12,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="bool" typeName="bool" name="draft"
         hasDefault="true" default="false" isConst="false" />
+        <arg type="double" typeName="double" name="pixelSizeHint"
+        hasDefault="true" default="0.0" isConst="false" />
       </variant>
     </method>
   </class>

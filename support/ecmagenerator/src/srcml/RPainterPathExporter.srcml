@@ -50,10 +50,10 @@
     <function><type><name>virtual</name> <name>void</name></type> <name>exportPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RPoint</name>&amp;</type> <name>point</name></decl></param>)</parameter_list> <block>{
         <macro><name>Q_UNUSED</name><argument_list>(<argument>point</argument>)</argument_list></macro>
     }</block></function>
-    <function><type><name>virtual</name> <name>void</name></type> <name>exportArcSegment</name><parameter_list>(<param><decl><type><name>const</name> <name>RArc</name>&amp;</type> <name>arc</name></decl></param>, <param><decl><type><name>bool</name></type> <name>allowForZeroLength</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <block>{
-        <macro><name>Q_UNUSED</name><argument_list>(<argument>arc</argument>)</argument_list></macro>
-        <macro><name>Q_UNUSED</name><argument_list>(<argument>allowForZeroLength</argument>)</argument_list></macro>
-    }</block></function>
+<comment type="line">//    virtual void exportArcSegment(const RArc&amp; arc, bool allowForZeroLength = false) {</comment>
+<comment type="line">//        Q_UNUSED(arc)</comment>
+<comment type="line">//        Q_UNUSED(allowForZeroLength)</comment>
+<comment type="line">//    }</comment>
     <function><type><name>virtual</name> <name>void</name></type> <name>exportTriangle</name><parameter_list>(<param><decl><type><name>const</name> <name>RTriangle</name>&amp;</type> <name>triangle</name></decl></param>)</parameter_list> <block>{
         <macro><name>Q_UNUSED</name><argument_list>(<argument>triangle</argument>)</argument_list></macro>
     }</block></function>

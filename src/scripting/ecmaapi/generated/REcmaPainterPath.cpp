@@ -94,6 +94,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, containsPoint, "containsPoint");
             
+            REcmaHelper::registerFunction(&engine, proto, addPolyline, "addPolyline");
+            
             REcmaHelper::registerFunction(&engine, proto, addPath, "addPath");
             
             REcmaHelper::registerFunction(&engine, proto, addLine, "addLine");
@@ -1554,6 +1556,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::containsPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::addPolyline
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::addPolyline", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::addPolyline";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("addPolyline", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPolyline */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RPolyline*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RPolyline*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type RPolyline.",
+                               context);                    
+                    }
+                    RPolyline 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addPolyline(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.addPolyline().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::addPolyline", context, engine);
             return result;
         }
          QScriptValue

@@ -81,6 +81,9 @@
         containsPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addPolyline
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addPath
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
