@@ -215,7 +215,7 @@
     <message>
         <location line="+32"/>
         <source>Top Left</source>
-        <translation>Open links</translation>
+        <translation>Oben links</translation>
     </message>
     <message>
         <location line="+35"/>
