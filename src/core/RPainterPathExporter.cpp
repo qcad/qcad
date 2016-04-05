@@ -37,7 +37,9 @@ void RPainterPathExporter::exportLineSegment(const RLine& line, double angle) {
         }
     }
     else {
-        path.moveTo(line.getStartPoint());
+        if (!path.isAtPosition(line.getStartPoint())) {
+            path.moveTo(line.getStartPoint());
+        }
         path.lineTo(line.getEndPoint());
     }
 }
@@ -48,6 +50,10 @@ void RPainterPathExporter::exportPainterPaths(const QList<RPainterPath>& paths) 
     }
 }
 
+/**
+ * \return The exported path. The stored path is reset, calling this
+ * twice will return an empty path the second time.
+ */
 RPainterPath RPainterPathExporter::getPainterPath() {
     RPainterPath ret = path;
     path = RPainterPath();
