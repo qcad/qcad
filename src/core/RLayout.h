@@ -62,6 +62,38 @@ public:
     static RPropertyTypeId PropertyMaxExtentsY;
     static RPropertyTypeId PropertyMaxExtentsZ;
 
+    static RPropertyTypeId PropertyPlotPaperMarginLeftMM;
+    static RPropertyTypeId PropertyPlotPaperMarginBottomMM;
+    static RPropertyTypeId PropertyPlotPaperMarginRightMM;
+    static RPropertyTypeId PropertyPlotPaperMarginTopMM;
+    static RPropertyTypeId PropertyPlotPaperSizeWidth;
+    static RPropertyTypeId PropertyPlotPaperSizeHeight;
+    static RPropertyTypeId PropertyPlotOriginX;
+    static RPropertyTypeId PropertyPlotOriginY;
+    static RPropertyTypeId PropertyPlotWindowAreaMinX;
+    static RPropertyTypeId PropertyPlotWindowAreaMinY;
+    static RPropertyTypeId PropertyPlotWindowAreaMaxX;
+    static RPropertyTypeId PropertyPlotWindowAreaMaxY;
+    static RPropertyTypeId PropertyNumeratorCustomScale;
+    static RPropertyTypeId PropertyDenominatorCustomScale;
+    static RPropertyTypeId PropertyPlotPaperUnits;
+    static RPropertyTypeId PropertyPlotRotation;
+
+    enum PlotPaperUnits
+    {
+      Inches         = 0,   // Inches
+      Millimeters    = 1,   // Millimeters
+      Pixels         = 2    // Pixels
+    };
+
+    enum PlotRotation
+    {
+      Zero              = 0,   // No rotation (0)
+      CounterClockWise  = 1,   // 90 CCW      (90)
+      Inverted          = 2,   // Inverted    (180)
+      ClockWise         = 3    // 90 CW       (270)
+    };
+
 public:
     RLayout();
 
@@ -131,6 +163,104 @@ public:
         return maxExtents;
     }
 
+    void setPlotPaperMarginLeftMM(double v) {
+        plotPaperMarginLeftMM = v;
+    }
+
+    void setPlotPaperMarginBottomMM(double v) {
+        plotPaperMarginBottomMM = v;
+    }
+
+    void setPlotPaperMarginRightMM(double v) {
+        plotPaperMarginRightMM = v;
+    }
+
+    void setPlotPaperMarginTopMM(double v) {
+        plotPaperMarginTopMM = v;
+    }
+
+    void setPlotPaperSize(const RVector& v) {
+        plotPaperSize = v;
+    }
+
+    void setPlotOrigin(const RVector& v) {
+        plotOrigin = v;
+    }
+
+    void setPlotWindowAreaMin(const RVector& v) {
+        plotWindowAreaMin = v;
+    }
+
+    void setPlotWindowAreaMax(const RVector& v) {
+        plotWindowAreaMax = v;
+    }
+
+    void setNumeratorCustomScale(double v) {
+        numeratorCustomScale = v;
+    }
+
+    void setDenominatorCustomScale(double v) {
+        denominatorCustomScale = v;
+    }
+
+    void setPlotPaperUnits(PlotPaperUnits v) {
+        plotPaperUnits = v;
+    }
+
+    void setPlotRotation(PlotRotation v) {
+        plotRotation = v;
+    }
+
+    double getPlotPaperMarginLeftMM() const {
+        return plotPaperMarginLeftMM;
+    }
+
+    double getPlotPaperMarginBottomMM() const {
+        return plotPaperMarginBottomMM;
+    }
+
+    double getPlotPaperMarginRightMM() const {
+        return plotPaperMarginRightMM;
+    }
+
+    double getPlotPaperMarginTopMM() const {
+        return plotPaperMarginTopMM;
+    }
+
+    RVector getPlotPaperSize() const {
+        return plotPaperSize;
+    }
+
+    RVector getPlotOrigin() const {
+        return plotOrigin;
+    }
+
+    RVector getPlotWindowAreaMin() const {
+        return plotWindowAreaMin;
+    }
+
+    RVector getPlotWindowAreaMax() const {
+        return plotWindowAreaMax;
+    }
+
+    double getNumeratorCustomScale() const {
+        return numeratorCustomScale;
+    }
+
+    double getDenominatorCustomScale() const {
+        return denominatorCustomScale;
+    }
+
+    PlotPaperUnits getPlotPaperUnits() const {
+        return plotPaperUnits;
+    }
+
+    PlotRotation getPlotRotation() const {
+        return plotRotation;
+    }
+
+
+
     virtual QPair<QVariant, RPropertyAttributes> getProperty(RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false);
     virtual bool setProperty(RPropertyTypeId propertyTypeId,
@@ -153,6 +283,20 @@ private:
     RVector insertionBase;
     RVector minExtents;
     RVector maxExtents;
+
+    // TODO: split into base class 'RPlotSettings':
+    double plotPaperMarginLeftMM;
+    double plotPaperMarginBottomMM;
+    double plotPaperMarginRightMM;
+    double plotPaperMarginTopMM;
+    RVector plotPaperSize;
+    RVector plotOrigin;
+    RVector plotWindowAreaMin;
+    RVector plotWindowAreaMax;
+    double numeratorCustomScale;
+    double denominatorCustomScale;
+    PlotPaperUnits plotPaperUnits;
+    PlotRotation plotRotation;
 };
 
 
@@ -160,5 +304,7 @@ Q_DECLARE_METATYPE(QSharedPointer<RLayout>)
 Q_DECLARE_METATYPE(QSharedPointer<RLayout>*)
 Q_DECLARE_METATYPE(RLayout)
 Q_DECLARE_METATYPE(RLayout*)
+Q_DECLARE_METATYPE(RLayout::PlotPaperUnits)
+Q_DECLARE_METATYPE(RLayout::PlotRotation)
 
 #endif
