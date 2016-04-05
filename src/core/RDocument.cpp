@@ -1282,6 +1282,20 @@ QMap<REntity::Id, QSet<int> > RDocument::queryIntersectedShapesXY(
             }
         }
 
+        // hide block attributes if block reference is hidden:
+        if (RSettings::getHideAttributeWithBlock()) {
+            if (entity->getType()==RS::EntityAttribute) {
+                REntity::Id blockRefId = entity->getParentId();
+                QSharedPointer<REntity> parent = queryEntityDirect(blockRefId);
+                QSharedPointer<RBlockReferenceEntity> blockRef = parent.dynamicCast<RBlockReferenceEntity>();
+                if (!blockRef.isNull()) {
+                    if (isLayerFrozen(blockRef->getLayerId())) {
+                        continue;
+                    }
+                }
+            }
+        }
+
         // apply filter:
         if (filter.contains(entity->getType())) {
             continue;

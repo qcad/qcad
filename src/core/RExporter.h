@@ -152,8 +152,10 @@ public:
     virtual void exportEntities(bool allBlocks = true, bool undone = false);
     virtual void exportEntities(const RBox& box);
     virtual void exportEntities(QSet<REntity::Id>& entityIds, bool allBlocks = true);
-    virtual void exportEntity(REntity& e, bool preview = false, bool allBlocks = true, bool forceSelected = false);
+    virtual void exportEntity(REntity& entity, bool preview = false, bool allBlocks = true, bool forceSelected = false);
     virtual void exportEntity(REntity::Id entityId, bool allBlocks = true, bool forceSelected = false);
+    virtual QSharedPointer<RLayer> getEntityLayer(REntity& entity);
+    virtual bool isVisible(REntity& entity);
     virtual void startEntity(bool /*topLevelEntity*/) {}
     virtual void endEntity() {}
     virtual void exportCurrentEntity(bool preview = false, bool forceSelected = false);

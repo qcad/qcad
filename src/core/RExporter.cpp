@@ -615,20 +615,7 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
     entityStack.push(&entity);
 
     // find layer of the current entity
-    QSharedPointer<RLayer> layer;
-    if (layerSource!=NULL) {
-        RLayer::Id layerId = entity.getLayerId();
-        layer = layerSource->queryLayerDirect(layerId);
-        Q_ASSERT(!layer.isNull());
-    }
-    else {
-        layer = doc->queryLayerDirect(entity.getLayerId());
-        if (layer.isNull()) {
-            qDebug() << "Document: " << *doc;
-            qDebug() << "Layer ID: " << entity.getLayerId();
-            Q_ASSERT_X(false, "RExporter::exportEntity", "layer is NULL");
-        }
-    }
+    QSharedPointer<RLayer> layer = getEntityLayer(entity);
     if (!layer.isNull()) {
         currentLayer = layer.data();
     }
@@ -648,7 +635,6 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
         blockRefOrViewportSet = true;
     }
 
-
 //    REntity* entity = getEntity();
 //    if (entity!=NULL) {
         bool skip = false;
@@ -656,27 +642,8 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
         // if this exporter exports a visual
         // representation of the drawing (scene, view, print)...
         if (isVisualExporter()) {
-            // ... only export entities on visible layers:
-            if (currentLayer!=NULL && currentLayer->isFrozen()) {
-                // viewports are exported even if layer is hidden (but without border):
-                if (entity.getType()!=RS::EntityViewport) {
-                    skip = true;
-                }
-            }
-
-            // ... only export entities in visible blocks:
-            RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(&entity);
-            if (blockRef!=NULL) {
-                RBlock::Id blockId = blockRef->getReferencedBlockId();
-                if (blockId!=RBlock::INVALID_ID) {
-                    QSharedPointer<RBlock> block = document->queryBlockDirect(blockId);
-                    if (!block.isNull() && block->isFrozen()) {
-                        skip = true;
-                    }
-                }
-            }
+            skip = !isVisible(entity);
         }
-
 
         if (!skip) {
             setEntityAttributes(forceSelected);
@@ -731,7 +698,81 @@ void RExporter::exportEntity(REntity::Id entityId, bool allBlocks, bool forceSel
     }
 }
 
+QSharedPointer<RLayer> RExporter::getEntityLayer(REntity& entity) {
+    RDocument* doc = entity.getDocument();
+    if (doc==NULL) {
+        doc = document;
+    }
 
+    QSharedPointer<RLayer> layer;
+    if (layerSource!=NULL) {
+        RLayer::Id layerId = entity.getLayerId();
+        layer = layerSource->queryLayerDirect(layerId);
+        Q_ASSERT(!layer.isNull());
+    }
+    else {
+        layer = doc->queryLayerDirect(entity.getLayerId());
+        if (layer.isNull()) {
+            qDebug() << "Document: " << *doc;
+            qDebug() << "Layer ID: " << entity.getLayerId();
+            Q_ASSERT_X(false, "RExporter::getEntityLayer", "layer is NULL");
+        }
+    }
+
+    return layer;
+}
+
+bool RExporter::isVisible(REntity& entity) {
+
+    // only export entities on visible layers:
+    if (currentLayer!=NULL && currentLayer->isFrozen()) {
+        // viewports are exported even if layer is hidden (but without border):
+        if (entity.getType()!=RS::EntityViewport) {
+            return false;
+        }
+    }
+
+    // only export entities in visible blocks:
+    {
+        RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(&entity);
+        if (blockRef!=NULL) {
+            RBlock::Id blockId = blockRef->getReferencedBlockId();
+            if (blockId!=RBlock::INVALID_ID) {
+                QSharedPointer<RBlock> block = document->queryBlockDirect(blockId);
+                if (!block.isNull() && block->isFrozen()) {
+                    return false;
+                }
+            }
+        }
+    }
+
+    // only export block attributes of visible blocks:
+    if (RSettings::getHideAttributeWithBlock()) {
+        if (entity.getType()==RS::EntityAttribute) {
+            RDocument* doc = entity.getDocument();
+            if (doc==NULL) {
+                doc = document;
+            }
+
+            REntity::Id blockRefId = entity.getParentId();
+            QSharedPointer<REntity> parentEntity = doc->queryEntityDirect(blockRefId);
+            QSharedPointer<RBlockReferenceEntity> blockRef = parentEntity.dynamicCast<RBlockReferenceEntity>();
+            if (!blockRef.isNull()) {
+                RLayer* currentLayerBak = currentLayer;
+                QSharedPointer<RLayer> layer = getEntityLayer(*blockRef);
+                if (!layer.isNull()) {
+                    currentLayer = layer.data();
+                }
+                //bool ret = isVisible(*blockRef);
+                bool ret = !doc->isLayerFrozen(blockRef->getLayerId());
+                currentLayer = currentLayerBak;
+                return ret;
+            }
+        }
+    }
+
+    return true;
+}
 
 /**
  * The default implementation calls the \ref REntity::exportEntity() function
@@ -748,63 +789,7 @@ void RExporter::exportCurrentEntity(bool preview, bool forceSelected) {
         return;
     }
 
-//    // if this exporter exports a visual
-//    // representation of the drawing (scene, view, print)...
-//    if (isVisualExporter()) {
-//        // ... only export entities on visible layers:
-//        if (currentLayer!=NULL && currentLayer->isFrozen()) {
-//            // viewports are exported even if layer is hidden (but without border):
-//            if (entity->getType()!=RS::EntityViewport) {
-//                return;
-//            }
-//        }
-
-//        // ... only export entities in visible blocks:
-//        RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(entity);
-//        if (blockRef!=NULL) {
-//            RBlock::Id blockId = blockRef->getReferencedBlockId();
-//            if (blockId!=RBlock::INVALID_ID) {
-//                QSharedPointer<RBlock> block = document->queryBlockDirect(blockId);
-//                if (!block.isNull() && block->isFrozen()) {
-//                    return;
-//                }
-//            }
-//        }
-//    }
-
-//    setEntityAttributes(forceSelected);
-
-//    if ((forceSelected || entity->isSelected()) && RSettings::getUseSecondarySelectionColor()) {
-//        // first part of two color selection:
-//        twoColorSelectedMode = true;
-//    }
-
     entity->exportEntity(*this, preview, forceSelected);
-
-//    if (entity->hasCustomProperties()) {
-//        if (RMainWindow::hasMainWindow()) {
-//            RMainWindow* appWin = RMainWindow::getMainWindow();
-//            appWin->notifyEntityExportListeners(this, entity);
-//        }
-//    }
-
-    // selected? export again with second color and pattern:
-//    if (visualExporter) {
-//        if ((forceSelected || entity->isSelected()) &&
-//            RSettings::getUseSecondarySelectionColor() &&
-//            entity->getType()!=RS::EntityBlockRef &&
-//            entity->getType()!=RS::EntityText &&
-//            entity->getType()!=RS::EntityAttribute &&
-//            entity->getType()!=RS::EntityAttributeDefinition) {
-
-//            RColor secondarySelectionColor = RSettings::getColor("GraphicsViewColors/SecondarySelectionColor", RColor(Qt::white));
-//            setColor(secondarySelectionColor);
-//            //setStyle(Qt::CustomDashLine);
-//            setDashPattern(QVector<qreal>() << 2 << 3);
-//            entity->exportEntity(*this, preview, forceSelected);
-//        }
-//    }
-//    twoColorSelectedMode = false;
 }
 
 
