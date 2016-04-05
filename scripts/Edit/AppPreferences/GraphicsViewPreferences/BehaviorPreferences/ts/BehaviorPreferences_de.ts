@@ -44,7 +44,7 @@
     <message>
         <location line="+10"/>
         <source>Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>Blöcke</translation>
     </message>
     <message>
         <location line="+6"/>
@@ -54,7 +54,7 @@
     <message>
         <location line="+7"/>
         <source>Hide attributes when block references are hidden</source>
-        <translation type="unfinished"></translation>
+        <translation>Attribute mit Blockreferenz ausblenden</translation>
     </message>
     <message>
         <location line="-85"/>
