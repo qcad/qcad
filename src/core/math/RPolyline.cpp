@@ -742,9 +742,6 @@ QSharedPointer<RShape> RPolyline::getSegmentAt(int i) const {
         double alpha = atan(bulge)*4.0;
 
         if (fabs(alpha) > 2*M_PI-RS::PointTolerance) {
-            qDebug() << "p1:" << p1;
-            qDebug() << "p2:" << p2;
-            qDebug() << "b:" << bulge;
             return QSharedPointer<RShape>(new RLine(p1, p2));
             //return QSharedPointer<RShape>();
         }
