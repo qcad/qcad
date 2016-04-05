@@ -298,7 +298,6 @@ double RMath::eval(const QString& expression, bool* ok) {
             Qt::CaseInsensitive, QRegExp::RegExp2);
         do {
             idx = re.indexIn(expr);
-            qDebug() << "deg,min,sec found at: " << idx;
             if (idx==-1) {
                 break;
             }
