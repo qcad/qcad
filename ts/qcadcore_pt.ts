@@ -530,7 +530,7 @@ Lista de Camadas</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+78"/>
+        <location filename="../src/core/RLayer.cpp" line="+80"/>
         <source>Linetype</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Tipo de Linha</translation>

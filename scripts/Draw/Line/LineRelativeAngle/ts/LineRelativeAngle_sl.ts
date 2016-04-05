@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>LineRelativeAngle</name>
     <message>
         <source>Choose base entity</source>
-        <translation>Izberi bazno entiteto</translation>
+        <translation type="vanished">Izberi bazno entiteto</translation>
     </message>
     <message>
         <location filename="../LineRelativeAngle.js" line="+70"/>

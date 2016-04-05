@@ -22,12 +22,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1314"/>
+        <location filename="../PropertyEditor.js" line="+1318"/>
         <source>*VARIES*</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-1124"/>
+        <location line="-1130"/>
         <source>:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -92,7 +92,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+314"/>
+        <location line="+320"/>
         <location line="+56"/>
         <location line="+11"/>
         <source>Property Editor</source>

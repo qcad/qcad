@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>About</name>
     <message>
@@ -121,11 +121,11 @@
     </message>
     <message>
         <source>Portions of this software © 2013 Digia Plc.</source>
-        <translation>Del tega programa  © 2013 Digia Plc.</translation>
+        <translation type="vanished">Del tega programa  © 2013 Digia Plc.</translation>
     </message>
     <message>
         <source>Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).</source>
-        <translation>Del tega programa © 2012 Nokia Corporation ter/ali njihovih podružnic.</translation>
+        <translation type="vanished">Del tega programa © 2012 Nokia Corporation ter/ali njihovih podružnic.</translation>
     </message>
     <message>
         <location line="+24"/>
@@ -210,7 +210,7 @@
     </message>
     <message>
         <source>about:blank</source>
-        <translation>o:prazno</translation>
+        <translation type="vanished">o:prazno</translation>
     </message>
     <message>
         <location line="+67"/>

@@ -541,7 +541,7 @@ Lista Layer</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+78"/>
+        <location filename="../src/core/RLayer.cpp" line="+80"/>
         <source>Linetype</source>
         <translatorcomment>--exact match--
 --file: LinetypeSettings_it.ts--

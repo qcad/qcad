@@ -35,13 +35,13 @@ Tipo de linha:</translatorcomment>
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1314"/>
+        <location filename="../PropertyEditor.js" line="+1318"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1124"/>
+        <location line="-1130"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: pt.po--
@@ -107,7 +107,7 @@ Fecha todas as janelas</translatorcomment>
         <translation>Todos</translation>
     </message>
     <message>
-        <location line="+633"/>
+        <location line="+639"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -117,7 +117,7 @@ Fecha todas as janelas</translatorcomment>
         <translation type="obsolete">Adicionar propriedade personalizada</translation>
     </message>
     <message>
-        <location line="-611"/>
+        <location line="-617"/>
         <source>Add custom property to selected objects</source>
         <translation>Adicione uma propriedade personalizada aos objetos selecionados</translation>
     </message>
@@ -241,7 +241,7 @@ Por favor verifique as permissões.</translatorcomment>
         <translation>Não</translation>
     </message>
     <message>
-        <location line="+314"/>
+        <location line="+320"/>
         <location line="+56"/>
         <location line="+11"/>
         <source>Property Editor</source>

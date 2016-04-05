@@ -31,7 +31,7 @@
         <translation type="vanished">Géométrie</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+391"/>
+        <location filename="../PropertyEditor.js" line="+389"/>
         <source>Custom</source>
         <translation>Personnalisé</translation>
     </message>
@@ -51,7 +51,7 @@
         <translation>Ajouter une propriété personnalisée pour les objets sélectionnés</translation>
     </message>
     <message>
-        <location line="+611"/>
+        <location line="+617"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -86,7 +86,7 @@
         <translation>*VARIABLE*</translation>
     </message>
     <message>
-        <location line="-1124"/>
+        <location line="-1130"/>
         <source>:</source>
         <translatorcomment>--ignored colon--
 --file: qt_fr.ts--
@@ -174,7 +174,7 @@ Verrouille ou déverrouille le point zéro relatif</translatorcomment>
         <translation type="obsolete">-</translation>
     </message>
     <message>
-        <location line="+314"/>
+        <location line="+320"/>
         <location line="+56"/>
         <location line="+11"/>
         <source>Property Editor</source>

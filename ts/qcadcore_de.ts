@@ -370,7 +370,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+78"/>
+        <location filename="../src/core/RLayer.cpp" line="+80"/>
         <source>Linetype</source>
         <translation>Linientyp</translation>
     </message>

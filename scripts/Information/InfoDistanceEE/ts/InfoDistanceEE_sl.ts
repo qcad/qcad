@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>InfoDistanceEE</name>
     <message>
@@ -33,23 +33,23 @@
     <name>InfoDistanceEP</name>
     <message>
         <source>Specify entity</source>
-        <translation>Določi entiteto</translation>
+        <translation type="vanished">Določi entiteto</translation>
     </message>
     <message>
         <source>Specify point</source>
-        <translation>Določi točko</translation>
+        <translation type="vanished">Določi točko</translation>
     </message>
     <message>
         <source>Done</source>
-        <translation>Končano</translation>
+        <translation type="vanished">Končano</translation>
     </message>
     <message>
         <source>Distance:</source>
-        <translation>Razdalja:</translation>
+        <translation type="vanished">Razdalja:</translation>
     </message>
     <message>
         <source>Distance &amp;Entity to Point</source>
-        <translation>Razdalja &amp;entiteta do točke</translation>
+        <translation type="vanished">Razdalja &amp;entiteta do točke</translation>
     </message>
 </context>
 </TS>

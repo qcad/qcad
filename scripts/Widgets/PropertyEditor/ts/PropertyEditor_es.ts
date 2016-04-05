@@ -38,7 +38,7 @@ Tipo de línea:</translatorcomment>
         <translation type="vanished">Geometría</translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+706"/>
+        <location filename="../PropertyEditor.js" line="+704"/>
         <source>Add custom property to selected objects</source>
         <translation>Agregar una propiedad personalizada a los objetos seleccionados</translation>
     </message>
@@ -67,13 +67,13 @@ Tipo de línea:</translatorcomment>
         <translation type="obsolete">Medio</translation>
     </message>
     <message>
-        <location line="+608"/>
+        <location line="+614"/>
         <source>*VARIES*</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>*VARIA*</translation>
     </message>
     <message>
-        <location line="-1124"/>
+        <location line="-1130"/>
         <source>:</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
@@ -131,7 +131,7 @@ Mosaico horizontal
         <translation>Todo</translation>
     </message>
     <message>
-        <location line="+633"/>
+        <location line="+639"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
@@ -161,7 +161,7 @@ Seleccione entidad base</translatorcomment>
         <translation type="obsolete">Base</translation>
     </message>
     <message>
-        <location line="-475"/>
+        <location line="-481"/>
         <source>Auto</source>
         <translation>Auto</translation>
     </message>
@@ -182,7 +182,7 @@ Seleccione entidad base</translatorcomment>
         <translation>No</translation>
     </message>
     <message>
-        <location line="+314"/>
+        <location line="+320"/>
         <location line="+56"/>
         <location line="+11"/>
         <source>Property Editor</source>

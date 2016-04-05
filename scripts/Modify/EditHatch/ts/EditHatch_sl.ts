@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>EditHatch</name>
     <message>
@@ -18,15 +18,15 @@
     <name>EditText</name>
     <message>
         <source>Choose text</source>
-        <translation>Izberi tekst</translation>
+        <translation type="vanished">Izberi tekst</translation>
     </message>
     <message>
         <source>Edit Te&amp;xt</source>
-        <translation>Uredi te&amp;kst</translation>
+        <translation type="vanished">Uredi te&amp;kst</translation>
     </message>
     <message>
         <source>Edit text</source>
-        <translation>Uredi tekst</translation>
+        <translation type="vanished">Uredi tekst</translation>
     </message>
 </context>
 </TS>

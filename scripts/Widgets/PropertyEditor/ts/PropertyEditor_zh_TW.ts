@@ -32,7 +32,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+190"/>
+        <location filename="../PropertyEditor.js" line="+188"/>
         <source>:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -97,7 +97,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+311"/>
+        <location line="+317"/>
         <source>*VARIES*</source>
         <translation type="unfinished"></translation>
     </message>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>QObject</name>
     <message>
@@ -362,7 +362,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <location filename="../src/core/RLayer.cpp" line="+78"/>
+        <location filename="../src/core/RLayer.cpp" line="+80"/>
         <source>Linetype</source>
         <translation>Tip črte</translation>
     </message>
@@ -617,11 +617,11 @@
     <name>RLayer</name>
     <message>
         <source>Name</source>
-        <translation>Ime</translation>
+        <translation type="vanished">Ime</translation>
     </message>
     <message>
         <source>Frozen</source>
-        <translation>Zamrznjeno</translation>
+        <translation type="vanished">Zamrznjeno</translation>
     </message>
     <message>
         <source>Hidden</source>
@@ -629,106 +629,106 @@
     </message>
     <message>
         <source>Locked</source>
-        <translation>Zaklenjeno</translation>
+        <translation type="vanished">Zaklenjeno</translation>
     </message>
     <message>
         <source>Color</source>
-        <translation>Barva</translation>
+        <translation type="vanished">Barva</translation>
     </message>
     <message>
         <source>Linetype</source>
-        <translation>Tip črte</translation>
+        <translation type="vanished">Tip črte</translation>
     </message>
     <message>
         <source>Lineweight</source>
-        <translation>Debelina črte</translation>
+        <translation type="vanished">Debelina črte</translation>
     </message>
 </context>
 <context>
     <name>RLinetype</name>
     <message>
         <source>By Layer</source>
-        <translation>Po plasti</translation>
+        <translation type="vanished">Po plasti</translation>
     </message>
     <message>
         <source>By Block</source>
-        <translation>Po elementu</translation>
+        <translation type="vanished">Po elementu</translation>
     </message>
     <message>
         <source>Continuous</source>
-        <translation>Neprekinjeno</translation>
+        <translation type="vanished">Neprekinjeno</translation>
     </message>
     <message>
         <source>Dot</source>
-        <translation>Pika</translation>
+        <translation type="vanished">Pika</translation>
     </message>
     <message>
         <source>Dot (small)</source>
-        <translation>Pika (majhna)</translation>
+        <translation type="vanished">Pika (majhna)</translation>
     </message>
     <message>
         <source>Dot (large)</source>
-        <translation>Pika (velika)</translation>
+        <translation type="vanished">Pika (velika)</translation>
     </message>
     <message>
         <source>Dash</source>
-        <translation>Črtica</translation>
+        <translation type="vanished">Črtica</translation>
     </message>
     <message>
         <source>Dash (small)</source>
-        <translation>Črtica (majhna)</translation>
+        <translation type="vanished">Črtica (majhna)</translation>
     </message>
     <message>
         <source>Dash (large)</source>
-        <translation>Črtica (velika)</translation>
+        <translation type="vanished">Črtica (velika)</translation>
     </message>
     <message>
         <source>Dash Dot</source>
-        <translation>Črtica Pika</translation>
+        <translation type="vanished">Črtica Pika</translation>
     </message>
     <message>
         <source>Dash Dot (small)</source>
-        <translation>Črtica Pika (majhna)</translation>
+        <translation type="vanished">Črtica Pika (majhna)</translation>
     </message>
     <message>
         <source>Dash Dot (large)</source>
-        <translation>Črtica Pika (velika)</translation>
+        <translation type="vanished">Črtica Pika (velika)</translation>
     </message>
     <message>
         <source>Divide</source>
-        <translation>Delilna</translation>
+        <translation type="vanished">Delilna</translation>
     </message>
     <message>
         <source>Divide (small)</source>
-        <translation>Delilna (majhna)</translation>
+        <translation type="vanished">Delilna (majhna)</translation>
     </message>
     <message>
         <source>Divide (large)</source>
-        <translation>Delilna (velika)</translation>
+        <translation type="vanished">Delilna (velika)</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation>Srednjica</translation>
+        <translation type="vanished">Srednjica</translation>
     </message>
     <message>
         <source>Center (small)</source>
-        <translation>Srednjica (majhna)</translation>
+        <translation type="vanished">Srednjica (majhna)</translation>
     </message>
     <message>
         <source>Center (large)</source>
-        <translation>Srednjica (velika)</translation>
+        <translation type="vanished">Srednjica (velika)</translation>
     </message>
     <message>
         <source>Border</source>
-        <translation>Rob</translation>
+        <translation type="vanished">Rob</translation>
     </message>
     <message>
         <source>Border (small)</source>
-        <translation>Rob (majhna)</translation>
+        <translation type="vanished">Rob (majhna)</translation>
     </message>
     <message>
         <source>Border (large)</source>
-        <translation>Rob (velika)</translation>
+        <translation type="vanished">Rob (velika)</translation>
     </message>
     <message>
         <location filename="../src/core/RLinetype.cpp" line="+48"/>
@@ -1087,7 +1087,7 @@
     <name>RObject</name>
     <message>
         <source>Custom</source>
-        <translation>Po meri</translation>
+        <translation type="vanished">Po meri</translation>
     </message>
     <message>
         <source>Type</source>
@@ -1095,11 +1095,11 @@
     </message>
     <message>
         <source>Handle</source>
-        <translation>Identifikator</translation>
+        <translation type="vanished">Identifikator</translation>
     </message>
     <message>
         <source>Protected</source>
-        <translation>Zaščiteno</translation>
+        <translation type="vanished">Zaščiteno</translation>
     </message>
 </context>
 </TS>

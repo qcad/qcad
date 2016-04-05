@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="sl_SI">
+<TS version="2.1" language="sl_SI">
 <context>
     <name>AddCustomPropertyDialog</name>
     <message>
@@ -22,12 +22,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1314"/>
+        <location filename="../PropertyEditor.js" line="+1318"/>
         <source>*VARIES*</source>
         <translation>*RAZLIČNO*</translation>
     </message>
     <message>
-        <location line="-1124"/>
+        <location line="-1130"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -38,7 +38,7 @@
     </message>
     <message>
         <source>Geometry</source>
-        <translation>Geometrija</translation>
+        <translation type="vanished">Geometrija</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -76,7 +76,7 @@
         <translation>Izbranim objektom dodaj dodatno lastnost</translation>
     </message>
     <message>
-        <location line="+611"/>
+        <location line="+617"/>
         <source>Widgets</source>
         <translation>Gradniki</translation>
     </message>
@@ -117,7 +117,7 @@
         <translation type="obsolete">Dno</translation>
     </message>
     <message>
-        <location line="-475"/>
+        <location line="-481"/>
         <source>Auto</source>
         <translation>Samodejno</translation>
     </message>
@@ -137,7 +137,7 @@
         <translation>Ne</translation>
     </message>
     <message>
-        <location line="+314"/>
+        <location line="+320"/>
         <location line="+56"/>
         <location line="+11"/>
         <source>Property Editor</source>
@@ -150,7 +150,7 @@
     </message>
     <message>
         <source>General</source>
-        <translation>Splošno</translation>
+        <translation type="vanished">Splošno</translation>
     </message>
     <message>
         <location line="+31"/>
@@ -164,7 +164,7 @@
     </message>
     <message>
         <source>Move Selection to a New Layer</source>
-        <translation>Premakni izbrano na drugo plast</translation>
+        <translation type="vanished">Premakni izbrano na drugo plast</translation>
     </message>
     <message>
         <location line="+104"/>
