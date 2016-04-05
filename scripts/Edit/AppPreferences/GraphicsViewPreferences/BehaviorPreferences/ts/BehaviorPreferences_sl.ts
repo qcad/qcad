@@ -42,12 +42,22 @@
         <translation>Desni dvojni klik za reset</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+10"/>
+        <source>Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Select block references together with attributes</source>
         <translation>Izberi blokovne reference skupaj z atributi</translation>
     </message>
     <message>
-        <location line="-78"/>
+        <location line="+7"/>
+        <source>Hide attributes when block references are hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-85"/>
         <source>Right-Click</source>
         <translation>Desni klik</translation>
     </message>
@@ -66,12 +76,11 @@
         <translation>Dvoklik za izbiro konture</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Block Selection</source>
-        <translation>Blokovni izbor</translation>
+        <translation type="vanished">Blokovni izbor</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+43"/>
         <source>Cursor Range</source>
         <translation>Območje kurzorja</translation>
     </message>

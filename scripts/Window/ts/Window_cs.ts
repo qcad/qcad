@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="cs">
 <context>
     <name>Window</name>
     <message>
         <location filename="../Window.js" line="+108"/>
         <source>&amp;Window</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Okno</translation>
     </message>
 </context>
 </TS>

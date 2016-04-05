@@ -240,7 +240,7 @@
     <message>
         <location filename="../src/core/RBlock.cpp" line="+56"/>
         <location filename="../src/core/RLayer.cpp" line="+76"/>
-        <location filename="../src/core/RLayout.cpp" line="+57"/>
+        <location filename="../src/core/RLayout.cpp" line="+75"/>
         <source>Name</source>
         <translation>名稱</translation>
     </message>

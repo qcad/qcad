@@ -42,12 +42,22 @@
         <translation>Rechts dubbelklikken om te resetten</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+10"/>
+        <source>Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Select block references together with attributes</source>
         <translation>Blok referenties samen met hun attributen selecteren</translation>
     </message>
     <message>
-        <location line="-78"/>
+        <location line="+7"/>
+        <source>Hide attributes when block references are hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-85"/>
         <source>Right-Click</source>
         <translation>Rechtsklik</translation>
     </message>
@@ -66,12 +76,11 @@
         <translation>Dubbelklik selecteert contour</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Block Selection</source>
-        <translation>Blok selectie</translation>
+        <translation type="vanished">Blok selectie</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+43"/>
         <source>Cursor Range</source>
         <translation>Cursor bereik</translation>
     </message>

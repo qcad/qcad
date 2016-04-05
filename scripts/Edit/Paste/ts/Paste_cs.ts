@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="cs">
 <context>
     <name>Paste</name>
     <message>
         <location filename="../Paste.js" line="+77"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozice</translation>
     </message>
     <message>
         <location filename="../Paste.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotace:</translation>
     </message>
     <message>
         <location line="+13"/>

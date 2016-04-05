@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="cs">
 <context>
     <name>AppPreferences</name>
     <message>
         <location filename="../AppPreferences.js" line="+64"/>
         <source>Application &amp;Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplikační &amp;předvolby</translation>
     </message>
 </context>
 </TS>

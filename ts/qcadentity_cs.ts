@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="cs">
 <context>
     <name>REntity</name>
     <message>
@@ -17,7 +17,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Střed</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -74,7 +74,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>X</source>
-        <translation type="unfinished"></translation>
+        <translation>X</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -131,7 +131,7 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Y</source>
-        <translation type="unfinished"></translation>
+        <translation>Y</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -187,37 +187,37 @@
         <location line="+3"/>
         <location line="+4"/>
         <source>Z</source>
-        <translation type="unfinished"></translation>
+        <translation>Z</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+1"/>
         <source>Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Poloměr</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="-9"/>
         <source>Start Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Počáteční úhel</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>End Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Koncový úhel</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+1"/>
         <source>Reversed</source>
-        <translation type="unfinished"></translation>
+        <translation>Obrácený</translation>
     </message>
     <message>
         <location line="+2"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
         <source>Diameter</source>
-        <translation type="unfinished"></translation>
+        <translation>Průměr</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -228,7 +228,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
         <source>Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Délka</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -240,18 +240,18 @@
         <location filename="../src/entity/RCircleEntity.cpp" line="+2"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Oblast</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+90"/>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+90"/>
         <source>Tag</source>
-        <translation type="unfinished"></translation>
+        <translation>Značka</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Prompt</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prompt</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeEntity.cpp" line="+1"/>
@@ -261,7 +261,7 @@
     <message>
         <location filename="../src/entity/RCircleEntity.cpp" line="-1"/>
         <source>Circumference</source>
-        <translation type="unfinished"></translation>
+        <translation>Obvod</translation>
     </message>
     <message>
         <location filename="../src/entity/RDimAlignedEntity.cpp" line="-10"/>
@@ -274,7 +274,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Dimension Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Kótovací čára</translation>
     </message>
     <message>
         <location line="+2"/>

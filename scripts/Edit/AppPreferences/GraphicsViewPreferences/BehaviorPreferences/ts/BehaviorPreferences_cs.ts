@@ -58,12 +58,17 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>Block Selection</source>
+        <source>Blocks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Select block references together with attributes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Hide attributes when block references are hidden</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

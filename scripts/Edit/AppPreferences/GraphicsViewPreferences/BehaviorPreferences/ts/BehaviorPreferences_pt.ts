@@ -42,12 +42,22 @@
         <translation>Clique duplo de direita para resetar</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+10"/>
+        <source>Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Select block references together with attributes</source>
         <translation>Selecione referências de blocos juntamente com seus atributos</translation>
     </message>
     <message>
-        <location line="-78"/>
+        <location line="+7"/>
+        <source>Hide attributes when block references are hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-85"/>
         <source>Right-Click</source>
         <translation>Clique do Botão Direito</translation>
     </message>
@@ -66,16 +76,15 @@
         <translation>Clique duplo para selecionar contorno</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Block Selection</source>
-        <translation>Bloco seleção</translation>
+        <translation type="vanished">Bloco seleção</translation>
     </message>
     <message>
         <source>Select block reference with attribute</source>
         <translation type="obsolete">Selecione referência de bloco com o atributo</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+43"/>
         <source>Cursor Range</source>
         <translation>Limites do Cursor</translation>
     </message>

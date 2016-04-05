@@ -42,12 +42,22 @@
         <translation>Rechts-Doppelklick zum Zurücksetzen</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+10"/>
+        <source>Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Select block references together with attributes</source>
         <translation>Blockreferenzen zusammen mit ihren Attributen selektieren</translation>
     </message>
     <message>
-        <location line="-78"/>
+        <location line="+7"/>
+        <source>Hide attributes when block references are hidden</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-85"/>
         <source>Right-Click</source>
         <translation>Rechtsklick</translation>
     </message>
@@ -66,16 +76,15 @@
         <translation>Doppelklick selektiert Kontour</translation>
     </message>
     <message>
-        <location line="+20"/>
         <source>Block Selection</source>
-        <translation>Blockselektion</translation>
+        <translation type="vanished">Blockselektion</translation>
     </message>
     <message>
         <source>Select block reference with attribute</source>
         <translation type="obsolete">Wählen Sie die Blockreferenz mit Attribut</translation>
     </message>
     <message>
-        <location line="+16"/>
+        <location line="+43"/>
         <source>Cursor Range</source>
         <translation>Zeigerreichweite</translation>
     </message>
