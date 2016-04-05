@@ -401,7 +401,9 @@ QString RTextBasedData::escapeUnicode(const QString& str) {
 }
 
 // "lo\C4;\H2.5;rem\P\C1;\fBaskerville|b0|i0|c0|p34;backslash:\FAPNORM.SHX|c0;\\semicolon:;\Pdolor\Psit\~amet\Plorem \Sipsum/dolor; sit\~amet"
-QList<RPainterPath> RTextBasedData::getPainterPaths(bool draft) const {
+QList<RPainterPath> RTextBasedData::getPainterPaths(bool draft, double pixelSizeHint) const {
+    Q_UNUSED(pixelSizeHint)
+
     if (!dirty) {
         // cached painter paths represent text in current draft mode (draft or normal):
         if (draft==gotDraft) {

@@ -300,7 +300,7 @@ public:
     }
     virtual bool isDirty() const;
 
-    virtual QList<RPainterPath> getPainterPaths(bool draft = false) const;
+    virtual QList<RPainterPath> getPainterPaths(bool draft = false, double pixelSizeHint = -1.0) const;
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const;
     virtual QList<QSharedPointer<RShape> > getExploded() const;
 
