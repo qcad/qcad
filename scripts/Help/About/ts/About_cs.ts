@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="cs">
 <context>
     <name>About</name>
     <message>
         <location filename="../About.js" line="+56"/>
         <source>About %1</source>
-        <translation type="unfinished"></translation>
+        <translation>O %1</translation>
     </message>
     <message>
         <location line="+33"/>
         <location line="+98"/>
         <source>Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Verze:</translation>
     </message>
     <message>
         <location line="-91"/>
         <location line="+108"/>
         <location line="+12"/>
         <source>Internet:</source>
-        <translation type="unfinished"></translation>
+        <translation>Internet:</translation>
     </message>
     <message>
         <location line="-118"/>
         <source>Build Date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Datum sestavení:</translation>
     </message>
     <message>
         <location line="+2"/>
         <source>Revision:</source>
-        <translation type="unfinished"></translation>
+        <translation>Revize:</translation>
     </message>
     <message>
         <location line="+2"/>
         <location line="+89"/>
         <source>Qt Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Verze Qt:</translation>
     </message>
     <message>
         <location line="-86"/>
         <source>Architecture:</source>
-        <translation type="unfinished"></translation>
+        <translation>Architektura:</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Compiler:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Překladač:</translation>
     </message>
     <message>
         <location line="+3"/>

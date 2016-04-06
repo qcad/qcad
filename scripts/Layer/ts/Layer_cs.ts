@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="cs">
 <context>
     <name>Layer</name>
     <message>
         <location filename="../Layer.js" line="+66"/>
         <source>Layer Tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Nástroje vrstev</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Show layer tools</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazit nástroje vrstev</translation>
     </message>
     <message>
         <location line="+23"/>
         <source>&amp;Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Vrstva</translation>
     </message>
 </context>
 <context>
@@ -24,37 +24,37 @@
     <message>
         <location filename="../LayerDialog.js" line="+180"/>
         <source>Leading or trailing spaces.</source>
-        <translation type="unfinished"></translation>
+        <translation>Počáteční nebo koncové mezery.</translation>
     </message>
     <message>
         <location line="+5"/>
         <source>Layer name is empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Název vrstvy je prázdný.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Layer already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vrstva už existuje.</translation>
     </message>
     <message>
         <location filename="../LayerDialog.ui" line="+17"/>
         <source>Layer Data</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Data vrstvy</translation>
     </message>
     <message>
         <location line="+12"/>
         <source>Layer name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Název vrstvy:</translation>
     </message>
     <message>
         <location line="+28"/>
         <source>Attributes</source>
-        <translation type="unfinished"></translation>
+        <translation>Parametry</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>Color:</source>
-        <translation type="unfinished"></translation>
+        <translation>Barva:</translation>
     </message>
     <message>
         <location line="+29"/>
