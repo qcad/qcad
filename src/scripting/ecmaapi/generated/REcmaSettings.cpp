@@ -135,6 +135,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getAutoScalePatterns, "getAutoScalePatterns");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getAutoZoomOnLoad, "getAutoZoomOnLoad");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getColorCorrection, "getColorCorrection");
             
             REcmaHelper::registerFunction(&engine, &ctor, getColorThreshold, "getColorThreshold");
@@ -2011,6 +2013,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getAutoScalePatterns", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getAutoZoomOnLoad
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getAutoZoomOnLoad", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getAutoZoomOnLoad";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getAutoZoomOnLoad();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getAutoZoomOnLoad().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getAutoZoomOnLoad", context, engine);
             return result;
         }
          QScriptValue

@@ -163,6 +163,9 @@
         getAutoScalePatterns
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getAutoZoomOnLoad
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getColorCorrection
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

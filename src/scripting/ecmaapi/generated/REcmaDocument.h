@@ -441,6 +441,9 @@
         hasVariable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setKnownVariable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

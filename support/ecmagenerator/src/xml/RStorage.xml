@@ -816,6 +816,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
+    <method name="removeVariable" cppName="removeVariable"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="true">
+        <arg type="QString &amp;" typeName="QString" name="key"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getVariable" cppName="getVariable"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

@@ -339,6 +339,9 @@
         setVariable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        removeVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getVariable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

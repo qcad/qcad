@@ -34,7 +34,7 @@ do
         let threads=threads+1
         if [ $threads -eq $maxThreads ]; then
             echo "waiting for threads to finish..."
-            sleep 0.05
+            sleep 0.1
             wait
             threads=0
         fi

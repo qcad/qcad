@@ -333,6 +333,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, hasVariable, "hasVariable");
             
+            REcmaHelper::registerFunction(&engine, proto, removeVariable, "removeVariable");
+            
             REcmaHelper::registerFunction(&engine, proto, setKnownVariable, "setKnownVariable");
             
             REcmaHelper::registerFunction(&engine, proto, getKnownVariable, "getKnownVariable");
@@ -10613,6 +10615,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::hasVariable", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::removeVariable
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::removeVariable", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::removeVariable";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("removeVariable", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeVariable(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.removeVariable().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::removeVariable", context, engine);
             return result;
         }
          QScriptValue
