@@ -1354,6 +1354,14 @@ void RMemoryStorage::setVariable(const QString& key, const QVariant& value, bool
     setModified(true);
 }
 
+void RMemoryStorage::removeVariable(const QString& key) {
+    if (!variableCaseMap.contains(key.toLower())) {
+        return;
+    }
+
+    variables.remove(variableCaseMap[key.toLower()]);
+}
+
 QVariant RMemoryStorage::getVariable(const QString& key) const {
     if (!variableCaseMap.contains(key.toLower())) {
         return QVariant();

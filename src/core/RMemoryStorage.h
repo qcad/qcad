@@ -135,6 +135,7 @@ public:
     virtual QStringList getVariables() const;
     virtual void setVariable(const QString& key, const QVariant& value, bool overwrite = true);
     virtual QVariant getVariable(const QString& key) const;
+    virtual void removeVariable(const QString& key);
 
     virtual void setKnownVariable(RS::KnownVariable key, const QVariant& value, RTransaction* transaction = NULL);
     virtual QVariant getKnownVariable(RS::KnownVariable key) const;

@@ -311,6 +311,7 @@ public:
     void setVariable(const QString& key, const QVariant& value, bool overwrite=true);
     QVariant getVariable(const QString& key, const QVariant& defaultValue = RDEFAULT_QVARIANT, bool useSettings = false) const;
     bool hasVariable(const QString& key) const;
+    void removeVariable(const QString& key);
 
     void setKnownVariable(RS::KnownVariable key, const QVariant& value, RTransaction* transaction = NULL);
     void setKnownVariable(RS::KnownVariable key, const RVector& value, RTransaction* transaction = NULL);

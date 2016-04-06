@@ -378,6 +378,7 @@ public:
 
     virtual QStringList getVariables() const = 0;
     virtual void setVariable(const QString& key, const QVariant& value, bool overwrite=true) = 0;
+    virtual void removeVariable(const QString& key) = 0;
     /**
      * \return The value of the given variable or an invalid variant if the
      *      variable does not exist.

@@ -580,6 +580,10 @@ bool RDocument::hasVariable(const QString& key) const {
     return storage.hasVariable(key);
 }
 
+void RDocument::removeVariable(const QString& key) {
+    storage.removeVariable(key);
+}
+
 void RDocument::setVariable(const QString& key, const QVariant& value, bool overwrite) {
     storage.setVariable(key, value, overwrite);
 }
