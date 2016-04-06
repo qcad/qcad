@@ -101,6 +101,7 @@ public:
     static bool getAutoScaleGrid();
     static bool getAutoScaleMetaGrid();
     static bool getAutoScalePatterns();
+    static bool getAutoZoomOnLoad();
     static bool getColorCorrection();
     static int getColorThreshold();
     static int getTextHeightThreshold();

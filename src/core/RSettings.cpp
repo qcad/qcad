@@ -485,6 +485,10 @@ bool RSettings::getAutoScalePatterns() {
     return getValue("GraphicsView/AutoScalePatterns", true).toBool();
 }
 
+bool RSettings::getAutoZoomOnLoad() {
+    return getValue("GraphicsView/AutoZoomOnLoad", true).toBool();
+}
+
 bool RSettings::getColorCorrection() {
     return getValue("GraphicsView/ColorCorrection", true).toBool();
 }

@@ -79,9 +79,22 @@ Viewport.updateViewports = function(viewports) {
     for (var i = 0; i < viewports.length; ++i) {
         var vp = viewports[i];
         vp.getEventHandler().viewportChanged();
-        var gv = vp.getGraphicsView();
-        gv.autoZoom(-1, true);
-        //gv.setAntialiasing(RSettings.getBoolValue("GraphicsView/Antialiasing", false));
+        var view = vp.getGraphicsView();
+
+        if (RSettings.getAutoZoomOnLoad() || i>0) {
+            view.autoZoom(-1, true);
+        }
+        else {
+            // restore first viewport (zoom / pan):
+            var di = vp.getDocumentInterface();
+            var doc = di.getDocument();
+            var c = doc.getVariable("ViewportCenter", undefined);
+            var w = doc.getVariable("ViewportWidth", undefined);
+            var h = doc.getVariable("ViewportHeight", undefined);
+            if (!isNull(c) || !isNull(w) || !isNull(h)) {
+                view.zoomTo(new RBox(c, w, h));
+            }
+        }
     }
 };
 
@@ -204,6 +217,10 @@ Viewport.prototype.getVpWidget = function() {
 
 Viewport.prototype.getGraphicsView = function() {
     return this.graphicsView;
+};
+
+Viewport.prototype.getDocumentInterface = function() {
+    return this.documentInterface;
 };
 
 Viewport.prototype.getEventHandler = function() {

@@ -1155,8 +1155,8 @@ QString RDocumentInterface::getCorrectedFileName(const QString& fileName, const 
 }
 
 bool RDocumentInterface::exportFile(const QString& fileName, const QString& fileVersion, bool resetModified) {
-    RFileExporter* fileExporter = RFileExporterRegistry::getFileExporter(
-            fileName, fileVersion, document);
+
+    RFileExporter* fileExporter = RFileExporterRegistry::getFileExporter(fileName, fileVersion, document);
     if (fileExporter == NULL) {
         return false;
     }
@@ -1167,7 +1167,24 @@ bool RDocumentInterface::exportFile(const QString& fileName, const QString& file
         mainWindow->notifyExportListenersPre(this);
     }
 
+    // set temporary variables to allow exporter to store additional information
+    // not available as part of the document:
+    RGraphicsView* view = getLastKnownViewWithFocus();
+    if (view!=NULL) {
+        RBox b = view->getBox();
+        RVector c = b.getCenter();
+        QVariant v;
+        v.setValue(c);
+        document.setVariable("ViewportCenter", v);
+        document.setVariable("ViewportWidth", b.getWidth());
+        document.setVariable("ViewportHeight", b.getHeight());
+    }
+
     bool success = fileExporter->exportFile(fileName, fileVersion, resetModified);
+
+    document.removeVariable("ViewportCenter");
+    document.removeVariable("ViewportWidth");
+    document.removeVariable("ViewportHeight");
 
     if (success) {
         // Note: exporter might set the file name of the document
