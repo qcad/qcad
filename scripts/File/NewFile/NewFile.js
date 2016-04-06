@@ -255,7 +255,7 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
 
     if (isOpen) {
         // trigger post open actions (actions configured by the user to be
-        // shown whenever a file is opened, for example to show a font
+        // run whenever a file is opened, for example to show a font
         // replacement dialog, etc):
         for (var k=0; k<NewFile.postOpenActions.length; k++) {
             if (!isNull(NewFile.postOpenActions[k])) {
