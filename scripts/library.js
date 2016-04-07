@@ -1356,8 +1356,8 @@ Array.alphaNumericalSorter = function(a, b) {
         return tz;
     }
 
-    var aa = chunkify(a);
-    var bb = chunkify(b);
+    var aa = chunkify(a.toLowerCase());
+    var bb = chunkify(b.toLowerCase());
 
     for (x = 0; aa[x] && bb[x]; x++) {
         if (aa[x] !== bb[x]) {
