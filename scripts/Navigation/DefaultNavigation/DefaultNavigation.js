@@ -208,14 +208,15 @@ DefaultNavigation.prototype.wheelEvent = function(event) {
                 this.panOffset = this.panOffset.operator_add(new RVector(wheelDelta/2, 0));
             }
 
-            // TODO: limit check to wheel events if possible:
-            if (QCoreApplication.hasPendingEvents()) {
-                return;
+            if (RSettings.getQtVersionString().startsWith("4.")) {
+                // TODO: limit check to wheel events if possible:
+                if (QCoreApplication.hasPendingEvents()) {
+                    return;
+                }
             }
-            else {
-                this.view.pan(this.panOffset);
-                this.panOffset = new RVector();
-            }
+
+            this.view.pan(this.panOffset);
+            this.panOffset = new RVector();
         }
         this.view.simulateMouseMoveEvent();
         break;
