@@ -152,6 +152,7 @@
 
     <function_decl><type><name>void</name></type> <name>addPolyline</name><parameter_list>(<param><decl><type><name>const</name> <name>RPolyline</name>&amp;</type> <name>pl</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>addPath</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>appendPath</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>path</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>addLine</name><parameter_list>(<param><decl><type><name>const</name> <name>RLine</name>&amp;</type> <name>line</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>addArc</name><parameter_list>(<param><decl><type><name>const</name> <name>RArc</name>&amp;</type> <name>arc</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>addSpline</name><parameter_list>(<param><decl><type><name>const</name> <name>RSpline</name>&amp;</type> <name>spline</name></decl></param>)</parameter_list>;</function_decl>

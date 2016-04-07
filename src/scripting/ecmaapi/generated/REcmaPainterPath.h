@@ -87,6 +87,9 @@
         addPath
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        appendPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         addLine
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

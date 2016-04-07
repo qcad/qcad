@@ -98,6 +98,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, addPath, "addPath");
             
+            REcmaHelper::registerFunction(&engine, proto, appendPath, "appendPath");
+            
             REcmaHelper::registerFunction(&engine, proto, addLine, "addLine");
             
             REcmaHelper::registerFunction(&engine, proto, addArc, "addArc");
@@ -1690,6 +1692,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPainterPath::addPath", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPainterPath::appendPath
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPainterPath::appendPath", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::appendPath";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPainterPath* self = 
+                        getSelf("appendPath", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPainterPath */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RPainterPath*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RPainterPath*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPainterPath: Argument 0 is not of type RPainterPath.",
+                               context);                    
+                    }
+                    RPainterPath 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->appendPath(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.appendPath().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPainterPath::appendPath", context, engine);
             return result;
         }
          QScriptValue

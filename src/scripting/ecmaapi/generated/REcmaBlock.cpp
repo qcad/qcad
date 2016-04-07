@@ -95,6 +95,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLayoutId, "getLayoutId");
             
+            REcmaHelper::registerFunction(&engine, proto, getLayoutName, "getLayoutName");
+            
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
             
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
@@ -1068,6 +1070,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaBlock::getLayoutId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaBlock::getLayoutName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaBlock::getLayoutName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaBlock::getLayoutName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBlock* self = 
+                        getSelf("getLayoutName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getLayoutName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.getLayoutName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaBlock::getLayoutName", context, engine);
             return result;
         }
          QScriptValue

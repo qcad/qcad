@@ -167,6 +167,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="path" isConst="true" />
       </variant>
     </method>
+    <method name="appendPath" cppName="appendPath"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPainterPath &amp;" typeName="RPainterPath"
+        name="path" isConst="true" />
+      </variant>
+    </method>
     <method name="addLine" cppName="addLine" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">

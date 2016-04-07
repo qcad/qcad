@@ -90,6 +90,9 @@
         getLayoutId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLayoutName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
