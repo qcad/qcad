@@ -889,10 +889,10 @@ RPainterPath RHatchData::getBoundaryPath(double pixelSizeHint) const {
 
                 RPainterPathExporter exp;
                 exp.setExportZeroLinesAsPoints(false);
-                exp.setPixelSizeHint(pixelSizeHint);
+                exp.setPixelSizeHint(pixelSizeHint*2);
                 exp.exportArcSegment(*arc);
                 RPainterPath p = exp.getPainterPath();
-                boundaryPath.addPath(p);
+                boundaryPath.appendPath(p);
                 cursor = arc->getEndPoint();
                 continue;
             }
