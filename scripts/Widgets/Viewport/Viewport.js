@@ -91,7 +91,7 @@ Viewport.updateViewports = function(viewports) {
             var c = doc.getVariable("ViewportCenter", undefined);
             var w = doc.getVariable("ViewportWidth", undefined);
             var h = doc.getVariable("ViewportHeight", undefined);
-            if (!isNull(c) || !isNull(w) || !isNull(h)) {
+            if (!isNull(c) && !isNull(w) && !isNull(h)) {
                 view.zoomTo(new RBox(c, w, h));
             }
         }
