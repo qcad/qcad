@@ -106,7 +106,23 @@ RBlockListQt.prototype.filter = function(block) {
 };
 
 RBlockListQt.prototype.sortBlockNames = function(blockNames) {
-    blockNames.sort();
+    var doc = this.di.getDocument();
+
+    //var self = this;
+    blockNames.sort(function(a, b) {
+        var blockA = doc.queryBlock(a);
+        var blockB = doc.queryBlock(b);
+        var blockTitleA = RBlockListQt.getBlockTitle(blockA);
+        var blockTitleB = RBlockListQt.getBlockTitle(blockB);
+        if (blockTitleA.startsWith("*")) {
+            blockTitleA = blockTitleA.substring(1);
+        }
+        if (blockTitleB.startsWith("*")) {
+            blockTitleB = blockTitleB.substring(1);
+        }
+
+        return Array.alphaNumericalSorter(blockTitleA, blockTitleB);
+    });
 };
 
 /**
@@ -171,6 +187,15 @@ RBlockListQt.prototype.updateBlocks = function(documentInterface) {
     this.blockActivated();
 };
 
+RBlockListQt.getBlockTitle = function(block) {
+    var title = block.getName();
+    var layoutName = block.getLayoutName();
+    if (layoutName.length>0) {
+        title = layoutName + " (" + title + ")";
+    }
+    return title;
+};
+
 RBlockListQt.prototype.getBlockItem = function(block) {
     var item = new QTreeWidgetItem();
     var name = block.getName();
@@ -178,17 +203,7 @@ RBlockListQt.prototype.getBlockItem = function(block) {
     var flags = new Qt.ItemFlags(Qt.ItemIsSelectable|Qt.ItemIsEnabled);
     item.setFlags(flags);
 
-    var title = name;
-    if (block.isLayout()) {
-        var layoutId = block.getLayoutId();
-        var doc = block.getDocument();
-        if (!isNull(doc)) {
-            var layout = doc.queryLayout(layoutId);
-            if (!isNull(layout)) {
-                title = layout.getName() + " (" + title + ")";
-            }
-        }
-    }
+    var title = RBlockListQt.getBlockTitle(block);
 
     item.setText(BlockList.colName, title);
 
