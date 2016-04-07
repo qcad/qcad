@@ -175,7 +175,6 @@ QList<QSharedPointer<RShape> > RPainterPath::getShapes() const {
     QList<QSharedPointer<RShape> > ret;
     QPointF cursor;
 
-    // distance to path:
     for (int i = 0; i < elementCount(); ++i) {
         QPainterPath::Element el = elementAt(i);
 
@@ -218,6 +217,37 @@ QList<QSharedPointer<RShape> > RPainterPath::getShapes() const {
 
 void RPainterPath::addPath(const RPainterPath& path) {
     QPainterPath::addPath(path);
+    points.append(path.getPoints());
+}
+
+void RPainterPath::appendPath(const RPainterPath& path) {
+    for (int i = 0; i < path.elementCount(); ++i) {
+        QPainterPath::Element el = path.elementAt(i);
+
+        // line element in path:
+        if (el.isLineTo()) {
+            lineTo(el.x, el.y);
+        }
+
+        // curve element in path:
+        else if (el.isCurveTo()) {
+            RVector controlPoint1(el.x, el.y);
+            i++;
+            if (i>=path.elementCount()) {
+                break;
+            }
+            el = path.elementAt(i);
+            RVector controlPoint2(el.x, el.y);
+            i++;
+            if (i>=path.elementCount()) {
+                break;
+            }
+            el = path.elementAt(i);
+            RVector endPoint(el.x, el.y);
+            cubicTo(controlPoint1, controlPoint2, endPoint);
+        }
+    }
+
     points.append(path.getPoints());
 }
 

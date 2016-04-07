@@ -151,6 +151,7 @@ public:
 
     void addPolyline(const RPolyline& pl);
     void addPath(const RPainterPath& path);
+    void appendPath(const RPainterPath& path);
     void addLine(const RLine& line);
     void addArc(const RArc& arc);
     void addSpline(const RSpline& spline);
