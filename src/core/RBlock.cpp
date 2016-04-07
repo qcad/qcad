@@ -69,6 +69,25 @@ void RBlock::setName(const QString& n) {
     name = n.trimmed();
 }
 
+QString RBlock::getLayoutName() const {
+    if (!isLayout()) {
+        return "";
+    }
+
+    RLayout::Id layoutId = getLayoutId();
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
+        return "";
+    }
+
+    QSharedPointer<RLayout> layout = doc->queryLayoutDirect(layoutId);
+    if (layout.isNull()) {
+        return "";
+    }
+
+    return layout->getName();
+}
+
 bool RBlock::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction) {
     bool ret = RObject::setProperty(propertyTypeId, value, transaction);
 

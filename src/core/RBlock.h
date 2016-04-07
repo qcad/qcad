@@ -112,6 +112,8 @@ public:
         return layoutId;
     }
 
+    QString getLayoutName() const;
+
     virtual QPair<QVariant, RPropertyAttributes> getProperty(RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false);
     virtual bool setProperty(RPropertyTypeId propertyTypeId,
