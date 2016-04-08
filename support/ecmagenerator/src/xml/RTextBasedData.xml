@@ -5,7 +5,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class name="RTextBasedData"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="true" isQObject="false"
-  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+  hasStreamOperator="true" isAbstract="false" isScriptable="true">
     <baseClass name="REntityData" specifier="public" />
     <baseClass name="RPainterPathSource" specifier="public" />
     <constructor>

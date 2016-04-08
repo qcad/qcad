@@ -249,7 +249,7 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, removeValue, "removeValue");
             
-            REcmaHelper::registerFunction(&engine, &ctor, setApplicationName, "setApplicationName");
+            REcmaHelper::registerFunction(&engine, &ctor, setApplicationNameOverride, "setApplicationNameOverride");
             
             REcmaHelper::registerFunction(&engine, &ctor, hasApplicationNameOverride, "hasApplicationNameOverride");
             
@@ -4694,12 +4694,12 @@
             return result;
         }
          QScriptValue
-        REcmaSettings::setApplicationName
+        REcmaSettings::setApplicationNameOverride
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSettings::setApplicationName", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::setApplicationName";
+            //REcmaHelper::functionStart("REcmaSettings::setApplicationNameOverride", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::setApplicationNameOverride";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
@@ -4726,16 +4726,16 @@
     // call C++ function:
     // return type 'void'
     RSettings::
-       setApplicationName(a0);
+       setApplicationNameOverride(a0);
     } else
 
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.setApplicationName().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.setApplicationNameOverride().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSettings::setApplicationName", context, engine);
+            //REcmaHelper::functionEnd("REcmaSettings::setApplicationNameOverride", context, engine);
             return result;
         }
          QScriptValue

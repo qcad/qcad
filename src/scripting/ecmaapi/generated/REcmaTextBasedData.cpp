@@ -6040,7 +6040,13 @@
     
     QString result;
     
-            result = QString("RTextBasedData(0x%1)").arg((unsigned long int)self, 0, 16);
+            QDebug d(&result);
+            if (self!=NULL) {
+                d << *self;
+            }
+            else {
+                d << "NULL";
+            }
         
     return QScriptValue(result);
     }

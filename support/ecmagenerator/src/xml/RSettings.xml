@@ -584,9 +584,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
-    <method name="setApplicationName" cppName="setApplicationName"
-    specifier="public" isStatic="true" isVirtual="false"
-    isScriptOverwritable="true">
+    <method name="setApplicationNameOverride"
+    cppName="setApplicationNameOverride" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QString &amp;" typeName="QString" name="n"
         isConst="true" />

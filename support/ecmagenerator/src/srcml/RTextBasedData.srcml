@@ -323,11 +323,6 @@
     <function_decl><type><name>static</name> <name>QString</name></type> <name>toEscapedText</name><parameter_list>(<param><decl><type><name>const</name> <name>QTextDocument</name>&amp;</type> <name>textDocument</name></decl></param>, <param><decl><type><name>const</name> <name>RColor</name>&amp;</type> <name>initialColor</name></decl></param>, <param><decl><type><name>double</name></type> <name>fontHeightFactor</name>=<init><expr>1.0</expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>static</name> <name>QString</name></type> <name>toRichText</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>escapedText</name></decl></param>, <param><decl><type><name>const</name> <name>QFont</name>&amp;</type> <name>mainFont</name></decl></param>, <param><decl><type><name>double</name></type> <name>fontHeightFactor</name>=<init><expr>1.0</expr></init></decl></param>)</parameter_list>;</function_decl>
 
-    <comment type="block">/**
-     * \nonscriptable
-     */</comment>
-    <function_decl><type><name>friend</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
-
 </public><protected>protected:
     <decl_stmt><decl><type><name>QString</name></type> <name>text</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>position</name></decl>;</decl_stmt>
@@ -357,6 +352,8 @@
     <decl_stmt><decl><type><name>mutable</name> <name>bool</name></type> <name>gotDraft</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>QList<argument_list>&lt;<argument><name>RTextLayout</name></argument>&gt;</argument_list></name></type> <name>textLayouts</name></decl>;</decl_stmt>
 </protected>}</block>;</class>
+
+<function_decl><type><name>QCADCORE_EXPORT</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>t</name></decl></param>)</parameter_list>;</function_decl>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTextBasedData</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RTextBasedData*</argument>)</argument_list></macro>

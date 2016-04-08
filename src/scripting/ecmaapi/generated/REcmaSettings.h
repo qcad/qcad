@@ -334,7 +334,7 @@
         removeValue
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        setApplicationName
+        setApplicationNameOverride
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasApplicationNameOverride
