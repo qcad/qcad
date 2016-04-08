@@ -908,12 +908,12 @@ QString RTextBasedData::toRichText(const QString& escapedText, const QFont& main
 
 QDebug operator<<(QDebug dbg, const RTextBasedData& t) {
     dbg.nospace() << "RTextBasedData("
-                  << "text: " << t.text
-                  << ", font: " << t.fontName
-                  << ", file: " << t.fontFile
-                  << ", position: " << t.position
-                  << ", alignmnet point: " << t.alignmentPoint
-                  << ", angle: " << RMath::rad2deg(t.angle)
+                  << "text: " << t.getText()
+                  << ", font: " << t.getFontName()
+                  << ", file: " << t.getFontFile()
+                  << ", position: " << t.getPosition()
+                  << ", alignmnet point: " << t.getAlignmentPoint()
+                  << ", angle: " << RMath::rad2deg(t.getAngle())
                   << ", pps: " << t.getPainterPaths()
                   << ")";
     return dbg;

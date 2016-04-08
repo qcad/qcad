@@ -322,11 +322,6 @@ public:
     static QString toEscapedText(const QTextDocument& textDocument, const RColor& initialColor, double fontHeightFactor=1.0);
     static QString toRichText(const QString& escapedText, const QFont& mainFont, double fontHeightFactor=1.0);
 
-    /**
-     * \nonscriptable
-     */
-    friend QDebug operator<<(QDebug dbg, const RTextBasedData& t);
-
 protected:
     QString text;
     RVector position;
@@ -356,6 +351,8 @@ protected:
     mutable bool gotDraft;
     mutable QList<RTextLayout> textLayouts;
 };
+
+QCADCORE_EXPORT QDebug operator<<(QDebug dbg, const RTextBasedData& t);
 
 Q_DECLARE_METATYPE(RTextBasedData)
 Q_DECLARE_METATYPE(RTextBasedData*)
