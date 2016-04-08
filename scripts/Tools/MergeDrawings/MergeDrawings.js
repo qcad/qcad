@@ -62,7 +62,7 @@ function main() {
     qApp.organizationDomain = "QCAD.org";
     qApp.applicationVersion = RSettings.getVersionString();
     qApp.applicationName = "QCAD";
-    RSettings.setApplicationName("QCAD3");
+    RSettings.setApplicationNameOverride("QCAD3");
     
     var xmlFile = args[args.length - 1];
     if (xmlFile.indexOf("-") === 0) {
