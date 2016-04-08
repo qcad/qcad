@@ -497,11 +497,7 @@ void RExporter::exportEntities(bool allBlocks, bool undone) {
     for (it=list.begin(); it!=list.end(); it++) {
         QSharedPointer<REntity> e = document->queryEntityDirect(*it);
         if (!e.isNull()) {
-            //RDebug::startTimer(500);
             exportEntity(*e, false);
-//            if (RDebug::stopTimer(500, "export entity", 100)>100000000) {
-//                qDebug() << *e;
-//            }
         }
     }
 }
