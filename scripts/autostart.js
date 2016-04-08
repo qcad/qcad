@@ -425,10 +425,6 @@ function uninitAddOns(addOns) {
  * Loads the add-ons and starts QCAD.
  */
 function main() {
-    if (!isNull(qApp.applicationNameOverride)) {
-        qApp.applicationName = qApp.applicationNameOverride;
-    }
-
     var i;
     var filesToOpen = [];
 
@@ -462,7 +458,7 @@ function main() {
     // older QCAD versions:
     // note that a plugin might have set a name override already:
     if (!RSettings.hasApplicationNameOverride()) {
-        RSettings.setApplicationName("QCAD3");
+        RSettings.setApplicationNameOverride("QCAD3");
     }
     // make sure settings file path is reinitialized:
     RSettings.uninit();
@@ -533,13 +529,13 @@ function main() {
     var pluginInfo;
 
     // look up app name override:
-    for (i=0; i<numPlugins; i++) {
-        pluginInfo = RPluginLoader.getPluginInfo(i);
-        var n = pluginInfo.get("NameOverride");
-        if (!isNull(n)) {
-            qApp.applicationName = n;
-        }
-    }
+//    for (i=0; i<numPlugins; i++) {
+//        pluginInfo = RPluginLoader.getPluginInfo(i);
+//        var n = pluginInfo.get("NameOverride");
+//        if (!isNull(n)) {
+//            qApp.applicationName = n;
+//        }
+//    }
 
     // if locale is given, don't show first start dialog:
     if (isFirstStart && !QCoreApplication.arguments().contains("-locale")) {
