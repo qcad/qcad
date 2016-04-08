@@ -81,14 +81,18 @@ bool RSettings::firstStart = false;
 bool RSettings::newVersion = false;
 int RSettings::previousVersion = 0;
 
+/**
+ * App ID used for DXF/DWG exports / imports to identify app XData.
+ */
 QString RSettings::getAppId() {
-    QString ret = qApp->applicationName();
-    ret.replace(QRegExp("[^a-zA-Z0-9]"), "");
+    //QString ret = qApp->applicationName();
+    //ret.replace(QRegExp("[^a-zA-Z0-9]"), "");
     // prevent 'empty record name' exception:
-    if (ret.isEmpty()) {
-        ret = "QCAD";
-    }
-    return ret;
+    //if (ret.isEmpty()) {
+    //    ret = "QCAD";
+    //}
+    //return ret;
+    return "QCAD";
 }
 
 double RSettings::getDevicePixelRatio() {
@@ -947,7 +951,10 @@ bool RSettings::isInitialized() {
     return !qApp->organizationName().isEmpty();
 }
 
-void RSettings::setApplicationName(const QString& n) {
+/**
+ * Sets the application name override used for the configuration file name (e.g. QCAD3).
+ */
+void RSettings::setApplicationNameOverride(const QString& n) {
     applicationNameOverride = n;
 }
 

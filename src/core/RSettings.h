@@ -186,7 +186,7 @@ public:
     static void setValue(const QString& key, const QVariant& value, bool overwrite=true);
     static void removeValue(const QString& key);
 
-    static void setApplicationName(const QString& n);
+    static void setApplicationNameOverride(const QString& n);
     static bool hasApplicationNameOverride();
 
     static QStringList getAllKeys(const QString& group);
