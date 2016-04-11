@@ -586,6 +586,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="true" isConst="false" />
       </variant>
     </method>
+    <method name="getIntersectionPointsSX"
+    cppName="getIntersectionPointsSX" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false">
+        <arg type="RSpline &amp;" typeName="RSpline" name="spline1"
+        isConst="true" />
+        <arg type="RExplodable &amp;" typeName="RExplodable"
+        name="explodable2" isConst="true" />
+        <arg type="bool" typeName="bool" name="limited"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getIntersectionPointsSS"
     cppName="getIntersectionPointsSS" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">
