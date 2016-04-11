@@ -42,7 +42,10 @@ var credits =
     [
         qsTr("Translations"),
         //[ "Wang Zhen Zhe",     "Chinese (zh_CN) translation." ],
+        [ "Petr Zgraja",       "Czech (cs) translation" ],
+        [ "Andrew Mustun",     "Dutch (nl) translation" ],
         [ "Timo Seppola",      "Finnish (fi) translation" ],
+        [ "Andrew Mustun",     "German (de) translation" ],
         [ "Tanaka Hidemune",   "Japanese (ja) translation and user reference manual" ],
         [ "Евгений, AlexL",    "Russian (ru) translation" ],
         [ "Ján Jamriška",      "Slovak (sk) translation" ],
