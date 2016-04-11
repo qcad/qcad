@@ -245,6 +245,9 @@ public:
     static QList<RVector> getIntersectionPointsEX(const REllipse& ellipse1,
             const RExplodable& explodable2, bool limited = true);
 
+    static QList<RVector> getIntersectionPointsSX(const RSpline& spline1,
+            const RExplodable& explodable2, bool limited);
+
     static QList<RVector> getIntersectionPointsSS(const RSpline& spline1,
             const RSpline& spline2, bool limited = true, bool same = false);
 

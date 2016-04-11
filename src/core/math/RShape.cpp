@@ -469,6 +469,12 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
             if (spline2 != NULL) {
                 return getIntersectionPointsSS(*spline1, *spline2, limited);
             }
+
+            // spline, polyline, ...:
+            const RExplodable* explodable2 = dynamic_cast<const RExplodable*> (&shape2);
+            if (explodable2 != NULL) {
+                return getIntersectionPointsSX(*spline1, *explodable2, limited);
+            }
         }
     }
 
@@ -497,6 +503,10 @@ QList<RVector> RShape::getIntersectionPoints(const RShape& shape1,
                 const RXLine* xline2 = dynamic_cast<const RXLine*> (&shape2);
                 if (xline2 != NULL) {
                     return getIntersectionPointsLX(xline2->getLineShape(), *explodable1, false);
+                }
+                const RSpline* spline2 = dynamic_cast<const RSpline*> (&shape2);
+                if (spline2 != NULL) {
+                    return getIntersectionPointsSX(*spline2, *explodable1, limited);
                 }
             }
 
@@ -1541,6 +1551,37 @@ QList<RVector> RShape::getIntersectionPointsEX(const REllipse& ellipse1,
         if (!pLine2.isNull()) {
             RLine line2 = *pLine2.data();
             res.append(RShape::getIntersectionPointsLE(line2, ellipse1));
+            continue;
+        }
+        QSharedPointer<RArc> pArc2 = (*it).dynamicCast<RArc>();
+        if (!pArc2.isNull()) {
+            RArc arc2 = *pArc2.data();
+            res.append(RShape::getIntersectionPointsAE(arc2, ellipse1));
+            continue;
+        }
+    }
+
+    return res;
+}
+
+QList<RVector> RShape::getIntersectionPointsSX(const RSpline& spline1,
+        const RExplodable& explodable2, bool limited) {
+    Q_UNUSED(limited)
+    QList<RVector> res;
+
+    QList<QSharedPointer<RShape> > sub = explodable2.getExploded();
+    QList<QSharedPointer<RShape> >::iterator it;
+    for (it=sub.begin(); it!=sub.end(); ++it) {
+        QSharedPointer<RLine> pLine2 = (*it).dynamicCast<RLine>();
+        if (!pLine2.isNull()) {
+            RLine line2 = *pLine2.data();
+            res.append(RShape::getIntersectionPointsLS(line2, spline1));
+            continue;
+        }
+        QSharedPointer<RArc> pArc2 = (*it).dynamicCast<RArc>();
+        if (!pArc2.isNull()) {
+            RArc arc2 = *pArc2.data();
+            res.append(RShape::getIntersectionPointsAS(arc2, spline1));
             continue;
         }
     }
