@@ -434,12 +434,12 @@
     <message>
         <location line="+2"/>
         <source>Layouts</source>
-        <translation type="unfinished"></translation>
+        <translation>Usporiadania</translation>
     </message>
     <message>
         <location line="+0"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>Usporiadanie</translation>
     </message>
     <message>
         <location line="+2"/>

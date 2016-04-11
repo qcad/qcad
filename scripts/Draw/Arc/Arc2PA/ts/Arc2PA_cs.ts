@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="cs">
 <context>
     <name>Arc2PA</name>
     <message>
         <location filename="../Arc2PA.js" line="+65"/>
         <source>Start point</source>
-        <translation type="unfinished"></translation>
+        <translation>Počáteční bod</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>End point</source>
-        <translation type="unfinished"></translation>
+        <translation>Koncový bod</translation>
     </message>
     <message>
         <location line="+85"/>
         <source>Invalid angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Neplatný úhel</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished"></translation>
+        <translation>Body jsou identické</translation>
     </message>
     <message>
         <location filename="../Arc2PA.ui" line="+17"/>
         <source>Angle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Úhel:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>Směr:</translation>
     </message>
     <message>
         <location line="+7"/>

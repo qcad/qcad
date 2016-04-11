@@ -94,7 +94,7 @@
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+244"/>
+        <location filename="../Viewport.js" line="+261"/>
         <source>Dropped data not supported</source>
         <translation>Опущенные данные не поддерживаются</translation>
     </message>

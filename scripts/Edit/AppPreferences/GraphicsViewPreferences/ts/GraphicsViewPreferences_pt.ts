@@ -69,12 +69,17 @@
         <translation>Zoom Automático</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
         <source>Margin (px):</source>
         <translation>Margem (px):</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+69"/>
+        <source>Auto zoom on load</source>
+        <translation>Zoom automático após o carregamento</translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Color Adjustment</source>
         <translation>Ajuste de Cor</translation>
     </message>

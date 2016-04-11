@@ -49,12 +49,17 @@
         <translation>Автоматическое масштабирование</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
         <source>Margin (px):</source>
         <translation>Край (пикс):</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+69"/>
+        <source>Auto zoom on load</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Color Adjustment</source>
         <translation>Регулировка цвета</translation>
     </message>

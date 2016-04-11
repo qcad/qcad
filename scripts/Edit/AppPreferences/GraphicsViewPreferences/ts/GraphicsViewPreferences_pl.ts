@@ -97,13 +97,18 @@ Autozoom
         <translation type="unfinished">Autozoom</translation>
     </message>
     <message>
-        <location line="+9"/>
+        <location line="+8"/>
         <source>Margin (px):</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Marża (px):</translation>
     </message>
     <message>
-        <location line="+57"/>
+        <location line="+69"/>
+        <source>Auto zoom on load</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+13"/>
         <source>Color Adjustment</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Regulacja kolorów</translation>
