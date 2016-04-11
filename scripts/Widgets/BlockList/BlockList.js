@@ -112,6 +112,40 @@ RBlockListQt.prototype.sortBlockNames = function(blockNames) {
     blockNames.sort(function(a, b) {
         var blockA = doc.queryBlock(a);
         var blockB = doc.queryBlock(b);
+        if (isNull(blockA) || isNull(blockB)) {
+            return 0;
+        }
+
+        // model space always first:
+        if (blockA.getName()===RBlock.modelSpaceName) {
+            return -1;
+        }
+        if (blockB.getName()===RBlock.modelSpaceName) {
+            return 1;
+        }
+
+        // layouts always before other blocks:
+        var blockAIsLayout = blockA.isLayout();
+        var blockBIsLayout = blockB.isLayout();
+        if (blockAIsLayout && !blockBIsLayout) {
+            return -1;
+        }
+        if (!blockAIsLayout && blockBIsLayout) {
+            return 1;
+        }
+
+        // sort among layouts by tab order:
+        if (blockAIsLayout && blockBIsLayout) {
+            var layoutAId = blockA.getLayoutId();
+            var layoutBId = blockB.getLayoutId();
+            var layoutA = doc.queryLayout(layoutAId);
+            var layoutB = doc.queryLayout(layoutBId);
+            if (!isNull(layoutA) && !isNull(layoutB)) {
+                return layoutA.getTabOrder() - layoutB.getTabOrder();
+            }
+        }
+
+        // sort by layout name or block name (ignoring * at start):
         var blockTitleA = RBlockListQt.getBlockTitle(blockA);
         var blockTitleB = RBlockListQt.getBlockTitle(blockB);
         if (blockTitleA.startsWith("*")) {
