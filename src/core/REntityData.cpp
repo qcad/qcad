@@ -28,7 +28,7 @@ REntityData::REntityData(RDocument* document) :
     updatesEnabled(true),
     selectionStatus(false), 
     drawOrder(RMININT),
-    layerId(RLayer::INVALID_ID), 
+    layerId(RLayer::INVALID_ID),
     blockId(RBlock::INVALID_ID), 
     parentId(REntity::INVALID_ID),
     linetypeId(RLinetype::INVALID_ID),
@@ -36,6 +36,7 @@ REntityData::REntityData(RDocument* document) :
     lineweight(RLineweight::WeightInvalid),
     color() {
 
+    drawOrder = REntityData::getDefaultDrawOrder();
 }
 
 QString REntityData::getLayerName() const {

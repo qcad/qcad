@@ -349,6 +349,10 @@ public:
      */
     virtual void update() const {}
 
+    static int getDefaultDrawOrder() {
+        return RMININT;
+    }
+
 protected:
     RDocument* document;
     bool updatesEnabled;

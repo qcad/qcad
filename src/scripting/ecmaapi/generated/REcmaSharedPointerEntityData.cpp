@@ -188,6 +188,8 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, getDefaultDrawOrder, "getDefaultDrawOrder");
+            
 
     // static properties:
     
@@ -5985,6 +5987,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerEntityData::update", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEntityData::getDefaultDrawOrder
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEntityData::getDefaultDrawOrder", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEntityData::getDefaultDrawOrder";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        REntityData::
+       getDefaultDrawOrder();
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntityData.getDefaultDrawOrder().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEntityData::getDefaultDrawOrder", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerEntityData::toString
