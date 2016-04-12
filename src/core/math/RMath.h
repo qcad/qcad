@@ -64,8 +64,8 @@
 #define RMINDOUBLE -std::numeric_limits<double>::max()
 #endif
 
-#define RMAXINT 2147483647
-#define RMININT -2147483648
+#define RMAXINT INT_MAX
+#define RMININT INT_MIN
 
 #ifndef RNANDOUBLE
 #define RNANDOUBLE std::numeric_limits<double>::quiet_NaN()
