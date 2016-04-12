@@ -204,6 +204,7 @@ void RMathLineEdit::setValue(double v, int precision) {
         v = RMath::rad2deg(v);
     }
     setText(QString("%1").arg(v, 0, 'g', precision));
+    clearError();
 }
 
 double RMathLineEdit::getValue() {
