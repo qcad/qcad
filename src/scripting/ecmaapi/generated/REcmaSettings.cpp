@@ -289,6 +289,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, hasDarkGuiBackground, "hasDarkGuiBackground");
             
+            REcmaHelper::registerFunction(&engine, &ctor, hasCustomStyleSheet, "hasCustomStyleSheet");
+            
 
     // static properties:
     
@@ -5497,6 +5499,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::hasDarkGuiBackground", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::hasCustomStyleSheet
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::hasCustomStyleSheet", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::hasCustomStyleSheet";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       hasCustomStyleSheet();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.hasCustomStyleSheet().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::hasCustomStyleSheet", context, engine);
             return result;
         }
          QScriptValue REcmaSettings::toString

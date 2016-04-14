@@ -216,6 +216,7 @@
     <function_decl><type><name>static</name> <name>bool</name></type> <name>getHideAttributeWithBlock</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>static</name> <name>bool</name></type> <name>hasDarkGuiBackground</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>hasCustomStyleSheet</name><parameter_list>()</parameter_list>;</function_decl>
 
 </public><private>private:
     <function_decl><type><name>static</name> <name>bool</name></type> <name>isInitialized</name><parameter_list>()</parameter_list>;</function_decl>
