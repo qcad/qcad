@@ -18,8 +18,10 @@
  */
 #include <QtDebug>
 #include <QApplication>
+#include <QColor>
 #include <QCoreApplication>
 #include <QFileInfo>
+#include <QFrame>
 #include <QStringList>
 #include <QTranslator>
 
@@ -43,6 +45,7 @@ QFont* RSettings::snapLabelFont = NULL;
 QFont* RSettings::infoLabelFont = NULL;
 QFont* RSettings::statusBarFont = NULL;
 RColor* RSettings::selectionColor = NULL;
+int RSettings::darkGuiBackground = -1;
 int RSettings::snapRange = -1;
 int RSettings::pickRange = -1;
 int RSettings::zeroWeightWeight = -1;
@@ -552,6 +555,19 @@ bool RSettings::getHideAttributeWithBlock() {
         hideAttributeWithBlock = getBoolValue("GraphicsView/HideAttributeWithBlock", false);
     }
     return hideAttributeWithBlock;
+}
+
+bool RSettings::hasDarkGuiBackground() {
+    if (darkGuiBackground==-1) {
+        // find out what color is used for QFrames (this might originate from a CSS stylesheet):
+        QFrame* w = new QFrame();
+        w->resize(1,1);
+        QPixmap pixmap = w->grab(QRect(0, 0, 1, 1));
+        delete w;
+        QImage img = pixmap.toImage();
+        darkGuiBackground = QColor(img.pixel(0,0)).value()<128;
+    }
+    return darkGuiBackground==1;
 }
 
 int RSettings::getQtVersion() {

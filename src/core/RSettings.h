@@ -214,6 +214,8 @@ public:
     static bool getSelectBlockWithAttribute();
     static bool getHideAttributeWithBlock();
 
+    static bool hasDarkGuiBackground();
+
 private:
     static bool isInitialized();
     static void shortenRecentFiles();
@@ -228,6 +230,7 @@ private:
     static QFont* infoLabelFont;
     static QFont* statusBarFont;
     static RColor* selectionColor;
+    static int darkGuiBackground;
     static int snapRange;
     static int pickRange;
     static int zeroWeightWeight;
