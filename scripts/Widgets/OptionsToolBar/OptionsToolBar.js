@@ -92,20 +92,23 @@ OptionsToolBar.postInit = function(basePath) {
     iconLabel.objectName = "Icon";
     iconLabel.alignment = Qt.AlignCenter;
     iconLabel.setContentsMargins(6, 0, 6, 0);
-    iconLabel.styleSheet =
-        "QLabel {"
-        + "border-radius: 6px; "
-        + "background-color: "
-        + "    qlineargradient(spread:pad, "
-        + "        x1: 0, y1: 0, "
-        + "        x2: 0, y2: 1, "
-        + "        stop: 0 rgba(255,255,255,0), "
-        + "        stop: 0.5 rgba(255,255,255,192), "
-        + "        stop: 1 rgba(255,255,255,0) "
-        + "    ); "
-        + "border: 2px solid #8f8f8f;"
-        + "margin: 2px 2px 2px 2px;"
-        + "}";
+
+    if (!RSettings.hasCustomStyleSheet()) {
+        iconLabel.styleSheet =
+            "QLabel {"
+            + "border-radius: 6px; "
+            + "background-color: "
+            + "    qlineargradient(spread:pad, "
+            + "        x1: 0, y1: 0, "
+            + "        x2: 0, y2: 1, "
+            + "        stop: 0 rgba(255,255,255,0), "
+            + "        stop: 0.5 rgba(255,255,255,192), "
+            + "        stop: 1 rgba(255,255,255,0) "
+            + "    ); "
+            + "border: 2px solid #8f8f8f;"
+            + "margin: 2px 2px 2px 2px;"
+            + "}";
+    }
 
     // avoid empty label after startup, before initializing new document:
     iconLabel.pixmap =
