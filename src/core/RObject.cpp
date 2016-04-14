@@ -502,6 +502,10 @@ QMap<QString, QVariantMap> RObject::getCustomProperties() const {
     return customProperties;
 }
 
+void RObject::copyCustomPropertiesFrom(RObject* other) {
+    customProperties.unite(other->getCustomProperties());
+}
+
 /**
  * Stream operator for QDebug
  */
