@@ -70,6 +70,7 @@ private:
     bool viewportChanged;
     QPainterPath cursorArrow;
     RVector cursorPosition;
+    int darkGuiBackground;
     mutable QSize hint;
 };
 

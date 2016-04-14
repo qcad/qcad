@@ -34,15 +34,9 @@ RRulerQt::RRulerQt(QWidget* parent) :
     RRuler(),
     painter(NULL),
     lastSize(0,0),
-    viewportChanged(false) {
+    viewportChanged(false),
+    darkGuiBackground(-1) {
     
-    //QPalette p = palette();
-    //QColor bg = p.color(QPalette::Window);
-    //p.setColor(QPalette::Window, bg.darker(120));
-    //setPalette(p);
-    
-    //setAutoFillBackground(false);
-
     qreal dpr = 1.0;
 #if QT_VERSION >= 0x050000
     dpr = devicePixelRatio();
@@ -122,19 +116,20 @@ void RRulerQt::paintTick(int pos, bool major, const QString& label) {
     if (major) {
         lineLength = 7*dpr;
     }
+
     if (orientation == Qt::Horizontal) {
-        painter->setPen(Qt::white);
+        painter->setPen(darkGuiBackground==1 ? Qt::black : Qt::white);
         painter->drawLine(pos + 1, height()*dpr - lineLength, pos + 1, height()*dpr);
-        painter->setPen(Qt::black);
+        painter->setPen(darkGuiBackground==1 ? Qt::white : Qt::black);
         painter->drawLine(pos, height()*dpr - lineLength, pos, height()*dpr);
         if (!label.isEmpty()) {
             QRect rect(pos - 250, top, 500, 500);
             painter->drawText(rect, Qt::AlignTop | Qt::AlignHCenter, label);
         }
     } else {
-        painter->setPen(Qt::white);
+        painter->setPen(darkGuiBackground==1 ? Qt::black : Qt::white);
         painter->drawLine(width()*dpr - lineLength, pos + 1, width()*dpr, pos + 1);
-        painter->setPen(Qt::black);
+        painter->setPen(darkGuiBackground==1 ? Qt::white : Qt::black);
         painter->drawLine(width()*dpr - lineLength, pos, width()*dpr, pos);
         if (!label.isEmpty()) {
             painter->save();
@@ -152,6 +147,10 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
 #if QT_VERSION >= 0x050000
     dpr = devicePixelRatio();
 #endif
+
+    if (darkGuiBackground<0) {
+        darkGuiBackground = RSettings::hasDarkGuiBackground();
+    }
 
     if (orientation == Qt::Horizontal) {
         if (sizeHint().height()*dpr != lastSize.height()) {
@@ -180,26 +179,8 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
     }
 
     if (viewportChanged) {
+        buffer.fill(Qt::transparent);
         painter = new QPainter(&buffer);
-        //painter->setCompositionMode(QPainter::CompositionMode_Clear);
-        //painter->eraseRect(QRect(QPoint(0, 0), size()));
-        //painter->setCompositionMode(QPainter::CompositionMode_SourceOver);
-#ifdef Q_OS_MAC
-        QLinearGradient fade;
-        fade.setStart(0, 0);
-        if (orientation==Qt::Horizontal) {
-            fade.setFinalStop(0, height());
-        }
-        else {
-            fade.setFinalStop(width(), 0);
-        }
-        fade.setColorAt(0, QColor(0xe5, 0xe5, 0xe5));
-        fade.setColorAt(1, QColor(0xc2, 0xc2, 0xc2));
-        painter->fillRect(buffer.rect(), fade);
-#else
-        painter->fillRect(buffer.rect(), palette().color(QPalette::Window));
-#endif
-
         painter->setPen(Qt::black);
         painter->setFont(getFont());
 
@@ -252,6 +233,7 @@ void RRulerQt::updateViewport() {
         setMinimumWidth(h.width());
         setMaximumWidth(h.width());
     }
+
     update();
 }
 
