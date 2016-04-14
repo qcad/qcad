@@ -1049,16 +1049,17 @@ EAction.getToolBar = function(title, objectName, toolBarArea, category, before) 
     if (isNull(tb)) {
         tb = new QToolBar(title);
         if (RSettings.isQt(5)) {
-            // Mac OS X: remove border around tool buttons:
-            //tb.setStyleSheet("QToolButton { background: transparent; }");
-            tb.setStyleSheet(
-                "QToolButton {" +
-                "  border: 1px solid transparent;" +
-                "} " +
-                "QToolButton:checked { " +
-                "  border:1px solid #7f7f7f; " +
-                "  background: qlineargradient(x1:0 y1:0, x2:0 y2:1 stop:0 #c0c0c0, stop:0.1 #8a8a8a stop:0.2 #a3a3a3 stop:1 transparent); " +
-                "}");
+            if (!RSettings.hasCustomStyleSheet()) {
+                // Mac OS X: remove border around tool buttons:
+                tb.setStyleSheet(
+                    "QToolButton {" +
+                    "  border: 1px solid transparent;" +
+                    "} " +
+                    "QToolButton:checked { " +
+                    "  border:1px solid #7f7f7f; " +
+                    "  background: qlineargradient(x1:0 y1:0, x2:0 y2:1 stop:0 #c0c0c0, stop:0.1 #8a8a8a stop:0.2 #a3a3a3 stop:1 transparent); " +
+                    "}");
+             }
         }
         tb.objectName = objectName;
         tb.setProperty("Category", category);
