@@ -199,7 +199,17 @@ void RGuiAction::setIcon(const QString& iconFile) {
         QAction::setIcon(QIcon());
     }
     else {
-        if (QFileInfo(iconFile).suffix().toLower()=="svg" &&
+        QString fileName = iconFile;
+
+        if (RSettings::hasDarkGuiBackground()) {
+            QFileInfo fi(iconFile);
+            QString iconFileDark = fi.absolutePath() + QDir::separator() + fi.baseName() + "-inverse." + fi.suffix();
+            if (QFileInfo(iconFileDark).exists()) {
+                fileName = iconFileDark;
+            }
+        }
+
+        if (QFileInfo(fileName).suffix().toLower()=="svg" &&
             !QCoreApplication::arguments().contains("-max-icon-res")) {
 
             int iconSize = RSettings::getIntValue("CadToolBar/IconSize", 32);
@@ -214,7 +224,7 @@ void RGuiAction::setIcon(const QString& iconFile) {
             pm.fill(Qt::transparent);
             QPainter p;
             p.begin(&pm);
-            QSvgRenderer renderer(iconFile);
+            QSvgRenderer renderer(fileName);
             renderer.render(&p, QRectF(0, 0, iconSize, iconSize));
             p.end();
 
