@@ -65,8 +65,8 @@
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RMINDOUBLE</name> -std::numeric_limits&lt;double&gt;::max()</cpp:define>
 <cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 
-<cpp:define>#<cpp:directive>define</cpp:directive> <name>RMAXINT</name> 2147483647</cpp:define>
-<cpp:define>#<cpp:directive>define</cpp:directive> <name>RMININT</name> -2147483648</cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RMAXINT</name> <name>INT_MAX</name></cpp:define>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>RMININT</name> <name>INT_MIN</name></cpp:define>
 
 <cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>RNANDOUBLE</name></cpp:ifndef>
 <cpp:define>#<cpp:directive>define</cpp:directive> <name>RNANDOUBLE</name> <name>std</name>::numeric_limits&lt;double&gt;::quiet_NaN()</cpp:define>

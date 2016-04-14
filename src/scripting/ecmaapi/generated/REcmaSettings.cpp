@@ -287,6 +287,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getHideAttributeWithBlock, "getHideAttributeWithBlock");
             
+            REcmaHelper::registerFunction(&engine, &ctor, hasDarkGuiBackground, "hasDarkGuiBackground");
+            
 
     // static properties:
     
@@ -5456,6 +5458,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getHideAttributeWithBlock", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::hasDarkGuiBackground
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::hasDarkGuiBackground", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::hasDarkGuiBackground";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       hasDarkGuiBackground();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.hasDarkGuiBackground().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::hasDarkGuiBackground", context, engine);
             return result;
         }
          QScriptValue REcmaSettings::toString

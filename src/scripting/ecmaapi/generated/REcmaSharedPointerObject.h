@@ -120,6 +120,9 @@
         getCustomPropertyKeys
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        copyCustomPropertiesFrom
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getComplexity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

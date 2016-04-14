@@ -71,6 +71,7 @@
     <decl_stmt><decl><type><name>bool</name></type> <name>viewportChanged</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QPainterPath</name></type> <name>cursorArrow</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>RVector</name></type> <name>cursorPosition</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>int</name></type> <name>darkBackground</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>mutable</name> <name>QSize</name></type> <name>hint</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
