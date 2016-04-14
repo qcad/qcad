@@ -32,14 +32,14 @@ function RCadToolMatrixTreePanel(parent, objectName) {
     layout.setIconSize(new QSize(iconSize, iconSize));
     this.setLayout(layout);
 
-    var pal = new QPalette();
-    var color = pal.color(QPalette.Active, QPalette.Window);
-    var colorName = color.name();
-    var colorLightName = color.lighter(105).name();
+    //var pal = new QPalette();
+    //var color = pal.color(QPalette.Active, QPalette.Window);
+    //var colorName = color.name();
+    //var colorLightName = color.lighter(105).name();
 
     this.styleSheet =
-          "QWidget#" + objectName + " { background: qlineargradient( x1:0 y1:0, x2:1 y2:0, stop:0 " + colorName + ", stop:1 " + colorLightName + "); }"
-        + "QToolButton {"
+          //"QWidget#" + objectName + " { background: qlineargradient( x1:0 y1:0, x2:1 y2:0, stop:0 " + colorName + ", stop:1 " + colorLightName + "); }"
+         "QToolButton {"
         + "  border-style: none;"
         + "}"
         + RCadToolMatrixTreePanel.getCheckedStyle()
