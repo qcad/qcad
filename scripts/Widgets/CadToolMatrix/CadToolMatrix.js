@@ -49,10 +49,12 @@ function RCadToolMatrixTreePanel(parent, objectName) {
 RCadToolMatrixTreePanel.prototype = new QWidget();
 
 RCadToolMatrixTreePanel.getCheckedStyle = function() {
-    return "QToolButton:checked {"
-            + "  border-radius: 4px; "
-            + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #b7b7b7, stop: 0.8 #cfcfcf, stop: 1 #d1d1d1);"
-            + "}";
+    if (!RSettings.hasCustomStyleSheet()) {
+        return "QToolButton:checked {"
+                + "  border-radius: 4px; "
+                + "  background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #b7b7b7, stop: 0.8 #cfcfcf, stop: 1 #d1d1d1);"
+                + "}";
+    }
 };
 
 RCadToolMatrixTreePanel.getPressedStyle = function() {
