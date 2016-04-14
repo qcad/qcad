@@ -1,11 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
-<defs/>
-<g transform="translate(0 464)">
-<g fill="none" stroke="#fff" stroke-linecap="square" stroke-width="16">
-<path d="m456-376-400,336"/>
-<path d="m216-40 80-336"/>
-</g>
-<path fill="#f00" d="m16.5,4.5c0,.5523-.4477,1-1,1-.5523,0-1-.4477-1-1 0-.5523 .4477-1 1-1 .5523,0 1,.4477 1,1z" transform="matrix(-32 0 0 -32 752 -64)"/>
-<path fill="none" stroke="#f00" stroke-linejoin="round" stroke-linecap="round" stroke-width="8" d="m290.4713-347.8479c29.9801,7.3649 56.2696,24.1185 75.573,46.9655"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g transform="translate(0 464)"><g style="fill:none;stroke:#fff;stroke-linecap:square;stroke-width:16"><path d="m456-376-400,336"/><path d="m216-40l80-336"/></g><path d="m16.5 4.5c0 .552-.448 1-1 1-.552 0-1-.448-1-1 0-.552.448-1 1-1 .552 0 1 .448 1 1" transform="matrix(-32 0 0-32 752-64)" style="fill:#f00"/><path d="m290.47-347.85c29.98 7.365 56.27 24.12 75.57 46.966" style="fill:none;stroke:#f00;stroke-linecap:round;stroke-linejoin:round;stroke-width:8"/></g></svg>

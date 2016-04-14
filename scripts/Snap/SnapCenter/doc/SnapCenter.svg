@@ -1,16 +1,1 @@
-<svg width="272.5" fill="none" xmlns="http://www.w3.org/2000/svg" height="61" viewBox="59.5 -90.5 272.5 61" stroke-linejoin="round" stroke-linecap="round">
-<g transform="scale(1 -1)">
-<g stroke="#000">
-<path d="m60,30l30,60"/>
-<path d="M150,90 A30,30 0 1,1 180,60 "/>
-<circle cx="240" cy="60" r="30"/>
-<circle cx="330" cy="60" r=".01"/>
-</g>
-<g stroke="#f00">
-<circle cx="75" cy="60" r="1.5"/>
-<circle cx="150" cy="60" r="1.5"/>
-<circle cx="240" cy="60" r="1.5"/>
-<circle cx="330" cy="60" r="1.5"/>
-</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="59.5 -90.5 272.5 61" style="fill:none;stroke-linecap:round;stroke-linejoin:round"><g transform="scale(1-1)"><g style="stroke:#000"><path d="m60 30l30 60"/><path d="M150 90A30 30 0 1 1 180 60"/><circle cx="240" cy="60" r="30"/><circle cx="330" cy="60" r=".01"/></g><g style="stroke:#f00"><circle cx="75" cy="60" r="1.5"/><circle cx="150" cy="60" r="1.5"/><circle cx="240" cy="60" r="1.5"/><circle cx="330" cy="60" r="1.5"/></g></g></svg>

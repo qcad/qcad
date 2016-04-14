@@ -1,16 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
-<defs/>
-<g transform="translate(0 492)">
-<path fill="#f00" fill-rule="evenodd" d="m200,200h112v112h-112z" transform="translate(0 -492)"/>
-<g fill="none" stroke="#fff" stroke-width="3.5">
-<path d="m94.9193-422 0,372"/>
-<path d="m309.6936-422 0,372"/>
-<path d="m202.3064-422 0,372"/>
-<path d="m417.0807-422 0,372"/>
-<path d="m442-397.0808-372,0"/>
-<path d="m442-182.3065-372,0"/>
-<path d="m442-289.6936-372,0"/>
-<path d="m442-74.9193-372,0"/>
-</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g transform="translate(0 492)"><g style="fill:none;stroke:#fff;stroke-width:3.5"><path d="m94.92-422v372"/><path d="m309.69-422v372"/><path d="m202.31-422v372"/><path d="m417.08-422v372"/><path d="m442-397.08h-372"/><path d="m442-182.31h-372"/><path d="m442-289.69h-372"/><path d="m442-74.919h-372"/></g></g></svg>

@@ -1,10 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
-<defs/>
-<g transform="translate(0 492)">
-<g fill="none" stroke="#fff">
-<path stroke-linecap="square" stroke-width="16" d="m38.4-69.6 435.2,0 0-332.8-435.2,0 0,332.8z"/>
-<path stroke-dasharray="32,32" stroke-width="8" d="m38.4-69.6 435.2-332.8"/>
-</g>
-<path fill="#f00" d="m16.5,4.5a1,1 0 1,1 -2,0 1,1 0 1,1 2,0z" transform="matrix(32 0 0 32 -240 -373.6)"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g style="fill:none;stroke:#fff"><path d="m40 424h432v-336h-432z" style="stroke-linecap:square;stroke-width:16"/><path d="m40 424l432-336" style="stroke-dasharray:32 32;stroke-width:8"/></g><path d="M320 352A32 32 0 1 1 256 352 32 32 0 1 1 320 352" transform="translate(-32-96)" style="fill:#f00"/></svg>

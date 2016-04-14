@@ -1,13 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs/>
-<g color="#000">
-<g fill="none" stroke-linecap="square" stroke-width="16">
-<path stroke="#fff" d="m56,248 0,208 144,0z"/>
-<path stroke="#f00" d="m264,408 208,0 0-144z"/>
-</g>
-<g fill="#fff" stroke="#00f" stroke-width="10">
-<path d="m42.2857,163.8319 0-27.4286 109.7143,0 0-27.4286 82.2857,41.1429l-82.2857,41.1429v-27.4286z"/>
-<path line-height="normal" d="m472,152-48-65.8824-48,65.8824h32c0,27.6495-19.4093,49.6176-48,49.6176-28.5907,0-51.5-22.9093-51.5-51.5 0-28.5907 22.9093-51.5 51.5-51.5v-25c-42.1017,0-76.5,34.3983-76.5,76.5 0,42.1017 34.3983,76.5 76.5,76.5 42.1017,0 80-33.4571 80-74.6176z"/>
-</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g style="color:#000"><g style="fill:none;stroke-linecap:square;stroke-width:16"><path d="m56 248v208h144z" style="stroke:#fff"/><path d="m264 408h208v-144z" style="stroke:#f00"/></g><g style="fill:#fff;stroke:#00f;stroke-width:10"><path d="m42.29 163.83v-27.429h109.71v-27.429l82.29 41.14-82.29 41.14v-27.429z"/><path d="m472 152l-48-65.882-48 65.882h32c0 27.649-19.409 49.618-48 49.618-28.591 0-51.5-22.909-51.5-51.5 0-28.591 22.909-51.5 51.5-51.5v-25c-42.1 0-76.5 34.398-76.5 76.5 0 42.1 34.398 76.5 76.5 76.5 42.1 0 80-33.457 80-74.62z"/></g></g></svg>

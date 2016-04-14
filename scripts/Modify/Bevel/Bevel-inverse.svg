@@ -1,10 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
-<defs/>
-<g fill="none" stroke-linecap="round" stroke-width="16" transform="translate(0 492)">
-<g stroke="#fff">
-<path d="m72-388 160,0"/>
-<path d="m408-212 0,144"/>
-</g>
-<path stroke="#f00" d="m408-212-176-176"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g transform="translate(0 492)" style="fill:none;stroke-linecap:round;stroke-width:16"><g style="stroke:#fff"><path d="m72-388h160"/><path d="m408-212v144"/></g><path d="m408-212-176-176" style="stroke:#f00"/></g></svg>

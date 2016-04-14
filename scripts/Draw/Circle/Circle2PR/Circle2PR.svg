@@ -1,13 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
-<defs/>
-<g transform="translate(0 464)">
-<g fill="none">
-<path stroke="#000" stroke-linejoin="round" stroke-linecap="square" stroke-width="16" d="m408,248a176,176 0 1,1 -352,0 176,176 0 1,1 352,0z" transform="translate(24 -456)"/>
-<path stroke="#f00" stroke-width="8" d="M 256.90158,-208.19447 368,-352"/>
-</g>
-<g fill="#f00">
-<path d="m16.5,4.5a1,1 0 1,1 -2,0 1,1 0 1,1 2,0z" transform="matrix(-32 0 0 -32 840 88)"/>
-<path d="m16.5,4.5a1,1 0 1,1 -2,0 1,1 0 1,1 2,0z" transform="matrix(-32 0 0 -32 600 24)"/>
-</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="translate(0 464)"><g style="fill:none"><path d="m408 248a176 176 0 1 1 -352 0 176 176 0 1 1 352 0z" transform="translate(24-456)" style="stroke:#000;stroke-linecap:square;stroke-linejoin:round;stroke-width:16"/><path d="m256.9-208.19l111.1-143.81" style="stroke:#f00;stroke-width:8"/></g><g style="fill:#f00"><path d="m16.5 4.5a1 1 0 1 1 -2 0 1 1 0 1 1 2 0" transform="matrix(-32 0 0-32 840 88)" id="0"/><use transform="translate(-240-64)" xlink:href="#0"/></g></g></svg>

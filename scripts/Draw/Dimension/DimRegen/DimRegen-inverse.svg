@@ -1,17 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs/>
-<g transform="translate(0 492)">
-<g stroke="#fff">
-<g fill="none" stroke-linecap="square" stroke-width="16">
-<path d="m424-260 0,144"/>
-<path d="m72-228 352,0"/>
-</g>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" d="m424-228-71.6515-35.5817 .1952,71.5539l71.4563-35.9722z"/>
-<path fill="none" stroke-linecap="square" stroke-width="16" d="m72-260 0,144"/>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" d="m72-228 71.6515,35.5817-.1952-71.5539l-71.4563,35.9722z"/>
-</g>
-<path stroke-dasharray="24,24" fill="none" stroke="#00f" stroke-width="8" d="m168-276 0-96 160,0 0,96z"/>
-<text x="172.444" y="-282.214" font-family="Sans" word-spacing="0" line-height="125%" xml:space="preserve" letter-spacing="0" font-size="114.79171753px"><tspan x="172.444" y="-282.214">10</tspan>
-</text>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g transform="translate(0 492)"><g style="stroke:#fff"><g style="fill:none;stroke-linecap:square;stroke-width:16"><path d="m424-260v144"/><path d="m72-228h352"/></g><path d="m424-228l-71.65-35.582.195 71.55 71.46-35.972z" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:8"/><path d="m72-260v144" style="fill:none;stroke-linecap:square;stroke-width:16"/><path d="m72-228l71.65 35.582-.195-71.55-71.46 35.972z" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:8"/></g><path d="m168-276v-96h160v96z" style="stroke-dasharray:24 24;fill:none;stroke:#00f;stroke-width:8"/><g><path d="m186.68-291.74h18.497v-63.842l-20.12 4.04v-10.313l20.01-4.04h11.322v74.16h18.497v9.529h-48.2v-9.529"/><path d="m282.02-358.44c-5.829 0-10.22 2.877-13.172 8.632-2.915 5.717-4.372 14.33-4.372 25.839 0 11.472 1.457 20.08 4.372 25.839 2.952 5.717 7.343 8.576 13.172 8.576 5.867 0 10.257-2.859 13.172-8.576 2.952-5.755 4.428-14.368 4.428-25.839 0-11.509-1.476-20.12-4.428-25.839-2.915-5.754-7.305-8.632-13.172-8.632m0-8.968c9.379 0 16.535 3.718 21.467 11.154 4.97 7.399 7.455 18.16 7.455 32.29 0 14.09-2.485 24.849-7.455 32.29-4.933 7.399-12.09 11.1-21.467 11.1-9.379 0-16.554-3.699-21.523-11.1-4.932-7.436-7.399-18.2-7.399-32.29 0-14.12 2.466-24.886 7.399-32.29 4.97-7.436 12.144-11.154 21.523-11.154"/></g></g></svg>

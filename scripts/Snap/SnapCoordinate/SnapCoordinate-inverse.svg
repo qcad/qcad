@@ -1,13 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
-<defs/>
-<g transform="translate(0 492)">
-<path fill="#f00" d="m16.5,4.5a1,1 0 1,1 -2,0 1,1 0 1,1 2,0z" transform="matrix(32 0 0 -32 -56 -276)"/>
-<path fill="none" stroke="#fff" stroke-width="16" d="m488-164-288,0 0-288"/>
-<g font-family="Bitstream Vera Sans" line-height="125%" font-size="1318.03881836px">
-<text x="356.066" y="-15.827" xml:space="preserve" transform="scale(1.02107 .97936)"><tspan x="356.066" y="-15.827" font-family="DejaVu Sans" text-align="start" font-size="204.80000305px">x</tspan>
-</text>
-<text x="43.386" y="-329.5" xml:space="preserve" transform="scale(1.02107 .97936)"><tspan x="43.386" y="-329.5" font-family="DejaVu Sans" text-align="start" font-size="204.80000305px">y</tspan>
-</text>
-</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g transform="translate(0 492)"><path d="m16.5 4.5a1 1 0 1 1 -2 0 1 1 0 1 1 2 0" transform="matrix(32 0 0-32-56-276)" style="fill:#f00"/><path d="m488-164h-288v-288" style="fill:none;stroke:#fff;stroke-width:16"/><g transform="scale(1.02107.97936)"><path d="m468.47-127.83l-40.5 54.5 42.6 57.5h-21.7l-32.6-44-32.6 44h-21.7l43.5-58.6-39.8-53.4h21.7l29.7 39.9 29.7-39.9h21.7"/><path d="m109.29-319.1c-5.2 13.333-10.267 22.03-15.2 26.1-4.933 4.067-11.533 6.1-19.8 6.1h-14.7v-15.4h10.8c5.067 0 9-1.2 11.8-3.6 2.8-2.4 5.9-8.07 9.3-17l3.3-8.4-45.3-110.2h19.5l35 87.6 35-87.6h19.5l-49.2 122.4"/></g></g></svg>

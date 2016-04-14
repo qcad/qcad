@@ -1,17 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs>
-<linearGradient id="linearGradient3630">
-<stop offset="0" stop-color="#ff0101"/>
-<stop offset=".184" stop-color="#f7ff01"/>
-<stop offset=".288" stop-color="#36ff01"/>
-<stop offset=".443" stop-color="#01fff4"/>
-<stop offset=".688" stop-color="#0105ff"/>
-<stop offset=".778" stop-color="#ff01f0"/>
-<stop offset="1" stop-color="#ff0101"/>
-</linearGradient>
-<linearGradient xlink:href="#linearGradient3630" id="linearGradient3636" x1="22" x2="490" gradientUnits="userSpaceOnUse"/>
-</defs>
-<g transform="translate(0 464)">
-<path fill="url(#linearGradient3636)" stroke="#fff" stroke-linecap="square" color="#000" stroke-width="20" d="m32-331.586h448v247.1722h-448z" stroke-miterlimit="10"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><linearGradient id="0" x1="22" x2="490" gradientUnits="userSpaceOnUse"><stop style="stop-color:#ff0101"/><stop offset=".184" style="stop-color:#f7ff01"/><stop offset=".288" style="stop-color:#36ff01"/><stop offset=".443" style="stop-color:#01fff4"/><stop offset=".688" style="stop-color:#0105ff"/><stop offset=".778" style="stop-color:#ff01f0"/><stop offset="1" style="stop-color:#ff0101"/></linearGradient></defs></svg>

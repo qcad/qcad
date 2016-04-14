@@ -1,10 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
-<defs/>
-<g color="#000">
-<path fill="#ff9191" d="m56,56h320v304h-320z"/>
-<g stroke="#fff" stroke-linecap="square" stroke-width="16">
-<path stroke-dasharray="48,48" fill="#ff9191" d="m152,168h320v304h-320z"/>
-<path fill="none" fill-opacity=".392" d="m56,56h320v304h-320z" stroke-dashoffset="39.825"/>
-</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g style="color:#000"><path d="m56 56h320v304h-320z" style="fill:#ff9191"/><g style="stroke:#fff;stroke-linecap:square;stroke-width:16"><path d="m152 168h320v304h-320z" style="stroke-dasharray:48 48;fill:#ff9191"/><path d="m56 56h320v304h-320z" style="fill:none;fill-opacity:.392;stroke-dashoffset:39.825"/></g></g></svg>

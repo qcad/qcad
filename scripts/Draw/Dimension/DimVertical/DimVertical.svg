@@ -1,12 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
-<defs/>
-<g stroke="#000" transform="translate(0 464)">
-<g fill="none" stroke-linecap="square" stroke-width="16">
-<path d="m120-392 144,0"/>
-<path d="m152-40 0-352"/>
-</g>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" d="m152-392-35.5817,71.6515 71.5539-.1952l-35.9722-71.4563z"/>
-<path fill="none" stroke-linecap="square" stroke-width="16" d="m120-40 288,0"/>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" d="m152-40 35.5817-71.6515-71.5539,.1952l35.9722,71.4563z"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g transform="translate(0 464)" style="stroke:#000"><g style="fill:none;stroke-linecap:square;stroke-width:16"><path d="m120-392h144"/><path d="m152-40v-352"/></g><path d="m152-392l-35.582 71.65 71.55-.195-35.972-71.46z" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:8"/><path d="m120-40h288" style="fill:none;stroke-linecap:square;stroke-width:16"/><path d="m152-40l35.582-71.65-71.55.195 35.972 71.46z" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:8"/></g></svg>

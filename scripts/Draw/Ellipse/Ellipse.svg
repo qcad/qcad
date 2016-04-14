@@ -1,10 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
-<defs/>
-<g stroke="#000" stroke-width="16">
-<path fill-rule="evenodd" d="m424,488 64,0 0-64-64,64z"/>
-<g fill="none" stroke-linecap="round">
-<path d="M 71.999999,440 A 101.82312,260.2153 45 0 1 440,72"/>
-<path d="M 440,72 A 101.82312,260.2153 45 0 1 71.999999,440"/>
-</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g style="stroke:#000;stroke-width:16"><path d="m424 488h64v-64l-64 64z" style="fill-rule:evenodd"/><g style="fill:none;stroke-linecap:round"><path d="M71.999999 440A101.82312 260.2153 45 0 1 440 72"/><path d="M440 72A101.82312 260.2153 45 0 1 71.999999 440"/></g></g></svg>

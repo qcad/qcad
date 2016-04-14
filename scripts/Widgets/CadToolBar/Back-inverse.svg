@@ -1,4 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs/>
-<path stroke="#fff" stroke-width=".614" fill="#999" d="m160,256 176-82.1333 0,164.2667-176-82.1333z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="m160 256l176-82.13v164.27l-176-82.13z" style="stroke:#fff;stroke-width:.614"/></svg>

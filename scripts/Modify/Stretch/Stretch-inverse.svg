@@ -1,16 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512" xmlns:xlink="http://www.w3.org/1999/xlink">
-<defs/>
-<g transform="translate(0 492)">
-<g color="#000">
-<g fill="none" stroke-linecap="square" stroke-width="16">
-<path stroke="#f00" d="m280-68 160,0 0-160-160,0m0-160 160,0 0,96-160,0"/>
-<g stroke="#fff">
-<path d="m280-68 0-160-128,0 0-64 128,0 0-96-224,0 0,208c0,61.8559 50.1441,112 112,112h112z"/>
-<path d="m-1560-340 0,384 144,0z"/>
-</g>
-<path stroke="#f00" d="m-1288-340 0,384 144,0z"/>
-</g>
-<path fill="#fff" stroke="#00f" stroke-width="10" d="m184-132 0-32 128,0 0-32 96,48-96,48 0-32z"/>
-</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g transform="translate(0 492)" style="color:#000"><g style="fill:none;stroke-linecap:square;stroke-width:16"><path d="m280-68h160v-160h-160m0-160h160v96h-160" style="stroke:#f00"/><g style="stroke:#fff"><path d="m280-68v-160h-128v-64h128v-96h-224v208c0 61.856 50.14 112 112 112h112z"/></g></g><path d="m184-132v-32h128v-32l96 48-96 48v-32z" style="fill:#fff;stroke:#00f;stroke-width:10"/></g></svg>

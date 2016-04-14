@@ -1,15 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
-<defs/>
-<g transform="translate(0 492)">
-<g fill="none" stroke="#000" stroke-linecap="square" stroke-width="16">
-<path d="m64-248.8 384,204.8"/>
-<path d="m217.6-428c0,153.6 76.8,230.4 230.4,230.4"/>
-</g>
-<g fill="#f00">
-<path d="m16.5,4.5a1,1 0 1,1 -2,0 1,1 0 1,1 2,0z" transform="matrix(32 0 0 32 -278.4 -572)"/>
-<path d="m16.5,4.5a1,1 0 1,1 -2,0 1,1 0 1,1 2,0z" transform="matrix(32 0 0 32 -48 -341.6)"/>
-<path d="m16.5,4.5a1,1 0 1,1 -2,0 1,1 0 1,1 2,0z" transform="matrix(32 0 0 32 -432 -392.8)"/>
-<path d="m16.5,4.5a1,1 0 1,1 -2,0 1,1 0 1,1 2,0z" transform="matrix(32 0 0 32 -48 -188)"/>
-</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="0" d="m16.5 4.5a1 1 0 1 1 -2 0 1 1 0 1 1 2 0"/></defs><g transform="translate(0 492)"><g style="fill:none;stroke:#000;stroke-linecap:square;stroke-width:16"><path d="m64-248.8l384 204.8"/><path d="m217.6-428c0 153.6 76.8 230.4 230.4 230.4"/></g><g style="fill:#f00"><use transform="matrix(32 0 0 32-278.4-572)" xlink:href="#0"/><use transform="matrix(32 0 0 32-48-341.6)" xlink:href="#0"/><use transform="matrix(32 0 0 32-432-392.8)" xlink:href="#0"/><use transform="matrix(32 0 0 32-48-188)" xlink:href="#0"/></g></g></svg>

@@ -1,17 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
-<defs/>
-<g color="#000">
-<path opacity=".25" fill="#000080" d="m88,392 352,0 0-272-352,0 0,272z"/>
-<g fill="none">
-<g stroke-width="16">
-<path stroke="#fff" d="m56,424 416,0 0-336-416,0 0,336z"/>
-<path stroke="#f00" stroke-linecap="square" d="m376,248-128,96 128,0 0-96z"/>
-</g>
-<path stroke="#f00" stroke-linecap="square" stroke-width="26.667" d="m168,136a80,80 0 1,1 -160,0 80,80 0 1,1 160,0z" transform="matrix(.6 0 0 .6 147.2 134.4)"/>
-<g stroke-width="16">
-<path stroke="#666" d="m72,408 384,0 0-304-384,0 0,304z"/>
-<path stroke="#fff" d="m88,392 352,0 0-272-352,0 0,272z"/>
-</g>
-</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g style="color:#000"><path d="m88 392h352v-272h-352v272" style="fill:#000080;opacity:.25"/><g style="fill:none"><g style="stroke-width:16"><path d="m56 424h416v-336h-416v336z" style="stroke:#fff"/><path d="m376 248l-128 96h128v-96z" style="stroke:#f00;stroke-linecap:square"/></g><path d="m168 136a80 80 0 1 1 -160 0 80 80 0 1 1 160 0z" transform="matrix(.6 0 0 .6 147.2 134.4)" style="stroke:#f00;stroke-linecap:square;stroke-width:26.667"/><g style="stroke-width:16"><path d="m72 408h384v-304h-384v304z" style="stroke:#666"/><path d="m88 392h352v-272h-352v272z" style="stroke:#fff"/></g></g></g></svg>

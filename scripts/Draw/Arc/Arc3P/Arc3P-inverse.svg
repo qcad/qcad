@@ -1,11 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
-<defs/>
-<g transform="translate(0 464)">
-<path fill="none" stroke="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-width="15.305" d="m106.7204-40c-23.2995-36.1002-37.2546-78.9092-37.2546-125.0844 0-126.1733 102.3428-224.5951 228.457-228.457 52.1057-1.5956 102.4157,17.8692 142.0771,49.5415"/>
-<g fill="#f00">
-<path d="m16.5,4.5a1,1 0 1,1 -2,0 1,1 0 1,1 2,0z" transform="matrix(-32 0 0 -32 936 -200)"/>
-<path d="m16.5,4.5a1,1 0 1,1 -2,0 1,1 0 1,1 2,0z" transform="matrix(-32 0 0 -32 680 -216)"/>
-<path d="m16.5,4.5a1,1 0 1,1 -2,0 1,1 0 1,1 2,0z" transform="matrix(-32 0 0 -32 600 104)"/>
-</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="0" d="m16.5 4.5a1 1 0 1 1 -2 0 1 1 0 1 1 2 0"/></defs><g transform="translate(0 464)"><path d="m106.72-40c-23.299-36.1-37.25-78.909-37.25-125.08 0-126.17 102.34-224.6 228.46-228.46 52.11-1.596 102.42 17.869 142.08 49.541" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:15.305"/><g style="fill:#f00"><use transform="matrix(-32 0 0-32 936-200)" xlink:href="#0"/><use transform="matrix(-32 0 0-32 680-216)" xlink:href="#0"/><use transform="matrix(-32 0 0-32 600 104)" xlink:href="#0"/></g></g></svg>

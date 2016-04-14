@@ -1,16 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
-<defs/>
-<g transform="translate(0 492)">
-<g fill="none" stroke="#000" stroke-linecap="square" stroke-width="16">
-<path d="m120-220 80-160"/>
-<path d="m392-92-208,0"/>
-</g>
-<g stroke="#f00">
-<g fill="#f00" stroke-linejoin="round" stroke-linecap="round" stroke-width="8">
-<path d="m189.0473-358.639 37.2097,70.8198 41.772-58.0956-78.9816-12.7241z"/>
-<path d="m360-92 23.2047-76.5607-70.5304,12.0605l47.3257,64.5002z"/>
-</g>
-<path fill="none" stroke-width="16" d="M 189.3033,-358.34315 C 280,-316 360,-204 360,-92"/>
-</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g transform="translate(0 492)"><g style="fill:none;stroke:#000;stroke-linecap:square;stroke-width:16"><path d="m120-220l80-160"/><path d="m392-92h-208"/></g><g style="stroke:#f00"><g style="fill:#f00;stroke-linecap:round;stroke-linejoin:round;stroke-width:8"><path d="m189.05-358.64l37.21 70.82 41.772-58.1-78.982-12.724z"/><path d="m360-92l23.2-76.56-70.53 12.06 47.33 64.5z"/></g><path d="M 189.3033,-358.34315 C 280,-316 360,-204 360,-92" style="fill:none;stroke-width:16"/></g></g></svg>

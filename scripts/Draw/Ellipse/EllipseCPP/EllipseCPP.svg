@@ -1,14 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
-<defs/>
-<g transform="translate(0 464)">
-<path fill="#f00" d="m16.5,4.5c0,.5523-.4477,1-1,1-.5523,0-1-.4477-1-1 0-.5523 .4477-1 1-1 .5523,0 1,.4477 1,1z" transform="matrix(-32 0 0 -32 752 -64)"/>
-<g fill="none" stroke="#000" stroke-linecap="round" stroke-width="16">
-<path d="M 72,-24 A 101.82312,260.2153 45 0 1 440,-392"/>
-<path d="M 440,-392 A 101.82312,260.2153 45 0 1 72,-24"/>
-</g>
-<g fill="#f00">
-<path d="m16.5,4.5c0,.5523-.4477,1-1,1-.5523,0-1-.4477-1-1 0-.5523 .4477-1 1-1 .5523,0 1,.4477 1,1z" transform="matrix(-32 0 0 -32 936 -248)"/>
-<path d="m16.5,4.5c0,.5523-.4477,1-1,1-.5523,0-1-.4477-1-1 0-.5523 .4477-1 1-1 .5523,0 1,.4477 1,1z" transform="matrix(-32 0 0 -32 680 -136)"/>
-</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="0" d="m16.5 4.5c0 .552-.448 1-1 1-.552 0-1-.448-1-1 0-.552.448-1 1-1 .552 0 1 .448 1 1"/></defs><g transform="translate(0 464)"><use transform="matrix(-32 0 0-32 752-64)" xlink:href="#0" style="fill:#f00"/><g style="fill:none;stroke:#000;stroke-linecap:round;stroke-width:16"><path d="M72-24A101.82312 260.2153 45 0 1 440 -392"/><path d="M440-392A101.82312 260.2153 45 0 1 72 -24"/></g><g style="fill:#f00"><use transform="matrix(-32 0 0-32 936-248)" xlink:href="#0"/><use transform="matrix(-32 0 0-32 680-136)" xlink:href="#0"/></g></g></svg>

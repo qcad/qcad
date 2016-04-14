@@ -1,6 +1,1 @@
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="48" xmlns="http://www.w3.org/2000/svg" height="48">
-<defs/>
-<g stroke="#000">
-<path fill="none" stroke="none" d="m256,256h-256v-256h256v256z"/>
-</g>
-</svg>
+<svg viewBox="0 0 256 256" width="48" xmlns="http://www.w3.org/2000/svg" height="48"/>

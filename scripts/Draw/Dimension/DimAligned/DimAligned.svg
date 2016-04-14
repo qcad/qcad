@@ -1,17 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
-<defs/>
-<g transform="translate(0 464)">
-<g stroke="#000">
-<g fill="none" stroke-linecap="square" stroke-width="16">
-<path d="m376-376 64,128"/>
-<path d="m72-184 320-160"/>
-</g>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" d="m392-344-80,0 32,64 48-64z"/>
-</g>
-<path fill="none" stroke="#f00" stroke-linecap="square" stroke-width="16" d="m152-24 320-160"/>
-<g stroke="#000">
-<path fill="none" stroke-linecap="square" stroke-width="16" d="m56-216 64,128"/>
-<path stroke-linejoin="round" stroke-linecap="round" stroke-width="8" d="m72-184 80,0-32-64-48,64z"/>
-</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g transform="translate(0 464)"><g style="stroke:#000"><g style="fill:none;stroke-linecap:square;stroke-width:16"><path d="m376-376l64 128"/><path d="m72-184l320-160"/></g><path d="m392-344h-80l32 64 48-64z" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:8"/></g><path d="m152-24l320-160" style="fill:none;stroke:#f00;stroke-linecap:square;stroke-width:16"/><g style="stroke:#000"><path d="m56-216l64 128" style="fill:none;stroke-linecap:square;stroke-width:16"/><path d="m72-184h80l-32-64-48 64z" style="stroke-linecap:round;stroke-linejoin:round;stroke-width:8"/></g></g></svg>

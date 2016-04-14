@@ -1,14 +1,1 @@
-<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
-<defs/>
-<g fill="#fff6d5">
-<path d="m376,312-304,0 0-224 304,0 0,224z"/>
-<path stroke="#000" stroke-width="15" d="m488,400a120,120 0 1,1 -240,0 120,120 0 1,1 240,0z" transform="matrix(1.06667 0 0 1.06667 -64.53333 -130.66665)"/>
-</g>
-<g fill="none" stroke-width="16">
-<path stroke="#000" stroke-linecap="square" d="m376,312-304,0 0-224 304,0 0,224z"/>
-<g stroke="#f00">
-<path d="m72,280 0,64"/>
-<path d="m40,312 64,0"/>
-</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g style="fill:#fff6d5"><path d="m376 312h-304v-224h304v224"/><path d="m488 400a120 120 0 1 1 -240 0 120 120 0 1 1 240 0z" transform="matrix(1.06667 0 0 1.06667-64.53-130.67)" style="stroke:#000;stroke-width:15"/></g><g style="fill:none;stroke-width:16"><path d="m376 312h-304v-224h304v224z" style="stroke:#000;stroke-linecap:square"/><g style="stroke:#f00"><path d="m72 280v64"/><path d="m40 312h64"/></g></g></svg>
