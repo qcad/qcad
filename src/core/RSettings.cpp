@@ -570,6 +570,10 @@ bool RSettings::hasDarkGuiBackground() {
     return darkGuiBackground==1;
 }
 
+bool RSettings::hasCustomStyleSheet() {
+    return !qApp->styleSheet().isEmpty();
+}
+
 int RSettings::getQtVersion() {
     return QT_VERSION;
 }

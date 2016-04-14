@@ -215,6 +215,7 @@ public:
     static bool getHideAttributeWithBlock();
 
     static bool hasDarkGuiBackground();
+    static bool hasCustomStyleSheet();
 
 private:
     static bool isInitialized();
