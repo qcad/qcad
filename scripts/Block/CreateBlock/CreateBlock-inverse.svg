@@ -1,1 +1,81 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g style="fill:#fff6d5"><path d="m376 312h-304v-224h304v224"/><path d="m488 400a120 120 0 1 1 -240 0 120 120 0 1 1 240 0z" transform="matrix(1.06667 0 0 1.06667-64.53-130.67)" style="stroke:#fff;stroke-width:15"/></g><g style="fill:none;stroke-width:16"><path d="m376 312h-304v-224h304v224z" style="stroke:#fff;stroke-linecap:square"/><g style="stroke:#f00"><path d="m72 280v64"/><path d="m40 312h64"/></g></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 512 512"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.5 r10040"
+   width="100%"
+   height="100%"
+   sodipodi:docname="CreateBlock-inverse.svg">
+  <metadata
+     id="metadata24">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs22" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1375"
+     inkscape:window-height="759"
+     id="namedview20"
+     showgrid="false"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="256"
+     inkscape:cy="256"
+     inkscape:window-x="1010"
+     inkscape:window-y="388"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <g
+     style="fill:#ffd132;fill-opacity:1"
+     id="g4">
+    <path
+       d="m376 312h-304v-224h304v224"
+       id="path6"
+       style="fill:#ffd132;fill-opacity:1" />
+    <path
+       d="m488 400a120 120 0 1 1 -240 0 120 120 0 1 1 240 0z"
+       transform="matrix(1.06667 0 0 1.06667-64.53-130.67)"
+       style="stroke:#fff;stroke-width:15;fill:#ffd132;fill-opacity:1"
+       id="path8" />
+  </g>
+  <g
+     style="fill:none;stroke-width:16"
+     id="g10">
+    <path
+       d="m376 312h-304v-224h304v224z"
+       style="stroke:#fff;stroke-linecap:square"
+       id="path12" />
+    <g
+       style="stroke:#f00"
+       id="g14">
+      <path
+         d="m72 280v64"
+         id="path16" />
+      <path
+         d="m40 312h64"
+         id="path18" />
+    </g>
+  </g>
+</svg>

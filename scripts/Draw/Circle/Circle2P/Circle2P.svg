@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="translate(0 464)"><g style="fill:#f00"><path d="m16.5 4.5c0 .552-.448 1-1 1-.552 0-1-.448-1-1 0-.552.448-1 1-1 .552 0 1 .448 1 1" transform="matrix(-32 0 0-32 904-152)" id="0"/><use transform="translate(-304 176)" xlink:href="#0"/></g></g></svg>
+<svg width="512" xmlns="http://www.w3.org/2000/svg" height="512">
+<defs/>
+<g transform="translate(0 464)">
+<path fill="#fff" stroke="#00f" fill-opacity="0" stroke-width="8" d="M 102.53048,344.4157 408,168" transform="translate(0 -464)"/>
+<path fill="none" stroke="#000" stroke-linejoin="round" stroke-linecap="square" stroke-width="16" d="m408,248c0,97.2021-78.7979,176-176,176-97.2021,0-176-78.7979-176-176 0-97.2021 78.7979-176 176-176 97.2021,0 176,78.7979 176,176z" transform="translate(24 -456)"/>
+<g fill="#f00">
+<path d="m16.5,4.5c0,.5523-.4477,1-1,1-.5523,0-1-.4477-1-1 0-.5523 .4477-1 1-1 .5523,0 1,.4477 1,1z" transform="matrix(-32 0 0 -32 904 -152)"/>
+<path d="m16.5,4.5c0,.5523-.4477,1-1,1-.5523,0-1-.4477-1-1 0-.5523 .4477-1 1-1 .5523,0 1,.4477 1,1z" transform="matrix(-32 0 0 -32 600 24)"/>
+</g>
+</g>
+</svg>
