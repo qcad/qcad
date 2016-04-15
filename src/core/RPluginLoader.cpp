@@ -72,6 +72,8 @@ QStringList RPluginLoader::getPluginFiles() {
         pluginFiles.append(pluginsDir.absoluteFilePath(fileName));
     }
 
+    //qSort();
+
     return pluginFiles;
 }
 

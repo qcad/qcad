@@ -15,4 +15,5 @@ SUBDIRS = \
 # used by translation (lrelease, lupdate)
 dummy {
     SUBDIRS += scripts
+    SUBDIRS += res
 }
