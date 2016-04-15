@@ -2286,6 +2286,29 @@ function autoIconPath(path) {
     return path;
 }
 
+function applyTheme() {
+    var theme = RSettings.getValue("Theme/ThemeName", undefined);
+    if (!isNull(theme)) {
+        var prefix = "themes/" + theme + "/";
+        var fn = prefix + "stylesheet.css";
+        if (new QFileInfo(fn).exists()) {
+            var file = new QFile(fn);
+            var flags = new QIODevice.OpenMode(QIODevice.ReadOnly | QIODevice.Text);
+            if (file.open(flags)) {
+                var textStream = new QTextStream(file);
+                var allLines = textStream.readAll();
+                file.close();
+                allLines = allLines.replace(/url\(/g, "url(" + prefix);
+                qDebug(allLines);
+                qApp.setStyleSheet(allLines);
+                return;
+            }
+        }
+        qWarning("Cannot open theme: ", theme);
+        qApp.setStyleSheet("");
+    }
+}
+
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {

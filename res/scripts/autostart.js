@@ -558,6 +558,9 @@ function main() {
         }
     }
 
+    // theme:
+    applyTheme();
+
     // splash:
     var splash = undefined;
     if (RSettings.getBoolValue("Start/EnableSplashScreen", true)) {

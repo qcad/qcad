@@ -77,7 +77,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">border: none;</string>
+      <string notr="true">border: none;background-color:transparent;</string>
      </property>
      <property name="icon">
       <iconset>

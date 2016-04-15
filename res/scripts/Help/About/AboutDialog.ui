@@ -14,9 +14,6 @@
    <iconset>
     <normaloff>../../qcad_icon.png</normaloff>../../qcad_icon.png</iconset>
   </property>
-  <property name="styleSheet">
-   <string notr="true">QDialog{background-color: rgb(255, 255, 255);}</string>
-  </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>
   </property>
@@ -40,7 +37,7 @@
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">border: none;</string>
+          <string notr="true">border: none;background-color:transparent;</string>
          </property>
          <property name="icon">
           <iconset>

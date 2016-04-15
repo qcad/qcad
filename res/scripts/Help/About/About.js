@@ -37,10 +37,15 @@ About.prototype.beginEvent = function() {
         f = 1.33;
     }
 
+    var blue = "#0000cc";
+    if (RSettings.hasDarkGuiBackground()) {
+        blue = "#2E9AFE";
+    }
+
     this.head = "<head>\n"
          + "<style type='text/css'>\n"
          + "body,td { font-family:Arial, Helvetica, sans-serif;font-size:%1pt; }\n".arg(9*f)
-         + "a { text-decoration:none }\n"
+         + "a { text-decoration:none;color:" + blue +" }\n"
          + "h1 { font-size:%1pt;margin-bottom:8pt; }\n".arg(13*f)
          + "h2 { font-size:%1pt;font-style:italic;margin-bottom:5pt; }\n".arg(9*f)
          + "}\n</style>\n"

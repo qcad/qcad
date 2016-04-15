@@ -80,7 +80,7 @@ CommandLine.init = function(basePath) {
     dock.shown.connect(function() { action.setChecked(true); });
     dock.hidden.connect(function() { action.setChecked(false); });
 
-    var blue = "#0000cc"
+    var blue = "#0000cc";
     if (RSettings.hasDarkGuiBackground()) {
         blue = "#2E9AFE";
     }

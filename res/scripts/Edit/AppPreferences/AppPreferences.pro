@@ -7,5 +7,6 @@ SUBDIRS = \
     ScriptingPreferences \
     StartupPreferences \
     TextPreferences \
+    ThemePreferences \
     ToolBarPreferences \
     ts
