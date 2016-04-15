@@ -146,7 +146,7 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation type="unfinished">Kolor ...</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
         <source>&amp;Special Characters...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Znaki specjalne ...</translation>
@@ -468,7 +468,7 @@ Wyrównanie|Pionowe</translatorcomment>
         <translation type="unfinished">Wyrównanie</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+79"/>
         <source>Top Center</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -476,12 +476,12 @@ Góra - środek</translatorcomment>
         <translation type="unfinished">Góra - środek</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+145"/>
         <source>Base Left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-177"/>
         <source>Top Left</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -489,17 +489,17 @@ Góra - lewo</translatorcomment>
         <translation type="unfinished">Góra - lewo</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+206"/>
         <source>Base Center</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Base Right</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+128"/>
+        <location line="-145"/>
         <source>Top Right</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -507,7 +507,7 @@ Góra - prawo</translatorcomment>
         <translation type="unfinished">Góra - prawo</translation>
     </message>
     <message>
-        <location line="-323"/>
+        <location line="+203"/>
         <source>Bottom Center</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -515,7 +515,7 @@ Dół - środek</translatorcomment>
         <translation type="unfinished">Dół - środek</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="-145"/>
         <source>Middle Left</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -523,7 +523,7 @@ Dół - środek</translatorcomment>
         <translation type="unfinished">Środek - lewo</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="-29"/>
         <source>Middle Center</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -531,7 +531,7 @@ Dół - środek</translatorcomment>
         <translation type="unfinished">Środek - środek</translation>
     </message>
     <message>
-        <location line="-163"/>
+        <location line="-58"/>
         <source>Middle Right</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -539,7 +539,7 @@ Dół - środek</translatorcomment>
         <translation type="unfinished">Środek - prawo</translation>
     </message>
     <message>
-        <location line="-96"/>
+        <location line="+203"/>
         <source>Bottom Left</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -547,7 +547,7 @@ Dół - lewo</translatorcomment>
         <translation type="unfinished">Dół - lewo</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="+58"/>
         <source>Bottom Right</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -555,7 +555,7 @@ Dół - prawo</translatorcomment>
         <translation type="unfinished">Dół - prawo</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+59"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--

@@ -100,7 +100,7 @@
         <translation>Bar&amp;va...</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
         <source>&amp;Special Characters...</source>
         <translation>Posebni &amp;znaki...</translation>
     </message>
@@ -319,67 +319,67 @@
         <translation>Poravnava</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+311"/>
         <source>Bottom Left</source>
         <translation>Desno spodaj</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Bottom Center</source>
         <translation>Sredina spodaj</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-261"/>
         <source>Top Center</source>
         <translation>Zgoraj sredina</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Middle Right</source>
         <translation>Sredina desno</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+116"/>
         <source>Base Left</source>
         <translation>V izhodišču levo</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-177"/>
         <source>Top Left</source>
         <translation>Zgoraj levo</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+206"/>
         <source>Base Center</source>
         <translation>V izhodišču sredina</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Base Right</source>
         <translation>V izhodišču desno</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-116"/>
         <source>Middle Center</source>
         <translation>Sredina center</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+203"/>
         <source>Bottom Right</source>
         <translation>Spodaj desno</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-174"/>
         <source>Middle Left</source>
         <translation>Sredina levo</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-58"/>
         <source>Top Right</source>
         <translation>Zgoraj desno</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+291"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>

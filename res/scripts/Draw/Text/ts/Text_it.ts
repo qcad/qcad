@@ -100,7 +100,7 @@
         <translation>&amp;Colore...</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
         <source>&amp;Special Characters...</source>
         <translation>&amp;Carattere speciale...</translation>
     </message>
@@ -322,67 +322,67 @@
         <translation>Allineamento</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+79"/>
         <source>Top Center</source>
         <translation>In Alto al Centro</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+145"/>
         <source>Base Left</source>
         <translation>In Base a Sinistra</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-177"/>
         <source>Top Left</source>
         <translation>In Alto a Sinistra</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+206"/>
         <source>Base Center</source>
         <translation>In Base al Centro</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Base Right</source>
         <translation>In Base a Destra</translation>
     </message>
     <message>
-        <location line="+128"/>
+        <location line="-145"/>
         <source>Top Right</source>
         <translation>In Alto a Destra</translation>
     </message>
     <message>
-        <location line="-323"/>
+        <location line="+203"/>
         <source>Bottom Center</source>
         <translation>In Basso al Centro</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="-145"/>
         <source>Middle Left</source>
         <translation>Medio a Sinistra</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="-29"/>
         <source>Middle Center</source>
         <translation>Medio al Centro</translation>
     </message>
     <message>
-        <location line="-163"/>
+        <location line="-58"/>
         <source>Middle Right</source>
         <translation>Medio a Destra</translation>
     </message>
     <message>
-        <location line="-96"/>
+        <location line="+203"/>
         <source>Bottom Left</source>
         <translation>In Basso a Sinistra</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="+58"/>
         <source>Bottom Right</source>
         <translation>In Basso a Destra</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+59"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>

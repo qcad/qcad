@@ -21,7 +21,7 @@
         <translation>&amp;Командная строка</translation>
     </message>
     <message>
-        <location line="+144"/>
+        <location line="+149"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation>Неверная координата или расстояние &apos;%1&apos;.</translation>
     </message>

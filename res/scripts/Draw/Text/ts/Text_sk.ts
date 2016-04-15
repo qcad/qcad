@@ -100,7 +100,7 @@
         <translation>&amp;Farba...</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
         <source>&amp;Special Characters...</source>
         <translation>&amp;Špeciálne Znaky...</translation>
     </message>
@@ -319,67 +319,67 @@
         <translation>Zarovnanie</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+311"/>
         <source>Bottom Left</source>
         <translation>Vľavo Dole</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Bottom Center</source>
         <translation>V strede Dole</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-261"/>
         <source>Top Center</source>
         <translation>V strede Hore</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Middle Right</source>
         <translation>Vpravo V strede</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+116"/>
         <source>Base Left</source>
         <translation>Základ Vľavo</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-177"/>
         <source>Top Left</source>
         <translation>Vľavo Hore</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+206"/>
         <source>Base Center</source>
         <translation>Základ V strede</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Base Right</source>
         <translation>Základ Vpravo</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-116"/>
         <source>Middle Center</source>
         <translation>Stred Stred</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+203"/>
         <source>Bottom Right</source>
         <translation>Vpravo Dole</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-174"/>
         <source>Middle Left</source>
         <translation>Vľavo V strede</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-58"/>
         <source>Top Right</source>
         <translation>Vpravo Hore</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+291"/>
         <source>Cancel</source>
         <translation>Zrušiť</translation>
     </message>

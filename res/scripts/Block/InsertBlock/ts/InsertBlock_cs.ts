@@ -26,7 +26,7 @@
     <message>
         <location line="+19"/>
         <source>Scale block in X&lt;br&gt;by this factor</source>
-        <translation type="unfinished">Změnit měřítko bloku v X&lt;br&gt;dle tohoto faktoru</translation>
+        <translation>Měřítko bloku v X&lt;br&gt;dle tohoto faktoru</translation>
     </message>
     <message>
         <location line="+68"/>
@@ -36,7 +36,7 @@
     <message>
         <location line="+22"/>
         <source>Scale block in Y&lt;br&gt;by this factor</source>
-        <translation type="unfinished">Změnit měřítko bloku v Y&lt;br&gt;dle tohoto faktoru</translation>
+        <translation>Měřítko bloku v Y&lt;br&gt;dle tohoto faktoru</translation>
     </message>
     <message>
         <location line="+65"/>
@@ -46,12 +46,12 @@
     <message>
         <location line="+24"/>
         <source>Flip block&lt;br&gt;horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Zrcadlit blok&lt;br&gt;horizontálně</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Flip block&lt;br&gt;vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Zrcadlit blok&lt;br&gt;vertikálně</translation>
     </message>
     <message>
         <location line="+18"/>
@@ -77,12 +77,12 @@
     <message>
         <location line="+14"/>
         <source>Column Spacing:</source>
-        <translation type="unfinished">Rozestupy sloupců:</translation>
+        <translation>Rozestup sloupců:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Row Spacing:</source>
-        <translation type="unfinished">Rozestup řádků:</translation>
+        <translation>Rozestup řádků:</translation>
     </message>
     <message>
         <location filename="../InsertBlockInit.js" line="+2"/>

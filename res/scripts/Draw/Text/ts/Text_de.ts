@@ -87,7 +87,7 @@
         <translation>Ein&amp;fügen</translation>
     </message>
     <message>
-        <location line="+508"/>
+        <location line="+506"/>
         <source>Degree</source>
         <translation>Grad</translation>
     </message>
@@ -203,67 +203,67 @@
         <translation>Ausrichtung</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+79"/>
         <source>Top Center</source>
         <translation>Oben zentriert</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+145"/>
         <source>Base Left</source>
         <translation>Basis links</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-177"/>
         <source>Top Left</source>
         <translation>Oben links</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+206"/>
         <source>Base Center</source>
         <translation>Basis zentriert</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Base Right</source>
         <translation>Basis rechts</translation>
     </message>
     <message>
-        <location line="+128"/>
+        <location line="-145"/>
         <source>Top Right</source>
         <translation>Oben rechts</translation>
     </message>
     <message>
-        <location line="-323"/>
+        <location line="+203"/>
         <source>Bottom Center</source>
         <translation>Unten zentriert</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="-145"/>
         <source>Middle Left</source>
         <translation>Mitte links</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="-29"/>
         <source>Middle Center</source>
         <translation>Mitte zentriert</translation>
     </message>
     <message>
-        <location line="-163"/>
+        <location line="-58"/>
         <source>Middle Right</source>
         <translation>Mitte rechts</translation>
     </message>
     <message>
-        <location line="-96"/>
+        <location line="+203"/>
         <source>Bottom Left</source>
         <translation>Unten links</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="+58"/>
         <source>Bottom Right</source>
         <translation>Unten rechts</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+59"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
@@ -273,7 +273,7 @@
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.js" line="-515"/>
+        <location filename="../TextDialog/TextDialog.js" line="-513"/>
         <source>&amp;Bold</source>
         <translation>&amp;Fett</translation>
     </message>
@@ -298,7 +298,7 @@
         <translation>&amp;Farbe...</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
         <source>&amp;Special Characters...</source>
         <translation>&amp;Sonderzeichen...</translation>
     </message>
@@ -347,7 +347,7 @@
         <translation>Kubik</translation>
     </message>
     <message>
-        <location filename="../TextDialog/TextDialog.ui" line="-1018"/>
+        <location filename="../TextDialog/TextDialog.ui" line="-982"/>
         <source>Main Font</source>
         <translation>Hauptschriftart</translation>
     </message>

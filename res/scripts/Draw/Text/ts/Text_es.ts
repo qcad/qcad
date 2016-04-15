@@ -100,7 +100,7 @@
         <translation>&amp;Color...</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
         <source>&amp;Special Characters...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Caracteres especiales ...</translation>
@@ -323,67 +323,67 @@
         <translation>Alineación</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+79"/>
         <source>Top Center</source>
         <translation>Arriba centro</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+145"/>
         <source>Base Left</source>
         <translation>Base izquierda</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-177"/>
         <source>Top Left</source>
         <translation>Arriba izquierda</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+206"/>
         <source>Base Center</source>
         <translation>Base centro</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Base Right</source>
         <translation>Base derecha</translation>
     </message>
     <message>
-        <location line="+128"/>
+        <location line="-145"/>
         <source>Top Right</source>
         <translation>Arriba derecha</translation>
     </message>
     <message>
-        <location line="-323"/>
+        <location line="+203"/>
         <source>Bottom Center</source>
         <translation>Abajo centro</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="-145"/>
         <source>Middle Left</source>
         <translation>Medio izquierda</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="-29"/>
         <source>Middle Center</source>
         <translation>Medio centro</translation>
     </message>
     <message>
-        <location line="-163"/>
+        <location line="-58"/>
         <source>Middle Right</source>
         <translation>Medio derecha</translation>
     </message>
     <message>
-        <location line="-96"/>
+        <location line="+203"/>
         <source>Bottom Left</source>
         <translation>Abajo izquierda</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="+58"/>
         <source>Bottom Right</source>
         <translation>Abajo derecha</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+59"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>

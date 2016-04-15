@@ -8,7 +8,7 @@
         <translation type="obsolete">&amp;Acerca de</translation>
     </message>
     <message>
-        <location filename="../About.js" line="+56"/>
+        <location filename="../About.js" line="+61"/>
         <source>About %1</source>
         <translation>Acerca de %1</translation>
     </message>
@@ -216,7 +216,7 @@
         <translation type="obsolete">Acerca de QCAD</translation>
     </message>
     <message>
-        <location filename="../AboutDialog.ui" line="+79"/>
+        <location filename="../AboutDialog.ui" line="+76"/>
         <source>About</source>
         <translation>Acerca de</translation>
     </message>

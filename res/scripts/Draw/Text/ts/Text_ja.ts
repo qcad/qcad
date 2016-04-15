@@ -100,7 +100,7 @@
         <translation>&amp;C 色...</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
         <source>&amp;Special Characters...</source>
         <translation>&amp;S 特殊文字...</translation>
     </message>
@@ -319,67 +319,67 @@
         <translation>位置合わせ</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+79"/>
         <source>Top Center</source>
         <translation>上 中央</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+145"/>
         <source>Base Left</source>
         <translation>ベース 左</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-177"/>
         <source>Top Left</source>
         <translation>左上</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+206"/>
         <source>Base Center</source>
         <translation>ベース 中央</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Base Right</source>
         <translation>ベース 右</translation>
     </message>
     <message>
-        <location line="+128"/>
+        <location line="-145"/>
         <source>Top Right</source>
         <translation>右上</translation>
     </message>
     <message>
-        <location line="-323"/>
+        <location line="+203"/>
         <source>Bottom Center</source>
         <translation>下 中央</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="-145"/>
         <source>Middle Left</source>
         <translation>左中央</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="-29"/>
         <source>Middle Center</source>
         <translation>中心</translation>
     </message>
     <message>
-        <location line="-163"/>
+        <location line="-58"/>
         <source>Middle Right</source>
         <translation>右中央</translation>
     </message>
     <message>
-        <location line="-96"/>
+        <location line="+203"/>
         <source>Bottom Left</source>
         <translation>下 左</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="+58"/>
         <source>Bottom Right</source>
         <translation>下 右</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+59"/>
         <source>Cancel</source>
         <translation>キャンセル</translation>
     </message>

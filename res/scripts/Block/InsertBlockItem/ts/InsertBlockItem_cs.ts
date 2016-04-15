@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="cs">
 <context>
     <name>InsertBlockItem</name>
     <message>
         <location filename="../InsertBlockItem.js" line="+88"/>
         <source>Cannot import file from URL: </source>
-        <translation type="unfinished"></translation>
+        <translation>Nelze importovat soubor z URL:</translation>
     </message>
     <message>
         <location line="+16"/>
         <source>Adjusted invalid block name to &apos;%1&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Chybně nastavené jméno bloku na &apos;%1&apos;</translation>
     </message>
     <message>
         <location line="+55"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation>Pozice</translation>
     </message>
     <message>
         <location filename="../InsertBlockItem.ui" line="+17"/>
         <source>Rotation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Rotace:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Natočení spojených prvků&lt;br&gt;dle daného úhlu</translation>
     </message>
     <message>
         <location line="+90"/>
         <source>Scale:</source>
-        <translation type="unfinished"></translation>
+        <translation>Měřítko:</translation>
     </message>
     <message>
         <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
-        <translation type="unfinished"></translation>
+        <translation>Měřítko spojených prvků&lt;br&gt;dle tohoto faktoru</translation>
     </message>
     <message>
         <location line="+65"/>
         <source>Flip pasted entities&lt;br&gt;horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Zrcadlit vložené prvky&lt;br&gt;horizontálně</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Flip pasted entities&lt;br&gt;vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Zrcadlit vložené prvky&lt;br&gt;vertikálně</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Overwrite existing layers&lt;br&gt;in drawing with&lt;br&gt;layers from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Překreslit existující vrstvy&lt;br&gt;ve výkresu&lt;br&gt;vrstvami ze schránky</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Overwrite layers</source>
-        <translation type="unfinished"></translation>
+        <translation>Přepkreslit vrstvy</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Overwrite existing blocks&lt;br&gt;in drawing with&lt;br&gt;blocks from clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Překreslit existující bloky&lt;br&gt;ve výkresu&lt;br&gt;bloky ze schránky</translation>
     </message>
     <message>
         <location line="+3"/>

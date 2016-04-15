@@ -100,7 +100,7 @@
         <translation>&amp;Цвет...</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
         <source>&amp;Special Characters...</source>
         <translation>&amp;Специальные символы...</translation>
     </message>
@@ -319,67 +319,67 @@
         <translation>Выравнивание</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+311"/>
         <source>Bottom Left</source>
         <translation>Слева внизу</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Bottom Center</source>
         <translation>Снизу и по центру</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-261"/>
         <source>Top Center</source>
         <translation>Вверху и по центру</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Middle Right</source>
         <translation>Справа посередине</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+116"/>
         <source>Base Left</source>
         <translation>Левая основа</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-177"/>
         <source>Top Left</source>
         <translation>Вверху слева</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+206"/>
         <source>Base Center</source>
         <translation>Центральная основа</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Base Right</source>
         <translation>Правая основа</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-116"/>
         <source>Middle Center</source>
         <translation>Посередине и по центру</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+203"/>
         <source>Bottom Right</source>
         <translation>Внизу справа</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-174"/>
         <source>Middle Left</source>
         <translation>Посередине и слева</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-58"/>
         <source>Top Right</source>
         <translation>Сверху справа</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+291"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>

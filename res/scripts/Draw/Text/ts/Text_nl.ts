@@ -100,7 +100,7 @@
         <translation>&amp;Kleur...</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
         <source>&amp;Special Characters...</source>
         <translation>&amp;Speciale tekens...</translation>
     </message>
@@ -319,67 +319,67 @@
         <translation>Uitlijning</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+311"/>
         <source>Bottom Left</source>
         <translation>Onder links</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Bottom Center</source>
         <translation>Onder center</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-261"/>
         <source>Top Center</source>
         <translation>Boven center</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Middle Right</source>
         <translation>Midden rechts</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+116"/>
         <source>Base Left</source>
         <translation>Basis links</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-177"/>
         <source>Top Left</source>
         <translation>Boven links</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+206"/>
         <source>Base Center</source>
         <translation>Basis center</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Base Right</source>
         <translation>Basis rechts</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-116"/>
         <source>Middle Center</source>
         <translation>Midden center</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+203"/>
         <source>Bottom Right</source>
         <translation>Onder rechts</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-174"/>
         <source>Middle Left</source>
         <translation>Midden links</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-58"/>
         <source>Top Right</source>
         <translation>Boven rechts</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+291"/>
         <source>Cancel</source>
         <translation>Annuleer</translation>
     </message>

@@ -100,7 +100,7 @@
         <translation>&amp;Väri...</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
         <source>&amp;Special Characters...</source>
         <translation>&amp;Erikoismerkit...</translation>
     </message>
@@ -319,67 +319,67 @@
         <translation>Tasaus</translation>
     </message>
     <message>
-        <location line="+21"/>
+        <location line="+311"/>
         <source>Bottom Left</source>
         <translation>Alavasen</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Bottom Center</source>
         <translation>Alakeski</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-261"/>
         <source>Top Center</source>
         <translation>Yläkeski</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Middle Right</source>
         <translation>Keskioikea</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+116"/>
         <source>Base Left</source>
         <translation>Perusvasen</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-177"/>
         <source>Top Left</source>
         <translation>Ylävasen</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+206"/>
         <source>Base Center</source>
         <translation>Peruskeski</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Base Right</source>
         <translation>Perusoikea</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-116"/>
         <source>Middle Center</source>
         <translation>Sivukeski</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+203"/>
         <source>Bottom Right</source>
         <translation>Alaoikea</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-174"/>
         <source>Middle Left</source>
         <translation>Sivuvasen</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-58"/>
         <source>Top Right</source>
         <translation>Yläoikea</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+291"/>
         <source>Cancel</source>
         <translation>Peruuta</translation>
     </message>

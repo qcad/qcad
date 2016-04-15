@@ -4,7 +4,7 @@
 <context>
     <name>Theme</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="20"/>
+        <location filename="../PreferencesPage.ui" line="+20"/>
         <source>User Interface Theme:</source>
         <translation>Thème de l&apos;interface utilisateur :</translation>
     </message>
@@ -12,12 +12,12 @@
 <context>
     <name>ThemePreferences</name>
     <message>
-        <location filename="../ThemePreferences.js" line="30"/>
+        <location filename="../ThemePreferences.js" line="+30"/>
         <source>General</source>
         <translation>Générale</translation>
     </message>
     <message>
-        <location filename="../ThemePreferences.js" line="30"/>
+        <location line="+0"/>
         <source>Theme</source>
         <translation>Thème</translation>
     </message>

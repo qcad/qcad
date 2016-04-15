@@ -142,7 +142,7 @@ Co&amp;lar</translatorcomment>
         <translation>&amp;Cor...</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+4"/>
         <source>&amp;Special Characters...</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>&amp;Caracteres Especiais...</translation>
@@ -464,7 +464,7 @@ Alinhamento|Vertical</translatorcomment>
         <translation>Alinhamento</translation>
     </message>
     <message>
-        <location line="+85"/>
+        <location line="+79"/>
         <source>Top Center</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -472,12 +472,12 @@ Centro Acima</translatorcomment>
         <translation>Centro Superior</translation>
     </message>
     <message>
-        <location line="+64"/>
+        <location line="+145"/>
         <source>Base Left</source>
         <translation>Esquerda de Base</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="-177"/>
         <source>Top Left</source>
         <translatorcomment>--exact match--
 --file: LineRectangleSize_pt.ts--
@@ -487,17 +487,17 @@ Cada objecto seleccionado tem um marca de diamante no canto esquerdo superio</tr
         <translation>Esquerda Superior</translation>
     </message>
     <message>
-        <location line="+35"/>
+        <location line="+206"/>
         <source>Base Center</source>
         <translation>Centro de Base</translation>
     </message>
     <message>
-        <location line="+32"/>
+        <location line="+29"/>
         <source>Base Right</source>
         <translation>Direita de Base</translation>
     </message>
     <message>
-        <location line="+128"/>
+        <location line="-145"/>
         <source>Top Right</source>
         <translatorcomment>--exact match--
 --file: LineRectangleSize_pt.ts--
@@ -506,7 +506,7 @@ Em cima à direita</translatorcomment>
         <translation>Direita Superior</translation>
     </message>
     <message>
-        <location line="-323"/>
+        <location line="+203"/>
         <source>Bottom Center</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -514,7 +514,7 @@ Centro Abaixo</translatorcomment>
         <translation>Centro Inferior</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="-145"/>
         <source>Middle Left</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -522,7 +522,7 @@ Esquerda ao Meio</translatorcomment>
         <translation>Esquerda ao Meio</translation>
     </message>
     <message>
-        <location line="-64"/>
+        <location line="-29"/>
         <source>Middle Center</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -530,7 +530,7 @@ Centro ao Meio</translatorcomment>
         <translation>Centro ao Meio</translation>
     </message>
     <message>
-        <location line="-163"/>
+        <location line="-58"/>
         <source>Middle Right</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -538,7 +538,7 @@ Direita ao Meio</translatorcomment>
         <translation>Direita ao Meio</translation>
     </message>
     <message>
-        <location line="-96"/>
+        <location line="+203"/>
         <source>Bottom Left</source>
         <translatorcomment>--exact match--
 --file: LineRectangleSize_pt.ts--
@@ -547,7 +547,7 @@ Em baixo à esquerda</translatorcomment>
         <translation>Esquerda Inferior</translation>
     </message>
     <message>
-        <location line="+291"/>
+        <location line="+58"/>
         <source>Bottom Right</source>
         <translatorcomment>--exact match--
 --file: LineRectangleSize_pt.ts--
@@ -556,7 +556,7 @@ Em baixo à direita</translatorcomment>
         <translation>Direita Inferior</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+59"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

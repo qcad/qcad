@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="cs_CZ">
+<TS version="2.1" language="cs">
 <context>
     <name>EditFromReference</name>
     <message>
         <location filename="../EditFromReference.js" line="+55"/>
         <source>Choose block reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte vlastnosti bloku</translation>
     </message>
     <message>
         <location filename="../EditFromReferenceInit.js" line="+2"/>
         <source>E&amp;dit Block from Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Editace bloku dle referencí</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Edit block based on chosen block reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Editace bloku dle vybraných referncí</translation>
     </message>
 </context>
 </TS>
