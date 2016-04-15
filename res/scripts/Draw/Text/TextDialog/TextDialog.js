@@ -122,7 +122,7 @@ TextDialog.prototype.show =  function(textDataIn) {
     }
 
     this.dialog = WidgetFactory.createDialog(TextDialog.basePath, "TextDialog.ui", EAction.getMainWindow());
-    this.dialog.windowIcon = new QIcon(TextDialog.basePath + "/../Text.svg");
+    this.dialog.windowIcon = new QIcon(autoIconPath(TextDialog.basePath + "/../Text.svg"));
 
     // initialize dialog controls:
     this.textEdit = this.dialog.findChild("Text");
@@ -497,23 +497,23 @@ TextDialog.basePath = includeBasePath;
 TextDialog.prototype.setupEditActions = function() {
     var a;
 
-    a = this.actionUndo = new QAction(new QIcon(TextDialog.basePath + "/Undo.svg"), qsTr("&Undo"), this.dialog);
+    a = this.actionUndo = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Undo.svg")), qsTr("&Undo"), this.dialog);
     a.shortcut = QKeySequence.Undo;
     this.dialog.findChild("Undo").setDefaultAction(a);
 
-    a = this.actionRedo = new QAction(new QIcon(TextDialog.basePath + "/Redo.svg"), qsTr("&Redo"), this.dialog);
+    a = this.actionRedo = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Redo.svg")), qsTr("&Redo"), this.dialog);
     a.shortcut = QKeySequence.Redo;
     this.dialog.findChild("Redo").setDefaultAction(a);
 
-    a = this.actionCut = new QAction(new QIcon(TextDialog.basePath + "/Cut.svg"), qsTr("Cu&t"), this.dialog);
+    a = this.actionCut = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Cut.svg")), qsTr("Cu&t"), this.dialog);
     a.shortcut = QKeySequence.Cut;
     this.dialog.findChild("Cut").setDefaultAction(a);
 
-    a = this.actionCopy = new QAction(new QIcon(TextDialog.basePath + "/Copy.svg"), qsTr("&Copy"), this.dialog);
+    a = this.actionCopy = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Copy.svg")), qsTr("&Copy"), this.dialog);
     a.shortcut = QKeySequence.Copy;
     this.dialog.findChild("Copy").setDefaultAction(a);
 
-    a = this.actionPaste = new QAction(new QIcon(TextDialog.basePath + "/Paste.svg"), qsTr("&Paste"), this.dialog);
+    a = this.actionPaste = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Paste.svg")), qsTr("&Paste"), this.dialog);
     a.shortcut = QKeySequence.Paste;
     this.dialog.findChild("Paste").setDefaultAction(a);
 
@@ -521,7 +521,7 @@ TextDialog.prototype.setupEditActions = function() {
 };
 
 TextDialog.prototype.setupTextActions = function() {
-    this.actionTextBold = new QAction(new QIcon(TextDialog.basePath + "/Bold.svg"), qsTr("&Bold"), this.dialog);
+    this.actionTextBold = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Bold.svg")), qsTr("&Bold"), this.dialog);
     this.actionTextBold.shortcut = new QKeySequence(Qt.ControlModifier | Qt.Key_B);
     var bold = new QFont();
     bold.setBold(true);
@@ -530,7 +530,7 @@ TextDialog.prototype.setupTextActions = function() {
     this.actionTextBold.checkable = true;
     this.dialog.findChild("Bold").setDefaultAction(this.actionTextBold);
 
-    this.actionTextItalic = new QAction(new QIcon(TextDialog.basePath + "/Italic.svg"), qsTr("&Italic"), this.dialog);
+    this.actionTextItalic = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Italic.svg")), qsTr("&Italic"), this.dialog);
     this.actionTextItalic.shortcut = new QKeySequence(Qt.ControlModifier | Qt.Key_I);
     var italic = new QFont();
     italic.setItalic(true);
@@ -540,7 +540,7 @@ TextDialog.prototype.setupTextActions = function() {
     this.dialog.findChild("Italic").setDefaultAction(this.actionTextItalic);
 
     /*
-    this.actionTextUnderline = new QAction(new QIcon(TextDialog.basePath + "/Underline.svg"), qsTr("&Underline"), this.dialog);
+    this.actionTextUnderline = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Underline.svg")), qsTr("&Underline"), this.dialog);
     this.actionTextUnderline.shortcut = Qt.CTRL + Qt.Key_U;
     var underline = new QFont();
     underline.setUnderline(true);
@@ -550,24 +550,24 @@ TextDialog.prototype.setupTextActions = function() {
     this.dialog.findChild("Underline").setDefaultAction(this.actionTextUnderline);
     */
 
-    this.actionSubscript = new QAction(new QIcon(TextDialog.basePath + "/Subscript.svg"), qsTr("&Subscript"), this.dialog);
+    this.actionSubscript = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Subscript.svg")), qsTr("&Subscript"), this.dialog);
     this.actionSubscript.shortcut = new QKeySequence(Qt.ShiftModifier | Qt.ControlModifier | Qt.Key_B);
     this.actionSubscript.triggered.connect(this, "textSubscript");
     this.actionSubscript.checkable = true;
     this.dialog.findChild("Subscript").setDefaultAction(this.actionSubscript);
 
-    this.actionSuperscript = new QAction(new QIcon(TextDialog.basePath + "/Superscript.svg"), qsTr("&Superscript"), this.dialog);
+    this.actionSuperscript = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Superscript.svg")), qsTr("&Superscript"), this.dialog);
     this.actionSuperscript.shortcut = new QKeySequence(Qt.ShiftModifier | Qt.ControlModifier | Qt.Key_P);
     this.actionSuperscript.triggered.connect(this, "textSuperscript");
     this.actionSuperscript.checkable = true;
     this.dialog.findChild("Superscript").setDefaultAction(this.actionSuperscript);
 
-//    this.actionZoomIn = new QAction(new QIcon(TextDialog.basePath + "/ZoomIn.svg"), qsTr("Zoom &In"), this.dialog);
+//    this.actionZoomIn = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/ZoomIn.svg")), qsTr("Zoom &In"), this.dialog);
 //    this.actionZoomIn.shortcut = new QKeySequence(Qt.ControlModifier | Qt.Key_Plus);
 //    this.actionZoomIn.triggered.connect(this.textEdit, "zoomIn");
 //    this.dialog.findChild("ZoomIn").setDefaultAction(this.actionZoomIn);
 
-//    this.actionZoomOut = new QAction(new QIcon(TextDialog.basePath + "/ZoomOut.svg"), qsTr("Zoom &Out"), this.dialog);
+//    this.actionZoomOut = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/ZoomOut.svg")), qsTr("Zoom &Out"), this.dialog);
 //    this.actionZoomOut.shortcut = new QKeySequence(Qt.ControlModifier | Qt.Key_Minus);
 //    this.actionZoomOut.triggered.connect(this.textEdit, "zoomOut");
 //    this.dialog.findChild("ZoomOut").setDefaultAction(this.actionZoomOut);
@@ -578,9 +578,7 @@ TextDialog.prototype.setupTextActions = function() {
     this.actionTextColor.triggered.connect(this, "textColor");
     this.dialog.findChild("Color").setDefaultAction(this.actionTextColor);
 
-    this.actionTextSymbol = new QAction(
-            new QIcon(TextDialog.basePath + "/Symbol.svg"),
-            qsTr("&Special Characters..."), this.dialog);
+    this.actionTextSymbol = new QAction(new QIcon(autoIconPath(TextDialog.basePath + "/Symbol.svg")), qsTr("&Special Characters..."), this.dialog);
     this.actionTextSymbol.triggered.connect(this, "textSymbol");
     this.dialog.findChild("Symbol").setDefaultAction(this.actionTextSymbol);
     

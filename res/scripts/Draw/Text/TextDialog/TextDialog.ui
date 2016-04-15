@@ -578,168 +578,34 @@ p, li { white-space: pre-wrap; }
         <property name="spacing">
          <number>6</number>
         </property>
-        <item row="3" column="1">
-         <widget class="QPushButton" name="AlignBottomLeft">
-          <property name="maximumSize">
+        <item row="1" column="4">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
            <size>
-            <width>32</width>
-            <height>32</height>
+            <width>40</width>
+            <height>20</height>
            </size>
           </property>
-          <property name="toolTip">
-           <string>Bottom Left</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>AlignBottomLeft.svg</normaloff>AlignBottomLeft.svg</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-          <property name="flat">
-           <bool>true</bool>
-          </property>
-         </widget>
+         </spacer>
         </item>
-        <item row="3" column="2">
-         <widget class="QPushButton" name="AlignBottomCenter">
-          <property name="maximumSize">
+        <item row="1" column="0">
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
            <size>
-            <width>32</width>
-            <height>32</height>
+            <width>40</width>
+            <height>20</height>
            </size>
           </property>
-          <property name="toolTip">
-           <string>Bottom Center</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>AlignBottomCenter.svg</normaloff>AlignBottomCenter.svg</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-          <property name="flat">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QPushButton" name="AlignTopCenter">
-          <property name="maximumSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>Top Center</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>AlignTopCenter.svg</normaloff>AlignTopCenter.svg</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-          <property name="flat">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="3">
-         <widget class="QPushButton" name="AlignMiddleRight">
-          <property name="maximumSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>Middle Right</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>AlignMiddleRight.svg</normaloff>AlignMiddleRight.svg</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-          <property name="flat">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="1">
-         <widget class="QPushButton" name="AlignBaseLeft">
-          <property name="maximumSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>Base Left</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>AlignBaseLeft.svg</normaloff>AlignBaseLeft.svg</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-          <property name="flat">
-           <bool>true</bool>
-          </property>
-         </widget>
+         </spacer>
         </item>
         <item row="0" column="1">
-         <widget class="QPushButton" name="AlignTopLeft">
+         <widget class="QToolButton" name="AlignTopLeft">
           <property name="maximumSize">
            <size>
             <width>32</width>
@@ -768,13 +634,10 @@ p, li { white-space: pre-wrap; }
           <property name="autoExclusive">
            <bool>true</bool>
           </property>
-          <property name="flat">
-           <bool>true</bool>
-          </property>
          </widget>
         </item>
-        <item row="2" column="2">
-         <widget class="QPushButton" name="AlignBaseCenter">
+        <item row="0" column="2">
+         <widget class="QToolButton" name="AlignTopCenter">
           <property name="maximumSize">
            <size>
             <width>32</width>
@@ -782,11 +645,11 @@ p, li { white-space: pre-wrap; }
            </size>
           </property>
           <property name="toolTip">
-           <string>Base Center</string>
+           <string>Top Center</string>
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>AlignBaseCenter.svg</normaloff>AlignBaseCenter.svg</iconset>
+            <normaloff>AlignTopCenter.svg</normaloff>AlignTopCenter.svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -800,13 +663,10 @@ p, li { white-space: pre-wrap; }
           <property name="autoExclusive">
            <bool>true</bool>
           </property>
-          <property name="flat">
-           <bool>true</bool>
-          </property>
          </widget>
         </item>
-        <item row="2" column="3">
-         <widget class="QPushButton" name="AlignBaseRight">
+        <item row="1" column="3">
+         <widget class="QToolButton" name="AlignMiddleRight">
           <property name="maximumSize">
            <size>
             <width>32</width>
@@ -814,11 +674,11 @@ p, li { white-space: pre-wrap; }
            </size>
           </property>
           <property name="toolTip">
-           <string>Base Right</string>
+           <string>Middle Right</string>
           </property>
           <property name="icon">
            <iconset>
-            <normaloff>AlignBaseRight.svg</normaloff>AlignBaseRight.svg</iconset>
+            <normaloff>AlignMiddleRight.svg</normaloff>AlignMiddleRight.svg</iconset>
           </property>
           <property name="iconSize">
            <size>
@@ -830,111 +690,12 @@ p, li { white-space: pre-wrap; }
            <bool>true</bool>
           </property>
           <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-          <property name="flat">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="2">
-         <widget class="QPushButton" name="AlignMiddleCenter">
-          <property name="maximumSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>Middle Center</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>AlignMiddleCenter.svg</normaloff>AlignMiddleCenter.svg</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-          <property name="flat">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="3">
-         <widget class="QPushButton" name="AlignBottomRight">
-          <property name="maximumSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>Bottom Right</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>AlignBottomRight.svg</normaloff>AlignBottomRight.svg</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-          <property name="flat">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QPushButton" name="AlignMiddleLeft">
-          <property name="maximumSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="toolTip">
-           <string>Middle Left</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>AlignMiddleLeft.svg</normaloff>AlignMiddleLeft.svg</iconset>
-          </property>
-          <property name="iconSize">
-           <size>
-            <width>32</width>
-            <height>32</height>
-           </size>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-          <property name="flat">
            <bool>true</bool>
           </property>
          </widget>
         </item>
         <item row="0" column="3">
-         <widget class="QPushButton" name="AlignTopRight">
+         <widget class="QToolButton" name="AlignTopRight">
           <property name="maximumSize">
            <size>
             <width>32</width>
@@ -960,36 +721,239 @@ p, li { white-space: pre-wrap; }
           <property name="autoExclusive">
            <bool>true</bool>
           </property>
-          <property name="flat">
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QToolButton" name="AlignMiddleCenter">
+          <property name="maximumSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Middle Center</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>AlignMiddleCenter.svg</normaloff>AlignMiddleCenter.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
            <bool>true</bool>
           </property>
          </widget>
         </item>
-        <item row="1" column="4">
-         <spacer name="horizontalSpacer">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
+        <item row="1" column="1">
+         <widget class="QToolButton" name="AlignMiddleLeft">
+          <property name="maximumSize">
            <size>
-            <width>40</width>
-            <height>20</height>
+            <width>32</width>
+            <height>32</height>
            </size>
           </property>
-         </spacer>
+          <property name="toolTip">
+           <string>Middle Left</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>AlignMiddleLeft.svg</normaloff>AlignMiddleLeft.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
         </item>
-        <item row="1" column="0">
-         <spacer name="horizontalSpacer_4">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
+        <item row="2" column="1">
+         <widget class="QToolButton" name="AlignBaseLeft">
+          <property name="maximumSize">
            <size>
-            <width>40</width>
-            <height>20</height>
+            <width>32</width>
+            <height>32</height>
            </size>
           </property>
-         </spacer>
+          <property name="toolTip">
+           <string>Base Left</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>AlignBaseLeft.svg</normaloff>AlignBaseLeft.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QToolButton" name="AlignBaseCenter">
+          <property name="maximumSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Base Center</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>AlignBaseCenter.svg</normaloff>AlignBaseCenter.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QToolButton" name="AlignBaseRight">
+          <property name="maximumSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Base Right</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>AlignBaseRight.svg</normaloff>AlignBaseRight.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QToolButton" name="AlignBottomLeft">
+          <property name="maximumSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Bottom Left</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>AlignBottomLeft.svg</normaloff>AlignBottomLeft.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QToolButton" name="AlignBottomCenter">
+          <property name="maximumSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Bottom Center</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>AlignBottomCenter.svg</normaloff>AlignBottomCenter.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QToolButton" name="AlignBottomRight">
+          <property name="maximumSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Bottom Right</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>AlignBottomRight.svg</normaloff>AlignBottomRight.svg</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>32</width>
+            <height>32</height>
+           </size>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+          <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
