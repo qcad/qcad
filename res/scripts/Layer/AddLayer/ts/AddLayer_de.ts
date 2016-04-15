@@ -24,12 +24,12 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+26"/>
         <source>Default color for new layers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Standard Farbe für neue Layer:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Default lineweight for new layers:</source>
-        <translation>Vorgabe für Linienbreite für neue Layer:</translation>
+        <translation>Standard Linienbreite für neue Layer:</translation>
     </message>
 </context>
 </TS>

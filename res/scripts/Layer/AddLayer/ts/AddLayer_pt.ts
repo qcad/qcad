@@ -27,7 +27,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+26"/>
         <source>Default color for new layers:</source>
-        <translation type="unfinished"></translation>
+        <translation>Cor padrão para novas camadas:</translation>
     </message>
     <message>
         <location line="+17"/>

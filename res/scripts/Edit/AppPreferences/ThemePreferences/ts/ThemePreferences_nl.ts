@@ -6,7 +6,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="20"/>
         <source>User Interface Theme:</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebruikersinterface theme:</translation>
     </message>
 </context>
 <context>
@@ -14,12 +14,12 @@
     <message>
         <location filename="../ThemePreferences.js" line="30"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Algemeen</translation>
     </message>
     <message>
         <location filename="../ThemePreferences.js" line="30"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Theme</translation>
     </message>
 </context>
 </TS>
