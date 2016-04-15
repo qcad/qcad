@@ -6104,7 +6104,6 @@
     <file alias="scripts/Widgets/CadToolBar/PreferencesPage.ui">../../res/scripts/Widgets/CadToolBar/PreferencesPage.ui</file>
     <file alias="scripts/Widgets/CadToolMatrix/CadToolMatrix.ui">../../res/scripts/Widgets/CadToolMatrix/CadToolMatrix.ui</file>
     <file alias="scripts/Widgets/CadToolMatrix/PreferencesPage.ui">../../res/scripts/Widgets/CadToolMatrix/PreferencesPage.ui</file>
-    <file alias="scripts/Widgets/CommandLine/CommandLine-inverse.ui">../../res/scripts/Widgets/CommandLine/CommandLine-inverse.ui</file>
     <file alias="scripts/Widgets/CommandLine/CommandLine.ui">../../res/scripts/Widgets/CommandLine/CommandLine.ui</file>
     <file alias="scripts/Widgets/CommandLine/PreferencesPage.ui">../../res/scripts/Widgets/CommandLine/PreferencesPage.ui</file>
     <file alias="scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui">../../res/scripts/Widgets/CoordinateDisplay/CoordinateDisplay.ui</file>
@@ -6948,7 +6947,6 @@
     <file alias="scripts/View/Zoom/ZoomOut/ZoomOut.svg">../../res/scripts/View/Zoom/ZoomOut/ZoomOut.svg</file>
     <file alias="scripts/View/Zoom/ZoomToSelection/ZoomToSelection-inverse.svg">../../res/scripts/View/Zoom/ZoomToSelection/ZoomToSelection-inverse.svg</file>
     <file alias="scripts/View/Zoom/ZoomToSelection/ZoomToSelection.svg">../../res/scripts/View/Zoom/ZoomToSelection/ZoomToSelection.svg</file>
-    <file alias="scripts/Widgets/BlockList/BlockList-inverse.svg">../../res/scripts/Widgets/BlockList/BlockList-inverse.svg</file>
     <file alias="scripts/Widgets/BlockList/BlockList.svg">../../res/scripts/Widgets/BlockList/BlockList.svg</file>
     <file alias="scripts/Widgets/BlockList/Edit0-inverse.svg">../../res/scripts/Widgets/BlockList/Edit0-inverse.svg</file>
     <file alias="scripts/Widgets/BlockList/Edit0.svg">../../res/scripts/Widgets/BlockList/Edit0.svg</file>
@@ -6962,7 +6960,6 @@
     <file alias="scripts/Widgets/CadToolBar/Back.svg">../../res/scripts/Widgets/CadToolBar/Back.svg</file>
     <file alias="scripts/Widgets/CadToolMatrix/Clear-inverse.svg">../../res/scripts/Widgets/CadToolMatrix/Clear-inverse.svg</file>
     <file alias="scripts/Widgets/CadToolMatrix/Clear.svg">../../res/scripts/Widgets/CadToolMatrix/Clear.svg</file>
-    <file alias="scripts/Widgets/CommandLine/CommandLine-inverse.svg">../../res/scripts/Widgets/CommandLine/CommandLine-inverse.svg</file>
     <file alias="scripts/Widgets/CommandLine/CommandLine.svg">../../res/scripts/Widgets/CommandLine/CommandLine.svg</file>
     <file alias="scripts/Widgets/CommandLine/ToggleTitleBar-inverse.svg">../../res/scripts/Widgets/CommandLine/ToggleTitleBar-inverse.svg</file>
     <file alias="scripts/Widgets/CommandLine/ToggleTitleBar.svg">../../res/scripts/Widgets/CommandLine/ToggleTitleBar.svg</file>
@@ -6970,7 +6967,6 @@
     <file alias="scripts/Widgets/DirectoryList/ArrowDown.svg">../../res/scripts/Widgets/DirectoryList/ArrowDown.svg</file>
     <file alias="scripts/Widgets/DirectoryList/ArrowUp-inverse.svg">../../res/scripts/Widgets/DirectoryList/ArrowUp-inverse.svg</file>
     <file alias="scripts/Widgets/DirectoryList/ArrowUp.svg">../../res/scripts/Widgets/DirectoryList/ArrowUp.svg</file>
-    <file alias="scripts/Widgets/LayerList/LayerList-inverse.svg">../../res/scripts/Widgets/LayerList/LayerList-inverse.svg</file>
     <file alias="scripts/Widgets/LayerList/LayerList.svg">../../res/scripts/Widgets/LayerList/LayerList.svg</file>
     <file alias="scripts/Widgets/LayerList/layerstatus_00-inverse.svg">../../res/scripts/Widgets/LayerList/layerstatus_00-inverse.svg</file>
     <file alias="scripts/Widgets/LayerList/layerstatus_00.svg">../../res/scripts/Widgets/LayerList/layerstatus_00.svg</file>
@@ -7002,7 +6998,6 @@
     <file alias="scripts/Widgets/LibraryBrowser/Insert.svg">../../res/scripts/Widgets/LibraryBrowser/Insert.svg</file>
     <file alias="scripts/Widgets/LibraryBrowser/JsFile-inverse.svg">../../res/scripts/Widgets/LibraryBrowser/JsFile-inverse.svg</file>
     <file alias="scripts/Widgets/LibraryBrowser/JsFile.svg">../../res/scripts/Widgets/LibraryBrowser/JsFile.svg</file>
-    <file alias="scripts/Widgets/LibraryBrowser/LibraryBrowser-inverse.svg">../../res/scripts/Widgets/LibraryBrowser/LibraryBrowser-inverse.svg</file>
     <file alias="scripts/Widgets/LibraryBrowser/LibraryBrowser.svg">../../res/scripts/Widgets/LibraryBrowser/LibraryBrowser.svg</file>
     <file alias="scripts/Widgets/LibraryBrowser/Next-inverse.svg">../../res/scripts/Widgets/LibraryBrowser/Next-inverse.svg</file>
     <file alias="scripts/Widgets/LibraryBrowser/Next.svg">../../res/scripts/Widgets/LibraryBrowser/Next.svg</file>
@@ -7028,7 +7023,6 @@
     <file alias="scripts/Widgets/PropertyEditor/AddCustomProperty.svg">../../res/scripts/Widgets/PropertyEditor/AddCustomProperty.svg</file>
     <file alias="scripts/Widgets/PropertyEditor/Clear-inverse.svg">../../res/scripts/Widgets/PropertyEditor/Clear-inverse.svg</file>
     <file alias="scripts/Widgets/PropertyEditor/Clear.svg">../../res/scripts/Widgets/PropertyEditor/Clear.svg</file>
-    <file alias="scripts/Widgets/PropertyEditor/PropertyEditor-inverse.svg">../../res/scripts/Widgets/PropertyEditor/PropertyEditor-inverse.svg</file>
     <file alias="scripts/Widgets/PropertyEditor/PropertyEditor.svg">../../res/scripts/Widgets/PropertyEditor/PropertyEditor.svg</file>
     <file alias="scripts/Widgets/PropertyEditor/RemoveCustomProperty-inverse.svg">../../res/scripts/Widgets/PropertyEditor/RemoveCustomProperty-inverse.svg</file>
     <file alias="scripts/Widgets/PropertyEditor/RemoveCustomProperty.svg">../../res/scripts/Widgets/PropertyEditor/RemoveCustomProperty.svg</file>

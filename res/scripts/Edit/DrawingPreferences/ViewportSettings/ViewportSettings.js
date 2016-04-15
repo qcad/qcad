@@ -37,16 +37,14 @@ ViewportSettings.initPreferences = function(pageWidget, calledByPrefDialog, docu
 
     vpList.clear();
     var dir = new QDir(Viewport.templateDir);
-    var filters = new QDir.Filters(QDir.Files, QDir.NoDotAndDotDot,
-            QDir.Readable);
+    var filters = new QDir.Filters(QDir.Files, QDir.NoDotAndDotDot, QDir.Readable);
     var sortFlags = new QDir.SortFlags(QDir.Name);
     var eil = dir.entryInfoList(new Array("*.ui"), filters, sortFlags);
     var defaultRow = -1;
     for ( var j = 0; j < eil.length; ++j) {
         var fi = eil[j];
         var w = WidgetFactory.createWidget(Viewport.templateDir, fi.fileName());
-        var lwi = new QListWidgetItem(w.windowTitle, vpList,
-                QListWidgetItem.Type.valueOf());
+        var lwi = new QListWidgetItem(w.windowTitle, vpList, QListWidgetItem.Type.valueOf());
         lwi.setData(Qt.UserRole, fi.fileName());
         // default viewport setting
         if (fi.fileName() == "00_Single.ui") {

@@ -17,11 +17,11 @@
  * along with QCAD.
  */
 
-if (new QFileInfo("scripts/Navigation/DefaultNavigation/DefaultNavigation.js").exists()) {
+if (new QFileInfo(autoPath("scripts/Navigation/DefaultNavigation/DefaultNavigation.js")).exists()) {
     include("scripts/Navigation/DefaultNavigation/DefaultNavigation.js");
 }
 
-Viewport.templateDir = "scripts/Widgets/Viewport/Templates";
+Viewport.templateDir = autoPath("scripts/Widgets/Viewport/Templates");
 
 /**
  * A viewport encapsulates one graphics view and might provide means to navigate

@@ -10,13 +10,16 @@ echo "  <qresource>" >> ${fn}_new.qrc
 
 for ext in js qm ui svg png
 do
-    files=`/usr/bin/find ../../res/scripts -name "*.$ext" | /usr/bin/sort`
+    echo "$ext files..."
+    /usr/bin/find ../../res/scripts -name "*.$ext" | /usr/bin/sort >tmp
 
-    for f in $files
-    do
-        f2=`echo $f | sed s#../../res/##`
-        echo "    <file alias=\"$f2\">$f</file>" >> ${fn}_new.qrc
-    done
+    cat tmp | sed "s#\(../../res/\(.*\)\)#    <file alias=\"\2\">\1</file>#" >>${fn}_new.qrc
+
+    #for f in $files
+    #do
+    #    f2=`echo $f | sed s#../../res/##`
+    #    echo "    <file alias=\"$f2\">$f</file>" >> ${fn}_new.qrc
+    #done
 done
 
 
