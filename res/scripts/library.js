@@ -2275,6 +2275,17 @@ function neutralPath(path) {
     return path;
 }
 
+function autoIconPath(path) {
+    if (RSettings.hasDarkGuiBackground()) {
+        var pathDark = path.replace(/\.svg$/, "-inverse.svg");
+        if (new QFileInfo(pathDark).exists()) {
+            return pathDark;
+        }
+    }
+
+    return path;
+}
+
 // fix QPlainTextEdit API for Qt 5:
 if (!isFunction(QPlainTextEdit.prototype.toPlainText)) {
     QPlainTextEdit.prototype.toPlainText = function() {
