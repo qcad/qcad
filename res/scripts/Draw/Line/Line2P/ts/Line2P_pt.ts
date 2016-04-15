@@ -4,7 +4,7 @@
 <context>
     <name>Line2P</name>
     <message>
-        <location filename="../Line2P.js" line="+67"/>
+        <location filename="../Line2P.js" line="+69"/>
         <source>First point</source>
         <translatorcomment>--exact match--
 --file: Circle3P_pt.ts--

@@ -4,7 +4,7 @@
 <context>
     <name>AbstractPreferences</name>
     <message>
-        <location filename="../AbstractPreferences.js" line="+45"/>
+        <location filename="../AbstractPreferences.js" line="+46"/>
         <source>Application Preferences</source>
         <translation>Preferencias de la aplicación</translation>
     </message>

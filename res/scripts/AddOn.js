@@ -465,50 +465,9 @@ AddOn.getAddOns = function(dir) {
 
         dir = "scripts";
 
-//        var menuNames = [
-//                    "Reset", "File", "Edit", "View", "Select", "Draw", "Dimension",
-//                    "Modify", "Snap", "Information", "Layer", "Block", "Developer",
-//                    "Window", "Widgets", "Misc", "Local"
-//                ];
-
         // fixed set of directories that will be scanned for add-ons first to 
         // ensure fixed order of menus and tool bars:
         fileMenuList = [
-//                new QFileInfo("scripts/Reset"),
-//                new QFileInfo(":scripts/Reset"),
-//                new QFileInfo("scripts/File"),
-//                new QFileInfo(":scripts/File"),
-//                new QFileInfo("scripts/Edit"),
-//                new QFileInfo(":scripts/Edit"),
-//                new QFileInfo("scripts/View"),
-//                new QFileInfo(":scripts/View"),
-//                new QFileInfo("scripts/Select"),
-//                new QFileInfo(":scripts/Select"),
-//                new QFileInfo("scripts/Draw"),
-//                new QFileInfo(":scripts/Draw"),
-//                new QFileInfo("scripts/Dimension"),
-//                new QFileInfo(":scripts/Dimension"),
-//                new QFileInfo("scripts/Modify"),
-//                new QFileInfo(":scripts/Modify"),
-//                new QFileInfo("scripts/Snap"),
-//                new QFileInfo(":scripts/Snap"),
-//                new QFileInfo("scripts/Information"),
-//                new QFileInfo(":scripts/Information"),
-//                new QFileInfo("scripts/Layer"),
-//                new QFileInfo(":scripts/Layer"),
-//                new QFileInfo("scripts/Block"),
-//                new QFileInfo(":scripts/Block"),
-//                new QFileInfo("scripts/Developer"),
-//                new QFileInfo(":scripts/Developer"),
-//                new QFileInfo("scripts/Window"),
-//                new QFileInfo(":scripts/Window"),
-//                new QFileInfo("scripts/Widgets"),
-//                new QFileInfo(":scripts/Widgets"),
-//                new QFileInfo("scripts/Misc"),
-//                new QFileInfo(":scripts/Misc"),
-//                new QFileInfo("scripts/Local"),
-//                new QFileInfo(":scripts/Local"),
-                new QFileInfo("scripts"),
                 // scripts compiled as resources in plugins:
                 new QFileInfo(":scripts"),
                 // local scripts:
@@ -527,8 +486,6 @@ AddOn.getAddOns = function(dir) {
             }
         }
 
-        //fileMenuList.push(new QFileInfo(":scripts/Help"));
-                
         // append directories not in the list above:
         var menuList = new QDir(dir).entryInfoList(dirFilter, sortFlags);
         for (i=0; i<menuList.length; ++i) {
@@ -582,18 +539,15 @@ AddOn.getAddOns = function(dir) {
                     "Window":140, "Widgets":150, "Misc":160, "Local":170, "Help":100000
                 };
 
-        RDebug.startTimer();
+        var rx1 = new RegExp(":?\/?scripts\/");
+        var rx2 = new RegExp("\/.*");
         addOns.sort(function(a,b) {
             // get top dir:
-            var da = a.getPath().replace(/:?\/?scripts\//, "").replace(/\/.*/, "");
-            var db = b.getPath().replace(/:?\/?scripts\//, "").replace(/\/.*/, "");
-
-            //qDebug(da, db);
+            var da = a.getPath().replace(rx1, "").replace(rx2, "");
+            var db = b.getPath().replace(rx1, "").replace(rx2, "");
 
             var oa = menuNames[da]
             var ob = menuNames[db]
-
-            //qDebug(oa, ob);
 
             if (isNull(oa)) {
                 oa = 1000;
@@ -604,7 +558,6 @@ AddOn.getAddOns = function(dir) {
 
             return oa-ob;
         });
-        RDebug.stopTimer("sort");
 
         // cache:
         AddOn.addOns = addOns;

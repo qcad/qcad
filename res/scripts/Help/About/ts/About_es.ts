@@ -199,7 +199,7 @@
         <translation>Traducciones</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>Icons</source>
         <translation>Iconos</translation>
     </message>

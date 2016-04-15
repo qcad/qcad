@@ -191,7 +191,7 @@
         <translation>Prevodi</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>Icons</source>
         <translation>Ikonce</translation>
     </message>

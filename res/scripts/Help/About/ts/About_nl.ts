@@ -191,7 +191,7 @@
         <translation>Vertalingen:</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>Icons</source>
         <translation>Icons</translation>
     </message>

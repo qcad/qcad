@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2005"/>
+        <location line="+2006"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location line="-1732"/>
+        <location line="-1733"/>
         <location line="+136"/>
         <source>Active Tool:</source>
         <translation>Активный инструмент:</translation>
@@ -79,7 +79,7 @@
         <translation>Нет</translation>
     </message>
     <message>
-        <location line="+634"/>
+        <location line="+635"/>
         <source>Options</source>
         <translation>Параметры</translation>
     </message>
@@ -210,7 +210,7 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+966"/>
+        <location filename="../WidgetFactory.js" line="+972"/>
         <source>Restore defaults</source>
         <translation>Восстановить умолчания</translation>
     </message>

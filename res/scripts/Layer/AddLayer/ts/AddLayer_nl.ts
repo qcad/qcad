@@ -22,7 +22,12 @@
 <context>
     <name>Layer</name>
     <message>
-        <location filename="../PreferencesPage.ui" line="+19"/>
+        <location filename="../PreferencesPage.ui" line="+26"/>
+        <source>Default color for new layers:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+17"/>
         <source>Default lineweight for new layers:</source>
         <translation>Standaard lijndikte voor nieuwe lagen:</translation>
     </message>

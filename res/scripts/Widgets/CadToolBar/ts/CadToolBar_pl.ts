@@ -64,7 +64,7 @@ Kolumn:</translatorcomment>
 <context>
     <name>CadToolBarPanel</name>
     <message>
-        <location filename="../CadToolBarPanel.js" line="+108"/>
+        <location filename="../CadToolBarPanel.js" line="+107"/>
         <source>Back</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

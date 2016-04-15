@@ -4,7 +4,7 @@
 <context>
     <name>CadToolMatrix</name>
     <message>
-        <location filename="../CadToolMatrix.js" line="+363"/>
+        <location filename="../CadToolMatrix.js" line="+365"/>
         <source>Expand all</source>
         <translation>Alles uitvouwen</translation>
     </message>

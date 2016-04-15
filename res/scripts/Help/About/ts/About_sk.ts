@@ -191,7 +191,7 @@
         <translation>Preklady</translation>
     </message>
     <message>
-        <location line="+10"/>
+        <location line="+13"/>
         <source>Icons</source>
         <translation>Ikony</translation>
     </message>
