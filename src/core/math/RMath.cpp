@@ -365,6 +365,9 @@ double RMath::eval(const QString& expression, bool* ok) {
 
     if (mathExt.isNull()) {
         QString inputJs = "scripts/input.js";
+        if (!QFileInfo(inputJs).exists()) {
+            inputJs = ":scripts/input.js";
+        }
         QFile file(inputJs);
         if (file.exists()) {
             if (file.open(QIODevice::ReadOnly|QIODevice::Text)) {
