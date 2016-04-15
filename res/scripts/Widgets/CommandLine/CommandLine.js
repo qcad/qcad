@@ -80,6 +80,11 @@ CommandLine.init = function(basePath) {
     dock.shown.connect(function() { action.setChecked(true); });
     dock.hidden.connect(function() { action.setChecked(false); });
 
+    var blue = "#0000cc"
+    if (RSettings.hasDarkGuiBackground()) {
+        blue = "#2E9AFE";
+    }
+
     function appendAndScroll(msg) {
         teHistory.append(msg);
         var c = teHistory.textCursor();
@@ -339,7 +344,7 @@ CommandLine.init = function(basePath) {
         }
         leCommand.appendCommand(message);
         appendAndScroll(
-            "<span style='color:#0000cc;'>"
+            "<span style='color:" + blue + ";'>"
             + "<i>" + what + ": </i>"
             + Qt.escape(message) + "</span>");
     });
