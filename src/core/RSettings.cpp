@@ -559,17 +559,23 @@ bool RSettings::getHideAttributeWithBlock() {
 
 bool RSettings::hasDarkGuiBackground() {
     if (darkGuiBackground==-1) {
-        // find out what color is used for QFrames (this might originate from a CSS stylesheet):
-        QFrame* w = new QFrame();
-        w->resize(1,1);
-#if QT_VERSION >= 0x050000
-        QPixmap pixmap = w->grab(QRect(0, 0, 1, 1));
-#else
-        QPixmap pixmap = QPixmap::grabWidget(w, QRect(0, 0, 1, 1));
-#endif
-        delete w;
-        QImage img = pixmap.toImage();
-        darkGuiBackground = QColor(img.pixel(0,0)).value()<128;
+//        // find out what color is used for QFrames (this might originate from a CSS stylesheet):
+//        QFrame* w = new QFrame();
+//        w->resize(1,1);
+//#if QT_VERSION >= 0x050000
+//        QPixmap pixmap = w->grab(QRect(0, 0, 1, 1));
+//#else
+//        QPixmap pixmap = QPixmap::grabWidget(w, QRect(0, 0, 1, 1));
+//#endif
+//        delete w;
+//        QImage img = pixmap.toImage();
+//        darkGuiBackground = QColor(img.pixel(0,0)).value()<128;
+        if (qApp->styleSheet().contains("IconPostfix:inverse", Qt::CaseInsensitive)) {
+            darkGuiBackground = 1;
+        }
+        else {
+            darkGuiBackground = 0;
+        }
     }
     return darkGuiBackground==1;
 }
