@@ -2299,7 +2299,6 @@ function applyTheme() {
                 var allLines = textStream.readAll();
                 file.close();
                 allLines = allLines.replace(/url\(/g, "url(" + prefix);
-                qDebug(allLines);
                 qApp.setStyleSheet(allLines);
                 return;
             }
