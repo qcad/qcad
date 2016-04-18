@@ -1,3 +1,12 @@
 TEMPLATE = subdirs
 SUBDIRS = \
-    Examples
+    Examples \
+    MiscBlock \
+    MiscDevelopment \
+    MiscDraw \
+    MiscIO \
+    MiscModify \
+    MiscSelect \
+    Screencast \
+    Tutorials \
+    ts

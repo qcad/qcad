@@ -60,7 +60,7 @@ void RScriptHandler::init(const QString& autostartFile, const QStringList& argum
         }
     }
 
-    qWarning() << "Autostart script not found at: \n" << triedLocations.join("\n");
+    qWarning() << "Autostart script not found at: \n" << triedLocations.join("\\n");
 }
 
 /**
