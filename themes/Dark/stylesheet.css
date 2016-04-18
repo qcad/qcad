@@ -365,7 +365,7 @@ QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
     width: 0;
 }
 
-/* QAbstractItemView modifications */
+/* QAbstractItemView */
 QAbstractItemView {
     border: 1px solid #323232;
     selection-color: #bbbbbb;
@@ -377,14 +377,19 @@ QAbstractItemView {
 QAbstractItemView::item:alternate {
     background-color: #414547;
 }
-QListWidgetItem,
+/*QListWidgetItem,
 QTreeWidgetItem  {
     background-color: red;
     color: yellow;
     border: 1px solid purple;
 }
+*/
 QAbstractItemView::text {
     color: #bbbbbb;
+}
+QTreeView::branch,
+QAbstractItemView::item {
+    background-color: rgba(255, 255, 255, 0);
 }
 QTreeView::branch:hover,
 QAbstractItemView::item:hover {
@@ -572,3 +577,13 @@ QDockWidget::close-button:pressed, QDockWidget::float-button:pressed {
     padding: 1px -1px -1px 1px;
 }
 */
+
+QListView#FileSystemListView,
+QListView#TagsListView,
+QListView#FavoritesListView {
+  background-color: #000;
+}
+
+QDialog QTextEdit#Text {
+  background-color: #fff;
+}
