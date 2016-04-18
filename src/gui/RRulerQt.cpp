@@ -201,12 +201,12 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
     RVector p = view->mapToView(cursorPosition);
     if (orientation==Qt::Horizontal) {
         wPainter.translate(p.x, height()-4);
-        wPainter.fillPath(cursorArrow, Qt::black);
+        wPainter.fillPath(cursorArrow, darkGuiBackground==1 ? Qt::white : Qt::black);
     }
     else {
         wPainter.rotate(-90);
         wPainter.translate(-p.y+1, width()-4);
-        wPainter.fillPath(cursorArrow, Qt::black);
+        wPainter.fillPath(cursorArrow, darkGuiBackground==1 ? Qt::white : Qt::black);
     }
     wPainter.end();
 
