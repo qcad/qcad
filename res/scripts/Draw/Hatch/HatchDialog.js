@@ -174,15 +174,21 @@ HatchDialog.prototype.patternChanged = function() {
             previewDoc.setUnit(RS.Millimeter);
             previewDoc.setMeasurement(RS.Metric);
             pattern = RPatternListMetric.get(patternName);
+            if (patternName.startsWith("AR-") /*|| patternName.startsWith("ACAD_")*/) {
+                size = 900.0;
+            }
         }
         else {
+            size = 2;
             previewDoc.setUnit(RS.Inch);
             previewDoc.setMeasurement(RS.Imperial);
             pattern = RPatternListImperial.get(patternName);
-        }
-
-        if (patternName.startsWith("AR-") /*|| patternName.startsWith("ACAD_")*/) {
-            size = 900.0;
+            if (patternName.startsWith("ACAD_")) {
+                size = 30.0;
+            }
+            if (patternName.startsWith("AR-") /*|| patternName.startsWith("ACAD_")*/) {
+                size = 30.0;
+            }
         }
 
         if (isNull(pattern)) {
