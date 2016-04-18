@@ -2303,7 +2303,9 @@ function applyTheme() {
                 return;
             }
         }
-        qWarning("Cannot open theme: ", theme);
+        if (theme!=="Default") {
+            qWarning("Cannot open theme: ", theme);
+        }
         qApp.setStyleSheet("");
     }
 }
