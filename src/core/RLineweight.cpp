@@ -17,6 +17,7 @@
  * along with QCAD.
  */
 #include "RLineweight.h"
+#include "RSettings.h"
 
 #include <QPainter>
 #include <QPainterPath>
@@ -118,8 +119,8 @@ QIcon RLineweight::getIcon(RLineweight::Lineweight lineweight) {
     QPainterPath path;
     path.moveTo(0, h / 2);
     path.lineTo(w, h / 2);
-    painter.setPen(QPen(Qt::black, (h / 2) * (lineweight < 1 ? 1 : lineweight)
-            / 200));
+    QColor penColor = (RSettings::hasDarkGuiBackground() ? Qt::white : Qt::black);
+    painter.setPen(QPen(penColor, (h / 2) * (lineweight < 1 ? 1 : lineweight) / 200));
     painter.drawPath(path);
 //  painter.setRenderHint(QPainter::Antialiasing, false);
 

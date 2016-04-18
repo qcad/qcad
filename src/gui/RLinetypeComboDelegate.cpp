@@ -111,6 +111,7 @@ QImage RLinetypeComboDelegate::getPreviewImage(const RLinetypePattern& pattern, 
     t.scale(1.0,-1.0);
     t.translate(0,-previewHeight/2);
     p.setTransform(t);
+    p.setPen(RSettings::hasDarkGuiBackground() ? Qt::white : Qt::black);
     p.drawPath(pp);
     p.end();
 
