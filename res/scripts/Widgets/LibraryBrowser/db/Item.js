@@ -193,7 +193,12 @@ Item.prototype.getIcon = function(small, regenerate, noFavoritesMark) {
     var view = new RGraphicsViewImage();
     view.setAntialiasing(true);
     view.setPaintOrigin(false);
-    view.setBackgroundColor(new QColor(Qt.white));
+    if (RSettings.hasDarkGuiBackground()) {
+        view.setBackgroundColor(new QColor(Qt.black));
+    }
+    else {
+        view.setBackgroundColor(new QColor(Qt.white));
+    }
     view.setColorCorrectionOverride(true);
     view.setMargin(2);
     view.setScene(scene);
