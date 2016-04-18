@@ -381,7 +381,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::clone";
             //QCoreApplication::processEvents();
 
@@ -422,7 +422,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -430,7 +430,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::to2D", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::to2D", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::to2D";
             //QCoreApplication::processEvents();
 
@@ -466,7 +466,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.to2D().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::to2D", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::to2D", context, engine);
             return result;
         }
          QScriptValue
@@ -474,7 +474,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::getPosition", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::getPosition", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::getPosition";
             //QCoreApplication::processEvents();
 
@@ -515,7 +515,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.getPosition().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::getPosition", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::getPosition", context, engine);
             return result;
         }
          QScriptValue
@@ -523,7 +523,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::setPosition", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::setPosition", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::setPosition";
             //QCoreApplication::processEvents();
 
@@ -582,7 +582,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.setPosition().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::setPosition", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::setPosition", context, engine);
             return result;
         }
          QScriptValue
@@ -590,7 +590,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::getBoundingBox", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::getBoundingBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::getBoundingBox";
             //QCoreApplication::processEvents();
 
@@ -631,7 +631,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.getBoundingBox().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::getBoundingBox", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::getBoundingBox", context, engine);
             return result;
         }
          QScriptValue
@@ -639,7 +639,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::getLength", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::getLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::getLength";
             //QCoreApplication::processEvents();
 
@@ -680,7 +680,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.getLength().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::getLength", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::getLength", context, engine);
             return result;
         }
          QScriptValue
@@ -688,7 +688,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::getEndPoints", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::getEndPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::getEndPoints";
             //QCoreApplication::processEvents();
 
@@ -729,7 +729,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.getEndPoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::getEndPoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::getEndPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -737,7 +737,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::getMiddlePoints", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::getMiddlePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::getMiddlePoints";
             //QCoreApplication::processEvents();
 
@@ -778,7 +778,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.getMiddlePoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::getMiddlePoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::getMiddlePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -786,7 +786,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::getCenterPoints", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::getCenterPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::getCenterPoints";
             //QCoreApplication::processEvents();
 
@@ -827,7 +827,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.getCenterPoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::getCenterPoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::getCenterPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -835,7 +835,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::getPointsWithDistanceToEnd", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::getPointsWithDistanceToEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::getPointsWithDistanceToEnd";
             //QCoreApplication::processEvents();
 
@@ -932,7 +932,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.getPointsWithDistanceToEnd().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::getPointsWithDistanceToEnd", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::getPointsWithDistanceToEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -940,7 +940,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::getAngleAt", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::getAngleAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::getAngleAt";
             //QCoreApplication::processEvents();
 
@@ -1037,7 +1037,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.getAngleAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::getAngleAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::getAngleAt", context, engine);
             return result;
         }
          QScriptValue
@@ -1045,7 +1045,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::getVectorTo", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::getVectorTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::getVectorTo";
             //QCoreApplication::processEvents();
 
@@ -1236,7 +1236,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.getVectorTo().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::getVectorTo", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::getVectorTo", context, engine);
             return result;
         }
          QScriptValue
@@ -1244,7 +1244,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::move", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::move", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::move";
             //QCoreApplication::processEvents();
 
@@ -1308,7 +1308,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.move().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::move", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::move", context, engine);
             return result;
         }
          QScriptValue
@@ -1316,7 +1316,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::rotate", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::rotate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::rotate";
             //QCoreApplication::processEvents();
 
@@ -1425,7 +1425,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.rotate().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::rotate", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::rotate", context, engine);
             return result;
         }
          QScriptValue
@@ -1433,7 +1433,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::scale", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::scale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::scale";
             //QCoreApplication::processEvents();
 
@@ -1566,7 +1566,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.scale().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::scale", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::scale", context, engine);
             return result;
         }
          QScriptValue
@@ -1574,7 +1574,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::mirror", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::mirror", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::mirror";
             //QCoreApplication::processEvents();
 
@@ -1638,7 +1638,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.mirror().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::mirror", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::mirror", context, engine);
             return result;
         }
          QScriptValue
@@ -1646,7 +1646,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::flipHorizontal", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::flipHorizontal", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::flipHorizontal";
             //QCoreApplication::processEvents();
 
@@ -1687,7 +1687,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.flipHorizontal().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::flipHorizontal", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::flipHorizontal", context, engine);
             return result;
         }
          QScriptValue
@@ -1695,7 +1695,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::flipVertical", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::flipVertical", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::flipVertical";
             //QCoreApplication::processEvents();
 
@@ -1736,7 +1736,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.flipVertical().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::flipVertical", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::flipVertical", context, engine);
             return result;
         }
          QScriptValue
@@ -1744,7 +1744,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPoint::getTransformed", context, engine);
+            //REcmaHelper::functionStart("REcmaPoint::getTransformed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPoint::getTransformed";
             //QCoreApplication::processEvents();
 
@@ -1806,7 +1806,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.getTransformed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPoint::getTransformed", context, engine);
+            //REcmaHelper::functionEnd("REcmaPoint::getTransformed", context, engine);
             return result;
         }
          QScriptValue REcmaPoint::toString

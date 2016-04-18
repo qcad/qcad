@@ -235,7 +235,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTreeWidget::setSelectableColumn", context, engine);
+            //REcmaHelper::functionStart("REcmaTreeWidget::setSelectableColumn", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTreeWidget::setSelectableColumn";
             //QCoreApplication::processEvents();
 
@@ -282,7 +282,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTreeWidget.setSelectableColumn().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTreeWidget::setSelectableColumn", context, engine);
+            //REcmaHelper::functionEnd("REcmaTreeWidget::setSelectableColumn", context, engine);
             return result;
         }
          QScriptValue
@@ -290,7 +290,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTreeWidget::getIndex", context, engine);
+            //REcmaHelper::functionStart("REcmaTreeWidget::getIndex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTreeWidget::getIndex";
             //QCoreApplication::processEvents();
 
@@ -401,7 +401,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTreeWidget.getIndex().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTreeWidget::getIndex", context, engine);
+            //REcmaHelper::functionEnd("REcmaTreeWidget::getIndex", context, engine);
             return result;
         }
          QScriptValue REcmaTreeWidget::toString

@@ -600,11 +600,11 @@ QVariant REcmaHelper::toVariant(const QSharedPointer<RShape>& cppValue) {
 }
 
 void REcmaHelper::functionStart(const QString& name, QScriptContext* context, QScriptEngine* engine) {
-    qDebug() << "REcmaHelper::functionStart: " << name;
+    //qDebug() << "REcmaHelper::functionStart: " << name;
 }
 
 void REcmaHelper::functionEnd(const QString& name, QScriptContext* context, QScriptEngine* engine) {
-    qDebug() << "REcmaHelper::functionEnd: " << name;
+    //qDebug() << "REcmaHelper::functionEnd: " << name;
 }
 
 void REcmaHelper::shellFunctionStart(const QString& name, QScriptEngine* engine) {

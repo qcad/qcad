@@ -121,7 +121,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaViewListener::updateViews", context, engine);
+            //REcmaHelper::functionStart("REcmaViewListener::updateViews", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewListener::updateViews";
             //QCoreApplication::processEvents();
 
@@ -175,7 +175,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewListener.updateViews().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaViewListener::updateViews", context, engine);
+            //REcmaHelper::functionEnd("REcmaViewListener::updateViews", context, engine);
             return result;
         }
          QScriptValue
@@ -183,7 +183,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaViewListener::clearViews", context, engine);
+            //REcmaHelper::functionStart("REcmaViewListener::clearViews", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewListener::clearViews";
             //QCoreApplication::processEvents();
 
@@ -219,7 +219,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewListener.clearViews().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaViewListener::clearViews", context, engine);
+            //REcmaHelper::functionEnd("REcmaViewListener::clearViews", context, engine);
             return result;
         }
          QScriptValue REcmaViewListener::toString

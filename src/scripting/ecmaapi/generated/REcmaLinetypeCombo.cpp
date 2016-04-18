@@ -243,7 +243,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinetypeCombo::init", context, engine);
+            //REcmaHelper::functionStart("REcmaLinetypeCombo::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeCombo::init";
             //QCoreApplication::processEvents();
 
@@ -297,7 +297,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeCombo.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinetypeCombo::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinetypeCombo::init", context, engine);
             return result;
         }
          QScriptValue
@@ -305,7 +305,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinetypeCombo::reinit", context, engine);
+            //REcmaHelper::functionStart("REcmaLinetypeCombo::reinit", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeCombo::reinit";
             //QCoreApplication::processEvents();
 
@@ -341,7 +341,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeCombo.reinit().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinetypeCombo::reinit", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinetypeCombo::reinit", context, engine);
             return result;
         }
          QScriptValue
@@ -349,7 +349,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinetypeCombo::getLinetypePattern", context, engine);
+            //REcmaHelper::functionStart("REcmaLinetypeCombo::getLinetypePattern", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeCombo::getLinetypePattern";
             //QCoreApplication::processEvents();
 
@@ -390,7 +390,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeCombo.getLinetypePattern().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinetypeCombo::getLinetypePattern", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinetypeCombo::getLinetypePattern", context, engine);
             return result;
         }
          QScriptValue
@@ -398,7 +398,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinetypeCombo::getLinetypePatternAt", context, engine);
+            //REcmaHelper::functionStart("REcmaLinetypeCombo::getLinetypePatternAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeCombo::getLinetypePatternAt";
             //QCoreApplication::processEvents();
 
@@ -450,7 +450,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeCombo.getLinetypePatternAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinetypeCombo::getLinetypePatternAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinetypeCombo::getLinetypePatternAt", context, engine);
             return result;
         }
          QScriptValue
@@ -458,7 +458,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinetypeCombo::setLinetypePattern", context, engine);
+            //REcmaHelper::functionStart("REcmaLinetypeCombo::setLinetypePattern", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeCombo::setLinetypePattern";
             //QCoreApplication::processEvents();
 
@@ -544,7 +544,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeCombo.setLinetypePattern().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinetypeCombo::setLinetypePattern", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinetypeCombo::setLinetypePattern", context, engine);
             return result;
         }
          QScriptValue
@@ -552,7 +552,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinetypeCombo::getOnlyFixed", context, engine);
+            //REcmaHelper::functionStart("REcmaLinetypeCombo::getOnlyFixed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeCombo::getOnlyFixed";
             //QCoreApplication::processEvents();
 
@@ -593,7 +593,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeCombo.getOnlyFixed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinetypeCombo::getOnlyFixed", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinetypeCombo::getOnlyFixed", context, engine);
             return result;
         }
          QScriptValue
@@ -601,7 +601,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinetypeCombo::setOnlyFixed", context, engine);
+            //REcmaHelper::functionStart("REcmaLinetypeCombo::setOnlyFixed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeCombo::setOnlyFixed";
             //QCoreApplication::processEvents();
 
@@ -648,7 +648,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeCombo.setOnlyFixed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinetypeCombo::setOnlyFixed", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinetypeCombo::setOnlyFixed", context, engine);
             return result;
         }
          QScriptValue
@@ -656,7 +656,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinetypeCombo::linetypePatternChanged", context, engine);
+            //REcmaHelper::functionStart("REcmaLinetypeCombo::linetypePatternChanged", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeCombo::linetypePatternChanged";
             //QCoreApplication::processEvents();
 
@@ -703,7 +703,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeCombo.linetypePatternChanged().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinetypeCombo::linetypePatternChanged", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinetypeCombo::linetypePatternChanged", context, engine);
             return result;
         }
          QScriptValue REcmaLinetypeCombo::toString

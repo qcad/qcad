@@ -233,7 +233,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaListWidget::setIconOffset", context, engine);
+            //REcmaHelper::functionStart("REcmaListWidget::setIconOffset", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaListWidget::setIconOffset";
             //QCoreApplication::processEvents();
 
@@ -280,7 +280,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RListWidget.setIconOffset().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaListWidget::setIconOffset", context, engine);
+            //REcmaHelper::functionEnd("REcmaListWidget::setIconOffset", context, engine);
             return result;
         }
          QScriptValue REcmaListWidget::toString

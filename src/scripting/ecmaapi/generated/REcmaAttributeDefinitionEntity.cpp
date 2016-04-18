@@ -525,7 +525,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::init", context, engine);
+            //REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeDefinitionEntity::init";
             //QCoreApplication::processEvents();
 
@@ -551,7 +551,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeDefinitionEntity.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::init", context, engine);
             return result;
         }
          QScriptValue
@@ -559,7 +559,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::getStaticPropertyTypeIds", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeDefinitionEntity::getStaticPropertyTypeIds";
             //QCoreApplication::processEvents();
 
@@ -591,7 +591,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeDefinitionEntity.getStaticPropertyTypeIds().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::getStaticPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue
@@ -599,7 +599,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeDefinitionEntity::clone";
             //QCoreApplication::processEvents();
 
@@ -640,7 +640,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeDefinitionEntity.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -648,7 +648,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::getType", context, engine);
+            //REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::getType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeDefinitionEntity::getType";
             //QCoreApplication::processEvents();
 
@@ -689,7 +689,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeDefinitionEntity.getType().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -697,7 +697,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::getData", context, engine);
+            //REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::getData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeDefinitionEntity::getData";
             //QCoreApplication::processEvents();
 
@@ -761,7 +761,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeDefinitionEntity.getData().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::getData", context, engine);
+            //REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::getData", context, engine);
             return result;
         }
          QScriptValue
@@ -769,7 +769,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::setData", context, engine);
+            //REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::setData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeDefinitionEntity::setData";
             //QCoreApplication::processEvents();
 
@@ -828,7 +828,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeDefinitionEntity.setData().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::setData", context, engine);
+            //REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::setData", context, engine);
             return result;
         }
          QScriptValue
@@ -836,7 +836,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::setProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeDefinitionEntity::setProperty";
             //QCoreApplication::processEvents();
 
@@ -1010,7 +1010,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeDefinitionEntity.setProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::setProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1018,7 +1018,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::getProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeDefinitionEntity::getProperty";
             //QCoreApplication::processEvents();
 
@@ -1257,7 +1257,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeDefinitionEntity.getProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::getProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1265,7 +1265,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::getTag", context, engine);
+            //REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::getTag", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeDefinitionEntity::getTag";
             //QCoreApplication::processEvents();
 
@@ -1306,7 +1306,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeDefinitionEntity.getTag().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::getTag", context, engine);
+            //REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::getTag", context, engine);
             return result;
         }
          QScriptValue
@@ -1314,7 +1314,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::setTag", context, engine);
+            //REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::setTag", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeDefinitionEntity::setTag";
             //QCoreApplication::processEvents();
 
@@ -1361,7 +1361,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeDefinitionEntity.setTag().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::setTag", context, engine);
+            //REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::setTag", context, engine);
             return result;
         }
          QScriptValue
@@ -1369,7 +1369,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::getPrompt", context, engine);
+            //REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::getPrompt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeDefinitionEntity::getPrompt";
             //QCoreApplication::processEvents();
 
@@ -1410,7 +1410,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeDefinitionEntity.getPrompt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::getPrompt", context, engine);
+            //REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::getPrompt", context, engine);
             return result;
         }
          QScriptValue
@@ -1418,7 +1418,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::setPrompt", context, engine);
+            //REcmaHelper::functionStart("REcmaAttributeDefinitionEntity::setPrompt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeDefinitionEntity::setPrompt";
             //QCoreApplication::processEvents();
 
@@ -1465,7 +1465,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeDefinitionEntity.setPrompt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::setPrompt", context, engine);
+            //REcmaHelper::functionEnd("REcmaAttributeDefinitionEntity::setPrompt", context, engine);
             return result;
         }
          QScriptValue REcmaAttributeDefinitionEntity::toString

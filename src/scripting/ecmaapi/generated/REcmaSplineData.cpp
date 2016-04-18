@@ -317,7 +317,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getBoundingBox", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getBoundingBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getBoundingBox";
             //QCoreApplication::processEvents();
 
@@ -390,7 +390,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getBoundingBox().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getBoundingBox", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getBoundingBox", context, engine);
             return result;
         }
          QScriptValue
@@ -398,7 +398,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getReferencePoints", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getReferencePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getReferencePoints";
             //QCoreApplication::processEvents();
 
@@ -471,7 +471,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getReferencePoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getReferencePoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getReferencePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -479,7 +479,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::moveReferencePoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::moveReferencePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::moveReferencePoint";
             //QCoreApplication::processEvents();
 
@@ -568,7 +568,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.moveReferencePoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::moveReferencePoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::moveReferencePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -576,7 +576,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::setShape", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::setShape", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::setShape";
             //QCoreApplication::processEvents();
 
@@ -635,7 +635,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.setShape().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::setShape", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::setShape", context, engine);
             return result;
         }
          QScriptValue
@@ -643,7 +643,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::appendControlPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::appendControlPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::appendControlPoint";
             //QCoreApplication::processEvents();
 
@@ -702,7 +702,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.appendControlPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::appendControlPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::appendControlPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -710,7 +710,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::setPeriodic", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::setPeriodic", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::setPeriodic";
             //QCoreApplication::processEvents();
 
@@ -757,7 +757,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.setPeriodic().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::setPeriodic", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::setPeriodic", context, engine);
             return result;
         }
          QScriptValue
@@ -765,7 +765,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::isValid", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::isValid";
             //QCoreApplication::processEvents();
 
@@ -806,7 +806,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.isValid().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::isValid", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::isValid", context, engine);
             return result;
         }
          QScriptValue
@@ -814,7 +814,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getDegree", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getDegree", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getDegree";
             //QCoreApplication::processEvents();
 
@@ -855,7 +855,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getDegree().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getDegree", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getDegree", context, engine);
             return result;
         }
          QScriptValue
@@ -863,7 +863,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getDirection1", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getDirection1", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getDirection1";
             //QCoreApplication::processEvents();
 
@@ -904,7 +904,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getDirection1().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getDirection1", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getDirection1", context, engine);
             return result;
         }
          QScriptValue
@@ -912,7 +912,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getDirection2", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getDirection2", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getDirection2";
             //QCoreApplication::processEvents();
 
@@ -953,7 +953,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getDirection2().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getDirection2", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getDirection2", context, engine);
             return result;
         }
          QScriptValue
@@ -961,7 +961,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getStartPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getStartPoint";
             //QCoreApplication::processEvents();
 
@@ -1002,7 +1002,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getStartPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getStartPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1010,7 +1010,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getEndPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getEndPoint";
             //QCoreApplication::processEvents();
 
@@ -1051,7 +1051,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getEndPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1059,7 +1059,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::setStartPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::setStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::setStartPoint";
             //QCoreApplication::processEvents();
 
@@ -1118,7 +1118,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.setStartPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::setStartPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::setStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1126,7 +1126,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::setEndPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::setEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::setEndPoint";
             //QCoreApplication::processEvents();
 
@@ -1185,7 +1185,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.setEndPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::setEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::setEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1193,7 +1193,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::reverse", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::reverse", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::reverse";
             //QCoreApplication::processEvents();
 
@@ -1234,7 +1234,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.reverse().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::reverse", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::reverse", context, engine);
             return result;
         }
          QScriptValue
@@ -1242,7 +1242,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getTrimEnd", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getTrimEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getTrimEnd";
             //QCoreApplication::processEvents();
 
@@ -1331,7 +1331,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getTrimEnd().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getTrimEnd", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getTrimEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -1339,7 +1339,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::trimStartPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::trimStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::trimStartPoint";
             //QCoreApplication::processEvents();
 
@@ -1472,7 +1472,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.trimStartPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::trimStartPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::trimStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1480,7 +1480,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::trimEndPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::trimEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::trimEndPoint";
             //QCoreApplication::processEvents();
 
@@ -1613,7 +1613,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.trimEndPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::trimEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::trimEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1621,7 +1621,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::isClosed", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::isClosed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::isClosed";
             //QCoreApplication::processEvents();
 
@@ -1662,7 +1662,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.isClosed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::isClosed", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::isClosed", context, engine);
             return result;
         }
          QScriptValue
@@ -1670,7 +1670,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::isPeriodic", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::isPeriodic", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::isPeriodic";
             //QCoreApplication::processEvents();
 
@@ -1711,7 +1711,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.isPeriodic().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::isPeriodic", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::isPeriodic", context, engine);
             return result;
         }
          QScriptValue
@@ -1719,7 +1719,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getTangentAtStart", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getTangentAtStart", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getTangentAtStart";
             //QCoreApplication::processEvents();
 
@@ -1760,7 +1760,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getTangentAtStart().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getTangentAtStart", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getTangentAtStart", context, engine);
             return result;
         }
          QScriptValue
@@ -1768,7 +1768,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getTangentAtEnd", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getTangentAtEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getTangentAtEnd";
             //QCoreApplication::processEvents();
 
@@ -1809,7 +1809,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getTangentAtEnd().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getTangentAtEnd", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getTangentAtEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -1817,7 +1817,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getControlPoints", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getControlPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getControlPoints";
             //QCoreApplication::processEvents();
 
@@ -1858,7 +1858,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getControlPoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getControlPoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getControlPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1866,7 +1866,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getControlPointsWrapped", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getControlPointsWrapped", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getControlPointsWrapped";
             //QCoreApplication::processEvents();
 
@@ -1907,7 +1907,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getControlPointsWrapped().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getControlPointsWrapped", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getControlPointsWrapped", context, engine);
             return result;
         }
          QScriptValue
@@ -1915,7 +1915,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getFitPoints", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getFitPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getFitPoints";
             //QCoreApplication::processEvents();
 
@@ -1956,7 +1956,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getFitPoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getFitPoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getFitPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1964,7 +1964,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getKnotVector", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getKnotVector", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getKnotVector";
             //QCoreApplication::processEvents();
 
@@ -2005,7 +2005,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getKnotVector().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getKnotVector", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getKnotVector", context, engine);
             return result;
         }
          QScriptValue
@@ -2013,7 +2013,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getActualKnotVector", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getActualKnotVector", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getActualKnotVector";
             //QCoreApplication::processEvents();
 
@@ -2054,7 +2054,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getActualKnotVector().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getActualKnotVector", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getActualKnotVector", context, engine);
             return result;
         }
          QScriptValue
@@ -2062,7 +2062,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getWeights", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getWeights", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getWeights";
             //QCoreApplication::processEvents();
 
@@ -2103,7 +2103,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getWeights().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getWeights", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getWeights", context, engine);
             return result;
         }
          QScriptValue
@@ -2111,7 +2111,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getLength", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getLength";
             //QCoreApplication::processEvents();
 
@@ -2152,7 +2152,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getLength().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getLength", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getLength", context, engine);
             return result;
         }
          QScriptValue
@@ -2160,7 +2160,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getPointAt", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getPointAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getPointAt";
             //QCoreApplication::processEvents();
 
@@ -2212,7 +2212,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getPointAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getPointAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getPointAt", context, engine);
             return result;
         }
          QScriptValue
@@ -2220,7 +2220,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getPointAtDistance", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getPointAtDistance", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getPointAtDistance";
             //QCoreApplication::processEvents();
 
@@ -2272,7 +2272,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getPointAtDistance().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getPointAtDistance", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getPointAtDistance", context, engine);
             return result;
         }
          QScriptValue
@@ -2280,7 +2280,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getAngleAt", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getAngleAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getAngleAt";
             //QCoreApplication::processEvents();
 
@@ -2377,7 +2377,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getAngleAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getAngleAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getAngleAt", context, engine);
             return result;
         }
          QScriptValue
@@ -2385,7 +2385,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::toPolyline", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::toPolyline", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::toPolyline";
             //QCoreApplication::processEvents();
 
@@ -2437,7 +2437,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.toPolyline().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::toPolyline", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::toPolyline", context, engine);
             return result;
         }
          QScriptValue
@@ -2445,7 +2445,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::simplify", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::simplify", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::simplify";
             //QCoreApplication::processEvents();
 
@@ -2492,7 +2492,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.simplify().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::simplify", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::simplify", context, engine);
             return result;
         }
          QScriptValue
@@ -2500,7 +2500,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::castToShape", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::castToShape", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::castToShape";
             //QCoreApplication::processEvents();
 
@@ -2541,7 +2541,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.castToShape().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::castToShape", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::castToShape", context, engine);
             return result;
         }
          QScriptValue
@@ -2549,7 +2549,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::getShapes", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::getShapes", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::getShapes";
             //QCoreApplication::processEvents();
 
@@ -2691,7 +2691,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.getShapes().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::getShapes", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::getShapes", context, engine);
             return result;
         }
          QScriptValue
@@ -2699,7 +2699,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSplineData::update", context, engine);
+            //REcmaHelper::functionStart("REcmaSplineData::update", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSplineData::update";
             //QCoreApplication::processEvents();
 
@@ -2735,7 +2735,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSplineData.update().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSplineData::update", context, engine);
+            //REcmaHelper::functionEnd("REcmaSplineData::update", context, engine);
             return result;
         }
          QScriptValue REcmaSplineData::toString

@@ -442,7 +442,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaImporter::startImport", context, engine);
+            //REcmaHelper::functionStart("REcmaImporter::startImport", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaImporter::startImport";
             //QCoreApplication::processEvents();
 
@@ -478,7 +478,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RImporter.startImport().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaImporter::startImport", context, engine);
+            //REcmaHelper::functionEnd("REcmaImporter::startImport", context, engine);
             return result;
         }
          QScriptValue
@@ -486,7 +486,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaImporter::endImport", context, engine);
+            //REcmaHelper::functionStart("REcmaImporter::endImport", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaImporter::endImport";
             //QCoreApplication::processEvents();
 
@@ -522,7 +522,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RImporter.endImport().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaImporter::endImport", context, engine);
+            //REcmaHelper::functionEnd("REcmaImporter::endImport", context, engine);
             return result;
         }
          QScriptValue
@@ -530,7 +530,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaImporter::importObject", context, engine);
+            //REcmaHelper::functionStart("REcmaImporter::importObject", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaImporter::importObject";
             //QCoreApplication::processEvents();
 
@@ -584,7 +584,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RImporter.importObject().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaImporter::importObject", context, engine);
+            //REcmaHelper::functionEnd("REcmaImporter::importObject", context, engine);
             return result;
         }
          QScriptValue
@@ -592,7 +592,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaImporter::setCurrentBlockId", context, engine);
+            //REcmaHelper::functionStart("REcmaImporter::setCurrentBlockId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaImporter::setCurrentBlockId";
             //QCoreApplication::processEvents();
 
@@ -639,7 +639,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RImporter.setCurrentBlockId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaImporter::setCurrentBlockId", context, engine);
+            //REcmaHelper::functionEnd("REcmaImporter::setCurrentBlockId", context, engine);
             return result;
         }
          QScriptValue
@@ -647,7 +647,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaImporter::getCurrentBlockId", context, engine);
+            //REcmaHelper::functionStart("REcmaImporter::getCurrentBlockId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaImporter::getCurrentBlockId";
             //QCoreApplication::processEvents();
 
@@ -688,7 +688,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RImporter.getCurrentBlockId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaImporter::getCurrentBlockId", context, engine);
+            //REcmaHelper::functionEnd("REcmaImporter::getCurrentBlockId", context, engine);
             return result;
         }
          QScriptValue
@@ -696,7 +696,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaImporter::getDocument", context, engine);
+            //REcmaHelper::functionStart("REcmaImporter::getDocument", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaImporter::getDocument";
             //QCoreApplication::processEvents();
 
@@ -738,7 +738,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RImporter.getDocument().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaImporter::getDocument", context, engine);
+            //REcmaHelper::functionEnd("REcmaImporter::getDocument", context, engine);
             return result;
         }
          QScriptValue
@@ -746,7 +746,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaImporter::setDocument", context, engine);
+            //REcmaHelper::functionStart("REcmaImporter::setDocument", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaImporter::setDocument";
             //QCoreApplication::processEvents();
 
@@ -800,7 +800,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RImporter.setDocument().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaImporter::setDocument", context, engine);
+            //REcmaHelper::functionEnd("REcmaImporter::setDocument", context, engine);
             return result;
         }
          QScriptValue
@@ -808,7 +808,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaImporter::setKnownVariable", context, engine);
+            //REcmaHelper::functionStart("REcmaImporter::setKnownVariable", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaImporter::setKnownVariable";
             //QCoreApplication::processEvents();
 
@@ -930,7 +930,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RImporter.setKnownVariable().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaImporter::setKnownVariable", context, engine);
+            //REcmaHelper::functionEnd("REcmaImporter::setKnownVariable", context, engine);
             return result;
         }
          QScriptValue REcmaImporter::toString

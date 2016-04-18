@@ -519,7 +519,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::init", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::init";
             //QCoreApplication::processEvents();
 
@@ -545,7 +545,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::init", context, engine);
             return result;
         }
          QScriptValue
@@ -553,7 +553,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::getStaticPropertyTypeIds", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::getStaticPropertyTypeIds";
             //QCoreApplication::processEvents();
 
@@ -585,7 +585,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.getStaticPropertyTypeIds().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::getStaticPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue
@@ -593,7 +593,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::clone";
             //QCoreApplication::processEvents();
 
@@ -634,7 +634,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -642,7 +642,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::getType", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::getType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::getType";
             //QCoreApplication::processEvents();
 
@@ -683,7 +683,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.getType().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -691,7 +691,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::setProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::setProperty";
             //QCoreApplication::processEvents();
 
@@ -865,7 +865,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.setProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::setProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -873,7 +873,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::getProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::getProperty";
             //QCoreApplication::processEvents();
 
@@ -1112,7 +1112,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.getProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::getProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1120,7 +1120,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::exportEntity", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::exportEntity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::exportEntity";
             //QCoreApplication::processEvents();
 
@@ -1290,7 +1290,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.exportEntity().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::exportEntity", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::exportEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -1298,7 +1298,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::getData", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::getData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::getData";
             //QCoreApplication::processEvents();
 
@@ -1362,7 +1362,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.getData().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::getData", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::getData", context, engine);
             return result;
         }
          QScriptValue
@@ -1370,7 +1370,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::setShape", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::setShape", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::setShape";
             //QCoreApplication::processEvents();
 
@@ -1429,7 +1429,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.setShape().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::setShape", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::setShape", context, engine);
             return result;
         }
          QScriptValue
@@ -1437,7 +1437,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::setBasePoint", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::setBasePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::setBasePoint";
             //QCoreApplication::processEvents();
 
@@ -1496,7 +1496,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.setBasePoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::setBasePoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::setBasePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1504,7 +1504,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::getBasePoint", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::getBasePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::getBasePoint";
             //QCoreApplication::processEvents();
 
@@ -1545,7 +1545,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.getBasePoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::getBasePoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::getBasePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1553,7 +1553,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::setSecondPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::setSecondPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::setSecondPoint";
             //QCoreApplication::processEvents();
 
@@ -1612,7 +1612,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.setSecondPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::setSecondPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::setSecondPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1620,7 +1620,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::getSecondPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::getSecondPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::getSecondPoint";
             //QCoreApplication::processEvents();
 
@@ -1661,7 +1661,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.getSecondPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::getSecondPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::getSecondPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1669,7 +1669,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::setDirectionVectorPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::setDirectionVectorPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::setDirectionVectorPoint";
             //QCoreApplication::processEvents();
 
@@ -1728,7 +1728,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.setDirectionVectorPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::setDirectionVectorPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::setDirectionVectorPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1736,7 +1736,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::getDirectionVector", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::getDirectionVector", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::getDirectionVector";
             //QCoreApplication::processEvents();
 
@@ -1777,7 +1777,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.getDirectionVector().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::getDirectionVector", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::getDirectionVector", context, engine);
             return result;
         }
          QScriptValue
@@ -1785,7 +1785,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::getAngle", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::getAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::getAngle";
             //QCoreApplication::processEvents();
 
@@ -1826,7 +1826,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.getAngle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::getAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::getAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -1834,7 +1834,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::hasFixedAngle", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::hasFixedAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::hasFixedAngle";
             //QCoreApplication::processEvents();
 
@@ -1875,7 +1875,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.hasFixedAngle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::hasFixedAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::hasFixedAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -1883,7 +1883,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::setFixedAngle", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::setFixedAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::setFixedAngle";
             //QCoreApplication::processEvents();
 
@@ -1930,7 +1930,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.setFixedAngle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::setFixedAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::setFixedAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -1938,7 +1938,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::getDirection1", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::getDirection1", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::getDirection1";
             //QCoreApplication::processEvents();
 
@@ -1979,7 +1979,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.getDirection1().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::getDirection1", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::getDirection1", context, engine);
             return result;
         }
          QScriptValue
@@ -1987,7 +1987,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::getDirection2", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::getDirection2", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::getDirection2";
             //QCoreApplication::processEvents();
 
@@ -2028,7 +2028,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.getDirection2().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::getDirection2", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::getDirection2", context, engine);
             return result;
         }
          QScriptValue
@@ -2036,7 +2036,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::reverse", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::reverse", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::reverse";
             //QCoreApplication::processEvents();
 
@@ -2077,7 +2077,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.reverse().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::reverse", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::reverse", context, engine);
             return result;
         }
          QScriptValue
@@ -2085,7 +2085,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::getSideOfPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::getSideOfPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::getSideOfPoint";
             //QCoreApplication::processEvents();
 
@@ -2149,7 +2149,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.getSideOfPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::getSideOfPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::getSideOfPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -2157,7 +2157,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::getTrimEnd", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::getTrimEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::getTrimEnd";
             //QCoreApplication::processEvents();
 
@@ -2246,7 +2246,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.getTrimEnd().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::getTrimEnd", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::getTrimEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -2254,7 +2254,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::trimStartPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::trimStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::trimStartPoint";
             //QCoreApplication::processEvents();
 
@@ -2387,7 +2387,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.trimStartPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::trimStartPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::trimStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -2395,7 +2395,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::trimEndPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::trimEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::trimEndPoint";
             //QCoreApplication::processEvents();
 
@@ -2528,7 +2528,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.trimEndPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::trimEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::trimEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -2536,7 +2536,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRayEntity::getLength", context, engine);
+            //REcmaHelper::functionStart("REcmaRayEntity::getLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRayEntity::getLength";
             //QCoreApplication::processEvents();
 
@@ -2577,7 +2577,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRayEntity.getLength().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRayEntity::getLength", context, engine);
+            //REcmaHelper::functionEnd("REcmaRayEntity::getLength", context, engine);
             return result;
         }
          QScriptValue REcmaRayEntity::toString

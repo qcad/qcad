@@ -497,7 +497,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getDistanceFromStart", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getDistanceFromStart", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getDistanceFromStart";
             //QCoreApplication::processEvents();
 
@@ -561,7 +561,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getDistanceFromStart().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getDistanceFromStart", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getDistanceFromStart", context, engine);
             return result;
         }
         
@@ -575,7 +575,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::clone";
             //QCoreApplication::processEvents();
 
@@ -616,7 +616,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -624,7 +624,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::to2D", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::to2D", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::to2D";
             //QCoreApplication::processEvents();
 
@@ -660,7 +660,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.to2D().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::to2D", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::to2D", context, engine);
             return result;
         }
          QScriptValue
@@ -668,7 +668,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::clear", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::clear", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::clear";
             //QCoreApplication::processEvents();
 
@@ -704,7 +704,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.clear().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::clear", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::clear", context, engine);
             return result;
         }
          QScriptValue
@@ -712,7 +712,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::normalize", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::normalize", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::normalize";
             //QCoreApplication::processEvents();
 
@@ -775,7 +775,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.normalize().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::normalize", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::normalize", context, engine);
             return result;
         }
          QScriptValue
@@ -783,7 +783,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::prependShape", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::prependShape", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::prependShape";
             //QCoreApplication::processEvents();
 
@@ -845,7 +845,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.prependShape().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::prependShape", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::prependShape", context, engine);
             return result;
         }
          QScriptValue
@@ -853,7 +853,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::appendShape", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::appendShape", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::appendShape";
             //QCoreApplication::processEvents();
 
@@ -970,7 +970,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.appendShape().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::appendShape", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::appendShape", context, engine);
             return result;
         }
          QScriptValue
@@ -978,7 +978,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::appendVertex", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::appendVertex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::appendVertex";
             //QCoreApplication::processEvents();
 
@@ -1232,7 +1232,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.appendVertex().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::appendVertex", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::appendVertex", context, engine);
             return result;
         }
          QScriptValue
@@ -1240,7 +1240,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::prependVertex", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::prependVertex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::prependVertex";
             //QCoreApplication::processEvents();
 
@@ -1494,7 +1494,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.prependVertex().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::prependVertex", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::prependVertex", context, engine);
             return result;
         }
          QScriptValue
@@ -1502,7 +1502,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::insertVertex", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::insertVertex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::insertVertex";
             //QCoreApplication::processEvents();
 
@@ -1574,7 +1574,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.insertVertex().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::insertVertex", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::insertVertex", context, engine);
             return result;
         }
          QScriptValue
@@ -1582,7 +1582,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::removeFirstVertex", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::removeFirstVertex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::removeFirstVertex";
             //QCoreApplication::processEvents();
 
@@ -1618,7 +1618,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.removeFirstVertex().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::removeFirstVertex", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::removeFirstVertex", context, engine);
             return result;
         }
          QScriptValue
@@ -1626,7 +1626,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::removeLastVertex", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::removeLastVertex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::removeLastVertex";
             //QCoreApplication::processEvents();
 
@@ -1662,7 +1662,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.removeLastVertex().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::removeLastVertex", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::removeLastVertex", context, engine);
             return result;
         }
          QScriptValue
@@ -1670,7 +1670,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::removeVertex", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::removeVertex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::removeVertex";
             //QCoreApplication::processEvents();
 
@@ -1717,7 +1717,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.removeVertex().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::removeVertex", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::removeVertex", context, engine);
             return result;
         }
          QScriptValue
@@ -1725,7 +1725,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::removeVerticesAfter", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::removeVerticesAfter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::removeVerticesAfter";
             //QCoreApplication::processEvents();
 
@@ -1772,7 +1772,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.removeVerticesAfter().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::removeVerticesAfter", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::removeVerticesAfter", context, engine);
             return result;
         }
          QScriptValue
@@ -1780,7 +1780,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::removeVerticesBefore", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::removeVerticesBefore", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::removeVerticesBefore";
             //QCoreApplication::processEvents();
 
@@ -1827,7 +1827,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.removeVerticesBefore().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::removeVerticesBefore", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::removeVerticesBefore", context, engine);
             return result;
         }
          QScriptValue
@@ -1835,7 +1835,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::setVertices", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::setVertices", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::setVertices";
             //QCoreApplication::processEvents();
 
@@ -1883,7 +1883,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.setVertices().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setVertices", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setVertices", context, engine);
             return result;
         }
          QScriptValue
@@ -1891,7 +1891,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getVertices", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getVertices", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getVertices";
             //QCoreApplication::processEvents();
 
@@ -1932,7 +1932,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getVertices().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getVertices", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getVertices", context, engine);
             return result;
         }
          QScriptValue
@@ -1940,7 +1940,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::setVertexAt", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::setVertexAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::setVertexAt";
             //QCoreApplication::processEvents();
 
@@ -2012,7 +2012,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.setVertexAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setVertexAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setVertexAt", context, engine);
             return result;
         }
          QScriptValue
@@ -2020,7 +2020,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getVertexAt", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getVertexAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getVertexAt";
             //QCoreApplication::processEvents();
 
@@ -2072,7 +2072,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getVertexAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getVertexAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getVertexAt", context, engine);
             return result;
         }
          QScriptValue
@@ -2080,7 +2080,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getVertexIndex", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getVertexIndex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getVertexIndex";
             //QCoreApplication::processEvents();
 
@@ -2201,7 +2201,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getVertexIndex().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getVertexIndex", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getVertexIndex", context, engine);
             return result;
         }
          QScriptValue
@@ -2209,7 +2209,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getLastVertex", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getLastVertex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getLastVertex";
             //QCoreApplication::processEvents();
 
@@ -2250,7 +2250,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getLastVertex().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getLastVertex", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getLastVertex", context, engine);
             return result;
         }
          QScriptValue
@@ -2258,7 +2258,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::countVertices", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::countVertices", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::countVertices";
             //QCoreApplication::processEvents();
 
@@ -2299,7 +2299,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.countVertices().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::countVertices", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::countVertices", context, engine);
             return result;
         }
          QScriptValue
@@ -2307,7 +2307,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::setBulges", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::setBulges", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::setBulges";
             //QCoreApplication::processEvents();
 
@@ -2355,7 +2355,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.setBulges().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setBulges", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setBulges", context, engine);
             return result;
         }
          QScriptValue
@@ -2363,7 +2363,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getBulges", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getBulges", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getBulges";
             //QCoreApplication::processEvents();
 
@@ -2404,7 +2404,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getBulges().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getBulges", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getBulges", context, engine);
             return result;
         }
          QScriptValue
@@ -2412,7 +2412,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getBulgeAt", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getBulgeAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getBulgeAt";
             //QCoreApplication::processEvents();
 
@@ -2464,7 +2464,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getBulgeAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getBulgeAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getBulgeAt", context, engine);
             return result;
         }
          QScriptValue
@@ -2472,7 +2472,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::setBulgeAt", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::setBulgeAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::setBulgeAt";
             //QCoreApplication::processEvents();
 
@@ -2532,7 +2532,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.setBulgeAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setBulgeAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setBulgeAt", context, engine);
             return result;
         }
          QScriptValue
@@ -2540,7 +2540,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::hasArcSegments", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::hasArcSegments", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::hasArcSegments";
             //QCoreApplication::processEvents();
 
@@ -2581,7 +2581,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.hasArcSegments().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::hasArcSegments", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::hasArcSegments", context, engine);
             return result;
         }
          QScriptValue
@@ -2589,7 +2589,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::setGlobalWidth", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::setGlobalWidth", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::setGlobalWidth";
             //QCoreApplication::processEvents();
 
@@ -2636,7 +2636,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.setGlobalWidth().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setGlobalWidth", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setGlobalWidth", context, engine);
             return result;
         }
          QScriptValue
@@ -2644,7 +2644,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::setStartWidthAt", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::setStartWidthAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::setStartWidthAt";
             //QCoreApplication::processEvents();
 
@@ -2704,7 +2704,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.setStartWidthAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setStartWidthAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setStartWidthAt", context, engine);
             return result;
         }
          QScriptValue
@@ -2712,7 +2712,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getStartWidthAt", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getStartWidthAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getStartWidthAt";
             //QCoreApplication::processEvents();
 
@@ -2764,7 +2764,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getStartWidthAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getStartWidthAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getStartWidthAt", context, engine);
             return result;
         }
          QScriptValue
@@ -2772,7 +2772,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::setEndWidthAt", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::setEndWidthAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::setEndWidthAt";
             //QCoreApplication::processEvents();
 
@@ -2832,7 +2832,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.setEndWidthAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setEndWidthAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setEndWidthAt", context, engine);
             return result;
         }
          QScriptValue
@@ -2840,7 +2840,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getEndWidthAt", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getEndWidthAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getEndWidthAt";
             //QCoreApplication::processEvents();
 
@@ -2892,7 +2892,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getEndWidthAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getEndWidthAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getEndWidthAt", context, engine);
             return result;
         }
          QScriptValue
@@ -2900,7 +2900,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::hasWidths", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::hasWidths", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::hasWidths";
             //QCoreApplication::processEvents();
 
@@ -2941,7 +2941,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.hasWidths().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::hasWidths", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::hasWidths", context, engine);
             return result;
         }
          QScriptValue
@@ -2949,7 +2949,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::setStartWidths", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::setStartWidths", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::setStartWidths";
             //QCoreApplication::processEvents();
 
@@ -2997,7 +2997,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.setStartWidths().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setStartWidths", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setStartWidths", context, engine);
             return result;
         }
          QScriptValue
@@ -3005,7 +3005,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getStartWidths", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getStartWidths", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getStartWidths";
             //QCoreApplication::processEvents();
 
@@ -3046,7 +3046,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getStartWidths().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getStartWidths", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getStartWidths", context, engine);
             return result;
         }
          QScriptValue
@@ -3054,7 +3054,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::setEndWidths", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::setEndWidths", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::setEndWidths";
             //QCoreApplication::processEvents();
 
@@ -3102,7 +3102,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.setEndWidths().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setEndWidths", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setEndWidths", context, engine);
             return result;
         }
          QScriptValue
@@ -3110,7 +3110,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getEndWidths", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getEndWidths", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getEndWidths";
             //QCoreApplication::processEvents();
 
@@ -3151,7 +3151,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getEndWidths().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getEndWidths", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getEndWidths", context, engine);
             return result;
         }
          QScriptValue
@@ -3159,7 +3159,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::setClosed", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::setClosed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::setClosed";
             //QCoreApplication::processEvents();
 
@@ -3206,7 +3206,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.setClosed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setClosed", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::setClosed", context, engine);
             return result;
         }
          QScriptValue
@@ -3214,7 +3214,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::isClosed", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::isClosed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::isClosed";
             //QCoreApplication::processEvents();
 
@@ -3255,7 +3255,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.isClosed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::isClosed", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::isClosed", context, engine);
             return result;
         }
          QScriptValue
@@ -3263,7 +3263,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::isGeometricallyClosed", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::isGeometricallyClosed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::isGeometricallyClosed";
             //QCoreApplication::processEvents();
 
@@ -3336,7 +3336,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.isGeometricallyClosed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::isGeometricallyClosed", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::isGeometricallyClosed", context, engine);
             return result;
         }
          QScriptValue
@@ -3344,7 +3344,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::autoClose", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::autoClose", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::autoClose";
             //QCoreApplication::processEvents();
 
@@ -3385,7 +3385,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.autoClose().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::autoClose", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::autoClose", context, engine);
             return result;
         }
          QScriptValue
@@ -3393,7 +3393,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getOrientation", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getOrientation", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getOrientation";
             //QCoreApplication::processEvents();
 
@@ -3434,7 +3434,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getOrientation().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getOrientation", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getOrientation", context, engine);
             return result;
         }
          QScriptValue
@@ -3442,7 +3442,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::contains", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::contains", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::contains";
             //QCoreApplication::processEvents();
 
@@ -3633,7 +3633,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.contains().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::contains", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::contains", context, engine);
             return result;
         }
          QScriptValue
@@ -3641,7 +3641,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::containsShape", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::containsShape", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::containsShape";
             //QCoreApplication::processEvents();
 
@@ -3703,7 +3703,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.containsShape().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::containsShape", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::containsShape", context, engine);
             return result;
         }
          QScriptValue
@@ -3711,7 +3711,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getStartPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getStartPoint";
             //QCoreApplication::processEvents();
 
@@ -3752,7 +3752,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getStartPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getStartPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3760,7 +3760,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getEndPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getEndPoint";
             //QCoreApplication::processEvents();
 
@@ -3801,7 +3801,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getEndPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3809,7 +3809,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getDirection1", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getDirection1", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getDirection1";
             //QCoreApplication::processEvents();
 
@@ -3850,7 +3850,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getDirection1().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getDirection1", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getDirection1", context, engine);
             return result;
         }
          QScriptValue
@@ -3858,7 +3858,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getDirection2", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getDirection2", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getDirection2";
             //QCoreApplication::processEvents();
 
@@ -3899,7 +3899,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getDirection2().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getDirection2", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getDirection2", context, engine);
             return result;
         }
          QScriptValue
@@ -3907,7 +3907,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getSideOfPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getSideOfPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getSideOfPoint";
             //QCoreApplication::processEvents();
 
@@ -3971,7 +3971,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getSideOfPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getSideOfPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getSideOfPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3979,7 +3979,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getBoundingBox", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getBoundingBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getBoundingBox";
             //QCoreApplication::processEvents();
 
@@ -4020,7 +4020,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getBoundingBox().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getBoundingBox", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getBoundingBox", context, engine);
             return result;
         }
          QScriptValue
@@ -4028,7 +4028,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getLength", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getLength";
             //QCoreApplication::processEvents();
 
@@ -4069,7 +4069,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getLength().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getLength", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getLength", context, engine);
             return result;
         }
          QScriptValue
@@ -4077,7 +4077,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getLengthTo", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getLengthTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getLengthTo";
             //QCoreApplication::processEvents();
 
@@ -4198,7 +4198,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getLengthTo().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getLengthTo", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getLengthTo", context, engine);
             return result;
         }
          QScriptValue
@@ -4206,7 +4206,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getEndPoints", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getEndPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getEndPoints";
             //QCoreApplication::processEvents();
 
@@ -4247,7 +4247,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getEndPoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getEndPoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getEndPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -4255,7 +4255,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getMiddlePoints", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getMiddlePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getMiddlePoints";
             //QCoreApplication::processEvents();
 
@@ -4296,7 +4296,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getMiddlePoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getMiddlePoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getMiddlePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -4304,7 +4304,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getCenterPoints", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getCenterPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getCenterPoints";
             //QCoreApplication::processEvents();
 
@@ -4345,7 +4345,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getCenterPoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getCenterPoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getCenterPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -4353,7 +4353,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getPointsWithDistanceToEnd", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getPointsWithDistanceToEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getPointsWithDistanceToEnd";
             //QCoreApplication::processEvents();
 
@@ -4450,7 +4450,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getPointsWithDistanceToEnd().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getPointsWithDistanceToEnd", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getPointsWithDistanceToEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -4458,7 +4458,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getAngleAt", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getAngleAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getAngleAt";
             //QCoreApplication::processEvents();
 
@@ -4555,7 +4555,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getAngleAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getAngleAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getAngleAt", context, engine);
             return result;
         }
          QScriptValue
@@ -4563,7 +4563,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getVectorTo", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getVectorTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getVectorTo";
             //QCoreApplication::processEvents();
 
@@ -4754,7 +4754,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getVectorTo().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getVectorTo", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getVectorTo", context, engine);
             return result;
         }
          QScriptValue
@@ -4762,7 +4762,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getDistanceTo", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getDistanceTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getDistanceTo";
             //QCoreApplication::processEvents();
 
@@ -4953,7 +4953,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getDistanceTo().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getDistanceTo", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getDistanceTo", context, engine);
             return result;
         }
          QScriptValue
@@ -4961,7 +4961,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getClosestSegment", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getClosestSegment", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getClosestSegment";
             //QCoreApplication::processEvents();
 
@@ -5025,7 +5025,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getClosestSegment().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getClosestSegment", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getClosestSegment", context, engine);
             return result;
         }
          QScriptValue
@@ -5033,7 +5033,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::move", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::move", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::move";
             //QCoreApplication::processEvents();
 
@@ -5097,7 +5097,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.move().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::move", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::move", context, engine);
             return result;
         }
          QScriptValue
@@ -5105,7 +5105,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::rotate", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::rotate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::rotate";
             //QCoreApplication::processEvents();
 
@@ -5214,7 +5214,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.rotate().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::rotate", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::rotate", context, engine);
             return result;
         }
          QScriptValue
@@ -5222,7 +5222,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::scale", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::scale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::scale";
             //QCoreApplication::processEvents();
 
@@ -5444,7 +5444,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.scale().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::scale", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::scale", context, engine);
             return result;
         }
          QScriptValue
@@ -5452,7 +5452,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::mirror", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::mirror", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::mirror";
             //QCoreApplication::processEvents();
 
@@ -5516,7 +5516,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.mirror().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::mirror", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::mirror", context, engine);
             return result;
         }
          QScriptValue
@@ -5524,7 +5524,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::reverse", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::reverse", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::reverse";
             //QCoreApplication::processEvents();
 
@@ -5565,7 +5565,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.reverse().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::reverse", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::reverse", context, engine);
             return result;
         }
          QScriptValue
@@ -5573,7 +5573,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::stretch", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::stretch", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::stretch";
             //QCoreApplication::processEvents();
 
@@ -5662,7 +5662,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.stretch().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::stretch", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::stretch", context, engine);
             return result;
         }
          QScriptValue
@@ -5670,7 +5670,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getTransformed", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getTransformed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getTransformed";
             //QCoreApplication::processEvents();
 
@@ -5732,7 +5732,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getTransformed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getTransformed", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getTransformed", context, engine);
             return result;
         }
          QScriptValue
@@ -5740,7 +5740,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getTrimEnd", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getTrimEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getTrimEnd";
             //QCoreApplication::processEvents();
 
@@ -5829,7 +5829,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getTrimEnd().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getTrimEnd", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getTrimEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -5837,7 +5837,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::trimStartPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::trimStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::trimStartPoint";
             //QCoreApplication::processEvents();
 
@@ -5970,7 +5970,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.trimStartPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::trimStartPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::trimStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -5978,7 +5978,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::trimEndPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::trimEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::trimEndPoint";
             //QCoreApplication::processEvents();
 
@@ -6111,7 +6111,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.trimEndPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::trimEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::trimEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -6119,7 +6119,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getExploded", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getExploded", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getExploded";
             //QCoreApplication::processEvents();
 
@@ -6192,7 +6192,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getExploded().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getExploded", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getExploded", context, engine);
             return result;
         }
          QScriptValue
@@ -6200,7 +6200,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getOutline", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getOutline", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getOutline";
             //QCoreApplication::processEvents();
 
@@ -6241,7 +6241,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getOutline().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getOutline", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getOutline", context, engine);
             return result;
         }
          QScriptValue
@@ -6249,7 +6249,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::isInterpolated", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::isInterpolated", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::isInterpolated";
             //QCoreApplication::processEvents();
 
@@ -6290,7 +6290,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.isInterpolated().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::isInterpolated", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::isInterpolated", context, engine);
             return result;
         }
          QScriptValue
@@ -6298,7 +6298,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::countSegments", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::countSegments", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::countSegments";
             //QCoreApplication::processEvents();
 
@@ -6339,7 +6339,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.countSegments().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::countSegments", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::countSegments", context, engine);
             return result;
         }
          QScriptValue
@@ -6347,7 +6347,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getSegmentAt", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getSegmentAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getSegmentAt";
             //QCoreApplication::processEvents();
 
@@ -6399,7 +6399,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getSegmentAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getSegmentAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getSegmentAt", context, engine);
             return result;
         }
          QScriptValue
@@ -6407,7 +6407,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::isArcSegmentAt", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::isArcSegmentAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::isArcSegmentAt";
             //QCoreApplication::processEvents();
 
@@ -6459,7 +6459,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.isArcSegmentAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::isArcSegmentAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::isArcSegmentAt", context, engine);
             return result;
         }
          QScriptValue
@@ -6467,7 +6467,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getLastSegment", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getLastSegment", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getLastSegment";
             //QCoreApplication::processEvents();
 
@@ -6508,7 +6508,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getLastSegment().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getLastSegment", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getLastSegment", context, engine);
             return result;
         }
          QScriptValue
@@ -6516,7 +6516,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::getFirstSegment", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getFirstSegment", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getFirstSegment";
             //QCoreApplication::processEvents();
 
@@ -6557,7 +6557,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getFirstSegment().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getFirstSegment", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getFirstSegment", context, engine);
             return result;
         }
          QScriptValue
@@ -6565,7 +6565,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::isStraight", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::isStraight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::isStraight";
             //QCoreApplication::processEvents();
 
@@ -6607,7 +6607,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.isStraight().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::isStraight", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::isStraight", context, engine);
             return result;
         }
          QScriptValue
@@ -6615,7 +6615,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::toPainterPath", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::toPainterPath", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::toPainterPath";
             //QCoreApplication::processEvents();
 
@@ -6656,7 +6656,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.toPainterPath().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::toPainterPath", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::toPainterPath", context, engine);
             return result;
         }
          QScriptValue
@@ -6664,7 +6664,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::simplify", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::simplify", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::simplify";
             //QCoreApplication::processEvents();
 
@@ -6737,7 +6737,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.simplify().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::simplify", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::simplify", context, engine);
             return result;
         }
          QScriptValue
@@ -6745,7 +6745,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::verifyTangency", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::verifyTangency", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::verifyTangency";
             //QCoreApplication::processEvents();
 
@@ -6863,7 +6863,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.verifyTangency().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::verifyTangency", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::verifyTangency", context, engine);
             return result;
         }
          QScriptValue
@@ -6871,7 +6871,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::stripWidths", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::stripWidths", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::stripWidths";
             //QCoreApplication::processEvents();
 
@@ -6907,7 +6907,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.stripWidths().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::stripWidths", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::stripWidths", context, engine);
             return result;
         }
          QScriptValue
@@ -6915,7 +6915,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::relocateStartPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::relocateStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::relocateStartPoint";
             //QCoreApplication::processEvents();
 
@@ -6979,7 +6979,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.relocateStartPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::relocateStartPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::relocateStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -6987,7 +6987,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::convertToClosed", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::convertToClosed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::convertToClosed";
             //QCoreApplication::processEvents();
 
@@ -7028,7 +7028,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.convertToClosed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::convertToClosed", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::convertToClosed", context, engine);
             return result;
         }
          QScriptValue
@@ -7036,7 +7036,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::convertToOpen", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::convertToOpen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::convertToOpen";
             //QCoreApplication::processEvents();
 
@@ -7077,7 +7077,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.convertToOpen().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::convertToOpen", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::convertToOpen", context, engine);
             return result;
         }
          QScriptValue
@@ -7085,7 +7085,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPolyline::hasProxy", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::hasProxy", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::hasProxy";
             //QCoreApplication::processEvents();
 
@@ -7116,7 +7116,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.hasProxy().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPolyline::hasProxy", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::hasProxy", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerPolyline::toString

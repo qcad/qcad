@@ -236,7 +236,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaThread::start", context, engine);
+            //REcmaHelper::functionStart("REcmaThread::start", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaThread::start";
             //QCoreApplication::processEvents();
 
@@ -272,7 +272,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RThread.start().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaThread::start", context, engine);
+            //REcmaHelper::functionEnd("REcmaThread::start", context, engine);
             return result;
         }
          QScriptValue
@@ -280,7 +280,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaThread::yieldCurrentThread", context, engine);
+            //REcmaHelper::functionStart("REcmaThread::yieldCurrentThread", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaThread::yieldCurrentThread";
             //QCoreApplication::processEvents();
 
@@ -306,7 +306,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RThread.yieldCurrentThread().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaThread::yieldCurrentThread", context, engine);
+            //REcmaHelper::functionEnd("REcmaThread::yieldCurrentThread", context, engine);
             return result;
         }
          QScriptValue
@@ -314,7 +314,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaThread::currentThreadAddress", context, engine);
+            //REcmaHelper::functionStart("REcmaThread::currentThreadAddress", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaThread::currentThreadAddress";
             //QCoreApplication::processEvents();
 
@@ -345,7 +345,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RThread.currentThreadAddress().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaThread::currentThreadAddress", context, engine);
+            //REcmaHelper::functionEnd("REcmaThread::currentThreadAddress", context, engine);
             return result;
         }
          QScriptValue
@@ -353,7 +353,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaThread::currentThreadName", context, engine);
+            //REcmaHelper::functionStart("REcmaThread::currentThreadName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaThread::currentThreadName";
             //QCoreApplication::processEvents();
 
@@ -384,7 +384,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RThread.currentThreadName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaThread::currentThreadName", context, engine);
+            //REcmaHelper::functionEnd("REcmaThread::currentThreadName", context, engine);
             return result;
         }
          QScriptValue
@@ -392,7 +392,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaThread::currentThread", context, engine);
+            //REcmaHelper::functionStart("REcmaThread::currentThread", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaThread::currentThread";
             //QCoreApplication::processEvents();
 
@@ -423,7 +423,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RThread.currentThread().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaThread::currentThread", context, engine);
+            //REcmaHelper::functionEnd("REcmaThread::currentThread", context, engine);
             return result;
         }
          QScriptValue REcmaThread::toString

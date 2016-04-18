@@ -1051,7 +1051,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::init", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::init";
             //QCoreApplication::processEvents();
 
@@ -1077,7 +1077,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::init", context, engine);
             return result;
         }
          QScriptValue
@@ -1085,7 +1085,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::getType", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::getType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::getType";
             //QCoreApplication::processEvents();
 
@@ -1126,7 +1126,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getType().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -1134,7 +1134,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::clone";
             //QCoreApplication::processEvents();
 
@@ -1175,7 +1175,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -1183,7 +1183,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::getName", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::getName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::getName";
             //QCoreApplication::processEvents();
 
@@ -1224,7 +1224,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::getName", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::getName", context, engine);
             return result;
         }
          QScriptValue
@@ -1232,7 +1232,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::setName", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::setName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::setName";
             //QCoreApplication::processEvents();
 
@@ -1279,7 +1279,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::setName", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::setName", context, engine);
             return result;
         }
          QScriptValue
@@ -1287,7 +1287,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::isFrozen", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::isFrozen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::isFrozen";
             //QCoreApplication::processEvents();
 
@@ -1328,7 +1328,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.isFrozen().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::isFrozen", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::isFrozen", context, engine);
             return result;
         }
          QScriptValue
@@ -1336,7 +1336,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::setFrozen", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::setFrozen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::setFrozen";
             //QCoreApplication::processEvents();
 
@@ -1383,7 +1383,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setFrozen().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::setFrozen", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::setFrozen", context, engine);
             return result;
         }
          QScriptValue
@@ -1391,7 +1391,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::isLocked", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::isLocked", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::isLocked";
             //QCoreApplication::processEvents();
 
@@ -1432,7 +1432,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.isLocked().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::isLocked", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::isLocked", context, engine);
             return result;
         }
          QScriptValue
@@ -1440,7 +1440,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::setLocked", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::setLocked", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::setLocked";
             //QCoreApplication::processEvents();
 
@@ -1487,7 +1487,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setLocked().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::setLocked", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::setLocked", context, engine);
             return result;
         }
          QScriptValue
@@ -1495,7 +1495,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::getColor", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::getColor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::getColor";
             //QCoreApplication::processEvents();
 
@@ -1536,7 +1536,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getColor().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::getColor", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::getColor", context, engine);
             return result;
         }
          QScriptValue
@@ -1544,7 +1544,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::setColor", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::setColor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::setColor";
             //QCoreApplication::processEvents();
 
@@ -1603,7 +1603,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setColor().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::setColor", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::setColor", context, engine);
             return result;
         }
          QScriptValue
@@ -1611,7 +1611,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::getLinetypeId", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::getLinetypeId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::getLinetypeId";
             //QCoreApplication::processEvents();
 
@@ -1652,7 +1652,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getLinetypeId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::getLinetypeId", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::getLinetypeId", context, engine);
             return result;
         }
          QScriptValue
@@ -1660,7 +1660,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::setLinetypeId", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::setLinetypeId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::setLinetypeId";
             //QCoreApplication::processEvents();
 
@@ -1707,7 +1707,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setLinetypeId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::setLinetypeId", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::setLinetypeId", context, engine);
             return result;
         }
          QScriptValue
@@ -1715,7 +1715,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::getLineweight", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::getLineweight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::getLineweight";
             //QCoreApplication::processEvents();
 
@@ -1756,7 +1756,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getLineweight().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::getLineweight", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::getLineweight", context, engine);
             return result;
         }
          QScriptValue
@@ -1764,7 +1764,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::setLineweight", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::setLineweight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::setLineweight";
             //QCoreApplication::processEvents();
 
@@ -1811,7 +1811,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setLineweight().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::setLineweight", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::setLineweight", context, engine);
             return result;
         }
          QScriptValue
@@ -1819,7 +1819,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::getProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::getProperty";
             //QCoreApplication::processEvents();
 
@@ -2058,7 +2058,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::getProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -2066,7 +2066,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::setProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::setProperty";
             //QCoreApplication::processEvents();
 
@@ -2240,7 +2240,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::setProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -2248,7 +2248,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerLayer::isSelectedForPropertyEditing", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerLayer::isSelectedForPropertyEditing", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLayer::isSelectedForPropertyEditing";
             //QCoreApplication::processEvents();
 
@@ -2289,7 +2289,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.isSelectedForPropertyEditing().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerLayer::isSelectedForPropertyEditing", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerLayer::isSelectedForPropertyEditing", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerLayer::toString

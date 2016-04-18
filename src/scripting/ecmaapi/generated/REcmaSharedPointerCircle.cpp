@@ -483,7 +483,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::clone";
             //QCoreApplication::processEvents();
 
@@ -524,7 +524,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -532,7 +532,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::createFrom2Points", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::createFrom2Points", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::createFrom2Points";
             //QCoreApplication::processEvents();
 
@@ -611,7 +611,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.createFrom2Points().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::createFrom2Points", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::createFrom2Points", context, engine);
             return result;
         }
          QScriptValue
@@ -619,7 +619,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::createFrom3Points", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::createFrom3Points", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::createFrom3Points";
             //QCoreApplication::processEvents();
 
@@ -723,7 +723,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.createFrom3Points().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::createFrom3Points", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::createFrom3Points", context, engine);
             return result;
         }
          QScriptValue
@@ -731,7 +731,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::isValid", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::isValid";
             //QCoreApplication::processEvents();
 
@@ -772,7 +772,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.isValid().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::isValid", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::isValid", context, engine);
             return result;
         }
          QScriptValue
@@ -780,7 +780,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::to2D", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::to2D", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::to2D";
             //QCoreApplication::processEvents();
 
@@ -816,7 +816,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.to2D().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::to2D", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::to2D", context, engine);
             return result;
         }
          QScriptValue
@@ -824,7 +824,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::getBoundingBox", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getBoundingBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getBoundingBox";
             //QCoreApplication::processEvents();
 
@@ -865,7 +865,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getBoundingBox().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::getBoundingBox", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getBoundingBox", context, engine);
             return result;
         }
          QScriptValue
@@ -873,7 +873,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::getLength", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getLength";
             //QCoreApplication::processEvents();
 
@@ -914,7 +914,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getLength().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::getLength", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getLength", context, engine);
             return result;
         }
          QScriptValue
@@ -922,7 +922,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::getEndPoints", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getEndPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getEndPoints";
             //QCoreApplication::processEvents();
 
@@ -963,7 +963,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getEndPoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::getEndPoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getEndPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -971,7 +971,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::getMiddlePoints", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getMiddlePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getMiddlePoints";
             //QCoreApplication::processEvents();
 
@@ -1012,7 +1012,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getMiddlePoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::getMiddlePoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getMiddlePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1020,7 +1020,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::getCenterPoints", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getCenterPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getCenterPoints";
             //QCoreApplication::processEvents();
 
@@ -1061,7 +1061,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getCenterPoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::getCenterPoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getCenterPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1069,7 +1069,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::getPointsWithDistanceToEnd", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getPointsWithDistanceToEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getPointsWithDistanceToEnd";
             //QCoreApplication::processEvents();
 
@@ -1166,7 +1166,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getPointsWithDistanceToEnd().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::getPointsWithDistanceToEnd", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getPointsWithDistanceToEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -1174,7 +1174,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::getAngleAt", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getAngleAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getAngleAt";
             //QCoreApplication::processEvents();
 
@@ -1271,7 +1271,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getAngleAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::getAngleAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getAngleAt", context, engine);
             return result;
         }
          QScriptValue
@@ -1279,7 +1279,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::getPointAtAngle", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getPointAtAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getPointAtAngle";
             //QCoreApplication::processEvents();
 
@@ -1331,7 +1331,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getPointAtAngle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::getPointAtAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getPointAtAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -1339,7 +1339,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::getVectorTo", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getVectorTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getVectorTo";
             //QCoreApplication::processEvents();
 
@@ -1530,7 +1530,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getVectorTo().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::getVectorTo", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getVectorTo", context, engine);
             return result;
         }
          QScriptValue
@@ -1538,7 +1538,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::getCenter", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getCenter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getCenter";
             //QCoreApplication::processEvents();
 
@@ -1579,7 +1579,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getCenter().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::getCenter", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getCenter", context, engine);
             return result;
         }
          QScriptValue
@@ -1587,7 +1587,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::setCenter", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::setCenter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::setCenter";
             //QCoreApplication::processEvents();
 
@@ -1646,7 +1646,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.setCenter().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::setCenter", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::setCenter", context, engine);
             return result;
         }
          QScriptValue
@@ -1654,7 +1654,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::getRadius", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getRadius", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getRadius";
             //QCoreApplication::processEvents();
 
@@ -1695,7 +1695,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getRadius().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::getRadius", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getRadius", context, engine);
             return result;
         }
          QScriptValue
@@ -1703,7 +1703,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::setRadius", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::setRadius", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::setRadius";
             //QCoreApplication::processEvents();
 
@@ -1750,7 +1750,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.setRadius().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::setRadius", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::setRadius", context, engine);
             return result;
         }
          QScriptValue
@@ -1758,7 +1758,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::getDiameter", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getDiameter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getDiameter";
             //QCoreApplication::processEvents();
 
@@ -1799,7 +1799,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getDiameter().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::getDiameter", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getDiameter", context, engine);
             return result;
         }
          QScriptValue
@@ -1807,7 +1807,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::setDiameter", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::setDiameter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::setDiameter";
             //QCoreApplication::processEvents();
 
@@ -1854,7 +1854,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.setDiameter().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::setDiameter", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::setDiameter", context, engine);
             return result;
         }
          QScriptValue
@@ -1862,7 +1862,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::getCircumference", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getCircumference", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getCircumference";
             //QCoreApplication::processEvents();
 
@@ -1903,7 +1903,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getCircumference().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::getCircumference", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getCircumference", context, engine);
             return result;
         }
          QScriptValue
@@ -1911,7 +1911,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::setCircumference", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::setCircumference", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::setCircumference";
             //QCoreApplication::processEvents();
 
@@ -1958,7 +1958,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.setCircumference().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::setCircumference", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::setCircumference", context, engine);
             return result;
         }
          QScriptValue
@@ -1966,7 +1966,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::getArea", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getArea", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getArea";
             //QCoreApplication::processEvents();
 
@@ -2007,7 +2007,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getArea().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::getArea", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getArea", context, engine);
             return result;
         }
          QScriptValue
@@ -2015,7 +2015,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::setArea", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::setArea", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::setArea";
             //QCoreApplication::processEvents();
 
@@ -2062,7 +2062,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.setArea().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::setArea", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::setArea", context, engine);
             return result;
         }
          QScriptValue
@@ -2070,7 +2070,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::contains", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::contains", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::contains";
             //QCoreApplication::processEvents();
 
@@ -2134,7 +2134,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.contains().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::contains", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::contains", context, engine);
             return result;
         }
          QScriptValue
@@ -2142,7 +2142,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::move", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::move", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::move";
             //QCoreApplication::processEvents();
 
@@ -2206,7 +2206,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.move().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::move", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::move", context, engine);
             return result;
         }
          QScriptValue
@@ -2214,7 +2214,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::rotate", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::rotate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::rotate";
             //QCoreApplication::processEvents();
 
@@ -2323,7 +2323,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.rotate().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::rotate", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::rotate", context, engine);
             return result;
         }
          QScriptValue
@@ -2331,7 +2331,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::scale", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::scale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::scale";
             //QCoreApplication::processEvents();
 
@@ -2464,7 +2464,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.scale().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::scale", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::scale", context, engine);
             return result;
         }
          QScriptValue
@@ -2472,7 +2472,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::mirror", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::mirror", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::mirror";
             //QCoreApplication::processEvents();
 
@@ -2536,7 +2536,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.mirror().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::mirror", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::mirror", context, engine);
             return result;
         }
          QScriptValue
@@ -2544,7 +2544,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::flipHorizontal", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::flipHorizontal", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::flipHorizontal";
             //QCoreApplication::processEvents();
 
@@ -2585,7 +2585,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.flipHorizontal().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::flipHorizontal", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::flipHorizontal", context, engine);
             return result;
         }
          QScriptValue
@@ -2593,7 +2593,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::flipVertical", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::flipVertical", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::flipVertical";
             //QCoreApplication::processEvents();
 
@@ -2634,7 +2634,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.flipVertical().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::flipVertical", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::flipVertical", context, engine);
             return result;
         }
          QScriptValue
@@ -2642,7 +2642,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::getTransformed", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getTransformed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getTransformed";
             //QCoreApplication::processEvents();
 
@@ -2704,7 +2704,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getTransformed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::getTransformed", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getTransformed", context, engine);
             return result;
         }
          QScriptValue
@@ -2712,7 +2712,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerCircle::getTangents", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerCircle::getTangents", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerCircle::getTangents";
             //QCoreApplication::processEvents();
 
@@ -2776,7 +2776,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircle.getTangents().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerCircle::getTangents", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerCircle::getTangents", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerCircle::toString

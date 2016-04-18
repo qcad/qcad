@@ -544,7 +544,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaShellMdiArea::resizeEvent", context, engine);
+            //REcmaHelper::functionStart("REcmaShellMdiArea::resizeEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellMdiArea::resizeEvent";
             //QCoreApplication::processEvents();
 
@@ -598,7 +598,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMdiArea.resizeEvent().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaShellMdiArea::resizeEvent", context, engine);
+            //REcmaHelper::functionEnd("REcmaShellMdiArea::resizeEvent", context, engine);
             return result;
         }
         

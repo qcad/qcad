@@ -529,7 +529,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::init", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::init";
             //QCoreApplication::processEvents();
 
@@ -555,7 +555,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::init", context, engine);
             return result;
         }
          QScriptValue
@@ -563,7 +563,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::getStaticPropertyTypeIds", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::getStaticPropertyTypeIds";
             //QCoreApplication::processEvents();
 
@@ -595,7 +595,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getStaticPropertyTypeIds().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::getStaticPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue
@@ -603,7 +603,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::clone";
             //QCoreApplication::processEvents();
 
@@ -644,7 +644,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -652,7 +652,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::getType", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::getType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::getType";
             //QCoreApplication::processEvents();
 
@@ -693,7 +693,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getType().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -701,7 +701,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::setData", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::setData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::setData";
             //QCoreApplication::processEvents();
 
@@ -760,7 +760,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setData().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::setData", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::setData", context, engine);
             return result;
         }
          QScriptValue
@@ -768,7 +768,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::hasCustomPattern", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::hasCustomPattern", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::hasCustomPattern";
             //QCoreApplication::processEvents();
 
@@ -809,7 +809,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.hasCustomPattern().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::hasCustomPattern", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::hasCustomPattern", context, engine);
             return result;
         }
          QScriptValue
@@ -817,7 +817,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::getCustomPattern", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::getCustomPattern", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::getCustomPattern";
             //QCoreApplication::processEvents();
 
@@ -858,7 +858,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getCustomPattern().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::getCustomPattern", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::getCustomPattern", context, engine);
             return result;
         }
          QScriptValue
@@ -866,7 +866,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::setProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::setProperty";
             //QCoreApplication::processEvents();
 
@@ -1040,7 +1040,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::setProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1048,7 +1048,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::setBoundaryVector", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::setBoundaryVector", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::setBoundaryVector";
             //QCoreApplication::processEvents();
 
@@ -1146,7 +1146,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setBoundaryVector().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::setBoundaryVector", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::setBoundaryVector", context, engine);
             return result;
         }
          QScriptValue
@@ -1154,7 +1154,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::setComponent", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::setComponent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::setComponent";
             //QCoreApplication::processEvents();
 
@@ -1254,7 +1254,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setComponent().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::setComponent", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::setComponent", context, engine);
             return result;
         }
          QScriptValue
@@ -1262,7 +1262,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::getProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::getProperty";
             //QCoreApplication::processEvents();
 
@@ -1501,7 +1501,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::getProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1509,7 +1509,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::exportEntity", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::exportEntity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::exportEntity";
             //QCoreApplication::processEvents();
 
@@ -1679,7 +1679,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.exportEntity().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::exportEntity", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::exportEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -1687,7 +1687,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::getData", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::getData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::getData";
             //QCoreApplication::processEvents();
 
@@ -1751,7 +1751,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getData().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::getData", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::getData", context, engine);
             return result;
         }
          QScriptValue
@@ -1759,7 +1759,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::getPainterPaths", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::getPainterPaths", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::getPainterPaths";
             //QCoreApplication::processEvents();
 
@@ -1877,7 +1877,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getPainterPaths().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::getPainterPaths", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::getPainterPaths", context, engine);
             return result;
         }
          QScriptValue
@@ -1885,7 +1885,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::getComplexity", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::getComplexity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::getComplexity";
             //QCoreApplication::processEvents();
 
@@ -1926,7 +1926,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getComplexity().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::getComplexity", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::getComplexity", context, engine);
             return result;
         }
          QScriptValue
@@ -1934,7 +1934,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::newLoop", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::newLoop", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::newLoop";
             //QCoreApplication::processEvents();
 
@@ -1970,7 +1970,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.newLoop().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::newLoop", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::newLoop", context, engine);
             return result;
         }
          QScriptValue
@@ -1978,7 +1978,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::addBoundary", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::addBoundary", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::addBoundary";
             //QCoreApplication::processEvents();
 
@@ -2056,7 +2056,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.addBoundary().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::addBoundary", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::addBoundary", context, engine);
             return result;
         }
          QScriptValue
@@ -2064,7 +2064,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::getLoopCount", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::getLoopCount", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::getLoopCount";
             //QCoreApplication::processEvents();
 
@@ -2105,7 +2105,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getLoopCount().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::getLoopCount", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::getLoopCount", context, engine);
             return result;
         }
          QScriptValue
@@ -2113,7 +2113,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::isSolid", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::isSolid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::isSolid";
             //QCoreApplication::processEvents();
 
@@ -2154,7 +2154,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.isSolid().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::isSolid", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::isSolid", context, engine);
             return result;
         }
          QScriptValue
@@ -2162,7 +2162,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::setSolid", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::setSolid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::setSolid";
             //QCoreApplication::processEvents();
 
@@ -2209,7 +2209,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setSolid().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::setSolid", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::setSolid", context, engine);
             return result;
         }
          QScriptValue
@@ -2217,7 +2217,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::getScale", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::getScale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::getScale";
             //QCoreApplication::processEvents();
 
@@ -2258,7 +2258,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getScale().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::getScale", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::getScale", context, engine);
             return result;
         }
          QScriptValue
@@ -2266,7 +2266,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::setScale", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::setScale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::setScale";
             //QCoreApplication::processEvents();
 
@@ -2313,7 +2313,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setScale().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::setScale", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::setScale", context, engine);
             return result;
         }
          QScriptValue
@@ -2321,7 +2321,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::getAngle", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::getAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::getAngle";
             //QCoreApplication::processEvents();
 
@@ -2362,7 +2362,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getAngle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::getAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::getAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -2370,7 +2370,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::setAngle", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::setAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::setAngle";
             //QCoreApplication::processEvents();
 
@@ -2417,7 +2417,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setAngle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::setAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::setAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -2425,7 +2425,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::getOriginPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::getOriginPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::getOriginPoint";
             //QCoreApplication::processEvents();
 
@@ -2466,7 +2466,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getOriginPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::getOriginPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::getOriginPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -2474,7 +2474,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::setOriginPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::setOriginPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::setOriginPoint";
             //QCoreApplication::processEvents();
 
@@ -2533,7 +2533,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setOriginPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::setOriginPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::setOriginPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -2541,7 +2541,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::getPatternName", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::getPatternName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::getPatternName";
             //QCoreApplication::processEvents();
 
@@ -2582,7 +2582,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getPatternName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::getPatternName", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::getPatternName", context, engine);
             return result;
         }
          QScriptValue
@@ -2590,7 +2590,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::setPatternName", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::setPatternName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::setPatternName";
             //QCoreApplication::processEvents();
 
@@ -2637,7 +2637,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setPatternName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::setPatternName", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::setPatternName", context, engine);
             return result;
         }
          QScriptValue
@@ -2645,7 +2645,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::clearCustomPattern", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::clearCustomPattern", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::clearCustomPattern";
             //QCoreApplication::processEvents();
 
@@ -2681,7 +2681,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.clearCustomPattern().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::clearCustomPattern", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::clearCustomPattern", context, engine);
             return result;
         }
          QScriptValue
@@ -2689,7 +2689,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::getLoopBoundary", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::getLoopBoundary", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::getLoopBoundary";
             //QCoreApplication::processEvents();
 
@@ -2741,7 +2741,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getLoopBoundary().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::getLoopBoundary", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::getLoopBoundary", context, engine);
             return result;
         }
          QScriptValue
@@ -2749,7 +2749,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::getBoundaryAsPolylines", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::getBoundaryAsPolylines", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::getBoundaryAsPolylines";
             //QCoreApplication::processEvents();
 
@@ -2801,7 +2801,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getBoundaryAsPolylines().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::getBoundaryAsPolylines", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::getBoundaryAsPolylines", context, engine);
             return result;
         }
          QScriptValue
@@ -2809,7 +2809,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::getShapes", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::getShapes", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::getShapes";
             //QCoreApplication::processEvents();
 
@@ -2951,7 +2951,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getShapes().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::getShapes", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::getShapes", context, engine);
             return result;
         }
          QScriptValue
@@ -2959,7 +2959,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaHatchEntity::getExploded", context, engine);
+            //REcmaHelper::functionStart("REcmaHatchEntity::getExploded", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaHatchEntity::getExploded";
             //QCoreApplication::processEvents();
 
@@ -3000,7 +3000,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getExploded().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaHatchEntity::getExploded", context, engine);
+            //REcmaHelper::functionEnd("REcmaHatchEntity::getExploded", context, engine);
             return result;
         }
          QScriptValue REcmaHatchEntity::toString

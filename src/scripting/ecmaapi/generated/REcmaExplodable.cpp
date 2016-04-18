@@ -117,7 +117,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaExplodable::getExploded", context, engine);
+            //REcmaHelper::functionStart("REcmaExplodable::getExploded", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaExplodable::getExploded";
             //QCoreApplication::processEvents();
 
@@ -190,7 +190,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RExplodable.getExploded().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaExplodable::getExploded", context, engine);
+            //REcmaHelper::functionEnd("REcmaExplodable::getExploded", context, engine);
             return result;
         }
          QScriptValue REcmaExplodable::toString

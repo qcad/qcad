@@ -619,7 +619,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::init", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::init";
             //QCoreApplication::processEvents();
 
@@ -645,7 +645,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::init", context, engine);
             return result;
         }
          QScriptValue
@@ -653,7 +653,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getStaticPropertyTypeIds", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getStaticPropertyTypeIds";
             //QCoreApplication::processEvents();
 
@@ -685,7 +685,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getStaticPropertyTypeIds().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getStaticPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue
@@ -693,7 +693,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::clone";
             //QCoreApplication::processEvents();
 
@@ -734,7 +734,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -742,7 +742,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getType", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getType";
             //QCoreApplication::processEvents();
 
@@ -783,7 +783,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getType().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -791,7 +791,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::setShape", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::setShape", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::setShape";
             //QCoreApplication::processEvents();
 
@@ -850,7 +850,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.setShape().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::setShape", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::setShape", context, engine);
             return result;
         }
          QScriptValue
@@ -858,7 +858,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::setProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::setProperty";
             //QCoreApplication::processEvents();
 
@@ -1032,7 +1032,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.setProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::setProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1040,7 +1040,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getProperty";
             //QCoreApplication::processEvents();
 
@@ -1279,7 +1279,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1287,7 +1287,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::exportEntity", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::exportEntity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::exportEntity";
             //QCoreApplication::processEvents();
 
@@ -1457,7 +1457,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.exportEntity().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::exportEntity", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::exportEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -1465,7 +1465,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getData", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getData";
             //QCoreApplication::processEvents();
 
@@ -1529,7 +1529,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getData().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getData", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getData", context, engine);
             return result;
         }
          QScriptValue
@@ -1537,7 +1537,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getPolylineShape", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getPolylineShape", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getPolylineShape";
             //QCoreApplication::processEvents();
 
@@ -1578,7 +1578,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getPolylineShape().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getPolylineShape", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getPolylineShape", context, engine);
             return result;
         }
          QScriptValue
@@ -1586,7 +1586,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::clear", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::clear", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::clear";
             //QCoreApplication::processEvents();
 
@@ -1622,7 +1622,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.clear().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::clear", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::clear", context, engine);
             return result;
         }
          QScriptValue
@@ -1630,7 +1630,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::normalize", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::normalize", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::normalize";
             //QCoreApplication::processEvents();
 
@@ -1693,7 +1693,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.normalize().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::normalize", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::normalize", context, engine);
             return result;
         }
          QScriptValue
@@ -1701,7 +1701,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::countVertices", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::countVertices", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::countVertices";
             //QCoreApplication::processEvents();
 
@@ -1742,7 +1742,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.countVertices().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::countVertices", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::countVertices", context, engine);
             return result;
         }
          QScriptValue
@@ -1750,7 +1750,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::appendVertex", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::appendVertex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::appendVertex";
             //QCoreApplication::processEvents();
 
@@ -2004,7 +2004,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.appendVertex().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::appendVertex", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::appendVertex", context, engine);
             return result;
         }
          QScriptValue
@@ -2012,7 +2012,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::prependVertex", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::prependVertex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::prependVertex";
             //QCoreApplication::processEvents();
 
@@ -2266,7 +2266,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.prependVertex().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::prependVertex", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::prependVertex", context, engine);
             return result;
         }
          QScriptValue
@@ -2274,7 +2274,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::insertVertex", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::insertVertex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::insertVertex";
             //QCoreApplication::processEvents();
 
@@ -2346,7 +2346,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.insertVertex().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::insertVertex", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::insertVertex", context, engine);
             return result;
         }
          QScriptValue
@@ -2354,7 +2354,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getVertexAt", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getVertexAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getVertexAt";
             //QCoreApplication::processEvents();
 
@@ -2406,7 +2406,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getVertexAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getVertexAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getVertexAt", context, engine);
             return result;
         }
          QScriptValue
@@ -2414,7 +2414,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::removeLastVertex", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::removeLastVertex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::removeLastVertex";
             //QCoreApplication::processEvents();
 
@@ -2450,7 +2450,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.removeLastVertex().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::removeLastVertex", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::removeLastVertex", context, engine);
             return result;
         }
          QScriptValue
@@ -2458,7 +2458,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::removeVertex", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::removeVertex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::removeVertex";
             //QCoreApplication::processEvents();
 
@@ -2505,7 +2505,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.removeVertex().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::removeVertex", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::removeVertex", context, engine);
             return result;
         }
          QScriptValue
@@ -2513,7 +2513,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::countSegments", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::countSegments", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::countSegments";
             //QCoreApplication::processEvents();
 
@@ -2554,7 +2554,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.countSegments().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::countSegments", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::countSegments", context, engine);
             return result;
         }
          QScriptValue
@@ -2562,7 +2562,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getSegmentAt", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getSegmentAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getSegmentAt";
             //QCoreApplication::processEvents();
 
@@ -2614,7 +2614,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getSegmentAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getSegmentAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getSegmentAt", context, engine);
             return result;
         }
          QScriptValue
@@ -2622,7 +2622,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getBulgeAt", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getBulgeAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getBulgeAt";
             //QCoreApplication::processEvents();
 
@@ -2674,7 +2674,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getBulgeAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getBulgeAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getBulgeAt", context, engine);
             return result;
         }
          QScriptValue
@@ -2682,7 +2682,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::setBulgeAt", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::setBulgeAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::setBulgeAt";
             //QCoreApplication::processEvents();
 
@@ -2742,7 +2742,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.setBulgeAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::setBulgeAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::setBulgeAt", context, engine);
             return result;
         }
          QScriptValue
@@ -2750,7 +2750,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getStartWidthAt", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getStartWidthAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getStartWidthAt";
             //QCoreApplication::processEvents();
 
@@ -2802,7 +2802,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getStartWidthAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getStartWidthAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getStartWidthAt", context, engine);
             return result;
         }
          QScriptValue
@@ -2810,7 +2810,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getEndWidthAt", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getEndWidthAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getEndWidthAt";
             //QCoreApplication::processEvents();
 
@@ -2862,7 +2862,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getEndWidthAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getEndWidthAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getEndWidthAt", context, engine);
             return result;
         }
          QScriptValue
@@ -2870,7 +2870,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getDirection1", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getDirection1", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getDirection1";
             //QCoreApplication::processEvents();
 
@@ -2911,7 +2911,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getDirection1().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getDirection1", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getDirection1", context, engine);
             return result;
         }
          QScriptValue
@@ -2919,7 +2919,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getDirection2", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getDirection2", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getDirection2";
             //QCoreApplication::processEvents();
 
@@ -2960,7 +2960,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getDirection2().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getDirection2", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getDirection2", context, engine);
             return result;
         }
          QScriptValue
@@ -2968,7 +2968,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::reverse", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::reverse", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::reverse";
             //QCoreApplication::processEvents();
 
@@ -3009,7 +3009,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.reverse().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::reverse", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::reverse", context, engine);
             return result;
         }
          QScriptValue
@@ -3017,7 +3017,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getSideOfPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getSideOfPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getSideOfPoint";
             //QCoreApplication::processEvents();
 
@@ -3081,7 +3081,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getSideOfPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getSideOfPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getSideOfPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3089,7 +3089,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getEndPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getEndPoint";
             //QCoreApplication::processEvents();
 
@@ -3130,7 +3130,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getEndPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3138,7 +3138,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getStartPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getStartPoint";
             //QCoreApplication::processEvents();
 
@@ -3179,7 +3179,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getStartPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getStartPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3187,7 +3187,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::setClosed", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::setClosed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::setClosed";
             //QCoreApplication::processEvents();
 
@@ -3234,7 +3234,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.setClosed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::setClosed", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::setClosed", context, engine);
             return result;
         }
          QScriptValue
@@ -3242,7 +3242,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::isClosed", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::isClosed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::isClosed";
             //QCoreApplication::processEvents();
 
@@ -3283,7 +3283,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.isClosed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::isClosed", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::isClosed", context, engine);
             return result;
         }
          QScriptValue
@@ -3291,7 +3291,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::isGeometricallyClosed", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::isGeometricallyClosed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::isGeometricallyClosed";
             //QCoreApplication::processEvents();
 
@@ -3364,7 +3364,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.isGeometricallyClosed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::isGeometricallyClosed", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::isGeometricallyClosed", context, engine);
             return result;
         }
          QScriptValue
@@ -3372,7 +3372,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::autoClose", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::autoClose", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::autoClose";
             //QCoreApplication::processEvents();
 
@@ -3408,7 +3408,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.autoClose().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::autoClose", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::autoClose", context, engine);
             return result;
         }
          QScriptValue
@@ -3416,7 +3416,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getLength", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getLength";
             //QCoreApplication::processEvents();
 
@@ -3457,7 +3457,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getLength().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getLength", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getLength", context, engine);
             return result;
         }
          QScriptValue
@@ -3465,7 +3465,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getExploded", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getExploded", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getExploded";
             //QCoreApplication::processEvents();
 
@@ -3506,7 +3506,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getExploded().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getExploded", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getExploded", context, engine);
             return result;
         }
          QScriptValue
@@ -3514,7 +3514,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getComplexity", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getComplexity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getComplexity";
             //QCoreApplication::processEvents();
 
@@ -3555,7 +3555,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getComplexity().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getComplexity", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getComplexity", context, engine);
             return result;
         }
          QScriptValue
@@ -3563,7 +3563,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::toPainterPath", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::toPainterPath", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::toPainterPath";
             //QCoreApplication::processEvents();
 
@@ -3604,7 +3604,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.toPainterPath().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::toPainterPath", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::toPainterPath", context, engine);
             return result;
         }
          QScriptValue
@@ -3612,7 +3612,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::simplify", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::simplify", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::simplify";
             //QCoreApplication::processEvents();
 
@@ -3659,7 +3659,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.simplify().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::simplify", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::simplify", context, engine);
             return result;
         }
          QScriptValue
@@ -3667,7 +3667,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::verifyTangency", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::verifyTangency", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::verifyTangency";
             //QCoreApplication::processEvents();
 
@@ -3785,7 +3785,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.verifyTangency().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::verifyTangency", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::verifyTangency", context, engine);
             return result;
         }
          QScriptValue
@@ -3793,7 +3793,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::setPolylineGen", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::setPolylineGen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::setPolylineGen";
             //QCoreApplication::processEvents();
 
@@ -3840,7 +3840,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.setPolylineGen().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::setPolylineGen", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::setPolylineGen", context, engine);
             return result;
         }
          QScriptValue
@@ -3848,7 +3848,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getPolylineGen", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getPolylineGen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getPolylineGen";
             //QCoreApplication::processEvents();
 
@@ -3889,7 +3889,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getPolylineGen().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getPolylineGen", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getPolylineGen", context, engine);
             return result;
         }
          QScriptValue
@@ -3897,7 +3897,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::getTrimEnd", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getTrimEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getTrimEnd";
             //QCoreApplication::processEvents();
 
@@ -3986,7 +3986,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getTrimEnd().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::getTrimEnd", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getTrimEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -3994,7 +3994,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::trimStartPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::trimStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::trimStartPoint";
             //QCoreApplication::processEvents();
 
@@ -4127,7 +4127,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.trimStartPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::trimStartPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::trimStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -4135,7 +4135,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPolylineEntity::trimEndPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaPolylineEntity::trimEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::trimEndPoint";
             //QCoreApplication::processEvents();
 
@@ -4268,7 +4268,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.trimEndPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPolylineEntity::trimEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::trimEndPoint", context, engine);
             return result;
         }
          QScriptValue REcmaPolylineEntity::toString

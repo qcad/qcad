@@ -273,7 +273,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMoveReferencePointOperation::apply", context, engine);
+            //REcmaHelper::functionStart("REcmaMoveReferencePointOperation::apply", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMoveReferencePointOperation::apply";
             //QCoreApplication::processEvents();
 
@@ -390,7 +390,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMoveReferencePointOperation.apply().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMoveReferencePointOperation::apply", context, engine);
+            //REcmaHelper::functionEnd("REcmaMoveReferencePointOperation::apply", context, engine);
             return result;
         }
          QScriptValue REcmaMoveReferencePointOperation::toString

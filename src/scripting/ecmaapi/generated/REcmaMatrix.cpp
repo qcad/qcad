@@ -319,7 +319,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::isValid", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::isValid";
             //QCoreApplication::processEvents();
 
@@ -360,7 +360,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.isValid().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::isValid", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::isValid", context, engine);
             return result;
         }
          QScriptValue
@@ -368,7 +368,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::createIdentity2x2", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::createIdentity2x2", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::createIdentity2x2";
             //QCoreApplication::processEvents();
 
@@ -399,7 +399,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.createIdentity2x2().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::createIdentity2x2", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::createIdentity2x2", context, engine);
             return result;
         }
          QScriptValue
@@ -407,7 +407,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::createIdentity3x3", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::createIdentity3x3", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::createIdentity3x3";
             //QCoreApplication::processEvents();
 
@@ -438,7 +438,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.createIdentity3x3().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::createIdentity3x3", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::createIdentity3x3", context, engine);
             return result;
         }
          QScriptValue
@@ -446,7 +446,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::createIdentity", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::createIdentity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::createIdentity";
             //QCoreApplication::processEvents();
 
@@ -488,7 +488,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.createIdentity().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::createIdentity", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::createIdentity", context, engine);
             return result;
         }
          QScriptValue
@@ -496,7 +496,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::createRotation", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::createRotation", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::createRotation";
             //QCoreApplication::processEvents();
 
@@ -538,7 +538,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.createRotation().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::createRotation", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::createRotation", context, engine);
             return result;
         }
          QScriptValue
@@ -546,7 +546,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::create2x2", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::create2x2", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::create2x2";
             //QCoreApplication::processEvents();
 
@@ -627,7 +627,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.create2x2().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::create2x2", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::create2x2", context, engine);
             return result;
         }
          QScriptValue
@@ -635,7 +635,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::create3x3", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::create3x3", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::create3x3";
             //QCoreApplication::processEvents();
 
@@ -781,7 +781,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.create3x3().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::create3x3", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::create3x3", context, engine);
             return result;
         }
          QScriptValue
@@ -789,7 +789,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::create3x1", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::create3x1", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::create3x1";
             //QCoreApplication::processEvents();
 
@@ -857,7 +857,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.create3x1().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::create3x1", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::create3x1", context, engine);
             return result;
         }
          QScriptValue
@@ -865,7 +865,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::create2x3", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::create2x3", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::create2x3";
             //QCoreApplication::processEvents();
 
@@ -972,7 +972,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.create2x3().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::create2x3", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::create2x3", context, engine);
             return result;
         }
          QScriptValue
@@ -980,7 +980,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::operator *", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::operator *", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::operator *";
             //QCoreApplication::processEvents();
 
@@ -1032,7 +1032,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.operator_multiply().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::operator *", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::operator *", context, engine);
             return result;
         }
          QScriptValue
@@ -1040,7 +1040,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::multiplyWith", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::multiplyWith", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::multiplyWith";
             //QCoreApplication::processEvents();
 
@@ -1180,7 +1180,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.multiplyWith().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::multiplyWith", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::multiplyWith", context, engine);
             return result;
         }
          QScriptValue
@@ -1188,7 +1188,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::init", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::init";
             //QCoreApplication::processEvents();
 
@@ -1248,7 +1248,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::init", context, engine);
             return result;
         }
          QScriptValue
@@ -1256,7 +1256,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::reset", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::reset", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::reset";
             //QCoreApplication::processEvents();
 
@@ -1292,7 +1292,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.reset().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::reset", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::reset", context, engine);
             return result;
         }
          QScriptValue
@@ -1300,7 +1300,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::clear", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::clear", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::clear";
             //QCoreApplication::processEvents();
 
@@ -1336,7 +1336,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.clear().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::clear", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::clear", context, engine);
             return result;
         }
          QScriptValue
@@ -1344,7 +1344,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::set3x3", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::set3x3", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::set3x3";
             //QCoreApplication::processEvents();
 
@@ -1495,7 +1495,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.set3x3().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::set3x3", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::set3x3", context, engine);
             return result;
         }
          QScriptValue
@@ -1503,7 +1503,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::set3x1", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::set3x1", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::set3x1";
             //QCoreApplication::processEvents();
 
@@ -1576,7 +1576,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.set3x1().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::set3x1", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::set3x1", context, engine);
             return result;
         }
          QScriptValue
@@ -1584,7 +1584,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::set2x3", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::set2x3", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::set2x3";
             //QCoreApplication::processEvents();
 
@@ -1696,7 +1696,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.set2x3().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::set2x3", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::set2x3", context, engine);
             return result;
         }
          QScriptValue
@@ -1704,7 +1704,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::set", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::set", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::set";
             //QCoreApplication::processEvents();
 
@@ -1777,7 +1777,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.set().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::set", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::set", context, engine);
             return result;
         }
          QScriptValue
@@ -1785,7 +1785,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::get", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::get", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::get";
             //QCoreApplication::processEvents();
 
@@ -1850,7 +1850,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.get().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::get", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::get", context, engine);
             return result;
         }
          QScriptValue
@@ -1858,7 +1858,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::getRows", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::getRows", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::getRows";
             //QCoreApplication::processEvents();
 
@@ -1899,7 +1899,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.getRows().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::getRows", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::getRows", context, engine);
             return result;
         }
          QScriptValue
@@ -1907,7 +1907,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::getCols", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::getCols", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::getCols";
             //QCoreApplication::processEvents();
 
@@ -1948,7 +1948,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.getCols().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::getCols", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::getCols", context, engine);
             return result;
         }
          QScriptValue
@@ -1956,7 +1956,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::rref", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::rref", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::rref";
             //QCoreApplication::processEvents();
 
@@ -1997,7 +1997,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.rref().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::rref", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::rref", context, engine);
             return result;
         }
          QScriptValue
@@ -2005,7 +2005,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::getInverse", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::getInverse", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::getInverse";
             //QCoreApplication::processEvents();
 
@@ -2046,7 +2046,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.getInverse().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::getInverse", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::getInverse", context, engine);
             return result;
         }
          QScriptValue
@@ -2054,7 +2054,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::getTransposed", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::getTransposed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::getTransposed";
             //QCoreApplication::processEvents();
 
@@ -2095,7 +2095,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.getTransposed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::getTransposed", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::getTransposed", context, engine);
             return result;
         }
          QScriptValue
@@ -2103,7 +2103,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::getAppended", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::getAppended", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::getAppended";
             //QCoreApplication::processEvents();
 
@@ -2167,7 +2167,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.getAppended().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::getAppended", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::getAppended", context, engine);
             return result;
         }
          QScriptValue
@@ -2175,7 +2175,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::isRotationAndUniformScale", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::isRotationAndUniformScale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::isRotationAndUniformScale";
             //QCoreApplication::processEvents();
 
@@ -2216,7 +2216,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.isRotationAndUniformScale().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::isRotationAndUniformScale", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::isRotationAndUniformScale", context, engine);
             return result;
         }
          QScriptValue
@@ -2224,7 +2224,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::getUniformScaleFactor", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::getUniformScaleFactor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::getUniformScaleFactor";
             //QCoreApplication::processEvents();
 
@@ -2265,7 +2265,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.getUniformScaleFactor().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::getUniformScaleFactor", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::getUniformScaleFactor", context, engine);
             return result;
         }
          QScriptValue
@@ -2273,7 +2273,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMatrix::getRotationAngle", context, engine);
+            //REcmaHelper::functionStart("REcmaMatrix::getRotationAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMatrix::getRotationAngle";
             //QCoreApplication::processEvents();
 
@@ -2314,7 +2314,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMatrix.getRotationAngle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMatrix::getRotationAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaMatrix::getRotationAngle", context, engine);
             return result;
         }
          QScriptValue REcmaMatrix::toString

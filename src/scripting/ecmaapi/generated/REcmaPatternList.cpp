@@ -154,7 +154,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPatternList::init", context, engine);
+            //REcmaHelper::functionStart("REcmaPatternList::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPatternList::init";
             //QCoreApplication::processEvents();
 
@@ -214,7 +214,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPatternList.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPatternList::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaPatternList::init", context, engine);
             return result;
         }
          QScriptValue REcmaPatternList::toString

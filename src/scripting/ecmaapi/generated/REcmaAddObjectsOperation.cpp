@@ -421,7 +421,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAddObjectsOperation::replaceObject", context, engine);
+            //REcmaHelper::functionStart("REcmaAddObjectsOperation::replaceObject", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAddObjectsOperation::replaceObject";
             //QCoreApplication::processEvents();
 
@@ -570,7 +570,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAddObjectsOperation.replaceObject().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAddObjectsOperation::replaceObject", context, engine);
+            //REcmaHelper::functionEnd("REcmaAddObjectsOperation::replaceObject", context, engine);
             return result;
         }
          QScriptValue
@@ -578,7 +578,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAddObjectsOperation::getObject", context, engine);
+            //REcmaHelper::functionStart("REcmaAddObjectsOperation::getObject", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAddObjectsOperation::getObject";
             //QCoreApplication::processEvents();
 
@@ -630,7 +630,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAddObjectsOperation.getObject().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAddObjectsOperation::getObject", context, engine);
+            //REcmaHelper::functionEnd("REcmaAddObjectsOperation::getObject", context, engine);
             return result;
         }
          QScriptValue
@@ -638,7 +638,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAddObjectsOperation::endCycle", context, engine);
+            //REcmaHelper::functionStart("REcmaAddObjectsOperation::endCycle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAddObjectsOperation::endCycle";
             //QCoreApplication::processEvents();
 
@@ -674,7 +674,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAddObjectsOperation.endCycle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAddObjectsOperation::endCycle", context, engine);
+            //REcmaHelper::functionEnd("REcmaAddObjectsOperation::endCycle", context, engine);
             return result;
         }
          QScriptValue
@@ -682,7 +682,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAddObjectsOperation::addObject", context, engine);
+            //REcmaHelper::functionStart("REcmaAddObjectsOperation::addObject", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAddObjectsOperation::addObject";
             //QCoreApplication::processEvents();
 
@@ -915,7 +915,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAddObjectsOperation.addObject().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAddObjectsOperation::addObject", context, engine);
+            //REcmaHelper::functionEnd("REcmaAddObjectsOperation::addObject", context, engine);
             return result;
         }
          QScriptValue
@@ -923,7 +923,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAddObjectsOperation::deleteObject", context, engine);
+            //REcmaHelper::functionStart("REcmaAddObjectsOperation::deleteObject", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAddObjectsOperation::deleteObject";
             //QCoreApplication::processEvents();
 
@@ -1001,7 +1001,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAddObjectsOperation.deleteObject().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAddObjectsOperation::deleteObject", context, engine);
+            //REcmaHelper::functionEnd("REcmaAddObjectsOperation::deleteObject", context, engine);
             return result;
         }
          QScriptValue
@@ -1009,7 +1009,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAddObjectsOperation::apply", context, engine);
+            //REcmaHelper::functionStart("REcmaAddObjectsOperation::apply", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAddObjectsOperation::apply";
             //QCoreApplication::processEvents();
 
@@ -1126,7 +1126,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAddObjectsOperation.apply().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAddObjectsOperation::apply", context, engine);
+            //REcmaHelper::functionEnd("REcmaAddObjectsOperation::apply", context, engine);
             return result;
         }
          QScriptValue
@@ -1134,7 +1134,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAddObjectsOperation::getPreviewCounter", context, engine);
+            //REcmaHelper::functionStart("REcmaAddObjectsOperation::getPreviewCounter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAddObjectsOperation::getPreviewCounter";
             //QCoreApplication::processEvents();
 
@@ -1175,7 +1175,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAddObjectsOperation.getPreviewCounter().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAddObjectsOperation::getPreviewCounter", context, engine);
+            //REcmaHelper::functionEnd("REcmaAddObjectsOperation::getPreviewCounter", context, engine);
             return result;
         }
          QScriptValue
@@ -1183,7 +1183,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAddObjectsOperation::setLimitPreview", context, engine);
+            //REcmaHelper::functionStart("REcmaAddObjectsOperation::setLimitPreview", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAddObjectsOperation::setLimitPreview";
             //QCoreApplication::processEvents();
 
@@ -1230,7 +1230,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAddObjectsOperation.setLimitPreview().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAddObjectsOperation::setLimitPreview", context, engine);
+            //REcmaHelper::functionEnd("REcmaAddObjectsOperation::setLimitPreview", context, engine);
             return result;
         }
          QScriptValue
@@ -1238,7 +1238,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaAddObjectsOperation::isEmpty", context, engine);
+            //REcmaHelper::functionStart("REcmaAddObjectsOperation::isEmpty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAddObjectsOperation::isEmpty";
             //QCoreApplication::processEvents();
 
@@ -1279,7 +1279,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAddObjectsOperation.isEmpty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaAddObjectsOperation::isEmpty", context, engine);
+            //REcmaHelper::functionEnd("REcmaAddObjectsOperation::isEmpty", context, engine);
             return result;
         }
          QScriptValue REcmaAddObjectsOperation::toString

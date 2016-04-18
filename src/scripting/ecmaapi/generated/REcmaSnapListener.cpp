@@ -121,7 +121,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSnapListener::updateSnap", context, engine);
+            //REcmaHelper::functionStart("REcmaSnapListener::updateSnap", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSnapListener::updateSnap";
             //QCoreApplication::processEvents();
 
@@ -175,7 +175,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSnapListener.updateSnap().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSnapListener::updateSnap", context, engine);
+            //REcmaHelper::functionEnd("REcmaSnapListener::updateSnap", context, engine);
             return result;
         }
          QScriptValue REcmaSnapListener::toString

@@ -174,7 +174,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPluginInterface::init", context, engine);
+            //REcmaHelper::functionStart("REcmaPluginInterface::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPluginInterface::init";
             //QCoreApplication::processEvents();
 
@@ -215,7 +215,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInterface.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPluginInterface::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaPluginInterface::init", context, engine);
             return result;
         }
          QScriptValue
@@ -223,7 +223,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPluginInterface::uninit", context, engine);
+            //REcmaHelper::functionStart("REcmaPluginInterface::uninit", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPluginInterface::uninit";
             //QCoreApplication::processEvents();
 
@@ -286,7 +286,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInterface.uninit().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPluginInterface::uninit", context, engine);
+            //REcmaHelper::functionEnd("REcmaPluginInterface::uninit", context, engine);
             return result;
         }
          QScriptValue
@@ -294,7 +294,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPluginInterface::postInit", context, engine);
+            //REcmaHelper::functionStart("REcmaPluginInterface::postInit", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPluginInterface::postInit";
             //QCoreApplication::processEvents();
 
@@ -341,7 +341,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInterface.postInit().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPluginInterface::postInit", context, engine);
+            //REcmaHelper::functionEnd("REcmaPluginInterface::postInit", context, engine);
             return result;
         }
          QScriptValue
@@ -349,7 +349,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPluginInterface::getPluginInfo", context, engine);
+            //REcmaHelper::functionStart("REcmaPluginInterface::getPluginInfo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPluginInterface::getPluginInfo";
             //QCoreApplication::processEvents();
 
@@ -390,7 +390,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInterface.getPluginInfo().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPluginInterface::getPluginInfo", context, engine);
+            //REcmaHelper::functionEnd("REcmaPluginInterface::getPluginInfo", context, engine);
             return result;
         }
          QScriptValue REcmaPluginInterface::toString

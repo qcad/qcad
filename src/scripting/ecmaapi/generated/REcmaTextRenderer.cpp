@@ -517,7 +517,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTextRenderer::renderSimple", context, engine);
+            //REcmaHelper::functionStart("REcmaTextRenderer::renderSimple", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextRenderer::renderSimple";
             //QCoreApplication::processEvents();
 
@@ -553,7 +553,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextRenderer.renderSimple().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTextRenderer::renderSimple", context, engine);
+            //REcmaHelper::functionEnd("REcmaTextRenderer::renderSimple", context, engine);
             return result;
         }
          QScriptValue
@@ -561,7 +561,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTextRenderer::render", context, engine);
+            //REcmaHelper::functionStart("REcmaTextRenderer::render", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextRenderer::render";
             //QCoreApplication::processEvents();
 
@@ -597,7 +597,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextRenderer.render().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTextRenderer::render", context, engine);
+            //REcmaHelper::functionEnd("REcmaTextRenderer::render", context, engine);
             return result;
         }
          QScriptValue
@@ -605,7 +605,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTextRenderer::getPainterPaths", context, engine);
+            //REcmaHelper::functionStart("REcmaTextRenderer::getPainterPaths", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextRenderer::getPainterPaths";
             //QCoreApplication::processEvents();
 
@@ -646,7 +646,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextRenderer.getPainterPaths().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTextRenderer::getPainterPaths", context, engine);
+            //REcmaHelper::functionEnd("REcmaTextRenderer::getPainterPaths", context, engine);
             return result;
         }
          QScriptValue
@@ -654,7 +654,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTextRenderer::getTextLayouts", context, engine);
+            //REcmaHelper::functionStart("REcmaTextRenderer::getTextLayouts", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextRenderer::getTextLayouts";
             //QCoreApplication::processEvents();
 
@@ -695,7 +695,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextRenderer.getTextLayouts().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTextRenderer::getTextLayouts", context, engine);
+            //REcmaHelper::functionEnd("REcmaTextRenderer::getTextLayouts", context, engine);
             return result;
         }
          QScriptValue
@@ -703,7 +703,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTextRenderer::getBoundingBox", context, engine);
+            //REcmaHelper::functionStart("REcmaTextRenderer::getBoundingBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextRenderer::getBoundingBox";
             //QCoreApplication::processEvents();
 
@@ -744,7 +744,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextRenderer.getBoundingBox().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTextRenderer::getBoundingBox", context, engine);
+            //REcmaHelper::functionEnd("REcmaTextRenderer::getBoundingBox", context, engine);
             return result;
         }
          QScriptValue
@@ -752,7 +752,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTextRenderer::getHeight", context, engine);
+            //REcmaHelper::functionStart("REcmaTextRenderer::getHeight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextRenderer::getHeight";
             //QCoreApplication::processEvents();
 
@@ -793,7 +793,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextRenderer.getHeight().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTextRenderer::getHeight", context, engine);
+            //REcmaHelper::functionEnd("REcmaTextRenderer::getHeight", context, engine);
             return result;
         }
          QScriptValue
@@ -801,7 +801,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTextRenderer::getWidth", context, engine);
+            //REcmaHelper::functionStart("REcmaTextRenderer::getWidth", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextRenderer::getWidth";
             //QCoreApplication::processEvents();
 
@@ -842,7 +842,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextRenderer.getWidth().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTextRenderer::getWidth", context, engine);
+            //REcmaHelper::functionEnd("REcmaTextRenderer::getWidth", context, engine);
             return result;
         }
          QScriptValue
@@ -850,7 +850,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTextRenderer::getRichText", context, engine);
+            //REcmaHelper::functionStart("REcmaTextRenderer::getRichText", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextRenderer::getRichText";
             //QCoreApplication::processEvents();
 
@@ -891,7 +891,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextRenderer.getRichText().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTextRenderer::getRichText", context, engine);
+            //REcmaHelper::functionEnd("REcmaTextRenderer::getRichText", context, engine);
             return result;
         }
          QScriptValue REcmaTextRenderer::toString

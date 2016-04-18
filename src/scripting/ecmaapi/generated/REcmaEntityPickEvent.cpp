@@ -317,7 +317,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaEntityPickEvent::getEntityId", context, engine);
+            //REcmaHelper::functionStart("REcmaEntityPickEvent::getEntityId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEntityPickEvent::getEntityId";
             //QCoreApplication::processEvents();
 
@@ -358,7 +358,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REntityPickEvent.getEntityId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaEntityPickEvent::getEntityId", context, engine);
+            //REcmaHelper::functionEnd("REcmaEntityPickEvent::getEntityId", context, engine);
             return result;
         }
          QScriptValue
@@ -366,7 +366,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaEntityPickEvent::setModifiers", context, engine);
+            //REcmaHelper::functionStart("REcmaEntityPickEvent::setModifiers", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEntityPickEvent::setModifiers";
             //QCoreApplication::processEvents();
 
@@ -413,7 +413,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REntityPickEvent.setModifiers().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaEntityPickEvent::setModifiers", context, engine);
+            //REcmaHelper::functionEnd("REcmaEntityPickEvent::setModifiers", context, engine);
             return result;
         }
          QScriptValue
@@ -421,7 +421,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaEntityPickEvent::getModifiers", context, engine);
+            //REcmaHelper::functionStart("REcmaEntityPickEvent::getModifiers", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEntityPickEvent::getModifiers";
             //QCoreApplication::processEvents();
 
@@ -462,7 +462,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REntityPickEvent.getModifiers().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaEntityPickEvent::getModifiers", context, engine);
+            //REcmaHelper::functionEnd("REcmaEntityPickEvent::getModifiers", context, engine);
             return result;
         }
          QScriptValue
@@ -470,7 +470,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaEntityPickEvent::isValid", context, engine);
+            //REcmaHelper::functionStart("REcmaEntityPickEvent::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEntityPickEvent::isValid";
             //QCoreApplication::processEvents();
 
@@ -511,7 +511,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REntityPickEvent.isValid().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaEntityPickEvent::isValid", context, engine);
+            //REcmaHelper::functionEnd("REcmaEntityPickEvent::isValid", context, engine);
             return result;
         }
          QScriptValue REcmaEntityPickEvent::toString

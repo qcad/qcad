@@ -187,7 +187,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSnapFree::snap", context, engine);
+            //REcmaHelper::functionStart("REcmaSnapFree::snap", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSnapFree::snap";
             //QCoreApplication::processEvents();
 
@@ -354,7 +354,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSnapFree.snap().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSnapFree::snap", context, engine);
+            //REcmaHelper::functionEnd("REcmaSnapFree::snap", context, engine);
             return result;
         }
          QScriptValue REcmaSnapFree::toString

@@ -253,7 +253,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPointData::getPosition", context, engine);
+            //REcmaHelper::functionStart("REcmaPointData::getPosition", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPointData::getPosition";
             //QCoreApplication::processEvents();
 
@@ -294,7 +294,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPointData.getPosition().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPointData::getPosition", context, engine);
+            //REcmaHelper::functionEnd("REcmaPointData::getPosition", context, engine);
             return result;
         }
          QScriptValue
@@ -302,7 +302,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPointData::getReferencePoints", context, engine);
+            //REcmaHelper::functionStart("REcmaPointData::getReferencePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPointData::getReferencePoints";
             //QCoreApplication::processEvents();
 
@@ -375,7 +375,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPointData.getReferencePoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPointData::getReferencePoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaPointData::getReferencePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -383,7 +383,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPointData::moveReferencePoint", context, engine);
+            //REcmaHelper::functionStart("REcmaPointData::moveReferencePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPointData::moveReferencePoint";
             //QCoreApplication::processEvents();
 
@@ -472,7 +472,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPointData.moveReferencePoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPointData::moveReferencePoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaPointData::moveReferencePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -480,7 +480,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPointData::castToShape", context, engine);
+            //REcmaHelper::functionStart("REcmaPointData::castToShape", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPointData::castToShape";
             //QCoreApplication::processEvents();
 
@@ -521,7 +521,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPointData.castToShape().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPointData::castToShape", context, engine);
+            //REcmaHelper::functionEnd("REcmaPointData::castToShape", context, engine);
             return result;
         }
          QScriptValue
@@ -529,7 +529,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPointData::getShapes", context, engine);
+            //REcmaHelper::functionStart("REcmaPointData::getShapes", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPointData::getShapes";
             //QCoreApplication::processEvents();
 
@@ -671,7 +671,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPointData.getShapes().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPointData::getShapes", context, engine);
+            //REcmaHelper::functionEnd("REcmaPointData::getShapes", context, engine);
             return result;
         }
          QScriptValue REcmaPointData::toString

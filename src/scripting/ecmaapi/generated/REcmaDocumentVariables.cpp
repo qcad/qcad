@@ -355,7 +355,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::init", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::init";
             //QCoreApplication::processEvents();
 
@@ -381,7 +381,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::init", context, engine);
             return result;
         }
          QScriptValue
@@ -389,7 +389,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::clone";
             //QCoreApplication::processEvents();
 
@@ -430,7 +430,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -438,7 +438,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::isSelectedForPropertyEditing", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::isSelectedForPropertyEditing", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::isSelectedForPropertyEditing";
             //QCoreApplication::processEvents();
 
@@ -479,7 +479,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.isSelectedForPropertyEditing().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::isSelectedForPropertyEditing", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::isSelectedForPropertyEditing", context, engine);
             return result;
         }
          QScriptValue
@@ -487,7 +487,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::getProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::getProperty";
             //QCoreApplication::processEvents();
 
@@ -726,7 +726,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.getProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::getProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -734,7 +734,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::setProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::setProperty";
             //QCoreApplication::processEvents();
 
@@ -908,7 +908,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.setProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::setProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -916,7 +916,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::clear", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::clear", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::clear";
             //QCoreApplication::processEvents();
 
@@ -952,7 +952,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.clear().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::clear", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::clear", context, engine);
             return result;
         }
          QScriptValue
@@ -960,7 +960,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::getCustomPropertyTypeIds", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::getCustomPropertyTypeIds", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::getCustomPropertyTypeIds";
             //QCoreApplication::processEvents();
 
@@ -1002,7 +1002,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.getCustomPropertyTypeIds().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::getCustomPropertyTypeIds", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::getCustomPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue
@@ -1010,7 +1010,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::setKnownVariable", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::setKnownVariable", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::setKnownVariable";
             //QCoreApplication::processEvents();
 
@@ -1132,7 +1132,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.setKnownVariable().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::setKnownVariable", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::setKnownVariable", context, engine);
             return result;
         }
          QScriptValue
@@ -1140,7 +1140,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::getKnownVariable", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::getKnownVariable", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::getKnownVariable";
             //QCoreApplication::processEvents();
 
@@ -1192,7 +1192,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.getKnownVariable().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::getKnownVariable", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::getKnownVariable", context, engine);
             return result;
         }
          QScriptValue
@@ -1200,7 +1200,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::hasKnownVariable", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::hasKnownVariable", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::hasKnownVariable";
             //QCoreApplication::processEvents();
 
@@ -1252,7 +1252,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.hasKnownVariable().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::hasKnownVariable", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::hasKnownVariable", context, engine);
             return result;
         }
          QScriptValue
@@ -1260,7 +1260,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::getCurrentLayerId", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::getCurrentLayerId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::getCurrentLayerId";
             //QCoreApplication::processEvents();
 
@@ -1301,7 +1301,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.getCurrentLayerId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::getCurrentLayerId", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::getCurrentLayerId", context, engine);
             return result;
         }
          QScriptValue
@@ -1309,7 +1309,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::setCurrentLayerId", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::setCurrentLayerId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::setCurrentLayerId";
             //QCoreApplication::processEvents();
 
@@ -1356,7 +1356,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.setCurrentLayerId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::setCurrentLayerId", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::setCurrentLayerId", context, engine);
             return result;
         }
          QScriptValue
@@ -1364,7 +1364,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::getUnit", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::getUnit", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::getUnit";
             //QCoreApplication::processEvents();
 
@@ -1405,7 +1405,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.getUnit().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::getUnit", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::getUnit", context, engine);
             return result;
         }
          QScriptValue
@@ -1413,7 +1413,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::setUnit", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::setUnit", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::setUnit";
             //QCoreApplication::processEvents();
 
@@ -1460,7 +1460,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.setUnit().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::setUnit", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::setUnit", context, engine);
             return result;
         }
          QScriptValue
@@ -1468,7 +1468,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::getMeasurement", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::getMeasurement", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::getMeasurement";
             //QCoreApplication::processEvents();
 
@@ -1509,7 +1509,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.getMeasurement().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::getMeasurement", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::getMeasurement", context, engine);
             return result;
         }
          QScriptValue
@@ -1517,7 +1517,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::setMeasurement", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::setMeasurement", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::setMeasurement";
             //QCoreApplication::processEvents();
 
@@ -1564,7 +1564,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.setMeasurement().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::setMeasurement", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::setMeasurement", context, engine);
             return result;
         }
          QScriptValue
@@ -1572,7 +1572,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::getLinetypeScale", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::getLinetypeScale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::getLinetypeScale";
             //QCoreApplication::processEvents();
 
@@ -1613,7 +1613,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.getLinetypeScale().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::getLinetypeScale", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::getLinetypeScale", context, engine);
             return result;
         }
          QScriptValue
@@ -1621,7 +1621,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::setLinetypeScale", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::setLinetypeScale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::setLinetypeScale";
             //QCoreApplication::processEvents();
 
@@ -1668,7 +1668,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.setLinetypeScale().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::setLinetypeScale", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::setLinetypeScale", context, engine);
             return result;
         }
          QScriptValue
@@ -1676,7 +1676,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::getDimensionFont", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::getDimensionFont", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::getDimensionFont";
             //QCoreApplication::processEvents();
 
@@ -1717,7 +1717,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.getDimensionFont().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::getDimensionFont", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::getDimensionFont", context, engine);
             return result;
         }
          QScriptValue
@@ -1725,7 +1725,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::setDimensionFont", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::setDimensionFont", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::setDimensionFont";
             //QCoreApplication::processEvents();
 
@@ -1772,7 +1772,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.setDimensionFont().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::setDimensionFont", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::setDimensionFont", context, engine);
             return result;
         }
          QScriptValue
@@ -1780,7 +1780,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDocumentVariables::print", context, engine);
+            //REcmaHelper::functionStart("REcmaDocumentVariables::print", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDocumentVariables::print";
             //QCoreApplication::processEvents();
 
@@ -1837,7 +1837,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentVariables.print().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDocumentVariables::print", context, engine);
+            //REcmaHelper::functionEnd("REcmaDocumentVariables::print", context, engine);
             return result;
         }
          QScriptValue REcmaDocumentVariables::toString

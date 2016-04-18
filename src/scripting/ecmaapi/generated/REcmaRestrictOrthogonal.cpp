@@ -239,7 +239,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRestrictOrthogonal::restrictSnap", context, engine);
+            //REcmaHelper::functionStart("REcmaRestrictOrthogonal::restrictSnap", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRestrictOrthogonal::restrictSnap";
             //QCoreApplication::processEvents();
 
@@ -328,7 +328,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRestrictOrthogonal.restrictSnap().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRestrictOrthogonal::restrictSnap", context, engine);
+            //REcmaHelper::functionEnd("REcmaRestrictOrthogonal::restrictSnap", context, engine);
             return result;
         }
          QScriptValue REcmaRestrictOrthogonal::toString

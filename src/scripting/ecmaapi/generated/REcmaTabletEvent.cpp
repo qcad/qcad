@@ -288,7 +288,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTabletEvent::getModelPosition", context, engine);
+            //REcmaHelper::functionStart("REcmaTabletEvent::getModelPosition", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTabletEvent::getModelPosition";
             //QCoreApplication::processEvents();
 
@@ -329,7 +329,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTabletEvent.getModelPosition().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTabletEvent::getModelPosition", context, engine);
+            //REcmaHelper::functionEnd("REcmaTabletEvent::getModelPosition", context, engine);
             return result;
         }
          QScriptValue
@@ -337,7 +337,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTabletEvent::getUcsPosition", context, engine);
+            //REcmaHelper::functionStart("REcmaTabletEvent::getUcsPosition", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTabletEvent::getUcsPosition";
             //QCoreApplication::processEvents();
 
@@ -378,7 +378,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTabletEvent.getUcsPosition().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTabletEvent::getUcsPosition", context, engine);
+            //REcmaHelper::functionEnd("REcmaTabletEvent::getUcsPosition", context, engine);
             return result;
         }
          QScriptValue
@@ -386,7 +386,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTabletEvent::getScreenPosition", context, engine);
+            //REcmaHelper::functionStart("REcmaTabletEvent::getScreenPosition", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTabletEvent::getScreenPosition";
             //QCoreApplication::processEvents();
 
@@ -427,7 +427,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTabletEvent.getScreenPosition().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTabletEvent::getScreenPosition", context, engine);
+            //REcmaHelper::functionEnd("REcmaTabletEvent::getScreenPosition", context, engine);
             return result;
         }
          QScriptValue
@@ -435,7 +435,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTabletEvent::getGraphicsView", context, engine);
+            //REcmaHelper::functionStart("REcmaTabletEvent::getGraphicsView", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTabletEvent::getGraphicsView";
             //QCoreApplication::processEvents();
 
@@ -477,7 +477,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTabletEvent.getGraphicsView().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTabletEvent::getGraphicsView", context, engine);
+            //REcmaHelper::functionEnd("REcmaTabletEvent::getGraphicsView", context, engine);
             return result;
         }
          QScriptValue
@@ -485,7 +485,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTabletEvent::getGraphicsScene", context, engine);
+            //REcmaHelper::functionStart("REcmaTabletEvent::getGraphicsScene", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTabletEvent::getGraphicsScene";
             //QCoreApplication::processEvents();
 
@@ -527,7 +527,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTabletEvent.getGraphicsScene().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTabletEvent::getGraphicsScene", context, engine);
+            //REcmaHelper::functionEnd("REcmaTabletEvent::getGraphicsScene", context, engine);
             return result;
         }
          QScriptValue REcmaTabletEvent::toString

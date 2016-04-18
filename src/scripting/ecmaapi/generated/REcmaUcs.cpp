@@ -426,7 +426,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaUcs::init", context, engine);
+            //REcmaHelper::functionStart("REcmaUcs::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUcs::init";
             //QCoreApplication::processEvents();
 
@@ -452,7 +452,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUcs.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaUcs::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaUcs::init", context, engine);
             return result;
         }
          QScriptValue
@@ -460,7 +460,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaUcs::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaUcs::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUcs::clone";
             //QCoreApplication::processEvents();
 
@@ -501,7 +501,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUcs.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaUcs::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaUcs::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -509,7 +509,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaUcs::isSelectedForPropertyEditing", context, engine);
+            //REcmaHelper::functionStart("REcmaUcs::isSelectedForPropertyEditing", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUcs::isSelectedForPropertyEditing";
             //QCoreApplication::processEvents();
 
@@ -550,7 +550,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUcs.isSelectedForPropertyEditing().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaUcs::isSelectedForPropertyEditing", context, engine);
+            //REcmaHelper::functionEnd("REcmaUcs::isSelectedForPropertyEditing", context, engine);
             return result;
         }
          QScriptValue
@@ -558,7 +558,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaUcs::getProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaUcs::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUcs::getProperty";
             //QCoreApplication::processEvents();
 
@@ -797,7 +797,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUcs.getProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaUcs::getProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaUcs::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -805,7 +805,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaUcs::setProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaUcs::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUcs::setProperty";
             //QCoreApplication::processEvents();
 
@@ -979,7 +979,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUcs.setProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaUcs::setProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaUcs::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -987,7 +987,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaUcs::setOrigin", context, engine);
+            //REcmaHelper::functionStart("REcmaUcs::setOrigin", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUcs::setOrigin";
             //QCoreApplication::processEvents();
 
@@ -1046,7 +1046,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUcs.setOrigin().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaUcs::setOrigin", context, engine);
+            //REcmaHelper::functionEnd("REcmaUcs::setOrigin", context, engine);
             return result;
         }
          QScriptValue
@@ -1054,7 +1054,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaUcs::setXAxisDirection", context, engine);
+            //REcmaHelper::functionStart("REcmaUcs::setXAxisDirection", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUcs::setXAxisDirection";
             //QCoreApplication::processEvents();
 
@@ -1113,7 +1113,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUcs.setXAxisDirection().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaUcs::setXAxisDirection", context, engine);
+            //REcmaHelper::functionEnd("REcmaUcs::setXAxisDirection", context, engine);
             return result;
         }
          QScriptValue
@@ -1121,7 +1121,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaUcs::setYAxisDirection", context, engine);
+            //REcmaHelper::functionStart("REcmaUcs::setYAxisDirection", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUcs::setYAxisDirection";
             //QCoreApplication::processEvents();
 
@@ -1180,7 +1180,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUcs.setYAxisDirection().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaUcs::setYAxisDirection", context, engine);
+            //REcmaHelper::functionEnd("REcmaUcs::setYAxisDirection", context, engine);
             return result;
         }
          QScriptValue
@@ -1188,7 +1188,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaUcs::getZAxisDirection", context, engine);
+            //REcmaHelper::functionStart("REcmaUcs::getZAxisDirection", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUcs::getZAxisDirection";
             //QCoreApplication::processEvents();
 
@@ -1229,7 +1229,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUcs.getZAxisDirection().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaUcs::getZAxisDirection", context, engine);
+            //REcmaHelper::functionEnd("REcmaUcs::getZAxisDirection", context, engine);
             return result;
         }
          QScriptValue
@@ -1237,7 +1237,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaUcs::mapFromUcs", context, engine);
+            //REcmaHelper::functionStart("REcmaUcs::mapFromUcs", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUcs::mapFromUcs";
             //QCoreApplication::processEvents();
 
@@ -1301,7 +1301,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUcs.mapFromUcs().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaUcs::mapFromUcs", context, engine);
+            //REcmaHelper::functionEnd("REcmaUcs::mapFromUcs", context, engine);
             return result;
         }
          QScriptValue
@@ -1309,7 +1309,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaUcs::mapToUcs", context, engine);
+            //REcmaHelper::functionStart("REcmaUcs::mapToUcs", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUcs::mapToUcs";
             //QCoreApplication::processEvents();
 
@@ -1373,7 +1373,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUcs.mapToUcs().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaUcs::mapToUcs", context, engine);
+            //REcmaHelper::functionEnd("REcmaUcs::mapToUcs", context, engine);
             return result;
         }
          QScriptValue REcmaUcs::toString

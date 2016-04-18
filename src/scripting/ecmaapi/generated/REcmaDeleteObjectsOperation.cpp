@@ -336,7 +336,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDeleteObjectsOperation::deleteObject", context, engine);
+            //REcmaHelper::functionStart("REcmaDeleteObjectsOperation::deleteObject", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDeleteObjectsOperation::deleteObject";
             //QCoreApplication::processEvents();
 
@@ -414,7 +414,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDeleteObjectsOperation.deleteObject().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDeleteObjectsOperation::deleteObject", context, engine);
+            //REcmaHelper::functionEnd("REcmaDeleteObjectsOperation::deleteObject", context, engine);
             return result;
         }
          QScriptValue
@@ -422,7 +422,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDeleteObjectsOperation::apply", context, engine);
+            //REcmaHelper::functionStart("REcmaDeleteObjectsOperation::apply", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDeleteObjectsOperation::apply";
             //QCoreApplication::processEvents();
 
@@ -539,7 +539,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDeleteObjectsOperation.apply().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDeleteObjectsOperation::apply", context, engine);
+            //REcmaHelper::functionEnd("REcmaDeleteObjectsOperation::apply", context, engine);
             return result;
         }
          QScriptValue
@@ -547,7 +547,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDeleteObjectsOperation::preview", context, engine);
+            //REcmaHelper::functionStart("REcmaDeleteObjectsOperation::preview", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDeleteObjectsOperation::preview";
             //QCoreApplication::processEvents();
 
@@ -627,7 +627,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDeleteObjectsOperation.preview().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDeleteObjectsOperation::preview", context, engine);
+            //REcmaHelper::functionEnd("REcmaDeleteObjectsOperation::preview", context, engine);
             return result;
         }
          QScriptValue REcmaDeleteObjectsOperation::toString

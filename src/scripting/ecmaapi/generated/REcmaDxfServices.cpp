@@ -230,7 +230,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::reset", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::reset", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::reset";
             //QCoreApplication::processEvents();
 
@@ -266,7 +266,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.reset().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::reset", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::reset", context, engine);
             return result;
         }
          QScriptValue
@@ -274,7 +274,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::fixBlockName", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::fixBlockName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::fixBlockName";
             //QCoreApplication::processEvents();
 
@@ -321,7 +321,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.fixBlockName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::fixBlockName", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::fixBlockName", context, engine);
             return result;
         }
          QScriptValue
@@ -329,7 +329,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::fixLayerName", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::fixLayerName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::fixLayerName";
             //QCoreApplication::processEvents();
 
@@ -376,7 +376,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.fixLayerName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::fixLayerName", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::fixLayerName", context, engine);
             return result;
         }
          QScriptValue
@@ -384,7 +384,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::fixFontName", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::fixFontName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::fixFontName";
             //QCoreApplication::processEvents();
 
@@ -436,7 +436,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.fixFontName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::fixFontName", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::fixFontName", context, engine);
             return result;
         }
          QScriptValue
@@ -444,7 +444,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::fixVersion2String", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::fixVersion2String", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::fixVersion2String";
             //QCoreApplication::processEvents();
 
@@ -491,7 +491,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.fixVersion2String().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::fixVersion2String", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::fixVersion2String", context, engine);
             return result;
         }
          QScriptValue
@@ -499,7 +499,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::fixDimensionLabel", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::fixDimensionLabel", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::fixDimensionLabel";
             //QCoreApplication::processEvents();
 
@@ -572,7 +572,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.fixDimensionLabel().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::fixDimensionLabel", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::fixDimensionLabel", context, engine);
             return result;
         }
          QScriptValue
@@ -580,7 +580,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::detectVersion2Format", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::detectVersion2Format", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::detectVersion2Format";
             //QCoreApplication::processEvents();
 
@@ -627,7 +627,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.detectVersion2Format().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::detectVersion2Format", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::detectVersion2Format", context, engine);
             return result;
         }
          QScriptValue
@@ -635,7 +635,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::hasDIMZIN", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::hasDIMZIN", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::hasDIMZIN";
             //QCoreApplication::processEvents();
 
@@ -676,7 +676,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.hasDIMZIN().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::hasDIMZIN", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::hasDIMZIN", context, engine);
             return result;
         }
          QScriptValue
@@ -684,7 +684,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::hasDIMAZIN", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::hasDIMAZIN", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::hasDIMAZIN";
             //QCoreApplication::processEvents();
 
@@ -725,7 +725,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.hasDIMAZIN().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::hasDIMAZIN", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::hasDIMAZIN", context, engine);
             return result;
         }
          QScriptValue
@@ -733,7 +733,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::hasInvalidEllipse", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::hasInvalidEllipse", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::hasInvalidEllipse";
             //QCoreApplication::processEvents();
 
@@ -774,7 +774,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.hasInvalidEllipse().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::hasInvalidEllipse", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::hasInvalidEllipse", context, engine);
             return result;
         }
          QScriptValue
@@ -782,7 +782,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::getVersion2Compatibility", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersion2Compatibility", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersion2Compatibility";
             //QCoreApplication::processEvents();
 
@@ -823,7 +823,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersion2Compatibility().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::getVersion2Compatibility", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersion2Compatibility", context, engine);
             return result;
         }
          QScriptValue
@@ -831,7 +831,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::getVersion3_1Compatibility", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersion3_1Compatibility", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersion3_1Compatibility";
             //QCoreApplication::processEvents();
 
@@ -872,7 +872,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersion3_1Compatibility().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::getVersion3_1Compatibility", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersion3_1Compatibility", context, engine);
             return result;
         }
          QScriptValue
@@ -880,7 +880,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::getMajorVersion", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::getMajorVersion", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getMajorVersion";
             //QCoreApplication::processEvents();
 
@@ -921,7 +921,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getMajorVersion().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::getMajorVersion", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getMajorVersion", context, engine);
             return result;
         }
          QScriptValue
@@ -929,7 +929,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::getMinorVersion", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::getMinorVersion", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getMinorVersion";
             //QCoreApplication::processEvents();
 
@@ -970,7 +970,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getMinorVersion().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::getMinorVersion", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getMinorVersion", context, engine);
             return result;
         }
          QScriptValue
@@ -978,7 +978,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::getPatchVersion", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::getPatchVersion", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getPatchVersion";
             //QCoreApplication::processEvents();
 
@@ -1019,7 +1019,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getPatchVersion().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::getPatchVersion", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getPatchVersion", context, engine);
             return result;
         }
          QScriptValue
@@ -1027,7 +1027,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::getVersion2LayerName", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersion2LayerName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersion2LayerName";
             //QCoreApplication::processEvents();
 
@@ -1079,7 +1079,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersion2LayerName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::getVersion2LayerName", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersion2LayerName", context, engine);
             return result;
         }
          QScriptValue
@@ -1087,7 +1087,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::getVersionBlockName", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersionBlockName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersionBlockName";
             //QCoreApplication::processEvents();
 
@@ -1139,7 +1139,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersionBlockName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::getVersionBlockName", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersionBlockName", context, engine);
             return result;
         }
          QScriptValue
@@ -1147,7 +1147,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::getVersion2Font", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersion2Font", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersion2Font";
             //QCoreApplication::processEvents();
 
@@ -1199,7 +1199,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersion2Font().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::getVersion2Font", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersion2Font", context, engine);
             return result;
         }
          QScriptValue
@@ -1207,7 +1207,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::getVersion2DimensionLabel", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersion2DimensionLabel", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersion2DimensionLabel";
             //QCoreApplication::processEvents();
 
@@ -1259,7 +1259,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersion2DimensionLabel().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::getVersion2DimensionLabel", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersion2DimensionLabel", context, engine);
             return result;
         }
          QScriptValue
@@ -1267,7 +1267,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::collectVersion2Info", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::collectVersion2Info", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::collectVersion2Info";
             //QCoreApplication::processEvents();
 
@@ -1319,7 +1319,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.collectVersion2Info().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::collectVersion2Info", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::collectVersion2Info", context, engine);
             return result;
         }
          QScriptValue
@@ -1327,7 +1327,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::getVersion2PatternAngle", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersion2PatternAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersion2PatternAngle";
             //QCoreApplication::processEvents();
 
@@ -1392,7 +1392,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersion2PatternAngle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::getVersion2PatternAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersion2PatternAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -1400,7 +1400,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::getVersion2PatternScale", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersion2PatternScale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersion2PatternScale";
             //QCoreApplication::processEvents();
 
@@ -1465,7 +1465,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersion2PatternScale().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::getVersion2PatternScale", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersion2PatternScale", context, engine);
             return result;
         }
          QScriptValue
@@ -1473,7 +1473,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::getVersion2PatternName", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::getVersion2PatternName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getVersion2PatternName";
             //QCoreApplication::processEvents();
 
@@ -1525,7 +1525,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getVersion2PatternName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::getVersion2PatternName", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getVersion2PatternName", context, engine);
             return result;
         }
          QScriptValue
@@ -1533,7 +1533,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::fixVersion2HatchData", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::fixVersion2HatchData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::fixVersion2HatchData";
             //QCoreApplication::processEvents();
 
@@ -1619,7 +1619,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.fixVersion2HatchData().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::fixVersion2HatchData", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::fixVersion2HatchData", context, engine);
             return result;
         }
          QScriptValue
@@ -1627,7 +1627,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::getCodec", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::getCodec", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getCodec";
             //QCoreApplication::processEvents();
 
@@ -1668,7 +1668,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getCodec().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::getCodec", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getCodec", context, engine);
             return result;
         }
          QScriptValue
@@ -1676,7 +1676,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::setCodec", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::setCodec", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::setCodec";
             //QCoreApplication::processEvents();
 
@@ -1730,7 +1730,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.setCodec().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::setCodec", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::setCodec", context, engine);
             return result;
         }
          QScriptValue
@@ -1738,7 +1738,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::numberToColor24", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::numberToColor24", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::numberToColor24";
             //QCoreApplication::processEvents();
 
@@ -1780,7 +1780,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.numberToColor24().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::numberToColor24", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::numberToColor24", context, engine);
             return result;
         }
          QScriptValue
@@ -1788,7 +1788,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::numberToWeight", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::numberToWeight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::numberToWeight";
             //QCoreApplication::processEvents();
 
@@ -1830,7 +1830,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.numberToWeight().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::numberToWeight", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::numberToWeight", context, engine);
             return result;
         }
          QScriptValue
@@ -1838,7 +1838,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::widthToNumber", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::widthToNumber", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::widthToNumber";
             //QCoreApplication::processEvents();
 
@@ -1880,7 +1880,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.widthToNumber().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::widthToNumber", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::widthToNumber", context, engine);
             return result;
         }
          QScriptValue
@@ -1888,7 +1888,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::colorToNumber24", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::colorToNumber24", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::colorToNumber24";
             //QCoreApplication::processEvents();
 
@@ -1942,7 +1942,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.colorToNumber24().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::colorToNumber24", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::colorToNumber24", context, engine);
             return result;
         }
          QScriptValue
@@ -1950,7 +1950,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::stringToVariable", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::stringToVariable", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::stringToVariable";
             //QCoreApplication::processEvents();
 
@@ -1992,7 +1992,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.stringToVariable().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::stringToVariable", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::stringToVariable", context, engine);
             return result;
         }
          QScriptValue
@@ -2000,7 +2000,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::variableToString", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::variableToString", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::variableToString";
             //QCoreApplication::processEvents();
 
@@ -2042,7 +2042,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.variableToString().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::variableToString", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::variableToString", context, engine);
             return result;
         }
          QScriptValue
@@ -2050,7 +2050,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::getCodeForVariable", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::getCodeForVariable", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::getCodeForVariable";
             //QCoreApplication::processEvents();
 
@@ -2092,7 +2092,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.getCodeForVariable().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::getCodeForVariable", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::getCodeForVariable", context, engine);
             return result;
         }
          QScriptValue
@@ -2100,7 +2100,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::isVariable2D", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::isVariable2D", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::isVariable2D";
             //QCoreApplication::processEvents();
 
@@ -2142,7 +2142,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.isVariable2D().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::isVariable2D", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::isVariable2D", context, engine);
             return result;
         }
          QScriptValue
@@ -2150,7 +2150,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::escapeUnicode", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::escapeUnicode", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::escapeUnicode";
             //QCoreApplication::processEvents();
 
@@ -2192,7 +2192,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.escapeUnicode().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::escapeUnicode", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::escapeUnicode", context, engine);
             return result;
         }
          QScriptValue
@@ -2200,7 +2200,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::parseUnicode", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::parseUnicode", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::parseUnicode";
             //QCoreApplication::processEvents();
 
@@ -2242,7 +2242,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.parseUnicode().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::parseUnicode", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::parseUnicode", context, engine);
             return result;
         }
          QScriptValue
@@ -2250,7 +2250,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDxfServices::autoFixLinetypePattern", context, engine);
+            //REcmaHelper::functionStart("REcmaDxfServices::autoFixLinetypePattern", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDxfServices::autoFixLinetypePattern";
             //QCoreApplication::processEvents();
 
@@ -2299,7 +2299,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDxfServices.autoFixLinetypePattern().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDxfServices::autoFixLinetypePattern", context, engine);
+            //REcmaHelper::functionEnd("REcmaDxfServices::autoFixLinetypePattern", context, engine);
             return result;
         }
          QScriptValue REcmaDxfServices::toString

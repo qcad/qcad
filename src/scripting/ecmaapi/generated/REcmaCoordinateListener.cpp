@@ -119,7 +119,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaCoordinateListener::updateCoordinate", context, engine);
+            //REcmaHelper::functionStart("REcmaCoordinateListener::updateCoordinate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCoordinateListener::updateCoordinate";
             //QCoreApplication::processEvents();
 
@@ -173,7 +173,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCoordinateListener.updateCoordinate().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaCoordinateListener::updateCoordinate", context, engine);
+            //REcmaHelper::functionEnd("REcmaCoordinateListener::updateCoordinate", context, engine);
             return result;
         }
          QScriptValue REcmaCoordinateListener::toString

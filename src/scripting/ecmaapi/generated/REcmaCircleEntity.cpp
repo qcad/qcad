@@ -531,7 +531,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaCircleEntity::init", context, engine);
+            //REcmaHelper::functionStart("REcmaCircleEntity::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleEntity::init";
             //QCoreApplication::processEvents();
 
@@ -557,7 +557,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleEntity.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaCircleEntity::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaCircleEntity::init", context, engine);
             return result;
         }
          QScriptValue
@@ -565,7 +565,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaCircleEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionStart("REcmaCircleEntity::getStaticPropertyTypeIds", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleEntity::getStaticPropertyTypeIds";
             //QCoreApplication::processEvents();
 
@@ -597,7 +597,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleEntity.getStaticPropertyTypeIds().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaCircleEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionEnd("REcmaCircleEntity::getStaticPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue
@@ -605,7 +605,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaCircleEntity::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaCircleEntity::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleEntity::clone";
             //QCoreApplication::processEvents();
 
@@ -646,7 +646,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleEntity.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaCircleEntity::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaCircleEntity::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -654,7 +654,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaCircleEntity::getType", context, engine);
+            //REcmaHelper::functionStart("REcmaCircleEntity::getType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleEntity::getType";
             //QCoreApplication::processEvents();
 
@@ -695,7 +695,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleEntity.getType().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaCircleEntity::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaCircleEntity::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -703,7 +703,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaCircleEntity::setProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaCircleEntity::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleEntity::setProperty";
             //QCoreApplication::processEvents();
 
@@ -877,7 +877,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleEntity.setProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaCircleEntity::setProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaCircleEntity::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -885,7 +885,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaCircleEntity::getProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaCircleEntity::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleEntity::getProperty";
             //QCoreApplication::processEvents();
 
@@ -1124,7 +1124,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleEntity.getProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaCircleEntity::getProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaCircleEntity::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1132,7 +1132,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaCircleEntity::exportEntity", context, engine);
+            //REcmaHelper::functionStart("REcmaCircleEntity::exportEntity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleEntity::exportEntity";
             //QCoreApplication::processEvents();
 
@@ -1302,7 +1302,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleEntity.exportEntity().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaCircleEntity::exportEntity", context, engine);
+            //REcmaHelper::functionEnd("REcmaCircleEntity::exportEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -1310,7 +1310,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaCircleEntity::getData", context, engine);
+            //REcmaHelper::functionStart("REcmaCircleEntity::getData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleEntity::getData";
             //QCoreApplication::processEvents();
 
@@ -1374,7 +1374,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleEntity.getData().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaCircleEntity::getData", context, engine);
+            //REcmaHelper::functionEnd("REcmaCircleEntity::getData", context, engine);
             return result;
         }
          QScriptValue
@@ -1382,7 +1382,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaCircleEntity::getCenter", context, engine);
+            //REcmaHelper::functionStart("REcmaCircleEntity::getCenter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleEntity::getCenter";
             //QCoreApplication::processEvents();
 
@@ -1423,7 +1423,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleEntity.getCenter().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaCircleEntity::getCenter", context, engine);
+            //REcmaHelper::functionEnd("REcmaCircleEntity::getCenter", context, engine);
             return result;
         }
          QScriptValue
@@ -1431,7 +1431,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaCircleEntity::getRadius", context, engine);
+            //REcmaHelper::functionStart("REcmaCircleEntity::getRadius", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleEntity::getRadius";
             //QCoreApplication::processEvents();
 
@@ -1472,7 +1472,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleEntity.getRadius().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaCircleEntity::getRadius", context, engine);
+            //REcmaHelper::functionEnd("REcmaCircleEntity::getRadius", context, engine);
             return result;
         }
          QScriptValue
@@ -1480,7 +1480,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaCircleEntity::setRadius", context, engine);
+            //REcmaHelper::functionStart("REcmaCircleEntity::setRadius", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleEntity::setRadius";
             //QCoreApplication::processEvents();
 
@@ -1527,7 +1527,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleEntity.setRadius().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaCircleEntity::setRadius", context, engine);
+            //REcmaHelper::functionEnd("REcmaCircleEntity::setRadius", context, engine);
             return result;
         }
          QScriptValue
@@ -1535,7 +1535,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaCircleEntity::getLength", context, engine);
+            //REcmaHelper::functionStart("REcmaCircleEntity::getLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleEntity::getLength";
             //QCoreApplication::processEvents();
 
@@ -1576,7 +1576,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleEntity.getLength().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaCircleEntity::getLength", context, engine);
+            //REcmaHelper::functionEnd("REcmaCircleEntity::getLength", context, engine);
             return result;
         }
          QScriptValue REcmaCircleEntity::toString

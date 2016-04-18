@@ -154,7 +154,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinetypeList::init", context, engine);
+            //REcmaHelper::functionStart("REcmaLinetypeList::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeList::init";
             //QCoreApplication::processEvents();
 
@@ -214,7 +214,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeList.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinetypeList::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinetypeList::init", context, engine);
             return result;
         }
          QScriptValue REcmaLinetypeList::toString

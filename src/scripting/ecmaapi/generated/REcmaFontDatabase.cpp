@@ -181,7 +181,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFontDatabase::families", context, engine);
+            //REcmaHelper::functionStart("REcmaFontDatabase::families", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFontDatabase::families";
             //QCoreApplication::processEvents();
 
@@ -254,7 +254,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFontDatabase.families().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFontDatabase::families", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontDatabase::families", context, engine);
             return result;
         }
          QScriptValue REcmaFontDatabase::toString

@@ -209,7 +209,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaClipboardOperation::apply", context, engine);
+            //REcmaHelper::functionStart("REcmaClipboardOperation::apply", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::apply";
             //QCoreApplication::processEvents();
 
@@ -326,7 +326,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.apply().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaClipboardOperation::apply", context, engine);
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::apply", context, engine);
             return result;
         }
          QScriptValue
@@ -334,7 +334,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaClipboardOperation::copyEntityBlock", context, engine);
+            //REcmaHelper::functionStart("REcmaClipboardOperation::copyEntityBlock", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::copyEntityBlock";
             //QCoreApplication::processEvents();
 
@@ -506,7 +506,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.copyEntityBlock().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaClipboardOperation::copyEntityBlock", context, engine);
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::copyEntityBlock", context, engine);
             return result;
         }
          QScriptValue
@@ -514,7 +514,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaClipboardOperation::copyBlock", context, engine);
+            //REcmaHelper::functionStart("REcmaClipboardOperation::copyBlock", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::copyBlock";
             //QCoreApplication::processEvents();
 
@@ -676,7 +676,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.copyBlock().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaClipboardOperation::copyBlock", context, engine);
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::copyBlock", context, engine);
             return result;
         }
          QScriptValue
@@ -684,7 +684,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaClipboardOperation::copyEntityLayer", context, engine);
+            //REcmaHelper::functionStart("REcmaClipboardOperation::copyEntityLayer", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::copyEntityLayer";
             //QCoreApplication::processEvents();
 
@@ -830,7 +830,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.copyEntityLayer().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaClipboardOperation::copyEntityLayer", context, engine);
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::copyEntityLayer", context, engine);
             return result;
         }
          QScriptValue
@@ -838,7 +838,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaClipboardOperation::copyLayer", context, engine);
+            //REcmaHelper::functionStart("REcmaClipboardOperation::copyLayer", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::copyLayer";
             //QCoreApplication::processEvents();
 
@@ -974,7 +974,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.copyLayer().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaClipboardOperation::copyLayer", context, engine);
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::copyLayer", context, engine);
             return result;
         }
          QScriptValue
@@ -982,7 +982,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaClipboardOperation::copyEntityLinetype", context, engine);
+            //REcmaHelper::functionStart("REcmaClipboardOperation::copyEntityLinetype", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::copyEntityLinetype";
             //QCoreApplication::processEvents();
 
@@ -1128,7 +1128,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.copyEntityLinetype().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaClipboardOperation::copyEntityLinetype", context, engine);
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::copyEntityLinetype", context, engine);
             return result;
         }
          QScriptValue
@@ -1136,7 +1136,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaClipboardOperation::copyLinetype", context, engine);
+            //REcmaHelper::functionStart("REcmaClipboardOperation::copyLinetype", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaClipboardOperation::copyLinetype";
             //QCoreApplication::processEvents();
 
@@ -1272,7 +1272,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RClipboardOperation.copyLinetype().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaClipboardOperation::copyLinetype", context, engine);
+            //REcmaHelper::functionEnd("REcmaClipboardOperation::copyLinetype", context, engine);
             return result;
         }
          QScriptValue REcmaClipboardOperation::toString

@@ -148,7 +148,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSnapEntityBase::snap", context, engine);
+            //REcmaHelper::functionStart("REcmaSnapEntityBase::snap", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSnapEntityBase::snap";
             //QCoreApplication::processEvents();
 
@@ -421,7 +421,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSnapEntityBase.snap().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSnapEntityBase::snap", context, engine);
+            //REcmaHelper::functionEnd("REcmaSnapEntityBase::snap", context, engine);
             return result;
         }
          QScriptValue REcmaSnapEntityBase::toString

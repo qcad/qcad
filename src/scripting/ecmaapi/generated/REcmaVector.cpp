@@ -706,7 +706,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::set", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::set", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::set";
             //QCoreApplication::processEvents();
 
@@ -819,7 +819,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.set().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::set", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::set", context, engine);
             return result;
         }
          QScriptValue
@@ -827,7 +827,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::setPolar", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::setPolar", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::setPolar";
             //QCoreApplication::processEvents();
 
@@ -887,7 +887,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.setPolar().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::setPolar", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::setPolar", context, engine);
             return result;
         }
          QScriptValue
@@ -895,7 +895,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::get2D", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::get2D", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::get2D";
             //QCoreApplication::processEvents();
 
@@ -936,7 +936,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.get2D().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::get2D", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::get2D", context, engine);
             return result;
         }
          QScriptValue
@@ -944,7 +944,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::isValid", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::isValid";
             //QCoreApplication::processEvents();
 
@@ -985,7 +985,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.isValid().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::isValid", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::isValid", context, engine);
             return result;
         }
          QScriptValue
@@ -993,7 +993,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::isSane", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::isSane", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::isSane";
             //QCoreApplication::processEvents();
 
@@ -1034,7 +1034,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.isSane().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::isSane", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::isSane", context, engine);
             return result;
         }
          QScriptValue
@@ -1042,7 +1042,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::isInside", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::isInside", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::isInside";
             //QCoreApplication::processEvents();
 
@@ -1106,7 +1106,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.isInside().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::isInside", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::isInside", context, engine);
             return result;
         }
          QScriptValue
@@ -1114,7 +1114,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::equalsFuzzy", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::equalsFuzzy", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::equalsFuzzy";
             //QCoreApplication::processEvents();
 
@@ -1235,7 +1235,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.equalsFuzzy().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::equalsFuzzy", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::equalsFuzzy", context, engine);
             return result;
         }
          QScriptValue
@@ -1243,7 +1243,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getDistanceTo", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getDistanceTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getDistanceTo";
             //QCoreApplication::processEvents();
 
@@ -1307,7 +1307,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getDistanceTo().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getDistanceTo", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getDistanceTo", context, engine);
             return result;
         }
          QScriptValue
@@ -1315,7 +1315,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getDistanceTo2d", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getDistanceTo2d", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getDistanceTo2d";
             //QCoreApplication::processEvents();
 
@@ -1379,7 +1379,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getDistanceTo2d().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getDistanceTo2d", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getDistanceTo2d", context, engine);
             return result;
         }
          QScriptValue
@@ -1387,7 +1387,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::setAngle", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::setAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::setAngle";
             //QCoreApplication::processEvents();
 
@@ -1434,7 +1434,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.setAngle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::setAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::setAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -1442,7 +1442,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getAngle", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getAngle";
             //QCoreApplication::processEvents();
 
@@ -1483,7 +1483,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getAngle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -1491,7 +1491,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getAngleToPlaneXY", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getAngleToPlaneXY", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getAngleToPlaneXY";
             //QCoreApplication::processEvents();
 
@@ -1532,7 +1532,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getAngleToPlaneXY().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getAngleToPlaneXY", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getAngleToPlaneXY", context, engine);
             return result;
         }
          QScriptValue
@@ -1540,7 +1540,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getAngleTo", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getAngleTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getAngleTo";
             //QCoreApplication::processEvents();
 
@@ -1604,7 +1604,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getAngleTo().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getAngleTo", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getAngleTo", context, engine);
             return result;
         }
          QScriptValue
@@ -1612,7 +1612,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::setMagnitude2d", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::setMagnitude2d", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::setMagnitude2d";
             //QCoreApplication::processEvents();
 
@@ -1659,7 +1659,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.setMagnitude2d().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::setMagnitude2d", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::setMagnitude2d", context, engine);
             return result;
         }
          QScriptValue
@@ -1667,7 +1667,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getMagnitude", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getMagnitude", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getMagnitude";
             //QCoreApplication::processEvents();
 
@@ -1708,7 +1708,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getMagnitude().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getMagnitude", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getMagnitude", context, engine);
             return result;
         }
          QScriptValue
@@ -1716,7 +1716,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getSquaredMagnitude", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getSquaredMagnitude", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getSquaredMagnitude";
             //QCoreApplication::processEvents();
 
@@ -1757,7 +1757,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getSquaredMagnitude().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getSquaredMagnitude", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getSquaredMagnitude", context, engine);
             return result;
         }
          QScriptValue
@@ -1765,7 +1765,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getMagnitude2d", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getMagnitude2d", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getMagnitude2d";
             //QCoreApplication::processEvents();
 
@@ -1806,7 +1806,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getMagnitude2d().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getMagnitude2d", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getMagnitude2d", context, engine);
             return result;
         }
          QScriptValue
@@ -1814,7 +1814,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getLerp", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getLerp", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getLerp";
             //QCoreApplication::processEvents();
 
@@ -1891,7 +1891,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getLerp().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getLerp", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getLerp", context, engine);
             return result;
         }
          QScriptValue
@@ -1899,7 +1899,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getUnitVector", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getUnitVector", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getUnitVector";
             //QCoreApplication::processEvents();
 
@@ -1940,7 +1940,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getUnitVector().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getUnitVector", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getUnitVector", context, engine);
             return result;
         }
          QScriptValue
@@ -1948,7 +1948,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::setX", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::setX", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::setX";
             //QCoreApplication::processEvents();
 
@@ -1995,7 +1995,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.setX().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::setX", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::setX", context, engine);
             return result;
         }
          QScriptValue
@@ -2003,7 +2003,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getX", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getX", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getX";
             //QCoreApplication::processEvents();
 
@@ -2044,7 +2044,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getX().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getX", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getX", context, engine);
             return result;
         }
          QScriptValue
@@ -2052,7 +2052,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::setY", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::setY", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::setY";
             //QCoreApplication::processEvents();
 
@@ -2099,7 +2099,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.setY().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::setY", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::setY", context, engine);
             return result;
         }
          QScriptValue
@@ -2107,7 +2107,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getY", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getY", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getY";
             //QCoreApplication::processEvents();
 
@@ -2148,7 +2148,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getY().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getY", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getY", context, engine);
             return result;
         }
          QScriptValue
@@ -2156,7 +2156,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::setZ", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::setZ", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::setZ";
             //QCoreApplication::processEvents();
 
@@ -2203,7 +2203,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.setZ().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::setZ", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::setZ", context, engine);
             return result;
         }
          QScriptValue
@@ -2211,7 +2211,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getZ", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getZ", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getZ";
             //QCoreApplication::processEvents();
 
@@ -2252,7 +2252,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getZ().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getZ", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getZ", context, engine);
             return result;
         }
          QScriptValue
@@ -2260,7 +2260,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::isInWindow", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::isInWindow", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::isInWindow";
             //QCoreApplication::processEvents();
 
@@ -2349,7 +2349,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.isInWindow().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::isInWindow", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::isInWindow", context, engine);
             return result;
         }
          QScriptValue
@@ -2357,7 +2357,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::move", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::move", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::move";
             //QCoreApplication::processEvents();
 
@@ -2421,7 +2421,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.move().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::move", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::move", context, engine);
             return result;
         }
          QScriptValue
@@ -2429,7 +2429,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::rotate", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::rotate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::rotate";
             //QCoreApplication::processEvents();
 
@@ -2538,7 +2538,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.rotate().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::rotate", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::rotate", context, engine);
             return result;
         }
          QScriptValue
@@ -2546,7 +2546,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::rotate3d", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::rotate3d", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::rotate3d";
             //QCoreApplication::processEvents();
 
@@ -2665,7 +2665,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.rotate3d().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::rotate3d", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::rotate3d", context, engine);
             return result;
         }
          QScriptValue
@@ -2673,7 +2673,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::scale", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::scale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::scale";
             //QCoreApplication::processEvents();
 
@@ -2895,7 +2895,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.scale().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::scale", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::scale", context, engine);
             return result;
         }
          QScriptValue
@@ -2903,7 +2903,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::mirror", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::mirror", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::mirror";
             //QCoreApplication::processEvents();
 
@@ -3036,7 +3036,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.mirror().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::mirror", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::mirror", context, engine);
             return result;
         }
          QScriptValue
@@ -3044,7 +3044,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::flipHorizontal", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::flipHorizontal", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::flipHorizontal";
             //QCoreApplication::processEvents();
 
@@ -3085,7 +3085,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.flipHorizontal().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::flipHorizontal", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::flipHorizontal", context, engine);
             return result;
         }
          QScriptValue
@@ -3093,7 +3093,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::flipVertical", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::flipVertical", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::flipVertical";
             //QCoreApplication::processEvents();
 
@@ -3134,7 +3134,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.flipVertical().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::flipVertical", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::flipVertical", context, engine);
             return result;
         }
          QScriptValue
@@ -3142,7 +3142,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::stretch", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::stretch", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::stretch";
             //QCoreApplication::processEvents();
 
@@ -3231,7 +3231,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.stretch().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::stretch", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::stretch", context, engine);
             return result;
         }
          QScriptValue
@@ -3239,7 +3239,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::isoProject", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::isoProject", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::isoProject";
             //QCoreApplication::processEvents();
 
@@ -3304,7 +3304,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.isoProject().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::isoProject", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::isoProject", context, engine);
             return result;
         }
          QScriptValue
@@ -3312,7 +3312,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::transform", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::transform", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::transform";
             //QCoreApplication::processEvents();
 
@@ -3376,7 +3376,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.transform().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::transform", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::transform", context, engine);
             return result;
         }
          QScriptValue
@@ -3384,7 +3384,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::transform2dM", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::transform2dM", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::transform2dM";
             //QCoreApplication::processEvents();
 
@@ -3448,7 +3448,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.transform2dM().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::transform2dM", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::transform2dM", context, engine);
             return result;
         }
          QScriptValue
@@ -3456,7 +3456,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::transform2d", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::transform2d", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::transform2d";
             //QCoreApplication::processEvents();
 
@@ -3518,7 +3518,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.transform2d().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::transform2d", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::transform2d", context, engine);
             return result;
         }
          QScriptValue
@@ -3526,7 +3526,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getTransformed", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getTransformed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getTransformed";
             //QCoreApplication::processEvents();
 
@@ -3590,7 +3590,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getTransformed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getTransformed", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getTransformed", context, engine);
             return result;
         }
          QScriptValue
@@ -3598,7 +3598,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getTransformed2dM", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getTransformed2dM", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getTransformed2dM";
             //QCoreApplication::processEvents();
 
@@ -3662,7 +3662,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getTransformed2dM().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getTransformed2dM", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getTransformed2dM", context, engine);
             return result;
         }
          QScriptValue
@@ -3670,7 +3670,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getTransformed2d", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getTransformed2d", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getTransformed2d";
             //QCoreApplication::processEvents();
 
@@ -3732,7 +3732,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getTransformed2d().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getTransformed2d", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getTransformed2d", context, engine);
             return result;
         }
          QScriptValue
@@ -3740,7 +3740,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getDividedComponents", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getDividedComponents", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getDividedComponents";
             //QCoreApplication::processEvents();
 
@@ -3804,7 +3804,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getDividedComponents().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getDividedComponents", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getDividedComponents", context, engine);
             return result;
         }
          QScriptValue
@@ -3812,7 +3812,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getMultipliedComponents", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getMultipliedComponents", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getMultipliedComponents";
             //QCoreApplication::processEvents();
 
@@ -3876,7 +3876,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getMultipliedComponents().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getMultipliedComponents", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getMultipliedComponents", context, engine);
             return result;
         }
          QScriptValue
@@ -3884,7 +3884,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getClosest", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getClosest", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getClosest";
             //QCoreApplication::processEvents();
 
@@ -3937,7 +3937,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getClosest().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getClosest", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getClosest", context, engine);
             return result;
         }
          QScriptValue
@@ -3945,7 +3945,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getClosest2d", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getClosest2d", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getClosest2d";
             //QCoreApplication::processEvents();
 
@@ -3998,7 +3998,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getClosest2d().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getClosest2d", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getClosest2d", context, engine);
             return result;
         }
          QScriptValue
@@ -4006,7 +4006,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getClosestDistance", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getClosestDistance", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getClosestDistance";
             //QCoreApplication::processEvents();
 
@@ -4072,7 +4072,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getClosestDistance().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getClosestDistance", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getClosestDistance", context, engine);
             return result;
         }
          QScriptValue
@@ -4080,7 +4080,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getClosestIndex", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getClosestIndex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getClosestIndex";
             //QCoreApplication::processEvents();
 
@@ -4179,7 +4179,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getClosestIndex().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getClosestIndex", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getClosestIndex", context, engine);
             return result;
         }
          QScriptValue
@@ -4187,7 +4187,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getClosestIndex2d", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getClosestIndex2d", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getClosestIndex2d";
             //QCoreApplication::processEvents();
 
@@ -4240,7 +4240,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getClosestIndex2d().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getClosestIndex2d", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getClosestIndex2d", context, engine);
             return result;
         }
          QScriptValue
@@ -4248,7 +4248,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::operator +", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::operator +", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::operator +";
             //QCoreApplication::processEvents();
 
@@ -4312,7 +4312,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.operator_add().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::operator +", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::operator +", context, engine);
             return result;
         }
          QScriptValue
@@ -4320,7 +4320,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::operator -", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::operator -", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::operator -";
             //QCoreApplication::processEvents();
 
@@ -4405,7 +4405,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.operator_subtract().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::operator -", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::operator -", context, engine);
             return result;
         }
          QScriptValue
@@ -4413,7 +4413,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::operator *", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::operator *", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::operator *";
             //QCoreApplication::processEvents();
 
@@ -4465,7 +4465,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.operator_multiply().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::operator *", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::operator *", context, engine);
             return result;
         }
          QScriptValue
@@ -4473,7 +4473,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::operator /", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::operator /", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::operator /";
             //QCoreApplication::processEvents();
 
@@ -4525,7 +4525,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.operator_divide().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::operator /", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::operator /", context, engine);
             return result;
         }
          QScriptValue
@@ -4533,7 +4533,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getNegated", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getNegated", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getNegated";
             //QCoreApplication::processEvents();
 
@@ -4574,7 +4574,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getNegated().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getNegated", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getNegated", context, engine);
             return result;
         }
          QScriptValue
@@ -4582,7 +4582,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::dot", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::dot", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::dot";
             //QCoreApplication::processEvents();
 
@@ -4646,7 +4646,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.dot().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::dot", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::dot", context, engine);
             return result;
         }
          QScriptValue
@@ -4654,7 +4654,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::normalize", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::normalize", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::normalize";
             //QCoreApplication::processEvents();
 
@@ -4695,7 +4695,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.normalize().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::normalize", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::normalize", context, engine);
             return result;
         }
          QScriptValue
@@ -4703,7 +4703,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getNormalized", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getNormalized", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getNormalized";
             //QCoreApplication::processEvents();
 
@@ -4744,7 +4744,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getNormalized().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getNormalized", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getNormalized", context, engine);
             return result;
         }
          QScriptValue
@@ -4752,7 +4752,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::operator +=", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::operator +=", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::operator +=";
             //QCoreApplication::processEvents();
 
@@ -4811,7 +4811,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.operator_add_assign().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::operator +=", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::operator +=", context, engine);
             return result;
         }
          QScriptValue
@@ -4819,7 +4819,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::operator -=", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::operator -=", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::operator -=";
             //QCoreApplication::processEvents();
 
@@ -4878,7 +4878,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.operator_subtract_assign().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::operator -=", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::operator -=", context, engine);
             return result;
         }
          QScriptValue
@@ -4886,7 +4886,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::operator *=", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::operator *=", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::operator *=";
             //QCoreApplication::processEvents();
 
@@ -4933,7 +4933,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.operator_multiply_assign().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::operator *=", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::operator *=", context, engine);
             return result;
         }
          QScriptValue
@@ -4941,7 +4941,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::operator /=", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::operator /=", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::operator /=";
             //QCoreApplication::processEvents();
 
@@ -4988,7 +4988,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.operator_divide_assign().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::operator /=", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::operator /=", context, engine);
             return result;
         }
          QScriptValue
@@ -4996,7 +4996,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::operator ==", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::operator ==", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::operator ==";
             //QCoreApplication::processEvents();
 
@@ -5060,7 +5060,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.equals().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::operator ==", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::operator ==", context, engine);
             return result;
         }
          QScriptValue
@@ -5068,7 +5068,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::operator !=", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::operator !=", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::operator !=";
             //QCoreApplication::processEvents();
 
@@ -5132,7 +5132,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.operator_not_assign().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::operator !=", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::operator !=", context, engine);
             return result;
         }
          QScriptValue
@@ -5140,7 +5140,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getFloor", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getFloor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getFloor";
             //QCoreApplication::processEvents();
 
@@ -5181,7 +5181,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getFloor().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getFloor", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getFloor", context, engine);
             return result;
         }
          QScriptValue
@@ -5189,7 +5189,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getCeil", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getCeil", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getCeil";
             //QCoreApplication::processEvents();
 
@@ -5230,7 +5230,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getCeil().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getCeil", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getCeil", context, engine);
             return result;
         }
          QScriptValue
@@ -5238,7 +5238,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::lteXY", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::lteXY", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::lteXY";
             //QCoreApplication::processEvents();
 
@@ -5302,7 +5302,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.lteXY().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::lteXY", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::lteXY", context, engine);
             return result;
         }
          QScriptValue
@@ -5310,7 +5310,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::gteXY", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::gteXY", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::gteXY";
             //QCoreApplication::processEvents();
 
@@ -5374,7 +5374,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.gteXY().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::gteXY", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::gteXY", context, engine);
             return result;
         }
          QScriptValue
@@ -5382,7 +5382,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::containsFuzzy", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::containsFuzzy", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::containsFuzzy";
             //QCoreApplication::processEvents();
 
@@ -5521,7 +5521,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.containsFuzzy().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::containsFuzzy", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::containsFuzzy", context, engine);
             return result;
         }
          QScriptValue
@@ -5529,7 +5529,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getMinimum", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getMinimum", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getMinimum";
             //QCoreApplication::processEvents();
 
@@ -5641,7 +5641,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getMinimum().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getMinimum", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getMinimum", context, engine);
             return result;
         }
          QScriptValue
@@ -5649,7 +5649,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getMaximum", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getMaximum", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getMaximum";
             //QCoreApplication::processEvents();
 
@@ -5761,7 +5761,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getMaximum().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getMaximum", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getMaximum", context, engine);
             return result;
         }
          QScriptValue
@@ -5769,7 +5769,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getMinimumX", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getMinimumX", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getMinimumX";
             //QCoreApplication::processEvents();
 
@@ -5812,7 +5812,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getMinimumX().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getMinimumX", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getMinimumX", context, engine);
             return result;
         }
          QScriptValue
@@ -5820,7 +5820,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getMaximumX", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getMaximumX", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getMaximumX";
             //QCoreApplication::processEvents();
 
@@ -5863,7 +5863,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getMaximumX().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getMaximumX", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getMaximumX", context, engine);
             return result;
         }
          QScriptValue
@@ -5871,7 +5871,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getMinimumY", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getMinimumY", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getMinimumY";
             //QCoreApplication::processEvents();
 
@@ -5914,7 +5914,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getMinimumY().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getMinimumY", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getMinimumY", context, engine);
             return result;
         }
          QScriptValue
@@ -5922,7 +5922,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getMaximumY", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getMaximumY", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getMaximumY";
             //QCoreApplication::processEvents();
 
@@ -5965,7 +5965,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getMaximumY().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getMaximumY", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getMaximumY", context, engine);
             return result;
         }
          QScriptValue
@@ -5973,7 +5973,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getAverage", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getAverage", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getAverage";
             //QCoreApplication::processEvents();
 
@@ -6085,7 +6085,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getAverage().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getAverage", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getAverage", context, engine);
             return result;
         }
          QScriptValue
@@ -6093,7 +6093,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getXList", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getXList", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getXList";
             //QCoreApplication::processEvents();
 
@@ -6136,7 +6136,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getXList().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getXList", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getXList", context, engine);
             return result;
         }
          QScriptValue
@@ -6144,7 +6144,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getYList", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getYList", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getYList";
             //QCoreApplication::processEvents();
 
@@ -6187,7 +6187,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getYList().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getYList", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getYList", context, engine);
             return result;
         }
          QScriptValue
@@ -6195,7 +6195,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getZList", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getZList", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getZList";
             //QCoreApplication::processEvents();
 
@@ -6238,7 +6238,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getZList().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getZList", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getZList", context, engine);
             return result;
         }
          QScriptValue
@@ -6246,7 +6246,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getCrossProduct", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getCrossProduct", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getCrossProduct";
             //QCoreApplication::processEvents();
 
@@ -6325,7 +6325,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getCrossProduct().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getCrossProduct", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getCrossProduct", context, engine);
             return result;
         }
          QScriptValue
@@ -6333,7 +6333,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getDotProduct", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getDotProduct", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getDotProduct";
             //QCoreApplication::processEvents();
 
@@ -6412,7 +6412,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getDotProduct().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getDotProduct", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getDotProduct", context, engine);
             return result;
         }
          QScriptValue
@@ -6420,7 +6420,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::createPolar", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::createPolar", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::createPolar";
             //QCoreApplication::processEvents();
 
@@ -6475,7 +6475,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.createPolar().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::createPolar", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::createPolar", context, engine);
             return result;
         }
          QScriptValue
@@ -6483,7 +6483,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::lessThanX", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::lessThanX", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::lessThanX";
             //QCoreApplication::processEvents();
 
@@ -6562,7 +6562,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.lessThanX().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::lessThanX", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::lessThanX", context, engine);
             return result;
         }
          QScriptValue
@@ -6570,7 +6570,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::greaterThanX", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::greaterThanX", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::greaterThanX";
             //QCoreApplication::processEvents();
 
@@ -6649,7 +6649,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.greaterThanX().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::greaterThanX", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::greaterThanX", context, engine);
             return result;
         }
          QScriptValue
@@ -6657,7 +6657,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::lessThanY", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::lessThanY", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::lessThanY";
             //QCoreApplication::processEvents();
 
@@ -6736,7 +6736,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.lessThanY().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::lessThanY", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::lessThanY", context, engine);
             return result;
         }
          QScriptValue
@@ -6744,7 +6744,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::greaterThanY", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::greaterThanY", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::greaterThanY";
             //QCoreApplication::processEvents();
 
@@ -6823,7 +6823,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.greaterThanY().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::greaterThanY", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::greaterThanY", context, engine);
             return result;
         }
          QScriptValue
@@ -6831,7 +6831,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::lessThanEqualXY", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::lessThanEqualXY", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::lessThanEqualXY";
             //QCoreApplication::processEvents();
 
@@ -6910,7 +6910,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.lessThanEqualXY().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::lessThanEqualXY", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::lessThanEqualXY", context, engine);
             return result;
         }
          QScriptValue
@@ -6918,7 +6918,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::greaterThanEqualXY", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::greaterThanEqualXY", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::greaterThanEqualXY";
             //QCoreApplication::processEvents();
 
@@ -6997,7 +6997,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.greaterThanEqualXY().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::greaterThanEqualXY", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::greaterThanEqualXY", context, engine);
             return result;
         }
          QScriptValue
@@ -7005,7 +7005,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getSortedByDistance", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getSortedByDistance", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getSortedByDistance";
             //QCoreApplication::processEvents();
 
@@ -7073,7 +7073,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getSortedByDistance().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getSortedByDistance", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getSortedByDistance", context, engine);
             return result;
         }
          QScriptValue
@@ -7081,7 +7081,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getSortedLeftRightTopBottom", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getSortedLeftRightTopBottom", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getSortedLeftRightTopBottom";
             //QCoreApplication::processEvents();
 
@@ -7124,7 +7124,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getSortedLeftRightTopBottom().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getSortedLeftRightTopBottom", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getSortedLeftRightTopBottom", context, engine);
             return result;
         }
          QScriptValue
@@ -7132,7 +7132,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaVector::getSortedByAngle", context, engine);
+            //REcmaHelper::functionStart("REcmaVector::getSortedByAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaVector::getSortedByAngle";
             //QCoreApplication::processEvents();
 
@@ -7213,7 +7213,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RVector.getSortedByAngle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaVector::getSortedByAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaVector::getSortedByAngle", context, engine);
             return result;
         }
          QScriptValue REcmaVector::toString

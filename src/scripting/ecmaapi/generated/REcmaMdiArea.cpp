@@ -247,7 +247,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMdiArea::getAddTabButton", context, engine);
+            //REcmaHelper::functionStart("REcmaMdiArea::getAddTabButton", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMdiArea::getAddTabButton";
             //QCoreApplication::processEvents();
 
@@ -288,7 +288,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMdiArea.getAddTabButton().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMdiArea::getAddTabButton", context, engine);
+            //REcmaHelper::functionEnd("REcmaMdiArea::getAddTabButton", context, engine);
             return result;
         }
          QScriptValue
@@ -296,7 +296,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMdiArea::updateTabBar", context, engine);
+            //REcmaHelper::functionStart("REcmaMdiArea::updateTabBar", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMdiArea::updateTabBar";
             //QCoreApplication::processEvents();
 
@@ -364,7 +364,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMdiArea.updateTabBar().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMdiArea::updateTabBar", context, engine);
+            //REcmaHelper::functionEnd("REcmaMdiArea::updateTabBar", context, engine);
             return result;
         }
          QScriptValue
@@ -372,7 +372,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMdiArea::updateTabBarSize", context, engine);
+            //REcmaHelper::functionStart("REcmaMdiArea::updateTabBarSize", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMdiArea::updateTabBarSize";
             //QCoreApplication::processEvents();
 
@@ -408,7 +408,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMdiArea.updateTabBarSize().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMdiArea::updateTabBarSize", context, engine);
+            //REcmaHelper::functionEnd("REcmaMdiArea::updateTabBarSize", context, engine);
             return result;
         }
          QScriptValue
@@ -416,7 +416,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMdiArea::updateAddButtonLocation", context, engine);
+            //REcmaHelper::functionStart("REcmaMdiArea::updateAddButtonLocation", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMdiArea::updateAddButtonLocation";
             //QCoreApplication::processEvents();
 
@@ -452,7 +452,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMdiArea.updateAddButtonLocation().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMdiArea::updateAddButtonLocation", context, engine);
+            //REcmaHelper::functionEnd("REcmaMdiArea::updateAddButtonLocation", context, engine);
             return result;
         }
          QScriptValue
@@ -460,7 +460,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMdiArea::closeTab", context, engine);
+            //REcmaHelper::functionStart("REcmaMdiArea::closeTab", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMdiArea::closeTab";
             //QCoreApplication::processEvents();
 
@@ -507,7 +507,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMdiArea.closeTab().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMdiArea::closeTab", context, engine);
+            //REcmaHelper::functionEnd("REcmaMdiArea::closeTab", context, engine);
             return result;
         }
          QScriptValue
@@ -515,7 +515,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaMdiArea::activateTab", context, engine);
+            //REcmaHelper::functionStart("REcmaMdiArea::activateTab", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMdiArea::activateTab";
             //QCoreApplication::processEvents();
 
@@ -562,7 +562,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMdiArea.activateTab().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaMdiArea::activateTab", context, engine);
+            //REcmaHelper::functionEnd("REcmaMdiArea::activateTab", context, engine);
             return result;
         }
          QScriptValue REcmaMdiArea::toString

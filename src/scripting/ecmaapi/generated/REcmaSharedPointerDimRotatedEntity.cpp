@@ -550,7 +550,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::init", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::init";
             //QCoreApplication::processEvents();
 
@@ -576,7 +576,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::init", context, engine);
             return result;
         }
          QScriptValue
@@ -584,7 +584,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::getStaticPropertyTypeIds", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::getStaticPropertyTypeIds";
             //QCoreApplication::processEvents();
 
@@ -616,7 +616,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.getStaticPropertyTypeIds().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::getStaticPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue
@@ -624,7 +624,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::clone";
             //QCoreApplication::processEvents();
 
@@ -665,7 +665,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -673,7 +673,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::getType", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::getType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::getType";
             //QCoreApplication::processEvents();
 
@@ -714,7 +714,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.getType().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -722,7 +722,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::setProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::setProperty";
             //QCoreApplication::processEvents();
 
@@ -896,7 +896,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.setProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::setProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -904,7 +904,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::getProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::getProperty";
             //QCoreApplication::processEvents();
 
@@ -1143,7 +1143,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.getProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::getProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1151,7 +1151,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::getData", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::getData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::getData";
             //QCoreApplication::processEvents();
 
@@ -1215,7 +1215,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.getData().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::getData", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::getData", context, engine);
             return result;
         }
          QScriptValue
@@ -1223,7 +1223,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::setData", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::setData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::setData";
             //QCoreApplication::processEvents();
 
@@ -1282,7 +1282,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.setData().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::setData", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::setData", context, engine);
             return result;
         }
          QScriptValue
@@ -1290,7 +1290,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::setExtensionPoint1", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::setExtensionPoint1", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::setExtensionPoint1";
             //QCoreApplication::processEvents();
 
@@ -1349,7 +1349,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.setExtensionPoint1().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::setExtensionPoint1", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::setExtensionPoint1", context, engine);
             return result;
         }
          QScriptValue
@@ -1357,7 +1357,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::getExtensionPoint1", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::getExtensionPoint1", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::getExtensionPoint1";
             //QCoreApplication::processEvents();
 
@@ -1398,7 +1398,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.getExtensionPoint1().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::getExtensionPoint1", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::getExtensionPoint1", context, engine);
             return result;
         }
          QScriptValue
@@ -1406,7 +1406,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::setExtensionPoint2", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::setExtensionPoint2", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::setExtensionPoint2";
             //QCoreApplication::processEvents();
 
@@ -1465,7 +1465,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.setExtensionPoint2().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::setExtensionPoint2", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::setExtensionPoint2", context, engine);
             return result;
         }
          QScriptValue
@@ -1473,7 +1473,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::getExtensionPoint2", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::getExtensionPoint2", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::getExtensionPoint2";
             //QCoreApplication::processEvents();
 
@@ -1514,7 +1514,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.getExtensionPoint2().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::getExtensionPoint2", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::getExtensionPoint2", context, engine);
             return result;
         }
          QScriptValue
@@ -1522,7 +1522,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::setRotation", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::setRotation", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::setRotation";
             //QCoreApplication::processEvents();
 
@@ -1569,7 +1569,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.setRotation().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::setRotation", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::setRotation", context, engine);
             return result;
         }
          QScriptValue
@@ -1577,7 +1577,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::getRotation", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerDimRotatedEntity::getRotation", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimRotatedEntity::getRotation";
             //QCoreApplication::processEvents();
 
@@ -1618,7 +1618,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedEntity.getRotation().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::getRotation", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimRotatedEntity::getRotation", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerDimRotatedEntity::toString

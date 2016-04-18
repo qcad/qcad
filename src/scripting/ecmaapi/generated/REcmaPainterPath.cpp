@@ -509,7 +509,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setPath", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setPath", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setPath";
             //QCoreApplication::processEvents();
 
@@ -566,7 +566,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setPath().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setPath", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setPath", context, engine);
             return result;
         }
          QScriptValue
@@ -574,7 +574,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getShapes", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getShapes", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getShapes";
             //QCoreApplication::processEvents();
 
@@ -615,7 +615,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getShapes().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getShapes", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getShapes", context, engine);
             return result;
         }
          QScriptValue
@@ -623,7 +623,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getCurrentPosition", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getCurrentPosition", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getCurrentPosition";
             //QCoreApplication::processEvents();
 
@@ -664,7 +664,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getCurrentPosition().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getCurrentPosition", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getCurrentPosition", context, engine);
             return result;
         }
          QScriptValue
@@ -672,7 +672,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::isAtPosition", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::isAtPosition", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::isAtPosition";
             //QCoreApplication::processEvents();
 
@@ -793,7 +793,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.isAtPosition().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::isAtPosition", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::isAtPosition", context, engine);
             return result;
         }
          QScriptValue
@@ -801,7 +801,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::moveTo", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::moveTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::moveTo";
             //QCoreApplication::processEvents();
 
@@ -900,7 +900,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.moveTo().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::moveTo", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::moveTo", context, engine);
             return result;
         }
          QScriptValue
@@ -908,7 +908,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::moveToOrNop", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::moveToOrNop", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::moveToOrNop";
             //QCoreApplication::processEvents();
 
@@ -967,7 +967,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.moveToOrNop().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::moveToOrNop", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::moveToOrNop", context, engine);
             return result;
         }
          QScriptValue
@@ -975,7 +975,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::lineTo", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::lineTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::lineTo";
             //QCoreApplication::processEvents();
 
@@ -1074,7 +1074,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.lineTo().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::lineTo", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::lineTo", context, engine);
             return result;
         }
          QScriptValue
@@ -1082,7 +1082,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::quadTo", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::quadTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::quadTo";
             //QCoreApplication::processEvents();
 
@@ -1232,7 +1232,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.quadTo().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::quadTo", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::quadTo", context, engine);
             return result;
         }
          QScriptValue
@@ -1240,7 +1240,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::cubicTo", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::cubicTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::cubicTo";
             //QCoreApplication::processEvents();
 
@@ -1441,7 +1441,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.cubicTo().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::cubicTo", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::cubicTo", context, engine);
             return result;
         }
          QScriptValue
@@ -1449,7 +1449,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::closeSubpath", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::closeSubpath", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::closeSubpath";
             //QCoreApplication::processEvents();
 
@@ -1485,7 +1485,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.closeSubpath().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::closeSubpath", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::closeSubpath", context, engine);
             return result;
         }
          QScriptValue
@@ -1493,7 +1493,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::containsPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::containsPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::containsPoint";
             //QCoreApplication::processEvents();
 
@@ -1557,7 +1557,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.containsPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::containsPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::containsPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1565,7 +1565,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::addPolyline", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::addPolyline", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::addPolyline";
             //QCoreApplication::processEvents();
 
@@ -1624,7 +1624,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.addPolyline().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::addPolyline", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::addPolyline", context, engine);
             return result;
         }
          QScriptValue
@@ -1632,7 +1632,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::addPath", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::addPath", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::addPath";
             //QCoreApplication::processEvents();
 
@@ -1691,7 +1691,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.addPath().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::addPath", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::addPath", context, engine);
             return result;
         }
          QScriptValue
@@ -1699,7 +1699,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::appendPath", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::appendPath", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::appendPath";
             //QCoreApplication::processEvents();
 
@@ -1758,7 +1758,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.appendPath().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::appendPath", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::appendPath", context, engine);
             return result;
         }
          QScriptValue
@@ -1766,7 +1766,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::addLine", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::addLine", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::addLine";
             //QCoreApplication::processEvents();
 
@@ -1825,7 +1825,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.addLine().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::addLine", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::addLine", context, engine);
             return result;
         }
          QScriptValue
@@ -1833,7 +1833,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::addArc", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::addArc", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::addArc";
             //QCoreApplication::processEvents();
 
@@ -1892,7 +1892,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.addArc().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::addArc", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::addArc", context, engine);
             return result;
         }
          QScriptValue
@@ -1900,7 +1900,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::addSpline", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::addSpline", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::addSpline";
             //QCoreApplication::processEvents();
 
@@ -1959,7 +1959,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.addSpline().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::addSpline", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::addSpline", context, engine);
             return result;
         }
          QScriptValue
@@ -1967,7 +1967,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::addRect", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::addRect", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::addRect";
             //QCoreApplication::processEvents();
 
@@ -2090,7 +2090,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.addRect().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::addRect", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::addRect", context, engine);
             return result;
         }
          QScriptValue
@@ -2098,7 +2098,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::addBox", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::addBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::addBox";
             //QCoreApplication::processEvents();
 
@@ -2157,7 +2157,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.addBox().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::addBox", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::addBox", context, engine);
             return result;
         }
          QScriptValue
@@ -2165,7 +2165,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getBoundingBox", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getBoundingBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getBoundingBox";
             //QCoreApplication::processEvents();
 
@@ -2206,7 +2206,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getBoundingBox().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getBoundingBox", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getBoundingBox", context, engine);
             return result;
         }
          QScriptValue
@@ -2214,7 +2214,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getStartPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getStartPoint";
             //QCoreApplication::processEvents();
 
@@ -2255,7 +2255,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getStartPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getStartPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -2263,7 +2263,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getEndPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getEndPoint";
             //QCoreApplication::processEvents();
 
@@ -2304,7 +2304,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getEndPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -2312,7 +2312,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::isValid", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::isValid";
             //QCoreApplication::processEvents();
 
@@ -2353,7 +2353,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.isValid().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::isValid", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::isValid", context, engine);
             return result;
         }
          QScriptValue
@@ -2361,7 +2361,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setValid", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setValid";
             //QCoreApplication::processEvents();
 
@@ -2408,7 +2408,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setValid().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setValid", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setValid", context, engine);
             return result;
         }
          QScriptValue
@@ -2416,7 +2416,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::isSane", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::isSane", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::isSane";
             //QCoreApplication::processEvents();
 
@@ -2457,7 +2457,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.isSane().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::isSane", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::isSane", context, engine);
             return result;
         }
          QScriptValue
@@ -2465,7 +2465,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getZLevel", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getZLevel", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getZLevel";
             //QCoreApplication::processEvents();
 
@@ -2506,7 +2506,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getZLevel().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getZLevel", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getZLevel", context, engine);
             return result;
         }
          QScriptValue
@@ -2514,7 +2514,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setZLevel", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setZLevel", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setZLevel";
             //QCoreApplication::processEvents();
 
@@ -2561,7 +2561,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setZLevel().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setZLevel", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setZLevel", context, engine);
             return result;
         }
          QScriptValue
@@ -2569,7 +2569,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getPen", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getPen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getPen";
             //QCoreApplication::processEvents();
 
@@ -2610,7 +2610,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getPen().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getPen", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getPen", context, engine);
             return result;
         }
          QScriptValue
@@ -2618,7 +2618,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setPen", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setPen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setPen";
             //QCoreApplication::processEvents();
 
@@ -2675,7 +2675,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setPen().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setPen", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setPen", context, engine);
             return result;
         }
          QScriptValue
@@ -2683,7 +2683,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getBrush", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getBrush", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getBrush";
             //QCoreApplication::processEvents();
 
@@ -2724,7 +2724,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getBrush().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getBrush", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getBrush", context, engine);
             return result;
         }
          QScriptValue
@@ -2732,7 +2732,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setBrush", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setBrush", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setBrush";
             //QCoreApplication::processEvents();
 
@@ -2789,7 +2789,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setBrush().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setBrush", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setBrush", context, engine);
             return result;
         }
          QScriptValue
@@ -2797,7 +2797,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setMode", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setMode", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setMode";
             //QCoreApplication::processEvents();
 
@@ -2904,7 +2904,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setMode().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setMode", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setMode", context, engine);
             return result;
         }
          QScriptValue
@@ -2912,7 +2912,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getMode", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getMode", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getMode";
             //QCoreApplication::processEvents();
 
@@ -2974,7 +2974,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getMode().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getMode", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getMode", context, engine);
             return result;
         }
          QScriptValue
@@ -2982,7 +2982,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setHighlighted", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setHighlighted", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setHighlighted";
             //QCoreApplication::processEvents();
 
@@ -3029,7 +3029,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setHighlighted().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setHighlighted", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setHighlighted", context, engine);
             return result;
         }
          QScriptValue
@@ -3037,7 +3037,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::isHighlighted", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::isHighlighted", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::isHighlighted";
             //QCoreApplication::processEvents();
 
@@ -3078,7 +3078,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.isHighlighted().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::isHighlighted", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::isHighlighted", context, engine);
             return result;
         }
          QScriptValue
@@ -3086,7 +3086,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setSelected", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setSelected", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setSelected";
             //QCoreApplication::processEvents();
 
@@ -3133,7 +3133,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setSelected().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setSelected", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setSelected", context, engine);
             return result;
         }
          QScriptValue
@@ -3141,7 +3141,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::isSelected", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::isSelected", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::isSelected";
             //QCoreApplication::processEvents();
 
@@ -3182,7 +3182,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.isSelected().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::isSelected", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::isSelected", context, engine);
             return result;
         }
          QScriptValue
@@ -3190,7 +3190,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setFixedPenColor", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setFixedPenColor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setFixedPenColor";
             //QCoreApplication::processEvents();
 
@@ -3237,7 +3237,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setFixedPenColor().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setFixedPenColor", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setFixedPenColor", context, engine);
             return result;
         }
          QScriptValue
@@ -3245,7 +3245,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::isFixedPenColor", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::isFixedPenColor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::isFixedPenColor";
             //QCoreApplication::processEvents();
 
@@ -3286,7 +3286,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.isFixedPenColor().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::isFixedPenColor", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::isFixedPenColor", context, engine);
             return result;
         }
          QScriptValue
@@ -3294,7 +3294,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setFixedBrushColor", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setFixedBrushColor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setFixedBrushColor";
             //QCoreApplication::processEvents();
 
@@ -3341,7 +3341,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setFixedBrushColor().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setFixedBrushColor", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setFixedBrushColor", context, engine);
             return result;
         }
          QScriptValue
@@ -3349,7 +3349,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::isFixedBrushColor", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::isFixedBrushColor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::isFixedBrushColor";
             //QCoreApplication::processEvents();
 
@@ -3390,7 +3390,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.isFixedBrushColor().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::isFixedBrushColor", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::isFixedBrushColor", context, engine);
             return result;
         }
          QScriptValue
@@ -3398,7 +3398,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setAutoRegen", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setAutoRegen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setAutoRegen";
             //QCoreApplication::processEvents();
 
@@ -3445,7 +3445,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setAutoRegen().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setAutoRegen", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setAutoRegen", context, engine);
             return result;
         }
          QScriptValue
@@ -3453,7 +3453,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getAutoRegen", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getAutoRegen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getAutoRegen";
             //QCoreApplication::processEvents();
 
@@ -3494,7 +3494,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getAutoRegen().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getAutoRegen", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getAutoRegen", context, engine);
             return result;
         }
          QScriptValue
@@ -3502,7 +3502,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setAlwaysRegen", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setAlwaysRegen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setAlwaysRegen";
             //QCoreApplication::processEvents();
 
@@ -3549,7 +3549,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setAlwaysRegen().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setAlwaysRegen", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setAlwaysRegen", context, engine);
             return result;
         }
          QScriptValue
@@ -3557,7 +3557,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getAlwaysRegen", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getAlwaysRegen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getAlwaysRegen";
             //QCoreApplication::processEvents();
 
@@ -3598,7 +3598,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getAlwaysRegen().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getAlwaysRegen", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getAlwaysRegen", context, engine);
             return result;
         }
          QScriptValue
@@ -3606,7 +3606,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setInheritPen", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setInheritPen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setInheritPen";
             //QCoreApplication::processEvents();
 
@@ -3653,7 +3653,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setInheritPen().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setInheritPen", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setInheritPen", context, engine);
             return result;
         }
          QScriptValue
@@ -3661,7 +3661,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getInheritPen", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getInheritPen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getInheritPen";
             //QCoreApplication::processEvents();
 
@@ -3702,7 +3702,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getInheritPen().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getInheritPen", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getInheritPen", context, engine);
             return result;
         }
          QScriptValue
@@ -3710,7 +3710,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setPixelUnit", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setPixelUnit", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setPixelUnit";
             //QCoreApplication::processEvents();
 
@@ -3757,7 +3757,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setPixelUnit().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setPixelUnit", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setPixelUnit", context, engine);
             return result;
         }
          QScriptValue
@@ -3765,7 +3765,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getPixelUnit", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getPixelUnit", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getPixelUnit";
             //QCoreApplication::processEvents();
 
@@ -3806,7 +3806,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getPixelUnit().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getPixelUnit", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getPixelUnit", context, engine);
             return result;
         }
          QScriptValue
@@ -3814,7 +3814,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setNoClipping", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setNoClipping", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setNoClipping";
             //QCoreApplication::processEvents();
 
@@ -3861,7 +3861,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setNoClipping().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setNoClipping", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setNoClipping", context, engine);
             return result;
         }
          QScriptValue
@@ -3869,7 +3869,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getNoClipping", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getNoClipping", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getNoClipping";
             //QCoreApplication::processEvents();
 
@@ -3910,7 +3910,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getNoClipping().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getNoClipping", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getNoClipping", context, engine);
             return result;
         }
          QScriptValue
@@ -3918,7 +3918,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setFeatureSize", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setFeatureSize", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setFeatureSize";
             //QCoreApplication::processEvents();
 
@@ -3965,7 +3965,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setFeatureSize().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setFeatureSize", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setFeatureSize", context, engine);
             return result;
         }
          QScriptValue
@@ -3973,7 +3973,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getFeatureSize", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getFeatureSize", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getFeatureSize";
             //QCoreApplication::processEvents();
 
@@ -4014,7 +4014,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getFeatureSize().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getFeatureSize", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getFeatureSize", context, engine);
             return result;
         }
          QScriptValue
@@ -4022,7 +4022,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setPixelSizeHint", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setPixelSizeHint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setPixelSizeHint";
             //QCoreApplication::processEvents();
 
@@ -4069,7 +4069,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setPixelSizeHint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setPixelSizeHint", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setPixelSizeHint", context, engine);
             return result;
         }
          QScriptValue
@@ -4077,7 +4077,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getPixelSizeHint", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getPixelSizeHint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getPixelSizeHint";
             //QCoreApplication::processEvents();
 
@@ -4118,7 +4118,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getPixelSizeHint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getPixelSizeHint", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getPixelSizeHint", context, engine);
             return result;
         }
          QScriptValue
@@ -4126,7 +4126,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getDistanceTo", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getDistanceTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getDistanceTo";
             //QCoreApplication::processEvents();
 
@@ -4190,7 +4190,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getDistanceTo().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getDistanceTo", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getDistanceTo", context, engine);
             return result;
         }
          QScriptValue
@@ -4198,7 +4198,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::addPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::addPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::addPoint";
             //QCoreApplication::processEvents();
 
@@ -4257,7 +4257,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.addPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::addPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::addPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -4265,7 +4265,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::hasPoints", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::hasPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::hasPoints";
             //QCoreApplication::processEvents();
 
@@ -4306,7 +4306,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.hasPoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::hasPoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::hasPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -4314,7 +4314,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::setPoints", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::setPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::setPoints";
             //QCoreApplication::processEvents();
 
@@ -4362,7 +4362,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.setPoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::setPoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::setPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -4370,7 +4370,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getPoints", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getPoints";
             //QCoreApplication::processEvents();
 
@@ -4411,7 +4411,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getPoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getPoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -4419,7 +4419,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::transform", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::transform", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::transform";
             //QCoreApplication::processEvents();
 
@@ -4476,7 +4476,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.transform().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::transform", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::transform", context, engine);
             return result;
         }
          QScriptValue
@@ -4484,7 +4484,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::move", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::move", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::move";
             //QCoreApplication::processEvents();
 
@@ -4543,7 +4543,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.move().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::move", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::move", context, engine);
             return result;
         }
          QScriptValue
@@ -4551,7 +4551,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::rotate", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::rotate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::rotate";
             //QCoreApplication::processEvents();
 
@@ -4598,7 +4598,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.rotate().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::rotate", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::rotate", context, engine);
             return result;
         }
          QScriptValue
@@ -4606,7 +4606,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::scale", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::scale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::scale";
             //QCoreApplication::processEvents();
 
@@ -4666,7 +4666,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.scale().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::scale", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::scale", context, engine);
             return result;
         }
          QScriptValue
@@ -4674,7 +4674,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getElementCount", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getElementCount", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getElementCount";
             //QCoreApplication::processEvents();
 
@@ -4715,7 +4715,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getElementCount().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getElementCount", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getElementCount", context, engine);
             return result;
         }
          QScriptValue
@@ -4723,7 +4723,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getXAt", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getXAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getXAt";
             //QCoreApplication::processEvents();
 
@@ -4775,7 +4775,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getXAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getXAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getXAt", context, engine);
             return result;
         }
          QScriptValue
@@ -4783,7 +4783,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getYAt", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getYAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getYAt";
             //QCoreApplication::processEvents();
 
@@ -4835,7 +4835,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getYAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getYAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getYAt", context, engine);
             return result;
         }
          QScriptValue
@@ -4843,7 +4843,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getTypeAt", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getTypeAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getTypeAt";
             //QCoreApplication::processEvents();
 
@@ -4895,7 +4895,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getTypeAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getTypeAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getTypeAt", context, engine);
             return result;
         }
          QScriptValue
@@ -4903,7 +4903,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::isEmpty", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::isEmpty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::isEmpty";
             //QCoreApplication::processEvents();
 
@@ -4944,7 +4944,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.isEmpty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::isEmpty", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::isEmpty", context, engine);
             return result;
         }
          QScriptValue
@@ -4952,7 +4952,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::addShape", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::addShape", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::addShape";
             //QCoreApplication::processEvents();
 
@@ -5030,7 +5030,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.addShape().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::addShape", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::addShape", context, engine);
             return result;
         }
          QScriptValue
@@ -5038,7 +5038,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::rotateList", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::rotateList", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::rotateList";
             //QCoreApplication::processEvents();
 
@@ -5089,7 +5089,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.rotateList().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::rotateList", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::rotateList", context, engine);
             return result;
         }
          QScriptValue
@@ -5097,7 +5097,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::translateList", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::translateList", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::translateList";
             //QCoreApplication::processEvents();
 
@@ -5160,7 +5160,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.translateList().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::translateList", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::translateList", context, engine);
             return result;
         }
          QScriptValue
@@ -5168,7 +5168,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::scaleList", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::scaleList", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::scaleList";
             //QCoreApplication::processEvents();
 
@@ -5232,7 +5232,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.scaleList().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::scaleList", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::scaleList", context, engine);
             return result;
         }
          QScriptValue
@@ -5240,7 +5240,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getMinList", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getMinList", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getMinList";
             //QCoreApplication::processEvents();
 
@@ -5283,7 +5283,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getMinList().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getMinList", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getMinList", context, engine);
             return result;
         }
          QScriptValue
@@ -5291,7 +5291,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPath::getMaxList", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPath::getMaxList", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPath::getMaxList";
             //QCoreApplication::processEvents();
 
@@ -5334,7 +5334,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPath.getMaxList().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPath::getMaxList", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPath::getMaxList", context, engine);
             return result;
         }
          QScriptValue REcmaPainterPath::toString

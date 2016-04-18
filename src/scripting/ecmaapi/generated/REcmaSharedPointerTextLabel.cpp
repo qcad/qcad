@@ -359,7 +359,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTextLabel::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTextLabel::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextLabel::clone";
             //QCoreApplication::processEvents();
 
@@ -400,7 +400,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextLabel.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTextLabel::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTextLabel::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -408,7 +408,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTextLabel::getText", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTextLabel::getText", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextLabel::getText";
             //QCoreApplication::processEvents();
 
@@ -449,7 +449,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextLabel.getText().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTextLabel::getText", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTextLabel::getText", context, engine);
             return result;
         }
          QScriptValue
@@ -457,7 +457,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTextLabel::getUserData", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTextLabel::getUserData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextLabel::getUserData";
             //QCoreApplication::processEvents();
 
@@ -498,7 +498,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextLabel.getUserData().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTextLabel::getUserData", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTextLabel::getUserData", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerTextLabel::toString

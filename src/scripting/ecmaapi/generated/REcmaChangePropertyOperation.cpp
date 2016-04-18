@@ -575,7 +575,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaChangePropertyOperation::apply", context, engine);
+            //REcmaHelper::functionStart("REcmaChangePropertyOperation::apply", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaChangePropertyOperation::apply";
             //QCoreApplication::processEvents();
 
@@ -692,7 +692,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RChangePropertyOperation.apply().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaChangePropertyOperation::apply", context, engine);
+            //REcmaHelper::functionEnd("REcmaChangePropertyOperation::apply", context, engine);
             return result;
         }
          QScriptValue
@@ -700,7 +700,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaChangePropertyOperation::preview", context, engine);
+            //REcmaHelper::functionStart("REcmaChangePropertyOperation::preview", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaChangePropertyOperation::preview";
             //QCoreApplication::processEvents();
 
@@ -780,7 +780,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RChangePropertyOperation.preview().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaChangePropertyOperation::preview", context, engine);
+            //REcmaHelper::functionEnd("REcmaChangePropertyOperation::preview", context, engine);
             return result;
         }
          QScriptValue REcmaChangePropertyOperation::toString

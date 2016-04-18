@@ -239,7 +239,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDeleteAllEntitiesOperation::apply", context, engine);
+            //REcmaHelper::functionStart("REcmaDeleteAllEntitiesOperation::apply", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDeleteAllEntitiesOperation::apply";
             //QCoreApplication::processEvents();
 
@@ -356,7 +356,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDeleteAllEntitiesOperation.apply().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDeleteAllEntitiesOperation::apply", context, engine);
+            //REcmaHelper::functionEnd("REcmaDeleteAllEntitiesOperation::apply", context, engine);
             return result;
         }
          QScriptValue
@@ -364,7 +364,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDeleteAllEntitiesOperation::preview", context, engine);
+            //REcmaHelper::functionStart("REcmaDeleteAllEntitiesOperation::preview", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDeleteAllEntitiesOperation::preview";
             //QCoreApplication::processEvents();
 
@@ -444,7 +444,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDeleteAllEntitiesOperation.preview().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDeleteAllEntitiesOperation::preview", context, engine);
+            //REcmaHelper::functionEnd("REcmaDeleteAllEntitiesOperation::preview", context, engine);
             return result;
         }
          QScriptValue REcmaDeleteAllEntitiesOperation::toString

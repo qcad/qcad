@@ -517,7 +517,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFileExporterAdapter::getCorrectedFileName", context, engine);
+            //REcmaHelper::functionStart("REcmaFileExporterAdapter::getCorrectedFileName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileExporterAdapter::getCorrectedFileName";
             //QCoreApplication::processEvents();
 
@@ -582,7 +582,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileExporterAdapter.getCorrectedFileName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFileExporterAdapter::getCorrectedFileName", context, engine);
+            //REcmaHelper::functionEnd("REcmaFileExporterAdapter::getCorrectedFileName", context, engine);
             return result;
         }
          QScriptValue
@@ -590,7 +590,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFileExporterAdapter::exportFile", context, engine);
+            //REcmaHelper::functionStart("REcmaFileExporterAdapter::exportFile", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileExporterAdapter::exportFile";
             //QCoreApplication::processEvents();
 
@@ -713,7 +713,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileExporterAdapter.exportFile().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFileExporterAdapter::exportFile", context, engine);
+            //REcmaHelper::functionEnd("REcmaFileExporterAdapter::exportFile", context, engine);
             return result;
         }
          QScriptValue
@@ -721,7 +721,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFileExporterAdapter::exportPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaFileExporterAdapter::exportPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileExporterAdapter::exportPoint";
             //QCoreApplication::processEvents();
 
@@ -780,7 +780,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileExporterAdapter.exportPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFileExporterAdapter::exportPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaFileExporterAdapter::exportPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -788,7 +788,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFileExporterAdapter::exportArcSegment", context, engine);
+            //REcmaHelper::functionStart("REcmaFileExporterAdapter::exportArcSegment", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileExporterAdapter::exportArcSegment";
             //QCoreApplication::processEvents();
 
@@ -899,7 +899,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileExporterAdapter.exportArcSegment().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFileExporterAdapter::exportArcSegment", context, engine);
+            //REcmaHelper::functionEnd("REcmaFileExporterAdapter::exportArcSegment", context, engine);
             return result;
         }
          QScriptValue
@@ -907,7 +907,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFileExporterAdapter::exportLineSegment", context, engine);
+            //REcmaHelper::functionStart("REcmaFileExporterAdapter::exportLineSegment", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileExporterAdapter::exportLineSegment";
             //QCoreApplication::processEvents();
 
@@ -1018,7 +1018,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileExporterAdapter.exportLineSegment().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFileExporterAdapter::exportLineSegment", context, engine);
+            //REcmaHelper::functionEnd("REcmaFileExporterAdapter::exportLineSegment", context, engine);
             return result;
         }
          QScriptValue
@@ -1026,7 +1026,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFileExporterAdapter::exportTriangle", context, engine);
+            //REcmaHelper::functionStart("REcmaFileExporterAdapter::exportTriangle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileExporterAdapter::exportTriangle";
             //QCoreApplication::processEvents();
 
@@ -1085,7 +1085,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileExporterAdapter.exportTriangle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFileExporterAdapter::exportTriangle", context, engine);
+            //REcmaHelper::functionEnd("REcmaFileExporterAdapter::exportTriangle", context, engine);
             return result;
         }
          QScriptValue
@@ -1093,7 +1093,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFileExporterAdapter::exportXLine", context, engine);
+            //REcmaHelper::functionStart("REcmaFileExporterAdapter::exportXLine", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileExporterAdapter::exportXLine";
             //QCoreApplication::processEvents();
 
@@ -1152,7 +1152,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileExporterAdapter.exportXLine().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFileExporterAdapter::exportXLine", context, engine);
+            //REcmaHelper::functionEnd("REcmaFileExporterAdapter::exportXLine", context, engine);
             return result;
         }
          QScriptValue
@@ -1160,7 +1160,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFileExporterAdapter::getLineTypePatternScale", context, engine);
+            //REcmaHelper::functionStart("REcmaFileExporterAdapter::getLineTypePatternScale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileExporterAdapter::getLineTypePatternScale";
             //QCoreApplication::processEvents();
 
@@ -1224,7 +1224,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileExporterAdapter.getLineTypePatternScale().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFileExporterAdapter::getLineTypePatternScale", context, engine);
+            //REcmaHelper::functionEnd("REcmaFileExporterAdapter::getLineTypePatternScale", context, engine);
             return result;
         }
          QScriptValue REcmaFileExporterAdapter::toString

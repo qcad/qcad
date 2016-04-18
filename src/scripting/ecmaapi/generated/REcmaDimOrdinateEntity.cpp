@@ -539,7 +539,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDimOrdinateEntity::init", context, engine);
+            //REcmaHelper::functionStart("REcmaDimOrdinateEntity::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateEntity::init";
             //QCoreApplication::processEvents();
 
@@ -565,7 +565,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDimOrdinateEntity::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimOrdinateEntity::init", context, engine);
             return result;
         }
          QScriptValue
@@ -573,7 +573,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDimOrdinateEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionStart("REcmaDimOrdinateEntity::getStaticPropertyTypeIds", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateEntity::getStaticPropertyTypeIds";
             //QCoreApplication::processEvents();
 
@@ -605,7 +605,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.getStaticPropertyTypeIds().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDimOrdinateEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimOrdinateEntity::getStaticPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue
@@ -613,7 +613,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDimOrdinateEntity::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaDimOrdinateEntity::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateEntity::clone";
             //QCoreApplication::processEvents();
 
@@ -654,7 +654,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDimOrdinateEntity::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimOrdinateEntity::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -662,7 +662,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDimOrdinateEntity::getType", context, engine);
+            //REcmaHelper::functionStart("REcmaDimOrdinateEntity::getType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateEntity::getType";
             //QCoreApplication::processEvents();
 
@@ -703,7 +703,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.getType().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDimOrdinateEntity::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimOrdinateEntity::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -711,7 +711,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDimOrdinateEntity::setProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaDimOrdinateEntity::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateEntity::setProperty";
             //QCoreApplication::processEvents();
 
@@ -885,7 +885,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.setProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDimOrdinateEntity::setProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimOrdinateEntity::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -893,7 +893,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDimOrdinateEntity::getProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaDimOrdinateEntity::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateEntity::getProperty";
             //QCoreApplication::processEvents();
 
@@ -1132,7 +1132,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.getProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDimOrdinateEntity::getProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimOrdinateEntity::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1140,7 +1140,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDimOrdinateEntity::getData", context, engine);
+            //REcmaHelper::functionStart("REcmaDimOrdinateEntity::getData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateEntity::getData";
             //QCoreApplication::processEvents();
 
@@ -1204,7 +1204,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.getData().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDimOrdinateEntity::getData", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimOrdinateEntity::getData", context, engine);
             return result;
         }
          QScriptValue
@@ -1212,7 +1212,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDimOrdinateEntity::setData", context, engine);
+            //REcmaHelper::functionStart("REcmaDimOrdinateEntity::setData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateEntity::setData";
             //QCoreApplication::processEvents();
 
@@ -1271,7 +1271,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.setData().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDimOrdinateEntity::setData", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimOrdinateEntity::setData", context, engine);
             return result;
         }
          QScriptValue
@@ -1279,7 +1279,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDimOrdinateEntity::setLeaderEndPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaDimOrdinateEntity::setLeaderEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateEntity::setLeaderEndPoint";
             //QCoreApplication::processEvents();
 
@@ -1338,7 +1338,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.setLeaderEndPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDimOrdinateEntity::setLeaderEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimOrdinateEntity::setLeaderEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1346,7 +1346,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDimOrdinateEntity::getLeaderEndPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaDimOrdinateEntity::getLeaderEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateEntity::getLeaderEndPoint";
             //QCoreApplication::processEvents();
 
@@ -1387,7 +1387,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.getLeaderEndPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDimOrdinateEntity::getLeaderEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimOrdinateEntity::getLeaderEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1395,7 +1395,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDimOrdinateEntity::setDefiningPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaDimOrdinateEntity::setDefiningPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateEntity::setDefiningPoint";
             //QCoreApplication::processEvents();
 
@@ -1454,7 +1454,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.setDefiningPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDimOrdinateEntity::setDefiningPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimOrdinateEntity::setDefiningPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1462,7 +1462,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDimOrdinateEntity::getDefiningPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaDimOrdinateEntity::getDefiningPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateEntity::getDefiningPoint";
             //QCoreApplication::processEvents();
 
@@ -1503,7 +1503,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.getDefiningPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDimOrdinateEntity::getDefiningPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimOrdinateEntity::getDefiningPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1511,7 +1511,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDimOrdinateEntity::setMeasuringXAxis", context, engine);
+            //REcmaHelper::functionStart("REcmaDimOrdinateEntity::setMeasuringXAxis", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateEntity::setMeasuringXAxis";
             //QCoreApplication::processEvents();
 
@@ -1547,7 +1547,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.setMeasuringXAxis().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDimOrdinateEntity::setMeasuringXAxis", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimOrdinateEntity::setMeasuringXAxis", context, engine);
             return result;
         }
          QScriptValue
@@ -1555,7 +1555,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDimOrdinateEntity::setMeasuringYAxis", context, engine);
+            //REcmaHelper::functionStart("REcmaDimOrdinateEntity::setMeasuringYAxis", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateEntity::setMeasuringYAxis";
             //QCoreApplication::processEvents();
 
@@ -1591,7 +1591,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.setMeasuringYAxis().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDimOrdinateEntity::setMeasuringYAxis", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimOrdinateEntity::setMeasuringYAxis", context, engine);
             return result;
         }
          QScriptValue
@@ -1599,7 +1599,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDimOrdinateEntity::isMeasuringXAxis", context, engine);
+            //REcmaHelper::functionStart("REcmaDimOrdinateEntity::isMeasuringXAxis", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateEntity::isMeasuringXAxis";
             //QCoreApplication::processEvents();
 
@@ -1640,7 +1640,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateEntity.isMeasuringXAxis().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDimOrdinateEntity::isMeasuringXAxis", context, engine);
+            //REcmaHelper::functionEnd("REcmaDimOrdinateEntity::isMeasuringXAxis", context, engine);
             return result;
         }
          QScriptValue REcmaDimOrdinateEntity::toString

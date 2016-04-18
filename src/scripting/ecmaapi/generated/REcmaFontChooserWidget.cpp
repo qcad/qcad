@@ -245,7 +245,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFontChooserWidget::getFont", context, engine);
+            //REcmaHelper::functionStart("REcmaFontChooserWidget::getFont", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFontChooserWidget::getFont";
             //QCoreApplication::processEvents();
 
@@ -286,7 +286,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFontChooserWidget.getFont().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFontChooserWidget::getFont", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontChooserWidget::getFont", context, engine);
             return result;
         }
          QScriptValue
@@ -294,7 +294,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFontChooserWidget::setFont", context, engine);
+            //REcmaHelper::functionStart("REcmaFontChooserWidget::setFont", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFontChooserWidget::setFont";
             //QCoreApplication::processEvents();
 
@@ -351,7 +351,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFontChooserWidget.setFont().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFontChooserWidget::setFont", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontChooserWidget::setFont", context, engine);
             return result;
         }
          QScriptValue
@@ -359,7 +359,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFontChooserWidget::getSize", context, engine);
+            //REcmaHelper::functionStart("REcmaFontChooserWidget::getSize", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFontChooserWidget::getSize";
             //QCoreApplication::processEvents();
 
@@ -400,7 +400,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFontChooserWidget.getSize().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFontChooserWidget::getSize", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontChooserWidget::getSize", context, engine);
             return result;
         }
          QScriptValue
@@ -408,7 +408,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFontChooserWidget::setSize", context, engine);
+            //REcmaHelper::functionStart("REcmaFontChooserWidget::setSize", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFontChooserWidget::setSize";
             //QCoreApplication::processEvents();
 
@@ -455,7 +455,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFontChooserWidget.setSize().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFontChooserWidget::setSize", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontChooserWidget::setSize", context, engine);
             return result;
         }
          QScriptValue
@@ -463,7 +463,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFontChooserWidget::getLabel", context, engine);
+            //REcmaHelper::functionStart("REcmaFontChooserWidget::getLabel", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFontChooserWidget::getLabel";
             //QCoreApplication::processEvents();
 
@@ -504,7 +504,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFontChooserWidget.getLabel().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFontChooserWidget::getLabel", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontChooserWidget::getLabel", context, engine);
             return result;
         }
          QScriptValue
@@ -512,7 +512,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFontChooserWidget::setLabel", context, engine);
+            //REcmaHelper::functionStart("REcmaFontChooserWidget::setLabel", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFontChooserWidget::setLabel";
             //QCoreApplication::processEvents();
 
@@ -559,7 +559,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFontChooserWidget.setLabel().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFontChooserWidget::setLabel", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontChooserWidget::setLabel", context, engine);
             return result;
         }
          QScriptValue
@@ -567,7 +567,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFontChooserWidget::fontChanged", context, engine);
+            //REcmaHelper::functionStart("REcmaFontChooserWidget::fontChanged", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFontChooserWidget::fontChanged";
             //QCoreApplication::processEvents();
 
@@ -624,7 +624,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFontChooserWidget.fontChanged().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFontChooserWidget::fontChanged", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontChooserWidget::fontChanged", context, engine);
             return result;
         }
          QScriptValue
@@ -632,7 +632,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFontChooserWidget::sizeChanged", context, engine);
+            //REcmaHelper::functionStart("REcmaFontChooserWidget::sizeChanged", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFontChooserWidget::sizeChanged";
             //QCoreApplication::processEvents();
 
@@ -679,7 +679,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFontChooserWidget.sizeChanged().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFontChooserWidget::sizeChanged", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontChooserWidget::sizeChanged", context, engine);
             return result;
         }
          QScriptValue REcmaFontChooserWidget::toString

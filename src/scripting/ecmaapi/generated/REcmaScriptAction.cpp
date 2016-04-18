@@ -146,7 +146,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaScriptAction::getScriptFile", context, engine);
+            //REcmaHelper::functionStart("REcmaScriptAction::getScriptFile", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaScriptAction::getScriptFile";
             //QCoreApplication::processEvents();
 
@@ -187,7 +187,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RScriptAction.getScriptFile().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaScriptAction::getScriptFile", context, engine);
+            //REcmaHelper::functionEnd("REcmaScriptAction::getScriptFile", context, engine);
             return result;
         }
          QScriptValue REcmaScriptAction::toString

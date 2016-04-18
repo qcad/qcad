@@ -254,7 +254,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaOrthoGrid::clearCache", context, engine);
+            //REcmaHelper::functionStart("REcmaOrthoGrid::clearCache", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::clearCache";
             //QCoreApplication::processEvents();
 
@@ -290,7 +290,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.clearCache().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaOrthoGrid::clearCache", context, engine);
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::clearCache", context, engine);
             return result;
         }
          QScriptValue
@@ -298,7 +298,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaOrthoGrid::snapToGrid", context, engine);
+            //REcmaHelper::functionStart("REcmaOrthoGrid::snapToGrid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::snapToGrid";
             //QCoreApplication::processEvents();
 
@@ -362,7 +362,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.snapToGrid().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaOrthoGrid::snapToGrid", context, engine);
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::snapToGrid", context, engine);
             return result;
         }
          QScriptValue
@@ -370,7 +370,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaOrthoGrid::update", context, engine);
+            //REcmaHelper::functionStart("REcmaOrthoGrid::update", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::update";
             //QCoreApplication::processEvents();
 
@@ -433,7 +433,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.update().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaOrthoGrid::update", context, engine);
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::update", context, engine);
             return result;
         }
          QScriptValue
@@ -441,7 +441,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaOrthoGrid::paint", context, engine);
+            //REcmaHelper::functionStart("REcmaOrthoGrid::paint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::paint";
             //QCoreApplication::processEvents();
 
@@ -477,7 +477,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.paint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaOrthoGrid::paint", context, engine);
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::paint", context, engine);
             return result;
         }
          QScriptValue
@@ -485,7 +485,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaOrthoGrid::paintMetaGrid", context, engine);
+            //REcmaHelper::functionStart("REcmaOrthoGrid::paintMetaGrid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::paintMetaGrid";
             //QCoreApplication::processEvents();
 
@@ -521,7 +521,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.paintMetaGrid().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaOrthoGrid::paintMetaGrid", context, engine);
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::paintMetaGrid", context, engine);
             return result;
         }
          QScriptValue
@@ -529,7 +529,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaOrthoGrid::paintGridLines", context, engine);
+            //REcmaHelper::functionStart("REcmaOrthoGrid::paintGridLines", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::paintGridLines";
             //QCoreApplication::processEvents();
 
@@ -626,7 +626,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.paintGridLines().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaOrthoGrid::paintGridLines", context, engine);
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::paintGridLines", context, engine);
             return result;
         }
          QScriptValue
@@ -634,7 +634,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaOrthoGrid::paintGridPoints", context, engine);
+            //REcmaHelper::functionStart("REcmaOrthoGrid::paintGridPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::paintGridPoints";
             //QCoreApplication::processEvents();
 
@@ -718,7 +718,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.paintGridPoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaOrthoGrid::paintGridPoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::paintGridPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -726,7 +726,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaOrthoGrid::paintCursor", context, engine);
+            //REcmaHelper::functionStart("REcmaOrthoGrid::paintCursor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::paintCursor";
             //QCoreApplication::processEvents();
 
@@ -785,7 +785,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.paintCursor().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaOrthoGrid::paintCursor", context, engine);
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::paintCursor", context, engine);
             return result;
         }
          QScriptValue
@@ -793,7 +793,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaOrthoGrid::paintRuler", context, engine);
+            //REcmaHelper::functionStart("REcmaOrthoGrid::paintRuler", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::paintRuler";
             //QCoreApplication::processEvents();
 
@@ -900,7 +900,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.paintRuler().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaOrthoGrid::paintRuler", context, engine);
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::paintRuler", context, engine);
             return result;
         }
          QScriptValue
@@ -908,7 +908,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaOrthoGrid::getInfoText", context, engine);
+            //REcmaHelper::functionStart("REcmaOrthoGrid::getInfoText", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::getInfoText";
             //QCoreApplication::processEvents();
 
@@ -949,7 +949,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.getInfoText().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaOrthoGrid::getInfoText", context, engine);
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::getInfoText", context, engine);
             return result;
         }
          QScriptValue
@@ -957,7 +957,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaOrthoGrid::getIdealSpacing", context, engine);
+            //REcmaHelper::functionStart("REcmaOrthoGrid::getIdealSpacing", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::getIdealSpacing";
             //QCoreApplication::processEvents();
 
@@ -1059,7 +1059,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.getIdealSpacing().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaOrthoGrid::getIdealSpacing", context, engine);
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::getIdealSpacing", context, engine);
             return result;
         }
          QScriptValue
@@ -1067,7 +1067,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaOrthoGrid::isIsometric", context, engine);
+            //REcmaHelper::functionStart("REcmaOrthoGrid::isIsometric", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::isIsometric";
             //QCoreApplication::processEvents();
 
@@ -1108,7 +1108,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.isIsometric().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaOrthoGrid::isIsometric", context, engine);
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::isIsometric", context, engine);
             return result;
         }
          QScriptValue
@@ -1116,7 +1116,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaOrthoGrid::setIsometric", context, engine);
+            //REcmaHelper::functionStart("REcmaOrthoGrid::setIsometric", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::setIsometric";
             //QCoreApplication::processEvents();
 
@@ -1163,7 +1163,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.setIsometric().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaOrthoGrid::setIsometric", context, engine);
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::setIsometric", context, engine);
             return result;
         }
          QScriptValue
@@ -1171,7 +1171,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaOrthoGrid::getProjection", context, engine);
+            //REcmaHelper::functionStart("REcmaOrthoGrid::getProjection", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::getProjection";
             //QCoreApplication::processEvents();
 
@@ -1212,7 +1212,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.getProjection().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaOrthoGrid::getProjection", context, engine);
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::getProjection", context, engine);
             return result;
         }
          QScriptValue
@@ -1220,7 +1220,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaOrthoGrid::setProjection", context, engine);
+            //REcmaHelper::functionStart("REcmaOrthoGrid::setProjection", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::setProjection";
             //QCoreApplication::processEvents();
 
@@ -1267,7 +1267,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.setProjection().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaOrthoGrid::setProjection", context, engine);
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::setProjection", context, engine);
             return result;
         }
          QScriptValue
@@ -1275,7 +1275,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaOrthoGrid::getIdealGridSpacing", context, engine);
+            //REcmaHelper::functionStart("REcmaOrthoGrid::getIdealGridSpacing", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::getIdealGridSpacing";
             //QCoreApplication::processEvents();
 
@@ -1390,7 +1390,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.getIdealGridSpacing().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaOrthoGrid::getIdealGridSpacing", context, engine);
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::getIdealGridSpacing", context, engine);
             return result;
         }
          QScriptValue
@@ -1398,7 +1398,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaOrthoGrid::isFractionalFormat", context, engine);
+            //REcmaHelper::functionStart("REcmaOrthoGrid::isFractionalFormat", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaOrthoGrid::isFractionalFormat";
             //QCoreApplication::processEvents();
 
@@ -1440,7 +1440,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for ROrthoGrid.isFractionalFormat().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaOrthoGrid::isFractionalFormat", context, engine);
+            //REcmaHelper::functionEnd("REcmaOrthoGrid::isFractionalFormat", context, engine);
             return result;
         }
          QScriptValue REcmaOrthoGrid::toString

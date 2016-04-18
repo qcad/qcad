@@ -164,7 +164,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFontList::init", context, engine);
+            //REcmaHelper::functionStart("REcmaFontList::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFontList::init";
             //QCoreApplication::processEvents();
 
@@ -190,7 +190,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFontList.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFontList::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontList::init", context, engine);
             return result;
         }
          QScriptValue
@@ -198,7 +198,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFontList::initSubstitutions", context, engine);
+            //REcmaHelper::functionStart("REcmaFontList::initSubstitutions", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFontList::initSubstitutions";
             //QCoreApplication::processEvents();
 
@@ -224,7 +224,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFontList.initSubstitutions().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFontList::initSubstitutions", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontList::initSubstitutions", context, engine);
             return result;
         }
          QScriptValue
@@ -232,7 +232,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFontList::uninit", context, engine);
+            //REcmaHelper::functionStart("REcmaFontList::uninit", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFontList::uninit";
             //QCoreApplication::processEvents();
 
@@ -258,7 +258,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFontList.uninit().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFontList::uninit", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontList::uninit", context, engine);
             return result;
         }
          QScriptValue
@@ -266,7 +266,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFontList::getNames", context, engine);
+            //REcmaHelper::functionStart("REcmaFontList::getNames", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFontList::getNames";
             //QCoreApplication::processEvents();
 
@@ -297,7 +297,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFontList.getNames().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFontList::getNames", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontList::getNames", context, engine);
             return result;
         }
          QScriptValue
@@ -305,7 +305,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFontList::get", context, engine);
+            //REcmaHelper::functionStart("REcmaFontList::get", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFontList::get";
             //QCoreApplication::processEvents();
 
@@ -347,7 +347,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFontList.get().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFontList::get", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontList::get", context, engine);
             return result;
         }
          QScriptValue
@@ -355,7 +355,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaFontList::isCadFont", context, engine);
+            //REcmaHelper::functionStart("REcmaFontList::isCadFont", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFontList::isCadFont";
             //QCoreApplication::processEvents();
 
@@ -410,7 +410,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFontList.isCadFont().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaFontList::isCadFont", context, engine);
+            //REcmaHelper::functionEnd("REcmaFontList::isCadFont", context, engine);
             return result;
         }
          QScriptValue REcmaFontList::toString

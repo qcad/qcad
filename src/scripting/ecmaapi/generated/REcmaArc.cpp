@@ -1004,7 +1004,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::clone";
             //QCoreApplication::processEvents();
 
@@ -1045,7 +1045,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -1053,7 +1053,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::to2D", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::to2D", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::to2D";
             //QCoreApplication::processEvents();
 
@@ -1089,7 +1089,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.to2D().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::to2D", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::to2D", context, engine);
             return result;
         }
          QScriptValue
@@ -1097,7 +1097,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::isValid", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::isValid";
             //QCoreApplication::processEvents();
 
@@ -1138,7 +1138,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.isValid().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::isValid", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::isValid", context, engine);
             return result;
         }
          QScriptValue
@@ -1146,7 +1146,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::isFullCircle", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::isFullCircle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::isFullCircle";
             //QCoreApplication::processEvents();
 
@@ -1219,7 +1219,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.isFullCircle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::isFullCircle", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::isFullCircle", context, engine);
             return result;
         }
          QScriptValue
@@ -1227,7 +1227,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::createFrom3Points", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::createFrom3Points", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::createFrom3Points";
             //QCoreApplication::processEvents();
 
@@ -1331,7 +1331,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.createFrom3Points().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::createFrom3Points", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::createFrom3Points", context, engine);
             return result;
         }
          QScriptValue
@@ -1339,7 +1339,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::createFrom2PBulge", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::createFrom2PBulge", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::createFrom2PBulge";
             //QCoreApplication::processEvents();
 
@@ -1431,7 +1431,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.createFrom2PBulge().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::createFrom2PBulge", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::createFrom2PBulge", context, engine);
             return result;
         }
          QScriptValue
@@ -1439,7 +1439,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::createTangential", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::createTangential", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::createTangential";
             //QCoreApplication::processEvents();
 
@@ -1544,7 +1544,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.createTangential().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::createTangential", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::createTangential", context, engine);
             return result;
         }
          QScriptValue
@@ -1552,7 +1552,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::createBiarc", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::createBiarc", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::createBiarc";
             //QCoreApplication::processEvents();
 
@@ -1765,7 +1765,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.createBiarc().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::createBiarc", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::createBiarc", context, engine);
             return result;
         }
          QScriptValue
@@ -1773,7 +1773,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getBoundingBox", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getBoundingBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getBoundingBox";
             //QCoreApplication::processEvents();
 
@@ -1814,7 +1814,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getBoundingBox().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getBoundingBox", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getBoundingBox", context, engine);
             return result;
         }
          QScriptValue
@@ -1822,7 +1822,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getEndPoints", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getEndPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getEndPoints";
             //QCoreApplication::processEvents();
 
@@ -1863,7 +1863,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getEndPoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getEndPoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getEndPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1871,7 +1871,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getMiddlePoints", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getMiddlePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getMiddlePoints";
             //QCoreApplication::processEvents();
 
@@ -1912,7 +1912,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getMiddlePoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getMiddlePoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getMiddlePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1920,7 +1920,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getCenterPoints", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getCenterPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getCenterPoints";
             //QCoreApplication::processEvents();
 
@@ -1961,7 +1961,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getCenterPoints().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getCenterPoints", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getCenterPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1969,7 +1969,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getPointsWithDistanceToEnd", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getPointsWithDistanceToEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getPointsWithDistanceToEnd";
             //QCoreApplication::processEvents();
 
@@ -2066,7 +2066,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getPointsWithDistanceToEnd().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getPointsWithDistanceToEnd", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getPointsWithDistanceToEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -2074,7 +2074,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getVectorTo", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getVectorTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getVectorTo";
             //QCoreApplication::processEvents();
 
@@ -2265,7 +2265,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getVectorTo().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getVectorTo", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getVectorTo", context, engine);
             return result;
         }
          QScriptValue
@@ -2273,7 +2273,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getCenter", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getCenter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getCenter";
             //QCoreApplication::processEvents();
 
@@ -2314,7 +2314,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getCenter().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getCenter", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getCenter", context, engine);
             return result;
         }
          QScriptValue
@@ -2322,7 +2322,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::setCenter", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::setCenter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::setCenter";
             //QCoreApplication::processEvents();
 
@@ -2381,7 +2381,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setCenter().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::setCenter", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::setCenter", context, engine);
             return result;
         }
          QScriptValue
@@ -2389,7 +2389,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getRadius", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getRadius", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getRadius";
             //QCoreApplication::processEvents();
 
@@ -2430,7 +2430,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getRadius().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getRadius", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getRadius", context, engine);
             return result;
         }
          QScriptValue
@@ -2438,7 +2438,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::setRadius", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::setRadius", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::setRadius";
             //QCoreApplication::processEvents();
 
@@ -2485,7 +2485,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setRadius().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::setRadius", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::setRadius", context, engine);
             return result;
         }
          QScriptValue
@@ -2493,7 +2493,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getStartAngle", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getStartAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getStartAngle";
             //QCoreApplication::processEvents();
 
@@ -2534,7 +2534,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getStartAngle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getStartAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getStartAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -2542,7 +2542,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::setStartAngle", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::setStartAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::setStartAngle";
             //QCoreApplication::processEvents();
 
@@ -2589,7 +2589,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setStartAngle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::setStartAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::setStartAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -2597,7 +2597,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getEndAngle", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getEndAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getEndAngle";
             //QCoreApplication::processEvents();
 
@@ -2638,7 +2638,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getEndAngle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getEndAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getEndAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -2646,7 +2646,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::setEndAngle", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::setEndAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::setEndAngle";
             //QCoreApplication::processEvents();
 
@@ -2693,7 +2693,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setEndAngle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::setEndAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::setEndAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -2701,7 +2701,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::isReversed", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::isReversed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::isReversed";
             //QCoreApplication::processEvents();
 
@@ -2742,7 +2742,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.isReversed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::isReversed", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::isReversed", context, engine);
             return result;
         }
          QScriptValue
@@ -2750,7 +2750,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::setReversed", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::setReversed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::setReversed";
             //QCoreApplication::processEvents();
 
@@ -2797,7 +2797,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setReversed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::setReversed", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::setReversed", context, engine);
             return result;
         }
          QScriptValue
@@ -2805,7 +2805,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getAngleLength", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getAngleLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getAngleLength";
             //QCoreApplication::processEvents();
 
@@ -2878,7 +2878,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getAngleLength().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getAngleLength", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getAngleLength", context, engine);
             return result;
         }
          QScriptValue
@@ -2886,7 +2886,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::isAngleWithinArc", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::isAngleWithinArc", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::isAngleWithinArc";
             //QCoreApplication::processEvents();
 
@@ -2938,7 +2938,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.isAngleWithinArc().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::isAngleWithinArc", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::isAngleWithinArc", context, engine);
             return result;
         }
          QScriptValue
@@ -2946,7 +2946,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getDiameter", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getDiameter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getDiameter";
             //QCoreApplication::processEvents();
 
@@ -2987,7 +2987,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getDiameter().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getDiameter", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getDiameter", context, engine);
             return result;
         }
          QScriptValue
@@ -2995,7 +2995,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::setDiameter", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::setDiameter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::setDiameter";
             //QCoreApplication::processEvents();
 
@@ -3042,7 +3042,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setDiameter().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::setDiameter", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::setDiameter", context, engine);
             return result;
         }
          QScriptValue
@@ -3050,7 +3050,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::setLength", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::setLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::setLength";
             //QCoreApplication::processEvents();
 
@@ -3097,7 +3097,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setLength().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::setLength", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::setLength", context, engine);
             return result;
         }
          QScriptValue
@@ -3105,7 +3105,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getArea", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getArea", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getArea";
             //QCoreApplication::processEvents();
 
@@ -3146,7 +3146,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getArea().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getArea", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getArea", context, engine);
             return result;
         }
          QScriptValue
@@ -3154,7 +3154,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::setArea", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::setArea", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::setArea";
             //QCoreApplication::processEvents();
 
@@ -3201,7 +3201,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setArea().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::setArea", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::setArea", context, engine);
             return result;
         }
          QScriptValue
@@ -3209,7 +3209,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getDirection1", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getDirection1", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getDirection1";
             //QCoreApplication::processEvents();
 
@@ -3250,7 +3250,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getDirection1().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getDirection1", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getDirection1", context, engine);
             return result;
         }
          QScriptValue
@@ -3258,7 +3258,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getDirection2", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getDirection2", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getDirection2";
             //QCoreApplication::processEvents();
 
@@ -3299,7 +3299,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getDirection2().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getDirection2", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getDirection2", context, engine);
             return result;
         }
          QScriptValue
@@ -3307,7 +3307,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getSideOfPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getSideOfPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getSideOfPoint";
             //QCoreApplication::processEvents();
 
@@ -3371,7 +3371,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getSideOfPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getSideOfPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getSideOfPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3379,7 +3379,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getSweep", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getSweep", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getSweep";
             //QCoreApplication::processEvents();
 
@@ -3420,7 +3420,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getSweep().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getSweep", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getSweep", context, engine);
             return result;
         }
          QScriptValue
@@ -3428,7 +3428,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::setSweep", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::setSweep", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::setSweep";
             //QCoreApplication::processEvents();
 
@@ -3475,7 +3475,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setSweep().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::setSweep", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::setSweep", context, engine);
             return result;
         }
          QScriptValue
@@ -3483,7 +3483,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getLength", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getLength";
             //QCoreApplication::processEvents();
 
@@ -3524,7 +3524,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getLength().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getLength", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getLength", context, engine);
             return result;
         }
          QScriptValue
@@ -3532,7 +3532,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getStartPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getStartPoint";
             //QCoreApplication::processEvents();
 
@@ -3573,7 +3573,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getStartPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getStartPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3581,7 +3581,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getEndPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getEndPoint";
             //QCoreApplication::processEvents();
 
@@ -3622,7 +3622,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getEndPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3630,7 +3630,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getPointAtAngle", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getPointAtAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getPointAtAngle";
             //QCoreApplication::processEvents();
 
@@ -3682,7 +3682,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getPointAtAngle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getPointAtAngle", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getPointAtAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -3690,7 +3690,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getAngleAt", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getAngleAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getAngleAt";
             //QCoreApplication::processEvents();
 
@@ -3787,7 +3787,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getAngleAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getAngleAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getAngleAt", context, engine);
             return result;
         }
          QScriptValue
@@ -3795,7 +3795,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getMiddlePoint", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getMiddlePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getMiddlePoint";
             //QCoreApplication::processEvents();
 
@@ -3836,7 +3836,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getMiddlePoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getMiddlePoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getMiddlePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3844,7 +3844,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::moveStartPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::moveStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::moveStartPoint";
             //QCoreApplication::processEvents();
 
@@ -3903,7 +3903,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.moveStartPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::moveStartPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::moveStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3911,7 +3911,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::moveEndPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::moveEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::moveEndPoint";
             //QCoreApplication::processEvents();
 
@@ -3970,7 +3970,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.moveEndPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::moveEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::moveEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3978,7 +3978,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::moveMiddlePoint", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::moveMiddlePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::moveMiddlePoint";
             //QCoreApplication::processEvents();
 
@@ -4037,7 +4037,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.moveMiddlePoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::moveMiddlePoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::moveMiddlePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -4045,7 +4045,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getBulge", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getBulge", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getBulge";
             //QCoreApplication::processEvents();
 
@@ -4086,7 +4086,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getBulge().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getBulge", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getBulge", context, engine);
             return result;
         }
          QScriptValue
@@ -4094,7 +4094,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::move", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::move", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::move";
             //QCoreApplication::processEvents();
 
@@ -4158,7 +4158,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.move().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::move", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::move", context, engine);
             return result;
         }
          QScriptValue
@@ -4166,7 +4166,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::rotate", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::rotate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::rotate";
             //QCoreApplication::processEvents();
 
@@ -4275,7 +4275,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.rotate().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::rotate", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::rotate", context, engine);
             return result;
         }
          QScriptValue
@@ -4283,7 +4283,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::scale", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::scale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::scale";
             //QCoreApplication::processEvents();
 
@@ -4416,7 +4416,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.scale().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::scale", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::scale", context, engine);
             return result;
         }
          QScriptValue
@@ -4424,7 +4424,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::mirror", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::mirror", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::mirror";
             //QCoreApplication::processEvents();
 
@@ -4488,7 +4488,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.mirror().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::mirror", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::mirror", context, engine);
             return result;
         }
          QScriptValue
@@ -4496,7 +4496,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::reverse", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::reverse", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::reverse";
             //QCoreApplication::processEvents();
 
@@ -4537,7 +4537,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.reverse().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::reverse", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::reverse", context, engine);
             return result;
         }
          QScriptValue
@@ -4545,7 +4545,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::stretch", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::stretch", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::stretch";
             //QCoreApplication::processEvents();
 
@@ -4634,7 +4634,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.stretch().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::stretch", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::stretch", context, engine);
             return result;
         }
          QScriptValue
@@ -4642,7 +4642,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getTransformed", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getTransformed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getTransformed";
             //QCoreApplication::processEvents();
 
@@ -4704,7 +4704,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getTransformed().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getTransformed", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getTransformed", context, engine);
             return result;
         }
          QScriptValue
@@ -4712,7 +4712,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getTrimEnd", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getTrimEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getTrimEnd";
             //QCoreApplication::processEvents();
 
@@ -4801,7 +4801,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getTrimEnd().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getTrimEnd", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getTrimEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -4809,7 +4809,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::trimStartPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::trimStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::trimStartPoint";
             //QCoreApplication::processEvents();
 
@@ -4942,7 +4942,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.trimStartPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::trimStartPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::trimStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -4950,7 +4950,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::trimEndPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::trimEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::trimEndPoint";
             //QCoreApplication::processEvents();
 
@@ -5083,7 +5083,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.trimEndPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::trimEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::trimEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -5091,7 +5091,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getDistanceFromStart", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getDistanceFromStart", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getDistanceFromStart";
             //QCoreApplication::processEvents();
 
@@ -5155,7 +5155,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getDistanceFromStart().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getDistanceFromStart", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getDistanceFromStart", context, engine);
             return result;
         }
          QScriptValue
@@ -5163,7 +5163,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::approximateWithLines", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::approximateWithLines", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::approximateWithLines";
             //QCoreApplication::processEvents();
 
@@ -5215,7 +5215,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.approximateWithLines().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::approximateWithLines", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::approximateWithLines", context, engine);
             return result;
         }
          QScriptValue
@@ -5223,7 +5223,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::approximateWithLinesTan", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::approximateWithLinesTan", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::approximateWithLinesTan";
             //QCoreApplication::processEvents();
 
@@ -5275,7 +5275,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.approximateWithLinesTan().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::approximateWithLinesTan", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::approximateWithLinesTan", context, engine);
             return result;
         }
          QScriptValue
@@ -5283,7 +5283,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaArc::getTangents", context, engine);
+            //REcmaHelper::functionStart("REcmaArc::getTangents", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaArc::getTangents";
             //QCoreApplication::processEvents();
 
@@ -5347,7 +5347,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getTangents().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaArc::getTangents", context, engine);
+            //REcmaHelper::functionEnd("REcmaArc::getTangents", context, engine);
             return result;
         }
          QScriptValue REcmaArc::toString

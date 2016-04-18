@@ -368,7 +368,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaView::init", context, engine);
+            //REcmaHelper::functionStart("REcmaView::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaView::init";
             //QCoreApplication::processEvents();
 
@@ -394,7 +394,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaView::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaView::init", context, engine);
             return result;
         }
          QScriptValue
@@ -402,7 +402,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaView::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaView::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaView::clone";
             //QCoreApplication::processEvents();
 
@@ -443,7 +443,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaView::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaView::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -451,7 +451,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaView::getName", context, engine);
+            //REcmaHelper::functionStart("REcmaView::getName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaView::getName";
             //QCoreApplication::processEvents();
 
@@ -492,7 +492,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.getName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaView::getName", context, engine);
+            //REcmaHelper::functionEnd("REcmaView::getName", context, engine);
             return result;
         }
          QScriptValue
@@ -500,7 +500,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaView::setName", context, engine);
+            //REcmaHelper::functionStart("REcmaView::setName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaView::setName";
             //QCoreApplication::processEvents();
 
@@ -547,7 +547,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.setName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaView::setName", context, engine);
+            //REcmaHelper::functionEnd("REcmaView::setName", context, engine);
             return result;
         }
          QScriptValue
@@ -555,7 +555,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaView::getCenterPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaView::getCenterPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaView::getCenterPoint";
             //QCoreApplication::processEvents();
 
@@ -596,7 +596,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.getCenterPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaView::getCenterPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaView::getCenterPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -604,7 +604,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaView::setCenterPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaView::setCenterPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaView::setCenterPoint";
             //QCoreApplication::processEvents();
 
@@ -663,7 +663,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.setCenterPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaView::setCenterPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaView::setCenterPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -671,7 +671,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaView::getWidth", context, engine);
+            //REcmaHelper::functionStart("REcmaView::getWidth", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaView::getWidth";
             //QCoreApplication::processEvents();
 
@@ -712,7 +712,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.getWidth().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaView::getWidth", context, engine);
+            //REcmaHelper::functionEnd("REcmaView::getWidth", context, engine);
             return result;
         }
          QScriptValue
@@ -720,7 +720,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaView::setWidth", context, engine);
+            //REcmaHelper::functionStart("REcmaView::setWidth", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaView::setWidth";
             //QCoreApplication::processEvents();
 
@@ -767,7 +767,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.setWidth().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaView::setWidth", context, engine);
+            //REcmaHelper::functionEnd("REcmaView::setWidth", context, engine);
             return result;
         }
          QScriptValue
@@ -775,7 +775,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaView::getHeight", context, engine);
+            //REcmaHelper::functionStart("REcmaView::getHeight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaView::getHeight";
             //QCoreApplication::processEvents();
 
@@ -816,7 +816,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.getHeight().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaView::getHeight", context, engine);
+            //REcmaHelper::functionEnd("REcmaView::getHeight", context, engine);
             return result;
         }
          QScriptValue
@@ -824,7 +824,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaView::setHeight", context, engine);
+            //REcmaHelper::functionStart("REcmaView::setHeight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaView::setHeight";
             //QCoreApplication::processEvents();
 
@@ -871,7 +871,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.setHeight().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaView::setHeight", context, engine);
+            //REcmaHelper::functionEnd("REcmaView::setHeight", context, engine);
             return result;
         }
          QScriptValue
@@ -879,7 +879,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaView::getBox", context, engine);
+            //REcmaHelper::functionStart("REcmaView::getBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaView::getBox";
             //QCoreApplication::processEvents();
 
@@ -920,7 +920,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.getBox().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaView::getBox", context, engine);
+            //REcmaHelper::functionEnd("REcmaView::getBox", context, engine);
             return result;
         }
          QScriptValue
@@ -928,7 +928,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaView::getProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaView::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaView::getProperty";
             //QCoreApplication::processEvents();
 
@@ -1167,7 +1167,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.getProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaView::getProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaView::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1175,7 +1175,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaView::setProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaView::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaView::setProperty";
             //QCoreApplication::processEvents();
 
@@ -1349,7 +1349,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.setProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaView::setProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaView::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1357,7 +1357,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaView::isSelectedForPropertyEditing", context, engine);
+            //REcmaHelper::functionStart("REcmaView::isSelectedForPropertyEditing", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaView::isSelectedForPropertyEditing";
             //QCoreApplication::processEvents();
 
@@ -1398,7 +1398,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.isSelectedForPropertyEditing().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaView::isSelectedForPropertyEditing", context, engine);
+            //REcmaHelper::functionEnd("REcmaView::isSelectedForPropertyEditing", context, engine);
             return result;
         }
          QScriptValue REcmaView::toString

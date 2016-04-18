@@ -122,7 +122,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerPainterPathSource::getPainterPaths", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerPainterPathSource::getPainterPaths", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPainterPathSource::getPainterPaths";
             //QCoreApplication::processEvents();
 
@@ -240,7 +240,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPathSource.getPainterPaths().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerPainterPathSource::getPainterPaths", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerPainterPathSource::getPainterPaths", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerPainterPathSource::toString

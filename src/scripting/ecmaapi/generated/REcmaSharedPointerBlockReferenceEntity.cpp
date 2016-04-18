@@ -588,7 +588,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::init", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::init";
             //QCoreApplication::processEvents();
 
@@ -614,7 +614,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::init", context, engine);
             return result;
         }
          QScriptValue
@@ -622,7 +622,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getStaticPropertyTypeIds", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getStaticPropertyTypeIds";
             //QCoreApplication::processEvents();
 
@@ -654,7 +654,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getStaticPropertyTypeIds().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getStaticPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue
@@ -662,7 +662,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::clone";
             //QCoreApplication::processEvents();
 
@@ -703,7 +703,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -711,7 +711,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getType", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getType";
             //QCoreApplication::processEvents();
 
@@ -752,7 +752,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getType().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -760,7 +760,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getPropertyTypeIds", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getPropertyTypeIds", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getPropertyTypeIds";
             //QCoreApplication::processEvents();
 
@@ -802,7 +802,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getPropertyTypeIds().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getPropertyTypeIds", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue
@@ -810,7 +810,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::setProperty";
             //QCoreApplication::processEvents();
 
@@ -984,7 +984,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.setProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -992,7 +992,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getProperty";
             //QCoreApplication::processEvents();
 
@@ -1231,7 +1231,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1239,7 +1239,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::exportEntity", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::exportEntity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::exportEntity";
             //QCoreApplication::processEvents();
 
@@ -1409,7 +1409,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.exportEntity().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::exportEntity", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::exportEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -1417,7 +1417,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getData", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getData";
             //QCoreApplication::processEvents();
 
@@ -1481,7 +1481,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getData().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getData", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getData", context, engine);
             return result;
         }
          QScriptValue
@@ -1489,7 +1489,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getPosition", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getPosition", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getPosition";
             //QCoreApplication::processEvents();
 
@@ -1530,7 +1530,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getPosition().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getPosition", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getPosition", context, engine);
             return result;
         }
          QScriptValue
@@ -1538,7 +1538,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setPosition", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setPosition", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::setPosition";
             //QCoreApplication::processEvents();
 
@@ -1597,7 +1597,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.setPosition().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setPosition", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setPosition", context, engine);
             return result;
         }
          QScriptValue
@@ -1605,7 +1605,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getScaleFactors", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getScaleFactors", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getScaleFactors";
             //QCoreApplication::processEvents();
 
@@ -1646,7 +1646,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getScaleFactors().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getScaleFactors", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getScaleFactors", context, engine);
             return result;
         }
          QScriptValue
@@ -1654,7 +1654,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setScaleFactors", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setScaleFactors", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::setScaleFactors";
             //QCoreApplication::processEvents();
 
@@ -1713,7 +1713,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.setScaleFactors().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setScaleFactors", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setScaleFactors", context, engine);
             return result;
         }
          QScriptValue
@@ -1721,7 +1721,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getRotation", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getRotation", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getRotation";
             //QCoreApplication::processEvents();
 
@@ -1762,7 +1762,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getRotation().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getRotation", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getRotation", context, engine);
             return result;
         }
          QScriptValue
@@ -1770,7 +1770,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setRotation", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setRotation", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::setRotation";
             //QCoreApplication::processEvents();
 
@@ -1817,7 +1817,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.setRotation().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setRotation", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setRotation", context, engine);
             return result;
         }
          QScriptValue
@@ -1825,7 +1825,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getColumnCount", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getColumnCount", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getColumnCount";
             //QCoreApplication::processEvents();
 
@@ -1866,7 +1866,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getColumnCount().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getColumnCount", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getColumnCount", context, engine);
             return result;
         }
          QScriptValue
@@ -1874,7 +1874,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setColumnCount", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setColumnCount", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::setColumnCount";
             //QCoreApplication::processEvents();
 
@@ -1921,7 +1921,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.setColumnCount().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setColumnCount", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setColumnCount", context, engine);
             return result;
         }
          QScriptValue
@@ -1929,7 +1929,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getRowCount", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getRowCount", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getRowCount";
             //QCoreApplication::processEvents();
 
@@ -1970,7 +1970,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getRowCount().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getRowCount", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getRowCount", context, engine);
             return result;
         }
          QScriptValue
@@ -1978,7 +1978,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setRowCount", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setRowCount", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::setRowCount";
             //QCoreApplication::processEvents();
 
@@ -2025,7 +2025,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.setRowCount().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setRowCount", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setRowCount", context, engine);
             return result;
         }
          QScriptValue
@@ -2033,7 +2033,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getColumnSpacing", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getColumnSpacing", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getColumnSpacing";
             //QCoreApplication::processEvents();
 
@@ -2074,7 +2074,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getColumnSpacing().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getColumnSpacing", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getColumnSpacing", context, engine);
             return result;
         }
          QScriptValue
@@ -2082,7 +2082,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setColumnSpacing", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setColumnSpacing", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::setColumnSpacing";
             //QCoreApplication::processEvents();
 
@@ -2129,7 +2129,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.setColumnSpacing().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setColumnSpacing", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setColumnSpacing", context, engine);
             return result;
         }
          QScriptValue
@@ -2137,7 +2137,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getRowSpacing", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getRowSpacing", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getRowSpacing";
             //QCoreApplication::processEvents();
 
@@ -2178,7 +2178,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getRowSpacing().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getRowSpacing", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getRowSpacing", context, engine);
             return result;
         }
          QScriptValue
@@ -2186,7 +2186,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setRowSpacing", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setRowSpacing", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::setRowSpacing";
             //QCoreApplication::processEvents();
 
@@ -2233,7 +2233,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.setRowSpacing().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setRowSpacing", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setRowSpacing", context, engine);
             return result;
         }
          QScriptValue
@@ -2241,7 +2241,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setReferencedBlockId", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::setReferencedBlockId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::setReferencedBlockId";
             //QCoreApplication::processEvents();
 
@@ -2288,7 +2288,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.setReferencedBlockId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setReferencedBlockId", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::setReferencedBlockId", context, engine);
             return result;
         }
          QScriptValue
@@ -2296,7 +2296,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getReferencedBlockId", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getReferencedBlockId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getReferencedBlockId";
             //QCoreApplication::processEvents();
 
@@ -2337,7 +2337,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getReferencedBlockId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getReferencedBlockId", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getReferencedBlockId", context, engine);
             return result;
         }
          QScriptValue
@@ -2345,7 +2345,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getReferencedBlockName", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::getReferencedBlockName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::getReferencedBlockName";
             //QCoreApplication::processEvents();
 
@@ -2386,7 +2386,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.getReferencedBlockName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getReferencedBlockName", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::getReferencedBlockName", context, engine);
             return result;
         }
          QScriptValue
@@ -2394,7 +2394,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::update", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::update", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::update";
             //QCoreApplication::processEvents();
 
@@ -2457,7 +2457,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.update().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::update", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::update", context, engine);
             return result;
         }
          QScriptValue
@@ -2465,7 +2465,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::queryEntity", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::queryEntity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::queryEntity";
             //QCoreApplication::processEvents();
 
@@ -2517,7 +2517,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.queryEntity().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::queryEntity", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::queryEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -2525,7 +2525,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::applyTransformationTo", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::applyTransformationTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::applyTransformationTo";
             //QCoreApplication::processEvents();
 
@@ -2587,7 +2587,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.applyTransformationTo().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::applyTransformationTo", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::applyTransformationTo", context, engine);
             return result;
         }
          QScriptValue
@@ -2595,7 +2595,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::mapToBlock", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerBlockReferenceEntity::mapToBlock", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBlockReferenceEntity::mapToBlock";
             //QCoreApplication::processEvents();
 
@@ -2659,7 +2659,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockReferenceEntity.mapToBlock().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::mapToBlock", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerBlockReferenceEntity::mapToBlock", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerBlockReferenceEntity::toString

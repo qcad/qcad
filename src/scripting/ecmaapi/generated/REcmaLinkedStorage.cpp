@@ -380,7 +380,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::clear", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::clear", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::clear";
             //QCoreApplication::processEvents();
 
@@ -416,7 +416,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.clear().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::clear", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::clear", context, engine);
             return result;
         }
          QScriptValue
@@ -424,7 +424,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryAllObjects", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryAllObjects", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryAllObjects";
             //QCoreApplication::processEvents();
 
@@ -466,7 +466,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryAllObjects().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllObjects", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllObjects", context, engine);
             return result;
         }
          QScriptValue
@@ -474,7 +474,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryAllVisibleEntities", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryAllVisibleEntities", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryAllVisibleEntities";
             //QCoreApplication::processEvents();
 
@@ -516,7 +516,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryAllVisibleEntities().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllVisibleEntities", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllVisibleEntities", context, engine);
             return result;
         }
          QScriptValue
@@ -524,7 +524,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryAllEntities", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryAllEntities", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryAllEntities";
             //QCoreApplication::processEvents();
 
@@ -704,7 +704,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryAllEntities().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllEntities", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllEntities", context, engine);
             return result;
         }
          QScriptValue
@@ -712,7 +712,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryAllUcs", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryAllUcs", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryAllUcs";
             //QCoreApplication::processEvents();
 
@@ -754,7 +754,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryAllUcs().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllUcs", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllUcs", context, engine);
             return result;
         }
          QScriptValue
@@ -762,7 +762,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryAllLayers", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryAllLayers", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryAllLayers";
             //QCoreApplication::processEvents();
 
@@ -837,7 +837,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryAllLayers().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllLayers", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllLayers", context, engine);
             return result;
         }
          QScriptValue
@@ -845,7 +845,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryAllBlocks", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryAllBlocks", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryAllBlocks";
             //QCoreApplication::processEvents();
 
@@ -920,7 +920,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryAllBlocks().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllBlocks", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllBlocks", context, engine);
             return result;
         }
          QScriptValue
@@ -928,7 +928,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryAllViews", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryAllViews", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryAllViews";
             //QCoreApplication::processEvents();
 
@@ -1003,7 +1003,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryAllViews().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllViews", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllViews", context, engine);
             return result;
         }
          QScriptValue
@@ -1011,7 +1011,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryAllLinetypes", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryAllLinetypes", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryAllLinetypes";
             //QCoreApplication::processEvents();
 
@@ -1053,7 +1053,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryAllLinetypes().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllLinetypes", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllLinetypes", context, engine);
             return result;
         }
          QScriptValue
@@ -1061,7 +1061,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryInfiniteEntities", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryInfiniteEntities", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryInfiniteEntities";
             //QCoreApplication::processEvents();
 
@@ -1103,7 +1103,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryInfiniteEntities().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryInfiniteEntities", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryInfiniteEntities", context, engine);
             return result;
         }
          QScriptValue
@@ -1111,7 +1111,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::querySelectedEntities", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::querySelectedEntities", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::querySelectedEntities";
             //QCoreApplication::processEvents();
 
@@ -1153,7 +1153,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.querySelectedEntities().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::querySelectedEntities", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::querySelectedEntities", context, engine);
             return result;
         }
          QScriptValue
@@ -1161,7 +1161,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryLayerEntities", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryLayerEntities", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryLayerEntities";
             //QCoreApplication::processEvents();
 
@@ -1260,7 +1260,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryLayerEntities().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryLayerEntities", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryLayerEntities", context, engine);
             return result;
         }
          QScriptValue
@@ -1268,7 +1268,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryBlockEntities", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryBlockEntities", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryBlockEntities";
             //QCoreApplication::processEvents();
 
@@ -1321,7 +1321,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryBlockEntities().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryBlockEntities", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryBlockEntities", context, engine);
             return result;
         }
          QScriptValue
@@ -1329,7 +1329,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryLayerBlockEntities", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryLayerBlockEntities", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryLayerBlockEntities";
             //QCoreApplication::processEvents();
 
@@ -1395,7 +1395,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryLayerBlockEntities().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryLayerBlockEntities", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryLayerBlockEntities", context, engine);
             return result;
         }
          QScriptValue
@@ -1403,7 +1403,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryChildEntities", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryChildEntities", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryChildEntities";
             //QCoreApplication::processEvents();
 
@@ -1502,7 +1502,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryChildEntities().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryChildEntities", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryChildEntities", context, engine);
             return result;
         }
          QScriptValue
@@ -1510,7 +1510,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::hasChildEntities", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::hasChildEntities", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::hasChildEntities";
             //QCoreApplication::processEvents();
 
@@ -1562,7 +1562,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.hasChildEntities().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::hasChildEntities", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::hasChildEntities", context, engine);
             return result;
         }
          QScriptValue
@@ -1570,7 +1570,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryBlockReferences", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryBlockReferences", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryBlockReferences";
             //QCoreApplication::processEvents();
 
@@ -1623,7 +1623,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryBlockReferences().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryBlockReferences", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryBlockReferences", context, engine);
             return result;
         }
          QScriptValue
@@ -1631,7 +1631,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryAllBlockReferences", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryAllBlockReferences", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryAllBlockReferences";
             //QCoreApplication::processEvents();
 
@@ -1673,7 +1673,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryAllBlockReferences().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllBlockReferences", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryAllBlockReferences", context, engine);
             return result;
         }
          QScriptValue
@@ -1681,7 +1681,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryDocumentVariablesDirect", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryDocumentVariablesDirect", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryDocumentVariablesDirect";
             //QCoreApplication::processEvents();
 
@@ -1722,7 +1722,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryDocumentVariablesDirect().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryDocumentVariablesDirect", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryDocumentVariablesDirect", context, engine);
             return result;
         }
          QScriptValue
@@ -1730,7 +1730,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryDocumentVariables", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryDocumentVariables", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryDocumentVariables";
             //QCoreApplication::processEvents();
 
@@ -1771,7 +1771,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryDocumentVariables().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryDocumentVariables", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryDocumentVariables", context, engine);
             return result;
         }
          QScriptValue
@@ -1779,7 +1779,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryObjectDirect", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryObjectDirect", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryObjectDirect";
             //QCoreApplication::processEvents();
 
@@ -1831,7 +1831,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryObjectDirect().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryObjectDirect", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryObjectDirect", context, engine);
             return result;
         }
          QScriptValue
@@ -1839,7 +1839,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryObject", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryObject", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryObject";
             //QCoreApplication::processEvents();
 
@@ -1891,7 +1891,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryObject().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryObject", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryObject", context, engine);
             return result;
         }
          QScriptValue
@@ -1899,7 +1899,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryObjectByHandle", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryObjectByHandle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryObjectByHandle";
             //QCoreApplication::processEvents();
 
@@ -1951,7 +1951,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryObjectByHandle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryObjectByHandle", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryObjectByHandle", context, engine);
             return result;
         }
          QScriptValue
@@ -1959,7 +1959,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryEntityDirect", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryEntityDirect", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryEntityDirect";
             //QCoreApplication::processEvents();
 
@@ -2011,7 +2011,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryEntityDirect().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryEntityDirect", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryEntityDirect", context, engine);
             return result;
         }
          QScriptValue
@@ -2019,7 +2019,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryEntity", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryEntity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryEntity";
             //QCoreApplication::processEvents();
 
@@ -2071,7 +2071,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryEntity().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryEntity", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -2079,7 +2079,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryLayerDirect", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryLayerDirect", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryLayerDirect";
             //QCoreApplication::processEvents();
 
@@ -2131,7 +2131,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryLayerDirect().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryLayerDirect", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryLayerDirect", context, engine);
             return result;
         }
          QScriptValue
@@ -2139,7 +2139,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryLayer", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryLayer", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryLayer";
             //QCoreApplication::processEvents();
 
@@ -2223,7 +2223,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryLayer().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryLayer", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryLayer", context, engine);
             return result;
         }
          QScriptValue
@@ -2231,7 +2231,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryLayoutDirect", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryLayoutDirect", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryLayoutDirect";
             //QCoreApplication::processEvents();
 
@@ -2283,7 +2283,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryLayoutDirect().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryLayoutDirect", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryLayoutDirect", context, engine);
             return result;
         }
          QScriptValue
@@ -2291,7 +2291,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryLayout", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryLayout", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryLayout";
             //QCoreApplication::processEvents();
 
@@ -2375,7 +2375,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryLayout().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryLayout", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryLayout", context, engine);
             return result;
         }
          QScriptValue
@@ -2383,7 +2383,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryBlockDirect", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryBlockDirect", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryBlockDirect";
             //QCoreApplication::processEvents();
 
@@ -2435,7 +2435,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryBlockDirect().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryBlockDirect", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryBlockDirect", context, engine);
             return result;
         }
          QScriptValue
@@ -2443,7 +2443,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryBlock", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryBlock", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryBlock";
             //QCoreApplication::processEvents();
 
@@ -2527,7 +2527,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryBlock().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryBlock", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryBlock", context, engine);
             return result;
         }
          QScriptValue
@@ -2535,7 +2535,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryView", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryView", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryView";
             //QCoreApplication::processEvents();
 
@@ -2619,7 +2619,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryView().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryView", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryView", context, engine);
             return result;
         }
          QScriptValue
@@ -2627,7 +2627,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryUcsDirect", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryUcsDirect", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryUcsDirect";
             //QCoreApplication::processEvents();
 
@@ -2679,7 +2679,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryUcsDirect().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryUcsDirect", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryUcsDirect", context, engine);
             return result;
         }
          QScriptValue
@@ -2687,7 +2687,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryUcs", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryUcs", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryUcs";
             //QCoreApplication::processEvents();
 
@@ -2771,7 +2771,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryUcs().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryUcs", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryUcs", context, engine);
             return result;
         }
          QScriptValue
@@ -2779,7 +2779,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryLinetypeDirect", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryLinetypeDirect", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryLinetypeDirect";
             //QCoreApplication::processEvents();
 
@@ -2831,7 +2831,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryLinetypeDirect().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryLinetypeDirect", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryLinetypeDirect", context, engine);
             return result;
         }
          QScriptValue
@@ -2839,7 +2839,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::queryLinetype", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::queryLinetype", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::queryLinetype";
             //QCoreApplication::processEvents();
 
@@ -2923,7 +2923,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.queryLinetype().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::queryLinetype", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::queryLinetype", context, engine);
             return result;
         }
          QScriptValue
@@ -2931,7 +2931,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getLayerName", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getLayerName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getLayerName";
             //QCoreApplication::processEvents();
 
@@ -2983,7 +2983,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getLayerName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getLayerName", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getLayerName", context, engine);
             return result;
         }
          QScriptValue
@@ -2991,7 +2991,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getLayerNames", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getLayerNames", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getLayerNames";
             //QCoreApplication::processEvents();
 
@@ -3066,7 +3066,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getLayerNames().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getLayerNames", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getLayerNames", context, engine);
             return result;
         }
          QScriptValue
@@ -3074,7 +3074,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getLayerId", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getLayerId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getLayerId";
             //QCoreApplication::processEvents();
 
@@ -3126,7 +3126,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getLayerId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getLayerId", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getLayerId", context, engine);
             return result;
         }
          QScriptValue
@@ -3134,7 +3134,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getLayoutName", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getLayoutName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getLayoutName";
             //QCoreApplication::processEvents();
 
@@ -3186,7 +3186,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getLayoutName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getLayoutName", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getLayoutName", context, engine);
             return result;
         }
          QScriptValue
@@ -3194,7 +3194,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getLayoutNames", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getLayoutNames", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getLayoutNames";
             //QCoreApplication::processEvents();
 
@@ -3269,7 +3269,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getLayoutNames().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getLayoutNames", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getLayoutNames", context, engine);
             return result;
         }
          QScriptValue
@@ -3277,7 +3277,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getLayoutId", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getLayoutId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getLayoutId";
             //QCoreApplication::processEvents();
 
@@ -3329,7 +3329,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getLayoutId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getLayoutId", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getLayoutId", context, engine);
             return result;
         }
          QScriptValue
@@ -3337,7 +3337,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getBlockName", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getBlockName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getBlockName";
             //QCoreApplication::processEvents();
 
@@ -3389,7 +3389,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getBlockName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getBlockName", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getBlockName", context, engine);
             return result;
         }
          QScriptValue
@@ -3397,7 +3397,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getBlockNames", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getBlockNames", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getBlockNames";
             //QCoreApplication::processEvents();
 
@@ -3472,7 +3472,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getBlockNames().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getBlockNames", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getBlockNames", context, engine);
             return result;
         }
          QScriptValue
@@ -3480,7 +3480,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getBlockId", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getBlockId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getBlockId";
             //QCoreApplication::processEvents();
 
@@ -3532,7 +3532,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getBlockId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getBlockId", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getBlockId", context, engine);
             return result;
         }
          QScriptValue
@@ -3540,7 +3540,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getViewName", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getViewName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getViewName";
             //QCoreApplication::processEvents();
 
@@ -3592,7 +3592,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getViewName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getViewName", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getViewName", context, engine);
             return result;
         }
          QScriptValue
@@ -3600,7 +3600,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getViewNames", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getViewNames", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getViewNames";
             //QCoreApplication::processEvents();
 
@@ -3642,7 +3642,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getViewNames().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getViewNames", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getViewNames", context, engine);
             return result;
         }
          QScriptValue
@@ -3650,7 +3650,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getViewId", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getViewId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getViewId";
             //QCoreApplication::processEvents();
 
@@ -3702,7 +3702,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getViewId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getViewId", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getViewId", context, engine);
             return result;
         }
          QScriptValue
@@ -3710,7 +3710,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getLinetypeName", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getLinetypeName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getLinetypeName";
             //QCoreApplication::processEvents();
 
@@ -3762,7 +3762,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getLinetypeName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getLinetypeName", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getLinetypeName", context, engine);
             return result;
         }
          QScriptValue
@@ -3770,7 +3770,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getLinetypeDescription", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getLinetypeDescription", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getLinetypeDescription";
             //QCoreApplication::processEvents();
 
@@ -3822,7 +3822,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getLinetypeDescription().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getLinetypeDescription", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getLinetypeDescription", context, engine);
             return result;
         }
          QScriptValue
@@ -3830,7 +3830,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getLinetypeLabel", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getLinetypeLabel", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getLinetypeLabel";
             //QCoreApplication::processEvents();
 
@@ -3882,7 +3882,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getLinetypeLabel().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getLinetypeLabel", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getLinetypeLabel", context, engine);
             return result;
         }
          QScriptValue
@@ -3890,7 +3890,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getLinetypeNames", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getLinetypeNames", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getLinetypeNames";
             //QCoreApplication::processEvents();
 
@@ -3932,7 +3932,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getLinetypeNames().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getLinetypeNames", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getLinetypeNames", context, engine);
             return result;
         }
          QScriptValue
@@ -3940,7 +3940,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getLinetypePatterns", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getLinetypePatterns", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getLinetypePatterns";
             //QCoreApplication::processEvents();
 
@@ -3981,7 +3981,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getLinetypePatterns().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getLinetypePatterns", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getLinetypePatterns", context, engine);
             return result;
         }
          QScriptValue
@@ -3989,7 +3989,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getLinetypeId", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getLinetypeId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getLinetypeId";
             //QCoreApplication::processEvents();
 
@@ -4041,7 +4041,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getLinetypeId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getLinetypeId", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getLinetypeId", context, engine);
             return result;
         }
          QScriptValue
@@ -4049,7 +4049,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getNewObjectId", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getNewObjectId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getNewObjectId";
             //QCoreApplication::processEvents();
 
@@ -4090,7 +4090,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getNewObjectId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getNewObjectId", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getNewObjectId", context, engine);
             return result;
         }
          QScriptValue
@@ -4098,7 +4098,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getNewObjectHandle", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getNewObjectHandle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getNewObjectHandle";
             //QCoreApplication::processEvents();
 
@@ -4139,7 +4139,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getNewObjectHandle().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getNewObjectHandle", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getNewObjectHandle", context, engine);
             return result;
         }
          QScriptValue
@@ -4147,7 +4147,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getCurrentLayerId", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getCurrentLayerId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getCurrentLayerId";
             //QCoreApplication::processEvents();
 
@@ -4188,7 +4188,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getCurrentLayerId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getCurrentLayerId", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getCurrentLayerId", context, engine);
             return result;
         }
          QScriptValue
@@ -4196,7 +4196,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getCurrentBlockId", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getCurrentBlockId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getCurrentBlockId";
             //QCoreApplication::processEvents();
 
@@ -4237,7 +4237,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getCurrentBlockId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getCurrentBlockId", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getCurrentBlockId", context, engine);
             return result;
         }
          QScriptValue
@@ -4245,7 +4245,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getCurrentViewId", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getCurrentViewId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getCurrentViewId";
             //QCoreApplication::processEvents();
 
@@ -4286,7 +4286,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getCurrentViewId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getCurrentViewId", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getCurrentViewId", context, engine);
             return result;
         }
          QScriptValue
@@ -4294,7 +4294,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getCurrentColor", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getCurrentColor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getCurrentColor";
             //QCoreApplication::processEvents();
 
@@ -4335,7 +4335,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getCurrentColor().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getCurrentColor", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getCurrentColor", context, engine);
             return result;
         }
          QScriptValue
@@ -4343,7 +4343,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getCurrentLineweight", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getCurrentLineweight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getCurrentLineweight";
             //QCoreApplication::processEvents();
 
@@ -4384,7 +4384,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getCurrentLineweight().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getCurrentLineweight", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getCurrentLineweight", context, engine);
             return result;
         }
          QScriptValue
@@ -4392,7 +4392,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getCurrentLinetypeId", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getCurrentLinetypeId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getCurrentLinetypeId";
             //QCoreApplication::processEvents();
 
@@ -4433,7 +4433,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getCurrentLinetypeId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getCurrentLinetypeId", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getCurrentLinetypeId", context, engine);
             return result;
         }
          QScriptValue
@@ -4441,7 +4441,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::deleteObject", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::deleteObject", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::deleteObject";
             //QCoreApplication::processEvents();
 
@@ -4493,7 +4493,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.deleteObject().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::deleteObject", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::deleteObject", context, engine);
             return result;
         }
          QScriptValue
@@ -4501,7 +4501,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::setUndoStatus", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::setUndoStatus", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::setUndoStatus";
             //QCoreApplication::processEvents();
 
@@ -4566,7 +4566,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.setUndoStatus().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::setUndoStatus", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::setUndoStatus", context, engine);
             return result;
         }
          QScriptValue
@@ -4574,7 +4574,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getDimensionFont", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getDimensionFont", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getDimensionFont";
             //QCoreApplication::processEvents();
 
@@ -4615,7 +4615,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getDimensionFont().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getDimensionFont", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getDimensionFont", context, engine);
             return result;
         }
          QScriptValue
@@ -4623,7 +4623,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getKnownVariable", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getKnownVariable", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getKnownVariable";
             //QCoreApplication::processEvents();
 
@@ -4675,7 +4675,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getKnownVariable().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getKnownVariable", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getKnownVariable", context, engine);
             return result;
         }
          QScriptValue
@@ -4683,7 +4683,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::isInBackStorage", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::isInBackStorage", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::isInBackStorage";
             //QCoreApplication::processEvents();
 
@@ -4735,7 +4735,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.isInBackStorage().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::isInBackStorage", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::isInBackStorage", context, engine);
             return result;
         }
          QScriptValue
@@ -4743,7 +4743,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLinkedStorage::getBackStorage", context, engine);
+            //REcmaHelper::functionStart("REcmaLinkedStorage::getBackStorage", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinkedStorage::getBackStorage";
             //QCoreApplication::processEvents();
 
@@ -4784,7 +4784,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinkedStorage.getBackStorage().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLinkedStorage::getBackStorage", context, engine);
+            //REcmaHelper::functionEnd("REcmaLinkedStorage::getBackStorage", context, engine);
             return result;
         }
          QScriptValue REcmaLinkedStorage::toString

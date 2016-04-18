@@ -176,7 +176,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDebug::printBacktrace", context, engine);
+            //REcmaHelper::functionStart("REcmaDebug::printBacktrace", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDebug::printBacktrace";
             //QCoreApplication::processEvents();
 
@@ -229,7 +229,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.printBacktrace().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDebug::printBacktrace", context, engine);
+            //REcmaHelper::functionEnd("REcmaDebug::printBacktrace", context, engine);
             return result;
         }
          QScriptValue
@@ -237,7 +237,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDebug::startTimer", context, engine);
+            //REcmaHelper::functionStart("REcmaDebug::startTimer", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDebug::startTimer";
             //QCoreApplication::processEvents();
 
@@ -290,7 +290,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.startTimer().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDebug::startTimer", context, engine);
+            //REcmaHelper::functionEnd("REcmaDebug::startTimer", context, engine);
             return result;
         }
          QScriptValue
@@ -298,7 +298,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDebug::stopTimer", context, engine);
+            //REcmaHelper::functionStart("REcmaDebug::stopTimer", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDebug::stopTimer";
             //QCoreApplication::processEvents();
 
@@ -443,7 +443,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.stopTimer().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDebug::stopTimer", context, engine);
+            //REcmaHelper::functionEnd("REcmaDebug::stopTimer", context, engine);
             return result;
         }
          QScriptValue
@@ -451,7 +451,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDebug::timeStamp", context, engine);
+            //REcmaHelper::functionStart("REcmaDebug::timeStamp", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDebug::timeStamp";
             //QCoreApplication::processEvents();
 
@@ -477,7 +477,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.timeStamp().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDebug::timeStamp", context, engine);
+            //REcmaHelper::functionEnd("REcmaDebug::timeStamp", context, engine);
             return result;
         }
          QScriptValue
@@ -485,7 +485,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDebug::hexDump", context, engine);
+            //REcmaHelper::functionStart("REcmaDebug::hexDump", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDebug::hexDump";
             //QCoreApplication::processEvents();
 
@@ -522,7 +522,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.hexDump().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDebug::hexDump", context, engine);
+            //REcmaHelper::functionEnd("REcmaDebug::hexDump", context, engine);
             return result;
         }
          QScriptValue
@@ -530,7 +530,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDebug::incCounter", context, engine);
+            //REcmaHelper::functionStart("REcmaDebug::incCounter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDebug::incCounter";
             //QCoreApplication::processEvents();
 
@@ -583,7 +583,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.incCounter().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDebug::incCounter", context, engine);
+            //REcmaHelper::functionEnd("REcmaDebug::incCounter", context, engine);
             return result;
         }
          QScriptValue
@@ -591,7 +591,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDebug::decCounter", context, engine);
+            //REcmaHelper::functionStart("REcmaDebug::decCounter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDebug::decCounter";
             //QCoreApplication::processEvents();
 
@@ -644,7 +644,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.decCounter().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDebug::decCounter", context, engine);
+            //REcmaHelper::functionEnd("REcmaDebug::decCounter", context, engine);
             return result;
         }
          QScriptValue
@@ -652,7 +652,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDebug::getCounter", context, engine);
+            //REcmaHelper::functionStart("REcmaDebug::getCounter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDebug::getCounter";
             //QCoreApplication::processEvents();
 
@@ -715,7 +715,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.getCounter().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDebug::getCounter", context, engine);
+            //REcmaHelper::functionEnd("REcmaDebug::getCounter", context, engine);
             return result;
         }
          QScriptValue
@@ -723,7 +723,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDebug::printCounter", context, engine);
+            //REcmaHelper::functionStart("REcmaDebug::printCounter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDebug::printCounter";
             //QCoreApplication::processEvents();
 
@@ -776,7 +776,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.printCounter().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDebug::printCounter", context, engine);
+            //REcmaHelper::functionEnd("REcmaDebug::printCounter", context, engine);
             return result;
         }
          QScriptValue
@@ -784,7 +784,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDebug::printCounters", context, engine);
+            //REcmaHelper::functionStart("REcmaDebug::printCounters", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDebug::printCounters";
             //QCoreApplication::processEvents();
 
@@ -810,7 +810,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.printCounters().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDebug::printCounters", context, engine);
+            //REcmaHelper::functionEnd("REcmaDebug::printCounters", context, engine);
             return result;
         }
          QScriptValue
@@ -818,7 +818,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDebug::setPrefix", context, engine);
+            //REcmaHelper::functionStart("REcmaDebug::setPrefix", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDebug::setPrefix";
             //QCoreApplication::processEvents();
 
@@ -855,7 +855,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.setPrefix().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDebug::setPrefix", context, engine);
+            //REcmaHelper::functionEnd("REcmaDebug::setPrefix", context, engine);
             return result;
         }
          QScriptValue
@@ -863,7 +863,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDebug::getPrefix", context, engine);
+            //REcmaHelper::functionStart("REcmaDebug::getPrefix", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDebug::getPrefix";
             //QCoreApplication::processEvents();
 
@@ -894,7 +894,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDebug.getPrefix().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDebug::getPrefix", context, engine);
+            //REcmaHelper::functionEnd("REcmaDebug::getPrefix", context, engine);
             return result;
         }
          QScriptValue REcmaDebug::toString

@@ -1050,7 +1050,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::init", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::init";
             //QCoreApplication::processEvents();
 
@@ -1076,7 +1076,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::init", context, engine);
             return result;
         }
          QScriptValue
@@ -1084,7 +1084,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::getType", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::getType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getType";
             //QCoreApplication::processEvents();
 
@@ -1125,7 +1125,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getType().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -1133,7 +1133,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::clone";
             //QCoreApplication::processEvents();
 
@@ -1174,7 +1174,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -1182,7 +1182,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::getName", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::getName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getName";
             //QCoreApplication::processEvents();
 
@@ -1223,7 +1223,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::getName", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::getName", context, engine);
             return result;
         }
          QScriptValue
@@ -1231,7 +1231,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::setName", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::setName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::setName";
             //QCoreApplication::processEvents();
 
@@ -1278,7 +1278,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::setName", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::setName", context, engine);
             return result;
         }
          QScriptValue
@@ -1286,7 +1286,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::isFrozen", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::isFrozen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::isFrozen";
             //QCoreApplication::processEvents();
 
@@ -1327,7 +1327,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.isFrozen().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::isFrozen", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::isFrozen", context, engine);
             return result;
         }
          QScriptValue
@@ -1335,7 +1335,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::setFrozen", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::setFrozen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::setFrozen";
             //QCoreApplication::processEvents();
 
@@ -1382,7 +1382,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setFrozen().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::setFrozen", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::setFrozen", context, engine);
             return result;
         }
          QScriptValue
@@ -1390,7 +1390,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::isLocked", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::isLocked", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::isLocked";
             //QCoreApplication::processEvents();
 
@@ -1431,7 +1431,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.isLocked().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::isLocked", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::isLocked", context, engine);
             return result;
         }
          QScriptValue
@@ -1439,7 +1439,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::setLocked", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::setLocked", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::setLocked";
             //QCoreApplication::processEvents();
 
@@ -1486,7 +1486,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setLocked().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::setLocked", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::setLocked", context, engine);
             return result;
         }
          QScriptValue
@@ -1494,7 +1494,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::getColor", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::getColor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getColor";
             //QCoreApplication::processEvents();
 
@@ -1535,7 +1535,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getColor().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::getColor", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::getColor", context, engine);
             return result;
         }
          QScriptValue
@@ -1543,7 +1543,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::setColor", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::setColor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::setColor";
             //QCoreApplication::processEvents();
 
@@ -1602,7 +1602,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setColor().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::setColor", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::setColor", context, engine);
             return result;
         }
          QScriptValue
@@ -1610,7 +1610,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::getLinetypeId", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::getLinetypeId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getLinetypeId";
             //QCoreApplication::processEvents();
 
@@ -1651,7 +1651,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getLinetypeId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::getLinetypeId", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::getLinetypeId", context, engine);
             return result;
         }
          QScriptValue
@@ -1659,7 +1659,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::setLinetypeId", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::setLinetypeId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::setLinetypeId";
             //QCoreApplication::processEvents();
 
@@ -1706,7 +1706,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setLinetypeId().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::setLinetypeId", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::setLinetypeId", context, engine);
             return result;
         }
          QScriptValue
@@ -1714,7 +1714,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::getLineweight", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::getLineweight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getLineweight";
             //QCoreApplication::processEvents();
 
@@ -1755,7 +1755,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getLineweight().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::getLineweight", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::getLineweight", context, engine);
             return result;
         }
          QScriptValue
@@ -1763,7 +1763,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::setLineweight", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::setLineweight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::setLineweight";
             //QCoreApplication::processEvents();
 
@@ -1810,7 +1810,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setLineweight().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::setLineweight", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::setLineweight", context, engine);
             return result;
         }
          QScriptValue
@@ -1818,7 +1818,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::getProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::getProperty";
             //QCoreApplication::processEvents();
 
@@ -2057,7 +2057,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.getProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::getProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -2065,7 +2065,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::setProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::setProperty";
             //QCoreApplication::processEvents();
 
@@ -2239,7 +2239,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.setProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::setProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -2247,7 +2247,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaLayer::isSelectedForPropertyEditing", context, engine);
+            //REcmaHelper::functionStart("REcmaLayer::isSelectedForPropertyEditing", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayer::isSelectedForPropertyEditing";
             //QCoreApplication::processEvents();
 
@@ -2288,7 +2288,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayer.isSelectedForPropertyEditing().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaLayer::isSelectedForPropertyEditing", context, engine);
+            //REcmaHelper::functionEnd("REcmaLayer::isSelectedForPropertyEditing", context, engine);
             return result;
         }
          QScriptValue REcmaLayer::toString

@@ -514,7 +514,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::init", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::init";
             //QCoreApplication::processEvents();
 
@@ -540,7 +540,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::init", context, engine);
             return result;
         }
          QScriptValue
@@ -548,7 +548,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getStaticPropertyTypeIds", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::getStaticPropertyTypeIds";
             //QCoreApplication::processEvents();
 
@@ -580,7 +580,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.getStaticPropertyTypeIds().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getStaticPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue
@@ -588,7 +588,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::clone";
             //QCoreApplication::processEvents();
 
@@ -629,7 +629,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -637,7 +637,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getType", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::getType";
             //QCoreApplication::processEvents();
 
@@ -678,7 +678,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.getType().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -686,7 +686,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::setProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::setProperty";
             //QCoreApplication::processEvents();
 
@@ -860,7 +860,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.setProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::setProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -868,7 +868,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::getProperty";
             //QCoreApplication::processEvents();
 
@@ -1107,7 +1107,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.getProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1115,7 +1115,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::exportEntity", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::exportEntity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::exportEntity";
             //QCoreApplication::processEvents();
 
@@ -1285,7 +1285,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.exportEntity().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::exportEntity", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::exportEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -1293,7 +1293,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getData", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::getData";
             //QCoreApplication::processEvents();
 
@@ -1357,7 +1357,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.getData().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getData", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getData", context, engine);
             return result;
         }
          QScriptValue
@@ -1365,7 +1365,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getVertexAt", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getVertexAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::getVertexAt";
             //QCoreApplication::processEvents();
 
@@ -1417,7 +1417,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.getVertexAt().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getVertexAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getVertexAt", context, engine);
             return result;
         }
          QScriptValue
@@ -1425,7 +1425,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::countVertices", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::countVertices", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::countVertices";
             //QCoreApplication::processEvents();
 
@@ -1466,7 +1466,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.countVertices().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::countVertices", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::countVertices", context, engine);
             return result;
         }
          QScriptValue
@@ -1474,7 +1474,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getStartPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::getStartPoint";
             //QCoreApplication::processEvents();
 
@@ -1515,7 +1515,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.getStartPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getStartPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1523,7 +1523,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getEndPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::getEndPoint";
             //QCoreApplication::processEvents();
 
@@ -1564,7 +1564,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.getEndPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1572,7 +1572,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getDirection1", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getDirection1", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::getDirection1";
             //QCoreApplication::processEvents();
 
@@ -1613,7 +1613,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.getDirection1().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getDirection1", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getDirection1", context, engine);
             return result;
         }
          QScriptValue
@@ -1621,7 +1621,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getDirection2", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getDirection2", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::getDirection2";
             //QCoreApplication::processEvents();
 
@@ -1662,7 +1662,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.getDirection2().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getDirection2", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getDirection2", context, engine);
             return result;
         }
          QScriptValue
@@ -1670,7 +1670,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::reverse", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::reverse", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::reverse";
             //QCoreApplication::processEvents();
 
@@ -1711,7 +1711,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.reverse().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::reverse", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::reverse", context, engine);
             return result;
         }
          QScriptValue
@@ -1719,7 +1719,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getTrimEnd", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getTrimEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::getTrimEnd";
             //QCoreApplication::processEvents();
 
@@ -1808,7 +1808,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.getTrimEnd().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getTrimEnd", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getTrimEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -1816,7 +1816,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::trimStartPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::trimStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::trimStartPoint";
             //QCoreApplication::processEvents();
 
@@ -1949,7 +1949,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.trimStartPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::trimStartPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::trimStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1957,7 +1957,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::trimEndPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::trimEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::trimEndPoint";
             //QCoreApplication::processEvents();
 
@@ -2090,7 +2090,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.trimEndPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::trimEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::trimEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -2098,7 +2098,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getLength", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerTraceEntity::getLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTraceEntity::getLength";
             //QCoreApplication::processEvents();
 
@@ -2139,7 +2139,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTraceEntity.getLength().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getLength", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerTraceEntity::getLength", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerTraceEntity::toString

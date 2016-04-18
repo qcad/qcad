@@ -122,7 +122,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerExplodable::getExploded", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerExplodable::getExploded", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerExplodable::getExploded";
             //QCoreApplication::processEvents();
 
@@ -195,7 +195,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RExplodable.getExploded().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerExplodable::getExploded", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerExplodable::getExploded", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerExplodable::toString

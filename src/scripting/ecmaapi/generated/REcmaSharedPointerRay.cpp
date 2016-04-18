@@ -464,7 +464,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerRay::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerRay::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerRay::clone";
             //QCoreApplication::processEvents();
 
@@ -505,7 +505,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRay.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerRay::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerRay::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -513,7 +513,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerRay::trimEndPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerRay::trimEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerRay::trimEndPoint";
             //QCoreApplication::processEvents();
 
@@ -646,7 +646,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRay.trimEndPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerRay::trimEndPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerRay::trimEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -654,7 +654,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerRay::getPointsWithDistanceToEnd", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerRay::getPointsWithDistanceToEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerRay::getPointsWithDistanceToEnd";
             //QCoreApplication::processEvents();
 
@@ -719,7 +719,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRay.getPointsWithDistanceToEnd().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerRay::getPointsWithDistanceToEnd", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerRay::getPointsWithDistanceToEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -727,7 +727,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerRay::reverse", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerRay::reverse", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerRay::reverse";
             //QCoreApplication::processEvents();
 
@@ -768,7 +768,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRay.reverse().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerRay::reverse", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerRay::reverse", context, engine);
             return result;
         }
          QScriptValue
@@ -776,7 +776,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerRay::getClippedLine", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerRay::getClippedLine", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerRay::getClippedLine";
             //QCoreApplication::processEvents();
 
@@ -840,7 +840,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRay.getClippedLine().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerRay::getClippedLine", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerRay::getClippedLine", context, engine);
             return result;
         }
          QScriptValue
@@ -848,7 +848,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerRay::getVectorTo", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerRay::getVectorTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerRay::getVectorTo";
             //QCoreApplication::processEvents();
 
@@ -1039,7 +1039,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRay.getVectorTo().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerRay::getVectorTo", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerRay::getVectorTo", context, engine);
             return result;
         }
          QScriptValue
@@ -1047,7 +1047,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerRay::stretch", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerRay::stretch", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerRay::stretch";
             //QCoreApplication::processEvents();
 
@@ -1136,7 +1136,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRay.stretch().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerRay::stretch", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerRay::stretch", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerRay::toString

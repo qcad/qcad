@@ -189,7 +189,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPatternListMetric::init", context, engine);
+            //REcmaHelper::functionStart("REcmaPatternListMetric::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPatternListMetric::init";
             //QCoreApplication::processEvents();
 
@@ -215,7 +215,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPatternListMetric.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPatternListMetric::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaPatternListMetric::init", context, engine);
             return result;
         }
          QScriptValue
@@ -223,7 +223,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPatternListMetric::uninit", context, engine);
+            //REcmaHelper::functionStart("REcmaPatternListMetric::uninit", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPatternListMetric::uninit";
             //QCoreApplication::processEvents();
 
@@ -249,7 +249,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPatternListMetric.uninit().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPatternListMetric::uninit", context, engine);
+            //REcmaHelper::functionEnd("REcmaPatternListMetric::uninit", context, engine);
             return result;
         }
          QScriptValue
@@ -257,7 +257,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPatternListMetric::getNames", context, engine);
+            //REcmaHelper::functionStart("REcmaPatternListMetric::getNames", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPatternListMetric::getNames";
             //QCoreApplication::processEvents();
 
@@ -288,7 +288,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPatternListMetric.getNames().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPatternListMetric::getNames", context, engine);
+            //REcmaHelper::functionEnd("REcmaPatternListMetric::getNames", context, engine);
             return result;
         }
          QScriptValue
@@ -296,7 +296,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPatternListMetric::get", context, engine);
+            //REcmaHelper::functionStart("REcmaPatternListMetric::get", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPatternListMetric::get";
             //QCoreApplication::processEvents();
 
@@ -338,7 +338,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPatternListMetric.get().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPatternListMetric::get", context, engine);
+            //REcmaHelper::functionEnd("REcmaPatternListMetric::get", context, engine);
             return result;
         }
          QScriptValue REcmaPatternListMetric::toString

@@ -207,7 +207,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSnapDistance::showUiOptions", context, engine);
+            //REcmaHelper::functionStart("REcmaSnapDistance::showUiOptions", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSnapDistance::showUiOptions";
             //QCoreApplication::processEvents();
 
@@ -243,7 +243,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSnapDistance.showUiOptions().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSnapDistance::showUiOptions", context, engine);
+            //REcmaHelper::functionEnd("REcmaSnapDistance::showUiOptions", context, engine);
             return result;
         }
          QScriptValue
@@ -251,7 +251,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSnapDistance::hideUiOptions", context, engine);
+            //REcmaHelper::functionStart("REcmaSnapDistance::hideUiOptions", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSnapDistance::hideUiOptions";
             //QCoreApplication::processEvents();
 
@@ -287,7 +287,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSnapDistance.hideUiOptions().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSnapDistance::hideUiOptions", context, engine);
+            //REcmaHelper::functionEnd("REcmaSnapDistance::hideUiOptions", context, engine);
             return result;
         }
          QScriptValue
@@ -295,7 +295,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSnapDistance::setDistance", context, engine);
+            //REcmaHelper::functionStart("REcmaSnapDistance::setDistance", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSnapDistance::setDistance";
             //QCoreApplication::processEvents();
 
@@ -342,7 +342,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSnapDistance.setDistance().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSnapDistance::setDistance", context, engine);
+            //REcmaHelper::functionEnd("REcmaSnapDistance::setDistance", context, engine);
             return result;
         }
          QScriptValue REcmaSnapDistance::toString

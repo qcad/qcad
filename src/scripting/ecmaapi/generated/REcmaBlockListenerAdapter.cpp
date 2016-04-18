@@ -254,7 +254,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaBlockListenerAdapter::updateBlocks", context, engine);
+            //REcmaHelper::functionStart("REcmaBlockListenerAdapter::updateBlocks", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlockListenerAdapter::updateBlocks";
             //QCoreApplication::processEvents();
 
@@ -308,7 +308,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockListenerAdapter.updateBlocks().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaBlockListenerAdapter::updateBlocks", context, engine);
+            //REcmaHelper::functionEnd("REcmaBlockListenerAdapter::updateBlocks", context, engine);
             return result;
         }
          QScriptValue
@@ -316,7 +316,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaBlockListenerAdapter::clearBlocks", context, engine);
+            //REcmaHelper::functionStart("REcmaBlockListenerAdapter::clearBlocks", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlockListenerAdapter::clearBlocks";
             //QCoreApplication::processEvents();
 
@@ -352,7 +352,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlockListenerAdapter.clearBlocks().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaBlockListenerAdapter::clearBlocks", context, engine);
+            //REcmaHelper::functionEnd("REcmaBlockListenerAdapter::clearBlocks", context, engine);
             return result;
         }
          QScriptValue REcmaBlockListenerAdapter::toString

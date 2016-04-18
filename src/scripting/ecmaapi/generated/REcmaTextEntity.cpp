@@ -509,7 +509,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTextEntity::init", context, engine);
+            //REcmaHelper::functionStart("REcmaTextEntity::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextEntity::init";
             //QCoreApplication::processEvents();
 
@@ -535,7 +535,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTextEntity::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaTextEntity::init", context, engine);
             return result;
         }
          QScriptValue
@@ -543,7 +543,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTextEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionStart("REcmaTextEntity::getStaticPropertyTypeIds", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextEntity::getStaticPropertyTypeIds";
             //QCoreApplication::processEvents();
 
@@ -575,7 +575,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.getStaticPropertyTypeIds().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTextEntity::getStaticPropertyTypeIds", context, engine);
+            //REcmaHelper::functionEnd("REcmaTextEntity::getStaticPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue
@@ -583,7 +583,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTextEntity::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaTextEntity::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextEntity::clone";
             //QCoreApplication::processEvents();
 
@@ -624,7 +624,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTextEntity::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaTextEntity::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -632,7 +632,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTextEntity::getType", context, engine);
+            //REcmaHelper::functionStart("REcmaTextEntity::getType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextEntity::getType";
             //QCoreApplication::processEvents();
 
@@ -673,7 +673,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.getType().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTextEntity::getType", context, engine);
+            //REcmaHelper::functionEnd("REcmaTextEntity::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -681,7 +681,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTextEntity::getData", context, engine);
+            //REcmaHelper::functionStart("REcmaTextEntity::getData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextEntity::getData";
             //QCoreApplication::processEvents();
 
@@ -746,7 +746,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.getData().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTextEntity::getData", context, engine);
+            //REcmaHelper::functionEnd("REcmaTextEntity::getData", context, engine);
             return result;
         }
          QScriptValue
@@ -754,7 +754,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaTextEntity::setData", context, engine);
+            //REcmaHelper::functionStart("REcmaTextEntity::setData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextEntity::setData";
             //QCoreApplication::processEvents();
 
@@ -813,7 +813,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextEntity.setData().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaTextEntity::setData", context, engine);
+            //REcmaHelper::functionEnd("REcmaTextEntity::setData", context, engine);
             return result;
         }
          QScriptValue REcmaTextEntity::toString

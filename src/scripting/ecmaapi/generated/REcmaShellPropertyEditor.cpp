@@ -1861,7 +1861,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaShellPropertyEditor::updateEditor", context, engine);
+            //REcmaHelper::functionStart("REcmaShellPropertyEditor::updateEditor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellPropertyEditor::updateEditor";
             //QCoreApplication::processEvents();
 
@@ -2001,7 +2001,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEditor.updateEditor().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaShellPropertyEditor::updateEditor", context, engine);
+            //REcmaHelper::functionEnd("REcmaShellPropertyEditor::updateEditor", context, engine);
             return result;
         }
          QScriptValue
@@ -2009,7 +2009,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaShellPropertyEditor::updateGui", context, engine);
+            //REcmaHelper::functionStart("REcmaShellPropertyEditor::updateGui", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellPropertyEditor::updateGui";
             //QCoreApplication::processEvents();
 
@@ -2072,7 +2072,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEditor.updateGui().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaShellPropertyEditor::updateGui", context, engine);
+            //REcmaHelper::functionEnd("REcmaShellPropertyEditor::updateGui", context, engine);
             return result;
         }
          QScriptValue
@@ -2080,7 +2080,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaShellPropertyEditor::updateProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaShellPropertyEditor::updateProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellPropertyEditor::updateProperty";
             //QCoreApplication::processEvents();
 
@@ -2182,7 +2182,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEditor.updateProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaShellPropertyEditor::updateProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaShellPropertyEditor::updateProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -2190,7 +2190,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaShellPropertyEditor::removeAllButThese", context, engine);
+            //REcmaHelper::functionStart("REcmaShellPropertyEditor::removeAllButThese", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellPropertyEditor::removeAllButThese";
             //QCoreApplication::processEvents();
 
@@ -2297,7 +2297,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEditor.removeAllButThese().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaShellPropertyEditor::removeAllButThese", context, engine);
+            //REcmaHelper::functionEnd("REcmaShellPropertyEditor::removeAllButThese", context, engine);
             return result;
         }
         

@@ -213,7 +213,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSpatialIndexNavel::create", context, engine);
+            //REcmaHelper::functionStart("REcmaSpatialIndexNavel::create", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndexNavel::create";
             //QCoreApplication::processEvents();
 
@@ -254,7 +254,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndexNavel.create().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSpatialIndexNavel::create", context, engine);
+            //REcmaHelper::functionEnd("REcmaSpatialIndexNavel::create", context, engine);
             return result;
         }
          QScriptValue
@@ -262,7 +262,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSpatialIndexNavel::clear", context, engine);
+            //REcmaHelper::functionStart("REcmaSpatialIndexNavel::clear", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndexNavel::clear";
             //QCoreApplication::processEvents();
 
@@ -298,7 +298,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndexNavel.clear().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSpatialIndexNavel::clear", context, engine);
+            //REcmaHelper::functionEnd("REcmaSpatialIndexNavel::clear", context, engine);
             return result;
         }
          QScriptValue
@@ -306,7 +306,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSpatialIndexNavel::bulkLoad", context, engine);
+            //REcmaHelper::functionStart("REcmaSpatialIndexNavel::bulkLoad", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndexNavel::bulkLoad";
             //QCoreApplication::processEvents();
 
@@ -368,7 +368,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndexNavel.bulkLoad().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSpatialIndexNavel::bulkLoad", context, engine);
+            //REcmaHelper::functionEnd("REcmaSpatialIndexNavel::bulkLoad", context, engine);
             return result;
         }
          QScriptValue
@@ -376,7 +376,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSpatialIndexNavel::addToIndex", context, engine);
+            //REcmaHelper::functionStart("REcmaSpatialIndexNavel::addToIndex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndexNavel::addToIndex";
             //QCoreApplication::processEvents();
 
@@ -579,7 +579,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndexNavel.addToIndex().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSpatialIndexNavel::addToIndex", context, engine);
+            //REcmaHelper::functionEnd("REcmaSpatialIndexNavel::addToIndex", context, engine);
             return result;
         }
          QScriptValue
@@ -587,7 +587,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSpatialIndexNavel::removeFromIndex", context, engine);
+            //REcmaHelper::functionStart("REcmaSpatialIndexNavel::removeFromIndex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndexNavel::removeFromIndex";
             //QCoreApplication::processEvents();
 
@@ -846,7 +846,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndexNavel.removeFromIndex().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSpatialIndexNavel::removeFromIndex", context, engine);
+            //REcmaHelper::functionEnd("REcmaSpatialIndexNavel::removeFromIndex", context, engine);
             return result;
         }
          QScriptValue
@@ -854,7 +854,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSpatialIndexNavel::queryIntersected", context, engine);
+            //REcmaHelper::functionStart("REcmaSpatialIndexNavel::queryIntersected", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndexNavel::queryIntersected";
             //QCoreApplication::processEvents();
 
@@ -1088,7 +1088,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndexNavel.queryIntersected().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSpatialIndexNavel::queryIntersected", context, engine);
+            //REcmaHelper::functionEnd("REcmaSpatialIndexNavel::queryIntersected", context, engine);
             return result;
         }
          QScriptValue
@@ -1096,7 +1096,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSpatialIndexNavel::queryIntersectedSimple", context, engine);
+            //REcmaHelper::functionStart("REcmaSpatialIndexNavel::queryIntersectedSimple", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndexNavel::queryIntersectedSimple";
             //QCoreApplication::processEvents();
 
@@ -1160,7 +1160,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndexNavel.queryIntersectedSimple().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSpatialIndexNavel::queryIntersectedSimple", context, engine);
+            //REcmaHelper::functionEnd("REcmaSpatialIndexNavel::queryIntersectedSimple", context, engine);
             return result;
         }
          QScriptValue
@@ -1168,7 +1168,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSpatialIndexNavel::queryContained", context, engine);
+            //REcmaHelper::functionStart("REcmaSpatialIndexNavel::queryContained", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndexNavel::queryContained";
             //QCoreApplication::processEvents();
 
@@ -1402,7 +1402,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndexNavel.queryContained().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSpatialIndexNavel::queryContained", context, engine);
+            //REcmaHelper::functionEnd("REcmaSpatialIndexNavel::queryContained", context, engine);
             return result;
         }
          QScriptValue
@@ -1410,7 +1410,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSpatialIndexNavel::queryNearestNeighbor", context, engine);
+            //REcmaHelper::functionStart("REcmaSpatialIndexNavel::queryNearestNeighbor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndexNavel::queryNearestNeighbor";
             //QCoreApplication::processEvents();
 
@@ -1660,7 +1660,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndexNavel.queryNearestNeighbor().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSpatialIndexNavel::queryNearestNeighbor", context, engine);
+            //REcmaHelper::functionEnd("REcmaSpatialIndexNavel::queryNearestNeighbor", context, engine);
             return result;
         }
          QScriptValue REcmaSpatialIndexNavel::toString

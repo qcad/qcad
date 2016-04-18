@@ -175,7 +175,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaCommandEvent::getCommand", context, engine);
+            //REcmaHelper::functionStart("REcmaCommandEvent::getCommand", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCommandEvent::getCommand";
             //QCoreApplication::processEvents();
 
@@ -216,7 +216,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCommandEvent.getCommand().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaCommandEvent::getCommand", context, engine);
+            //REcmaHelper::functionEnd("REcmaCommandEvent::getCommand", context, engine);
             return result;
         }
          QScriptValue
@@ -224,7 +224,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaCommandEvent::accept", context, engine);
+            //REcmaHelper::functionStart("REcmaCommandEvent::accept", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCommandEvent::accept";
             //QCoreApplication::processEvents();
 
@@ -260,7 +260,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCommandEvent.accept().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaCommandEvent::accept", context, engine);
+            //REcmaHelper::functionEnd("REcmaCommandEvent::accept", context, engine);
             return result;
         }
          QScriptValue
@@ -268,7 +268,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaCommandEvent::isAccepted", context, engine);
+            //REcmaHelper::functionStart("REcmaCommandEvent::isAccepted", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCommandEvent::isAccepted";
             //QCoreApplication::processEvents();
 
@@ -309,7 +309,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCommandEvent.isAccepted().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaCommandEvent::isAccepted", context, engine);
+            //REcmaHelper::functionEnd("REcmaCommandEvent::isAccepted", context, engine);
             return result;
         }
          QScriptValue REcmaCommandEvent::toString

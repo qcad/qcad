@@ -117,7 +117,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaPainterPathSource::getPainterPaths", context, engine);
+            //REcmaHelper::functionStart("REcmaPainterPathSource::getPainterPaths", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPainterPathSource::getPainterPaths";
             //QCoreApplication::processEvents();
 
@@ -235,7 +235,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPainterPathSource.getPainterPaths().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaPainterPathSource::getPainterPaths", context, engine);
+            //REcmaHelper::functionEnd("REcmaPainterPathSource::getPainterPaths", context, engine);
             return result;
         }
          QScriptValue REcmaPainterPathSource::toString

@@ -369,7 +369,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerView::init", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerView::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerView::init";
             //QCoreApplication::processEvents();
 
@@ -395,7 +395,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.init().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerView::init", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerView::init", context, engine);
             return result;
         }
          QScriptValue
@@ -403,7 +403,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerView::clone", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerView::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerView::clone";
             //QCoreApplication::processEvents();
 
@@ -444,7 +444,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.clone().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerView::clone", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerView::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -452,7 +452,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerView::getName", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerView::getName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerView::getName";
             //QCoreApplication::processEvents();
 
@@ -493,7 +493,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.getName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerView::getName", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerView::getName", context, engine);
             return result;
         }
          QScriptValue
@@ -501,7 +501,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerView::setName", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerView::setName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerView::setName";
             //QCoreApplication::processEvents();
 
@@ -548,7 +548,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.setName().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerView::setName", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerView::setName", context, engine);
             return result;
         }
          QScriptValue
@@ -556,7 +556,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerView::getCenterPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerView::getCenterPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerView::getCenterPoint";
             //QCoreApplication::processEvents();
 
@@ -597,7 +597,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.getCenterPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerView::getCenterPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerView::getCenterPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -605,7 +605,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerView::setCenterPoint", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerView::setCenterPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerView::setCenterPoint";
             //QCoreApplication::processEvents();
 
@@ -664,7 +664,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.setCenterPoint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerView::setCenterPoint", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerView::setCenterPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -672,7 +672,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerView::getWidth", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerView::getWidth", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerView::getWidth";
             //QCoreApplication::processEvents();
 
@@ -713,7 +713,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.getWidth().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerView::getWidth", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerView::getWidth", context, engine);
             return result;
         }
          QScriptValue
@@ -721,7 +721,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerView::setWidth", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerView::setWidth", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerView::setWidth";
             //QCoreApplication::processEvents();
 
@@ -768,7 +768,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.setWidth().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerView::setWidth", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerView::setWidth", context, engine);
             return result;
         }
          QScriptValue
@@ -776,7 +776,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerView::getHeight", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerView::getHeight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerView::getHeight";
             //QCoreApplication::processEvents();
 
@@ -817,7 +817,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.getHeight().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerView::getHeight", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerView::getHeight", context, engine);
             return result;
         }
          QScriptValue
@@ -825,7 +825,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerView::setHeight", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerView::setHeight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerView::setHeight";
             //QCoreApplication::processEvents();
 
@@ -872,7 +872,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.setHeight().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerView::setHeight", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerView::setHeight", context, engine);
             return result;
         }
          QScriptValue
@@ -880,7 +880,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerView::getBox", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerView::getBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerView::getBox";
             //QCoreApplication::processEvents();
 
@@ -921,7 +921,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.getBox().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerView::getBox", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerView::getBox", context, engine);
             return result;
         }
          QScriptValue
@@ -929,7 +929,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerView::getProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerView::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerView::getProperty";
             //QCoreApplication::processEvents();
 
@@ -1168,7 +1168,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.getProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerView::getProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerView::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1176,7 +1176,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerView::setProperty", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerView::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerView::setProperty";
             //QCoreApplication::processEvents();
 
@@ -1350,7 +1350,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.setProperty().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerView::setProperty", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerView::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1358,7 +1358,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSharedPointerView::isSelectedForPropertyEditing", context, engine);
+            //REcmaHelper::functionStart("REcmaSharedPointerView::isSelectedForPropertyEditing", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerView::isSelectedForPropertyEditing";
             //QCoreApplication::processEvents();
 
@@ -1399,7 +1399,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RView.isSelectedForPropertyEditing().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSharedPointerView::isSelectedForPropertyEditing", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerView::isSelectedForPropertyEditing", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerView::toString

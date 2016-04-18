@@ -252,7 +252,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaSelectionListenerAdapter::updateSelectionListener", context, engine);
+            //REcmaHelper::functionStart("REcmaSelectionListenerAdapter::updateSelectionListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSelectionListenerAdapter::updateSelectionListener";
             //QCoreApplication::processEvents();
 
@@ -306,7 +306,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSelectionListenerAdapter.updateSelectionListener().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaSelectionListenerAdapter::updateSelectionListener", context, engine);
+            //REcmaHelper::functionEnd("REcmaSelectionListenerAdapter::updateSelectionListener", context, engine);
             return result;
         }
          QScriptValue REcmaSelectionListenerAdapter::toString

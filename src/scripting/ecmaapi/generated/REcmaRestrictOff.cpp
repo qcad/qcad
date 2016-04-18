@@ -238,7 +238,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaRestrictOff::restrictSnap", context, engine);
+            //REcmaHelper::functionStart("REcmaRestrictOff::restrictSnap", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRestrictOff::restrictSnap";
             //QCoreApplication::processEvents();
 
@@ -327,7 +327,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRestrictOff.restrictSnap().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaRestrictOff::restrictSnap", context, engine);
+            //REcmaHelper::functionEnd("REcmaRestrictOff::restrictSnap", context, engine);
             return result;
         }
          QScriptValue REcmaRestrictOff::toString

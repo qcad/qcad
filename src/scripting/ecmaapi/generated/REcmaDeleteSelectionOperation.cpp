@@ -213,7 +213,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDeleteSelectionOperation::apply", context, engine);
+            //REcmaHelper::functionStart("REcmaDeleteSelectionOperation::apply", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDeleteSelectionOperation::apply";
             //QCoreApplication::processEvents();
 
@@ -330,7 +330,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDeleteSelectionOperation.apply().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDeleteSelectionOperation::apply", context, engine);
+            //REcmaHelper::functionEnd("REcmaDeleteSelectionOperation::apply", context, engine);
             return result;
         }
          QScriptValue
@@ -338,7 +338,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaDeleteSelectionOperation::preview", context, engine);
+            //REcmaHelper::functionStart("REcmaDeleteSelectionOperation::preview", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDeleteSelectionOperation::preview";
             //QCoreApplication::processEvents();
 
@@ -418,7 +418,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDeleteSelectionOperation.preview().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaDeleteSelectionOperation::preview", context, engine);
+            //REcmaHelper::functionEnd("REcmaDeleteSelectionOperation::preview", context, engine);
             return result;
         }
          QScriptValue REcmaDeleteSelectionOperation::toString

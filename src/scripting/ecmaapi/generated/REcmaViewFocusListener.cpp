@@ -119,7 +119,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaViewFocusListener::updateFocus", context, engine);
+            //REcmaHelper::functionStart("REcmaViewFocusListener::updateFocus", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewFocusListener::updateFocus";
             //QCoreApplication::processEvents();
 
@@ -173,7 +173,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewFocusListener.updateFocus().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaViewFocusListener::updateFocus", context, engine);
+            //REcmaHelper::functionEnd("REcmaViewFocusListener::updateFocus", context, engine);
             return result;
         }
          QScriptValue REcmaViewFocusListener::toString

@@ -245,7 +245,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaToolMatrixItemDelegate::paint", context, engine);
+            //REcmaHelper::functionStart("REcmaToolMatrixItemDelegate::paint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaToolMatrixItemDelegate::paint";
             //QCoreApplication::processEvents();
 
@@ -345,7 +345,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RToolMatrixItemDelegate.paint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaToolMatrixItemDelegate::paint", context, engine);
+            //REcmaHelper::functionEnd("REcmaToolMatrixItemDelegate::paint", context, engine);
             return result;
         }
          QScriptValue
@@ -353,7 +353,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            REcmaHelper::functionStart("REcmaToolMatrixItemDelegate::sizeHint", context, engine);
+            //REcmaHelper::functionStart("REcmaToolMatrixItemDelegate::sizeHint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaToolMatrixItemDelegate::sizeHint";
             //QCoreApplication::processEvents();
 
@@ -438,7 +438,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RToolMatrixItemDelegate.sizeHint().",
                    context);
             }
-            REcmaHelper::functionEnd("REcmaToolMatrixItemDelegate::sizeHint", context, engine);
+            //REcmaHelper::functionEnd("REcmaToolMatrixItemDelegate::sizeHint", context, engine);
             return result;
         }
          QScriptValue REcmaToolMatrixItemDelegate::toString
