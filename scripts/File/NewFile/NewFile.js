@@ -205,12 +205,16 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
     mdiChild.setDocumentInterface(documentInterface);
     mdiArea.addSubWindow(mdiChild);
     mdiChild.updatesEnabled = false;
+    // we this this twice:
+    mdiChild.showMaximized();
     var flags = new Qt.WindowFlags(Qt.FramelessWindowHint);
     mdiChild.setWindowFlags(flags);
 
     // load ui file and set the MDI content widget:
     //qDebug("initMdiChild");
     Viewport.initMdiChild(mdiChild, uiFileName);
+    
+    // fix Qt bug in which Qt icon is shown at the top left if tab bar is off:
     mdiChild.showMaximized();
 
     var viewports = Viewport.getViewports(mdiChild, documentInterface);
