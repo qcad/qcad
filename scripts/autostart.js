@@ -61,7 +61,6 @@ function usage() {
           + "-exec [script file] [options]    Executes the given script file directly\n"
           + "                                 after staring QCAD. Options after the script\n"
           + "                                 file are passed on to the script.\n"
-          + "-gui-css-file [CSS file]         Loads the specified CSS file.\n"
           + "-help                            Displays this help.\n"
           + "-locale [locale]                 Sets the locale to be used (overrides\n"
           + "                                 the language set in the preferences).\n"
@@ -70,6 +69,7 @@ function usage() {
           + "-no-show                         Use but don't display GUI.\n"
           + "-filter [filter]                 Opens the subsequent file(s) with the explicitly \n"
           + "                                 given import filter.\n"
+          + "-font-substitution A B           Substitute font A with font B.\n"
           + "-rescan                          Rescan scripts folder for new add-ons\n"
           + "-version                         Displays the application version.\n"
           + "-enable-xdata                    Enables XData (custom properties) support.\n"
@@ -104,8 +104,7 @@ function openFiles(args, createNew) {
 
     for (var i = 0; i < args.length; ++i) {
         // arguments with one parameter:
-        if (args[i] === "-gui-style" || args[i] === "-gui-css-file"
-            || args[i] === "-locale" || args[i] === "-autostart"
+        if (args[i] === "-locale" || args[i] === "-autostart"
             || args[i] === "-app-id" || args[i] === "-ignore"
             || args[i] === "-config") {
             // skip 2 arguments
