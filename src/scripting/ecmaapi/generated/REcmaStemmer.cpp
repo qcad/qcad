@@ -154,7 +154,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaStemmer::stem", context, engine);
+            REcmaHelper::functionStart("REcmaStemmer::stem", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaStemmer::stem";
             //QCoreApplication::processEvents();
 
@@ -209,7 +209,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RStemmer.stem().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaStemmer::stem", context, engine);
+            REcmaHelper::functionEnd("REcmaStemmer::stem", context, engine);
             return result;
         }
          QScriptValue REcmaStemmer::toString

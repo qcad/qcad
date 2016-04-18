@@ -320,7 +320,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaAttributeData::getRenderedText", context, engine);
+            REcmaHelper::functionStart("REcmaAttributeData::getRenderedText", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeData::getRenderedText";
             //QCoreApplication::processEvents();
 
@@ -393,7 +393,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeData.getRenderedText().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaAttributeData::getRenderedText", context, engine);
+            REcmaHelper::functionEnd("REcmaAttributeData::getRenderedText", context, engine);
             return result;
         }
          QScriptValue
@@ -401,7 +401,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaAttributeData::getTag", context, engine);
+            REcmaHelper::functionStart("REcmaAttributeData::getTag", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeData::getTag";
             //QCoreApplication::processEvents();
 
@@ -442,7 +442,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeData.getTag().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaAttributeData::getTag", context, engine);
+            REcmaHelper::functionEnd("REcmaAttributeData::getTag", context, engine);
             return result;
         }
          QScriptValue
@@ -450,7 +450,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaAttributeData::setTag", context, engine);
+            REcmaHelper::functionStart("REcmaAttributeData::setTag", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeData::setTag";
             //QCoreApplication::processEvents();
 
@@ -497,7 +497,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeData.setTag().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaAttributeData::setTag", context, engine);
+            REcmaHelper::functionEnd("REcmaAttributeData::setTag", context, engine);
             return result;
         }
          QScriptValue
@@ -505,7 +505,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaAttributeData::isInvisible", context, engine);
+            REcmaHelper::functionStart("REcmaAttributeData::isInvisible", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeData::isInvisible";
             //QCoreApplication::processEvents();
 
@@ -546,7 +546,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeData.isInvisible().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaAttributeData::isInvisible", context, engine);
+            REcmaHelper::functionEnd("REcmaAttributeData::isInvisible", context, engine);
             return result;
         }
          QScriptValue
@@ -554,7 +554,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaAttributeData::setInvisible", context, engine);
+            REcmaHelper::functionStart("REcmaAttributeData::setInvisible", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeData::setInvisible";
             //QCoreApplication::processEvents();
 
@@ -601,7 +601,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeData.setInvisible().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaAttributeData::setInvisible", context, engine);
+            REcmaHelper::functionEnd("REcmaAttributeData::setInvisible", context, engine);
             return result;
         }
          QScriptValue
@@ -609,7 +609,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaAttributeData::getLinetypeId", context, engine);
+            REcmaHelper::functionStart("REcmaAttributeData::getLinetypeId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeData::getLinetypeId";
             //QCoreApplication::processEvents();
 
@@ -684,7 +684,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeData.getLinetypeId().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaAttributeData::getLinetypeId", context, engine);
+            REcmaHelper::functionEnd("REcmaAttributeData::getLinetypeId", context, engine);
             return result;
         }
          QScriptValue
@@ -692,7 +692,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaAttributeData::getLineweight", context, engine);
+            REcmaHelper::functionStart("REcmaAttributeData::getLineweight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeData::getLineweight";
             //QCoreApplication::processEvents();
 
@@ -767,7 +767,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeData.getLineweight().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaAttributeData::getLineweight", context, engine);
+            REcmaHelper::functionEnd("REcmaAttributeData::getLineweight", context, engine);
             return result;
         }
          QScriptValue
@@ -775,7 +775,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaAttributeData::getColor", context, engine);
+            REcmaHelper::functionStart("REcmaAttributeData::getColor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAttributeData::getColor";
             //QCoreApplication::processEvents();
 
@@ -871,7 +871,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAttributeData.getColor().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaAttributeData::getColor", context, engine);
+            REcmaHelper::functionEnd("REcmaAttributeData::getColor", context, engine);
             return result;
         }
          QScriptValue REcmaAttributeData::toString

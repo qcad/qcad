@@ -1001,7 +1001,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::clone", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::clone";
             //QCoreApplication::processEvents();
 
@@ -1042,7 +1042,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.clone().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::clone", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -1050,7 +1050,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::to2D", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::to2D", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::to2D";
             //QCoreApplication::processEvents();
 
@@ -1086,7 +1086,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.to2D().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::to2D", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::to2D", context, engine);
             return result;
         }
          QScriptValue
@@ -1094,7 +1094,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::isValid", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::isValid";
             //QCoreApplication::processEvents();
 
@@ -1135,7 +1135,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.isValid().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::isValid", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::isValid", context, engine);
             return result;
         }
          QScriptValue
@@ -1143,7 +1143,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::isFullCircle", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::isFullCircle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::isFullCircle";
             //QCoreApplication::processEvents();
 
@@ -1216,7 +1216,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.isFullCircle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::isFullCircle", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::isFullCircle", context, engine);
             return result;
         }
          QScriptValue
@@ -1224,7 +1224,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::createFrom3Points", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::createFrom3Points", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::createFrom3Points";
             //QCoreApplication::processEvents();
 
@@ -1328,7 +1328,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.createFrom3Points().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::createFrom3Points", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::createFrom3Points", context, engine);
             return result;
         }
          QScriptValue
@@ -1336,7 +1336,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::createFrom2PBulge", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::createFrom2PBulge", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::createFrom2PBulge";
             //QCoreApplication::processEvents();
 
@@ -1428,7 +1428,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.createFrom2PBulge().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::createFrom2PBulge", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::createFrom2PBulge", context, engine);
             return result;
         }
          QScriptValue
@@ -1436,7 +1436,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::createTangential", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::createTangential", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::createTangential";
             //QCoreApplication::processEvents();
 
@@ -1541,7 +1541,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.createTangential().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::createTangential", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::createTangential", context, engine);
             return result;
         }
          QScriptValue
@@ -1549,7 +1549,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::createBiarc", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::createBiarc", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::createBiarc";
             //QCoreApplication::processEvents();
 
@@ -1762,7 +1762,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.createBiarc().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::createBiarc", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::createBiarc", context, engine);
             return result;
         }
          QScriptValue
@@ -1770,7 +1770,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getBoundingBox", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getBoundingBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getBoundingBox";
             //QCoreApplication::processEvents();
 
@@ -1811,7 +1811,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getBoundingBox().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getBoundingBox", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getBoundingBox", context, engine);
             return result;
         }
          QScriptValue
@@ -1819,7 +1819,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getEndPoints", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getEndPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getEndPoints";
             //QCoreApplication::processEvents();
 
@@ -1860,7 +1860,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getEndPoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getEndPoints", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getEndPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1868,7 +1868,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getMiddlePoints", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getMiddlePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getMiddlePoints";
             //QCoreApplication::processEvents();
 
@@ -1909,7 +1909,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getMiddlePoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getMiddlePoints", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getMiddlePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1917,7 +1917,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getCenterPoints", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getCenterPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getCenterPoints";
             //QCoreApplication::processEvents();
 
@@ -1958,7 +1958,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getCenterPoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getCenterPoints", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getCenterPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1966,7 +1966,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getPointsWithDistanceToEnd", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getPointsWithDistanceToEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getPointsWithDistanceToEnd";
             //QCoreApplication::processEvents();
 
@@ -2063,7 +2063,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getPointsWithDistanceToEnd().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getPointsWithDistanceToEnd", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getPointsWithDistanceToEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -2071,7 +2071,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getVectorTo", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getVectorTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getVectorTo";
             //QCoreApplication::processEvents();
 
@@ -2262,7 +2262,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getVectorTo().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getVectorTo", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getVectorTo", context, engine);
             return result;
         }
          QScriptValue
@@ -2270,7 +2270,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getCenter", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getCenter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getCenter";
             //QCoreApplication::processEvents();
 
@@ -2311,7 +2311,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getCenter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getCenter", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getCenter", context, engine);
             return result;
         }
          QScriptValue
@@ -2319,7 +2319,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::setCenter", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::setCenter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::setCenter";
             //QCoreApplication::processEvents();
 
@@ -2378,7 +2378,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setCenter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::setCenter", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::setCenter", context, engine);
             return result;
         }
          QScriptValue
@@ -2386,7 +2386,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getRadius", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getRadius", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getRadius";
             //QCoreApplication::processEvents();
 
@@ -2427,7 +2427,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getRadius().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getRadius", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getRadius", context, engine);
             return result;
         }
          QScriptValue
@@ -2435,7 +2435,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::setRadius", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::setRadius", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::setRadius";
             //QCoreApplication::processEvents();
 
@@ -2482,7 +2482,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setRadius().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::setRadius", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::setRadius", context, engine);
             return result;
         }
          QScriptValue
@@ -2490,7 +2490,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getStartAngle", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getStartAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getStartAngle";
             //QCoreApplication::processEvents();
 
@@ -2531,7 +2531,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getStartAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getStartAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getStartAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -2539,7 +2539,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::setStartAngle", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::setStartAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::setStartAngle";
             //QCoreApplication::processEvents();
 
@@ -2586,7 +2586,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setStartAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::setStartAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::setStartAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -2594,7 +2594,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getEndAngle", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getEndAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getEndAngle";
             //QCoreApplication::processEvents();
 
@@ -2635,7 +2635,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getEndAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getEndAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getEndAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -2643,7 +2643,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::setEndAngle", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::setEndAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::setEndAngle";
             //QCoreApplication::processEvents();
 
@@ -2690,7 +2690,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setEndAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::setEndAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::setEndAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -2698,7 +2698,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::isReversed", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::isReversed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::isReversed";
             //QCoreApplication::processEvents();
 
@@ -2739,7 +2739,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.isReversed().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::isReversed", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::isReversed", context, engine);
             return result;
         }
          QScriptValue
@@ -2747,7 +2747,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::setReversed", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::setReversed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::setReversed";
             //QCoreApplication::processEvents();
 
@@ -2794,7 +2794,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setReversed().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::setReversed", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::setReversed", context, engine);
             return result;
         }
          QScriptValue
@@ -2802,7 +2802,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getAngleLength", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getAngleLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getAngleLength";
             //QCoreApplication::processEvents();
 
@@ -2875,7 +2875,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getAngleLength().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getAngleLength", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getAngleLength", context, engine);
             return result;
         }
          QScriptValue
@@ -2883,7 +2883,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::isAngleWithinArc", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::isAngleWithinArc", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::isAngleWithinArc";
             //QCoreApplication::processEvents();
 
@@ -2935,7 +2935,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.isAngleWithinArc().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::isAngleWithinArc", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::isAngleWithinArc", context, engine);
             return result;
         }
          QScriptValue
@@ -2943,7 +2943,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getDiameter", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getDiameter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getDiameter";
             //QCoreApplication::processEvents();
 
@@ -2984,7 +2984,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getDiameter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getDiameter", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getDiameter", context, engine);
             return result;
         }
          QScriptValue
@@ -2992,7 +2992,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::setDiameter", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::setDiameter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::setDiameter";
             //QCoreApplication::processEvents();
 
@@ -3039,7 +3039,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setDiameter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::setDiameter", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::setDiameter", context, engine);
             return result;
         }
          QScriptValue
@@ -3047,7 +3047,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::setLength", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::setLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::setLength";
             //QCoreApplication::processEvents();
 
@@ -3094,7 +3094,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setLength().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::setLength", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::setLength", context, engine);
             return result;
         }
          QScriptValue
@@ -3102,7 +3102,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getArea", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getArea", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getArea";
             //QCoreApplication::processEvents();
 
@@ -3143,7 +3143,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getArea().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getArea", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getArea", context, engine);
             return result;
         }
          QScriptValue
@@ -3151,7 +3151,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::setArea", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::setArea", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::setArea";
             //QCoreApplication::processEvents();
 
@@ -3198,7 +3198,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setArea().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::setArea", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::setArea", context, engine);
             return result;
         }
          QScriptValue
@@ -3206,7 +3206,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getDirection1", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getDirection1", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getDirection1";
             //QCoreApplication::processEvents();
 
@@ -3247,7 +3247,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getDirection1().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getDirection1", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getDirection1", context, engine);
             return result;
         }
          QScriptValue
@@ -3255,7 +3255,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getDirection2", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getDirection2", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getDirection2";
             //QCoreApplication::processEvents();
 
@@ -3296,7 +3296,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getDirection2().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getDirection2", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getDirection2", context, engine);
             return result;
         }
          QScriptValue
@@ -3304,7 +3304,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getSideOfPoint", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getSideOfPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getSideOfPoint";
             //QCoreApplication::processEvents();
 
@@ -3368,7 +3368,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getSideOfPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getSideOfPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getSideOfPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3376,7 +3376,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getSweep", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getSweep", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getSweep";
             //QCoreApplication::processEvents();
 
@@ -3417,7 +3417,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getSweep().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getSweep", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getSweep", context, engine);
             return result;
         }
          QScriptValue
@@ -3425,7 +3425,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::setSweep", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::setSweep", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::setSweep";
             //QCoreApplication::processEvents();
 
@@ -3472,7 +3472,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.setSweep().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::setSweep", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::setSweep", context, engine);
             return result;
         }
          QScriptValue
@@ -3480,7 +3480,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getLength", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getLength";
             //QCoreApplication::processEvents();
 
@@ -3521,7 +3521,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getLength().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getLength", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getLength", context, engine);
             return result;
         }
          QScriptValue
@@ -3529,7 +3529,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getStartPoint", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getStartPoint";
             //QCoreApplication::processEvents();
 
@@ -3570,7 +3570,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getStartPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getStartPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3578,7 +3578,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getEndPoint", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getEndPoint";
             //QCoreApplication::processEvents();
 
@@ -3619,7 +3619,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getEndPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getEndPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3627,7 +3627,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getPointAtAngle", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getPointAtAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getPointAtAngle";
             //QCoreApplication::processEvents();
 
@@ -3679,7 +3679,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getPointAtAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getPointAtAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getPointAtAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -3687,7 +3687,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getAngleAt", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getAngleAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getAngleAt";
             //QCoreApplication::processEvents();
 
@@ -3784,7 +3784,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getAngleAt().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getAngleAt", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getAngleAt", context, engine);
             return result;
         }
          QScriptValue
@@ -3792,7 +3792,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getMiddlePoint", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getMiddlePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getMiddlePoint";
             //QCoreApplication::processEvents();
 
@@ -3833,7 +3833,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getMiddlePoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getMiddlePoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getMiddlePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3841,7 +3841,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::moveStartPoint", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::moveStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::moveStartPoint";
             //QCoreApplication::processEvents();
 
@@ -3900,7 +3900,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.moveStartPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::moveStartPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::moveStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3908,7 +3908,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::moveEndPoint", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::moveEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::moveEndPoint";
             //QCoreApplication::processEvents();
 
@@ -3967,7 +3967,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.moveEndPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::moveEndPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::moveEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3975,7 +3975,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::moveMiddlePoint", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::moveMiddlePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::moveMiddlePoint";
             //QCoreApplication::processEvents();
 
@@ -4034,7 +4034,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.moveMiddlePoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::moveMiddlePoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::moveMiddlePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -4042,7 +4042,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getBulge", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getBulge", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getBulge";
             //QCoreApplication::processEvents();
 
@@ -4083,7 +4083,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getBulge().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getBulge", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getBulge", context, engine);
             return result;
         }
          QScriptValue
@@ -4091,7 +4091,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::move", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::move", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::move";
             //QCoreApplication::processEvents();
 
@@ -4155,7 +4155,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.move().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::move", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::move", context, engine);
             return result;
         }
          QScriptValue
@@ -4163,7 +4163,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::rotate", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::rotate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::rotate";
             //QCoreApplication::processEvents();
 
@@ -4272,7 +4272,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.rotate().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::rotate", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::rotate", context, engine);
             return result;
         }
          QScriptValue
@@ -4280,7 +4280,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::scale", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::scale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::scale";
             //QCoreApplication::processEvents();
 
@@ -4413,7 +4413,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.scale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::scale", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::scale", context, engine);
             return result;
         }
          QScriptValue
@@ -4421,7 +4421,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::mirror", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::mirror", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::mirror";
             //QCoreApplication::processEvents();
 
@@ -4485,7 +4485,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.mirror().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::mirror", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::mirror", context, engine);
             return result;
         }
          QScriptValue
@@ -4493,7 +4493,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::reverse", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::reverse", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::reverse";
             //QCoreApplication::processEvents();
 
@@ -4534,7 +4534,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.reverse().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::reverse", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::reverse", context, engine);
             return result;
         }
          QScriptValue
@@ -4542,7 +4542,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::stretch", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::stretch", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::stretch";
             //QCoreApplication::processEvents();
 
@@ -4631,7 +4631,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.stretch().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::stretch", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::stretch", context, engine);
             return result;
         }
          QScriptValue
@@ -4639,7 +4639,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getTransformed", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getTransformed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getTransformed";
             //QCoreApplication::processEvents();
 
@@ -4701,7 +4701,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getTransformed().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getTransformed", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getTransformed", context, engine);
             return result;
         }
          QScriptValue
@@ -4709,7 +4709,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getTrimEnd", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getTrimEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getTrimEnd";
             //QCoreApplication::processEvents();
 
@@ -4798,7 +4798,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getTrimEnd().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getTrimEnd", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getTrimEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -4806,7 +4806,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::trimStartPoint", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::trimStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::trimStartPoint";
             //QCoreApplication::processEvents();
 
@@ -4939,7 +4939,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.trimStartPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::trimStartPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::trimStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -4947,7 +4947,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::trimEndPoint", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::trimEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::trimEndPoint";
             //QCoreApplication::processEvents();
 
@@ -5080,7 +5080,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.trimEndPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::trimEndPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::trimEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -5088,7 +5088,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getDistanceFromStart", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getDistanceFromStart", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getDistanceFromStart";
             //QCoreApplication::processEvents();
 
@@ -5152,7 +5152,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getDistanceFromStart().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getDistanceFromStart", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getDistanceFromStart", context, engine);
             return result;
         }
          QScriptValue
@@ -5160,7 +5160,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::approximateWithLines", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::approximateWithLines", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::approximateWithLines";
             //QCoreApplication::processEvents();
 
@@ -5212,7 +5212,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.approximateWithLines().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::approximateWithLines", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::approximateWithLines", context, engine);
             return result;
         }
          QScriptValue
@@ -5220,7 +5220,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::approximateWithLinesTan", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::approximateWithLinesTan", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::approximateWithLinesTan";
             //QCoreApplication::processEvents();
 
@@ -5272,7 +5272,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.approximateWithLinesTan().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::approximateWithLinesTan", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::approximateWithLinesTan", context, engine);
             return result;
         }
          QScriptValue
@@ -5280,7 +5280,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerArc::getTangents", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerArc::getTangents", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getTangents";
             //QCoreApplication::processEvents();
 
@@ -5344,7 +5344,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getTangents().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getTangents", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerArc::getTangents", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerArc::toString

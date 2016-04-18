@@ -156,7 +156,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileCache::getContents", context, engine);
+            REcmaHelper::functionStart("REcmaFileCache::getContents", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileCache::getContents";
             //QCoreApplication::processEvents();
 
@@ -243,7 +243,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileCache.getContents().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileCache::getContents", context, engine);
+            REcmaHelper::functionEnd("REcmaFileCache::getContents", context, engine);
             return result;
         }
          QScriptValue
@@ -251,7 +251,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileCache::getBuffer", context, engine);
+            REcmaHelper::functionStart("REcmaFileCache::getBuffer", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileCache::getBuffer";
             //QCoreApplication::processEvents();
 
@@ -338,7 +338,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileCache.getBuffer().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileCache::getBuffer", context, engine);
+            REcmaHelper::functionEnd("REcmaFileCache::getBuffer", context, engine);
             return result;
         }
          QScriptValue REcmaFileCache::toString

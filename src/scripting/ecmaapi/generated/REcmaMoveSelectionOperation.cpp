@@ -271,7 +271,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMoveSelectionOperation::apply", context, engine);
+            REcmaHelper::functionStart("REcmaMoveSelectionOperation::apply", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMoveSelectionOperation::apply";
             //QCoreApplication::processEvents();
 
@@ -388,7 +388,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMoveSelectionOperation.apply().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMoveSelectionOperation::apply", context, engine);
+            REcmaHelper::functionEnd("REcmaMoveSelectionOperation::apply", context, engine);
             return result;
         }
          QScriptValue REcmaMoveSelectionOperation::toString

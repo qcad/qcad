@@ -362,7 +362,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTextLabel::clone", context, engine);
+            REcmaHelper::functionStart("REcmaTextLabel::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextLabel::clone";
             //QCoreApplication::processEvents();
 
@@ -403,7 +403,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextLabel.clone().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTextLabel::clone", context, engine);
+            REcmaHelper::functionEnd("REcmaTextLabel::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -411,7 +411,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTextLabel::getText", context, engine);
+            REcmaHelper::functionStart("REcmaTextLabel::getText", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextLabel::getText";
             //QCoreApplication::processEvents();
 
@@ -452,7 +452,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextLabel.getText().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTextLabel::getText", context, engine);
+            REcmaHelper::functionEnd("REcmaTextLabel::getText", context, engine);
             return result;
         }
          QScriptValue
@@ -460,7 +460,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTextLabel::getUserData", context, engine);
+            REcmaHelper::functionStart("REcmaTextLabel::getUserData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextLabel::getUserData";
             //QCoreApplication::processEvents();
 
@@ -501,7 +501,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextLabel.getUserData().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTextLabel::getUserData", context, engine);
+            REcmaHelper::functionEnd("REcmaTextLabel::getUserData", context, engine);
             return result;
         }
          QScriptValue REcmaTextLabel::toString

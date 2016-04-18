@@ -287,7 +287,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCopyOperation::apply", context, engine);
+            REcmaHelper::functionStart("REcmaCopyOperation::apply", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::apply";
             //QCoreApplication::processEvents();
 
@@ -404,7 +404,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.apply().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCopyOperation::apply", context, engine);
+            REcmaHelper::functionEnd("REcmaCopyOperation::apply", context, engine);
             return result;
         }
          QScriptValue
@@ -412,7 +412,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCopyOperation::preview", context, engine);
+            REcmaHelper::functionStart("REcmaCopyOperation::preview", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::preview";
             //QCoreApplication::processEvents();
 
@@ -492,7 +492,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.preview().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCopyOperation::preview", context, engine);
+            REcmaHelper::functionEnd("REcmaCopyOperation::preview", context, engine);
             return result;
         }
          QScriptValue
@@ -500,7 +500,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCopyOperation::setClear", context, engine);
+            REcmaHelper::functionStart("REcmaCopyOperation::setClear", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCopyOperation::setClear";
             //QCoreApplication::processEvents();
 
@@ -547,7 +547,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCopyOperation.setClear().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCopyOperation::setClear", context, engine);
+            REcmaHelper::functionEnd("REcmaCopyOperation::setClear", context, engine);
             return result;
         }
          QScriptValue REcmaCopyOperation::toString

@@ -189,7 +189,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLinetypeListMetric::init", context, engine);
+            REcmaHelper::functionStart("REcmaLinetypeListMetric::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeListMetric::init";
             //QCoreApplication::processEvents();
 
@@ -215,7 +215,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeListMetric.init().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLinetypeListMetric::init", context, engine);
+            REcmaHelper::functionEnd("REcmaLinetypeListMetric::init", context, engine);
             return result;
         }
          QScriptValue
@@ -223,7 +223,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLinetypeListMetric::uninit", context, engine);
+            REcmaHelper::functionStart("REcmaLinetypeListMetric::uninit", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeListMetric::uninit";
             //QCoreApplication::processEvents();
 
@@ -249,7 +249,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeListMetric.uninit().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLinetypeListMetric::uninit", context, engine);
+            REcmaHelper::functionEnd("REcmaLinetypeListMetric::uninit", context, engine);
             return result;
         }
          QScriptValue
@@ -257,7 +257,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLinetypeListMetric::getNames", context, engine);
+            REcmaHelper::functionStart("REcmaLinetypeListMetric::getNames", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeListMetric::getNames";
             //QCoreApplication::processEvents();
 
@@ -288,7 +288,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeListMetric.getNames().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLinetypeListMetric::getNames", context, engine);
+            REcmaHelper::functionEnd("REcmaLinetypeListMetric::getNames", context, engine);
             return result;
         }
          QScriptValue
@@ -296,7 +296,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLinetypeListMetric::get", context, engine);
+            REcmaHelper::functionStart("REcmaLinetypeListMetric::get", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeListMetric::get";
             //QCoreApplication::processEvents();
 
@@ -338,7 +338,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeListMetric.get().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLinetypeListMetric::get", context, engine);
+            REcmaHelper::functionEnd("REcmaLinetypeListMetric::get", context, engine);
             return result;
         }
          QScriptValue REcmaLinetypeListMetric::toString

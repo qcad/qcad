@@ -366,7 +366,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::isValid", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::isValid";
             //QCoreApplication::processEvents();
 
@@ -407,7 +407,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.isValid().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::isValid", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::isValid", context, engine);
             return result;
         }
          QScriptValue
@@ -415,7 +415,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::setLeaderEndPoint", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::setLeaderEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::setLeaderEndPoint";
             //QCoreApplication::processEvents();
 
@@ -474,7 +474,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.setLeaderEndPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::setLeaderEndPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::setLeaderEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -482,7 +482,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::getLeaderEndPoint", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::getLeaderEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::getLeaderEndPoint";
             //QCoreApplication::processEvents();
 
@@ -523,7 +523,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.getLeaderEndPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::getLeaderEndPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::getLeaderEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -531,7 +531,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::setOrigin", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::setOrigin", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::setOrigin";
             //QCoreApplication::processEvents();
 
@@ -590,7 +590,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.setOrigin().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::setOrigin", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::setOrigin", context, engine);
             return result;
         }
          QScriptValue
@@ -598,7 +598,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::getOrigin", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::getOrigin", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::getOrigin";
             //QCoreApplication::processEvents();
 
@@ -639,7 +639,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.getOrigin().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::getOrigin", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::getOrigin", context, engine);
             return result;
         }
          QScriptValue
@@ -647,7 +647,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::setDefiningPoint", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::setDefiningPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::setDefiningPoint";
             //QCoreApplication::processEvents();
 
@@ -706,7 +706,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.setDefiningPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::setDefiningPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::setDefiningPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -714,7 +714,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::getDefiningPoint", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::getDefiningPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::getDefiningPoint";
             //QCoreApplication::processEvents();
 
@@ -755,7 +755,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.getDefiningPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::getDefiningPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::getDefiningPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -763,7 +763,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::setMeasuringXAxis", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::setMeasuringXAxis", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::setMeasuringXAxis";
             //QCoreApplication::processEvents();
 
@@ -799,7 +799,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.setMeasuringXAxis().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::setMeasuringXAxis", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::setMeasuringXAxis", context, engine);
             return result;
         }
          QScriptValue
@@ -807,7 +807,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::setMeasuringYAxis", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::setMeasuringYAxis", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::setMeasuringYAxis";
             //QCoreApplication::processEvents();
 
@@ -843,7 +843,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.setMeasuringYAxis().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::setMeasuringYAxis", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::setMeasuringYAxis", context, engine);
             return result;
         }
          QScriptValue
@@ -851,7 +851,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::isMeasuringXAxis", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::isMeasuringXAxis", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::isMeasuringXAxis";
             //QCoreApplication::processEvents();
 
@@ -892,7 +892,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.isMeasuringXAxis().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::isMeasuringXAxis", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::isMeasuringXAxis", context, engine);
             return result;
         }
          QScriptValue
@@ -900,7 +900,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::getReferencePoints", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::getReferencePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::getReferencePoints";
             //QCoreApplication::processEvents();
 
@@ -973,7 +973,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.getReferencePoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::getReferencePoints", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::getReferencePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -981,7 +981,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::moveReferencePoint", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::moveReferencePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::moveReferencePoint";
             //QCoreApplication::processEvents();
 
@@ -1070,7 +1070,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.moveReferencePoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::moveReferencePoint", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::moveReferencePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1078,7 +1078,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::move", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::move", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::move";
             //QCoreApplication::processEvents();
 
@@ -1142,7 +1142,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.move().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::move", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::move", context, engine);
             return result;
         }
          QScriptValue
@@ -1150,7 +1150,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::rotate", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::rotate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::rotate";
             //QCoreApplication::processEvents();
 
@@ -1227,7 +1227,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.rotate().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::rotate", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::rotate", context, engine);
             return result;
         }
          QScriptValue
@@ -1235,7 +1235,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::scale", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::scale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::scale";
             //QCoreApplication::processEvents();
 
@@ -1324,7 +1324,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.scale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::scale", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::scale", context, engine);
             return result;
         }
          QScriptValue
@@ -1332,7 +1332,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::mirror", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::mirror", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::mirror";
             //QCoreApplication::processEvents();
 
@@ -1396,7 +1396,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.mirror().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::mirror", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::mirror", context, engine);
             return result;
         }
          QScriptValue
@@ -1404,7 +1404,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::stretch", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::stretch", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::stretch";
             //QCoreApplication::processEvents();
 
@@ -1493,7 +1493,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.stretch().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::stretch", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::stretch", context, engine);
             return result;
         }
          QScriptValue
@@ -1501,7 +1501,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::getShapes", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::getShapes", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::getShapes";
             //QCoreApplication::processEvents();
 
@@ -1643,7 +1643,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.getShapes().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::getShapes", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::getShapes", context, engine);
             return result;
         }
          QScriptValue
@@ -1651,7 +1651,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::getMeasuredValue", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::getMeasuredValue", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::getMeasuredValue";
             //QCoreApplication::processEvents();
 
@@ -1692,7 +1692,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.getMeasuredValue().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::getMeasuredValue", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::getMeasuredValue", context, engine);
             return result;
         }
          QScriptValue
@@ -1700,7 +1700,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimOrdinateData::getAutoLabel", context, engine);
+            REcmaHelper::functionStart("REcmaDimOrdinateData::getAutoLabel", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimOrdinateData::getAutoLabel";
             //QCoreApplication::processEvents();
 
@@ -1741,7 +1741,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimOrdinateData.getAutoLabel().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimOrdinateData::getAutoLabel", context, engine);
+            REcmaHelper::functionEnd("REcmaDimOrdinateData::getAutoLabel", context, engine);
             return result;
         }
          QScriptValue REcmaDimOrdinateData::toString

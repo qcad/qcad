@@ -212,7 +212,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTransactionListenerAdapter::updateTransactionListener", context, engine);
+            REcmaHelper::functionStart("REcmaTransactionListenerAdapter::updateTransactionListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTransactionListenerAdapter::updateTransactionListener";
             //QCoreApplication::processEvents();
 
@@ -320,7 +320,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTransactionListenerAdapter.updateTransactionListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTransactionListenerAdapter::updateTransactionListener", context, engine);
+            REcmaHelper::functionEnd("REcmaTransactionListenerAdapter::updateTransactionListener", context, engine);
             return result;
         }
          QScriptValue REcmaTransactionListenerAdapter::toString

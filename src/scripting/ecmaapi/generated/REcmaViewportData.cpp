@@ -234,7 +234,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::getBoundingBox", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::getBoundingBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::getBoundingBox";
             //QCoreApplication::processEvents();
 
@@ -307,7 +307,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.getBoundingBox().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::getBoundingBox", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::getBoundingBox", context, engine);
             return result;
         }
          QScriptValue
@@ -315,7 +315,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::castToShape", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::castToShape", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::castToShape";
             //QCoreApplication::processEvents();
 
@@ -356,7 +356,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.castToShape().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::castToShape", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::castToShape", context, engine);
             return result;
         }
          QScriptValue
@@ -364,7 +364,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::getViewportId", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::getViewportId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::getViewportId";
             //QCoreApplication::processEvents();
 
@@ -405,7 +405,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.getViewportId().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::getViewportId", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::getViewportId", context, engine);
             return result;
         }
          QScriptValue
@@ -413,7 +413,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::setViewportId", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::setViewportId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::setViewportId";
             //QCoreApplication::processEvents();
 
@@ -460,7 +460,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.setViewportId().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::setViewportId", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::setViewportId", context, engine);
             return result;
         }
          QScriptValue
@@ -468,7 +468,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::getStatus", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::getStatus", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::getStatus";
             //QCoreApplication::processEvents();
 
@@ -509,7 +509,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.getStatus().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::getStatus", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::getStatus", context, engine);
             return result;
         }
          QScriptValue
@@ -517,7 +517,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::setStatus", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::setStatus", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::setStatus";
             //QCoreApplication::processEvents();
 
@@ -564,7 +564,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.setStatus().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::setStatus", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::setStatus", context, engine);
             return result;
         }
          QScriptValue
@@ -572,7 +572,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::getCenter", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::getCenter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::getCenter";
             //QCoreApplication::processEvents();
 
@@ -613,7 +613,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.getCenter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::getCenter", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::getCenter", context, engine);
             return result;
         }
          QScriptValue
@@ -621,7 +621,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::setCenter", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::setCenter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::setCenter";
             //QCoreApplication::processEvents();
 
@@ -680,7 +680,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.setCenter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::setCenter", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::setCenter", context, engine);
             return result;
         }
          QScriptValue
@@ -688,7 +688,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::getViewCenter", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::getViewCenter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::getViewCenter";
             //QCoreApplication::processEvents();
 
@@ -729,7 +729,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.getViewCenter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::getViewCenter", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::getViewCenter", context, engine);
             return result;
         }
          QScriptValue
@@ -737,7 +737,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::setViewCenter", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::setViewCenter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::setViewCenter";
             //QCoreApplication::processEvents();
 
@@ -796,7 +796,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.setViewCenter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::setViewCenter", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::setViewCenter", context, engine);
             return result;
         }
          QScriptValue
@@ -804,7 +804,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::getViewTarget", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::getViewTarget", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::getViewTarget";
             //QCoreApplication::processEvents();
 
@@ -845,7 +845,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.getViewTarget().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::getViewTarget", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::getViewTarget", context, engine);
             return result;
         }
          QScriptValue
@@ -853,7 +853,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::setViewTarget", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::setViewTarget", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::setViewTarget";
             //QCoreApplication::processEvents();
 
@@ -912,7 +912,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.setViewTarget().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::setViewTarget", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::setViewTarget", context, engine);
             return result;
         }
          QScriptValue
@@ -920,7 +920,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::getWidth", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::getWidth", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::getWidth";
             //QCoreApplication::processEvents();
 
@@ -961,7 +961,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.getWidth().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::getWidth", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::getWidth", context, engine);
             return result;
         }
          QScriptValue
@@ -969,7 +969,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::setWidth", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::setWidth", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::setWidth";
             //QCoreApplication::processEvents();
 
@@ -1016,7 +1016,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.setWidth().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::setWidth", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::setWidth", context, engine);
             return result;
         }
          QScriptValue
@@ -1024,7 +1024,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::getHeight", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::getHeight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::getHeight";
             //QCoreApplication::processEvents();
 
@@ -1065,7 +1065,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.getHeight().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::getHeight", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::getHeight", context, engine);
             return result;
         }
          QScriptValue
@@ -1073,7 +1073,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::setHeight", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::setHeight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::setHeight";
             //QCoreApplication::processEvents();
 
@@ -1120,7 +1120,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.setHeight().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::setHeight", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::setHeight", context, engine);
             return result;
         }
          QScriptValue
@@ -1128,7 +1128,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::getScale", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::getScale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::getScale";
             //QCoreApplication::processEvents();
 
@@ -1169,7 +1169,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.getScale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::getScale", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::getScale", context, engine);
             return result;
         }
          QScriptValue
@@ -1177,7 +1177,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::setScale", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::setScale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::setScale";
             //QCoreApplication::processEvents();
 
@@ -1224,7 +1224,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.setScale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::setScale", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::setScale", context, engine);
             return result;
         }
          QScriptValue
@@ -1232,7 +1232,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::isOverall", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::isOverall", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::isOverall";
             //QCoreApplication::processEvents();
 
@@ -1273,7 +1273,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.isOverall().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::isOverall", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::isOverall", context, engine);
             return result;
         }
          QScriptValue
@@ -1281,7 +1281,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::setOverall", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::setOverall", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::setOverall";
             //QCoreApplication::processEvents();
 
@@ -1328,7 +1328,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.setOverall().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::setOverall", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::setOverall", context, engine);
             return result;
         }
          QScriptValue
@@ -1336,7 +1336,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::getReferencePoints", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::getReferencePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::getReferencePoints";
             //QCoreApplication::processEvents();
 
@@ -1409,7 +1409,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.getReferencePoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::getReferencePoints", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::getReferencePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1417,7 +1417,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::moveReferencePoint", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::moveReferencePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::moveReferencePoint";
             //QCoreApplication::processEvents();
 
@@ -1506,7 +1506,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.moveReferencePoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::moveReferencePoint", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::moveReferencePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1514,7 +1514,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaViewportData::getShapes", context, engine);
+            REcmaHelper::functionStart("REcmaViewportData::getShapes", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaViewportData::getShapes";
             //QCoreApplication::processEvents();
 
@@ -1656,7 +1656,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RViewportData.getShapes().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaViewportData::getShapes", context, engine);
+            REcmaHelper::functionEnd("REcmaViewportData::getShapes", context, engine);
             return result;
         }
          QScriptValue REcmaViewportData::toString

@@ -216,7 +216,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaExportListenerAdapter::preExportEvent", context, engine);
+            REcmaHelper::functionStart("REcmaExportListenerAdapter::preExportEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaExportListenerAdapter::preExportEvent";
             //QCoreApplication::processEvents();
 
@@ -270,7 +270,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RExportListenerAdapter.preExportEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaExportListenerAdapter::preExportEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaExportListenerAdapter::preExportEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -278,7 +278,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaExportListenerAdapter::postExportEvent", context, engine);
+            REcmaHelper::functionStart("REcmaExportListenerAdapter::postExportEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaExportListenerAdapter::postExportEvent";
             //QCoreApplication::processEvents();
 
@@ -332,7 +332,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RExportListenerAdapter.postExportEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaExportListenerAdapter::postExportEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaExportListenerAdapter::postExportEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -340,7 +340,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaExportListenerAdapter::endOfExportEvent", context, engine);
+            REcmaHelper::functionStart("REcmaExportListenerAdapter::endOfExportEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaExportListenerAdapter::endOfExportEvent";
             //QCoreApplication::processEvents();
 
@@ -394,7 +394,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RExportListenerAdapter.endOfExportEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaExportListenerAdapter::endOfExportEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaExportListenerAdapter::endOfExportEvent", context, engine);
             return result;
         }
          QScriptValue REcmaExportListenerAdapter::toString

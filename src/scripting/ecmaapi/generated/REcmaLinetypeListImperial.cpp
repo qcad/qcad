@@ -189,7 +189,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLinetypeListImperial::init", context, engine);
+            REcmaHelper::functionStart("REcmaLinetypeListImperial::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeListImperial::init";
             //QCoreApplication::processEvents();
 
@@ -215,7 +215,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeListImperial.init().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLinetypeListImperial::init", context, engine);
+            REcmaHelper::functionEnd("REcmaLinetypeListImperial::init", context, engine);
             return result;
         }
          QScriptValue
@@ -223,7 +223,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLinetypeListImperial::uninit", context, engine);
+            REcmaHelper::functionStart("REcmaLinetypeListImperial::uninit", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeListImperial::uninit";
             //QCoreApplication::processEvents();
 
@@ -249,7 +249,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeListImperial.uninit().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLinetypeListImperial::uninit", context, engine);
+            REcmaHelper::functionEnd("REcmaLinetypeListImperial::uninit", context, engine);
             return result;
         }
          QScriptValue
@@ -257,7 +257,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLinetypeListImperial::getNames", context, engine);
+            REcmaHelper::functionStart("REcmaLinetypeListImperial::getNames", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeListImperial::getNames";
             //QCoreApplication::processEvents();
 
@@ -288,7 +288,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeListImperial.getNames().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLinetypeListImperial::getNames", context, engine);
+            REcmaHelper::functionEnd("REcmaLinetypeListImperial::getNames", context, engine);
             return result;
         }
          QScriptValue
@@ -296,7 +296,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLinetypeListImperial::get", context, engine);
+            REcmaHelper::functionStart("REcmaLinetypeListImperial::get", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLinetypeListImperial::get";
             //QCoreApplication::processEvents();
 
@@ -338,7 +338,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLinetypeListImperial.get().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLinetypeListImperial::get", context, engine);
+            REcmaHelper::functionEnd("REcmaLinetypeListImperial::get", context, engine);
             return result;
         }
          QScriptValue REcmaLinetypeListImperial::toString

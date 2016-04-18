@@ -244,7 +244,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaNavigationAction::mousePressEvent", context, engine);
+            REcmaHelper::functionStart("REcmaNavigationAction::mousePressEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaNavigationAction::mousePressEvent";
             //QCoreApplication::processEvents();
 
@@ -301,7 +301,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RNavigationAction.mousePressEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaNavigationAction::mousePressEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaNavigationAction::mousePressEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -309,7 +309,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaNavigationAction::mouseReleaseEvent", context, engine);
+            REcmaHelper::functionStart("REcmaNavigationAction::mouseReleaseEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaNavigationAction::mouseReleaseEvent";
             //QCoreApplication::processEvents();
 
@@ -366,7 +366,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RNavigationAction.mouseReleaseEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaNavigationAction::mouseReleaseEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaNavigationAction::mouseReleaseEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -374,7 +374,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaNavigationAction::mouseMoveEvent", context, engine);
+            REcmaHelper::functionStart("REcmaNavigationAction::mouseMoveEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaNavigationAction::mouseMoveEvent";
             //QCoreApplication::processEvents();
 
@@ -431,7 +431,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RNavigationAction.mouseMoveEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaNavigationAction::mouseMoveEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaNavigationAction::mouseMoveEvent", context, engine);
             return result;
         }
          QScriptValue REcmaNavigationAction::toString

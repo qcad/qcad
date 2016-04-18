@@ -258,7 +258,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::setRootPath", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::setRootPath", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::setRootPath";
             //QCoreApplication::processEvents();
 
@@ -310,7 +310,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.setRootPath().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::setRootPath", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::setRootPath", context, engine);
             return result;
         }
          QScriptValue
@@ -318,7 +318,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::rootPath", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::rootPath", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::rootPath";
             //QCoreApplication::processEvents();
 
@@ -359,7 +359,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.rootPath().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::rootPath", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::rootPath", context, engine);
             return result;
         }
          QScriptValue
@@ -367,7 +367,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::pathIndex", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::pathIndex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::pathIndex";
             //QCoreApplication::processEvents();
 
@@ -464,7 +464,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.pathIndex().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::pathIndex", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::pathIndex", context, engine);
             return result;
         }
          QScriptValue
@@ -472,7 +472,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::index", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::index", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::index";
             //QCoreApplication::processEvents();
 
@@ -605,7 +605,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.index().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::index", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::index", context, engine);
             return result;
         }
          QScriptValue
@@ -613,7 +613,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::filePath", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::filePath", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::filePath";
             //QCoreApplication::processEvents();
 
@@ -675,7 +675,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.filePath().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::filePath", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::filePath", context, engine);
             return result;
         }
          QScriptValue
@@ -683,7 +683,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::setFilter", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::setFilter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::setFilter";
             //QCoreApplication::processEvents();
 
@@ -740,7 +740,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.setFilter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::setFilter", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::setFilter", context, engine);
             return result;
         }
          QScriptValue
@@ -748,7 +748,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::isDir", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::isDir", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::isDir";
             //QCoreApplication::processEvents();
 
@@ -810,7 +810,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.isDir().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::isDir", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::isDir", context, engine);
             return result;
         }
          QScriptValue
@@ -818,7 +818,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::setHeaderData", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::setHeaderData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::setHeaderData";
             //QCoreApplication::processEvents();
 
@@ -1116,7 +1116,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.setHeaderData().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::setHeaderData", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::setHeaderData", context, engine);
             return result;
         }
          QScriptValue
@@ -1124,7 +1124,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::rowCount", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::rowCount", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::rowCount";
             //QCoreApplication::processEvents();
 
@@ -1207,7 +1207,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.rowCount().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::rowCount", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::rowCount", context, engine);
             return result;
         }
          QScriptValue
@@ -1215,7 +1215,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::setIconProvider", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::setIconProvider", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::setIconProvider";
             //QCoreApplication::processEvents();
 
@@ -1269,7 +1269,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.setIconProvider().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::setIconProvider", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::setIconProvider", context, engine);
             return result;
         }
          QScriptValue
@@ -1277,7 +1277,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::setNameFilter", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::setNameFilter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::setNameFilter";
             //QCoreApplication::processEvents();
 
@@ -1324,7 +1324,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.setNameFilter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::setNameFilter", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::setNameFilter", context, engine);
             return result;
         }
          QScriptValue
@@ -1332,7 +1332,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::setNameFilters", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::setNameFilters", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::setNameFilters";
             //QCoreApplication::processEvents();
 
@@ -1380,7 +1380,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.setNameFilters().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::setNameFilters", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::setNameFilters", context, engine);
             return result;
         }
          QScriptValue
@@ -1388,7 +1388,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::setNameFilterDisables", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::setNameFilterDisables", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::setNameFilterDisables";
             //QCoreApplication::processEvents();
 
@@ -1435,7 +1435,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.setNameFilterDisables().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::setNameFilterDisables", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::setNameFilterDisables", context, engine);
             return result;
         }
          QScriptValue
@@ -1443,7 +1443,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::setItemData", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::setItemData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::setItemData";
             //QCoreApplication::processEvents();
 
@@ -1674,7 +1674,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.setItemData().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::setItemData", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::setItemData", context, engine);
             return result;
         }
          QScriptValue
@@ -1682,7 +1682,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::itemData", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::itemData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::itemData";
             //QCoreApplication::processEvents();
 
@@ -1744,7 +1744,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.itemData().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::itemData", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::itemData", context, engine);
             return result;
         }
          QScriptValue
@@ -1752,7 +1752,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::canFetchMore", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::canFetchMore", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::canFetchMore";
             //QCoreApplication::processEvents();
 
@@ -1814,7 +1814,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.canFetchMore().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::canFetchMore", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::canFetchMore", context, engine);
             return result;
         }
          QScriptValue
@@ -1822,7 +1822,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::fetchMore", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::fetchMore", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::fetchMore";
             //QCoreApplication::processEvents();
 
@@ -1879,7 +1879,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.fetchMore().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::fetchMore", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::fetchMore", context, engine);
             return result;
         }
          QScriptValue
@@ -1887,7 +1887,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileSystemModel::data", context, engine);
+            REcmaHelper::functionStart("REcmaFileSystemModel::data", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileSystemModel::data";
             //QCoreApplication::processEvents();
 
@@ -2004,7 +2004,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileSystemModel.data().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileSystemModel::data", context, engine);
+            REcmaHelper::functionEnd("REcmaFileSystemModel::data", context, engine);
             return result;
         }
          QScriptValue REcmaFileSystemModel::toString

@@ -296,7 +296,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCoordinateEvent::setModifiers", context, engine);
+            REcmaHelper::functionStart("REcmaCoordinateEvent::setModifiers", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCoordinateEvent::setModifiers";
             //QCoreApplication::processEvents();
 
@@ -343,7 +343,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCoordinateEvent.setModifiers().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCoordinateEvent::setModifiers", context, engine);
+            REcmaHelper::functionEnd("REcmaCoordinateEvent::setModifiers", context, engine);
             return result;
         }
          QScriptValue
@@ -351,7 +351,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCoordinateEvent::getModifiers", context, engine);
+            REcmaHelper::functionStart("REcmaCoordinateEvent::getModifiers", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCoordinateEvent::getModifiers";
             //QCoreApplication::processEvents();
 
@@ -392,7 +392,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCoordinateEvent.getModifiers().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCoordinateEvent::getModifiers", context, engine);
+            REcmaHelper::functionEnd("REcmaCoordinateEvent::getModifiers", context, engine);
             return result;
         }
          QScriptValue REcmaCoordinateEvent::toString

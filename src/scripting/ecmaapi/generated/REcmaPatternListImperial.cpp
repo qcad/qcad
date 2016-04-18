@@ -189,7 +189,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPatternListImperial::init", context, engine);
+            REcmaHelper::functionStart("REcmaPatternListImperial::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPatternListImperial::init";
             //QCoreApplication::processEvents();
 
@@ -215,7 +215,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPatternListImperial.init().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPatternListImperial::init", context, engine);
+            REcmaHelper::functionEnd("REcmaPatternListImperial::init", context, engine);
             return result;
         }
          QScriptValue
@@ -223,7 +223,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPatternListImperial::uninit", context, engine);
+            REcmaHelper::functionStart("REcmaPatternListImperial::uninit", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPatternListImperial::uninit";
             //QCoreApplication::processEvents();
 
@@ -249,7 +249,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPatternListImperial.uninit().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPatternListImperial::uninit", context, engine);
+            REcmaHelper::functionEnd("REcmaPatternListImperial::uninit", context, engine);
             return result;
         }
          QScriptValue
@@ -257,7 +257,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPatternListImperial::getNames", context, engine);
+            REcmaHelper::functionStart("REcmaPatternListImperial::getNames", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPatternListImperial::getNames";
             //QCoreApplication::processEvents();
 
@@ -288,7 +288,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPatternListImperial.getNames().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPatternListImperial::getNames", context, engine);
+            REcmaHelper::functionEnd("REcmaPatternListImperial::getNames", context, engine);
             return result;
         }
          QScriptValue
@@ -296,7 +296,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPatternListImperial::get", context, engine);
+            REcmaHelper::functionStart("REcmaPatternListImperial::get", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPatternListImperial::get";
             //QCoreApplication::processEvents();
 
@@ -338,7 +338,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPatternListImperial.get().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPatternListImperial::get", context, engine);
+            REcmaHelper::functionEnd("REcmaPatternListImperial::get", context, engine);
             return result;
         }
          QScriptValue REcmaPatternListImperial::toString

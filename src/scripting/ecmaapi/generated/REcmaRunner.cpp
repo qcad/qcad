@@ -186,7 +186,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRunner::doWork", context, engine);
+            REcmaHelper::functionStart("REcmaRunner::doWork", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRunner::doWork";
             //QCoreApplication::processEvents();
 
@@ -222,7 +222,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRunner.doWork().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRunner::doWork", context, engine);
+            REcmaHelper::functionEnd("REcmaRunner::doWork", context, engine);
             return result;
         }
          QScriptValue REcmaRunner::toString

@@ -129,7 +129,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileExporterFactory::getFilterStrings", context, engine);
+            REcmaHelper::functionStart("REcmaFileExporterFactory::getFilterStrings", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileExporterFactory::getFilterStrings";
             //QCoreApplication::processEvents();
 
@@ -170,7 +170,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileExporterFactory.getFilterStrings().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileExporterFactory::getFilterStrings", context, engine);
+            REcmaHelper::functionEnd("REcmaFileExporterFactory::getFilterStrings", context, engine);
             return result;
         }
          QScriptValue
@@ -178,7 +178,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileExporterFactory::canExport", context, engine);
+            REcmaHelper::functionStart("REcmaFileExporterFactory::canExport", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileExporterFactory::canExport";
             //QCoreApplication::processEvents();
 
@@ -275,7 +275,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileExporterFactory.canExport().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileExporterFactory::canExport", context, engine);
+            REcmaHelper::functionEnd("REcmaFileExporterFactory::canExport", context, engine);
             return result;
         }
          QScriptValue
@@ -283,7 +283,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileExporterFactory::instantiate", context, engine);
+            REcmaHelper::functionStart("REcmaFileExporterFactory::instantiate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileExporterFactory::instantiate";
             //QCoreApplication::processEvents();
 
@@ -489,7 +489,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileExporterFactory.instantiate().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileExporterFactory::instantiate", context, engine);
+            REcmaHelper::functionEnd("REcmaFileExporterFactory::instantiate", context, engine);
             return result;
         }
          QScriptValue REcmaFileExporterFactory::toString

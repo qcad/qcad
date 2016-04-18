@@ -1855,7 +1855,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaS::compare", context, engine);
+            REcmaHelper::functionStart("REcmaS::compare", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaS::compare";
             //QCoreApplication::processEvents();
 
@@ -1995,7 +1995,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RS.compare().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaS::compare", context, engine);
+            REcmaHelper::functionEnd("REcmaS::compare", context, engine);
             return result;
         }
          QScriptValue
@@ -2003,7 +2003,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaS::getCpuCores", context, engine);
+            REcmaHelper::functionStart("REcmaS::getCpuCores", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaS::getCpuCores";
             //QCoreApplication::processEvents();
 
@@ -2034,7 +2034,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RS.getCpuCores().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaS::getCpuCores", context, engine);
+            REcmaHelper::functionEnd("REcmaS::getCpuCores", context, engine);
             return result;
         }
          QScriptValue
@@ -2042,7 +2042,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaS::getBuildCpuArchitecture", context, engine);
+            REcmaHelper::functionStart("REcmaS::getBuildCpuArchitecture", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaS::getBuildCpuArchitecture";
             //QCoreApplication::processEvents();
 
@@ -2073,7 +2073,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RS.getBuildCpuArchitecture().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaS::getBuildCpuArchitecture", context, engine);
+            REcmaHelper::functionEnd("REcmaS::getBuildCpuArchitecture", context, engine);
             return result;
         }
          QScriptValue
@@ -2081,7 +2081,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaS::getHostId", context, engine);
+            REcmaHelper::functionStart("REcmaS::getHostId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaS::getHostId";
             //QCoreApplication::processEvents();
 
@@ -2112,7 +2112,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RS.getHostId().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaS::getHostId", context, engine);
+            REcmaHelper::functionEnd("REcmaS::getHostId", context, engine);
             return result;
         }
          QScriptValue
@@ -2120,7 +2120,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaS::getSystemId", context, engine);
+            REcmaHelper::functionStart("REcmaS::getSystemId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaS::getSystemId";
             //QCoreApplication::processEvents();
 
@@ -2151,7 +2151,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RS.getSystemId().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaS::getSystemId", context, engine);
+            REcmaHelper::functionEnd("REcmaS::getSystemId", context, engine);
             return result;
         }
          QScriptValue
@@ -2159,7 +2159,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaS::getWindowManagerId", context, engine);
+            REcmaHelper::functionStart("REcmaS::getWindowManagerId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaS::getWindowManagerId";
             //QCoreApplication::processEvents();
 
@@ -2190,7 +2190,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RS.getWindowManagerId().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaS::getWindowManagerId", context, engine);
+            REcmaHelper::functionEnd("REcmaS::getWindowManagerId", context, engine);
             return result;
         }
          QScriptValue
@@ -2198,7 +2198,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaS::getDirectoryList", context, engine);
+            REcmaHelper::functionStart("REcmaS::getDirectoryList", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaS::getDirectoryList";
             //QCoreApplication::processEvents();
 
@@ -2240,7 +2240,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RS.getDirectoryList().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaS::getDirectoryList", context, engine);
+            REcmaHelper::functionEnd("REcmaS::getDirectoryList", context, engine);
             return result;
         }
          QScriptValue
@@ -2248,7 +2248,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaS::getFileList", context, engine);
+            REcmaHelper::functionStart("REcmaS::getFileList", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaS::getFileList";
             //QCoreApplication::processEvents();
 
@@ -2303,7 +2303,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RS.getFileList().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaS::getFileList", context, engine);
+            REcmaHelper::functionEnd("REcmaS::getFileList", context, engine);
             return result;
         }
          QScriptValue
@@ -2311,7 +2311,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaS::getFontList", context, engine);
+            REcmaHelper::functionStart("REcmaS::getFontList", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaS::getFontList";
             //QCoreApplication::processEvents();
 
@@ -2342,7 +2342,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RS.getFontList().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaS::getFontList", context, engine);
+            REcmaHelper::functionEnd("REcmaS::getFontList", context, engine);
             return result;
         }
          QScriptValue
@@ -2350,7 +2350,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaS::getPatternList", context, engine);
+            REcmaHelper::functionStart("REcmaS::getPatternList", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaS::getPatternList";
             //QCoreApplication::processEvents();
 
@@ -2392,7 +2392,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RS.getPatternList().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaS::getPatternList", context, engine);
+            REcmaHelper::functionEnd("REcmaS::getPatternList", context, engine);
             return result;
         }
          QScriptValue
@@ -2400,7 +2400,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaS::getLinetypeList", context, engine);
+            REcmaHelper::functionStart("REcmaS::getLinetypeList", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaS::getLinetypeList";
             //QCoreApplication::processEvents();
 
@@ -2442,7 +2442,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RS.getLinetypeList().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaS::getLinetypeList", context, engine);
+            REcmaHelper::functionEnd("REcmaS::getLinetypeList", context, engine);
             return result;
         }
          QScriptValue REcmaS::toString

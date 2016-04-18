@@ -129,7 +129,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRuler::setGraphicsView", context, engine);
+            REcmaHelper::functionStart("REcmaRuler::setGraphicsView", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRuler::setGraphicsView";
             //QCoreApplication::processEvents();
 
@@ -183,7 +183,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRuler.setGraphicsView().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRuler::setGraphicsView", context, engine);
+            REcmaHelper::functionEnd("REcmaRuler::setGraphicsView", context, engine);
             return result;
         }
          QScriptValue
@@ -191,7 +191,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRuler::getOrientation", context, engine);
+            REcmaHelper::functionStart("REcmaRuler::getOrientation", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRuler::getOrientation";
             //QCoreApplication::processEvents();
 
@@ -232,7 +232,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRuler.getOrientation().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRuler::getOrientation", context, engine);
+            REcmaHelper::functionEnd("REcmaRuler::getOrientation", context, engine);
             return result;
         }
          QScriptValue
@@ -240,7 +240,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRuler::setOrientation", context, engine);
+            REcmaHelper::functionStart("REcmaRuler::setOrientation", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRuler::setOrientation";
             //QCoreApplication::processEvents();
 
@@ -287,7 +287,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRuler.setOrientation().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRuler::setOrientation", context, engine);
+            REcmaHelper::functionEnd("REcmaRuler::setOrientation", context, engine);
             return result;
         }
          QScriptValue
@@ -295,7 +295,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRuler::paintTick", context, engine);
+            REcmaHelper::functionStart("REcmaRuler::paintTick", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRuler::paintTick";
             //QCoreApplication::processEvents();
 
@@ -368,7 +368,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRuler.paintTick().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRuler::paintTick", context, engine);
+            REcmaHelper::functionEnd("REcmaRuler::paintTick", context, engine);
             return result;
         }
          QScriptValue
@@ -376,7 +376,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRuler::getFont", context, engine);
+            REcmaHelper::functionStart("REcmaRuler::getFont", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRuler::getFont";
             //QCoreApplication::processEvents();
 
@@ -417,7 +417,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRuler.getFont().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRuler::getFont", context, engine);
+            REcmaHelper::functionEnd("REcmaRuler::getFont", context, engine);
             return result;
         }
          QScriptValue REcmaRuler::toString

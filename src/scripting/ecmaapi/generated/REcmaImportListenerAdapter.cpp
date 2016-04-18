@@ -214,7 +214,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaImportListenerAdapter::preImportEvent", context, engine);
+            REcmaHelper::functionStart("REcmaImportListenerAdapter::preImportEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaImportListenerAdapter::preImportEvent";
             //QCoreApplication::processEvents();
 
@@ -268,7 +268,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RImportListenerAdapter.preImportEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaImportListenerAdapter::preImportEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaImportListenerAdapter::preImportEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -276,7 +276,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaImportListenerAdapter::postImportEvent", context, engine);
+            REcmaHelper::functionStart("REcmaImportListenerAdapter::postImportEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaImportListenerAdapter::postImportEvent";
             //QCoreApplication::processEvents();
 
@@ -330,7 +330,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RImportListenerAdapter.postImportEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaImportListenerAdapter::postImportEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaImportListenerAdapter::postImportEvent", context, engine);
             return result;
         }
          QScriptValue REcmaImportListenerAdapter::toString

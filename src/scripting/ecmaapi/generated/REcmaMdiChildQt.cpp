@@ -277,7 +277,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMdiChildQt::setDocumentInterface", context, engine);
+            REcmaHelper::functionStart("REcmaMdiChildQt::setDocumentInterface", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMdiChildQt::setDocumentInterface";
             //QCoreApplication::processEvents();
 
@@ -331,7 +331,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMdiChildQt.setDocumentInterface().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMdiChildQt::setDocumentInterface", context, engine);
+            REcmaHelper::functionEnd("REcmaMdiChildQt::setDocumentInterface", context, engine);
             return result;
         }
          QScriptValue
@@ -339,7 +339,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMdiChildQt::getDocumentInterface", context, engine);
+            REcmaHelper::functionStart("REcmaMdiChildQt::getDocumentInterface", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMdiChildQt::getDocumentInterface";
             //QCoreApplication::processEvents();
 
@@ -380,7 +380,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMdiChildQt.getDocumentInterface().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMdiChildQt::getDocumentInterface", context, engine);
+            REcmaHelper::functionEnd("REcmaMdiChildQt::getDocumentInterface", context, engine);
             return result;
         }
          QScriptValue
@@ -388,7 +388,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMdiChildQt::getDocument", context, engine);
+            REcmaHelper::functionStart("REcmaMdiChildQt::getDocument", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMdiChildQt::getDocument";
             //QCoreApplication::processEvents();
 
@@ -429,7 +429,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMdiChildQt.getDocument().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMdiChildQt::getDocument", context, engine);
+            REcmaHelper::functionEnd("REcmaMdiChildQt::getDocument", context, engine);
             return result;
         }
          QScriptValue
@@ -437,7 +437,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMdiChildQt::getLastKnownViewWithFocus", context, engine);
+            REcmaHelper::functionStart("REcmaMdiChildQt::getLastKnownViewWithFocus", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMdiChildQt::getLastKnownViewWithFocus";
             //QCoreApplication::processEvents();
 
@@ -478,7 +478,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMdiChildQt.getLastKnownViewWithFocus().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMdiChildQt::getLastKnownViewWithFocus", context, engine);
+            REcmaHelper::functionEnd("REcmaMdiChildQt::getLastKnownViewWithFocus", context, engine);
             return result;
         }
          QScriptValue
@@ -486,7 +486,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMdiChildQt::updateModifiedListener", context, engine);
+            REcmaHelper::functionStart("REcmaMdiChildQt::updateModifiedListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMdiChildQt::updateModifiedListener";
             //QCoreApplication::processEvents();
 
@@ -540,7 +540,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMdiChildQt.updateModifiedListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMdiChildQt::updateModifiedListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMdiChildQt::updateModifiedListener", context, engine);
             return result;
         }
          QScriptValue
@@ -548,7 +548,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMdiChildQt::setCloseEventRejected", context, engine);
+            REcmaHelper::functionStart("REcmaMdiChildQt::setCloseEventRejected", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMdiChildQt::setCloseEventRejected";
             //QCoreApplication::processEvents();
 
@@ -584,7 +584,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMdiChildQt.setCloseEventRejected().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMdiChildQt::setCloseEventRejected", context, engine);
+            REcmaHelper::functionEnd("REcmaMdiChildQt::setCloseEventRejected", context, engine);
             return result;
         }
          QScriptValue
@@ -592,7 +592,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMdiChildQt::setCloseEventAccepted", context, engine);
+            REcmaHelper::functionStart("REcmaMdiChildQt::setCloseEventAccepted", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMdiChildQt::setCloseEventAccepted";
             //QCoreApplication::processEvents();
 
@@ -628,7 +628,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMdiChildQt.setCloseEventAccepted().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMdiChildQt::setCloseEventAccepted", context, engine);
+            REcmaHelper::functionEnd("REcmaMdiChildQt::setCloseEventAccepted", context, engine);
             return result;
         }
          QScriptValue
@@ -636,7 +636,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMdiChildQt::isCloseEventAccepted", context, engine);
+            REcmaHelper::functionStart("REcmaMdiChildQt::isCloseEventAccepted", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMdiChildQt::isCloseEventAccepted";
             //QCoreApplication::processEvents();
 
@@ -677,7 +677,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMdiChildQt.isCloseEventAccepted().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMdiChildQt::isCloseEventAccepted", context, engine);
+            REcmaHelper::functionEnd("REcmaMdiChildQt::isCloseEventAccepted", context, engine);
             return result;
         }
          QScriptValue REcmaMdiChildQt::toString

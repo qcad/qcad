@@ -229,7 +229,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCommandLine::getLastCommand", context, engine);
+            REcmaHelper::functionStart("REcmaCommandLine::getLastCommand", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCommandLine::getLastCommand";
             //QCoreApplication::processEvents();
 
@@ -270,7 +270,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCommandLine.getLastCommand().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCommandLine::getLastCommand", context, engine);
+            REcmaHelper::functionEnd("REcmaCommandLine::getLastCommand", context, engine);
             return result;
         }
          QScriptValue
@@ -278,7 +278,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCommandLine::appendCommand", context, engine);
+            REcmaHelper::functionStart("REcmaCommandLine::appendCommand", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCommandLine::appendCommand";
             //QCoreApplication::processEvents();
 
@@ -325,7 +325,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCommandLine.appendCommand().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCommandLine::appendCommand", context, engine);
+            REcmaHelper::functionEnd("REcmaCommandLine::appendCommand", context, engine);
             return result;
         }
          QScriptValue REcmaCommandLine::toString

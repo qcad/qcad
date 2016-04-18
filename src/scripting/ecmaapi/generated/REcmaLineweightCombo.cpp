@@ -239,7 +239,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLineweightCombo::init", context, engine);
+            REcmaHelper::functionStart("REcmaLineweightCombo::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLineweightCombo::init";
             //QCoreApplication::processEvents();
 
@@ -275,7 +275,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLineweightCombo.init().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLineweightCombo::init", context, engine);
+            REcmaHelper::functionEnd("REcmaLineweightCombo::init", context, engine);
             return result;
         }
          QScriptValue
@@ -283,7 +283,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLineweightCombo::getLineweight", context, engine);
+            REcmaHelper::functionStart("REcmaLineweightCombo::getLineweight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLineweightCombo::getLineweight";
             //QCoreApplication::processEvents();
 
@@ -324,7 +324,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLineweightCombo.getLineweight().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLineweightCombo::getLineweight", context, engine);
+            REcmaHelper::functionEnd("REcmaLineweightCombo::getLineweight", context, engine);
             return result;
         }
          QScriptValue
@@ -332,7 +332,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLineweightCombo::setLineweight", context, engine);
+            REcmaHelper::functionStart("REcmaLineweightCombo::setLineweight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLineweightCombo::setLineweight";
             //QCoreApplication::processEvents();
 
@@ -379,7 +379,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLineweightCombo.setLineweight().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLineweightCombo::setLineweight", context, engine);
+            REcmaHelper::functionEnd("REcmaLineweightCombo::setLineweight", context, engine);
             return result;
         }
          QScriptValue
@@ -387,7 +387,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLineweightCombo::getOnlyFixed", context, engine);
+            REcmaHelper::functionStart("REcmaLineweightCombo::getOnlyFixed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLineweightCombo::getOnlyFixed";
             //QCoreApplication::processEvents();
 
@@ -428,7 +428,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLineweightCombo.getOnlyFixed().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLineweightCombo::getOnlyFixed", context, engine);
+            REcmaHelper::functionEnd("REcmaLineweightCombo::getOnlyFixed", context, engine);
             return result;
         }
          QScriptValue
@@ -436,7 +436,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLineweightCombo::setOnlyFixed", context, engine);
+            REcmaHelper::functionStart("REcmaLineweightCombo::setOnlyFixed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLineweightCombo::setOnlyFixed";
             //QCoreApplication::processEvents();
 
@@ -483,7 +483,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLineweightCombo.setOnlyFixed().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLineweightCombo::setOnlyFixed", context, engine);
+            REcmaHelper::functionEnd("REcmaLineweightCombo::setOnlyFixed", context, engine);
             return result;
         }
          QScriptValue
@@ -491,7 +491,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLineweightCombo::lineweightChanged", context, engine);
+            REcmaHelper::functionStart("REcmaLineweightCombo::lineweightChanged", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLineweightCombo::lineweightChanged";
             //QCoreApplication::processEvents();
 
@@ -538,7 +538,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLineweightCombo.lineweightChanged().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLineweightCombo::lineweightChanged", context, engine);
+            REcmaHelper::functionEnd("REcmaLineweightCombo::lineweightChanged", context, engine);
             return result;
         }
          QScriptValue REcmaLineweightCombo::toString

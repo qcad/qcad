@@ -162,7 +162,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPatternLine::getPainterPath", context, engine);
+            REcmaHelper::functionStart("REcmaPatternLine::getPainterPath", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPatternLine::getPainterPath";
             //QCoreApplication::processEvents();
 
@@ -203,7 +203,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPatternLine.getPainterPath().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPatternLine::getPainterPath", context, engine);
+            REcmaHelper::functionEnd("REcmaPatternLine::getPainterPath", context, engine);
             return result;
         }
          QScriptValue
@@ -211,7 +211,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPatternLine::getLines", context, engine);
+            REcmaHelper::functionStart("REcmaPatternLine::getLines", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPatternLine::getLines";
             //QCoreApplication::processEvents();
 
@@ -252,7 +252,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPatternLine.getLines().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPatternLine::getLines", context, engine);
+            REcmaHelper::functionEnd("REcmaPatternLine::getLines", context, engine);
             return result;
         }
          QScriptValue
@@ -260,7 +260,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPatternLine::getLength", context, engine);
+            REcmaHelper::functionStart("REcmaPatternLine::getLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPatternLine::getLength";
             //QCoreApplication::processEvents();
 
@@ -301,7 +301,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPatternLine.getLength().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPatternLine::getLength", context, engine);
+            REcmaHelper::functionEnd("REcmaPatternLine::getLength", context, engine);
             return result;
         }
          QScriptValue
@@ -309,7 +309,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPatternLine::scale", context, engine);
+            REcmaHelper::functionStart("REcmaPatternLine::scale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPatternLine::scale";
             //QCoreApplication::processEvents();
 
@@ -356,7 +356,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPatternLine.scale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPatternLine::scale", context, engine);
+            REcmaHelper::functionEnd("REcmaPatternLine::scale", context, engine);
             return result;
         }
          QScriptValue
@@ -364,7 +364,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPatternLine::rotate", context, engine);
+            REcmaHelper::functionStart("REcmaPatternLine::rotate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPatternLine::rotate";
             //QCoreApplication::processEvents();
 
@@ -411,7 +411,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPatternLine.rotate().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPatternLine::rotate", context, engine);
+            REcmaHelper::functionEnd("REcmaPatternLine::rotate", context, engine);
             return result;
         }
          QScriptValue REcmaPatternLine::toString

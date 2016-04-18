@@ -832,7 +832,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellListView::contextMenuEvent", context, engine);
+            REcmaHelper::functionStart("REcmaShellListView::contextMenuEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellListView::contextMenuEvent";
             //QCoreApplication::processEvents();
 
@@ -886,7 +886,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RListView.contextMenuEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellListView::contextMenuEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaShellListView::contextMenuEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -894,7 +894,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellListView::mousePressEvent", context, engine);
+            REcmaHelper::functionStart("REcmaShellListView::mousePressEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellListView::mousePressEvent";
             //QCoreApplication::processEvents();
 
@@ -946,7 +946,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RListView.mousePressEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellListView::mousePressEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaShellListView::mousePressEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -954,7 +954,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellListView::mouseReleaseEvent", context, engine);
+            REcmaHelper::functionStart("REcmaShellListView::mouseReleaseEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellListView::mouseReleaseEvent";
             //QCoreApplication::processEvents();
 
@@ -1006,7 +1006,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RListView.mouseReleaseEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellListView::mouseReleaseEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaShellListView::mouseReleaseEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -1014,7 +1014,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellListView::mouseMoveEvent", context, engine);
+            REcmaHelper::functionStart("REcmaShellListView::mouseMoveEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellListView::mouseMoveEvent";
             //QCoreApplication::processEvents();
 
@@ -1066,7 +1066,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RListView.mouseMoveEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellListView::mouseMoveEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaShellListView::mouseMoveEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -1074,7 +1074,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellListView::dragEnterEvent", context, engine);
+            REcmaHelper::functionStart("REcmaShellListView::dragEnterEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellListView::dragEnterEvent";
             //QCoreApplication::processEvents();
 
@@ -1128,7 +1128,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RListView.dragEnterEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellListView::dragEnterEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaShellListView::dragEnterEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -1136,7 +1136,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellListView::dragMoveEvent", context, engine);
+            REcmaHelper::functionStart("REcmaShellListView::dragMoveEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellListView::dragMoveEvent";
             //QCoreApplication::processEvents();
 
@@ -1190,7 +1190,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RListView.dragMoveEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellListView::dragMoveEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaShellListView::dragMoveEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -1198,7 +1198,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellListView::dropEvent", context, engine);
+            REcmaHelper::functionStart("REcmaShellListView::dropEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellListView::dropEvent";
             //QCoreApplication::processEvents();
 
@@ -1252,7 +1252,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RListView.dropEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellListView::dropEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaShellListView::dropEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -1260,7 +1260,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellListView::startDrag", context, engine);
+            REcmaHelper::functionStart("REcmaShellListView::startDrag", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellListView::startDrag";
             //QCoreApplication::processEvents();
 
@@ -1307,7 +1307,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RListView.startDrag().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellListView::startDrag", context, engine);
+            REcmaHelper::functionEnd("REcmaShellListView::startDrag", context, engine);
             return result;
         }
          QScriptValue
@@ -1315,7 +1315,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellListView::selectionChanged", context, engine);
+            REcmaHelper::functionStart("REcmaShellListView::selectionChanged", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellListView::selectionChanged";
             //QCoreApplication::processEvents();
 
@@ -1395,7 +1395,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RListView.selectionChanged().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellListView::selectionChanged", context, engine);
+            REcmaHelper::functionEnd("REcmaShellListView::selectionChanged", context, engine);
             return result;
         }
          QScriptValue
@@ -1403,7 +1403,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellListView::currentChanged", context, engine);
+            REcmaHelper::functionStart("REcmaShellListView::currentChanged", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellListView::currentChanged";
             //QCoreApplication::processEvents();
 
@@ -1483,7 +1483,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RListView.currentChanged().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellListView::currentChanged", context, engine);
+            REcmaHelper::functionEnd("REcmaShellListView::currentChanged", context, engine);
             return result;
         }
         

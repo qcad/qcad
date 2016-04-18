@@ -526,7 +526,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setText", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setText", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setText";
             //QCoreApplication::processEvents();
 
@@ -573,7 +573,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setText().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setText", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setText", context, engine);
             return result;
         }
          QScriptValue
@@ -581,7 +581,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::initTexts", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::initTexts", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::initTexts";
             //QCoreApplication::processEvents();
 
@@ -617,7 +617,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.initTexts().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::initTexts", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::initTexts", context, engine);
             return result;
         }
          QScriptValue
@@ -625,7 +625,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::init", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::init";
             //QCoreApplication::processEvents();
 
@@ -661,7 +661,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.init().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::init", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::init", context, engine);
             return result;
         }
          QScriptValue
@@ -669,7 +669,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::formatToolTip", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::formatToolTip", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::formatToolTip";
             //QCoreApplication::processEvents();
 
@@ -724,7 +724,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.formatToolTip().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::formatToolTip", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::formatToolTip", context, engine);
             return result;
         }
          QScriptValue
@@ -732,7 +732,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getToolTip", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getToolTip", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getToolTip";
             //QCoreApplication::processEvents();
 
@@ -797,7 +797,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getToolTip().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getToolTip", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getToolTip", context, engine);
             return result;
         }
          QScriptValue
@@ -805,7 +805,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setDocumentInterface", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setDocumentInterface", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setDocumentInterface";
             //QCoreApplication::processEvents();
 
@@ -859,7 +859,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setDocumentInterface().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setDocumentInterface", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setDocumentInterface", context, engine);
             return result;
         }
          QScriptValue
@@ -867,7 +867,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getDocumentInterface", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getDocumentInterface", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getDocumentInterface";
             //QCoreApplication::processEvents();
 
@@ -908,7 +908,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getDocumentInterface().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getDocumentInterface", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getDocumentInterface", context, engine);
             return result;
         }
          QScriptValue
@@ -916,7 +916,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setShortcut", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setShortcut", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setShortcut";
             //QCoreApplication::processEvents();
 
@@ -973,7 +973,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setShortcut().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setShortcut", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setShortcut", context, engine);
             return result;
         }
          QScriptValue
@@ -981,7 +981,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setDefaultShortcut", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setDefaultShortcut", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setDefaultShortcut";
             //QCoreApplication::processEvents();
 
@@ -1038,7 +1038,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setDefaultShortcut().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setDefaultShortcut", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setDefaultShortcut", context, engine);
             return result;
         }
          QScriptValue
@@ -1046,7 +1046,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setShortcuts", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setShortcuts", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setShortcuts";
             //QCoreApplication::processEvents();
 
@@ -1094,7 +1094,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setShortcuts().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setShortcuts", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setShortcuts", context, engine);
             return result;
         }
          QScriptValue
@@ -1102,7 +1102,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setDefaultShortcuts", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setDefaultShortcuts", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setDefaultShortcuts";
             //QCoreApplication::processEvents();
 
@@ -1150,7 +1150,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setDefaultShortcuts().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setDefaultShortcuts", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setDefaultShortcuts", context, engine);
             return result;
         }
          QScriptValue
@@ -1158,7 +1158,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getDefaultShortcuts", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getDefaultShortcuts", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getDefaultShortcuts";
             //QCoreApplication::processEvents();
 
@@ -1199,7 +1199,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getDefaultShortcuts().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getDefaultShortcuts", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getDefaultShortcuts", context, engine);
             return result;
         }
          QScriptValue
@@ -1207,7 +1207,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setShortcutText", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setShortcutText", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setShortcutText";
             //QCoreApplication::processEvents();
 
@@ -1254,7 +1254,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setShortcutText().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setShortcutText", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setShortcutText", context, engine);
             return result;
         }
          QScriptValue
@@ -1262,7 +1262,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getShortcutText", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getShortcutText", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getShortcutText";
             //QCoreApplication::processEvents();
 
@@ -1303,7 +1303,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getShortcutText().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getShortcutText", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getShortcutText", context, engine);
             return result;
         }
          QScriptValue
@@ -1311,7 +1311,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setGroupSortOrderStatic", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setGroupSortOrderStatic", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setGroupSortOrderStatic";
             //QCoreApplication::processEvents();
 
@@ -1364,7 +1364,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setGroupSortOrderStatic().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setGroupSortOrderStatic", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setGroupSortOrderStatic", context, engine);
             return result;
         }
          QScriptValue
@@ -1372,7 +1372,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setGroupSortOrderOverrideStatic", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setGroupSortOrderOverrideStatic", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setGroupSortOrderOverrideStatic";
             //QCoreApplication::processEvents();
 
@@ -1438,7 +1438,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setGroupSortOrderOverrideStatic().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setGroupSortOrderOverrideStatic", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setGroupSortOrderOverrideStatic", context, engine);
             return result;
         }
          QScriptValue
@@ -1446,7 +1446,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getGroupSortOrderStatic", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getGroupSortOrderStatic", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getGroupSortOrderStatic";
             //QCoreApplication::processEvents();
 
@@ -1543,7 +1543,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getGroupSortOrderStatic().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getGroupSortOrderStatic", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getGroupSortOrderStatic", context, engine);
             return result;
         }
          QScriptValue
@@ -1551,7 +1551,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setSortOrderStatic", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setSortOrderStatic", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setSortOrderStatic";
             //QCoreApplication::processEvents();
 
@@ -1604,7 +1604,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setSortOrderStatic().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setSortOrderStatic", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setSortOrderStatic", context, engine);
             return result;
         }
          QScriptValue
@@ -1612,7 +1612,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setSortOrderOverrideStatic", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setSortOrderOverrideStatic", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setSortOrderOverrideStatic";
             //QCoreApplication::processEvents();
 
@@ -1678,7 +1678,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setSortOrderOverrideStatic().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setSortOrderOverrideStatic", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setSortOrderOverrideStatic", context, engine);
             return result;
         }
          QScriptValue
@@ -1686,7 +1686,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getSortOrderStatic", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getSortOrderStatic", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getSortOrderStatic";
             //QCoreApplication::processEvents();
 
@@ -1783,7 +1783,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getSortOrderStatic().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getSortOrderStatic", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getSortOrderStatic", context, engine);
             return result;
         }
          QScriptValue
@@ -1791,7 +1791,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setGroupSortOrder", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setGroupSortOrder", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setGroupSortOrder";
             //QCoreApplication::processEvents();
 
@@ -1838,7 +1838,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setGroupSortOrder().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setGroupSortOrder", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setGroupSortOrder", context, engine);
             return result;
         }
          QScriptValue
@@ -1846,7 +1846,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setGroupSortOrderOverride", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setGroupSortOrderOverride", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setGroupSortOrderOverride";
             //QCoreApplication::processEvents();
 
@@ -1906,7 +1906,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setGroupSortOrderOverride().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setGroupSortOrderOverride", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setGroupSortOrderOverride", context, engine);
             return result;
         }
          QScriptValue
@@ -1914,7 +1914,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getGroupSortOrder", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getGroupSortOrder", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getGroupSortOrder";
             //QCoreApplication::processEvents();
 
@@ -1991,7 +1991,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getGroupSortOrder().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getGroupSortOrder", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getGroupSortOrder", context, engine);
             return result;
         }
          QScriptValue
@@ -1999,7 +1999,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setSortOrder", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setSortOrder", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setSortOrder";
             //QCoreApplication::processEvents();
 
@@ -2046,7 +2046,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setSortOrder().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setSortOrder", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setSortOrder", context, engine);
             return result;
         }
          QScriptValue
@@ -2054,7 +2054,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setSortOrderOverride", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setSortOrderOverride", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setSortOrderOverride";
             //QCoreApplication::processEvents();
 
@@ -2114,7 +2114,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setSortOrderOverride().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setSortOrderOverride", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setSortOrderOverride", context, engine);
             return result;
         }
          QScriptValue
@@ -2122,7 +2122,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getSortOrder", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getSortOrder", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getSortOrder";
             //QCoreApplication::processEvents();
 
@@ -2199,7 +2199,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getSortOrder().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getSortOrder", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getSortOrder", context, engine);
             return result;
         }
          QScriptValue
@@ -2207,7 +2207,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::addToMenu", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::addToMenu", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::addToMenu";
             //QCoreApplication::processEvents();
 
@@ -2257,7 +2257,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.addToMenu().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::addToMenu", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::addToMenu", context, engine);
             return result;
         }
          QScriptValue
@@ -2265,7 +2265,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::addToToolBar", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::addToToolBar", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::addToToolBar";
             //QCoreApplication::processEvents();
 
@@ -2315,7 +2315,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.addToToolBar().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::addToToolBar", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::addToToolBar", context, engine);
             return result;
         }
          QScriptValue
@@ -2323,7 +2323,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::fixSeparators", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::fixSeparators", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::fixSeparators";
             //QCoreApplication::processEvents();
 
@@ -2364,7 +2364,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.fixSeparators().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::fixSeparators", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::fixSeparators", context, engine);
             return result;
         }
          QScriptValue
@@ -2372,7 +2372,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::addSeparatorToWidget", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::addSeparatorToWidget", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::addSeparatorToWidget";
             //QCoreApplication::processEvents();
 
@@ -2429,7 +2429,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.addSeparatorToWidget().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::addSeparatorToWidget", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::addSeparatorToWidget", context, engine);
             return result;
         }
          QScriptValue
@@ -2437,7 +2437,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::addToWidget", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::addToWidget", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::addToWidget";
             //QCoreApplication::processEvents();
 
@@ -2494,7 +2494,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.addToWidget().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::addToWidget", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::addToWidget", context, engine);
             return result;
         }
          QScriptValue
@@ -2502,7 +2502,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::removeFromWidget", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::removeFromWidget", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::removeFromWidget";
             //QCoreApplication::processEvents();
 
@@ -2559,7 +2559,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.removeFromWidget().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::removeFromWidget", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::removeFromWidget", context, engine);
             return result;
         }
          QScriptValue
@@ -2567,7 +2567,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setIcon", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setIcon", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setIcon";
             //QCoreApplication::processEvents();
 
@@ -2614,7 +2614,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setIcon().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setIcon", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setIcon", context, engine);
             return result;
         }
          QScriptValue
@@ -2622,7 +2622,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::disableIcon", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::disableIcon", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::disableIcon";
             //QCoreApplication::processEvents();
 
@@ -2658,7 +2658,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.disableIcon().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::disableIcon", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::disableIcon", context, engine);
             return result;
         }
          QScriptValue
@@ -2666,7 +2666,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::isIconDisabled", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::isIconDisabled", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::isIconDisabled";
             //QCoreApplication::processEvents();
 
@@ -2707,7 +2707,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.isIconDisabled().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::isIconDisabled", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::isIconDisabled", context, engine);
             return result;
         }
          QScriptValue
@@ -2715,7 +2715,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setToolTip", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setToolTip", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setToolTip";
             //QCoreApplication::processEvents();
 
@@ -2762,7 +2762,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setToolTip().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setToolTip", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setToolTip", context, engine);
             return result;
         }
          QScriptValue
@@ -2770,7 +2770,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setStatusTip", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setStatusTip", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setStatusTip";
             //QCoreApplication::processEvents();
 
@@ -2817,7 +2817,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setStatusTip().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setStatusTip", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setStatusTip", context, engine);
             return result;
         }
          QScriptValue
@@ -2825,7 +2825,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setEnabled", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setEnabled", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setEnabled";
             //QCoreApplication::processEvents();
 
@@ -2872,7 +2872,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setEnabled().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setEnabled", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setEnabled", context, engine);
             return result;
         }
          QScriptValue
@@ -2880,7 +2880,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setEnabledOverride", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setEnabledOverride", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setEnabledOverride";
             //QCoreApplication::processEvents();
 
@@ -2940,7 +2940,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setEnabledOverride().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setEnabledOverride", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setEnabledOverride", context, engine);
             return result;
         }
          QScriptValue
@@ -2948,7 +2948,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setChecked", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setChecked", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setChecked";
             //QCoreApplication::processEvents();
 
@@ -2995,7 +2995,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setChecked().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setChecked", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setChecked", context, engine);
             return result;
         }
          QScriptValue
@@ -3003,7 +3003,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::triggerGroupDefault", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::triggerGroupDefault", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::triggerGroupDefault";
             //QCoreApplication::processEvents();
 
@@ -3040,7 +3040,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.triggerGroupDefault().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::triggerGroupDefault", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::triggerGroupDefault", context, engine);
             return result;
         }
          QScriptValue
@@ -3048,7 +3048,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::triggerGroupDefaults", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::triggerGroupDefaults", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::triggerGroupDefaults";
             //QCoreApplication::processEvents();
 
@@ -3074,7 +3074,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.triggerGroupDefaults().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::triggerGroupDefaults", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::triggerGroupDefaults", context, engine);
             return result;
         }
          QScriptValue
@@ -3082,7 +3082,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::isChecked", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::isChecked", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::isChecked";
             //QCoreApplication::processEvents();
 
@@ -3123,7 +3123,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.isChecked().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::isChecked", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::isChecked", context, engine);
             return result;
         }
          QScriptValue
@@ -3131,7 +3131,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setRequiresDocument", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setRequiresDocument", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setRequiresDocument";
             //QCoreApplication::processEvents();
 
@@ -3178,7 +3178,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setRequiresDocument().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setRequiresDocument", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setRequiresDocument", context, engine);
             return result;
         }
          QScriptValue
@@ -3186,7 +3186,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getRequiresDocument", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getRequiresDocument", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getRequiresDocument";
             //QCoreApplication::processEvents();
 
@@ -3227,7 +3227,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getRequiresDocument().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getRequiresDocument", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getRequiresDocument", context, engine);
             return result;
         }
          QScriptValue
@@ -3235,7 +3235,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setRequiresSelection", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setRequiresSelection", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setRequiresSelection";
             //QCoreApplication::processEvents();
 
@@ -3282,7 +3282,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setRequiresSelection().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setRequiresSelection", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setRequiresSelection", context, engine);
             return result;
         }
          QScriptValue
@@ -3290,7 +3290,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getRequiresSelection", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getRequiresSelection", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getRequiresSelection";
             //QCoreApplication::processEvents();
 
@@ -3331,7 +3331,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getRequiresSelection().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getRequiresSelection", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getRequiresSelection", context, engine);
             return result;
         }
          QScriptValue
@@ -3339,7 +3339,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setRequiresUndoableTransaction", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setRequiresUndoableTransaction", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setRequiresUndoableTransaction";
             //QCoreApplication::processEvents();
 
@@ -3386,7 +3386,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setRequiresUndoableTransaction().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setRequiresUndoableTransaction", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setRequiresUndoableTransaction", context, engine);
             return result;
         }
          QScriptValue
@@ -3394,7 +3394,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getRequiresUndoableTransaction", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getRequiresUndoableTransaction", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getRequiresUndoableTransaction";
             //QCoreApplication::processEvents();
 
@@ -3435,7 +3435,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getRequiresUndoableTransaction().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getRequiresUndoableTransaction", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getRequiresUndoableTransaction", context, engine);
             return result;
         }
          QScriptValue
@@ -3443,7 +3443,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setRequiresRedoableTransaction", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setRequiresRedoableTransaction", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setRequiresRedoableTransaction";
             //QCoreApplication::processEvents();
 
@@ -3490,7 +3490,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setRequiresRedoableTransaction().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setRequiresRedoableTransaction", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setRequiresRedoableTransaction", context, engine);
             return result;
         }
          QScriptValue
@@ -3498,7 +3498,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getRequiresRedoableTransaction", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getRequiresRedoableTransaction", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getRequiresRedoableTransaction";
             //QCoreApplication::processEvents();
 
@@ -3539,7 +3539,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getRequiresRedoableTransaction().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getRequiresRedoableTransaction", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getRequiresRedoableTransaction", context, engine);
             return result;
         }
          QScriptValue
@@ -3547,7 +3547,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setOverride", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setOverride", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setOverride";
             //QCoreApplication::processEvents();
 
@@ -3583,7 +3583,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setOverride().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setOverride", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setOverride", context, engine);
             return result;
         }
          QScriptValue
@@ -3591,7 +3591,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::isOverride", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::isOverride", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::isOverride";
             //QCoreApplication::processEvents();
 
@@ -3632,7 +3632,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.isOverride().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::isOverride", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::isOverride", context, engine);
             return result;
         }
          QScriptValue
@@ -3640,7 +3640,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setNoState", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setNoState", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setNoState";
             //QCoreApplication::processEvents();
 
@@ -3703,7 +3703,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setNoState().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setNoState", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setNoState", context, engine);
             return result;
         }
          QScriptValue
@@ -3711,7 +3711,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::hasNoState", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::hasNoState", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::hasNoState";
             //QCoreApplication::processEvents();
 
@@ -3752,7 +3752,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.hasNoState().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::hasNoState", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::hasNoState", context, engine);
             return result;
         }
          QScriptValue
@@ -3760,7 +3760,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setToggleable", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setToggleable", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setToggleable";
             //QCoreApplication::processEvents();
 
@@ -3823,7 +3823,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setToggleable().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setToggleable", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setToggleable", context, engine);
             return result;
         }
          QScriptValue
@@ -3831,7 +3831,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::isToggleable", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::isToggleable", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::isToggleable";
             //QCoreApplication::processEvents();
 
@@ -3872,7 +3872,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.isToggleable().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::isToggleable", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::isToggleable", context, engine);
             return result;
         }
          QScriptValue
@@ -3880,7 +3880,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setUniqueGroup", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setUniqueGroup", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setUniqueGroup";
             //QCoreApplication::processEvents();
 
@@ -3927,7 +3927,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setUniqueGroup().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setUniqueGroup", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setUniqueGroup", context, engine);
             return result;
         }
          QScriptValue
@@ -3935,7 +3935,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getUniqueGroup", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getUniqueGroup", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getUniqueGroup";
             //QCoreApplication::processEvents();
 
@@ -3976,7 +3976,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getUniqueGroup().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getUniqueGroup", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getUniqueGroup", context, engine);
             return result;
         }
          QScriptValue
@@ -3984,7 +3984,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getMainCommand", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getMainCommand", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getMainCommand";
             //QCoreApplication::processEvents();
 
@@ -4025,7 +4025,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getMainCommand().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getMainCommand", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getMainCommand", context, engine);
             return result;
         }
          QScriptValue
@@ -4033,7 +4033,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getCommands", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getCommands", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getCommands";
             //QCoreApplication::processEvents();
 
@@ -4074,7 +4074,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getCommands().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getCommands", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getCommands", context, engine);
             return result;
         }
          QScriptValue
@@ -4082,7 +4082,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getDefaultCommands", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getDefaultCommands", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getDefaultCommands";
             //QCoreApplication::processEvents();
 
@@ -4123,7 +4123,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getDefaultCommands().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getDefaultCommands", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getDefaultCommands", context, engine);
             return result;
         }
          QScriptValue
@@ -4131,7 +4131,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setDefaultCommands", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setDefaultCommands", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setDefaultCommands";
             //QCoreApplication::processEvents();
 
@@ -4179,7 +4179,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setDefaultCommands().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setDefaultCommands", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setDefaultCommands", context, engine);
             return result;
         }
          QScriptValue
@@ -4187,7 +4187,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setCommands", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setCommands", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setCommands";
             //QCoreApplication::processEvents();
 
@@ -4235,7 +4235,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setCommands().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setCommands", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setCommands", context, engine);
             return result;
         }
          QScriptValue
@@ -4243,7 +4243,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setScriptFile", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setScriptFile", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setScriptFile";
             //QCoreApplication::processEvents();
 
@@ -4330,7 +4330,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setScriptFile().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setScriptFile", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setScriptFile", context, engine);
             return result;
         }
          QScriptValue
@@ -4338,7 +4338,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getScriptFile", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getScriptFile", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getScriptFile";
             //QCoreApplication::processEvents();
 
@@ -4379,7 +4379,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getScriptFile().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getScriptFile", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getScriptFile", context, engine);
             return result;
         }
          QScriptValue
@@ -4387,7 +4387,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getScriptClass", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getScriptClass", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getScriptClass";
             //QCoreApplication::processEvents();
 
@@ -4428,7 +4428,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getScriptClass().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getScriptClass", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getScriptClass", context, engine);
             return result;
         }
          QScriptValue
@@ -4436,7 +4436,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setGroup", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setGroup", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setGroup";
             //QCoreApplication::processEvents();
 
@@ -4483,7 +4483,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setGroup().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setGroup", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setGroup", context, engine);
             return result;
         }
          QScriptValue
@@ -4491,7 +4491,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getGroup", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getGroup", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getGroup";
             //QCoreApplication::processEvents();
 
@@ -4532,7 +4532,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getGroup().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getGroup", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getGroup", context, engine);
             return result;
         }
          QScriptValue
@@ -4540,7 +4540,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setGroupDefault", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setGroupDefault", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setGroupDefault";
             //QCoreApplication::processEvents();
 
@@ -4587,7 +4587,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setGroupDefault().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setGroupDefault", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setGroupDefault", context, engine);
             return result;
         }
          QScriptValue
@@ -4595,7 +4595,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::isGroupDefault", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::isGroupDefault", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::isGroupDefault";
             //QCoreApplication::processEvents();
 
@@ -4636,7 +4636,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.isGroupDefault().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::isGroupDefault", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::isGroupDefault", context, engine);
             return result;
         }
          QScriptValue
@@ -4644,7 +4644,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getActions", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getActions", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getActions";
             //QCoreApplication::processEvents();
 
@@ -4675,7 +4675,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getActions().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getActions", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getActions", context, engine);
             return result;
         }
          QScriptValue
@@ -4683,7 +4683,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::triggerByCommand", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::triggerByCommand", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::triggerByCommand";
             //QCoreApplication::processEvents();
 
@@ -4725,7 +4725,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.triggerByCommand().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::triggerByCommand", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::triggerByCommand", context, engine);
             return result;
         }
          QScriptValue
@@ -4733,7 +4733,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getByScriptFile", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getByScriptFile", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getByScriptFile";
             //QCoreApplication::processEvents();
 
@@ -4775,7 +4775,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getByScriptFile().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getByScriptFile", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getByScriptFile", context, engine);
             return result;
         }
          QScriptValue
@@ -4783,7 +4783,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getByClassName", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getByClassName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getByClassName";
             //QCoreApplication::processEvents();
 
@@ -4825,7 +4825,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getByClassName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getByClassName", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getByClassName", context, engine);
             return result;
         }
          QScriptValue
@@ -4833,7 +4833,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getByCommand", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getByCommand", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getByCommand";
             //QCoreApplication::processEvents();
 
@@ -4875,7 +4875,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getByCommand().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getByCommand", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getByCommand", context, engine);
             return result;
         }
          QScriptValue
@@ -4883,7 +4883,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::triggerByScriptFile", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::triggerByScriptFile", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::triggerByScriptFile";
             //QCoreApplication::processEvents();
 
@@ -4925,7 +4925,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.triggerByScriptFile().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::triggerByScriptFile", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::triggerByScriptFile", context, engine);
             return result;
         }
          QScriptValue
@@ -4933,7 +4933,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getAvailableCommands", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getAvailableCommands", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getAvailableCommands";
             //QCoreApplication::processEvents();
 
@@ -5073,7 +5073,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getAvailableCommands().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getAvailableCommands", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getAvailableCommands", context, engine);
             return result;
         }
          QScriptValue
@@ -5081,7 +5081,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::clear", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::clear", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::clear";
             //QCoreApplication::processEvents();
 
@@ -5107,7 +5107,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.clear().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::clear", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::clear", context, engine);
             return result;
         }
          QScriptValue
@@ -5115,7 +5115,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::updateTransactionListener", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::updateTransactionListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::updateTransactionListener";
             //QCoreApplication::processEvents();
 
@@ -5223,7 +5223,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.updateTransactionListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::updateTransactionListener", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::updateTransactionListener", context, engine);
             return result;
         }
          QScriptValue
@@ -5231,7 +5231,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::updateSelectionListener", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::updateSelectionListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::updateSelectionListener";
             //QCoreApplication::processEvents();
 
@@ -5285,7 +5285,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.updateSelectionListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::updateSelectionListener", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::updateSelectionListener", context, engine);
             return result;
         }
          QScriptValue
@@ -5293,7 +5293,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::updateFocus", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::updateFocus", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::updateFocus";
             //QCoreApplication::processEvents();
 
@@ -5347,7 +5347,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.updateFocus().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::updateFocus", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::updateFocus", context, engine);
             return result;
         }
          QScriptValue
@@ -5355,7 +5355,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::addArgument", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::addArgument", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::addArgument";
             //QCoreApplication::processEvents();
 
@@ -5402,7 +5402,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.addArgument().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::addArgument", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::addArgument", context, engine);
             return result;
         }
          QScriptValue
@@ -5410,7 +5410,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getArguments", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getArguments", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getArguments";
             //QCoreApplication::processEvents();
 
@@ -5451,7 +5451,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getArguments().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getArguments", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getArguments", context, engine);
             return result;
         }
          QScriptValue
@@ -5459,7 +5459,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::clearArguments", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::clearArguments", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::clearArguments";
             //QCoreApplication::processEvents();
 
@@ -5495,7 +5495,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.clearArguments().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::clearArguments", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::clearArguments", context, engine);
             return result;
         }
          QScriptValue
@@ -5503,7 +5503,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setWidgetNamesStatic", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setWidgetNamesStatic", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setWidgetNamesStatic";
             //QCoreApplication::processEvents();
 
@@ -5557,7 +5557,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setWidgetNamesStatic().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setWidgetNamesStatic", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setWidgetNamesStatic", context, engine);
             return result;
         }
          QScriptValue
@@ -5565,7 +5565,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getWidgetNamesStatic", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getWidgetNamesStatic", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getWidgetNamesStatic";
             //QCoreApplication::processEvents();
 
@@ -5610,7 +5610,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getWidgetNamesStatic().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getWidgetNamesStatic", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getWidgetNamesStatic", context, engine);
             return result;
         }
          QScriptValue
@@ -5618,7 +5618,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::setWidgetNames", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::setWidgetNames", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::setWidgetNames";
             //QCoreApplication::processEvents();
 
@@ -5666,7 +5666,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.setWidgetNames().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::setWidgetNames", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::setWidgetNames", context, engine);
             return result;
         }
          QScriptValue
@@ -5674,7 +5674,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::getWidgetNames", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::getWidgetNames", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::getWidgetNames";
             //QCoreApplication::processEvents();
 
@@ -5715,7 +5715,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.getWidgetNames().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::getWidgetNames", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::getWidgetNames", context, engine);
             return result;
         }
          QScriptValue
@@ -5723,7 +5723,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGuiAction::slotTrigger", context, engine);
+            REcmaHelper::functionStart("REcmaGuiAction::slotTrigger", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGuiAction::slotTrigger";
             //QCoreApplication::processEvents();
 
@@ -5796,7 +5796,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGuiAction.slotTrigger().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGuiAction::slotTrigger", context, engine);
+            REcmaHelper::functionEnd("REcmaGuiAction::slotTrigger", context, engine);
             return result;
         }
          QScriptValue REcmaGuiAction::toString

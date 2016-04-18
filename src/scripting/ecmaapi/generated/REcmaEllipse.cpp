@@ -557,7 +557,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getDistanceFromStart", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getDistanceFromStart", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getDistanceFromStart";
             //QCoreApplication::processEvents();
 
@@ -621,7 +621,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getDistanceFromStart().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getDistanceFromStart", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getDistanceFromStart", context, engine);
             return result;
         }
         
@@ -853,7 +853,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::clone", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::clone";
             //QCoreApplication::processEvents();
 
@@ -894,7 +894,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.clone().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::clone", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -902,7 +902,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::isValid", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::isValid";
             //QCoreApplication::processEvents();
 
@@ -943,7 +943,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.isValid().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::isValid", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::isValid", context, engine);
             return result;
         }
          QScriptValue
@@ -951,7 +951,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::to2D", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::to2D", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::to2D";
             //QCoreApplication::processEvents();
 
@@ -987,7 +987,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.to2D().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::to2D", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::to2D", context, engine);
             return result;
         }
          QScriptValue
@@ -995,7 +995,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getBoundingBox", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getBoundingBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getBoundingBox";
             //QCoreApplication::processEvents();
 
@@ -1036,7 +1036,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getBoundingBox().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getBoundingBox", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getBoundingBox", context, engine);
             return result;
         }
          QScriptValue
@@ -1044,7 +1044,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getEndPoints", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getEndPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getEndPoints";
             //QCoreApplication::processEvents();
 
@@ -1085,7 +1085,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getEndPoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getEndPoints", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getEndPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1093,7 +1093,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getMiddlePoints", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getMiddlePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getMiddlePoints";
             //QCoreApplication::processEvents();
 
@@ -1134,7 +1134,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getMiddlePoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getMiddlePoints", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getMiddlePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1142,7 +1142,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getCenterPoints", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getCenterPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getCenterPoints";
             //QCoreApplication::processEvents();
 
@@ -1183,7 +1183,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getCenterPoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getCenterPoints", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getCenterPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1191,7 +1191,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getPointsWithDistanceToEnd", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getPointsWithDistanceToEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getPointsWithDistanceToEnd";
             //QCoreApplication::processEvents();
 
@@ -1288,7 +1288,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getPointsWithDistanceToEnd().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getPointsWithDistanceToEnd", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getPointsWithDistanceToEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -1296,7 +1296,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getVectorTo", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getVectorTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getVectorTo";
             //QCoreApplication::processEvents();
 
@@ -1487,7 +1487,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getVectorTo().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getVectorTo", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getVectorTo", context, engine);
             return result;
         }
          QScriptValue
@@ -1495,7 +1495,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::moveStartPoint", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::moveStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::moveStartPoint";
             //QCoreApplication::processEvents();
 
@@ -1606,7 +1606,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.moveStartPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::moveStartPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::moveStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1614,7 +1614,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::moveEndPoint", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::moveEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::moveEndPoint";
             //QCoreApplication::processEvents();
 
@@ -1725,7 +1725,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.moveEndPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::moveEndPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::moveEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1733,7 +1733,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getFoci", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getFoci", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getFoci";
             //QCoreApplication::processEvents();
 
@@ -1774,7 +1774,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getFoci().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getFoci", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getFoci", context, engine);
             return result;
         }
          QScriptValue
@@ -1782,7 +1782,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getCenter", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getCenter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getCenter";
             //QCoreApplication::processEvents();
 
@@ -1823,7 +1823,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getCenter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getCenter", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getCenter", context, engine);
             return result;
         }
          QScriptValue
@@ -1831,7 +1831,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::setCenter", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::setCenter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::setCenter";
             //QCoreApplication::processEvents();
 
@@ -1890,7 +1890,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.setCenter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::setCenter", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::setCenter", context, engine);
             return result;
         }
          QScriptValue
@@ -1898,7 +1898,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getMajorPoint", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getMajorPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getMajorPoint";
             //QCoreApplication::processEvents();
 
@@ -1939,7 +1939,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getMajorPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getMajorPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getMajorPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1947,7 +1947,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getMinorPoint", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getMinorPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getMinorPoint";
             //QCoreApplication::processEvents();
 
@@ -1988,7 +1988,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getMinorPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getMinorPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getMinorPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1996,7 +1996,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::setMajorPoint", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::setMajorPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::setMajorPoint";
             //QCoreApplication::processEvents();
 
@@ -2055,7 +2055,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.setMajorPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::setMajorPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::setMajorPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -2063,7 +2063,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::setMinorPoint", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::setMinorPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::setMinorPoint";
             //QCoreApplication::processEvents();
 
@@ -2122,7 +2122,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.setMinorPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::setMinorPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::setMinorPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -2130,7 +2130,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::switchMajorMinor", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::switchMajorMinor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::switchMajorMinor";
             //QCoreApplication::processEvents();
 
@@ -2171,7 +2171,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.switchMajorMinor().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::switchMajorMinor", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::switchMajorMinor", context, engine);
             return result;
         }
          QScriptValue
@@ -2179,7 +2179,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getRatio", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getRatio", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getRatio";
             //QCoreApplication::processEvents();
 
@@ -2220,7 +2220,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getRatio().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getRatio", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getRatio", context, engine);
             return result;
         }
          QScriptValue
@@ -2228,7 +2228,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::setRatio", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::setRatio", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::setRatio";
             //QCoreApplication::processEvents();
 
@@ -2275,7 +2275,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.setRatio().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::setRatio", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::setRatio", context, engine);
             return result;
         }
          QScriptValue
@@ -2283,7 +2283,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getStartParam", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getStartParam", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getStartParam";
             //QCoreApplication::processEvents();
 
@@ -2324,7 +2324,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getStartParam().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getStartParam", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getStartParam", context, engine);
             return result;
         }
          QScriptValue
@@ -2332,7 +2332,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::setStartParam", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::setStartParam", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::setStartParam";
             //QCoreApplication::processEvents();
 
@@ -2379,7 +2379,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.setStartParam().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::setStartParam", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::setStartParam", context, engine);
             return result;
         }
          QScriptValue
@@ -2387,7 +2387,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getEndParam", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getEndParam", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getEndParam";
             //QCoreApplication::processEvents();
 
@@ -2428,7 +2428,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getEndParam().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getEndParam", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getEndParam", context, engine);
             return result;
         }
          QScriptValue
@@ -2436,7 +2436,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::setEndParam", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::setEndParam", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::setEndParam";
             //QCoreApplication::processEvents();
 
@@ -2483,7 +2483,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.setEndParam().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::setEndParam", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::setEndParam", context, engine);
             return result;
         }
          QScriptValue
@@ -2491,7 +2491,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getStartAngle", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getStartAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getStartAngle";
             //QCoreApplication::processEvents();
 
@@ -2532,7 +2532,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getStartAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getStartAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getStartAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -2540,7 +2540,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::setStartAngle", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::setStartAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::setStartAngle";
             //QCoreApplication::processEvents();
 
@@ -2587,7 +2587,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.setStartAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::setStartAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::setStartAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -2595,7 +2595,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::angleToParam", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::angleToParam", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::angleToParam";
             //QCoreApplication::processEvents();
 
@@ -2647,7 +2647,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.angleToParam().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::angleToParam", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::angleToParam", context, engine);
             return result;
         }
          QScriptValue
@@ -2655,7 +2655,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getEndAngle", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getEndAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getEndAngle";
             //QCoreApplication::processEvents();
 
@@ -2696,7 +2696,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getEndAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getEndAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getEndAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -2704,7 +2704,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::setEndAngle", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::setEndAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::setEndAngle";
             //QCoreApplication::processEvents();
 
@@ -2751,7 +2751,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.setEndAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::setEndAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::setEndAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -2759,7 +2759,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getAngleLength", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getAngleLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getAngleLength";
             //QCoreApplication::processEvents();
 
@@ -2832,7 +2832,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getAngleLength().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getAngleLength", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getAngleLength", context, engine);
             return result;
         }
          QScriptValue
@@ -2840,7 +2840,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::isAngleWithinArc", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::isAngleWithinArc", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::isAngleWithinArc";
             //QCoreApplication::processEvents();
 
@@ -2892,7 +2892,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.isAngleWithinArc().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::isAngleWithinArc", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::isAngleWithinArc", context, engine);
             return result;
         }
          QScriptValue
@@ -2900,7 +2900,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::isParamWithinArc", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::isParamWithinArc", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::isParamWithinArc";
             //QCoreApplication::processEvents();
 
@@ -2952,7 +2952,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.isParamWithinArc().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::isParamWithinArc", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::isParamWithinArc", context, engine);
             return result;
         }
          QScriptValue
@@ -2960,7 +2960,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::isReversed", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::isReversed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::isReversed";
             //QCoreApplication::processEvents();
 
@@ -3001,7 +3001,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.isReversed().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::isReversed", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::isReversed", context, engine);
             return result;
         }
          QScriptValue
@@ -3009,7 +3009,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::setReversed", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::setReversed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::setReversed";
             //QCoreApplication::processEvents();
 
@@ -3056,7 +3056,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.setReversed().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::setReversed", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::setReversed", context, engine);
             return result;
         }
          QScriptValue
@@ -3064,7 +3064,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getDirection1", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getDirection1", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getDirection1";
             //QCoreApplication::processEvents();
 
@@ -3105,7 +3105,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getDirection1().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getDirection1", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getDirection1", context, engine);
             return result;
         }
          QScriptValue
@@ -3113,7 +3113,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getDirection2", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getDirection2", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getDirection2";
             //QCoreApplication::processEvents();
 
@@ -3154,7 +3154,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getDirection2().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getDirection2", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getDirection2", context, engine);
             return result;
         }
          QScriptValue
@@ -3162,7 +3162,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getSideOfPoint", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getSideOfPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getSideOfPoint";
             //QCoreApplication::processEvents();
 
@@ -3226,7 +3226,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getSideOfPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getSideOfPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getSideOfPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3234,7 +3234,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getStartPoint", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getStartPoint";
             //QCoreApplication::processEvents();
 
@@ -3275,7 +3275,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getStartPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getStartPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3283,7 +3283,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getEndPoint", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getEndPoint";
             //QCoreApplication::processEvents();
 
@@ -3324,7 +3324,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getEndPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getEndPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -3332,7 +3332,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getMajorRadius", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getMajorRadius", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getMajorRadius";
             //QCoreApplication::processEvents();
 
@@ -3373,7 +3373,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getMajorRadius().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getMajorRadius", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getMajorRadius", context, engine);
             return result;
         }
          QScriptValue
@@ -3381,7 +3381,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getMinorRadius", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getMinorRadius", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getMinorRadius";
             //QCoreApplication::processEvents();
 
@@ -3422,7 +3422,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getMinorRadius().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getMinorRadius", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getMinorRadius", context, engine);
             return result;
         }
          QScriptValue
@@ -3430,7 +3430,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getAngle", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getAngle";
             //QCoreApplication::processEvents();
 
@@ -3471,7 +3471,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -3479,7 +3479,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::setAngle", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::setAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::setAngle";
             //QCoreApplication::processEvents();
 
@@ -3526,7 +3526,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.setAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::setAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::setAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -3534,7 +3534,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::isFullEllipse", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::isFullEllipse", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::isFullEllipse";
             //QCoreApplication::processEvents();
 
@@ -3575,7 +3575,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.isFullEllipse().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::isFullEllipse", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::isFullEllipse", context, engine);
             return result;
         }
          QScriptValue
@@ -3583,7 +3583,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::isCircular", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::isCircular", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::isCircular";
             //QCoreApplication::processEvents();
 
@@ -3624,7 +3624,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.isCircular().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::isCircular", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::isCircular", context, engine);
             return result;
         }
          QScriptValue
@@ -3632,7 +3632,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getLength", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getLength";
             //QCoreApplication::processEvents();
 
@@ -3673,7 +3673,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getLength().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getLength", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getLength", context, engine);
             return result;
         }
          QScriptValue
@@ -3681,7 +3681,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getSimpsonLength", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getSimpsonLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getSimpsonLength";
             //QCoreApplication::processEvents();
 
@@ -3746,7 +3746,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getSimpsonLength().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getSimpsonLength", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getSimpsonLength", context, engine);
             return result;
         }
          QScriptValue
@@ -3754,7 +3754,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::contains", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::contains", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::contains";
             //QCoreApplication::processEvents();
 
@@ -3818,7 +3818,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.contains().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::contains", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::contains", context, engine);
             return result;
         }
          QScriptValue
@@ -3826,7 +3826,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getAngleAt", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getAngleAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getAngleAt";
             //QCoreApplication::processEvents();
 
@@ -3890,7 +3890,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getAngleAt().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getAngleAt", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getAngleAt", context, engine);
             return result;
         }
          QScriptValue
@@ -3898,7 +3898,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getParamTo", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getParamTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getParamTo";
             //QCoreApplication::processEvents();
 
@@ -3962,7 +3962,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getParamTo().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getParamTo", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getParamTo", context, engine);
             return result;
         }
          QScriptValue
@@ -3970,7 +3970,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getRadiusAt", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getRadiusAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getRadiusAt";
             //QCoreApplication::processEvents();
 
@@ -4022,7 +4022,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getRadiusAt().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getRadiusAt", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getRadiusAt", context, engine);
             return result;
         }
          QScriptValue
@@ -4030,7 +4030,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getPointAt", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getPointAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getPointAt";
             //QCoreApplication::processEvents();
 
@@ -4082,7 +4082,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getPointAt().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getPointAt", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getPointAt", context, engine);
             return result;
         }
          QScriptValue
@@ -4090,7 +4090,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getMiddlePoint", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getMiddlePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getMiddlePoint";
             //QCoreApplication::processEvents();
 
@@ -4131,7 +4131,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getMiddlePoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getMiddlePoint", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getMiddlePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -4139,7 +4139,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::move", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::move", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::move";
             //QCoreApplication::processEvents();
 
@@ -4203,7 +4203,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.move().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::move", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::move", context, engine);
             return result;
         }
          QScriptValue
@@ -4211,7 +4211,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::rotate", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::rotate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::rotate";
             //QCoreApplication::processEvents();
 
@@ -4320,7 +4320,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.rotate().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::rotate", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::rotate", context, engine);
             return result;
         }
          QScriptValue
@@ -4328,7 +4328,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::scale", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::scale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::scale";
             //QCoreApplication::processEvents();
 
@@ -4461,7 +4461,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.scale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::scale", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::scale", context, engine);
             return result;
         }
          QScriptValue
@@ -4469,7 +4469,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::mirror", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::mirror", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::mirror";
             //QCoreApplication::processEvents();
 
@@ -4533,7 +4533,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.mirror().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::mirror", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::mirror", context, engine);
             return result;
         }
          QScriptValue
@@ -4541,7 +4541,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::reverse", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::reverse", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::reverse";
             //QCoreApplication::processEvents();
 
@@ -4582,7 +4582,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.reverse().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::reverse", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::reverse", context, engine);
             return result;
         }
          QScriptValue
@@ -4590,7 +4590,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getTransformed", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getTransformed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getTransformed";
             //QCoreApplication::processEvents();
 
@@ -4652,7 +4652,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getTransformed().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getTransformed", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getTransformed", context, engine);
             return result;
         }
          QScriptValue
@@ -4660,7 +4660,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getTrimEnd", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getTrimEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getTrimEnd";
             //QCoreApplication::processEvents();
 
@@ -4749,7 +4749,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getTrimEnd().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getTrimEnd", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getTrimEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -4757,7 +4757,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::trimStartPoint", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::trimStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::trimStartPoint";
             //QCoreApplication::processEvents();
 
@@ -4890,7 +4890,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.trimStartPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::trimStartPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::trimStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -4898,7 +4898,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::trimEndPoint", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::trimEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::trimEndPoint";
             //QCoreApplication::processEvents();
 
@@ -5031,7 +5031,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.trimEndPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::trimEndPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::trimEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -5039,7 +5039,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::correctMajorMinor", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::correctMajorMinor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::correctMajorMinor";
             //QCoreApplication::processEvents();
 
@@ -5075,7 +5075,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.correctMajorMinor().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::correctMajorMinor", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::correctMajorMinor", context, engine);
             return result;
         }
          QScriptValue
@@ -5083,7 +5083,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getSweep", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getSweep", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getSweep";
             //QCoreApplication::processEvents();
 
@@ -5124,7 +5124,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getSweep().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getSweep", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getSweep", context, engine);
             return result;
         }
          QScriptValue
@@ -5132,7 +5132,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getBoxCorners", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getBoxCorners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getBoxCorners";
             //QCoreApplication::processEvents();
 
@@ -5173,7 +5173,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getBoxCorners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getBoxCorners", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getBoxCorners", context, engine);
             return result;
         }
          QScriptValue
@@ -5181,7 +5181,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::getTangents", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::getTangents", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::getTangents";
             //QCoreApplication::processEvents();
 
@@ -5245,7 +5245,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getTangents().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::getTangents", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::getTangents", context, engine);
             return result;
         }
          QScriptValue
@@ -5253,7 +5253,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::approximateWithSplines", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::approximateWithSplines", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::approximateWithSplines";
             //QCoreApplication::processEvents();
 
@@ -5294,7 +5294,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.approximateWithSplines().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::approximateWithSplines", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::approximateWithSplines", context, engine);
             return result;
         }
          QScriptValue
@@ -5302,7 +5302,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEllipse::hasProxy", context, engine);
+            REcmaHelper::functionStart("REcmaEllipse::hasProxy", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEllipse::hasProxy";
             //QCoreApplication::processEvents();
 
@@ -5333,7 +5333,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.hasProxy().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEllipse::hasProxy", context, engine);
+            REcmaHelper::functionEnd("REcmaEllipse::hasProxy", context, engine);
             return result;
         }
          QScriptValue REcmaEllipse::toString

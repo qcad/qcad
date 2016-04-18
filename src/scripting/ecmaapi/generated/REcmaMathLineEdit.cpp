@@ -251,7 +251,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMathLineEdit::isAngle", context, engine);
+            REcmaHelper::functionStart("REcmaMathLineEdit::isAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMathLineEdit::isAngle";
             //QCoreApplication::processEvents();
 
@@ -292,7 +292,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMathLineEdit.isAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMathLineEdit::isAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaMathLineEdit::isAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -300,7 +300,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMathLineEdit::setAngle", context, engine);
+            REcmaHelper::functionStart("REcmaMathLineEdit::setAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMathLineEdit::setAngle";
             //QCoreApplication::processEvents();
 
@@ -347,7 +347,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMathLineEdit.setAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMathLineEdit::setAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaMathLineEdit::setAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -355,7 +355,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMathLineEdit::isInteger", context, engine);
+            REcmaHelper::functionStart("REcmaMathLineEdit::isInteger", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMathLineEdit::isInteger";
             //QCoreApplication::processEvents();
 
@@ -396,7 +396,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMathLineEdit.isInteger().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMathLineEdit::isInteger", context, engine);
+            REcmaHelper::functionEnd("REcmaMathLineEdit::isInteger", context, engine);
             return result;
         }
          QScriptValue
@@ -404,7 +404,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMathLineEdit::setInteger", context, engine);
+            REcmaHelper::functionStart("REcmaMathLineEdit::setInteger", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMathLineEdit::setInteger";
             //QCoreApplication::processEvents();
 
@@ -451,7 +451,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMathLineEdit.setInteger().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMathLineEdit::setInteger", context, engine);
+            REcmaHelper::functionEnd("REcmaMathLineEdit::setInteger", context, engine);
             return result;
         }
          QScriptValue
@@ -459,7 +459,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMathLineEdit::setValue", context, engine);
+            REcmaHelper::functionStart("REcmaMathLineEdit::setValue", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMathLineEdit::setValue";
             //QCoreApplication::processEvents();
 
@@ -546,7 +546,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMathLineEdit.setValue().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMathLineEdit::setValue", context, engine);
+            REcmaHelper::functionEnd("REcmaMathLineEdit::setValue", context, engine);
             return result;
         }
          QScriptValue
@@ -554,7 +554,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMathLineEdit::getValue", context, engine);
+            REcmaHelper::functionStart("REcmaMathLineEdit::getValue", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMathLineEdit::getValue";
             //QCoreApplication::processEvents();
 
@@ -595,7 +595,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMathLineEdit.getValue().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMathLineEdit::getValue", context, engine);
+            REcmaHelper::functionEnd("REcmaMathLineEdit::getValue", context, engine);
             return result;
         }
          QScriptValue
@@ -603,7 +603,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMathLineEdit::getError", context, engine);
+            REcmaHelper::functionStart("REcmaMathLineEdit::getError", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMathLineEdit::getError";
             //QCoreApplication::processEvents();
 
@@ -644,7 +644,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMathLineEdit.getError().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMathLineEdit::getError", context, engine);
+            REcmaHelper::functionEnd("REcmaMathLineEdit::getError", context, engine);
             return result;
         }
          QScriptValue
@@ -652,7 +652,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMathLineEdit::clearError", context, engine);
+            REcmaHelper::functionStart("REcmaMathLineEdit::clearError", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMathLineEdit::clearError";
             //QCoreApplication::processEvents();
 
@@ -688,7 +688,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMathLineEdit.clearError().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMathLineEdit::clearError", context, engine);
+            REcmaHelper::functionEnd("REcmaMathLineEdit::clearError", context, engine);
             return result;
         }
          QScriptValue
@@ -696,7 +696,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMathLineEdit::isValid", context, engine);
+            REcmaHelper::functionStart("REcmaMathLineEdit::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMathLineEdit::isValid";
             //QCoreApplication::processEvents();
 
@@ -737,7 +737,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMathLineEdit.isValid().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMathLineEdit::isValid", context, engine);
+            REcmaHelper::functionEnd("REcmaMathLineEdit::isValid", context, engine);
             return result;
         }
          QScriptValue
@@ -745,7 +745,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMathLineEdit::setToolTip", context, engine);
+            REcmaHelper::functionStart("REcmaMathLineEdit::setToolTip", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMathLineEdit::setToolTip";
             //QCoreApplication::processEvents();
 
@@ -792,7 +792,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMathLineEdit.setToolTip().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMathLineEdit::setToolTip", context, engine);
+            REcmaHelper::functionEnd("REcmaMathLineEdit::setToolTip", context, engine);
             return result;
         }
          QScriptValue
@@ -800,7 +800,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMathLineEdit::slotTextChanged", context, engine);
+            REcmaHelper::functionStart("REcmaMathLineEdit::slotTextChanged", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMathLineEdit::slotTextChanged";
             //QCoreApplication::processEvents();
 
@@ -847,7 +847,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMathLineEdit.slotTextChanged().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMathLineEdit::slotTextChanged", context, engine);
+            REcmaHelper::functionEnd("REcmaMathLineEdit::slotTextChanged", context, engine);
             return result;
         }
          QScriptValue
@@ -855,7 +855,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMathLineEdit::slotTextEdited", context, engine);
+            REcmaHelper::functionStart("REcmaMathLineEdit::slotTextEdited", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMathLineEdit::slotTextEdited";
             //QCoreApplication::processEvents();
 
@@ -902,7 +902,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMathLineEdit.slotTextEdited().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMathLineEdit::slotTextEdited", context, engine);
+            REcmaHelper::functionEnd("REcmaMathLineEdit::slotTextEdited", context, engine);
             return result;
         }
          QScriptValue REcmaMathLineEdit::toString

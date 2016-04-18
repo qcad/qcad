@@ -212,7 +212,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEntityExportListenerAdapter::registerCustomProperty", context, engine);
+            REcmaHelper::functionStart("REcmaEntityExportListenerAdapter::registerCustomProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEntityExportListenerAdapter::registerCustomProperty";
             //QCoreApplication::processEvents();
 
@@ -272,7 +272,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REntityExportListenerAdapter.registerCustomProperty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEntityExportListenerAdapter::registerCustomProperty", context, engine);
+            REcmaHelper::functionEnd("REcmaEntityExportListenerAdapter::registerCustomProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -280,7 +280,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEntityExportListenerAdapter::checkCustomProperty", context, engine);
+            REcmaHelper::functionStart("REcmaEntityExportListenerAdapter::checkCustomProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEntityExportListenerAdapter::checkCustomProperty";
             //QCoreApplication::processEvents();
 
@@ -339,7 +339,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REntityExportListenerAdapter.checkCustomProperty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEntityExportListenerAdapter::checkCustomProperty", context, engine);
+            REcmaHelper::functionEnd("REcmaEntityExportListenerAdapter::checkCustomProperty", context, engine);
             return result;
         }
         
@@ -353,7 +353,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaEntityExportListenerAdapter::exportEntity", context, engine);
+            REcmaHelper::functionStart("REcmaEntityExportListenerAdapter::exportEntity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaEntityExportListenerAdapter::exportEntity";
             //QCoreApplication::processEvents();
 
@@ -427,7 +427,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for REntityExportListenerAdapter.exportEntity().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaEntityExportListenerAdapter::exportEntity", context, engine);
+            REcmaHelper::functionEnd("REcmaEntityExportListenerAdapter::exportEntity", context, engine);
             return result;
         }
          QScriptValue REcmaEntityExportListenerAdapter::toString

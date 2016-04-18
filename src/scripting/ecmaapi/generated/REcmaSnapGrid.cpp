@@ -187,7 +187,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSnapGrid::snap", context, engine);
+            REcmaHelper::functionStart("REcmaSnapGrid::snap", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSnapGrid::snap";
             //QCoreApplication::processEvents();
 
@@ -354,7 +354,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSnapGrid.snap().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSnapGrid::snap", context, engine);
+            REcmaHelper::functionEnd("REcmaSnapGrid::snap", context, engine);
             return result;
         }
          QScriptValue REcmaSnapGrid::toString

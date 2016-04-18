@@ -162,7 +162,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPluginInfo::set", context, engine);
+            REcmaHelper::functionStart("REcmaPluginInfo::set", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPluginInfo::set";
             //QCoreApplication::processEvents();
 
@@ -232,7 +232,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInfo.set().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPluginInfo::set", context, engine);
+            REcmaHelper::functionEnd("REcmaPluginInfo::set", context, engine);
             return result;
         }
          QScriptValue
@@ -240,7 +240,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPluginInfo::get", context, engine);
+            REcmaHelper::functionStart("REcmaPluginInfo::get", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPluginInfo::get";
             //QCoreApplication::processEvents();
 
@@ -347,7 +347,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInfo.get().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPluginInfo::get", context, engine);
+            REcmaHelper::functionEnd("REcmaPluginInfo::get", context, engine);
             return result;
         }
          QScriptValue
@@ -355,7 +355,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPluginInfo::getKeys", context, engine);
+            REcmaHelper::functionStart("REcmaPluginInfo::getKeys", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPluginInfo::getKeys";
             //QCoreApplication::processEvents();
 
@@ -396,7 +396,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPluginInfo.getKeys().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPluginInfo::getKeys", context, engine);
+            REcmaHelper::functionEnd("REcmaPluginInfo::getKeys", context, engine);
             return result;
         }
          QScriptValue REcmaPluginInfo::toString

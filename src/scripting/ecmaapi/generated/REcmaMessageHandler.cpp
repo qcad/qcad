@@ -123,7 +123,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMessageHandler::handleUserMessage", context, engine);
+            REcmaHelper::functionStart("REcmaMessageHandler::handleUserMessage", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMessageHandler::handleUserMessage";
             //QCoreApplication::processEvents();
 
@@ -170,7 +170,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMessageHandler.handleUserMessage().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMessageHandler::handleUserMessage", context, engine);
+            REcmaHelper::functionEnd("REcmaMessageHandler::handleUserMessage", context, engine);
             return result;
         }
          QScriptValue
@@ -178,7 +178,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMessageHandler::handleUserInfo", context, engine);
+            REcmaHelper::functionStart("REcmaMessageHandler::handleUserInfo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMessageHandler::handleUserInfo";
             //QCoreApplication::processEvents();
 
@@ -225,7 +225,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMessageHandler.handleUserInfo().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMessageHandler::handleUserInfo", context, engine);
+            REcmaHelper::functionEnd("REcmaMessageHandler::handleUserInfo", context, engine);
             return result;
         }
          QScriptValue
@@ -233,7 +233,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMessageHandler::handleUserWarning", context, engine);
+            REcmaHelper::functionStart("REcmaMessageHandler::handleUserWarning", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMessageHandler::handleUserWarning";
             //QCoreApplication::processEvents();
 
@@ -320,7 +320,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMessageHandler.handleUserWarning().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMessageHandler::handleUserWarning", context, engine);
+            REcmaHelper::functionEnd("REcmaMessageHandler::handleUserWarning", context, engine);
             return result;
         }
          QScriptValue
@@ -328,7 +328,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMessageHandler::handleUserCommand", context, engine);
+            REcmaHelper::functionStart("REcmaMessageHandler::handleUserCommand", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMessageHandler::handleUserCommand";
             //QCoreApplication::processEvents();
 
@@ -375,7 +375,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMessageHandler.handleUserCommand().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMessageHandler::handleUserCommand", context, engine);
+            REcmaHelper::functionEnd("REcmaMessageHandler::handleUserCommand", context, engine);
             return result;
         }
          QScriptValue REcmaMessageHandler::toString

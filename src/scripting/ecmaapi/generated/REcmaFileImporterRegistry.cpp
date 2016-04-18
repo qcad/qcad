@@ -176,7 +176,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileImporterRegistry::registerFileImporter", context, engine);
+            REcmaHelper::functionStart("REcmaFileImporterRegistry::registerFileImporter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileImporterRegistry::registerFileImporter";
             //QCoreApplication::processEvents();
 
@@ -220,7 +220,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileImporterRegistry.registerFileImporter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileImporterRegistry::registerFileImporter", context, engine);
+            REcmaHelper::functionEnd("REcmaFileImporterRegistry::registerFileImporter", context, engine);
             return result;
         }
          QScriptValue
@@ -228,7 +228,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileImporterRegistry::unregisterFileImporter", context, engine);
+            REcmaHelper::functionStart("REcmaFileImporterRegistry::unregisterFileImporter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileImporterRegistry::unregisterFileImporter";
             //QCoreApplication::processEvents();
 
@@ -272,7 +272,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileImporterRegistry.unregisterFileImporter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileImporterRegistry::unregisterFileImporter", context, engine);
+            REcmaHelper::functionEnd("REcmaFileImporterRegistry::unregisterFileImporter", context, engine);
             return result;
         }
          QScriptValue
@@ -280,7 +280,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileImporterRegistry::getFileImporter", context, engine);
+            REcmaHelper::functionStart("REcmaFileImporterRegistry::getFileImporter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileImporterRegistry::getFileImporter";
             //QCoreApplication::processEvents();
 
@@ -554,7 +554,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileImporterRegistry.getFileImporter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileImporterRegistry::getFileImporter", context, engine);
+            REcmaHelper::functionEnd("REcmaFileImporterRegistry::getFileImporter", context, engine);
             return result;
         }
          QScriptValue
@@ -562,7 +562,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileImporterRegistry::getFilterStrings", context, engine);
+            REcmaHelper::functionStart("REcmaFileImporterRegistry::getFilterStrings", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileImporterRegistry::getFilterStrings";
             //QCoreApplication::processEvents();
 
@@ -593,7 +593,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileImporterRegistry.getFilterStrings().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileImporterRegistry::getFilterStrings", context, engine);
+            REcmaHelper::functionEnd("REcmaFileImporterRegistry::getFilterStrings", context, engine);
             return result;
         }
          QScriptValue
@@ -601,7 +601,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileImporterRegistry::hasFileImporter", context, engine);
+            REcmaHelper::functionStart("REcmaFileImporterRegistry::hasFileImporter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileImporterRegistry::hasFileImporter";
             //QCoreApplication::processEvents();
 
@@ -656,7 +656,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileImporterRegistry.hasFileImporter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileImporterRegistry::hasFileImporter", context, engine);
+            REcmaHelper::functionEnd("REcmaFileImporterRegistry::hasFileImporter", context, engine);
             return result;
         }
          QScriptValue
@@ -664,7 +664,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileImporterRegistry::getFilterExtensions", context, engine);
+            REcmaHelper::functionStart("REcmaFileImporterRegistry::getFilterExtensions", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileImporterRegistry::getFilterExtensions";
             //QCoreApplication::processEvents();
 
@@ -695,7 +695,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileImporterRegistry.getFilterExtensions().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileImporterRegistry::getFilterExtensions", context, engine);
+            REcmaHelper::functionEnd("REcmaFileImporterRegistry::getFilterExtensions", context, engine);
             return result;
         }
          QScriptValue
@@ -703,7 +703,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileImporterRegistry::getFilterExtensionPatterns", context, engine);
+            REcmaHelper::functionStart("REcmaFileImporterRegistry::getFilterExtensionPatterns", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileImporterRegistry::getFilterExtensionPatterns";
             //QCoreApplication::processEvents();
 
@@ -734,7 +734,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileImporterRegistry.getFilterExtensionPatterns().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileImporterRegistry::getFilterExtensionPatterns", context, engine);
+            REcmaHelper::functionEnd("REcmaFileImporterRegistry::getFilterExtensionPatterns", context, engine);
             return result;
         }
          QScriptValue REcmaFileImporterRegistry::toString

@@ -143,7 +143,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGrid::clearCache", context, engine);
+            REcmaHelper::functionStart("REcmaGrid::clearCache", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGrid::clearCache";
             //QCoreApplication::processEvents();
 
@@ -179,7 +179,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGrid.clearCache().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGrid::clearCache", context, engine);
+            REcmaHelper::functionEnd("REcmaGrid::clearCache", context, engine);
             return result;
         }
          QScriptValue
@@ -187,7 +187,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGrid::snapToGrid", context, engine);
+            REcmaHelper::functionStart("REcmaGrid::snapToGrid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGrid::snapToGrid";
             //QCoreApplication::processEvents();
 
@@ -251,7 +251,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGrid.snapToGrid().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGrid::snapToGrid", context, engine);
+            REcmaHelper::functionEnd("REcmaGrid::snapToGrid", context, engine);
             return result;
         }
          QScriptValue
@@ -259,7 +259,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGrid::update", context, engine);
+            REcmaHelper::functionStart("REcmaGrid::update", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGrid::update";
             //QCoreApplication::processEvents();
 
@@ -322,7 +322,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGrid.update().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGrid::update", context, engine);
+            REcmaHelper::functionEnd("REcmaGrid::update", context, engine);
             return result;
         }
          QScriptValue
@@ -330,7 +330,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGrid::paint", context, engine);
+            REcmaHelper::functionStart("REcmaGrid::paint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGrid::paint";
             //QCoreApplication::processEvents();
 
@@ -366,7 +366,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGrid.paint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGrid::paint", context, engine);
+            REcmaHelper::functionEnd("REcmaGrid::paint", context, engine);
             return result;
         }
          QScriptValue
@@ -374,7 +374,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGrid::paintMetaGrid", context, engine);
+            REcmaHelper::functionStart("REcmaGrid::paintMetaGrid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGrid::paintMetaGrid";
             //QCoreApplication::processEvents();
 
@@ -410,7 +410,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGrid.paintMetaGrid().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGrid::paintMetaGrid", context, engine);
+            REcmaHelper::functionEnd("REcmaGrid::paintMetaGrid", context, engine);
             return result;
         }
          QScriptValue
@@ -418,7 +418,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGrid::paintCursor", context, engine);
+            REcmaHelper::functionStart("REcmaGrid::paintCursor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGrid::paintCursor";
             //QCoreApplication::processEvents();
 
@@ -477,7 +477,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGrid.paintCursor().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGrid::paintCursor", context, engine);
+            REcmaHelper::functionEnd("REcmaGrid::paintCursor", context, engine);
             return result;
         }
          QScriptValue
@@ -485,7 +485,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGrid::paintRuler", context, engine);
+            REcmaHelper::functionStart("REcmaGrid::paintRuler", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGrid::paintRuler";
             //QCoreApplication::processEvents();
 
@@ -592,7 +592,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGrid.paintRuler().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGrid::paintRuler", context, engine);
+            REcmaHelper::functionEnd("REcmaGrid::paintRuler", context, engine);
             return result;
         }
          QScriptValue
@@ -600,7 +600,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGrid::getInfoText", context, engine);
+            REcmaHelper::functionStart("REcmaGrid::getInfoText", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGrid::getInfoText";
             //QCoreApplication::processEvents();
 
@@ -641,7 +641,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGrid.getInfoText().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGrid::getInfoText", context, engine);
+            REcmaHelper::functionEnd("REcmaGrid::getInfoText", context, engine);
             return result;
         }
          QScriptValue
@@ -649,7 +649,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGrid::getViewportNumber", context, engine);
+            REcmaHelper::functionStart("REcmaGrid::getViewportNumber", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGrid::getViewportNumber";
             //QCoreApplication::processEvents();
 
@@ -690,7 +690,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGrid.getViewportNumber().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGrid::getViewportNumber", context, engine);
+            REcmaHelper::functionEnd("REcmaGrid::getViewportNumber", context, engine);
             return result;
         }
          QScriptValue
@@ -698,7 +698,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGrid::getDocument", context, engine);
+            REcmaHelper::functionStart("REcmaGrid::getDocument", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGrid::getDocument";
             //QCoreApplication::processEvents();
 
@@ -739,7 +739,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGrid.getDocument().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGrid::getDocument", context, engine);
+            REcmaHelper::functionEnd("REcmaGrid::getDocument", context, engine);
             return result;
         }
          QScriptValue
@@ -747,7 +747,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGrid::setVisible", context, engine);
+            REcmaHelper::functionStart("REcmaGrid::setVisible", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGrid::setVisible";
             //QCoreApplication::processEvents();
 
@@ -794,7 +794,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGrid.setVisible().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGrid::setVisible", context, engine);
+            REcmaHelper::functionEnd("REcmaGrid::setVisible", context, engine);
             return result;
         }
          QScriptValue
@@ -802,7 +802,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGrid::isVisible", context, engine);
+            REcmaHelper::functionStart("REcmaGrid::isVisible", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGrid::isVisible";
             //QCoreApplication::processEvents();
 
@@ -843,7 +843,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGrid.isVisible().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGrid::isVisible", context, engine);
+            REcmaHelper::functionEnd("REcmaGrid::isVisible", context, engine);
             return result;
         }
          QScriptValue REcmaGrid::toString

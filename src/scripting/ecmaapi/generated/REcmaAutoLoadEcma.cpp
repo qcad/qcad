@@ -156,7 +156,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaAutoLoadEcma::addAutoLoadFile", context, engine);
+            REcmaHelper::functionStart("REcmaAutoLoadEcma::addAutoLoadFile", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAutoLoadEcma::addAutoLoadFile";
             //QCoreApplication::processEvents();
 
@@ -193,7 +193,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAutoLoadEcma.addAutoLoadFile().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaAutoLoadEcma::addAutoLoadFile", context, engine);
+            REcmaHelper::functionEnd("REcmaAutoLoadEcma::addAutoLoadFile", context, engine);
             return result;
         }
          QScriptValue
@@ -201,7 +201,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaAutoLoadEcma::getAutoLoadFiles", context, engine);
+            REcmaHelper::functionStart("REcmaAutoLoadEcma::getAutoLoadFiles", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaAutoLoadEcma::getAutoLoadFiles";
             //QCoreApplication::processEvents();
 
@@ -232,7 +232,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RAutoLoadEcma.getAutoLoadFiles().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaAutoLoadEcma::getAutoLoadFiles", context, engine);
+            REcmaHelper::functionEnd("REcmaAutoLoadEcma::getAutoLoadFiles", context, engine);
             return result;
         }
          QScriptValue REcmaAutoLoadEcma::toString

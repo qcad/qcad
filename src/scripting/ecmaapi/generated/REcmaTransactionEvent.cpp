@@ -389,7 +389,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTransactionEvent::hasOnlyChanges", context, engine);
+            REcmaHelper::functionStart("REcmaTransactionEvent::hasOnlyChanges", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTransactionEvent::hasOnlyChanges";
             //QCoreApplication::processEvents();
 
@@ -430,7 +430,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTransactionEvent.hasOnlyChanges().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTransactionEvent::hasOnlyChanges", context, engine);
+            REcmaHelper::functionEnd("REcmaTransactionEvent::hasOnlyChanges", context, engine);
             return result;
         }
          QScriptValue
@@ -438,7 +438,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTransactionEvent::getEntityTypeFilter", context, engine);
+            REcmaHelper::functionStart("REcmaTransactionEvent::getEntityTypeFilter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTransactionEvent::getEntityTypeFilter";
             //QCoreApplication::processEvents();
 
@@ -479,7 +479,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTransactionEvent.getEntityTypeFilter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTransactionEvent::getEntityTypeFilter", context, engine);
+            REcmaHelper::functionEnd("REcmaTransactionEvent::getEntityTypeFilter", context, engine);
             return result;
         }
          QScriptValue
@@ -487,7 +487,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTransactionEvent::getTransaction", context, engine);
+            REcmaHelper::functionStart("REcmaTransactionEvent::getTransaction", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTransactionEvent::getTransaction";
             //QCoreApplication::processEvents();
 
@@ -528,7 +528,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTransactionEvent.getTransaction().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTransactionEvent::getTransaction", context, engine);
+            REcmaHelper::functionEnd("REcmaTransactionEvent::getTransaction", context, engine);
             return result;
         }
          QScriptValue REcmaTransactionEvent::toString

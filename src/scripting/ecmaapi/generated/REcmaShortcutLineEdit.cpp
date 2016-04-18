@@ -209,7 +209,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShortcutLineEdit::clear", context, engine);
+            REcmaHelper::functionStart("REcmaShortcutLineEdit::clear", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShortcutLineEdit::clear";
             //QCoreApplication::processEvents();
 
@@ -245,7 +245,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RShortcutLineEdit.clear().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShortcutLineEdit::clear", context, engine);
+            REcmaHelper::functionEnd("REcmaShortcutLineEdit::clear", context, engine);
             return result;
         }
          QScriptValue REcmaShortcutLineEdit::toString

@@ -243,7 +243,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCharacterWidget::sizeHint", context, engine);
+            REcmaHelper::functionStart("REcmaCharacterWidget::sizeHint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCharacterWidget::sizeHint";
             //QCoreApplication::processEvents();
 
@@ -284,7 +284,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCharacterWidget.sizeHint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCharacterWidget::sizeHint", context, engine);
+            REcmaHelper::functionEnd("REcmaCharacterWidget::sizeHint", context, engine);
             return result;
         }
          QScriptValue
@@ -292,7 +292,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCharacterWidget::getDisplayFont", context, engine);
+            REcmaHelper::functionStart("REcmaCharacterWidget::getDisplayFont", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCharacterWidget::getDisplayFont";
             //QCoreApplication::processEvents();
 
@@ -333,7 +333,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCharacterWidget.getDisplayFont().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCharacterWidget::getDisplayFont", context, engine);
+            REcmaHelper::functionEnd("REcmaCharacterWidget::getDisplayFont", context, engine);
             return result;
         }
          QScriptValue
@@ -341,7 +341,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCharacterWidget::updateFont", context, engine);
+            REcmaHelper::functionStart("REcmaCharacterWidget::updateFont", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCharacterWidget::updateFont";
             //QCoreApplication::processEvents();
 
@@ -398,7 +398,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCharacterWidget.updateFont().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCharacterWidget::updateFont", context, engine);
+            REcmaHelper::functionEnd("REcmaCharacterWidget::updateFont", context, engine);
             return result;
         }
          QScriptValue
@@ -406,7 +406,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCharacterWidget::updateSize", context, engine);
+            REcmaHelper::functionStart("REcmaCharacterWidget::updateSize", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCharacterWidget::updateSize";
             //QCoreApplication::processEvents();
 
@@ -453,7 +453,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCharacterWidget.updateSize().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCharacterWidget::updateSize", context, engine);
+            REcmaHelper::functionEnd("REcmaCharacterWidget::updateSize", context, engine);
             return result;
         }
          QScriptValue
@@ -461,7 +461,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCharacterWidget::updateStyle", context, engine);
+            REcmaHelper::functionStart("REcmaCharacterWidget::updateStyle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCharacterWidget::updateStyle";
             //QCoreApplication::processEvents();
 
@@ -508,7 +508,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCharacterWidget.updateStyle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCharacterWidget::updateStyle", context, engine);
+            REcmaHelper::functionEnd("REcmaCharacterWidget::updateStyle", context, engine);
             return result;
         }
          QScriptValue
@@ -516,7 +516,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCharacterWidget::updateFontMerging", context, engine);
+            REcmaHelper::functionStart("REcmaCharacterWidget::updateFontMerging", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCharacterWidget::updateFontMerging";
             //QCoreApplication::processEvents();
 
@@ -563,7 +563,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCharacterWidget.updateFontMerging().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCharacterWidget::updateFontMerging", context, engine);
+            REcmaHelper::functionEnd("REcmaCharacterWidget::updateFontMerging", context, engine);
             return result;
         }
          QScriptValue REcmaCharacterWidget::toString

@@ -224,7 +224,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::init", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::init";
             //QCoreApplication::processEvents();
 
@@ -250,7 +250,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.init().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::init", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::init", context, engine);
             return result;
         }
          QScriptValue
@@ -258,7 +258,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::clone", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::clone";
             //QCoreApplication::processEvents();
 
@@ -299,7 +299,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.clone().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::clone", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -307,7 +307,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::getDocument", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::getDocument", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getDocument";
             //QCoreApplication::processEvents();
 
@@ -369,7 +369,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getDocument().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getDocument", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::getDocument", context, engine);
             return result;
         }
          QScriptValue
@@ -377,7 +377,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::setDocument", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::setDocument", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::setDocument";
             //QCoreApplication::processEvents();
 
@@ -431,7 +431,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.setDocument().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::setDocument", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::setDocument", context, engine);
             return result;
         }
          QScriptValue
@@ -439,7 +439,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::getId", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::getId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getId";
             //QCoreApplication::processEvents();
 
@@ -480,7 +480,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getId().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getId", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::getId", context, engine);
             return result;
         }
          QScriptValue
@@ -488,7 +488,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::getHandle", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::getHandle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getHandle";
             //QCoreApplication::processEvents();
 
@@ -529,7 +529,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getHandle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getHandle", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::getHandle", context, engine);
             return result;
         }
          QScriptValue
@@ -537,7 +537,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::getType", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::getType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getType";
             //QCoreApplication::processEvents();
 
@@ -578,7 +578,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getType().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getType", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -586,7 +586,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::isProtected", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::isProtected", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::isProtected";
             //QCoreApplication::processEvents();
 
@@ -627,7 +627,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.isProtected().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::isProtected", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::isProtected", context, engine);
             return result;
         }
          QScriptValue
@@ -635,7 +635,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::setProtected", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::setProtected", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::setProtected";
             //QCoreApplication::processEvents();
 
@@ -682,7 +682,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.setProtected().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::setProtected", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::setProtected", context, engine);
             return result;
         }
          QScriptValue
@@ -690,7 +690,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::isUndone", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::isUndone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::isUndone";
             //QCoreApplication::processEvents();
 
@@ -731,7 +731,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.isUndone().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::isUndone", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::isUndone", context, engine);
             return result;
         }
          QScriptValue
@@ -739,7 +739,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::getPropertyTypeIds", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::getPropertyTypeIds", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getPropertyTypeIds";
             //QCoreApplication::processEvents();
 
@@ -781,7 +781,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getPropertyTypeIds().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getPropertyTypeIds", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::getPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue
@@ -789,7 +789,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::getCustomPropertyTypeIds", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::getCustomPropertyTypeIds", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getCustomPropertyTypeIds";
             //QCoreApplication::processEvents();
 
@@ -831,7 +831,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getCustomPropertyTypeIds().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getCustomPropertyTypeIds", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::getCustomPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue
@@ -839,7 +839,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::getProperty", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getProperty";
             //QCoreApplication::processEvents();
 
@@ -1078,7 +1078,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getProperty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getProperty", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1086,7 +1086,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::setProperty", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::setProperty";
             //QCoreApplication::processEvents();
 
@@ -1260,7 +1260,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.setProperty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::setProperty", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1268,7 +1268,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::hasPropertyType", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::hasPropertyType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::hasPropertyType";
             //QCoreApplication::processEvents();
 
@@ -1332,7 +1332,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.hasPropertyType().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::hasPropertyType", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::hasPropertyType", context, engine);
             return result;
         }
          QScriptValue
@@ -1340,7 +1340,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::isSelectedForPropertyEditing", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::isSelectedForPropertyEditing", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::isSelectedForPropertyEditing";
             //QCoreApplication::processEvents();
 
@@ -1381,7 +1381,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.isSelectedForPropertyEditing().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::isSelectedForPropertyEditing", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::isSelectedForPropertyEditing", context, engine);
             return result;
         }
          QScriptValue
@@ -1389,7 +1389,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::hasCustomProperties", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::hasCustomProperties", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::hasCustomProperties";
             //QCoreApplication::processEvents();
 
@@ -1430,7 +1430,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.hasCustomProperties().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::hasCustomProperties", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::hasCustomProperties", context, engine);
             return result;
         }
          QScriptValue
@@ -1438,7 +1438,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::hasCustomProperty", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::hasCustomProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::hasCustomProperty";
             //QCoreApplication::processEvents();
 
@@ -1503,7 +1503,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.hasCustomProperty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::hasCustomProperty", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::hasCustomProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1511,7 +1511,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::getCustomProperty", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::getCustomProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getCustomProperty";
             //QCoreApplication::processEvents();
 
@@ -1644,7 +1644,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getCustomProperty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getCustomProperty", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::getCustomProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1652,7 +1652,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::getCustomBoolProperty", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::getCustomBoolProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getCustomBoolProperty";
             //QCoreApplication::processEvents();
 
@@ -1730,7 +1730,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getCustomBoolProperty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getCustomBoolProperty", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::getCustomBoolProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1738,7 +1738,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::setCustomProperty", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::setCustomProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::setCustomProperty";
             //QCoreApplication::processEvents();
 
@@ -1821,7 +1821,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.setCustomProperty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::setCustomProperty", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::setCustomProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1829,7 +1829,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::removeCustomProperty", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::removeCustomProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::removeCustomProperty";
             //QCoreApplication::processEvents();
 
@@ -1889,7 +1889,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.removeCustomProperty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::removeCustomProperty", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::removeCustomProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1897,7 +1897,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::getCustomPropertyTitles", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::getCustomPropertyTitles", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getCustomPropertyTitles";
             //QCoreApplication::processEvents();
 
@@ -1938,7 +1938,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getCustomPropertyTitles().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getCustomPropertyTitles", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::getCustomPropertyTitles", context, engine);
             return result;
         }
          QScriptValue
@@ -1946,7 +1946,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::getCustomPropertyKeys", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::getCustomPropertyKeys", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getCustomPropertyKeys";
             //QCoreApplication::processEvents();
 
@@ -1998,7 +1998,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getCustomPropertyKeys().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getCustomPropertyKeys", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::getCustomPropertyKeys", context, engine);
             return result;
         }
          QScriptValue
@@ -2006,7 +2006,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::copyCustomPropertiesFrom", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::copyCustomPropertiesFrom", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::copyCustomPropertiesFrom";
             //QCoreApplication::processEvents();
 
@@ -2060,7 +2060,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.copyCustomPropertiesFrom().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::copyCustomPropertiesFrom", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::copyCustomPropertiesFrom", context, engine);
             return result;
         }
          QScriptValue
@@ -2068,7 +2068,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::getComplexity", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::getComplexity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::getComplexity";
             //QCoreApplication::processEvents();
 
@@ -2109,7 +2109,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.getComplexity().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::getComplexity", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::getComplexity", context, engine);
             return result;
         }
          QScriptValue
@@ -2117,7 +2117,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerObject::dump", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerObject::dump", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::dump";
             //QCoreApplication::processEvents();
 
@@ -2153,7 +2153,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RObject.dump().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerObject::dump", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerObject::dump", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerObject::toString

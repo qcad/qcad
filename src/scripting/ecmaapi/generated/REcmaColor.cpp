@@ -631,7 +631,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::getCustomColorCode", context, engine);
+            REcmaHelper::functionStart("REcmaColor::getCustomColorCode", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::getCustomColorCode";
             //QCoreApplication::processEvents();
 
@@ -672,7 +672,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.getCustomColorCode().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::getCustomColorCode", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::getCustomColorCode", context, engine);
             return result;
         }
          QScriptValue
@@ -680,7 +680,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::getColorIndex", context, engine);
+            REcmaHelper::functionStart("REcmaColor::getColorIndex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::getColorIndex";
             //QCoreApplication::processEvents();
 
@@ -721,7 +721,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.getColorIndex().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::getColorIndex", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::getColorIndex", context, engine);
             return result;
         }
          QScriptValue
@@ -729,7 +729,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::removeColor", context, engine);
+            REcmaHelper::functionStart("REcmaColor::removeColor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::removeColor";
             //QCoreApplication::processEvents();
 
@@ -766,7 +766,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.removeColor().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::removeColor", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::removeColor", context, engine);
             return result;
         }
          QScriptValue
@@ -774,7 +774,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::createFromCadIndex", context, engine);
+            REcmaHelper::functionStart("REcmaColor::createFromCadIndex", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::createFromCadIndex";
             //QCoreApplication::processEvents();
 
@@ -848,7 +848,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.createFromCadIndex().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::createFromCadIndex", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::createFromCadIndex", context, engine);
             return result;
         }
          QScriptValue
@@ -856,7 +856,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::createFromCadCustom", context, engine);
+            REcmaHelper::functionStart("REcmaColor::createFromCadCustom", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::createFromCadCustom";
             //QCoreApplication::processEvents();
 
@@ -930,7 +930,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.createFromCadCustom().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::createFromCadCustom", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::createFromCadCustom", context, engine);
             return result;
         }
          QScriptValue
@@ -938,7 +938,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::createFromName", context, engine);
+            REcmaHelper::functionStart("REcmaColor::createFromName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::createFromName";
             //QCoreApplication::processEvents();
 
@@ -980,7 +980,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.createFromName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::createFromName", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::createFromName", context, engine);
             return result;
         }
          QScriptValue
@@ -988,7 +988,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::getList", context, engine);
+            REcmaHelper::functionStart("REcmaColor::getList", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::getList";
             //QCoreApplication::processEvents();
 
@@ -1051,7 +1051,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.getList().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::getList", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::getList", context, engine);
             return result;
         }
          QScriptValue
@@ -1059,7 +1059,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::getIcon", context, engine);
+            REcmaHelper::functionStart("REcmaColor::getIcon", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::getIcon";
             //QCoreApplication::processEvents();
 
@@ -1180,7 +1180,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.getIcon().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::getIcon", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::getIcon", context, engine);
             return result;
         }
          QScriptValue
@@ -1188,7 +1188,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::getHash", context, engine);
+            REcmaHelper::functionStart("REcmaColor::getHash", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::getHash";
             //QCoreApplication::processEvents();
 
@@ -1229,7 +1229,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.getHash().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::getHash", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::getHash", context, engine);
             return result;
         }
          QScriptValue
@@ -1237,7 +1237,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::isValid", context, engine);
+            REcmaHelper::functionStart("REcmaColor::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::isValid";
             //QCoreApplication::processEvents();
 
@@ -1278,7 +1278,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.isValid().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::isValid", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::isValid", context, engine);
             return result;
         }
          QScriptValue
@@ -1286,7 +1286,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::getName", context, engine);
+            REcmaHelper::functionStart("REcmaColor::getName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::getName";
             //QCoreApplication::processEvents();
 
@@ -1327,7 +1327,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.getName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::getName", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::getName", context, engine);
             return result;
         }
          QScriptValue
@@ -1335,7 +1335,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::isByLayer", context, engine);
+            REcmaHelper::functionStart("REcmaColor::isByLayer", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::isByLayer";
             //QCoreApplication::processEvents();
 
@@ -1376,7 +1376,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.isByLayer().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::isByLayer", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::isByLayer", context, engine);
             return result;
         }
          QScriptValue
@@ -1384,7 +1384,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::isByBlock", context, engine);
+            REcmaHelper::functionStart("REcmaColor::isByBlock", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::isByBlock";
             //QCoreApplication::processEvents();
 
@@ -1425,7 +1425,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.isByBlock().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::isByBlock", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::isByBlock", context, engine);
             return result;
         }
          QScriptValue
@@ -1433,7 +1433,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::isFixed", context, engine);
+            REcmaHelper::functionStart("REcmaColor::isFixed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::isFixed";
             //QCoreApplication::processEvents();
 
@@ -1474,7 +1474,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.isFixed().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::isFixed", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::isFixed", context, engine);
             return result;
         }
          QScriptValue
@@ -1482,7 +1482,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::toCompat", context, engine);
+            REcmaHelper::functionStart("REcmaColor::toCompat", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::toCompat";
             //QCoreApplication::processEvents();
 
@@ -1523,7 +1523,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.toCompat().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::toCompat", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::toCompat", context, engine);
             return result;
         }
          QScriptValue
@@ -1531,7 +1531,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::getHighlighted", context, engine);
+            REcmaHelper::functionStart("REcmaColor::getHighlighted", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::getHighlighted";
             //QCoreApplication::processEvents();
 
@@ -1688,7 +1688,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.getHighlighted().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::getHighlighted", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::getHighlighted", context, engine);
             return result;
         }
          QScriptValue
@@ -1696,7 +1696,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::operator==", context, engine);
+            REcmaHelper::functionStart("REcmaColor::operator==", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::operator==";
             //QCoreApplication::processEvents();
 
@@ -1760,7 +1760,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.equals().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::operator==", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::operator==", context, engine);
             return result;
         }
          QScriptValue
@@ -1768,7 +1768,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::operator!=", context, engine);
+            REcmaHelper::functionStart("REcmaColor::operator!=", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::operator!=";
             //QCoreApplication::processEvents();
 
@@ -1832,7 +1832,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.operator_not_assign().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::operator!=", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::operator!=", context, engine);
             return result;
         }
          QScriptValue
@@ -1840,7 +1840,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaColor::operator<", context, engine);
+            REcmaHelper::functionStart("REcmaColor::operator<", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaColor::operator<";
             //QCoreApplication::processEvents();
 
@@ -1904,7 +1904,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RColor.operator_less().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaColor::operator<", context, engine);
+            REcmaHelper::functionEnd("REcmaColor::operator<", context, engine);
             return result;
         }
          QScriptValue REcmaColor::toString

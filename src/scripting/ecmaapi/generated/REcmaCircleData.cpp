@@ -329,7 +329,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCircleData::getCircle", context, engine);
+            REcmaHelper::functionStart("REcmaCircleData::getCircle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleData::getCircle";
             //QCoreApplication::processEvents();
 
@@ -370,7 +370,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleData.getCircle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCircleData::getCircle", context, engine);
+            REcmaHelper::functionEnd("REcmaCircleData::getCircle", context, engine);
             return result;
         }
          QScriptValue
@@ -378,7 +378,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCircleData::getCenter", context, engine);
+            REcmaHelper::functionStart("REcmaCircleData::getCenter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleData::getCenter";
             //QCoreApplication::processEvents();
 
@@ -419,7 +419,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleData.getCenter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCircleData::getCenter", context, engine);
+            REcmaHelper::functionEnd("REcmaCircleData::getCenter", context, engine);
             return result;
         }
          QScriptValue
@@ -427,7 +427,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCircleData::getRadius", context, engine);
+            REcmaHelper::functionStart("REcmaCircleData::getRadius", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleData::getRadius";
             //QCoreApplication::processEvents();
 
@@ -468,7 +468,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleData.getRadius().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCircleData::getRadius", context, engine);
+            REcmaHelper::functionEnd("REcmaCircleData::getRadius", context, engine);
             return result;
         }
          QScriptValue
@@ -476,7 +476,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCircleData::getReferencePoints", context, engine);
+            REcmaHelper::functionStart("REcmaCircleData::getReferencePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleData::getReferencePoints";
             //QCoreApplication::processEvents();
 
@@ -549,7 +549,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleData.getReferencePoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCircleData::getReferencePoints", context, engine);
+            REcmaHelper::functionEnd("REcmaCircleData::getReferencePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -557,7 +557,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCircleData::moveReferencePoint", context, engine);
+            REcmaHelper::functionStart("REcmaCircleData::moveReferencePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleData::moveReferencePoint";
             //QCoreApplication::processEvents();
 
@@ -646,7 +646,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleData.moveReferencePoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCircleData::moveReferencePoint", context, engine);
+            REcmaHelper::functionEnd("REcmaCircleData::moveReferencePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -654,7 +654,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCircleData::castToShape", context, engine);
+            REcmaHelper::functionStart("REcmaCircleData::castToShape", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleData::castToShape";
             //QCoreApplication::processEvents();
 
@@ -695,7 +695,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleData.castToShape().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCircleData::castToShape", context, engine);
+            REcmaHelper::functionEnd("REcmaCircleData::castToShape", context, engine);
             return result;
         }
          QScriptValue
@@ -703,7 +703,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaCircleData::getShapes", context, engine);
+            REcmaHelper::functionStart("REcmaCircleData::getShapes", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaCircleData::getShapes";
             //QCoreApplication::processEvents();
 
@@ -845,7 +845,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RCircleData.getShapes().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaCircleData::getShapes", context, engine);
+            REcmaHelper::functionEnd("REcmaCircleData::getShapes", context, engine);
             return result;
         }
          QScriptValue REcmaCircleData::toString

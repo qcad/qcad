@@ -634,7 +634,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::isValid", context, engine);
+            REcmaHelper::functionStart("REcmaBox::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::isValid";
             //QCoreApplication::processEvents();
 
@@ -675,7 +675,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.isValid().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::isValid", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::isValid", context, engine);
             return result;
         }
          QScriptValue
@@ -683,7 +683,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::isSane", context, engine);
+            REcmaHelper::functionStart("REcmaBox::isSane", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::isSane";
             //QCoreApplication::processEvents();
 
@@ -724,7 +724,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.isSane().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::isSane", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::isSane", context, engine);
             return result;
         }
          QScriptValue
@@ -732,7 +732,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::getWidth", context, engine);
+            REcmaHelper::functionStart("REcmaBox::getWidth", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::getWidth";
             //QCoreApplication::processEvents();
 
@@ -773,7 +773,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.getWidth().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::getWidth", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::getWidth", context, engine);
             return result;
         }
          QScriptValue
@@ -781,7 +781,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::getHeight", context, engine);
+            REcmaHelper::functionStart("REcmaBox::getHeight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::getHeight";
             //QCoreApplication::processEvents();
 
@@ -822,7 +822,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.getHeight().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::getHeight", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::getHeight", context, engine);
             return result;
         }
          QScriptValue
@@ -830,7 +830,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::getSize", context, engine);
+            REcmaHelper::functionStart("REcmaBox::getSize", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::getSize";
             //QCoreApplication::processEvents();
 
@@ -871,7 +871,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.getSize().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::getSize", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::getSize", context, engine);
             return result;
         }
          QScriptValue
@@ -879,7 +879,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::getCenter", context, engine);
+            REcmaHelper::functionStart("REcmaBox::getCenter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::getCenter";
             //QCoreApplication::processEvents();
 
@@ -920,7 +920,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.getCenter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::getCenter", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::getCenter", context, engine);
             return result;
         }
          QScriptValue
@@ -928,7 +928,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::getMinimum", context, engine);
+            REcmaHelper::functionStart("REcmaBox::getMinimum", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::getMinimum";
             //QCoreApplication::processEvents();
 
@@ -969,7 +969,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.getMinimum().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::getMinimum", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::getMinimum", context, engine);
             return result;
         }
          QScriptValue
@@ -977,7 +977,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::getMaximum", context, engine);
+            REcmaHelper::functionStart("REcmaBox::getMaximum", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::getMaximum";
             //QCoreApplication::processEvents();
 
@@ -1018,7 +1018,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.getMaximum().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::getMaximum", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::getMaximum", context, engine);
             return result;
         }
          QScriptValue
@@ -1026,7 +1026,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::isOutside", context, engine);
+            REcmaHelper::functionStart("REcmaBox::isOutside", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::isOutside";
             //QCoreApplication::processEvents();
 
@@ -1090,7 +1090,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.isOutside().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::isOutside", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::isOutside", context, engine);
             return result;
         }
          QScriptValue
@@ -1098,7 +1098,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::isOutsideXY", context, engine);
+            REcmaHelper::functionStart("REcmaBox::isOutsideXY", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::isOutsideXY";
             //QCoreApplication::processEvents();
 
@@ -1162,7 +1162,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.isOutsideXY().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::isOutsideXY", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::isOutsideXY", context, engine);
             return result;
         }
          QScriptValue
@@ -1170,7 +1170,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::contains", context, engine);
+            REcmaHelper::functionStart("REcmaBox::contains", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::contains";
             //QCoreApplication::processEvents();
 
@@ -1234,7 +1234,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.contains().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::contains", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::contains", context, engine);
             return result;
         }
          QScriptValue
@@ -1242,7 +1242,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::containsBox", context, engine);
+            REcmaHelper::functionStart("REcmaBox::containsBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::containsBox";
             //QCoreApplication::processEvents();
 
@@ -1306,7 +1306,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.containsBox().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::containsBox", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::containsBox", context, engine);
             return result;
         }
          QScriptValue
@@ -1314,7 +1314,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::containsPoint", context, engine);
+            REcmaHelper::functionStart("REcmaBox::containsPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::containsPoint";
             //QCoreApplication::processEvents();
 
@@ -1378,7 +1378,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.containsPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::containsPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::containsPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1386,7 +1386,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::intersects", context, engine);
+            REcmaHelper::functionStart("REcmaBox::intersects", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::intersects";
             //QCoreApplication::processEvents();
 
@@ -1450,7 +1450,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.intersects().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::intersects", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::intersects", context, engine);
             return result;
         }
          QScriptValue
@@ -1458,7 +1458,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::intersectsWith", context, engine);
+            REcmaHelper::functionStart("REcmaBox::intersectsWith", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::intersectsWith";
             //QCoreApplication::processEvents();
 
@@ -1575,7 +1575,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.intersectsWith().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::intersectsWith", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::intersectsWith", context, engine);
             return result;
         }
          QScriptValue
@@ -1583,7 +1583,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::growToInclude", context, engine);
+            REcmaHelper::functionStart("REcmaBox::growToInclude", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::growToInclude";
             //QCoreApplication::processEvents();
 
@@ -1642,7 +1642,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.growToInclude().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::growToInclude", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::growToInclude", context, engine);
             return result;
         }
          QScriptValue
@@ -1650,7 +1650,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::growToIncludeBoxes", context, engine);
+            REcmaHelper::functionStart("REcmaBox::growToIncludeBoxes", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::growToIncludeBoxes";
             //QCoreApplication::processEvents();
 
@@ -1698,7 +1698,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.growToIncludeBoxes().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::growToIncludeBoxes", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::growToIncludeBoxes", context, engine);
             return result;
         }
          QScriptValue
@@ -1706,7 +1706,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::growToIncludeBox", context, engine);
+            REcmaHelper::functionStart("REcmaBox::growToIncludeBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::growToIncludeBox";
             //QCoreApplication::processEvents();
 
@@ -1765,7 +1765,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.growToIncludeBox().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::growToIncludeBox", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::growToIncludeBox", context, engine);
             return result;
         }
          QScriptValue
@@ -1773,7 +1773,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::growToIncludePoint", context, engine);
+            REcmaHelper::functionStart("REcmaBox::growToIncludePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::growToIncludePoint";
             //QCoreApplication::processEvents();
 
@@ -1832,7 +1832,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.growToIncludePoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::growToIncludePoint", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::growToIncludePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1840,7 +1840,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::getCorner1", context, engine);
+            REcmaHelper::functionStart("REcmaBox::getCorner1", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::getCorner1";
             //QCoreApplication::processEvents();
 
@@ -1881,7 +1881,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.getCorner1().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::getCorner1", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::getCorner1", context, engine);
             return result;
         }
          QScriptValue
@@ -1889,7 +1889,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::setCorner1", context, engine);
+            REcmaHelper::functionStart("REcmaBox::setCorner1", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::setCorner1";
             //QCoreApplication::processEvents();
 
@@ -1948,7 +1948,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.setCorner1().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::setCorner1", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::setCorner1", context, engine);
             return result;
         }
          QScriptValue
@@ -1956,7 +1956,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::getCorner2", context, engine);
+            REcmaHelper::functionStart("REcmaBox::getCorner2", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::getCorner2";
             //QCoreApplication::processEvents();
 
@@ -1997,7 +1997,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.getCorner2().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::getCorner2", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::getCorner2", context, engine);
             return result;
         }
          QScriptValue
@@ -2005,7 +2005,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::setCorner2", context, engine);
+            REcmaHelper::functionStart("REcmaBox::setCorner2", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::setCorner2";
             //QCoreApplication::processEvents();
 
@@ -2064,7 +2064,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.setCorner2().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::setCorner2", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::setCorner2", context, engine);
             return result;
         }
          QScriptValue
@@ -2072,7 +2072,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::getCorners", context, engine);
+            REcmaHelper::functionStart("REcmaBox::getCorners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::getCorners";
             //QCoreApplication::processEvents();
 
@@ -2113,7 +2113,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.getCorners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::getCorners", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::getCorners", context, engine);
             return result;
         }
          QScriptValue
@@ -2121,7 +2121,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::getCorners2d", context, engine);
+            REcmaHelper::functionStart("REcmaBox::getCorners2d", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::getCorners2d";
             //QCoreApplication::processEvents();
 
@@ -2162,7 +2162,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.getCorners2d().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::getCorners2d", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::getCorners2d", context, engine);
             return result;
         }
          QScriptValue
@@ -2170,7 +2170,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::getLines2d", context, engine);
+            REcmaHelper::functionStart("REcmaBox::getLines2d", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::getLines2d";
             //QCoreApplication::processEvents();
 
@@ -2211,7 +2211,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.getLines2d().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::getLines2d", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::getLines2d", context, engine);
             return result;
         }
          QScriptValue
@@ -2219,7 +2219,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::getPolyline2d", context, engine);
+            REcmaHelper::functionStart("REcmaBox::getPolyline2d", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::getPolyline2d";
             //QCoreApplication::processEvents();
 
@@ -2260,7 +2260,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.getPolyline2d().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::getPolyline2d", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::getPolyline2d", context, engine);
             return result;
         }
          QScriptValue
@@ -2268,7 +2268,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::getTriangles", context, engine);
+            REcmaHelper::functionStart("REcmaBox::getTriangles", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::getTriangles";
             //QCoreApplication::processEvents();
 
@@ -2309,7 +2309,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.getTriangles().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::getTriangles", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::getTriangles", context, engine);
             return result;
         }
          QScriptValue
@@ -2317,7 +2317,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::grow", context, engine);
+            REcmaHelper::functionStart("REcmaBox::grow", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::grow";
             //QCoreApplication::processEvents();
 
@@ -2370,7 +2370,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.grow().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::grow", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::grow", context, engine);
             return result;
         }
          QScriptValue
@@ -2378,7 +2378,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::growXY", context, engine);
+            REcmaHelper::functionStart("REcmaBox::growXY", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::growXY";
             //QCoreApplication::processEvents();
 
@@ -2431,7 +2431,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.growXY().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::growXY", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::growXY", context, engine);
             return result;
         }
          QScriptValue
@@ -2439,7 +2439,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::move", context, engine);
+            REcmaHelper::functionStart("REcmaBox::move", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::move";
             //QCoreApplication::processEvents();
 
@@ -2498,7 +2498,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.move().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::move", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::move", context, engine);
             return result;
         }
          QScriptValue
@@ -2506,7 +2506,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::toQRectF", context, engine);
+            REcmaHelper::functionStart("REcmaBox::toQRectF", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::toQRectF";
             //QCoreApplication::processEvents();
 
@@ -2547,7 +2547,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.toQRectF().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::toQRectF", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::toQRectF", context, engine);
             return result;
         }
          QScriptValue
@@ -2555,7 +2555,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::operator ==", context, engine);
+            REcmaHelper::functionStart("REcmaBox::operator ==", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::operator ==";
             //QCoreApplication::processEvents();
 
@@ -2619,7 +2619,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.equals().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::operator ==", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::operator ==", context, engine);
             return result;
         }
          QScriptValue
@@ -2627,7 +2627,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBox::operator !=", context, engine);
+            REcmaHelper::functionStart("REcmaBox::operator !=", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBox::operator !=";
             //QCoreApplication::processEvents();
 
@@ -2691,7 +2691,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBox.operator_not_assign().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBox::operator !=", context, engine);
+            REcmaHelper::functionEnd("REcmaBox::operator !=", context, engine);
             return result;
         }
          QScriptValue REcmaBox::toString

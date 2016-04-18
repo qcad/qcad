@@ -442,7 +442,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellListWidget::contextMenuEvent", context, engine);
+            REcmaHelper::functionStart("REcmaShellListWidget::contextMenuEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellListWidget::contextMenuEvent";
             //QCoreApplication::processEvents();
 
@@ -496,7 +496,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RListWidget.contextMenuEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellListWidget::contextMenuEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaShellListWidget::contextMenuEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -504,7 +504,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellListWidget::mousePressEvent", context, engine);
+            REcmaHelper::functionStart("REcmaShellListWidget::mousePressEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellListWidget::mousePressEvent";
             //QCoreApplication::processEvents();
 
@@ -556,7 +556,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RListWidget.mousePressEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellListWidget::mousePressEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaShellListWidget::mousePressEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -564,7 +564,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellListWidget::mouseReleaseEvent", context, engine);
+            REcmaHelper::functionStart("REcmaShellListWidget::mouseReleaseEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellListWidget::mouseReleaseEvent";
             //QCoreApplication::processEvents();
 
@@ -616,7 +616,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RListWidget.mouseReleaseEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellListWidget::mouseReleaseEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaShellListWidget::mouseReleaseEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -624,7 +624,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellListWidget::mouseMoveEvent", context, engine);
+            REcmaHelper::functionStart("REcmaShellListWidget::mouseMoveEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellListWidget::mouseMoveEvent";
             //QCoreApplication::processEvents();
 
@@ -676,7 +676,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RListWidget.mouseMoveEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellListWidget::mouseMoveEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaShellListWidget::mouseMoveEvent", context, engine);
             return result;
         }
         

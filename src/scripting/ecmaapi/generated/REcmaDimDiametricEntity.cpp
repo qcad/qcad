@@ -529,7 +529,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimDiametricEntity::init", context, engine);
+            REcmaHelper::functionStart("REcmaDimDiametricEntity::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimDiametricEntity::init";
             //QCoreApplication::processEvents();
 
@@ -555,7 +555,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimDiametricEntity.init().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimDiametricEntity::init", context, engine);
+            REcmaHelper::functionEnd("REcmaDimDiametricEntity::init", context, engine);
             return result;
         }
          QScriptValue
@@ -563,7 +563,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimDiametricEntity::getStaticPropertyTypeIds", context, engine);
+            REcmaHelper::functionStart("REcmaDimDiametricEntity::getStaticPropertyTypeIds", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimDiametricEntity::getStaticPropertyTypeIds";
             //QCoreApplication::processEvents();
 
@@ -595,7 +595,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimDiametricEntity.getStaticPropertyTypeIds().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimDiametricEntity::getStaticPropertyTypeIds", context, engine);
+            REcmaHelper::functionEnd("REcmaDimDiametricEntity::getStaticPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue
@@ -603,7 +603,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimDiametricEntity::clone", context, engine);
+            REcmaHelper::functionStart("REcmaDimDiametricEntity::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimDiametricEntity::clone";
             //QCoreApplication::processEvents();
 
@@ -644,7 +644,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimDiametricEntity.clone().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimDiametricEntity::clone", context, engine);
+            REcmaHelper::functionEnd("REcmaDimDiametricEntity::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -652,7 +652,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimDiametricEntity::getType", context, engine);
+            REcmaHelper::functionStart("REcmaDimDiametricEntity::getType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimDiametricEntity::getType";
             //QCoreApplication::processEvents();
 
@@ -693,7 +693,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimDiametricEntity.getType().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimDiametricEntity::getType", context, engine);
+            REcmaHelper::functionEnd("REcmaDimDiametricEntity::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -701,7 +701,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimDiametricEntity::setProperty", context, engine);
+            REcmaHelper::functionStart("REcmaDimDiametricEntity::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimDiametricEntity::setProperty";
             //QCoreApplication::processEvents();
 
@@ -875,7 +875,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimDiametricEntity.setProperty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimDiametricEntity::setProperty", context, engine);
+            REcmaHelper::functionEnd("REcmaDimDiametricEntity::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -883,7 +883,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimDiametricEntity::getProperty", context, engine);
+            REcmaHelper::functionStart("REcmaDimDiametricEntity::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimDiametricEntity::getProperty";
             //QCoreApplication::processEvents();
 
@@ -1122,7 +1122,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimDiametricEntity.getProperty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimDiametricEntity::getProperty", context, engine);
+            REcmaHelper::functionEnd("REcmaDimDiametricEntity::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1130,7 +1130,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimDiametricEntity::getData", context, engine);
+            REcmaHelper::functionStart("REcmaDimDiametricEntity::getData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimDiametricEntity::getData";
             //QCoreApplication::processEvents();
 
@@ -1194,7 +1194,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimDiametricEntity.getData().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimDiametricEntity::getData", context, engine);
+            REcmaHelper::functionEnd("REcmaDimDiametricEntity::getData", context, engine);
             return result;
         }
          QScriptValue
@@ -1202,7 +1202,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimDiametricEntity::setData", context, engine);
+            REcmaHelper::functionStart("REcmaDimDiametricEntity::setData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimDiametricEntity::setData";
             //QCoreApplication::processEvents();
 
@@ -1261,7 +1261,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimDiametricEntity.setData().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimDiametricEntity::setData", context, engine);
+            REcmaHelper::functionEnd("REcmaDimDiametricEntity::setData", context, engine);
             return result;
         }
          QScriptValue
@@ -1269,7 +1269,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimDiametricEntity::setChordPoint", context, engine);
+            REcmaHelper::functionStart("REcmaDimDiametricEntity::setChordPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimDiametricEntity::setChordPoint";
             //QCoreApplication::processEvents();
 
@@ -1328,7 +1328,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimDiametricEntity.setChordPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimDiametricEntity::setChordPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaDimDiametricEntity::setChordPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1336,7 +1336,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimDiametricEntity::getChordPoint", context, engine);
+            REcmaHelper::functionStart("REcmaDimDiametricEntity::getChordPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimDiametricEntity::getChordPoint";
             //QCoreApplication::processEvents();
 
@@ -1377,7 +1377,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimDiametricEntity.getChordPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimDiametricEntity::getChordPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaDimDiametricEntity::getChordPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1385,7 +1385,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimDiametricEntity::setFarChordPoint", context, engine);
+            REcmaHelper::functionStart("REcmaDimDiametricEntity::setFarChordPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimDiametricEntity::setFarChordPoint";
             //QCoreApplication::processEvents();
 
@@ -1444,7 +1444,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimDiametricEntity.setFarChordPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimDiametricEntity::setFarChordPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaDimDiametricEntity::setFarChordPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1452,7 +1452,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimDiametricEntity::getFarChordPoint", context, engine);
+            REcmaHelper::functionStart("REcmaDimDiametricEntity::getFarChordPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimDiametricEntity::getFarChordPoint";
             //QCoreApplication::processEvents();
 
@@ -1493,7 +1493,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimDiametricEntity.getFarChordPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimDiametricEntity::getFarChordPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaDimDiametricEntity::getFarChordPoint", context, engine);
             return result;
         }
          QScriptValue REcmaDimDiametricEntity::toString

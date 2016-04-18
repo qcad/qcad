@@ -237,7 +237,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaWidget::removeAction", context, engine);
+            REcmaHelper::functionStart("REcmaWidget::removeAction", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaWidget::removeAction";
             //QCoreApplication::processEvents();
 
@@ -287,7 +287,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RWidget.removeAction().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaWidget::removeAction", context, engine);
+            REcmaHelper::functionEnd("REcmaWidget::removeAction", context, engine);
             return result;
         }
          QScriptValue
@@ -295,7 +295,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaWidget::addAction", context, engine);
+            REcmaHelper::functionStart("REcmaWidget::addAction", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaWidget::addAction";
             //QCoreApplication::processEvents();
 
@@ -345,7 +345,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RWidget.addAction().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaWidget::addAction", context, engine);
+            REcmaHelper::functionEnd("REcmaWidget::addAction", context, engine);
             return result;
         }
          QScriptValue
@@ -353,7 +353,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaWidget::insertAction", context, engine);
+            REcmaHelper::functionStart("REcmaWidget::insertAction", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaWidget::insertAction";
             //QCoreApplication::processEvents();
 
@@ -419,7 +419,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RWidget.insertAction().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaWidget::insertAction", context, engine);
+            REcmaHelper::functionEnd("REcmaWidget::insertAction", context, engine);
             return result;
         }
          QScriptValue REcmaWidget::toString

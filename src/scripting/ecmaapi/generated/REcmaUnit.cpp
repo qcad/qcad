@@ -186,7 +186,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaUnit::formatLinear", context, engine);
+            REcmaHelper::functionStart("REcmaUnit::formatLinear", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUnit::formatLinear";
             //QCoreApplication::processEvents();
 
@@ -681,7 +681,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.formatLinear().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaUnit::formatLinear", context, engine);
+            REcmaHelper::functionEnd("REcmaUnit::formatLinear", context, engine);
             return result;
         }
          QScriptValue
@@ -689,7 +689,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaUnit::formatScientific", context, engine);
+            REcmaHelper::functionStart("REcmaUnit::formatScientific", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUnit::formatScientific";
             //QCoreApplication::processEvents();
 
@@ -1119,7 +1119,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.formatScientific().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaUnit::formatScientific", context, engine);
+            REcmaHelper::functionEnd("REcmaUnit::formatScientific", context, engine);
             return result;
         }
          QScriptValue
@@ -1127,7 +1127,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaUnit::formatDecimal", context, engine);
+            REcmaHelper::functionStart("REcmaUnit::formatDecimal", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUnit::formatDecimal";
             //QCoreApplication::processEvents();
 
@@ -1557,7 +1557,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.formatDecimal().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaUnit::formatDecimal", context, engine);
+            REcmaHelper::functionEnd("REcmaUnit::formatDecimal", context, engine);
             return result;
         }
          QScriptValue
@@ -1565,7 +1565,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaUnit::formatEngineering", context, engine);
+            REcmaHelper::functionStart("REcmaUnit::formatEngineering", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUnit::formatEngineering";
             //QCoreApplication::processEvents();
 
@@ -1995,7 +1995,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.formatEngineering().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaUnit::formatEngineering", context, engine);
+            REcmaHelper::functionEnd("REcmaUnit::formatEngineering", context, engine);
             return result;
         }
          QScriptValue
@@ -2003,7 +2003,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaUnit::formatArchitectural", context, engine);
+            REcmaHelper::functionStart("REcmaUnit::formatArchitectural", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUnit::formatArchitectural";
             //QCoreApplication::processEvents();
 
@@ -2433,7 +2433,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.formatArchitectural().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaUnit::formatArchitectural", context, engine);
+            REcmaHelper::functionEnd("REcmaUnit::formatArchitectural", context, engine);
             return result;
         }
          QScriptValue
@@ -2441,7 +2441,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaUnit::formatFractional", context, engine);
+            REcmaHelper::functionStart("REcmaUnit::formatFractional", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUnit::formatFractional";
             //QCoreApplication::processEvents();
 
@@ -2871,7 +2871,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.formatFractional().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaUnit::formatFractional", context, engine);
+            REcmaHelper::functionEnd("REcmaUnit::formatFractional", context, engine);
             return result;
         }
          QScriptValue
@@ -2879,7 +2879,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaUnit::formatAngle", context, engine);
+            REcmaHelper::functionStart("REcmaUnit::formatAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUnit::formatAngle";
             //QCoreApplication::processEvents();
 
@@ -3102,7 +3102,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.formatAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaUnit::formatAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaUnit::formatAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -3110,7 +3110,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaUnit::isMetric", context, engine);
+            REcmaHelper::functionStart("REcmaUnit::isMetric", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUnit::isMetric";
             //QCoreApplication::processEvents();
 
@@ -3152,7 +3152,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.isMetric().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaUnit::isMetric", context, engine);
+            REcmaHelper::functionEnd("REcmaUnit::isMetric", context, engine);
             return result;
         }
          QScriptValue
@@ -3160,7 +3160,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaUnit::convert", context, engine);
+            REcmaHelper::functionStart("REcmaUnit::convert", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUnit::convert";
             //QCoreApplication::processEvents();
 
@@ -3298,7 +3298,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.convert().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaUnit::convert", context, engine);
+            REcmaHelper::functionEnd("REcmaUnit::convert", context, engine);
             return result;
         }
          QScriptValue
@@ -3306,7 +3306,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaUnit::getFactorToM", context, engine);
+            REcmaHelper::functionStart("REcmaUnit::getFactorToM", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUnit::getFactorToM";
             //QCoreApplication::processEvents();
 
@@ -3348,7 +3348,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.getFactorToM().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaUnit::getFactorToM", context, engine);
+            REcmaHelper::functionEnd("REcmaUnit::getFactorToM", context, engine);
             return result;
         }
          QScriptValue
@@ -3356,7 +3356,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaUnit::parseUnit", context, engine);
+            REcmaHelper::functionStart("REcmaUnit::parseUnit", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUnit::parseUnit";
             //QCoreApplication::processEvents();
 
@@ -3398,7 +3398,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.parseUnit().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaUnit::parseUnit", context, engine);
+            REcmaHelper::functionEnd("REcmaUnit::parseUnit", context, engine);
             return result;
         }
          QScriptValue
@@ -3406,7 +3406,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaUnit::unitToSymbol", context, engine);
+            REcmaHelper::functionStart("REcmaUnit::unitToSymbol", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUnit::unitToSymbol";
             //QCoreApplication::processEvents();
 
@@ -3448,7 +3448,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.unitToSymbol().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaUnit::unitToSymbol", context, engine);
+            REcmaHelper::functionEnd("REcmaUnit::unitToSymbol", context, engine);
             return result;
         }
          QScriptValue
@@ -3456,7 +3456,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaUnit::unitToName", context, engine);
+            REcmaHelper::functionStart("REcmaUnit::unitToName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUnit::unitToName";
             //QCoreApplication::processEvents();
 
@@ -3543,7 +3543,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.unitToName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaUnit::unitToName", context, engine);
+            REcmaHelper::functionEnd("REcmaUnit::unitToName", context, engine);
             return result;
         }
          QScriptValue
@@ -3551,7 +3551,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaUnit::getLabel", context, engine);
+            REcmaHelper::functionStart("REcmaUnit::getLabel", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUnit::getLabel";
             //QCoreApplication::processEvents();
 
@@ -3859,7 +3859,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.getLabel().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaUnit::getLabel", context, engine);
+            REcmaHelper::functionEnd("REcmaUnit::getLabel", context, engine);
             return result;
         }
          QScriptValue
@@ -3867,7 +3867,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaUnit::doubleToString", context, engine);
+            REcmaHelper::functionStart("REcmaUnit::doubleToString", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUnit::doubleToString";
             //QCoreApplication::processEvents();
 
@@ -4225,7 +4225,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.doubleToString().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaUnit::doubleToString", context, engine);
+            REcmaHelper::functionEnd("REcmaUnit::doubleToString", context, engine);
             return result;
         }
          QScriptValue
@@ -4233,7 +4233,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaUnit::doubleToStringDec", context, engine);
+            REcmaHelper::functionStart("REcmaUnit::doubleToStringDec", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaUnit::doubleToStringDec";
             //QCoreApplication::processEvents();
 
@@ -4417,7 +4417,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RUnit.doubleToStringDec().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaUnit::doubleToStringDec", context, engine);
+            REcmaHelper::functionEnd("REcmaUnit::doubleToStringDec", context, engine);
             return result;
         }
          QScriptValue REcmaUnit::toString

@@ -365,7 +365,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyTypeId::getId", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyTypeId::getId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyTypeId::getId";
             //QCoreApplication::processEvents();
 
@@ -406,7 +406,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyTypeId.getId().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyTypeId::getId", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyTypeId::getId", context, engine);
             return result;
         }
          QScriptValue
@@ -414,7 +414,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyTypeId::setId", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyTypeId::setId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyTypeId::setId";
             //QCoreApplication::processEvents();
 
@@ -461,7 +461,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyTypeId.setId().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyTypeId::setId", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyTypeId::setId", context, engine);
             return result;
         }
          QScriptValue
@@ -469,7 +469,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyTypeId::getCustomPropertyTitle", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyTypeId::getCustomPropertyTitle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyTypeId::getCustomPropertyTitle";
             //QCoreApplication::processEvents();
 
@@ -510,7 +510,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyTypeId.getCustomPropertyTitle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyTypeId::getCustomPropertyTitle", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyTypeId::getCustomPropertyTitle", context, engine);
             return result;
         }
          QScriptValue
@@ -518,7 +518,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyTypeId::setCustomPropertyTitle", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyTypeId::setCustomPropertyTitle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyTypeId::setCustomPropertyTitle";
             //QCoreApplication::processEvents();
 
@@ -565,7 +565,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyTypeId.setCustomPropertyTitle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyTypeId::setCustomPropertyTitle", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyTypeId::setCustomPropertyTitle", context, engine);
             return result;
         }
          QScriptValue
@@ -573,7 +573,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyTypeId::getCustomPropertyName", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyTypeId::getCustomPropertyName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyTypeId::getCustomPropertyName";
             //QCoreApplication::processEvents();
 
@@ -614,7 +614,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyTypeId.getCustomPropertyName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyTypeId::getCustomPropertyName", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyTypeId::getCustomPropertyName", context, engine);
             return result;
         }
          QScriptValue
@@ -622,7 +622,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyTypeId::setCustomPropertyName", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyTypeId::setCustomPropertyName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyTypeId::setCustomPropertyName";
             //QCoreApplication::processEvents();
 
@@ -669,7 +669,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyTypeId.setCustomPropertyName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyTypeId::setCustomPropertyName", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyTypeId::setCustomPropertyName", context, engine);
             return result;
         }
          QScriptValue
@@ -677,7 +677,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyTypeId::isValid", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyTypeId::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyTypeId::isValid";
             //QCoreApplication::processEvents();
 
@@ -718,7 +718,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyTypeId.isValid().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyTypeId::isValid", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyTypeId::isValid", context, engine);
             return result;
         }
          QScriptValue
@@ -726,7 +726,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyTypeId::isCustom", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyTypeId::isCustom", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyTypeId::isCustom";
             //QCoreApplication::processEvents();
 
@@ -767,7 +767,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyTypeId.isCustom().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyTypeId::isCustom", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyTypeId::isCustom", context, engine);
             return result;
         }
          QScriptValue
@@ -775,7 +775,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyTypeId::getPropertyGroupTitle", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyTypeId::getPropertyGroupTitle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyTypeId::getPropertyGroupTitle";
             //QCoreApplication::processEvents();
 
@@ -816,7 +816,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyTypeId.getPropertyGroupTitle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyTypeId::getPropertyGroupTitle", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyTypeId::getPropertyGroupTitle", context, engine);
             return result;
         }
          QScriptValue
@@ -824,7 +824,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyTypeId::getPropertyTitle", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyTypeId::getPropertyTitle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyTypeId::getPropertyTitle";
             //QCoreApplication::processEvents();
 
@@ -865,7 +865,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyTypeId.getPropertyTitle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyTypeId::getPropertyTitle", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyTypeId::getPropertyTitle", context, engine);
             return result;
         }
          QScriptValue
@@ -873,7 +873,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyTypeId::getPropertyTypeId", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyTypeId::getPropertyTypeId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyTypeId::getPropertyTypeId";
             //QCoreApplication::processEvents();
 
@@ -928,7 +928,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyTypeId.getPropertyTypeId().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyTypeId::getPropertyTypeId", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyTypeId::getPropertyTypeId", context, engine);
             return result;
         }
          QScriptValue
@@ -936,7 +936,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyTypeId::operator ==", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyTypeId::operator ==", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyTypeId::operator ==";
             //QCoreApplication::processEvents();
 
@@ -1000,7 +1000,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyTypeId.equals().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyTypeId::operator ==", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyTypeId::operator ==", context, engine);
             return result;
         }
          QScriptValue
@@ -1008,7 +1008,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyTypeId::operator !=", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyTypeId::operator !=", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyTypeId::operator !=";
             //QCoreApplication::processEvents();
 
@@ -1072,7 +1072,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyTypeId.operator_not_assign().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyTypeId::operator !=", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyTypeId::operator !=", context, engine);
             return result;
         }
          QScriptValue
@@ -1080,7 +1080,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyTypeId::operator <", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyTypeId::operator <", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyTypeId::operator <";
             //QCoreApplication::processEvents();
 
@@ -1144,7 +1144,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyTypeId.operator_less().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyTypeId::operator <", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyTypeId::operator <", context, engine);
             return result;
         }
          QScriptValue REcmaPropertyTypeId::toString

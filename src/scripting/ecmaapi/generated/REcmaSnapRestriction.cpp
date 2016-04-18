@@ -221,7 +221,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSnapRestriction::restrictSnap", context, engine);
+            REcmaHelper::functionStart("REcmaSnapRestriction::restrictSnap", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSnapRestriction::restrictSnap";
             //QCoreApplication::processEvents();
 
@@ -310,7 +310,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSnapRestriction.restrictSnap().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSnapRestriction::restrictSnap", context, engine);
+            REcmaHelper::functionEnd("REcmaSnapRestriction::restrictSnap", context, engine);
             return result;
         }
          QScriptValue
@@ -318,7 +318,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSnapRestriction::showUiOptions", context, engine);
+            REcmaHelper::functionStart("REcmaSnapRestriction::showUiOptions", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSnapRestriction::showUiOptions";
             //QCoreApplication::processEvents();
 
@@ -354,7 +354,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSnapRestriction.showUiOptions().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSnapRestriction::showUiOptions", context, engine);
+            REcmaHelper::functionEnd("REcmaSnapRestriction::showUiOptions", context, engine);
             return result;
         }
          QScriptValue
@@ -362,7 +362,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSnapRestriction::hideUiOptions", context, engine);
+            REcmaHelper::functionStart("REcmaSnapRestriction::hideUiOptions", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSnapRestriction::hideUiOptions";
             //QCoreApplication::processEvents();
 
@@ -398,7 +398,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSnapRestriction.hideUiOptions().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSnapRestriction::hideUiOptions", context, engine);
+            REcmaHelper::functionEnd("REcmaSnapRestriction::hideUiOptions", context, engine);
             return result;
         }
          QScriptValue
@@ -406,7 +406,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSnapRestriction::getLastSnap", context, engine);
+            REcmaHelper::functionStart("REcmaSnapRestriction::getLastSnap", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSnapRestriction::getLastSnap";
             //QCoreApplication::processEvents();
 
@@ -447,7 +447,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSnapRestriction.getLastSnap().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSnapRestriction::getLastSnap", context, engine);
+            REcmaHelper::functionEnd("REcmaSnapRestriction::getLastSnap", context, engine);
             return result;
         }
          QScriptValue
@@ -455,7 +455,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSnapRestriction::reset", context, engine);
+            REcmaHelper::functionStart("REcmaSnapRestriction::reset", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSnapRestriction::reset";
             //QCoreApplication::processEvents();
 
@@ -491,7 +491,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSnapRestriction.reset().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSnapRestriction::reset", context, engine);
+            REcmaHelper::functionEnd("REcmaSnapRestriction::reset", context, engine);
             return result;
         }
          QScriptValue REcmaSnapRestriction::toString

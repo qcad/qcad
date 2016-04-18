@@ -129,7 +129,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyListener::updateFromDocument", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyListener::updateFromDocument", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyListener::updateFromDocument";
             //QCoreApplication::processEvents();
 
@@ -329,7 +329,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyListener.updateFromDocument().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyListener::updateFromDocument", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyListener::updateFromDocument", context, engine);
             return result;
         }
          QScriptValue
@@ -337,7 +337,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyListener::updateFromObject", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyListener::updateFromObject", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyListener::updateFromObject";
             //QCoreApplication::processEvents();
 
@@ -445,7 +445,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyListener.updateFromObject().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyListener::updateFromObject", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyListener::updateFromObject", context, engine);
             return result;
         }
          QScriptValue
@@ -453,7 +453,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyListener::clearEditor", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyListener::clearEditor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyListener::clearEditor";
             //QCoreApplication::processEvents();
 
@@ -489,7 +489,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyListener.clearEditor().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyListener::clearEditor", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyListener::clearEditor", context, engine);
             return result;
         }
          QScriptValue REcmaPropertyListener::toString

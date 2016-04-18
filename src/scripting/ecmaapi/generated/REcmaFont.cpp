@@ -210,7 +210,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFont::isValid", context, engine);
+            REcmaHelper::functionStart("REcmaFont::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFont::isValid";
             //QCoreApplication::processEvents();
 
@@ -251,7 +251,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFont.isValid().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFont::isValid", context, engine);
+            REcmaHelper::functionEnd("REcmaFont::isValid", context, engine);
             return result;
         }
          QScriptValue
@@ -259,7 +259,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFont::getFileName", context, engine);
+            REcmaHelper::functionStart("REcmaFont::getFileName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFont::getFileName";
             //QCoreApplication::processEvents();
 
@@ -300,7 +300,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFont.getFileName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFont::getFileName", context, engine);
+            REcmaHelper::functionEnd("REcmaFont::getFileName", context, engine);
             return result;
         }
          QScriptValue
@@ -308,7 +308,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFont::getEncoding", context, engine);
+            REcmaHelper::functionStart("REcmaFont::getEncoding", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFont::getEncoding";
             //QCoreApplication::processEvents();
 
@@ -349,7 +349,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFont.getEncoding().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFont::getEncoding", context, engine);
+            REcmaHelper::functionEnd("REcmaFont::getEncoding", context, engine);
             return result;
         }
          QScriptValue
@@ -357,7 +357,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFont::getNames", context, engine);
+            REcmaHelper::functionStart("REcmaFont::getNames", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFont::getNames";
             //QCoreApplication::processEvents();
 
@@ -398,7 +398,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFont.getNames().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFont::getNames", context, engine);
+            REcmaHelper::functionEnd("REcmaFont::getNames", context, engine);
             return result;
         }
          QScriptValue
@@ -406,7 +406,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFont::getAuthors", context, engine);
+            REcmaHelper::functionStart("REcmaFont::getAuthors", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFont::getAuthors";
             //QCoreApplication::processEvents();
 
@@ -447,7 +447,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFont.getAuthors().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFont::getAuthors", context, engine);
+            REcmaHelper::functionEnd("REcmaFont::getAuthors", context, engine);
             return result;
         }
          QScriptValue
@@ -455,7 +455,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFont::getLetterSpacing", context, engine);
+            REcmaHelper::functionStart("REcmaFont::getLetterSpacing", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFont::getLetterSpacing";
             //QCoreApplication::processEvents();
 
@@ -496,7 +496,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFont.getLetterSpacing().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFont::getLetterSpacing", context, engine);
+            REcmaHelper::functionEnd("REcmaFont::getLetterSpacing", context, engine);
             return result;
         }
          QScriptValue
@@ -504,7 +504,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFont::getWordSpacing", context, engine);
+            REcmaHelper::functionStart("REcmaFont::getWordSpacing", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFont::getWordSpacing";
             //QCoreApplication::processEvents();
 
@@ -545,7 +545,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFont.getWordSpacing().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFont::getWordSpacing", context, engine);
+            REcmaHelper::functionEnd("REcmaFont::getWordSpacing", context, engine);
             return result;
         }
          QScriptValue
@@ -553,7 +553,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFont::getLineSpacingFactor", context, engine);
+            REcmaHelper::functionStart("REcmaFont::getLineSpacingFactor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFont::getLineSpacingFactor";
             //QCoreApplication::processEvents();
 
@@ -594,7 +594,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFont.getLineSpacingFactor().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFont::getLineSpacingFactor", context, engine);
+            REcmaHelper::functionEnd("REcmaFont::getLineSpacingFactor", context, engine);
             return result;
         }
          QScriptValue
@@ -602,7 +602,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFont::load", context, engine);
+            REcmaHelper::functionStart("REcmaFont::load", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFont::load";
             //QCoreApplication::processEvents();
 
@@ -643,7 +643,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFont.load().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFont::load", context, engine);
+            REcmaHelper::functionEnd("REcmaFont::load", context, engine);
             return result;
         }
          QScriptValue
@@ -651,7 +651,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFont::isLoaded", context, engine);
+            REcmaHelper::functionStart("REcmaFont::isLoaded", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFont::isLoaded";
             //QCoreApplication::processEvents();
 
@@ -692,7 +692,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFont.isLoaded().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFont::isLoaded", context, engine);
+            REcmaHelper::functionEnd("REcmaFont::isLoaded", context, engine);
             return result;
         }
          QScriptValue REcmaFont::toString

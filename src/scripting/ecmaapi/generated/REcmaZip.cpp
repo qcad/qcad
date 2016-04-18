@@ -154,7 +154,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaZip::unzipFile", context, engine);
+            REcmaHelper::functionStart("REcmaZip::unzipFile", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaZip::unzipFile";
             //QCoreApplication::processEvents();
 
@@ -209,7 +209,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RZip.unzipFile().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaZip::unzipFile", context, engine);
+            REcmaHelper::functionEnd("REcmaZip::unzipFile", context, engine);
             return result;
         }
          QScriptValue REcmaZip::toString

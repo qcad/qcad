@@ -254,7 +254,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPenListenerAdapter::updatePen", context, engine);
+            REcmaHelper::functionStart("REcmaPenListenerAdapter::updatePen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPenListenerAdapter::updatePen";
             //QCoreApplication::processEvents();
 
@@ -308,7 +308,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPenListenerAdapter.updatePen().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPenListenerAdapter::updatePen", context, engine);
+            REcmaHelper::functionEnd("REcmaPenListenerAdapter::updatePen", context, engine);
             return result;
         }
          QScriptValue
@@ -316,7 +316,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPenListenerAdapter::clearPen", context, engine);
+            REcmaHelper::functionStart("REcmaPenListenerAdapter::clearPen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPenListenerAdapter::clearPen";
             //QCoreApplication::processEvents();
 
@@ -352,7 +352,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPenListenerAdapter.clearPen().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPenListenerAdapter::clearPen", context, engine);
+            REcmaHelper::functionEnd("REcmaPenListenerAdapter::clearPen", context, engine);
             return result;
         }
          QScriptValue REcmaPenListenerAdapter::toString

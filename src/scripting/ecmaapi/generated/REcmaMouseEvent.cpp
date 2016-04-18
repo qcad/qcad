@@ -649,7 +649,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMouseEvent::getModelPosition", context, engine);
+            REcmaHelper::functionStart("REcmaMouseEvent::getModelPosition", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMouseEvent::getModelPosition";
             //QCoreApplication::processEvents();
 
@@ -690,7 +690,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMouseEvent.getModelPosition().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMouseEvent::getModelPosition", context, engine);
+            REcmaHelper::functionEnd("REcmaMouseEvent::getModelPosition", context, engine);
             return result;
         }
          QScriptValue
@@ -698,7 +698,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMouseEvent::setModelPosition", context, engine);
+            REcmaHelper::functionStart("REcmaMouseEvent::setModelPosition", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMouseEvent::setModelPosition";
             //QCoreApplication::processEvents();
 
@@ -757,7 +757,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMouseEvent.setModelPosition().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMouseEvent::setModelPosition", context, engine);
+            REcmaHelper::functionEnd("REcmaMouseEvent::setModelPosition", context, engine);
             return result;
         }
          QScriptValue
@@ -765,7 +765,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMouseEvent::setScreenPosition", context, engine);
+            REcmaHelper::functionStart("REcmaMouseEvent::setScreenPosition", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMouseEvent::setScreenPosition";
             //QCoreApplication::processEvents();
 
@@ -824,7 +824,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMouseEvent.setScreenPosition().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMouseEvent::setScreenPosition", context, engine);
+            REcmaHelper::functionEnd("REcmaMouseEvent::setScreenPosition", context, engine);
             return result;
         }
          QScriptValue
@@ -832,7 +832,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMouseEvent::getScreenPosition", context, engine);
+            REcmaHelper::functionStart("REcmaMouseEvent::getScreenPosition", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMouseEvent::getScreenPosition";
             //QCoreApplication::processEvents();
 
@@ -873,7 +873,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMouseEvent.getScreenPosition().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMouseEvent::getScreenPosition", context, engine);
+            REcmaHelper::functionEnd("REcmaMouseEvent::getScreenPosition", context, engine);
             return result;
         }
          QScriptValue
@@ -881,7 +881,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMouseEvent::getGraphicsView", context, engine);
+            REcmaHelper::functionStart("REcmaMouseEvent::getGraphicsView", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMouseEvent::getGraphicsView";
             //QCoreApplication::processEvents();
 
@@ -923,7 +923,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMouseEvent.getGraphicsView().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMouseEvent::getGraphicsView", context, engine);
+            REcmaHelper::functionEnd("REcmaMouseEvent::getGraphicsView", context, engine);
             return result;
         }
          QScriptValue
@@ -931,7 +931,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMouseEvent::getGraphicsScene", context, engine);
+            REcmaHelper::functionStart("REcmaMouseEvent::getGraphicsScene", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMouseEvent::getGraphicsScene";
             //QCoreApplication::processEvents();
 
@@ -973,7 +973,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMouseEvent.getGraphicsScene().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMouseEvent::getGraphicsScene", context, engine);
+            REcmaHelper::functionEnd("REcmaMouseEvent::getGraphicsScene", context, engine);
             return result;
         }
          QScriptValue
@@ -981,7 +981,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMouseEvent::isValid", context, engine);
+            REcmaHelper::functionStart("REcmaMouseEvent::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMouseEvent::isValid";
             //QCoreApplication::processEvents();
 
@@ -1022,7 +1022,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMouseEvent.isValid().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMouseEvent::isValid", context, engine);
+            REcmaHelper::functionEnd("REcmaMouseEvent::isValid", context, engine);
             return result;
         }
         
@@ -1036,7 +1036,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMouseEvent::hasMouseMoved", context, engine);
+            REcmaHelper::functionStart("REcmaMouseEvent::hasMouseMoved", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMouseEvent::hasMouseMoved";
             //QCoreApplication::processEvents();
 
@@ -1067,7 +1067,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMouseEvent.hasMouseMoved().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMouseEvent::hasMouseMoved", context, engine);
+            REcmaHelper::functionEnd("REcmaMouseEvent::hasMouseMoved", context, engine);
             return result;
         }
          QScriptValue
@@ -1075,7 +1075,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMouseEvent::resetOriginalMousePos", context, engine);
+            REcmaHelper::functionStart("REcmaMouseEvent::resetOriginalMousePos", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMouseEvent::resetOriginalMousePos";
             //QCoreApplication::processEvents();
 
@@ -1101,7 +1101,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMouseEvent.resetOriginalMousePos().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMouseEvent::resetOriginalMousePos", context, engine);
+            REcmaHelper::functionEnd("REcmaMouseEvent::resetOriginalMousePos", context, engine);
             return result;
         }
          QScriptValue
@@ -1109,7 +1109,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMouseEvent::setOriginalMousePos", context, engine);
+            REcmaHelper::functionStart("REcmaMouseEvent::setOriginalMousePos", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMouseEvent::setOriginalMousePos";
             //QCoreApplication::processEvents();
 
@@ -1156,7 +1156,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMouseEvent.setOriginalMousePos().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMouseEvent::setOriginalMousePos", context, engine);
+            REcmaHelper::functionEnd("REcmaMouseEvent::setOriginalMousePos", context, engine);
             return result;
         }
          QScriptValue REcmaMouseEvent::toString

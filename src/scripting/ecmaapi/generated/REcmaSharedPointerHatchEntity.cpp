@@ -530,7 +530,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::init", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::init";
             //QCoreApplication::processEvents();
 
@@ -556,7 +556,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.init().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::init", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::init", context, engine);
             return result;
         }
          QScriptValue
@@ -564,7 +564,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getStaticPropertyTypeIds", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getStaticPropertyTypeIds", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getStaticPropertyTypeIds";
             //QCoreApplication::processEvents();
 
@@ -596,7 +596,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getStaticPropertyTypeIds().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getStaticPropertyTypeIds", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getStaticPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue
@@ -604,7 +604,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::clone", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::clone";
             //QCoreApplication::processEvents();
 
@@ -645,7 +645,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.clone().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::clone", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -653,7 +653,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getType", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getType";
             //QCoreApplication::processEvents();
 
@@ -694,7 +694,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getType().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getType", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -702,7 +702,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setData", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::setData";
             //QCoreApplication::processEvents();
 
@@ -761,7 +761,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setData().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setData", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setData", context, engine);
             return result;
         }
          QScriptValue
@@ -769,7 +769,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::hasCustomPattern", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::hasCustomPattern", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::hasCustomPattern";
             //QCoreApplication::processEvents();
 
@@ -810,7 +810,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.hasCustomPattern().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::hasCustomPattern", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::hasCustomPattern", context, engine);
             return result;
         }
          QScriptValue
@@ -818,7 +818,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getCustomPattern", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getCustomPattern", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getCustomPattern";
             //QCoreApplication::processEvents();
 
@@ -859,7 +859,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getCustomPattern().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getCustomPattern", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getCustomPattern", context, engine);
             return result;
         }
          QScriptValue
@@ -867,7 +867,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setProperty", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::setProperty";
             //QCoreApplication::processEvents();
 
@@ -1041,7 +1041,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setProperty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setProperty", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1049,7 +1049,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setBoundaryVector", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setBoundaryVector", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::setBoundaryVector";
             //QCoreApplication::processEvents();
 
@@ -1147,7 +1147,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setBoundaryVector().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setBoundaryVector", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setBoundaryVector", context, engine);
             return result;
         }
          QScriptValue
@@ -1155,7 +1155,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setComponent", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setComponent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::setComponent";
             //QCoreApplication::processEvents();
 
@@ -1255,7 +1255,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setComponent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setComponent", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setComponent", context, engine);
             return result;
         }
          QScriptValue
@@ -1263,7 +1263,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getProperty", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getProperty";
             //QCoreApplication::processEvents();
 
@@ -1502,7 +1502,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getProperty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getProperty", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1510,7 +1510,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::exportEntity", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::exportEntity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::exportEntity";
             //QCoreApplication::processEvents();
 
@@ -1680,7 +1680,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.exportEntity().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::exportEntity", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::exportEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -1688,7 +1688,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getData", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getData";
             //QCoreApplication::processEvents();
 
@@ -1752,7 +1752,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getData().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getData", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getData", context, engine);
             return result;
         }
          QScriptValue
@@ -1760,7 +1760,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getPainterPaths", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getPainterPaths", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getPainterPaths";
             //QCoreApplication::processEvents();
 
@@ -1878,7 +1878,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getPainterPaths().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getPainterPaths", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getPainterPaths", context, engine);
             return result;
         }
          QScriptValue
@@ -1886,7 +1886,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getComplexity", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getComplexity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getComplexity";
             //QCoreApplication::processEvents();
 
@@ -1927,7 +1927,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getComplexity().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getComplexity", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getComplexity", context, engine);
             return result;
         }
          QScriptValue
@@ -1935,7 +1935,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::newLoop", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::newLoop", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::newLoop";
             //QCoreApplication::processEvents();
 
@@ -1971,7 +1971,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.newLoop().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::newLoop", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::newLoop", context, engine);
             return result;
         }
          QScriptValue
@@ -1979,7 +1979,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::addBoundary", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::addBoundary", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::addBoundary";
             //QCoreApplication::processEvents();
 
@@ -2057,7 +2057,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.addBoundary().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::addBoundary", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::addBoundary", context, engine);
             return result;
         }
          QScriptValue
@@ -2065,7 +2065,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getLoopCount", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getLoopCount", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getLoopCount";
             //QCoreApplication::processEvents();
 
@@ -2106,7 +2106,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getLoopCount().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getLoopCount", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getLoopCount", context, engine);
             return result;
         }
          QScriptValue
@@ -2114,7 +2114,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::isSolid", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::isSolid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::isSolid";
             //QCoreApplication::processEvents();
 
@@ -2155,7 +2155,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.isSolid().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::isSolid", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::isSolid", context, engine);
             return result;
         }
          QScriptValue
@@ -2163,7 +2163,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setSolid", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setSolid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::setSolid";
             //QCoreApplication::processEvents();
 
@@ -2210,7 +2210,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setSolid().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setSolid", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setSolid", context, engine);
             return result;
         }
          QScriptValue
@@ -2218,7 +2218,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getScale", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getScale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getScale";
             //QCoreApplication::processEvents();
 
@@ -2259,7 +2259,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getScale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getScale", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getScale", context, engine);
             return result;
         }
          QScriptValue
@@ -2267,7 +2267,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setScale", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setScale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::setScale";
             //QCoreApplication::processEvents();
 
@@ -2314,7 +2314,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setScale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setScale", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setScale", context, engine);
             return result;
         }
          QScriptValue
@@ -2322,7 +2322,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getAngle", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getAngle";
             //QCoreApplication::processEvents();
 
@@ -2363,7 +2363,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -2371,7 +2371,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setAngle", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::setAngle";
             //QCoreApplication::processEvents();
 
@@ -2418,7 +2418,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -2426,7 +2426,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getOriginPoint", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getOriginPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getOriginPoint";
             //QCoreApplication::processEvents();
 
@@ -2467,7 +2467,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getOriginPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getOriginPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getOriginPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -2475,7 +2475,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setOriginPoint", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setOriginPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::setOriginPoint";
             //QCoreApplication::processEvents();
 
@@ -2534,7 +2534,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setOriginPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setOriginPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setOriginPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -2542,7 +2542,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getPatternName", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getPatternName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getPatternName";
             //QCoreApplication::processEvents();
 
@@ -2583,7 +2583,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getPatternName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getPatternName", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getPatternName", context, engine);
             return result;
         }
          QScriptValue
@@ -2591,7 +2591,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setPatternName", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::setPatternName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::setPatternName";
             //QCoreApplication::processEvents();
 
@@ -2638,7 +2638,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.setPatternName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setPatternName", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::setPatternName", context, engine);
             return result;
         }
          QScriptValue
@@ -2646,7 +2646,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::clearCustomPattern", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::clearCustomPattern", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::clearCustomPattern";
             //QCoreApplication::processEvents();
 
@@ -2682,7 +2682,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.clearCustomPattern().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::clearCustomPattern", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::clearCustomPattern", context, engine);
             return result;
         }
          QScriptValue
@@ -2690,7 +2690,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getLoopBoundary", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getLoopBoundary", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getLoopBoundary";
             //QCoreApplication::processEvents();
 
@@ -2742,7 +2742,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getLoopBoundary().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getLoopBoundary", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getLoopBoundary", context, engine);
             return result;
         }
          QScriptValue
@@ -2750,7 +2750,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getBoundaryAsPolylines", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getBoundaryAsPolylines", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getBoundaryAsPolylines";
             //QCoreApplication::processEvents();
 
@@ -2802,7 +2802,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getBoundaryAsPolylines().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getBoundaryAsPolylines", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getBoundaryAsPolylines", context, engine);
             return result;
         }
          QScriptValue
@@ -2810,7 +2810,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getShapes", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getShapes", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getShapes";
             //QCoreApplication::processEvents();
 
@@ -2952,7 +2952,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getShapes().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getShapes", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getShapes", context, engine);
             return result;
         }
          QScriptValue
@@ -2960,7 +2960,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getExploded", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerHatchEntity::getExploded", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerHatchEntity::getExploded";
             //QCoreApplication::processEvents();
 
@@ -3001,7 +3001,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RHatchEntity.getExploded().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getExploded", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerHatchEntity::getExploded", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerHatchEntity::toString

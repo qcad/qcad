@@ -382,7 +382,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::getMainWindow", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::getMainWindow", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::getMainWindow";
             //QCoreApplication::processEvents();
 
@@ -413,7 +413,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.getMainWindow().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::getMainWindow", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::getMainWindow", context, engine);
             return result;
         }
          QScriptValue
@@ -421,7 +421,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::hasMainWindow", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::hasMainWindow", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::hasMainWindow";
             //QCoreApplication::processEvents();
 
@@ -452,7 +452,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.hasMainWindow().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::hasMainWindow", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::hasMainWindow", context, engine);
             return result;
         }
          QScriptValue
@@ -460,7 +460,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::installMessageHandler", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::installMessageHandler", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::installMessageHandler";
             //QCoreApplication::processEvents();
 
@@ -486,7 +486,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.installMessageHandler().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::installMessageHandler", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::installMessageHandler", context, engine);
             return result;
         }
          QScriptValue
@@ -494,7 +494,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::getDocument", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::getDocument", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::getDocument";
             //QCoreApplication::processEvents();
 
@@ -535,7 +535,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.getDocument().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::getDocument", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::getDocument", context, engine);
             return result;
         }
          QScriptValue
@@ -543,7 +543,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::disable", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::disable", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::disable";
             //QCoreApplication::processEvents();
 
@@ -579,7 +579,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.disable().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::disable", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::disable", context, engine);
             return result;
         }
          QScriptValue
@@ -587,7 +587,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::enable", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::enable", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::enable";
             //QCoreApplication::processEvents();
 
@@ -623,7 +623,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.enable().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::enable", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::enable", context, engine);
             return result;
         }
          QScriptValue
@@ -631,7 +631,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::getDocumentInterface", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::getDocumentInterface", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::getDocumentInterface";
             //QCoreApplication::processEvents();
 
@@ -672,7 +672,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.getDocumentInterface().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::getDocumentInterface", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::getDocumentInterface", context, engine);
             return result;
         }
          QScriptValue
@@ -680,7 +680,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::getDocumentInterfaceStatic", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::getDocumentInterfaceStatic", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::getDocumentInterfaceStatic";
             //QCoreApplication::processEvents();
 
@@ -711,7 +711,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.getDocumentInterfaceStatic().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::getDocumentInterfaceStatic", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::getDocumentInterfaceStatic", context, engine);
             return result;
         }
          QScriptValue
@@ -719,7 +719,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyListeners", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyListeners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyListeners";
             //QCoreApplication::processEvents();
 
@@ -782,7 +782,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyListeners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyListeners", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyListeners", context, engine);
             return result;
         }
          QScriptValue
@@ -790,7 +790,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::addCoordinateListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::addCoordinateListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addCoordinateListener";
             //QCoreApplication::processEvents();
 
@@ -844,7 +844,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addCoordinateListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::addCoordinateListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::addCoordinateListener", context, engine);
             return result;
         }
          QScriptValue
@@ -852,7 +852,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::removeCoordinateListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::removeCoordinateListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removeCoordinateListener";
             //QCoreApplication::processEvents();
 
@@ -906,7 +906,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removeCoordinateListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::removeCoordinateListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::removeCoordinateListener", context, engine);
             return result;
         }
          QScriptValue
@@ -914,7 +914,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyCoordinateListeners", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyCoordinateListeners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyCoordinateListeners";
             //QCoreApplication::processEvents();
 
@@ -968,7 +968,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyCoordinateListeners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyCoordinateListeners", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyCoordinateListeners", context, engine);
             return result;
         }
          QScriptValue
@@ -976,7 +976,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::addSelectionListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::addSelectionListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addSelectionListener";
             //QCoreApplication::processEvents();
 
@@ -1030,7 +1030,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addSelectionListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::addSelectionListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::addSelectionListener", context, engine);
             return result;
         }
          QScriptValue
@@ -1038,7 +1038,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::removeSelectionListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::removeSelectionListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removeSelectionListener";
             //QCoreApplication::processEvents();
 
@@ -1092,7 +1092,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removeSelectionListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::removeSelectionListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::removeSelectionListener", context, engine);
             return result;
         }
          QScriptValue
@@ -1100,7 +1100,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifySelectionListeners", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifySelectionListeners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifySelectionListeners";
             //QCoreApplication::processEvents();
 
@@ -1154,7 +1154,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifySelectionListeners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifySelectionListeners", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifySelectionListeners", context, engine);
             return result;
         }
          QScriptValue
@@ -1162,7 +1162,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::postSelectionChangedEvent", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::postSelectionChangedEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::postSelectionChangedEvent";
             //QCoreApplication::processEvents();
 
@@ -1198,7 +1198,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.postSelectionChangedEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::postSelectionChangedEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::postSelectionChangedEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -1206,7 +1206,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::postTransactionEvent", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::postTransactionEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::postTransactionEvent";
             //QCoreApplication::processEvents();
 
@@ -1382,7 +1382,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.postTransactionEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::postTransactionEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::postTransactionEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -1390,7 +1390,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::postCloseEvent", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::postCloseEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::postCloseEvent";
             //QCoreApplication::processEvents();
 
@@ -1426,7 +1426,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.postCloseEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::postCloseEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::postCloseEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -1434,7 +1434,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::addPropertyListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::addPropertyListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addPropertyListener";
             //QCoreApplication::processEvents();
 
@@ -1488,7 +1488,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addPropertyListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::addPropertyListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::addPropertyListener", context, engine);
             return result;
         }
          QScriptValue
@@ -1496,7 +1496,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::removePropertyListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::removePropertyListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removePropertyListener";
             //QCoreApplication::processEvents();
 
@@ -1550,7 +1550,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removePropertyListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::removePropertyListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::removePropertyListener", context, engine);
             return result;
         }
          QScriptValue
@@ -1558,7 +1558,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyPropertyListeners", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyPropertyListeners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyPropertyListeners";
             //QCoreApplication::processEvents();
 
@@ -1795,7 +1795,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyPropertyListeners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyPropertyListeners", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyPropertyListeners", context, engine);
             return result;
         }
          QScriptValue
@@ -1803,7 +1803,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::addExportListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::addExportListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addExportListener";
             //QCoreApplication::processEvents();
 
@@ -1857,7 +1857,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addExportListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::addExportListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::addExportListener", context, engine);
             return result;
         }
          QScriptValue
@@ -1865,7 +1865,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::removeExportListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::removeExportListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removeExportListener";
             //QCoreApplication::processEvents();
 
@@ -1919,7 +1919,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removeExportListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::removeExportListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::removeExportListener", context, engine);
             return result;
         }
          QScriptValue
@@ -1927,7 +1927,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyExportListenersPre", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyExportListenersPre", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyExportListenersPre";
             //QCoreApplication::processEvents();
 
@@ -1981,7 +1981,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyExportListenersPre().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyExportListenersPre", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyExportListenersPre", context, engine);
             return result;
         }
          QScriptValue
@@ -1989,7 +1989,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyExportListenersPost", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyExportListenersPost", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyExportListenersPost";
             //QCoreApplication::processEvents();
 
@@ -2043,7 +2043,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyExportListenersPost().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyExportListenersPost", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyExportListenersPost", context, engine);
             return result;
         }
          QScriptValue
@@ -2051,7 +2051,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyExportListenersEnd", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyExportListenersEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyExportListenersEnd";
             //QCoreApplication::processEvents();
 
@@ -2105,7 +2105,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyExportListenersEnd().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyExportListenersEnd", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyExportListenersEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -2113,7 +2113,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::addEntityExportListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::addEntityExportListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addEntityExportListener";
             //QCoreApplication::processEvents();
 
@@ -2167,7 +2167,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addEntityExportListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::addEntityExportListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::addEntityExportListener", context, engine);
             return result;
         }
          QScriptValue
@@ -2175,7 +2175,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::removeEntityExportListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::removeEntityExportListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removeEntityExportListener";
             //QCoreApplication::processEvents();
 
@@ -2229,7 +2229,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removeEntityExportListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::removeEntityExportListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::removeEntityExportListener", context, engine);
             return result;
         }
          QScriptValue
@@ -2237,7 +2237,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyEntityExportListeners", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyEntityExportListeners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyEntityExportListeners";
             //QCoreApplication::processEvents();
 
@@ -2311,7 +2311,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyEntityExportListeners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyEntityExportListeners", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyEntityExportListeners", context, engine);
             return result;
         }
          QScriptValue
@@ -2319,7 +2319,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::addImportListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::addImportListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addImportListener";
             //QCoreApplication::processEvents();
 
@@ -2373,7 +2373,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addImportListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::addImportListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::addImportListener", context, engine);
             return result;
         }
          QScriptValue
@@ -2381,7 +2381,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::removeImportListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::removeImportListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removeImportListener";
             //QCoreApplication::processEvents();
 
@@ -2435,7 +2435,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removeImportListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::removeImportListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::removeImportListener", context, engine);
             return result;
         }
          QScriptValue
@@ -2443,7 +2443,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyImportListenersPre", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyImportListenersPre", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyImportListenersPre";
             //QCoreApplication::processEvents();
 
@@ -2497,7 +2497,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyImportListenersPre().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyImportListenersPre", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyImportListenersPre", context, engine);
             return result;
         }
          QScriptValue
@@ -2505,7 +2505,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyImportListenersPost", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyImportListenersPost", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyImportListenersPost";
             //QCoreApplication::processEvents();
 
@@ -2559,7 +2559,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyImportListenersPost().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyImportListenersPost", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyImportListenersPost", context, engine);
             return result;
         }
          QScriptValue
@@ -2567,7 +2567,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::addTransactionListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::addTransactionListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addTransactionListener";
             //QCoreApplication::processEvents();
 
@@ -2621,7 +2621,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addTransactionListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::addTransactionListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::addTransactionListener", context, engine);
             return result;
         }
          QScriptValue
@@ -2629,7 +2629,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::removeTransactionListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::removeTransactionListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removeTransactionListener";
             //QCoreApplication::processEvents();
 
@@ -2683,7 +2683,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removeTransactionListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::removeTransactionListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::removeTransactionListener", context, engine);
             return result;
         }
          QScriptValue
@@ -2691,7 +2691,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyTransactionListeners", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyTransactionListeners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyTransactionListeners";
             //QCoreApplication::processEvents();
 
@@ -2799,7 +2799,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyTransactionListeners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyTransactionListeners", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyTransactionListeners", context, engine);
             return result;
         }
          QScriptValue
@@ -2807,7 +2807,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::addInterTransactionListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::addInterTransactionListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addInterTransactionListener";
             //QCoreApplication::processEvents();
 
@@ -2861,7 +2861,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addInterTransactionListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::addInterTransactionListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::addInterTransactionListener", context, engine);
             return result;
         }
          QScriptValue
@@ -2869,7 +2869,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::removeInterTransactionListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::removeInterTransactionListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removeInterTransactionListener";
             //QCoreApplication::processEvents();
 
@@ -2923,7 +2923,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removeInterTransactionListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::removeInterTransactionListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::removeInterTransactionListener", context, engine);
             return result;
         }
          QScriptValue
@@ -2931,7 +2931,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyInterTransactionListeners", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyInterTransactionListeners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyInterTransactionListeners";
             //QCoreApplication::processEvents();
 
@@ -3039,7 +3039,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyInterTransactionListeners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyInterTransactionListeners", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyInterTransactionListeners", context, engine);
             return result;
         }
          QScriptValue
@@ -3047,7 +3047,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::addNewDocumentListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::addNewDocumentListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addNewDocumentListener";
             //QCoreApplication::processEvents();
 
@@ -3101,7 +3101,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addNewDocumentListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::addNewDocumentListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::addNewDocumentListener", context, engine);
             return result;
         }
          QScriptValue
@@ -3109,7 +3109,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::removeNewDocumentListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::removeNewDocumentListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removeNewDocumentListener";
             //QCoreApplication::processEvents();
 
@@ -3163,7 +3163,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removeNewDocumentListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::removeNewDocumentListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::removeNewDocumentListener", context, engine);
             return result;
         }
          QScriptValue
@@ -3171,7 +3171,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyNewDocumentListeners", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyNewDocumentListeners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyNewDocumentListeners";
             //QCoreApplication::processEvents();
 
@@ -3245,7 +3245,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyNewDocumentListeners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyNewDocumentListeners", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyNewDocumentListeners", context, engine);
             return result;
         }
          QScriptValue
@@ -3253,7 +3253,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::addSnapListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::addSnapListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addSnapListener";
             //QCoreApplication::processEvents();
 
@@ -3307,7 +3307,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addSnapListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::addSnapListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::addSnapListener", context, engine);
             return result;
         }
          QScriptValue
@@ -3315,7 +3315,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::removeSnapListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::removeSnapListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removeSnapListener";
             //QCoreApplication::processEvents();
 
@@ -3369,7 +3369,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removeSnapListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::removeSnapListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::removeSnapListener", context, engine);
             return result;
         }
          QScriptValue
@@ -3377,7 +3377,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifySnapListeners", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifySnapListeners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifySnapListeners";
             //QCoreApplication::processEvents();
 
@@ -3431,7 +3431,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifySnapListeners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifySnapListeners", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifySnapListeners", context, engine);
             return result;
         }
          QScriptValue
@@ -3439,7 +3439,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::addFocusListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::addFocusListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addFocusListener";
             //QCoreApplication::processEvents();
 
@@ -3493,7 +3493,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addFocusListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::addFocusListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::addFocusListener", context, engine);
             return result;
         }
          QScriptValue
@@ -3501,7 +3501,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::removeFocusListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::removeFocusListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removeFocusListener";
             //QCoreApplication::processEvents();
 
@@ -3555,7 +3555,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removeFocusListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::removeFocusListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::removeFocusListener", context, engine);
             return result;
         }
          QScriptValue
@@ -3563,7 +3563,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyFocusListeners", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyFocusListeners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyFocusListeners";
             //QCoreApplication::processEvents();
 
@@ -3617,7 +3617,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyFocusListeners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyFocusListeners", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyFocusListeners", context, engine);
             return result;
         }
          QScriptValue
@@ -3625,7 +3625,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::addViewFocusListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::addViewFocusListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addViewFocusListener";
             //QCoreApplication::processEvents();
 
@@ -3679,7 +3679,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addViewFocusListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::addViewFocusListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::addViewFocusListener", context, engine);
             return result;
         }
          QScriptValue
@@ -3687,7 +3687,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::removeViewFocusListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::removeViewFocusListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removeViewFocusListener";
             //QCoreApplication::processEvents();
 
@@ -3741,7 +3741,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removeViewFocusListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::removeViewFocusListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::removeViewFocusListener", context, engine);
             return result;
         }
          QScriptValue
@@ -3749,7 +3749,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyViewFocusListeners", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyViewFocusListeners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyViewFocusListeners";
             //QCoreApplication::processEvents();
 
@@ -3803,7 +3803,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyViewFocusListeners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyViewFocusListeners", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyViewFocusListeners", context, engine);
             return result;
         }
          QScriptValue
@@ -3811,7 +3811,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::propertyChangeEvent", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::propertyChangeEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::propertyChangeEvent";
             //QCoreApplication::processEvents();
 
@@ -3870,7 +3870,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.propertyChangeEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::propertyChangeEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::propertyChangeEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -3878,7 +3878,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::addUcsListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::addUcsListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addUcsListener";
             //QCoreApplication::processEvents();
 
@@ -3932,7 +3932,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addUcsListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::addUcsListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::addUcsListener", context, engine);
             return result;
         }
          QScriptValue
@@ -3940,7 +3940,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::removeUcsListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::removeUcsListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removeUcsListener";
             //QCoreApplication::processEvents();
 
@@ -3994,7 +3994,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removeUcsListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::removeUcsListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::removeUcsListener", context, engine);
             return result;
         }
          QScriptValue
@@ -4002,7 +4002,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyUcsListeners", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyUcsListeners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyUcsListeners";
             //QCoreApplication::processEvents();
 
@@ -4056,7 +4056,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyUcsListeners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyUcsListeners", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyUcsListeners", context, engine);
             return result;
         }
          QScriptValue
@@ -4064,7 +4064,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::addLayerListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::addLayerListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addLayerListener";
             //QCoreApplication::processEvents();
 
@@ -4118,7 +4118,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addLayerListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::addLayerListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::addLayerListener", context, engine);
             return result;
         }
          QScriptValue
@@ -4126,7 +4126,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::removeLayerListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::removeLayerListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removeLayerListener";
             //QCoreApplication::processEvents();
 
@@ -4180,7 +4180,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removeLayerListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::removeLayerListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::removeLayerListener", context, engine);
             return result;
         }
          QScriptValue
@@ -4188,7 +4188,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyLayerListeners", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyLayerListeners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyLayerListeners";
             //QCoreApplication::processEvents();
 
@@ -4242,7 +4242,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyLayerListeners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyLayerListeners", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyLayerListeners", context, engine);
             return result;
         }
          QScriptValue
@@ -4250,7 +4250,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyLayerListenersCurrentLayer", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyLayerListenersCurrentLayer", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyLayerListenersCurrentLayer";
             //QCoreApplication::processEvents();
 
@@ -4304,7 +4304,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyLayerListenersCurrentLayer().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyLayerListenersCurrentLayer", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyLayerListenersCurrentLayer", context, engine);
             return result;
         }
          QScriptValue
@@ -4312,7 +4312,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::addBlockListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::addBlockListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addBlockListener";
             //QCoreApplication::processEvents();
 
@@ -4366,7 +4366,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addBlockListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::addBlockListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::addBlockListener", context, engine);
             return result;
         }
          QScriptValue
@@ -4374,7 +4374,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::removeBlockListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::removeBlockListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removeBlockListener";
             //QCoreApplication::processEvents();
 
@@ -4428,7 +4428,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removeBlockListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::removeBlockListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::removeBlockListener", context, engine);
             return result;
         }
          QScriptValue
@@ -4436,7 +4436,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyBlockListeners", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyBlockListeners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyBlockListeners";
             //QCoreApplication::processEvents();
 
@@ -4490,7 +4490,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyBlockListeners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyBlockListeners", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyBlockListeners", context, engine);
             return result;
         }
          QScriptValue
@@ -4498,7 +4498,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::addViewListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::addViewListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addViewListener";
             //QCoreApplication::processEvents();
 
@@ -4552,7 +4552,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addViewListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::addViewListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::addViewListener", context, engine);
             return result;
         }
          QScriptValue
@@ -4560,7 +4560,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::removeViewListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::removeViewListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removeViewListener";
             //QCoreApplication::processEvents();
 
@@ -4614,7 +4614,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removeViewListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::removeViewListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::removeViewListener", context, engine);
             return result;
         }
          QScriptValue
@@ -4622,7 +4622,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyViewListeners", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyViewListeners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyViewListeners";
             //QCoreApplication::processEvents();
 
@@ -4676,7 +4676,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyViewListeners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyViewListeners", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyViewListeners", context, engine);
             return result;
         }
          QScriptValue
@@ -4684,7 +4684,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::addPenListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::addPenListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addPenListener";
             //QCoreApplication::processEvents();
 
@@ -4738,7 +4738,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addPenListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::addPenListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::addPenListener", context, engine);
             return result;
         }
          QScriptValue
@@ -4746,7 +4746,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::removePenListener", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::removePenListener", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removePenListener";
             //QCoreApplication::processEvents();
 
@@ -4800,7 +4800,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removePenListener().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::removePenListener", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::removePenListener", context, engine);
             return result;
         }
          QScriptValue
@@ -4808,7 +4808,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::notifyPenListeners", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::notifyPenListeners", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyPenListeners";
             //QCoreApplication::processEvents();
 
@@ -4862,7 +4862,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyPenListeners().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::notifyPenListeners", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::notifyPenListeners", context, engine);
             return result;
         }
          QScriptValue
@@ -4870,7 +4870,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::ucsSetEvent", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::ucsSetEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::ucsSetEvent";
             //QCoreApplication::processEvents();
 
@@ -4917,7 +4917,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.ucsSetEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::ucsSetEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::ucsSetEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -4925,7 +4925,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::escapeEvent", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::escapeEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::escapeEvent";
             //QCoreApplication::processEvents();
 
@@ -4961,7 +4961,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.escapeEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::escapeEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::escapeEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -4969,7 +4969,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::setGraphicsViewCursor", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::setGraphicsViewCursor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::setGraphicsViewCursor";
             //QCoreApplication::processEvents();
 
@@ -5026,7 +5026,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.setGraphicsViewCursor().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::setGraphicsViewCursor", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::setGraphicsViewCursor", context, engine);
             return result;
         }
          QScriptValue
@@ -5034,7 +5034,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::getWidth", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::getWidth", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::getWidth";
             //QCoreApplication::processEvents();
 
@@ -5075,7 +5075,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.getWidth().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::getWidth", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::getWidth", context, engine);
             return result;
         }
          QScriptValue
@@ -5083,7 +5083,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::getHeight", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::getHeight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::getHeight";
             //QCoreApplication::processEvents();
 
@@ -5124,7 +5124,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.getHeight().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::getHeight", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::getHeight", context, engine);
             return result;
         }
          QScriptValue
@@ -5132,7 +5132,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::getPositionX", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::getPositionX", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::getPositionX";
             //QCoreApplication::processEvents();
 
@@ -5173,7 +5173,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.getPositionX().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::getPositionX", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::getPositionX", context, engine);
             return result;
         }
          QScriptValue
@@ -5181,7 +5181,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::getPositionY", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::getPositionY", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::getPositionY";
             //QCoreApplication::processEvents();
 
@@ -5222,7 +5222,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.getPositionY().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::getPositionY", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::getPositionY", context, engine);
             return result;
         }
          QScriptValue
@@ -5230,7 +5230,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::resize", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::resize", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::resize";
             //QCoreApplication::processEvents();
 
@@ -5290,7 +5290,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.resize().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::resize", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::resize", context, engine);
             return result;
         }
          QScriptValue
@@ -5298,7 +5298,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::move", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::move", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::move";
             //QCoreApplication::processEvents();
 
@@ -5358,7 +5358,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.move().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::move", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::move", context, engine);
             return result;
         }
          QScriptValue
@@ -5366,7 +5366,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::quit", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::quit", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::quit";
             //QCoreApplication::processEvents();
 
@@ -5402,7 +5402,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.quit().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::quit", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::quit", context, engine);
             return result;
         }
          QScriptValue
@@ -5410,7 +5410,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::getChildWidget", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::getChildWidget", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::getChildWidget";
             //QCoreApplication::processEvents();
 
@@ -5462,7 +5462,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.getChildWidget().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::getChildWidget", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::getChildWidget", context, engine);
             return result;
         }
          QScriptValue
@@ -5470,7 +5470,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::handleUserMessage", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::handleUserMessage", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::handleUserMessage";
             //QCoreApplication::processEvents();
 
@@ -5517,7 +5517,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.handleUserMessage().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::handleUserMessage", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::handleUserMessage", context, engine);
             return result;
         }
          QScriptValue
@@ -5525,7 +5525,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::handleUserInfo", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::handleUserInfo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::handleUserInfo";
             //QCoreApplication::processEvents();
 
@@ -5572,7 +5572,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.handleUserInfo().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::handleUserInfo", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::handleUserInfo", context, engine);
             return result;
         }
          QScriptValue
@@ -5580,7 +5580,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::handleUserWarning", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::handleUserWarning", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::handleUserWarning";
             //QCoreApplication::processEvents();
 
@@ -5667,7 +5667,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.handleUserWarning().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::handleUserWarning", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::handleUserWarning", context, engine);
             return result;
         }
          QScriptValue
@@ -5675,7 +5675,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::handleUserCommand", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::handleUserCommand", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::handleUserCommand";
             //QCoreApplication::processEvents();
 
@@ -5722,7 +5722,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.handleUserCommand().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::handleUserCommand", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::handleUserCommand", context, engine);
             return result;
         }
          QScriptValue
@@ -5730,7 +5730,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::setCommandPrompt", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::setCommandPrompt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::setCommandPrompt";
             //QCoreApplication::processEvents();
 
@@ -5793,7 +5793,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.setCommandPrompt().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::setCommandPrompt", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::setCommandPrompt", context, engine);
             return result;
         }
          QScriptValue
@@ -5801,7 +5801,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::setLeftMouseTip", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::setLeftMouseTip", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::setLeftMouseTip";
             //QCoreApplication::processEvents();
 
@@ -5864,7 +5864,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.setLeftMouseTip().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::setLeftMouseTip", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::setLeftMouseTip", context, engine);
             return result;
         }
          QScriptValue
@@ -5872,7 +5872,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::setRightMouseTip", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::setRightMouseTip", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::setRightMouseTip";
             //QCoreApplication::processEvents();
 
@@ -5935,7 +5935,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.setRightMouseTip().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::setRightMouseTip", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::setRightMouseTip", context, engine);
             return result;
         }
          QScriptValue
@@ -5943,7 +5943,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMainWindow::eval", context, engine);
+            REcmaHelper::functionStart("REcmaMainWindow::eval", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::eval";
             //QCoreApplication::processEvents();
 
@@ -6008,7 +6008,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.eval().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMainWindow::eval", context, engine);
+            REcmaHelper::functionEnd("REcmaMainWindow::eval", context, engine);
             return result;
         }
          QScriptValue REcmaMainWindow::toString

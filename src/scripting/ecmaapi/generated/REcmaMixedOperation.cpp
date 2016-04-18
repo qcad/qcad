@@ -275,7 +275,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMixedOperation::addObject", context, engine);
+            REcmaHelper::functionStart("REcmaMixedOperation::addObject", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMixedOperation::addObject";
             //QCoreApplication::processEvents();
 
@@ -523,7 +523,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMixedOperation.addObject().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMixedOperation::addObject", context, engine);
+            REcmaHelper::functionEnd("REcmaMixedOperation::addObject", context, engine);
             return result;
         }
          QScriptValue
@@ -531,7 +531,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMixedOperation::deleteObject", context, engine);
+            REcmaHelper::functionStart("REcmaMixedOperation::deleteObject", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMixedOperation::deleteObject";
             //QCoreApplication::processEvents();
 
@@ -609,7 +609,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMixedOperation.deleteObject().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMixedOperation::deleteObject", context, engine);
+            REcmaHelper::functionEnd("REcmaMixedOperation::deleteObject", context, engine);
             return result;
         }
          QScriptValue
@@ -617,7 +617,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMixedOperation::endCycle", context, engine);
+            REcmaHelper::functionStart("REcmaMixedOperation::endCycle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMixedOperation::endCycle";
             //QCoreApplication::processEvents();
 
@@ -653,7 +653,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMixedOperation.endCycle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMixedOperation::endCycle", context, engine);
+            REcmaHelper::functionEnd("REcmaMixedOperation::endCycle", context, engine);
             return result;
         }
          QScriptValue
@@ -661,7 +661,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaMixedOperation::apply", context, engine);
+            REcmaHelper::functionStart("REcmaMixedOperation::apply", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaMixedOperation::apply";
             //QCoreApplication::processEvents();
 
@@ -778,7 +778,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RMixedOperation.apply().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaMixedOperation::apply", context, engine);
+            REcmaHelper::functionEnd("REcmaMixedOperation::apply", context, engine);
             return result;
         }
          QScriptValue REcmaMixedOperation::toString

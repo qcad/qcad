@@ -211,7 +211,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTextEdit::sizeHint", context, engine);
+            REcmaHelper::functionStart("REcmaTextEdit::sizeHint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextEdit::sizeHint";
             //QCoreApplication::processEvents();
 
@@ -252,7 +252,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextEdit.sizeHint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTextEdit::sizeHint", context, engine);
+            REcmaHelper::functionEnd("REcmaTextEdit::sizeHint", context, engine);
             return result;
         }
          QScriptValue
@@ -260,7 +260,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTextEdit::minimumSizeHint", context, engine);
+            REcmaHelper::functionStart("REcmaTextEdit::minimumSizeHint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTextEdit::minimumSizeHint";
             //QCoreApplication::processEvents();
 
@@ -301,7 +301,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextEdit.minimumSizeHint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTextEdit::minimumSizeHint", context, engine);
+            REcmaHelper::functionEnd("REcmaTextEdit::minimumSizeHint", context, engine);
             return result;
         }
          QScriptValue REcmaTextEdit::toString

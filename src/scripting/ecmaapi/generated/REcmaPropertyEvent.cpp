@@ -315,7 +315,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyEvent::getPropertyTypeId", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyEvent::getPropertyTypeId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyEvent::getPropertyTypeId";
             //QCoreApplication::processEvents();
 
@@ -356,7 +356,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEvent.getPropertyTypeId().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyEvent::getPropertyTypeId", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyEvent::getPropertyTypeId", context, engine);
             return result;
         }
          QScriptValue
@@ -364,7 +364,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyEvent::getValue", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyEvent::getValue", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyEvent::getValue";
             //QCoreApplication::processEvents();
 
@@ -405,7 +405,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEvent.getValue().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyEvent::getValue", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyEvent::getValue", context, engine);
             return result;
         }
          QScriptValue
@@ -413,7 +413,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPropertyEvent::getEntityTypeFilter", context, engine);
+            REcmaHelper::functionStart("REcmaPropertyEvent::getEntityTypeFilter", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPropertyEvent::getEntityTypeFilter";
             //QCoreApplication::processEvents();
 
@@ -454,7 +454,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPropertyEvent.getEntityTypeFilter().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPropertyEvent::getEntityTypeFilter", context, engine);
+            REcmaHelper::functionEnd("REcmaPropertyEvent::getEntityTypeFilter", context, engine);
             return result;
         }
          QScriptValue REcmaPropertyEvent::toString

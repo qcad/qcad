@@ -256,7 +256,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLayerListenerAdapter::updateLayers", context, engine);
+            REcmaHelper::functionStart("REcmaLayerListenerAdapter::updateLayers", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayerListenerAdapter::updateLayers";
             //QCoreApplication::processEvents();
 
@@ -310,7 +310,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayerListenerAdapter.updateLayers().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLayerListenerAdapter::updateLayers", context, engine);
+            REcmaHelper::functionEnd("REcmaLayerListenerAdapter::updateLayers", context, engine);
             return result;
         }
          QScriptValue
@@ -318,7 +318,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLayerListenerAdapter::setCurrentLayer", context, engine);
+            REcmaHelper::functionStart("REcmaLayerListenerAdapter::setCurrentLayer", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayerListenerAdapter::setCurrentLayer";
             //QCoreApplication::processEvents();
 
@@ -372,7 +372,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayerListenerAdapter.setCurrentLayer().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLayerListenerAdapter::setCurrentLayer", context, engine);
+            REcmaHelper::functionEnd("REcmaLayerListenerAdapter::setCurrentLayer", context, engine);
             return result;
         }
          QScriptValue
@@ -380,7 +380,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLayerListenerAdapter::clearLayers", context, engine);
+            REcmaHelper::functionStart("REcmaLayerListenerAdapter::clearLayers", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLayerListenerAdapter::clearLayers";
             //QCoreApplication::processEvents();
 
@@ -416,7 +416,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLayerListenerAdapter.clearLayers().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLayerListenerAdapter::clearLayers", context, engine);
+            REcmaHelper::functionEnd("REcmaLayerListenerAdapter::clearLayers", context, engine);
             return result;
         }
          QScriptValue REcmaLayerListenerAdapter::toString

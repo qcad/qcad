@@ -392,7 +392,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::clone", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::clone";
             //QCoreApplication::processEvents();
 
@@ -433,7 +433,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.clone().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::clone", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -441,7 +441,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::to2D", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::to2D", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::to2D";
             //QCoreApplication::processEvents();
 
@@ -477,7 +477,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.to2D().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::to2D", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::to2D", context, engine);
             return result;
         }
          QScriptValue
@@ -485,7 +485,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::createArrow", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::createArrow", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::createArrow";
             //QCoreApplication::processEvents();
 
@@ -565,7 +565,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.createArrow().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::createArrow", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::createArrow", context, engine);
             return result;
         }
          QScriptValue
@@ -573,7 +573,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::getBoundingBox", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::getBoundingBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getBoundingBox";
             //QCoreApplication::processEvents();
 
@@ -614,7 +614,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getBoundingBox().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::getBoundingBox", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::getBoundingBox", context, engine);
             return result;
         }
          QScriptValue
@@ -622,7 +622,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::getLength", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::getLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getLength";
             //QCoreApplication::processEvents();
 
@@ -663,7 +663,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getLength().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::getLength", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::getLength", context, engine);
             return result;
         }
          QScriptValue
@@ -671,7 +671,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::getCorner", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::getCorner", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getCorner";
             //QCoreApplication::processEvents();
 
@@ -723,7 +723,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getCorner().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::getCorner", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::getCorner", context, engine);
             return result;
         }
          QScriptValue
@@ -731,7 +731,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::setCorner", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::setCorner", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::setCorner";
             //QCoreApplication::processEvents();
 
@@ -803,7 +803,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.setCorner().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::setCorner", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::setCorner", context, engine);
             return result;
         }
          QScriptValue
@@ -811,7 +811,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::getEndPoints", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::getEndPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getEndPoints";
             //QCoreApplication::processEvents();
 
@@ -852,7 +852,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getEndPoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::getEndPoints", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::getEndPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -860,7 +860,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::getMiddlePoints", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::getMiddlePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getMiddlePoints";
             //QCoreApplication::processEvents();
 
@@ -901,7 +901,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getMiddlePoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::getMiddlePoints", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::getMiddlePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -909,7 +909,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::getCenterPoints", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::getCenterPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getCenterPoints";
             //QCoreApplication::processEvents();
 
@@ -950,7 +950,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getCenterPoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::getCenterPoints", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::getCenterPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -958,7 +958,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::getPointsWithDistanceToEnd", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::getPointsWithDistanceToEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getPointsWithDistanceToEnd";
             //QCoreApplication::processEvents();
 
@@ -1055,7 +1055,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getPointsWithDistanceToEnd().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::getPointsWithDistanceToEnd", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::getPointsWithDistanceToEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -1063,7 +1063,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::getDistanceTo", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::getDistanceTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getDistanceTo";
             //QCoreApplication::processEvents();
 
@@ -1254,7 +1254,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getDistanceTo().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::getDistanceTo", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::getDistanceTo", context, engine);
             return result;
         }
          QScriptValue
@@ -1262,7 +1262,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::getVectorTo", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::getVectorTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getVectorTo";
             //QCoreApplication::processEvents();
 
@@ -1453,7 +1453,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getVectorTo().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::getVectorTo", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::getVectorTo", context, engine);
             return result;
         }
          QScriptValue
@@ -1461,7 +1461,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::getNormal", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::getNormal", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getNormal";
             //QCoreApplication::processEvents();
 
@@ -1502,7 +1502,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getNormal().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::getNormal", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::getNormal", context, engine);
             return result;
         }
          QScriptValue
@@ -1510,7 +1510,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::isPointInTriangle", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::isPointInTriangle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::isPointInTriangle";
             //QCoreApplication::processEvents();
 
@@ -1631,7 +1631,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.isPointInTriangle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::isPointInTriangle", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::isPointInTriangle", context, engine);
             return result;
         }
          QScriptValue
@@ -1639,7 +1639,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::isPointInQuadrant", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::isPointInQuadrant", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::isPointInQuadrant";
             //QCoreApplication::processEvents();
 
@@ -1703,7 +1703,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.isPointInQuadrant().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::isPointInQuadrant", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::isPointInQuadrant", context, engine);
             return result;
         }
          QScriptValue
@@ -1711,7 +1711,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::getD", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::getD", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getD";
             //QCoreApplication::processEvents();
 
@@ -1752,7 +1752,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getD().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::getD", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::getD", context, engine);
             return result;
         }
          QScriptValue
@@ -1760,7 +1760,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::getExploded", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::getExploded", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getExploded";
             //QCoreApplication::processEvents();
 
@@ -1833,7 +1833,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getExploded().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::getExploded", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::getExploded", context, engine);
             return result;
         }
          QScriptValue
@@ -1841,7 +1841,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::move", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::move", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::move";
             //QCoreApplication::processEvents();
 
@@ -1905,7 +1905,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.move().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::move", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::move", context, engine);
             return result;
         }
          QScriptValue
@@ -1913,7 +1913,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::rotate", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::rotate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::rotate";
             //QCoreApplication::processEvents();
 
@@ -2022,7 +2022,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.rotate().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::rotate", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::rotate", context, engine);
             return result;
         }
          QScriptValue
@@ -2030,7 +2030,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::mirror", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::mirror", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::mirror";
             //QCoreApplication::processEvents();
 
@@ -2094,7 +2094,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.mirror().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::mirror", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::mirror", context, engine);
             return result;
         }
          QScriptValue
@@ -2102,7 +2102,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::flipHorizontal", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::flipHorizontal", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::flipHorizontal";
             //QCoreApplication::processEvents();
 
@@ -2143,7 +2143,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.flipHorizontal().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::flipHorizontal", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::flipHorizontal", context, engine);
             return result;
         }
          QScriptValue
@@ -2151,7 +2151,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::flipVertical", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::flipVertical", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::flipVertical";
             //QCoreApplication::processEvents();
 
@@ -2192,7 +2192,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.flipVertical().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::flipVertical", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::flipVertical", context, engine);
             return result;
         }
          QScriptValue
@@ -2200,7 +2200,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaTriangle::getTransformed", context, engine);
+            REcmaHelper::functionStart("REcmaTriangle::getTransformed", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaTriangle::getTransformed";
             //QCoreApplication::processEvents();
 
@@ -2262,7 +2262,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getTransformed().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaTriangle::getTransformed", context, engine);
+            REcmaHelper::functionEnd("REcmaTriangle::getTransformed", context, engine);
             return result;
         }
          QScriptValue REcmaTriangle::toString

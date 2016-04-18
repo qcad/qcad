@@ -364,7 +364,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::init", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::init";
             //QCoreApplication::processEvents();
 
@@ -390,7 +390,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.init().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::init", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::init", context, engine);
             return result;
         }
          QScriptValue
@@ -398,7 +398,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::getType", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::getType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::getType";
             //QCoreApplication::processEvents();
 
@@ -439,7 +439,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.getType().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::getType", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -447,7 +447,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::clone", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::clone";
             //QCoreApplication::processEvents();
 
@@ -488,7 +488,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.clone().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::clone", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -496,7 +496,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::getName", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::getName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::getName";
             //QCoreApplication::processEvents();
 
@@ -537,7 +537,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.getName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::getName", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::getName", context, engine);
             return result;
         }
          QScriptValue
@@ -545,7 +545,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::setName", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::setName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::setName";
             //QCoreApplication::processEvents();
 
@@ -592,7 +592,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.setName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::setName", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::setName", context, engine);
             return result;
         }
          QScriptValue
@@ -600,7 +600,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::isFrozen", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::isFrozen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::isFrozen";
             //QCoreApplication::processEvents();
 
@@ -641,7 +641,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.isFrozen().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::isFrozen", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::isFrozen", context, engine);
             return result;
         }
          QScriptValue
@@ -649,7 +649,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::setFrozen", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::setFrozen", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::setFrozen";
             //QCoreApplication::processEvents();
 
@@ -696,7 +696,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.setFrozen().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::setFrozen", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::setFrozen", context, engine);
             return result;
         }
          QScriptValue
@@ -704,7 +704,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::isAnonymous", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::isAnonymous", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::isAnonymous";
             //QCoreApplication::processEvents();
 
@@ -745,7 +745,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.isAnonymous().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::isAnonymous", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::isAnonymous", context, engine);
             return result;
         }
          QScriptValue
@@ -753,7 +753,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::setAnonymous", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::setAnonymous", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::setAnonymous";
             //QCoreApplication::processEvents();
 
@@ -800,7 +800,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.setAnonymous().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::setAnonymous", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::setAnonymous", context, engine);
             return result;
         }
          QScriptValue
@@ -808,7 +808,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::setOrigin", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::setOrigin", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::setOrigin";
             //QCoreApplication::processEvents();
 
@@ -867,7 +867,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.setOrigin().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::setOrigin", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::setOrigin", context, engine);
             return result;
         }
          QScriptValue
@@ -875,7 +875,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::getOrigin", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::getOrigin", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::getOrigin";
             //QCoreApplication::processEvents();
 
@@ -916,7 +916,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.getOrigin().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::getOrigin", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::getOrigin", context, engine);
             return result;
         }
          QScriptValue
@@ -924,7 +924,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::isLayout", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::isLayout", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::isLayout";
             //QCoreApplication::processEvents();
 
@@ -965,7 +965,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.isLayout().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::isLayout", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::isLayout", context, engine);
             return result;
         }
          QScriptValue
@@ -973,7 +973,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::setLayoutId", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::setLayoutId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::setLayoutId";
             //QCoreApplication::processEvents();
 
@@ -1020,7 +1020,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.setLayoutId().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::setLayoutId", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::setLayoutId", context, engine);
             return result;
         }
          QScriptValue
@@ -1028,7 +1028,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::getLayoutId", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::getLayoutId", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::getLayoutId";
             //QCoreApplication::processEvents();
 
@@ -1069,7 +1069,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.getLayoutId().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::getLayoutId", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::getLayoutId", context, engine);
             return result;
         }
          QScriptValue
@@ -1077,7 +1077,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::getLayoutName", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::getLayoutName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::getLayoutName";
             //QCoreApplication::processEvents();
 
@@ -1118,7 +1118,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.getLayoutName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::getLayoutName", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::getLayoutName", context, engine);
             return result;
         }
          QScriptValue
@@ -1126,7 +1126,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::getProperty", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::getProperty";
             //QCoreApplication::processEvents();
 
@@ -1365,7 +1365,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.getProperty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::getProperty", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1373,7 +1373,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::setProperty", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::setProperty";
             //QCoreApplication::processEvents();
 
@@ -1547,7 +1547,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.setProperty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::setProperty", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1555,7 +1555,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaBlock::isSelectedForPropertyEditing", context, engine);
+            REcmaHelper::functionStart("REcmaBlock::isSelectedForPropertyEditing", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaBlock::isSelectedForPropertyEditing";
             //QCoreApplication::processEvents();
 
@@ -1596,7 +1596,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RBlock.isSelectedForPropertyEditing().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaBlock::isSelectedForPropertyEditing", context, engine);
+            REcmaHelper::functionEnd("REcmaBlock::isSelectedForPropertyEditing", context, engine);
             return result;
         }
          QScriptValue REcmaBlock::toString

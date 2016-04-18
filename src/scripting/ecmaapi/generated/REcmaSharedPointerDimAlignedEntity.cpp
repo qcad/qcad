@@ -542,7 +542,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::init", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimAlignedEntity::init";
             //QCoreApplication::processEvents();
 
@@ -568,7 +568,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedEntity.init().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::init", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::init", context, engine);
             return result;
         }
          QScriptValue
@@ -576,7 +576,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::getStaticPropertyTypeIds", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::getStaticPropertyTypeIds", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimAlignedEntity::getStaticPropertyTypeIds";
             //QCoreApplication::processEvents();
 
@@ -608,7 +608,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedEntity.getStaticPropertyTypeIds().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::getStaticPropertyTypeIds", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::getStaticPropertyTypeIds", context, engine);
             return result;
         }
          QScriptValue
@@ -616,7 +616,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::clone", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::clone", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimAlignedEntity::clone";
             //QCoreApplication::processEvents();
 
@@ -657,7 +657,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedEntity.clone().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::clone", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::clone", context, engine);
             return result;
         }
          QScriptValue
@@ -665,7 +665,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::getType", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::getType", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimAlignedEntity::getType";
             //QCoreApplication::processEvents();
 
@@ -706,7 +706,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedEntity.getType().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::getType", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::getType", context, engine);
             return result;
         }
          QScriptValue
@@ -714,7 +714,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::setProperty", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::setProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimAlignedEntity::setProperty";
             //QCoreApplication::processEvents();
 
@@ -888,7 +888,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedEntity.setProperty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::setProperty", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::setProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -896,7 +896,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::getProperty", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::getProperty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimAlignedEntity::getProperty";
             //QCoreApplication::processEvents();
 
@@ -1135,7 +1135,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedEntity.getProperty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::getProperty", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::getProperty", context, engine);
             return result;
         }
          QScriptValue
@@ -1143,7 +1143,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::getData", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::getData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimAlignedEntity::getData";
             //QCoreApplication::processEvents();
 
@@ -1207,7 +1207,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedEntity.getData().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::getData", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::getData", context, engine);
             return result;
         }
          QScriptValue
@@ -1215,7 +1215,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::setData", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::setData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimAlignedEntity::setData";
             //QCoreApplication::processEvents();
 
@@ -1274,7 +1274,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedEntity.setData().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::setData", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::setData", context, engine);
             return result;
         }
          QScriptValue
@@ -1282,7 +1282,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::setExtensionPoint1", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::setExtensionPoint1", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimAlignedEntity::setExtensionPoint1";
             //QCoreApplication::processEvents();
 
@@ -1341,7 +1341,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedEntity.setExtensionPoint1().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::setExtensionPoint1", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::setExtensionPoint1", context, engine);
             return result;
         }
          QScriptValue
@@ -1349,7 +1349,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::getExtensionPoint1", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::getExtensionPoint1", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimAlignedEntity::getExtensionPoint1";
             //QCoreApplication::processEvents();
 
@@ -1390,7 +1390,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedEntity.getExtensionPoint1().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::getExtensionPoint1", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::getExtensionPoint1", context, engine);
             return result;
         }
          QScriptValue
@@ -1398,7 +1398,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::setExtensionPoint2", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::setExtensionPoint2", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimAlignedEntity::setExtensionPoint2";
             //QCoreApplication::processEvents();
 
@@ -1457,7 +1457,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedEntity.setExtensionPoint2().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::setExtensionPoint2", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::setExtensionPoint2", context, engine);
             return result;
         }
          QScriptValue
@@ -1465,7 +1465,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::getExtensionPoint2", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerDimAlignedEntity::getExtensionPoint2", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimAlignedEntity::getExtensionPoint2";
             //QCoreApplication::processEvents();
 
@@ -1506,7 +1506,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedEntity.getExtensionPoint2().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::getExtensionPoint2", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerDimAlignedEntity::getExtensionPoint2", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerDimAlignedEntity::toString

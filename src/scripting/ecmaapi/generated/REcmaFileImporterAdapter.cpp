@@ -475,7 +475,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaFileImporterAdapter::importFile", context, engine);
+            REcmaHelper::functionStart("REcmaFileImporterAdapter::importFile", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaFileImporterAdapter::importFile";
             //QCoreApplication::processEvents();
 
@@ -540,7 +540,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RFileImporterAdapter.importFile().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaFileImporterAdapter::importFile", context, engine);
+            REcmaHelper::functionEnd("REcmaFileImporterAdapter::importFile", context, engine);
             return result;
         }
          QScriptValue REcmaFileImporterAdapter::toString

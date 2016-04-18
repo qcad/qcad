@@ -187,7 +187,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSnapIntersection::snap", context, engine);
+            REcmaHelper::functionStart("REcmaSnapIntersection::snap", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSnapIntersection::snap";
             //QCoreApplication::processEvents();
 
@@ -469,7 +469,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSnapIntersection.snap().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSnapIntersection::snap", context, engine);
+            REcmaHelper::functionEnd("REcmaSnapIntersection::snap", context, engine);
             return result;
         }
          QScriptValue REcmaSnapIntersection::toString

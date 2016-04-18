@@ -117,7 +117,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSpatialIndexVisitor::visitNode", context, engine);
+            REcmaHelper::functionStart("REcmaSpatialIndexVisitor::visitNode", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndexVisitor::visitNode";
             //QCoreApplication::processEvents();
 
@@ -229,7 +229,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndexVisitor.visitNode().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSpatialIndexVisitor::visitNode", context, engine);
+            REcmaHelper::functionEnd("REcmaSpatialIndexVisitor::visitNode", context, engine);
             return result;
         }
          QScriptValue REcmaSpatialIndexVisitor::toString

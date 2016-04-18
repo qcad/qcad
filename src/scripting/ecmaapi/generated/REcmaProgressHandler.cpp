@@ -123,7 +123,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaProgressHandler::setProgress", context, engine);
+            REcmaHelper::functionStart("REcmaProgressHandler::setProgress", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaProgressHandler::setProgress";
             //QCoreApplication::processEvents();
 
@@ -170,7 +170,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RProgressHandler.setProgress().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaProgressHandler::setProgress", context, engine);
+            REcmaHelper::functionEnd("REcmaProgressHandler::setProgress", context, engine);
             return result;
         }
          QScriptValue
@@ -178,7 +178,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaProgressHandler::setProgressEnd", context, engine);
+            REcmaHelper::functionStart("REcmaProgressHandler::setProgressEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaProgressHandler::setProgressEnd";
             //QCoreApplication::processEvents();
 
@@ -214,7 +214,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RProgressHandler.setProgressEnd().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaProgressHandler::setProgressEnd", context, engine);
+            REcmaHelper::functionEnd("REcmaProgressHandler::setProgressEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -222,7 +222,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaProgressHandler::setProgressText", context, engine);
+            REcmaHelper::functionStart("REcmaProgressHandler::setProgressText", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaProgressHandler::setProgressText";
             //QCoreApplication::processEvents();
 
@@ -285,7 +285,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RProgressHandler.setProgressText().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaProgressHandler::setProgressText", context, engine);
+            REcmaHelper::functionEnd("REcmaProgressHandler::setProgressText", context, engine);
             return result;
         }
          QScriptValue
@@ -293,7 +293,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaProgressHandler::setProgressEnabled", context, engine);
+            REcmaHelper::functionStart("REcmaProgressHandler::setProgressEnabled", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaProgressHandler::setProgressEnabled";
             //QCoreApplication::processEvents();
 
@@ -340,7 +340,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RProgressHandler.setProgressEnabled().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaProgressHandler::setProgressEnabled", context, engine);
+            REcmaHelper::functionEnd("REcmaProgressHandler::setProgressEnabled", context, engine);
             return result;
         }
          QScriptValue REcmaProgressHandler::toString

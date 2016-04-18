@@ -955,7 +955,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellSnapDistance::snapEntity", context, engine);
+            REcmaHelper::functionStart("REcmaShellSnapDistance::snapEntity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellSnapDistance::snapEntity";
             //QCoreApplication::processEvents();
 
@@ -1111,7 +1111,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSnapDistance.snapEntity().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellSnapDistance::snapEntity", context, engine);
+            REcmaHelper::functionEnd("REcmaShellSnapDistance::snapEntity", context, engine);
             return result;
         }
         

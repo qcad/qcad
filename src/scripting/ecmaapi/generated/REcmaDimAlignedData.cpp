@@ -354,7 +354,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimAlignedData::getBoundingBox", context, engine);
+            REcmaHelper::functionStart("REcmaDimAlignedData::getBoundingBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimAlignedData::getBoundingBox";
             //QCoreApplication::processEvents();
 
@@ -427,7 +427,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedData.getBoundingBox().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimAlignedData::getBoundingBox", context, engine);
+            REcmaHelper::functionEnd("REcmaDimAlignedData::getBoundingBox", context, engine);
             return result;
         }
          QScriptValue
@@ -435,7 +435,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimAlignedData::getReferencePoints", context, engine);
+            REcmaHelper::functionStart("REcmaDimAlignedData::getReferencePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimAlignedData::getReferencePoints";
             //QCoreApplication::processEvents();
 
@@ -508,7 +508,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedData.getReferencePoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimAlignedData::getReferencePoints", context, engine);
+            REcmaHelper::functionEnd("REcmaDimAlignedData::getReferencePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -516,7 +516,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimAlignedData::moveReferencePoint", context, engine);
+            REcmaHelper::functionStart("REcmaDimAlignedData::moveReferencePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimAlignedData::moveReferencePoint";
             //QCoreApplication::processEvents();
 
@@ -605,7 +605,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedData.moveReferencePoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimAlignedData::moveReferencePoint", context, engine);
+            REcmaHelper::functionEnd("REcmaDimAlignedData::moveReferencePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -613,7 +613,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimAlignedData::recomputeDefinitionPoint", context, engine);
+            REcmaHelper::functionStart("REcmaDimAlignedData::recomputeDefinitionPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimAlignedData::recomputeDefinitionPoint";
             //QCoreApplication::processEvents();
 
@@ -747,7 +747,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedData.recomputeDefinitionPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimAlignedData::recomputeDefinitionPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaDimAlignedData::recomputeDefinitionPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -755,7 +755,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimAlignedData::getShapes", context, engine);
+            REcmaHelper::functionStart("REcmaDimAlignedData::getShapes", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimAlignedData::getShapes";
             //QCoreApplication::processEvents();
 
@@ -897,7 +897,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedData.getShapes().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimAlignedData::getShapes", context, engine);
+            REcmaHelper::functionEnd("REcmaDimAlignedData::getShapes", context, engine);
             return result;
         }
          QScriptValue
@@ -905,7 +905,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimAlignedData::getMeasuredValue", context, engine);
+            REcmaHelper::functionStart("REcmaDimAlignedData::getMeasuredValue", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimAlignedData::getMeasuredValue";
             //QCoreApplication::processEvents();
 
@@ -946,7 +946,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedData.getMeasuredValue().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimAlignedData::getMeasuredValue", context, engine);
+            REcmaHelper::functionEnd("REcmaDimAlignedData::getMeasuredValue", context, engine);
             return result;
         }
          QScriptValue
@@ -954,7 +954,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimAlignedData::getAutoLabel", context, engine);
+            REcmaHelper::functionStart("REcmaDimAlignedData::getAutoLabel", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimAlignedData::getAutoLabel";
             //QCoreApplication::processEvents();
 
@@ -995,7 +995,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimAlignedData.getAutoLabel().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimAlignedData::getAutoLabel", context, engine);
+            REcmaHelper::functionEnd("REcmaDimAlignedData::getAutoLabel", context, engine);
             return result;
         }
          QScriptValue REcmaDimAlignedData::toString

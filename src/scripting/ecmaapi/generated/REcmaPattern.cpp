@@ -229,7 +229,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPattern::loadAllFrom", context, engine);
+            REcmaHelper::functionStart("REcmaPattern::loadAllFrom", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPattern::loadAllFrom";
             //QCoreApplication::processEvents();
 
@@ -271,7 +271,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPattern.loadAllFrom().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPattern::loadAllFrom", context, engine);
+            REcmaHelper::functionEnd("REcmaPattern::loadAllFrom", context, engine);
             return result;
         }
          QScriptValue
@@ -279,7 +279,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPattern::isValid", context, engine);
+            REcmaHelper::functionStart("REcmaPattern::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPattern::isValid";
             //QCoreApplication::processEvents();
 
@@ -320,7 +320,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPattern.isValid().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPattern::isValid", context, engine);
+            REcmaHelper::functionEnd("REcmaPattern::isValid", context, engine);
             return result;
         }
          QScriptValue
@@ -328,7 +328,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPattern::clear", context, engine);
+            REcmaHelper::functionStart("REcmaPattern::clear", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPattern::clear";
             //QCoreApplication::processEvents();
 
@@ -364,7 +364,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPattern.clear().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPattern::clear", context, engine);
+            REcmaHelper::functionEnd("REcmaPattern::clear", context, engine);
             return result;
         }
          QScriptValue
@@ -372,7 +372,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPattern::getFileName", context, engine);
+            REcmaHelper::functionStart("REcmaPattern::getFileName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPattern::getFileName";
             //QCoreApplication::processEvents();
 
@@ -413,7 +413,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPattern.getFileName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPattern::getFileName", context, engine);
+            REcmaHelper::functionEnd("REcmaPattern::getFileName", context, engine);
             return result;
         }
          QScriptValue
@@ -421,7 +421,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPattern::getName", context, engine);
+            REcmaHelper::functionStart("REcmaPattern::getName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPattern::getName";
             //QCoreApplication::processEvents();
 
@@ -462,7 +462,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPattern.getName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPattern::getName", context, engine);
+            REcmaHelper::functionEnd("REcmaPattern::getName", context, engine);
             return result;
         }
          QScriptValue
@@ -470,7 +470,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPattern::isLoaded", context, engine);
+            REcmaHelper::functionStart("REcmaPattern::isLoaded", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPattern::isLoaded";
             //QCoreApplication::processEvents();
 
@@ -511,7 +511,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPattern.isLoaded().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPattern::isLoaded", context, engine);
+            REcmaHelper::functionEnd("REcmaPattern::isLoaded", context, engine);
             return result;
         }
          QScriptValue
@@ -519,7 +519,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPattern::load", context, engine);
+            REcmaHelper::functionStart("REcmaPattern::load", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPattern::load";
             //QCoreApplication::processEvents();
 
@@ -555,7 +555,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPattern.load().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPattern::load", context, engine);
+            REcmaHelper::functionEnd("REcmaPattern::load", context, engine);
             return result;
         }
          QScriptValue
@@ -563,7 +563,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPattern::getPatternLines", context, engine);
+            REcmaHelper::functionStart("REcmaPattern::getPatternLines", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPattern::getPatternLines";
             //QCoreApplication::processEvents();
 
@@ -604,7 +604,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPattern.getPatternLines().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPattern::getPatternLines", context, engine);
+            REcmaHelper::functionEnd("REcmaPattern::getPatternLines", context, engine);
             return result;
         }
          QScriptValue
@@ -612,7 +612,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPattern::addPatternLine", context, engine);
+            REcmaHelper::functionStart("REcmaPattern::addPatternLine", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPattern::addPatternLine";
             //QCoreApplication::processEvents();
 
@@ -669,7 +669,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPattern.addPatternLine().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPattern::addPatternLine", context, engine);
+            REcmaHelper::functionEnd("REcmaPattern::addPatternLine", context, engine);
             return result;
         }
          QScriptValue
@@ -677,7 +677,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPattern::scale", context, engine);
+            REcmaHelper::functionStart("REcmaPattern::scale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPattern::scale";
             //QCoreApplication::processEvents();
 
@@ -724,7 +724,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPattern.scale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPattern::scale", context, engine);
+            REcmaHelper::functionEnd("REcmaPattern::scale", context, engine);
             return result;
         }
          QScriptValue
@@ -732,7 +732,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPattern::rotate", context, engine);
+            REcmaHelper::functionStart("REcmaPattern::rotate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPattern::rotate";
             //QCoreApplication::processEvents();
 
@@ -779,7 +779,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPattern.rotate().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPattern::rotate", context, engine);
+            REcmaHelper::functionEnd("REcmaPattern::rotate", context, engine);
             return result;
         }
          QScriptValue REcmaPattern::toString

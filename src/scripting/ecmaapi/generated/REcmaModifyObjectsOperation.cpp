@@ -344,7 +344,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaModifyObjectsOperation::transformSelection", context, engine);
+            REcmaHelper::functionStart("REcmaModifyObjectsOperation::transformSelection", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaModifyObjectsOperation::transformSelection";
             //QCoreApplication::processEvents();
 
@@ -470,7 +470,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RModifyObjectsOperation.transformSelection().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaModifyObjectsOperation::transformSelection", context, engine);
+            REcmaHelper::functionEnd("REcmaModifyObjectsOperation::transformSelection", context, engine);
             return result;
         }
          QScriptValue REcmaModifyObjectsOperation::toString

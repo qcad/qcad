@@ -456,7 +456,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellThread::run", context, engine);
+            REcmaHelper::functionStart("REcmaShellThread::run", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellThread::run";
             //QCoreApplication::processEvents();
 
@@ -492,7 +492,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RThread.run().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellThread::run", context, engine);
+            REcmaHelper::functionEnd("REcmaShellThread::run", context, engine);
             return result;
         }
         

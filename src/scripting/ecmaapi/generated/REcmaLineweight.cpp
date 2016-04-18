@@ -309,7 +309,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLineweight::getList", context, engine);
+            REcmaHelper::functionStart("REcmaLineweight::getList", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLineweight::getList";
             //QCoreApplication::processEvents();
 
@@ -351,7 +351,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLineweight.getList().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLineweight::getList", context, engine);
+            REcmaHelper::functionEnd("REcmaLineweight::getList", context, engine);
             return result;
         }
          QScriptValue
@@ -359,7 +359,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLineweight::getIcon", context, engine);
+            REcmaHelper::functionStart("REcmaLineweight::getIcon", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLineweight::getIcon";
             //QCoreApplication::processEvents();
 
@@ -401,7 +401,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLineweight.getIcon().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLineweight::getIcon", context, engine);
+            REcmaHelper::functionEnd("REcmaLineweight::getIcon", context, engine);
             return result;
         }
          QScriptValue
@@ -409,7 +409,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaLineweight::getName", context, engine);
+            REcmaHelper::functionStart("REcmaLineweight::getName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaLineweight::getName";
             //QCoreApplication::processEvents();
 
@@ -451,7 +451,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RLineweight.getName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaLineweight::getName", context, engine);
+            REcmaHelper::functionEnd("REcmaLineweight::getName", context, engine);
             return result;
         }
          QScriptValue REcmaLineweight::toString

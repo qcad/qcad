@@ -187,7 +187,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSpatialIndexVisitorAdapter::visitData", context, engine);
+            REcmaHelper::functionStart("REcmaSpatialIndexVisitorAdapter::visitData", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndexVisitorAdapter::visitData";
             //QCoreApplication::processEvents();
 
@@ -325,7 +325,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndexVisitorAdapter.visitData().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSpatialIndexVisitorAdapter::visitData", context, engine);
+            REcmaHelper::functionEnd("REcmaSpatialIndexVisitorAdapter::visitData", context, engine);
             return result;
         }
          QScriptValue
@@ -333,7 +333,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSpatialIndexVisitorAdapter::visitNode", context, engine);
+            REcmaHelper::functionStart("REcmaSpatialIndexVisitorAdapter::visitNode", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSpatialIndexVisitorAdapter::visitNode";
             //QCoreApplication::processEvents();
 
@@ -445,7 +445,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSpatialIndexVisitorAdapter.visitNode().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSpatialIndexVisitorAdapter::visitNode", context, engine);
+            REcmaHelper::functionEnd("REcmaSpatialIndexVisitorAdapter::visitNode", context, engine);
             return result;
         }
          QScriptValue REcmaSpatialIndexVisitorAdapter::toString

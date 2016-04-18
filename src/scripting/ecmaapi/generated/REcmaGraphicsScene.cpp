@@ -214,7 +214,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::getDocumentInterface", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::getDocumentInterface", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::getDocumentInterface";
             //QCoreApplication::processEvents();
 
@@ -256,7 +256,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.getDocumentInterface().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::getDocumentInterface", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::getDocumentInterface", context, engine);
             return result;
         }
          QScriptValue
@@ -264,7 +264,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::getGraphicsViews", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::getGraphicsViews", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::getGraphicsViews";
             //QCoreApplication::processEvents();
 
@@ -305,7 +305,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.getGraphicsViews().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::getGraphicsViews", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::getGraphicsViews", context, engine);
             return result;
         }
          QScriptValue
@@ -313,7 +313,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::clear", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::clear", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::clear";
             //QCoreApplication::processEvents();
 
@@ -349,7 +349,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.clear().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::clear", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::clear", context, engine);
             return result;
         }
          QScriptValue
@@ -357,7 +357,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::exportDocumentSettings", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::exportDocumentSettings", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::exportDocumentSettings";
             //QCoreApplication::processEvents();
 
@@ -398,7 +398,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.exportDocumentSettings().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::exportDocumentSettings", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::exportDocumentSettings", context, engine);
             return result;
         }
          QScriptValue
@@ -406,7 +406,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::regenerate", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::regenerate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::regenerate";
             //QCoreApplication::processEvents();
 
@@ -510,7 +510,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.regenerate().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::regenerate", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::regenerate", context, engine);
             return result;
         }
          QScriptValue
@@ -518,7 +518,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::updateSelectionStatus", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::updateSelectionStatus", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::updateSelectionStatus";
             //QCoreApplication::processEvents();
 
@@ -579,7 +579,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.updateSelectionStatus().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::updateSelectionStatus", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::updateSelectionStatus", context, engine);
             return result;
         }
          QScriptValue
@@ -587,7 +587,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::regenerateViews", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::regenerateViews", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::regenerateViews";
             //QCoreApplication::processEvents();
 
@@ -678,7 +678,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.regenerateViews().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::regenerateViews", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::regenerateViews", context, engine);
             return result;
         }
          QScriptValue
@@ -686,7 +686,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::repaintViews", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::repaintViews", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::repaintViews";
             //QCoreApplication::processEvents();
 
@@ -722,7 +722,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.repaintViews().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::repaintViews", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::repaintViews", context, engine);
             return result;
         }
          QScriptValue
@@ -730,7 +730,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::setCursor", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::setCursor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::setCursor";
             //QCoreApplication::processEvents();
 
@@ -787,7 +787,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.setCursor().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::setCursor", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::setCursor", context, engine);
             return result;
         }
          QScriptValue
@@ -795,7 +795,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::handleTerminateEvent", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::handleTerminateEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::handleTerminateEvent";
             //QCoreApplication::processEvents();
 
@@ -852,7 +852,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.handleTerminateEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::handleTerminateEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::handleTerminateEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -860,7 +860,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::handleKeyPressEvent", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::handleKeyPressEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::handleKeyPressEvent";
             //QCoreApplication::processEvents();
 
@@ -915,7 +915,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.handleKeyPressEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::handleKeyPressEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::handleKeyPressEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -923,7 +923,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::handleKeyReleaseEvent", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::handleKeyReleaseEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::handleKeyReleaseEvent";
             //QCoreApplication::processEvents();
 
@@ -978,7 +978,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.handleKeyReleaseEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::handleKeyReleaseEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::handleKeyReleaseEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -986,7 +986,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::handleMouseMoveEvent", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::handleMouseMoveEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::handleMouseMoveEvent";
             //QCoreApplication::processEvents();
 
@@ -1043,7 +1043,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.handleMouseMoveEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::handleMouseMoveEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::handleMouseMoveEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -1051,7 +1051,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::handleMousePressEvent", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::handleMousePressEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::handleMousePressEvent";
             //QCoreApplication::processEvents();
 
@@ -1108,7 +1108,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.handleMousePressEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::handleMousePressEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::handleMousePressEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -1116,7 +1116,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::handleMouseReleaseEvent", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::handleMouseReleaseEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::handleMouseReleaseEvent";
             //QCoreApplication::processEvents();
 
@@ -1173,7 +1173,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.handleMouseReleaseEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::handleMouseReleaseEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::handleMouseReleaseEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -1181,7 +1181,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::handleMouseDoubleClickEvent", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::handleMouseDoubleClickEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::handleMouseDoubleClickEvent";
             //QCoreApplication::processEvents();
 
@@ -1238,7 +1238,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.handleMouseDoubleClickEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::handleMouseDoubleClickEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::handleMouseDoubleClickEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -1246,7 +1246,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::handleWheelEvent", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::handleWheelEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::handleWheelEvent";
             //QCoreApplication::processEvents();
 
@@ -1303,7 +1303,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.handleWheelEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::handleWheelEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::handleWheelEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -1311,7 +1311,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::handleTabletEvent", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::handleTabletEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::handleTabletEvent";
             //QCoreApplication::processEvents();
 
@@ -1368,7 +1368,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.handleTabletEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::handleTabletEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::handleTabletEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -1376,7 +1376,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::handleSwipeGestureEvent", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::handleSwipeGestureEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::handleSwipeGestureEvent";
             //QCoreApplication::processEvents();
 
@@ -1433,7 +1433,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.handleSwipeGestureEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::handleSwipeGestureEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::handleSwipeGestureEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -1441,7 +1441,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::handlePanGestureEvent", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::handlePanGestureEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::handlePanGestureEvent";
             //QCoreApplication::processEvents();
 
@@ -1498,7 +1498,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.handlePanGestureEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::handlePanGestureEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::handlePanGestureEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -1506,7 +1506,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::handlePinchGestureEvent", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::handlePinchGestureEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::handlePinchGestureEvent";
             //QCoreApplication::processEvents();
 
@@ -1563,7 +1563,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.handlePinchGestureEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::handlePinchGestureEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::handlePinchGestureEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -1571,7 +1571,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::registerView", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::registerView", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::registerView";
             //QCoreApplication::processEvents();
 
@@ -1672,7 +1672,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.registerView().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::registerView", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::registerView", context, engine);
             return result;
         }
          QScriptValue
@@ -1680,7 +1680,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::unregisterView", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::unregisterView", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::unregisterView";
             //QCoreApplication::processEvents();
 
@@ -1734,7 +1734,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.unregisterView().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::unregisterView", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::unregisterView", context, engine);
             return result;
         }
          QScriptValue
@@ -1742,7 +1742,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::beginPreview", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::beginPreview", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::beginPreview";
             //QCoreApplication::processEvents();
 
@@ -1778,7 +1778,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.beginPreview().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::beginPreview", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::beginPreview", context, engine);
             return result;
         }
          QScriptValue
@@ -1786,7 +1786,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::endPreview", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::endPreview", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::endPreview";
             //QCoreApplication::processEvents();
 
@@ -1822,7 +1822,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.endPreview().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::endPreview", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::endPreview", context, engine);
             return result;
         }
          QScriptValue
@@ -1830,7 +1830,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::clearPreview", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::clearPreview", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::clearPreview";
             //QCoreApplication::processEvents();
 
@@ -1866,7 +1866,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.clearPreview().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::clearPreview", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::clearPreview", context, engine);
             return result;
         }
          QScriptValue
@@ -1874,7 +1874,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::isPreviewEmpty", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::isPreviewEmpty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::isPreviewEmpty";
             //QCoreApplication::processEvents();
 
@@ -1915,7 +1915,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.isPreviewEmpty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::isPreviewEmpty", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::isPreviewEmpty", context, engine);
             return result;
         }
          QScriptValue
@@ -1923,7 +1923,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::getHighlightedReferencePoint", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::getHighlightedReferencePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::getHighlightedReferencePoint";
             //QCoreApplication::processEvents();
 
@@ -1964,7 +1964,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.getHighlightedReferencePoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::getHighlightedReferencePoint", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::getHighlightedReferencePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1972,7 +1972,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::highlightEntity", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::highlightEntity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::highlightEntity";
             //QCoreApplication::processEvents();
 
@@ -2029,7 +2029,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.highlightEntity().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::highlightEntity", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::highlightEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -2037,7 +2037,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::highlightReferencePoint", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::highlightReferencePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::highlightReferencePoint";
             //QCoreApplication::processEvents();
 
@@ -2096,7 +2096,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.highlightReferencePoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::highlightReferencePoint", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::highlightReferencePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -2104,7 +2104,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::exportCurrentEntity", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::exportCurrentEntity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::exportCurrentEntity";
             //QCoreApplication::processEvents();
 
@@ -2207,7 +2207,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.exportCurrentEntity().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::exportCurrentEntity", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::exportCurrentEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -2215,7 +2215,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::unexportEntity", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::unexportEntity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::unexportEntity";
             //QCoreApplication::processEvents();
 
@@ -2262,7 +2262,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.unexportEntity().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::unexportEntity", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::unexportEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -2270,7 +2270,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::getReferencePoints", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::getReferencePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::getReferencePoints";
             //QCoreApplication::processEvents();
 
@@ -2312,7 +2312,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.getReferencePoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::getReferencePoints", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::getReferencePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -2320,7 +2320,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaGraphicsScene::dump", context, engine);
+            REcmaHelper::functionStart("REcmaGraphicsScene::dump", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsScene::dump";
             //QCoreApplication::processEvents();
 
@@ -2356,7 +2356,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsScene.dump().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaGraphicsScene::dump", context, engine);
+            REcmaHelper::functionEnd("REcmaGraphicsScene::dump", context, engine);
             return result;
         }
          QScriptValue REcmaGraphicsScene::toString

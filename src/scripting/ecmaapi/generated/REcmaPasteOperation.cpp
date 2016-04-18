@@ -294,7 +294,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::setOffsets", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::setOffsets", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::setOffsets";
             //QCoreApplication::processEvents();
 
@@ -342,7 +342,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.setOffsets().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::setOffsets", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::setOffsets", context, engine);
             return result;
         }
          QScriptValue
@@ -350,7 +350,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::setRotations", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::setRotations", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::setRotations";
             //QCoreApplication::processEvents();
 
@@ -398,7 +398,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.setRotations().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::setRotations", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::setRotations", context, engine);
             return result;
         }
          QScriptValue
@@ -406,7 +406,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::setOffset", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::setOffset", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::setOffset";
             //QCoreApplication::processEvents();
 
@@ -465,7 +465,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.setOffset().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::setOffset", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::setOffset", context, engine);
             return result;
         }
          QScriptValue
@@ -473,7 +473,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::getOffset", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::getOffset", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::getOffset";
             //QCoreApplication::processEvents();
 
@@ -514,7 +514,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.getOffset().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::getOffset", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::getOffset", context, engine);
             return result;
         }
          QScriptValue
@@ -522,7 +522,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::setScale", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::setScale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::setScale";
             //QCoreApplication::processEvents();
 
@@ -569,7 +569,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.setScale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::setScale", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::setScale", context, engine);
             return result;
         }
          QScriptValue
@@ -577,7 +577,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::getScale", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::getScale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::getScale";
             //QCoreApplication::processEvents();
 
@@ -618,7 +618,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.getScale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::getScale", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::getScale", context, engine);
             return result;
         }
          QScriptValue
@@ -626,7 +626,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::setRotation", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::setRotation", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::setRotation";
             //QCoreApplication::processEvents();
 
@@ -673,7 +673,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.setRotation().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::setRotation", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::setRotation", context, engine);
             return result;
         }
          QScriptValue
@@ -681,7 +681,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::getRotation", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::getRotation", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::getRotation";
             //QCoreApplication::processEvents();
 
@@ -722,7 +722,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.getRotation().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::getRotation", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::getRotation", context, engine);
             return result;
         }
          QScriptValue
@@ -730,7 +730,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::setFlipHorizontal", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::setFlipHorizontal", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::setFlipHorizontal";
             //QCoreApplication::processEvents();
 
@@ -777,7 +777,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.setFlipHorizontal().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::setFlipHorizontal", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::setFlipHorizontal", context, engine);
             return result;
         }
          QScriptValue
@@ -785,7 +785,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::getFlipHorizontal", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::getFlipHorizontal", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::getFlipHorizontal";
             //QCoreApplication::processEvents();
 
@@ -826,7 +826,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.getFlipHorizontal().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::getFlipHorizontal", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::getFlipHorizontal", context, engine);
             return result;
         }
          QScriptValue
@@ -834,7 +834,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::setFlipVertical", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::setFlipVertical", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::setFlipVertical";
             //QCoreApplication::processEvents();
 
@@ -881,7 +881,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.setFlipVertical().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::setFlipVertical", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::setFlipVertical", context, engine);
             return result;
         }
          QScriptValue
@@ -889,7 +889,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::getFlipVertical", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::getFlipVertical", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::getFlipVertical";
             //QCoreApplication::processEvents();
 
@@ -930,7 +930,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.getFlipVertical().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::getFlipVertical", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::getFlipVertical", context, engine);
             return result;
         }
          QScriptValue
@@ -938,7 +938,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::setToCurrentLayer", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::setToCurrentLayer", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::setToCurrentLayer";
             //QCoreApplication::processEvents();
 
@@ -985,7 +985,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.setToCurrentLayer().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::setToCurrentLayer", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::setToCurrentLayer", context, engine);
             return result;
         }
          QScriptValue
@@ -993,7 +993,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::getToCurrentLayer", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::getToCurrentLayer", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::getToCurrentLayer";
             //QCoreApplication::processEvents();
 
@@ -1034,7 +1034,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.getToCurrentLayer().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::getToCurrentLayer", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::getToCurrentLayer", context, engine);
             return result;
         }
          QScriptValue
@@ -1042,7 +1042,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::setOverwriteLayers", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::setOverwriteLayers", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::setOverwriteLayers";
             //QCoreApplication::processEvents();
 
@@ -1089,7 +1089,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.setOverwriteLayers().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::setOverwriteLayers", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::setOverwriteLayers", context, engine);
             return result;
         }
          QScriptValue
@@ -1097,7 +1097,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::getOverwriteLayers", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::getOverwriteLayers", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::getOverwriteLayers";
             //QCoreApplication::processEvents();
 
@@ -1138,7 +1138,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.getOverwriteLayers().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::getOverwriteLayers", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::getOverwriteLayers", context, engine);
             return result;
         }
          QScriptValue
@@ -1146,7 +1146,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::setOverwriteBlocks", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::setOverwriteBlocks", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::setOverwriteBlocks";
             //QCoreApplication::processEvents();
 
@@ -1193,7 +1193,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.setOverwriteBlocks().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::setOverwriteBlocks", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::setOverwriteBlocks", context, engine);
             return result;
         }
          QScriptValue
@@ -1201,7 +1201,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::getOverwriteBlocks", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::getOverwriteBlocks", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::getOverwriteBlocks";
             //QCoreApplication::processEvents();
 
@@ -1242,7 +1242,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.getOverwriteBlocks().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::getOverwriteBlocks", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::getOverwriteBlocks", context, engine);
             return result;
         }
          QScriptValue
@@ -1250,7 +1250,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::setBlockName", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::setBlockName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::setBlockName";
             //QCoreApplication::processEvents();
 
@@ -1297,7 +1297,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.setBlockName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::setBlockName", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::setBlockName", context, engine);
             return result;
         }
          QScriptValue
@@ -1305,7 +1305,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::getBlockName", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::getBlockName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::getBlockName";
             //QCoreApplication::processEvents();
 
@@ -1346,7 +1346,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.getBlockName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::getBlockName", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::getBlockName", context, engine);
             return result;
         }
          QScriptValue
@@ -1354,7 +1354,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::setLayerName", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::setLayerName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::setLayerName";
             //QCoreApplication::processEvents();
 
@@ -1401,7 +1401,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.setLayerName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::setLayerName", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::setLayerName", context, engine);
             return result;
         }
          QScriptValue
@@ -1409,7 +1409,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::getLayerName", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::getLayerName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::getLayerName";
             //QCoreApplication::processEvents();
 
@@ -1450,7 +1450,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.getLayerName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::getLayerName", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::getLayerName", context, engine);
             return result;
         }
          QScriptValue
@@ -1458,7 +1458,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::setAttribute", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::setAttribute", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::setAttribute";
             //QCoreApplication::processEvents();
 
@@ -1518,7 +1518,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.setAttribute().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::setAttribute", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::setAttribute", context, engine);
             return result;
         }
          QScriptValue
@@ -1526,7 +1526,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::apply", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::apply", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::apply";
             //QCoreApplication::processEvents();
 
@@ -1643,7 +1643,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.apply().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::apply", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::apply", context, engine);
             return result;
         }
          QScriptValue
@@ -1651,7 +1651,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaPasteOperation::getBoundary", context, engine);
+            REcmaHelper::functionStart("REcmaPasteOperation::getBoundary", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaPasteOperation::getBoundary";
             //QCoreApplication::processEvents();
 
@@ -1703,7 +1703,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RPasteOperation.getBoundary().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaPasteOperation::getBoundary", context, engine);
+            REcmaHelper::functionEnd("REcmaPasteOperation::getBoundary", context, engine);
             return result;
         }
          QScriptValue REcmaPasteOperation::toString

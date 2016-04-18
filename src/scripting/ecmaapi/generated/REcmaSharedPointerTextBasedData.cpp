@@ -723,7 +723,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::isValid", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::isValid";
             //QCoreApplication::processEvents();
 
@@ -764,7 +764,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.isValid().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::isValid", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::isValid", context, engine);
             return result;
         }
          QScriptValue
@@ -772,7 +772,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getBoundingBox", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getBoundingBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getBoundingBox";
             //QCoreApplication::processEvents();
 
@@ -845,7 +845,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getBoundingBox().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getBoundingBox", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getBoundingBox", context, engine);
             return result;
         }
          QScriptValue
@@ -853,7 +853,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getWidth", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getWidth", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getWidth";
             //QCoreApplication::processEvents();
 
@@ -894,7 +894,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getWidth().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getWidth", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getWidth", context, engine);
             return result;
         }
          QScriptValue
@@ -902,7 +902,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getHeight", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getHeight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getHeight";
             //QCoreApplication::processEvents();
 
@@ -943,7 +943,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getHeight().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getHeight", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getHeight", context, engine);
             return result;
         }
          QScriptValue
@@ -951,7 +951,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::sync", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::sync", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::sync";
             //QCoreApplication::processEvents();
 
@@ -1010,7 +1010,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.sync().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::sync", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::sync", context, engine);
             return result;
         }
          QScriptValue
@@ -1018,7 +1018,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getPointOnEntity", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getPointOnEntity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getPointOnEntity";
             //QCoreApplication::processEvents();
 
@@ -1059,7 +1059,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getPointOnEntity().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getPointOnEntity", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getPointOnEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -1067,7 +1067,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getEndPoints", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getEndPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getEndPoints";
             //QCoreApplication::processEvents();
 
@@ -1152,7 +1152,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getEndPoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getEndPoints", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getEndPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1160,7 +1160,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getMiddlePoints", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getMiddlePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getMiddlePoints";
             //QCoreApplication::processEvents();
 
@@ -1245,7 +1245,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getMiddlePoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getMiddlePoints", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getMiddlePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1253,7 +1253,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getCenterPoints", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getCenterPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getCenterPoints";
             //QCoreApplication::processEvents();
 
@@ -1338,7 +1338,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getCenterPoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getCenterPoints", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getCenterPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1346,7 +1346,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getPointsWithDistanceToEnd", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getPointsWithDistanceToEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getPointsWithDistanceToEnd";
             //QCoreApplication::processEvents();
 
@@ -1513,7 +1513,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getPointsWithDistanceToEnd().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getPointsWithDistanceToEnd", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getPointsWithDistanceToEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -1521,7 +1521,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getDistanceTo", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getDistanceTo", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getDistanceTo";
             //QCoreApplication::processEvents();
 
@@ -1891,7 +1891,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getDistanceTo().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getDistanceTo", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getDistanceTo", context, engine);
             return result;
         }
          QScriptValue
@@ -1899,7 +1899,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::intersectsWith", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::intersectsWith", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::intersectsWith";
             //QCoreApplication::processEvents();
 
@@ -1961,7 +1961,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.intersectsWith().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::intersectsWith", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::intersectsWith", context, engine);
             return result;
         }
          QScriptValue
@@ -1969,7 +1969,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getPosition", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getPosition", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getPosition";
             //QCoreApplication::processEvents();
 
@@ -2010,7 +2010,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getPosition().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getPosition", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getPosition", context, engine);
             return result;
         }
          QScriptValue
@@ -2018,7 +2018,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setPosition", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setPosition", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setPosition";
             //QCoreApplication::processEvents();
 
@@ -2077,7 +2077,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setPosition().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setPosition", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setPosition", context, engine);
             return result;
         }
          QScriptValue
@@ -2085,7 +2085,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getAlignmentPoint", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getAlignmentPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getAlignmentPoint";
             //QCoreApplication::processEvents();
 
@@ -2126,7 +2126,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getAlignmentPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getAlignmentPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getAlignmentPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -2134,7 +2134,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setAlignmentPoint", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setAlignmentPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setAlignmentPoint";
             //QCoreApplication::processEvents();
 
@@ -2193,7 +2193,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setAlignmentPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setAlignmentPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setAlignmentPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -2201,7 +2201,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setText", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setText", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setText";
             //QCoreApplication::processEvents();
 
@@ -2248,7 +2248,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setText().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setText", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setText", context, engine);
             return result;
         }
          QScriptValue
@@ -2256,7 +2256,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getFontName", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getFontName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getFontName";
             //QCoreApplication::processEvents();
 
@@ -2297,7 +2297,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getFontName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getFontName", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getFontName", context, engine);
             return result;
         }
          QScriptValue
@@ -2305,7 +2305,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setFontName", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setFontName", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setFontName";
             //QCoreApplication::processEvents();
 
@@ -2352,7 +2352,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setFontName().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setFontName", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setFontName", context, engine);
             return result;
         }
          QScriptValue
@@ -2360,7 +2360,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getFontFile", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getFontFile", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getFontFile";
             //QCoreApplication::processEvents();
 
@@ -2401,7 +2401,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getFontFile().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getFontFile", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getFontFile", context, engine);
             return result;
         }
          QScriptValue
@@ -2409,7 +2409,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setFontFile", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setFontFile", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setFontFile";
             //QCoreApplication::processEvents();
 
@@ -2456,7 +2456,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setFontFile().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setFontFile", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setFontFile", context, engine);
             return result;
         }
          QScriptValue
@@ -2464,7 +2464,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::isBold", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::isBold", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::isBold";
             //QCoreApplication::processEvents();
 
@@ -2505,7 +2505,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.isBold().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::isBold", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::isBold", context, engine);
             return result;
         }
          QScriptValue
@@ -2513,7 +2513,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setBold", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setBold", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setBold";
             //QCoreApplication::processEvents();
 
@@ -2560,7 +2560,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setBold().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setBold", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setBold", context, engine);
             return result;
         }
          QScriptValue
@@ -2568,7 +2568,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::isItalic", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::isItalic", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::isItalic";
             //QCoreApplication::processEvents();
 
@@ -2609,7 +2609,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.isItalic().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::isItalic", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::isItalic", context, engine);
             return result;
         }
          QScriptValue
@@ -2617,7 +2617,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setItalic", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setItalic", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setItalic";
             //QCoreApplication::processEvents();
 
@@ -2664,7 +2664,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setItalic().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setItalic", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setItalic", context, engine);
             return result;
         }
          QScriptValue
@@ -2672,7 +2672,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getTextHeight", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getTextHeight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getTextHeight";
             //QCoreApplication::processEvents();
 
@@ -2713,7 +2713,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getTextHeight().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getTextHeight", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getTextHeight", context, engine);
             return result;
         }
          QScriptValue
@@ -2721,7 +2721,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setTextHeight", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setTextHeight", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setTextHeight";
             //QCoreApplication::processEvents();
 
@@ -2768,7 +2768,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setTextHeight().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setTextHeight", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setTextHeight", context, engine);
             return result;
         }
          QScriptValue
@@ -2776,7 +2776,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getTextWidth", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getTextWidth", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getTextWidth";
             //QCoreApplication::processEvents();
 
@@ -2817,7 +2817,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getTextWidth().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getTextWidth", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getTextWidth", context, engine);
             return result;
         }
          QScriptValue
@@ -2825,7 +2825,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setTextWidth", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setTextWidth", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setTextWidth";
             //QCoreApplication::processEvents();
 
@@ -2872,7 +2872,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setTextWidth().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setTextWidth", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setTextWidth", context, engine);
             return result;
         }
          QScriptValue
@@ -2880,7 +2880,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setVAlign", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setVAlign", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setVAlign";
             //QCoreApplication::processEvents();
 
@@ -2927,7 +2927,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setVAlign().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setVAlign", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setVAlign", context, engine);
             return result;
         }
          QScriptValue
@@ -2935,7 +2935,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getVAlign", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getVAlign", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getVAlign";
             //QCoreApplication::processEvents();
 
@@ -2976,7 +2976,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getVAlign().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getVAlign", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getVAlign", context, engine);
             return result;
         }
          QScriptValue
@@ -2984,7 +2984,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setHAlign", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setHAlign", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setHAlign";
             //QCoreApplication::processEvents();
 
@@ -3031,7 +3031,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setHAlign().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setHAlign", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setHAlign", context, engine);
             return result;
         }
          QScriptValue
@@ -3039,7 +3039,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getHAlign", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getHAlign", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getHAlign";
             //QCoreApplication::processEvents();
 
@@ -3080,7 +3080,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getHAlign().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getHAlign", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getHAlign", context, engine);
             return result;
         }
          QScriptValue
@@ -3088,7 +3088,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setDrawingDirection", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setDrawingDirection", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setDrawingDirection";
             //QCoreApplication::processEvents();
 
@@ -3135,7 +3135,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setDrawingDirection().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setDrawingDirection", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setDrawingDirection", context, engine);
             return result;
         }
          QScriptValue
@@ -3143,7 +3143,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getDrawingDirection", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getDrawingDirection", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getDrawingDirection";
             //QCoreApplication::processEvents();
 
@@ -3184,7 +3184,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getDrawingDirection().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getDrawingDirection", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getDrawingDirection", context, engine);
             return result;
         }
          QScriptValue
@@ -3192,7 +3192,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setLineSpacingStyle", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setLineSpacingStyle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setLineSpacingStyle";
             //QCoreApplication::processEvents();
 
@@ -3239,7 +3239,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setLineSpacingStyle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setLineSpacingStyle", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setLineSpacingStyle", context, engine);
             return result;
         }
          QScriptValue
@@ -3247,7 +3247,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getLineSpacingStyle", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getLineSpacingStyle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getLineSpacingStyle";
             //QCoreApplication::processEvents();
 
@@ -3288,7 +3288,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getLineSpacingStyle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getLineSpacingStyle", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getLineSpacingStyle", context, engine);
             return result;
         }
          QScriptValue
@@ -3296,7 +3296,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setLineSpacingFactor", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setLineSpacingFactor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setLineSpacingFactor";
             //QCoreApplication::processEvents();
 
@@ -3343,7 +3343,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setLineSpacingFactor().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setLineSpacingFactor", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setLineSpacingFactor", context, engine);
             return result;
         }
          QScriptValue
@@ -3351,7 +3351,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getLineSpacingFactor", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getLineSpacingFactor", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getLineSpacingFactor";
             //QCoreApplication::processEvents();
 
@@ -3392,7 +3392,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getLineSpacingFactor().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getLineSpacingFactor", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getLineSpacingFactor", context, engine);
             return result;
         }
          QScriptValue
@@ -3400,7 +3400,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setAngle", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setAngle";
             //QCoreApplication::processEvents();
 
@@ -3447,7 +3447,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -3455,7 +3455,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getAngle", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getAngle";
             //QCoreApplication::processEvents();
 
@@ -3496,7 +3496,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -3504,7 +3504,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setXScale", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setXScale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setXScale";
             //QCoreApplication::processEvents();
 
@@ -3551,7 +3551,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setXScale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setXScale", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setXScale", context, engine);
             return result;
         }
          QScriptValue
@@ -3559,7 +3559,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getXScale", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getXScale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getXScale";
             //QCoreApplication::processEvents();
 
@@ -3600,7 +3600,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getXScale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getXScale", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getXScale", context, engine);
             return result;
         }
          QScriptValue
@@ -3608,7 +3608,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setSimple", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setSimple", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setSimple";
             //QCoreApplication::processEvents();
 
@@ -3655,7 +3655,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setSimple().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setSimple", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setSimple", context, engine);
             return result;
         }
          QScriptValue
@@ -3663,7 +3663,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::isSimple", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::isSimple", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::isSimple";
             //QCoreApplication::processEvents();
 
@@ -3704,7 +3704,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.isSimple().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::isSimple", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::isSimple", context, engine);
             return result;
         }
          QScriptValue
@@ -3712,7 +3712,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setDimensionLabel", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setDimensionLabel", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setDimensionLabel";
             //QCoreApplication::processEvents();
 
@@ -3759,7 +3759,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setDimensionLabel().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setDimensionLabel", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setDimensionLabel", context, engine);
             return result;
         }
          QScriptValue
@@ -3767,7 +3767,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::isDimensionLabel", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::isDimensionLabel", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::isDimensionLabel";
             //QCoreApplication::processEvents();
 
@@ -3808,7 +3808,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.isDimensionLabel().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::isDimensionLabel", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::isDimensionLabel", context, engine);
             return result;
         }
          QScriptValue
@@ -3816,7 +3816,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setSelected", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setSelected", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setSelected";
             //QCoreApplication::processEvents();
 
@@ -3863,7 +3863,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setSelected().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setSelected", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setSelected", context, engine);
             return result;
         }
          QScriptValue
@@ -3871,7 +3871,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setHighlighted", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::setHighlighted", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::setHighlighted";
             //QCoreApplication::processEvents();
 
@@ -3918,7 +3918,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.setHighlighted().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setHighlighted", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::setHighlighted", context, engine);
             return result;
         }
          QScriptValue
@@ -3926,7 +3926,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::isHighlighted", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::isHighlighted", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::isHighlighted";
             //QCoreApplication::processEvents();
 
@@ -3967,7 +3967,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.isHighlighted().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::isHighlighted", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::isHighlighted", context, engine);
             return result;
         }
          QScriptValue
@@ -3975,7 +3975,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getReferencePoints", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getReferencePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getReferencePoints";
             //QCoreApplication::processEvents();
 
@@ -4048,7 +4048,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getReferencePoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getReferencePoints", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getReferencePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -4056,7 +4056,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::moveReferencePoint", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::moveReferencePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::moveReferencePoint";
             //QCoreApplication::processEvents();
 
@@ -4145,7 +4145,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.moveReferencePoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::moveReferencePoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::moveReferencePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -4153,7 +4153,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::move", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::move", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::move";
             //QCoreApplication::processEvents();
 
@@ -4217,7 +4217,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.move().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::move", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::move", context, engine);
             return result;
         }
          QScriptValue
@@ -4225,7 +4225,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::rotate", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::rotate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::rotate";
             //QCoreApplication::processEvents();
 
@@ -4302,7 +4302,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.rotate().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::rotate", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::rotate", context, engine);
             return result;
         }
          QScriptValue
@@ -4310,7 +4310,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::scale", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::scale", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::scale";
             //QCoreApplication::processEvents();
 
@@ -4399,7 +4399,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.scale().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::scale", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::scale", context, engine);
             return result;
         }
          QScriptValue
@@ -4407,7 +4407,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::mirror", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::mirror", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::mirror";
             //QCoreApplication::processEvents();
 
@@ -4471,7 +4471,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.mirror().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::mirror", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::mirror", context, engine);
             return result;
         }
          QScriptValue
@@ -4479,7 +4479,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::flipHorizontal", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::flipHorizontal", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::flipHorizontal";
             //QCoreApplication::processEvents();
 
@@ -4520,7 +4520,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.flipHorizontal().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::flipHorizontal", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::flipHorizontal", context, engine);
             return result;
         }
          QScriptValue
@@ -4528,7 +4528,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::flipVertical", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::flipVertical", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::flipVertical";
             //QCoreApplication::processEvents();
 
@@ -4569,7 +4569,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.flipVertical().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::flipVertical", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::flipVertical", context, engine);
             return result;
         }
          QScriptValue
@@ -4577,7 +4577,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getText", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getText", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getText";
             //QCoreApplication::processEvents();
 
@@ -4618,7 +4618,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getText().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getText", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getText", context, engine);
             return result;
         }
          QScriptValue
@@ -4626,7 +4626,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getRenderedText", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getRenderedText", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getRenderedText";
             //QCoreApplication::processEvents();
 
@@ -4699,7 +4699,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getRenderedText().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getRenderedText", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getRenderedText", context, engine);
             return result;
         }
          QScriptValue
@@ -4707,7 +4707,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getPlainText", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getPlainText", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getPlainText";
             //QCoreApplication::processEvents();
 
@@ -4748,7 +4748,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getPlainText().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getPlainText", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getPlainText", context, engine);
             return result;
         }
          QScriptValue
@@ -4756,7 +4756,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getEscapedText", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getEscapedText", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getEscapedText";
             //QCoreApplication::processEvents();
 
@@ -4829,7 +4829,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getEscapedText().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getEscapedText", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getEscapedText", context, engine);
             return result;
         }
          QScriptValue
@@ -4837,7 +4837,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::escapeUnicode", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::escapeUnicode", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::escapeUnicode";
             //QCoreApplication::processEvents();
 
@@ -4879,7 +4879,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.escapeUnicode().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::escapeUnicode", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::escapeUnicode", context, engine);
             return result;
         }
          QScriptValue
@@ -4887,7 +4887,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getMainFont", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getMainFont", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getMainFont";
             //QCoreApplication::processEvents();
 
@@ -4928,7 +4928,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getMainFont().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getMainFont", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getMainFont", context, engine);
             return result;
         }
          QScriptValue
@@ -4936,7 +4936,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::update", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::update", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::update";
             //QCoreApplication::processEvents();
 
@@ -4999,7 +4999,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.update().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::update", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::update", context, engine);
             return result;
         }
          QScriptValue
@@ -5007,7 +5007,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::isDirty", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::isDirty", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::isDirty";
             //QCoreApplication::processEvents();
 
@@ -5048,7 +5048,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.isDirty().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::isDirty", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::isDirty", context, engine);
             return result;
         }
          QScriptValue
@@ -5056,7 +5056,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getPainterPaths", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getPainterPaths", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getPainterPaths";
             //QCoreApplication::processEvents();
 
@@ -5174,7 +5174,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getPainterPaths().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getPainterPaths", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getPainterPaths", context, engine);
             return result;
         }
          QScriptValue
@@ -5182,7 +5182,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getShapes", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getShapes", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getShapes";
             //QCoreApplication::processEvents();
 
@@ -5324,7 +5324,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getShapes().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getShapes", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getShapes", context, engine);
             return result;
         }
          QScriptValue
@@ -5332,7 +5332,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getExploded", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getExploded", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getExploded";
             //QCoreApplication::processEvents();
 
@@ -5373,7 +5373,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getExploded().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getExploded", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getExploded", context, engine);
             return result;
         }
          QScriptValue
@@ -5381,7 +5381,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getClosestShape", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getClosestShape", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getClosestShape";
             //QCoreApplication::processEvents();
 
@@ -5572,7 +5572,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getClosestShape().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getClosestShape", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getClosestShape", context, engine);
             return result;
         }
          QScriptValue
@@ -5580,7 +5580,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getClosestPointOnEntity", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getClosestPointOnEntity", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getClosestPointOnEntity";
             //QCoreApplication::processEvents();
 
@@ -5670,7 +5670,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getClosestPointOnEntity().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getClosestPointOnEntity", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getClosestPointOnEntity", context, engine);
             return result;
         }
          QScriptValue
@@ -5678,7 +5678,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getTextLayouts", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::getTextLayouts", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::getTextLayouts";
             //QCoreApplication::processEvents();
 
@@ -5719,7 +5719,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.getTextLayouts().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getTextLayouts", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::getTextLayouts", context, engine);
             return result;
         }
          QScriptValue
@@ -5727,7 +5727,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::toEscapedText", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::toEscapedText", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::toEscapedText";
             //QCoreApplication::processEvents();
 
@@ -5884,7 +5884,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.toEscapedText().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::toEscapedText", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::toEscapedText", context, engine);
             return result;
         }
          QScriptValue
@@ -5892,7 +5892,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::toRichText", context, engine);
+            REcmaHelper::functionStart("REcmaSharedPointerTextBasedData::toRichText", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTextBasedData::toRichText";
             //QCoreApplication::processEvents();
 
@@ -6025,7 +6025,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTextBasedData.toRichText().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::toRichText", context, engine);
+            REcmaHelper::functionEnd("REcmaSharedPointerTextBasedData::toRichText", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerTextBasedData::toString

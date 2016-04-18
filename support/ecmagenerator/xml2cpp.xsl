@@ -915,7 +915,7 @@
             </xsl:when>
             <xsl:otherwise>
         {
-            //REcmaHelper::functionStart("<xsl:value-of select="$prefix"/><xsl:value-of select="@name" />", context, engine);
+            REcmaHelper::functionStart("<xsl:value-of select="$prefix"/><xsl:value-of select="@name" />", context, engine);
             //qDebug() &lt;&lt; "ECMAScript WRAPPER: <xsl:value-of select="$prefix"/><xsl:value-of select="@name" />";
             //QCoreApplication::processEvents();
 
@@ -960,7 +960,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for <xsl:value-of select="$name" />.<xsl:value-of select="rs:fixFunctionName(@name)" />().",
                    context);
             }
-            //REcmaHelper::functionEnd("<xsl:value-of select="$prefix"/><xsl:value-of select="@name" />", context, engine);
+            REcmaHelper::functionEnd("<xsl:value-of select="$prefix"/><xsl:value-of select="@name" />", context, engine);
             return result;
         }
         </xsl:otherwise>

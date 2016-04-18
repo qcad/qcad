@@ -292,7 +292,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRulerQt::setGraphicsView", context, engine);
+            REcmaHelper::functionStart("REcmaRulerQt::setGraphicsView", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRulerQt::setGraphicsView";
             //QCoreApplication::processEvents();
 
@@ -346,7 +346,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRulerQt.setGraphicsView().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRulerQt::setGraphicsView", context, engine);
+            REcmaHelper::functionEnd("REcmaRulerQt::setGraphicsView", context, engine);
             return result;
         }
          QScriptValue
@@ -354,7 +354,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRulerQt::getOrientation", context, engine);
+            REcmaHelper::functionStart("REcmaRulerQt::getOrientation", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRulerQt::getOrientation";
             //QCoreApplication::processEvents();
 
@@ -395,7 +395,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRulerQt.getOrientation().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRulerQt::getOrientation", context, engine);
+            REcmaHelper::functionEnd("REcmaRulerQt::getOrientation", context, engine);
             return result;
         }
         
@@ -414,7 +414,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRulerQt::setOrientation", context, engine);
+            REcmaHelper::functionStart("REcmaRulerQt::setOrientation", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRulerQt::setOrientation";
             //QCoreApplication::processEvents();
 
@@ -461,7 +461,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRulerQt.setOrientation().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRulerQt::setOrientation", context, engine);
+            REcmaHelper::functionEnd("REcmaRulerQt::setOrientation", context, engine);
             return result;
         }
          QScriptValue
@@ -469,7 +469,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRulerQt::sizeHint", context, engine);
+            REcmaHelper::functionStart("REcmaRulerQt::sizeHint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRulerQt::sizeHint";
             //QCoreApplication::processEvents();
 
@@ -510,7 +510,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRulerQt.sizeHint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRulerQt::sizeHint", context, engine);
+            REcmaHelper::functionEnd("REcmaRulerQt::sizeHint", context, engine);
             return result;
         }
          QScriptValue
@@ -518,7 +518,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRulerQt::paintTick", context, engine);
+            REcmaHelper::functionStart("REcmaRulerQt::paintTick", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRulerQt::paintTick";
             //QCoreApplication::processEvents();
 
@@ -591,7 +591,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRulerQt.paintTick().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRulerQt::paintTick", context, engine);
+            REcmaHelper::functionEnd("REcmaRulerQt::paintTick", context, engine);
             return result;
         }
          QScriptValue
@@ -599,7 +599,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRulerQt::getFont", context, engine);
+            REcmaHelper::functionStart("REcmaRulerQt::getFont", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRulerQt::getFont";
             //QCoreApplication::processEvents();
 
@@ -640,7 +640,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRulerQt.getFont().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRulerQt::getFont", context, engine);
+            REcmaHelper::functionEnd("REcmaRulerQt::getFont", context, engine);
             return result;
         }
          QScriptValue
@@ -648,7 +648,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRulerQt::updateViewport", context, engine);
+            REcmaHelper::functionStart("REcmaRulerQt::updateViewport", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRulerQt::updateViewport";
             //QCoreApplication::processEvents();
 
@@ -684,7 +684,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRulerQt.updateViewport().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRulerQt::updateViewport", context, engine);
+            REcmaHelper::functionEnd("REcmaRulerQt::updateViewport", context, engine);
             return result;
         }
          QScriptValue
@@ -692,7 +692,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRulerQt::updateCoordinate", context, engine);
+            REcmaHelper::functionStart("REcmaRulerQt::updateCoordinate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRulerQt::updateCoordinate";
             //QCoreApplication::processEvents();
 
@@ -746,7 +746,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRulerQt.updateCoordinate().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRulerQt::updateCoordinate", context, engine);
+            REcmaHelper::functionEnd("REcmaRulerQt::updateCoordinate", context, engine);
             return result;
         }
          QScriptValue REcmaRulerQt::toString

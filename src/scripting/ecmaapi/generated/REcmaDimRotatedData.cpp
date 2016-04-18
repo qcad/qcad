@@ -383,7 +383,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimRotatedData::getBoundingBox", context, engine);
+            REcmaHelper::functionStart("REcmaDimRotatedData::getBoundingBox", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::getBoundingBox";
             //QCoreApplication::processEvents();
 
@@ -456,7 +456,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.getBoundingBox().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimRotatedData::getBoundingBox", context, engine);
+            REcmaHelper::functionEnd("REcmaDimRotatedData::getBoundingBox", context, engine);
             return result;
         }
          QScriptValue
@@ -464,7 +464,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimRotatedData::isValid", context, engine);
+            REcmaHelper::functionStart("REcmaDimRotatedData::isValid", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::isValid";
             //QCoreApplication::processEvents();
 
@@ -505,7 +505,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.isValid().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimRotatedData::isValid", context, engine);
+            REcmaHelper::functionEnd("REcmaDimRotatedData::isValid", context, engine);
             return result;
         }
          QScriptValue
@@ -513,7 +513,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimRotatedData::setRotation", context, engine);
+            REcmaHelper::functionStart("REcmaDimRotatedData::setRotation", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::setRotation";
             //QCoreApplication::processEvents();
 
@@ -560,7 +560,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.setRotation().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimRotatedData::setRotation", context, engine);
+            REcmaHelper::functionEnd("REcmaDimRotatedData::setRotation", context, engine);
             return result;
         }
          QScriptValue
@@ -568,7 +568,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimRotatedData::getRotation", context, engine);
+            REcmaHelper::functionStart("REcmaDimRotatedData::getRotation", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::getRotation";
             //QCoreApplication::processEvents();
 
@@ -609,7 +609,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.getRotation().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimRotatedData::getRotation", context, engine);
+            REcmaHelper::functionEnd("REcmaDimRotatedData::getRotation", context, engine);
             return result;
         }
          QScriptValue
@@ -617,7 +617,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimRotatedData::getReferencePoints", context, engine);
+            REcmaHelper::functionStart("REcmaDimRotatedData::getReferencePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::getReferencePoints";
             //QCoreApplication::processEvents();
 
@@ -690,7 +690,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.getReferencePoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimRotatedData::getReferencePoints", context, engine);
+            REcmaHelper::functionEnd("REcmaDimRotatedData::getReferencePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -698,7 +698,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimRotatedData::moveReferencePoint", context, engine);
+            REcmaHelper::functionStart("REcmaDimRotatedData::moveReferencePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::moveReferencePoint";
             //QCoreApplication::processEvents();
 
@@ -787,7 +787,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.moveReferencePoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimRotatedData::moveReferencePoint", context, engine);
+            REcmaHelper::functionEnd("REcmaDimRotatedData::moveReferencePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -795,7 +795,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimRotatedData::getDimPoints", context, engine);
+            REcmaHelper::functionStart("REcmaDimRotatedData::getDimPoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::getDimPoints";
             //QCoreApplication::processEvents();
 
@@ -836,7 +836,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.getDimPoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimRotatedData::getDimPoints", context, engine);
+            REcmaHelper::functionEnd("REcmaDimRotatedData::getDimPoints", context, engine);
             return result;
         }
          QScriptValue
@@ -844,7 +844,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimRotatedData::recomputeDefinitionPoint", context, engine);
+            REcmaHelper::functionStart("REcmaDimRotatedData::recomputeDefinitionPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::recomputeDefinitionPoint";
             //QCoreApplication::processEvents();
 
@@ -978,7 +978,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.recomputeDefinitionPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimRotatedData::recomputeDefinitionPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaDimRotatedData::recomputeDefinitionPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -986,7 +986,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimRotatedData::rotate", context, engine);
+            REcmaHelper::functionStart("REcmaDimRotatedData::rotate", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::rotate";
             //QCoreApplication::processEvents();
 
@@ -1063,7 +1063,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.rotate().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimRotatedData::rotate", context, engine);
+            REcmaHelper::functionEnd("REcmaDimRotatedData::rotate", context, engine);
             return result;
         }
          QScriptValue
@@ -1071,7 +1071,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimRotatedData::mirror", context, engine);
+            REcmaHelper::functionStart("REcmaDimRotatedData::mirror", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::mirror";
             //QCoreApplication::processEvents();
 
@@ -1135,7 +1135,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.mirror().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimRotatedData::mirror", context, engine);
+            REcmaHelper::functionEnd("REcmaDimRotatedData::mirror", context, engine);
             return result;
         }
          QScriptValue
@@ -1143,7 +1143,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimRotatedData::getShapes", context, engine);
+            REcmaHelper::functionStart("REcmaDimRotatedData::getShapes", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::getShapes";
             //QCoreApplication::processEvents();
 
@@ -1285,7 +1285,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.getShapes().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimRotatedData::getShapes", context, engine);
+            REcmaHelper::functionEnd("REcmaDimRotatedData::getShapes", context, engine);
             return result;
         }
          QScriptValue
@@ -1293,7 +1293,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimRotatedData::getMeasuredValue", context, engine);
+            REcmaHelper::functionStart("REcmaDimRotatedData::getMeasuredValue", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::getMeasuredValue";
             //QCoreApplication::processEvents();
 
@@ -1334,7 +1334,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.getMeasuredValue().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimRotatedData::getMeasuredValue", context, engine);
+            REcmaHelper::functionEnd("REcmaDimRotatedData::getMeasuredValue", context, engine);
             return result;
         }
          QScriptValue
@@ -1342,7 +1342,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaDimRotatedData::getAutoLabel", context, engine);
+            REcmaHelper::functionStart("REcmaDimRotatedData::getAutoLabel", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaDimRotatedData::getAutoLabel";
             //QCoreApplication::processEvents();
 
@@ -1383,7 +1383,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RDimRotatedData.getAutoLabel().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaDimRotatedData::getAutoLabel", context, engine);
+            REcmaHelper::functionEnd("REcmaDimRotatedData::getAutoLabel", context, engine);
             return result;
         }
          QScriptValue REcmaDimRotatedData::toString

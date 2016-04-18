@@ -346,7 +346,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaScaleSelectionOperation::apply", context, engine);
+            REcmaHelper::functionStart("REcmaScaleSelectionOperation::apply", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaScaleSelectionOperation::apply";
             //QCoreApplication::processEvents();
 
@@ -463,7 +463,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RScaleSelectionOperation.apply().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaScaleSelectionOperation::apply", context, engine);
+            REcmaHelper::functionEnd("REcmaScaleSelectionOperation::apply", context, engine);
             return result;
         }
          QScriptValue REcmaScaleSelectionOperation::toString

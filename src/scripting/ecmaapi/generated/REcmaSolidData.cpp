@@ -568,7 +568,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSolidData::getStartPoint", context, engine);
+            REcmaHelper::functionStart("REcmaSolidData::getStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSolidData::getStartPoint";
             //QCoreApplication::processEvents();
 
@@ -609,7 +609,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSolidData.getStartPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSolidData::getStartPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSolidData::getStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -617,7 +617,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSolidData::getEndPoint", context, engine);
+            REcmaHelper::functionStart("REcmaSolidData::getEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSolidData::getEndPoint";
             //QCoreApplication::processEvents();
 
@@ -658,7 +658,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSolidData.getEndPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSolidData::getEndPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSolidData::getEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -666,7 +666,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSolidData::getDirection1", context, engine);
+            REcmaHelper::functionStart("REcmaSolidData::getDirection1", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSolidData::getDirection1";
             //QCoreApplication::processEvents();
 
@@ -707,7 +707,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSolidData.getDirection1().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSolidData::getDirection1", context, engine);
+            REcmaHelper::functionEnd("REcmaSolidData::getDirection1", context, engine);
             return result;
         }
          QScriptValue
@@ -715,7 +715,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSolidData::getDirection2", context, engine);
+            REcmaHelper::functionStart("REcmaSolidData::getDirection2", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSolidData::getDirection2";
             //QCoreApplication::processEvents();
 
@@ -756,7 +756,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSolidData.getDirection2().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSolidData::getDirection2", context, engine);
+            REcmaHelper::functionEnd("REcmaSolidData::getDirection2", context, engine);
             return result;
         }
          QScriptValue
@@ -764,7 +764,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSolidData::reverse", context, engine);
+            REcmaHelper::functionStart("REcmaSolidData::reverse", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSolidData::reverse";
             //QCoreApplication::processEvents();
 
@@ -805,7 +805,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSolidData.reverse().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSolidData::reverse", context, engine);
+            REcmaHelper::functionEnd("REcmaSolidData::reverse", context, engine);
             return result;
         }
          QScriptValue
@@ -813,7 +813,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSolidData::getVertexAt", context, engine);
+            REcmaHelper::functionStart("REcmaSolidData::getVertexAt", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSolidData::getVertexAt";
             //QCoreApplication::processEvents();
 
@@ -865,7 +865,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSolidData.getVertexAt().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSolidData::getVertexAt", context, engine);
+            REcmaHelper::functionEnd("REcmaSolidData::getVertexAt", context, engine);
             return result;
         }
          QScriptValue
@@ -873,7 +873,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSolidData::countVertices", context, engine);
+            REcmaHelper::functionStart("REcmaSolidData::countVertices", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSolidData::countVertices";
             //QCoreApplication::processEvents();
 
@@ -914,7 +914,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSolidData.countVertices().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSolidData::countVertices", context, engine);
+            REcmaHelper::functionEnd("REcmaSolidData::countVertices", context, engine);
             return result;
         }
          QScriptValue
@@ -922,7 +922,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSolidData::getTrimEnd", context, engine);
+            REcmaHelper::functionStart("REcmaSolidData::getTrimEnd", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSolidData::getTrimEnd";
             //QCoreApplication::processEvents();
 
@@ -1011,7 +1011,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSolidData.getTrimEnd().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSolidData::getTrimEnd", context, engine);
+            REcmaHelper::functionEnd("REcmaSolidData::getTrimEnd", context, engine);
             return result;
         }
          QScriptValue
@@ -1019,7 +1019,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSolidData::trimStartPoint", context, engine);
+            REcmaHelper::functionStart("REcmaSolidData::trimStartPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSolidData::trimStartPoint";
             //QCoreApplication::processEvents();
 
@@ -1152,7 +1152,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSolidData.trimStartPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSolidData::trimStartPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSolidData::trimStartPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1160,7 +1160,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSolidData::trimEndPoint", context, engine);
+            REcmaHelper::functionStart("REcmaSolidData::trimEndPoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSolidData::trimEndPoint";
             //QCoreApplication::processEvents();
 
@@ -1293,7 +1293,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSolidData.trimEndPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSolidData::trimEndPoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSolidData::trimEndPoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1301,7 +1301,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSolidData::getReferencePoints", context, engine);
+            REcmaHelper::functionStart("REcmaSolidData::getReferencePoints", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSolidData::getReferencePoints";
             //QCoreApplication::processEvents();
 
@@ -1374,7 +1374,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSolidData.getReferencePoints().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSolidData::getReferencePoints", context, engine);
+            REcmaHelper::functionEnd("REcmaSolidData::getReferencePoints", context, engine);
             return result;
         }
          QScriptValue
@@ -1382,7 +1382,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSolidData::moveReferencePoint", context, engine);
+            REcmaHelper::functionStart("REcmaSolidData::moveReferencePoint", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSolidData::moveReferencePoint";
             //QCoreApplication::processEvents();
 
@@ -1471,7 +1471,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSolidData.moveReferencePoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSolidData::moveReferencePoint", context, engine);
+            REcmaHelper::functionEnd("REcmaSolidData::moveReferencePoint", context, engine);
             return result;
         }
          QScriptValue
@@ -1479,7 +1479,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSolidData::castToShape", context, engine);
+            REcmaHelper::functionStart("REcmaSolidData::castToShape", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSolidData::castToShape";
             //QCoreApplication::processEvents();
 
@@ -1520,7 +1520,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSolidData.castToShape().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSolidData::castToShape", context, engine);
+            REcmaHelper::functionEnd("REcmaSolidData::castToShape", context, engine);
             return result;
         }
          QScriptValue
@@ -1528,7 +1528,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSolidData::getShapes", context, engine);
+            REcmaHelper::functionStart("REcmaSolidData::getShapes", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSolidData::getShapes";
             //QCoreApplication::processEvents();
 
@@ -1670,7 +1670,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSolidData.getShapes().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSolidData::getShapes", context, engine);
+            REcmaHelper::functionEnd("REcmaSolidData::getShapes", context, engine);
             return result;
         }
          QScriptValue
@@ -1678,7 +1678,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSolidData::getGeometry", context, engine);
+            REcmaHelper::functionStart("REcmaSolidData::getGeometry", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSolidData::getGeometry";
             //QCoreApplication::processEvents();
 
@@ -1719,7 +1719,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSolidData.getGeometry().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSolidData::getGeometry", context, engine);
+            REcmaHelper::functionEnd("REcmaSolidData::getGeometry", context, engine);
             return result;
         }
          QScriptValue REcmaSolidData::toString

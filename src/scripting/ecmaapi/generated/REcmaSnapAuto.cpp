@@ -189,7 +189,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSnapAuto::snap", context, engine);
+            REcmaHelper::functionStart("REcmaSnapAuto::snap", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::snap";
             //QCoreApplication::processEvents();
 
@@ -356,7 +356,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.snap().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSnapAuto::snap", context, engine);
+            REcmaHelper::functionEnd("REcmaSnapAuto::snap", context, engine);
             return result;
         }
          QScriptValue
@@ -364,7 +364,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaSnapAuto::init", context, engine);
+            REcmaHelper::functionStart("REcmaSnapAuto::init", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaSnapAuto::init";
             //QCoreApplication::processEvents();
 
@@ -417,7 +417,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RSnapAuto.init().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSnapAuto::init", context, engine);
+            REcmaHelper::functionEnd("REcmaSnapAuto::init", context, engine);
             return result;
         }
          QScriptValue REcmaSnapAuto::toString

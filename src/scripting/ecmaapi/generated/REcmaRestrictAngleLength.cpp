@@ -404,7 +404,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRestrictAngleLength::restrictSnap", context, engine);
+            REcmaHelper::functionStart("REcmaRestrictAngleLength::restrictSnap", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRestrictAngleLength::restrictSnap";
             //QCoreApplication::processEvents();
 
@@ -493,7 +493,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRestrictAngleLength.restrictSnap().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRestrictAngleLength::restrictSnap", context, engine);
+            REcmaHelper::functionEnd("REcmaRestrictAngleLength::restrictSnap", context, engine);
             return result;
         }
          QScriptValue
@@ -501,7 +501,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRestrictAngleLength::setBaseAngle", context, engine);
+            REcmaHelper::functionStart("REcmaRestrictAngleLength::setBaseAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRestrictAngleLength::setBaseAngle";
             //QCoreApplication::processEvents();
 
@@ -548,7 +548,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRestrictAngleLength.setBaseAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRestrictAngleLength::setBaseAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaRestrictAngleLength::setBaseAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -556,7 +556,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRestrictAngleLength::setAngle", context, engine);
+            REcmaHelper::functionStart("REcmaRestrictAngleLength::setAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRestrictAngleLength::setAngle";
             //QCoreApplication::processEvents();
 
@@ -603,7 +603,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRestrictAngleLength.setAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRestrictAngleLength::setAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaRestrictAngleLength::setAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -611,7 +611,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRestrictAngleLength::setBaseLength", context, engine);
+            REcmaHelper::functionStart("REcmaRestrictAngleLength::setBaseLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRestrictAngleLength::setBaseLength";
             //QCoreApplication::processEvents();
 
@@ -658,7 +658,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRestrictAngleLength.setBaseLength().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRestrictAngleLength::setBaseLength", context, engine);
+            REcmaHelper::functionEnd("REcmaRestrictAngleLength::setBaseLength", context, engine);
             return result;
         }
          QScriptValue
@@ -666,7 +666,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRestrictAngleLength::setLength", context, engine);
+            REcmaHelper::functionStart("REcmaRestrictAngleLength::setLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRestrictAngleLength::setLength";
             //QCoreApplication::processEvents();
 
@@ -713,7 +713,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRestrictAngleLength.setLength().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRestrictAngleLength::setLength", context, engine);
+            REcmaHelper::functionEnd("REcmaRestrictAngleLength::setLength", context, engine);
             return result;
         }
          QScriptValue
@@ -721,7 +721,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRestrictAngleLength::setRestrictAngle", context, engine);
+            REcmaHelper::functionStart("REcmaRestrictAngleLength::setRestrictAngle", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRestrictAngleLength::setRestrictAngle";
             //QCoreApplication::processEvents();
 
@@ -768,7 +768,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRestrictAngleLength.setRestrictAngle().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRestrictAngleLength::setRestrictAngle", context, engine);
+            REcmaHelper::functionEnd("REcmaRestrictAngleLength::setRestrictAngle", context, engine);
             return result;
         }
          QScriptValue
@@ -776,7 +776,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaRestrictAngleLength::setRestrictLength", context, engine);
+            REcmaHelper::functionStart("REcmaRestrictAngleLength::setRestrictLength", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaRestrictAngleLength::setRestrictLength";
             //QCoreApplication::processEvents();
 
@@ -823,7 +823,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RRestrictAngleLength.setRestrictLength().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaRestrictAngleLength::setRestrictLength", context, engine);
+            REcmaHelper::functionEnd("REcmaRestrictAngleLength::setRestrictLength", context, engine);
             return result;
         }
          QScriptValue REcmaRestrictAngleLength::toString

@@ -601,7 +601,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellTreeWidget::contextMenuEvent", context, engine);
+            REcmaHelper::functionStart("REcmaShellTreeWidget::contextMenuEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellTreeWidget::contextMenuEvent";
             //QCoreApplication::processEvents();
 
@@ -655,7 +655,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTreeWidget.contextMenuEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellTreeWidget::contextMenuEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaShellTreeWidget::contextMenuEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -663,7 +663,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellTreeWidget::mousePressEvent", context, engine);
+            REcmaHelper::functionStart("REcmaShellTreeWidget::mousePressEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellTreeWidget::mousePressEvent";
             //QCoreApplication::processEvents();
 
@@ -715,7 +715,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTreeWidget.mousePressEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellTreeWidget::mousePressEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaShellTreeWidget::mousePressEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -723,7 +723,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellTreeWidget::mouseReleaseEvent", context, engine);
+            REcmaHelper::functionStart("REcmaShellTreeWidget::mouseReleaseEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellTreeWidget::mouseReleaseEvent";
             //QCoreApplication::processEvents();
 
@@ -775,7 +775,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTreeWidget.mouseReleaseEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellTreeWidget::mouseReleaseEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaShellTreeWidget::mouseReleaseEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -783,7 +783,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellTreeWidget::mouseMoveEvent", context, engine);
+            REcmaHelper::functionStart("REcmaShellTreeWidget::mouseMoveEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellTreeWidget::mouseMoveEvent";
             //QCoreApplication::processEvents();
 
@@ -835,7 +835,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTreeWidget.mouseMoveEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellTreeWidget::mouseMoveEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaShellTreeWidget::mouseMoveEvent", context, engine);
             return result;
         }
          QScriptValue
@@ -843,7 +843,7 @@
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShellTreeWidget::resizeEvent", context, engine);
+            REcmaHelper::functionStart("REcmaShellTreeWidget::resizeEvent", context, engine);
             //qDebug() << "ECMAScript WRAPPER: REcmaShellTreeWidget::resizeEvent";
             //QCoreApplication::processEvents();
 
@@ -897,7 +897,7 @@
                return REcmaHelper::throwError("Wrong number/types of arguments for RTreeWidget.resizeEvent().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShellTreeWidget::resizeEvent", context, engine);
+            REcmaHelper::functionEnd("REcmaShellTreeWidget::resizeEvent", context, engine);
             return result;
         }
         
