@@ -49,12 +49,10 @@ Line2P.State = {
 };
 
 Line2P.prototype.beginEvent = function() {
-    RDebug.startTimer();
     Line.prototype.beginEvent.call(this);
 
     this.setState(Line2P.State.SettingFirstPoint);
     this.updateButtonStates();
-    RDebug.stopTimer("line2p");
 };
 
 Line2P.prototype.setState = function(state) {
