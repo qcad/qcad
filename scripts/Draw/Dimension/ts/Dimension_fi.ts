@@ -84,12 +84,12 @@
         <translation>Lisää kiinteä selitee tai jätä tyhjäksi automaattiselle selitteelle</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+61"/>
         <source>Upper tolerance</source>
         <translation>Ylätoleranssi</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+54"/>
         <source>Lower tolerance</source>
         <translation>Alatoleranssi</translation>
     </message>

@@ -84,12 +84,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+61"/>
         <source>Upper tolerance</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+54"/>
         <source>Lower tolerance</source>
         <translation type="unfinished"></translation>
     </message>

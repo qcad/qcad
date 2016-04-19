@@ -113,7 +113,7 @@ Entre o rótulo fixo ou deixe-o vazio para rotulação automática</translatorco
         <translation>Entre com o rótulo fixo ou deixe-o vazio para rotulação automática</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+61"/>
         <source>Upper tolerance</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--
@@ -121,7 +121,7 @@ Tolerância superior</translatorcomment>
         <translation>Tolerância superior</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+54"/>
         <source>Lower tolerance</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--

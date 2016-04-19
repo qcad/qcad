@@ -88,12 +88,12 @@
         <translation>Indiquer l&apos;étiquette fixe ou laisser vide pour l&apos;étiquette automatique</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+61"/>
         <source>Upper tolerance</source>
         <translation>Tolérance supérieure</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+54"/>
         <source>Lower tolerance</source>
         <translation>Tolérance inférieure</translation>
     </message>

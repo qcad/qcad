@@ -1153,8 +1153,8 @@ void RScriptHandlerEcma::createActionApplicationLevel(
 
     globalObject.setProperty("guiAction", engine->toScriptValue(guiAction));
     eval("var a = new " + className + "(guiAction);"
-         "a.beginEvent();"
-         "a.finishEvent();"
+         "if (typeof(a.beginEvent)===\"function\") a.beginEvent();"
+         "if (typeof(a.finishEvent)===\"function\") a.finishEvent();"
          "a.destroy();");
          //"if (!isNull(guiAction) && guiAction.hasNoState()) a.destroy();");
 

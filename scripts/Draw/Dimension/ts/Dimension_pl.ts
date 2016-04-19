@@ -112,7 +112,7 @@ Wprowadź stałą etykietę lub pozostaw puste aby otrzymać etykietę automatyc
         <translation type="unfinished">Wprowadź stałą etykietę lub pozostaw puste aby otrzymać etykietę automatyczną</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+61"/>
         <source>Upper tolerance</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--
@@ -120,7 +120,7 @@ Górna tolerancja</translatorcomment>
         <translation type="unfinished">Górna tolerancja</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+54"/>
         <source>Lower tolerance</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

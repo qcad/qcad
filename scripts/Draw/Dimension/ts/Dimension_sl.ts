@@ -84,12 +84,12 @@
         <translation>Vnesite fiksno vrednost ali pustite prazno za samodejni napis</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+61"/>
         <source>Upper tolerance</source>
         <translation>Zgornja toleranca</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+54"/>
         <source>Lower tolerance</source>
         <translation>Spodnja toleranca</translation>
     </message>

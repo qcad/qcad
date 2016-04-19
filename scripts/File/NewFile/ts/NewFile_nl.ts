@@ -70,7 +70,7 @@
         <translation>Formaat:</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+125"/>
         <source>Untitled %1</source>
         <translation>Naamloos %1</translation>
     </message>

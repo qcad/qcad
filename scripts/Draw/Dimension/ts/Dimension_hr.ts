@@ -84,12 +84,12 @@
         <translation>Unesi stalnu oznaku ili ostavi prazno za automatsko označavanje</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+61"/>
         <source>Upper tolerance</source>
         <translation>Gornja tolerancija</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+54"/>
         <source>Lower tolerance</source>
         <translation>Donja tolerancija</translation>
     </message>

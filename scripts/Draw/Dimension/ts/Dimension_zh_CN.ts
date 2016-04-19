@@ -84,12 +84,12 @@
         <translation>输入固定标签或留空以使用自动标签</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+61"/>
         <source>Upper tolerance</source>
         <translation>上公差</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+54"/>
         <source>Lower tolerance</source>
         <translation>下公差</translation>
     </message>

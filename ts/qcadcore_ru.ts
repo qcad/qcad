@@ -608,7 +608,7 @@
 <context>
     <name>RGuiAction</name>
     <message>
-        <location filename="../src/core/RGuiAction.cpp" line="+181"/>
+        <location filename="../src/core/RGuiAction.cpp" line="+182"/>
         <source>Requires selection</source>
         <translation>Выделение требований</translation>
     </message>
@@ -860,7 +860,7 @@
 <context>
     <name>RLineweight</name>
     <message>
-        <location filename="../src/core/RLineweight.cpp" line="+34"/>
+        <location filename="../src/core/RLineweight.cpp" line="+35"/>
         <source>By Layer</source>
         <translation> По слою</translation>
     </message>

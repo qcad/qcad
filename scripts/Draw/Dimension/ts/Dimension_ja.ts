@@ -84,12 +84,12 @@
         <translation>固定ラベルを入力または自動ラベルを削除</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+61"/>
         <source>Upper tolerance</source>
         <translation>許容誤差の上限</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+54"/>
         <source>Lower tolerance</source>
         <translation>許容誤差の下限</translation>
     </message>

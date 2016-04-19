@@ -88,12 +88,12 @@
         <translation>Fixes Mass eingeben oder leer lassen für automatisches Mass</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+61"/>
         <source>Upper tolerance</source>
         <translation>Obere Toleranz</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+54"/>
         <source>Lower tolerance</source>
         <translation>Untere Toleranz</translation>
     </message>

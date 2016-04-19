@@ -88,12 +88,12 @@
         <translation>Introduzca la etiqueta determinada o manténgala vacía para generarla en forma automática</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+61"/>
         <source>Upper tolerance</source>
         <translation>Toleranicia máxima</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+54"/>
         <source>Lower tolerance</source>
         <translation>Tolerancia mínima</translation>
     </message>

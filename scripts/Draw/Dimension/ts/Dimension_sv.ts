@@ -84,12 +84,12 @@
         <translation>Skriv in fast etikett eller lämna tom för automatisk etikett</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+61"/>
         <source>Upper tolerance</source>
         <translation>Övre tolerans</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+54"/>
         <source>Lower tolerance</source>
         <translation>Undre tolerans</translation>
     </message>

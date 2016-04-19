@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>719</width>
-    <height>56</height>
+    <width>722</width>
+    <height>46</height>
    </rect>
   </property>
   <layout class="QHBoxLayout">
@@ -70,21 +70,31 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label">
-     <property name="maximumSize">
+    <widget class="QToolButton" name="toolButton">
+     <property name="minimumSize">
       <size>
-       <width>32</width>
-       <height>32</height>
+       <width>22</width>
+       <height>22</height>
       </size>
      </property>
-     <property name="text">
-      <string/>
+     <property name="maximumSize">
+      <size>
+       <width>22</width>
+       <height>22</height>
+      </size>
      </property>
-     <property name="pixmap">
-      <pixmap>UpperTolerance.svg</pixmap>
+     <property name="styleSheet">
+      <string notr="true">border: none;background-color:transparent;</string>
      </property>
-     <property name="scaledContents">
-      <bool>true</bool>
+     <property name="icon">
+      <iconset>
+       <normaloff>UpperTolerance.svg</normaloff>UpperTolerance.svg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>22</width>
+       <height>22</height>
+      </size>
      </property>
     </widget>
    </item>
@@ -114,21 +124,31 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="label_2">
-     <property name="maximumSize">
+    <widget class="QToolButton" name="toolButton_2">
+     <property name="minimumSize">
       <size>
-       <width>32</width>
-       <height>32</height>
+       <width>22</width>
+       <height>22</height>
       </size>
      </property>
-     <property name="text">
-      <string/>
+     <property name="maximumSize">
+      <size>
+       <width>22</width>
+       <height>22</height>
+      </size>
      </property>
-     <property name="pixmap">
-      <pixmap>LowerTolerance.svg</pixmap>
+     <property name="styleSheet">
+      <string notr="true">border: none;background-color:transparent;</string>
      </property>
-     <property name="scaledContents">
-      <bool>true</bool>
+     <property name="icon">
+      <iconset>
+       <normaloff>LowerTolerance.svg</normaloff>LowerTolerance.svg</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>22</width>
+       <height>22</height>
+      </size>
      </property>
     </widget>
    </item>

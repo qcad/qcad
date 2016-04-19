@@ -84,12 +84,12 @@
         <translation>Geef vaste label of laat leeg voor automatische label</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+61"/>
         <source>Upper tolerance</source>
         <translation>Opper tolerantie</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+54"/>
         <source>Lower tolerance</source>
         <translation>Lagere tolerantie</translation>
     </message>
