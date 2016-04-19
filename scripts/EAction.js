@@ -349,6 +349,7 @@ EAction.prototype.showUiOptions = function(resume, restoreFromSettings) {
     for (var i = 0; i < this.uiFile.length; ++i) {
         var uiFile = this.uiFile[i];
         var wOptions = this.createWidget(uiFile);
+        //qDebug("adjust icons for uiFile: ", uiFile);
 
         if (isNull(wOptions)) {
             qWarning("Cannot create widget from UI file: ", uiFile);

@@ -18,7 +18,7 @@
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>Auto.svg</normaloff>Auto.svg</iconset>
+       <normaloff>TypeAuto.svg</normaloff>TypeAuto.svg</iconset>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -41,7 +41,7 @@
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>Segment.svg</normaloff>Segment.svg</iconset>
+       <normaloff>TypeSegment.svg</normaloff>TypeSegment.svg</iconset>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -64,7 +64,7 @@
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>XLine.svg</normaloff>XLine.svg</iconset>
+       <normaloff>TypeXLine.svg</normaloff>TypeXLine.svg</iconset>
      </property>
      <property name="checkable">
       <bool>true</bool>
@@ -81,7 +81,7 @@
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>Ray.svg</normaloff>Ray.svg</iconset>
+       <normaloff>TypeRay.svg</normaloff>TypeRay.svg</iconset>
      </property>
      <property name="checkable">
       <bool>true</bool>

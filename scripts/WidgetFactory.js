@@ -81,7 +81,7 @@ WidgetFactory.createWidget = function(basePath, uiFile, parent) {
         }
     }
 
-    fileInfo = new QFileInfo(uiFile);
+    //fileInfo = new QFileInfo(uiFile);
     if (!fileInfo.exists()) {
         qWarning("WidgetFactory: File %1 does not exist".arg(uiFile));
         return undefined;
@@ -109,6 +109,8 @@ WidgetFactory.createWidget = function(basePath, uiFile, parent) {
     if (RS.getSystemId()==="osx") {
         WidgetFactory.installComboBoxEventFilter(formWidget);
     }
+
+    WidgetFactory.adjustIcons(fileInfo.absolutePath(), formWidget);
 
     return formWidget;
 };
@@ -961,6 +963,7 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
                     w.maximumWidth = 75;
                 }
             }
+
             a = targetWidget.addWidget(w);
             a.objectName = w.objectName + "Action";
             ret.push(a);
@@ -974,6 +977,38 @@ WidgetFactory.moveChildren = function(sourceWidget, targetWidget, settingsGroup)
     }
 
     return ret;
+};
+
+WidgetFactory.adjustIcons = function(includeBasePath, widget) {
+    if (!RSettings.hasDarkGuiBackground()) {
+        return;
+    }
+
+    if (!isFunction(widget.children)) {
+        return;
+    }
+
+    var children = widget.children();
+    for(var i=0;i<children.length;++i) {
+        var w=children[i];
+
+        // adjust icon for dark themes:
+        if (isOfType(w, QToolButton)) {
+            qDebug("tool button: ", w.objectName);
+            //var da = w.defaultAction();
+            //if (!isNull(da)) {
+                var iconFile = includeBasePath + "/" + w.objectName + "-inverse.svg";
+                qDebug("  icon file: ", iconFile);
+                if (new QFileInfo(iconFile).exists()) {
+                    w.icon = new QIcon(iconFile);
+                }
+            //}
+        }
+        else {
+            WidgetFactory.adjustIcons(includeBasePath, w);
+        }
+
+    }
 };
 
 /**

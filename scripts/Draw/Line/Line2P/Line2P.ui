@@ -24,7 +24,7 @@
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>CloseSequence.svg</normaloff>CloseSequence.svg</iconset>
+       <normaloff>Close.svg</normaloff>Close.svg</iconset>
      </property>
      <property name="shortcut">
       <string>,, C</string>
@@ -51,7 +51,7 @@
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>UndoSegment.svg</normaloff>UndoSegment.svg</iconset>
+       <normaloff>Undo.svg</normaloff>Undo.svg</iconset>
      </property>
      <property name="shortcut">
       <string>,, U</string>
@@ -71,7 +71,7 @@
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>RedoSegment.svg</normaloff>RedoSegment.svg</iconset>
+       <normaloff>Redo.svg</normaloff>Redo.svg</iconset>
      </property>
      <property name="shortcut">
       <string>,, R</string>

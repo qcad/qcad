@@ -27,7 +27,7 @@
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>UndoPath.svg</normaloff>UndoPath.svg</iconset>
+       <normaloff>Undo.svg</normaloff>Undo.svg</iconset>
      </property>
     </widget>
    </item>
