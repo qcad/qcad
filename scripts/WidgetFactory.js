@@ -994,15 +994,10 @@ WidgetFactory.adjustIcons = function(includeBasePath, widget) {
 
         // adjust icon for dark themes:
         if (isOfType(w, QToolButton)) {
-            qDebug("tool button: ", w.objectName);
-            //var da = w.defaultAction();
-            //if (!isNull(da)) {
-                var iconFile = includeBasePath + "/" + w.objectName + "-inverse.svg";
-                qDebug("  icon file: ", iconFile);
-                if (new QFileInfo(iconFile).exists()) {
-                    w.icon = new QIcon(iconFile);
-                }
-            //}
+            var iconFile = includeBasePath + "/" + w.objectName + "-inverse.svg";
+            if (new QFileInfo(iconFile).exists()) {
+                w.icon = new QIcon(iconFile);
+            }
         }
         else {
             WidgetFactory.adjustIcons(includeBasePath, w);
