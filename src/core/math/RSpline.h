@@ -86,6 +86,9 @@ public:
     RVector getControlPointAt(int i) const;
 
     void appendFitPoint(const RVector& point);
+    void prependFitPoint(const RVector& point);
+    void insertFitPointAt(const RVector& point);
+    void removeFitPointAt(const RVector& point);
     void removeLastFitPoint();
     void setFitPoints(const QList<RVector>& points);
     QList<RVector> getFitPoints() const;
@@ -192,6 +195,10 @@ public:
     void updateFromControlPoints() const;
     void updateFromFitPoints(bool useTangents = false) const;
     void update() const;
+
+    bool isDirty() const {
+        return dirty;
+    }
 
     static bool hasProxy() {
         return splineProxy!=NULL;

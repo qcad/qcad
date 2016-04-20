@@ -61,7 +61,7 @@ void RSpline::copySpline(const RSpline& other) {
     this->tangentEnd = other.tangentEnd;
     this->boundingBox = other.boundingBox;
     this->exploded = other.exploded;
-    this->dirty = true;
+    this->dirty = other.dirty;
 }
 
 /**
@@ -291,6 +291,63 @@ RVector RSpline::getControlPointAt(int i) const {
  */
 void RSpline::appendFitPoint(const RVector& point) {
     fitPoints.append(point);
+    update();
+}
+
+/**
+ * Prepends a fit point.
+ */
+void RSpline::prependFitPoint(const RVector& point) {
+    fitPoints.prepend(point);
+    update();
+}
+
+/**
+ * Inserts a git point at the point on the spline closest to the given position.
+ */
+void RSpline::insertFitPointAt(const RVector& point) {
+    RVector p = getClosestPointOnShape(point);
+
+    // find out T at the point closest to point:
+    double t = getTAtPoint(p);
+
+    // find out index of fit point before t:
+    int index = -1;
+    for (int i=0; i<fitPoints.length(); i++) {
+        double tc = getTAtPoint(fitPoints[i]);
+        if (tc<t) {
+            index = i+1;
+        }
+        else {
+            break;
+        }
+    }
+
+    // point not on spline:
+    if (index<0 ||  index>=fitPoints.length()) {
+        return;
+    }
+
+    fitPoints.insert(index, p);
+    update();
+}
+
+void RSpline::removeFitPointAt(const RVector& point) {
+    double minDist = RMAXDOUBLE;
+    int index = -1;
+    for (int i=0; i<fitPoints.length(); i++) {
+        double dist = point.getDistanceTo(fitPoints[i]);
+        if (dist<minDist) {
+            minDist = dist;
+            index = i;
+        }
+    }
+
+    if (index<0 || index>=fitPoints.length()) {
+        return;
+    }
+
+    fitPoints.removeAt(index);
     update();
 }
 
@@ -913,16 +970,12 @@ QList<RVector> RSpline::getPointsWithDistanceToEnd(double distance, RS::From fro
 }
 
 RVector RSpline::getVectorTo(const RVector& point, bool limited, double strictRange) const {
-    RVector ret = RVector::invalid;
+    if (splineProxy!=NULL) {
+        return splineProxy->getVectorTo(*this, point, limited, strictRange);
+    }
+    else {
+        RVector ret = RVector::invalid;
 
-//  TODO: not implemented in Teigha:
-//    if (splineProxy!=NULL) {
-//        RVector p = splineProxy->getClosestPointOnShape(*this, point, limited);
-//        if (p.isValid()) {
-//            ret = p - point;
-//        }
-//    }
-//    else {
         QList<QSharedPointer<RShape> > sub = getExploded();
         QList<QSharedPointer<RShape> >::iterator it;
         for (it=sub.begin(); it!=sub.end(); ++it) {
@@ -931,9 +984,9 @@ RVector RSpline::getVectorTo(const RVector& point, bool limited, double strictRa
                 ret = v;
             }
         }
-//    }
 
-    return ret;
+        return ret;
+    }
 }
 
 bool RSpline::isOnShape(const RVector& point, bool limited, double tolerance) const {
@@ -1244,7 +1297,7 @@ void RSpline::updateInternal() const {
 
     //updateBoundingBox();
     boundingBox = RBox();
-    getExploded();
+    //getExploded();
 
     updateInProgress = false;
 }
@@ -1590,6 +1643,7 @@ void RSpline::print(QDebug dbg) const {
     RShape::print(dbg);
 
     dbg.nospace() << ", degree: " << getDegree();
+    dbg.nospace() << ", dirty: " << dirty;
     dbg.nospace() << ", order: " << getOrder();
     dbg.nospace() << ", closed: " << isClosed();
     dbg.nospace() << ", periodic: " << isPeriodic();
