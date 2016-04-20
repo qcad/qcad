@@ -108,7 +108,7 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setLeftMouseTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name> =<init> <expr>""</expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setRightMouseTip</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>text</name> =<init> <expr>""</expr></init></decl></param>)</parameter_list>;</function_decl>
 
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>showContextMenu</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>showContextMenu</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>escapeEvent</name><parameter_list>()</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setGraphicsViewCursor</name><parameter_list>(<param><decl><type><name>const</name> <name>QCursor</name>&amp;</type> <name>cursor</name></decl></param>)</parameter_list>;</function_decl>
@@ -162,7 +162,7 @@
     <comment type="block">/**
      * Emitted when a context menu is requested on top of the given entity.
      */</comment>
-    <function_decl><type><name>void</name></type> <name>contextMenu</name><parameter_list>(<param><decl><type><name>int</name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>contextMenu</name><parameter_list>(<param><decl><type><name>int</name></type> <name>entityId</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>pos</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>escape</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>drop</name><parameter_list>(<param><decl><type><name>QDropEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>dragEnter</name><parameter_list>(<param><decl><type><name>QDragEnterEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>

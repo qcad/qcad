@@ -6381,9 +6381,14 @@
                 
     
     if( context->argumentCount() ==
-    1 && (
+    2 && (
             context->argument(0).isNumber()
         ) /* type: RObject::Id */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
     
     ){
     // prepare arguments:
@@ -6396,12 +6401,32 @@
                     context->argument( 0 ).
                     toNumber();
                 
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RMainWindowQt: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->showContextMenu(a0);
+               self->showContextMenu(a0
+        ,
+    a1);
     } else
 
 

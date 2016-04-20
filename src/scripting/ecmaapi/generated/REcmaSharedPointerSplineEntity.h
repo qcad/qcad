@@ -142,6 +142,18 @@
         appendControlPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        appendFitPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        prependFitPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        insertFitPointAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeFitPointAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setPeriodic
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -158,6 +170,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasFitPoints
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        countFitPoints
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getKnotVector

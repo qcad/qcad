@@ -189,6 +189,22 @@
         <expr_stmt><expr><name>data</name>.<call><name>appendControlPoint</name><argument_list>(<argument><expr><name>point</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>appendFitPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>appendFitPoint</name><argument_list>(<argument><expr><name>point</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>prependFitPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>prependFitPoint</name><argument_list>(<argument><expr><name>point</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>insertFitPointAt</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>insertFitPointAt</name><argument_list>(<argument><expr><name>point</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>removeFitPointAt</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>removeFitPointAt</name><argument_list>(<argument><expr><name>point</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>setPeriodic</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>data</name>.<call><name>setPeriodic</name><argument_list>(<argument><expr><name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
@@ -211,6 +227,10 @@
 
     <function><type><name>bool</name></type> <name>hasFitPoints</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>data</name>.<call><name>hasFitPoints</name><argument_list>()</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>int</name></type> <name>countFitPoints</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>countFitPoints</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
     <function><type><name>QList<argument_list>&lt;<argument><name>double</name></argument>&gt;</argument_list></name></type> <name>getKnotVector</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{

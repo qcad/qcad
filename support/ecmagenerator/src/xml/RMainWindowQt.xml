@@ -220,6 +220,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RObject::Id" typeName="RObject::Id"
         name="entityId" isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="pos"
+        isConst="true" />
       </variant>
     </method>
     <method name="escapeEvent" cppName="escapeEvent"

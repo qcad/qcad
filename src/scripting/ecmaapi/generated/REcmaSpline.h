@@ -120,6 +120,15 @@
         appendFitPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        prependFitPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        insertFitPointAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removeFitPointAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         removeLastFitPoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

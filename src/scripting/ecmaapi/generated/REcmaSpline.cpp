@@ -156,6 +156,12 @@
             
             REcmaHelper::registerFunction(&engine, proto, appendFitPoint, "appendFitPoint");
             
+            REcmaHelper::registerFunction(&engine, proto, prependFitPoint, "prependFitPoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, insertFitPointAt, "insertFitPointAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, removeFitPointAt, "removeFitPointAt");
+            
             REcmaHelper::registerFunction(&engine, proto, removeLastFitPoint, "removeLastFitPoint");
             
             REcmaHelper::registerFunction(&engine, proto, setFitPoints, "setFitPoints");
@@ -1564,6 +1570,207 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpline::appendFitPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::prependFitPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::prependFitPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::prependFitPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("prependFitPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSpline: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->prependFitPoint(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.prependFitPoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::prependFitPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::insertFitPointAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::insertFitPointAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::insertFitPointAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("insertFitPointAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSpline: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->insertFitPointAt(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.insertFitPointAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::insertFitPointAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::removeFitPointAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::removeFitPointAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::removeFitPointAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("removeFitPointAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RSpline: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removeFitPointAt(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.removeFitPointAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::removeFitPointAt", context, engine);
             return result;
         }
          QScriptValue
