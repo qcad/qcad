@@ -188,6 +188,22 @@ public:
         data.appendControlPoint(point);
     }
 
+    void appendFitPoint(const RVector& point) {
+        data.appendFitPoint(point);
+    }
+
+    void prependFitPoint(const RVector& point) {
+        data.prependFitPoint(point);
+    }
+
+    void insertFitPointAt(const RVector& point) {
+        data.insertFitPointAt(point);
+    }
+
+    void removeFitPointAt(const RVector& point) {
+        data.removeFitPointAt(point);
+    }
+
     void setPeriodic(bool on) {
         data.setPeriodic(on);
     }
@@ -210,6 +226,10 @@ public:
 
     bool hasFitPoints() const {
         return data.hasFitPoints();
+    }
+
+    int countFitPoints() const {
+        return data.countFitPoints();
     }
 
     QList<double> getKnotVector() const {

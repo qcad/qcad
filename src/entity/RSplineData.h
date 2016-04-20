@@ -63,6 +63,22 @@ public:
         RSpline::appendControlPoint(point);
     }
 
+    void appendFitPoint(const RVector& point) {
+        RSpline::appendFitPoint(point);
+    }
+
+    void prependFitPoint(const RVector& point) {
+        RSpline::prependFitPoint(point);
+    }
+
+    void insertFitPointAt(const RVector& point) {
+        RSpline::insertFitPointAt(point);
+    }
+
+    void removeFitPointAt(const RVector& point) {
+        RSpline::removeFitPointAt(point);
+    }
+
     void setPeriodic(bool on) {
         RSpline::setPeriodic(on);
     }
