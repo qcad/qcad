@@ -353,7 +353,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
                 var rightClickEntityContextMenu = RSettings.getBoolValue("ContextMenu/RightClickEntityContextMenu", false);
                 if (rightClickEntityContextMenu) {
                     event.accept();
-                    appWin.showContextMenu(entityId);
+                    appWin.showContextMenu(entityId, event.getModelPosition());
                     handled = true;
                 }
 
@@ -383,10 +383,11 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
         }
 
         if (!handled) {
+            // show context menu for empty space:
             var rightClickContextMenu = RSettings.getBoolValue("ContextMenu/RightClickContextMenu", false);
             if (rightClickContextMenu===true) {
                 event.accept();
-                appWin.showContextMenu(RObject.INVALID_ID);
+                appWin.showContextMenu(RObject.INVALID_ID, event.getModelPosition());
             }
         }
     }

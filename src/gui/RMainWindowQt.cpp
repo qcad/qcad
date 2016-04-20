@@ -433,8 +433,8 @@ void RMainWindowQt::escapeEvent() {
     emit escape();
 }
 
-void RMainWindowQt::showContextMenu(RObject::Id entityId) {
-    emit contextMenu((int)entityId);
+void RMainWindowQt::showContextMenu(RObject::Id entityId, const RVector& pos) {
+    emit contextMenu((int)entityId, pos);
 }
 
 void RMainWindowQt::setGraphicsViewCursor(const QCursor& cursor) {
