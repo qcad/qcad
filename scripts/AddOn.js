@@ -542,12 +542,24 @@ AddOn.getAddOns = function(dir) {
         var rx1 = new RegExp(":?\/?scripts\/");
         var rx2 = new RegExp("\/.*");
         addOns.sort(function(a,b) {
-            // get top dir:
-            var da = a.getPath().replace(rx1, "").replace(rx2, "");
-            var db = b.getPath().replace(rx1, "").replace(rx2, "");
+            var aPath = a.getPath();
+            var bPath = b.getPath();
 
-            var oa = menuNames[da]
-            var ob = menuNames[db]
+            // always prioritize 'scripts' paths (QCAD) over ':scripts' (plugin):
+            if (!aPath.startsWith(":") && bPath.startsWith(":")) {
+                return -1;
+            }
+            else if (aPath.startsWith(":") && !bPath.startsWith(":")) {
+                return 1;
+            }
+
+            // get top dir name after scripts (e.g. 'File', 'Layer', ...):
+            var da = aPath.replace(rx1, "").replace(rx2, "");
+            var db = bPath.replace(rx1, "").replace(rx2, "");
+
+            // get sort order from menuNames map:
+            var oa = menuNames[da];
+            var ob = menuNames[db];
 
             if (isNull(oa)) {
                 oa = 1000;
@@ -558,6 +570,10 @@ AddOn.getAddOns = function(dir) {
 
             return oa-ob;
         });
+
+        //for (var i=0; i<addOns.length; i++) {
+        //    qDebug("addOn: ", addOns[i].getPath());
+        //}
 
         // cache:
         AddOn.addOns = addOns;
