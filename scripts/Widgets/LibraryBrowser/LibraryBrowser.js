@@ -121,6 +121,7 @@ LibraryBrowser.prototype.beginEvent = function() {
     var dock = appWin.findChild("LibraryBrowserDock");
     if (!QCoreApplication.arguments().contains("-no-show")) {
         dock.visible = !dock.visible;
+        if (dock.visible) dock.raise();
     }
 
     if (dock.visible) {

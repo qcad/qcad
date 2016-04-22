@@ -418,6 +418,7 @@ BlockList.prototype.beginEvent = function() {
     var dock = appWin.findChild("BlockListDock");
     if (!QCoreApplication.arguments().contains("-no-show")) {
         dock.visible = !dock.visible;
+        if (dock.visible) dock.raise();
     }
 };
 

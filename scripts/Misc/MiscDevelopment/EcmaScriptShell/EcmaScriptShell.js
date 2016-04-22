@@ -44,6 +44,7 @@ EcmaScriptShell.prototype.beginEvent = function() {
     var dock = appWin.findChild("EcmaScriptShellDock");
     if (!QCoreApplication.arguments().contains("-no-show")) {
         dock.visible = !dock.visible;
+        if (dock.visible) dock.raise();
     }
 };
 
