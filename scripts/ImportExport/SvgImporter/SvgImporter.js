@@ -433,7 +433,13 @@ SvgImporter.prototype.importBezier = function(x1, y1, px1, py1, px2, py2, x2, y2
     spline.appendControlPoint(new RVector(px2, py2));
     spline.appendControlPoint(new RVector(x2, y2));
 
-    var shape = ShapeAlgorithms.splineToLineOrArc(spline, 0.1);
+    var shape;
+    if (RSettings.getBoolValue("SvgImport/AutoConvertSplines", true)===true) {
+        shape = ShapeAlgorithms.splineToLineOrArc(spline, 0.1);
+    }
+    else {
+        shape = spline;
+    }
 
     this.importShape(shape);
 };
@@ -737,7 +743,9 @@ SvgImporter.prototype.importPath = function(dData) {
         case 'z':
             x = x0;
             y = y0;
-            this.importLine(ox,oy, x,y);
+            if (ox!==x || oy!==y) {
+                this.importLine(ox,oy, x,y);
+            }
             ox = x;
             oy = y;
             break;

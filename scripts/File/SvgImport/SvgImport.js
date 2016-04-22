@@ -26,6 +26,10 @@ function SvgImport(guiAction) {
 
 SvgImport.prototype = new File();
 
+SvgImport.getPreferencesCategory = function() {
+    return [ qsTr("File"), qsTr("SVG Import")];
+};
+
 SvgImport.includeBasePath = includeBasePath;
 
 SvgImport.prototype.beginEvent = function() {
