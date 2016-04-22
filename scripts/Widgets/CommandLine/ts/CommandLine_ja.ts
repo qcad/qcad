@@ -4,13 +4,13 @@
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../CommandLine.js" line="+59"/>
+        <location filename="../CommandLine.js" line="+60"/>
         <source>&amp;Command Line</source>
         <translation>&amp;C コマンドライン</translation>
     </message>
     <message>
-        <location line="-29"/>
-        <location line="+45"/>
+        <location line="-30"/>
+        <location line="+46"/>
         <location filename="../CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>コマンドライン</translation>
@@ -49,12 +49,12 @@
         <translation type="obsolete">ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
     </message>
     <message>
-        <location line="-282"/>
+        <location line="-283"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
     <message>
-        <location line="+178"/>
+        <location line="+179"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation>無効な座標または距離 &apos;%1&apos;.</translation>
     </message>

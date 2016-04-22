@@ -4,7 +4,7 @@
 <context>
     <name>EcmaScriptShell</name>
     <message>
-        <location filename="../EcmaScriptShell.js" line="+61"/>
+        <location filename="../EcmaScriptShell.js" line="+62"/>
         <source>&amp;Script Shell</source>
         <translation>&amp;Skriptshell</translation>
     </message>

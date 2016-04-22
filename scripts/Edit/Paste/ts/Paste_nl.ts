@@ -14,7 +14,7 @@
         <translation>Rotatie:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation>Draai ingevoegde objecten&lt;br&gt;over deze hoek</translation>
     </message>
@@ -24,7 +24,7 @@
         <translation>&amp;Schaal:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation>Schaal ingevoegde objecten&lt;br&gt;met deze factor</translation>
     </message>

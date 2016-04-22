@@ -4,7 +4,12 @@
 <context>
     <name>SvgImport</name>
     <message>
-        <location filename="../SvgImport.js" line="+59"/>
+        <location filename="../SvgImport.js" line="+30"/>
+        <source>File</source>
+        <translation>File</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Import SVG</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Importa SVG</translation>
@@ -35,12 +40,13 @@ Tutti i file</translatorcomment>
         <translation>Importa &amp;SVG...</translation>
     </message>
     <message>
+        <location filename="../SvgImport.js" line="-34"/>
         <location filename="../SvgImportDialog.ui" line="+14"/>
         <source>SVG Import</source>
         <translation>Importa SVG</translation>
     </message>
     <message>
-        <location line="+8"/>
+        <location filename="../SvgImportDialog.ui" line="+8"/>
         <source>Resolution:</source>
         <translation>Risoluzione:</translation>
     </message>
@@ -48,6 +54,16 @@ Tutti i file</translatorcomment>
         <location line="+57"/>
         <source>Pixels / Inch</source>
         <translation>Pixel / Pollice</translation>
+    </message>
+    <message>
+        <location filename="../PreferencesPage.ui" line="+17"/>
+        <source>Splines</source>
+        <translation>Splines</translation>
+    </message>
+    <message>
+        <location line="+6"/>
+        <source>Automatically convert splines to lines / arcs if appropriate</source>
+        <translation>Convertire automaticamente spline alle linee / archi</translation>
     </message>
 </context>
 </TS>

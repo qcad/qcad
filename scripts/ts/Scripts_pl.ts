@@ -39,7 +39,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+350"/>
+        <location line="+351"/>
         <source>Move Reference Point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -72,7 +72,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2006"/>
+        <location line="+2007"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -81,8 +81,8 @@ Anuluj
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location line="-1733"/>
-        <location line="+136"/>
+        <location line="-1734"/>
+        <location line="+137"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Aktywne narzędzia:</translation>
@@ -253,7 +253,7 @@ Narzędzia CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+972"/>
+        <location filename="../WidgetFactory.js" line="+975"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pl.ts--
@@ -261,7 +261,7 @@ Przywróć ustawienia</translatorcomment>
         <translation type="unfinished">Przywróć ustawienia</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+47"/>
         <source>Insert Symbol</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

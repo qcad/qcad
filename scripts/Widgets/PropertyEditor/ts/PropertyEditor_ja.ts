@@ -106,7 +106,7 @@
     </message>
     <message>
         <location line="+320"/>
-        <location line="+56"/>
+        <location line="+57"/>
         <location line="+11"/>
         <source>Property Editor</source>
         <translation>プロパティエディタ</translation>

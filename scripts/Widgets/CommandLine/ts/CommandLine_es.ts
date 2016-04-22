@@ -5,7 +5,7 @@
     <name>CommandLine</name>
     <message>
         <location filename="../CommandLine.js" line="+30"/>
-        <location line="+45"/>
+        <location line="+46"/>
         <location filename="../CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Línea de comandos</translation>
@@ -64,12 +64,12 @@
         <translation type="obsolete">Tratando de aprovechar o modificar las entidades de una capa bloqueada.</translation>
     </message>
     <message>
-        <location line="-282"/>
+        <location line="-283"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+178"/>
+        <location line="+179"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation>Inválida coordinar o distancia &apos;%1&apos;.</translation>
     </message>

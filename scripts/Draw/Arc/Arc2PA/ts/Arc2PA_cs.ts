@@ -36,7 +36,7 @@
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>Směr otočení (Kladně)</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -47,17 +47,17 @@
     <message>
         <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Otočení (Záporné)</translation>
     </message>
     <message>
         <location filename="../Arc2PAInit.js" line="+2"/>
         <source>&amp;2 Points and Angle</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;2 Body a úhel</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and angle</source>
-        <translation type="unfinished"></translation>
+        <translation>Kreslení oblouku z 2 bodů a úhlu</translation>
     </message>
 </context>
 </TS>

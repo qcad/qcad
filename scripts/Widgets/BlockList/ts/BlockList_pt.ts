@@ -5,7 +5,7 @@
     <name>BlockList</name>
     <message>
         <location filename="../BlockList.js" line="+399"/>
-        <location line="+40"/>
+        <location line="+41"/>
         <location line="+39"/>
         <source>Block List</source>
         <translatorcomment>--exact match--
@@ -14,7 +14,7 @@ Lista de Blocos</translatorcomment>
         <translation>Lista de Blocos</translation>
     </message>
     <message>
-        <location line="-79"/>
+        <location line="-80"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>

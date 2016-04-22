@@ -10,7 +10,7 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+108"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation>Zoznam Vrstiev</translation>
     </message>

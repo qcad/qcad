@@ -9,13 +9,13 @@
         <translation>Gradniki</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+54"/>
         <source>&amp;Layer List</source>
         <translation>&amp;Seznam plasti</translation>
     </message>
     <message>
-        <location line="-53"/>
-        <location line="+108"/>
+        <location line="-54"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation>Seznam plasti</translation>
     </message>

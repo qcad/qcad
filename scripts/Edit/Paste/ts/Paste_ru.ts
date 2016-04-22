@@ -14,7 +14,7 @@
         <translation>Вращение:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation>Вращать вставленный элемент&lt;br&gt;на заданный угол</translation>
     </message>
@@ -24,7 +24,7 @@
         <translation>Масштаб:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation>Масштабировать вставленный элемент&lt;br&gt;на заданный коэффициент</translation>
     </message>

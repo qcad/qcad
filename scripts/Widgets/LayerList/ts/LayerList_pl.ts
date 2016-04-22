@@ -9,14 +9,14 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+54"/>
         <source>&amp;Layer List</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Lista warstwa</translation>
     </message>
     <message>
-        <location line="-53"/>
-        <location line="+108"/>
+        <location line="-54"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translatorcomment>--exact match--
 --file: qcad_pl.ts--

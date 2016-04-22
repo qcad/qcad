@@ -4,15 +4,15 @@
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../CommandLine.js" line="+59"/>
+        <location filename="../CommandLine.js" line="+60"/>
         <source>&amp;Command Line</source>
         <translatorcomment>--google--
 Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="unfinished">Command Line</translation>
     </message>
     <message>
-        <location line="-29"/>
-        <location line="+45"/>
+        <location line="-30"/>
+        <location line="+46"/>
         <location filename="../CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translatorcomment>--exact match--
@@ -61,12 +61,12 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Próbuje zwrócić na lub modyfikować jednostki na warstwie zablokowanej lub niewidoczne.</translation>
     </message>
     <message>
-        <location line="-282"/>
+        <location line="-283"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+178"/>
+        <location line="+179"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>

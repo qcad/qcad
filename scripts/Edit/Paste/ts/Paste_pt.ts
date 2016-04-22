@@ -30,7 +30,7 @@ _Rotação</translatorcomment>
         <translation>Rotação:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--
@@ -47,7 +47,7 @@ Escala de tipo de linha global:</translatorcomment>
         <translation>Escala:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translatorcomment>--exact match--
 --file: InsertBlockItem_pt.ts--

@@ -10,7 +10,7 @@
     </message>
     <message>
         <location line="+0"/>
-        <location line="+45"/>
+        <location line="+46"/>
         <location filename="../CommandLine.ui" line="+20"/>
         <source>Command Line</source>
         <translation>Príkazový riadok</translation>

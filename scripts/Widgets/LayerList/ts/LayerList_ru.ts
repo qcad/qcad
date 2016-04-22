@@ -9,13 +9,13 @@
         <translation>Виджеты</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+54"/>
         <source>&amp;Layer List</source>
         <translation>&amp;Список слоёв</translation>
     </message>
     <message>
-        <location line="-53"/>
-        <location line="+108"/>
+        <location line="-54"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation>Список слоёв</translation>
     </message>

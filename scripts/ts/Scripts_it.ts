@@ -39,7 +39,7 @@
         <translation>Spostare entità</translation>
     </message>
     <message>
-        <location line="+350"/>
+        <location line="+351"/>
         <source>Move Reference Point</source>
         <translation>Spostare riferimento</translation>
     </message>
@@ -68,13 +68,13 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2006"/>
+        <location line="+2007"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location line="-1733"/>
-        <location line="+136"/>
+        <location line="-1734"/>
+        <location line="+137"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
         <translation>Strumento attivo:</translation>
@@ -232,12 +232,12 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+972"/>
+        <location filename="../WidgetFactory.js" line="+975"/>
         <source>Restore defaults</source>
         <translation>Ripristina predefiniti</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+47"/>
         <source>Insert Symbol</source>
         <translation>Inserisci Simbolo</translation>
     </message>

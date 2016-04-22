@@ -9,7 +9,7 @@
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+53"/>
+        <location line="+54"/>
         <source>&amp;Layer List</source>
         <translation>&amp;Liste des calques</translation>
     </message>
@@ -18,8 +18,8 @@
         <translation type="vanished">Listes</translation>
     </message>
     <message>
-        <location line="-53"/>
-        <location line="+108"/>
+        <location line="-54"/>
+        <location line="+109"/>
         <source>Layer List</source>
         <translation>Liste des calques</translation>
     </message>

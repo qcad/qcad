@@ -39,7 +39,7 @@
         <translation>Mova a entidade para a localização desejada</translation>
     </message>
     <message>
-        <location line="+350"/>
+        <location line="+351"/>
         <source>Move Reference Point</source>
         <translation>Mova o Ponto de Referência</translation>
     </message>
@@ -72,7 +72,7 @@ Retorna ao último menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2006"/>
+        <location line="+2007"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -81,8 +81,8 @@ Cancelar
         <translation>Cancele</translation>
     </message>
     <message>
-        <location line="-1733"/>
-        <location line="+136"/>
+        <location line="-1734"/>
+        <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Ferramenta Ativa:</translation>
     </message>
@@ -256,7 +256,7 @@ Ferramentas CAD</translatorcomment>
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+972"/>
+        <location filename="../WidgetFactory.js" line="+975"/>
         <source>Restore defaults</source>
         <translatorcomment>--ignored case--
 --file: qt_pt.ts--
@@ -265,7 +265,7 @@ Restaurar Predefinições</translatorcomment>
         <translation>Restaure padrões</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+47"/>
         <source>Insert Symbol</source>
         <translatorcomment>--exact match--
 --file: Text_pt.ts--

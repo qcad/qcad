@@ -14,7 +14,7 @@
         <translation>回転:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation>貼り付けエンティティを回転&lt;br&gt;この角度で</translation>
     </message>
@@ -24,7 +24,7 @@
         <translation>縮尺:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation>貼り付けエンティティを拡縮&lt;br&gt;この係数で</translation>
     </message>

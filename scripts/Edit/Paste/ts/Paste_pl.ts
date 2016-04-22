@@ -22,7 +22,7 @@ Obracanie:</translatorcomment>
         <translation type="unfinished">Obracanie:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Obróć wklejone podmioty &lt;br&gt; przez to kąt</translation>
@@ -36,7 +36,7 @@ Skala:</translatorcomment>
         <translation type="unfinished">Skala:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Skala wklejone podmioty &lt;br&gt; tym czynnikiem</translation>

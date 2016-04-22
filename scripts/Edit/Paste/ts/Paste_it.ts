@@ -9,7 +9,7 @@
         <translation>Rotazione:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation>Ruotare le entità incollato&lt;br&gt;da questa angolazione</translation>
     </message>
@@ -19,7 +19,7 @@
         <translation>Scala:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation>Scala entità incollate&lt;br&gt;da questo fattore</translation>
     </message>

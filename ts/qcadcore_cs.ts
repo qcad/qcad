@@ -56,7 +56,7 @@
     <message>
         <location line="+3"/>
         <source>Yard</source>
-        <translation>Yard</translation>
+        <translation>Míle</translation>
     </message>
     <message>
         <location line="+3"/>

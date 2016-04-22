@@ -14,7 +14,7 @@
         <translation>Natočenie:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation>Natočiť vkladané prvky&lt;br&gt;pod týmto uhlom</translation>
     </message>
@@ -24,7 +24,7 @@
         <translation>Mierka:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation>Mierka vkladaných prvkov&lt;br&gt;podľa tohto Faktora</translation>
     </message>

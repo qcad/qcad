@@ -39,7 +39,7 @@
         <translation>Déplacer entité</translation>
     </message>
     <message>
-        <location line="+350"/>
+        <location line="+351"/>
         <source>Move Reference Point</source>
         <translation>Déplacer référence</translation>
     </message>
@@ -68,13 +68,13 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2006"/>
+        <location line="+2007"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="-1733"/>
-        <location line="+136"/>
+        <location line="-1734"/>
+        <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Outil actif:</translation>
     </message>
@@ -236,12 +236,12 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+972"/>
+        <location filename="../WidgetFactory.js" line="+975"/>
         <source>Restore defaults</source>
         <translation>Restaurer les valeurs par défaut</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+47"/>
         <source>Insert Symbol</source>
         <translation>Insérer symbole</translation>
     </message>

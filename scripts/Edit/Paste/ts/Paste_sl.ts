@@ -14,7 +14,7 @@
         <translation>Rotacija:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation>Rotiraj prilepljene entitete&lt;br&gt;za ta kot</translation>
     </message>
@@ -24,7 +24,7 @@
         <translation>Razmerje:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation>Povečaj/pomanjšaj entitete&lt;br&gt;za ta faktor</translation>
     </message>

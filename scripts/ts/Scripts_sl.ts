@@ -34,7 +34,7 @@
         <translation>Premakni entiteto na željeno lokacijo</translation>
     </message>
     <message>
-        <location line="+350"/>
+        <location line="+351"/>
         <source>Move Reference Point</source>
         <translation>Premakni referenčno točko</translation>
     </message>
@@ -63,13 +63,13 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2006"/>
+        <location line="+2007"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location line="-1733"/>
-        <location line="+136"/>
+        <location line="-1734"/>
+        <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Aktivno orodje:</translation>
     </message>
@@ -210,12 +210,12 @@
 <context>
     <name>WidgetFactory</name>
     <message>
-        <location filename="../WidgetFactory.js" line="+972"/>
+        <location filename="../WidgetFactory.js" line="+975"/>
         <source>Restore defaults</source>
         <translation>Obnovi privzeto</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+47"/>
         <source>Insert Symbol</source>
         <translation>Vstavi simbol</translation>
     </message>

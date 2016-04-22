@@ -14,7 +14,7 @@
         <translation>Kiertäminen:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Rotate pasted entities&lt;br&gt;by this angle</source>
         <translation>Kierrä liitetyt kohteet&lt;br&gt;tämän kulman mukaan</translation>
     </message>
@@ -24,7 +24,7 @@
         <translation>Mittakaava:</translation>
     </message>
     <message>
-        <location line="+13"/>
+        <location line="+19"/>
         <source>Scale pasted entities&lt;br&gt;by this factor</source>
         <translation>Mittakaavaan liitetyt kohteet&lt;br&gt;tämän tekijän mukaan</translation>
     </message>
