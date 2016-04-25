@@ -229,6 +229,10 @@ public:
         return statusChanges;
     }
 
+    bool hasStatusChange(RObject::Id id) const {
+        return statusChanges.contains(id);
+    }
+
     /**
      * \return Map of properties that are changed by this transaction.
      */
