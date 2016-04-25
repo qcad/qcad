@@ -358,7 +358,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
                 }
 
                 // use right-click on entity to select entity:
-                if (rightClickToDeselect) {
+                else if (rightClickToDeselect) {
                     this.selectEntity(entityId, shiftPressed);
                     handled = true;
                 }
