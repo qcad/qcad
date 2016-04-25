@@ -305,6 +305,8 @@ TextDialog.prototype.show =  function(textDataIn) {
             this.mode === TextDialog.Mode.AttributeDefinition) {
 
             this.dialog.findChild("AttributeTag").text = textDataIn.getTag();
+            this.dialog.findChild("AttributeValue").text = textDataIn.getText();
+
             if (this.mode === TextDialog.Mode.AttributeDefinition) {
                 this.dialog.findChild("AttributePrompt").text = textDataIn.getPrompt();
             }
@@ -312,8 +314,8 @@ TextDialog.prototype.show =  function(textDataIn) {
                 this.dialog.findChild("AttributePrompt").visible = false;
                 this.dialog.findChild("PromptLabel").visible = false;
                 this.dialog.findChild("AttributeTag").enabled = false;
+                this.dialog.findChild("AttributeValue").selectAll();
             }
-            this.dialog.findChild("AttributeValue").text = textDataIn.getText();
         }
     }
     else {
