@@ -312,6 +312,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, update, "update");
             
+            REcmaHelper::registerFunction(&engine, proto, isDirty, "isDirty");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RSpline*>(), *proto);
 
@@ -6674,6 +6676,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpline::update", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::isDirty
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::isDirty", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::isDirty";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("isDirty", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isDirty();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.isDirty().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::isDirty", context, engine);
             return result;
         }
          QScriptValue

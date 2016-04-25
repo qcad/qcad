@@ -356,6 +356,9 @@
         update
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isDirty
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         hasProxy
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

@@ -230,6 +230,10 @@
         <return>return <expr><name>statusChanges</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>bool</name></type> <name>hasStatusChange</name><parameter_list>(<param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>statusChanges</name>.<call><name>contains</name><argument_list>(<argument><expr><name>id</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
     <comment type="block">/**
      * \return Map of properties that are changed by this transaction.
      */</comment>

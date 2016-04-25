@@ -133,6 +133,9 @@
         getStatusChanges
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasStatusChange
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getPropertyChanges
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

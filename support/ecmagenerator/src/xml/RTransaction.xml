@@ -241,6 +241,14 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; RObject::Id &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="hasStatusChange" cppName="hasStatusChange"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RObject::Id" typeName="RObject::Id" name="id"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="getPropertyChanges" cppName="getPropertyChanges"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

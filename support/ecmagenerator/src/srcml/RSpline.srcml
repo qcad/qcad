@@ -197,6 +197,10 @@
     <function_decl><type><name>void</name></type> <name>updateFromFitPoints</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>useTangents</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>void</name></type> <name>update</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function><type><name>bool</name></type> <name>isDirty</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>dirty</name></expr>;</return>
+    }</block></function>
+
     <function><type><name>static</name> <name>bool</name></type> <name>hasProxy</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>splineProxy</name>!=<name>NULL</name></expr>;</return>
     }</block></function>
