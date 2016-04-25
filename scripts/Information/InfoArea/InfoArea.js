@@ -125,15 +125,33 @@ InfoArea.prototype.getOperation = function(preview) {
 
     var view = di.getLastKnownViewWithFocus();
     view = view.getRGraphicsView();
-    var area = this.getArea();
-    var label = sprintf("%0.3f", area);
+    var areaText = this.getAreaText();
     view.clearTextLabels();
     var c = this.polyline.getLastVertex();
     if (c.isValid()) {
-        this.addTextLabel(op, view, c, label, preview);
+        this.addTextLabel(op, view, c, areaText, preview);
     }
 
     return op;
+};
+
+InfoArea.prototype.getAreaText = function(rounded) {
+    var prec = 12;
+    if (rounded) {
+        prec = 3;
+    }
+
+    var doc = this.getDocument();
+    var area = this.getArea();
+    var areaText;
+    if (doc.getUnit()===RS.Inch) {
+        var sqft = Math.floor(area/144);
+        var sqin = area-sqft*144;
+        return "%1 (= %2ft² %3in²)".arg(area).arg(sqft, 0, 'f', prec).arg(sqin, 0, 'f', prec);
+    }
+    else {
+        return "%1".arg(area, 0, 'f', prec);
+    }
 };
 
 InfoArea.prototype.getArea = function() {
@@ -195,6 +213,7 @@ InfoArea.prototype.getCenter = function() {
 
 InfoArea.prototype.slotCalculate = function() {
     var di = this.getDocumentInterface();
+    var doc = di.getDocument();
 
     if (isNull(this.polyline) || this.polyline.countVertices()===0) {
         this.polyline = undefined;
@@ -205,7 +224,9 @@ InfoArea.prototype.slotCalculate = function() {
         return;
     }
 
-    var info = qsTr("Polygon area:") + " " + this.getArea() +
+    var areaText = this.getAreaText();
+
+    var info = qsTr("Polygon area:") + " " + areaText +
             ", " + qsTr("circumference:") + " " + this.getCircumference();
 
     if (this.addToDrawing) {
