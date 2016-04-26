@@ -323,6 +323,11 @@ void RSpline::insertFitPointAt(const RVector& point) {
     int index = -1;
     for (int i=0; i<fitPoints.length(); i++) {
         double tc = getTAtPoint(fitPoints[i]);
+        if (i==0 && isClosed()) {
+            // closed spline: two t's for first fit point:
+            tc = 0.0;
+        }
+        //qWarning() << "tc: " << tc;
         if (tc<t) {
             index = i+1;
         }
@@ -331,9 +336,16 @@ void RSpline::insertFitPointAt(const RVector& point) {
         }
     }
 
+
     // point not on spline:
-    if (index<0 ||  index>=fitPoints.length()) {
-        return;
+    if (index<0 || index>=fitPoints.length()) {
+        if (isClosed()) {
+            index = 0;
+        }
+        else {
+            qWarning() << "no point on spline found. t: " << t;
+            return;
+        }
     }
 
     fitPoints.insert(index, p);
