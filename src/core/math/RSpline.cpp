@@ -62,6 +62,9 @@ void RSpline::copySpline(const RSpline& other) {
     this->boundingBox = other.boundingBox;
     this->exploded = other.exploded;
     this->dirty = other.dirty;
+#ifndef R_NO_OPENNURBS
+    this->curve = other.curve;
+#endif
 }
 
 /**
