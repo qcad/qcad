@@ -528,13 +528,13 @@ function main() {
     var pluginInfo;
 
     // look up app name override:
-//    for (i=0; i<numPlugins; i++) {
-//        pluginInfo = RPluginLoader.getPluginInfo(i);
-//        var n = pluginInfo.get("NameOverride");
-//        if (!isNull(n)) {
-//            qApp.applicationName = n;
-//        }
-//    }
+    for (i=0; i<numPlugins; i++) {
+        pluginInfo = RPluginLoader.getPluginInfo(i);
+        var n = pluginInfo.get("NameOverride");
+        if (!isNull(n)) {
+            qApp.applicationName = n;
+        }
+    }
 
     // if locale is given, don't show first start dialog:
     if (isFirstStart && !QCoreApplication.arguments().contains("-locale")) {
