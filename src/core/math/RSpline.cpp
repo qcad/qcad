@@ -60,11 +60,12 @@ void RSpline::copySpline(const RSpline& other) {
     this->tangentStart = other.tangentStart;
     this->tangentEnd = other.tangentEnd;
     this->boundingBox = other.boundingBox;
+
+    // do NOT copy curve member (copying of ON_NurbsCurve is broken, segfault).
+    updateInternal();
+
     this->exploded = other.exploded;
     this->dirty = other.dirty;
-#ifndef R_NO_OPENNURBS
-    this->curve = other.curve;
-#endif
 }
 
 /**
