@@ -62,7 +62,7 @@
         <translation>Standardwert:</translation>
     </message>
     <message>
-        <location line="+258"/>
+        <location line="+260"/>
         <source>&amp;Undo</source>
         <translation>&amp;Rückgängig</translation>
     </message>

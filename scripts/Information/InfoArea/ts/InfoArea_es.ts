@@ -14,7 +14,7 @@
         <translation>Terminar</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+153"/>
         <source>Polygon area:</source>
         <translation>Área de un polígono:</translation>
     </message>

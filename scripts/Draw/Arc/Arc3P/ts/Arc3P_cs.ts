@@ -6,7 +6,7 @@
     <message>
         <location filename="../Arc3P.js" line="+62"/>
         <source>Start point</source>
-        <translation type="unfinished"></translation>
+        <translation>Počáteční bod</translation>
     </message>
     <message>
         <location line="+8"/>

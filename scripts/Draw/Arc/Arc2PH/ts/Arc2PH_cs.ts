@@ -36,12 +36,12 @@
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished">Směr otáčení (Kladný)</translation>
+        <translation>Směr otáčení (Kladný)</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished">Směr otáčení (Záporný)</translation>
+        <translation>Směr otáčení (Záporný)</translation>
     </message>
     <message>
         <location filename="../Arc2PHInit.js" line="+2"/>

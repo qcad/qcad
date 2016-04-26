@@ -6,7 +6,7 @@
     <message>
         <location filename="../Circle2P.js" line="+58"/>
         <source>First point</source>
-        <translation type="unfinished"></translation>
+        <translation>První bod</translation>
     </message>
     <message>
         <location line="+7"/>

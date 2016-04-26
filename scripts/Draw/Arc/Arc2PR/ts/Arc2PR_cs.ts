@@ -36,49 +36,49 @@
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished">Směr otočení (Kladný)</translation>
+        <translation>Směr otáčení (Kladný)</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+17"/>
         <source>Direction</source>
-        <translation type="unfinished"></translation>
+        <translation>Směr</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>Směr otáčení (Záporný)</translation>
     </message>
     <message>
         <location line="+24"/>
         <source>Solution:</source>
-        <translation type="unfinished"></translation>
+        <translation>Řešení:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Shorter Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Malý oblouk</translation>
     </message>
     <message>
         <location line="+13"/>
         <location line="+17"/>
         <source>Solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Řešení</translation>
     </message>
     <message>
         <location line="-10"/>
         <source>Longer Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>Dlouhý oblouk</translation>
     </message>
     <message>
         <location filename="../Arc2PRInit.js" line="+2"/>
         <source>&amp;2 Points and Radius</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;2 Body a úhel</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw arc from 2 points and radius</source>
-        <translation type="unfinished"></translation>
+        <translation>Kreslení oblouku z 2 bodů a úhlu</translation>
     </message>
 </context>
 </TS>

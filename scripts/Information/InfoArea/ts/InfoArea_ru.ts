@@ -14,7 +14,7 @@
         <translation>Завершено</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+153"/>
         <source>Polygon area:</source>
         <translation>Полигональная область:</translation>
     </message>

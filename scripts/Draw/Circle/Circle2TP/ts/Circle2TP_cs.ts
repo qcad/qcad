@@ -21,7 +21,7 @@
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation type="unfinished"></translation>
+        <translation>Vybrat řešení</translation>
     </message>
     <message>
         <location line="+136"/>

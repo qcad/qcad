@@ -22,7 +22,7 @@
 <context>
     <name>LayerDialog</name>
     <message>
-        <location filename="../LayerDialog.js" line="+181"/>
+        <location filename="../LayerDialog.js" line="+176"/>
         <source>Leading or trailing spaces.</source>
         <translation>Počáteční nebo koncové mezery.</translation>
     </message>

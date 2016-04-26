@@ -50,7 +50,7 @@
         <translation>Standardvärde:</translation>
     </message>
     <message>
-        <location line="+258"/>
+        <location line="+260"/>
         <source>&amp;Undo</source>
         <translation type="unfinished"></translation>
     </message>

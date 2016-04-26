@@ -26,7 +26,7 @@
     <message>
         <location line="+4"/>
         <source>Draw arc tangential to base entity</source>
-        <translation type="unfinished">Vykreslit oblouk tangenciálně k základu</translation>
+        <translation>Vykreslit oblouk tangenciálně k základu</translation>
     </message>
 </context>
 </TS>

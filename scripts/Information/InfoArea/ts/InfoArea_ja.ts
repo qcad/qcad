@@ -14,7 +14,7 @@
         <translation>完了</translation>
     </message>
     <message>
-        <location line="+132"/>
+        <location line="+153"/>
         <source>Polygon area:</source>
         <translation>ポリゴンエリア（面積）:</translation>
     </message>
