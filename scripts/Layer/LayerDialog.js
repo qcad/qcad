@@ -75,8 +75,6 @@ LayerDialog.prototype.show = function() {
     var cbLinetype = widgets["Linetype"];
     cbLinetype.init(this.document);
 
-    var prefixed = true;
-
     // init from existing layer:
     if (!isNull(this.layer)) {
         leLayerName.text = this.layer.getName();
@@ -88,7 +86,6 @@ LayerDialog.prototype.show = function() {
             // only allow user to edit part after prefix:
             if (!isNull(this.prefix)) {
                 if (leLayerName.text.startsWith(this.prefix)) {
-                    prefixed = true;
                     leLayerName.text = leLayerName.text.substring(this.prefix.length);
                 }
             }
@@ -104,12 +101,10 @@ LayerDialog.prototype.show = function() {
         }
     }
 
-    if (prefixed) {
-        // show prefix as part of the layer name label:
-        var lLayerName = widgets["LayerNameLabel"];
-        if (!isNull(this.prefix)) {
-            lLayerName.text = lLayerName.text + " " + this.prefix;
-        }
+    // show prefix as part of the layer name label:
+    var lLayerName = widgets["LayerNameLabel"];
+    if (!isNull(this.prefix)) {
+        lLayerName.text = lLayerName.text + " " + this.prefix;
     }
 
     leLayerName.textChanged.connect(this, "validate");
