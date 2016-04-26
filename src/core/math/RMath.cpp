@@ -337,23 +337,32 @@ double RMath::eval(const QString& expression, bool* ok) {
     }
 
     // convert foot indication to a factor of 12
-    // e.g. "10'" to 10*12 and "10' " to 10*12+
+    // e.g.
+    // 10'5  -> 10*12+5
+    // 10'   -> 10*12
+    // -10'5 -> -10*12-5
+    // an optional " at the end may be present and is ignored
     {
-        QRegExp re("(\\d+)'[ ]*(\\d*)", Qt::CaseInsensitive, QRegExp::RegExp2);
+        QRegExp re("([+-])?(\\d+)'[ ]*(\\d*)(\"?)", Qt::CaseInsensitive, QRegExp::RegExp2);
         do {
             idx = re.indexIn(expr);
             if (idx==-1) {
                 break;
             }
-            QString feetString = re.cap(1);
+            QString signString = re.cap(1);
+            if (signString.isEmpty()) {
+                signString = "+";
+            }
+            QString feetString = re.cap(2);
             //QString spacesString = re.cap(2);
-            QString inchString = re.cap(2);
+            QString inchString = re.cap(3);
             expr.replace(
                 re,
-                QString("%1*12%2%3")
-                    .arg(feetString)
-                    .arg(inchString.isEmpty() ? "" : "+")
-                    .arg(inchString)
+                QString("%1%2*12%3%4")
+                    .arg(re.cap(1))                                // sign for feet
+                    .arg(feetString)                               // feet
+                    .arg(inchString.isEmpty() ? "" : signString)   // sign for inches (same as sign for feet)
+                    .arg(inchString)                               // inches
             );
         } while(idx!=-1);
     }
