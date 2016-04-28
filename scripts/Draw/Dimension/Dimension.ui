@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>722</width>
+    <width>731</width>
     <height>46</height>
    </rect>
   </property>
@@ -84,11 +84,11 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">border: none;background-color:transparent;</string>
+      <string notr="true">border: none;</string>
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>UpperTolerance.svg</normaloff>UpperTolerance.svg</iconset>
+       <normaloff>UpperToleranceIcon.svg</normaloff>UpperToleranceIcon.svg</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -142,7 +142,7 @@
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>LowerTolerance.svg</normaloff>LowerTolerance.svg</iconset>
+       <normaloff>LowerToleranceIcon.svg</normaloff>LowerToleranceIcon.svg</iconset>
      </property>
      <property name="iconSize">
       <size>
