@@ -479,7 +479,8 @@ QString RUnit::formatEngineering(double length, RS::Unit unit,
 
     double lengthInch;
     if (unit==RS::Foot) {
-        lengthInch = length * 12;
+        // 20160428: even if unit is set to feet, the drawing unit is regarded as inches if architectural or engineering:
+        lengthInch = length /* * 12*/;
     }
     else {
         lengthInch = length;
@@ -532,7 +533,8 @@ QString RUnit::formatArchitectural(double length, RS::Unit unit,
 
     double lengthInch;
     if (unit==RS::Foot) {
-        lengthInch = length * 12;
+        // 20160428: even if unit is set to feet, the drawing unit is regarded as inches if architectural or engineering:
+        lengthInch = length /* * 12*/;
     }
     else {
         lengthInch = length;
