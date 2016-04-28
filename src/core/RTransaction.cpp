@@ -932,6 +932,7 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object) {
     RObject::Id objectId = object->getId();
 
     if (object->isProtected()) {
+        failed = true;
         qWarning() << "RTransaction::deleteObject: trying to delete protected object";
         return;
     }
@@ -940,8 +941,15 @@ void RTransaction::deleteObject(QSharedPointer<RObject> object) {
     QSharedPointer<RLayer> layer = object.dynamicCast<RLayer>();
     if (!layer.isNull()) {
         if (layer->getName() == "0") {
+            failed = true;
             qWarning() << "RTransaction::deleteObject: "
                     "trying to delete the default layer \"0\"";
+            return;
+        }
+        if (layer->isLocked()) {
+            failed = true;
+            qWarning() << "RTransaction::deleteObject: "
+                    "trying to delete locked layer: " << layer->getName();
             return;
         }
 
