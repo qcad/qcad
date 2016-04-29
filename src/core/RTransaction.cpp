@@ -224,6 +224,11 @@ void RTransaction::redo() {
         }
     }
 
+    RMainWindow* mainWindow = RMainWindow::getMainWindow();
+    if (mainWindow!=NULL && storage->getDocument()!=NULL) {
+        mainWindow->notifyInterTransactionListeners(storage->getDocument(), this);
+    }
+
     updateAffectedBlockReferences();
     undoing = true;
 }
@@ -305,6 +310,11 @@ void RTransaction::undo() {
                 }
             }
         }
+    }
+
+    RMainWindow* mainWindow = RMainWindow::getMainWindow();
+    if (mainWindow!=NULL && storage->getDocument()!=NULL) {
+        mainWindow->notifyInterTransactionListeners(storage->getDocument(), this);
     }
 
     updateAffectedBlockReferences();
