@@ -161,17 +161,22 @@ Autozoom
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+82"/>
-        <source>Anti-aliasing on by default</source>
+        <location line="+144"/>
+        <source>Use full resolution for Retina display</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
+        <source>Anti-aliasing on by default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-69"/>
         <source>Timeout for hatch rendering:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-349"/>
+        <location line="-342"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation type="unfinished"></translation>
     </message>
@@ -204,7 +209,7 @@ Liczba obiektów w podglądzie:</translatorcomment>
         <translation type="obsolete">Wysokość progu Text display:</translation>
     </message>
     <message>
-        <location line="+265"/>
+        <location line="+272"/>
         <source>Selection</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

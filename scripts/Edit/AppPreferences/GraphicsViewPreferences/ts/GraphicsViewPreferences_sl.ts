@@ -109,17 +109,22 @@
         <translation>Najmanjši kot koraka za izris krivulje (stopinje):</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+144"/>
+        <source>Use full resolution for Retina display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Anti-aliasing on by default</source>
         <translation>Glajenje robov provzeto vklopljeno</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-69"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Iztek časa za izris šrafur:</translation>
     </message>
     <message>
-        <location line="-349"/>
+        <location line="-342"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Samodejno uporabi zaslonske črte v prikazu modela</translation>
     </message>
@@ -151,7 +156,7 @@
         <translation type="obsolete">Prag prikaza višine besedila:</translation>
     </message>
     <message>
-        <location line="+265"/>
+        <location line="+272"/>
         <source>Selection</source>
         <translation>Izbor</translation>
     </message>

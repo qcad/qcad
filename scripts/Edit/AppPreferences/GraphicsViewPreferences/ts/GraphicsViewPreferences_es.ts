@@ -129,12 +129,17 @@
         <translation>Paso ángulo mínimo para la prestación de arcos (grados):</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+144"/>
+        <source>Use full resolution for Retina display</source>
+        <translation>Utilice la resolución completa de la pantalla Retina</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Anti-aliasing on by default</source>
         <translation>Antialiasing activado por defecto</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-69"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Tiempo de espera para la representación rayado:</translation>
     </message>
@@ -147,7 +152,7 @@
         <translation type="obsolete">Mostrar entidades con guiones N como contínua:</translation>
     </message>
     <message>
-        <location line="-349"/>
+        <location line="-342"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Usar automáticamente los tipos de línea base de la pantalla de visualización del modelo</translation>
     </message>
@@ -179,7 +184,7 @@
         <translation type="obsolete">Mostrar límite para el texto:</translation>
     </message>
     <message>
-        <location line="+265"/>
+        <location line="+272"/>
         <source>Selection</source>
         <translation>Selección</translation>
     </message>

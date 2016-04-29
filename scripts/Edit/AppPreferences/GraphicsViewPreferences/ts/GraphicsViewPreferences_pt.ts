@@ -129,12 +129,17 @@
         <translation>Passo mínimo de ângulo para renderização de arcos (graus):</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+144"/>
+        <source>Use full resolution for Retina display</source>
+        <translation>Use resolução total para a exposição Retina</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Anti-aliasing on by default</source>
         <translation>Suavização ativada como padrão</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-69"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Tempo de espera para renderização de hachura:</translation>
     </message>
@@ -143,7 +148,7 @@
         <translation type="vanished">Suavização ativada como padrão</translation>
     </message>
     <message>
-        <location line="-349"/>
+        <location line="-342"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Use automaticamente tipos de linha baseados em tela, na visão de modelagem</translation>
     </message>
@@ -175,7 +180,7 @@
         <translation type="obsolete">Mostrar limite para o texto:</translation>
     </message>
     <message>
-        <location line="+265"/>
+        <location line="+272"/>
         <source>Selection</source>
         <translation>Seleção</translation>
     </message>

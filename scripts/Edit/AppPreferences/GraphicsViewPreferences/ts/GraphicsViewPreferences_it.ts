@@ -129,12 +129,17 @@
         <translation>Passo angolo minimo per rendere archi (gradi):</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+144"/>
+        <source>Use full resolution for Retina display</source>
+        <translation>Utilizzare piena risoluzione per il display Retina</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Anti-aliasing on by default</source>
         <translation>Antialiasing di default</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-69"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Timeout per la rappresentazione tratteggio:</translation>
     </message>
@@ -143,7 +148,7 @@
         <translation type="vanished">Antialiasing di default</translation>
     </message>
     <message>
-        <location line="-349"/>
+        <location line="-342"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Utilizzare automaticamente i tipi di linea a base di schermo in vista del modello</translation>
     </message>
@@ -175,7 +180,7 @@
         <translation type="obsolete">Visualizzare limite per il testo:</translation>
     </message>
     <message>
-        <location line="+265"/>
+        <location line="+272"/>
         <source>Selection</source>
         <translation>Selezione</translation>
     </message>

@@ -129,12 +129,17 @@
         <translation>Incrément angulaire minimum pour rendre arcs (degrés):</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+144"/>
+        <source>Use full resolution for Retina display</source>
+        <translation>Utilisez pleine résolution pour affichage Retina</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Anti-aliasing on by default</source>
         <translation>Antialiasing activé par défaut</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-69"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Délai d&apos;attente pour hachure rendu :</translation>
     </message>
@@ -147,7 +152,7 @@
         <translation type="obsolete">Afficher les entités avec N tirets que continu:</translation>
     </message>
     <message>
-        <location line="-349"/>
+        <location line="-342"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Utiliser automatiquement les types de lignes sur écran en vue du modèle</translation>
     </message>
@@ -179,7 +184,7 @@
         <translation type="obsolete">Afficher limite pour le texte:</translation>
     </message>
     <message>
-        <location line="+265"/>
+        <location line="+272"/>
         <source>Selection</source>
         <translation>Sélection</translation>
     </message>

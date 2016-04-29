@@ -129,17 +129,22 @@
         <translation>Minimálny uhol kroku pre zobrazovanie oblúkov (v stupňoch):</translation>
     </message>
     <message>
-        <location line="+82"/>
+        <location line="+144"/>
+        <source>Use full resolution for Retina display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Anti-aliasing on by default</source>
         <translation>Predvolené vyhladenie prvkov</translation>
     </message>
     <message>
-        <location line="+7"/>
+        <location line="-69"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Časový limit pre zobrazenie šrafovania:</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+79"/>
         <source>Selection</source>
         <translation>Výber</translation>
     </message>

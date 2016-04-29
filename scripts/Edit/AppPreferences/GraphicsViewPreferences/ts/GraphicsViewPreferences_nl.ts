@@ -104,12 +104,17 @@
         <translation>Objecten met meer dan N streepjes als doorlopend weergeven:</translation>
     </message>
     <message>
-        <location line="+124"/>
+        <location line="+186"/>
+        <source>Use full resolution for Retina display</source>
+        <translation>Gebruik volledige resolutie voor Retina-display</translation>
+    </message>
+    <message>
+        <location line="+7"/>
         <source>Anti-aliasing on by default</source>
         <translation>Anti-aliasing altijd aan</translation>
     </message>
     <message>
-        <location line="-342"/>
+        <location line="-411"/>
         <source>Automatically use screen based linetypes in model view</source>
         <translation>Automatisch scherm gebaseerde lijntypen gebruiken in model weergave</translation>
     </message>
@@ -134,12 +139,12 @@
         <translation>Minimale hoek voor weergave van bogens (graden):</translation>
     </message>
     <message>
-        <location line="+89"/>
+        <location line="+82"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Time-out voor weergave van arcering:</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+79"/>
         <source>Selection</source>
         <translation>Selectie</translation>
     </message>

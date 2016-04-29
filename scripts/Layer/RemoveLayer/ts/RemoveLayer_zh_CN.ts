@@ -5,7 +5,7 @@
     <name>RemoveLayer</name>
     <message>
         <location filename="../RemoveLayerInit.js" line="+2"/>
-        <source>&amp;Remove Layer</source>
+        <source>&amp;Delete Layer</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

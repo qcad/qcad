@@ -129,17 +129,22 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+82"/>
-        <source>Anti-aliasing on by default</source>
+        <location line="+144"/>
+        <source>Use full resolution for Retina display</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+7"/>
+        <source>Anti-aliasing on by default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-69"/>
         <source>Timeout for hatch rendering:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+79"/>
         <source>Selection</source>
         <translation type="unfinished"></translation>
     </message>

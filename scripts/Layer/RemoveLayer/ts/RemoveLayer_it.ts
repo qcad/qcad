@@ -4,9 +4,13 @@
 <context>
     <name>RemoveLayer</name>
     <message>
-        <location filename="../RemoveLayerInit.js" line="+2"/>
         <source>&amp;Remove Layer</source>
-        <translation>Cancella Layer</translation>
+        <translation type="vanished">Cancella Layer</translation>
+    </message>
+    <message>
+        <location filename="../RemoveLayerInit.js" line="+2"/>
+        <source>&amp;Delete Layer</source>
+        <translation>&amp;Cancella Layer</translation>
     </message>
 </context>
 </TS>
