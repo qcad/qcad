@@ -230,6 +230,7 @@ void RDocumentInterface::clear() {
     for (it=scenes.begin(); it!=scenes.end(); it++) {
         (*it)->clear();
     }
+    setRelativeZero(RVector(0,0));
 
     //qDebug() << "RDocumentInterface::clear: modified: " << document.isModified();
     document.setModified(false);
