@@ -3,10 +3,10 @@
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:dcterms="http://purl.org/dc/terms/">
   <rdf:Description rdf:about="">
-    <dc:title xml:lang="en">DIN7200 DE A3</dc:title>
+    <dc:title xml:lang="en">DIN7200 DE A3 Landscape</dc:title>
     <dcterms:license>http://creativecommons.org/publicdomain/mark/1.0/</dcterms:license>
     <dcterms:created>2016-04</dcterms:created>
-    <dc:creator>Frank</dc:creator>
+    <dc:creator>Frank (DL3DL)</dc:creator>
     <ql:standard>DIN7200</ql:standard>
   </rdf:Description>
 </rdf:RDF>

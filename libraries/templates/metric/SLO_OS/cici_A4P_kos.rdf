@@ -3,7 +3,7 @@
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:dcterms="http://purl.org/dc/terms/">
   <rdf:Description rdf:about="Poenostavljena predloga primerna za OŠ">
-    <dc:title xml:lang="en">Teplate for Slowenian primary schools</dc:title>
+    <dc:title xml:lang="en">Template for Slowenian primary schools</dc:title>
     <dc:title xml:lang="sl">A4 pokončno s kosovnico</dc:title>
     <dcterms:license>http://creativecommons.org/publicdomain/mark/1.0/</dcterms:license>
     <dcterms:created>2015-04-03</dcterms:created>

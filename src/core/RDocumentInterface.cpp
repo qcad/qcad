@@ -1610,7 +1610,10 @@ RVector RDocumentInterface::getLastPosition() const {
     return lastPosition;
 }
 
-
+/**
+ * Sets the position of the relative zero point to p and updates the graphics views.
+ * If the relative zero position is locked it is not moved.
+ */
 void RDocumentInterface::setRelativeZero(const RVector& p) {
     // update last position, even if relative zero is locked:
     lastPosition = p;

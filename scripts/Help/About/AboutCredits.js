@@ -53,6 +53,12 @@ var credits =
         [ "Eduardo Passeto",   "Portuguese (pt) translation" ],
     ],
     [
+        qsTr("Templates"),
+        [ "Clive Tubb ('clive')", "ISO/AEC templates" ],
+        [ "Frank ('DL3DL')",   "German templates DIN6771-1, DIN7200" ],
+        [ "Miha ('miharix')",  "Slowenian Templates (OŠ)" ],
+    ],
+    [
         qsTr("Icons"),
         [ "Ralf Blumhagen ('blumi')",   "Icons for Apollonius tools in Misc > Drawing" ],
     ],
