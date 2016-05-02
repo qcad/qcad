@@ -389,25 +389,28 @@ EventHandler.prototype.drawSnapLabel = function(painter, pos, posRestriction, te
     painter.setPen(color.toCompat());
 
     var font = RSettings.getSnapLabelFont();
+    font.setPointSizeF(font.pointSizeF()*this.graphicsView.getDevicePixelRatio());
     var fm = new QFontMetrics(font);
     painter.setFont(font);
 
+    var offset = 5 * this.graphicsView.getDevicePixelRatio();
+
     if (text!=="") {
         painter.drawText(
-            p.x + 5, p.y + 5,
+            p.x + offset, p.y + offset,
             fm.width(text)+10, fm.height()+10,
             new Qt.Alignment(Qt.AlignHCenter | Qt.AlignVCenter),
             text, null);
     }
 
-    painter.drawEllipse(p.x-5, p.y-5, 10, 10);
+    painter.drawEllipse(p.x-offset, p.y-offset, offset*2, offset*2);
 
     // restriction position:
     if (isValidVector(pr)) {
-        painter.drawLine(pr.x, pr.y-5, pr.x+5, pr.y);
-        painter.drawLine(pr.x+5, pr.y, pr.x, pr.y+5);
-        painter.drawLine(pr.x, pr.y+5, pr.x-5, pr.y);
-        painter.drawLine(pr.x-5, pr.y, pr.x, pr.y-5);
+        painter.drawLine(pr.x, pr.y-offset, pr.x+offset, pr.y);
+        painter.drawLine(pr.x+offset, pr.y, pr.x, pr.y+offset);
+        painter.drawLine(pr.x, pr.y+offset, pr.x-offset, pr.y);
+        painter.drawLine(pr.x-offset, pr.y, pr.x, pr.y-offset);
     }
 
     // display distance/angle:
@@ -463,7 +466,7 @@ EventHandler.prototype.drawSnapLabel = function(painter, pos, posRestriction, te
 
     if (text !== "") {
         painter.drawText(
-                    p.x + 5, p.y - 15 - fm.height(),
+                    p.x + offset, p.y - 3*offset - fm.height(),
                     fm.width(text)+10, fm.height()+10,
                     new Qt.Alignment(Qt.AlignHCenter | Qt.AlignVCenter),
                     text, null);

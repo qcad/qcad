@@ -320,7 +320,7 @@ void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RVector& p
     if (highlight) {
         color = RColor::getHighlighted(color, backgroundColor, 100);
     }
-    int size = RSettings::getIntValue("GraphicsView/ReferencePointSize", 10);
+    int size = RSettings::getIntValue("GraphicsView/ReferencePointSize", 10) * getDevicePixelRatio();
     int shape = RSettings::getIntValue("GraphicsView/ReferencePointShape", 0);
 
     if (shape==1) {
@@ -459,7 +459,7 @@ void RGraphicsViewImage::paintOrigin(QPaintDevice& device) {
     }
     else {
         gridPainter->setPen(pen);
-        double r = mapDistanceFromView(20.0);
+        double r = mapDistanceFromView(20.0 * getDevicePixelRatio());
         gridPainter->drawLine(
             QPointF(-r,0.0),
             QPointF(r,0.0)
@@ -528,7 +528,7 @@ void RGraphicsViewImage::paintRelativeZero(QPaintDevice& device) {
     }
 
     RVector screenPos = mapToView(relativeZero);
-    double r = 5.0;
+    double r = 5.0 * getDevicePixelRatio();
 
     QPainter painter(&device);
     painter.setPen(
