@@ -203,6 +203,7 @@ void RMathLineEdit::setValue(double v, int precision) {
     if (isAngle()) {
         v = RMath::rad2deg(v);
     }
+    value = v;
     setText(QString("%1").arg(v, 0, 'g', precision));
     clearError();
 }
