@@ -545,14 +545,6 @@ AddOn.getAddOns = function(dir) {
             var aPath = a.getPath();
             var bPath = b.getPath();
 
-            // always prioritize 'scripts' paths (QCAD) over ':scripts' (plugin):
-            if (!aPath.startsWith(":") && bPath.startsWith(":")) {
-                return -1;
-            }
-            else if (aPath.startsWith(":") && !bPath.startsWith(":")) {
-                return 1;
-            }
-
             // get top dir name after scripts (e.g. 'File', 'Layer', ...):
             var da = aPath.replace(rx1, "").replace(rx2, "");
             var db = bPath.replace(rx1, "").replace(rx2, "");
@@ -566,6 +558,16 @@ AddOn.getAddOns = function(dir) {
             }
             if (isNull(ob)) {
                 ob = 1000;
+            }
+
+            if (oa===ob) {
+                // prioritize 'scripts' paths (QCAD) over ':scripts' (plugin):
+                if (!aPath.startsWith(":") && bPath.startsWith(":")) {
+                    return -1;
+                }
+                else if (aPath.startsWith(":") && !bPath.startsWith(":")) {
+                    return 1;
+                }
             }
 
             return oa-ob;
