@@ -23,7 +23,7 @@
 #include "RUcs.h"
 
 RCoordinateEvent::RCoordinateEvent(const RVector& position,
-   RGraphicsScene& s, RGraphicsView& v) : RInputEvent(position, s, v), mods(Qt::NoModifier) {
+   RGraphicsScene& s, RGraphicsView& v) : QEvent((QEvent::Type)(QEvent::User+201)), RInputEvent(position, s, v), mods(Qt::NoModifier) {
 
     modelPosition = position;
     screenPosition = v.mapToView(position);

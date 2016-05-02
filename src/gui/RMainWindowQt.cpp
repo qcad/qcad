@@ -543,6 +543,14 @@ bool RMainWindowQt::event(QEvent* e) {
         return true;
     }
 
+    RCoordinateEvent* coe = dynamic_cast<RCoordinateEvent*>(e);
+    if (coe!=NULL) {
+        RDocumentInterface* di = getDocumentInterface();
+        if (di!=NULL) {
+            di->coordinateEvent(*coe);
+        }
+    }
+
     RTransactionEvent* te = dynamic_cast<RTransactionEvent*>(e);
     if (te!=NULL) {
         // combined properties might have changed (deleted entities):
