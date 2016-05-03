@@ -23,7 +23,7 @@ TEMPLATE = app
 OTHER_FILES += $$PWD/run.dox
 
 win32 {
-    TARGET = qcad
+    TARGET = $${RLIBNAME}
 }
 
 macx {
@@ -31,7 +31,7 @@ macx {
 } 
 else {
     unix {
-        TARGET = qcad-bin
+        TARGET = $${RLIBNAME}-bin
     }
 }
 

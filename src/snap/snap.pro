@@ -44,7 +44,7 @@ r_static_libs {
 else {
     CONFIG += plugin
 }
-TARGET = qcadsnap
-LIBS += -lqcadcore -lqcadgrid -lqcadentity
+TARGET = $${RLIBNAME}snap
+LIBS += -l$${RLIBNAME}core -l$${RLIBNAME}grid -l$${RLIBNAME}entity
 OTHER_FILES += snap.dox
 DEFINES += QCADSNAP_LIBRARY

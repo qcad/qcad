@@ -94,7 +94,7 @@ macx {
 }
 
 win32 {
-    RLIBPRE = 
+    RLIBPRE =
     RLIBPOST = .lib
     RLIBPOSTDLL = .dll
 }
@@ -107,6 +107,13 @@ else {
     else {
         RLIBPOSTDLL = .so
     }
+}
+
+defined(r_libname, var) {
+    RLIBNAME = $$r_libname
+}
+else {
+    RLIBNAME = "qcad"
 }
 
 QT += core \

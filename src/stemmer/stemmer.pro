@@ -6,7 +6,7 @@ HEADERS = \
 
 TEMPLATE = lib
 CONFIG += plugin
-TARGET = qcadstemmer
+TARGET = $${RLIBNAME}stemmer
 LIBS += -lstemmer
 OTHER_FILES += stemmer.dox
 DEFINES += QCADSTEMMER_LIBRARY

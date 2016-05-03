@@ -1,7 +1,7 @@
 include( ../../../shared.pri )
 TEMPLATE = lib
 CONFIG += plugin
-TARGET = qcadecmaapi
+TARGET = $${RLIBNAME}ecmaapi
 CONFIG -= warn_on
 CONFIG += warn_off
 CONFIG += precompile_header
@@ -19,13 +19,13 @@ SOURCES += \
 include(adapters/adapters.pri)
 include(generated/generated.pri)
 LIBS += \
-    -lqcadcore \
-    -lqcadentity \
-    -lqcadgrid \
-    -lqcadgui \
-    -lqcadoperations \
-    -lqcadsnap \
-    -lqcadspatialindex \
-    -lqcadstemmer \
-    -lqcadzip \
+    -l$${RLIBNAME}core \
+    -l$${RLIBNAME}entity \
+    -l$${RLIBNAME}grid \
+    -l$${RLIBNAME}gui \
+    -l$${RLIBNAME}operations \
+    -l$${RLIBNAME}snap \
+    -l$${RLIBNAME}spatialindex \
+    -l$${RLIBNAME}stemmer \
+    -l$${RLIBNAME}zip \
     -lquazip

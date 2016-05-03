@@ -273,7 +273,7 @@ else {
     CONFIG += plugin
 }
 
-NAME = qcadcore
+NAME = $${RLIBNAME}core
 TARGET = $${NAME}
 RESOURCES = resources/core.qrc
 OTHER_FILES += core.dox math/math.dox

@@ -12,5 +12,5 @@ r_static_libs {
 else {
     CONFIG += plugin
 }
-TARGET = qcadgrid
-LIBS += -lqcadcore
+TARGET = $${RLIBNAME}grid
+LIBS += -l$${RLIBNAME}core

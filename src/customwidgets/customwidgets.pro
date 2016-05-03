@@ -1,4 +1,4 @@
-TARGET = qcadcustomwidgets
+TARGET = $${RLIBNAME}customwidgets
 CONFIG += plugin
 include( ../../shared.pri )
 
@@ -36,6 +36,6 @@ HEADERS = RShortcutLineEditPlugin.h \
 #    HEADERS += RWebViewPlugin.h
 #}
 TEMPLATE = lib
-LIBS += -lqcadgui -lqcadcore
+LIBS += -l$${RLIBNAME}gui -l$${RLIBNAME}core
 DESTDIR = ../../plugins/designer
 OTHER_FILES += customwidgets.dox

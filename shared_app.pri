@@ -1,18 +1,18 @@
 include($$PWD/shared.pri)
 
 LIBS += \
-    -lqcadecmaapi \
-    -lqcadgui \
-    -lqcadentity \
-    -lqcadoperations \
-    -lqcadspatialindex \
+    -l$${RLIBNAME}ecmaapi \
+    -l$${RLIBNAME}gui \
+    -l$${RLIBNAME}entity \
+    -l$${RLIBNAME}operations \
+    -l$${RLIBNAME}spatialindex \
     -lspatialindexnavel \
-    -lqcadgrid \
-    -lqcadsnap \
-    -lqcadcore \
-    -lqcadstemmer \
+    -l$${RLIBNAME}grid \
+    -l$${RLIBNAME}snap \
+    -l$${RLIBNAME}core \
+    -l$${RLIBNAME}stemmer \
     -lstemmer \
-    -lqcadzip \
+    -l$${RLIBNAME}zip \
     -lquazip
 
 !r_no_opennurbs {

@@ -1,6 +1,6 @@
-CONFIG += plugin
-TARGET = qcaddxf
 include( ../../../shared.pri )
+CONFIG += plugin
+TARGET = $${RLIBNAME}dxf
 
 HEADERS = \
     RDxfExporter.h \
@@ -16,7 +16,7 @@ SOURCES = \
     RDxfPlugin.cpp
 TEMPLATE = lib
 DEFINES += QCADDXF_LIBRARY
-LIBS += -lqcadcore -lqcadentity -ldxflib -lqcadoperations
+LIBS += -l$${RLIBNAME}core -l$${RLIBNAME}entity -ldxflib -l$${RLIBNAME}operations
 r_static_libs {
     CONFIG -= plugin
     CONFIG += staticlib

@@ -111,11 +111,11 @@ r_static_libs {
 else {
     CONFIG += plugin
 }
-NAME = qcadentity
+NAME = $${RLIBNAME}entity
 TARGET = $${NAME}
 OTHER_FILES += entity.dox
 DEFINES += QCADENTITY_LIBRARY
-LIBS += -lqcadcore -lopennurbs
+LIBS += -l$${RLIBNAME}core -lopennurbs
 !win32 {
     include( ../../shared_ts.pri )
 }

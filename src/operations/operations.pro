@@ -40,7 +40,7 @@ r_static_libs {
 else {
     CONFIG += plugin
 }
-TARGET = qcadoperations
-LIBS += -lqcadcore -lqcadentity
+TARGET = $${RLIBNAME}operations
+LIBS += -l$${RLIBNAME}core -l$${RLIBNAME}entity
 OTHER_FILES += operations.dox
 DEFINES += QCADOPERATIONS_LIBRARY

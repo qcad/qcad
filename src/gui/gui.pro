@@ -78,8 +78,8 @@ else {
     CONFIG += plugin
 }
 
-LIBS += -lqcadcore -lqcadentity
-NAME = qcadgui
+LIBS += -l$${RLIBNAME}core -l$${RLIBNAME}entity
+NAME = $${RLIBNAME}gui
 TARGET = $${NAME}
 OTHER_FILES += gui.dox
 DEFINES += QCADGUI_LIBRARY

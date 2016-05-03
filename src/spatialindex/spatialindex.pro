@@ -13,8 +13,8 @@ r_static_libs {
 else {
     CONFIG += plugin
 }
-TARGET = qcadspatialindex
-LIBS += -lqcadcore -lspatialindexnavel
+TARGET = $${RLIBNAME}spatialindex
+LIBS += -l$${RLIBNAME}core -lspatialindexnavel
 OTHER_FILES += spatialindex.dox
 DEFINES += QCADSPATIALINDEX_LIBRARY
 

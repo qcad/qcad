@@ -22,8 +22,8 @@ r_static_libs {
 else {
     CONFIG += plugin
 }
-TARGET = qcadzip
-LIBS += -lqcadcore -lquazip
+TARGET = $${RLIBNAME}zip
+LIBS += -l$${RLIBNAME}core -lquazip
 OTHER_FILES += zip.dox
 DEFINES += QCADZIP_LIBRARY
 
