@@ -113,18 +113,23 @@ About.prototype.initAboutApp = function(textBrowser) {
             html += "<td><b>" + qsTr("Compiler:") + "</b> </td><td>%1</td>".arg(RSettings.getCompilerVersion())
             + "</tr></table>"
             + "<hr/>"
-            + "<p>" + qsTr("%1 is an application for computer-aided design (CAD).").arg("QCAD") + "</p>"
-            + "<p/>"
-            + "<p>" + qsTr("%1 is free (open source) software.").arg("QCAD") + "<br/>"
-            + "" + qsTr("This means that everyone can <a href='%1'>get involved</a>!").arg("http://www.qcad.org/contribute") + "</p>"
-            + "<p>" + qsTr("Plugins and script add-ons are subject to their respective license (see 'Plugins' tab).") + "</p>"
+            + "<p>" + qsTr("%1 is an application for computer-aided design (CAD).").arg(this.applicationName) + "</p>"
+            + "<p/>";
+
+            if (this.applicationName!=="QCAD" && !this.applicationName.startsWith("QCAD ")) {
+                html += "<p>" + qsTr("%1 is based on QCAD, a free (open source) software.").arg(this.applicationName) + "</p>";
+            }
+            else {
+                html += "<p>" + qsTr("%1 is free (open source) software.").arg("QCAD") + "<br/>"
+                      + "" + qsTr("This means that everyone can <a href='%1'>get involved</a>!").arg("http://www.qcad.org/contribute") + "</p>";
+            }
+
+            html += "<p>" + qsTr("Plugins and script add-ons are subject to their respective license (see 'Plugins' tab).") + "</p>"
             + "<p/>"
             + "<p>" + qsTr("All brand or product names are trademarks or registered trademarks of their respective holders.") + "</p>"
             + "<p/>"
             + "<p>© 2011-2016 RibbonSoft GmbH.</p>"
             + "<p>" + qsTr("Portions of this software © 2008-2016 The Qt Company Ltd.") + "</p>"
-            //+ "<p>" + qsTr("Portions of this software © 2013 Digia Plc.") + "</p>"
-            //+ "<p>" + qsTr("Portions of this software © 2012 Nokia Corporation and/or its subsidiary(-ies).") + "</p>"
             + "<p>" + qsTr("The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.") + "</p>"
             + "<p/>"
             + "</body></html>";
