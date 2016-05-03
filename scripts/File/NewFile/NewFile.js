@@ -202,13 +202,12 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
     }
 
     var mdiChild = new RMdiChildQt();
+    mdiChild.windowIcon = new QIcon("scripts/qcad_icon.png");
     mdiChild.setDocumentInterface(documentInterface);
-    mdiArea.addSubWindow(mdiChild);
-    mdiChild.updatesEnabled = false;
-    // we this this twice:
-    mdiChild.showMaximized();
     var flags = new Qt.WindowFlags(Qt.FramelessWindowHint);
     mdiChild.setWindowFlags(flags);
+    mdiArea.addSubWindow(mdiChild);
+    mdiChild.updatesEnabled = false;
 
     // load ui file and set the MDI content widget:
     //qDebug("initMdiChild");
