@@ -313,6 +313,7 @@ EventHandler.prototype.drawInfoLabel = function(painter, textLabel) {
 
     if (text!=="") {
         var font = RSettings.getInfoLabelFont();
+        font.setPointSizeF(font.pointSizeF()*this.graphicsView.getDevicePixelRatio());
         var fm = new QFontMetrics(font);
         var w = fm.width(text)+10;
         var h = fm.height()+10;
