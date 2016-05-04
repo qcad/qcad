@@ -119,6 +119,8 @@ else {
     RLIBNAME = "qcad"
 }
 
+TARGET = $$join(TARGET,,$$RLIBNAME,)
+
 QT += core \
     script \
     scripttools \

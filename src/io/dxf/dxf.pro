@@ -1,6 +1,6 @@
-include( ../../../shared.pri )
 CONFIG += plugin
-TARGET = $${RLIBNAME}dxf
+TARGET = dxf
+include( ../../../shared.pri )
 
 HEADERS = \
     RDxfExporter.h \
