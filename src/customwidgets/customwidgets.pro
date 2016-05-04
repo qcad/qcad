@@ -1,6 +1,6 @@
+include( ../../shared.pri )
 TARGET = $${RLIBNAME}customwidgets
 CONFIG += plugin
-include( ../../shared.pri )
 
 SOURCES = RShortcutLineEditPlugin.cpp \
     RCharacterWidgetPlugin.cpp \
