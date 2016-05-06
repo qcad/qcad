@@ -117,6 +117,10 @@ void RRulerQt::paintTick(int pos, bool major, const QString& label) {
         lineLength = 7*dpr;
     }
 
+    if (RSettings::getHighResolutionGraphicsView()) {
+        pos /= dpr;
+    }
+
     if (orientation == Qt::Horizontal) {
         painter->setPen(darkGuiBackground==1 ? Qt::black : Qt::white);
         painter->drawLine(pos + 1, height()*dpr - lineLength, pos + 1, height()*dpr);
@@ -199,6 +203,9 @@ void RRulerQt::paintEvent(QPaintEvent* e) {
     //wPainter.drawImage(0,0,buffer);
     wPainter.drawImage(rect(), buffer);
     RVector p = view->mapToView(cursorPosition);
+    if (RSettings::getHighResolutionGraphicsView()) {
+        p /= dpr;
+    }
     if (orientation==Qt::Horizontal) {
         wPainter.translate(p.x, height()-4);
         wPainter.fillPath(cursorArrow, darkGuiBackground==1 ? Qt::white : Qt::black);
