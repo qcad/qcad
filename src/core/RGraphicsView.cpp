@@ -189,6 +189,7 @@ void RGraphicsView::autoZoom(int margin, bool ignoreEmpty) {
         return;
     }
     RBox bb = document->getBoundingBox(true, ignoreEmpty);
+
     // TODO: optional:
     bb.growXY(
         RUnit::convert(
@@ -287,6 +288,10 @@ void RGraphicsView::zoomTo(const RBox& window, int margin) {
     RVector f(RMAXDOUBLE, RMAXDOUBLE);
     double w = window.getWidth();
     double h = window.getHeight();
+
+    if (w<1.0e-6 && h<1.0e-6) {
+        return;
+    }
 
     if (w>1.0e-6) {
         f.x = (getWidth() - 2 * margin) / w;
