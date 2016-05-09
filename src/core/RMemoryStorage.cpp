@@ -349,6 +349,22 @@ QSet<REntity::Id> RMemoryStorage::queryLayerEntities(RLayer::Id layerId, bool al
     return result;
 }
 
+bool RMemoryStorage::hasBlockEntities(RBlock::Id blockId) const {
+    if (!blockEntityMap.contains(blockId)) {
+        return false;
+    }
+
+    QList<QSharedPointer<REntity> > candidates = blockEntityMap.values(blockId);
+    QList<QSharedPointer<REntity> >::iterator it;
+    for (it=candidates.begin(); it!=candidates.end(); it++) {
+        QSharedPointer<REntity> e = *it;
+        if (!e.isNull() && !e->isUndone()) {
+            return true;
+        }
+    }
+    return false;
+}
+
 QSet<REntity::Id> RMemoryStorage::queryBlockEntities(RBlock::Id blockId) {
     if (!blockEntityMap.contains(blockId)) {
         return QSet<REntity::Id>();

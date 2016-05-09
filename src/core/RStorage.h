@@ -146,6 +146,11 @@ public:
     virtual QSet<REntity::Id> queryLayerEntities(RLayer::Id layerId, bool allBlocks = false) = 0;
 
     /**
+     * \return True if the given block contains any entities.
+     */
+    virtual bool hasBlockEntities(RBlock::Id blockId) const = 0;
+
+    /**
      * \return A set of all entity IDs that are part of the given block.
      */
     virtual QSet<REntity::Id> queryBlockEntities(RBlock::Id blockId) = 0;
@@ -503,7 +508,7 @@ public:
         return b->isFrozen();
     }
 
-    virtual void setObjectId(RObject& object, RObject::Id objectId);
+    virtual void setObjectId(RObject& object, RObject::Id objectId) const;
     virtual void setObjectHandle(RObject& object, RObject::Handle objectHandle);
 
     virtual void setUndoStatus(RObject& object, bool status);

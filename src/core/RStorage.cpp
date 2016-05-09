@@ -51,7 +51,7 @@ void RStorage::clear() {
     lastTransactionGroup = 1;
 }
 
-void RStorage::setObjectId(RObject& object, RObject::Id objectId) {
+void RStorage::setObjectId(RObject& object, RObject::Id objectId) const {
     object.setId(objectId);
 }
 

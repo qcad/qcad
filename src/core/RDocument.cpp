@@ -1034,6 +1034,10 @@ QSet<REntity::Id> RDocument::queryLayerEntities(RLayer::Id layerId, bool allBloc
     return storage.queryLayerEntities(layerId, allBlocks);
 }
 
+bool RDocument::hasBlockEntities(RBlock::Id blockId) const {
+    return storage.hasBlockEntities(blockId);
+}
+
 QSet<REntity::Id> RDocument::queryBlockEntities(RBlock::Id blockId) const {
     return storage.queryBlockEntities(blockId);
 }
