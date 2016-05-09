@@ -265,12 +265,7 @@ RBox REntityData::getBoundingBox(bool ignoreEmpty) const {
     QList<QSharedPointer<RShape> > shapes = getShapes();
     for (int i=0; i<shapes.size(); i++) {
         RBox bb = shapes.at(i)->getBoundingBox();
-        if (!ret.isValid()) {
-            ret = bb;
-        }
-        else {
-            ret.growToInclude(bb);
-        }
+        ret.growToInclude(bb);
     }
     return ret;
 }
