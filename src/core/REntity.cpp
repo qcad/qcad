@@ -153,7 +153,7 @@ RLinetype::Id REntity::getLinetypeId(bool resolve, const QStack<REntity*>& block
 /**
  * Copies all attributes (layer, block, color, line weight, line style) from the given entity.
  */
-void REntity::copyAttributesFrom(REntity* entity, bool copyBlockId) {
+void REntity::copyAttributesFrom(const REntity* entity, bool copyBlockId) {
     if (entity==NULL) {
         qWarning("REntity::copyAttributesFrom: source entity is NULL");
         return;
@@ -161,19 +161,37 @@ void REntity::copyAttributesFrom(REntity* entity, bool copyBlockId) {
 
     if (getDocument()!=entity->getDocument()) {
         qWarning("REntity::copyAttributesFrom: source entity not from same document");
-        //RDebug::printBacktrace();
         return;
     }
 
-    setLayerId(entity->getLayerId());
-    if (copyBlockId) {
-        setBlockId(entity->getBlockId());
+    copyAttributesFrom(entity->getData(), copyBlockId);
+
+//    setLayerId(entity->getLayerId());
+//    if (copyBlockId) {
+//        setBlockId(entity->getBlockId());
+//    }
+//    setColor(entity->getColor());
+//    setLineweight(entity->getLineweight());
+//    setLinetypeId(entity->getLinetypeId());
+//    setLinetypeScale(entity->getLinetypeScale());
+//    setDrawOrder(entity->getDrawOrder());
+}
+
+void REntity::copyAttributesFrom(const REntityData& entityData, bool copyBlockId) {
+    if (getDocument()!=entityData.getDocument()) {
+        qWarning("REntity::copyAttributesFrom: source entity not from same document");
+        return;
     }
-    setColor(entity->getColor());
-    setLineweight(entity->getLineweight());
-    setLinetypeId(entity->getLinetypeId());
-    setLinetypeScale(entity->getLinetypeScale());
-    setDrawOrder(entity->getDrawOrder());
+
+    setLayerId(entityData.getLayerId());
+    if (copyBlockId) {
+        setBlockId(entityData.getBlockId());
+    }
+    setColor(entityData.getColor());
+    setLineweight(entityData.getLineweight());
+    setLinetypeId(entityData.getLinetypeId());
+    setLinetypeScale(entityData.getLinetypeScale());
+    setDrawOrder(entityData.getDrawOrder());
 }
 
 QList<RVector> REntity::getIntersectionPoints(

@@ -317,7 +317,8 @@ public:
         return getData().getDisplayColor();
     }
 
-    void copyAttributesFrom(REntity* entity, bool copyBlockId=true);
+    void copyAttributesFrom(const REntity* entity, bool copyBlockId=true);
+    void copyAttributesFrom(const REntityData& entityData, bool copyBlockId=true);
 
     /**
      * \copydoc REntityData::getBoundingBox
