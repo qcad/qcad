@@ -18,7 +18,7 @@
  */
 #include "RDimensionEntity.h"
 #include "RExporter.h"
-#include "RPluginLoader.h"
+#include "RStorage.h"
 
 RPropertyTypeId RDimensionEntity::PropertyCustom;
 RPropertyTypeId RDimensionEntity::PropertyHandle;
@@ -231,14 +231,23 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
 }
 
-
 void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelected) const {
     Q_UNUSED(preview);
 
     // make sure text data is removed:
     //e.unexportEntity(e.getBlockRefOrEntity()->getId());
 
-    getData().dirty = true;
+    const RDimensionData& data = getData();
+
+    // if a block is assiciated with this dimension, look up and export block:
+    QSharedPointer<RBlockReferenceEntity> dimBlockReference = data.getDimensionBlockReference();
+    if (!dimBlockReference.isNull()) {
+        getDocument()->getStorage().setObjectId(*dimBlockReference, getId());
+        e.exportEntity(*dimBlockReference, preview, false, isSelected());
+        return;
+    }
+
+    data.dirty = true;
 
     // export shapes:
     QList<QSharedPointer<RShape> > shapes = getShapes();
@@ -266,7 +275,7 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
     }
 
     // export text label:
-    RTextData& textData = getData().getTextData();
+    RTextData& textData = data.getTextData();
     //qDebug() << "export dim: angle: " << textData.getAngle();
 
     if (RSettings::isTextRenderedAsText()) {
@@ -280,7 +289,7 @@ void RDimensionEntity::exportEntity(RExporter& e, bool preview, bool forceSelect
 
     e.setBrush(Qt::NoBrush);
 
-    getData().dirty = false;
+    data.dirty = false;
 }
 
 void RDimensionEntity::print(QDebug dbg) const {
