@@ -252,7 +252,7 @@ void RBox::growToIncludeBoxes(const QList<RBox>& others) {
  * given box if this box is invalid.
  */
 void RBox::growToInclude(const RBox& other) {
-    if (!other.isValid()) {
+    if (!other.isSane()) {
         return;
     }
 
