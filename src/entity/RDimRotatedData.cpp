@@ -48,8 +48,10 @@ RDimRotatedData::RDimRotatedData(const RDimensionData& dimData,
 
 RBox RDimRotatedData::getBoundingBox(bool ignoreEmpty) const {
     boundingBox = RDimensionData::getBoundingBox(ignoreEmpty);
-    boundingBox.growToInclude(extensionPoint1);
-    boundingBox.growToInclude(extensionPoint2);
+    if (!hasDimensionBlockReference()) {
+        boundingBox.growToInclude(extensionPoint1);
+        boundingBox.growToInclude(extensionPoint2);
+    }
     return boundingBox;
 }
 
@@ -179,6 +181,15 @@ bool RDimRotatedData::mirror(const RLine& axis) {
 QList<QSharedPointer<RShape> > RDimRotatedData::getShapes(const RBox& queryBox, bool ignoreComplex) const {
     Q_UNUSED(queryBox)
     Q_UNUSED(ignoreComplex)
+
+    QSharedPointer<RBlockReferenceEntity> dimBlockReference = getDimensionBlockReference();
+    if (!dimBlockReference.isNull()) {
+//        QList<QSharedPointer<RShape> > sps = dimBlockReference->getShapes(queryBox, ignoreComplex);
+//        for (int i=0; i<sps.length(); i++) {
+//            qDebug() << "getShapes: from block ref" << *sps.at(i);
+//        }
+        return dimBlockReference->getShapes(queryBox, ignoreComplex);
+    }
 
     QList<QSharedPointer<RShape> > ret;
 

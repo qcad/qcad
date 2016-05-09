@@ -131,6 +131,11 @@ QList<QSharedPointer<RShape> > RDimOrdinateData::getShapes(const RBox& queryBox,
     Q_UNUSED(queryBox)
     Q_UNUSED(ignoreComplex)
 
+    QSharedPointer<RBlockReferenceEntity> dimBlockReference = getDimensionBlockReference();
+    if (!dimBlockReference.isNull()) {
+        return dimBlockReference->getShapes(queryBox, ignoreComplex);
+    }
+
     QList<QSharedPointer<RShape> > ret;
 
     // make sure that defaultAngle is valid, even if not used:

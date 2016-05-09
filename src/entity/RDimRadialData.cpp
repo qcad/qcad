@@ -130,6 +130,11 @@ QList<QSharedPointer<RShape> > RDimRadialData::getShapes(const RBox& queryBox, b
     Q_UNUSED(queryBox)
     Q_UNUSED(ignoreComplex)
 
+    QSharedPointer<RBlockReferenceEntity> dimBlockReference = getDimensionBlockReference();
+    if (!dimBlockReference.isNull()) {
+        return dimBlockReference->getShapes(queryBox, ignoreComplex);
+    }
+
     QList<QSharedPointer<RShape> > ret;
 
     defaultAngle = 0.0;

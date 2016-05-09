@@ -107,6 +107,15 @@ public:
         return fontName;
     }
 
+    void setDimBlockName(const QString& bn) {
+        dimBlockName = bn;
+        //update();
+    }
+
+    QString getDimBlockName() const {
+        return dimBlockName;
+    }
+
     double getLinearFactor() const {
         return linearFactor;
     }
@@ -176,6 +185,9 @@ public:
 
     virtual void update() const;
 
+    QSharedPointer<RBlockReferenceEntity> getDimensionBlockReference() const;
+    bool hasDimensionBlockReference() const;
+
 protected:
     /** Definition point */
     mutable RVector definitionPoint;
@@ -206,6 +218,8 @@ protected:
     QString lowerTolerance;
     /** Dimension font name */
     QString fontName;
+    /** Dimension appearance is defined in this block */
+    mutable QString dimBlockName;
 
     mutable double defaultAngle;
     /** Rotation angle of dimension text away from default orientation */

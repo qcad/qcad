@@ -182,6 +182,10 @@ public:
         getData().setDimScale(f);
     }
 
+    QString getDimBlockName() const {
+        return getData().getDimBlockName();
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 };

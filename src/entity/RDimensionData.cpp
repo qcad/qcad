@@ -563,3 +563,49 @@ void RDimensionData::updateTextData() const {
     textData.rotate(defaultAngle, RVector(0,0));
     textData.move(getTextPosition());
 }
+
+bool RDimensionData::hasDimensionBlockReference() const {
+    QString dimBlockName = getDimBlockName();
+    if (dimBlockName.isEmpty()) {
+        return false;
+    }
+
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
+        return false;
+    }
+
+    // check if block is empty (ignore):
+    if (!doc->hasBlockEntities(dimBlockId)) {
+        return false;
+    }
+
+    return true;
+}
+
+QSharedPointer<RBlockReferenceEntity> RDimensionData::getDimensionBlockReference() const {
+    QString dimBlockName = getDimBlockName();
+    if (dimBlockName.isEmpty()) {
+        return QSharedPointer<RBlockReferenceEntity>();
+    }
+
+    const RDocument* doc = getDocument();
+    if (doc==NULL) {
+        return QSharedPointer<RBlockReferenceEntity>();
+    }
+
+    RBlock::Id dimBlockId = doc->getBlockId(dimBlockName);
+
+    // check if block is empty (ignore):
+    if (!doc->hasBlockEntities(dimBlockId)) {
+        return QSharedPointer<RBlockReferenceEntity>();
+    }
+
+    // TODO: ignore block if dimension entity is valid (i.e. only use block if we cannot recompute (?))
+
+    RBlockReferenceEntity* dimBlockReference = new RBlockReferenceEntity((RDocument*)doc, RBlockReferenceData(dimBlockId, RVector(0,0), RVector(1,1), 0.0)/*, getId()*/);
+    dimBlockReference->copyAttributesFrom(*this, true);
+    //e.exportEntity(*dimBlockReference, preview, false, forceSelected);
+    //delete dimBlockReference;
+    return QSharedPointer<RBlockReferenceEntity>(dimBlockReference);
+}
