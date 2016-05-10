@@ -171,6 +171,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="hasBlockEntities" cppName="hasBlockEntities"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RBlock::Id" typeName="RBlock::Id" name="blockId"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="queryBlockEntities" cppName="queryBlockEntities"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

@@ -84,6 +84,12 @@
         getFontName
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setDimBlockName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimBlockName
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLinearFactor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -187,6 +193,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         update
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimensionBlockReference
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasDimensionBlockReference
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

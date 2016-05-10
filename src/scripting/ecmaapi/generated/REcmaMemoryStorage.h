@@ -98,6 +98,9 @@
         queryLayerEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        hasBlockEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryBlockEntities
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

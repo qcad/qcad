@@ -147,6 +147,11 @@
     <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryLayerEntities</name><parameter_list>(<param><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl></param>, <param><decl><type><name>bool</name></type> <name>allBlocks</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <comment type="block">/**
+     * \return True if the given block contains any entities.
+     */</comment>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>hasBlockEntities</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+
+    <comment type="block">/**
      * \return A set of all entity IDs that are part of the given block.
      */</comment>
     <function_decl><type><name>virtual</name> <name>QSet<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>&gt;</argument_list></name></type> <name>queryBlockEntities</name><parameter_list>(<param><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
@@ -504,7 +509,7 @@
         <return>return <expr><name>b</name>-&gt;<call><name>isFrozen</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setObjectId</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setObjectId</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name></decl></param>)</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setObjectHandle</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Handle</name></name></type> <name>objectHandle</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setUndoStatus</name><parameter_list>(<param><decl><type><name>RObject</name>&amp;</type> <name>object</name></decl></param>, <param><decl><type><name>bool</name></type> <name>status</name></decl></param>)</parameter_list>;</function_decl>

@@ -112,6 +112,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="QString" isPureVirtual="false" />
     </method>
+    <method name="setDimBlockName" cppName="setDimBlockName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString" name="bn"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="getDimBlockName" cppName="getDimBlockName"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QString" isPureVirtual="false" />
+    </method>
     <method name="getLinearFactor" cppName="getLinearFactor"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -356,6 +369,17 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="update" cppName="update" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="getDimensionBlockReference"
+    cppName="getDimensionBlockReference" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSharedPointer &lt; RBlockReferenceEntity &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="hasDimensionBlockReference"
+    cppName="hasDimensionBlockReference" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
     </method>
   </class>
 </unit>

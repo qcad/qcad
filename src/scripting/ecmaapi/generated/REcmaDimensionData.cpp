@@ -89,6 +89,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getFontName, "getFontName");
             
+            REcmaHelper::registerFunction(&engine, proto, setDimBlockName, "setDimBlockName");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimBlockName, "getDimBlockName");
+            
             REcmaHelper::registerFunction(&engine, proto, getLinearFactor, "getLinearFactor");
             
             REcmaHelper::registerFunction(&engine, proto, setLinearFactor, "setLinearFactor");
@@ -158,6 +162,10 @@
             REcmaHelper::registerFunction(&engine, proto, formatAngleLabel, "formatAngleLabel");
             
             REcmaHelper::registerFunction(&engine, proto, update, "update");
+            
+            REcmaHelper::registerFunction(&engine, proto, getDimensionBlockReference, "getDimensionBlockReference");
+            
+            REcmaHelper::registerFunction(&engine, proto, hasDimensionBlockReference, "hasDimensionBlockReference");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RDimensionData*>(), *proto);
@@ -1215,6 +1223,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionData::getFontName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::setDimBlockName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::setDimBlockName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::setDimBlockName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("setDimBlockName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    QString
+                    a0 =
+                    (QString)
+                    
+                    context->argument( 0 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimBlockName(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.setDimBlockName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::setDimBlockName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getDimBlockName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimBlockName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimBlockName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDimBlockName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getDimBlockName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimBlockName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimBlockName", context, engine);
             return result;
         }
          QScriptValue
@@ -3665,6 +3777,104 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionData::update", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::getDimensionBlockReference
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::getDimensionBlockReference", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::getDimensionBlockReference";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("getDimensionBlockReference", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSharedPointer < RBlockReferenceEntity >'
+    QSharedPointer < RBlockReferenceEntity > cppResult =
+        
+               self->getDimensionBlockReference();
+        // return type: QSharedPointer < RBlockReferenceEntity >
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.getDimensionBlockReference().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::getDimensionBlockReference", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionData::hasDimensionBlockReference
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionData::hasDimensionBlockReference", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionData::hasDimensionBlockReference";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionData* self = 
+                        getSelf("hasDimensionBlockReference", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasDimensionBlockReference();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionData.hasDimensionBlockReference().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionData::hasDimensionBlockReference", context, engine);
             return result;
         }
          QScriptValue REcmaDimensionData::toString

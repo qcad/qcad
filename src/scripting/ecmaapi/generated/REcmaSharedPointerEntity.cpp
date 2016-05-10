@@ -2477,6 +2477,93 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntityData */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    REntityData*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REntityData*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type REntityData*.",
+                               context);                    
+                    }
+                    REntityData& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->copyAttributesFrom(a0);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: REntityData */
+     && (
+            context->argument(1).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    REntityData*
+                    ap0 =
+                    qscriptvalue_cast<
+                    REntityData*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("REntity: Argument 0 is not of type REntityData*.",
+                               context);                    
+                    }
+                    REntityData& a0 = *ap0;
+                
+                    // argument isStandardType
+                    bool
+                    a1 =
+                    (bool)
+                    
+                    context->argument( 1 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->copyAttributesFrom(a0
+        ,
+    a1);
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for REntity.copyAttributesFrom().",
                    context);

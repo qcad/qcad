@@ -101,6 +101,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, queryLayerEntities, "queryLayerEntities");
             
+            REcmaHelper::registerFunction(&engine, proto, hasBlockEntities, "hasBlockEntities");
+            
             REcmaHelper::registerFunction(&engine, proto, queryBlockEntities, "queryBlockEntities");
             
             REcmaHelper::registerFunction(&engine, proto, queryLayerBlockEntities, "queryLayerBlockEntities");
@@ -1527,6 +1529,66 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaStorage::queryLayerEntities", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaStorage::hasBlockEntities
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaStorage::hasBlockEntities", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaStorage::hasBlockEntities";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RStorage* self = 
+                        getSelf("hasBlockEntities", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RBlock::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RBlock::Id
+                    a0 =
+                    (RBlock::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasBlockEntities(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RStorage.hasBlockEntities().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaStorage::hasBlockEntities", context, engine);
             return result;
         }
          QScriptValue

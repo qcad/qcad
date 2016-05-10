@@ -124,6 +124,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setDimScale, "setDimScale");
             
+            REcmaHelper::registerFunction(&engine, proto, getDimBlockName, "getDimBlockName");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDimensionEntityPointer>(), *proto);
       
@@ -2198,6 +2200,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimensionEntity::setDimScale", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDimensionEntity::getDimBlockName
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDimensionEntity::getDimBlockName", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimensionEntity::getDimBlockName";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionEntity* self = 
+                        getSelf("getDimBlockName", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QString'
+    QString cppResult =
+        
+               self->getDimBlockName();
+        // return type: QString
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.getDimBlockName().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimensionEntity::getDimBlockName", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerDimensionEntity::toString
