@@ -109,13 +109,10 @@ else {
     }
 }
 
-#defined(r_libname, var) {
 !isEmpty(r_libname) {
-    message(got prefix $$r_libname)
     RLIBNAME = $$r_libname
 }
 else {
-    message("default prefix")
     RLIBNAME = "qcad"
 }
 
