@@ -200,10 +200,13 @@ void RMathLineEdit::slotTextEdited(const QString& text) {
 }
 
 void RMathLineEdit::setValue(double v, int precision) {
+    // update value (in rad for angles):
+    value = v;
+
+    // update text (in deg for angles):
     if (isAngle()) {
         v = RMath::rad2deg(v);
     }
-    value = v;
     setText(QString("%1").arg(v, 0, 'g', precision));
     clearError();
 }
