@@ -575,6 +575,8 @@ bool RDimensionData::hasDimensionBlockReference() const {
         return false;
     }
 
+    RBlock::Id dimBlockId = doc->getBlockId(dimBlockName);
+
     // check if block is empty (ignore):
     if (!doc->hasBlockEntities(dimBlockId)) {
         return false;
