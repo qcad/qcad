@@ -187,7 +187,7 @@ AbstractPreferences.prototype.apply = function() {
         if (isNull(widget) || widget.hasChanged !== true) {
             continue;
         }
-        
+
         try {
             // include normally not needed
             var doInclude = false;
@@ -197,7 +197,7 @@ AbstractPreferences.prototype.apply = function() {
             if (doInclude) {
                 include(addOn.getFilePath());
             }
-            
+
             // apply application settings globally:
             if (this.appPreferences) {
                 if (!isNull(global[className]) && isFunction(global[className].applyPreferences)) {
@@ -234,6 +234,14 @@ AbstractPreferences.prototype.apply = function() {
     var di = EAction.getDocumentInterface();
     if (!isNull(di)) {
         di.regenerateScenes();
+    }
+
+    var appWin = EAction.getMainWindow();
+    if (this.appPreferences) {
+        appWin.notifyPreferencesListeners(null);
+    }
+    else {
+        appWin.notifyPreferencesListeners(di);
     }
 };
 
