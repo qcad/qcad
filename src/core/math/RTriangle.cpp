@@ -77,6 +77,18 @@ double RTriangle::getLength() const {
            corner[2].getDistanceTo(corner[0]);
 }
 
+double RTriangle::getArea() const {
+    double a = corner[0].getDistanceTo(corner[1]);
+    double b = corner[1].getDistanceTo(corner[2]);
+    double c = corner[2].getDistanceTo(corner[0]);
+    if (RMath::fuzzyCompare(a, 0.0) || RMath::fuzzyCompare(b, 0.0) || RMath::fuzzyCompare(c, 0.0)) {
+        return 0.0;
+    }
+    double s = (a + b + c) / 2;
+    double rootTerm = fabs(s * (s - a) * (s - b) * (s - c));
+    return sqrt(rootTerm);
+}
+
 RVector RTriangle::getCorner(int i) const {
     if (i<0 || i>2) {
         return RVector::invalid;

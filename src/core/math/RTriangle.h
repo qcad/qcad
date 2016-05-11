@@ -60,6 +60,7 @@ public:
 
     virtual RBox getBoundingBox() const;
     virtual double getLength() const;
+    double getArea() const;
     RVector getCorner(int i) const;
     void setCorner(int i, const RVector& p);
 
