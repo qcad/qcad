@@ -194,6 +194,7 @@ HEADERS = \
     RPluginInterface.h \
     RPluginInfo.h \
     RPluginLoader.h \
+    RPreferencesListener.h \
     RProgressHandler.h \
     RPropertyAttributes.h \
     RPropertyChange.h \

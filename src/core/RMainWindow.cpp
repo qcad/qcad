@@ -35,6 +35,7 @@
 #include "RMainWindow.h"
 #include "RNewDocumentListener.h"
 #include "RPenListener.h"
+#include "RPreferencesListener.h"
 #include "RPropertyListener.h"
 #include "RScriptHandler.h"
 #include "RScriptHandlerRegistry.h"
@@ -493,6 +494,31 @@ void RMainWindow::notifyViewFocusListeners(RGraphicsView* view) {
     QList<RViewFocusListener*>::iterator it;
     for (it = viewFocusListeners.begin(); it != viewFocusListeners.end(); ++it) {
         (*it)->updateFocus(view);
+    }
+}
+
+/**
+ * Adds a listener for preferences changes.
+ */
+void RMainWindow::addPreferencesListener(RPreferencesListener* l) {
+    if (l != NULL) {
+        preferencesListeners.push_back(l);
+    } else {
+        qWarning("RMainWindow::addPreferencesListener(): Listener is NULL.");
+    }
+}
+
+void RMainWindow::removePreferencesListener(RPreferencesListener* l) {
+    preferencesListeners.removeAll(l);
+}
+
+/**
+ * Notifies all preferences listeners.
+ */
+void RMainWindow::notifyPreferencesListeners(RDocumentInterface* documentInterface) {
+    QList<RPreferencesListener*>::iterator it;
+    for (it = preferencesListeners.begin(); it != preferencesListeners.end(); ++it) {
+        (*it)->updatePreferences(documentInterface);
     }
 }
 

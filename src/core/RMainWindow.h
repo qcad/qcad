@@ -45,6 +45,7 @@ class RLayerListener;
 class RNewDocumentListener;
 class RPenListener;
 class RPropertyListener;
+class RPreferencesListener;
 class RSelectionListener;
 class RSnapListener;
 class RTransaction;
@@ -162,6 +163,10 @@ public:
     void addViewFocusListener(RViewFocusListener* l);
     void removeViewFocusListener(RViewFocusListener* l);
     void notifyViewFocusListeners(RGraphicsView* view);
+
+    void addPreferencesListener(RPreferencesListener* l);
+    void removePreferencesListener(RPreferencesListener* l);
+    void notifyPreferencesListeners(RDocumentInterface* documentInterface);
 
     void propertyChangeEvent(RPropertyEvent& event);
 
@@ -292,6 +297,7 @@ protected:
     QList<RSnapListener*> snapListeners;
     QList<RFocusListener*> focusListeners;
     QList<RViewFocusListener*> viewFocusListeners;
+    QList<RPreferencesListener*> preferencesListeners;
 
     QMutex mutex;
 };
