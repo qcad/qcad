@@ -180,6 +180,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setArea, "setArea");
             
+            REcmaHelper::registerFunction(&engine, proto, getChordArea, "getChordArea");
+            
             REcmaHelper::registerFunction(&engine, proto, getDirection1, "getDirection1");
             
             REcmaHelper::registerFunction(&engine, proto, getDirection2, "getDirection2");
@@ -3199,6 +3201,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerArc::setArea", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerArc::getChordArea
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerArc::getChordArea", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerArc::getChordArea";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RArc* self = 
+                        getSelf("getChordArea", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getChordArea();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getChordArea().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerArc::getChordArea", context, engine);
             return result;
         }
          QScriptValue

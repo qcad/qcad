@@ -72,6 +72,9 @@
         getLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getArea
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getCorner
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -158,6 +158,9 @@
         setArea
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getChordArea
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDirection1
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

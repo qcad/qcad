@@ -178,6 +178,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setArea, "setArea");
             
+            REcmaHelper::registerFunction(&engine, proto, getChordArea, "getChordArea");
+            
             REcmaHelper::registerFunction(&engine, proto, getDirection1, "getDirection1");
             
             REcmaHelper::registerFunction(&engine, proto, getDirection2, "getDirection2");
@@ -3202,6 +3204,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaArc::setArea", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaArc::getChordArea
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaArc::getChordArea", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaArc::getChordArea";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RArc* self = 
+                        getSelf("getChordArea", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getChordArea();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getChordArea().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaArc::getChordArea", context, engine);
             return result;
         }
          QScriptValue

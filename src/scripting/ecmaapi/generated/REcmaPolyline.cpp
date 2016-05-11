@@ -194,6 +194,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getBoundingBox, "getBoundingBox");
             
+            REcmaHelper::registerFunction(&engine, proto, getArea, "getArea");
+            
             REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
             
             REcmaHelper::registerFunction(&engine, proto, getLengthTo, "getLengthTo");
@@ -4024,6 +4026,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::getBoundingBox", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::getArea
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::getArea", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::getArea";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getArea", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getArea();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getArea().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::getArea", context, engine);
             return result;
         }
          QScriptValue

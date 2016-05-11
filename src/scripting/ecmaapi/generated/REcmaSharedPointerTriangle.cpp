@@ -92,6 +92,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
             
+            REcmaHelper::registerFunction(&engine, proto, getArea, "getArea");
+            
             REcmaHelper::registerFunction(&engine, proto, getCorner, "getCorner");
             
             REcmaHelper::registerFunction(&engine, proto, setCorner, "setCorner");
@@ -661,6 +663,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerTriangle::getLength", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerTriangle::getArea
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerTriangle::getArea", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTriangle::getArea";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTriangle* self = 
+                        getSelf("getArea", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getArea();
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getArea().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerTriangle::getArea", context, engine);
             return result;
         }
          QScriptValue

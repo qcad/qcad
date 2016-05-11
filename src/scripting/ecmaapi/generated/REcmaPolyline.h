@@ -212,6 +212,9 @@
         getBoundingBox
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getArea
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
