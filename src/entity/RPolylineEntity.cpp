@@ -182,7 +182,7 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
             QVariant v;
             v.setValue(data.getLength());
             return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));
-        } else if (RPolyline::hasProxy() && propertyTypeId == PropertyArea) {
+        } else if (propertyTypeId == PropertyArea) {
             QVariant v;
             v.setValue(data.getArea());
             return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));
