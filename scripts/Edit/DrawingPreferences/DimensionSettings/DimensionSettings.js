@@ -45,6 +45,10 @@ DimensionSettings.dimx = [
  */
 DimensionSettings.updateUnit = function(unit) {
     var widgets = getWidgets(this.pageWidget);
+    if (isNull(widgets)) {
+        return;
+    }
+
     DimensionSettings.unit = unit;
 
     // (re-)init unit labels:

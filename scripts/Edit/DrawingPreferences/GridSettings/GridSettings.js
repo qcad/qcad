@@ -39,6 +39,9 @@ GridSettings.updateUnit = function(unit) {
 
     unitSymbol = RUnit.unitToSymbol(unit);
 
+    if (isNull(GridSettings.widgets)) {
+        return;
+    }
 
     for (var i=0; i<4; i++) {
         if (isNull(GridSettings.widgets["GridSpacingXUnit0%1".arg(i)])) {
