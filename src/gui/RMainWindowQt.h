@@ -45,6 +45,7 @@ class RMdiArea;
 class RMdiChildQt;
 class RNewDocumentListener;
 class RPenListener;
+class RPreferencesListener;
 class RPropertyListener;
 class RSelectionListener;
 class RSnapListener;
