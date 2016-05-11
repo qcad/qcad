@@ -29,6 +29,8 @@
             
                 #include "RPropertyListener.h"
             
+                #include "RPreferencesListener.h"
+            
                 #include "RSelectionListener.h"
             
                 #include "RSnapListener.h"
@@ -206,6 +208,12 @@
             REcmaHelper::registerFunction(&engine, proto, removeViewFocusListener, "removeViewFocusListener");
             
             REcmaHelper::registerFunction(&engine, proto, notifyViewFocusListeners, "notifyViewFocusListeners");
+            
+            REcmaHelper::registerFunction(&engine, proto, addPreferencesListener, "addPreferencesListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, removePreferencesListener, "removePreferencesListener");
+            
+            REcmaHelper::registerFunction(&engine, proto, notifyPreferencesListeners, "notifyPreferencesListeners");
             
             REcmaHelper::registerFunction(&engine, proto, propertyChangeEvent, "propertyChangeEvent");
             
@@ -3804,6 +3812,192 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaMainWindow::notifyViewFocusListeners", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindow::addPreferencesListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindow::addPreferencesListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::addPreferencesListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindow* self = 
+                        getSelf("addPreferencesListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPreferencesListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RPreferencesListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RPreferencesListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RPreferencesListener *RPreferencesListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->addPreferencesListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.addPreferencesListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindow::addPreferencesListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindow::removePreferencesListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindow::removePreferencesListener", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::removePreferencesListener";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindow* self = 
+                        getSelf("removePreferencesListener", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RPreferencesListener * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RPreferencesListener * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RPreferencesListener >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RPreferencesListener *RPreferencesListener *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->removePreferencesListener(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.removePreferencesListener().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindow::removePreferencesListener", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaMainWindow::notifyPreferencesListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaMainWindow::notifyPreferencesListeners", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaMainWindow::notifyPreferencesListeners";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RMainWindow* self = 
+                        getSelf("notifyPreferencesListeners", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocumentInterface * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RDocumentInterface * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocumentInterface >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RMainWindow: Argument 0 is not of type RDocumentInterface *RDocumentInterface *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->notifyPreferencesListeners(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RMainWindow.notifyPreferencesListeners().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaMainWindow::notifyPreferencesListeners", context, engine);
             return result;
         }
          QScriptValue

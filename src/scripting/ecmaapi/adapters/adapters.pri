@@ -14,6 +14,7 @@ HEADERS += \
     $$PWD/RLayerListenerAdapter.h \
     $$PWD/RNewDocumentListenerAdapter.h \
     $$PWD/RPenListenerAdapter.h \
+    $$PWD/RPreferencesListenerAdapter.h \
     $$PWD/RSelectionListenerAdapter.h \
     $$PWD/RSpatialIndexVisitorAdapter.h \
     $$PWD/RTransactionListenerAdapter.h \

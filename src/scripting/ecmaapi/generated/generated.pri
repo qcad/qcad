@@ -172,6 +172,8 @@ HEADERS += \
     $$PWD/REcmaPolyline.h \
     $$PWD/REcmaPolylineData.h \
     $$PWD/REcmaPolylineEntity.h \
+    $$PWD/REcmaPreferencesListener.h \
+    $$PWD/REcmaPreferencesListenerAdapter.h \
     $$PWD/REcmaProgressHandler.h \
     $$PWD/REcmaPropertyAttributes.h \
     $$PWD/REcmaPropertyChange.h \
@@ -520,6 +522,8 @@ SOURCES += \
     $$PWD/REcmaPolyline.cpp \
     $$PWD/REcmaPolylineData.cpp \
     $$PWD/REcmaPolylineEntity.cpp \
+    $$PWD/REcmaPreferencesListener.cpp \
+    $$PWD/REcmaPreferencesListenerAdapter.cpp \
     $$PWD/REcmaProgressHandler.cpp \
     $$PWD/REcmaPropertyAttributes.cpp \
     $$PWD/REcmaPropertyChange.cpp \

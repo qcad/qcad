@@ -46,6 +46,7 @@
 <class_decl>class <name>RMdiChildQt</name>;</class_decl>
 <class_decl>class <name>RNewDocumentListener</name>;</class_decl>
 <class_decl>class <name>RPenListener</name>;</class_decl>
+<class_decl>class <name>RPreferencesListener</name>;</class_decl>
 <class_decl>class <name>RPropertyListener</name>;</class_decl>
 <class_decl>class <name>RSelectionListener</name>;</class_decl>
 <class_decl>class <name>RSnapListener</name>;</class_decl>

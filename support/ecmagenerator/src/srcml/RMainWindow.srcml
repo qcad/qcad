@@ -46,6 +46,7 @@
 <class_decl>class <name>RNewDocumentListener</name>;</class_decl>
 <class_decl>class <name>RPenListener</name>;</class_decl>
 <class_decl>class <name>RPropertyListener</name>;</class_decl>
+<class_decl>class <name>RPreferencesListener</name>;</class_decl>
 <class_decl>class <name>RSelectionListener</name>;</class_decl>
 <class_decl>class <name>RSnapListener</name>;</class_decl>
 <class_decl>class <name>RTransaction</name>;</class_decl>
@@ -163,6 +164,10 @@
     <function_decl><type><name>void</name></type> <name>addViewFocusListener</name><parameter_list>(<param><decl><type><name>RViewFocusListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>removeViewFocusListener</name><parameter_list>(<param><decl><type><name>RViewFocusListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>notifyViewFocusListeners</name><parameter_list>(<param><decl><type><name>RGraphicsView</name>*</type> <name>view</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>addPreferencesListener</name><parameter_list>(<param><decl><type><name>RPreferencesListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>removePreferencesListener</name><parameter_list>(<param><decl><type><name>RPreferencesListener</name>*</type> <name>l</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>notifyPreferencesListeners</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>propertyChangeEvent</name><parameter_list>(<param><decl><type><name>RPropertyEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
 
@@ -293,6 +298,7 @@
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RSnapListener</name>*</argument>&gt;</argument_list></name></type> <name>snapListeners</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RFocusListener</name>*</argument>&gt;</argument_list></name></type> <name>focusListeners</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RViewFocusListener</name>*</argument>&gt;</argument_list></name></type> <name>viewFocusListeners</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RPreferencesListener</name>*</argument>&gt;</argument_list></name></type> <name>preferencesListeners</name></decl>;</decl_stmt>
 
     <decl_stmt><decl><type><name>QMutex</name></type> <name>mutex</name></decl>;</decl_stmt>
 </protected>}</block>;</class>

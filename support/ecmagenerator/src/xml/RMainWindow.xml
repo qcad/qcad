@@ -12,6 +12,7 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class_decl name="RNewDocumentListener" />
   <class_decl name="RPenListener" />
   <class_decl name="RPropertyListener" />
+  <class_decl name="RPreferencesListener" />
   <class_decl name="RSelectionListener" />
   <class_decl name="RSnapListener" />
   <class_decl name="RTransaction" />
@@ -449,6 +450,33 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="RGraphicsView *" typeName="RGraphicsView *"
         name="view" isConst="false" />
+      </variant>
+    </method>
+    <method name="addPreferencesListener"
+    cppName="addPreferencesListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPreferencesListener *"
+        typeName="RPreferencesListener *" name="l"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="removePreferencesListener"
+    cppName="removePreferencesListener" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RPreferencesListener *"
+        typeName="RPreferencesListener *" name="l"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="notifyPreferencesListeners"
+    cppName="notifyPreferencesListeners" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        isConst="false" />
       </variant>
     </method>
     <method name="propertyChangeEvent"

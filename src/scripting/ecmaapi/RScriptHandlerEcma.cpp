@@ -205,6 +205,8 @@
 #include "REcmaPolyline.h"
 #include "REcmaPolylineData.h"
 #include "REcmaPolylineEntity.h"
+#include "REcmaPreferencesListener.h"
+#include "REcmaPreferencesListenerAdapter.h"
 #include "REcmaPropertyAttributes.h"
 #include "REcmaPropertyChange.h"
 #include "REcmaPropertyEditor.h"
@@ -899,6 +901,9 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaFocusListenerAdapter::initEcma(*engine);
     REcmaViewFocusListener::initEcma(*engine);
     REcmaViewFocusListenerAdapter::initEcma(*engine);
+
+    REcmaPreferencesListener::initEcma(*engine);
+    REcmaPreferencesListenerAdapter::initEcma(*engine);
 
     REcmaTextRenderer::initEcma(*engine);
 

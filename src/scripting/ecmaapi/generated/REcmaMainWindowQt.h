@@ -182,6 +182,15 @@
         notifyViewFocusListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addPreferencesListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        removePreferencesListener
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        notifyPreferencesListeners
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         propertyChangeEvent
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
