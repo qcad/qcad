@@ -100,6 +100,7 @@ public:
     void setLength(double l);
     double getArea() const;
     void setArea(double a);
+    double getChordArea() const;
 
     virtual double getDirection1() const;
     virtual double getDirection2() const;

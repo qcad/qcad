@@ -368,6 +368,30 @@ void RArc::setArea(double a) {
 }
 
 /**
+ * \return Area limited by arc line and arc chord (line between start and end point).
+ * \author Robert S.
+ */
+double RArc::getChordArea() const {
+    double sectorArea = 0.0;
+    double angleLength = getAngleLength(false);
+    double sweep = getSweep();
+    if (sweep < M_PI) {
+        sectorArea = ((radius * radius) * (angleLength - sin(angleLength))) / 2.0;
+    }
+    else if (sweep == M_PI) {
+        sectorArea = 0.5 * (M_PI * radius * radius);
+    }
+    else {
+        double remainAngle = (M_PI * 2) - sweep;
+        double remainSliceArea = (radius * radius * remainAngle) / 2.0;
+        double remainSectorArea = (radius * radius * (remainAngle - sin(remainAngle))) / 2.0;
+        sectorArea = getArea() + (remainSliceArea - remainSectorArea);
+    }
+
+    return sectorArea;
+}
+
+/**
  * \return Angle length in rad.
  *
  * \param allowForZeroLength: Allow for zero length result if start
