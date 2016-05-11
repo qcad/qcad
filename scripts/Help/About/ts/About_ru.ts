@@ -14,17 +14,22 @@
         <translation>Версия:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
+        <source>%1 is based on QCAD, a free (open source) software.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
         <translation>Это означает, что каждый может &lt;a href=&apos;%1&apos;&gt;участвовать&lt;/a&gt;!</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
         <translation>Фрагменты этой программы © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>Программа предоставляется КАК ЕСТЬ, БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ВКЛЮЧАЯ ГАРАНТИИ ДИЗАЙНА, КОММЕРЧЕСКОЙ ЦЕННОСТИ И ПРИГОДНОСТИ ДЛЯ КОНКРЕТНЫХ ЦЕЛЕЙ.</translation>
     </message>
@@ -61,14 +66,14 @@
         <translation>Неизвестно</translation>
     </message>
     <message>
-        <location line="-105"/>
-        <location line="+98"/>
+        <location line="-110"/>
+        <location line="+103"/>
         <source>Version:</source>
         <translation>Версия:</translation>
     </message>
     <message>
-        <location line="-85"/>
-        <location line="+89"/>
+        <location line="-90"/>
+        <location line="+94"/>
         <source>Qt Version:</source>
         <translation>Версия Qt:</translation>
     </message>
@@ -78,14 +83,14 @@
         <translation>Лицензия:</translation>
     </message>
     <message>
-        <location line="-99"/>
-        <location line="+108"/>
+        <location line="-104"/>
+        <location line="+113"/>
         <location line="+12"/>
         <source>Internet:</source>
         <translation>Интернет:</translation>
     </message>
     <message>
-        <location line="-118"/>
+        <location line="-123"/>
         <source>Build Date:</source>
         <translation>Дата сборки:</translation>
     </message>
@@ -105,12 +110,12 @@
         <translation>%1 - приложение для автоматизированного проектирования (САПР).</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+7"/>
         <source>%1 is free (open source) software.</source>
         <translation>%1 - свободное программное обеспечение с открытым кодом.</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+4"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
         <translation>Плагины и скрипты дополнений подчиняются их соответствующей лицензии (см. вкладку &apos;Плагины&apos;).</translation>
     </message>
@@ -128,7 +133,7 @@
         <translation type="vanished">Фрагменты этой программы © 2012 корпорация Nokia и/или её дочери.</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>No plugins found.</source>
         <translation>Не найдено плагинов.</translation>
     </message>
@@ -186,12 +191,17 @@
         <translation>Программирование</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+40"/>
         <source>Translations</source>
         <translation>Переводы</translation>
     </message>
     <message>
         <location line="+13"/>
+        <source>Templates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Icons</source>
         <translation>Иконки</translation>
     </message>

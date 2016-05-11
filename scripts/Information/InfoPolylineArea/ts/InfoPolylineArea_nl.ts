@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="nl_NL">
+<TS version="2.1" language="nl_NL">
 <context>
     <name>InfoPolylineArea</name>
     <message>
-        <location filename="../InfoPolylineArea.js" line="53"/>
-        <source>Select polyline</source>
-        <translation type="unfinished"></translation>
+        <location filename="../InfoPolylineArea.js" line="+53"/>
+        <source>Choose polyline</source>
+        <translation>Polylijn kiesen</translation>
     </message>
     <message>
-        <location filename="../InfoPolylineArea.js" line="59"/>
+        <location line="+6"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Klaar</translation>
     </message>
     <message>
-        <location filename="../InfoPolylineArea.js" line="100"/>
+        <location line="+41"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Oppervlakte</translation>
     </message>
     <message>
-        <location filename="../InfoPolylineArea.js" line="101"/>
+        <location line="+1"/>
         <source>Circumference</source>
-        <translation type="unfinished"></translation>
+        <translation>Omtrek</translation>
     </message>
     <message>
-        <location filename="../InfoPolylineArea.js" line="220"/>
+        <location line="+52"/>
         <source>Polyline area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Oppervlakte:</translation>
     </message>
     <message>
-        <location filename="../InfoPolylineArea.js" line="221"/>
+        <location line="+1"/>
         <source>circumference:</source>
-        <translation type="unfinished"></translation>
+        <translation>Omtrek:</translation>
     </message>
     <message>
-        <location filename="../InfoPolylineAreaInit.js" line="2"/>
+        <location filename="../InfoPolylineAreaInit.js" line="+2"/>
         <source>Polyl&amp;ine Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Polylijn &amp;oppervlakte</translation>
     </message>
 </context>
 </TS>

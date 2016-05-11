@@ -18,17 +18,22 @@
         <translation>Repaso:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
+        <source>%1 is based on QCAD, a free (open source) software.</source>
+        <translation>%1 se basa en QCAD, un software libre (open source).</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
         <translation>Esto significa que todo el mundo &lt;a href=&apos;%1&apos;&gt;puede participar&lt;/a&gt;!</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
         <translation>Partes de este software © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA, incluso sin la garantía MERCANTIL implícita o sin garantizar la CONVENIENCIA PARA UN PROPÓSITO PARTICULAR.</translation>
     </message>
@@ -65,14 +70,14 @@
         <translation>Desconocido</translation>
     </message>
     <message>
-        <location line="-105"/>
-        <location line="+98"/>
+        <location line="-110"/>
+        <location line="+103"/>
         <source>Version:</source>
         <translation>Versión:</translation>
     </message>
     <message>
-        <location line="-85"/>
-        <location line="+89"/>
+        <location line="-90"/>
+        <location line="+94"/>
         <source>Qt Version:</source>
         <translation>Qt Versión:</translation>
     </message>
@@ -82,14 +87,14 @@
         <translation>Licencia:</translation>
     </message>
     <message>
-        <location line="-99"/>
-        <location line="+108"/>
+        <location line="-104"/>
+        <location line="+113"/>
         <location line="+12"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-118"/>
+        <location line="-123"/>
         <source>Build Date:</source>
         <translation>Fecha de producción:</translation>
     </message>
@@ -109,12 +114,12 @@
         <translation>%1 es una aplicación para el diseño asistido por ordenador (CAD).</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+7"/>
         <source>%1 is free (open source) software.</source>
         <translation>%1 es software libre (de código abierto).</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+4"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
         <translation>Plugins y script complementos están sujetas a sus respectivas licencias (ver &quot;Plugins&quot; ficha).</translation>
     </message>
@@ -132,7 +137,7 @@
         <translation type="vanished">Partes de este software © 2012 Nokia Corporation y / o su filial(es).</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>No plugins found.</source>
         <translation>No hay plugins encontrados.</translation>
     </message>
@@ -194,12 +199,17 @@
         <translation>Programación</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+40"/>
         <source>Translations</source>
         <translation>Traducciones</translation>
     </message>
     <message>
         <location line="+13"/>
+        <source>Templates</source>
+        <translation>Plantillas</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Icons</source>
         <translation>Iconos</translation>
     </message>

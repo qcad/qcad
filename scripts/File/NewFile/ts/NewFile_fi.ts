@@ -70,7 +70,7 @@
         <translation>Muoto:</translation>
     </message>
     <message>
-        <location line="+125"/>
+        <location line="+124"/>
         <source>Untitled %1</source>
         <translation>Nimetön %1</translation>
     </message>

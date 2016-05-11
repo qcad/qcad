@@ -10,19 +10,19 @@
     </message>
     <message>
         <location line="+33"/>
-        <location line="+98"/>
+        <location line="+103"/>
         <source>Version:</source>
         <translation>Verze:</translation>
     </message>
     <message>
-        <location line="-91"/>
-        <location line="+108"/>
+        <location line="-96"/>
+        <location line="+113"/>
         <location line="+12"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-118"/>
+        <location line="-123"/>
         <source>Build Date:</source>
         <translation>Datum sestavení:</translation>
     </message>
@@ -33,12 +33,12 @@
     </message>
     <message>
         <location line="+2"/>
-        <location line="+89"/>
+        <location line="+94"/>
         <source>Qt Version:</source>
         <translation>Verze Qt:</translation>
     </message>
     <message>
-        <location line="-86"/>
+        <location line="-91"/>
         <source>Architecture:</source>
         <translation>Architektura:</translation>
     </message>
@@ -53,7 +53,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+4"/>
+        <source>%1 is based on QCAD, a free (open source) software.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>%1 is free (open source) software.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -63,7 +68,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+1"/>
+        <location line="+3"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
         <translation type="unfinished"></translation>
     </message>
@@ -78,7 +83,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -178,12 +183,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+40"/>
         <source>Translations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+13"/>
+        <source>Templates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Icons</source>
         <translation type="unfinished"></translation>
     </message>

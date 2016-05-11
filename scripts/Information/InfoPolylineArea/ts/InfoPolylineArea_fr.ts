@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fr_FR">
+<TS version="2.1" language="fr_FR">
 <context>
     <name>InfoPolylineArea</name>
     <message>
-        <location filename="../InfoPolylineArea.js" line="53"/>
-        <source>Select polyline</source>
-        <translation type="unfinished"></translation>
+        <location filename="../InfoPolylineArea.js" line="+53"/>
+        <source>Choose polyline</source>
+        <translation>Choose polyline</translation>
     </message>
     <message>
-        <location filename="../InfoPolylineArea.js" line="59"/>
+        <location line="+6"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Terminer</translation>
     </message>
     <message>
-        <location filename="../InfoPolylineArea.js" line="100"/>
+        <location line="+41"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Aire</translation>
     </message>
     <message>
-        <location filename="../InfoPolylineArea.js" line="101"/>
+        <location line="+1"/>
         <source>Circumference</source>
-        <translation type="unfinished"></translation>
+        <translation>Circonférence</translation>
     </message>
     <message>
-        <location filename="../InfoPolylineArea.js" line="220"/>
+        <location line="+52"/>
         <source>Polyline area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Aire :</translation>
     </message>
     <message>
-        <location filename="../InfoPolylineArea.js" line="221"/>
+        <location line="+1"/>
         <source>circumference:</source>
-        <translation type="unfinished"></translation>
+        <translation>Circonférence :</translation>
     </message>
     <message>
-        <location filename="../InfoPolylineAreaInit.js" line="2"/>
+        <location filename="../InfoPolylineAreaInit.js" line="+2"/>
         <source>Polyl&amp;ine Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Polyline &amp;area</translation>
     </message>
 </context>
 </TS>

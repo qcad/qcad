@@ -109,7 +109,7 @@
         <translation>URL для импортирования:</translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+66"/>
         <source>Grid</source>
         <translation>По сетке</translation>
     </message>

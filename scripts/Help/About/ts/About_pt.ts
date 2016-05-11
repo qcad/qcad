@@ -20,17 +20,22 @@
         <translation>Revisão:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
+        <source>%1 is based on QCAD, a free (open source) software.</source>
+        <translation>%1 é baseado em QCAD, um software livre (open source).</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
         <translation>Isto significa que todos &lt;a href=&apos;%1&apos;&gt;podem se envolver&lt;/a&gt;!</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
         <translation>Partes deste software © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>Esse programa é distribuído na esperança que seja útil, mas sem nenhuma garantia, nem mesmo a garantia implicada de comercialização ou propriedade para uso particular.</translation>
     </message>
@@ -67,14 +72,14 @@
         <translation>Desconhecido</translation>
     </message>
     <message>
-        <location line="-105"/>
-        <location line="+98"/>
+        <location line="-110"/>
+        <location line="+103"/>
         <source>Version:</source>
         <translation>Versão:</translation>
     </message>
     <message>
-        <location line="-85"/>
-        <location line="+89"/>
+        <location line="-90"/>
+        <location line="+94"/>
         <source>Qt Version:</source>
         <translation>Qt Versão:</translation>
     </message>
@@ -84,14 +89,14 @@
         <translation>Licença:</translation>
     </message>
     <message>
-        <location line="-99"/>
-        <location line="+108"/>
+        <location line="-104"/>
+        <location line="+113"/>
         <location line="+12"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-118"/>
+        <location line="-123"/>
         <source>Build Date:</source>
         <translation>Data de constituição:</translation>
     </message>
@@ -111,12 +116,12 @@
         <translation>%1 é um pedido de desenho assistido por computador (CAD).</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+7"/>
         <source>%1 is free (open source) software.</source>
         <translation>%1 é um software livre (open source).</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+4"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
         <translation>Plugins e script add-ons estão sujeitos às suas respectivas licenças (ver &quot;Plugins&quot; tab).</translation>
     </message>
@@ -134,7 +139,7 @@
         <translation type="vanished">Partes deste software © 2012 Nokia Corporation e / ou de sua controlada(s).</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>No plugins found.</source>
         <translation>Nenhum plugin encontrado.</translation>
     </message>
@@ -196,12 +201,17 @@
         <translation>Programação</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+40"/>
         <source>Translations</source>
         <translation>Traduções</translation>
     </message>
     <message>
         <location line="+13"/>
+        <source>Templates</source>
+        <translation>Modelos</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Icons</source>
         <translation>Icones</translation>
     </message>

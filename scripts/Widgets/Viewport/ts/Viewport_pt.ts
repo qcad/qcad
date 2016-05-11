@@ -165,7 +165,7 @@ Selecione Entidades singulares</translatorcomment>
         <translation>Importando a URL: </translation>
     </message>
     <message>
-        <location line="+65"/>
+        <location line="+66"/>
         <source>Grid</source>
         <translatorcomment>--exact match--
 --file: pt.po--

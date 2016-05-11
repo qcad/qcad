@@ -18,17 +18,22 @@
         <translation>Revision:</translation>
     </message>
     <message>
-        <location line="+14"/>
+        <location line="+15"/>
+        <source>%1 is based on QCAD, a free (open source) software.</source>
+        <translation>%1 baut auf QCAD auf, einer freien (Open Source) Software.</translation>
+    </message>
+    <message>
+        <location line="+4"/>
         <source>This means that everyone can &lt;a href=&apos;%1&apos;&gt;get involved&lt;/a&gt;!</source>
         <translation>Das bedeutet, dass jeder &lt;a href=&apos;%1&apos;&gt;mithelfen&lt;/a&gt; kann!</translation>
     </message>
     <message>
-        <location line="+6"/>
+        <location line="+8"/>
         <source>Portions of this software © 2008-2016 The Qt Company Ltd.</source>
         <translation>Teile dieser Software sind © 2008-2016 The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+3"/>
+        <location line="+1"/>
         <source>The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</source>
         <translation>Die Veröffentlichung dieses Programms erfolgt in der Hoffnung, dass es Ihnen von Nutzen sein wird, aber OHNE JEDE GEWÄHRLEISTUNG - sogar ohne die implizite Gewährleistung der MARKTREIFE oder der EIGNUNG FÜR EINEN BESTIMMTEN ZWECK.</translation>
     </message>
@@ -65,14 +70,14 @@
         <translation>Unbekannt</translation>
     </message>
     <message>
-        <location line="-105"/>
-        <location line="+98"/>
+        <location line="-110"/>
+        <location line="+103"/>
         <source>Version:</source>
         <translation>Version:</translation>
     </message>
     <message>
-        <location line="-85"/>
-        <location line="+89"/>
+        <location line="-90"/>
+        <location line="+94"/>
         <source>Qt Version:</source>
         <translation>Qt Version:</translation>
     </message>
@@ -82,14 +87,14 @@
         <translation>Lizenz:</translation>
     </message>
     <message>
-        <location line="-99"/>
-        <location line="+108"/>
+        <location line="-104"/>
+        <location line="+113"/>
         <location line="+12"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-118"/>
+        <location line="-123"/>
         <source>Build Date:</source>
         <translation>Erstellungsdatum:</translation>
     </message>
@@ -113,7 +118,7 @@
         <translation>%1 ist eine Applikation für computerunterstütztes Zeichnen (CAD).</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+7"/>
         <source>%1 is free (open source) software.</source>
         <translation>%1 ist freie (Open Source) Software.</translation>
     </message>
@@ -122,7 +127,7 @@
         <translation type="obsolete">Das bedeutet, dass jeder &lt;a href=&apos;%1&apos;&gt;mithelfen kann.</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+4"/>
         <source>Plugins and script add-ons are subject to their respective license (see &apos;Plugins&apos; tab).</source>
         <translation>Plugins und Skript Add-ons unterliegen ihrer jeweiligen Lizenz (siehe &quot;Plugins&quot; Reiter).</translation>
     </message>
@@ -140,7 +145,7 @@
         <translation type="vanished">Teile dieser Software sind © 2012 Nokia Corporation und / oder ihrer Tochtergesellschaft(en).</translation>
     </message>
     <message>
-        <location line="+24"/>
+        <location line="+22"/>
         <source>No plugins found.</source>
         <translation>Keine Plugins gefunden.</translation>
     </message>
@@ -202,12 +207,17 @@
         <translation>Programmierung</translation>
     </message>
     <message>
-        <location line="+39"/>
+        <location line="+40"/>
         <source>Translations</source>
         <translation>Übersetzungen</translation>
     </message>
     <message>
         <location line="+13"/>
+        <source>Templates</source>
+        <translation>Vorlagen</translation>
+    </message>
+    <message>
+        <location line="+6"/>
         <source>Icons</source>
         <translation>Ikone</translation>
     </message>
