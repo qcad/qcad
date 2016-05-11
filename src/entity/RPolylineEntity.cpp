@@ -183,10 +183,8 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
             v.setValue(data.getLength());
             return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));
         } else if (RPolyline::hasProxy() && propertyTypeId == PropertyArea) {
-            RBox bb = getBoundingBox();
-            double s = qMax(bb.getWidth(), bb.getHeight());
             QVariant v;
-            v.setValue(data.getArea(s/100));
+            v.setValue(data.getArea());
             return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));
         }
     }

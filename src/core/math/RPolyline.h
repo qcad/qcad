@@ -120,7 +120,7 @@ public:
 
     virtual RBox getBoundingBox() const;
 
-    double getArea(double segmentLength = -1.0) const;
+    double getArea() const;
 
     virtual double getLength() const;
     double getLengthTo(const RVector& p, bool limited = true) const;

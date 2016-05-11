@@ -960,11 +960,64 @@ RBox RPolyline::getBoundingBox() const {
     return ret;
 }
 
-double RPolyline::getArea(double segmentLength) const {
-    if (polylineProxy!=NULL) {
-        return polylineProxy->getArea(*this, segmentLength);
+/**
+ * \return Area of (implicitly closed) polyline.
+ * \author Robert S.
+ */
+double RPolyline::getArea() const {
+//    double control = 0.0;
+//    if (polylineProxy!=NULL) {
+//        control = polylineProxy->getArea(*this, 0.01);
+//    }
+
+    RPolyline closedCopy = *this;
+    if (!closedCopy.isGeometricallyClosed()) {
+        closedCopy.autoClose();
     }
-    return 0.0;
+
+    // polygonal area (all segments treated as lines):
+    QList<RVector> pts = closedCopy.getVertices();
+    double area = 0;
+    int nPts = closedCopy.countVertices();
+    int j = nPts - 1;
+    RVector p1;
+    RVector p2;
+
+    for (int i=0; i<nPts; j=i++) {
+        p1 = pts[i];
+        p2 = pts[j];
+        area += p1.x * p2.y;
+        area -= p1.y * p2.x;
+    }
+    area /= 2;
+    area = fabs(area);
+
+    // add / subtract arc segment sector area:
+    if (closedCopy.hasArcSegments()) {
+        bool plReversed = (closedCopy.getOrientation()==RS::CW);
+        for (int i = 0; i < closedCopy.countSegments(); i++) {
+            if (closedCopy.isArcSegmentAt(i)) {
+                QSharedPointer<RShape> shape = closedCopy.getSegmentAt(i);
+                QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();
+                if (!arc.isNull()) {
+                    double chordArea = arc->getChordArea();
+
+                    if (arc->isReversed()==plReversed) {
+                        // arc has same orientation as polyline: add
+                        area = area + chordArea;
+                    }
+                    else {
+                        // arc has opposite orientation of polyline: subtract
+                        area = area - chordArea;
+                    }
+                }
+            }
+        }
+    }
+
+    area = fabs(area);
+    //qDebug() << "error: " << fabs(area - control);
+    return area;
 }
 
 double RPolyline::getLength() const {
