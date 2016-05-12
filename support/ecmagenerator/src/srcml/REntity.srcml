@@ -88,7 +88,7 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertySizeY</name></decl>;</decl_stmt>
 
 </public><public>public:
-    <macro><name>REntity</name><argument_list>(<argument>RDocument* document</argument>, <argument>RObject::Id objectId=-1</argument>)</argument_list></macro>;
+    <constructor_decl><name>REntity</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>)</parameter_list>;</constructor_decl>
     <constructor_decl><name>REntity</name><parameter_list>(<param><decl><type><name>const</name> <name>REntity</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~REntity</name><parameter_list>()</parameter_list>;</destructor_decl>
 
@@ -596,7 +596,7 @@
         <return>return <expr><call><name>isSelected</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
-    <function><type><name>void</name></type> <name>setAutoUpdatesBlocked</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>virtual</name> <name>void</name></type> <name>setAutoUpdatesBlocked</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><call><name>getData</name><argument_list>()</argument_list></call>.<call><name>setAutoUpdatesBlocked</name><argument_list>(<argument><expr><name>on</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 

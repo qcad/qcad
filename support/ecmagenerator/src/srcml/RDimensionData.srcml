@@ -32,11 +32,11 @@
  * Base class for dimension entity data classes.
  *
  * \scriptable
- * \ingroup core
+ * \ingroup entity
  *
  * \todo explodable interface that returns list of REntityData, maybe base class RComposedEntityData?
  */</comment>
-<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RDimensionData</name><super>: <specifier>public</specifier> <name>REntityData</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADENTITY_EXPORT</name></macro> <name>RDimensionData</name><super>: <specifier>public</specifier> <name>REntityData</name></super> <block>{<private type="default">
     <decl_stmt><decl><type><name>friend</name> class</type> <name>RDimensionEntity</name></decl>;</decl_stmt>
 
 </private><protected>protected:
@@ -188,7 +188,6 @@
 
     <function_decl><type><name>QSharedPointer<argument_list>&lt;<argument><name>RBlockReferenceEntity</name></argument>&gt;</argument_list></name></type> <name>getDimensionBlockReference</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>bool</name></type> <name>hasDimensionBlockReference</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
-    <comment type="line">//void setDimensionBlockLock(bool on);</comment>
 
 </public><protected>protected:
     <comment type="block">/** Definition point */</comment>
@@ -222,7 +221,6 @@
     <decl_stmt><decl><type><name>QString</name></type> <name>fontName</name></decl>;</decl_stmt>
     <comment type="block">/** Dimension appearance is defined in this block */</comment>
     <decl_stmt><decl><type><name>mutable</name> <name>QString</name></type> <name>dimBlockName</name></decl>;</decl_stmt>
-    <comment type="line">//mutable bool dimBlockNameLocked;</comment>
 
     <decl_stmt><decl><type><name>mutable</name> <name>double</name></type> <name>defaultAngle</name></decl>;</decl_stmt>
     <comment type="block">/** Rotation angle of dimension text away from default orientation */</comment>

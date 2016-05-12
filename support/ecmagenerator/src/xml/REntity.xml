@@ -12,6 +12,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <baseClass name="RObject" specifier="public" />
     <constructor>
       <variant>
+        <arg type="RDocument *" typeName="RDocument *"
+        name="document" isConst="false" />
+      </variant>
+      <variant>
         <arg type="REntity &amp;" typeName="REntity" name="other"
         isConst="true" />
       </variant>
@@ -621,7 +625,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <method name="setAutoUpdatesBlocked"
     cppName="setAutoUpdatesBlocked" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="on"
         isConst="false" />

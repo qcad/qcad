@@ -14,9 +14,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="document" isConst="false" />
         <arg type="RAttributeData &amp;" typeName="RAttributeData"
         name="data" isConst="true" />
-        <arg type="RObject::Id" typeName="RObject::Id"
-        name="objectId" hasDefault="true"
-        default="RObject :: INVALID_ID" isConst="false" />
       </variant>
     </constructor>
     <method name="init" cppName="init" specifier="public"

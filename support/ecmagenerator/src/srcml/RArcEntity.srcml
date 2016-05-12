@@ -67,8 +67,7 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyArea</name></decl>;</decl_stmt>
 
 </public><public>public:
-    <constructor_decl><name>RArcEntity</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>RArcData</name>&amp;</type> <name>data</name></decl></param>,
-        <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name> =<init> <expr><name><name>RObject</name>::<name>INVALID_ID</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RArcEntity</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>RArcData</name>&amp;</type> <name>data</name></decl></param>)</parameter_list>;</constructor_decl>
     <constructor_decl><name>RArcEntity</name><parameter_list>(<param><decl><type><name>const</name> <name>RArcEntity</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~RArcEntity</name><parameter_list>()</parameter_list>;</destructor_decl>
 

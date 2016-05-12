@@ -124,6 +124,9 @@
         getComplexity
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setAutoUpdatesBlocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         dump
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

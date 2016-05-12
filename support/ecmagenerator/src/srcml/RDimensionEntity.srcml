@@ -34,9 +34,9 @@
  *
  * \scriptable
  * \sharedPointerSupport
- * \ingroup core
+ * \ingroup entity
  */</comment>
-<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RDimensionEntity</name><super>: <specifier>public</specifier> <name>REntity</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADENTITY_EXPORT</name></macro> <name>RDimensionEntity</name><super>: <specifier>public</specifier> <name>REntity</name></super> <block>{<private type="default">
 
     <macro><name>Q_DECLARE_TR_FUNCTIONS</name><argument_list>(<argument>RDimensionEntity</argument>)</argument_list></macro>
 
@@ -79,7 +79,7 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyMeasuredValue</name></decl>;</decl_stmt>
 
 </public><public>public:
-    <constructor_decl><name>RDimensionEntity</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name> =<init> <expr><name><name>RObject</name>::<name>INVALID_ID</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RDimensionEntity</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~RDimensionEntity</name><parameter_list>()</parameter_list>;</destructor_decl>
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>

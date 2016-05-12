@@ -15,9 +15,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RBlockReferenceData &amp;"
         typeName="RBlockReferenceData" name="data"
         isConst="true" />
-        <arg type="RObject::Id" typeName="RObject::Id"
-        name="objectId" hasDefault="true"
-        default="RObject :: INVALID_ID" isConst="false" />
       </variant>
       <variant>
         <arg type="RBlockReferenceEntity &amp;"

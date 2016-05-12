@@ -12,9 +12,6 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant>
         <arg type="RDocument *" typeName="RDocument *"
         name="document" isConst="false" />
-        <arg type="RObject::Id" typeName="RObject::Id"
-        name="objectId" hasDefault="true"
-        default="RObject :: INVALID_ID" isConst="false" />
       </variant>
     </constructor>
     <method name="init" cppName="init" specifier="public"

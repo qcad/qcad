@@ -17,8 +17,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RDocument *" typeName="RDocument *"
         name="document" hasDefault="true" default="NULL"
         isConst="false" />
-        <arg type="RObject::Id" typeName="RObject::Id" name="id"
-        hasDefault="true" default="INVALID_ID" isConst="false" />
       </variant>
       <variant>
         <arg type="RObject &amp;" typeName="RObject" name="other"
@@ -217,6 +215,14 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="int" isPureVirtual="false" />
+    </method>
+    <method name="setAutoUpdatesBlocked"
+    cppName="setAutoUpdatesBlocked" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
     </method>
     <method name="dump" cppName="dump" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">

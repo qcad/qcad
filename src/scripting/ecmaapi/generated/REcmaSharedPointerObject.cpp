@@ -107,6 +107,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getComplexity, "getComplexity");
             
+            REcmaHelper::registerFunction(&engine, proto, setAutoUpdatesBlocked, "setAutoUpdatesBlocked");
+            
             REcmaHelper::registerFunction(&engine, proto, dump, "dump");
             
         engine.setDefaultPrototype(
@@ -2110,6 +2112,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerObject::getComplexity", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerObject::setAutoUpdatesBlocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerObject::setAutoUpdatesBlocked", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerObject::setAutoUpdatesBlocked";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RObject* self = 
+                        getSelf("setAutoUpdatesBlocked", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAutoUpdatesBlocked(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RObject.setAutoUpdatesBlocked().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerObject::setAutoUpdatesBlocked", context, engine);
             return result;
         }
          QScriptValue

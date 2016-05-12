@@ -72,8 +72,7 @@
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyVAlign</name></decl>;</decl_stmt>
 
 </public><public>public:
-    <constructor_decl><name>RAttributeDefinitionEntity</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>RAttributeDefinitionData</name>&amp;</type> <name>data</name></decl></param>,
-        <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>objectId</name> =<init> <expr><name><name>RObject</name>::<name>INVALID_ID</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RAttributeDefinitionEntity</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>const</name> <name>RAttributeDefinitionData</name>&amp;</type> <name>data</name></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~RAttributeDefinitionEntity</name><parameter_list>()</parameter_list>;</destructor_decl>
 
     <function_decl><type><name>static</name> <name>void</name></type> <name>init</name><parameter_list>()</parameter_list>;</function_decl>

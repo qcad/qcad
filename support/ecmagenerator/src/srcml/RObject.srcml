@@ -66,7 +66,7 @@
     }</block>;</enum>
 
 </public><public>public:
-    <constructor_decl><name>RObject</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name>=<init><expr><name>NULL</name></expr></init></decl></param>, <param><decl><type><name><name>RObject</name>::<name>Id</name></name></type> <name>id</name> =<init> <expr><name>INVALID_ID</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RObject</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
     <constructor_decl><name>RObject</name><parameter_list>(<param><decl><type><name>const</name> <name>RObject</name>&amp;</type> <name>other</name></decl></param>)</parameter_list>;</constructor_decl>
     <destructor_decl><specifier>virtual</specifier> <name>~RObject</name><parameter_list>()</parameter_list>;</destructor_decl>
 
@@ -195,6 +195,10 @@
 
     <function><type><name>virtual</name> <name>int</name></type> <name>getComplexity</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr>0</expr>;</return>
+    }</block></function>
+
+    <function><type><name>virtual</name> <name>void</name></type> <name>setAutoUpdatesBlocked</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <macro><name>Q_UNUSED</name><argument_list>(<argument>on</argument>)</argument_list></macro>
     }</block></function>
 
     <function><type><name>void</name></type> <name>dump</name><parameter_list>()</parameter_list> <block>{
