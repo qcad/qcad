@@ -33,9 +33,9 @@
  * \scriptable
  * \sharedPointerSupport
  * \copyable
- * \ingroup entity
+ * \ingroup core
  */</comment>
-<class>class <macro><name>QCADENTITY_EXPORT</name></macro> <name>RTextData</name><super>: <specifier>public</specifier> <name>RTextBasedData</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RTextData</name><super>: <specifier>public</specifier> <name>RTextBasedData</name></super> <block>{<private type="default">
     <decl_stmt><decl><type><name>friend</name> class</type> <name>RTextEntity</name></decl>;</decl_stmt>
 
 </private><protected>protected:

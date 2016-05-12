@@ -201,6 +201,10 @@
                 qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyDimScale),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyDimBlockName",
+                qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyDimBlockName),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyAutoTextPos",
                 qScriptValueFromValue(&engine, RDimRotatedEntity::PropertyAutoTextPos),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

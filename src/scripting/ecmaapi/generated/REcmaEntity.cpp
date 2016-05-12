@@ -205,6 +205,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isSelectedForPropertyEditing, "isSelectedForPropertyEditing");
             
+            REcmaHelper::registerFunction(&engine, proto, setAutoUpdatesBlocked, "setAutoUpdatesBlocked");
+            
             REcmaHelper::registerFunction(&engine, proto, getProperty, "getProperty");
             
             REcmaHelper::registerFunction(&engine, proto, setProperty, "setProperty");
@@ -7050,6 +7052,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEntity::isSelectedForPropertyEditing", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEntity::setAutoUpdatesBlocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEntity::setAutoUpdatesBlocked", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEntity::setAutoUpdatesBlocked";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REntity* self = 
+                        getSelf("setAutoUpdatesBlocked", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setAutoUpdatesBlocked(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REntity.setAutoUpdatesBlocked().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEntity::setAutoUpdatesBlocked", context, engine);
             return result;
         }
          QScriptValue

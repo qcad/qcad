@@ -34,9 +34,9 @@
  *
  * \scriptable
  * \sharedPointerSupport
- * \ingroup entity
+ * \ingroup core
  */</comment>
-<class>class <macro><name>QCADENTITY_EXPORT</name></macro> <name>RDimensionEntity</name><super>: <specifier>public</specifier> <name>REntity</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RDimensionEntity</name><super>: <specifier>public</specifier> <name>REntity</name></super> <block>{<private type="default">
 
     <macro><name>Q_DECLARE_TR_FUNCTIONS</name><argument_list>(<argument>RDimensionEntity</argument>)</argument_list></macro>
 
@@ -66,6 +66,7 @@
 
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyLinearFactor</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimScale</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyDimBlockName</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyAutoTextPos</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>static</name> <name>RPropertyTypeId</name></type> <name>PropertyFontName</name></decl>;</decl_stmt>
     <comment type="line">//static RPropertyTypeId PropertyHeight;</comment>

@@ -260,6 +260,9 @@
         isSelectedForPropertyEditing
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setAutoUpdatesBlocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getProperty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -34,9 +34,9 @@
  *
  * \scriptable
  * \sharedPointerSupport
- * \ingroup entity
+ * \ingroup core
  */</comment>
-<class>class <macro><name>QCADENTITY_EXPORT</name></macro> <name>RTextEntity</name><super>: <specifier>public</specifier> <name>RTextBasedEntity</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RTextEntity</name><super>: <specifier>public</specifier> <name>RTextBasedEntity</name></super> <block>{<private type="default">
 
     <macro><name>Q_DECLARE_TR_FUNCTIONS</name><argument_list>(<argument>RTextBasedEntity</argument>)</argument_list></macro>
 

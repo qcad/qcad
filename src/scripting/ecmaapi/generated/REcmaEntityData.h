@@ -223,6 +223,9 @@
         update
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setAutoUpdatesBlocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getDefaultDrawOrder
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

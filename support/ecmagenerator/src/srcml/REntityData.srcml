@@ -349,6 +349,7 @@
      * (mark the entity as dirty).
      */</comment>
     <function><type><name>virtual</name> <name>void</name></type> <name>update</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{}</block></function>
+    <function_decl><type><name>void</name></type> <name>setAutoUpdatesBlocked</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
 
     <function><type><name>static</name> <name>int</name></type> <name>getDefaultDrawOrder</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>RMININT</name></expr>;</return>
@@ -358,6 +359,8 @@
     <decl_stmt><decl><type><name>RDocument</name>*</type> <name>document</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>updatesEnabled</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>selectionStatus</name></decl>;</decl_stmt>
+    <comment type="block">/** Block auto updates is true during imports, undo and redo. */</comment>
+    <decl_stmt><decl><type><name>bool</name></type> <name>autoUpdatesBlocked</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>int</name></type> <name>drawOrder</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RLayer</name>::<name>Id</name></name></type> <name>layerId</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>blockId</name></decl>;</decl_stmt>
