@@ -65,8 +65,7 @@ public:
     static RPropertyTypeId PropertyFade;
 
 public:
-    RImageEntity(RDocument* document, const RImageData& data,
-        RObject::Id objectId = RObject::INVALID_ID);
+    RImageEntity(RDocument* document, const RImageData& data);
     RImageEntity(const RImageEntity& other);
     virtual ~RImageEntity();
 

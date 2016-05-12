@@ -82,8 +82,7 @@ public:
     static RPropertyTypeId PropertyAngle;
 
 public:
-    RDimRotatedEntity(RDocument* document, const RDimRotatedData& data,
-                      RObject::Id objectId = RObject::INVALID_ID);
+    RDimRotatedEntity(RDocument* document, const RDimRotatedData& data);
     virtual ~RDimRotatedEntity();
 
     static void init();

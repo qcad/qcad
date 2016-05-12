@@ -71,8 +71,7 @@ public:
     static RPropertyTypeId PropertyArea;
 
 public:
-    RPolylineEntity(RDocument* document, const RPolylineData& data,
-        RObject::Id objectId = RObject::INVALID_ID);
+    RPolylineEntity(RDocument* document, const RPolylineData& data);
     RPolylineEntity(const RPolylineEntity& other);
     virtual ~RPolylineEntity();
 

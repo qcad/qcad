@@ -69,7 +69,7 @@ public:
     static RPropertyTypeId PropertyVAlign;
 
 public:
-    RTextBasedEntity(RDocument* document, RObject::Id objectId = RObject::INVALID_ID);
+    RTextBasedEntity(RDocument* document);
     virtual ~RTextBasedEntity();
 
     static void init();

@@ -66,8 +66,7 @@ public:
     static RPropertyTypeId PropertyFixedAngle;
 
 public:
-    RRayEntity(RDocument* document, const RRayData& data,
-        RObject::Id objectId = RObject::INVALID_ID);
+    RRayEntity(RDocument* document, const RRayData& data);
     virtual ~RRayEntity();
 
     static void init();

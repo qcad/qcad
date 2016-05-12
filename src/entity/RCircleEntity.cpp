@@ -44,9 +44,8 @@ RPropertyTypeId RCircleEntity::PropertyArea;
 
 
 
-RCircleEntity::RCircleEntity(RDocument* document, const RCircleData& data,
-        RObject::Id objectId) :
-    REntity(document, objectId), data(document, data) {
+RCircleEntity::RCircleEntity(RDocument* document, const RCircleData& data) :
+    REntity(document), data(document, data) {
 
     RDebug::incCounter("RCircleEntity");
 }

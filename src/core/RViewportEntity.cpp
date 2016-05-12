@@ -48,9 +48,8 @@ RPropertyTypeId RViewportEntity::PropertyViewTargetZ;
 RPropertyTypeId RViewportEntity::PropertyOverall;
 
 
-RViewportEntity::RViewportEntity(RDocument* document, const RViewportData& data,
-        RObject::Id objectId) :
-    REntity(document, objectId), data(document, data) {
+RViewportEntity::RViewportEntity(RDocument* document, const RViewportData& data) :
+    REntity(document), data(document, data) {
 }
 
 RViewportEntity::~RViewportEntity() {

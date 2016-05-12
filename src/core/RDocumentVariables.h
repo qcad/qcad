@@ -45,7 +45,7 @@ public:
     static RPropertyTypeId PropertyDimensionFont;
 
 public:
-    RDocumentVariables(RDocument* document, RObject::Id objectId=INVALID_ID);
+    RDocumentVariables(RDocument* document);
     virtual ~RDocumentVariables();
 
     static void init();

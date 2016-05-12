@@ -60,8 +60,7 @@ public:
     static RPropertyTypeId PropertyArea;
 
 public:
-    RCircleEntity(RDocument* document, const RCircleData& data,
-        RObject::Id objectId = RObject::INVALID_ID);
+    RCircleEntity(RDocument* document, const RCircleData& data);
     RCircleEntity(const RCircleEntity& other);
     virtual ~RCircleEntity();
 

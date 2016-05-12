@@ -39,8 +39,8 @@ RPropertyTypeId RLeaderEntity::PropertyVertexNY;
 RPropertyTypeId RLeaderEntity::PropertyVertexNZ;
 
 
-RLeaderEntity::RLeaderEntity(RDocument* document, const RLeaderData& data, RObject::Id objectId) :
-    REntity(document, objectId), data(document, data) {
+RLeaderEntity::RLeaderEntity(RDocument* document, const RLeaderData& data) :
+    REntity(document), data(document, data) {
     RDebug::incCounter("RLeaderEntity");
 }
 

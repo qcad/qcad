@@ -78,8 +78,7 @@ public:
     static RPropertyTypeId PropertyExtensionPoint2Z;
 
 public:
-    RDimAlignedEntity(RDocument* document, const RDimAlignedData& data,
-                      RObject::Id objectId = RObject::INVALID_ID);
+    RDimAlignedEntity(RDocument* document, const RDimAlignedData& data);
     virtual ~RDimAlignedEntity();
 
     static void init();

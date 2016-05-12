@@ -83,8 +83,7 @@ public:
     static RPropertyTypeId PropertyDimArcPositionZ;
 
 public:
-    RDimAngularEntity(RDocument* document, const RDimAngularData& data,
-                      RObject::Id objectId = RObject::INVALID_ID);
+    RDimAngularEntity(RDocument* document, const RDimAngularData& data);
     virtual ~RDimAngularEntity();
 
     static void init();

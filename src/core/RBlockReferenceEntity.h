@@ -65,8 +65,7 @@ public:
     static RPropertyTypeId PropertyRowSpacing;
 
 public:
-    RBlockReferenceEntity(RDocument* document, const RBlockReferenceData& data,
-            RObject::Id objectId = RObject::INVALID_ID);
+    RBlockReferenceEntity(RDocument* document, const RBlockReferenceData& data);
     RBlockReferenceEntity(const RBlockReferenceEntity& other);
     virtual ~RBlockReferenceEntity();
 

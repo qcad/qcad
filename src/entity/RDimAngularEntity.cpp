@@ -63,8 +63,8 @@ RPropertyTypeId RDimAngularEntity::PropertyDimArcPositionZ;
 
 
 
-RDimAngularEntity::RDimAngularEntity(RDocument* document, const RDimAngularData& data, RObject::Id objectId) :
-    RDimensionEntity(document, objectId), data(document, data) {
+RDimAngularEntity::RDimAngularEntity(RDocument* document, const RDimAngularData& data) :
+    RDimensionEntity(document), data(document, data) {
 }
 
 RDimAngularEntity::~RDimAngularEntity() {

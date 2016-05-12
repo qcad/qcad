@@ -77,8 +77,7 @@ public:
     static RPropertyTypeId PropertyDefiningPointZ;
 
 public:
-    RDimOrdinateEntity(RDocument* document, const RDimOrdinateData& data,
-                      RObject::Id objectId = RObject::INVALID_ID);
+    RDimOrdinateEntity(RDocument* document, const RDimOrdinateData& data);
     virtual ~RDimOrdinateEntity();
 
     static void init();

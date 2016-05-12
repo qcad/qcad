@@ -57,8 +57,8 @@ RPropertyTypeId RDimensionEntity::PropertyAutoLabel;
 RPropertyTypeId RDimensionEntity::PropertyMeasuredValue;
 
 
-RDimensionEntity::RDimensionEntity(RDocument* document, RObject::Id objectId) :
-    REntity(document, objectId) {
+RDimensionEntity::RDimensionEntity(RDocument* document) :
+    REntity(document) {
 }
 
 RDimensionEntity::~RDimensionEntity() {

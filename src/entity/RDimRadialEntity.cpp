@@ -54,8 +54,8 @@ RPropertyTypeId RDimRadialEntity::PropertyChordPointY;
 RPropertyTypeId RDimRadialEntity::PropertyChordPointZ;
 
 
-RDimRadialEntity::RDimRadialEntity(RDocument* document, const RDimRadialData& data, RObject::Id objectId) :
-    RDimensionEntity(document, objectId), data(document, data) {
+RDimRadialEntity::RDimRadialEntity(RDocument* document, const RDimRadialData& data) :
+    RDimensionEntity(document), data(document, data) {
 }
 
 RDimRadialEntity::~RDimRadialEntity() {

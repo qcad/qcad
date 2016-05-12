@@ -61,8 +61,8 @@ RPropertyTypeId RDimRotatedEntity::PropertyExtensionPoint2Z;
 RPropertyTypeId RDimRotatedEntity::PropertyAngle;
 
 
-RDimRotatedEntity::RDimRotatedEntity(RDocument* document, const RDimRotatedData& data, RObject::Id objectId) :
-    RDimensionEntity(document, objectId), data(document, data) {
+RDimRotatedEntity::RDimRotatedEntity(RDocument* document, const RDimRotatedData& data) :
+    RDimensionEntity(document), data(document, data) {
 }
 
 RDimRotatedEntity::~RDimRotatedEntity() {

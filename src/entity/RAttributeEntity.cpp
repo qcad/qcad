@@ -50,9 +50,8 @@ RPropertyTypeId RAttributeEntity::PropertyVAlign;
 RPropertyTypeId RAttributeEntity::PropertyInvisible;
 
 
-RAttributeEntity::RAttributeEntity(RDocument* document, const RAttributeData& data,
-        RObject::Id objectId) :
-    RTextBasedEntity(document, objectId), data(document, data) {
+RAttributeEntity::RAttributeEntity(RDocument* document, const RAttributeData& data) :
+    RTextBasedEntity(document), data(document, data) {
 }
 
 RAttributeEntity::~RAttributeEntity() {

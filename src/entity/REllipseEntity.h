@@ -75,8 +75,7 @@ public:
     static RPropertyTypeId PropertyCircumference;
 
 public:
-    REllipseEntity(RDocument* document, const REllipseData& data,
-        RObject::Id objectId = RObject::INVALID_ID);
+    REllipseEntity(RDocument* document, const REllipseData& data);
     virtual ~REllipseEntity();
 
     static void init();

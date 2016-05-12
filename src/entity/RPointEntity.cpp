@@ -38,9 +38,8 @@ RPropertyTypeId RPointEntity::PropertyPositionY;
 RPropertyTypeId RPointEntity::PropertyPositionZ;
 
 
-RPointEntity::RPointEntity(RDocument* document, const RPointData& data,
-        RObject::Id objectId) :
-    REntity(document, objectId), data(document, data) {
+RPointEntity::RPointEntity(RDocument* document, const RPointData& data) :
+    REntity(document), data(document, data) {
 
     RDebug::incCounter("RPointEntity");
 }

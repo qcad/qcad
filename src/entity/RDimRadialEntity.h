@@ -76,8 +76,7 @@ public:
     static RPropertyTypeId PropertyChordPointZ;
 
 public:
-    RDimRadialEntity(RDocument* document, const RDimRadialData& data,
-                      RObject::Id objectId = RObject::INVALID_ID);
+    RDimRadialEntity(RDocument* document, const RDimRadialData& data);
     virtual ~RDimRadialEntity();
 
     static void init();

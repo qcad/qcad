@@ -48,8 +48,8 @@ RPropertyTypeId RTextBasedEntity::PropertyHAlign;
 RPropertyTypeId RTextBasedEntity::PropertyVAlign;
 
 
-RTextBasedEntity::RTextBasedEntity(RDocument* document, RObject::Id objectId) :
-    REntity(document, objectId) {
+RTextBasedEntity::RTextBasedEntity(RDocument* document) :
+    REntity(document) {
 }
 
 RTextBasedEntity::~RTextBasedEntity() {

@@ -58,8 +58,7 @@ public:
     static RPropertyTypeId PropertyVertexNZ;
 
 public:
-    RLeaderEntity(RDocument* document, const RLeaderData& data,
-                      RObject::Id objectId = RObject::INVALID_ID);
+    RLeaderEntity(RDocument* document, const RLeaderData& data);
     RLeaderEntity(const RLeaderEntity& other);
     virtual ~RLeaderEntity();
 

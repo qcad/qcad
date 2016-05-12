@@ -66,8 +66,7 @@ public:
     static RPropertyTypeId PropertyFixedAngle;
 
 public:
-    RXLineEntity(RDocument* document, const RXLineData& data,
-        RObject::Id objectId = RObject::INVALID_ID);
+    RXLineEntity(RDocument* document, const RXLineData& data);
     virtual ~RXLineEntity();
 
     static void init();

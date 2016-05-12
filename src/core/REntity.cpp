@@ -43,8 +43,8 @@ RPropertyTypeId REntity::PropertyMaxY;
 RPropertyTypeId REntity::PropertySizeX;
 RPropertyTypeId REntity::PropertySizeY;
 
-REntity::REntity(RDocument* document, RObject::Id objectId)
-    : RObject(document, objectId) {
+REntity::REntity(RDocument* document)
+    : RObject(document) {
 
     RDebug::incCounter("REntity");
 }

@@ -57,8 +57,8 @@ RPropertyTypeId RDimLinearEntity::PropertyExtensionPoint2Y;
 RPropertyTypeId RDimLinearEntity::PropertyExtensionPoint2Z;
 
 
-RDimLinearEntity::RDimLinearEntity(RDocument* document, RObject::Id objectId) :
-    RDimensionEntity(document, objectId) {
+RDimLinearEntity::RDimLinearEntity(RDocument* document) :
+    RDimensionEntity(document) {
 }
 
 RDimLinearEntity::~RDimLinearEntity() {

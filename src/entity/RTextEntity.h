@@ -70,8 +70,7 @@ public:
     static RPropertyTypeId PropertyVAlign;
 
 public:
-    RTextEntity(RDocument* document, const RTextData& data,
-                      RObject::Id objectId = RObject::INVALID_ID);
+    RTextEntity(RDocument* document, const RTextData& data);
     virtual ~RTextEntity();
 
     static void init();

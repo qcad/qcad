@@ -50,9 +50,8 @@ RPropertyTypeId RAttributeDefinitionEntity::PropertyHAlign;
 RPropertyTypeId RAttributeDefinitionEntity::PropertyVAlign;
 
 
-RAttributeDefinitionEntity::RAttributeDefinitionEntity(RDocument* document, const RAttributeDefinitionData& data,
-        RObject::Id objectId) :
-    RTextBasedEntity(document, objectId), data(document, data) {
+RAttributeDefinitionEntity::RAttributeDefinitionEntity(RDocument* document, const RAttributeDefinitionData& data) :
+    RTextBasedEntity(document), data(document, data) {
 }
 
 RAttributeDefinitionEntity::~RAttributeDefinitionEntity() {

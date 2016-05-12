@@ -55,9 +55,8 @@ RPropertyTypeId REllipseEntity::PropertyEndPointZ;
 
 RPropertyTypeId REllipseEntity::PropertyCircumference;
 
-REllipseEntity::REllipseEntity(RDocument* document, const REllipseData& data,
-        RObject::Id objectId) :
-    REntity(document, objectId), data(document, data) {
+REllipseEntity::REllipseEntity(RDocument* document, const REllipseData& data) :
+    REntity(document), data(document, data) {
 }
 
 REllipseEntity::~REllipseEntity() {

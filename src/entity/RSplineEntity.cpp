@@ -44,9 +44,8 @@ RPropertyTypeId RSplineEntity::PropertyPeriodic;
 RPropertyTypeId RSplineEntity::PropertyDegree;
 RPropertyTypeId RSplineEntity::PropertyLength;
 
-RSplineEntity::RSplineEntity(RDocument* document, const RSplineData& data,
-        RObject::Id objectId) :
-    REntity(document, objectId), data(document, data) {
+RSplineEntity::RSplineEntity(RDocument* document, const RSplineData& data) :
+    REntity(document), data(document, data) {
     RDebug::incCounter("RSplineEntity");
 }
 

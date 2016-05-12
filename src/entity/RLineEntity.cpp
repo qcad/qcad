@@ -44,9 +44,8 @@ RPropertyTypeId RLineEntity::PropertyAngle;
 RPropertyTypeId RLineEntity::PropertyLength;
 
 
-RLineEntity::RLineEntity(RDocument* document, const RLineData& data,
-        RObject::Id objectId) :
-    REntity(document, objectId), data(document, data) {
+RLineEntity::RLineEntity(RDocument* document, const RLineData& data) :
+    REntity(document), data(document, data) {
 
     RDebug::incCounter("RLineEntity");
 }

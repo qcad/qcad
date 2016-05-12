@@ -72,8 +72,7 @@ public:
     static RPropertyTypeId PropertyInvisible;
 
 public:
-    RAttributeEntity(RDocument* document, const RAttributeData& data,
-        RObject::Id objectId = RObject::INVALID_ID);
+    RAttributeEntity(RDocument* document, const RAttributeData& data);
     virtual ~RAttributeEntity();
 
     static void init();

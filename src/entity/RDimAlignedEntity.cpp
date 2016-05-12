@@ -57,8 +57,8 @@ RPropertyTypeId RDimAlignedEntity::PropertyExtensionPoint2Y;
 RPropertyTypeId RDimAlignedEntity::PropertyExtensionPoint2Z;
 
 
-RDimAlignedEntity::RDimAlignedEntity(RDocument* document, const RDimAlignedData& data, RObject::Id objectId) :
-    RDimensionEntity(document, objectId), data(document, data) {
+RDimAlignedEntity::RDimAlignedEntity(RDocument* document, const RDimAlignedData& data) :
+    RDimensionEntity(document), data(document, data) {
 }
 
 RDimAlignedEntity::~RDimAlignedEntity() {

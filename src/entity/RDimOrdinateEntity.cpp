@@ -56,8 +56,8 @@ RPropertyTypeId RDimOrdinateEntity::PropertyDefiningPointY;
 RPropertyTypeId RDimOrdinateEntity::PropertyDefiningPointZ;
 
 
-RDimOrdinateEntity::RDimOrdinateEntity(RDocument* document, const RDimOrdinateData& data, RObject::Id objectId) :
-    RDimensionEntity(document, objectId), data(document, data) {
+RDimOrdinateEntity::RDimOrdinateEntity(RDocument* document, const RDimOrdinateData& data) :
+    RDimensionEntity(document), data(document, data) {
 }
 
 RDimOrdinateEntity::~RDimOrdinateEntity() {

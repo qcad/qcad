@@ -78,7 +78,7 @@ public:
     static RPropertyTypeId PropertyMeasuredValue;
 
 public:
-    RDimensionEntity(RDocument* document, RObject::Id objectId = RObject::INVALID_ID);
+    RDimensionEntity(RDocument* document);
     virtual ~RDimensionEntity();
 
     static void init();

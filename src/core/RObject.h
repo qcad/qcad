@@ -65,7 +65,7 @@ public:
     };
 
 public:
-    RObject(RDocument* document=NULL, RObject::Id id = INVALID_ID);
+    RObject(RDocument* document=NULL);
     RObject(const RObject& other);
     virtual ~RObject();
 

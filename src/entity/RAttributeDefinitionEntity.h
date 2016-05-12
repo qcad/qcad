@@ -71,8 +71,7 @@ public:
     static RPropertyTypeId PropertyVAlign;
 
 public:
-    RAttributeDefinitionEntity(RDocument* document, const RAttributeDefinitionData& data,
-        RObject::Id objectId = RObject::INVALID_ID);
+    RAttributeDefinitionEntity(RDocument* document, const RAttributeDefinitionData& data);
     virtual ~RAttributeDefinitionEntity();
 
     static void init();

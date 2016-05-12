@@ -48,9 +48,8 @@ RPropertyTypeId RXLineEntity::PropertyAngle;
 RPropertyTypeId RXLineEntity::PropertyFixedAngle;
 
 
-RXLineEntity::RXLineEntity(RDocument* document, const RXLineData& data,
-        RObject::Id objectId) :
-    REntity(document, objectId), data(document, data) {
+RXLineEntity::RXLineEntity(RDocument* document, const RXLineData& data) :
+    REntity(document), data(document, data) {
 }
 
 RXLineEntity::~RXLineEntity() {

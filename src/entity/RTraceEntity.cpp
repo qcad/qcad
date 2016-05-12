@@ -49,9 +49,8 @@ RPropertyTypeId RTraceEntity::PropertyPoint4Z;
 RPropertyTypeId RTraceEntity::PropertyLength;
 
 
-RTraceEntity::RTraceEntity(RDocument* document, const RTraceData& data,
-        RObject::Id objectId) :
-    REntity(document, objectId), data(document, data) {
+RTraceEntity::RTraceEntity(RDocument* document, const RTraceData& data) :
+    REntity(document), data(document, data) {
 }
 
 RTraceEntity::~RTraceEntity() {

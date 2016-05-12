@@ -33,9 +33,9 @@ RPropertyTypeId RObject::PropertyType;
 RPropertyTypeId RObject::PropertyHandle;
 RPropertyTypeId RObject::PropertyProtected;
 
-RObject::RObject(RDocument* document, RObject::Id id) :
+RObject::RObject(RDocument* document) :
     document(document),
-    objectId(id),
+    objectId(INVALID_ID),
     handle(INVALID_HANDLE),
     undone(false),
     protect(false) {

@@ -49,8 +49,8 @@ RPropertyTypeId RBlockReferenceEntity::PropertyRowSpacing;
 
 
 RBlockReferenceEntity::RBlockReferenceEntity(RDocument* document,
-    const RBlockReferenceData& data, RObject::Id objectId) :
-    REntity(document, objectId), data(document, data),
+    const RBlockReferenceData& data) :
+    REntity(document), data(document, data),
     recursionDepth(0) {
 //  if (data.getDocument() == NULL) {
 //      return;

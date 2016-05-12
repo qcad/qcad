@@ -54,9 +54,8 @@ RPropertyTypeId RHatchEntity::PropertyVertexNY;
 RPropertyTypeId RHatchEntity::PropertyVertexNZ;
 
 
-RHatchEntity::RHatchEntity(RDocument* document, const RHatchData& data,
-        RObject::Id objectId) :
-    REntity(document, objectId), data(document, data) {
+RHatchEntity::RHatchEntity(RDocument* document, const RHatchData& data) :
+    REntity(document), data(document, data) {
 }
 
 RHatchEntity::~RHatchEntity() {

@@ -50,9 +50,8 @@ RPropertyTypeId RImageEntity::PropertyHeight;
 RPropertyTypeId RImageEntity::PropertyAngle;
 RPropertyTypeId RImageEntity::PropertyFade;
 
-RImageEntity::RImageEntity(RDocument* document, const RImageData& data,
-        RObject::Id objectId) :
-    REntity(document, objectId), data(document, data) {
+RImageEntity::RImageEntity(RDocument* document, const RImageData& data) :
+    REntity(document), data(document, data) {
 
     RDebug::incCounter("RImageEntity");
 }

@@ -65,8 +65,7 @@ public:
     static RPropertyTypeId PropertyOverall;
 
 public:
-    RViewportEntity(RDocument* document, const RViewportData& data,
-        RObject::Id objectId = RObject::INVALID_ID);
+    RViewportEntity(RDocument* document, const RViewportData& data);
     virtual ~RViewportEntity();
 
     static void init();

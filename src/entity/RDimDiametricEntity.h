@@ -77,8 +77,7 @@ public:
     static RPropertyTypeId PropertyFarChordPointZ;
 
 public:
-    RDimDiametricEntity(RDocument* document, const RDimDiametricData& data,
-                      RObject::Id objectId = RObject::INVALID_ID);
+    RDimDiametricEntity(RDocument* document, const RDimDiametricData& data);
     virtual ~RDimDiametricEntity();
 
     static void init();

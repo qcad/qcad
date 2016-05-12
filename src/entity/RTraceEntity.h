@@ -67,8 +67,7 @@ public:
     static RPropertyTypeId PropertyLength;
 
 public:
-    RTraceEntity(RDocument* document, const RTraceData& data,
-        RObject::Id objectId = RObject::INVALID_ID);
+    RTraceEntity(RDocument* document, const RTraceData& data);
     virtual ~RTraceEntity();
 
     static void init();

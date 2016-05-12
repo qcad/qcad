@@ -55,8 +55,7 @@ public:
     static RPropertyTypeId PropertyPositionZ;
 
 public:
-    RPointEntity(RDocument* document, const RPointData& data,
-        RObject::Id objectId = RObject::INVALID_ID);
+    RPointEntity(RDocument* document, const RPointData& data);
     RPointEntity(const RPointEntity& other);
     virtual ~RPointEntity();
 

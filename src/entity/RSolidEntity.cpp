@@ -49,9 +49,8 @@ RPropertyTypeId RSolidEntity::PropertyPoint4Z;
 RPropertyTypeId RSolidEntity::PropertyLength;
 
 
-RSolidEntity::RSolidEntity(RDocument* document, const RSolidData& data,
-        RObject::Id objectId) :
-    REntity(document, objectId), data(document, data) {
+RSolidEntity::RSolidEntity(RDocument* document, const RSolidData& data) :
+    REntity(document), data(document, data) {
 }
 
 RSolidEntity::~RSolidEntity() {

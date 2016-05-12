@@ -48,9 +48,8 @@ RPropertyTypeId RRayEntity::PropertyAngle;
 RPropertyTypeId RRayEntity::PropertyFixedAngle;
 
 
-RRayEntity::RRayEntity(RDocument* document, const RRayData& data,
-        RObject::Id objectId) :
-    REntity(document, objectId), data(document, data) {
+RRayEntity::RRayEntity(RDocument* document, const RRayData& data) :
+    REntity(document), data(document, data) {
 }
 
 RRayEntity::~RRayEntity() {

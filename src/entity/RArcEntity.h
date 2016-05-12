@@ -66,8 +66,7 @@ public:
     static RPropertyTypeId PropertyArea;
 
 public:
-    RArcEntity(RDocument* document, const RArcData& data,
-        RObject::Id objectId = RObject::INVALID_ID);
+    RArcEntity(RDocument* document, const RArcData& data);
     RArcEntity(const RArcEntity& other);
     virtual ~RArcEntity();
 

@@ -56,8 +56,8 @@ RPropertyTypeId RDimDiametricEntity::PropertyFarChordPointY;
 RPropertyTypeId RDimDiametricEntity::PropertyFarChordPointZ;
 
 
-RDimDiametricEntity::RDimDiametricEntity(RDocument* document, const RDimDiametricData& data, RObject::Id objectId) :
-    RDimensionEntity(document, objectId), data(document, data) {
+RDimDiametricEntity::RDimDiametricEntity(RDocument* document, const RDimDiametricData& data) :
+    RDimensionEntity(document), data(document, data) {
 }
 
 RDimDiametricEntity::~RDimDiametricEntity() {

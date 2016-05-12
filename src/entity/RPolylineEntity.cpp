@@ -47,9 +47,8 @@ RPropertyTypeId RPolylineEntity::PropertyGlobalWidth;
 RPropertyTypeId RPolylineEntity::PropertyLength;
 RPropertyTypeId RPolylineEntity::PropertyArea;
 
-RPolylineEntity::RPolylineEntity(RDocument* document, const RPolylineData& data,
-        RObject::Id objectId) :
-    REntity(document, objectId), data(document, data) {
+RPolylineEntity::RPolylineEntity(RDocument* document, const RPolylineData& data) :
+    REntity(document), data(document, data) {
     RDebug::incCounter("RPolylineEntity");
 }
 

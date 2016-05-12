@@ -68,8 +68,7 @@ public:
     static RPropertyTypeId PropertyLength;
 
 public:
-    RSplineEntity(RDocument* document, const RSplineData& data,
-        RObject::Id objectId = RObject::INVALID_ID);
+    RSplineEntity(RDocument* document, const RSplineData& data);
     RSplineEntity(const RSplineEntity& other);
     virtual ~RSplineEntity();
 

@@ -62,8 +62,7 @@ public:
     static RPropertyTypeId PropertyLength;
 
 public:
-    RLineEntity(RDocument* document, const RLineData& data,
-        RObject::Id objectId = RObject::INVALID_ID);
+    RLineEntity(RDocument* document, const RLineData& data);
     RLineEntity(const RLineEntity& other);
     virtual ~RLineEntity();
 

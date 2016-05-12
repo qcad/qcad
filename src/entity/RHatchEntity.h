@@ -66,8 +66,7 @@ public:
     static RPropertyTypeId PropertyVertexNZ;
 
 public:
-    RHatchEntity(RDocument* document, const RHatchData& data,
-        RObject::Id objectId = RObject::INVALID_ID);
+    RHatchEntity(RDocument* document, const RHatchData& data);
     virtual ~RHatchEntity();
 
     static void init();

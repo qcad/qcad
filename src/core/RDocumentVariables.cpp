@@ -27,8 +27,8 @@ RPropertyTypeId RDocumentVariables::PropertyUnit;
 RPropertyTypeId RDocumentVariables::PropertyLinetypeScale;
 RPropertyTypeId RDocumentVariables::PropertyDimensionFont;
 
-RDocumentVariables::RDocumentVariables(RDocument* document, RObject::Id objectId)
-        : RObject(document, objectId),
+RDocumentVariables::RDocumentVariables(RDocument* document)
+        : RObject(document),
         currentLayerId(RLayer::INVALID_ID),
         unit(RS::None),
         measurement(RS::UnknownMeasurement),

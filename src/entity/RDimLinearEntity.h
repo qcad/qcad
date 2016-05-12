@@ -80,7 +80,7 @@ public:
     static RPropertyTypeId PropertyExtensionPoint2Z;
 
 public:
-    RDimLinearEntity(RDocument* document, RObject::Id objectId = RObject::INVALID_ID);
+    RDimLinearEntity(RDocument* document);
     virtual ~RDimLinearEntity();
 
     static void init();

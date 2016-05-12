@@ -46,9 +46,8 @@ RPropertyTypeId RArcEntity::PropertyLength;
 RPropertyTypeId RArcEntity::PropertySweepAngle;
 RPropertyTypeId RArcEntity::PropertyArea;
 
-RArcEntity::RArcEntity(RDocument* document, const RArcData& data,
-        RObject::Id objectId) :
-    REntity(document, objectId), data(document, data) {
+RArcEntity::RArcEntity(RDocument* document, const RArcData& data) :
+    REntity(document), data(document, data) {
     RDebug::incCounter("RArcEntity");
 }
 

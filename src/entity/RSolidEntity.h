@@ -67,8 +67,7 @@ public:
     static RPropertyTypeId PropertyLength;
 
 public:
-    RSolidEntity(RDocument* document, const RSolidData& data,
-        RObject::Id objectId = RObject::INVALID_ID);
+    RSolidEntity(RDocument* document, const RSolidData& data);
     virtual ~RSolidEntity();
 
     static void init();
