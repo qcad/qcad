@@ -111,9 +111,11 @@ FirstStart.prototype.showDialog = function() {
         var paperUnit;
         if (!RUnit.isMetric(drawingUnit)) {
             paperUnit = RS.Inch;
+            RSettings.setValue("UnitSettings/Measurement", RS.Imperial);
         }
         else {
             paperUnit = RS.Millimeter;
+            RSettings.setValue("UnitSettings/Measurement", RS.Metric);
         }
         RSettings.setValue("UnitSettings/PaperUnit", paperUnit);
 
