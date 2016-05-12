@@ -984,6 +984,10 @@ QSet<REntity::Id> RDocument::queryAllEntities(bool undone, bool allBlocks, RS::E
     return storage.queryAllEntities(undone, allBlocks, type);
 }
 
+QSet<REntity::Id> RDocument::queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types) const {
+    return storage.queryAllEntities(undone, allBlocks, types);
+}
+
 /**
  * Queries all UCSs of this document.
  *

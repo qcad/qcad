@@ -212,19 +212,30 @@ QSet<REntity::Id> RMemoryStorage::queryAllEntities(bool undone, bool allBlocks, 
         if (type!=RS::EntityAll && e->getType()!=type) {
             continue;
         }
-//        if (!includeFrozenLayers) {
-//            RLayer::Id layerId = e->getLayerId();
-//            QSharedPointer<RLayer> layer = queryLayer(layerId);
-//            if (!layer.isNull()) {
-//                if (layer->isFrozen()) {
-//                    continue;
-//                }
-//            }
-//        }
-//        if (!e.isNull() && (undone || !e->isUndone()) && (allBlocks
-//                || e->getBlockId() == currentBlock)) {
-//            result.insert(e->getId());
-//        }
+        result.insert(e->getId());
+    }
+    return result;
+}
+
+QSet<REntity::Id> RMemoryStorage::queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types) {
+    QSet<REntity::Id> result;
+    result.reserve(entityMap.count());
+    RBlock::Id currentBlock = getCurrentBlockId();
+    QHash<REntity::Id, QSharedPointer<REntity> >::iterator it;
+    for (it = entityMap.begin(); it != entityMap.end(); ++it) {
+        QSharedPointer<REntity> e = *it;
+        if (e.isNull()) {
+            continue;
+        }
+        if (!undone && e->isUndone()) {
+            continue;
+        }
+        if (!allBlocks && e->getBlockId() != currentBlock) {
+            continue;
+        }
+        if (!types.isEmpty() && !types.contains(e->getType())) {
+            continue;
+        }
         result.insert(e->getId());
     }
     return result;

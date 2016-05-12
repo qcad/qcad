@@ -115,6 +115,9 @@ public:
     virtual QSet<REntity::Id> queryAllEntities(bool undone = false,
             bool allBlocks = false, RS::EntityType type = RS::EntityAll) = 0;
 
+    virtual QSet<REntity::Id> queryAllEntities(bool undone,
+            bool allBlocks, QList<RS::EntityType> types) = 0;
+
     /**
      * \return A set of all UCS IDs of the document.
      */

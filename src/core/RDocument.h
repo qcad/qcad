@@ -101,6 +101,7 @@ public:
     QSet<RObject::Id> queryAllObjects() const;
     QSet<REntity::Id> queryAllVisibleEntities() const;
     QSet<REntity::Id> queryAllEntities(bool undone = false, bool allBlocks = false, RS::EntityType type = RS::EntityAll) const;
+    QSet<REntity::Id> queryAllEntities(bool undone, bool allBlocks, QList<RS::EntityType> types) const;
     QSet<RUcs::Id> queryAllUcs() const;
     QSet<RLayer::Id> queryAllLayers() const;
     QSet<RBlock::Id> queryAllBlocks() const;
