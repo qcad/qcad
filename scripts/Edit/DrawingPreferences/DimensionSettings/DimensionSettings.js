@@ -109,7 +109,10 @@ DimensionSettings.initPreferences = function(pageWidget, calledByPrefDialog, doc
         // unit might have been changed by user:
         var unitCombo = objectFromPath("MainWindow::Unit");
         if (isComboBox(unitCombo)) {
-            unit = unitCombo.itemData(unitCombo.currentIndex);
+            var u = unitCombo.itemData(unitCombo.currentIndex);
+            if (!isNull(u)) {
+                unit = u;
+            }
         }
     }
     DimensionSettings.unit = unit;
