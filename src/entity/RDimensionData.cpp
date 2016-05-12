@@ -472,6 +472,10 @@ void RDimensionData::update() const {
     dirty = true;
     textData.update();
     boundingBox = RBox();
+    if (!autoUpdatesBlocked) {
+        //qDebug() << "clear dim block name";
+        dimBlockName = "";
+    }
 }
 
 QString RDimensionData::getMeasurement(bool resolveAutoMeasurement) const {

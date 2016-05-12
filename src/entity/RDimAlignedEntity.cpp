@@ -42,6 +42,7 @@ RPropertyTypeId RDimAlignedEntity::PropertyMeasuredValue;
 
 RPropertyTypeId RDimAlignedEntity::PropertyLinearFactor;
 RPropertyTypeId RDimAlignedEntity::PropertyDimScale;
+RPropertyTypeId RDimAlignedEntity::PropertyDimBlockName;
 RPropertyTypeId RDimAlignedEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimAlignedEntity::PropertyFontName;
 
@@ -87,6 +88,7 @@ void RDimAlignedEntity::init() {
 
     RDimAlignedEntity::PropertyLinearFactor.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyLinearFactor);
     RDimAlignedEntity::PropertyDimScale.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimScale);
+    RDimAlignedEntity::PropertyDimBlockName.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyDimBlockName);
     RDimAlignedEntity::PropertyAutoTextPos.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyAutoTextPos);
     RDimAlignedEntity::PropertyFontName.generateId(typeid(RDimAlignedEntity), RDimensionEntity::PropertyFontName);
 

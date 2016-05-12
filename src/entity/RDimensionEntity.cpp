@@ -44,6 +44,7 @@ RPropertyTypeId RDimensionEntity::PropertyUpperTolerance;
 RPropertyTypeId RDimensionEntity::PropertyLowerTolerance;
 RPropertyTypeId RDimensionEntity::PropertyLinearFactor;
 RPropertyTypeId RDimensionEntity::PropertyDimScale;
+RPropertyTypeId RDimensionEntity::PropertyDimBlockName;
 RPropertyTypeId RDimensionEntity::PropertyAutoTextPos;
 RPropertyTypeId RDimensionEntity::PropertyFontName;
 //RPropertyTypeId RDimensionEntity::PropertyHeight;
@@ -97,6 +98,7 @@ void RDimensionEntity::init() {
     RDimensionEntity::PropertyMeasuredValue.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Measured Value"));
     RDimensionEntity::PropertyLinearFactor.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Linear Factor"));
     RDimensionEntity::PropertyDimScale.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Scale"));
+    RDimensionEntity::PropertyDimBlockName.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Block Name"));
     RDimensionEntity::PropertyAutoTextPos.generateId(typeid(RDimensionEntity), "", QT_TRANSLATE_NOOP("REntity", "Auto Label Position"));
 }
 
@@ -130,6 +132,7 @@ bool RDimensionEntity::setProperty(RPropertyTypeId propertyTypeId,
     ret = ret || RObject::setMember(getData().lowerTolerance, value, PropertyLowerTolerance == propertyTypeId);
     ret = ret || RObject::setMember(getData().linearFactor, value, PropertyLinearFactor == propertyTypeId);
     ret = ret || RObject::setMember(getData().dimScale, value, PropertyDimScale == propertyTypeId);
+    ret = ret || RObject::setMember(getData().dimBlockName, value, PropertyDimBlockName == propertyTypeId);
     ret = ret || RObject::setMember(getData().autoTextPos, value, PropertyAutoTextPos == propertyTypeId);
 //    if (RPluginLoader::hasPlugin("DWG")) {
 //        ret = ret || RObject::setMember(getData().fontName, value, PropertyFontName == propertyTypeId);
@@ -207,6 +210,8 @@ QPair<QVariant, RPropertyAttributes> RDimensionEntity::getProperty(
         return qMakePair(QVariant(getData().linearFactor), RPropertyAttributes());
     } else if (propertyTypeId == PropertyDimScale) {
         return qMakePair(QVariant(getData().dimScale), RPropertyAttributes());
+    } else if (propertyTypeId == PropertyDimBlockName) {
+        return qMakePair(QVariant(getData().dimBlockName), RPropertyAttributes(RPropertyAttributes::ReadOnly));
     } else if (propertyTypeId == PropertyAutoTextPos) {
         return qMakePair(QVariant(getData().autoTextPos), RPropertyAttributes(RPropertyAttributes::Invisible));
     }

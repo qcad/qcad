@@ -5,7 +5,12 @@ macx {
 }
 
 win32 {
-    RC_FILE = $$PWD/qcad.rc
+    !isEmpty(r_iconrc) {
+        RC_FILE = $$r_iconrc
+    }
+    else {
+        RC_FILE = $$PWD/qcad.rc
+    }
 }
 
 win32 {
