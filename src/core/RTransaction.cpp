@@ -290,6 +290,8 @@ void RTransaction::undo() {
 
             storage->removeObject(storage->queryObjectDirect(objId));
 
+            object->setAutoUpdatesBlocked(true);
+
             QList<RPropertyChange> objectChanges = propertyChanges.value(objId);
             for (int i=objectChanges.size()-1; i>=0; --i) {
                 RPropertyTypeId propertyTypeId = objectChanges.at(i).propertyTypeId;
@@ -309,6 +311,8 @@ void RTransaction::undo() {
                     document->addToSpatialIndex(entity);
                 }
             }
+
+            object->setAutoUpdatesBlocked(false);
         }
     }
 
