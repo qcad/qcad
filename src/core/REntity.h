@@ -595,6 +595,10 @@ public:
         return isSelected();
     }
 
+    virtual void setAutoUpdatesBlocked(bool on) {
+        getData().setAutoUpdatesBlocked(on);
+    }
+
     virtual QPair<QVariant, RPropertyAttributes> getProperty(
             RPropertyTypeId& propertyTypeId,
             bool humanReadable = false, bool noAttributes = false);

@@ -27,6 +27,7 @@ REntityData::REntityData(RDocument* document) :
     document(document),
     updatesEnabled(true),
     selectionStatus(false), 
+    autoUpdatesBlocked(false),
     drawOrder(RMININT),
     layerId(RLayer::INVALID_ID),
     blockId(RBlock::INVALID_ID), 
@@ -604,4 +605,8 @@ QSharedPointer<RShape> REntityData::getClosestShape(const RVector& pos, double r
     }
 
     return ret;
+}
+
+void REntityData::setAutoUpdatesBlocked(bool on) {
+    autoUpdatesBlocked = on;
 }

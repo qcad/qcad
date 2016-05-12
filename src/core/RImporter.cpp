@@ -125,6 +125,15 @@ void RImporter::endImport() {
     //qDebug() << "rebuilding spatial index";
     document->rebuildSpatialIndex();
     //qDebug() << "rebuilding spatial index: OK";
+
+    QSet<REntity::Id> entityIds = document->queryAllEntities(false, true);
+    QSet<REntity::Id>::const_iterator it2;
+    for (it2=entityIds.constBegin(); it2!=entityIds.constEnd(); it2++) {
+        REntity::Id entityId = *it2;
+
+        QSharedPointer<REntity> entity = document->queryEntityDirect(entityId);
+        entity->setAutoUpdatesBlocked(false);
+    }
 }
 
 void RImporter::setCurrentBlockId(RBlock::Id id) {

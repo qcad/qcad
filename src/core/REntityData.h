@@ -348,6 +348,7 @@ public:
      * (mark the entity as dirty).
      */
     virtual void update() const {}
+    void setAutoUpdatesBlocked(bool on);
 
     static int getDefaultDrawOrder() {
         return RMININT;
@@ -357,6 +358,8 @@ protected:
     RDocument* document;
     bool updatesEnabled;
     bool selectionStatus;
+    /** Block auto updates is true during imports, undo and redo. */
+    bool autoUpdatesBlocked;
     int drawOrder;
     RLayer::Id layerId;
     RBlock::Id blockId;

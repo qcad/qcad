@@ -196,6 +196,10 @@ public:
         return 0;
     }
 
+    virtual void setAutoUpdatesBlocked(bool on) {
+        Q_UNUSED(on)
+    }
+
     void dump() {
         qDebug() << *this;
     }
