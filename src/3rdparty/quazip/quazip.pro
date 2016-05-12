@@ -1,5 +1,6 @@
 include( ../../../shared.pri )
 
+TARGET = quazip
 TEMPLATE = lib
 r_static_libs {
     CONFIG += staticlib

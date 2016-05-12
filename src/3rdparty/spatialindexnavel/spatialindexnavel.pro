@@ -1,5 +1,6 @@
 include( ../../../shared.pri )
 
+TARGET = spatialindexnavel
 TEMPLATE = lib
 r_static_libs {
     CONFIG += staticlib

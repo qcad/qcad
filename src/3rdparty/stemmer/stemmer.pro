@@ -42,6 +42,7 @@ HEADERS += \
     src_c/stem_UTF_8_swedish.h \
     src_c/stem_UTF_8_turkish.h
 
+TARGET = stemmer
 TEMPLATE = lib
 CONFIG += staticlib
 #CONFIG += plugin

@@ -25,6 +25,7 @@ HEADERS += \
     zlib.h \
     zutil.h
 
+TARGET = zlib
 TEMPLATE = lib
 CONFIG += staticlib
 #win32 {

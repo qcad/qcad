@@ -216,6 +216,7 @@ HEADERS += \
     ../opennurbs_xform.h \
     ../opennurbs_zlib.h
 
+TARGET = opennurbs
 TEMPLATE = lib
 CONFIG += staticlib
 CONFIG(release, debug|release) {
