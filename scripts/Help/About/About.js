@@ -52,6 +52,7 @@ About.prototype.beginEvent = function() {
          + "</head>";
 
     this.applicationName = qApp.applicationName;
+    this.iconFile = undefined;
 
     // init plugin view:
     var textBrowser = dialog.findChild("PluginsText");
@@ -59,6 +60,9 @@ About.prototype.beginEvent = function() {
     this.initAboutPlugins(textBrowser);
 
     dialog.windowTitle = qsTr("About %1").arg(this.applicationName);
+    if (!isNull(this.iconFile)) {
+        dialog.findChild("Icon").setIcon(new QIcon(this.iconFile));
+    }
 
     // init about view:
     textBrowser = dialog.findChild("AppText");
@@ -178,6 +182,11 @@ About.prototype.initAboutPlugins = function(textBrowser) {
             text = pluginInfo.get("NameOverride");
             if (!isNull(text)) {
                 nameOverrides.push(text);
+            }
+
+            text = pluginInfo.get("IconOverride");
+            if (!isNull(text)) {
+                this.iconFile = text;
             }
 
             // ID:

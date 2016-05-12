@@ -23,7 +23,7 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QToolButton" name="toolButton">
+        <widget class="QToolButton" name="Icon">
          <property name="minimumSize">
           <size>
            <width>128</width>
