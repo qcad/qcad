@@ -7,6 +7,7 @@ SOURCES += \
     RCommandLine.cpp \
     RDockWidget.cpp \
     REventFilter.cpp \
+    REventHandler.cpp \
     RFileSystemModel.cpp \
     RFlowLayout.cpp \
     RFocusFrame.cpp \
@@ -37,6 +38,7 @@ HEADERS += \
     RCommandLine.h \
     RDockWidget.h \
     REventFilter.h \
+    REventHandler.h \
     RFileSystemModel.h \
     RFlowLayout.h \
     RFocusFrame.h \
