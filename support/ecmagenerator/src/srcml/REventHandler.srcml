@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<unit xmlns="http://www.sdml.info/srcML/src" xmlns:cpp="http://www.sdml.info/srcML/cpp" language="C++" dir="./gui" filename="REventHandler.h"><comment type="block">/**
+ * Copyright (c) 2011-2016 by Andrew Mustun. All rights reserved.
+ * 
+ * This file is part of the QCAD project.
+ *
+ * QCAD is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * QCAD is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with QCAD.
+ */</comment>
+
+<cpp:ifndef>#<cpp:directive>ifndef</cpp:directive> <name>REVENTHANDLER_H</name></cpp:ifndef>
+<cpp:define>#<cpp:directive>define</cpp:directive> <name>REVENTHANDLER_H</name></cpp:define>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>"gui_global.h"</cpp:file></cpp:include>
+
+<cpp:include>#<cpp:directive>include</cpp:directive> <cpp:file>&lt;QObject&gt;</cpp:file></cpp:include>
+
+<class_decl>class <name>QScrollBar</name>;</class_decl>
+<class_decl>class <name>QUrl</name>;</class_decl>
+<class_decl>class <name>QWidget</name>;</class_decl>
+<class_decl>class <name>QPainter</name>;</class_decl>
+<class_decl>class <name>QMimeData</name>;</class_decl>
+<class_decl>class <name>QDragEnterEvent</name>;</class_decl>
+
+<class_decl>class <name>RDocumentInterface</name>;</class_decl>
+<class_decl>class <name>RGraphicsViewQt</name>;</class_decl>
+<class_decl>class <name>RRulerQt</name>;</class_decl>
+<class_decl>class <name>RSnap</name>;</class_decl>
+<class_decl>class <name>RVector</name>;</class_decl>
+<class_decl>class <name>RTextLabel</name>;</class_decl>
+<class_decl>class <name>RSnapRestriction</name>;</class_decl>
+
+<comment type="block">/**
+ * Event handler class. For each new document that is created or
+ * opened, an event handler is created to handle various events
+ * for the life time of the document.
+ *
+ * \scriptable
+ * \generateScriptShell
+ * \ingroup gui
+ */</comment>
+<class>class <macro><name>QCADGUI_EXPORT</name></macro> <name>REventHandler</name> <super>: <specifier>public</specifier> <name>QObject</name></super> <block>{<private type="default">
+    <macro><name>Q_OBJECT</name></macro>
+
+</private><public>public:
+    <constructor_decl><name>REventHandler</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>widget</name> =<init> <expr><name>NULL</name></expr></init></decl></param>, <param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name> =<init> <expr><name>NULL</name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
+
+    <function_decl><type><name>static</name> <name>bool</name></type> <name>isUrl</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>urlString</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>QUrl</name></argument>&gt;</argument_list></name></type> <name>getUrlsFromMimeData</name><parameter_list>(<param><decl><type><name>QMimeData</name>*</type> <name>mimeData</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><public>public slots:
+    <function_decl><type><name>void</name></type> <name>dragEnter</name><parameter_list>(<param><decl><type><name>QDragEnterEvent</name> *</type><name>event</name></decl></param>)</parameter_list>;</function_decl>
+
+    <function_decl><type><name>void</name></type> <name>updateTextLabel</name><parameter_list>(<param><decl><type><name>QPainter</name> *</type><name>painter</name></decl></param>, <param><decl><type><name>const</name> <name>RTextLabel</name> &amp;</type><name>textLabel</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>drawInfoLabel</name><parameter_list>(<param><decl><type><name>QPainter</name> *</type><name>painter</name></decl></param>, <param><decl><type><name>const</name> <name>RTextLabel</name> &amp;</type><name>textLabel</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>updateSnapInfo</name><parameter_list>(<param><decl><type><name>QPainter</name> *</type><name>painter</name></decl></param>, <param><decl><type><name>RSnap</name> *</type><name>snap</name></decl></param>, <param><decl><type><name>RSnapRestriction</name> *</type><name>restriction</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>drawSnapLabel</name><parameter_list>(<param><decl><type><name>QPainter</name> *</type><name>painter</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name> &amp;</type><name>pos</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name> &amp;</type><name>posRestriction</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name> &amp;</type><name>text</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>viewportChanged</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>horizontalScrolled</name><parameter_list>(<param><decl><type><name>double</name></type> <name>pos</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>verticalScrolled</name><parameter_list>(<param><decl><type><name>double</name></type> <name>pos</name></decl></param>)</parameter_list>;</function_decl>
+
+</public><private>private:
+    <decl_stmt><decl><type><name>QWidget</name>*</type> <name>widget</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QScrollBar</name>*</type> <name>hsb</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QScrollBar</name>*</type> <name>vsb</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RGraphicsViewQt</name>*</type> <name>graphicsView</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RRulerQt</name>*</type> <name>hruler</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RRulerQt</name>*</type> <name>vruler</name></decl>;</decl_stmt>
+</private>}</block>;</class>
+
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>REventHandler*</argument>)</argument_list></macro>
+
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
+</unit>

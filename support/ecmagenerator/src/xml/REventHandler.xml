@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class_decl name="QScrollBar" />
+  <class_decl name="QUrl" />
+  <class_decl name="QWidget" />
+  <class_decl name="QPainter" />
+  <class_decl name="QMimeData" />
+  <class_decl name="QDragEnterEvent" />
+  <class_decl name="RDocumentInterface" />
+  <class_decl name="RGraphicsViewQt" />
+  <class_decl name="RRulerQt" />
+  <class_decl name="RSnap" />
+  <class_decl name="RVector" />
+  <class_decl name="RTextLabel" />
+  <class_decl name="RSnapRestriction" />
+  <class name="REventHandler"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
+  hasShell="true" sharedPointerSupport="false" isQObject="true"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="QObject" specifier="public" />
+    <constructor>
+      <variant>
+        <arg type="QWidget *" typeName="QWidget *" name="widget"
+        hasDefault="true" default="NULL" isConst="false" />
+        <arg type="RDocumentInterface *"
+        typeName="RDocumentInterface *" name="documentInterface"
+        hasDefault="true" default="NULL" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="isUrl" cppName="isUrl" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="QString &amp;" typeName="QString"
+        name="urlString" isConst="true" />
+      </variant>
+    </method>
+    <method name="getUrlsFromMimeData"
+    cppName="getUrlsFromMimeData" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; QUrl &gt;"
+      isPureVirtual="false">
+        <arg type="QMimeData *" typeName="QMimeData *"
+        name="mimeData" isConst="false" />
+      </variant>
+    </method>
+    <method name="dragEnter" cppName="dragEnter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QDragEnterEvent *" typeName="QDragEnterEvent *"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="updateTextLabel" cppName="updateTextLabel"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        isConst="false" />
+        <arg type="RTextLabel &amp;" typeName="RTextLabel"
+        name="textLabel" isConst="true" />
+      </variant>
+    </method>
+    <method name="drawInfoLabel" cppName="drawInfoLabel"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        isConst="false" />
+        <arg type="RTextLabel &amp;" typeName="RTextLabel"
+        name="textLabel" isConst="true" />
+      </variant>
+    </method>
+    <method name="updateSnapInfo" cppName="updateSnapInfo"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        isConst="false" />
+        <arg type="RSnap *" typeName="RSnap *" name="snap"
+        isConst="false" />
+        <arg type="RSnapRestriction *"
+        typeName="RSnapRestriction *" name="restriction"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="drawSnapLabel" cppName="drawSnapLabel"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="pos"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="posRestriction" isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="text"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="viewportChanged" cppName="viewportChanged"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false" />
+    </method>
+    <method name="horizontalScrolled" cppName="horizontalScrolled"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="pos"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="verticalScrolled" cppName="verticalScrolled"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="double" typeName="double" name="pos"
+        isConst="false" />
+      </variant>
+    </method>
+  </class>
+</unit>
