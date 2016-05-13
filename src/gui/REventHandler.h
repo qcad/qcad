@@ -23,6 +23,8 @@
 #include "gui_global.h"
 
 #include <QObject>
+#include <QMetaObject>
+#include <QMetaType>
 
 class QScrollBar;
 class QUrl;
