@@ -44,14 +44,7 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="mimeData" isConst="false" />
       </variant>
     </method>
-    <method name="dragEnter" cppName="dragEnter" specifier="public"
-    isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QDragEnterEvent *" typeName="QDragEnterEvent *"
-        name="event" isConst="false" />
-      </variant>
-    </method>
-    <method name="updateTextLabel" cppName="updateTextLabel"
+    <method name="drawInfoLabel" cppName="drawInfoLabel"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -61,7 +54,28 @@ xmlns:rs="http://www.ribbonsoft.com">
         name="textLabel" isConst="true" />
       </variant>
     </method>
-    <method name="drawInfoLabel" cppName="drawInfoLabel"
+    <method name="drawSnapLabel" cppName="drawSnapLabel"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QPainter *" typeName="QPainter *" name="painter"
+        isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector" name="pos"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="posRestriction" isConst="true" />
+        <arg type="QString &amp;" typeName="QString" name="text"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="dragEnter" cppName="dragEnter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QDragEnterEvent *" typeName="QDragEnterEvent *"
+        name="event" isConst="false" />
+      </variant>
+    </method>
+    <method name="updateTextLabel" cppName="updateTextLabel"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -82,20 +96,6 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RSnapRestriction *"
         typeName="RSnapRestriction *" name="restriction"
         isConst="false" />
-      </variant>
-    </method>
-    <method name="drawSnapLabel" cppName="drawSnapLabel"
-    specifier="public" isStatic="false" isVirtual="false"
-    isScriptOverwritable="true">
-      <variant returnType="void" isPureVirtual="false">
-        <arg type="QPainter *" typeName="QPainter *" name="painter"
-        isConst="false" />
-        <arg type="RVector &amp;" typeName="RVector" name="pos"
-        isConst="true" />
-        <arg type="RVector &amp;" typeName="RVector"
-        name="posRestriction" isConst="true" />
-        <arg type="QString &amp;" typeName="QString" name="text"
-        isConst="true" />
       </variant>
     </method>
     <method name="viewportChanged" cppName="viewportChanged"

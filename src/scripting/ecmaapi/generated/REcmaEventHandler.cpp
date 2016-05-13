@@ -89,15 +89,15 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, drawInfoLabel, "drawInfoLabel");
+            
+            REcmaHelper::registerFunction(&engine, proto, drawSnapLabel, "drawSnapLabel");
+            
             REcmaHelper::registerFunction(&engine, proto, dragEnter, "dragEnter");
             
             REcmaHelper::registerFunction(&engine, proto, updateTextLabel, "updateTextLabel");
             
-            REcmaHelper::registerFunction(&engine, proto, drawInfoLabel, "drawInfoLabel");
-            
             REcmaHelper::registerFunction(&engine, proto, updateSnapInfo, "updateSnapInfo");
-            
-            REcmaHelper::registerFunction(&engine, proto, drawSnapLabel, "drawSnapLabel");
             
             REcmaHelper::registerFunction(&engine, proto, viewportChanged, "viewportChanged");
             
@@ -459,6 +459,218 @@
             return result;
         }
          QScriptValue
+        REcmaEventHandler::drawInfoLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEventHandler::drawInfoLabel", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEventHandler::drawInfoLabel";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REventHandler* self = 
+                        getSelf("drawInfoLabel", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QPainter * */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RTextLabel */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    QPainter * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<QPainter >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("REventHandler: Argument 0 is not of type QPainter *QPainter *.", context);                    
+                    }
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RTextLabel*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RTextLabel*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("REventHandler: Argument 1 is not of type RTextLabel.",
+                               context);                    
+                    }
+                    RTextLabel 
+                    a1 = 
+                    *ap1;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->drawInfoLabel(a0
+        ,
+    a1);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REventHandler.drawInfoLabel().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEventHandler::drawInfoLabel", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEventHandler::drawSnapLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEventHandler::drawSnapLabel", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEventHandler::drawSnapLabel";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REventHandler* self = 
+                        getSelf("drawSnapLabel", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QPainter * */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(3).isString()
+        ) /* type: QString */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    QPainter * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<QPainter >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("REventHandler: Argument 0 is not of type QPainter *QPainter *.", context);                    
+                    }
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("REventHandler: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if (ap2 == NULL) {
+                           return REcmaHelper::throwError("REventHandler: Argument 2 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a2 = 
+                    *ap2;
+                
+                    // argument isStandardType
+                    QString
+                    a3 =
+                    (QString)
+                    
+                    context->argument( 3 ).
+                    toString();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->drawSnapLabel(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REventHandler.drawSnapLabel().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEventHandler::drawSnapLabel", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaEventHandler::dragEnter
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -608,93 +820,6 @@
             return result;
         }
          QScriptValue
-        REcmaEventHandler::drawInfoLabel
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaEventHandler::drawInfoLabel", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaEventHandler::drawInfoLabel";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    REventHandler* self = 
-                        getSelf("drawInfoLabel", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: QPainter * */
-     && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNull()
-        ) /* type: RTextLabel */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is pointer
-                    QPainter * a0 = NULL;
-
-                    a0 = 
-                        REcmaHelper::scriptValueTo<QPainter >(
-                            context->argument(0)
-                        );
-                    
-                    if (a0==NULL && 
-                        !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("REventHandler: Argument 0 is not of type QPainter *QPainter *.", context);                    
-                    }
-                
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RTextLabel*
-                    ap1 =
-                    qscriptvalue_cast<
-                    RTextLabel*
-                        >(
-                        context->argument(
-                        1
-                        )
-                    );
-                    if (ap1 == NULL) {
-                           return REcmaHelper::throwError("REventHandler: Argument 1 is not of type RTextLabel.",
-                               context);                    
-                    }
-                    RTextLabel 
-                    a1 = 
-                    *ap1;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->drawInfoLabel(a0
-        ,
-    a1);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for REventHandler.drawInfoLabel().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaEventHandler::drawInfoLabel", context, engine);
-            return result;
-        }
-         QScriptValue
         REcmaEventHandler::updateSnapInfo
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -794,131 +919,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEventHandler::updateSnapInfo", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaEventHandler::drawSnapLabel
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaEventHandler::drawSnapLabel", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaEventHandler::drawSnapLabel";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    REventHandler* self = 
-                        getSelf("drawSnapLabel", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    4 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: QPainter * */
-     && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNull()
-        ) /* type: RVector */
-     && (
-            context->argument(2).isVariant() || 
-            context->argument(2).isQObject() || 
-            context->argument(2).isNull()
-        ) /* type: RVector */
-     && (
-            context->argument(3).isString()
-        ) /* type: QString */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument is pointer
-                    QPainter * a0 = NULL;
-
-                    a0 = 
-                        REcmaHelper::scriptValueTo<QPainter >(
-                            context->argument(0)
-                        );
-                    
-                    if (a0==NULL && 
-                        !context->argument(0).isNull()) {
-                        return REcmaHelper::throwError("REventHandler: Argument 0 is not of type QPainter *QPainter *.", context);                    
-                    }
-                
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RVector*
-                    ap1 =
-                    qscriptvalue_cast<
-                    RVector*
-                        >(
-                        context->argument(
-                        1
-                        )
-                    );
-                    if (ap1 == NULL) {
-                           return REcmaHelper::throwError("REventHandler: Argument 1 is not of type RVector.",
-                               context);                    
-                    }
-                    RVector 
-                    a1 = 
-                    *ap1;
-                
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    RVector*
-                    ap2 =
-                    qscriptvalue_cast<
-                    RVector*
-                        >(
-                        context->argument(
-                        2
-                        )
-                    );
-                    if (ap2 == NULL) {
-                           return REcmaHelper::throwError("REventHandler: Argument 2 is not of type RVector.",
-                               context);                    
-                    }
-                    RVector 
-                    a2 = 
-                    *ap2;
-                
-                    // argument isStandardType
-                    QString
-                    a3 =
-                    (QString)
-                    
-                    context->argument( 3 ).
-                    toString();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->drawSnapLabel(a0
-        ,
-    a1
-        ,
-    a2
-        ,
-    a3);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for REventHandler.drawSnapLabel().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaEventHandler::drawSnapLabel", context, engine);
             return result;
         }
          QScriptValue

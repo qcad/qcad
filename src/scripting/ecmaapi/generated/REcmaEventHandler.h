@@ -54,19 +54,19 @@
         getUrlsFromMimeData
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        drawInfoLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        drawSnapLabel
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         dragEnter
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         updateTextLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        drawInfoLabel
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
         updateSnapInfo
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        drawSnapLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         viewportChanged

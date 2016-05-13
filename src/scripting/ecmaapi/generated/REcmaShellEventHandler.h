@@ -52,6 +52,18 @@
         
     
     
+      void drawInfoLabel(
+                QPainter * painter, const RTextLabel & textLabel
+            );
+        
+    
+    
+      void drawSnapLabel(
+                QPainter * painter, const RVector & pos, const RVector & posRestriction, const QString & text
+            );
+        
+    
+    
       void dragEnter(
                 QDragEnterEvent * event
             );
@@ -64,20 +76,8 @@
         
     
     
-      void drawInfoLabel(
-                QPainter * painter, const RTextLabel & textLabel
-            );
-        
-    
-    
       void updateSnapInfo(
                 QPainter * painter, RSnap * snap, RSnapRestriction * restriction
-            );
-        
-    
-    
-      void drawSnapLabel(
-                QPainter * painter, const RVector & pos, const RVector & posRestriction, const QString & text
             );
         
     

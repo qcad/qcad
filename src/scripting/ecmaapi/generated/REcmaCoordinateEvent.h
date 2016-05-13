@@ -31,9 +31,9 @@
     ;
 
     // conversion functions for base classes:
-    static  QScriptValue getQEvent(QScriptContext *context,
+    static  QScriptValue getRInputEvent(QScriptContext *context,
             QScriptEngine *engine)
-        ;static  QScriptValue getRInputEvent(QScriptContext *context,
+        ;static  QScriptValue getQEvent(QScriptContext *context,
             QScriptEngine *engine)
         ;
 
@@ -43,32 +43,6 @@
 
     // returns all base classes (in case of multiple inheritance):
     static  QScriptValue getBaseClasses(QScriptContext *context, QScriptEngine *engine) 
-        ;
-        // properties of secondary base class RInputEvent:
-        
-
-        // methods of secondary base class RInputEvent:
-        static  QScriptValue
-        getModelPosition
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setModelPosition
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        setScreenPosition
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getScreenPosition
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getGraphicsView
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        getGraphicsScene
-        (QScriptContext* context, QScriptEngine* engine) 
-        ;static  QScriptValue
-        isValid
-        (QScriptContext* context, QScriptEngine* engine) 
         ;
 
     // properties:
