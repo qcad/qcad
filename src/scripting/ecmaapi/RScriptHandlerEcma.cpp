@@ -111,6 +111,7 @@
 #include "REcmaEntityExportListenerAdapter.h"
 #include "REcmaEntityPickEvent.h"
 #include "REcmaEventFilter.h"
+#include "REcmaEventHandler.h"
 #include "REcmaExporter.h"
 #include "REcmaExportListener.h"
 #include "REcmaExportListenerAdapter.h"
@@ -663,6 +664,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaScriptAction::initEcma(*engine);
 
     REcmaEventFilter::initEcma(*engine);
+    REcmaEventHandler::initEcma(*engine);
 
     REcmaTerminateEvent::initEcma(*engine);
     REcmaInputEvent::initEcma(*engine);

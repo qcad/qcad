@@ -68,6 +68,7 @@ HEADERS += \
     $$PWD/REcmaEntityExportListenerAdapter.h \
     $$PWD/REcmaEntityPickEvent.h \
     $$PWD/REcmaEventFilter.h \
+    $$PWD/REcmaEventHandler.h \
     $$PWD/REcmaExplodable.h \
     $$PWD/REcmaExportListener.h \
     $$PWD/REcmaExportListenerAdapter.h \
@@ -259,6 +260,7 @@ HEADERS += \
     $$PWD/REcmaSharedPointerXLine.h \
     $$PWD/REcmaSharedPointerXLineEntity.h \
     $$PWD/REcmaShellActionAdapter.h \
+    $$PWD/REcmaShellEventHandler.h \
     $$PWD/REcmaShellFileExporterAdapter.h \
     $$PWD/REcmaShellFileExporterFactoryAdapter.h \
     $$PWD/REcmaShellFileImporterAdapter.h \
@@ -418,6 +420,7 @@ SOURCES += \
     $$PWD/REcmaEntityExportListenerAdapter.cpp \
     $$PWD/REcmaEntityPickEvent.cpp \
     $$PWD/REcmaEventFilter.cpp \
+    $$PWD/REcmaEventHandler.cpp \
     $$PWD/REcmaExplodable.cpp \
     $$PWD/REcmaExportListener.cpp \
     $$PWD/REcmaExportListenerAdapter.cpp \
@@ -609,6 +612,7 @@ SOURCES += \
     $$PWD/REcmaSharedPointerXLine.cpp \
     $$PWD/REcmaSharedPointerXLineEntity.cpp \
     $$PWD/REcmaShellActionAdapter.cpp \
+    $$PWD/REcmaShellEventHandler.cpp \
     $$PWD/REcmaShellFileExporterAdapter.cpp \
     $$PWD/REcmaShellFileExporterFactoryAdapter.cpp \
     $$PWD/REcmaShellFileImporterAdapter.cpp \
