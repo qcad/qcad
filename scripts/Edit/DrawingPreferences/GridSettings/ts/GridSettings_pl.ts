@@ -94,7 +94,7 @@ General Punctuation</translatorcomment>
         <translation type="unfinished">Ogólny</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+84"/>
         <location line="+103"/>
         <location line="+1"/>
         <location line="+22"/>

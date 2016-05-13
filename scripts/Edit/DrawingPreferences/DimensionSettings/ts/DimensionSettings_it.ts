@@ -24,7 +24,7 @@
         <translation>Predefiniti per nuovi disegni</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+109"/>
         <source>Scientific</source>
         <translation>Scientifica</translation>
     </message>

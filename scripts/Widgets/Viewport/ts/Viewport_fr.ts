@@ -150,7 +150,7 @@ Points uniques</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+261"/>
+        <location filename="../Viewport.js" line="+252"/>
         <source>Dropped data not supported</source>
         <translation>Données insérées pas pris en charge</translation>
     </message>
@@ -165,50 +165,41 @@ Points uniques</translatorcomment>
         <translation>Importation URL: </translation>
     </message>
     <message>
-        <location line="+66"/>
         <source>Grid</source>
-        <translation>Grille</translation>
+        <translation type="vanished">Grille</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>End</source>
-        <translation>Fin</translation>
+        <translation type="vanished">Fin</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>On Entity</source>
-        <translation>A l&apos;entité</translation>
+        <translation type="vanished">A l&apos;entité</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Perpendicular</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation>Perpendiculairement</translation>
+        <translation type="vanished">Perpendiculairement</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Tangential</source>
-        <translation>Tangentiel</translation>
+        <translation type="vanished">Tangentiel</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Center</source>
-        <translation>Centre</translation>
+        <translation type="vanished">Centre</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Middle</source>
-        <translation>Milieu</translation>
+        <translation type="vanished">Milieu</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Intersection</source>
-        <translation>Intersection</translation>
+        <translation type="vanished">Intersection</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Reference</source>
-        <translation>Référence</translation>
+        <translation type="vanished">Référence</translation>
     </message>
     <message>
         <location filename="../Viewport.ui" line="+99"/>

@@ -94,7 +94,7 @@
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+261"/>
+        <location filename="../Viewport.js" line="+252"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished"></translation>
     </message>
@@ -106,51 +106,6 @@
     <message>
         <location line="+11"/>
         <source>Importing URL: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+66"/>
-        <source>Grid</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>End</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>On Entity</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Perpendicular</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Tangential</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Center</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Middle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Intersection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Reference</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

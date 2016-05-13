@@ -14,7 +14,7 @@
         <translation>Piirroksen asetukset</translation>
     </message>
     <message>
-        <location line="+304"/>
+        <location line="+312"/>
         <source>Restart required</source>
         <translation>Uudelleenkäynnistys tarvitaan</translation>
     </message>

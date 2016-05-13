@@ -31,7 +31,7 @@ Dimensão Alinhada</translatorcomment>
         <translation>Padrões para Novos Desenhos</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+109"/>
         <source>Scientific</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pt.ts--

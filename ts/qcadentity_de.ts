@@ -4,9 +4,9 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="+86"/>
-        <location filename="../src/entity/RCircleEntity.cpp" line="+76"/>
-        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+93"/>
+        <location filename="../src/entity/RArcEntity.cpp" line="+85"/>
+        <location filename="../src/entity/RCircleEntity.cpp" line="+75"/>
+        <location filename="../src/entity/RDimAlignedEntity.cpp" line="+95"/>
         <location line="+4"/>
         <location line="+4"/>
         <location filename="../src/entity/RDimAngularEntity.cpp" line="+97"/>
@@ -14,47 +14,47 @@
         <location line="+4"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+93"/>
+        <location filename="../src/entity/RDimDiametricEntity.cpp" line="+95"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimLinearEntity.cpp" line="+92"/>
+        <location filename="../src/entity/RDimLinearEntity.cpp" line="+94"/>
         <location line="+4"/>
         <location line="+3"/>
         <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+89"/>
         <location line="+5"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimRadialEntity.cpp" line="+91"/>
+        <location filename="../src/entity/RDimRadialEntity.cpp" line="+93"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+97"/>
+        <location filename="../src/entity/RDimRotatedEntity.cpp" line="+99"/>
         <location line="+4"/>
         <location line="+4"/>
-        <location filename="../src/entity/RDimensionEntity.cpp" line="+83"/>
+        <location filename="../src/entity/RDimensionEntity.cpp" line="+84"/>
         <location line="+3"/>
-        <location filename="../src/entity/REllipseEntity.cpp" line="+80"/>
+        <location filename="../src/entity/REllipseEntity.cpp" line="+79"/>
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
-        <location filename="../src/entity/RHatchEntity.cpp" line="+90"/>
+        <location filename="../src/entity/RHatchEntity.cpp" line="+89"/>
         <location line="+3"/>
-        <location filename="../src/entity/RImageEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RImageEntity.cpp" line="+88"/>
         <location filename="../src/entity/RLeaderEntity.cpp" line="+71"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="+82"/>
+        <location filename="../src/entity/RLineEntity.cpp" line="+81"/>
         <location line="+3"/>
-        <location filename="../src/entity/RPointEntity.cpp" line="+70"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+89"/>
-        <location filename="../src/entity/RRayEntity.cpp" line="+78"/>
+        <location filename="../src/entity/RPointEntity.cpp" line="+69"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+88"/>
+        <location filename="../src/entity/RRayEntity.cpp" line="+77"/>
         <location line="+3"/>
         <location line="+4"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="+74"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="+73"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="+77"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+76"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTraceEntity.cpp" line="+74"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="+73"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RXLineEntity.cpp" line="+78"/>
+        <location filename="../src/entity/RXLineEntity.cpp" line="+77"/>
         <location line="+3"/>
         <location line="+4"/>
         <source>X</source>
@@ -681,6 +681,11 @@
     </message>
     <message>
         <location line="+2"/>
+        <source>Block Name</source>
+        <translation>Blockname</translation>
+    </message>
+    <message>
+        <location line="+1"/>
         <source>Auto Label Position</source>
         <translation>Auto Label Position</translation>
     </message>
@@ -689,7 +694,7 @@
         <translation type="obsolete">Definitionspunkt</translation>
     </message>
     <message>
-        <location line="-14"/>
+        <location line="-15"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Text Position</source>
@@ -746,8 +751,8 @@
         <translation>Punkt 4</translation>
     </message>
     <message>
-        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+90"/>
-        <location filename="../src/entity/RAttributeEntity.cpp" line="+90"/>
+        <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RAttributeEntity.cpp" line="+89"/>
         <source>Tag</source>
         <translation>Bezeichnung</translation>
     </message>

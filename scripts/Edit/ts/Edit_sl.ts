@@ -14,7 +14,7 @@
         <translation>Nastavitve risbe</translation>
     </message>
     <message>
-        <location line="+304"/>
+        <location line="+312"/>
         <source>Restart required</source>
         <translation>Potreben je ponovni zagon</translation>
     </message>

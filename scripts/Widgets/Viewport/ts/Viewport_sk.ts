@@ -94,7 +94,7 @@
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+261"/>
+        <location filename="../Viewport.js" line="+252"/>
         <source>Dropped data not supported</source>
         <translation>Vložené údaje nie sú podporované</translation>
     </message>
@@ -109,49 +109,40 @@
         <translation>Importuje sa URL:</translation>
     </message>
     <message>
-        <location line="+66"/>
         <source>Grid</source>
-        <translation>Sieť</translation>
+        <translation type="vanished">Sieť</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>End</source>
-        <translation>Koniec</translation>
+        <translation type="vanished">Koniec</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>On Entity</source>
-        <translation>Na prvku</translation>
+        <translation type="vanished">Na prvku</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Perpendicular</source>
-        <translation>Kolmica</translation>
+        <translation type="vanished">Kolmica</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Tangential</source>
-        <translation>Dotyčnica</translation>
+        <translation type="vanished">Dotyčnica</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Center</source>
-        <translation>Stred</translation>
+        <translation type="vanished">Stred</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Middle</source>
-        <translation>1/2</translation>
+        <translation type="vanished">1/2</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Intersection</source>
-        <translation>Priesečník</translation>
+        <translation type="vanished">Priesečník</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Reference</source>
-        <translation>Kvadrant</translation>
+        <translation type="vanished">Kvadrant</translation>
     </message>
     <message>
         <location filename="../Viewport.ui" line="+99"/>

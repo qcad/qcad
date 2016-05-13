@@ -20,7 +20,7 @@
         <translation>Bemating</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+107"/>
         <source>Scientific</source>
         <translation>Wetenschappelijk</translation>
     </message>

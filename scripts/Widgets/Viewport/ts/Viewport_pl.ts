@@ -149,7 +149,7 @@ Zaznacza pojedynczy obiekt</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+261"/>
+        <location filename="../Viewport.js" line="+252"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished"></translation>
     </message>
@@ -164,81 +164,68 @@ Zaznacza pojedynczy obiekt</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+66"/>
         <source>Grid</source>
         <translatorcomment>--exact match--
 --file: designer_pl.ts--
 &amp;Siatka
 Siatka
 Pozycjonowanie siatki</translatorcomment>
-        <translation type="unfinished">Siatka</translation>
+        <translation type="obsolete">Siatka</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>End</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Wskaż punkt końcowy odnośnika
 Wskaż kąt końcowy lub [kąt/długość cięciwy]</translatorcomment>
-        <translation type="unfinished">End</translation>
+        <translation type="obsolete">End</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>On Entity</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Punt cięcia nie jest na obiekcie.
 Punt cięcia nie jest na obiekcie
 Punkt cięcia nie jest na obiekcie.</translatorcomment>
-        <translation type="unfinished">Na obiekcie</translation>
+        <translation type="obsolete">Na obiekcie</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Perpendicular</source>
         <translatorcomment>--google--</translatorcomment>
-        <translation type="unfinished">Prostopadły</translation>
+        <translation type="obsolete">Prostopadły</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Tangential</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--
 Wskaż środek
 Łuk: środek, punkt, kąty</translatorcomment>
-        <translation type="unfinished">Wyśrodkuj</translation>
+        <translation type="obsolete">Wyśrodkuj</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Middle</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 &amp;Punkt centralny
 Środek
 Przyciągaj do punktów pośrednich</translatorcomment>
-        <translation type="unfinished">Środek</translation>
+        <translation type="obsolete">Środek</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Intersection</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Odetnij odcinek
 Wybierz pierwszy punkt linii przecinającej</translatorcomment>
-        <translation type="unfinished">Przecięcie</translation>
+        <translation type="obsolete">Przecięcie</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Reference</source>
         <translatorcomment>--exact match--
 --file: qcadlib_pl.ts--
 Wskaż punkt odniesienia
 Kopiuj z punktem &amp;odniesienia</translatorcomment>
-        <translation type="unfinished">Odniesienie</translation>
+        <translation type="obsolete">Odniesienie</translation>
     </message>
     <message>
         <location filename="../Viewport.ui" line="+99"/>

@@ -67,7 +67,7 @@
         <translation>Valeurs par défaut pour les nouveaux dessins</translation>
     </message>
     <message>
-        <location line="+83"/>
+        <location line="+86"/>
         <location line="+103"/>
         <location line="+1"/>
         <location line="+22"/>

@@ -24,7 +24,7 @@
         <translation>Valeurs par défaut pour les nouveaux dessins</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+109"/>
         <source>Scientific</source>
         <translation>Scientifique</translation>
     </message>

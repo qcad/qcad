@@ -150,7 +150,7 @@ Seleziona Singolo Oggetto</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+261"/>
+        <location filename="../Viewport.js" line="+252"/>
         <source>Dropped data not supported</source>
         <translation>I dati inseriti non sono supportati</translation>
     </message>
@@ -165,54 +165,45 @@ Seleziona Singolo Oggetto</translatorcomment>
         <translation>Importazione URL: </translation>
     </message>
     <message>
-        <location line="+66"/>
         <source>Grid</source>
-        <translation>Griglia</translation>
+        <translation type="vanished">Griglia</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>End</source>
-        <translation>Fine</translation>
+        <translation type="vanished">Fine</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>On Entity</source>
-        <translation>Sull&apos;entità</translation>
+        <translation type="vanished">Sull&apos;entità</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Perpendicular</source>
         <translatorcomment>--exact match--
 --file: SnapPerpendicular_it.ts--
 &amp;Perpendicolare
 Perpendicolare
 Seleziona il piano perpendicolare alla vista corrente</translatorcomment>
-        <translation>Perpendicolare</translation>
+        <translation type="vanished">Perpendicolare</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Tangential</source>
-        <translation>Tangenziale</translation>
+        <translation type="vanished">Tangenziale</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Center</source>
-        <translation>Centro</translation>
+        <translation type="vanished">Centro</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Middle</source>
-        <translation>Medio</translation>
+        <translation type="vanished">Medio</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Intersection</source>
-        <translation>Intersezione</translation>
+        <translation type="vanished">Intersezione</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Reference</source>
-        <translation>Riferimento</translation>
+        <translation type="vanished">Riferimento</translation>
     </message>
     <message>
         <location filename="../Viewport.ui" line="+99"/>

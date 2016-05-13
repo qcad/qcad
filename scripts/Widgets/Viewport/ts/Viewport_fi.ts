@@ -94,7 +94,7 @@
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+261"/>
+        <location filename="../Viewport.js" line="+252"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished"></translation>
     </message>
@@ -109,49 +109,36 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+66"/>
         <source>Grid</source>
-        <translation>Ruudukko</translation>
+        <translation type="vanished">Ruudukko</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>End</source>
-        <translation>Loppu</translation>
+        <translation type="vanished">Loppu</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>On Entity</source>
-        <translation>Kohteessa</translation>
+        <translation type="vanished">Kohteessa</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Perpendicular</source>
-        <translation>Kohtisuora</translation>
+        <translation type="vanished">Kohtisuora</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Tangential</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
         <source>Center</source>
-        <translation>Keski</translation>
+        <translation type="vanished">Keski</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Middle</source>
-        <translation>Keskellä</translation>
+        <translation type="vanished">Keskellä</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Intersection</source>
-        <translation>Leikkaus</translation>
+        <translation type="vanished">Leikkaus</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Reference</source>
-        <translation>Viite</translation>
+        <translation type="vanished">Viite</translation>
     </message>
     <message>
         <location filename="../Viewport.ui" line="+99"/>

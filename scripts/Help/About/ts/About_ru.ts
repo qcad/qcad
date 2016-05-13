@@ -4,12 +4,12 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../About.js" line="+61"/>
+        <location filename="../About.js" line="+62"/>
         <source>About %1</source>
         <translation>О %1</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+47"/>
         <source>Revision:</source>
         <translation>Версия:</translation>
     </message>
@@ -49,7 +49,7 @@
         <translation>Надстройка:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+25"/>
         <source>ID:</source>
         <translation>Идентификатор:</translation>
     </message>
@@ -66,14 +66,14 @@
         <translation>Неизвестно</translation>
     </message>
     <message>
-        <location line="-110"/>
-        <location line="+103"/>
+        <location line="-115"/>
+        <location line="+108"/>
         <source>Version:</source>
         <translation>Версия:</translation>
     </message>
     <message>
-        <location line="-90"/>
-        <location line="+94"/>
+        <location line="-95"/>
+        <location line="+99"/>
         <source>Qt Version:</source>
         <translation>Версия Qt:</translation>
     </message>
@@ -83,14 +83,14 @@
         <translation>Лицензия:</translation>
     </message>
     <message>
-        <location line="-104"/>
-        <location line="+113"/>
+        <location line="-109"/>
+        <location line="+118"/>
         <location line="+12"/>
         <source>Internet:</source>
         <translation>Интернет:</translation>
     </message>
     <message>
-        <location line="-123"/>
+        <location line="-128"/>
         <source>Build Date:</source>
         <translation>Дата сборки:</translation>
     </message>
@@ -138,7 +138,7 @@
         <translation>Не найдено плагинов.</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+93"/>
         <source>Active</source>
         <translation>Включён</translation>
     </message>

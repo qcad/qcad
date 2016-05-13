@@ -94,7 +94,7 @@
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+261"/>
+        <location filename="../Viewport.js" line="+252"/>
         <source>Dropped data not supported</source>
         <translation>Ingevoegd bestand niet ondersteund</translation>
     </message>
@@ -109,49 +109,40 @@
         <translation>Importeren URL: </translation>
     </message>
     <message>
-        <location line="+66"/>
         <source>Grid</source>
-        <translation>Raster</translation>
+        <translation type="vanished">Raster</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>End</source>
-        <translation>Eind</translation>
+        <translation type="vanished">Eind</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>On Entity</source>
-        <translation>Op Element</translation>
+        <translation type="vanished">Op Element</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Perpendicular</source>
-        <translation>Loodrecht</translation>
+        <translation type="vanished">Loodrecht</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Tangential</source>
-        <translation>Tangentieel</translation>
+        <translation type="vanished">Tangentieel</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Center</source>
-        <translation>Centrum</translation>
+        <translation type="vanished">Centrum</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Middle</source>
-        <translation>Midden</translation>
+        <translation type="vanished">Midden</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Intersection</source>
-        <translation>Intersectie</translation>
+        <translation type="vanished">Intersectie</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Reference</source>
-        <translation>Referentie</translation>
+        <translation type="vanished">Referentie</translation>
     </message>
     <message>
         <location filename="../Viewport.ui" line="+99"/>

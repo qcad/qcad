@@ -10,12 +10,12 @@
         <translation type="obsolete">&amp;Sobre</translation>
     </message>
     <message>
-        <location filename="../About.js" line="+61"/>
+        <location filename="../About.js" line="+62"/>
         <source>About %1</source>
         <translation>Sobre %1</translation>
     </message>
     <message>
-        <location line="+44"/>
+        <location line="+47"/>
         <source>Revision:</source>
         <translation>Revisão:</translation>
     </message>
@@ -55,7 +55,7 @@
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+25"/>
         <source>ID:</source>
         <translation>ID:</translation>
     </message>
@@ -72,14 +72,14 @@
         <translation>Desconhecido</translation>
     </message>
     <message>
-        <location line="-110"/>
-        <location line="+103"/>
+        <location line="-115"/>
+        <location line="+108"/>
         <source>Version:</source>
         <translation>Versão:</translation>
     </message>
     <message>
-        <location line="-90"/>
-        <location line="+94"/>
+        <location line="-95"/>
+        <location line="+99"/>
         <source>Qt Version:</source>
         <translation>Qt Versão:</translation>
     </message>
@@ -89,14 +89,14 @@
         <translation>Licença:</translation>
     </message>
     <message>
-        <location line="-104"/>
-        <location line="+113"/>
+        <location line="-109"/>
+        <location line="+118"/>
         <location line="+12"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-123"/>
+        <location line="-128"/>
         <source>Build Date:</source>
         <translation>Data de constituição:</translation>
     </message>
@@ -144,7 +144,7 @@
         <translation>Nenhum plugin encontrado.</translation>
     </message>
     <message>
-        <location line="+88"/>
+        <location line="+93"/>
         <source>Active</source>
         <translation>Ativo</translation>
     </message>

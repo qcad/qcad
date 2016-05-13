@@ -94,7 +94,7 @@
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+261"/>
+        <location filename="../Viewport.js" line="+252"/>
         <source>Dropped data not supported</source>
         <translation>Опущенные данные не поддерживаются</translation>
     </message>
@@ -109,49 +109,40 @@
         <translation>URL для импортирования:</translation>
     </message>
     <message>
-        <location line="+66"/>
         <source>Grid</source>
-        <translation>По сетке</translation>
+        <translation type="vanished">По сетке</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>End</source>
-        <translation>Конец</translation>
+        <translation type="vanished">Конец</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>On Entity</source>
-        <translation>Точка на кривой</translation>
+        <translation type="vanished">Точка на кривой</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Perpendicular</source>
-        <translation>Перпендикуляр</translation>
+        <translation type="vanished">Перпендикуляр</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Tangential</source>
-        <translation>По касательной</translation>
+        <translation type="vanished">По касательной</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Center</source>
-        <translation>Центр</translation>
+        <translation type="vanished">Центр</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Middle</source>
-        <translation>Середина</translation>
+        <translation type="vanished">Середина</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Intersection</source>
-        <translation>Пересечение</translation>
+        <translation type="vanished">Пересечение</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Reference</source>
-        <translation>Привязка</translation>
+        <translation type="vanished">Привязка</translation>
     </message>
     <message>
         <location filename="../Viewport.ui" line="+99"/>

@@ -20,7 +20,7 @@
         <translation>一般</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+84"/>
         <location line="+103"/>
         <location line="+1"/>
         <location line="+22"/>

@@ -14,7 +14,7 @@
         <translation>Параметры чертежа</translation>
     </message>
     <message>
-        <location line="+304"/>
+        <location line="+312"/>
         <source>Restart required</source>
         <translation>Нужен перезапуск</translation>
     </message>

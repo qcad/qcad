@@ -29,7 +29,7 @@ Wskaż położenie linii wymiarowej</translatorcomment>
         <translation type="unfinished">Wymiar</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+107"/>
         <source>Scientific</source>
         <translatorcomment>--exact match--
 --file: qcadguiqt_pl.ts--

@@ -150,7 +150,7 @@ Selecciona entidades solas</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+261"/>
+        <location filename="../Viewport.js" line="+252"/>
         <source>Dropped data not supported</source>
         <translation>Datos insertados no compatibles</translation>
     </message>
@@ -165,53 +165,44 @@ Selecciona entidades solas</translatorcomment>
         <translation>Importación de URL: </translation>
     </message>
     <message>
-        <location line="+66"/>
         <source>Grid</source>
-        <translation>Rejilla</translation>
+        <translation type="vanished">Rejilla</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>End</source>
-        <translation>Fin</translation>
+        <translation type="vanished">Fin</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>On Entity</source>
-        <translation>En entidad</translation>
+        <translation type="vanished">En entidad</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Perpendicular</source>
         <translatorcomment>--exact match--
 --file: artisan_es.ts--
 &amp;Perpendicular
 Perpendicular</translatorcomment>
-        <translation>Perpendicular</translation>
+        <translation type="vanished">Perpendicular</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Tangential</source>
-        <translation>Tangencial</translation>
+        <translation type="vanished">Tangencial</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Center</source>
-        <translation>Centro</translation>
+        <translation type="vanished">Centro</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Middle</source>
-        <translation>Medio</translation>
+        <translation type="vanished">Medio</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Intersection</source>
-        <translation>Intersección</translation>
+        <translation type="vanished">Intersección</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Reference</source>
-        <translation>Referencia</translation>
+        <translation type="vanished">Referencia</translation>
     </message>
     <message>
         <location filename="../Viewport.ui" line="+99"/>

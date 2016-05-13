@@ -150,7 +150,7 @@ Selecione Entidades singulares</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+261"/>
+        <location filename="../Viewport.js" line="+252"/>
         <source>Dropped data not supported</source>
         <translation>Dados inseridos não suportados</translation>
     </message>
@@ -165,86 +165,77 @@ Selecione Entidades singulares</translatorcomment>
         <translation>Importando a URL: </translation>
     </message>
     <message>
-        <location line="+66"/>
         <source>Grid</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 &amp;Grade
 Grelha
 Posicionamento na grade</translatorcomment>
-        <translation>Grade</translation>
+        <translation type="vanished">Grade</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>End</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 Indique o ponto de término do guia
 Indique o ângulo de fim ou [Ângulo/Comprimento da corda]</translatorcomment>
-        <translation>Fim</translation>
+        <translation type="vanished">Fim</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>On Entity</source>
         <translatorcomment>--exact match--
 --file: SnapOnEntity_pt.ts--
 Ponto de corte não está na entidade.
 Ponto de corte não está na entidade
 Ponto de divisão não está contido na entidade.</translatorcomment>
-        <translation>Na Entidade</translation>
+        <translation type="vanished">Na Entidade</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Perpendicular</source>
         <translatorcomment>--exact match--
 --file: SnapPerpendicular_pt.ts--
 &amp;Perpendicular
 Perpendicular
 (perpendicular ao traço, \&quot;escova\&quot;)</translatorcomment>
-        <translation>Perpendicular</translation>
+        <translation type="vanished">Perpendicular</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Tangential</source>
-        <translation>Tangencial</translation>
+        <translation type="vanished">Tangencial</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Center</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 &amp;Centro, ponto, ângulos
 Centro, ponto, ângulos
 Arco com Centro, Ponto, Ângulos</translatorcomment>
-        <translation>Centro</translation>
+        <translation type="vanished">Centro</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Middle</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
 &amp;Meio
 Meio
 Salta aos pontos de meio</translatorcomment>
-        <translation>Meio</translation>
+        <translation type="vanished">Meio</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Intersection</source>
         <translatorcomment>--exact match--
 --file: pt.po--
 Corte fora o segmento
 Selecione o primeiro ponto da linha de intersecção</translatorcomment>
-        <translation>Interseção</translation>
+        <translation type="vanished">Interseção</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Reference</source>
         <translatorcomment>--exact match--
 --file: SnapReference_pt.ts--
 Indique o ponto de referência
 &amp;Copie com referência</translatorcomment>
-        <translation>Referência</translation>
+        <translation type="vanished">Referência</translation>
     </message>
     <message>
         <location filename="../Viewport.ui" line="+99"/>

@@ -20,7 +20,7 @@
         <translation>寸法</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+107"/>
         <source>Scientific</source>
         <translation>科学</translation>
     </message>

@@ -41,6 +41,54 @@ Personnalisé</translatorcomment>
     </message>
 </context>
 <context>
+    <name>REventHandler</name>
+    <message>
+        <location filename="../src/gui/REventHandler.cpp" line="+192"/>
+        <source>Grid</source>
+        <translation>Grille</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>End</source>
+        <translation>Fin</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>On Entity</source>
+        <translation>A l&apos;entité</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Perpendicular</source>
+        <translation>Perpendiculaire</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Tangential</source>
+        <translation>Tangentiel</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Center</source>
+        <translation>Centre</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Middle</source>
+        <translation>Milieu</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Intersection</source>
+        <translation>Intersection</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Reference</source>
+        <translation>Référence</translation>
+    </message>
+</context>
+<context>
     <name>RMathLineEdit</name>
     <message>
         <location filename="../src/gui/RMathLineEdit.cpp" line="+156"/>

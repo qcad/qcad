@@ -14,7 +14,7 @@
         <translation>Nastavenia Kreslenia</translation>
     </message>
     <message>
-        <location line="+304"/>
+        <location line="+312"/>
         <source>Restart required</source>
         <translation>Vyžaduje reštart</translation>
     </message>

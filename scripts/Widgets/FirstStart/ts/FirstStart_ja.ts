@@ -5,7 +5,7 @@
     <name>FirstStart</name>
     <message>
         <location filename="../FirstStart.js" line="+35"/>
-        <location line="+214"/>
+        <location line="+216"/>
         <source>%1 First Start</source>
         <translation>%1 初回実行</translation>
     </message>

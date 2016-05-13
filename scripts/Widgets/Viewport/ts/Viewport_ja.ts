@@ -134,7 +134,7 @@
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+261"/>
+        <location filename="../Viewport.js" line="+252"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished"></translation>
     </message>
@@ -149,49 +149,36 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+66"/>
         <source>Grid</source>
-        <translation>グリッド</translation>
+        <translation type="vanished">グリッド</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>End</source>
-        <translation>終端</translation>
+        <translation type="vanished">終端</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>On Entity</source>
-        <translation>エンティティ</translation>
+        <translation type="vanished">エンティティ</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Perpendicular</source>
-        <translation>垂線</translation>
+        <translation type="vanished">垂線</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Tangential</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
         <source>Center</source>
-        <translation>中心</translation>
+        <translation type="vanished">中心</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Middle</source>
-        <translation>中央</translation>
+        <translation type="vanished">中央</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Intersection</source>
-        <translation>交点</translation>
+        <translation type="vanished">交点</translation>
     </message>
     <message>
-        <location line="+3"/>
         <source>Reference</source>
-        <translation>基準点</translation>
+        <translation type="vanished">基準点</translation>
     </message>
     <message>
         <location filename="../Viewport.ui" line="+99"/>

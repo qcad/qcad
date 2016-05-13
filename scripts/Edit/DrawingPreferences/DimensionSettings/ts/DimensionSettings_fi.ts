@@ -20,7 +20,7 @@
         <translation>Mitat</translation>
     </message>
     <message>
-        <location line="+100"/>
+        <location line="+107"/>
         <source>Scientific</source>
         <translation>Tieteellinen</translation>
     </message>

@@ -4,25 +4,25 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../About.js" line="+61"/>
+        <location filename="../About.js" line="+62"/>
         <source>About %1</source>
         <translation>O %1</translation>
     </message>
     <message>
-        <location line="+33"/>
-        <location line="+103"/>
+        <location line="+36"/>
+        <location line="+108"/>
         <source>Version:</source>
         <translation>Verze:</translation>
     </message>
     <message>
-        <location line="-96"/>
-        <location line="+113"/>
+        <location line="-101"/>
+        <location line="+118"/>
         <location line="+12"/>
         <source>Internet:</source>
         <translation>Internet:</translation>
     </message>
     <message>
-        <location line="-123"/>
+        <location line="-128"/>
         <source>Build Date:</source>
         <translation>Datum sestavení:</translation>
     </message>
@@ -33,12 +33,12 @@
     </message>
     <message>
         <location line="+2"/>
-        <location line="+94"/>
+        <location line="+99"/>
         <source>Qt Version:</source>
         <translation>Verze Qt:</translation>
     </message>
     <message>
-        <location line="-91"/>
+        <location line="-96"/>
         <source>Architecture:</source>
         <translation>Architektura:</translation>
     </message>
@@ -108,7 +108,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+25"/>
         <source>ID:</source>
         <translation type="unfinished"></translation>
     </message>

@@ -383,7 +383,7 @@ Lista de bloques</translatorcomment>
         <location line="+3"/>
         <location line="+3"/>
         <location filename="../src/core/RTextBasedEntity.cpp" line="+72"/>
-        <location filename="../src/core/RViewportEntity.cpp" line="+72"/>
+        <location filename="../src/core/RViewportEntity.cpp" line="+71"/>
         <location line="+6"/>
         <location line="+2"/>
         <source>X</source>

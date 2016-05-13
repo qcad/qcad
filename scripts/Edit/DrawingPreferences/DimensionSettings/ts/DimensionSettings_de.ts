@@ -24,7 +24,7 @@
         <translation>Standards für neue Zeichnungen</translation>
     </message>
     <message>
-        <location line="+102"/>
+        <location line="+109"/>
         <source>Scientific</source>
         <translation>Wissenschaftlich</translation>
     </message>
