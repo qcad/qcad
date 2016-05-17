@@ -34,7 +34,7 @@ class RGraphicsScene;
  * \ingroup core
  * \scriptable
  */
-class QCADCORE_EXPORT RCoordinateEvent : public RInputEvent, public QEvent {
+class QCADCORE_EXPORT RCoordinateEvent : public QEvent, public RInputEvent {
 public:
     /**
      * \param position Absolute model coordinate.

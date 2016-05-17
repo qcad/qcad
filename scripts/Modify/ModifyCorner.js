@@ -295,7 +295,7 @@ ModifyCorner.prototype.pickCorner = function(event) {
     var doc = this.getDocument();
 
     // get closest entity:
-    var entityId1 = di.getClosestEntity(event);
+    var entityId1 = di.getClosestEntity(event.getRInputEvent());
     if (entityId1===RObject.INVALID_ID) {
         return false;
     }
