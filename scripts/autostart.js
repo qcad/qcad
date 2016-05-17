@@ -513,7 +513,7 @@ function main() {
         var fi = new QFileInfo(configFile);
         if (fi.exists()) {
             var configPath = fi.absolutePath();
-            var configBak = configPath + QDir.separator + "QCAD3_old." + fi.suffix();
+            var configBak = configPath + QDir.separator + fi.baseName() + "_old." + fi.suffix();
             qDebug("Renaming old unversioned config file from '" + configFile + "' to '"+ configBak + "'");
             QFile.remove(configBak);
             QFile.rename(configFile, configBak);
