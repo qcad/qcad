@@ -7,8 +7,8 @@ xmlns:rs="http://www.ribbonsoft.com">
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="false"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
   hasStreamOperator="false" isAbstract="false" isScriptable="true">
-    <baseClass name="RInputEvent" specifier="public" />
     <baseClass name="QEvent" specifier="public" />
+    <baseClass name="RInputEvent" specifier="public" />
     <constructor>
       <variant>
         <arg type="RVector &amp;" typeName="RVector"

@@ -35,7 +35,7 @@
  * \ingroup core
  * \scriptable
  */</comment>
-<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RCoordinateEvent</name> <super>: <specifier>public</specifier> <name>RInputEvent</name>, <specifier>public</specifier> <name>QEvent</name></super> <block>{<private type="default">
+<class>class <macro><name>QCADCORE_EXPORT</name></macro> <name>RCoordinateEvent</name> <super>: <specifier>public</specifier> <name>QEvent</name>, <specifier>public</specifier> <name>RInputEvent</name></super> <block>{<private type="default">
 </private><public>public:
     <comment type="block">/**
      * \param position Absolute model coordinate.
