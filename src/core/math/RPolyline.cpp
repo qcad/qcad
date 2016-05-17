@@ -859,6 +859,7 @@ bool RPolyline::containsShape(const RShape& shape) const {
     }
 
     Q_ASSERT("shape not supported");
+    return false;
 }
 
 RVector RPolyline::getStartPoint() const {
