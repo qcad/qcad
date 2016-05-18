@@ -1668,7 +1668,7 @@ EAction.prototype.updatePreview = function(clear) {
  */
 EAction.prototype.applyOperation = function() {
     var di = this.getDocumentInterface();
-    var op = this.getOperation();
+    var op = this.getOperation(false);
     if (isNull(op)) {
         qWarning("Operation returned by this.getOperation() is undefined");
         return false;
