@@ -58,11 +58,9 @@ public:
         return rotation;
     }
 
-    virtual QList<RVector> getReferencePoints(
-        RS::ProjectionRenderingHint hint = RS::RenderTop) const;
+    virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 
-    virtual bool moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint);
+    virtual bool moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint);
 
     virtual QList<RVector> getDimPoints() const;
 

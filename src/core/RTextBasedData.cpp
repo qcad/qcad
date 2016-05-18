@@ -263,11 +263,10 @@ void RTextBasedData::setText(const QString& text) {
     update();
 }
 
-QList<RVector> RTextBasedData::getReferencePoints(
-        RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> RTextBasedData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint);
 
-    QList<RVector> ret;
+    QList<RRefPoint> ret;
 
     ret.append(alignmentPoint);
 

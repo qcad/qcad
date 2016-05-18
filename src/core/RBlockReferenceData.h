@@ -55,22 +55,18 @@ public:
     virtual QList<RBox> getBoundingBoxes(bool ignoreEmpty=false) const;
     virtual RBox getBoundingBox(bool ignoreEmpty=false) const;
 
-    virtual QList<RVector> getInternalReferencePoints(
-        RS::ProjectionRenderingHint hint = RS::RenderTop) const;
-    virtual QList<RVector> getReferencePoints(
-        RS::ProjectionRenderingHint hint = RS::RenderTop) const;
-    virtual RVector getVectorTo(const RVector& point, 
-        bool limited = true, double strictRange = RMAXDOUBLE) const;
-    virtual double getDistanceTo(const RVector& point,
-        bool limited = true, double range = 0.0, bool draft = false, double strictRange = RMAXDOUBLE) const;
+    virtual QList<RRefPoint> getInternalReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
+    virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
+    virtual RVector getVectorTo(const RVector& point,  bool limited = true, double strictRange = RMAXDOUBLE) const;
+    virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0,
+                                 bool draft = false, double strictRange = RMAXDOUBLE) const;
 
     RBox getQueryBoxInBlockCoordinates(const RBox& box) const;
     virtual QList<QSharedPointer<RShape> > getShapes(const RBox& queryBox = RDEFAULT_RBOX, bool ignoreComplex = false) const;
 
     //virtual void setSelected(bool on);
 
-    virtual bool moveReferencePoint(const RVector& referencePoint, 
-        const RVector& targetPoint);
+    virtual bool moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint);
     virtual bool move(const RVector& offset);
     virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR);
     virtual bool mirror(const RLine& axis);

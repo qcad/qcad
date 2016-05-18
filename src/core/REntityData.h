@@ -33,6 +33,7 @@
 #include "RMatrix.h"
 #include "RObject.h"
 #include "RPolyline.h"
+#include "RRefPoint.h"
 #include "RSettings.h"
 #include "RView.h"
 
@@ -265,12 +266,8 @@ public:
      * snap to reference points.
      * Default implementation returns same as getReferencePoints().
      */
-    virtual QList<RVector> getInternalReferencePoints(
-        RS::ProjectionRenderingHint hint=RS::RenderTop) const {
-
-        Q_UNUSED(hint)
-
-        return getReferencePoints();
+    virtual QList<RRefPoint> getInternalReferencePoints(RS::ProjectionRenderingHint hint=RS::RenderTop) const {
+        return getReferencePoints(hint);
     }
 
     /**
@@ -278,8 +275,7 @@ public:
      *      can usually be moved around by the user to change the geometry
      *      of the entity.
      */
-    virtual QList<RVector> getReferencePoints(
-        RS::ProjectionRenderingHint hint=RS::RenderTop) const = 0;
+    virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint=RS::RenderTop) const = 0;
 
     virtual RVector getPointOnEntity() const;
     virtual QList<RVector> getEndPoints(const RBox& queryBox = RDEFAULT_RBOX) const;

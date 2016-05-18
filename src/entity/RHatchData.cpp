@@ -202,10 +202,10 @@ bool RHatchData::intersectsWith(const RShape& shape) const {
     return false;
 }
 
-QList<RVector> RHatchData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> RHatchData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
-    QList<RVector> ret;
+    QList<RRefPoint> ret;
 
     for (int i=0; i<boundary.size(); ++i) {
         QList<QSharedPointer<RShape> > loop = boundary.at(i);
@@ -244,10 +244,10 @@ QList<RVector> RHatchData::getReferencePoints(RS::ProjectionRenderingHint hint) 
             QSharedPointer<RSpline> spline = shape.dynamicCast<RSpline>();
             if (!spline.isNull()) {
                 if (spline->hasFitPoints()) {
-                    ret.append(spline->getFitPoints());
+                    ret.append(RRefPoint::toRefPointList(spline->getFitPoints()));
                 }
                 else {
-                    ret.append(spline->getControlPoints());
+                    ret.append(RRefPoint::toRefPointList(spline->getControlPoints()));
                 }
                 continue;
             }

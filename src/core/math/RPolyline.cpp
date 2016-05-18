@@ -232,6 +232,54 @@ void RPolyline::insertVertex(int index, const RVector& vertex) {
     endWidths.insert(index, RNANDOUBLE);
 }
 
+/**
+ * Inserts a git point at the point on the spline closest to the given position.
+ */
+void RPolyline::insertVertexAt(const RVector& point) {
+    int index = getClosestSegment(point);
+    if (index<0) {
+        return;
+    }
+
+    QSharedPointer<RShape> seg1 = getSegmentAt(index);
+    if (seg1.isNull()) {
+        return;
+    }
+
+    RVector p = seg1->getClosestPointOnShape(point, false);
+
+    QSharedPointer<RShape> seg2 = QSharedPointer<RShape>(seg1->clone());
+
+    QSharedPointer<RDirected> dir1 = seg1.dynamicCast<RDirected>();
+    QSharedPointer<RDirected> dir2 = seg2.dynamicCast<RDirected>();
+
+    if (dir1.isNull() || dir2.isNull()) {
+        return;
+    }
+
+    dir1->trimEndPoint(p);
+    dir2->trimStartPoint(p);
+
+    insertVertex(index+1, p);
+
+    QSharedPointer<RArc> arc1 = seg1.dynamicCast<RArc>();
+    QSharedPointer<RArc> arc2 = seg2.dynamicCast<RArc>();
+    if (arc1.isNull()) {
+        setBulgeAt(index, 0.0);
+    }
+    else {
+        setBulgeAt(index, arc1->getBulge());
+    }
+
+    if (arc2.isNull()) {
+        setBulgeAt(index+1, 0.0);
+    }
+    else {
+        setBulgeAt(index+1, arc2->getBulge());
+    }
+
+}
+
 void RPolyline::removeFirstVertex() {
     if (vertices.isEmpty()) {
         return;

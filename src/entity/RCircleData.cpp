@@ -34,11 +34,10 @@ RCircleData::RCircleData(const RVector& center, double radius) :
     RCircle(center, radius) {
 }
 
-QList<RVector> RCircleData::getReferencePoints(
-        RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> RCircleData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
-    QList<RVector> ret;
+    QList<RRefPoint> ret;
     ret.append(center);
     ret.append(center + RVector(radius, 0));
     ret.append(center + RVector(0, radius));

@@ -60,11 +60,10 @@ RSolidData::RSolidData(const RVector& p1, const RVector& p2, const RVector& p3, 
     setClosed(true);
 }
 
-QList<RVector> RSolidData::getReferencePoints(
-        RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> RSolidData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
-    return getVertices();
+    return RRefPoint::toRefPointList(getVertices());
 }
 
 bool RSolidData::moveReferencePoint(const RVector& referencePoint,

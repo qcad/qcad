@@ -42,21 +42,18 @@ RBox RSplineData::getBoundingBox(bool ignoreEmpty) const {
     return RSpline::getBoundingBox();
 }
 
-QList<RVector> RSplineData::getReferencePoints(
-        RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> RSplineData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
     if (countFitPoints()!=0) {
-        return getFitPoints();
+        return RRefPoint::toRefPointList(getFitPoints());
     }
     else {
-        return getControlPoints();
+        return RRefPoint::toRefPointList(getControlPoints());
     }
 }
 
-bool RSplineData::moveReferencePoint(const RVector& referencePoint,
-        const RVector& targetPoint) {
-
+bool RSplineData::moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint) {
     bool ret = false;
     //bool periodic = isPeriodic();
 

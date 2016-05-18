@@ -35,18 +35,17 @@ REllipseData::REllipseData(const RVector& center, const RVector& majorPoint,
     REllipse(center, majorPoint, ratio, startAngle, endAngle, reversed) {
 }
 
-QList<RVector> REllipseData::getReferencePoints(
-        RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> REllipseData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
-    QList<RVector> ret;
+    QList<RRefPoint> ret;
 
     ret.append(center);
     ret.append(center+majorPoint);
     ret.append(center-majorPoint);
     ret.append(center+getMinorPoint());
     ret.append(center-getMinorPoint());
-    ret.append(getFoci());
+    ret.append(RRefPoint::toRefPointList(getFoci()));
 
     if (!isFullEllipse()) {
         ret.append(getStartPoint());

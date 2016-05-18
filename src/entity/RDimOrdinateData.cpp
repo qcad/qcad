@@ -50,12 +50,8 @@ bool RDimOrdinateData::isValid() const {
             definingPoint.isValid();
 }
 
-QList<RVector> RDimOrdinateData::getReferencePoints(
-    RS::ProjectionRenderingHint hint) const {
-
-    Q_UNUSED(hint)
-
-    QList<RVector> ret = RDimensionData::getReferencePoints(hint);
+QList<RRefPoint> RDimOrdinateData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
+    QList<RRefPoint> ret = RDimensionData::getReferencePoints(hint);
 
     ret.append(leaderEndPoint);
     ret.append(definingPoint);

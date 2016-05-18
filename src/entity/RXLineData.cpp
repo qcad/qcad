@@ -39,11 +39,10 @@ RXLineData::RXLineData(const RVector& basePoint, const RVector& dir) :
     RXLine(basePoint, dir), fixedAngle(false) {
 }
 
-QList<RVector> RXLineData::getReferencePoints(
-        RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> RXLineData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
-    QList<RVector> ret;
+    QList<RRefPoint> ret;
     ret.append(basePoint);
     if (!hasFixedAngle()) {
         ret.append(getSecondPoint());

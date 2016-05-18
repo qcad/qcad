@@ -39,10 +39,10 @@ RRayData::RRayData(const RVector& basePoint, const RVector& dir) :
     RRay(basePoint, dir) {
 }
 
-QList<RVector> RRayData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> RRayData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
-    QList<RVector> ret;
+    QList<RRefPoint> ret;
     ret.append(basePoint);
     ret.append(getSecondPoint());
     return ret;

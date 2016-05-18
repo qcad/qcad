@@ -52,11 +52,10 @@ RPolyline RLineData::getHull(double offset) const {
     return ret;
 }
 
-QList<RVector> RLineData::getReferencePoints(
-        RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> RLineData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
-    QList<RVector> ret;
+    QList<RRefPoint> ret;
     ret.append(startPoint);
     ret.append(endPoint);
     return ret;

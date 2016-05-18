@@ -89,12 +89,10 @@ bool RLeaderData::canHaveArrowHead() const {
     return true;
 }
 
-QList<RVector> RLeaderData::getReferencePoints(
-    RS::ProjectionRenderingHint hint) const {
-
+QList<RRefPoint> RLeaderData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
-    return getVertices();
+    return RRefPoint::toRefPointList(getVertices());
 }
 
 bool RLeaderData::moveReferencePoint(const RVector& referencePoint,

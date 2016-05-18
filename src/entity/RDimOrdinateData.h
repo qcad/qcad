@@ -83,11 +83,9 @@ public:
         return xType;
     }
 
-    virtual QList<RVector> getReferencePoints(
-        RS::ProjectionRenderingHint hint = RS::RenderTop) const;
+    virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 
-    virtual bool moveReferencePoint(const RVector& referencePoint, 
-        const RVector& targetPoint);
+    virtual bool moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint);
 
     virtual bool move(const RVector& offset);
     virtual bool rotate(double rotation, const RVector& center);

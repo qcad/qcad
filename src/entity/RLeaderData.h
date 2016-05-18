@@ -83,11 +83,9 @@ public:
         RPolyline::appendVertex(vertex);
     }
 
-    virtual QList<RVector> getReferencePoints(
-        RS::ProjectionRenderingHint hint = RS::RenderTop) const;
+    virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 
-    virtual bool moveReferencePoint(const RVector& referencePoint, 
-        const RVector& targetPoint);
+    virtual bool moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint);
 
     QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const {
         return RPolyline::getExploded(segments);

@@ -134,11 +134,9 @@ public:
     virtual double getDistanceTo(const RVector& point, bool limited = true, double range = 0.0, bool draft = false, double strictRange = RMAXDOUBLE) const;
     virtual bool intersectsWith(const RShape& shape) const;
 
-    virtual QList<RVector> getReferencePoints(
-        RS::ProjectionRenderingHint hint = RS::RenderTop) const;
+    virtual QList<RRefPoint> getReferencePoints(RS::ProjectionRenderingHint hint = RS::RenderTop) const;
 
-    virtual bool moveReferencePoint(const RVector& referencePoint, 
-        const RVector& targetPoint);
+    virtual bool moveReferencePoint(const RVector& referencePoint, const RVector& targetPoint);
 
     virtual bool move(const RVector& offset);
     virtual bool rotate(double rotation, const RVector& center);

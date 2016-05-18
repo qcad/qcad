@@ -125,12 +125,10 @@ bool RDimensionData::intersectsWith(const RShape& shape) const {
     return false;
 }
 
-QList<RVector> RDimensionData::getReferencePoints(
-    RS::ProjectionRenderingHint hint) const {
-
+QList<RRefPoint> RDimensionData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
-    QList<RVector> ret;
+    QList<RRefPoint> ret;
 
     ret.append(definitionPoint);
     ret.append(getTextPosition());

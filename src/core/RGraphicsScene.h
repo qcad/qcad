@@ -120,7 +120,7 @@ public:
     virtual void exportCurrentEntity(bool preview = false, bool forceSelected = false);
     virtual void unexportEntity(REntity::Id entityId);
 
-    QMultiMap<REntity::Id, RVector>& getReferencePoints() {
+    QMultiMap<REntity::Id, RRefPoint>& getReferencePoints() {
         return referencePoints;
     }
 
@@ -152,7 +152,7 @@ protected:
      * Used for drawing reference points.
      * TODO: store selection status of reference points.
      */
-    QMultiMap<REntity::Id, RVector> referencePoints;
+    QMultiMap<REntity::Id, RRefPoint> referencePoints;
 
 private:
     bool deleting;

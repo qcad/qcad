@@ -135,6 +135,10 @@ public:
         data.insertVertex(index, vertex);
     }
 
+    void insertVertexAt(const RVector& vertex) {
+        data.insertVertexAt(vertex);
+    }
+
     RVector getVertexAt(int i) const {
         return data.getVertexAt(i);
     }

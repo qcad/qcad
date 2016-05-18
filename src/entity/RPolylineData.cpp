@@ -58,15 +58,15 @@ QList<RBox> RPolylineData::getBoundingBoxes(bool ignoreEmpty) const {
     return ret;
 }
 
-QList<RVector> RPolylineData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> RPolylineData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
-    QList<RVector> ret = getVertices();
+    QList<RRefPoint> ret = RRefPoint::toRefPointList(getVertices());
     for (int i=0; i<countSegments(); i++) {
         if (isArcSegmentAt(i)) {
             QSharedPointer<RArc> arc = getSegmentAt(i).dynamicCast<RArc>();
             if (!arc.isNull()) {
-                ret.append(arc->getMiddlePoint());
+                ret.append(RRefPoint(arc->getMiddlePoint(), RRefPoint::Secondary));
             }
         }
     }

@@ -35,11 +35,10 @@ RPointData::RPointData(const RVector& point) :
     RPoint(point) {
 }
 
-QList<RVector> RPointData::getReferencePoints(
-        RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> RPointData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
-    QList<RVector> ret;
+    QList<RRefPoint> ret;
     ret.append(position);
     return ret;
 }

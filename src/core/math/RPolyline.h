@@ -69,6 +69,7 @@ public:
     void appendVertex(const RVector& vertex, double bulge = 0.0, double w1 = 0.0, double w2 = 0.0);
     void prependVertex(const RVector& vertex, double bulge = 0.0, double w1 = 0.0, double w2 = 0.0);
     void insertVertex(int index, const RVector& vertex);
+    void insertVertexAt(const RVector& point);
     void removeFirstVertex();
     void removeLastVertex();
     void removeVertex(int index);

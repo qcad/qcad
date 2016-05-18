@@ -51,14 +51,13 @@ RBox RDimAlignedData::getBoundingBox(bool ignoreEmpty) const {
     return boundingBox;
 }
 
-QList<RVector> RDimAlignedData::getReferencePoints(
-    RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> RDimAlignedData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
 
     Q_UNUSED(hint)
 
     // we don't want to add definitionPoint, so we don't call the base
     // class implementation here on purpose
-    QList<RVector> ret;
+    QList<RRefPoint> ret;
 
     ret.append(getTextPosition());
     ret.append(extensionPoint1);

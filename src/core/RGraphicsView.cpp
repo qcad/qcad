@@ -753,9 +753,8 @@ RVector RGraphicsView::getClosestReferencePoint(const RVector& screenPosition,
 
     double minDist = (double) range;
 
-    QMultiMap<REntity::Id, RVector>& referencePoints =
-            scene->getReferencePoints();
-    QMultiMap<REntity::Id, RVector>::iterator it;
+    QMultiMap<REntity::Id, RRefPoint>& referencePoints = scene->getReferencePoints();
+    QMultiMap<REntity::Id, RRefPoint>::iterator it;
     for (it = referencePoints.begin(); it != referencePoints.end(); it++) {
         RVector rp = mapToView(it.value());
 
@@ -792,9 +791,8 @@ RVector RGraphicsView::getClosestReferencePoint(
         return ret;
     }
 
-    QList<RVector> referencePoints = entity->getReferencePoints(
-            scene->getProjectionRenderingHint());
-    QList<RVector>::iterator it;
+    QList<RRefPoint> referencePoints = entity->getReferencePoints(scene->getProjectionRenderingHint());
+    QList<RRefPoint>::iterator it;
     for (it=referencePoints.begin(); it!=referencePoints.end(); it++) {
         RVector rp = mapToView(*it);
 

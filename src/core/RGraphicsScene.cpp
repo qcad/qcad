@@ -316,10 +316,10 @@ void RGraphicsScene::exportReferencePoints() {
     }
 
     // get list of reference points:
-    QList<RVector> ref = entity->getReferencePoints(getProjectionRenderingHint());
+    QList<RRefPoint> ref = entity->getReferencePoints(getProjectionRenderingHint());
 
     // export reference points:
-    QList<RVector>::iterator it;
+    QList<RRefPoint>::iterator it;
     for (it=ref.begin(); it!=ref.end(); ++it) {
         referencePoints.insert(entity->getId(), *it);
     }

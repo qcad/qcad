@@ -391,10 +391,8 @@ RVector RBlockReferenceData::mapToBlock(const RVector& v) const {
     return ret;
 }
 
-QList<RVector> RBlockReferenceData::getInternalReferencePoints(
-        RS::ProjectionRenderingHint hint) const {
-
-    QList<RVector> ret;
+QList<RRefPoint> RBlockReferenceData::getInternalReferencePoints(RS::ProjectionRenderingHint hint) const {
+    QList<RRefPoint> ret;
 
     if (document == NULL) {
         return ret;
@@ -409,8 +407,7 @@ QList<RVector> RBlockReferenceData::getInternalReferencePoints(
         return ret;
     }
 
-    QSet<REntity::Id> ids =
-        document->queryBlockEntities(referencedBlockId);
+    QSet<REntity::Id> ids = document->queryBlockEntities(referencedBlockId);
     QSet<REntity::Id>::iterator it;
     for (it = ids.begin(); it != ids.end(); it++) {
         QSharedPointer<REntity> entity = queryEntity(*it);
@@ -424,11 +421,10 @@ QList<RVector> RBlockReferenceData::getInternalReferencePoints(
     return ret;
 }
 
-QList<RVector> RBlockReferenceData::getReferencePoints(
-        RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> RBlockReferenceData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
-    QList<RVector> ret;
+    QList<RRefPoint> ret;
     ret.append(position);
     return ret;
 }

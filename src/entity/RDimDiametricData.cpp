@@ -47,10 +47,8 @@ bool RDimDiametricData::isValid() const {
             chordPoint.isValid();
 }
 
-QList<RVector> RDimDiametricData::getReferencePoints(
-    RS::ProjectionRenderingHint hint) const {
-
-    QList<RVector> ret = RDimensionData::getReferencePoints(hint);
+QList<RRefPoint> RDimDiametricData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
+    QList<RRefPoint> ret = RDimensionData::getReferencePoints(hint);
 
     ret.append(getTextPosition());
     ret.append(chordPoint);

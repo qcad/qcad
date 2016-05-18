@@ -54,10 +54,10 @@ RBox RViewportData::getBoundingBox(bool ignoreEmpty) const {
     return RBox(position, width, height);
 }
 
-QList<RVector> RViewportData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> RViewportData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
-    QList<RVector> ret;
+    QList<RRefPoint> ret;
     ret.append(position);
     return ret;
 }

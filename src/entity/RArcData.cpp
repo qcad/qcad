@@ -35,16 +35,16 @@ RArcData::RArcData(const RVector& center, double radius, double startAngle,
     RArc(center, radius, startAngle, endAngle, reversed) {
 }
 
-QList<RVector> RArcData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> RArcData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
-    QList<RVector> ret;
+    QList<RRefPoint> ret;
     ret.append(center);
     ret.append(getStartPoint());
     ret.append(getEndPoint());
     ret.append(getMiddlePoint());
 
-    QList<RVector> p;
+    QList<RRefPoint> p;
     p.append(center + RVector(radius, 0));
     p.append(center + RVector(0, radius));
     p.append(center - RVector(radius, 0));

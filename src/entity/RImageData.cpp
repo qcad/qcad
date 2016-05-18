@@ -121,11 +121,10 @@ bool RImageData::intersectsWith(const RShape& shape) const {
     return false;
 }
 
-QList<RVector> RImageData::getReferencePoints(
-        RS::ProjectionRenderingHint hint) const {
+QList<RRefPoint> RImageData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
     Q_UNUSED(hint)
 
-    QList<RVector> ret;
+    QList<RRefPoint> ret;
     //ret.append(insertionPoint);
 
     QList<RLine> edges = getEdges();

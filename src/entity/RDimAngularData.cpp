@@ -55,10 +55,8 @@ bool RDimAngularData::isValid() const {
             dimArcPosition.isValid();
 }
 
-QList<RVector> RDimAngularData::getReferencePoints(
-    RS::ProjectionRenderingHint hint) const {
-
-    QList<RVector> ret = RDimensionData::getReferencePoints(hint);
+QList<RRefPoint> RDimAngularData::getReferencePoints(RS::ProjectionRenderingHint hint) const {
+    QList<RRefPoint> ret = RDimensionData::getReferencePoints(hint);
 
     ret.append(getTextPosition());
     ret.append(extensionLine1Start);
