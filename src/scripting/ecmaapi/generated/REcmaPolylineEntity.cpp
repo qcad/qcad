@@ -114,6 +114,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getSegmentAt, "getSegmentAt");
             
+            REcmaHelper::registerFunction(&engine, proto, isArcSegmentAt, "isArcSegmentAt");
+            
+            REcmaHelper::registerFunction(&engine, proto, getClosestSegment, "getClosestSegment");
+            
             REcmaHelper::registerFunction(&engine, proto, getBulgeAt, "getBulgeAt");
             
             REcmaHelper::registerFunction(&engine, proto, setBulgeAt, "setBulgeAt");
@@ -2508,6 +2512,138 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolylineEntity::getSegmentAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineEntity::isArcSegmentAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineEntity::isArcSegmentAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::isArcSegmentAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineEntity* self = 
+                        getSelf("isArcSegmentAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isArcSegmentAt(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.isArcSegmentAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::isArcSegmentAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolylineEntity::getClosestSegment
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolylineEntity::getClosestSegment", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolylineEntity::getClosestSegment";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolylineEntity* self = 
+                        getSelf("getClosestSegment", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPolylineEntity: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getClosestSegment(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolylineEntity.getClosestSegment().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolylineEntity::getClosestSegment", context, engine);
             return result;
         }
          QScriptValue

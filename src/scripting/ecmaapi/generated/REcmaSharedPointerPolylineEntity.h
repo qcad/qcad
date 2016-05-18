@@ -115,6 +115,12 @@
         getSegmentAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isArcSegmentAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getClosestSegment
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBulgeAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
