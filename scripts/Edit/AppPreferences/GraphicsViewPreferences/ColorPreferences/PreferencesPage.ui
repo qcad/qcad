@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>565</width>
-    <height>728</height>
+    <width>573</width>
+    <height>954</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,9 +20,9 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>-185</y>
-     <width>548</width>
-     <height>911</height>
+     <y>0</y>
+     <width>556</width>
+     <height>1011</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -445,6 +445,33 @@
         </widget>
        </item>
        <item row="4" column="0">
+        <widget class="QLabel" name="label_15">
+         <property name="text">
+          <string>Secondary reference points:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="RColorCombo" name="ReferencePointColor_2">
+         <property name="onlyFixed" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="showAlphaChannel" stdset="0">
+          <bool>true</bool>
+         </property>
+         <property name="color" stdset="0">
+          <color>
+           <red>0</red>
+           <green>0</green>
+           <blue>172</blue>
+          </color>
+         </property>
+         <property name="blackWhite" stdset="0">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
         <widget class="QLabel" name="label_8">
          <property name="minimumSize">
           <size>
@@ -460,7 +487,7 @@
          </property>
         </widget>
        </item>
-       <item row="4" column="1">
+       <item row="5" column="1">
         <widget class="RColorCombo" name="SelectionBoxColor">
          <property name="onlyFixed" stdset="0">
           <bool>true</bool>
@@ -469,7 +496,7 @@
           <bool>true</bool>
          </property>
          <property name="color" stdset="0">
-          <color alpha="255">
+          <color>
            <red>128</red>
            <green>0</green>
            <blue>0</blue>
@@ -480,7 +507,7 @@
          </property>
         </widget>
        </item>
-       <item row="5" column="0">
+       <item row="6" column="0">
         <widget class="QLabel" name="label_9">
          <property name="minimumSize">
           <size>
@@ -496,7 +523,7 @@
          </property>
         </widget>
        </item>
-       <item row="5" column="1">
+       <item row="6" column="1">
         <widget class="RColorCombo" name="SelectionBoxBackgroundColor">
          <property name="onlyFixed" stdset="0">
           <bool>true</bool>
@@ -516,7 +543,7 @@
          </property>
         </widget>
        </item>
-       <item row="6" column="0">
+       <item row="7" column="0">
         <widget class="QLabel" name="label_12">
          <property name="minimumSize">
           <size>
@@ -532,7 +559,7 @@
          </property>
         </widget>
        </item>
-       <item row="6" column="1">
+       <item row="7" column="1">
         <widget class="RColorCombo" name="SelectionBoxBackgroundCrossColor">
          <property name="onlyFixed" stdset="0">
           <bool>true</bool>
@@ -724,7 +751,7 @@
           <bool>true</bool>
          </property>
          <property name="color" stdset="0">
-          <color alpha="255">
+          <color>
            <red>127</red>
            <green>0</green>
            <blue>0</blue>
