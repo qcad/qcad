@@ -350,7 +350,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
             // right-click on entity can be used to show context menu:
             if (entityId!==-1) {
                 // show entity context menu:
-                var rightClickEntityContextMenu = RSettings.getBoolValue("ContextMenu/RightClickEntityContextMenu", false);
+                var rightClickEntityContextMenu = RSettings.getBoolValue("ContextMenu/RightClickEntityContextMenu", true);
                 if (rightClickEntityContextMenu) {
                     event.accept();
                     appWin.showContextMenu(entityId, event.getModelPosition());
@@ -384,7 +384,7 @@ DefaultAction.prototype.mouseReleaseEvent = function(event) {
 
         if (!handled) {
             // show context menu for empty space:
-            var rightClickContextMenu = RSettings.getBoolValue("ContextMenu/RightClickContextMenu", false);
+            var rightClickContextMenu = RSettings.getBoolValue("ContextMenu/RightClickContextMenu", true);
             if (rightClickContextMenu===true) {
                 event.accept();
                 appWin.showContextMenu(RObject.INVALID_ID, event.getModelPosition());
