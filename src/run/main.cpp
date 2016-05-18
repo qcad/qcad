@@ -297,7 +297,7 @@ int main(int argc, char *argv[]) {
 
     RDocumentInterface::deleteClipboard();
 
-    RDebug::printCounters();
+    //RDebug::printCounters();
 
     return ret;
 }
