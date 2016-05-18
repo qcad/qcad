@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<unit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:rs="http://www.ribbonsoft.com">
+  <class name="RRefPoint"
+  xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
+  hasShell="false" sharedPointerSupport="false" isQObject="false"
+  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+    <baseClass name="RVector" specifier="public" />
+    <enum name="Flag">
+      <value name="NoFlags" />
+      <value name="Secondary" />
+    </enum>
+    <constructor>
+      <variant />
+      <variant>
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+        <arg type="RRefPoint::Flags" typeName="RRefPoint::Flags"
+        name="f" isConst="false" />
+      </variant>
+      <variant>
+        <arg type="RVector &amp;" typeName="RVector" name="v"
+        isConst="true" />
+      </variant>
+      <variant>
+        <arg type="double" typeName="double" name="vx"
+        isConst="false" />
+        <arg type="double" typeName="double" name="vy"
+        isConst="false" />
+        <arg type="double" typeName="double" name="vz"
+        hasDefault="true" default="0.0" isConst="false" />
+        <arg type="bool" typeName="bool" name="valid_in"
+        hasDefault="true" default="true" isConst="false" />
+      </variant>
+    </constructor>
+    <method name="toVectorList" cppName="toVectorList"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RVector &gt;"
+      isPureVirtual="false">
+        <arg type="QList &lt; RRefPoint &gt; &amp;"
+        typeName="QList &lt; RRefPoint &gt;" name="list"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="toRefPointList" cppName="toRefPointList"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; RRefPoint &gt;"
+      isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="list"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="setFlag" cppName="setFlag" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RRefPoint::Flag" typeName="RRefPoint::Flag"
+        name="flag" isConst="false" />
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="getFlag" cppName="getFlag" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RRefPoint::Flag" typeName="RRefPoint::Flag"
+        name="flag" isConst="false" />
+      </variant>
+    </method>
+    <method name="getFlags" cppName="getFlags" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RRefPoint::Flags"
+      isPureVirtual="false" />
+    </method>
+  </class>
+</unit>
