@@ -137,6 +137,11 @@ CommandLine.init = function(basePath) {
             return;
         }
 
+        // handle math expressions preview,
+        if (command.startsWith("=")) {
+            return;
+        }
+
         if (di.getClickMode() !== RAction.PickCoordinate) {
             return;
         }
@@ -192,6 +197,34 @@ CommandLine.init = function(basePath) {
             if (e.isAccepted()) {
                 //appWin.handleUserCommand(command);
                 leCommand.clear();
+                return;
+            }
+
+            // handle math expressions and leave result in command line,
+            // or, if error, print error and leave command line unchanged
+            if (command.startsWith("=")) {
+                // remove leading '='
+                command = command.slice(1);
+                var prefix = "=";
+                var relprefix = RSettings.getStringValue(
+                            "Input/RelativeCoordinatePrefix",
+                            String.fromCharCode(64)  // @ (doxygen can't cope with an @ here)
+                );
+                if (command.endsWith(" ")) {
+                    prefix = "";
+                } else if (command.endsWith(relprefix)) {
+                    command = command.replace(relprefix, "");
+                    prefix = relprefix;
+                }
+
+                var val = RMath.eval(command);
+                if (isNumber(val)) {
+                    appWin.handleUserCommand("=" + command);
+                    leCommand.text = prefix + val;
+                } else {
+                    var er = RMath.getError();
+                    EAction.handleUserWarning(qsTr("Invalid value:") + " '=%1' -  %2".arg(command).arg(er));
+                }
                 return;
             }
 

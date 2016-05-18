@@ -16,6 +16,7 @@ var credits =
         [ "Robert S.",        "Direct distance entry<br>" +
                               "Selecting overlapping entities<br>" +
                               "Polyline area calculation<br>" +
+                              "Command line calculator<br>" +
                               "Snap > X/Y from Points<br>" +
                               "Snap > Y/X from Points<br>" +
                               "Snap > Distance Manual<br>" +
