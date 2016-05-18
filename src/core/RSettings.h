@@ -96,6 +96,8 @@ public:
     static QFont getStatusBarFont();
 
     static RColor getSelectionColor();
+    static RColor getReferencePointColor();
+    static RColor getSecondaryReferencePointColor();
 
     static bool getHighResolutionGraphicsView();
     static bool getAutoScaleGrid();
@@ -231,6 +233,8 @@ private:
     static QFont* infoLabelFont;
     static QFont* statusBarFont;
     static RColor* selectionColor;
+    static RColor* referencePointColor;
+    static RColor* secondaryReferencePointColor;
     static int darkGuiBackground;
     static int snapRange;
     static int pickRange;

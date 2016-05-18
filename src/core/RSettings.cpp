@@ -45,6 +45,8 @@ QFont* RSettings::snapLabelFont = NULL;
 QFont* RSettings::infoLabelFont = NULL;
 QFont* RSettings::statusBarFont = NULL;
 RColor* RSettings::selectionColor = NULL;
+RColor* RSettings::referencePointColor = NULL;
+RColor* RSettings::secondaryReferencePointColor = NULL;
 int RSettings::darkGuiBackground = -1;
 int RSettings::snapRange = -1;
 int RSettings::pickRange = -1;
@@ -474,10 +476,23 @@ QFont RSettings::getStatusBarFont() {
 
 RColor RSettings::getSelectionColor() {
     if (selectionColor==NULL) {
-        // get application's default font (pixel size is -1, point size e.g. 10pt):
         selectionColor = new RColor(getColor("GraphicsViewColors/SelectionColor", RColor(164,70,70,128)));
     }
     return *selectionColor;
+}
+
+RColor RSettings::getReferencePointColor() {
+    if (referencePointColor==NULL) {
+        referencePointColor = new RColor(getColor("GraphicsViewColors/ReferencePointColor", RColor(0,0,172)));
+    }
+    return *referencePointColor;
+}
+
+RColor RSettings::getSecondaryReferencePointColor() {
+    if (secondaryReferencePointColor==NULL) {
+        secondaryReferencePointColor = new RColor(getColor("GraphicsViewColors/SecondaryReferencePointColor", RColor(0,128,128)));
+    }
+    return *secondaryReferencePointColor;
 }
 
 bool RSettings::getAutoScaleGrid() {
@@ -1066,6 +1081,18 @@ void RSettings::resetCache() {
     if (statusBarFont!=NULL) {
         delete statusBarFont;
         statusBarFont = NULL;
+    }
+    if (selectionColor!=NULL) {
+        delete selectionColor;
+        selectionColor = NULL;
+    }
+    if (referencePointColor!=NULL) {
+        delete referencePointColor;
+        referencePointColor = NULL;
+    }
+    if (secondaryReferencePointColor!=NULL) {
+        delete secondaryReferencePointColor;
+        secondaryReferencePointColor = NULL;
     }
     snapRange = -1;
     zeroWeightWeight = -1;
