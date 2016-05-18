@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>652</width>
-    <height>886</height>
+    <height>929</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,7 @@
      <x>0</x>
      <y>0</y>
      <width>650</width>
-     <height>884</height>
+     <height>927</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -683,6 +683,65 @@
          <property name="text">
           <string>Anti-aliasing on by default</string>
          </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>Maximum number of reference points displayed:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QComboBox" name="MaxReferencePoints">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">1000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">2000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">3000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">4000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">5000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">10000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">25000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">50000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">100000</string>
+          </property>
+         </item>
         </widget>
        </item>
       </layout>
