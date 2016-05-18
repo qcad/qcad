@@ -27,10 +27,10 @@ QList<RVector> RSnapReference::snapEntity(QSharedPointer<REntity> entity,
     Q_UNUSED(queryBox);
     Q_UNUSED(view);
 
-    QList<RVector> ret = entity->getInternalReferencePoints();
+    QList<RRefPoint> ret = entity->getInternalReferencePoints();
     QSharedPointer<RBlockReferenceEntity> blockRef = entity.dynamicCast<RBlockReferenceEntity>();
     if (!blockRef.isNull()) {
         ret.append(entity->getReferencePoints());
     }
-    return ret;
+    return RRefPoint::toVectorList(ret);
 }
