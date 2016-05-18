@@ -1754,7 +1754,6 @@ void RDocument::clearSpatialIndices() {
  * block is changed).
  */
 void RDocument::rebuildSpatialIndex() {
-    qDebug() << "rebuildSpatialIndex";
     clearSpatialIndices();
 
     QSet<REntity::Id> result = storage.queryAllEntities(false, true);
