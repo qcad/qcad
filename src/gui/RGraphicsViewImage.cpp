@@ -315,8 +315,14 @@ void RGraphicsViewImage::updateImage() {
     paintRelativeZero(graphicsBufferWithPreview);
 }
 
-void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RVector& pos, bool highlight) {
-    RColor color = RSettings::getColor("GraphicsViewColors/ReferencePointColor", RColor(0,0,172));
+void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RVector& pos, bool highlight, RRefPoint::Flags flags) {
+    RColor color;
+    if (flags==RRefPoint::Secondary) {
+        color = RSettings::getSecondaryReferencePointColor();
+    }
+    else {
+        color = RSettings::getReferencePointColor();
+    }
     if (highlight) {
         color = RColor::getHighlighted(color, backgroundColor, 100);
     }
@@ -610,14 +616,15 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
     delete painter;
 
     // paint reference points of selected entities:
-    QMultiMap<REntity::Id, RVector>& referencePoints = scene->getReferencePoints();
-    if (!referencePoints.isEmpty() && referencePoints.count()<1000) {
+    QMultiMap<REntity::Id, RRefPoint>& referencePoints = scene->getReferencePoints();
+    int num = referencePoints.count();
+    if (num!=0 && num<RSettings::getIntValue("GraphicsView/MaxReferencePoints", 1000)) {
         QPainter gbPainter(&graphicsBuffer);
+        QMultiMap<REntity::Id, RRefPoint>::iterator it;
 
-        QMultiMap<REntity::Id, RVector>::iterator it;
         for (it = referencePoints.begin(); it != referencePoints.end(); ++it) {
             RVector p = mapToView(it.value());
-            paintReferencePoint(gbPainter, p, false);
+            paintReferencePoint(gbPainter, p, false, it.value().getFlags());
         }
 
         gbPainter.end();
