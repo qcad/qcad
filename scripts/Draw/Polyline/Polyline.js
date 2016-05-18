@@ -116,20 +116,18 @@ Polyline.prototype.getClosestSegment = function(pos) {
         return undefined;
     }
 
-    var ret = -1;
-
-    var minDistance = -1;
-    var numSegments = this.polylineEntity.countSegments();
-    for (var i=0; i<numSegments; i++) {
-        var seg = this.polylineEntity.getSegmentAt(i);
-        var distance = seg.getDistanceTo(pos);
-        if (minDistance==-1 || distance < minDistance) {
-            minDistance = distance;
-            this.previousNode = seg.getStartPoint();
-            this.nextNode = seg.getEndPoint();
-            ret = i;
-        }
+    var i = this.polylineEntity.getClosestSegment(pos);
+    if (i<0) {
+        return undefined;
     }
 
-    return ret;
+    var seg = this.polylineEntity.getSegmentAt(i);
+    if (isNull(seg)) {
+        return undefined;
+    }
+
+    this.previousNode = seg.getStartPoint();
+    this.nextNode = seg.getEndPoint();
+
+    return i;
 };
