@@ -21,8 +21,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>556</width>
-     <height>1011</height>
+     <width>571</width>
+     <height>952</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -452,7 +452,7 @@
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="RColorCombo" name="ReferencePointColor_2">
+        <widget class="RColorCombo" name="SecondaryReferencePointColor">
          <property name="onlyFixed" stdset="0">
           <bool>true</bool>
          </property>
@@ -462,8 +462,8 @@
          <property name="color" stdset="0">
           <color>
            <red>0</red>
-           <green>0</green>
-           <blue>172</blue>
+           <green>128</green>
+           <blue>128</blue>
           </color>
          </property>
          <property name="blackWhite" stdset="0">
