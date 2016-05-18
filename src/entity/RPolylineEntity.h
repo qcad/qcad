@@ -155,6 +155,14 @@ public:
         return data.getSegmentAt(i);
     }
 
+    bool isArcSegmentAt(int i) const {
+        return data.isArcSegmentAt(i);
+    }
+
+    int getClosestSegment(const RVector& point) const {
+        return data.getClosestSegment(point);
+    }
+
     double getBulgeAt(int i) const {
         return data.getBulgeAt(i);
     }
