@@ -154,6 +154,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="insertVertexAt" cppName="insertVertexAt"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="vertex"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="getVertexAt" cppName="getVertexAt"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

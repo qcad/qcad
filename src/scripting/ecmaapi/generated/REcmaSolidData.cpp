@@ -1326,11 +1326,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QList < RVector >'
-    QList < RVector > cppResult =
+    // return type 'QList < RRefPoint >'
+    QList < RRefPoint > cppResult =
         
                self->getReferencePoints();
-        // return type: QList < RVector >
+        // return type: QList < RRefPoint >
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);
             
@@ -1358,11 +1358,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QList < RVector >'
-    QList < RVector > cppResult =
+    // return type 'QList < RRefPoint >'
+    QList < RRefPoint > cppResult =
         
                self->getReferencePoints(a0);
-        // return type: QList < RVector >
+        // return type: QList < RRefPoint >
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);
             

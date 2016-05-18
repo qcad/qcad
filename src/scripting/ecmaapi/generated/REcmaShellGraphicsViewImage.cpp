@@ -6561,7 +6561,7 @@
     
     
       void REcmaShellGraphicsViewImage::paintReferencePoint(
-                QPainter & painter, const RVector & pos, bool highlight
+                QPainter & painter, const RVector & pos, bool highlight, RRefPoint::Flags flags
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::paintReferencePoint", engine);
@@ -6574,7 +6574,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=3*/
+                    || _q_function.property("length").toInt32()!=4*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RGraphicsViewImage::paintReferencePoint";
@@ -6587,7 +6587,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RGraphicsViewImage::paintReferencePoint(
-                            painter, pos, highlight
+                            painter, pos, highlight, flags
                         );
 
                         // block recursion again:
@@ -6638,6 +6638,15 @@
         << qScriptValueFromValue(engine, 
 
         highlight
+        )
+      
+
+
+
+    // type: RRefPoint::Flags, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        flags
         )
       
                             )
@@ -11390,6 +11399,94 @@
     a1
         ,
     a2);
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: QPainter */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(2).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(3).isNumber()
+        ) /* type: RRefPoint::Flags */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    QPainter*
+                    ap0 =
+                    qscriptvalue_cast<
+                    QPainter*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 0 is not of type QPainter*.",
+                               context);                    
+                    }
+                    QPainter& a0 = *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RGraphicsViewImage: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+                    // argument isStandardType
+                    bool
+                    a2 =
+                    (bool)
+                    
+                    context->argument( 2 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    RRefPoint::Flags
+                    a3 =
+                    (RRefPoint::Flags)
+                    (int)
+                    context->argument( 3 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->RGraphicsViewImage::paintReferencePoint(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
     } else
 
 

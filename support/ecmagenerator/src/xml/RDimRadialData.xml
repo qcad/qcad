@@ -46,7 +46,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getReferencePoints" cppName="getReferencePoints"
     specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
-      <variant returnType="QList &lt; RVector &gt;"
+      <variant returnType="QList &lt; RRefPoint &gt;"
       isPureVirtual="false">
         <arg type="RS::ProjectionRenderingHint"
         typeName="RS::ProjectionRenderingHint" name="hint"

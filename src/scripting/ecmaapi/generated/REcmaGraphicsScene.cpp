@@ -2295,11 +2295,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'QMultiMap < REntity::Id , RVector > &'
-    QMultiMap < REntity::Id , RVector > & cppResult =
+    // return type 'QMultiMap < REntity::Id , RRefPoint > &'
+    QMultiMap < REntity::Id , RRefPoint > & cppResult =
         
                self->getReferencePoints();
-        // return type: QMultiMap < REntity::Id , RVector > &
+        // return type: QMultiMap < REntity::Id , RRefPoint > &
                 // reference
                 result = engine->newVariant(
                 QVariant::fromValue(&cppResult));

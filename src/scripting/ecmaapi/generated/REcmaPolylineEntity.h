@@ -98,6 +98,9 @@
         insertVertex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        insertVertexAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getVertexAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -200,6 +200,16 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="RColor" isPureVirtual="false" />
     </method>
+    <method name="getReferencePointColor"
+    cppName="getReferencePointColor" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false" />
+    </method>
+    <method name="getSecondaryReferencePointColor"
+    cppName="getSecondaryReferencePointColor" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RColor" isPureVirtual="false" />
+    </method>
     <method name="getHighResolutionGraphicsView"
     cppName="getHighResolutionGraphicsView" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

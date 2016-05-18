@@ -262,7 +262,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getReferencePoints" cppName="getReferencePoints"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="QMultiMap &lt; REntity::Id , RVector &gt; &amp;"
+      <variant returnType="QMultiMap &lt; REntity::Id , RRefPoint &gt; &amp;"
       isPureVirtual="false" />
     </method>
     <method name="dump" cppName="dump" specifier="public"

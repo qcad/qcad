@@ -114,6 +114,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, insertVertex, "insertVertex");
             
+            REcmaHelper::registerFunction(&engine, proto, insertVertexAt, "insertVertexAt");
+            
             REcmaHelper::registerFunction(&engine, proto, removeFirstVertex, "removeFirstVertex");
             
             REcmaHelper::registerFunction(&engine, proto, removeLastVertex, "removeLastVertex");
@@ -1580,6 +1582,73 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaPolyline::insertVertex", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaPolyline::insertVertexAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPolyline::insertVertexAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPolyline::insertVertexAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("insertVertexAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->insertVertexAt(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.insertVertexAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPolyline::insertVertexAt", context, engine);
             return result;
         }
          QScriptValue

@@ -185,6 +185,7 @@ HEADERS += \
     $$PWD/REcmaRay.h \
     $$PWD/REcmaRayData.h \
     $$PWD/REcmaRayEntity.h \
+    $$PWD/REcmaRefPoint.h \
     $$PWD/REcmaRestrictAngleLength.h \
     $$PWD/REcmaRestrictHorizontal.h \
     $$PWD/REcmaRestrictOff.h \
@@ -537,6 +538,7 @@ SOURCES += \
     $$PWD/REcmaRay.cpp \
     $$PWD/REcmaRayData.cpp \
     $$PWD/REcmaRayEntity.cpp \
+    $$PWD/REcmaRefPoint.cpp \
     $$PWD/REcmaRestrictAngleLength.cpp \
     $$PWD/REcmaRestrictHorizontal.cpp \
     $$PWD/REcmaRestrictOff.cpp \

@@ -121,7 +121,7 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportCurrentEntity</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>unexportEntity</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
 
-    <function><type><name>QMultiMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>getReferencePoints</name><parameter_list>()</parameter_list> <block>{
+    <function><type><name>QMultiMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>RRefPoint</name></argument>&gt;</argument_list></name>&amp;</type> <name>getReferencePoints</name><parameter_list>()</parameter_list> <block>{
         <return>return <expr><name>referencePoints</name></expr>;</return>
     }</block></function>
 
@@ -153,7 +153,7 @@
      * Used for drawing reference points.
      * TODO: store selection status of reference points.
      */</comment>
-    <decl_stmt><decl><type><name>QMultiMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>RVector</name></argument>&gt;</argument_list></name></type> <name>referencePoints</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>QMultiMap<argument_list>&lt;<argument><name><name>REntity</name>::<name>Id</name></name></argument>, <argument><name>RRefPoint</name></argument>&gt;</argument_list></name></type> <name>referencePoints</name></decl>;</decl_stmt>
 
 </protected><private>private:
     <decl_stmt><decl><type><name>bool</name></type> <name>deleting</name></decl>;</decl_stmt>

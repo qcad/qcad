@@ -592,7 +592,8 @@
     
     
       void paintReferencePoint(
-                QPainter & painter, const RVector & pos, bool highlight
+                QPainter & painter, const RVector & pos, bool highlight, RRefPoint::Flags flags
+        = RRefPoint :: NoFlags
             );
         
     

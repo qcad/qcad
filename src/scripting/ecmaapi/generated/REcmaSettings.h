@@ -151,6 +151,12 @@
         getSelectionColor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getReferencePointColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getSecondaryReferencePointColor
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getHighResolutionGraphicsView
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

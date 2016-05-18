@@ -136,6 +136,10 @@
         <expr_stmt><expr><name>data</name>.<call><name>insertVertex</name><argument_list>(<argument><expr><name>index</name></expr></argument>, <argument><expr><name>vertex</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>insertVertexAt</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>vertex</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>insertVertexAt</name><argument_list>(<argument><expr><name>vertex</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>RVector</name></type> <name>getVertexAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>data</name>.<call><name>getVertexAt</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>

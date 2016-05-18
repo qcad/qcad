@@ -94,6 +94,9 @@
         insertVertex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        insertVertexAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         removeFirstVertex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

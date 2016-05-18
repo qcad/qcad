@@ -2,7 +2,7 @@
 
 echo "srcml to xml ..."
 
-maxThreads=32
+maxThreads=16
 SPATH=$(pwd)
 if [ -z $1 ]; then
     scope="src"
@@ -20,6 +20,7 @@ do
     basename=${srcmlfile%%.*}
     xmlfile="$scope/xml/$basename.xml"
     #if [ "$f" -nt "$SPATH/$xmlfile" -o "../../srcml2xml.xsl" -nt "$SPATH/$xmlfile" -o ! -s "$SPATH/$xmlfile" ]; then
+        sleep 0.01
         echo "processing $srcmlfile ..."
         (
             xsltproc "../../srcml2xml.xsl" "$f" >"$SPATH/$xmlfile"
@@ -34,7 +35,6 @@ do
         let threads=threads+1
         if [ $threads -eq $maxThreads ]; then
             echo "waiting for threads to finish..."
-            sleep 0.1
             wait
             threads=0
         fi
