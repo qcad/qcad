@@ -139,6 +139,7 @@ public:
     virtual double getDistanceTo(const RVector& point, bool limited = true, double strictRange = RMAXDOUBLE) const;
 
     int getClosestSegment(const RVector& point) const;
+    int getClosestVertex(const RVector& point) const;
 
     virtual bool move(const RVector& offset);
     virtual bool rotate(double rotation, const RVector& center = RDEFAULT_RVECTOR);

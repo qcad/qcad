@@ -1332,6 +1332,10 @@ int RPolyline::getClosestSegment(const RVector& point) const {
     return ret;
 }
 
+int RPolyline::getClosestVertex(const RVector& point) const {
+    return point.getClosestIndex(getVertices());
+}
+
 bool RPolyline::move(const RVector& offset) {
     for (int i=0; i<vertices.size(); i++) {
         vertices[i].move(offset);
