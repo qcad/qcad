@@ -168,6 +168,10 @@
         <return>return <expr><name>data</name>.<call><name>getClosestSegment</name><argument_list>(<argument><expr><name>point</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>int</name></type> <name>getClosestVertex</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>point</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <expr_stmt><expr><name>data</name>.<call><name>getClosestVertex</name><argument_list>(<argument><expr><name>point</name></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+    }</block></function>
+
     <function><type><name>double</name></type> <name>getBulgeAt</name><parameter_list>(<param><decl><type><name>int</name></type> <name>i</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>data</name>.<call><name>getBulgeAt</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr>;</return>
     }</block></function>

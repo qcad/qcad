@@ -250,6 +250,9 @@
         getClosestSegment
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getClosestVertex
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         move
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

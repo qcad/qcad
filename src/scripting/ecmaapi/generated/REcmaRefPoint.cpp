@@ -651,6 +651,52 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RRefPoint::Flags */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+                    // argument isStandardType
+                    RRefPoint::Flags
+                    a1 =
+                    (RRefPoint::Flags)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < RRefPoint >'
+    QList < RRefPoint > cppResult =
+        RRefPoint::
+       toRefPointList(a0
+        ,
+    a1);
+        // return type: QList < RRefPoint >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RRefPoint.toRefPointList().",
                    context);

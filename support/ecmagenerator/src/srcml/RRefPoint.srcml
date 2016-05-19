@@ -33,10 +33,10 @@
         <return>return <expr><name>ret</name></expr>;</return>
     }</block></function>
 
-    <function><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>RRefPoint</name></argument>&gt;</argument_list></name></type> <name>toRefPointList</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>)</parameter_list> <block>{
+    <function><type><name>static</name> <name>QList<argument_list>&lt;<argument><name>RRefPoint</name></argument>&gt;</argument_list></name></type> <name>toRefPointList</name><parameter_list>(<param><decl><type><name>const</name> <name>QList<argument_list>&lt;<argument><name>RVector</name></argument>&gt;</argument_list></name>&amp;</type> <name>list</name></decl></param>, <param><decl><type><name><name>RRefPoint</name>::<name>Flags</name></name></type> <name>flags</name> =<init> <expr><name><name>RRefPoint</name>::<name>NoFlags</name></name></expr></init></decl></param>)</parameter_list> <block>{
         <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RRefPoint</name></argument>&gt;</argument_list></name></type> <name>ret</name></decl>;</decl_stmt>
         <for>for (<init><expr><type><name>int</name></type> <name>i</name>=<init><expr>0</expr></init></expr>;</init> <condition><expr><name>i</name>&lt;<name>list</name>.<call><name>length</name><argument_list>()</argument_list></call></expr>;</condition> <incr><expr><name>i</name>++</expr></incr>) <block>{
-            <expr_stmt><expr><name>ret</name>.<call><name>append</name><argument_list>(<argument><expr><name>list</name>.<call><name>at</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
+            <expr_stmt><expr><name>ret</name>.<call><name>append</name><argument_list>(<argument><expr><call><name>RRefPoint</name><argument_list>(<argument><expr><name>list</name>.<call><name>at</name><argument_list>(<argument><expr><name>i</name></expr></argument>)</argument_list></call></expr></argument>, <argument><expr><name>flags</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
         }</block></for>
         <return>return <expr><name>ret</name></expr>;</return>
     }</block></function>

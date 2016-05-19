@@ -52,6 +52,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QList &lt; RVector &gt; &amp;"
         typeName="QList &lt; RVector &gt;" name="list"
         isConst="true" />
+        <arg type="RRefPoint::Flags" typeName="RRefPoint::Flags"
+        name="flags" hasDefault="true"
+        default="RRefPoint :: NoFlags" isConst="false" />
       </variant>
     </method>
     <method name="isSecondary" cppName="isSecondary"

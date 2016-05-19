@@ -220,6 +220,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getClosestSegment, "getClosestSegment");
             
+            REcmaHelper::registerFunction(&engine, proto, getClosestVertex, "getClosestVertex");
+            
             REcmaHelper::registerFunction(&engine, proto, move, "move");
             
             REcmaHelper::registerFunction(&engine, proto, rotate, "rotate");
@@ -5146,6 +5148,78 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getClosestSegment", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::getClosestVertex
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getClosestVertex", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getClosestVertex";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getClosestVertex", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if (ap0 == NULL) {
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a0 = 
+                    *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'int'
+    int cppResult =
+        
+               self->getClosestVertex(a0);
+        // return type: int
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getClosestVertex().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getClosestVertex", context, engine);
             return result;
         }
          QScriptValue

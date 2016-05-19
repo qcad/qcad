@@ -122,6 +122,9 @@
         getClosestSegment
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getClosestVertex
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getBulgeAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
