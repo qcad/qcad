@@ -73,7 +73,7 @@ QString RDxfExporter::getCorrectedFileName(const QString& fileName, const QStrin
 }
 
 bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter, bool setFileName) {
-    qDebug() << "RDxfExporter::exportFile";
+    //qDebug() << "RDxfExporter::exportFile";
 
     if (nameFilter.contains("min")) {
         minimalistic = true;
@@ -108,11 +108,11 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
 
     if (!minimalistic) {
         // Header
-        qDebug() << "RDxfExporter::exportFile: header";
+        //qDebug() << "RDxfExporter::exportFile: header";
         dxf.writeHeader(*dw);
 
         // Variables
-        qDebug() << "RDxfExporter::exportFile: variables";
+        //qDebug() << "RDxfExporter::exportFile: variables";
         writeVariables();
 
         // end header
@@ -120,17 +120,17 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     }
 
     // Section TABLES
-    qDebug() << "RDxfExporter::exportFile: tables";
+    //qDebug() << "RDxfExporter::exportFile: tables";
     dw->sectionTables();
 
     // VPORT:
     if (!minimalistic) {
-        qDebug() << "RDxfExporter::exportFile: vport";
+        //qDebug() << "RDxfExporter::exportFile: vport";
         dxf.writeVPort(*dw);
     }
 
     // Line types:
-    qDebug() << "RDxfExporter::exportFile: linetypes";
+    //qDebug() << "RDxfExporter::exportFile: linetypes";
     if (minimalistic) {
         QSharedPointer<RLinetype> lt = document->queryLinetype("CONTINUOUS");
         if (!lt.isNull()) {
@@ -140,14 +140,14 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     }
     else {
         QStringList lts = document->getLinetypeNames().toList();
-        qDebug() << "RDxfExporter::exportFile: linetypes table";
+        //qDebug() << "RDxfExporter::exportFile: linetypes table";
         dw->tableLinetypes(lts.size());
         // continuous must always be the first LTYPE:
         QSharedPointer<RLinetype> lt = document->queryLinetype("CONTINUOUS");
         if (!lt.isNull()) {
             writeLinetype(lt->getPattern());
         }
-        qDebug() << "RDxfExporter::exportFile: linetypes loop";
+        //qDebug() << "RDxfExporter::exportFile: linetypes loop";
         for (int i=0; i<lts.size(); i++) {
             if (lts[i].toUpper()=="CONTINUOUS") {
                 continue;
@@ -158,11 +158,11 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
             }
         }
     }
-    qDebug() << "RDxfExporter::exportFile: linetypes table end";
+    //qDebug() << "RDxfExporter::exportFile: linetypes table end";
     dw->tableEnd();
 
     // Layers:
-    qDebug() << "RDxfExporter::exportFile: layers";
+    //qDebug() << "RDxfExporter::exportFile: layers";
     QStringList layerNames;
     if (minimalistic) {
         layerNames.append("0");
@@ -182,7 +182,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
 
     if (!minimalistic) {
         // STYLE:
-        qDebug() << "writing styles...";
+        //qDebug() << "writing styles...";
         QList<DL_StyleData> uniqueTextStyles;
 
         QString dimFont;
@@ -240,19 +240,19 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
 
     // VIEW:
     if (!minimalistic) {
-        qDebug() << "writing views...";
+        //qDebug() << "writing views...";
         dxf.writeView(*dw);
     }
 
     // UCS:
     if (!minimalistic) {
-        qDebug() << "writing ucs...";
+        //qDebug() << "writing ucs...";
         dxf.writeUcs(*dw);
     }
 
     // Appid:
     if (!minimalistic) {
-        qDebug() << "writing appid...";
+        //qDebug() << "writing appid...";
         dw->tableAppid(1);
         dxf.writeAppid(*dw, "ACAD");
         dxf.writeAppid(*dw, "QCAD");
@@ -261,7 +261,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
 
     // DIMSTYLE:
     if (!minimalistic) {
-        qDebug() << "writing dim styles...";
+        //qDebug() << "writing dim styles...";
         dxf.writeDimStyle(*dw,
                           document->getKnownVariable(RS::DIMASZ, 2.5).toDouble(),
                           document->getKnownVariable(RS::DIMEXE, 0.625).toDouble(),
@@ -274,11 +274,11 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     // BLOCK_RECORD:
     QStringList blockNames = document->getBlockNames().toList();
     if (exportVersion!=DL_Codes::AC1009 && exportVersion!=DL_Codes::AC1009_MIN) {
-        qDebug() << "writing block records...";
+        //qDebug() << "writing block records...";
         dxf.writeBlockRecord(*dw);
 
         for (int i=0; i<blockNames.size(); ++i) {
-            qDebug() << "writing block record: " << blockNames[i];
+            //qDebug() << "writing block record: " << blockNames[i];
             if (blockNames[i].startsWith("*")) {
                 continue;
             }
@@ -296,11 +296,11 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     }
 
     // end of tables:
-    qDebug() << "writing end of section TABLES...";
+    //qDebug() << "writing end of section TABLES...";
     dw->sectionEnd();
 
     // Section BLOCKS:
-    qDebug() << "writing blocks...";
+    //qDebug() << "writing blocks...";
     dw->sectionBlocks();
 
     if (exportVersion!=DL_Codes::AC1009 && exportVersion!=DL_Codes::AC1009_MIN) {
@@ -314,7 +314,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
 
     //if (!minimalistic) {
         for (int i=0; i<blockNames.size(); ++i) {
-            qDebug() << "writing block: " << blockNames[i];
+            //qDebug() << "writing block: " << blockNames[i];
             if (blockNames[i].startsWith("*") && !blockNames[i].startsWith("*X")) {
                 continue;
             }
@@ -329,7 +329,7 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     dw->sectionEnd();
 
     // Section ENTITIES:
-    qDebug() << "writing section ENTITIES...";
+    //qDebug() << "writing section ENTITIES...";
     dw->sectionEntities();
 
     QSet<REntity::Id> blockEntityIds = document->queryBlockEntities(document->getModelSpaceBlockId());
@@ -340,11 +340,11 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
     for (int i=0; i<list.size(); i++) {
         writeEntity(list[i]);
     }
-    qDebug() << "writing end of section ENTITIES...";
+    //qDebug() << "writing end of section ENTITIES...";
     dw->sectionEnd();
 
     if (exportVersion!=DL_Codes::AC1009 && exportVersion!=DL_Codes::AC1009_MIN) {
-        qDebug() << "writing section OBJECTS...";
+        //qDebug() << "writing section OBJECTS...";
         dxf.writeObjects(*dw, "QCAD_OBJECTS");
 
         if (!minimalistic) {
@@ -421,21 +421,21 @@ bool RDxfExporter::exportFile(const QString& fileName, const QString& nameFilter
                 written.append(file);
             }
         }
-        qDebug() << "writing end of section OBJECTS...";
+        //qDebug() << "writing end of section OBJECTS...";
         dxf.writeObjectsEnd(*dw);
     }
 
-    qDebug() << "writing EOF...";
+    //qDebug() << "writing EOF...";
     dw->dxfEOF();
 
-    qDebug() << "RDxfExporter::exportFile: close";
+    //qDebug() << "RDxfExporter::exportFile: close";
     dw->close();
 
-    qDebug() << "RDxfExporter::exportFile: delete";
+    //qDebug() << "RDxfExporter::exportFile: delete";
     delete dw;
     dw = NULL;
 
-    qDebug() << "RDxfExporter::exportFile: OK";
+    //qDebug() << "RDxfExporter::exportFile: OK";
 
     // check if file was actually written. Windows might not write
     // any output without reporting an error.
