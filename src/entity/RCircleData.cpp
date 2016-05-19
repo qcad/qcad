@@ -38,11 +38,11 @@ QList<RRefPoint> RCircleData::getReferencePoints(RS::ProjectionRenderingHint hin
     Q_UNUSED(hint)
 
     QList<RRefPoint> ret;
-    ret.append(center);
-    ret.append(center + RVector(radius, 0));
-    ret.append(center + RVector(0, radius));
-    ret.append(center - RVector(radius, 0));
-    ret.append(center - RVector(0, radius));
+    ret.append(RRefPoint(center, RRefPoint::Center));
+    ret.append(RRefPoint(center + RVector(radius, 0), RRefPoint::Secondary));
+    ret.append(RRefPoint(center + RVector(0, radius), RRefPoint::Secondary));
+    ret.append(RRefPoint(center - RVector(radius, 0), RRefPoint::Secondary));
+    ret.append(RRefPoint(center - RVector(0, radius), RRefPoint::Secondary));
     return ret;
 }
 

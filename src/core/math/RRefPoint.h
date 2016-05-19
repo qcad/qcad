@@ -32,10 +32,10 @@ public:
         return ret;
     }
 
-    static QList<RRefPoint> toRefPointList(const QList<RVector>& list) {
+    static QList<RRefPoint> toRefPointList(const QList<RVector>& list, RRefPoint::Flags flags = RRefPoint::NoFlags) {
         QList<RRefPoint> ret;
         for (int i=0; i<list.length(); i++) {
-            ret.append(list.at(i));
+            ret.append(RRefPoint(list.at(i), flags));
         }
         return ret;
     }

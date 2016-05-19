@@ -40,12 +40,12 @@ QList<RRefPoint> REllipseData::getReferencePoints(RS::ProjectionRenderingHint hi
 
     QList<RRefPoint> ret;
 
-    ret.append(center);
-    ret.append(center+majorPoint);
-    ret.append(center-majorPoint);
-    ret.append(center+getMinorPoint());
-    ret.append(center-getMinorPoint());
-    ret.append(RRefPoint::toRefPointList(getFoci()));
+    ret.append(RRefPoint(center, RRefPoint::Center));
+    ret.append(RRefPoint(center+majorPoint, RRefPoint::Secondary));
+    ret.append(RRefPoint(center-majorPoint, RRefPoint::Secondary));
+    ret.append(RRefPoint(center+getMinorPoint(), RRefPoint::Secondary));
+    ret.append(RRefPoint(center-getMinorPoint(), RRefPoint::Secondary));
+    ret.append(RRefPoint::toRefPointList(getFoci(), RRefPoint::Secondary));
 
     if (!isFullEllipse()) {
         ret.append(getStartPoint());
