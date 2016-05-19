@@ -1943,7 +1943,7 @@ EAction.getEntityIdUnderCursor = function(di, event, range) {
     range = view.mapDistanceFromView(range);
 
     var strictRange = view.mapDistanceFromView(10);
-    return di.getClosestEntity(event.getModelPosition(), range, strictRange, false);
+    return di.getClosestEntity(event.getModelPosition(), range, strictRange, true);
 };
 
 /**
@@ -1964,7 +1964,7 @@ EAction.getEntityIdsUnderCursor = function(di, event, range) {
     range = view.mapDistanceFromView(range);
 
     var doc = di.getDocument();
-    return doc.queryIntersectedEntitiesXY(new RBox(event.getModelPosition(), range), true, false);
+    return doc.queryIntersectedEntitiesXY(new RBox(event.getModelPosition(), range), false, true);
 };
 
 /**
@@ -2000,6 +2000,7 @@ EAction.getEntityId = function(di, action, event, preview) {
     var altPressed = (mod & Qt.AltModifier)!==0;
     if (!altPressed || preview) {
         if (!isNull(action.idFromContextMenu)) {
+            // user already chose an entity from the context menu:
             return action.idFromContextMenu;
         }
         else {
