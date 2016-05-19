@@ -21,6 +21,7 @@
     <enum>enum <name>Flag</name> <block>{
         <expr><name>NoFlags</name> = 0x000</expr>,
         <expr><name>Secondary</name> = 0x001</expr>,
+        <expr><name>Center</name> = 0x002</expr>
     }</block>;</enum>
     <macro><name>Q_DECLARE_FLAGS</name><argument_list>(<argument>Flags</argument>, <argument>Flag</argument>)</argument_list></macro>
 
@@ -45,6 +46,22 @@
     <constructor><name>RRefPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>v</name></decl></param>)</parameter_list> <member_list>: <call><name>RVector</name><argument_list>(<argument><expr><name>v</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
     <constructor><name>RRefPoint</name><parameter_list>(<param><decl><type><name>double</name></type> <name>vx</name></decl></param>, <param><decl><type><name>double</name></type> <name>vy</name></decl></param>, <param><decl><type><name>double</name></type> <name>vz</name> =<init> <expr>0.0</expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>valid_in</name> =<init> <expr><name>true</name></expr></init></decl></param>)</parameter_list> <member_list>: <call><name>RVector</name><argument_list>(<argument><expr><name>vx</name></expr></argument>, <argument><expr><name>vy</name></expr></argument>, <argument><expr><name>vz</name></expr></argument>, <argument><expr><name>valid_in</name></expr></argument>)</argument_list></call> </member_list><block>{}</block></constructor>
 
+    <function><type><name>bool</name></type> <name>isSecondary</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RRefPoint</name>::<name>Secondary</name></name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setSecondary</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RRefPoint</name>::<name>Secondary</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
+    <function><type><name>bool</name></type> <name>isCenter</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><call><name>getFlag</name><argument_list>(<argument><expr><name><name>RRefPoint</name>::<name>Center</name></name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setCenter</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <constructor_decl><name>setFlag</name><parameter_list>(<param><decl><type><name><name>RRefPoint</name>::<name>Center</name></name></type></decl></param>, <param><decl><type><name>on</name></type></decl></param>)</parameter_list>;</constructor_decl>
+    }</block></function>
+
     <function><type><name>void</name></type> <name>setFlag</name><parameter_list>(<param><decl><type><name><name>RRefPoint</name>::<name>Flag</name></name></type> <name>flag</name></decl></param>, <param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
         <if>if <condition>(<expr><name>on</name></expr>)</condition><then> <block>{
             <expr_stmt><expr><name>flags</name> |= <name>flag</name></expr>;</expr_stmt>
@@ -61,9 +78,15 @@
         <return>return <expr><name>flags</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>void</name></type> <name>setFlags</name><parameter_list>(<param><decl><type><name><name>RRefPoint</name>::<name>Flags</name></name></type> <name>f</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>flags</name> = <name>f</name></expr>;</expr_stmt>
+    }</block></function>
+
 </public><private>private:
     <decl_stmt><decl><type><name>Flags</name></type> <name>flags</name></decl>;</decl_stmt>
 </private>}</block>;</class>
+
+<function_decl><type><name>QCADCORE_EXPORT</name> <name>QDebug</name></type> <name>operator&lt;&lt;</name><parameter_list>(<param><decl><type><name>QDebug</name></type> <name>dbg</name></decl></param>, <param><decl><type><name>const</name> <name>RRefPoint</name>&amp;</type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt;RRefPoint&gt;</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QList&lt;RRefPoint&gt;*</argument>)</argument_list></macro>

@@ -688,13 +688,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="void" isPureVirtual="false">
         <arg type="QPainter &amp;" typeName="QPainter"
         name="painter" isConst="false" />
-        <arg type="RVector &amp;" typeName="RVector" name="pos"
+        <arg type="RRefPoint &amp;" typeName="RRefPoint" name="pos"
         isConst="true" />
         <arg type="bool" typeName="bool" name="highlight"
         isConst="false" />
-        <arg type="RRefPoint::Flags" typeName="RRefPoint::Flags"
-        name="flags" hasDefault="true"
-        default="RRefPoint :: NoFlags" isConst="false" />
       </variant>
     </method>
     <method name="paintCursor" cppName="paintCursor"

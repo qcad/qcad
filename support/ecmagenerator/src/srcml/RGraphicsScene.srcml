@@ -104,7 +104,7 @@
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>clearPreview</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>isPreviewEmpty</name><parameter_list>()</parameter_list>;</function_decl>
 
-    <function_decl><type><name>RVector</name></type> <name>getHighlightedReferencePoint</name><parameter_list>()</parameter_list>;</function_decl>
+    <function_decl><type><name>RRefPoint</name></type> <name>getHighlightedReferencePoint</name><parameter_list>()</parameter_list>;</function_decl>
 
     <comment type="block">/**
      * Highlights the given entity. This is typically used to highlight entities
@@ -116,7 +116,7 @@
      * Highlights the reference point at the given position. This is typically
      * used to highlight reference point when the mouse hovers over them.
      */</comment>
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>highlightReferencePoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>position</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>highlightReferencePoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RRefPoint</name>&amp;</type> <name>position</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>exportCurrentEntity</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>preview</name> =<init> <expr><name>false</name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>forceSelected</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>unexportEntity</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>entityId</name></decl></param>)</parameter_list>;</function_decl>
@@ -146,7 +146,7 @@
     <decl_stmt><decl><type><name>QList<argument_list>&lt;<argument><name>RGraphicsView</name>*</argument>&gt;</argument_list></name></type> <name>views</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>exportToPreview</name></decl>;</decl_stmt>
     <decl_stmt><decl><type><name>bool</name></type> <name>previewIsEmpty</name></decl>;</decl_stmt>
-    <decl_stmt><decl><type><name>RVector</name></type> <name>highlightedReferencePoint</name></decl>;</decl_stmt>
+    <decl_stmt><decl><type><name>RRefPoint</name></type> <name>highlightedReferencePoint</name></decl>;</decl_stmt>
 
     <comment type="block">/**
      * Internal map of reference points for every selected entity in the scene.

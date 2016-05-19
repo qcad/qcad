@@ -54,6 +54,18 @@
         toRefPointList
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isSecondary
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSecondary
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setCenter
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setFlag
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -61,6 +73,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getFlags
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setFlags
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

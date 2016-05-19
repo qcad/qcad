@@ -592,8 +592,7 @@
     
     
       void paintReferencePoint(
-                QPainter & painter, const RVector & pos, bool highlight, RRefPoint::Flags flags
-        = RRefPoint :: NoFlags
+                QPainter & painter, const RRefPoint & pos, bool highlight
             );
         
     
@@ -774,11 +773,11 @@
             );
         
     
-      RVector getClosestReferencePoint(
+      RRefPoint getClosestReferencePoint(
                 const RVector & screenPosition, int range
             );
         
-      RVector getClosestReferencePoint(
+      RRefPoint getClosestReferencePoint(
                 REntity::Id entityId, const RVector & screenPosition
             );
         

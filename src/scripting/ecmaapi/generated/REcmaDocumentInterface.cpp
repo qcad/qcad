@@ -5374,26 +5374,26 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: RVector */
+        ) /* type: RRefPoint */
     
     ){
     // prepare arguments:
     
                     // argument isCopyable and has default constructor and isSimpleClass 
-                    RVector*
+                    RRefPoint*
                     ap0 =
                     qscriptvalue_cast<
-                    RVector*
+                    RRefPoint*
                         >(
                         context->argument(
                         0
                         )
                     );
                     if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type RVector.",
+                           return REcmaHelper::throwError("RDocumentInterface: Argument 0 is not of type RRefPoint.",
                                context);                    
                     }
-                    RVector 
+                    RRefPoint 
                     a0 = 
                     *ap0;
                 

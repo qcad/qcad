@@ -4,11 +4,12 @@ xmlns:rs="http://www.ribbonsoft.com">
   <class name="RRefPoint"
   xsi:noNamespaceSchemaLocation="../class.xsd" isCopyable="true"
   hasShell="false" sharedPointerSupport="false" isQObject="false"
-  hasStreamOperator="false" isAbstract="false" isScriptable="true">
+  hasStreamOperator="true" isAbstract="false" isScriptable="true">
     <baseClass name="RVector" specifier="public" />
     <enum name="Flag">
       <value name="NoFlags" />
       <value name="Secondary" />
+      <value name="Center" />
     </enum>
     <constructor>
       <variant />
@@ -53,6 +54,30 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="isSecondary" cppName="isSecondary"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setSecondary" cppName="setSecondary"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isCenter" cppName="isCenter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setCenter" cppName="setCenter" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="on"
+        isConst="false" />
+      </variant>
+    </method>
     <method name="setFlag" cppName="setFlag" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
@@ -73,6 +98,13 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RRefPoint::Flags"
       isPureVirtual="false" />
+    </method>
+    <method name="setFlags" cppName="setFlags" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RRefPoint::Flags" typeName="RRefPoint::Flags"
+        name="f" isConst="false" />
+      </variant>
     </method>
   </class>
 </unit>

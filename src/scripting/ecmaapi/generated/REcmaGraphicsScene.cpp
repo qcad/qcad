@@ -1948,11 +1948,11 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RVector'
-    RVector cppResult =
+    // return type 'RRefPoint'
+    RRefPoint cppResult =
         
                self->getHighlightedReferencePoint();
-        // return type: RVector
+        // return type: RRefPoint
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -2059,26 +2059,26 @@
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
-        ) /* type: RVector */
+        ) /* type: RRefPoint */
     
     ){
     // prepare arguments:
     
                     // argument isCopyable and has default constructor and isSimpleClass 
-                    RVector*
+                    RRefPoint*
                     ap0 =
                     qscriptvalue_cast<
-                    RVector*
+                    RRefPoint*
                         >(
                         context->argument(
                         0
                         )
                     );
                     if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type RVector.",
+                           return REcmaHelper::throwError("RGraphicsScene: Argument 0 is not of type RRefPoint.",
                                context);                    
                     }
-                    RVector 
+                    RRefPoint 
                     a0 = 
                     *ap0;
                 

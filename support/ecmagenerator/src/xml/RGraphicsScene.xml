@@ -223,7 +223,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getHighlightedReferencePoint"
     cppName="getHighlightedReferencePoint" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
-      <variant returnType="RVector" isPureVirtual="false" />
+      <variant returnType="RRefPoint" isPureVirtual="false" />
     </method>
     <method name="highlightEntity" cppName="highlightEntity"
     specifier="public" isStatic="false" isVirtual="true"
@@ -237,7 +237,7 @@ xmlns:rs="http://www.ribbonsoft.com">
     cppName="highlightReferencePoint" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
-        <arg type="RVector &amp;" typeName="RVector"
+        <arg type="RRefPoint &amp;" typeName="RRefPoint"
         name="position" isConst="true" />
       </variant>
     </method>

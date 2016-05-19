@@ -8637,7 +8637,7 @@
             }
         
     
-      RVector REcmaShellGraphicsViewQt::getClosestReferencePoint(
+      RRefPoint REcmaShellGraphicsViewQt::getClosestReferencePoint(
                 const RVector & screenPosition, int range
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
@@ -8663,7 +8663,7 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        RVector ret =
+                        RRefPoint ret =
                         RGraphicsViewQt::getClosestReferencePoint(
                             screenPosition, range
                         );
@@ -8681,10 +8681,10 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    RVector res;
+                    RRefPoint res;
                       
                           res = qscriptvalue_cast< 
-                            RVector
+                            RRefPoint
                           >(
                         
                             _q_function.call(__qtscript_self,
@@ -8724,7 +8724,7 @@
                           
             }
         
-      RVector REcmaShellGraphicsViewQt::getClosestReferencePoint(
+      RRefPoint REcmaShellGraphicsViewQt::getClosestReferencePoint(
                 REntity::Id entityId, const RVector & screenPosition
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
@@ -8750,7 +8750,7 @@
                         //if (cppSig!="RGraphicsViewQt::event") {
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
-                        RVector ret =
+                        RRefPoint ret =
                         RGraphicsViewQt::getClosestReferencePoint(
                             entityId, screenPosition
                         );
@@ -8768,10 +8768,10 @@
                     // mark function as 'in call':
                     quint32 prev = _q_function.data().toUInt32();
                     _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
-                    RVector res;
+                    RRefPoint res;
                       
                           res = qscriptvalue_cast< 
-                            RVector
+                            RRefPoint
                           >(
                         
                             _q_function.call(__qtscript_self,

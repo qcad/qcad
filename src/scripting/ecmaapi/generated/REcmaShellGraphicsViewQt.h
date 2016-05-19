@@ -718,11 +718,11 @@
             );
         
     
-      RVector getClosestReferencePoint(
+      RRefPoint getClosestReferencePoint(
                 const RVector & screenPosition, int range
             );
         
-      RVector getClosestReferencePoint(
+      RRefPoint getClosestReferencePoint(
                 REntity::Id entityId, const RVector & screenPosition
             );
         

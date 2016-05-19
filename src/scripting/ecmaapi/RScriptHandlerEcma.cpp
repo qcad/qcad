@@ -217,6 +217,7 @@
 #include "REcmaRay.h"
 #include "REcmaRayData.h"
 #include "REcmaRayEntity.h"
+#include "REcmaRefPoint.h"
 #include "REcmaRestrictAngleLength.h"
 #include "REcmaRestrictHorizontal.h"
 #include "REcmaRestrictVertical.h"
@@ -555,6 +556,7 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaFileCache::initEcma(*engine);
 
     REcmaVector::initEcma(*engine);
+    REcmaRefPoint::initEcma(*engine);
 
     REcmaImporter::initEcma(*engine);
     REcmaExporter::initEcma(*engine);

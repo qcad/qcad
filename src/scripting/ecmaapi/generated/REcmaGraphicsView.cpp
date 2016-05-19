@@ -4557,13 +4557,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RVector'
-    RVector cppResult =
+    // return type 'RRefPoint'
+    RRefPoint cppResult =
         
                self->getClosestReferencePoint(a0
         ,
     a1);
-        // return type: RVector
+        // return type: RRefPoint
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
@@ -4614,13 +4614,13 @@
     // end of arguments
 
     // call C++ function:
-    // return type 'RVector'
-    RVector cppResult =
+    // return type 'RRefPoint'
+    RRefPoint cppResult =
         
                self->getClosestReferencePoint(a0
         ,
     a1);
-        // return type: RVector
+        // return type: RRefPoint
                 // not standard type nor reference
                 result = qScriptValueFromValue(engine, cppResult);
             
