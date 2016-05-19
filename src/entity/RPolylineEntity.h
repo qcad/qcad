@@ -167,6 +167,10 @@ public:
         return data.getClosestSegment(point);
     }
 
+    int getClosestVertex(const RVector& point) const {
+        return data.getClosestVertex(point);
+    }
+
     double getBulgeAt(int i) const {
         return data.getBulgeAt(i);
     }
