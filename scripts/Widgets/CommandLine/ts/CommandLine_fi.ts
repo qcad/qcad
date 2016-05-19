@@ -21,7 +21,12 @@
         <translation>&amp;Komentorivi</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+166"/>
+        <source>Invalid value:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation>Puutteellinen koordinaatti tai etäisyys &apos;%1&apos;.</translation>
     </message>

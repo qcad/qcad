@@ -27,7 +27,7 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Nieprawidłowy koordynować&apos;&amp;#39;.</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+185"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Nieznane polecenie lub nieprawidłowy współrzędnych lub wartość:&apos;&amp;#39;</translation>
@@ -61,12 +61,17 @@ Aktywuj linię &amp;poleceń</translatorcomment>
         <translation type="obsolete">Próbuje zwrócić na lub modyfikować jednostki na warstwie zablokowanej lub niewidoczne.</translation>
     </message>
     <message>
-        <location line="-283"/>
+        <location line="-316"/>
         <source>Widgets</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+179"/>
+        <location line="+196"/>
+        <source>Invalid value:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>

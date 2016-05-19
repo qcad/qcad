@@ -20,7 +20,7 @@
         <translation type="obsolete">無効な座標 &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+152"/>
+        <location line="+185"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>不明なコマンドまたは無効な座標もしくは値: &apos;%1&apos;</translation>
     </message>
@@ -49,12 +49,17 @@
         <translation type="obsolete">ロックされたまたは不可視な画層のエンティティを描画、修正しようとしています。</translation>
     </message>
     <message>
-        <location line="-283"/>
+        <location line="-316"/>
         <source>Widgets</source>
         <translation>ウィジェット</translation>
     </message>
     <message>
-        <location line="+179"/>
+        <location line="+196"/>
+        <source>Invalid value:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation>無効な座標または距離 &apos;%1&apos;.</translation>
     </message>

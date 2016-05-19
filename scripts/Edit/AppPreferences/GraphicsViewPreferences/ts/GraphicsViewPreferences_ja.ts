@@ -139,7 +139,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-69"/>
+        <location line="+7"/>
+        <source>Maximum number of reference points displayed:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-76"/>
         <source>Timeout for hatch rendering:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -176,7 +181,7 @@
         <translation type="obsolete">テキスト高さの表示閾値:</translation>
     </message>
     <message>
-        <location line="+272"/>
+        <location line="+331"/>
         <source>Selection</source>
         <translation>選択</translation>
     </message>

@@ -21,7 +21,12 @@
         <translation>&amp;Comando regel</translation>
     </message>
     <message>
-        <location line="+149"/>
+        <location line="+166"/>
+        <source>Invalid value:</source>
+        <translation>Ongeldig waarde:</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation>Ongeldige coördinaat of afstand &apos;%1&apos;.</translation>
     </message>

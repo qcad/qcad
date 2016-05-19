@@ -171,7 +171,12 @@ Autozoom
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-69"/>
+        <location line="+7"/>
+        <source>Maximum number of reference points displayed:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-76"/>
         <source>Timeout for hatch rendering:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -209,7 +214,7 @@ Liczba obiektów w podglądzie:</translatorcomment>
         <translation type="obsolete">Wysokość progu Text display:</translation>
     </message>
     <message>
-        <location line="+272"/>
+        <location line="+331"/>
         <source>Selection</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

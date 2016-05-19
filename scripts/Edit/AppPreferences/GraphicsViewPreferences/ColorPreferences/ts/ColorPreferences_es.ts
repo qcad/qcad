@@ -107,7 +107,12 @@ Ver gráficos</translatorcomment>
         <translation>Puntos de referencia:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+30"/>
+        <source>Secondary reference points:</source>
+        <translation>Puntos de referencia secundaria:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Selection box border:</source>
         <translation>Borde del cuadro de selección:</translation>
     </message>
@@ -167,7 +172,7 @@ Ver gráficos</translatorcomment>
         <translation type="obsolete">Retículo inactivo:</translation>
     </message>
     <message>
-        <location line="-535"/>
+        <location line="-562"/>
         <source>Origin:</source>
         <translatorcomment>--exact match--
 --file: sketch_es.po--

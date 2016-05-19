@@ -30,7 +30,7 @@
         <translation type="obsolete">Invalid coordonner &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+168"/>
+        <location line="+201"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Commande inconnue ou de coordonnées ou une valeur invalide: &apos;%1&apos;</translation>
     </message>
@@ -64,12 +64,17 @@
         <translation type="obsolete">Essayant de tirer ou de modifier des entités sur un calque verrouillé.</translation>
     </message>
     <message>
-        <location line="-283"/>
+        <location line="-316"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+179"/>
+        <location line="+196"/>
+        <source>Invalid value:</source>
+        <translation>Valeur invalide :</translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Invalid coordinate or distance &apos;%1&apos;.</source>
         <translation>Invalid coordonner ou distance &apos;%1&apos;.</translation>
     </message>

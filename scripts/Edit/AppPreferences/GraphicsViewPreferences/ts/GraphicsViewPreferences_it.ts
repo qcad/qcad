@@ -139,7 +139,12 @@
         <translation>Antialiasing di default</translation>
     </message>
     <message>
-        <location line="-69"/>
+        <location line="+7"/>
+        <source>Maximum number of reference points displayed:</source>
+        <translation>Numero massimo di punti di riferimento visualizzati:</translation>
+    </message>
+    <message>
+        <location line="-76"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Timeout per la rappresentazione tratteggio:</translation>
     </message>
@@ -180,7 +185,7 @@
         <translation type="obsolete">Visualizzare limite per il testo:</translation>
     </message>
     <message>
-        <location line="+272"/>
+        <location line="+331"/>
         <source>Selection</source>
         <translation>Selezione</translation>
     </message>

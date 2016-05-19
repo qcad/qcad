@@ -139,7 +139,12 @@
         <translation>Antialiasing activé par défaut</translation>
     </message>
     <message>
-        <location line="-69"/>
+        <location line="+7"/>
+        <source>Maximum number of reference points displayed:</source>
+        <translation>Nombre maximum de points de référence affichés :</translation>
+    </message>
+    <message>
+        <location line="-76"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Délai d&apos;attente pour hachure rendu :</translation>
     </message>
@@ -184,7 +189,7 @@
         <translation type="obsolete">Afficher limite pour le texte:</translation>
     </message>
     <message>
-        <location line="+272"/>
+        <location line="+331"/>
         <source>Selection</source>
         <translation>Sélection</translation>
     </message>

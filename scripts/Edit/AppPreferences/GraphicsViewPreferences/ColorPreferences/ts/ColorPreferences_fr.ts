@@ -101,7 +101,12 @@ Arrière-plan du dessin :</translatorcomment>
         <translation>Points de référence :</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+30"/>
+        <source>Secondary reference points:</source>
+        <translation>Points de référence secondaire :</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Selection box border:</source>
         <translation>Bordure de la zone de sélection :</translation>
     </message>
@@ -166,7 +171,7 @@ Arrière-plan du dessin :</translatorcomment>
         <translation type="obsolete">Réticule inactif :</translation>
     </message>
     <message>
-        <location line="-616"/>
+        <location line="-643"/>
         <source>Crosshairs:</source>
         <translation>Réticule :</translation>
     </message>

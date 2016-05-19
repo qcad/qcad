@@ -139,7 +139,12 @@
         <translation>Kantenglättung standardmässig an</translation>
     </message>
     <message>
-        <location line="-69"/>
+        <location line="+7"/>
+        <source>Maximum number of reference points displayed:</source>
+        <translation>Maximale Anzahl angezeigte Referenzpunkte:</translation>
+    </message>
+    <message>
+        <location line="-76"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Timeout für Schraffurwiedergabe:</translation>
     </message>
@@ -184,7 +189,7 @@
         <translation type="obsolete">Anzeigegrenzwert für Texte:</translation>
     </message>
     <message>
-        <location line="+272"/>
+        <location line="+331"/>
         <source>Selection</source>
         <translation>Selektion</translation>
     </message>

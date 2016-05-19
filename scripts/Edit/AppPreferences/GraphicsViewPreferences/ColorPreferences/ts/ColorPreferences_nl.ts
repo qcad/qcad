@@ -87,7 +87,12 @@
         <translation>Versleepbare referentiepunten:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+30"/>
+        <source>Secondary reference points:</source>
+        <translation>Secundaire referentiepunten:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Selection box border:</source>
         <translation>Keuzevenster rand:</translation>
     </message>
@@ -142,7 +147,7 @@
         <translation>Zoom venster rand:</translation>
     </message>
     <message>
-        <location line="-535"/>
+        <location line="-562"/>
         <source>Origin:</source>
         <translation>Oorsprong:</translation>
     </message>

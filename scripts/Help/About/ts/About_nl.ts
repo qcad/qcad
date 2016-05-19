@@ -191,7 +191,7 @@
         <translation>Programmering</translation>
     </message>
     <message>
-        <location line="+40"/>
+        <location line="+41"/>
         <source>Translations</source>
         <translation>Vertalingen</translation>
     </message>

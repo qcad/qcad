@@ -119,7 +119,12 @@
         <translation>Glajenje robov provzeto vklopljeno</translation>
     </message>
     <message>
-        <location line="-69"/>
+        <location line="+7"/>
+        <source>Maximum number of reference points displayed:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="-76"/>
         <source>Timeout for hatch rendering:</source>
         <translation>Iztek časa za izris šrafur:</translation>
     </message>
@@ -156,7 +161,7 @@
         <translation type="obsolete">Prag prikaza višine besedila:</translation>
     </message>
     <message>
-        <location line="+272"/>
+        <location line="+331"/>
         <source>Selection</source>
         <translation>Izbor</translation>
     </message>

@@ -87,7 +87,12 @@
         <translation>Vedettävät vertailupisteet:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+30"/>
+        <source>Secondary reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Selection box border:</source>
         <translation>Valintalaatikon reuna:</translation>
     </message>
@@ -142,7 +147,7 @@
         <translation>Suurenna/säädä laatikon reuna:</translation>
     </message>
     <message>
-        <location line="-535"/>
+        <location line="-562"/>
         <source>Origin:</source>
         <translation>Nollakohta:</translation>
     </message>

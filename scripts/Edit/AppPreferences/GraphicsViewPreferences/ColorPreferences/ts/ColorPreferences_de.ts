@@ -101,7 +101,12 @@
         <translation>Referenzpunkte:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+30"/>
+        <source>Secondary reference points:</source>
+        <translation>Sekundäre Referenzpunkte:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Selection box border:</source>
         <translation>Auswahlbox (Rand):</translation>
     </message>
@@ -172,7 +177,7 @@
         <translation type="obsolete">Inaktives Fadenkreuz:</translation>
     </message>
     <message>
-        <location line="-616"/>
+        <location line="-643"/>
         <source>Crosshairs:</source>
         <translation>Fadenkreuz:</translation>
     </message>

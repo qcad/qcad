@@ -87,7 +87,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+30"/>
+        <source>Secondary reference points:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Selection box border:</source>
         <translation>選択ボックスの境界:</translation>
     </message>
@@ -146,7 +151,7 @@
         <translation type="obsolete">非アクティブな十字線:</translation>
     </message>
     <message>
-        <location line="-535"/>
+        <location line="-562"/>
         <source>Origin:</source>
         <translation>原点:</translation>
     </message>

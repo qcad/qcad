@@ -114,7 +114,12 @@ Pano de Fundo do Desenho:</translatorcomment>
         <translation>Pontos de referência arrastáveis:</translation>
     </message>
     <message>
-        <location line="+36"/>
+        <location line="+30"/>
+        <source>Secondary reference points:</source>
+        <translation>Pontos de referência secundária:</translation>
+    </message>
+    <message>
+        <location line="+33"/>
         <source>Selection box border:</source>
         <translation>Borda da caixa de seleção:</translation>
     </message>
@@ -174,7 +179,7 @@ Pano de Fundo do Desenho:</translatorcomment>
         <translation type="obsolete">Mira inativos:</translation>
     </message>
     <message>
-        <location line="-535"/>
+        <location line="-562"/>
         <source>Origin:</source>
         <translatorcomment>--exact match--
 --file: qgis_pt.ts--

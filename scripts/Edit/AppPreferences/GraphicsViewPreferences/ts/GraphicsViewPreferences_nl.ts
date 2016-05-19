@@ -144,7 +144,12 @@
         <translation>Time-out voor weergave van arcering:</translation>
     </message>
     <message>
-        <location line="+79"/>
+        <location line="+76"/>
+        <source>Maximum number of reference points displayed:</source>
+        <translation>Maximum aantal weergeven referentiepunten:</translation>
+    </message>
+    <message>
+        <location line="+62"/>
         <source>Selection</source>
         <translation>Selectie</translation>
     </message>
