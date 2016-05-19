@@ -989,13 +989,8 @@ RVector operator*(double s, const RVector& v) {
  * Stream operator for QDebug
  */
 QDebug operator<<(QDebug dbg, const RVector& v) {
-//    if (v.valid) {
-        dbg.nospace() << "RVector(" << v.x << ", " << v.y << ", " << v.z << ", " << v.valid << ")";
-//    } else {
-//        dbg.nospace() << "RVector(invalid)";
-//    }
+    dbg.nospace() << "RVector(" << v.x << ", " << v.y << ", " << v.z << ", " << v.valid << ")";
     return dbg;
-    //return dbg.space();
 }
 
 /**
