@@ -1407,7 +1407,7 @@ void RDocumentInterface::highlightEntity(REntity::Id entityId) {
 /**
  * Highlights the given reference point.
  */
-void RDocumentInterface::highlightReferencePoint(const RVector& position) {
+void RDocumentInterface::highlightReferencePoint(const RRefPoint& position) {
     QList<RGraphicsScene*>::iterator it;
     for (it=scenes.begin(); it!=scenes.end(); it++) {
         (*it)->highlightReferencePoint(position);

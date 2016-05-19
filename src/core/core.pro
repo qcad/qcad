@@ -98,6 +98,7 @@ SOURCES += \
     math/RPoint.cpp \
     math/RPolyline.cpp \
     math/RRay.cpp \
+    math/RRefPoint.cpp \
     math/RShape.cpp \
     math/RSpline.cpp \
     math/RTextLabel.cpp \
@@ -258,6 +259,7 @@ HEADERS = \
     math/RPolyline.h \
     math/RPolylineProxy.h \
     math/RRay.h \
+    math/RRefPoint.h \
     math/RShape.h \
     math/RSpline.h \
     math/RSplineProxy.h \

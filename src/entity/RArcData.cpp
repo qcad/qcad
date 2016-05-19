@@ -39,16 +39,16 @@ QList<RRefPoint> RArcData::getReferencePoints(RS::ProjectionRenderingHint hint) 
     Q_UNUSED(hint)
 
     QList<RRefPoint> ret;
-    ret.append(center);
+    ret.append(RRefPoint(center, RRefPoint::Center));
     ret.append(getStartPoint());
     ret.append(getEndPoint());
-    ret.append(getMiddlePoint());
+    ret.append(RRefPoint(getMiddlePoint(), RRefPoint::Secondary));
 
     QList<RRefPoint> p;
-    p.append(center + RVector(radius, 0));
-    p.append(center + RVector(0, radius));
-    p.append(center - RVector(radius, 0));
-    p.append(center - RVector(0, radius));
+    p.append(RRefPoint(center + RVector(radius, 0), RRefPoint::Secondary));
+    p.append(RRefPoint(center + RVector(0, radius), RRefPoint::Secondary));
+    p.append(RRefPoint(center - RVector(radius, 0), RRefPoint::Secondary));
+    p.append(RRefPoint(center - RVector(0, radius), RRefPoint::Secondary));
 
     for (int i=0; i<p.size(); i++) {
         if (RMath::isAngleBetween(center.getAngleTo(p[i]), startAngle, endAngle, reversed)) {

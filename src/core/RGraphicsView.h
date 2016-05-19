@@ -225,8 +225,8 @@ public:
     virtual void setCursor(Qt::CursorShape /*cursorShape*/) {}
     virtual void setCursor(const QCursor& /*cursor*/) {}
 
-    RVector getClosestReferencePoint(const RVector& screenPosition, int range);
-    RVector getClosestReferencePoint(REntity::Id entityId, const RVector& screenPosition);
+    RRefPoint getClosestReferencePoint(const RVector& screenPosition, int range);
+    RRefPoint getClosestReferencePoint(REntity::Id entityId, const RVector& screenPosition);
     REntity::Id getClosestEntity(const RVector& screenPosition, int range, int strictRange, bool includeLockedLayers=true, bool selectedOnly = false);
     //REntity::Id getClosestEntityInUcs(const RVector& screenPosition, int range);
 

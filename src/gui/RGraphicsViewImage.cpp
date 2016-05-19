@@ -281,9 +281,11 @@ void RGraphicsViewImage::updateImage() {
 
     // highlighting of closest reference point:
     if (scene->getHighlightedReferencePoint().isValid()) {
-        RVector p = mapToView(scene->getHighlightedReferencePoint());
+        RRefPoint p = scene->getHighlightedReferencePoint();
+        RRefPoint pm = mapToView(p);
         QPainter gbPainter(&graphicsBufferWithPreview);
-        paintReferencePoint(gbPainter, p, true);
+        pm.setFlags(p.getFlags());
+        paintReferencePoint(gbPainter, pm, true);
         gbPainter.end();
     }
 
@@ -315,9 +317,9 @@ void RGraphicsViewImage::updateImage() {
     paintRelativeZero(graphicsBufferWithPreview);
 }
 
-void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RVector& pos, bool highlight, RRefPoint::Flags flags) {
+void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RRefPoint& pos, bool highlight) {
     RColor color;
-    if (flags==RRefPoint::Secondary) {
+    if (pos.isSecondary()) {
         color = RSettings::getSecondaryReferencePointColor();
     }
     else {
@@ -338,7 +340,13 @@ void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RVector& p
         painter.drawLine(QPointF(pos.x, pos.y-size/2), QPointF(pos.x, pos.y+size/2));
     }
     else {
-        painter.fillRect(QRect(pos.x - size/2, pos.y - size/2, size, size), color);
+        if (pos.isCenter()) {
+            painter.setBrush(color);
+            painter.drawEllipse(pos.x - size/2, pos.y - size/2, size, size);
+        }
+        else {
+            painter.fillRect(QRect(pos.x - size/2, pos.y - size/2, size, size), color);
+        }
         if (highlight) {
             if (backgroundColor.value()<128) {
                 painter.setPen(QPen(Qt::white));
@@ -346,7 +354,12 @@ void RGraphicsViewImage::paintReferencePoint(QPainter& painter, const RVector& p
             else {
                 painter.setPen(QPen(Qt::black));
             }
-            painter.drawRect(QRect(pos.x - size/2, pos.y - size/2, size, size));
+            if (pos.isCenter()) {
+                painter.drawEllipse(pos.x - size/2, pos.y - size/2, size, size);
+            }
+            else {
+                painter.drawRect(QRect(pos.x - size/2, pos.y - size/2, size, size));
+            }
         }
     }
 }
@@ -623,8 +636,10 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
         QMultiMap<REntity::Id, RRefPoint>::iterator it;
 
         for (it = referencePoints.begin(); it != referencePoints.end(); ++it) {
-            RVector p = mapToView(it.value());
-            paintReferencePoint(gbPainter, p, false, it.value().getFlags());
+            RRefPoint p = it.value();
+            RRefPoint pm = mapToView(p);
+            pm.setFlags(p.getFlags());
+            paintReferencePoint(gbPainter, pm, false);
         }
 
         gbPainter.end();

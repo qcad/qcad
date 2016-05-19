@@ -227,7 +227,7 @@ public:
         bool includeLockedLayers = true,
         bool selectedOnly = false);
     void highlightEntity(REntity::Id entityId);
-    void highlightReferencePoint(const RVector& position);
+    void highlightReferencePoint(const RRefPoint& position);
     void selectEntities(const QSet<REntity::Id>& entityIds, bool add = false);
     void selectEntity(REntity::Id entityId, bool add = false);
     bool deselectEntities(const QSet<REntity::Id>& entityIds);

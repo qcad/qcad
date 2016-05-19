@@ -335,11 +335,11 @@ void RGraphicsScene::unexportEntity(REntity::Id entityId) {
     referencePoints.remove(entityId);
 }
 
-void RGraphicsScene::highlightReferencePoint(const RVector& position) {
+void RGraphicsScene::highlightReferencePoint(const RRefPoint& position) {
     highlightedReferencePoint = position;
 }
 
-RVector RGraphicsScene::getHighlightedReferencePoint() {
+RRefPoint RGraphicsScene::getHighlightedReferencePoint() {
     return highlightedReferencePoint;
 }
 

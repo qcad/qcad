@@ -490,7 +490,7 @@ RColor RSettings::getReferencePointColor() {
 
 RColor RSettings::getSecondaryReferencePointColor() {
     if (secondaryReferencePointColor==NULL) {
-        secondaryReferencePointColor = new RColor(getColor("GraphicsViewColors/SecondaryReferencePointColor", RColor(0,128,128)));
+        secondaryReferencePointColor = new RColor(getColor("GraphicsViewColors/SecondaryReferencePointColor", RColor(0,128,172)));
     }
     return *secondaryReferencePointColor;
 }

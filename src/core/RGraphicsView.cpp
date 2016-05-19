@@ -743,10 +743,8 @@ void RGraphicsView::setNavigationAction(RAction* action) {
  *
  * \return The closest referecene point in model coordinates.
  */
-RVector RGraphicsView::getClosestReferencePoint(const RVector& screenPosition,
-        int range) {
-
-    RVector ret = RVector::invalid;
+RRefPoint RGraphicsView::getClosestReferencePoint(const RVector& screenPosition, int range) {
+    RRefPoint ret = RVector::invalid;
     if (scene == NULL) {
         return ret;
     }
@@ -756,12 +754,12 @@ RVector RGraphicsView::getClosestReferencePoint(const RVector& screenPosition,
     QMultiMap<REntity::Id, RRefPoint>& referencePoints = scene->getReferencePoints();
     QMultiMap<REntity::Id, RRefPoint>::iterator it;
     for (it = referencePoints.begin(); it != referencePoints.end(); it++) {
-        RVector rp = mapToView(it.value());
+        RVector rp = mapToView(*it);
 
         double dist = screenPosition.getDistanceTo(rp);
         if (dist < minDist) {
             minDist = dist;
-            ret = it.value();
+            ret = *it;
         }
     }
 
@@ -773,10 +771,8 @@ RVector RGraphicsView::getClosestReferencePoint(const RVector& screenPosition,
 /**
  * \overload
  */
-RVector RGraphicsView::getClosestReferencePoint(
-    REntity::Id entityId, const RVector& screenPosition) {
-
-    RVector ret = RVector::invalid;
+RRefPoint RGraphicsView::getClosestReferencePoint(REntity::Id entityId, const RVector& screenPosition) {
+    RRefPoint ret = RVector::invalid;
     double minDist = RMAXDOUBLE;
 
     if (scene == NULL) {

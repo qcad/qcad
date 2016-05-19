@@ -103,7 +103,7 @@ public:
     virtual void clearPreview();
     virtual bool isPreviewEmpty();
 
-    RVector getHighlightedReferencePoint();
+    RRefPoint getHighlightedReferencePoint();
 
     /**
      * Highlights the given entity. This is typically used to highlight entities
@@ -115,7 +115,7 @@ public:
      * Highlights the reference point at the given position. This is typically
      * used to highlight reference point when the mouse hovers over them.
      */
-    virtual void highlightReferencePoint(const RVector& position);
+    virtual void highlightReferencePoint(const RRefPoint& position);
 
     virtual void exportCurrentEntity(bool preview = false, bool forceSelected = false);
     virtual void unexportEntity(REntity::Id entityId);
@@ -145,7 +145,7 @@ protected:
     QList<RGraphicsView*> views;
     bool exportToPreview;
     bool previewIsEmpty;
-    RVector highlightedReferencePoint;
+    RRefPoint highlightedReferencePoint;
 
     /**
      * Internal map of reference points for every selected entity in the scene.
