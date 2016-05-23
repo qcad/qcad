@@ -72,7 +72,7 @@ Powrót do poprzedniego menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2007"/>
+        <location line="+2008"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--
@@ -81,7 +81,7 @@ Anuluj
         <translation type="unfinished">Anuluj</translation>
     </message>
     <message>
-        <location line="-1734"/>
+        <location line="-1735"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translatorcomment>--google--</translatorcomment>
@@ -131,7 +131,7 @@ Narzędzia CAD</translatorcomment>
         <translation type="unfinished">Jednostka jest na zablokowanej warstwie.</translation>
     </message>
     <message>
-        <location line="+214"/>
+        <location line="+215"/>
         <source>Length:</source>
         <translation type="unfinished"></translation>
     </message>

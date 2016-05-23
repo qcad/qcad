@@ -272,7 +272,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Origin</source>
-        <translation type="unfinished"></translation>
+        <translation>原点</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -308,7 +308,7 @@
     <message>
         <location line="+1"/>
         <source>Layout</source>
-        <translation type="unfinished"></translation>
+        <translation>レイアウト</translation>
     </message>
     <message>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="-2"/>
@@ -326,22 +326,22 @@
     <message>
         <location line="+1"/>
         <source>Columns</source>
-        <translation type="unfinished"></translation>
+        <translation>列</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Rows</source>
-        <translation type="unfinished"></translation>
+        <translation>行</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Column Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>列間隔</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Row Spacing</source>
-        <translation type="unfinished"></translation>
+        <translation>行間</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+86"/>
@@ -452,7 +452,7 @@
         <location line="+0"/>
         <location line="+1"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>サイズ</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -556,7 +556,7 @@
         <location filename="../src/core/RLayer.cpp" line="-3"/>
         <location filename="../src/core/RLayout.cpp" line="-16"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>名前</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -767,7 +767,7 @@
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation type="unfinished">連続</translation>
+        <translation>連続</translation>
     </message>
     <message>
         <location line="+2"/>

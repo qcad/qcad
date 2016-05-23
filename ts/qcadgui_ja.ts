@@ -14,47 +14,47 @@
     <message>
         <location filename="../src/gui/REventHandler.cpp" line="+192"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>グリッド</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>終端</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>エンティティ</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Perpendicular</source>
-        <translation type="unfinished"></translation>
+        <translation>垂直</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation>タンジェント</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>中心</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>中央</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation type="unfinished"></translation>
+        <translation>交点</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>基準点</translation>
     </message>
 </context>
 <context>

@@ -6,28 +6,28 @@
     <message>
         <location filename="../ArcTPR.js" line="+79"/>
         <source>Choose line, arc, circle or ellipse</source>
-        <translation type="unfinished"></translation>
+        <translation>線分,弧,円または楕円を選択してください</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>Point on arc</source>
-        <translation type="unfinished"></translation>
+        <translation>通過点</translation>
     </message>
     <message>
         <location line="+10"/>
         <source>Choose solution</source>
-        <translation type="unfinished">ソリューション</translation>
+        <translation>ソリューション</translation>
     </message>
     <message>
         <location line="+120"/>
         <location line="+65"/>
         <source>No solution</source>
-        <translation type="unfinished">解決法がありません</translation>
+        <translation>解決法がありません</translation>
     </message>
     <message>
         <location filename="../ArcTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>半径:</translation>
     </message>
     <message>
         <location filename="../ArcTPRInit.js" line="+2"/>

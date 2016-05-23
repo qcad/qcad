@@ -36,7 +36,7 @@
     <message>
         <location filename="../Circle2TPInit.js" line="+2"/>
         <source>2 Tan&amp;gents and Point</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;g 1点と2接線</translation>
     </message>
     <message>
         <location line="+4"/>

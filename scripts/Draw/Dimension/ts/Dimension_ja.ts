@@ -26,7 +26,7 @@
     <message>
         <location line="+1"/>
         <source>Arc</source>
-        <translation type="unfinished"></translation>
+        <translation>弧</translation>
     </message>
     <message>
         <location line="+1"/>

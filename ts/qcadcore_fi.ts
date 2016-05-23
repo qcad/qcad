@@ -430,12 +430,12 @@
     <message>
         <location line="+2"/>
         <source>Handle</source>
-        <translation type="unfinished">Kahva</translation>
+        <translation>Kahva</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Protected</source>
-        <translation type="unfinished">Suojattu</translation>
+        <translation>Suojattu</translation>
     </message>
     <message>
         <location filename="../src/core/REntity.cpp" line="+2"/>
@@ -551,18 +551,18 @@
         <location filename="../src/core/RLayer.cpp" line="-3"/>
         <location filename="../src/core/RLayout.cpp" line="-16"/>
         <source>Name</source>
-        <translation type="unfinished">Nimi</translation>
+        <translation>Nimi</translation>
     </message>
     <message>
         <location line="+1"/>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Hidden</source>
-        <translation type="unfinished">Piilotettu</translation>
+        <translation>Piilotettu</translation>
     </message>
     <message>
         <location filename="../src/core/RLayer.cpp" line="+1"/>
         <source>Locked</source>
-        <translation type="unfinished">Lukittu</translation>
+        <translation>Lukittu</translation>
     </message>
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
@@ -766,7 +766,7 @@
     <message>
         <location line="+1"/>
         <source>Continuous</source>
-        <translation type="unfinished">Jatkuva</translation>
+        <translation>Jatkuva</translation>
     </message>
     <message>
         <location line="+2"/>

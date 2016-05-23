@@ -36,7 +36,7 @@
     <message>
         <location filename="../CircleT2PInit.js" line="+2"/>
         <source>&amp;Tangent and 2 Points</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;t ２点と接線</translation>
     </message>
     <message>
         <location line="+4"/>

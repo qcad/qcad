@@ -72,7 +72,7 @@ Retorna ao último menu</translatorcomment>
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2007"/>
+        <location line="+2008"/>
         <source>Cancel</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -81,7 +81,7 @@ Cancelar
         <translation>Cancele</translation>
     </message>
     <message>
-        <location line="-1734"/>
+        <location line="-1735"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Ferramenta Ativa:</translation>
@@ -136,7 +136,7 @@ Ferramentas CAD</translatorcomment>
         <translation>A entidade está em uma camada bloqueada.</translation>
     </message>
     <message>
-        <location line="+214"/>
+        <location line="+215"/>
         <source>Length:</source>
         <translation>Comprimento:</translation>
     </message>

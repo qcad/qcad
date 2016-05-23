@@ -14,47 +14,47 @@
     <message>
         <location filename="../src/gui/REventHandler.cpp" line="+192"/>
         <source>Grid</source>
-        <translation type="unfinished"></translation>
+        <translation>Mriežka</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>End</source>
-        <translation type="unfinished"></translation>
+        <translation>Koniec</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>On Entity</source>
-        <translation type="unfinished"></translation>
+        <translation>Na prvku</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Perpendicular</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolmica</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Tangential</source>
-        <translation type="unfinished"></translation>
+        <translation>Dotyčnica</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>Stred</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Middle</source>
-        <translation type="unfinished"></translation>
+        <translation>Stred</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Intersection</source>
-        <translation type="unfinished"></translation>
+        <translation>Prienik</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Reference</source>
-        <translation type="unfinished"></translation>
+        <translation>Odkaz</translation>
     </message>
 </context>
 <context>

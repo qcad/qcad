@@ -6,7 +6,7 @@
     <message>
         <location filename="../LayerCompatibility.js" line="+30"/>
         <source>Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>レイヤー</translation>
     </message>
     <message>
         <location line="+0"/>

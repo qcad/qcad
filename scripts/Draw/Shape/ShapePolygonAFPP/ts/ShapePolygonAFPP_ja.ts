@@ -11,7 +11,7 @@
     <message>
         <location line="+2"/>
         <source>First Corner</source>
-        <translation type="unfinished"></translation>
+        <translation>第１の頂点</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -21,12 +21,12 @@
     <message>
         <location line="+2"/>
         <source>Second Corner</source>
-        <translation type="unfinished"></translation>
+        <translation>第２の頂点</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>完了</translation>
     </message>
     <message>
         <location filename="../ShapePolygonAFPPInit.js" line="+2"/>
@@ -41,7 +41,7 @@
     <message>
         <location filename="../ShapePolygonAFPP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished"></translation>
+        <translation>頂点:</translation>
     </message>
     <message>
         <location line="+21"/>

@@ -68,12 +68,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2007"/>
+        <location line="+2008"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
     <message>
-        <location line="-1734"/>
+        <location line="-1735"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Outil actif:</translation>
@@ -116,7 +116,7 @@
         <translation>Entité est sur un calque verrouillé.</translation>
     </message>
     <message>
-        <location line="+214"/>
+        <location line="+215"/>
         <source>Length:</source>
         <translation>Longueur :</translation>
     </message>

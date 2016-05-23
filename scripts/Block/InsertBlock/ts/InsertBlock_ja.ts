@@ -72,22 +72,22 @@
     <message>
         <location filename="../InsertBlockDialog.ui" line="+12"/>
         <source>Columns:</source>
-        <translation type="unfinished"></translation>
+        <translation>列:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Rows:</source>
-        <translation type="unfinished"></translation>
+        <translation>行:</translation>
     </message>
     <message>
         <location line="+14"/>
         <source>Column Spacing:</source>
-        <translation type="unfinished"></translation>
+        <translation>列間隔:</translation>
     </message>
     <message>
         <location line="+17"/>
         <source>Row Spacing:</source>
-        <translation type="unfinished"></translation>
+        <translation>行間:</translation>
     </message>
 </context>
 <context>

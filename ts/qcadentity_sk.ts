@@ -435,7 +435,7 @@
     <message>
         <location line="+2"/>
         <source>Block Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Názov bloku</translation>
     </message>
     <message>
         <location line="+1"/>

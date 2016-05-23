@@ -56,7 +56,7 @@
     <message>
         <location line="+69"/>
         <source>Auto zoom on load</source>
-        <translation type="unfinished"></translation>
+        <translation>Pri načítaní automatické priblíženie</translation>
     </message>
     <message>
         <location line="+13"/>

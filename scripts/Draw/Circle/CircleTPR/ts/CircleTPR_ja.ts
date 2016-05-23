@@ -48,7 +48,7 @@
     <message>
         <location filename="../CircleTPR.js" line="+39"/>
         <source>Point on circle</source>
-        <translation type="unfinished"></translation>
+        <translation>点</translation>
     </message>
     <message>
         <location filename="../CircleTPRInit.js" line="+2"/>
@@ -63,7 +63,7 @@
     <message>
         <location filename="../CircleTPR.ui" line="+17"/>
         <source>Radius:</source>
-        <translation type="unfinished"></translation>
+        <translation>半径:</translation>
     </message>
 </context>
 </TS>

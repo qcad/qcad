@@ -24,7 +24,7 @@
     <message>
         <location filename="../BlockDialog.js" line="+115"/>
         <source>Leading or trailing spaces.</source>
-        <translation>上部または下部の余白</translation>
+        <translation>上部または下部の余白。</translation>
     </message>
     <message>
         <location line="+5"/>

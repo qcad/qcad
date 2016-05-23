@@ -6,7 +6,7 @@
     <message>
         <location filename="../ShapePolygonAFCP.js" line="+61"/>
         <source>Center</source>
-        <translation type="unfinished"></translation>
+        <translation>中心</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -16,7 +16,7 @@
     <message>
         <location line="+3"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>完了</translation>
     </message>
     <message>
         <location filename="../ShapePolygonAFCPInit.js" line="+2"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../ShapePolygonAFCP.ui" line="+17"/>
         <source>Corners:</source>
-        <translation type="unfinished"></translation>
+        <translation>頂点:</translation>
     </message>
 </context>
 </TS>

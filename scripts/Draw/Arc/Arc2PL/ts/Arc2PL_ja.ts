@@ -6,12 +6,12 @@
     <message>
         <location filename="../Arc2PL.js" line="+65"/>
         <source>Start point</source>
-        <translation type="unfinished"></translation>
+        <translation>開始点</translation>
     </message>
     <message>
         <location line="+9"/>
         <source>End point</source>
-        <translation type="unfinished"></translation>
+        <translation>終了点</translation>
     </message>
     <message>
         <location line="+81"/>
@@ -21,7 +21,7 @@
     <message>
         <location line="+7"/>
         <source>The two points are identical</source>
-        <translation type="unfinished"></translation>
+        <translation>２点は同一です</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -31,22 +31,22 @@
     <message>
         <location filename="../Arc2PL.ui" line="+17"/>
         <source>Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>長さ:</translation>
     </message>
     <message>
         <location line="+27"/>
         <source>Direction:</source>
-        <translation type="unfinished"></translation>
+        <translation>向き:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Counter Clockwise (Positive)</source>
-        <translation type="unfinished"></translation>
+        <translation>反時計回り（正）</translation>
     </message>
     <message>
         <location line="+20"/>
         <source>Clockwise (Negative)</source>
-        <translation type="unfinished"></translation>
+        <translation>時計回り（負）</translation>
     </message>
     <message>
         <location filename="../Arc2PLInit.js" line="+2"/>

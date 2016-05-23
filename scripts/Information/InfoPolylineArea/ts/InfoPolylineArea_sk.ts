@@ -6,22 +6,22 @@
     <message>
         <location filename="../InfoPolylineArea.js" line="+53"/>
         <source>Choose polyline</source>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte krivku</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Done</source>
-        <translation type="unfinished"></translation>
+        <translation>Hotovo</translation>
     </message>
     <message>
         <location line="+41"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Plocha</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Circumference</source>
-        <translation type="unfinished"></translation>
+        <translation>Obvod</translation>
     </message>
     <message>
         <location line="+52"/>
@@ -31,7 +31,7 @@
     <message>
         <location line="+1"/>
         <source>circumference:</source>
-        <translation type="unfinished"></translation>
+        <translation>Obvod:</translation>
     </message>
     <message>
         <location filename="../InfoPolylineAreaInit.js" line="+2"/>

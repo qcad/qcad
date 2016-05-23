@@ -47,7 +47,7 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Splines</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spline-y</translation>
     </message>
     <message>
         <location line="+6"/>

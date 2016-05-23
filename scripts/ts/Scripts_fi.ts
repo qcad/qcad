@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2007"/>
+        <location line="+2008"/>
         <source>Cancel</source>
         <translation>Peruuta</translation>
     </message>
     <message>
-        <location line="-1734"/>
+        <location line="-1735"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Aktiivinen työkalu:</translation>
@@ -103,7 +103,7 @@
         <translation>Kohde on lukitussa tasossa.</translation>
     </message>
     <message>
-        <location line="+214"/>
+        <location line="+215"/>
         <source>Length:</source>
         <translation type="unfinished"></translation>
     </message>

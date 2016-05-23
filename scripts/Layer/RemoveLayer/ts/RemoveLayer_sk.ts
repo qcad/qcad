@@ -10,7 +10,7 @@
     <message>
         <location filename="../RemoveLayerInit.js" line="+2"/>
         <source>&amp;Delete Layer</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Odstrániť vrstvu</translation>
     </message>
 </context>
 </TS>
