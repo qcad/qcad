@@ -220,6 +220,7 @@ CommandLine.init = function(basePath) {
                 var val = RMath.eval(command);
                 if (isNumber(val)) {
                     appWin.handleUserCommand("=" + command);
+                    appWin.handleUserInfo(val.toString());
                     leCommand.text = prefix + val;
                 } else {
                     var er = RMath.getError();
