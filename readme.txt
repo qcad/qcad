@@ -1,6 +1,6 @@
 QCAD
 
-This is QCAD version 3.14.
+This is QCAD version 3.15.
 
 QCAD is an application for computer aided drafting (CAD) in two dimensions (2D).
 
