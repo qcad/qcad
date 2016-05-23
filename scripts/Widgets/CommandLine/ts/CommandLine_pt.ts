@@ -35,7 +35,7 @@ Linha de Comando</translatorcomment>
         <translation type="obsolete">Coordenar inválido &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+202"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Comando desconhecido, ou coordenadas ou valor inválido: &apos;%1&apos;</translation>
     </message>
@@ -69,12 +69,12 @@ Linha de Comando</translatorcomment>
         <translation type="obsolete">Tentando aproveitar ou modificar as entidades em uma camada bloqueada.</translation>
     </message>
     <message>
-        <location line="-316"/>
+        <location line="-317"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+197"/>
         <source>Invalid value:</source>
         <translation>Valor inválido:</translation>
     </message>

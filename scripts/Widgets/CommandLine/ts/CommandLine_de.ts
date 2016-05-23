@@ -28,7 +28,7 @@
         <translation type="obsolete">Ungültige Koordinate &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+202"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Unbekanntes Kommando oder ungültige Koordinate oder Wert: &apos;%1&apos;</translation>
     </message>
@@ -61,12 +61,12 @@
         <translation type="obsolete">Versuch Objekte auf gesperrtem Layer zu zeichnen oder zu bearbeiten.</translation>
     </message>
     <message>
-        <location line="-316"/>
+        <location line="-317"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+197"/>
         <source>Invalid value:</source>
         <translation>Ungültiger Wert:</translation>
     </message>

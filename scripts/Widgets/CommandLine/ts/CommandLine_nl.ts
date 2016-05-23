@@ -21,7 +21,7 @@
         <translation>&amp;Comando regel</translation>
     </message>
     <message>
-        <location line="+166"/>
+        <location line="+167"/>
         <source>Invalid value:</source>
         <translation>Ongeldig waarde:</translation>
     </message>

@@ -21,7 +21,7 @@
         <translation>&amp;Komentorivi</translation>
     </message>
     <message>
-        <location line="+166"/>
+        <location line="+167"/>
         <source>Invalid value:</source>
         <translation type="unfinished"></translation>
     </message>

@@ -30,7 +30,7 @@
         <translation type="obsolete">Inválida coordinar &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location line="+201"/>
+        <location line="+202"/>
         <source>Unknown command or invalid coordinate or value: &apos;%1&apos;</source>
         <translation>Comando desconocido o valor de coordenadas no válido: &apos;%1&apos;</translation>
     </message>
@@ -64,12 +64,12 @@
         <translation type="obsolete">Tratando de aprovechar o modificar las entidades de una capa bloqueada.</translation>
     </message>
     <message>
-        <location line="-316"/>
+        <location line="-317"/>
         <source>Widgets</source>
         <translation>Widgets</translation>
     </message>
     <message>
-        <location line="+196"/>
+        <location line="+197"/>
         <source>Invalid value:</source>
         <translation>Valor no válido:</translation>
     </message>
