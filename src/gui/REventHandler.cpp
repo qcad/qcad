@@ -296,7 +296,7 @@ void REventHandler::drawSnapLabel(QPainter* painter, const RVector& pos, const R
         displayText = "";
         break;
     case 1:
-        displayText = distStr + sep + angStr + "°";
+        displayText = distStr + sep + angStr + QChar(0x00b0);
         break;
     case 2:
         displayText = distStr;
@@ -311,7 +311,7 @@ void REventHandler::drawSnapLabel(QPainter* painter, const RVector& pos, const R
     if (!displayText.isEmpty()) {
         painter->drawText(
                     p.x + offset, p.y - 3*offset - fm.height(),
-                    fm.width(text)+10, fm.height()+10,
+                    fm.width(displayText)+10, fm.height()+10,
                     Qt::AlignHCenter | Qt::AlignVCenter,
                     displayText, NULL);
     }
