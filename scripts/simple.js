@@ -55,8 +55,10 @@ function addPoint(p1, p2) {
 /**
  * Adds a line to the drawing.
  *
+ * \code
  * addLine(x1,y1, x2,y2)
  * addLine(new RVector(x1,y1), new RVector(x2,y2))
+ * \endcode
  */
 function addLine(p1, p2, p3, p4) {
     if (isNumber(p1)) {
@@ -70,8 +72,10 @@ function addLine(p1, p2, p3, p4) {
 /**
  * Adds an arc to the drawing.
  *
+ * \code
  * addArc(cx,cy, radius, startAngle, endAngle, reversed)
  * addArc(new RVector(cx,cy), radius, startAngle, endAngle, reversed)
+ * \endcode
  */
 function addArc(p1, p2, p3, p4, p5, p6) {
     if (isNumber(p1)) {
@@ -84,8 +88,10 @@ function addArc(p1, p2, p3, p4, p5, p6) {
 /**
  * Adds a circle to the drawing.
  *
+ * \code
  * addCircle(cx,cy, radius)
  * addCircle(new RVector(cx,cy), radius)
+ * \endcode
  */
 function addCircle(p1, p2, p3) {
     if (isNumber(p1)) {
@@ -101,8 +107,10 @@ function addCircle(p1, p2, p3) {
  * \param points Array of RVector or [x,y] tuples.
  * \param closed True for an implicitely closed polyline.
  *
+ * \code
  * addPolyline([[x1,y1],[x2,y2],[x3,y3]], false)
  * addPolyline([new RVector(x1,y1)],new RVector(x2,y2),new RVector(x3,y3)], false)
+ * \endcode
  */
 function addPolyline(points, closed) {
     if (isNull(closed)) {
@@ -135,8 +143,10 @@ function addPolyline(points, closed) {
  * \param bold True for bold text (TTF fonts only)
  * \param italic True for italic text (TTF fonts only)
  *
+ * \code
  * addPolyline([[x1,y1],[x2,y2],[x3,y3]], false)
  * addPolyline([new RVector(x1,y1)],new RVector(x2,y2),new RVector(x3,y3)], false)
+ * \endcode
  */
 function addSimpleText(text, x, y, height, angle, font, vAlign, hAlign, bold, italic) {
     if (isNull(height)) height = 1.0;
@@ -199,11 +209,13 @@ function addEntity(entity) {
  * Starts a transaction. This can increase performance when adding multiple entities.
  * Entities are added in one transaction when endTransaction is called.
  *
+ * \code
  * startTransaction();
  * for (...) {
  *     addLine(...);
  * }
  * endTransaction();
+ * \endcode
  */
 function startTransaction() {
     __simpleUseOp = true;
