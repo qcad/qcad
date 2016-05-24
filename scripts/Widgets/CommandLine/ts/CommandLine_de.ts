@@ -87,6 +87,11 @@
     </message>
     <message>
         <location line="+15"/>
+        <source>Expression</source>
+        <translation>Ausdruck</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Coordinate</source>
         <translation>Koordinate</translation>
     </message>

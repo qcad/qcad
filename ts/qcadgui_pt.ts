@@ -42,7 +42,7 @@ Configurar...</translatorcomment>
 <context>
     <name>REventHandler</name>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="+192"/>
+        <location filename="../src/gui/REventHandler.cpp" line="+193"/>
         <source>Grid</source>
         <translation>Grade</translation>
     </message>

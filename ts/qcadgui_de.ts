@@ -54,7 +54,7 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>REventHandler</name>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="+192"/>
+        <location filename="../src/gui/REventHandler.cpp" line="+193"/>
         <source>Grid</source>
         <translation>Raster</translation>
     </message>

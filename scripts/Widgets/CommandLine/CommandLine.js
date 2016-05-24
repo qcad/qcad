@@ -371,7 +371,10 @@ CommandLine.init = function(basePath) {
         var cartCoordSep = RSettings.getStringValue("Input/CartesianCoordinateSeparator", ',');
         var polCoordSep = RSettings.getStringValue("Input/PolarCoordinateSeparator", '<');
         var what;
-        if (message.contains(cartCoordSep) || message.contains(polCoordSep)) {
+        if (message.startsWith("=")) {
+            what = qsTr("Expression");
+        }
+        else if (message.contains(cartCoordSep) || message.contains(polCoordSep)) {
             what = qsTr("Coordinate");
         }
         else {

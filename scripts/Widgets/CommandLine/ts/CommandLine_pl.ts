@@ -96,6 +96,11 @@ Wypisuje informację debugowania obiektów</translatorcomment>
     </message>
     <message>
         <location line="+15"/>
+        <source>Expression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Coordinate</source>
         <translatorcomment>--exact match--
 --file: qcadactions_pl.ts--

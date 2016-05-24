@@ -1389,9 +1389,6 @@ REntity::Id RDocumentInterface::getClosestEntity(const RVector& position,
     return document.queryClosestXY(position, range, draft, strictRange, includeLockedLayers, selectedOnly);
 }
 
-/**
- * \override
- */
 void RDocumentInterface::highlightEntity(REntity::Id entityId) {
     QSharedPointer<REntity> entity = document.queryEntityDirect(entityId);
     if (entity.isNull()) {

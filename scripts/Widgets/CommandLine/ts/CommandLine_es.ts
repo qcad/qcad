@@ -90,6 +90,11 @@
     </message>
     <message>
         <location line="+15"/>
+        <source>Expression</source>
+        <translation>Expresión</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Coordinate</source>
         <translation>Coordenada</translation>
     </message>

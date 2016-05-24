@@ -100,6 +100,11 @@ Aviso:</translatorcomment>
     </message>
     <message>
         <location line="+15"/>
+        <source>Expression</source>
+        <translation>Expressão</translation>
+    </message>
+    <message>
+        <location line="+3"/>
         <source>Coordinate</source>
         <translatorcomment>--exact match--
 --file: SnapCoordinate_pt.ts--
