@@ -290,9 +290,9 @@ double RMath::eval(const QString& expression, bool* ok) {
     {
         QRegExp re(
             "("
-              "(?:(\\d*\\.?\\d*)[d°])"  // degrees
-              "(?:(\\d*\\.?\\d*)')?"    // minutes
-              "(?:(\\d*\\.?\\d*)\")?"   // seconds
+              "(?:((?:\\.\\d+)|(?:\\d+\\.\\d*)|(?:\\d+))[d°])"  // degrees
+              "(?:((?:\\.\\d+)|(?:\\d+\\.\\d*)|(?:\\d+))')?"    // minutes
+              "(?:((?:\\.\\d+)|(?:\\d+\\.\\d*)|(?:\\d+))\")?"   // seconds
             ")"
             "(?:[^\\d]|$)",             // followed by not a number or end
             Qt::CaseInsensitive, QRegExp::RegExp2);
