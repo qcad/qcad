@@ -29,6 +29,7 @@
 #include "RMainWindowQt.h"
 #include "RSnapRestriction.h"
 #include "RSnap.h"
+#include "RUnit.h"
 
 /**
  * Event handler for scroll, drag and drop, snap info.
@@ -275,21 +276,16 @@ void REventHandler::drawSnapLabel(QPainter* painter, const RVector& pos, const R
     }
 
     int lp = doc->getLinearPrecision();
-    QString lformat = QString("%.%1f").arg(lp);
-    QString distStr;
-    distStr.sprintf((const char*)lformat.toLatin1(), dist);
+    QString distStr = RUnit::doubleToString(dist, lp);
 
     angle = RMath::rad2deg(angle);
     int ap = doc->getAnglePrecision();
-    QString aformat = QString("%.%1f").arg(ap);
-    QString angStr;
-    angStr.sprintf((const char*)aformat.toLatin1(), angle);
+    QString angStr = RUnit::doubleToString(angle, ap);
 
     QString sep = RSettings::getStringValue("Input/PolarCoordinateSeparator", "<");
 
     color = RSettings::getColor("GraphicsViewColors/MeasurementToolsColor", RColor(155,220,112));
     painter->setPen(color);
-
     QString displayText;
     switch (display) {
     case 0:
@@ -302,7 +298,7 @@ void REventHandler::drawSnapLabel(QPainter* painter, const RVector& pos, const R
         displayText = distStr;
         break;
     case 3:
-        displayText = angStr + "°";
+        displayText = angStr + QChar(0x00b0);
         break;
     default:
         displayText = "";
