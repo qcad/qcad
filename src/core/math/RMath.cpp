@@ -336,6 +336,33 @@ double RMath::eval(const QString& expression, bool* ok) {
         } while(idx!=-1);
     }
 
+    // advanced feet/inch entering:
+    // e.g. 12'3/4"
+    {
+        QRegExp re("([+-])?(\\d+)'[ ]*([^\"]*)\"", Qt::CaseInsensitive, QRegExp::RegExp2);
+        do {
+            idx = re.indexIn(expr);
+            if (idx==-1) {
+                break;
+            }
+            QString signString = re.cap(1);
+            if (signString.isEmpty()) {
+                signString = "+";
+            }
+            QString feetString = re.cap(2);
+            //QString spacesString = re.cap(2);
+            QString inchString = re.cap(3);
+            expr.replace(
+                        re,
+                        QString("%1%2*12%3(%4)")
+                        .arg(re.cap(1))                                // sign for feet or ""
+                        .arg(feetString)                               // feet (number)
+                        .arg(inchString.isEmpty() ? "" : signString)   // sign for inches (same as sign for feet)
+                        .arg(inchString)                               // inches number of formula
+                        );
+        } while(idx!=-1);
+    }
+
     // convert foot indication to a factor of 12
     // e.g.
     // 10'5  -> 10*12+5
@@ -367,10 +394,7 @@ double RMath::eval(const QString& expression, bool* ok) {
         } while(idx!=-1);
     }
 
-    //qDebug() << "RMath::eval: expression is: " << expr;
-
-    QScriptEngine e;
-
+    static QScriptEngine e;
 
     if (mathExt.isNull()) {
         QString inputJs = "scripts/input.js";
@@ -405,7 +429,7 @@ double RMath::eval(const QString& expression, bool* ok) {
         if (ok != NULL) {
             *ok = false;
         }
-        lastError = expr + " is not a number";
+        lastError = expr + " is not a number: " + res.toString();
         //qDebug() << "RMath::evel: error: " << lastError;
         return RNANDOUBLE;
     }
