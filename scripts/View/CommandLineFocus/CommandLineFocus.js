@@ -29,8 +29,10 @@ CommandLineFocus.prototype.beginEvent = function() {
     View.prototype.beginEvent.call(this);
 
     var appWin = EAction.getMainWindow();
-    var commandEdit = appWin.findChild("CommandEdit");
-    commandEdit.setFocus(Qt.OtherFocusReason);
+    var commandEdit = objectFromPath("MainWindow::CommandLine::CommandEdit");
+    if (commandEdit.visible) {
+        commandEdit.setFocus(Qt.OtherFocusReason);
+    }
 
     this.terminate();
 };
