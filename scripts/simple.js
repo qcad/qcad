@@ -45,11 +45,10 @@ function getDocument() {
  */
 function addPoint(p1, p2) {
     if (isNumber(p1)) {
-        addPoint(new RVector(p1, p2));
-        return;
+        return addPoint(new RVector(p1, p2));
     }
 
-    addShape(new RPoint(p1));
+    return addShape(new RPoint(p1));
 }
 
 /**
@@ -62,11 +61,10 @@ function addPoint(p1, p2) {
  */
 function addLine(p1, p2, p3, p4) {
     if (isNumber(p1)) {
-        addLine(new RVector(p1, p2), new RVector(p3, p4));
-        return;
+        return addLine(new RVector(p1, p2), new RVector(p3, p4));
     }
 
-    addShape(new RLine(p1, p2));
+    return addShape(new RLine(p1, p2));
 }
 
 /**
@@ -79,10 +77,9 @@ function addLine(p1, p2, p3, p4) {
  */
 function addArc(p1, p2, p3, p4, p5, p6) {
     if (isNumber(p1)) {
-        addArc(new RVector(p1, p2), p3, p4, p5, p6);
-        return;
+        return addArc(new RVector(p1, p2), p3, p4, p5, p6);
     }
-    addShape(new RArc(p1, p2, p3, p4, p5));
+    return addShape(new RArc(p1, p2, p3, p4, p5));
 }
 
 /**
@@ -95,10 +92,9 @@ function addArc(p1, p2, p3, p4, p5, p6) {
  */
 function addCircle(p1, p2, p3) {
     if (isNumber(p1)) {
-        addCircle(new RVector(p1, p2), p3);
-        return;
+        return addCircle(new RVector(p1, p2), p3);
     }
-    addShape(new RCircle(p1, p2));
+    return addShape(new RCircle(p1, p2));
 }
 
 /**
@@ -126,7 +122,7 @@ function addPolyline(points, closed) {
             pl.appendVertex(new RVector(points[i][0], points[i][1]));
         }
     }
-    addShape(pl);
+    return addShape(pl);
 }
 
 /**
@@ -177,7 +173,7 @@ function addSimpleText(text, x, y, height, angle, font, vAlign, hAlign, bold, it
               true
         )
     );
-    addEntity(entity);
+    return addEntity(entity);
 }
 
 /**
@@ -186,11 +182,13 @@ function addSimpleText(text, x, y, height, angle, font, vAlign, hAlign, bold, it
 function addShape(shape) {
     var di = getDocumentInterface();
     var entity = shapeToEntity(getDocument(), shape);
-    addEntity(entity);
+    return addEntity(entity);
 }
 
 /**
  * Adds the given REntity to the drawing using layer and attributes as set by the entity.
+ *
+ * \return ID of added entity or RObject.INVALID_ID (-1) if a transaction is in progress.
  */
 function addEntity(entity) {
     if (__simpleUseOp===true) {
@@ -198,10 +196,12 @@ function addEntity(entity) {
             __simpleOp = new RAddObjectsOperation();
         }
         __simpleOp.addObject(entity, false);
+        return RObject.INVALID_ID;
     }
     else {
         var di = getDocumentInterface();
         di.applyOperation(new RAddObjectOperation(entity, false));
+        return entity.getId();
     }
 }
 
@@ -227,12 +227,15 @@ function startTransaction() {
 
 /**
  * \see startTransaction
+ * \return RTransaction object containing information about the transaction.
  */
 function endTransaction() {
+    var ret = undefined;
     if (!isNull(__simpleOp)) {
         var di = getDocumentInterface();
-        di.applyOperation(__simpleOp);
+        ret = di.applyOperation(__simpleOp);
         __simpleOp = undefined;
     }
     __simpleUseOp = false;
+    return ret;
 }
