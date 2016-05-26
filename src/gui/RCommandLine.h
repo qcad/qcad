@@ -39,6 +39,7 @@ signals:
     void clearHistory();
     void commandConfirmed(const QString& command);
     void completeCommand(const QString& command);
+    void escape();
 
 public:
     RCommandLine(QWidget* parent = 0);
