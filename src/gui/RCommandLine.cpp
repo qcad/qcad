@@ -49,7 +49,7 @@ bool RCommandLine::event(QEvent* event) {
     return QLineEdit::event(event);
 }
 
-void RCommandLine::keyPressEvent(QKeyEvent * event) {
+void RCommandLine::keyPressEvent(QKeyEvent* event) {
     switch (event->key()) {
     case Qt::Key_L:
         if (event->modifiers() == Qt::ControlModifier) {
@@ -84,13 +84,6 @@ void RCommandLine::keyPressEvent(QKeyEvent * event) {
             }
         }
         return;
-        break;
-    case Qt::Key_Escape:
-        if (text().isEmpty()) {
-            event->ignore();
-        } else {
-            clear();
-        }
         break;
     default:
         break;

@@ -46,7 +46,7 @@ public:
     void appendCommand(const QString& cmd);
 
 protected:
-    virtual void keyPressEvent(QKeyEvent * event);
+    virtual void keyPressEvent(QKeyEvent* event);
     virtual bool event(QEvent* event);
 
 private:
