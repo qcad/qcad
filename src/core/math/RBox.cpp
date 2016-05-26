@@ -47,8 +47,6 @@ RBox::RBox(const RVector& c1, const RVector& c2) {
     // important for later x1<x2 check (cross selection):
     this->c1 = c1;
     this->c2 = c2;
-    //this->c1 = RVector::getMinimum(c1, c2);
-    //this->c2 = RVector::getMaximum(c1, c2);
 }
 
 /**
@@ -59,19 +57,33 @@ RBox::RBox(const RVector& center, double range) {
     c2 = RVector(center.x+range, center.y+range);
 }
 
+/**
+ * Creates a box with the given center and the given width / height.
+ */
 RBox::RBox(const RVector& center, double width, double height) {
     c1 = center - RVector(width, height)/2;
     c2 = center + RVector(width, height)/2;
 }
 
+/**
+ * \return True if this box is valid (i.e. both diagonally opposite corners are valid).
+ */
 bool RBox::isValid() const {
     return (c1.isValid() && c2.isValid());
 }
 
+/**
+ * \return True if this box is sane (i.e. both diagonally opposite corners are
+ * valid and not Infitiy or NaN).
+ */
 bool RBox::isSane() const {
     return (c1.isSane() && c2.isSane());
 }
 
+/**
+ * Grows this box by the given offset in X, Y and Z (!).
+ * \return pointer to this box
+ */
 RBox& RBox::grow(double offset) {
     RVector min = getMinimum();
     RVector max = getMaximum();
@@ -82,6 +94,10 @@ RBox& RBox::grow(double offset) {
     return *this;
 }
 
+/**
+ * Grows this box by the given offset in X and Y only.
+ * \return pointer to this box
+ */
 RBox& RBox::growXY(double offset) {
     RVector min = getMinimum();
     RVector max = getMaximum();
@@ -92,67 +108,83 @@ RBox& RBox::growXY(double offset) {
     return *this;
 }
 
+/**
+ * Moves this box by the given offset.
+ */
 void RBox::move(const RVector& offset) {
     c1.move(offset);
     c2.move(offset);
 }
 
+/**
+ * \return Width of this box.
+ */
 double RBox::getWidth() const {
     return qAbs(c2.x-c1.x);
 }
 
+/**
+ * \return Height of this box.
+ */
 double RBox::getHeight() const {
     return qAbs(c2.y-c1.y);
 }
 
+/**
+ * \return Size of this box (X,Y,Z).
+ */
 RVector RBox::getSize() const {
     return c2 - c1;
 }
 
-
-
+/**
+ * \return Center of this box.
+ */
 RVector RBox::getCenter() const {
     return (c1 + c2) / 2.0;
 }
 
-
-
+/**
+ * \return Minimum point of this box (minimum X,Z and Z).
+ */
 RVector RBox::getMinimum() const {
     return RVector::getMinimum(c1, c2);
 }
 
-
-
+/**
+ * \return Maximum point of this box (maximum X,Z and Z).
+ */
 RVector RBox::getMaximum() const {
     return RVector::getMaximum(c1, c2);
 }
 
-
-
+/**
+ * \return First of two diagonally opposite corners that define the box.
+ */
 RVector RBox::getCorner1() const {
     return c1;
 }
 
+/**
+ * Set first of two diagonally opposite corners that define the box.
+ */
 void RBox::setCorner1(const RVector& v) {
     c1 = v;
 }
 
+/**
+ * \return Second of two diagonally opposite corners that define the box.
+ */
 RVector RBox::getCorner2() const {
     return c2;
 }
 
+/**
+ * Set second of two diagonally opposite corners that define the box.
+ */
 void RBox::setCorner2(const RVector& v) {
     c2 = v;
 }
-
-/**
- * \return True if this box is completely inside the given box.
- */
-//bool RBox::isInside(const RBox& other) const {
-//    return other.contains(*this);
-//}
-
-
 
 /**
  * \return True if the given box is completely outside this box.
@@ -190,8 +222,6 @@ bool RBox::isOutsideXY(const RBox& other) const {
            );
 }
 
-
-
 /**
  * \return True if the given box is completely inside this box.
  */
@@ -206,6 +236,9 @@ bool RBox::contains(const RVector& v) const {
     return v.isInside(*this);
 }
 
+/**
+ * \return True if this box intersects the given other box.
+ */
 bool RBox::intersects(const RBox& other) const {
     RVector maximum = getMaximum();
     RVector minimum = getMinimum();
@@ -226,6 +259,11 @@ bool RBox::intersects(const RBox& other) const {
     return true;
 }
 
+/**
+ * \return True if this box intersects the given shape.
+ * \param limited True to limit the shape to its actual length,
+ * false to return true if the extended shape interesects this box.
+ */
 bool RBox::intersectsWith(const RShape& shape, bool limited) const {
     if (limited && !intersects(shape.getBoundingBox())) {
         return false;
@@ -241,6 +279,9 @@ bool RBox::intersectsWith(const RShape& shape, bool limited) const {
     return false;
 }
 
+/**
+ * Grows this box to include all other given boxes.
+ */
 void RBox::growToIncludeBoxes(const QList<RBox>& others) {
     for (int i=0; i<others.length(); i++) {
         growToInclude(others[i]);
@@ -270,8 +311,6 @@ void RBox::growToInclude(const RBox& other) {
     c2 = RVector::getMaximum(max, omax);
 }
 
-
-
 /**
  * Grows this box to include the given point.
  */
@@ -286,8 +325,6 @@ void RBox::growToInclude(const RVector& v) {
     c1 = min;
     c2 = max;
 }
-
-
 
 /**
  * \return 8 vectors for the eight corners of the box.
@@ -314,6 +351,9 @@ QList<RVector> RBox::getCorners() const {
     return ret;
 }
 
+/**
+ * \return List of all four corners of this box flattened to 2D.
+ */
 QList<RVector> RBox::getCorners2d() const {
     QList<RVector> ret;
 
@@ -325,7 +365,9 @@ QList<RVector> RBox::getCorners2d() const {
     return ret;
 }
 
-
+/**
+ * \return List of all four sides of this box flattened to 2D.
+ */
 QList<RLine> RBox::getLines2d() const {
     QList<RLine> ret;
 
@@ -337,6 +379,9 @@ QList<RLine> RBox::getLines2d() const {
     return ret;
 }
 
+/**
+ * \return Polyline representing the four sides of this box flattened to 2D.
+ */
 RPolyline RBox::getPolyline2d() const {
     RPolyline ret;
     ret.appendVertex(RVector(c1.x, c1.y));
@@ -346,7 +391,6 @@ RPolyline RBox::getPolyline2d() const {
     ret.setClosed(true);
     return ret;
 }
-
 
 /**
  * \return 12 triangles, two for each side of the box.
@@ -382,11 +426,12 @@ QList<RTriangle> RBox::getTriangles() const {
     return ret;
 }
 
-
+/**
+ * \return This box converted to a QRectF object (2D).
+ */
 QRectF RBox::toQRectF() const {
     return QRectF(c1.x, c1.y, c2.x - c1.x, c2.y - c1.y);
 }
-
 
 /**
  * == operator
@@ -394,7 +439,6 @@ QRectF RBox::toQRectF() const {
 bool RBox::operator ==(const RBox& other) const {
     return c1==other.c1 && c2==other.c2;
 }
-
 
 /**
  * Stream operator for QDebug
