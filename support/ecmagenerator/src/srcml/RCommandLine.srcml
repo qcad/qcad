@@ -40,6 +40,7 @@
     <function_decl><type><name>void</name></type> <name>clearHistory</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>commandConfirmed</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>command</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>completeCommand</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>command</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>escape</name><parameter_list>()</parameter_list>;</function_decl>
 
 </private><public>public:
     <constructor_decl><name>RCommandLine</name><parameter_list>(<param><decl><type><name>QWidget</name>*</type> <name>parent</name> =<init> <expr>0</expr></init></decl></param>)</parameter_list>;</constructor_decl>
@@ -47,7 +48,7 @@
     <function_decl><type><name>void</name></type> <name>appendCommand</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>cmd</name></decl></param>)</parameter_list>;</function_decl>
 
 </public><protected>protected:
-    <function_decl><type><name>virtual</name> <name>void</name></type> <name>keyPressEvent</name><parameter_list>(<param><decl><type><name>QKeyEvent</name> *</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>keyPressEvent</name><parameter_list>(<param><decl><type><name>QKeyEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>event</name><parameter_list>(<param><decl><type><name>QEvent</name>*</type> <name>event</name></decl></param>)</parameter_list>;</function_decl>
 
 </protected><private>private:

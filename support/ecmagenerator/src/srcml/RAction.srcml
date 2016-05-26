@@ -239,14 +239,8 @@
      */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>coordinateEventPreview</name><parameter_list>(<param><decl><type><name>RCoordinateEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
-    <comment type="block">/**
-     * \override
-     */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>entityPickEvent</name><parameter_list>(<param><decl><type><name>REntityPickEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
-    <comment type="block">/**
-     * \override
-     */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>entityPickEventPreview</name><parameter_list>(<param><decl><type><name>REntityPickEvent</name>&amp;</type> <name>event</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <comment type="block">/**
