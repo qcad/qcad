@@ -123,7 +123,40 @@ EcmaScriptShell.init = function(basePath) {
         }
     );
 
+    var expression = "";
+    var bracketsCountR = 0;
+    var bracketsCountC = 0;
+    var bracketsCountS = 0;
+    lCommand.text = ">";
+
     // user pressed enter, eval command:
+    function countBraces(str) {
+        for (var i=0, len=str.length; i<len; ++i) {
+            switch(str[i]) {
+                case '(': ++bracketsCountR; break;
+                case ')': --bracketsCountR; break;
+                case '{': ++bracketsCountC; break;
+                case '}': --bracketsCountC; break;
+                case '[': ++bracketsCountS; break;
+                case ']': --bracketsCountS; break;
+            }
+            if (bracketsCountR < 0 || bracketsCountC < 0 || bracketsCountS < 0) {
+                // error:
+                return false;
+            }
+        }
+        return true;
+    }
+
+    leCommand.escape.connect(function() {
+        leCommand.setProperty("OpenBrackets", bracketsCountR+bracketsCountC+bracketsCountS);
+        bracketsCountR = 0;
+        bracketsCountC = 0;
+        bracketsCountS = 0;
+        lCommand.text = ">";
+        expression = "";
+    });
+
     leCommand.commandConfirmed.connect(function(command) {
         leCommand.clear();
 
@@ -133,19 +166,43 @@ EcmaScriptShell.init = function(basePath) {
             teHistory.setPlainText(buf.slice(-historySize).join("\n"));
         }
 
-        appendAndScroll("<span style='color:#000000;'>" + Qt.escape("ecma> ") + Qt.escape(command) + "</span>");
-
-        var res;
-        try {
-            startTransaction();
-            res = RMainWindow.getMainWindow().eval("js", command);
-            endTransaction();
-            appendAndScroll("<span style='color:#000000;'>" + Qt.escape(res) + "</span>");
+        var col = "#000";
+        var colWarning = "#cc0000";
+        var colPrompt = "#0000cc";
+        if (RSettings.hasDarkGuiBackground()) {
+            col = "#fff";
+            colWarning = "#cc0000";
+            colPrompt = "#2E9AFE";
         }
-        catch(e) {
-            appendAndScroll("<span style='color:#cc0000;'>" + Qt.escape(e) + "</span>");
-            //qDebug("error: ", e);
-            //qDebug("error: res:", res);
+
+        appendAndScroll("<span style='font-style:italic;color:"+colPrompt+";'>" + Qt.escape("ecma> ") + "</span>"
+                        + "<span style='color:"+col+"'>" + Qt.escape(command) + "</span>");
+
+        // if we have open brackets: continue entering:
+        countBraces(command);
+        expression+=command + "\n";
+        if (bracketsCountR>0 || bracketsCountC>0 || bracketsCountS>0) {
+            lCommand.text = "...";
+        }
+        else {
+            var res;
+            try {
+                //startTransaction();
+                res = RMainWindow.getMainWindow().eval("js", expression);
+                //endTransaction();
+                appendAndScroll("<span style='color:"+col+";'>" + Qt.escape(res) + "</span>");
+            }
+            catch(e) {
+                appendAndScroll("<span style='color:"+colWarning+";'>" + Qt.escape(e) + "</span>");
+                //qDebug("error: ", e);
+                //qDebug("error: res:", res);
+            }
+
+            expression = "";
+            bracketsCountR = 0;
+            bracketsCountC = 0;
+            bracketsCountS = 0;
+            lCommand.text = ">";
         }
 
         leCommand.setFocus();

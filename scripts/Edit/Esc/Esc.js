@@ -63,7 +63,14 @@ Esc.prototype.beginEvent = function() {
                 return;
             }
             else {
-                returnFocus = true;
+                // give script shell a chance to cancel open brackets
+                ecmaScriptShellEdit.escape();
+                if (ecmaScriptShellEdit.property("OpenBrackets")>0) {
+                    ecmaScriptShellEdit.setProperty("OpenBrackets", 0);
+                }
+                else {
+                    returnFocus = true;
+                }
             }
         }
     }
