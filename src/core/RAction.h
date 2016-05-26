@@ -238,14 +238,8 @@ public:
      */
     virtual void coordinateEventPreview(RCoordinateEvent& event) = 0;
 
-    /**
-     * \override
-     */
     virtual void entityPickEvent(REntityPickEvent& event) = 0;
 
-    /**
-     * \override
-     */
     virtual void entityPickEventPreview(REntityPickEvent& event) = 0;
 
     /**
