@@ -1548,10 +1548,10 @@ RS::Ending RSpline::getTrimEnd(const RVector& trimPoint, const RVector& clickPoi
     double tAtTrimPoint = getTAtPoint(trimPoint);
 
     if (tAtTrimPoint < tAtClickPoint) {
-        return RS::EndingEnd;
+        return RS::EndingStart;
     }
     else {
-        return RS::EndingStart;
+        return RS::EndingEnd;
     }
 }
 
