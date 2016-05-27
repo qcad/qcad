@@ -38,6 +38,15 @@ void RCommandLine::appendCommand(const QString& cmd) {
     it = history.end();
 }
 
+QStringList RCommandLine::getHistory() const {
+    return history;
+}
+
+void RCommandLine::setHistory(QStringList& h) {
+    history = h;
+    it = history.end();
+}
+
 bool RCommandLine::event(QEvent* event) {
     if (event->type() == QEvent::KeyPress) {
         QKeyEvent* ke = dynamic_cast<QKeyEvent*> (event);
@@ -60,11 +69,11 @@ void RCommandLine::keyPressEvent(QKeyEvent* event) {
     case Qt::Key_Enter:
     case Qt::Key_Return: {
         QString t = text();
-        emit commandConfirmed(t);
         if (!t.isEmpty() && (history.isEmpty() || history.last() != t)) {
             history.append(t);
-            it = history.end();
         }
+        it = history.end();
+        emit commandConfirmed(t);
         }
         break;
     case Qt::Key_Up:
