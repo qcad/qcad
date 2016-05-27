@@ -1094,19 +1094,20 @@ QDebug operator<<(QDebug dbg, RTransaction& t) {
         }
     }
 
-    {
-        dbg.nospace() << "\n, statusChanges: ";
-        QSet<RObject::Id> objs = t.getStatusChanges();
-        QSet<RObject::Id>::iterator it;
-        for (it = objs.begin(); it != objs.end(); ++it) {
-            dbg.nospace() << *it << ", ";
-        }
-    }
+//    {
+//        dbg.nospace() << "\n, statusChanges: ";
+//        QSet<RObject::Id> objs = t.getStatusChanges();
+//        QSet<RObject::Id>::iterator it;
+//        for (it = objs.begin(); it != objs.end(); ++it) {
+//            dbg.nospace() << *it << ", ";
+//        }
+//    }
 
     {
-        dbg.nospace() << "\n, propertyChanges: ";
-        QMap<RObject::Id, QList<RPropertyChange> > propertyChanges =
-            t.getPropertyChanges();
+        QMap<RObject::Id, QList<RPropertyChange> > propertyChanges = t.getPropertyChanges();
+        if (!propertyChanges.isEmpty()) {
+            dbg.nospace() << "\n, propertyChanges: ";
+        }
         QMap<RObject::Id, QList<RPropertyChange> >::iterator it;
         for (it = propertyChanges.begin(); it != propertyChanges.end(); ++it) {
             dbg.nospace() << "\n\tobjectId: " << it.key() << ", \n\tchanges:\n\t";
@@ -1115,7 +1116,6 @@ QDebug operator<<(QDebug dbg, RTransaction& t) {
                 dbg.nospace() << *it2 << ", \n\t";
             }
         }
-        dbg.nospace() << "\n)\n";
     }
 
     dbg.nospace() << ")";
