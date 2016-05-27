@@ -69,9 +69,19 @@ EcmaScriptShell.init = function(basePath) {
     action.setSortOrder(100);
     action.setWidgetNames(["MiscDevelopmentMenu", "MiscDevelopmentToolBar", "MiscDevelopmentToolsPanel"]);
 
+    var col = "#000";
+    var colWarning = "#cc0000";
+    var colPrompt = "#0000cc";
+    if (RSettings.hasDarkGuiBackground()) {
+        col = "#fff";
+        colWarning = "#cc0000";
+        colPrompt = "#2E9AFE";
+    }
+
     var formWidget = WidgetFactory.createWidget(basePath, "EcmaScriptShell.ui");
     var teHistory = formWidget.findChild("History");
     var leCommand = formWidget.findChild("CommandEdit");
+    leCommand.setHistory(RSettings.getStringListValue("EcmaScriptShell/History", []));
     var lCommand = formWidget.findChild("CommandLabel");
     var bToggleTitleBar = formWidget.findChild("ToggleTitleBar");
     var dock = new RDockWidget(qsTr("Script Shell"), appWin);
@@ -83,6 +93,13 @@ EcmaScriptShell.init = function(basePath) {
     dock.hidden.connect(function() { action.setChecked(false); });
 
     dock.visible = false;
+
+    if (!isNull(warning)) {
+        // initialize simple API warning handler:
+        warning.handler = function(msg) {
+            appendAndScroll("<span style='color:"+colWarning+"'>WARNING: " +  Qt.escape(msg) + "</span>");
+        };
+    }
 
     function appendAndScroll(msg) {
         teHistory.append(msg);
@@ -158,21 +175,20 @@ EcmaScriptShell.init = function(basePath) {
     });
 
     leCommand.commandConfirmed.connect(function(command) {
+        // save history:
+        var h = leCommand.getHistory();
+        if (h.length>100) {
+            h = h.slice(-100);
+        }
+
+        RSettings.setValue("EcmaScriptShell/History", h);
+
         leCommand.clear();
 
         var historySize = RSettings.getIntValue("EcmaScriptShell/HistorySize", 1000);
         var buf = teHistory.plainText.split("\n");
         if (buf.length > historySize) {
             teHistory.setPlainText(buf.slice(-historySize).join("\n"));
-        }
-
-        var col = "#000";
-        var colWarning = "#cc0000";
-        var colPrompt = "#0000cc";
-        if (RSettings.hasDarkGuiBackground()) {
-            col = "#fff";
-            colWarning = "#cc0000";
-            colPrompt = "#2E9AFE";
         }
 
         appendAndScroll("<span style='font-style:italic;color:"+colPrompt+";'>" + Qt.escape("ecma> ") + "</span>"
@@ -190,6 +206,12 @@ EcmaScriptShell.init = function(basePath) {
                 //startTransaction();
                 res = RMainWindow.getMainWindow().eval("js", expression);
                 //endTransaction();
+
+                // make sure input is enabled again:
+                if (!isInputEnabled()) {
+                    enableInput();
+                }
+
                 appendAndScroll("<span style='color:"+col+";'>" + Qt.escape(res) + "</span>");
             }
             catch(e) {
