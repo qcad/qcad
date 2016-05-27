@@ -543,18 +543,6 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         return false;
     }
 
-    // TODO: add generic way to allow any object not to be cloned here:
-    // i.e. if (object.cloneInsteadOfUpdate()) { ... }
-//    QSharedPointer<RLinetype> lt = object.dynamicCast<RLinetype>();
-//    if (!lt.isNull() && lt->getId()!=RObject::INVALID_ID) {
-//        qDebug() << "replace linetype";
-//        QSharedPointer<RLinetype> clone = QSharedPointer<RLinetype>(lt->clone());
-//        objectStorage->setObjectId(*clone, RObject::INVALID_ID);
-//        deleteObject(lt->getId());
-//        addObject(clone, useCurrentAttributes, false, modifiedPropertyTypeIds);
-//        return true;
-//    }
-
     QSharedPointer<REntity> entity = object.dynamicCast<REntity>();
     bool mustClone = false;
     if (!entity.isNull() && entity->getId()!=REntity::INVALID_ID) {
@@ -567,7 +555,7 @@ bool RTransaction::addObject(QSharedPointer<RObject> object,
         }
         if (!mustClone) {
             if (entity->getType()==RS::EntityHatch && modifiedPropertyTypeIds.isEmpty()) {
-                // entity is hatch and not only property has changed:
+                // entity is hatch and not only one property has changed:
                 mustClone = true;
             }
         }
