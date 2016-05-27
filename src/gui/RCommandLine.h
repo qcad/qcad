@@ -45,6 +45,8 @@ public:
     RCommandLine(QWidget* parent = 0);
     QString getLastCommand();
     void appendCommand(const QString& cmd);
+    QStringList getHistory() const;
+    void setHistory(QStringList& h);
 
 protected:
     virtual void keyPressEvent(QKeyEvent* event);
