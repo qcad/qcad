@@ -66,8 +66,7 @@ void RScriptHandler::init(const QString& autostartFile, const QStringList& argum
 /**
  * Runs the given script file as application level action.
  */
-void RScriptHandler::triggerActionApplicationLevel(const QString& scriptFile,
-        RGuiAction* guiAction) {
+void RScriptHandler::triggerActionApplicationLevel(const QString& scriptFile, RGuiAction* guiAction) {
     QString suffix = QFileInfo(scriptFile).suffix();
     RScriptHandler* h = RScriptHandlerRegistry::getGlobalScriptHandler(suffix);
     if (h == NULL) {
