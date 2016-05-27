@@ -2,12 +2,17 @@
  * Simple API, mainly designed for use in the ECMAScript console.
  */
 
-include("scripts/library.js");
-include("scripts/input.js");
+include("library.js");
+include("input.js");
 
 // internal:
 __simpleUseOp = false;
 __simpleOp = undefined;
+
+include("simple_create.js");
+include("simple_modify.js");
+include("simple_info.js");
+include("simple_transaction.js");
 
 /**
  * Returns a pointer to the main application window (RMainWindowQt).
@@ -36,206 +41,48 @@ function getDocument() {
 }
 
 /**
- * Adds a point to the drawing.
- *
- * \code
- * addPoint(x,y)
- * addPoint(new RVector(x,y))
- * \endcode
+ * Disables the main application window to prevent user input.
  */
-function addPoint(p1, p2) {
-    if (isNumber(p1)) {
-        return addPoint(new RVector(p1, p2));
-    }
-
-    return addShape(new RPoint(p1));
+function disableInput() {
+    getMainWindow().enabled = false;
+    return getMainWindow().enabled;
 }
 
 /**
- * Adds a line to the drawing.
- *
- * \code
- * addLine(x1,y1, x2,y2)
- * addLine(new RVector(x1,y1), new RVector(x2,y2))
- * \endcode
+ * Enables the main application window to prevent user input.
  */
-function addLine(p1, p2, p3, p4) {
-    if (isNumber(p1)) {
-        return addLine(new RVector(p1, p2), new RVector(p3, p4));
-    }
-
-    return addShape(new RLine(p1, p2));
+function enableInput() {
+    getMainWindow().enabled = true;
+    return getMainWindow().enabled;
 }
 
 /**
- * Adds an arc to the drawing.
- *
- * \code
- * addArc(cx,cy, radius, startAngle, endAngle, reversed)
- * addArc(new RVector(cx,cy), radius, startAngle, endAngle, reversed)
- * \endcode
+ * Returns true if user input is enabled.
  */
-function addArc(p1, p2, p3, p4, p5, p6) {
-    if (isNumber(p1)) {
-        return addArc(new RVector(p1, p2), p3, p4, p5, p6);
-    }
-    return addShape(new RArc(p1, p2, p3, p4, p5));
+function isInputEnabled() {
+    return getMainWindow().enabled;
 }
 
 /**
- * Adds a circle to the drawing.
- *
- * \code
- * addCircle(cx,cy, radius)
- * addCircle(new RVector(cx,cy), radius)
- * \endcode
+ * Prints a warning to stdout.
  */
-function addCircle(p1, p2, p3) {
-    if (isNumber(p1)) {
-        return addCircle(new RVector(p1, p2), p3);
+function warning(msg) {
+    if (isFunction(warning.handler)) {
+        return warning.handler(msg);
     }
-    return addShape(new RCircle(p1, p2));
+    print("WARNING: " + msg);
 }
 
 /**
- * Adds a polyline to the drawing.
- *
- * \param points Array of RVector or [x,y] tuples.
- * \param closed True for an implicitely closed polyline.
- *
- * \code
- * addPolyline([[x1,y1],[x2,y2],[x3,y3]], false)
- * addPolyline([new RVector(x1,y1)],new RVector(x2,y2),new RVector(x3,y3)], false)
- * \endcode
+ * Keeps the user interface up to date during long operations.
+ * User input must be disabled using disableInput before calling update.
  */
-function addPolyline(points, closed) {
-    if (isNull(closed)) {
-        closed = false;
+function update() {
+    if (isInputEnabled()) {
+        warning("User input must be disabled before calling update");
+        return false;
     }
-    var pl = new RPolyline();
-    pl.setClosed(closed);
-    for (var i=0; i<points.length; i++) {
-        if (isVector(points[i])) {
-            pl.appendVertex(points[i]);
-        }
-        else {
-            pl.appendVertex(new RVector(points[i][0], points[i][1]));
-        }
-    }
-    return addShape(pl);
-}
 
-/**
- * Adds a simple text to the drawing.
- *
- * \param text Text string.
- * \param x X position
- * \param y Y position
- * \param height Text height (defaults to 1)
- * \param angle Text angle (defaults to 0)
- * \param font Font (defaults to "standard")
- * \param vAlign Vertical alignment (defaults to RS.VAlignTop)
- * \param hAlign Horizontal alignment (defaults to RS.HAlignLeft)
- * \param bold True for bold text (TTF fonts only)
- * \param italic True for italic text (TTF fonts only)
- *
- * \code
- * addPolyline([[x1,y1],[x2,y2],[x3,y3]], false)
- * addPolyline([new RVector(x1,y1)],new RVector(x2,y2),new RVector(x3,y3)], false)
- * \endcode
- */
-function addSimpleText(text, x, y, height, angle, font, vAlign, hAlign, bold, italic) {
-    if (isNull(height)) height = 1.0;
-    if (isNull(angle)) angle = 0.0;
-    if (isNull(font)) font = "Standard";
-    if (isNull(vAlign)) vAlign = RS.VAlignTop;
-    if (isNull(hAlign)) hAlign = RS.HAlignLeft;
-    if (isNull(bold)) bold = false;
-    if (isNull(italic)) italic = false;
-
-    var entity = new RTextEntity(
-        getDocument(),
-        new RTextData(
-              new RVector(x, y),
-              new RVector(x, y),
-              height,
-              100.0,
-              vAlign,
-              hAlign,
-              RS.LeftToRight,
-              RS.Exact,
-              1.0,
-              text,
-              font,
-              bold,
-              italic,
-              angle,
-              true
-        )
-    );
-    return addEntity(entity);
-}
-
-/**
- * Adds the given RShape to the drawing using current layer and attributes.
- */
-function addShape(shape) {
-    var di = getDocumentInterface();
-    var entity = shapeToEntity(getDocument(), shape);
-    return addEntity(entity);
-}
-
-/**
- * Adds the given REntity to the drawing using layer and attributes as set by the entity.
- *
- * \return ID of added entity or RObject.INVALID_ID (-1) if a transaction is in progress.
- */
-function addEntity(entity) {
-    if (__simpleUseOp===true) {
-        if (isNull(__simpleOp)) {
-            __simpleOp = new RAddObjectsOperation();
-        }
-        __simpleOp.addObject(entity, false);
-        return RObject.INVALID_ID;
-    }
-    else {
-        var di = getDocumentInterface();
-        di.applyOperation(new RAddObjectOperation(entity, false));
-        return entity.getId();
-    }
-}
-
-/**
- * Starts a transaction. This can increase performance when adding multiple entities.
- * Entities are added in one transaction when endTransaction is called.
- *
- * \code
- * startTransaction();
- * for (...) {
- *     addLine(...);
- * }
- * endTransaction();
- * \endcode
- */
-function startTransaction() {
-    __simpleUseOp = true;
-    if (!isNull(__simpleOp)) {
-        __simpleOp.destroy();
-        __simpleOp = undefined;
-    }
-}
-
-/**
- * \see startTransaction
- * \return RTransaction object containing information about the transaction.
- */
-function endTransaction() {
-    var ret = undefined;
-    if (!isNull(__simpleOp)) {
-        var di = getDocumentInterface();
-        ret = di.applyOperation(__simpleOp);
-        __simpleOp = undefined;
-    }
-    __simpleUseOp = false;
-    return ret;
+    QCoreApplication.processEvents();
+    return true;
 }

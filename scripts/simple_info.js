@@ -1,0 +1,43 @@
+/**
+ * Simple Information API, mainly designed for use in the ECMAScript console.
+ */
+
+/**
+ * \return Intersection points between the two given entities or shapes.
+ *
+ * \param e1 First entity, entity ID or shape.
+ * \param e2 Second entity, entity ID or shape.
+ * \param limited True to only return intersection points that lay
+ * on the given entities or shapes (visible intersections).
+ */
+function getIntersectionPoints(e1, e2, limited) {
+    var doc = getDocument();
+    if (isNull(doc)) {
+        return [];
+    }
+
+    if (isNull(limited)) {
+        limited = true;
+    }
+
+    if (isNumber(e1)) {
+        var entity1 = doc.queryEntityDirect(e1);
+        e1 = entity1.data();
+    }
+    if (isNumber(e2)) {
+        var entity2 = doc.queryEntityDirect(e2);
+        e2 = entity2.data();
+    }
+
+    if (isEntity(e1) && isEntity(e2)) {
+        return e1.getIntersectionPoints(e2, limited);
+    }
+    if (isEntity(e1) && isShape(e2)) {
+        return e1.getIntersectionPointsWithShape(e2, limited);
+    }
+    if (isShape(e1) && isEntity(e2)) {
+        return e2.getIntersectionPointsWithShape(e1, limited);
+    }
+
+    return [];
+}
