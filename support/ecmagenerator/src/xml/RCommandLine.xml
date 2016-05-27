@@ -25,6 +25,19 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </method>
+    <method name="getHistory" cppName="getHistory"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QStringList" isPureVirtual="false" />
+    </method>
+    <method name="setHistory" cppName="setHistory"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="QStringList &amp;" typeName="QStringList"
+        name="h" isConst="false" />
+      </variant>
+    </method>
     <method name="keyPressEvent" cppName="keyPressEvent"
     specifier="protected" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">

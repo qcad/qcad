@@ -67,6 +67,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, appendCommand, "appendCommand");
             
+            REcmaHelper::registerFunction(&engine, proto, getHistory, "getHistory");
+            
+            REcmaHelper::registerFunction(&engine, proto, setHistory, "setHistory");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RCommandLine*>(), *proto);
 
@@ -326,6 +330,111 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaCommandLine::appendCommand", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCommandLine::getHistory
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCommandLine::getHistory", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCommandLine::getHistory";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCommandLine* self = 
+                        getSelf("getHistory", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QStringList'
+    QStringList cppResult =
+        
+               self->getHistory();
+        // return type: QStringList
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCommandLine.getHistory().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCommandLine::getHistory", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaCommandLine::setHistory
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaCommandLine::setHistory", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaCommandLine::setHistory";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RCommandLine* self = 
+                        getSelf("setHistory", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QStringList */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QStringList
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setHistory(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RCommandLine.setHistory().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaCommandLine::setHistory", context, engine);
             return result;
         }
          QScriptValue REcmaCommandLine::toString
