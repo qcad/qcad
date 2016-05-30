@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>RunScriptDialog</class>
- <widget class="QDialog" name="RunScriptDialog">
+ <class>RunScript</class>
+ <widget class="QDialog" name="RunScript">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -63,7 +63,7 @@
   <connection>
    <sender>ButtonBox</sender>
    <signal>accepted()</signal>
-   <receiver>RunScriptDialog</receiver>
+   <receiver>RunScript</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -79,7 +79,7 @@
   <connection>
    <sender>ButtonBox</sender>
    <signal>rejected()</signal>
-   <receiver>RunScriptDialog</receiver>
+   <receiver>RunScript</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

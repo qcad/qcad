@@ -77,14 +77,14 @@ RunScript.prototype.beginEvent = function() {
         if (RSettings.getBoolValue("RunScript/DontShowDialog", false)!==true) {
             var dialog = WidgetFactory.createDialog(RunScript.includeBasePath, "RunScriptDialog.ui", appWin);
             var bb = dialog.findChild("ButtonBox");
-            //bb.button(QDialogButtonBox.Ok).text = qsTr("Run Script");
             var b = bb.addButton(qsTr("Run Script"), QDialogButtonBox.AcceptRole);
             b["default"] = false;
             bb.button(QDialogButtonBox.Cancel)["default"] = true;
             var l = dialog.findChild("Message");
             l.text = l.text.arg(fileNames.join("<br>"));
             var ret = dialog.exec();
-            if (ret!==QDialog.Accepted) {
+            if (ret!==QDialog.Accepted.valueOf()) {
+                qDebug("cancel");
                 dialog.destroy();
                 EAction.activateMainWindow();
                 return;
