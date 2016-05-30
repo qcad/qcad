@@ -43,10 +43,11 @@ RBox::RBox(const QRectF& rect) {
 /**
  * Constructor for a box with two given diagonally opposite corners.
  */
-RBox::RBox(const RVector& c1, const RVector& c2) {
-    // important for later x1<x2 check (cross selection):
-    this->c1 = c1;
-    this->c2 = c2;
+RBox::RBox(const RVector& c1, const RVector& c2) : c1(c1), c2(c2) {
+    // important for later x1<x2 check (cross selection): keep c1, c2 order
+}
+
+RBox::RBox(double x1, double y1, double x2, double y2) : c1(x1,y1), c2(x2,y2) {
 }
 
 /**

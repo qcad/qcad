@@ -44,6 +44,7 @@ class QCADCORE_EXPORT RBox {
 public:
     RBox();
     explicit RBox(const QRectF& rect);
+    RBox(double x1, double y1, double x2, double y2);
     RBox(const RVector& c1, const RVector& c2);
     RBox(const RVector& center, double range);
     RBox(const RVector& center, double width, double height);
