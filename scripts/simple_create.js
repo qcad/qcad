@@ -47,9 +47,9 @@ function addLine(p1, p2, p3, p4) {
  */
 function addArc(p1, p2, p3, p4, p5, p6) {
     if (isNumber(p1)) {
-        return addArc(new RVector(p1, p2), p3, p4, p5, p6);
+        return addArc(new RVector(p1, p2), p3, p4,p5, p6);
     }
-    return addShape(new RArc(p1, p2, p3, p4, p5));
+    return addShape(new RArc(p1, p2, deg2rad(p3),deg2rad(p4), p5));
 }
 
 /**
@@ -142,8 +142,7 @@ function addSpline(points, closed) {
  * \param italic True for italic text (TTF fonts only)
  *
  * \code
- * addPolyline([[x1,y1],[x2,y2],[x3,y3]], false)
- * addPolyline([new RVector(x1,y1)],new RVector(x2,y2),new RVector(x3,y3)], false)
+ * addSimpleText(text, x, y, height, angle, font, vAlign, hAlign, bold, italic)
  * \endcode
  */
 function addSimpleText(text, x, y, height, angle, font, vAlign, hAlign, bold, italic) {
@@ -171,7 +170,7 @@ function addSimpleText(text, x, y, height, angle, font, vAlign, hAlign, bold, it
               font,
               bold,
               italic,
-              angle,
+              deg2rad(angle),
               true
         )
     );
