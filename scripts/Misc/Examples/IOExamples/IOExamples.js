@@ -17,6 +17,12 @@
  * along with QCAD.
  */
 
+/**
+ * \defgroup ecma_misc_examples_ioexamples Example IO Scripts
+ * \ingroup ecma_misc_examples
+ *
+ * \brief This module contains I/O related ECMAScript example.
+ */
 include("../Examples.js");
 
 /**

@@ -17,6 +17,12 @@
  * along with QCAD.
  */
 
+/**
+ * \defgroup ecma_misc_examples_qtexamples Example Qt Scripts
+ * \ingroup ecma_misc_examples
+ *
+ * \brief This module contains Qt related ECMAScript example.
+ */
 include("../Examples.js");
 
 /**

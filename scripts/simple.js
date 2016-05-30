@@ -2,6 +2,12 @@
  * Simple API, mainly designed for use in the ECMAScript console.
  */
 
+/**
+ * \defgroup ecma_simple QCAD Simple API
+ * \ingroup ecma_scripts
+ *
+ * \brief This module defines the QCAD Simple API in ECMAScript.
+ */
 include("library.js");
 include("input.js");
 
@@ -17,6 +23,7 @@ include("simple_view.js");
 
 /**
  * Returns a pointer to the main application window (RMainWindowQt).
+ * \ingroup ecma_simple
  */
 function getMainWindow() {
     return RMainWindowQt.getMainWindow();
@@ -24,6 +31,7 @@ function getMainWindow() {
 
 /**
  * Returns the current RDocumentInterface or undefined.
+ * \ingroup ecma_simple
  */
 function getDocumentInterface() {
     var appWin = getMainWindow();
@@ -32,6 +40,7 @@ function getDocumentInterface() {
 
 /**
  * Returns the current RDocument or undefined.
+ * \ingroup ecma_simple
  */
 function getDocument() {
     var di = getDocumentInterface();
@@ -43,6 +52,7 @@ function getDocument() {
 
 /**
  * Returns the current or last active RGraphicsView.
+ * \ingroup ecma_simple
  */
 function getGraphicsView() {
     var di = getDocumentInterface();
@@ -54,6 +64,7 @@ function getGraphicsView() {
 
 /**
  * Disables the main application window to prevent user input.
+ * \ingroup ecma_simple
  */
 function disableInput() {
     getMainWindow().enabled = false;
@@ -62,6 +73,7 @@ function disableInput() {
 
 /**
  * Enables the main application window to prevent user input.
+ * \ingroup ecma_simple
  */
 function enableInput() {
     getMainWindow().enabled = true;
@@ -70,6 +82,7 @@ function enableInput() {
 
 /**
  * Returns true if user input is enabled.
+ * \ingroup ecma_simple
  */
 function isInputEnabled() {
     return getMainWindow().enabled;
@@ -77,6 +90,7 @@ function isInputEnabled() {
 
 /**
  * Prints a warning to stdout.
+ * \ingroup ecma_simple
  */
 function warning(msg) {
     if (isFunction(warning.handler)) {
@@ -88,6 +102,7 @@ function warning(msg) {
 /**
  * Keeps the user interface up to date during long operations.
  * User input must be disabled using disableInput before calling update.
+ * \ingroup ecma_simple
  */
 function update() {
     if (isInputEnabled()) {
@@ -95,6 +110,34 @@ function update() {
         return false;
     }
 
-    QCoreApplication.processEvents();
+    var ret = true;
+    try {
+        QCoreApplication.processEvents(QEventLoop.ExcludeSocketNotifiers, 100);
+    } catch (e) {
+        qWarning("error: " + e);
+        ret = false;
+    }
+
+    return ret;
+}
+
+/**
+ * Sleeps for the indicated time in milliseconds.
+ * \ingroup ecma_simple
+ */
+function sleep(d) {
+    if (isInputEnabled()) {
+        warning("User input must be disabled before calling sleep");
+        return false;
+    }
+
+    var t = new QTime();
+    t.start();
+    while (t.elapsed() < d) {
+        if (!update()) {
+            return false;
+        }
+    }
+
     return true;
 }

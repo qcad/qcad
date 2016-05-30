@@ -4,6 +4,7 @@
 
 /**
  * Adds a point to the drawing.
+ * \ingroup ecma_simple
  *
  * \code
  * addPoint(x,y)
@@ -20,6 +21,7 @@ function addPoint(p1, p2) {
 
 /**
  * Adds a line to the drawing.
+ * \ingroup ecma_simple
  *
  * \code
  * addLine(x1,y1, x2,y2)
@@ -36,6 +38,7 @@ function addLine(p1, p2, p3, p4) {
 
 /**
  * Adds an arc to the drawing.
+ * \ingroup ecma_simple
  *
  * \code
  * addArc(cx,cy, radius, startAngle, endAngle, reversed)
@@ -51,6 +54,7 @@ function addArc(p1, p2, p3, p4, p5, p6) {
 
 /**
  * Adds a circle to the drawing.
+ * \ingroup ecma_simple
  *
  * \code
  * addCircle(cx,cy, radius)
@@ -66,6 +70,7 @@ function addCircle(p1, p2, p3) {
 
 /**
  * Adds a polyline to the drawing.
+ * \ingroup ecma_simple
  *
  * \param points Array of RVector or [x,y] tuples.
  * \param closed True for an implicitely closed polyline.
@@ -94,6 +99,7 @@ function addPolyline(points, closed) {
 
 /**
  * Adds a spline to the drawing.
+ * \ingroup ecma_simple
  *
  * \param fitPoints Array of RVector or [x,y] tuples.
  * \param closed True for a closed, periodic spline.
@@ -122,6 +128,7 @@ function addSpline(points, closed) {
 
 /**
  * Adds a simple text to the drawing.
+ * \ingroup ecma_simple
  *
  * \param text Text string.
  * \param x X position
@@ -173,6 +180,7 @@ function addSimpleText(text, x, y, height, angle, font, vAlign, hAlign, bold, it
 
 /**
  * Adds the given RShape to the drawing using current layer and attributes.
+ * \ingroup ecma_simple
  */
 function addShape(shape) {
     var di = getDocumentInterface();
@@ -182,6 +190,7 @@ function addShape(shape) {
 
 /**
  * Adds the given REntity to the drawing using layer and attributes as set by the entity.
+ * \ingroup ecma_simple
  *
  * \return ID of added entity or undefined if a transaction is in progress
  * and the entity ID is not yet known.

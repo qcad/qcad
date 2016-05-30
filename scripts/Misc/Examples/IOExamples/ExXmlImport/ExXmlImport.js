@@ -54,6 +54,8 @@ MyXmlHandler.prototype.characters = function(str) {
 
 
 /**
+ * \ingroup ecma_misc_examples_ioexamples
+ * \class ExXmlImport
  * This action reads an XML file and outputs information to stderr.
  * This can be used as starting point for XML importers.
  */

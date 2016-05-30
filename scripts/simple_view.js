@@ -4,6 +4,7 @@
 
 /**
  * Auto zoom.
+ * \ingroup ecma_simple
  */
 function autoZoom() {
     var view = getGraphicsView();
@@ -17,6 +18,7 @@ function autoZoom() {
 /**
  * Zooms to the given entity.
  * Returns the bounding box of the given entity or undefined.
+ * \ingroup ecma_simple
  *
  * \code
  * zoomTo(entity)

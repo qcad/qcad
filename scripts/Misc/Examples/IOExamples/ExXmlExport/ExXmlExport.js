@@ -20,6 +20,8 @@
 include("scripts/EAction.js");
 
 /**
+ * \ingroup ecma_misc_examples_ioexamples
+ * \class ExXmlExport
  * This action writes an XML file.
  * This can be used as starting point for XML exporters.
  */

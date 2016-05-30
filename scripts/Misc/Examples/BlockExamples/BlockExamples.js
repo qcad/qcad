@@ -17,6 +17,12 @@
  * along with QCAD.
  */
 
+/**
+ * \defgroup ecma_misc_examples_block Example Block Scripts
+ * \ingroup ecma_misc_examples
+ *
+ * \brief This module contains block related ECMAScript example.
+ */
 include("../Examples.js");
 
 /**

@@ -20,6 +20,8 @@
 include("scripts/EAction.js");
 
 /**
+ * \ingroup ecma_misc_examples_qtexamples
+ * \class ExDirListing
  * This action lists the contents of the home directory and prints
  * it into the QCAD command line history.
  */

@@ -20,6 +20,8 @@
 include("../MathExamples.js");
 
 /**
+ * \ingroup ecma_misc_examples_mathexamples
+ * \class ExMathSpiral
  * This action draws a simple spiral (center at 0/0).
  */
 function ExMathSpiral(guiAction) {

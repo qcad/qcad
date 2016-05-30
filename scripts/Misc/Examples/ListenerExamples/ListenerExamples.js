@@ -17,6 +17,12 @@
  * along with QCAD.
  */
 
+/**
+ * \defgroup ecma_misc_examples_listenerexamples Example Layer Scripts
+ * \ingroup ecma_misc_examples
+ *
+ * \brief This module contains listener related ECMAScript example.
+ */
 include("../Examples.js");
 
 /**

@@ -20,6 +20,8 @@
 include("../QtExamples.js");
 
 /**
+ * \ingroup ecma_misc_examples_qtexamples
+ * \class ExProcess
  * This action runs an external process
  */
 function ExProcess(guiAction) {

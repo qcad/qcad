@@ -20,6 +20,8 @@
 include("../BlockExamples.js");
 
 /**
+ * \ingroup ecma_misc_examples_block
+ * \class ExAddBlock
  * This action adds a block called 'MyBlock' with a line and an arc as contents.
  * A block reference is also inserted into the main drawing.
  */

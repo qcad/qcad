@@ -23,6 +23,10 @@ include("scripts/EAction.js");
 //! [include]
 
 //! [constructor]
+/**
+ * \class ExThreePoints
+ * \ingroup ecma_misc_examples_draw
+ */
 function ExThreePoints(guiAction) {
     EAction.call(this, guiAction);
 }

@@ -20,6 +20,8 @@
 include("../DrawExamples.js");
 
 /**
+ * \class ExDrawColors
+ * \ingroup ecma_misc_examples_draw
  * This action draws lines in different colors.
  */
 function ExDrawColors(guiAction) {

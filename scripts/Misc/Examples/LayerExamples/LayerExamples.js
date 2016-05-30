@@ -17,6 +17,12 @@
  * along with QCAD.
  */
 
+/**
+ * \defgroup ecma_misc_examples_layerexamples Example Layer Scripts
+ * \ingroup ecma_misc_examples
+ *
+ * \brief This module contains layer related ECMAScript example.
+ */
 include("../Examples.js");
 
 /**

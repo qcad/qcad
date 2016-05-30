@@ -18,10 +18,6 @@
  */
 include("scripts/library.js");
 
-/**
- * Command line tool.
- * Changes the color of all solid lines in the given file to blue.
- */
 function printHelp() {
     print("Usage: " + args[1] + " [OPTIONS]... <input-file> <output-file>");
     print();
@@ -31,6 +27,12 @@ function printHelp() {
     print();
 }
 
+/**
+ * \ingroup ecma_misc_examples_commandlineexamples
+ * Command line tool.
+ * Changes the color of all solid lines in the given file to blue.
+ * Execute with ./qcad -autostart scripts/Misc/Examples/CommandLineExamples/ExSetColor/ExSetColor.js
+ */
 function main() {
     if (args.length < 3) {
         print("No input file given. Try -h for help.");

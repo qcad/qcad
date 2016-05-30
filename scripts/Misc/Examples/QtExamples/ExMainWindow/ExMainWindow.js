@@ -20,6 +20,8 @@
 include("../QtExamples.js");
 
 /**
+ * \ingroup ecma_misc_examples_qtexamples
+ * \class ExMainWindow
  * This action creates a Qt main window.
  */
 function ExMainWindow(guiAction) {

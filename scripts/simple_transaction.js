@@ -5,6 +5,7 @@
 /**
  * Starts a transaction. This can increase performance when adding multiple entities.
  * Entities are added in one transaction when endTransaction is called.
+ * \ingroup ecma_simple
  *
  * \code
  * startTransaction();
@@ -25,6 +26,7 @@ function startTransaction() {
 
 /**
  * \see startTransaction
+ * \ingroup ecma_simple
  * \return RTransaction object containing information about the transaction.
  */
 function endTransaction() {

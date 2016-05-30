@@ -19,6 +19,8 @@
 include("../DrawExamples.js");
 
 /**
+ * \class ExText
+ * \ingroup ecma_misc_examples_draw
  * Adds a text entity to the drawing.
  */
 function ExText(guiAction) {

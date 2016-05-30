@@ -20,6 +20,8 @@
 include("../LayerExamples.js");
 
 /**
+ * \ingroup ecma_misc_examples_layerexamples
+ * \class ExLayerWhiteToBlack
  * This action changes the color of all white layers to black.
  */
 function ExLayerWhiteToBlack(guiAction) {

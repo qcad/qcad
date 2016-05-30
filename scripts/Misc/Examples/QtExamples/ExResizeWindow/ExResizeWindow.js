@@ -20,6 +20,8 @@
 include("../QtExamples.js");
 
 /**
+ * \ingroup ecma_misc_examples_qtexamples
+ * \class ExResizeWindow
  * This action resizes the main application window to common 
  * screencast / screenshot sizes.
  */

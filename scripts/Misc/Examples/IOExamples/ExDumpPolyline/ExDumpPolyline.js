@@ -20,6 +20,8 @@
 include("../IOExamples.js");
 
 /**
+ * \ingroup ecma_misc_examples_ioexamples
+ * \class ExDumpPolyline
  * This action dumps all selected polylines as plain text into the 
  * command line history.
  */

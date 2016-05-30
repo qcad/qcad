@@ -4,6 +4,7 @@
 
 /**
  * Moves the given entity or shape by the given offset.
+ * \ingroup ecma_simple
  *
  * \param e Entity, entity ID or shape.
  *
@@ -31,6 +32,7 @@ function move(e, p1, p2) {
 
 /**
  * Rotates the given entity or shape by the given angle around the given center.
+ * \ingroup ecma_simple
  *
  * \param e Entity, entity ID or shape.
  *
@@ -63,6 +65,7 @@ function rotate(e, angle, p1, p2) {
 
 /**
  * Scales the given entity or shape by the given factor with the given focus point.
+ * \ingroup ecma_simple
  *
  * \param e Entity, entity ID or shape.
  *
@@ -95,6 +98,7 @@ function scale(e, factor, p1, p2) {
 
 /**
  * Mirrors the given entity or shape at the given axis.
+ * \ingroup ecma_simple
  *
  * \param e Entity, entity ID or shape.
  *

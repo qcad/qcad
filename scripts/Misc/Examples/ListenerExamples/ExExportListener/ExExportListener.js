@@ -20,6 +20,8 @@
 include("scripts/EAction.js");
 
 /**
+ * \ingroup ecma_misc_examples_listenerexamples
+ * \class ExExportListener
  * This action installs an export listener and prints information about
  * exports (files being saved) to stdout.
  */

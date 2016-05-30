@@ -17,6 +17,12 @@
  * along with QCAD.
  */
 
+/**
+ * \defgroup ecma_misc_examples_commandlineexamples Example Command Line Tool Scripts
+ * \ingroup ecma_misc_examples
+ *
+ * \brief This module contains ECMAScript example command line tools.
+ */
 include("../Examples.js");
 
 /**

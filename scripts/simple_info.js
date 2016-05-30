@@ -4,6 +4,7 @@
 
 /**
  * \return Intersection points between the two given entities or shapes.
+ * \ingroup ecma_simple
  *
  * \param e1 First entity, entity ID or shape.
  * \param e2 Second entity, entity ID or shape.

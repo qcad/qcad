@@ -20,6 +20,8 @@
 include("../LayerExamples.js");
 
 /**
+ * \ingroup ecma_misc_examples_layerexamples
+ * \class ExLayerCustomProperty
  * This action adds a custom property to layer '0'.
  */
 function ExLayerCustomProperty(guiAction) {

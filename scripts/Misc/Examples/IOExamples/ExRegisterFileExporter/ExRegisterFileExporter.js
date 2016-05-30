@@ -53,6 +53,8 @@ ExFileExporterFactory.prototype.instantiate = function(document, messageHandler,
 
 
 /**
+ * \ingroup ecma_misc_examples_ioexamples
+ * \class ExFileExporter
  * File exporter implementation.
  * This class is instantiated if a file of the registered type is exported.
  */

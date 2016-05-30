@@ -17,6 +17,12 @@
  * along with QCAD.
  */
 
+/**
+ * \defgroup ecma_misc_examples_draw Example Draw Scripts
+ * \ingroup ecma_misc_examples
+ *
+ * \brief This module contains drawing related ECMAScript example.
+ */
 include("../Examples.js");
 
 /**
