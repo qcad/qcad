@@ -22,6 +22,11 @@
 include("scripts/WidgetFactory.js");
 include("scripts/simple.js");
 
+/**
+ * \class EcmaScriptShell
+ * \brief Dockable script shell with history.
+ * \ingroup ecma_misc_development
+ */
 function EcmaScriptShell(guiAction) {
     EAction.call(this, guiAction);
 }

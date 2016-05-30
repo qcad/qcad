@@ -10,9 +10,10 @@ __simpleUseOp = false;
 __simpleOp = undefined;
 
 include("simple_create.js");
-include("simple_modify.js");
 include("simple_info.js");
+include("simple_modify.js");
 include("simple_transaction.js");
+include("simple_view.js");
 
 /**
  * Returns a pointer to the main application window (RMainWindowQt).
@@ -38,6 +39,17 @@ function getDocument() {
         return undefined;
     }
     return di.getDocument();
+}
+
+/**
+ * Returns the current or last active RGraphicsView.
+ */
+function getGraphicsView() {
+    var di = getDocumentInterface();
+    if (isNull(di)) {
+        return undefined;
+    }
+    return di.getLastKnownViewWithFocus();
 }
 
 /**

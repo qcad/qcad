@@ -93,6 +93,34 @@ function addPolyline(points, closed) {
 }
 
 /**
+ * Adds a spline to the drawing.
+ *
+ * \param fitPoints Array of RVector or [x,y] tuples.
+ * \param closed True for a closed, periodic spline.
+ *
+ * \code
+ * addSpline([[x1,y1],[x2,y2],[x3,y3]], false)
+ * addSpline([new RVector(x1,y1)],new RVector(x2,y2),new RVector(x3,y3)], false)
+ * \endcode
+ */
+function addSpline(points, closed) {
+    if (isNull(closed)) {
+        closed = false;
+    }
+    var sp = new RSpline();
+    sp.setPeriodic(closed);
+    for (var i=0; i<points.length; i++) {
+        if (isVector(points[i])) {
+            sp.appendFitPoint(points[i]);
+        }
+        else {
+            sp.appendFitPoint(new RVector(points[i][0], points[i][1]));
+        }
+    }
+    return addShape(sp);
+}
+
+/**
  * Adds a simple text to the drawing.
  *
  * \param text Text string.

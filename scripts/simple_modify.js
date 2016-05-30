@@ -10,10 +10,6 @@
  * \code
  * move(entity, x,y)
  * move(entity, new RVector(x,y))
- * move(entityId, x,y)
- * move(entityId, new RVector(x,y))
- * move(shape, x,y)
- * move(shape, new RVector(x,y))
  * \endcode
  */
 function move(e, p1, p2) {
@@ -41,10 +37,6 @@ function move(e, p1, p2) {
  * \code
  * rotate(entity, angle, cx,cy)
  * rotate(entity, angle, new RVector(cx,cy))
- * rotate(entityId, angle, cx,cy)
- * rotate(entityId, angle, new RVector(cx,cy))
- * rotate(shape, angle, cx,cy)
- * rotate(shape, angle, new RVector(x,y))
  * \endcode
  */
 function rotate(e, angle, p1, p2) {
@@ -66,5 +58,68 @@ function rotate(e, angle, p1, p2) {
     else {
         e.rotate(deg2rad(angle), p1);
     }
+    return addEntity(e);
+}
+
+/**
+ * Scales the given entity or shape by the given factor with the given focus point.
+ *
+ * \param e Entity, entity ID or shape.
+ *
+ * \code
+ * scale(entity, factor, cx,cy)
+ * scale(entity, factor, new RVector(cx,cy))
+ * \endcode
+ */
+function scale(e, factor, p1, p2) {
+    if (isNumber(p1)) {
+        return scale(e, factor, new RVector(p1, p2));
+    }
+    if (isNumber(e)) {
+        var doc = getDocument();
+        if (isNull(doc)) {
+            return undefined;
+        }
+        var entity = doc.queryEntity(e);
+        return scale(entity, factor, p1);
+    }
+
+    if (isNull(p1)) {
+        e.scale(factor);
+    }
+    else {
+        e.scale(factor, p1);
+    }
+    return addEntity(e);
+}
+
+/**
+ * Mirrors the given entity or shape at the given axis.
+ *
+ * \param e Entity, entity ID or shape.
+ *
+ * \code
+ * mirror(entity, axis)
+ * mirror(entity, p1, p2)
+ * mirror(entity, x1,y1, x2,y2)
+ * \endcode
+ */
+function mirror(e, p1, p2, p3, p4) {
+    if (isNumber(p1)) {
+        return mirror(e, new RLine(new RVector(p1, p2), new RVector(p3, p4)));
+    }
+    if (isVector(p1)) {
+        return mirror(e, new RLine(p1, p2));
+    }
+    if (isNumber(e)) {
+        var doc = getDocument();
+        if (isNull(doc)) {
+            return undefined;
+        }
+        var entity = doc.queryEntity(e);
+        return mirror(entity, p1);
+    }
+
+    e.mirror(p1);
     return addEntity(e);
 }

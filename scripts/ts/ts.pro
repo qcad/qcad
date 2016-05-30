@@ -2,18 +2,24 @@ NAME = Scripts
 TSDIR = .
 include(../translations.pri)
 SOURCES = \
-    ../EAction.js \
     ../AddOn.js \
     ../Apollonius.js \
-    ../WidgetFactory.js \
-    ../ShapeAlgorithms.js \
     ../DbConnection.js \
-    ../library.js \
-    ../autostart.js \
-    ../simple.js \
-    ../sprintf.js \
-    ../map.js \
     ../DefaultAction.js \
+    ../EAction.js \
+    ../ShapeAlgorithms.js \
+    ../WidgetFactory.js \
+    ../autostart.js \
+    ../input.js \
+    ../library.js \
+    ../map.js \
+    ../simple.js \
+    ../simple_create.js \
+    ../simple_info.js \
+    ../simple_modify.js \
+    ../simple_transaction.js \
+    ../simple_view.js \
+    ../sprintf.js \
     ../lib/hull/grid.js \
     ../lib/hull/hull.js \
     ../lib/hull/intersect.js
