@@ -4,7 +4,7 @@
 <context>
     <name>ExMainWindow</name>
     <message>
-        <location filename="../ExMainWindow.js" line="+48"/>
+        <location filename="../ExMainWindow.js" line="+50"/>
         <source>&amp;Main Window</source>
         <translation>&amp;Главное окно</translation>
     </message>

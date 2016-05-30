@@ -191,7 +191,7 @@
         <translation>Программирование</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+42"/>
         <source>Translations</source>
         <translation>Переводы</translation>
     </message>

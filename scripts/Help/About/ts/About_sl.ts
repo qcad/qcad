@@ -191,7 +191,7 @@
         <translation>Programiranje</translation>
     </message>
     <message>
-        <location line="+41"/>
+        <location line="+42"/>
         <source>Translations</source>
         <translation>Prevodi</translation>
     </message>

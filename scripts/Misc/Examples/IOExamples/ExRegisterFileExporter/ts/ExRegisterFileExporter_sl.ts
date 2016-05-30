@@ -9,7 +9,7 @@
         <translation>Primeri datotek %1</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+83"/>
         <source>Info</source>
         <translation>Info</translation>
     </message>

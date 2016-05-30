@@ -4,7 +4,7 @@
 <context>
     <name>ExXmlExport</name>
     <message>
-        <location filename="../ExXmlExport.js" line="+37"/>
+        <location filename="../ExXmlExport.js" line="+39"/>
         <source>All Files</source>
         <translation>Vse datoteke</translation>
     </message>

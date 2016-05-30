@@ -8,7 +8,7 @@
         <translation type="vanished">&amp;Izvoz / Uvoz</translation>
     </message>
     <message>
-        <location filename="../IOExamples.js" line="+45"/>
+        <location filename="../IOExamples.js" line="+51"/>
         <source>&amp;Import/Export</source>
         <translation>&amp;Izvoz/Uvoz</translation>
     </message>

@@ -4,7 +4,7 @@
 <context>
     <name>ExThreePoints</name>
     <message>
-        <location filename="../ExThreePoints.js" line="+54"/>
+        <location filename="../ExThreePoints.js" line="+58"/>
         <source>Position</source>
         <translation>Position</translation>
     </message>

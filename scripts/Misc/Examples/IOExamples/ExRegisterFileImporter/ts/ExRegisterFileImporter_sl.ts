@@ -9,7 +9,7 @@
         <translation>Primeri datotek %1</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+53"/>
         <source>Read from file: &apos;%1&apos;</source>
         <translation>Beri iz datoteke &apos;%1&apos;</translation>
     </message>

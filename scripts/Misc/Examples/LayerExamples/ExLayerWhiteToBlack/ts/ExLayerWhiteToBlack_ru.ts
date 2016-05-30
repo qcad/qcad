@@ -4,7 +4,7 @@
 <context>
     <name>ExLayerWhiteToBlack</name>
     <message>
-        <location filename="../ExLayerWhiteToBlack.js" line="+64"/>
+        <location filename="../ExLayerWhiteToBlack.js" line="+66"/>
         <source>Changed color of layer &apos;%1&apos; from white to black.</source>
         <translation>Изменён цвет слоя &apos;%1&apos; с белого на чёрный.</translation>
     </message>

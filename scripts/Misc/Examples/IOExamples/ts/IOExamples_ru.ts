@@ -4,7 +4,7 @@
 <context>
     <name>IOExamples</name>
     <message>
-        <location filename="../IOExamples.js" line="+45"/>
+        <location filename="../IOExamples.js" line="+51"/>
         <source>&amp;Import/Export</source>
         <translation>&amp;Импорт/Экспорт</translation>
     </message>

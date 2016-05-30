@@ -9,7 +9,7 @@
         <translation>Beispieldateien %1</translation>
     </message>
     <message>
-        <location line="+51"/>
+        <location line="+53"/>
         <source>Read from file: &apos;%1&apos;</source>
         <translation>Aus Datei gelesen: &apos;%1&apos;</translation>
     </message>

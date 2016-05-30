@@ -4,7 +4,7 @@
 <context>
     <name>ExLayerCustomProperty</name>
     <message>
-        <location filename="../ExLayerCustomProperty.js" line="+41"/>
+        <location filename="../ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &apos;MyCustomProperty&apos; to layer &apos;0&apos;.</source>
         <translation>Pridané vlastné vlastnosť &apos;Vlastné&apos; na vrstve &apos;0&apos;.</translation>
     </message>

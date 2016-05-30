@@ -4,7 +4,7 @@
 <context>
     <name>ExMathSpiral</name>
     <message>
-        <location filename="../ExMathSpiral.js" line="+71"/>
+        <location filename="../ExMathSpiral.js" line="+73"/>
         <source>&amp;Spiral</source>
         <translation>&amp;Špirála</translation>
     </message>

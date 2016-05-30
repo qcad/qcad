@@ -4,7 +4,7 @@
 <context>
     <name>QtExamples</name>
     <message>
-        <location filename="../QtExamples.js" line="+44"/>
+        <location filename="../QtExamples.js" line="+50"/>
         <source>&amp;Qt</source>
         <translation>&amp;Qt</translation>
     </message>

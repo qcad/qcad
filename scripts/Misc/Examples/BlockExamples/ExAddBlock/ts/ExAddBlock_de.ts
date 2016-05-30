@@ -4,7 +4,7 @@
 <context>
     <name>ExAddBlock</name>
     <message>
-        <location filename="../ExAddBlock.js" line="+83"/>
+        <location filename="../ExAddBlock.js" line="+85"/>
         <source>&amp;Create Block</source>
         <translation>&amp;Block erstellen</translation>
     </message>

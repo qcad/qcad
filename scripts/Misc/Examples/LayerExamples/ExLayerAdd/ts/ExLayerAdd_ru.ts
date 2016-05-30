@@ -4,7 +4,7 @@
 <context>
     <name>ExLayerAdd</name>
     <message>
-        <location filename="../ExLayerAdd.js" line="+42"/>
+        <location filename="../ExLayerAdd.js" line="+44"/>
         <source>Added layer &apos;MyLayer&apos;</source>
         <translation>Добавлен слой &apos;МойСлой&apos;</translation>
     </message>

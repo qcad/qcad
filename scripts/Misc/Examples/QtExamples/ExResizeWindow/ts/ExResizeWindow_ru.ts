@@ -4,7 +4,7 @@
 <context>
     <name>ExResizeWindow</name>
     <message>
-        <location filename="../ExResizeWindow.js" line="+58"/>
+        <location filename="../ExResizeWindow.js" line="+60"/>
         <source>&amp;Resize Window</source>
         <translation>&amp;Изменить размер окна</translation>
     </message>

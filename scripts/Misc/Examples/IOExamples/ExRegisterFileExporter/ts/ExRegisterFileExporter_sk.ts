@@ -9,7 +9,7 @@
         <translation>Example súbory %1</translation>
     </message>
     <message>
-        <location line="+81"/>
+        <location line="+83"/>
         <source>Info</source>
         <translation>Informácia</translation>
     </message>

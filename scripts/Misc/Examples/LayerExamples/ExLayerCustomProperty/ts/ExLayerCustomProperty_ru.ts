@@ -4,7 +4,7 @@
 <context>
     <name>ExLayerCustomProperty</name>
     <message>
-        <location filename="../ExLayerCustomProperty.js" line="+41"/>
+        <location filename="../ExLayerCustomProperty.js" line="+43"/>
         <source>Added custom property &apos;MyCustomProperty&apos; to layer &apos;0&apos;.</source>
         <translation>Добавлено пользовательское свойство &apos;MyCustomProperty&apos; к слою &apos;0&apos;.</translation>
     </message>

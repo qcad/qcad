@@ -8,7 +8,7 @@
         <translation type="vanished">&amp;Zeichnen</translation>
     </message>
     <message>
-        <location filename="../DrawExamples.js" line="+45"/>
+        <location filename="../DrawExamples.js" line="+51"/>
         <source>&amp;Draw</source>
         <translation>&amp;Zeichnen</translation>
     </message>

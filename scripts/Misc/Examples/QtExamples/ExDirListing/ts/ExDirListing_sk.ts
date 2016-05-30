@@ -4,7 +4,7 @@
 <context>
     <name>ExDirListing</name>
     <message>
-        <location filename="../ExDirListing.js" line="+64"/>
+        <location filename="../ExDirListing.js" line="+66"/>
         <source>&amp;Directory Listing</source>
         <translation>&amp;Výpis adresárov</translation>
     </message>

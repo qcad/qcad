@@ -4,7 +4,7 @@
 <context>
     <name>ExText</name>
     <message>
-        <location filename="../ExText.js" line="+67"/>
+        <location filename="../ExText.js" line="+69"/>
         <source>Text</source>
         <translation>Текст</translation>
     </message>

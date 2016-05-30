@@ -4,12 +4,12 @@
 <context>
     <name>EcmaScriptShell</name>
     <message>
-        <location filename="../EcmaScriptShell.js" line="+62"/>
+        <location filename="../EcmaScriptShell.js" line="+67"/>
         <source>&amp;Script Shell</source>
         <translation>&amp;Ukazna lupina</translation>
     </message>
     <message>
-        <location line="+15"/>
+        <location line="+25"/>
         <location filename="../EcmaScriptShell.ui" line="+14"/>
         <source>Script Shell</source>
         <translation>Ukazna lupina</translation>
