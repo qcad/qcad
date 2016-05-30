@@ -28,7 +28,8 @@ var credits =
                               "Draw > Shape > Polygon (Center, Side)<br>" +
                               "Draw > Shape > Polygon (Side, Side)<br>" +
                               "Draw > Arc > 2 Points and Length<br>" +
-                              "Draw > Arc > 2 Points and Height.<br>" +
+                              "Draw > Arc > 2 Points and Height<br>" +
+                              "Misc > Development > Run Script<br>" +
                               "<i>Significant contributions to:</i><br>" +
                               "Draw > Line > Line from 2 Points<br>" +
                               "Draw > Polyline > Draw Polyline<br>" +
