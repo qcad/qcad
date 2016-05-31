@@ -697,6 +697,14 @@
          <property name="editable">
           <bool>true</bool>
          </property>
+         <property name="currentIndex">
+          <number>6</number>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">0</string>
+          </property>
+         </item>
          <item>
           <property name="text">
            <string notr="true">1000</string>
@@ -704,17 +712,7 @@
          </item>
          <item>
           <property name="text">
-           <string notr="true">2000</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">3000</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">4000</string>
+           <string notr="true">2500</string>
           </property>
          </item>
          <item>
@@ -729,17 +727,27 @@
          </item>
          <item>
           <property name="text">
-           <string notr="true">25000</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
            <string notr="true">50000</string>
           </property>
          </item>
          <item>
           <property name="text">
            <string notr="true">100000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">250000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">500000</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">1000000</string>
           </property>
          </item>
         </widget>

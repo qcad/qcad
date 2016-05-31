@@ -631,7 +631,7 @@ void RGraphicsViewImage::paintDocument(const QRect& rect) {
     // paint reference points of selected entities:
     QMultiMap<REntity::Id, RRefPoint>& referencePoints = scene->getReferencePoints();
     int num = referencePoints.count();
-    if (num!=0 && num<RSettings::getIntValue("GraphicsView/MaxReferencePoints", 1000)) {
+    if (num!=0 && num<RSettings::getIntValue("GraphicsView/MaxReferencePoints", 100000)) {
         QPainter gbPainter(&graphicsBuffer);
         QMultiMap<REntity::Id, RRefPoint>::iterator it;
 
