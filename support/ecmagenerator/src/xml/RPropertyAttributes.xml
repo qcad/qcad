@@ -28,6 +28,8 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="NumericallySorted" />
       <value name="Percentage" />
       <value name="Integer" />
+      <value name="Sum" />
+      <value name="ReadOnly" />
     </enum>
     <constructor>
       <variant />
@@ -196,6 +198,17 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="void" isPureVirtual="false">
         <arg type="bool" typeName="bool" name="mixed"
+        isConst="false" />
+      </variant>
+    </method>
+    <method name="isSum" cppName="isSum" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="setSum" cppName="setSum" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="sum"
         isConst="false" />
       </variant>
     </method>

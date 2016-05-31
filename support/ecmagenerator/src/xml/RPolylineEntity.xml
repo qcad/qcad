@@ -439,7 +439,11 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyLength" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyTotalLength" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyArea" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyTotalArea" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
   </class>
 </unit>

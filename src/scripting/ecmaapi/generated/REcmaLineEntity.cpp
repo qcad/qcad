@@ -211,6 +211,10 @@
                 qScriptValueFromValue(&engine, RLineEntity::PropertyLength),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyTotalLength",
+                qScriptValueFromValue(&engine, RLineEntity::PropertyTotalLength),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
 
     // enum values:
     

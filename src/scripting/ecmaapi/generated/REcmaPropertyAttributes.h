@@ -121,6 +121,12 @@
         setMixed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isSum
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSum
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isLabel
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
