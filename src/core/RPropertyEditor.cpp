@@ -71,8 +71,15 @@ void RPropertyEditor::updateProperty(const RPropertyTypeId& propertyTypeId,
                 QPair<QVariant, RPropertyAttributes> property =
                     object.getProperty(pid, true, true);
 
-                // mixed value:
-                if (!RS::compare(propertyMap[propertyTitle], property)) {
+                // property is sum:
+                if (propertyMap[propertyTitle].second.isSum()) {
+                    // sum of all values:
+                    double v = propertyMap[propertyTitle].first.toDouble();
+                    v += property.first.toDouble();
+                    propertyMap[propertyTitle].first.setValue(v);
+                }
+                else if (!RS::compare(propertyMap[propertyTitle], property)) {
+                    // mixed value:
                     propertyMap[propertyTitle].first = property.first;
                     propertyMap[propertyTitle].second.setMixed(true);
                 }

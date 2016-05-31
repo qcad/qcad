@@ -67,7 +67,8 @@ public:
         VisibleToParent = 0x10000,       //!< Property can be edited in the context of the parent entity
         KnownVariable = 0x20000,         //!< Property is a known DXF variable
         NumericallySorted = 0x40000,     //!< Sort choices for this property numerically
-        Percentage = 0x80000 | Integer   //!< Property is a percentage (0...100)
+        Percentage = 0x80000 | Integer,  //!< Property is a percentage (0...100), implies Integer
+        Sum = 0x100000 | ReadOnly        //!< Sum up this property when multiple entities are selected (area, lenght), implies ReadOnly
     };
     Q_DECLARE_FLAGS(Options, Option)
 
@@ -184,6 +185,14 @@ public:
 
     void setMixed(bool mixed) {
         setOption(Mixed, mixed);
+    }
+
+    bool isSum() const {
+        return options.testFlag(Sum);
+    }
+
+    void setSum(bool sum) {
+        setOption(Sum, sum);
     }
 
     bool isLabel() const {
