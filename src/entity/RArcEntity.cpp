@@ -43,8 +43,10 @@ RPropertyTypeId RArcEntity::PropertyReversed;
 
 RPropertyTypeId RArcEntity::PropertyDiameter;
 RPropertyTypeId RArcEntity::PropertyLength;
+RPropertyTypeId RArcEntity::PropertyTotalLength;
 RPropertyTypeId RArcEntity::PropertySweepAngle;
 RPropertyTypeId RArcEntity::PropertyArea;
+RPropertyTypeId RArcEntity::PropertyTotalArea;
 
 RArcEntity::RArcEntity(RDocument* document, const RArcData& data) :
     REntity(document), data(document, data) {
@@ -92,8 +94,10 @@ void RArcEntity::init() {
 
     RArcEntity::PropertyDiameter.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Diameter"));
     RArcEntity::PropertyLength.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+    RArcEntity::PropertyTotalLength.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
     RArcEntity::PropertySweepAngle.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Sweep Angle"));
     RArcEntity::PropertyArea.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Area"));
+    RArcEntity::PropertyTotalArea.generateId(typeid(RArcEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Area"));
 }
 
 bool RArcEntity::setProperty(RPropertyTypeId propertyTypeId, const QVariant& value, RTransaction* transaction) {
@@ -154,10 +158,14 @@ QPair<QVariant, RPropertyAttributes> RArcEntity::getProperty(
         return qMakePair(QVariant(data.getDiameter()), RPropertyAttributes(RPropertyAttributes::Redundant));
     } else if (propertyTypeId == PropertyLength) {
         return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::Redundant));
+    } else if (propertyTypeId == PropertyTotalLength) {
+        return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::ReadOnly|RPropertyAttributes::Sum));
     } else if (propertyTypeId == PropertySweepAngle) {
         return qMakePair(QVariant(data.getSweep()), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::Angle));
     } else if (propertyTypeId == PropertyArea) {
         return qMakePair(QVariant(data.getArea()), RPropertyAttributes(RPropertyAttributes::Redundant));
+    } else if (propertyTypeId == PropertyTotalArea) {
+        return qMakePair(QVariant(data.getArea()), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::Sum));
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);

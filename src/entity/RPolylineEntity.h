@@ -68,7 +68,9 @@ public:
     static RPropertyTypeId PropertyGlobalWidth;
 
     static RPropertyTypeId PropertyLength;
+    static RPropertyTypeId PropertyTotalLength;
     static RPropertyTypeId PropertyArea;
+    static RPropertyTypeId PropertyTotalArea;
 
 public:
     RPolylineEntity(RDocument* document, const RPolylineData& data);

@@ -60,6 +60,7 @@ public:
 
     static RPropertyTypeId PropertyAngle;
     static RPropertyTypeId PropertyLength;
+    static RPropertyTypeId PropertyTotalLength;
 
 public:
     RLineEntity(RDocument* document, const RLineData& data);

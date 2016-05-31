@@ -62,8 +62,10 @@ public:
 
     static RPropertyTypeId PropertyDiameter;
     static RPropertyTypeId PropertyLength;
+    static RPropertyTypeId PropertyTotalLength;
     static RPropertyTypeId PropertySweepAngle;
     static RPropertyTypeId PropertyArea;
+    static RPropertyTypeId PropertyTotalArea;
 
 public:
     RArcEntity(RDocument* document, const RArcData& data);

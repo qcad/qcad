@@ -43,6 +43,7 @@ RPropertyTypeId RSplineEntity::PropertyKnotN;
 RPropertyTypeId RSplineEntity::PropertyPeriodic;
 RPropertyTypeId RSplineEntity::PropertyDegree;
 RPropertyTypeId RSplineEntity::PropertyLength;
+RPropertyTypeId RSplineEntity::PropertyTotalLength;
 
 RSplineEntity::RSplineEntity(RDocument* document, const RSplineData& data) :
     REntity(document), data(document, data) {
@@ -81,6 +82,7 @@ void RSplineEntity::init() {
     RSplineEntity::PropertyFitPointNZ.generateId(typeid(RSplineEntity), QT_TRANSLATE_NOOP("REntity", "Fit Point"), QT_TRANSLATE_NOOP("REntity", "Z"));
     RSplineEntity::PropertyKnotN.generateId(typeid(RSplineEntity), QT_TRANSLATE_NOOP("REntity", "Knot Vector"), QT_TRANSLATE_NOOP("REntity", "Knot"));
     RSplineEntity::PropertyLength.generateId(typeid(RSplineEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+    RSplineEntity::PropertyTotalLength.generateId(typeid(RSplineEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
 }
 
 bool RSplineEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -177,6 +179,9 @@ QPair<QVariant, RPropertyAttributes> RSplineEntity::getProperty(
     if (humanReadable) {
         if (propertyTypeId==PropertyLength) {
             return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::Redundant|RPropertyAttributes::ReadOnly));
+        }
+        else if (propertyTypeId==PropertyTotalLength) {
+            return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::Sum));
         }
     }
 

@@ -65,6 +65,7 @@ public:
     static RPropertyTypeId PropertyPoint4Z;
 
     static RPropertyTypeId PropertyLength;
+    static RPropertyTypeId PropertyTotalLength;
 
 public:
     RSolidEntity(RDocument* document, const RSolidData& data);

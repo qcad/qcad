@@ -42,6 +42,7 @@ RPropertyTypeId RLineEntity::PropertyEndPointZ;
 
 RPropertyTypeId RLineEntity::PropertyAngle;
 RPropertyTypeId RLineEntity::PropertyLength;
+RPropertyTypeId RLineEntity::PropertyTotalLength;
 
 
 RLineEntity::RLineEntity(RDocument* document, const RLineData& data) :
@@ -87,6 +88,7 @@ void RLineEntity::init() {
 
     RLineEntity::PropertyAngle.generateId(typeid(RLineEntity), "", QT_TRANSLATE_NOOP("REntity", "Angle"));
     RLineEntity::PropertyLength.generateId(typeid(RLineEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+    RLineEntity::PropertyTotalLength.generateId(typeid(RLineEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
 }
 
 bool RLineEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -132,6 +134,8 @@ QPair<QVariant, RPropertyAttributes> RLineEntity::getProperty(
         return qMakePair(QVariant(data.getAngle()), RPropertyAttributes(RPropertyAttributes::Angle|RPropertyAttributes::Redundant));
     } else if (propertyTypeId==PropertyLength) {
         return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::Redundant));
+    } else if (propertyTypeId==PropertyTotalLength) {
+        return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::Sum));
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);

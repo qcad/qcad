@@ -45,7 +45,9 @@ RPropertyTypeId RPolylineEntity::PropertyEndWidthN;
 RPropertyTypeId RPolylineEntity::PropertyGlobalWidth;
 
 RPropertyTypeId RPolylineEntity::PropertyLength;
+RPropertyTypeId RPolylineEntity::PropertyTotalLength;
 RPropertyTypeId RPolylineEntity::PropertyArea;
+RPropertyTypeId RPolylineEntity::PropertyTotalArea;
 
 RPolylineEntity::RPolylineEntity(RDocument* document, const RPolylineData& data) :
     REntity(document), data(document, data) {
@@ -96,7 +98,9 @@ void RPolylineEntity::init() {
     RPolylineEntity::PropertyGlobalWidth.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Global Width"));
 
     RPolylineEntity::PropertyLength.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+    RPolylineEntity::PropertyTotalLength.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
     RPolylineEntity::PropertyArea.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Area"));
+    RPolylineEntity::PropertyTotalArea.generateId(typeid(RPolylineEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Area"));
 }
 
 bool RPolylineEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -181,10 +185,18 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
             QVariant v;
             v.setValue(data.getLength());
             return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));
+        } else if (propertyTypeId == PropertyTotalLength) {
+            QVariant v;
+            v.setValue(data.getLength());
+            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Sum));
         } else if (propertyTypeId == PropertyArea) {
             QVariant v;
             v.setValue(data.getArea());
             return qMakePair(v, RPropertyAttributes(RPropertyAttributes::ReadOnly));
+        } else if (propertyTypeId == PropertyTotalArea) {
+            QVariant v;
+            v.setValue(data.getArea());
+            return qMakePair(v, RPropertyAttributes(RPropertyAttributes::Sum));
         }
     }
 

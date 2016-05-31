@@ -47,6 +47,7 @@ RPropertyTypeId RSolidEntity::PropertyPoint4Y;
 RPropertyTypeId RSolidEntity::PropertyPoint4Z;
 
 RPropertyTypeId RSolidEntity::PropertyLength;
+RPropertyTypeId RSolidEntity::PropertyTotalLength;
 
 
 RSolidEntity::RSolidEntity(RDocument* document, const RSolidData& data) :
@@ -84,6 +85,7 @@ void RSolidEntity::init() {
     RSolidEntity::PropertyPoint4Z.generateId(typeid(RSolidEntity), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "Z"));
 
     RSolidEntity::PropertyLength.generateId(typeid(RSolidEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+    RSolidEntity::PropertyTotalLength.generateId(typeid(RSolidEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
 }
 
 bool RSolidEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -190,6 +192,10 @@ QPair<QVariant, RPropertyAttributes> RSolidEntity::getProperty(
             return qMakePair(QVariant(), RPropertyAttributes());
         }
         return qMakePair(QVariant(data.getVertexAt(3).z), RPropertyAttributes());
+    } else if (propertyTypeId==PropertyLength) {
+        return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    } else if (propertyTypeId==PropertyTotalLength) {
+        return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::Sum));
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);

@@ -66,6 +66,7 @@ public:
     static RPropertyTypeId PropertyDegree;
 
     static RPropertyTypeId PropertyLength;
+    static RPropertyTypeId PropertyTotalLength;
 
 public:
     RSplineEntity(RDocument* document, const RSplineData& data);

@@ -47,6 +47,7 @@ RPropertyTypeId RTraceEntity::PropertyPoint4Y;
 RPropertyTypeId RTraceEntity::PropertyPoint4Z;
 
 RPropertyTypeId RTraceEntity::PropertyLength;
+RPropertyTypeId RTraceEntity::PropertyTotalLength;
 
 
 RTraceEntity::RTraceEntity(RDocument* document, const RTraceData& data) :
@@ -84,6 +85,7 @@ void RTraceEntity::init() {
     RTraceEntity::PropertyPoint4Z.generateId(typeid(RTraceEntity), QT_TRANSLATE_NOOP("REntity", "Point 4"), QT_TRANSLATE_NOOP("REntity", "Z"));
 
     RTraceEntity::PropertyLength.generateId(typeid(RTraceEntity), "", QT_TRANSLATE_NOOP("REntity", "Length"));
+    RTraceEntity::PropertyTotalLength.generateId(typeid(RTraceEntity), "", QT_TRANSLATE_NOOP("REntity", "Total Length"));
 }
 
 bool RTraceEntity::setProperty(RPropertyTypeId propertyTypeId,
@@ -190,6 +192,10 @@ QPair<QVariant, RPropertyAttributes> RTraceEntity::getProperty(
             return qMakePair(QVariant(), RPropertyAttributes());
         }
         return qMakePair(QVariant(data.getVertexAt(3).z), RPropertyAttributes());
+    } else if (propertyTypeId==PropertyLength) {
+        return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::ReadOnly));
+    } else if (propertyTypeId==PropertyTotalLength) {
+        return qMakePair(QVariant(data.getLength()), RPropertyAttributes(RPropertyAttributes::Sum));
     }
 
     return REntity::getProperty(propertyTypeId, humanReadable, noAttributes);
