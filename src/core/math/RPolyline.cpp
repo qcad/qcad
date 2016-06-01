@@ -414,6 +414,45 @@ bool RPolyline::hasArcSegments() const {
     return false;
 }
 
+QList<double> RPolyline::getVertexAngles() const {
+    QList<double> ret;
+    for (int i=0; i<countVertices(); i++) {
+        ret.append(getVertexAngle(i));
+    }
+    return ret;
+}
+
+double RPolyline::getVertexAngle(int i) const {
+    if (!isGeometricallyClosed() && (i==0 || i==countVertices()-1)) {
+        // angles at first / last vertex for open polyline:
+        return 0.0;
+    }
+
+    if (countSegments()==0) {
+        return 0.0;
+    }
+
+    QSharedPointer<RShape> prevSegment = getSegmentAt(RMath::absmod(i-1, countSegments()));
+    QSharedPointer<RShape> nextSegment = getSegmentAt(i%countSegments());
+    QSharedPointer<RDirected> prevDir = prevSegment.dynamicCast<RDirected>();
+    QSharedPointer<RDirected> nextDir = nextSegment.dynamicCast<RDirected>();
+    if (prevDir.isNull() || nextDir.isNull()) {
+        return 0.0;
+    }
+
+    // angle from vertex to next segment:
+    double aNext = nextDir->getDirection1();
+    // angle from vertex to previous segment:
+    double aPrev = prevDir->getDirection2();
+
+    if (getOrientation(true)==RS::CCW) {
+        return RMath::getAngleDifference(aNext, aPrev);
+    }
+    else {
+        return RMath::getAngleDifference(aPrev, aNext);
+    }
+}
+
 void RPolyline::setGlobalWidth(double w) {
     for (int i=0; i<startWidths.length(); i++) {
         startWidths[i] = w;
@@ -513,8 +552,8 @@ bool RPolyline::autoClose() {
     return true;
 }
 
-RS::Orientation RPolyline::getOrientation() const {
-    if (!isGeometricallyClosed()) {
+RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
+    if (!implicitelyClosed && !isGeometricallyClosed()) {
         return RS::Any;
     }
 
@@ -908,6 +947,16 @@ bool RPolyline::containsShape(const RShape& shape) const {
 
     Q_ASSERT("shape not supported");
     return false;
+}
+
+/**
+ * \return Any point that is inside this polyline.
+ */
+RVector RPolyline::getPointInside() const {
+    if (polylineProxy!=NULL) {
+        return polylineProxy->getPointInside(*this);
+    }
+    return RVector::invalid;
 }
 
 RVector RPolyline::getStartPoint() const {

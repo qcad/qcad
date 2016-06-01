@@ -48,6 +48,7 @@ public:
     virtual QList<RPolyline> renderThickPolyline(const RPolyline& polyline) = 0;
     virtual QList<RVector> verifyTangency(const RPolyline& polyline, double toleranceMin = RS::AngleTolerance, double toleranceMax = M_PI_4) = 0;
     virtual double getArea(const RPolyline& polyline, double segmentLength) = 0;
+    virtual RVector getPointInside(const RPolyline& polyline) = 0;
 };
 
 #endif

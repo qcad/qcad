@@ -90,6 +90,9 @@ public:
     void setBulgeAt(int i, double b);
     bool hasArcSegments() const;
 
+    QList<double> getVertexAngles() const;
+    double getVertexAngle(int i) const;
+
     void setGlobalWidth(double w);
     void setStartWidthAt(int i, double w);
     double getStartWidthAt(int i) const;
@@ -106,10 +109,12 @@ public:
     bool isGeometricallyClosed(double tolerance=RS::PointTolerance) const;
     bool autoClose();
 
-    RS::Orientation getOrientation() const;
+    RS::Orientation getOrientation(bool implicitelyClosed = false) const;
 
     bool contains(const RVector& point, bool borderIsInside=false, double tolerance=RS::PointTolerance) const;
     bool containsShape(const RShape& shape) const;
+
+    RVector getPointInside() const;
 
     virtual RVector getStartPoint() const;
     virtual RVector getEndPoint() const;
