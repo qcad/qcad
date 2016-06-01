@@ -40,8 +40,10 @@ RPropertyTypeId RPolylineEntity::PropertyVertexNX;
 RPropertyTypeId RPolylineEntity::PropertyVertexNY;
 RPropertyTypeId RPolylineEntity::PropertyVertexNZ;
 RPropertyTypeId RPolylineEntity::PropertyBulgeN;
+RPropertyTypeId RPolylineEntity::PropertyAngleN;
 RPropertyTypeId RPolylineEntity::PropertyStartWidthN;
 RPropertyTypeId RPolylineEntity::PropertyEndWidthN;
+
 RPropertyTypeId RPolylineEntity::PropertyGlobalWidth;
 
 RPropertyTypeId RPolylineEntity::PropertyLength;
@@ -91,6 +93,7 @@ void RPolylineEntity::init() {
     RPolylineEntity::PropertyVertexNY.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Y"));
     RPolylineEntity::PropertyVertexNZ.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Z"));
     RPolylineEntity::PropertyBulgeN.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Bulge"));
+    RPolylineEntity::PropertyAngleN.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Angle"));
 
     RPolylineEntity::PropertyStartWidthN.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "Start Width"));
     RPolylineEntity::PropertyEndWidthN.generateId(typeid(RPolylineEntity), QT_TRANSLATE_NOOP("REntity", "Vertex"), QT_TRANSLATE_NOOP("REntity", "End Width"));
@@ -154,6 +157,10 @@ QPair<QVariant, RPropertyAttributes> RPolylineEntity::getProperty(
         QVariant v;
         v.setValue(data.bulges);
         return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List));
+    } else if (propertyTypeId == PropertyAngleN) {
+        QVariant v;
+        v.setValue(data.getVertexAngles());
+        return qMakePair(v, RPropertyAttributes(RPropertyAttributes::List|RPropertyAttributes::Angle));
     } else if (RPolyline::hasProxy() && propertyTypeId == PropertyStartWidthN) {
         QVariant v;
         v.setValue(data.startWidths);

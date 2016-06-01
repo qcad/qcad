@@ -63,6 +63,7 @@ public:
     static RPropertyTypeId PropertyVertexNY;
     static RPropertyTypeId PropertyVertexNZ;
     static RPropertyTypeId PropertyBulgeN;
+    static RPropertyTypeId PropertyAngleN;
     static RPropertyTypeId PropertyStartWidthN;
     static RPropertyTypeId PropertyEndWidthN;
     static RPropertyTypeId PropertyGlobalWidth;
