@@ -228,6 +228,19 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
     </method>
+    <method name="getVertexAngles" cppName="getVertexAngles"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; double &gt;"
+      isPureVirtual="false" />
+    </method>
+    <method name="getVertexAngle" cppName="getVertexAngle"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="double" isPureVirtual="false">
+        <arg type="int" typeName="int" name="i" isConst="false" />
+      </variant>
+    </method>
     <method name="setGlobalWidth" cppName="setGlobalWidth"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -329,8 +342,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     <method name="getOrientation" cppName="getOrientation"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
-      <variant returnType="RS::Orientation"
-      isPureVirtual="false" />
+      <variant returnType="RS::Orientation" isPureVirtual="false">
+        <arg type="bool" typeName="bool" name="implicitelyClosed"
+        hasDefault="true" default="false" isConst="false" />
+      </variant>
     </method>
     <method name="contains" cppName="contains" specifier="public"
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
@@ -351,6 +366,11 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RShape &amp;" typeName="RShape" name="shape"
         isConst="true" />
       </variant>
+    </method>
+    <method name="getPointInside" cppName="getPointInside"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
     </method>
     <method name="getStartPoint" cppName="getStartPoint"
     specifier="public" isStatic="false" isVirtual="true"

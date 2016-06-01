@@ -146,6 +146,12 @@
         hasArcSegments
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getVertexAngles
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getVertexAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setGlobalWidth
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -195,6 +201,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         containsShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getPointInside
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getStartPoint

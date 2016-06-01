@@ -262,6 +262,10 @@
                 qScriptValueFromValue(&engine, RPolylineEntity::PropertyBulgeN),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyAngleN",
+                qScriptValueFromValue(&engine, RPolylineEntity::PropertyAngleN),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyStartWidthN",
                 qScriptValueFromValue(&engine, RPolylineEntity::PropertyStartWidthN),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

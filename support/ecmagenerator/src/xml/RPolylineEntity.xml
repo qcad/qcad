@@ -431,6 +431,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyBulgeN" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyAngleN" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyStartWidthN" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyEndWidthN" type="RPropertyTypeId"

@@ -152,6 +152,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, hasArcSegments, "hasArcSegments");
             
+            REcmaHelper::registerFunction(&engine, proto, getVertexAngles, "getVertexAngles");
+            
+            REcmaHelper::registerFunction(&engine, proto, getVertexAngle, "getVertexAngle");
+            
             REcmaHelper::registerFunction(&engine, proto, setGlobalWidth, "setGlobalWidth");
             
             REcmaHelper::registerFunction(&engine, proto, setStartWidthAt, "setStartWidthAt");
@@ -185,6 +189,8 @@
             REcmaHelper::registerFunction(&engine, proto, contains, "contains");
             
             REcmaHelper::registerFunction(&engine, proto, containsShape, "containsShape");
+            
+            REcmaHelper::registerFunction(&engine, proto, getPointInside, "getPointInside");
             
             REcmaHelper::registerFunction(&engine, proto, getStartPoint, "getStartPoint");
             
@@ -2658,6 +2664,115 @@
             return result;
         }
          QScriptValue
+        REcmaSharedPointerPolyline::getVertexAngles
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getVertexAngles", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getVertexAngles";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getVertexAngles", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < double >'
+    QList < double > cppResult =
+        
+               self->getVertexAngles();
+        // return type: QList < double >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getVertexAngles().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getVertexAngles", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::getVertexAngle
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getVertexAngle", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getVertexAngle";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getVertexAngle", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getVertexAngle(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getVertexAngle().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getVertexAngle", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerPolyline::setGlobalWidth
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -3503,6 +3618,38 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RS::Orientation'
+    RS::Orientation cppResult =
+        
+               self->getOrientation(a0);
+        // return type: RS::Orientation
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getOrientation().",
                    context);
@@ -3777,6 +3924,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::containsShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::getPointInside
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getPointInside", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getPointInside";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getPointInside", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getPointInside();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getPointInside().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getPointInside", context, engine);
             return result;
         }
          QScriptValue
