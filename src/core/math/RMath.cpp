@@ -286,9 +286,10 @@ double RMath::eval(const QString& expression, bool* ok) {
 
     //qDebug() << "RMath::eval: expression 003 is: " << expr;
 
-    // convert explicitely indicated degree angles (e.g. "90d") to degrees:
+    // convert explicitely indicated degree angles (e.g. "90d30'5\"") to degrees:
     {
         QRegExp re(
+            "(?:[^a-zA-Z0-9]|^)"                                // not preceded by letter or number (could be part of a function)
             "("
               "(?:((?:\\.\\d+)|(?:\\d+\\.\\d*)|(?:\\d+))[d°])"  // degrees
               "(?:((?:\\.\\d+)|(?:\\d+\\.\\d*)|(?:\\d+))')?"    // minutes
