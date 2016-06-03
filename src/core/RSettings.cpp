@@ -36,6 +36,7 @@
 #include "RSettings.h"
 #include "RVersion.h"
 
+bool RSettings::noWrite = false;
 QVariantMap RSettings::cache;
 
 QString RSettings::launchPath;
@@ -71,6 +72,7 @@ int RSettings::textRenderedAsText = -1;
 int RSettings::layer0CompatibilityOn = -1;
 int RSettings::selectBlockWithAttribute = -1;
 int RSettings::hideAttributeWithBlock = -1;
+int RSettings::importRecomputedDimBlocks = -1;
 QStringList RSettings::recentFiles;
 QLocale* RSettings::numberLocale = NULL;
 QString RSettings::applicationNameOverride;
@@ -572,6 +574,13 @@ bool RSettings::getHideAttributeWithBlock() {
     return hideAttributeWithBlock;
 }
 
+bool RSettings::getImportRecomputedDimBlocks() {
+    if (importRecomputedDimBlocks==-1) {
+        importRecomputedDimBlocks = getBoolValue("Dwg/ImportRecomputedDimBlocks", false);
+    }
+    return importRecomputedDimBlocks;
+}
+
 bool RSettings::hasDarkGuiBackground() {
     if (darkGuiBackground==-1) {
 //        // find out what color is used for QFrames (this might originate from a CSS stylesheet):
@@ -972,14 +981,16 @@ void RSettings::setValue(const QString& key, const QVariant& value, bool overwri
     }
 
     cache[key] = value;
-    // TODO: fix:
-    if (QString(value.typeName())=="QPrinter::PageSize") {
-        getQSettings()->setValue(key, value.toInt());
+
+    if (!noWrite) {
+        // TODO: fix:
+        if (QString(value.typeName())=="QPrinter::PageSize") {
+            getQSettings()->setValue(key, value.toInt());
+        }
+        else {
+            getQSettings()->setValue(key, value);
+        }
     }
-    else {
-        getQSettings()->setValue(key, value);
-    }
-    //getQSettings()->sync();
 }
 
 void RSettings::removeValue(const QString& key) {
@@ -988,8 +999,10 @@ void RSettings::removeValue(const QString& key) {
     }
 
     cache.remove(key);
-    getQSettings()->remove(key);
-    //getQSettings()->sync();
+
+    if (!noWrite) {
+        getQSettings()->remove(key);
+    }
 }
 
 bool RSettings::isInitialized() {
@@ -1114,6 +1127,7 @@ void RSettings::resetCache() {
     layer0CompatibilityOn = -1;
     selectBlockWithAttribute = -1;
     hideAttributeWithBlock = -1;
+    importRecomputedDimBlocks = -1;
     mouseThreshold = -1;
     cache.clear();
 }
@@ -1123,4 +1137,8 @@ void RSettings::uninit() {
         delete qSettings;
         qSettings = NULL;
     }
+}
+
+void RSettings::setNoWrite(bool on) {
+    noWrite = on;
 }

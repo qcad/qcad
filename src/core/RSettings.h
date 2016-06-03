@@ -48,6 +48,7 @@
 class QCADCORE_EXPORT RSettings {
 public:
     static void uninit();
+    static void setNoWrite(bool on = true);
 
     static QString getAppId();
 
@@ -215,6 +216,7 @@ public:
     static bool isLayer0CompatibilityOn();
     static bool getSelectBlockWithAttribute();
     static bool getHideAttributeWithBlock();
+    static bool getImportRecomputedDimBlocks();
 
     static bool hasDarkGuiBackground();
     static bool hasCustomStyleSheet();
@@ -224,6 +226,7 @@ private:
     static void shortenRecentFiles();
 
 private:
+    static bool noWrite;
     // cache for faster access:
     static QVariantMap cache;
 
@@ -259,6 +262,7 @@ private:
     static int layer0CompatibilityOn;
     static int selectBlockWithAttribute;
     static int hideAttributeWithBlock;
+    static int importRecomputedDimBlocks;
     static QStringList recentFiles;
     static QLocale* numberLocale;
 
