@@ -126,6 +126,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getDimBlockName, "getDimBlockName");
             
+            REcmaHelper::registerFunction(&engine, proto, hasDimensionBlockReference, "hasDimensionBlockReference");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RDimensionEntityPointer>(), *proto);
       
@@ -2253,6 +2255,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDimensionEntity::getDimBlockName", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDimensionEntity::hasDimensionBlockReference
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDimensionEntity::hasDimensionBlockReference", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDimensionEntity::hasDimensionBlockReference";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDimensionEntity* self = 
+                        getSelf("hasDimensionBlockReference", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->hasDimensionBlockReference();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.hasDimensionBlockReference().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDimensionEntity::hasDimensionBlockReference", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerDimensionEntity::toString

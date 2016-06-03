@@ -59,6 +59,8 @@
     
             REcmaHelper::registerFunction(&engine, &ctor, uninit, "uninit");
             
+            REcmaHelper::registerFunction(&engine, &ctor, setNoWrite, "setNoWrite");
+            
             REcmaHelper::registerFunction(&engine, &ctor, getAppId, "getAppId");
             
             REcmaHelper::registerFunction(&engine, &ctor, getDevicePixelRatio, "getDevicePixelRatio");
@@ -291,6 +293,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getHideAttributeWithBlock, "getHideAttributeWithBlock");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getImportRecomputedDimBlocks, "getImportRecomputedDimBlocks");
+            
             REcmaHelper::registerFunction(&engine, &ctor, hasDarkGuiBackground, "hasDarkGuiBackground");
             
             REcmaHelper::registerFunction(&engine, &ctor, hasCustomStyleSheet, "hasCustomStyleSheet");
@@ -417,6 +421,67 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::uninit", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::setNoWrite
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::setNoWrite", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::setNoWrite";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       setNoWrite();
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    RSettings::
+       setNoWrite(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.setNoWrite().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::setNoWrite", context, engine);
             return result;
         }
          QScriptValue
@@ -5542,6 +5607,45 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSettings::getHideAttributeWithBlock", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSettings::getImportRecomputedDimBlocks
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSettings::getImportRecomputedDimBlocks", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSettings::getImportRecomputedDimBlocks";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RSettings::
+       getImportRecomputedDimBlocks();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSettings.getImportRecomputedDimBlocks().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSettings::getImportRecomputedDimBlocks", context, engine);
             return result;
         }
          QScriptValue

@@ -49,6 +49,9 @@
         uninit
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setNoWrite
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getAppId
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -395,6 +398,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getHideAttributeWithBlock
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getImportRecomputedDimBlocks
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasDarkGuiBackground

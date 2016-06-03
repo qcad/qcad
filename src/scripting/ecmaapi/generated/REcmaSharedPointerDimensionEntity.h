@@ -135,6 +135,9 @@
         ;static  QScriptValue
         getDimBlockName
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        hasDimensionBlockReference
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
