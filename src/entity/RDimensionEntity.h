@@ -187,6 +187,10 @@ public:
         return getData().getDimBlockName();
     }
 
+    bool hasDimensionBlockReference() const {
+        return getData().hasDimensionBlockReference();
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 };
