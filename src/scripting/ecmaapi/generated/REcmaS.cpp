@@ -253,6 +253,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("EntityFace",
+    QScriptValue(RS::EntityFace),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("EntityDimension",
     QScriptValue(RS::EntityDimension),
     QScriptValue::ReadOnly);

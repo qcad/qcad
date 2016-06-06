@@ -73,6 +73,8 @@ HEADERS += \
     $$PWD/REcmaExportListener.h \
     $$PWD/REcmaExportListenerAdapter.h \
     $$PWD/REcmaExporter.h \
+    $$PWD/REcmaFaceData.h \
+    $$PWD/REcmaFaceEntity.h \
     $$PWD/REcmaFileCache.h \
     $$PWD/REcmaFileExporter.h \
     $$PWD/REcmaFileExporterAdapter.h \
@@ -228,6 +230,7 @@ HEADERS += \
     $$PWD/REcmaSharedPointerEntity.h \
     $$PWD/REcmaSharedPointerEntityData.h \
     $$PWD/REcmaSharedPointerExplodable.h \
+    $$PWD/REcmaSharedPointerFaceEntity.h \
     $$PWD/REcmaSharedPointerHatchEntity.h \
     $$PWD/REcmaSharedPointerImageEntity.h \
     $$PWD/REcmaSharedPointerLayer.h \
@@ -426,6 +429,8 @@ SOURCES += \
     $$PWD/REcmaExportListener.cpp \
     $$PWD/REcmaExportListenerAdapter.cpp \
     $$PWD/REcmaExporter.cpp \
+    $$PWD/REcmaFaceData.cpp \
+    $$PWD/REcmaFaceEntity.cpp \
     $$PWD/REcmaFileCache.cpp \
     $$PWD/REcmaFileExporter.cpp \
     $$PWD/REcmaFileExporterAdapter.cpp \
@@ -581,6 +586,7 @@ SOURCES += \
     $$PWD/REcmaSharedPointerEntity.cpp \
     $$PWD/REcmaSharedPointerEntityData.cpp \
     $$PWD/REcmaSharedPointerExplodable.cpp \
+    $$PWD/REcmaSharedPointerFaceEntity.cpp \
     $$PWD/REcmaSharedPointerHatchEntity.cpp \
     $$PWD/REcmaSharedPointerImageEntity.cpp \
     $$PWD/REcmaSharedPointerLayer.cpp \

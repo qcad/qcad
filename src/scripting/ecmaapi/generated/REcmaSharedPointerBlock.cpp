@@ -123,6 +123,14 @@
                 qScriptValueFromValue(&engine, RBlock::PropertyCustom),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyType",
+                qScriptValueFromValue(&engine, RBlock::PropertyType),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
+            ctor.setProperty("PropertyHandle",
+                qScriptValueFromValue(&engine, RBlock::PropertyHandle),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyName",
                 qScriptValueFromValue(&engine, RBlock::PropertyName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);

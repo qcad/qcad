@@ -103,6 +103,7 @@
         <expr><name>EntityTextBased</name></expr>,    <comment type="block">/**&lt; Any text based entity (text, attribute def, attribute) */</comment>
         <expr><name>EntityText</name></expr>,         <comment type="block">/**&lt; Text */</comment>
         <expr><name>EntityTrace</name></expr>,        <comment type="block">/**&lt; Trace */</comment>
+        <expr><name>EntityFace</name></expr>,         <comment type="block">/**&lt; Face */</comment>
         <expr><name>EntityDimension</name></expr>,    <comment type="block">/**&lt; Any Dimension */</comment>
         <expr><name>EntityDimLinear</name></expr>,    <comment type="block">/**&lt; Any linear dimension */</comment>
         <expr><name>EntityDimAligned</name></expr>,   <comment type="block">/**&lt; Linear aligned Dimension */</comment>

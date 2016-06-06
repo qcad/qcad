@@ -133,6 +133,10 @@ xmlns:rs="http://www.ribbonsoft.com">
     </method>
     <property name="PropertyCustom" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyType" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
+    <property name="PropertyHandle" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyName" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyFrozen" type="RPropertyTypeId"

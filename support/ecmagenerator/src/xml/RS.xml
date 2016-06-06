@@ -41,6 +41,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="EntityTextBased" />
       <value name="EntityText" />
       <value name="EntityTrace" />
+      <value name="EntityFace" />
       <value name="EntityDimension" />
       <value name="EntityDimLinear" />
       <value name="EntityDimAligned" />
