@@ -473,6 +473,15 @@ function isTraceEntity(obj) {
 }
 
 /**
+ * Checks if the given object is a face entity.
+ *
+ * \return true if the given object is a face entity (RFaceEntity).
+ */
+function isFaceEntity(obj) {
+    return isOfType(obj, RFaceEntity) || isOfType(obj, RFaceEntityPointer);
+}
+
+/**
  * Checks if the given object is a viewport entity.
  *
  * \return true if the given object is a viewport entity (RViewportEntity).
@@ -810,6 +819,8 @@ function entityTypeToString(type, plural) {
         return plural ? qsTr("Solids") : qsTr("Solid");
     case RS.EntityTrace:
         return plural ? qsTr("Traces") : qsTr("Trace");
+    case RS.EntityFace:
+        return plural ? qsTr("Faces") : qsTr("Face");
     case RS.EntitySpline:
         return plural ? qsTr("Splines") : qsTr("Spline");
     case RS.EntityTextBased:

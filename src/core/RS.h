@@ -102,6 +102,7 @@ public:
         EntityTextBased,    /**< Any text based entity (text, attribute def, attribute) */
         EntityText,         /**< Text */
         EntityTrace,        /**< Trace */
+        EntityFace,         /**< Face */
         EntityDimension,    /**< Any Dimension */
         EntityDimLinear,    /**< Any linear dimension */
         EntityDimAligned,   /**< Linear aligned Dimension */
