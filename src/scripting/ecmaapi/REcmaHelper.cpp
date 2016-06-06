@@ -318,7 +318,7 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, REntity* cppValue
         v = tryCast<RArcEntity>(engine, cppValue);
         if (v.isValid()) return v;
         break;
-    case RS::EntityBlockReference:
+    case RS::EntityBlockRef:
         v = tryCast<RBlockReferenceEntity>(engine, cppValue);
         if (v.isValid()) return v;
         break;
