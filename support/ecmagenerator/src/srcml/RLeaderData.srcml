@@ -50,7 +50,10 @@
     }</block></function>
 
     <function_decl><type><name>double</name></type> <name>getDimasz</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimaszOverride</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
+
     <function_decl><type><name>double</name></type> <name>getDimscale</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimscaleOverride</name><parameter_list>(<param><decl><type><name>double</name></type> <name>v</name></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>setArrowHead</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function><type><name>bool</name></type> <name>hasArrowHead</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
@@ -115,6 +118,10 @@
 </public><private>private:
     <comment type="block">/** Arrow head on / off */</comment>
     <decl_stmt><decl><type><name>bool</name></type> <name>arrowHead</name></decl>;</decl_stmt>
+    <comment type="block">/** Arrow size */</comment>
+    <decl_stmt><decl><type><name>double</name></type> <name>dimaszOverride</name></decl>;</decl_stmt>
+    <comment type="block">/** Dimension scale */</comment>
+    <decl_stmt><decl><type><name>double</name></type> <name>dimscaleOverride</name></decl>;</decl_stmt>
     <comment type="block">/** Block to use instead of arrow */</comment>
     <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>dimLeaderBlockId</name></decl>;</decl_stmt>
 </private>}</block>;</class>
