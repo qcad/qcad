@@ -182,32 +182,8 @@ void RLeaderEntity::exportEntity(RExporter& e, bool preview, bool forceSelected)
                     getDirection1() + M_PI
                 )
             );
-            //arrowBlock.setDocument(doc);
-            //arrowBlock.exportEntity(e, preview, forceSelected);
             arrowBlock.update();
-
-            //e.exportEntity(arrowBlock, preview, forceSelected);
             arrowBlock.exportEntity(e, preview, forceSelected);
-
-            // render arrow block reference into leader:
-//            QSet<REntity::Id> ids = doc->queryBlockEntities(dimLeaderBlockId);
-//            QList<REntity::Id> list = doc->getStorage().orderBackToFront(ids);
-//            int i;
-//            QList<REntity::Id>::iterator it;
-//            for (it = list.begin(), i = 0; it != list.end(); it++) {
-//                if (preview && i>RSettings::getPreviewEntities()) {
-//                    break;
-//                }
-
-//                QSharedPointer<REntity> entity = arrowBlock.queryEntity(*it);
-//                if (entity.isNull()) {
-//                    continue;
-//                }
-
-//                qDebug() << "export entity as part of arrow block:" << *entity;
-//                e.exportEntity(*entity, preview, true);
-//                i++;
-//            }
         }
         else {
             // use regular arrow for leader:
