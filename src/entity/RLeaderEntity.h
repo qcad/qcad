@@ -53,6 +53,7 @@ public:
     static RPropertyTypeId PropertyDrawOrder;
 
     static RPropertyTypeId PropertyArrowHead;
+    static RPropertyTypeId PropertyDimLeaderBlock;
     static RPropertyTypeId PropertyVertexNX;
     static RPropertyTypeId PropertyVertexNY;
     static RPropertyTypeId PropertyVertexNZ;

@@ -49,7 +49,10 @@ public:
     }
 
     double getDimasz() const;
+    void setDimaszOverride(double v);
+
     double getDimscale() const;
+    void setDimscaleOverride(double v);
 
     void setArrowHead(bool on);
     bool hasArrowHead() const {
@@ -108,9 +111,18 @@ public:
 
     RTriangle getArrowShape() const;
 
+    REntity::Id getDimLeaderBlockId() const;
+    void setDimLeaderBlockId(REntity::Id id);
+
 private:
     /** Arrow head on / off */
     bool arrowHead;
+    /** Arrow size */
+    double dimaszOverride;
+    /** Dimension scale */
+    double dimscaleOverride;
+    /** Block to use instead of arrow */
+    RBlock::Id dimLeaderBlockId;
 };
 
 Q_DECLARE_METATYPE(RLeaderData)

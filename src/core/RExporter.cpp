@@ -618,16 +618,10 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
 
     // find block reference of the current entity, ignore this entity:
     bool blockRefOrViewportSet = false;
-    // check if this entity is a block reference:
-    RBlockReferenceEntity* blockRef = dynamic_cast<RBlockReferenceEntity*>(&entity);
-    if (blockRef!=NULL) {
-        blockRefViewportStack.push(blockRef);
-        blockRefOrViewportSet = true;
-    }
-    // check if this entity is a viewport:
-    RViewportEntity* viewPort = dynamic_cast<RViewportEntity*>(&entity);
-    if (viewPort!=NULL) {
-        blockRefViewportStack.push(viewPort);
+    // check if this entity is a block reference, viewport or leader
+    // (which can all serve as container for other entities):
+    if (entity.getType()==RS::EntityBlockRef || entity.getType()==RS::EntityViewport || entity.getType()==RS::EntityLeader) {
+        blockRefViewportStack.push(&entity);
         blockRefOrViewportSet = true;
     }
 

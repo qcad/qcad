@@ -19,7 +19,11 @@
 #include "RLeaderData.h"
 #include "RUnit.h"
 
-RLeaderData::RLeaderData() : arrowHead(true) {
+RLeaderData::RLeaderData()
+    : arrowHead(true),
+      dimaszOverride(RNANDOUBLE),
+      dimscaleOverride(RNANDOUBLE),
+      dimLeaderBlockId(REntity::INVALID_ID) {
 }
 
 RLeaderData::RLeaderData(RDocument* document, const RLeaderData& data)
@@ -33,14 +37,21 @@ RLeaderData::RLeaderData(RDocument* document, const RLeaderData& data)
 
 RLeaderData::RLeaderData(const RPolyline& polyline, bool arrowHead)
     : RPolyline(polyline),
-      arrowHead(arrowHead) {
+      arrowHead(arrowHead), dimaszOverride(-1), dimscaleOverride(1.0), dimLeaderBlockId(REntity::INVALID_ID) {
 
+}
+
+void RLeaderData::setDimaszOverride(double v) {
+    dimaszOverride = v;
 }
 
 double RLeaderData::getDimasz() const {
     double dimasz = 2.5;
 
-    if (document!=NULL) {
+    if (!RMath::isNaN(dimaszOverride)) {
+        dimasz = dimaszOverride;
+    }
+    else if (document!=NULL) {
         dimasz = document->getKnownVariable(RS::DIMASZ, dimasz).toDouble();
     }
     else {
@@ -50,10 +61,17 @@ double RLeaderData::getDimasz() const {
     return dimasz * getDimscale();
 }
 
+void RLeaderData::setDimscaleOverride(double v) {
+    dimscaleOverride = v;
+}
+
 double RLeaderData::getDimscale() const {
     double dimscale = 1.0;
 
-    if (document!=NULL) {
+    if (!RMath::isNaN(dimscaleOverride)) {
+        dimscale = dimscaleOverride;
+    }
+    else if (document!=NULL) {
         dimscale = document->getKnownVariable(RS::DIMSCALE, dimscale).toDouble();
     }
     else {
@@ -139,4 +157,12 @@ bool RLeaderData::updateArrowHead() {
     }
 
     return false;
+}
+
+REntity::Id RLeaderData::getDimLeaderBlockId() const {
+    return dimLeaderBlockId;
+}
+
+void RLeaderData::setDimLeaderBlockId(REntity::Id id) {
+    dimLeaderBlockId = id;
 }
