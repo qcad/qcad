@@ -354,6 +354,10 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, REntity* cppValue
         v = tryCast<REllipseEntity>(engine, cppValue);
         if (v.isValid()) return v;
         break;
+    case RS::EntityFace:
+        v = tryCast<RFaceEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
     case RS::EntityHatch:
         v = tryCast<RHatchEntity>(engine, cppValue);
         if (v.isValid()) return v;
@@ -437,6 +441,8 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RE
     v = tryCast<RDimRotatedData>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<REllipseData>(engine, cppValue);
+    if (v.isValid()) return v;
+    v = tryCast<RFaceData>(engine, cppValue);
     if (v.isValid()) return v;
     v = tryCast<RHatchData>(engine, cppValue);
     if (v.isValid()) return v;
