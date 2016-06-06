@@ -158,6 +158,7 @@ Hatch.verifyBoundaryEntity = function(doc, entity) {
         isCircleEntity(entity) ||
         isEllipseEntity(entity) ||
         isPolylineEntity(entity) ||
+        isFaceEntity(entity) ||
         isSplineEntity(entity)) {
 
         return true;
@@ -356,7 +357,7 @@ Hatch.traverse = function(hatchData, docOrBlockRef, entity, candidateIds) {
 };
 
 Hatch.isClosedPolyline = function(entity) {
-    return isPolylineEntity(entity) && entity.isGeometricallyClosed();
+    return (isPolylineEntity(entity) && entity.isGeometricallyClosed()) || isFaceEntity(entity);
 };
 
 Hatch.isClosedCurve = function(entity) {
