@@ -163,6 +163,15 @@ Explode.explodeSelection = function(di, action) {
             }
         }
 
+        // explode faces into polylines:
+        else if (isFaceEntity(entity)) {
+            shapes = entity.getShapes();
+            for (k=0; k<shapes.length; k++) {
+                shape = shapes[k].data();
+                newShapes.push(shape.clone());
+            }
+        }
+
         // explode text entities into lines, arcs and splines:
         else if (isTextEntity(entity)) {
             var painterPaths = entity.getPainterPaths();
