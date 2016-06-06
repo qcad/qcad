@@ -459,25 +459,26 @@ QPlainTextEdit {
 QTreeWidget#ToolMatrix QToolButton {
     border-radius: 4px;
     background-color: transparent;
+    color: #bbbbbb;
 }
 
 QTreeWidget#ToolMatrix QToolButton:checked {
     background-color: #848484;
+    color: #010101;
 }
 
 QTreeWidget#ToolMatrix QToolButton:pressed {
     background-color: #848484;
+    color: #010101;
 }
 
 QTreeWidget#ToolMatrix QToolButton:disabled {
     background-color: #323232;
 }
 
-
 QTreeWidget#ToolMatrix QWidget {
     background-color: #4b4b4b;
 }
-
 
 /* Options Tool Bar */
 QToolBar QLabel#Icon {
