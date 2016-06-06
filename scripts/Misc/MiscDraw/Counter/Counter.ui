@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>522</width>
+    <width>580</width>
     <height>50</height>
    </rect>
   </property>
@@ -37,11 +37,28 @@
      <property name="text">
       <string notr="true">1</string>
      </property>
-     <property name="angle" stdset="0">
-      <bool>false</bool>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="PrecisionLabel">
+     <property name="text">
+      <string>Precision:</string>
      </property>
-     <property name="defaultUnit" stdset="0">
-      <number>0</number>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSpinBox" name="Precision">
+     <property name="toolTip">
+      <string>Number of decimal digits</string>
+     </property>
+     <property name="wrapping">
+      <bool>true</bool>
+     </property>
+     <property name="prefix">
+      <string/>
+     </property>
+     <property name="maximum">
+      <number>17</number>
      </property>
     </widget>
    </item>
@@ -57,11 +74,11 @@
      <property name="text">
       <string notr="true"/>
      </property>
-     <property name="angle" stdset="0">
-      <bool>true</bool>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
      </property>
-     <property name="defaultUnit" stdset="0">
-      <number>0</number>
+     <property name="clearButtonEnabled">
+      <bool>false</bool>
      </property>
     </widget>
    </item>

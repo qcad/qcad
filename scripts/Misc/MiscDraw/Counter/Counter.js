@@ -35,6 +35,7 @@ function Counter(guiAction) {
 
     this.start = 1;
     this.increment = 1;
+    this.precision = 0;
     this.prefix = "";
     this.suffix = "";
 
@@ -74,8 +75,7 @@ Counter.prototype.pickCoordinate = function(event, preview) {
     var pos = event.getModelPosition();
     var str;
     var startnum = EAction.getMainWindow().findChild("Start");
-    var value = doc.formatLinear(this.start);
-    //str = this.prefix + this.start + this.suffix;
+    var value = this.start.toFixed(this.precision);
     str = this.prefix + value + this.suffix;
 
     var fontName = RSettings.getStringValue("TextDialog/Font", "Arial");
@@ -106,12 +106,11 @@ Counter.prototype.pickCoordinate = function(event, preview) {
         di.previewOperation(op);
     }
     else {
-        var pr = doc.getLinearPrecision();
         di.applyOperation(op);
         di.setRelativeZero(pos);
         // set start number to start number + increment
         this.start = this.start + this.increment;
-        startnum.text = doc.formatLinear(this.start);
+        startnum.text = this.start.toFixed(this.precision);
     }
 };
 
@@ -121,6 +120,12 @@ Counter.prototype.slotStartChanged = function(value) {
 
 Counter.prototype.slotIncrementChanged = function(value) {
     this.increment = value;
+};
+
+Counter.prototype.slotPrecisionChanged = function(value) {
+    this.precision = value;
+    var startnum = EAction.getMainWindow().findChild("Start");
+    startnum.text = this.start.toFixed(this.precision);
 };
 
 Counter.prototype.slotPrefixChanged = function(value) {
