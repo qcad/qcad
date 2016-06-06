@@ -44,6 +44,8 @@ class RTransaction;
 class QCADCORE_EXPORT RBlock: public RObject {
 public:
     static RPropertyTypeId PropertyCustom;
+    static RPropertyTypeId PropertyType;
+    static RPropertyTypeId PropertyHandle;
     static RPropertyTypeId PropertyName;
     static RPropertyTypeId PropertyFrozen;
     static RPropertyTypeId PropertyOriginX;
