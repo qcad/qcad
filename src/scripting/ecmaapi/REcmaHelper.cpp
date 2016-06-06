@@ -184,6 +184,10 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RO
 QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<REntity>& cppValue) {
     QScriptValue v;
 
+    if (cppValue.isNull()) {
+        return qScriptValueFromValue(engine, cppValue);
+    }
+
     switch (cppValue->getType()) {
     case RS::EntityLine:
         v = tryCast<RLineEntity>(engine, cppValue);
@@ -297,56 +301,112 @@ QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, QSharedPointer<RE
 QScriptValue REcmaHelper::toScriptValue(QScriptEngine* engine, REntity* cppValue) {
     QScriptValue v;
 
-    v = tryCast<RAttributeEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RAttributeDefinitionEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RArcEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RBlockReferenceEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RCircleEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RDimAlignedEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RDimAngularEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RDimDiametricEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RDimOrdinateEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RDimRadialEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RDimRotatedEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<REllipseEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RHatchEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RImageEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RLeaderEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RLineEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RRayEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RXLineEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RPointEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RPolylineEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RSolidEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RTraceEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RViewportEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RSplineEntity>(engine, cppValue);
-    if (v.isValid()) return v;
-    v = tryCast<RTextEntity>(engine, cppValue);
-    if (v.isValid()) return v;
+    if (cppValue==NULL) {
+        return qScriptValueFromValue(engine, cppValue);
+    }
+
+    switch (cppValue->getType()) {
+    case RS::EntityAttribute:
+        v = tryCast<RAttributeEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityAttributeDefinition:
+        v = tryCast<RAttributeDefinitionEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityArc:
+        v = tryCast<RArcEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityBlockReference:
+        v = tryCast<RBlockReferenceEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityCircle:
+        v = tryCast<RCircleEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityDimAligned:
+        v = tryCast<RDimAlignedEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityDimAngular:
+        v = tryCast<RDimAngularEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityDimDiametric:
+        v = tryCast<RDimDiametricEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityDimOrdinate:
+        v = tryCast<RDimOrdinateEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityDimRadial:
+        v = tryCast<RDimRadialEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityDimRotated:
+        v = tryCast<RDimRotatedEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityEllipse:
+        v = tryCast<REllipseEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityHatch:
+        v = tryCast<RHatchEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityImage:
+        v = tryCast<RImageEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityLeader:
+        v = tryCast<RLeaderEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityLine:
+        v = tryCast<RLineEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityRay:
+        v = tryCast<RRayEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityXLine:
+        v = tryCast<RXLineEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityPoint:
+        v = tryCast<RPointEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityPolyline:
+        v = tryCast<RPolylineEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntitySolid:
+        v = tryCast<RSolidEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityTrace:
+        v = tryCast<RTraceEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityViewport:
+        v = tryCast<RViewportEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntitySpline:
+        v = tryCast<RSplineEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    case RS::EntityText:
+        v = tryCast<RTextEntity>(engine, cppValue);
+        if (v.isValid()) return v;
+        break;
+    }
 
     return qScriptValueFromValue(engine, cppValue);
 }
