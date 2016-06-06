@@ -26,6 +26,8 @@ SOURCES = \
     RDimensionEntity.cpp \
     REllipseData.cpp \
     REllipseEntity.cpp \
+    RFaceData.cpp \
+    RFaceEntity.cpp \
     RHatchData.cpp \
     RHatchEntity.cpp \
     RImageData.cpp \
@@ -78,6 +80,8 @@ HEADERS = \
     RDimensionEntity.h \
     REllipseData.h \
     REllipseEntity.h \
+    RFaceData.h \
+    RFaceEntity.h \
     RHatchData.h \
     RHatchEntity.h \
     RHatchProxy.h \
