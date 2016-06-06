@@ -115,6 +115,8 @@
 #include "REcmaExporter.h"
 #include "REcmaExportListener.h"
 #include "REcmaExportListenerAdapter.h"
+#include "REcmaFaceData.h"
+#include "REcmaFaceEntity.h"
 #include "REcmaFileCache.h"
 #include "REcmaFileExporter.h"
 #include "REcmaFileExporterAdapter.h"
@@ -254,6 +256,7 @@
 #include "REcmaSharedPointerEllipse.h"
 #include "REcmaSharedPointerEllipseEntity.h"
 #include "REcmaSharedPointerEntity.h"
+#include "REcmaSharedPointerFaceEntity.h"
 #include "REcmaSharedPointerHatchEntity.h"
 #include "REcmaSharedPointerImageEntity.h"
 #include "REcmaSharedPointerLayer.h"
@@ -745,6 +748,10 @@ RScriptHandlerEcma::RScriptHandlerEcma() : engine(NULL), debugger(NULL) {
     REcmaTraceData::initEcma(*engine);
     REcmaTraceEntity::initEcma(*engine);
     REcmaSharedPointerTraceEntity::initEcma(*engine);
+
+    REcmaFaceData::initEcma(*engine);
+    REcmaFaceEntity::initEcma(*engine);
+    REcmaSharedPointerFaceEntity::initEcma(*engine);
 
     REcmaViewportData::initEcma(*engine);
     REcmaViewportEntity::initEcma(*engine);

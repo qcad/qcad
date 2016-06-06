@@ -106,6 +106,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getLength, "getLength");
             
+            REcmaHelper::registerFunction(&engine, proto, getExploded, "getExploded");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RSolidEntity*>(), *proto);
 
@@ -2036,6 +2038,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSolidEntity::getLength", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSolidEntity::getExploded
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSolidEntity::getExploded", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSolidEntity::getExploded";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSolidEntity* self = 
+                        getSelf("getExploded", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->getExploded();
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSolidEntity.getExploded().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSolidEntity::getExploded", context, engine);
             return result;
         }
          QScriptValue REcmaSolidEntity::toString
