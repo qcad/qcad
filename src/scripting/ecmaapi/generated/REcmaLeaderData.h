@@ -104,6 +104,12 @@
         ;static  QScriptValue
         getArrowShape
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getDimLeaderBlockId
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setDimLeaderBlockId
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue copy

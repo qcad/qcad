@@ -109,9 +109,14 @@
 
     <function_decl><type><name>RTriangle</name></type> <name>getArrowShape</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
 
+    <function_decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>getDimLeaderBlockId</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>void</name></type> <name>setDimLeaderBlockId</name><parameter_list>(<param><decl><type><name><name>REntity</name>::<name>Id</name></name></type> <name>id</name></decl></param>)</parameter_list>;</function_decl>
+
 </public><private>private:
     <comment type="block">/** Arrow head on / off */</comment>
     <decl_stmt><decl><type><name>bool</name></type> <name>arrowHead</name></decl>;</decl_stmt>
+    <comment type="block">/** Block to use instead of arrow */</comment>
+    <decl_stmt><decl><type><name><name>RBlock</name>::<name>Id</name></name></type> <name>dimLeaderBlockId</name></decl>;</decl_stmt>
 </private>}</block>;</class>
 
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RLeaderData</argument>)</argument_list></macro>

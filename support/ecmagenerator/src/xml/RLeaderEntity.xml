@@ -276,6 +276,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyArrowHead" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyDimLeaderBlock" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyVertexNX" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyVertexNY" type="RPropertyTypeId"

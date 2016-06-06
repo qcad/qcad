@@ -109,6 +109,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getArrowShape, "getArrowShape");
             
+            REcmaHelper::registerFunction(&engine, proto, getDimLeaderBlockId, "getDimLeaderBlockId");
+            
+            REcmaHelper::registerFunction(&engine, proto, setDimLeaderBlockId, "setDimLeaderBlockId");
+            
         engine.setDefaultPrototype(
             qMetaTypeId<RLeaderData*>(), *proto);
 
@@ -1555,6 +1559,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaLeaderData::getArrowShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLeaderData::getDimLeaderBlockId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLeaderData::getDimLeaderBlockId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderData::getDimLeaderBlockId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderData* self = 
+                        getSelf("getDimLeaderBlockId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'REntity::Id'
+    REntity::Id cppResult =
+        
+               self->getDimLeaderBlockId();
+        // return type: REntity::Id
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderData.getDimLeaderBlockId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLeaderData::getDimLeaderBlockId", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaLeaderData::setDimLeaderBlockId
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaLeaderData::setDimLeaderBlockId", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaLeaderData::setDimLeaderBlockId";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLeaderData* self = 
+                        getSelf("setDimLeaderBlockId", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: REntity::Id */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    REntity::Id
+                    a0 =
+                    (REntity::Id)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setDimLeaderBlockId(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLeaderData.setDimLeaderBlockId().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaLeaderData::setDimLeaderBlockId", context, engine);
             return result;
         }
          QScriptValue REcmaLeaderData::toString

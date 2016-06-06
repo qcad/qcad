@@ -202,6 +202,10 @@
                 qScriptValueFromValue(&engine, RLeaderEntity::PropertyArrowHead),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyDimLeaderBlock",
+                qScriptValueFromValue(&engine, RLeaderEntity::PropertyDimLeaderBlock),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyVertexNX",
                 qScriptValueFromValue(&engine, RLeaderEntity::PropertyVertexNX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
