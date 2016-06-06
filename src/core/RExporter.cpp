@@ -349,8 +349,12 @@ REntity* RExporter::getEntity() {
 }
 
 REntity* RExporter::getCurrentBlockRef() const {
-    if (!blockRefViewportStack.isEmpty()) {
-        return blockRefViewportStack.top();
+    for (int i=blockRefViewportStack.size()-1; i>=0; i--) {
+        REntity* e = blockRefViewportStack.at(i);
+        RBlockReferenceEntity* v = dynamic_cast<RBlockReferenceEntity*>(e);
+        if (v!=NULL) {
+            return v;
+        }
     }
     return NULL;
 }
