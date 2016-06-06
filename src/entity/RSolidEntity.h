@@ -144,6 +144,10 @@ public:
         return data.getLength();
     }
 
+    QList<QSharedPointer<RShape> > getExploded() const {
+        return data.getExploded();
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 
