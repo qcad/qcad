@@ -38,27 +38,39 @@ RShapesExporter::RShapesExporter(RExporter& exporter, const QList<QSharedPointer
     if (proxy) {
         proxy->init();
     }
+    // export straight line with angle 0 and length of polyline / spline:
     exportLine(line, offset);
     if (proxy) {
         proxy->uninit();
     }
 }
 
+/**
+ * Exports the given line segment.
+ *
+ * \param line Line segment, mapped to the straight, horizontal line starting at 0/0).
+ * \param angle Always 0.0.
+ */
 void RShapesExporter::exportLineSegment(const RLine& line, double angle) {
+    // indices of segments on real shape:
     int i1, i2;
-    RVector p1 = getPointAt(line.startPoint.x, &i1);
-    RVector p2 = getPointAt(line.endPoint.x, &i2);
+    // map segment start to real shape:
+    RVector p1OnShape = getPointAt(line.startPoint.x, &i1);
+    // map segment start to real shape:
+    RVector p2OnShape = getPointAt(line.endPoint.x, &i2);
+    // get angle on real shape:
+    double a = getAngleAt(line.startPoint.x);
 
-    if (!p1.isValid() || !p2.isValid()) {
+    if (!p1OnShape.isValid() || !p2OnShape.isValid()) {
         return;
     }
 
     if (line.getLength()<RS::PointTolerance) {
         // zero length (point):
-        exporter.exportLineSegment(RLine(p1, p2), angle);
+        exporter.exportLineSegment(RLine(p1OnShape, p2OnShape), a);
     }
     else {
-        exportShapesBetween(i1, p1, i2, p2);
+        exportShapesBetween(i1, p1OnShape, i2, p2OnShape, a);
     }
 }
 
@@ -120,11 +132,11 @@ int RShapesExporter::getShapeAt(double d) {
     return -1;
 }
 
-void RShapesExporter::exportShapesBetween(int i1, const RVector& p1, int i2, const RVector& p2) {
+void RShapesExporter::exportShapesBetween(int i1, const RVector& p1, int i2, const RVector& p2, double angle) {
     for (int i=i1; i<=i2; i++) {
         if (i!=i1 && i!=i2) {
             // whole shape is between points:
-            exporter.exportShapeSegment(shapes[i]);
+            exporter.exportShapeSegment(shapes[i], angle);
         }
 
         QSharedPointer<RShape> shape = QSharedPointer<RShape>(shapes[i]->clone());
@@ -142,6 +154,6 @@ void RShapesExporter::exportShapesBetween(int i1, const RVector& p1, int i2, con
             dir->trimEndPoint(p2);
         }
 
-        exporter.exportShapeSegment(shape);
+        exporter.exportShapeSegment(shape, angle);
     }
 }

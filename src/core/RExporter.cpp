@@ -1710,14 +1710,14 @@ void RExporter::exportShape(QSharedPointer<RShape> shape) {
     }
 }
 
-void RExporter::exportShapeSegment(QSharedPointer<RShape> shape) {
+void RExporter::exportShapeSegment(QSharedPointer<RShape> shape, double angle) {
     if (shape.isNull()) {
         return;
     }
 
     QSharedPointer<RLine> line = shape.dynamicCast<RLine>();
     if (!line.isNull()) {
-        exportLineSegment(*line.data());
+        exportLineSegment(*line.data(), angle);
     }
 
     QSharedPointer<RArc> arc = shape.dynamicCast<RArc>();

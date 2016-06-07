@@ -163,7 +163,7 @@ public:
 
     virtual void exportShapes(const QList<QSharedPointer<RShape> >& shapes);
     virtual void exportShape(QSharedPointer<RShape> shape);
-    virtual void exportShapeSegment(QSharedPointer<RShape> shape);
+    virtual void exportShapeSegment(QSharedPointer<RShape> shape, double angle);
 
     /**
      * Exports a line with the current attributes.

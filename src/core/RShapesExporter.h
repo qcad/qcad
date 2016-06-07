@@ -53,7 +53,7 @@ public:
     RVector getPointAt(double d, int* index = NULL);
     double getAngleAt(double d);
     int getShapeAt(double d);
-    void exportShapesBetween(int i1, const RVector& p1, int i2, const RVector& p2);
+    void exportShapesBetween(int i1, const RVector& p1, int i2, const RVector& p2, double angle);
 
 private:
     RExporter& exporter;
