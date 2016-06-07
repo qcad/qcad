@@ -4129,11 +4129,14 @@
                 
     
     if( context->argumentCount() ==
-    1 && (
+    2 && (
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
         ) /* type: QSharedPointer < RShape > */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: double */
     
     ){
     // prepare arguments:
@@ -4175,12 +4178,22 @@
                     //a0 =
                     //QSharedPointer < RShape >(o0->clone());
                 
+                    // argument isStandardType
+                    double
+                    a1 =
+                    (double)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
     // end of arguments
 
     // call C++ function:
     // return type 'void'
     
-               self->exportShapeSegment(a0);
+               self->exportShapeSegment(a0
+        ,
+    a1);
     } else
 
 

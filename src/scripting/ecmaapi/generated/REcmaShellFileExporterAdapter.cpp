@@ -4792,7 +4792,7 @@
         
     
       void REcmaShellFileExporterAdapter::exportShapeSegment(
-                QSharedPointer < RShape > shape
+                QSharedPointer < RShape > shape, double angle
             ) {
                 QScriptEngine* engine = __qtscript_self.engine();
                 //REcmaHelper::shellFunctionStart("REcmaShellFileExporterAdapter::exportShapeSegment", engine);
@@ -4805,7 +4805,7 @@
                     QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
                     
                     /* function might have more arguments than expected:
-                    || _q_function.property("length").toInt32()!=1*/
+                    || _q_function.property("length").toInt32()!=2*/
                     /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
                     ) {
                     //QString cppSig = "RFileExporterAdapter::exportShapeSegment";
@@ -4818,7 +4818,7 @@
                             _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
                         //}
                         RFileExporterAdapter::exportShapeSegment(
-                            shape
+                            shape, angle
                         );
 
                         // block recursion again:
@@ -4845,6 +4845,15 @@
         << qScriptValueFromValue(engine, 
 
         shape
+        )
+      
+
+
+
+    // type: double, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        angle
         )
       
                             )

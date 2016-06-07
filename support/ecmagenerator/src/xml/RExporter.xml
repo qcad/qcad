@@ -455,6 +455,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QSharedPointer &lt; RShape &gt;"
         typeName="QSharedPointer &lt; RShape &gt;" name="shape"
         isConst="false" />
+        <arg type="double" typeName="double" name="angle"
+        isConst="false" />
       </variant>
     </method>
     <method name="exportLine" cppName="exportLine"

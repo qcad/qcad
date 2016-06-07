@@ -399,7 +399,7 @@
         
     
       void exportShapeSegment(
-                QSharedPointer < RShape > shape
+                QSharedPointer < RShape > shape, double angle
             );
         
     
