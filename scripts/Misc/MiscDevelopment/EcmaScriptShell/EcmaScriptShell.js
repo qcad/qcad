@@ -38,6 +38,7 @@ EcmaScriptShell.getPreferencesCategory = function() {
 */
 
 EcmaScriptShell.prototype = new EAction();
+EcmaScriptShell.includeBasePath = includeBasePath;
 
 /**
  * Shows / hides the script shell widget.
@@ -48,6 +49,27 @@ EcmaScriptShell.prototype.beginEvent = function() {
     var appWin = RMainWindowQt.getMainWindow();
     var dock = appWin.findChild("EcmaScriptShellDock");
     if (!QCoreApplication.arguments().contains("-no-show")) {
+
+        if (dock.visible===false) {
+            // show warning:
+            if (RSettings.getBoolValue("EcmaScriptShell/DontShowDialog", false)!==true) {
+                var dialog = WidgetFactory.createDialog(EcmaScriptShell.includeBasePath, "EcmaScriptShellDialog.ui", appWin);
+                var bb = dialog.findChild("ButtonBox");
+                var b = bb.addButton(qsTr("Show ECMAScript Shell"), QDialogButtonBox.AcceptRole);
+                b["default"] = false;
+                bb.button(QDialogButtonBox.Cancel)["default"] = true;
+                var ret = dialog.exec();
+                if (ret!==QDialog.Accepted.valueOf()) {
+                    dialog.destroy();
+                    EAction.activateMainWindow();
+                    return;
+                }
+                WidgetFactory.saveState(dialog);
+                dialog.destroy();
+                EAction.activateMainWindow();
+            }
+        }
+
         dock.visible = !dock.visible;
         if (dock.visible) dock.raise();
     }
