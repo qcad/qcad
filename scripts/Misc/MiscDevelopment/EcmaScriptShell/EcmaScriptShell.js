@@ -58,6 +58,8 @@ EcmaScriptShell.prototype.beginEvent = function() {
                 var b = bb.addButton(qsTr("Show ECMAScript Shell"), QDialogButtonBox.AcceptRole);
                 b["default"] = false;
                 bb.button(QDialogButtonBox.Cancel)["default"] = true;
+                var l = dialog.findChild("Message");
+                l.openExternalLinks = true;
                 var ret = dialog.exec();
                 if (ret!==QDialog.Accepted.valueOf()) {
                     dialog.destroy();
@@ -82,6 +84,11 @@ EcmaScriptShell.prototype.finishEvent = function() {
     var dock = appWin.findChild("EcmaScriptShellDock");
     this.getGuiAction().setChecked(dock.visible);
 };
+
+//EcmaScriptShell.prototype.openUrl = function(url) {
+//    QDesktopServices.openUrl(url);
+//};
+
 
 EcmaScriptShell.init = function(basePath) {
     var appWin = EAction.getMainWindow();

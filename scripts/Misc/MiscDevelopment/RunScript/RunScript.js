@@ -84,7 +84,6 @@ RunScript.prototype.beginEvent = function() {
             l.text = l.text.arg(fileNames.join("<br>"));
             var ret = dialog.exec();
             if (ret!==QDialog.Accepted.valueOf()) {
-                qDebug("cancel");
                 dialog.destroy();
                 EAction.activateMainWindow();
                 return;
