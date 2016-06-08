@@ -567,7 +567,7 @@
     <message>
         <location filename="../src/core/RLayout.cpp" line="+1"/>
         <source>Tab Order</source>
-        <translation type="unfinished">Tab Order</translation>
+        <translation>Poradie aktivácie</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -588,7 +588,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation type="unfinished">Insertion Base</translation>
+        <translation type="unfinished">Vloženie Základu</translation>
     </message>
     <message>
         <location line="+1"/>

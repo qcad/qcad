@@ -131,7 +131,7 @@
     <message>
         <location line="+144"/>
         <source>Use full resolution for Retina display</source>
-        <translation type="unfinished"></translation>
+        <translation>Použiť celé rozlíšenie pre Retina display</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -146,7 +146,7 @@
     <message>
         <location line="+76"/>
         <source>Maximum number of reference points displayed:</source>
-        <translation type="unfinished"></translation>
+        <translation>Maximálny počet zobrazených bodov :</translation>
     </message>
     <message>
         <location line="+70"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sk_SK">
+<TS version="2.1" language="sk">
 <context>
     <name>InfoPolylineArea</name>
     <message>
@@ -26,7 +26,7 @@
     <message>
         <location line="+52"/>
         <source>Polyline area:</source>
-        <translation type="unfinished"></translation>
+        <translation>Plocha krivky:</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -36,7 +36,7 @@
     <message>
         <location filename="../InfoPolylineAreaInit.js" line="+2"/>
         <source>Polyl&amp;ine Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Pl&amp;ocha Krivky</translation>
     </message>
 </context>
 </TS>

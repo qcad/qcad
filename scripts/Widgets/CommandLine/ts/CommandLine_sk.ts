@@ -23,7 +23,7 @@
     <message>
         <location line="+167"/>
         <source>Invalid value:</source>
-        <translation type="unfinished"></translation>
+        <translation>Neplatná hodnota:</translation>
     </message>
     <message>
         <location line="+16"/>

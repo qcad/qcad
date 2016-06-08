@@ -99,7 +99,7 @@
     <message>
         <location line="+30"/>
         <source>Secondary reference points:</source>
-        <translation type="unfinished"></translation>
+        <translation>Druhé body:</translation>
     </message>
     <message>
         <location line="+33"/>

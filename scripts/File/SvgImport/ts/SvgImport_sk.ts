@@ -6,7 +6,7 @@
     <message>
         <location filename="../SvgImport.js" line="+30"/>
         <source>File</source>
-        <translation type="unfinished"></translation>
+        <translation>Súbor</translation>
     </message>
     <message>
         <location line="+33"/>
@@ -47,12 +47,12 @@
     <message>
         <location filename="../PreferencesPage.ui" line="+17"/>
         <source>Splines</source>
-        <translation type="unfinished">Spline-y</translation>
+        <translation>Spline-y</translation>
     </message>
     <message>
         <location line="+6"/>
         <source>Automatically convert splines to lines / arcs if appropriate</source>
-        <translation type="unfinished"></translation>
+        <translation>Automaticky previesť spline-y na čiary / oblúky ak je to vhodné</translation>
     </message>
 </context>
 </TS>

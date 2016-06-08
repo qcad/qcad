@@ -16,7 +16,7 @@
     <message>
         <location line="+15"/>
         <source>%1 is based on QCAD, a free (open source) software.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 je založený na QCAD-e, volne šíriteľný (open source) software.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -198,7 +198,7 @@
     <message>
         <location line="+13"/>
         <source>Templates</source>
-        <translation type="unfinished"></translation>
+        <translation>Šablóny</translation>
     </message>
     <message>
         <location line="+6"/>
