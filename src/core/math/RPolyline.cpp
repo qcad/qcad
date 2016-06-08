@@ -47,7 +47,9 @@ RPolyline::RPolyline(const QList<RVector>& vertices, bool closed) :
 /**
  * Creates a polyline from segments (lines or arcs).
  */
-RPolyline::RPolyline(const QList<QSharedPointer<RShape> >& segments) {
+RPolyline::RPolyline(const QList<QSharedPointer<RShape> >& segments) :
+    closed(false) {
+
     QList<QSharedPointer<RShape> >::const_iterator it;
     for (it=segments.begin(); it!=segments.end(); ++it) {
         QSharedPointer<RDirected> directed = it->dynamicCast<RDirected>();
@@ -66,6 +68,8 @@ RPolyline::RPolyline(const QList<QSharedPointer<RShape> >& segments) {
             }
         }
     }
+
+    autoClose();
 }
 
 RPolyline::~RPolyline() {
@@ -277,7 +281,6 @@ void RPolyline::insertVertexAt(const RVector& point) {
     else {
         setBulgeAt(index+1, arc2->getBulge());
     }
-
 }
 
 void RPolyline::removeFirstVertex() {
@@ -415,14 +418,15 @@ bool RPolyline::hasArcSegments() const {
 }
 
 QList<double> RPolyline::getVertexAngles() const {
+    RS::Orientation orientation = getOrientation(true);
     QList<double> ret;
     for (int i=0; i<countVertices(); i++) {
-        ret.append(getVertexAngle(i));
+        ret.append(getVertexAngle(i, orientation));
     }
     return ret;
 }
 
-double RPolyline::getVertexAngle(int i) const {
+double RPolyline::getVertexAngle(int i, RS::Orientation orientation) const {
     if (!isGeometricallyClosed() && (i==0 || i==countVertices()-1)) {
         // angles at first / last vertex for open polyline:
         return 0.0;
@@ -431,6 +435,7 @@ double RPolyline::getVertexAngle(int i) const {
     if (countSegments()==0) {
         return 0.0;
     }
+
 
     QSharedPointer<RShape> prevSegment = getSegmentAt(RMath::absmod(i-1, countSegments()));
     QSharedPointer<RShape> nextSegment = getSegmentAt(i%countSegments());
@@ -445,7 +450,10 @@ double RPolyline::getVertexAngle(int i) const {
     // angle from vertex to previous segment:
     double aPrev = prevDir->getDirection2();
 
-    if (getOrientation(true)==RS::CCW) {
+    if (orientation==RS::Any) {
+        orientation = getOrientation(true);
+    }
+    if (orientation==RS::CCW) {
         return RMath::getAngleDifference(aNext, aPrev);
     }
     else {
