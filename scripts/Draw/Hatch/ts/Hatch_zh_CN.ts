@@ -14,7 +14,7 @@
         <translation>环在点 %1/%2 未闭合.</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>每个边界实体必须是直线，弧，圆，椭圆弧，椭圆，折线或曲线. 发现：</translation>
     </message>

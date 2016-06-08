@@ -459,7 +459,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+747"/>
+        <location filename="../library.js" line="+756"/>
         <source>Objects</source>
         <translation>Objets</translation>
     </message>
@@ -822,6 +822,16 @@ Impossible de fermer la séquence de lignes : nombre d&apos;entités définies e
         <location line="+0"/>
         <source>Trace</source>
         <translation>Trace</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Faces</source>
+        <translation>Faces</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Face</source>
+        <translation>Face</translation>
     </message>
     <message>
         <location line="+2"/>

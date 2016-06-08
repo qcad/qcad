@@ -14,7 +14,7 @@
         <translation>Slingan är inte sluten vid punkt %1/%2.</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Varje gränsobjekt måste vara en linje, båge, cirkel, ellipsbåge, ellips, polylinje eller list. Found:</translation>
     </message>

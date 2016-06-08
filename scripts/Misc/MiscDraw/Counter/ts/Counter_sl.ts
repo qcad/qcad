@@ -4,7 +4,7 @@
 <context>
     <name>Counter</name>
     <message>
-        <location filename="../Counter.js" line="+63"/>
+        <location filename="../Counter.js" line="+64"/>
         <source>Position</source>
         <translation>Pozicija</translation>
     </message>
@@ -19,7 +19,17 @@
         <translation>Korak:</translation>
     </message>
     <message>
-        <location line="+20"/>
+        <location line="+14"/>
+        <source>Precision:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Number of decimal digits</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+16"/>
         <source>Prefix:</source>
         <translation>Predpona:</translation>
     </message>

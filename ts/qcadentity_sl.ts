@@ -4,7 +4,7 @@
 <context>
     <name>REntity</name>
     <message>
-        <location filename="../src/entity/RArcEntity.cpp" line="+85"/>
+        <location filename="../src/entity/RArcEntity.cpp" line="+87"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RCircleEntity.cpp" line="+75"/>
@@ -49,24 +49,28 @@
         <location line="+3"/>
         <location line="+10"/>
         <location line="+3"/>
+        <location filename="../src/entity/RFaceEntity.cpp" line="+74"/>
+        <location line="+3"/>
+        <location line="+3"/>
+        <location line="+3"/>
         <location filename="../src/entity/RHatchEntity.cpp" line="+89"/>
         <location line="+3"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+88"/>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="+71"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="+81"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="+74"/>
+        <location filename="../src/entity/RLineEntity.cpp" line="+82"/>
         <location line="+3"/>
         <location filename="../src/entity/RPointEntity.cpp" line="+69"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+88"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+92"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+77"/>
         <location line="+3"/>
         <location line="+4"/>
-        <location filename="../src/entity/RSolidEntity.cpp" line="+73"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="+74"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
-        <location filename="../src/entity/RSplineEntity.cpp" line="+76"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+77"/>
         <location line="+3"/>
-        <location filename="../src/entity/RTraceEntity.cpp" line="+73"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="+74"/>
         <location line="+3"/>
         <location line="+3"/>
         <location line="+3"/>
@@ -105,6 +109,10 @@
         <location filename="../src/entity/REllipseEntity.cpp" line="-15"/>
         <location line="+3"/>
         <location line="+10"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RFaceEntity.cpp" line="-8"/>
+        <location line="+3"/>
+        <location line="+3"/>
         <location line="+3"/>
         <location filename="../src/entity/RHatchEntity.cpp" line="-2"/>
         <location line="+3"/>
@@ -162,6 +170,10 @@
         <location filename="../src/entity/REllipseEntity.cpp" line="-15"/>
         <location line="+3"/>
         <location line="+10"/>
+        <location line="+3"/>
+        <location filename="../src/entity/RFaceEntity.cpp" line="-8"/>
+        <location line="+3"/>
+        <location line="+3"/>
         <location line="+3"/>
         <location filename="../src/entity/RHatchEntity.cpp" line="+1"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+1"/>
@@ -222,13 +234,25 @@
     <message>
         <location line="+1"/>
         <location filename="../src/entity/REllipseEntity.cpp" line="+9"/>
+        <location filename="../src/entity/RFaceEntity.cpp" line="+2"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+3"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="+8"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+9"/>
         <location filename="../src/entity/RSolidEntity.cpp" line="+2"/>
         <location filename="../src/entity/RSplineEntity.cpp" line="+2"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+2"/>
         <source>Length</source>
         <translation>Dolžina</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/entity/RFaceEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RLineEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="+1"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
+        <source>Total Length</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+1"/>
@@ -241,6 +265,12 @@
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Area</source>
         <translation>Ploščina</translation>
+    </message>
+    <message>
+        <location line="+1"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
+        <source>Total Area</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+89"/>
@@ -468,7 +498,7 @@
         <location line="+5"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RLineEntity.cpp" line="-8"/>
+        <location filename="../src/entity/RLineEntity.cpp" line="-9"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Start Point</source>
@@ -511,6 +541,7 @@
         <location line="+1"/>
         <location filename="../src/entity/RImageEntity.cpp" line="+8"/>
         <location filename="../src/entity/RLineEntity.cpp" line="+2"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-10"/>
         <location filename="../src/entity/RRayEntity.cpp" line="+2"/>
         <location filename="../src/entity/RXLineEntity.cpp" line="+2"/>
         <source>Angle</source>
@@ -539,7 +570,8 @@
         <location filename="../src/entity/RLeaderEntity.cpp" line="-2"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-11"/>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-4"/>
+        <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -590,12 +622,17 @@
         <translation>Prelij</translation>
     </message>
     <message>
-        <location filename="../src/entity/RLeaderEntity.cpp" line="-3"/>
+        <location filename="../src/entity/RLeaderEntity.cpp" line="-4"/>
         <source>Arrow</source>
         <translation>Puščica</translation>
     </message>
     <message>
-        <location filename="../src/entity/RPolylineEntity.cpp" line="-8"/>
+        <location line="+1"/>
+        <source>Arrow Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>
         <source>Polyline Pattern</source>
         <translation>Vzorec lomljenka</translation>
     </message>
@@ -610,7 +647,7 @@
         <translation>Izboklina</translation>
     </message>
     <message>
-        <location line="+2"/>
+        <location line="+3"/>
         <source>Start Width</source>
         <translation>Začetna širina</translation>
     </message>
@@ -625,10 +662,13 @@
         <translation>Globalna širina</translation>
     </message>
     <message>
-        <location filename="../src/entity/RSolidEntity.cpp" line="-13"/>
+        <location filename="../src/entity/RFaceEntity.cpp" line="-14"/>
         <location line="+1"/>
         <location line="+1"/>
-        <location filename="../src/entity/RTraceEntity.cpp" line="-13"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="-14"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RTraceEntity.cpp" line="-14"/>
         <location line="+1"/>
         <location line="+1"/>
         <source>Point 1</source>
@@ -636,6 +676,9 @@
     </message>
     <message>
         <location line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
@@ -648,6 +691,9 @@
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -658,6 +704,9 @@
         <location line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
+        <location filename="../src/entity/RSolidEntity.cpp" line="+1"/>
+        <location line="+1"/>
+        <location line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
         <location line="+1"/>
         <location line="+1"/>
@@ -665,7 +714,7 @@
         <translation>Točka 4</translation>
     </message>
     <message>
-        <location filename="../src/entity/RSplineEntity.cpp" line="-9"/>
+        <location filename="../src/entity/RSplineEntity.cpp" line="-10"/>
         <source>Closed Periodic</source>
         <translation>Periodično zaključeno</translation>
     </message>

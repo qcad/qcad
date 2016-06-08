@@ -455,7 +455,7 @@
 <context>
     <name>library</name>
     <message>
-        <location filename="../library.js" line="+747"/>
+        <location filename="../library.js" line="+756"/>
         <source>Objects</source>
         <translation>Oggetti</translation>
     </message>
@@ -798,6 +798,16 @@ in linee, solidi e testi</translatorcomment>
         <location line="+0"/>
         <source>Trace</source>
         <translation>Traccia</translation>
+    </message>
+    <message>
+        <location line="+2"/>
+        <source>Faces</source>
+        <translation>Faccias</translation>
+    </message>
+    <message>
+        <location line="+0"/>
+        <source>Face</source>
+        <translation>Faccia</translation>
     </message>
     <message>
         <location line="+2"/>

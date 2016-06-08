@@ -161,7 +161,7 @@
         <translation type="obsolete">Prag prikaza višine besedila:</translation>
     </message>
     <message>
-        <location line="+331"/>
+        <location line="+339"/>
         <source>Selection</source>
         <translation>Izbor</translation>
     </message>

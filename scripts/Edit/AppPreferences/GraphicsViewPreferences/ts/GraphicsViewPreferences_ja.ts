@@ -181,7 +181,7 @@
         <translation type="obsolete">テキスト高さの表示閾値:</translation>
     </message>
     <message>
-        <location line="+331"/>
+        <location line="+339"/>
         <source>Selection</source>
         <translation>選択</translation>
     </message>

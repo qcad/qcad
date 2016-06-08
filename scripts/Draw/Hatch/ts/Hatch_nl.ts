@@ -14,7 +14,7 @@
         <translation>Loop niet gesloten op punt %1/%2.</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Elk rand objekt moet een lijn, boog, cirkel, ellips boog, ellips, polylijn of spline zijn. Gevonden:</translation>
     </message>

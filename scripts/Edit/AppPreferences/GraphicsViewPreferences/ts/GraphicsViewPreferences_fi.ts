@@ -157,7 +157,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+70"/>
         <source>Selection</source>
         <translation>Valinta</translation>
     </message>

@@ -251,7 +251,7 @@
         <translation type="obsolete">Referenzierter Block</translation>
     </message>
     <message>
-        <location filename="../src/core/RBlock.cpp" line="+58"/>
+        <location filename="../src/core/RBlock.cpp" line="+62"/>
         <location filename="../src/core/RBlockReferenceEntity.cpp" line="+1"/>
         <location line="+3"/>
         <location filename="../src/core/RLayout.cpp" line="+77"/>

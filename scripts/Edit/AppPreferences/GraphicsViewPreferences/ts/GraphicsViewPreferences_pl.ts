@@ -214,7 +214,7 @@ Liczba obiektów w podglądzie:</translatorcomment>
         <translation type="obsolete">Wysokość progu Text display:</translation>
     </message>
     <message>
-        <location line="+331"/>
+        <location line="+339"/>
         <source>Selection</source>
         <translatorcomment>--exact match--
 --file: qt_pl.ts--

@@ -14,7 +14,7 @@
         <translation>Цикл не закрыт в точке %1/%2.</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Каждый объект с границей должен быть линией, дугой, окружностью, эллиптической дугой, эллипсом, ломаной или кривой. Найдено:</translation>
     </message>

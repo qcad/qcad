@@ -14,7 +14,7 @@
         <translation>Contorno no se cierra en el punto %1/%2.</translation>
     </message>
     <message>
-        <location line="+95"/>
+        <location line="+96"/>
         <source>Each boundary entity must be a line, arc, circle, ellipse arc, ellipse, polyline or spline. Found:</source>
         <translation>Cada objeto de frontera debe ser una línea, arco, círculo, arco elíptico, una elipse, polilínea o spline. Encuentran:</translation>
     </message>
