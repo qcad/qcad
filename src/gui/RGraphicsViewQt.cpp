@@ -333,6 +333,14 @@ QRect RGraphicsViewQt::getRect() const {
     return QRect(0,0,getWidth(),getHeight());
 }
 
+bool RGraphicsViewQt::getSignalsBlocked() const {
+    return signalsBlocked();
+}
+
+void RGraphicsViewQt::setSignalsBlocked(bool on) {
+    blockSignals(on);
+}
+
 QCursor RGraphicsViewQt::getCursor() {
     return QWidget::cursor();
 }

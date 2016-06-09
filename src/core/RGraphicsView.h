@@ -193,6 +193,13 @@ public:
      */
     virtual int getHeight() const = 0;
 
+    virtual bool getSignalsBlocked() const {
+        return false;
+    }
+    virtual void setSignalsBlocked(bool on) {
+        return;
+    }
+
     void setNavigationAction(RAction* action);
 
     /**

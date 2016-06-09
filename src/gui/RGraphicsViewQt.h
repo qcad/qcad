@@ -75,6 +75,9 @@ public:
     virtual int getWidth() const;
     virtual int getHeight() const;
     virtual QRect getRect() const;
+
+    virtual bool getSignalsBlocked() const;
+    virtual void setSignalsBlocked(bool on);
     
     virtual QCursor getCursor();
     virtual void setCursor(Qt::CursorShape cursorShape);

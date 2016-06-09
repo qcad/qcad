@@ -67,10 +67,10 @@ Viewport.initEventHandler = function(viewports) {
     }
 };
 
-Viewport.initializeViewports = function(viewports) {
+Viewport.initializeViewports = function(viewports, uiFile, graphicsSceneClass) {
     for ( var i = 0; i < viewports.length; ++i) {
         var vp = viewports[i];
-        vp.init();
+        vp.init(uiFile, graphicsSceneClass);
     }
 };
 
@@ -122,17 +122,25 @@ Viewport.prototype.initEventHandler = function() {
 
 /**
  * Initializes this viewport.
+ *
+ * \param uiFile UI file to use for view port (defaults to ViewportQt.ui).
+ * \param graphicsSceneClass Class to use for graphics scene (defaults to "RGraphicsSceneQt")
  */
-Viewport.prototype.init = function() {
+Viewport.prototype.init = function(uiFile, graphicsSceneClass) {
     // delete placeholder children if there are any (clear out parent window):
     var chs = this.vpWidget.children();
     for (var i = 0; i < chs.length; ++i) {
         var ch = chs[i];
         ch.destroy();
     }
-    
-    var vpw = WidgetFactory.createWidget("", "scripts/Widgets/Viewport/Viewport.ui", this.vpWidget);
-//    var vpw = WidgetFactory.createWidget("", "scripts/Widgets/Viewport/ViewportGl.ui", this.vpWidget);
+
+    if (isNull(uiFile)) {
+        uiFile = "scripts/Widgets/Viewport/ViewportQt.ui";
+    }
+
+    // use ViewportQt.ui or
+    var vpw = WidgetFactory.createWidget("", uiFile, this.vpWidget);
+
     var layout = new QVBoxLayout();
     layout.addWidget(vpw, 0, Qt.AlignTop | Qt.AlignLeft);
     layout.setStretch(0, 1);
@@ -157,8 +165,18 @@ Viewport.prototype.init = function() {
 
     this.graphicsView.setAntialiasing(RSettings.getBoolValue("GraphicsView/Antialiasing", false));
 
-    var scene = new RGraphicsSceneQt(this.documentInterface);
-    // var scene = new RGraphicsSceneGl(this.documentInterface);
+    // create custom graphics scene (e.g. OpenGL, ...):
+    var scene = undefined;
+    if (!isNull(graphicsSceneClass)) {
+        if (!isNull(global[graphicsSceneClass])) {
+            scene = new global[graphicsSceneClass](this.documentInterface);
+        }
+    }
+
+    if (isNull(scene)) {
+        scene = new RGraphicsSceneQt(this.documentInterface);
+    }
+
     if (RSettings.getBoolValue("GraphicsView/AutoSwitchLinetypes", false)===true) {
         scene.setScreenBasedLinetypes(true);
     }

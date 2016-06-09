@@ -24,7 +24,7 @@
 
 #include "REventHandler.h"
 #include "RDocumentInterface.h"
-#include "RGraphicsViewQt.h"
+#include "RGraphicsView.h"
 #include "RRulerQt.h"
 #include "RMainWindowQt.h"
 #include "RSnapRestriction.h"
@@ -46,7 +46,8 @@ REventHandler::REventHandler(QWidget* widget, RDocumentInterface* di)
     if (widget!=NULL) {
         hsb = widget->findChild<QScrollBar*>("HorizontalScrollBar");
         vsb = widget->findChild<QScrollBar*>("VerticalScrollBar");
-        graphicsView = widget->findChild<RGraphicsViewQt*>("GraphicsView");
+        QWidget* gv = widget->findChild<QWidget*>("GraphicsView");
+        graphicsView = dynamic_cast<RGraphicsView*>(gv);
         hruler = widget->findChild<RRulerQt*>("HorizontalRuler");
         vruler = widget->findChild<RRulerQt*>("VerticalRuler");
     }
@@ -360,24 +361,24 @@ void REventHandler::viewportChanged() {
 }
 
 void REventHandler::horizontalScrolled(double pos) {
-    bool blocked = graphicsView->signalsBlocked();
-    graphicsView->blockSignals(true);
+    bool blocked = graphicsView->getSignalsBlocked();
+    graphicsView->setSignalsBlocked(true);
     RVector off = graphicsView->getOffset();
     off.x = -(pos / graphicsView->getFactor());
     graphicsView->setOffset(off);
-    graphicsView->blockSignals(blocked);
+    graphicsView->setSignalsBlocked(blocked);
     if (hruler!=NULL) {
         hruler->updateViewport();
     }
 }
 
 void REventHandler::verticalScrolled(double pos) {
-    bool blocked = graphicsView->signalsBlocked();
-    graphicsView->blockSignals(true);
+    bool blocked = graphicsView->getSignalsBlocked();
+    graphicsView->setSignalsBlocked(true);
     RVector off = graphicsView->getOffset();
     off.y = pos / graphicsView->getFactor();
     graphicsView->setOffset(off);
-    graphicsView->blockSignals(blocked);
+    graphicsView->setSignalsBlocked(blocked);
     if (vruler!=NULL) {
         vruler->updateViewport();
     }

@@ -3,7 +3,6 @@ TSDIR = ts
 include(../../translations.pri)
 SOURCES = $${TARGET}.js
 FORMS = $${TARGET}.ui \
-    $${TARGET}Gl.ui \
     Templates/00_Single.ui \
     Templates/10_TwoVertical.ui \
     Templates/11_TwoHorizontal.ui \

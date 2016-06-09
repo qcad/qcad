@@ -90,8 +90,13 @@ NewFile.prototype.beginEvent = function() {
 /**
  * Creates a new MDI child based on the given UI file and adds it to the
  * MDI area.
+ *
+ * \param fileName File name of file to open.
+ * \param nameFilter Filter to use to import file.
+ * \param uiFile UI file to use for view port (defaults to ViewportQt.ui).
+ * \param graphicsSceneClass Class to use for graphics scene (defaults to "RGraphicsSceneQt")
  */
-NewFile.createMdiChild = function(fileName, nameFilter) {
+NewFile.createMdiChild = function(fileName, nameFilter, uiFile, graphicsSceneClass) {
     var isOpen = !isNull(fileName);
 
     if (isNull(nameFilter)) {
@@ -219,7 +224,7 @@ NewFile.createMdiChild = function(fileName, nameFilter) {
     var viewports = Viewport.getViewports(mdiChild, documentInterface);
     mdiChild.viewports = viewports;
     //qDebug("initViewports");
-    Viewport.initializeViewports(viewports);
+    Viewport.initializeViewports(viewports, uiFile, graphicsSceneClass);
     //qDebug("initViewports: done");
     NewFile.updateTitle(mdiChild);
 

@@ -34,7 +34,7 @@ class QMimeData;
 class QDragEnterEvent;
 
 class RDocumentInterface;
-class RGraphicsViewQt;
+class RGraphicsView;
 class RRulerQt;
 class RSnap;
 class RVector;
@@ -77,7 +77,7 @@ private:
     RDocumentInterface* documentInterface;
     QScrollBar* hsb;
     QScrollBar* vsb;
-    RGraphicsViewQt* graphicsView;
+    RGraphicsView* graphicsView;
     RRulerQt* hruler;
     RRulerQt* vruler;
 };
