@@ -194,6 +194,13 @@
      */</comment>
     <function_decl><type><name>virtual</name> <name>int</name></type> <name>getHeight</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
 
+    <function><type><name>virtual</name> <name>bool</name></type> <name>getSignalsBlocked</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>false</name></expr>;</return>
+    }</block></function>
+    <function><type><name>virtual</name> <name>void</name></type> <name>setSignalsBlocked</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list> <block>{
+        <return>return;</return>
+    }</block></function>
+
     <function_decl><type><name>void</name></type> <name>setNavigationAction</name><parameter_list>(<param><decl><type><name>RAction</name>*</type> <name>action</name></decl></param>)</parameter_list>;</function_decl>
 
     <comment type="block">/**

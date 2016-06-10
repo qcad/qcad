@@ -76,6 +76,9 @@
     <function_decl><type><name>virtual</name> <name>int</name></type> <name>getWidth</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>int</name></type> <name>getHeight</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>QRect</name></type> <name>getRect</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>getSignalsBlocked</name><parameter_list>()</parameter_list> <specifier>const</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>void</name></type> <name>setSignalsBlocked</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     
     <function_decl><type><name>virtual</name> <name>QCursor</name></type> <name>getCursor</name><parameter_list>()</parameter_list>;</function_decl>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>setCursor</name><parameter_list>(<param><decl><type><name><name>Qt</name>::<name>CursorShape</name></name></type> <name>cursorShape</name></decl></param>)</parameter_list>;</function_decl>

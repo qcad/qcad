@@ -208,6 +208,12 @@
         getHeight
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSignalsBlocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSignalsBlocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setNavigationAction
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

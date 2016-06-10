@@ -1558,6 +1558,11 @@
     QScriptValue::ReadOnly);
 
 
+    ctor.setProperty("UnknownOrientation",
+    QScriptValue(RS::UnknownOrientation),
+    QScriptValue::ReadOnly);
+
+
     ctor.setProperty("Any",
     QScriptValue(RS::Any),
     QScriptValue::ReadOnly);

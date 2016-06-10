@@ -338,6 +338,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       <value name="Negative" />
     </enum>
     <enum name="Orientation">
+      <value name="UnknownOrientation" />
       <value name="Any" />
       <value name="CW" />
       <value name="CCW" />

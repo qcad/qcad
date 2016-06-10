@@ -759,6 +759,16 @@
             );
         
     
+      bool getSignalsBlocked(
+                
+            );
+        
+    
+      void setSignalsBlocked(
+                bool on
+            );
+        
+    
       QCursor getCursor(
                 
             );

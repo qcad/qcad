@@ -239,6 +239,9 @@ xmlns:rs="http://www.ribbonsoft.com">
     isScriptOverwritable="true">
       <variant returnType="double" isPureVirtual="false">
         <arg type="int" typeName="int" name="i" isConst="false" />
+        <arg type="RS::Orientation" typeName="RS::Orientation"
+        name="orientation" hasDefault="true"
+        default="RS :: UnknownOrientation" isConst="false" />
       </variant>
     </method>
     <method name="setGlobalWidth" cppName="setGlobalWidth"

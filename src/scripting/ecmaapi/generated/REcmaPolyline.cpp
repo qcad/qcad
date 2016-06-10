@@ -2768,6 +2768,51 @@
 
 
         
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RS::Orientation */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    int
+                    a0 =
+                    (int)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RS::Orientation
+                    a1 =
+                    (RS::Orientation)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getVertexAngle(a0
+        ,
+    a1);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
             {
                return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getVertexAngle().",
                    context);

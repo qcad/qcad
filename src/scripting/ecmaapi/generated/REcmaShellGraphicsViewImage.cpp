@@ -8665,6 +8665,138 @@
             }
         
     
+      bool REcmaShellGraphicsViewImage::getSignalsBlocked(
+                
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::getSignalsBlocked", engine);
+                QScriptValue _q_function = __qtscript_self.property("getSignalsBlocked");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=0*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RGraphicsViewImage::getSignalsBlocked";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        bool ret =
+                        RGraphicsViewImage::getSignalsBlocked(
+                            
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getSignalsBlocked", engine);
+
+                        
+                            return ret;
+                          
+                }
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    bool res;
+                      
+                          res = qscriptvalue_cast< 
+                            bool
+                          >(
+                        
+                            _q_function.call(__qtscript_self)
+                        
+                      )
+                    
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::getSignalsBlocked", engine);
+
+                    
+                            return res;
+                          
+            }
+        
+    
+      void REcmaShellGraphicsViewImage::setSignalsBlocked(
+                bool on
+            ) {
+                QScriptEngine* engine = __qtscript_self.engine();
+                //REcmaHelper::shellFunctionStart("REcmaShellGraphicsViewImage::setSignalsBlocked", engine);
+                QScriptValue _q_function = __qtscript_self.property("setSignalsBlocked");
+
+
+
+                if (!_q_function.isFunction() || 
+                    QTSCRIPT_IS_GENERATED_FUNCTION(_q_function) ||
+                    QTSCRIPT_IS_FUNCTION_IN_CALL(_q_function)
+                    
+                    /* function might have more arguments than expected:
+                    || _q_function.property("length").toInt32()!=1*/
+                    /*|| (__qtscript_self.propertyFlags("atEnd") & QScriptValue::QObjectMember)*/
+                    ) {
+                    //QString cppSig = "RGraphicsViewImage::setSignalsBlocked";
+                    
+                        // re-enable recursion for calls from C++ into ECMAScript functions
+                        // leave it marked as generated though if appropriate:
+                        
+                        quint32 prev = _q_function.data().toUInt32();
+                        //if (cppSig!="RGraphicsViewQt::event") {
+                            _q_function.setData(QScriptValue(engine, prev & 0xFFFF0000));
+                        //}
+                        RGraphicsViewImage::setSignalsBlocked(
+                            on
+                        );
+
+                        // block recursion again:
+                        _q_function.setData(QScriptValue(engine, prev));
+
+                        //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setSignalsBlocked", engine);
+
+                        
+                            return;
+                          
+                }
+                    // prevent recursion if script implementation calls base implementation
+                    // mark function as 'in call':
+                    quint32 prev = _q_function.data().toUInt32();
+                    _q_function.setData(QScriptValue(engine, uint(prev | 0x0000B000)));
+                    
+                            _q_function.call(__qtscript_self,
+                                QScriptValueList()
+                                
+
+
+
+    // type: bool, copyable: true
+        << qScriptValueFromValue(engine, 
+
+        on
+        )
+      
+                            )
+                        
+                    ;
+                    _q_function.setData(QScriptValue(engine, prev));
+
+                    //REcmaHelper::shellFunctionEnd("REcmaShellGraphicsViewImage::setSignalsBlocked", engine);
+
+                    
+            }
+        
+    
       QCursor REcmaShellGraphicsViewImage::getCursor(
                 
             ) {

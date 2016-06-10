@@ -282,6 +282,12 @@
         getRect
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getSignalsBlocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setSignalsBlocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getCursor
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

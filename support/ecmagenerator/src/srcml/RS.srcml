@@ -492,6 +492,7 @@
     }</block>;</enum>
 
     <enum>enum <name>Orientation</name> <block>{
+        <expr><name>UnknownOrientation</name></expr>,
         <expr><name>Any</name></expr>,
         <expr><name>CW</name></expr>,
         <expr><name>CCW</name></expr>

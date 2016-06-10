@@ -244,6 +244,10 @@
             
             REcmaHelper::registerFunction(&engine, proto, getRect, "getRect");
             
+            REcmaHelper::registerFunction(&engine, proto, getSignalsBlocked, "getSignalsBlocked");
+            
+            REcmaHelper::registerFunction(&engine, proto, setSignalsBlocked, "setSignalsBlocked");
+            
             REcmaHelper::registerFunction(&engine, proto, getCursor, "getCursor");
             
             REcmaHelper::registerFunction(&engine, proto, setCursor, "setCursor");
@@ -5144,6 +5148,110 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsViewQt::getRect", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewQt::getSignalsBlocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::getSignalsBlocked", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::getSignalsBlocked";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("getSignalsBlocked", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->getSignalsBlocked();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.getSignalsBlocked().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::getSignalsBlocked", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaGraphicsViewQt::setSignalsBlocked
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaGraphicsViewQt::setSignalsBlocked", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsViewQt::setSignalsBlocked";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RGraphicsViewQt* self = 
+                        getSelf("setSignalsBlocked", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    bool
+                    a0 =
+                    (bool)
+                    
+                    context->argument( 0 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setSignalsBlocked(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsViewQt.setSignalsBlocked().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaGraphicsViewQt::setSignalsBlocked", context, engine);
             return result;
         }
          QScriptValue

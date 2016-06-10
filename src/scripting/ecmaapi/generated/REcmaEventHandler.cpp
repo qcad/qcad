@@ -21,7 +21,7 @@
             
                 #include "RDocumentInterface.h"
             
-                #include "RGraphicsViewQt.h"
+                #include "RGraphicsView.h"
             
                 #include "RRulerQt.h"
             
