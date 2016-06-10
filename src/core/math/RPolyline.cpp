@@ -565,6 +565,10 @@ RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
         return RS::Any;
     }
 
+    if (countSegments()<1) {
+        return RS::Any;
+    }
+
     RVector minV = RVector::invalid;
     QSharedPointer<RDirected> shapeBefore;
     QSharedPointer<RDirected> shapeAfter;
