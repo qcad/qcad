@@ -450,14 +450,14 @@ double RPolyline::getVertexAngle(int i, RS::Orientation orientation) const {
     // angle from vertex to previous segment:
     double aPrev = prevDir->getDirection2();
 
-    if (orientation==RS::Any) {
+    if (orientation==RS::UnknownOrientation) {
         orientation = getOrientation(true);
     }
-    if (orientation==RS::CCW) {
-        return RMath::getAngleDifference(aNext, aPrev);
+    if (orientation==RS::CW) {
+        return RMath::getAngleDifference(aPrev, aNext);
     }
     else {
-        return RMath::getAngleDifference(aPrev, aNext);
+        return RMath::getAngleDifference(aNext, aPrev);
     }
 }
 
@@ -607,6 +607,10 @@ RS::Orientation RPolyline::getOrientation(bool implicitelyClosed) const {
         l = arcAfter->getLength();
         p = arcAfter->getPointsWithDistanceToEnd(l/10, RS::FromEnd)[0];
         shapeAfter = QSharedPointer<RLine>(new RLine(arcAfter->getStartPoint(), p));
+    }
+
+    if (shapeBefore.isNull() || shapeAfter.isNull()) {
+        return RS::Any;
     }
 
     double xa = shapeBefore->getStartPoint().x;
