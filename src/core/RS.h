@@ -491,10 +491,10 @@ public:
     };
 
     enum Orientation {
-        UnknownOrientation,
-        Any,
-        CW,
-        CCW
+        UnknownOrientation = -1,
+        Any = 0,
+        CW = 1,
+        CCW = 2
     };
 
     enum JoinType {
