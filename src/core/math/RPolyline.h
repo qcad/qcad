@@ -91,7 +91,7 @@ public:
     bool hasArcSegments() const;
 
     QList<double> getVertexAngles() const;
-    double getVertexAngle(int i, RS::Orientation orientation = RS::Any) const;
+    double getVertexAngle(int i, RS::Orientation orientation = RS::UnknownOrientation) const;
 
     void setGlobalWidth(double w);
     void setStartWidthAt(int i, double w);
