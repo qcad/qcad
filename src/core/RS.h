@@ -491,6 +491,7 @@ public:
     };
 
     enum Orientation {
+        UnknownOrientation,
         Any,
         CW,
         CCW
