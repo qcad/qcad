@@ -1255,6 +1255,7 @@ void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
         for (a=a1+aStep; a<=a2; a+=aStep) {
             ci.x = center.x + cos(a) * radius;
             ci.y = center.y + sin(a) * radius;
+            ci.z = center.z;
             exportLineSegment(RLine(prev, ci), a+M_PI_2);
 //            pl.appendVertex(ci);
             prev = ci;
@@ -1267,6 +1268,7 @@ void RExporter::exportArcSegment(const RArc& arc, bool allowForZeroLength) {
         for (a=a1-aStep; a>=a2; a-=aStep) {
             ci.x = center.x + cos(a) * radius;
             ci.y = center.y + sin(a) * radius;
+            ci.z = center.z;
             exportLineSegment(RLine(prev, ci), a+M_PI_2);
 //            pl.appendVertex(ci);
             prev = ci;
