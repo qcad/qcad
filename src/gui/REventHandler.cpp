@@ -16,11 +16,12 @@
  * You should have received a copy of the GNU General Public License
  * along with QCAD.
  */
-#include <QScrollBar>
-#include <QWidget>
-#include <QPainter>
 #include <QLabel>
 #include <QMimeData>
+#include <QPainter>
+#include <QScrollBar>
+#include <QUrl>
+#include <QWidget>
 
 #include "REventHandler.h"
 #include "RDocumentInterface.h"
