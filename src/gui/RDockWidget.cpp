@@ -43,7 +43,6 @@ void RDockWidget::hideEvent(QHideEvent* event) {
 
 void RDockWidget::actionEvent(QActionEvent* event) {
     QAction* action = event->action();
-    QWidgetAction* widgetAction = qobject_cast<QWidgetAction*>(action);
 
     if (layout==NULL) {
         // first action added: add widget with flow layout to dock:
@@ -55,7 +54,7 @@ void RDockWidget::actionEvent(QActionEvent* event) {
 
     switch (event->type()) {
         case QEvent::ActionAdded: {
-            Q_ASSERT_X(widgetAction == 0 || layout->indexOf(widgetAction) == -1,
+            Q_ASSERT_X(qobject_cast<QWidgetAction*>(action) == 0 || layout->indexOf(qobject_cast<QWidgetAction*>(action)) == -1,
                         "RDockWidget", "widgets cannot be inserted multiple times");
 
             int index = layout->count();
