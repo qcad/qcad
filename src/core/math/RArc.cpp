@@ -502,7 +502,7 @@ RVector RArc::getEndPoint() const {
 }
 
 RVector RArc::getPointAtAngle(double a) const {
-    return RVector(center.x + cos(a) * radius, center.y + sin(a) * radius);
+    return RVector(center.x + cos(a) * radius, center.y + sin(a) * radius, center.z);
 }
 
 double RArc::getAngleAt(double distance, RS::From from) const {
