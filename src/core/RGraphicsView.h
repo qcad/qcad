@@ -197,6 +197,7 @@ public:
         return false;
     }
     virtual void setSignalsBlocked(bool on) {
+        Q_UNUSED(on)
         return;
     }
 
