@@ -588,7 +588,7 @@
         <location line="+1"/>
         <location line="+1"/>
         <source>Insertion Base</source>
-        <translation type="unfinished">Vloženie Základu</translation>
+        <translation>Vloženie Základu</translation>
     </message>
     <message>
         <location line="+1"/>

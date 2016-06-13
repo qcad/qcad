@@ -46,12 +46,12 @@
     <message>
         <location filename="../SplineControlPointsInit.js" line="+2"/>
         <source>&amp;Spline (Control Points)</source>
-        <translation>&amp;Spline (Riadiace Body)</translation>
+        <translation>&amp;Spline (Kontrolné/Kotevné Body)</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Draw spline from control points</source>
-        <translation>Nakreslite spline pomocou riadiacich (kontrólnych) bodov</translation>
+        <translation>Nakreslite spline pomocou kontrolných (kotevných) bodov</translation>
     </message>
 </context>
 </TS>

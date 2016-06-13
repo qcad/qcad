@@ -94,7 +94,7 @@
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+252"/>
+        <location filename="../Viewport.js" line="+270"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished"></translation>
     </message>
@@ -141,17 +141,15 @@
         <translation type="vanished">Viite</translation>
     </message>
     <message>
-        <location filename="../Viewport.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>Ristikon välit &lt; Meta-ristikon välit</translation>
+        <translation type="vanished">Ristikon välit &lt; Meta-ristikon välit</translation>
     </message>
 </context>
 <context>
     <name>ViewportGl</name>
     <message>
-        <location filename="../ViewportGl.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>Ristikon välit &lt; Meta-ristikon välit</translation>
+        <translation type="vanished">Ristikon välit &lt; Meta-ristikon välit</translation>
     </message>
 </context>
 </TS>

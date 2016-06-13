@@ -21,12 +21,12 @@
     <message>
         <location line="+14"/>
         <source>Precision:</source>
-        <translation type="unfinished"></translation>
+        <translation>Presnosť:</translation>
     </message>
     <message>
         <location line="+7"/>
         <source>Number of decimal digits</source>
-        <translation type="unfinished"></translation>
+        <translation>Presnosť</translation>
     </message>
     <message>
         <location line="+16"/>

@@ -150,7 +150,7 @@ Selecione Entidades singulares</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+252"/>
+        <location filename="../Viewport.js" line="+270"/>
         <source>Dropped data not supported</source>
         <translation>Dados inseridos não suportados</translation>
     </message>
@@ -238,17 +238,15 @@ Indique o ponto de referência
         <translation type="vanished">Referência</translation>
     </message>
     <message>
-        <location filename="../Viewport.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>Espaçamento da Grade &lt; Espaçamento da Metagrade</translation>
+        <translation type="vanished">Espaçamento da Grade &lt; Espaçamento da Metagrade</translation>
     </message>
 </context>
 <context>
     <name>ViewportGl</name>
     <message>
-        <location filename="../ViewportGl.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>Espaçamento da Grade &lt; Espaçamento da Metagrade</translation>
+        <translation type="vanished">Espaçamento da Grade &lt; Espaçamento da Metagrade</translation>
     </message>
 </context>
 </TS>

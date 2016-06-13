@@ -149,7 +149,7 @@ Zaznacza pojedynczy obiekt</translatorcomment>
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+252"/>
+        <location filename="../Viewport.js" line="+270"/>
         <source>Dropped data not supported</source>
         <translation type="unfinished"></translation>
     </message>
@@ -228,17 +228,15 @@ Kopiuj z punktem &amp;odniesienia</translatorcomment>
         <translation type="obsolete">Odniesienie</translation>
     </message>
     <message>
-        <location filename="../Viewport.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">Odstępy siatki &amp;lt;odstęp siatki Meta</translation>
+        <translation type="obsolete">Odstępy siatki &amp;lt;odstęp siatki Meta</translation>
     </message>
 </context>
 <context>
     <name>ViewportGl</name>
     <message>
-        <location filename="../ViewportGl.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation type="unfinished">Odstępy siatki &amp;lt;odstęp siatki Meta</translation>
+        <translation type="obsolete">Odstępy siatki &amp;lt;odstęp siatki Meta</translation>
     </message>
 </context>
 </TS>

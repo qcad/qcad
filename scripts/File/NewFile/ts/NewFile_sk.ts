@@ -20,7 +20,7 @@
 <context>
     <name>NewFile</name>
     <message>
-        <location filename="../NewFile.js" line="+114"/>
+        <location filename="../NewFile.js" line="+119"/>
         <source>Opening drawing:</source>
         <translation>Otváranie výkresu:</translation>
     </message>

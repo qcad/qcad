@@ -43,7 +43,7 @@ Personnalisé</translatorcomment>
 <context>
     <name>REventHandler</name>
     <message>
-        <location filename="../src/gui/REventHandler.cpp" line="+193"/>
+        <location filename="../src/gui/REventHandler.cpp" line="+195"/>
         <source>Grid</source>
         <translation>Grille</translation>
     </message>

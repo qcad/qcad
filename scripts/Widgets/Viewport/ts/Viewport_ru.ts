@@ -94,7 +94,7 @@
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+252"/>
+        <location filename="../Viewport.js" line="+270"/>
         <source>Dropped data not supported</source>
         <translation>Опущенные данные не поддерживаются</translation>
     </message>
@@ -145,17 +145,15 @@
         <translation type="vanished">Привязка</translation>
     </message>
     <message>
-        <location filename="../Viewport.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>Шаг сетки &lt; шага дополнительной сетки</translation>
+        <translation type="vanished">Шаг сетки &lt; шага дополнительной сетки</translation>
     </message>
 </context>
 <context>
     <name>ViewportGl</name>
     <message>
-        <location filename="../ViewportGl.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>Шаг сетки &lt; шага дополнительной сетки</translation>
+        <translation type="vanished">Шаг сетки &lt; шага дополнительной сетки</translation>
     </message>
 </context>
 </TS>

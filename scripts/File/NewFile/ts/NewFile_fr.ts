@@ -24,7 +24,7 @@
         <translation type="obsolete">Sans titre %1 [*]</translation>
     </message>
     <message>
-        <location filename="../NewFile.js" line="+114"/>
+        <location filename="../NewFile.js" line="+119"/>
         <source>Opening drawing:</source>
         <translation>Ouverture du dessin :</translation>
     </message>

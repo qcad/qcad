@@ -68,7 +68,7 @@
     <message>
         <location line="+15"/>
         <source>Expression</source>
-        <translation type="unfinished"></translation>
+        <translation>Výraz</translation>
     </message>
     <message>
         <location line="+3"/>

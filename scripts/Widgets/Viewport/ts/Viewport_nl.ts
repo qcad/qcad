@@ -94,7 +94,7 @@
 <context>
     <name>Viewport</name>
     <message>
-        <location filename="../Viewport.js" line="+252"/>
+        <location filename="../Viewport.js" line="+270"/>
         <source>Dropped data not supported</source>
         <translation>Ingevoegd bestand niet ondersteund</translation>
     </message>
@@ -145,17 +145,15 @@
         <translation type="vanished">Referentie</translation>
     </message>
     <message>
-        <location filename="../Viewport.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>Raster tussenafstand &lt; Meta raster tussenafstand</translation>
+        <translation type="vanished">Raster tussenafstand &lt; Meta raster tussenafstand</translation>
     </message>
 </context>
 <context>
     <name>ViewportGl</name>
     <message>
-        <location filename="../ViewportGl.ui" line="+99"/>
         <source>Grid Spacing &lt; Meta Grid Spacing</source>
-        <translation>Raster tussenafstand &lt; Meta raster tussenafstand</translation>
+        <translation type="vanished">Raster tussenafstand &lt; Meta raster tussenafstand</translation>
     </message>
 </context>
 </TS>

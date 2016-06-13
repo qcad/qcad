@@ -252,7 +252,7 @@
         <location filename="../src/entity/RSplineEntity.cpp" line="+1"/>
         <location filename="../src/entity/RTraceEntity.cpp" line="+1"/>
         <source>Total Length</source>
-        <translation type="unfinished"></translation>
+        <translation>Celková dĺžka</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -270,7 +270,7 @@
         <location line="+1"/>
         <location filename="../src/entity/RPolylineEntity.cpp" line="+1"/>
         <source>Total Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Celková plocha</translation>
     </message>
     <message>
         <location filename="../src/entity/RAttributeDefinitionEntity.cpp" line="+89"/>
@@ -628,7 +628,7 @@
     <message>
         <location line="+1"/>
         <source>Arrow Block</source>
-        <translation type="unfinished"></translation>
+        <translation>Šípka bloku</translation>
     </message>
     <message>
         <location filename="../src/entity/RPolylineEntity.cpp" line="-9"/>

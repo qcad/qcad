@@ -164,7 +164,7 @@
     <message>
         <location filename="../GraphicsViewPreferences.js" line="+24"/>
         <source>Graphics View</source>
-        <translation>Plocha Grafiky </translation>
+        <translation>Plocha Grafiky</translation>
     </message>
     <message>
         <location line="+0"/>
