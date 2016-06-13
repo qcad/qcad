@@ -176,16 +176,11 @@ Print.prototype.print = function(pdfFile) {
     var widthInMM = printer.paperRect(QPrinter.Millimeter).width();
     var heightInMM = printer.paperRect(QPrinter.Millimeter).height();
 
-    qDebug("width mm:", widthInMM);
-    qDebug("height mm:", heightInMM);
-
     // factor from mm to printer unit:
     var printerFactor = new RVector(
         printer.paperRect().width() / widthInMM,
         printer.paperRect().height() / heightInMM
     );
-
-    qDebug("factor: ", printerFactor);
 
     // printer calibration goes here (future use):
     //printerFactor.x *= 200/200.05;
