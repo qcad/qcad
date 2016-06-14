@@ -246,7 +246,7 @@ LineRelativeAngle.prototype.getAbsoluteAngle = function() {
     }
     else if (isEllipseShape(this.shape)) {
         var p = this.shape.getClosestPointOnShape(this.pos, false);
-        ret = this.shape.getAngleAt(p);
+        ret = this.shape.getAngleAtPoint(p);
     }
 
     ret += this.angle;
