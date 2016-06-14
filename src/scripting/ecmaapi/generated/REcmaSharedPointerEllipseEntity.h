@@ -121,6 +121,9 @@
         getAngleLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getAngleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         isReversed
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

@@ -167,6 +167,10 @@
         <return>return <expr><name>data</name>.<call><name>getAngleLength</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>
 
+    <function><type><name>double</name></type> <name>getAngleAt</name><parameter_list>(<param><decl><type><name>double</name></type> <name>distance</name></decl></param>, <param><decl><type><name><name>RS</name>::<name>From</name></name></type> <name>from</name></decl></param>)</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>data</name>.<call><name>getAngleAt</name><argument_list>(<argument><expr><name>distance</name></expr></argument>, <argument><expr><name>from</name></expr></argument>)</argument_list></call></expr>;</return>
+    }</block></function>
+
     <function><type><name>bool</name></type> <name>isReversed</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
         <return>return <expr><name>data</name>.<call><name>isReversed</name><argument_list>()</argument_list></call></expr>;</return>
     }</block></function>

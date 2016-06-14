@@ -144,6 +144,9 @@
         ;static  QScriptValue
         getAngleLength
         (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getAngleAt
+        (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)

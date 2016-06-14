@@ -114,6 +114,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAngleLength, "getAngleLength");
             
+            REcmaHelper::registerFunction(&engine, proto, getAngleAt, "getAngleAt");
+            
             REcmaHelper::registerFunction(&engine, proto, isReversed, "isReversed");
             
             REcmaHelper::registerFunction(&engine, proto, setReversed, "setReversed");
@@ -2087,6 +2089,79 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaEllipseEntity::getAngleLength", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaEllipseEntity::getAngleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaEllipseEntity::getAngleAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaEllipseEntity::getAngleAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REllipseEntity* self = 
+                        getSelf("getAngleAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RS::From */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RS::From
+                    a1 =
+                    (RS::From)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getAngleAt(a0
+        ,
+    a1);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipseEntity.getAngleAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaEllipseEntity::getAngleAt", context, engine);
             return result;
         }
          QScriptValue

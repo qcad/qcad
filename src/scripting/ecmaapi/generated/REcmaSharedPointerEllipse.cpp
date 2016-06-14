@@ -234,6 +234,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAngleAt, "getAngleAt");
             
+            REcmaHelper::registerFunction(&engine, proto, getAngleAtPoint, "getAngleAtPoint");
+            
             REcmaHelper::registerFunction(&engine, proto, getParamTo, "getParamTo");
             
             REcmaHelper::registerFunction(&engine, proto, getRadiusAt, "getRadiusAt");
@@ -3842,6 +3844,111 @@
     
     if( context->argumentCount() ==
     1 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getAngleAt(a0);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RS::From */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RS::From
+                    a1 =
+                    (RS::From)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getAngleAt(a0
+        ,
+    a1);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getAngleAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerEllipse::getAngleAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerEllipse::getAngleAtPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerEllipse::getAngleAtPoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerEllipse::getAngleAtPoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    REllipse* self = 
+                        getSelf("getAngleAtPoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
             context->argument(0).isVariant() || 
             context->argument(0).isQObject() || 
             context->argument(0).isNull()
@@ -3874,7 +3981,7 @@
     // return type 'double'
     double cppResult =
         
-               self->getAngleAt(a0);
+               self->getAngleAtPoint(a0);
         // return type: double
                 // standard Type
                 result = QScriptValue(cppResult);
@@ -3884,10 +3991,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getAngleAt().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for REllipse.getAngleAtPoint().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaSharedPointerEllipse::getAngleAt", context, engine);
+            //REcmaHelper::functionEnd("REcmaSharedPointerEllipse::getAngleAtPoint", context, engine);
             return result;
         }
          QScriptValue

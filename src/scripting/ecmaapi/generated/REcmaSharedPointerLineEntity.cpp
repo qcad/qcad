@@ -100,6 +100,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getAngle, "getAngle");
             
+            REcmaHelper::registerFunction(&engine, proto, getAngleAt, "getAngleAt");
+            
             REcmaHelper::registerFunction(&engine, proto, getDirection1, "getDirection1");
             
             REcmaHelper::registerFunction(&engine, proto, getDirection2, "getDirection2");
@@ -1696,6 +1698,79 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerLineEntity::getAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerLineEntity::getAngleAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerLineEntity::getAngleAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerLineEntity::getAngleAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RLineEntity* self = 
+                        getSelf("getAngleAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    2 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: RS::From */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RS::From
+                    a1 =
+                    (RS::From)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'double'
+    double cppResult =
+        
+               self->getAngleAt(a0
+        ,
+    a1);
+        // return type: double
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RLineEntity.getAngleAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerLineEntity::getAngleAt", context, engine);
             return result;
         }
          QScriptValue

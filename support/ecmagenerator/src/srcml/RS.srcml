@@ -492,10 +492,10 @@
     }</block>;</enum>
 
     <enum>enum <name>Orientation</name> <block>{
-        <expr><name>UnknownOrientation</name></expr>,
-        <expr><name>Any</name></expr>,
-        <expr><name>CW</name></expr>,
-        <expr><name>CCW</name></expr>
+        <expr><name>UnknownOrientation</name> = -1</expr>,
+        <expr><name>Any</name> = 0</expr>,
+        <expr><name>CW</name> = 1</expr>,
+        <expr><name>CCW</name> = 2</expr>
     }</block>;</enum>
 
     <enum>enum <name>JoinType</name> <block>{

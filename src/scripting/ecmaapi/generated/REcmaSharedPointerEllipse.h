@@ -222,6 +222,9 @@
         getAngleAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getAngleAtPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getParamTo
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
