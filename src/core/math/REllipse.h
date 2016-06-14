@@ -134,9 +134,9 @@ public:
 
     bool contains(const RVector& p) const;
 
-//    virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;
+    virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;
 
-    double getAngleAt(const RVector& pos) const;
+    double getAngleAtPoint(const RVector& pos) const;
     double getParamTo(const RVector& pos) const;
     double getRadiusAt(double param) const;
     RVector getPointAt(double param) const;

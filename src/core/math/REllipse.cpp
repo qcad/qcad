@@ -120,7 +120,15 @@ void REllipse::moveEndPoint(const RVector& pos, bool changeAngleOnly) {
     }
 }
 
-double REllipse::getAngleAt(const RVector& pos) const {
+double REllipse::getAngleAt(double distance, RS::From from) const {
+    Q_UNUSED(distance)
+    Q_UNUSED(from)
+
+    // TODO
+    return 0.0;
+}
+
+double REllipse::getAngleAtPoint(const RVector& pos) const {
     RVector m = pos;
     m.move(-getCenter());
     m.rotate(-getAngle());
