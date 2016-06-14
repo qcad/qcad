@@ -166,6 +166,10 @@ public:
         return data.getAngleLength();
     }
 
+    double getAngleAt(double distance, RS::From from) const {
+        return data.getAngleAt(distance, from);
+    }
+
     bool isReversed() const {
         return data.isReversed();
     }

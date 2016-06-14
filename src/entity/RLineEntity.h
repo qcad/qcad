@@ -123,6 +123,10 @@ public:
         return data.getAngle();
     }
 
+    double getAngleAt(double distance, RS::From from) const {
+        return data.getAngleAt(distance, from);
+    }
+
     double getDirection1() const {
         return data.getDirection1();
     }

@@ -190,6 +190,10 @@ public:
         return data.getAngleLength(allowForZeroLength);
     }
 
+    double getAngleAt(double distance, RS::From from) const {
+        return data.getAngleAt(distance, from);
+    }
+
 protected:
     virtual void print(QDebug dbg) const;
 
