@@ -145,17 +145,14 @@ QList<RVector> RLine::getCenterPoints() const {
 
 QList<RVector> RLine::getPointsWithDistanceToEnd(double distance, RS::From from) const {
     QList<RVector> ret;
-    double a1 = getAngle();
-
-    RVector dv;
-    dv.setPolar(distance, a1);
 
     if (from&RS::FromStart) {
-        ret.append(startPoint + dv);
+        RVector normalStart = (endPoint-startPoint).getNormalized();
+        ret.append(startPoint + normalStart*distance);
     }
-
     if (from&RS::FromEnd) {
-        ret.append(endPoint - dv);
+        RVector normalEnd = (startPoint-endPoint).getNormalized();
+        ret.append(endPoint + normalEnd*distance);
     }
 
     return ret;
