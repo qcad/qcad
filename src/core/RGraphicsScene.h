@@ -29,6 +29,7 @@
 #include "REntity.h"
 #include "RExporter.h"
 #include "RGraphicsView.h"
+#include "RGraphicsSceneDrawable.h"
 #include "RMouseEvent.h"
 #include "RSpatialIndex.h"
 #include "RTabletEvent.h"
@@ -102,6 +103,15 @@ public:
     virtual void endPreview();
     virtual void clearPreview();
     virtual bool isPreviewEmpty();
+
+    virtual void addToPreview(REntity::Id entityId, const QList<RGraphicsSceneDrawable>& drawables) {
+        Q_UNUSED(entityId)
+        Q_UNUSED(drawables)
+    }
+    virtual void addToPreview(REntity::Id entityId, const RGraphicsSceneDrawable& drawable) {
+        Q_UNUSED(entityId)
+        Q_UNUSED(drawable)
+    }
 
     RRefPoint getHighlightedReferencePoint();
 
