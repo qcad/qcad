@@ -45,23 +45,23 @@ public:
     /**
      * \nonscriptable
      */
-    RGraphicsSceneDrawable(const RPainterPath& pp);
+    RGraphicsSceneDrawable(const RPainterPath& pp, const RVector& os = RVector::nullVector);
 
     /**
      * \nonscriptable
      */
-    RGraphicsSceneDrawable(const RImageData& img);
+    RGraphicsSceneDrawable(const RImageData& img, const RVector& os = RVector::nullVector);
 
     /**
      * \nonscriptable
      */
-    RGraphicsSceneDrawable(const RTextBasedData& txt);
+    RGraphicsSceneDrawable(const RTextBasedData& txt, const RVector& os = RVector::nullVector);
 
     ~RGraphicsSceneDrawable();
 
-    static RGraphicsSceneDrawable createFromPainterPath(const RPainterPath& pp);
-    static RGraphicsSceneDrawable createFromImage(const RImageData& img);
-    static RGraphicsSceneDrawable createFromText(const RTextBasedData& txt);
+    static RGraphicsSceneDrawable createFromPainterPath(const RPainterPath& pp, const RVector& offset = RVector::nullVector);
+    static RGraphicsSceneDrawable createFromImage(const RImageData& img, const RVector& offset = RVector::nullVector);
+    static RGraphicsSceneDrawable createFromText(const RTextBasedData& txt, const RVector& offset = RVector::nullVector);
 
     void uninit();
 
@@ -84,6 +84,14 @@ public:
         return *text;
     }
 
+    RVector getOffset() const {
+        return offset;
+    }
+
+    void setOffset(const RVector& o) {
+        offset = o;
+    }
+
     void setSelected(bool on);
     void setHighlighted(bool on);
 
@@ -91,6 +99,7 @@ public:
 
 protected:
      Type type;
+     RVector offset;
 
     //union {
         RPainterPath* painterPath;

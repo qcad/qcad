@@ -4,15 +4,15 @@ RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RGraphicsSceneDrawable& oth
     operator =(other);
 }
 
-RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RPainterPath& pp) : type(PainterPath), painterPath(NULL), image(NULL), text(NULL) {
+RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RPainterPath& pp, const RVector& os) : type(PainterPath), offset(os), painterPath(NULL), image(NULL), text(NULL) {
     painterPath = new RPainterPath(pp);
 }
 
-RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RImageData& img) : type(Image), painterPath(NULL), image(NULL), text(NULL) {
+RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RImageData& img, const RVector& os) : type(Image), offset(os), painterPath(NULL), image(NULL), text(NULL) {
     image = new RImageData(img);
 }
 
-RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RTextBasedData& txt) : type(Text), painterPath(NULL), image(NULL), text(NULL) {
+RGraphicsSceneDrawable::RGraphicsSceneDrawable(const RTextBasedData& txt, const RVector& os) : type(Text), offset(os), painterPath(NULL), image(NULL), text(NULL) {
     text = new RTextBasedData(txt);
 }
 
@@ -20,16 +20,16 @@ RGraphicsSceneDrawable::~RGraphicsSceneDrawable() {
     uninit();
 }
 
-RGraphicsSceneDrawable RGraphicsSceneDrawable::createFromPainterPath(const RPainterPath& pp) {
-    return RGraphicsSceneDrawable(pp);
+RGraphicsSceneDrawable RGraphicsSceneDrawable::createFromPainterPath(const RPainterPath& pp, const RVector& offset) {
+    return RGraphicsSceneDrawable(pp, offset);
 }
 
-RGraphicsSceneDrawable RGraphicsSceneDrawable::createFromImage(const RImageData& img) {
-    return RGraphicsSceneDrawable(img);
+RGraphicsSceneDrawable RGraphicsSceneDrawable::createFromImage(const RImageData& img, const RVector& offset) {
+    return RGraphicsSceneDrawable(img, offset);
 }
 
-RGraphicsSceneDrawable RGraphicsSceneDrawable::createFromText(const RTextBasedData& txt) {
-    return RGraphicsSceneDrawable(txt);
+RGraphicsSceneDrawable RGraphicsSceneDrawable::createFromText(const RTextBasedData& txt, const RVector& offset) {
+    return RGraphicsSceneDrawable(txt, offset);
 }
 
 void RGraphicsSceneDrawable::uninit() {
@@ -96,6 +96,7 @@ RGraphicsSceneDrawable& RGraphicsSceneDrawable::operator=(const RGraphicsSceneDr
         text = new RTextBasedData(*other.text);
     }
     type = other.type;
+    offset = other.offset;
 
     return *this;
 }
