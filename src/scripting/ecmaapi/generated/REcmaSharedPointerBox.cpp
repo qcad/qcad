@@ -78,6 +78,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, isSane, "isSane");
             
+            REcmaHelper::registerFunction(&engine, proto, get2D, "get2D");
+            
             REcmaHelper::registerFunction(&engine, proto, getWidth, "getWidth");
             
             REcmaHelper::registerFunction(&engine, proto, getHeight, "getHeight");
@@ -812,6 +814,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerBox::isSane", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerBox::get2D
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerBox::get2D", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerBox::get2D";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RBox* self = 
+                        getSelf("get2D", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RBox'
+    RBox cppResult =
+        
+               self->get2D();
+        // return type: RBox
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RBox.get2D().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerBox::get2D", context, engine);
             return result;
         }
          QScriptValue

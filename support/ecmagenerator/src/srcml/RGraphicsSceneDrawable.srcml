@@ -46,23 +46,23 @@
     <comment type="block">/**
      * \nonscriptable
      */</comment>
-    <constructor_decl><name>RGraphicsSceneDrawable</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>pp</name></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RGraphicsSceneDrawable</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>pp</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>os</name> =<init> <expr><name><name>RVector</name>::<name>nullVector</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
     <comment type="block">/**
      * \nonscriptable
      */</comment>
-    <constructor_decl><name>RGraphicsSceneDrawable</name><parameter_list>(<param><decl><type><name>const</name> <name>RImageData</name>&amp;</type> <name>img</name></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RGraphicsSceneDrawable</name><parameter_list>(<param><decl><type><name>const</name> <name>RImageData</name>&amp;</type> <name>img</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>os</name> =<init> <expr><name><name>RVector</name>::<name>nullVector</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
     <comment type="block">/**
      * \nonscriptable
      */</comment>
-    <constructor_decl><name>RGraphicsSceneDrawable</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>txt</name></decl></param>)</parameter_list>;</constructor_decl>
+    <constructor_decl><name>RGraphicsSceneDrawable</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>txt</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>os</name> =<init> <expr><name><name>RVector</name>::<name>nullVector</name></name></expr></init></decl></param>)</parameter_list>;</constructor_decl>
 
     <destructor_decl><name>~RGraphicsSceneDrawable</name><parameter_list>()</parameter_list>;</destructor_decl>
 
-    <function_decl><type><name>static</name> <name>RGraphicsSceneDrawable</name></type> <name>createFromPainterPath</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>pp</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>static</name> <name>RGraphicsSceneDrawable</name></type> <name>createFromImage</name><parameter_list>(<param><decl><type><name>const</name> <name>RImageData</name>&amp;</type> <name>img</name></decl></param>)</parameter_list>;</function_decl>
-    <function_decl><type><name>static</name> <name>RGraphicsSceneDrawable</name></type> <name>createFromText</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>txt</name></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RGraphicsSceneDrawable</name></type> <name>createFromPainterPath</name><parameter_list>(<param><decl><type><name>const</name> <name>RPainterPath</name>&amp;</type> <name>pp</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name> =<init> <expr><name><name>RVector</name>::<name>nullVector</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RGraphicsSceneDrawable</name></type> <name>createFromImage</name><parameter_list>(<param><decl><type><name>const</name> <name>RImageData</name>&amp;</type> <name>img</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name> =<init> <expr><name><name>RVector</name>::<name>nullVector</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
+    <function_decl><type><name>static</name> <name>RGraphicsSceneDrawable</name></type> <name>createFromText</name><parameter_list>(<param><decl><type><name>const</name> <name>RTextBasedData</name>&amp;</type> <name>txt</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>offset</name> =<init> <expr><name><name>RVector</name>::<name>nullVector</name></name></expr></init></decl></param>)</parameter_list>;</function_decl>
 
     <function_decl><type><name>void</name></type> <name>uninit</name><parameter_list>()</parameter_list>;</function_decl>
 
@@ -85,6 +85,14 @@
         <return>return <expr>*<name>text</name></expr>;</return>
     }</block></function>
 
+    <function><type><name>RVector</name></type> <name>getOffset</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>offset</name></expr>;</return>
+    }</block></function>
+
+    <function><type><name>void</name></type> <name>setOffset</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>o</name></decl></param>)</parameter_list> <block>{
+        <expr_stmt><expr><name>offset</name> = <name>o</name></expr>;</expr_stmt>
+    }</block></function>
+
     <function_decl><type><name>void</name></type> <name>setSelected</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
     <function_decl><type><name>void</name></type> <name>setHighlighted</name><parameter_list>(<param><decl><type><name>bool</name></type> <name>on</name></decl></param>)</parameter_list>;</function_decl>
 
@@ -92,6 +100,7 @@
 
 </public><protected>protected:
      <decl_stmt><decl><type><name>Type</name></type> <name>type</name></decl>;</decl_stmt>
+     <decl_stmt><decl><type><name>RVector</name></type> <name>offset</name></decl>;</decl_stmt>
 
     <comment type="line">//union {</comment>
         <decl_stmt><decl><type><name>RPainterPath</name>*</type> <name>painterPath</name></decl>;</decl_stmt>

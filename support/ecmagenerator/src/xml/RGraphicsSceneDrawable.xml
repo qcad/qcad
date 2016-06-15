@@ -26,6 +26,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="RPainterPath &amp;" typeName="RPainterPath"
         name="pp" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="offset"
+        hasDefault="true" default="RVector :: nullVector"
+        isConst="true" />
       </variant>
     </method>
     <method name="createFromImage" cppName="createFromImage"
@@ -35,6 +38,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="RImageData &amp;" typeName="RImageData"
         name="img" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="offset"
+        hasDefault="true" default="RVector :: nullVector"
+        isConst="true" />
       </variant>
     </method>
     <method name="createFromText" cppName="createFromText"
@@ -44,6 +50,9 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="RTextBasedData &amp;" typeName="RTextBasedData"
         name="txt" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector" name="offset"
+        hasDefault="true" default="RVector :: nullVector"
+        isConst="true" />
       </variant>
     </method>
     <method name="uninit" cppName="uninit" specifier="public"
@@ -70,6 +79,17 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="RTextBasedData &amp;"
       isPureVirtual="false" />
+    </method>
+    <method name="getOffset" cppName="getOffset" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RVector" isPureVirtual="false" />
+    </method>
+    <method name="setOffset" cppName="setOffset" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="void" isPureVirtual="false">
+        <arg type="RVector &amp;" typeName="RVector" name="o"
+        isConst="true" />
+      </variant>
     </method>
     <method name="setSelected" cppName="setSelected"
     specifier="public" isStatic="false" isVirtual="false"

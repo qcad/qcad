@@ -129,6 +129,9 @@
         isPreviewEmpty
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        addToPreview
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getHighlightedReferencePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

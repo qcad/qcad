@@ -58,6 +58,9 @@
         isSane
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        get2D
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getWidth
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

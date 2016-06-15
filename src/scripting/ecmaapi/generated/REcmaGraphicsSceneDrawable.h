@@ -70,6 +70,12 @@
         getText
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        setOffset
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         setSelected
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
