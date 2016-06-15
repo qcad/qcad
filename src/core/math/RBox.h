@@ -52,6 +52,10 @@ public:
     bool isValid() const;
     bool isSane() const;
 
+    RBox get2D() const {
+        return RBox(c1.get2D(), c2.get2D());
+    }
+
     double getWidth() const;
     double getHeight() const;
     RVector getSize() const;
