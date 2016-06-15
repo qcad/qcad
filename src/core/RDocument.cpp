@@ -402,18 +402,14 @@ QList<QSharedPointer<RObject> > RDocument::getDefaultLinetypes() {
  * Resets this document to its initial, empty state.
  */
 void RDocument::clear() {
+    // preserve unit:
+    RS::Unit u = getUnit();
+
     fileName = "";
     storage.clear();
     clearSpatialIndices();
     transactionStack.reset();
 
-    // TODO: check if needed (doc vars are reset in init):
-    QSharedPointer<RDocumentVariables> docVars = queryDocumentVariablesDirect();
-    if (!docVars.isNull()) {
-        //docVars.clear();
-        docVars = QSharedPointer<RDocumentVariables>();
-    }
-    RS::Unit u = getUnit();
     init();
     setUnit(u);
 }
