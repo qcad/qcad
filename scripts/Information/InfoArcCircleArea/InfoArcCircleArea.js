@@ -300,7 +300,7 @@ InfoArcCircleArea.prototype.getInfo = function(cmdLine) {
         if (!cmdLine) {
             area = area.toFixed(4);
             circ = circ.toFixed(4);
-            this.label1 = qsTr("Area") + " = " + area;
+            this.label1 = qsTr("Area") + " = " + this.formatAreaResult(area, true);
             if (this.addLength) {
                 this.label2 = qsTr("Circumference") + " = " + circ;
             } else {
@@ -309,7 +309,7 @@ InfoArcCircleArea.prototype.getInfo = function(cmdLine) {
             this.label3 = "";
             info = this.label1;
         } else {
-            info = qsTr("Circle area:") + " " + area +
+            info = qsTr("Circle area:") + " " + this.formatAreaResult(area, false) +
             ", " +  qsTr("circumference:") + " " + circ;
         }
     } else if (isEllipseArcShape(this.shape)) {
@@ -321,7 +321,7 @@ InfoArcCircleArea.prototype.getInfo = function(cmdLine) {
                 area = area.toFixed(4);
                 len = len.toFixed(4);
                 chord = chord.toFixed(4);
-                this.label1 = qsTr("Area") + " = " + area;
+                this.label1 = qsTr("Area") + " = " + this.formatAreaResult(area, true);
                 if (this.addLength) {
                     this.label2 = qsTr("Length") + " = " + len;
                     this.label3 = qsTr("Chord") + " = " + chord;
@@ -331,7 +331,7 @@ InfoArcCircleArea.prototype.getInfo = function(cmdLine) {
                 }
                 info = this.label1;
             } else {
-                info = qsTr("Ellipse arc area:") + " " + area +
+                info = qsTr("Ellipse arc area:") + " " + this.formatAreaResult(area, false) +
                 ", " + qsTr("arc length:") + " " + len +
                 ", " + qsTr("chord:") + " " + chord;
             }
@@ -345,7 +345,7 @@ InfoArcCircleArea.prototype.getInfo = function(cmdLine) {
                 len = len.toFixed(4);
                 rad1 = rad1.toFixed(4);
                 rad2 = rad2.toFixed(4);
-                this.label1 = qsTr("Area") + " = " + area;
+                this.label1 = qsTr("Area") + " = " + this.formatAreaResult(area, true);
                 if (this.addLength) {
                     this.label2 = qsTr("Length") + " = " + len;
                     this.label3 = qsTr("Distance") + " = " + rad1 + " x " + rad2;
@@ -355,7 +355,7 @@ InfoArcCircleArea.prototype.getInfo = function(cmdLine) {
                 }
                 info = this.label1;
             } else {
-                info = qsTr("Ellipse arc area:") + " " + area +
+                info = qsTr("Ellipse arc area:") + " " + this.formatAreaResult(area, false) +
                 ", " + qsTr("arc length:") + " " + len +
                 ", " + qsTr("distance:") + " " + rad1 + " x " + rad2;
             }
@@ -366,7 +366,7 @@ InfoArcCircleArea.prototype.getInfo = function(cmdLine) {
         if (!cmdLine) {
             area = area.toFixed(4);
             circ = circ.toFixed(4);
-            this.label1 = qsTr("Area") + " = " + area;
+            this.label1 = qsTr("Area") + " = " + this.formatAreaResult(area, true);
             if (this.addLength) {
                 this.label2 = qsTr("Circumference") + " = " + circ;
                 this.label3 = "";
@@ -376,7 +376,7 @@ InfoArcCircleArea.prototype.getInfo = function(cmdLine) {
             }
             info = this.label1;
         } else {
-            info = qsTr("Ellipse area:") + " " + area +
+            info = qsTr("Ellipse area:") + " " + this.formatAreaResult(area, false) +
             ", " + qsTr("circumference:") + " " + circ;
         }
     } else {   // Arc shape
@@ -388,7 +388,7 @@ InfoArcCircleArea.prototype.getInfo = function(cmdLine) {
                 area = area.toFixed(4);
                 len = len.toFixed(4);
                 chord = chord.toFixed(4);
-                this.label1 = qsTr("Area") + " = " + area;
+                this.label1 = qsTr("Area") + " = " + this.formatAreaResult(area, true);
                 if (this.addLength) {
                     this.label2 = qsTr("Length") + " = " + len;
                     this.label3 = qsTr("Chord") + " = " + chord;
@@ -398,7 +398,7 @@ InfoArcCircleArea.prototype.getInfo = function(cmdLine) {
                 }
                 info = this.label1;
             } else {
-                info = qsTr("Arc area:") + " " + area +
+                info = qsTr("Arc area:") + " " + this.formatAreaResult(area, false) +
                 ", " + qsTr("arc length:") + " " + len +
                 ", " + qsTr("chord:") + " " + chord;
             }
@@ -410,7 +410,7 @@ InfoArcCircleArea.prototype.getInfo = function(cmdLine) {
                 area = area.toFixed(4);
                 len = len.toFixed(4);
                 rad1 = rad1.toFixed(4);
-                this.label1 = qsTr("Area") + " = " + area;
+                this.label1 = qsTr("Area") + " = " + this.formatAreaResult(area, true);
                 if (this.addLength) {
                     this.label2 = qsTr("Length") + " = " + len;
                     this.label3 = qsTr("Radius") + " = " + rad1;
@@ -420,7 +420,7 @@ InfoArcCircleArea.prototype.getInfo = function(cmdLine) {
                 }
                 info = this.label1;
             } else {
-                info = qsTr("Arc area:") + " " + area +
+                info = qsTr("Arc area:") + " " + this.formatAreaResult(area, false) +
                 ", " + qsTr("arc length:") + " " + len +
                 ", " + qsTr("radius:") + " " + rad1;
             }

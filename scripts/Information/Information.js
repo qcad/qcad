@@ -68,6 +68,28 @@ Information.prototype.formatAngularResult = function(angle) {
     return document.formatAngle(angle);
 };
 
+Information.prototype.formatAreaResult = function(area, rounded) {
+    var document = this.getDocument();
+    if (isNull(document)) {
+        return "";
+    }
+
+    var prec = 12;
+    if (rounded) {
+        prec = 3;
+    }
+
+    var areaText;
+    if (document.getUnit()===RS.Inch) {
+        var sqft = Math.floor(area/144);
+        var sqin = area-sqft*144;
+        return "%1 (= %2ft² %3in²)".arg(area).arg(sqft, 0, 'f', prec).arg(sqin, 0, 'f', prec);
+    }
+    else {
+        return "%1".arg(area, 0, 'f', prec);
+    }
+};
+
 /**
  * \return Result formatted in dimension label format and with 6 decimal points.
  * e.g.: "3 1/3 [3.333333]"

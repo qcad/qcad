@@ -97,7 +97,7 @@ InfoPolylineArea.prototype.getOperation = function(preview) {
     var circ = this.getCircumference();
     circ = circ.toFixed(6);
 
-    var label1 = qsTr("Area") + " = " + area;
+    var label1 = qsTr("Area") + " = " + this.formatAreaResult(area, true);;
     var label2 = qsTr("Circumference") + " = " + circ;
     view.clearTextLabels();
     var c = this.shape.getLastVertex();
@@ -150,7 +150,7 @@ InfoPolylineArea.prototype.slotCalculate = function() {
         return;
     }
 
-    var info = qsTr("Polyline area:") + " " + this.getArea() +
+    var info = qsTr("Polyline area:") + " " + this.formatAreaResult(this.getArea(), false) +
             ", " + qsTr("circumference:") + " " + this.getCircumference();
 
     if (this.addToDrawing) {

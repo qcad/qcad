@@ -136,22 +136,7 @@ InfoArea.prototype.getOperation = function(preview) {
 };
 
 InfoArea.prototype.getAreaText = function(rounded) {
-    var prec = 12;
-    if (rounded) {
-        prec = 3;
-    }
-
-    var doc = this.getDocument();
-    var area = this.getArea();
-    var areaText;
-    if (doc.getUnit()===RS.Inch) {
-        var sqft = Math.floor(area/144);
-        var sqin = area-sqft*144;
-        return "%1 (= %2ft² %3in²)".arg(area).arg(sqft, 0, 'f', prec).arg(sqin, 0, 'f', prec);
-    }
-    else {
-        return "%1".arg(area, 0, 'f', prec);
-    }
+    return this.formatAreaResult(this.getArea(), rounded);
 };
 
 InfoArea.prototype.getArea = function() {
