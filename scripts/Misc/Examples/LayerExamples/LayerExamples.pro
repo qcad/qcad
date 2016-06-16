@@ -1,7 +1,8 @@
 TEMPLATE = subdirs
 
 SUBDIRS = \
-    ts \
     ExLayerAdd \
+    ExLayerCustomProperty \
+    ExLayerFromHatches \
     ExLayerWhiteToBlack \
-    ExLayerCustomProperty
+    ts
