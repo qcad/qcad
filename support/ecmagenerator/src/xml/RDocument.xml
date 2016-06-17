@@ -158,6 +158,12 @@ xmlns:rs="http://www.ribbonsoft.com">
       <variant returnType="QSet &lt; RBlock::Id &gt;"
       isPureVirtual="false" />
     </method>
+    <method name="queryAllLayoutBlocks"
+    cppName="queryAllLayoutBlocks" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QSet &lt; RBlock::Id &gt;"
+      isPureVirtual="false" />
+    </method>
     <method name="queryAllViews" cppName="queryAllViews"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">

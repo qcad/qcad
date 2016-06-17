@@ -96,6 +96,9 @@
         queryAllBlocks
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        queryAllLayoutBlocks
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         queryAllViews
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
