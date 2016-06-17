@@ -866,6 +866,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         // image:
         if (drawable.getType()==RGraphicsSceneDrawable::Image) {
             RImageData image = drawable.getImage();
+            image.move(drawable.getOffset());
             image.move(paintOffset);
             paintImage(painter, image);
         }
@@ -873,6 +874,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
         // text:
         if (drawable.getType()==RGraphicsSceneDrawable::Text) {
             RTextBasedData text = drawable.getText();
+            text.move(drawable.getOffset());
             text.move(paintOffset);
             paintText(painter, text);
         }
@@ -895,6 +897,7 @@ void RGraphicsViewImage::paintEntity(QPainter* painter, REntity::Id id, bool pre
             path.move(sp);
         }
 
+        path.move(drawable.getOffset());
         path.move(paintOffset);
         RBox pathBB = path.getBoundingBox();
 
