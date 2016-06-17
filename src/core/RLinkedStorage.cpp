@@ -66,6 +66,11 @@ QSet<RBlock::Id> RLinkedStorage::queryAllBlocks(bool undone) {
             .unite(backStorage->queryAllBlocks(undone));
 }
 
+QSet<RBlock::Id> RLinkedStorage::queryAllLayoutBlocks(bool undone) {
+    return RMemoryStorage::queryAllLayoutBlocks(undone)
+            .unite(backStorage->queryAllLayoutBlocks(undone));
+}
+
 QSet<RView::Id> RLinkedStorage::queryAllViews(bool undone) {
     return RMemoryStorage::queryAllViews(undone)
             .unite(backStorage->queryAllViews(undone));

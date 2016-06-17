@@ -277,6 +277,18 @@ QSet<RBlock::Id> RMemoryStorage::queryAllBlocks(bool undone) {
     return result;
 }
 
+QSet<RBlock::Id> RMemoryStorage::queryAllLayoutBlocks(bool undone) {
+    QSet<RBlock::Id> result;
+    QHash<RObject::Id, QSharedPointer<RBlock> >::iterator it;
+    for (it = blockMap.begin(); it != blockMap.end(); ++it) {
+        QSharedPointer<RBlock> b = *it;
+        if (!b.isNull() && (undone || !b->isUndone()) && b->isLayout()) {
+            result.insert(b->getId());
+        }
+    }
+    return result;
+}
+
 QSet<RView::Id> RMemoryStorage::queryAllViews(bool undone) {
     QSet<RView::Id> result;
     QHash<RObject::Id, QSharedPointer<RObject> >::iterator it;

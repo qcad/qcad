@@ -1014,6 +1014,10 @@ QSet<RBlock::Id> RDocument::queryAllBlocks() const {
     return storage.queryAllBlocks();
 }
 
+QSet<RBlock::Id> RDocument::queryAllLayoutBlocks() const {
+    return storage.queryAllLayoutBlocks();
+}
+
 /*
 QList<RBlock::Id> RDocument::queryAllBlocks() const {
     QSet<RBlock::Id> result;

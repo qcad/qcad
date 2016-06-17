@@ -134,6 +134,11 @@ public:
     virtual QSet<RBlock::Id> queryAllBlocks(bool undone = false) = 0;
 
     /**
+     * \return A set of all block IDs of layout blocks of the document.
+     */
+    virtual QSet<RBlock::Id> queryAllLayoutBlocks(bool undone = false) = 0;
+
+    /**
      * \return A set of all view IDs of the document.
      */
     virtual QSet<RView::Id> queryAllViews(bool undone = false) = 0;

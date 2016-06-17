@@ -105,6 +105,7 @@ public:
     QSet<RUcs::Id> queryAllUcs() const;
     QSet<RLayer::Id> queryAllLayers() const;
     QSet<RBlock::Id> queryAllBlocks() const;
+    QSet<RBlock::Id> queryAllLayoutBlocks() const;
     QSet<RView::Id> queryAllViews() const;
     QSet<RLinetype::Id> queryAllLinetypes() const;
 
