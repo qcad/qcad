@@ -274,6 +274,10 @@ Explode.explodeSelection = function(di, action) {
             // delete original entity:
             op.deleteObject(entity);
         }
+        else {
+            // delete original entity:
+            op.deleteObject(entity);
+        }
     }
 
     di.applyOperation(op);
