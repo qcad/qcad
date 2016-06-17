@@ -908,7 +908,9 @@ PropertyEditorImpl.prototype.initNumberControls = function(objectName, propertyT
     }
 
     if (attributes.isInteger()) {
-        control.setInteger(true);
+        if (isOfType(control, RMathLineEdit)) {
+            control.setInteger(true);
+        }
     }
 
     if (!onlyChanges) {
