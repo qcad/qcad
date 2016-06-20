@@ -18,6 +18,26 @@
         <source>&amp;Layer</source>
         <translation>&amp;Laag</translation>
     </message>
+    <message>
+        <location line="+17"/>
+        <source>Showing all layers</source>
+        <translation>Alle laagen tonen</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Hiding all layers</source>
+        <translation>Alle laagen verbergen</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Locking all layers</source>
+        <translation>Alle laagen vergrendelen</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Unlocking all layers</source>
+        <translation>Alle laagen ontgrendelen</translation>
+    </message>
 </context>
 <context>
     <name>LayerDialog</name>

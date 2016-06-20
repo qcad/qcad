@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2008"/>
+        <location line="+2009"/>
         <source>Cancel</source>
         <translation>Abbrechen</translation>
     </message>
     <message>
-        <location line="-1735"/>
+        <location line="-1736"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation>Aktives Werkzeug:</translation>
@@ -102,7 +102,7 @@
         <translation>CAD Werkzeuge</translation>
     </message>
     <message>
-        <location line="+686"/>
+        <location line="+687"/>
         <source>Entity is on a locked layer.</source>
         <translation>Element ist auf gesperrtem Layer.</translation>
     </message>

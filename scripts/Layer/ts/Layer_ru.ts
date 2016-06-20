@@ -18,6 +18,26 @@
         <source>&amp;Layer</source>
         <translation>С&amp;лой</translation>
     </message>
+    <message>
+        <location line="+17"/>
+        <source>Showing all layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Hiding all layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Locking all layers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Unlocking all layers</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>LayerDialog</name>

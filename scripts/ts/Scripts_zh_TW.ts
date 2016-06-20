@@ -63,12 +63,12 @@
     </message>
     <message>
         <location line="+1"/>
-        <location line="+2008"/>
+        <location line="+2009"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="-1735"/>
+        <location line="-1736"/>
         <location line="+137"/>
         <source>Active Tool:</source>
         <translation type="unfinished"></translation>
@@ -94,7 +94,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+686"/>
+        <location line="+687"/>
         <source>Entity is on a locked layer.</source>
         <translation type="unfinished"></translation>
     </message>

@@ -14,7 +14,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location line="+153"/>
+        <location line="+138"/>
         <source>Polygon area:</source>
         <translation type="unfinished"></translation>
     </message>

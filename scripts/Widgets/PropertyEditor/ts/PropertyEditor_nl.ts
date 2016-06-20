@@ -22,12 +22,12 @@
 <context>
     <name>PropertyEditor</name>
     <message>
-        <location filename="../PropertyEditor.js" line="+1318"/>
+        <location filename="../PropertyEditor.js" line="+1320"/>
         <source>*VARIES*</source>
         <translation>*VARIEERT*</translation>
     </message>
     <message>
-        <location line="-1130"/>
+        <location line="-1132"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -77,7 +77,7 @@
         <translation>auto</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+123"/>
         <source>Use auto measurement</source>
         <translation>Automatisch</translation>
     </message>

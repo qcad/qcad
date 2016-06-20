@@ -108,10 +108,10 @@ Layer.init = function() {
 Layer.showHide = function(show, obj, layerId, showProgress) {
     if (showProgress===true) {
         if (show) {
-            EAction.setProgressText(qsTr("Showing all Layers"));
+            EAction.setProgressText(qsTr("Showing all layers"));
         }
         else {
-            EAction.setProgressText(qsTr("Hiding all Layers"));
+            EAction.setProgressText(qsTr("Hiding all layers"));
         }
     }
 
@@ -143,10 +143,10 @@ Layer.showHide = function(show, obj, layerId, showProgress) {
 Layer.lockUnlock = function(lock, di, showProgress) {
     if (showProgress===true) {
         if (lock) {
-            EAction.setProgressText(qsTr("Locking all Layers"));
+            EAction.setProgressText(qsTr("Locking all layers"));
         }
         else {
-            EAction.setProgressText(qsTr("Unlocking all Layers"));
+            EAction.setProgressText(qsTr("Unlocking all layers"));
         }
     }
 

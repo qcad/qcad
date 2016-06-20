@@ -18,6 +18,26 @@
         <source>&amp;Layer</source>
         <translation>&amp;Calque</translation>
     </message>
+    <message>
+        <location line="+17"/>
+        <source>Showing all layers</source>
+        <translation>Afficher toutes les calques</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Hiding all layers</source>
+        <translation>Cachez tous les calques</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Locking all layers</source>
+        <translation>Verrouiller tous les calques</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Unlocking all layers</source>
+        <translation>Déverrouiller tous les calques</translation>
+    </message>
 </context>
 <context>
     <name>LayerDialog</name>

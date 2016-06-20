@@ -22,6 +22,26 @@
 Utilize a &amp;camada atual</translatorcomment>
         <translation>&amp;Camada</translation>
     </message>
+    <message>
+        <location line="+17"/>
+        <source>Showing all layers</source>
+        <translation>Exibir todas as camadas</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Hiding all layers</source>
+        <translation>Ocultar todas as camadas</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Locking all layers</source>
+        <translation>Bloqueie todas as camadas</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Unlocking all layers</source>
+        <translation>Desbloqueie todas as camadas</translation>
+    </message>
 </context>
 <context>
     <name>LayerDialog</name>

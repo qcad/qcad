@@ -32,12 +32,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../PropertyEditor.js" line="+1318"/>
+        <location filename="../PropertyEditor.js" line="+1320"/>
         <source>*VARIES*</source>
         <translation>*VAIHTELEVA*</translation>
     </message>
     <message>
-        <location line="-1130"/>
+        <location line="-1132"/>
         <source>:</source>
         <translation>:</translation>
     </message>
@@ -91,7 +91,7 @@
         <translation>Automaattinen</translation>
     </message>
     <message>
-        <location line="+121"/>
+        <location line="+123"/>
         <source>Use auto measurement</source>
         <translation>Käytä automaattisia mittauksia</translation>
     </message>

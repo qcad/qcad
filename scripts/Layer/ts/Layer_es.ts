@@ -18,6 +18,26 @@
         <source>&amp;Layer</source>
         <translation>&amp;Capa</translation>
     </message>
+    <message>
+        <location line="+17"/>
+        <source>Showing all layers</source>
+        <translation>Mostrar todas las capas</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Hiding all layers</source>
+        <translation>Ocultar todas las capas</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Locking all layers</source>
+        <translation>Bloquear todas las capas</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Unlocking all layers</source>
+        <translation>Desbloquear todas las capas</translation>
+    </message>
 </context>
 <context>
     <name>LayerDialog</name>

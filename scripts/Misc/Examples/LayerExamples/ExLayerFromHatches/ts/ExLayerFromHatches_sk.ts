@@ -4,7 +4,7 @@
 <context>
     <name>ExLayerFromHatches</name>
     <message>
-        <location filename="../ExLayerFromHatchesInit.js" line="2"/>
+        <location filename="../ExLayerFromHatchesInit.js" line="+2"/>
         <source>&amp;Create New Layer from Hatches</source>
         <translation type="unfinished"></translation>
     </message>

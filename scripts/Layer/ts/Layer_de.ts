@@ -18,6 +18,26 @@
         <source>&amp;Layer</source>
         <translation>&amp;Layer</translation>
     </message>
+    <message>
+        <location line="+17"/>
+        <source>Showing all layers</source>
+        <translation>Alle Layer anzeigen</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Hiding all layers</source>
+        <translation>Alle Layer verbergen</translation>
+    </message>
+    <message>
+        <location line="+32"/>
+        <source>Locking all layers</source>
+        <translation>Alle Layer sperren</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Unlocking all layers</source>
+        <translation>Alle Layer entsperren</translation>
+    </message>
 </context>
 <context>
     <name>LayerDialog</name>
