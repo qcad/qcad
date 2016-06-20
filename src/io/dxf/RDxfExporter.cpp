@@ -1079,6 +1079,7 @@ void RDxfExporter::writeMText(const RTextEntity& t) {
         attachmentPoint+=3;
         break;
     case RS::VAlignBottom:
+    case RS::VAlignBase:
         attachmentPoint+=6;
         break;
     }
