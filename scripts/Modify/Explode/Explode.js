@@ -60,7 +60,8 @@ Explode.explodeSelection = function(di, action) {
         // these entity types are not explodable:
         if (isPointEntity(entity) ||
             isLineEntity(entity) ||
-            isArcEntity(entity)) {
+            isArcEntity(entity) ||
+            isCircleEntity(entity)) {
             continue;
         }
 
