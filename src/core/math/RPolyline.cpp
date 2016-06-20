@@ -1086,7 +1086,7 @@ double RPolyline::getArea() const {
 
     RPolyline closedCopy = *this;
     if (!closedCopy.isGeometricallyClosed()) {
-        closedCopy.autoClose();
+        closedCopy.setClosed(true);
     }
 
     // polygonal area (all segments treated as lines):
