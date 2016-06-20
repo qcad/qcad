@@ -1826,6 +1826,7 @@ EAction.setProgressText = function(t) {
     if (isNull(appWin)) {
         return;
     }
+    EAction.handleUserMessage(t);
     appWin.setProgressText(t);
 };
 
