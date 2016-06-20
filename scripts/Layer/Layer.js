@@ -105,10 +105,23 @@ Layer.init = function() {
     Layer.getToolMatrixPanel();
 };
 
-Layer.showHide = function(show, obj, layerId) {
+Layer.showHide = function(show, obj, layerId, showProgress) {
+    if (showProgress===true) {
+        if (show) {
+            EAction.setProgressText(qsTr("Showing all Layers"));
+        }
+        else {
+            EAction.setProgressText(qsTr("Hiding all Layers"));
+        }
+    }
+
     var operation = new RModifyObjectsOperation();
     var layers = obj.getDocument().queryAllLayers();
     for (var l = 0; l < layers.length; ++l) {
+        if (showProgress===true) {
+            EAction.setProgress(100/layers.length*l);
+        }
+
         var layer = obj.getDocument().queryLayer(layers[l]);
         if (layers[l] !== layerId) {
             layer.setFrozen(!show);
@@ -121,19 +134,46 @@ Layer.showHide = function(show, obj, layerId) {
     di.applyOperation(operation);
     di.clearPreview();
     di.repaintViews();
+
+    if (showProgress===true) {
+        EAction.setProgressEnd();
+    }
 };
 
-Layer.lockUnlock = function(lock, di) {
+Layer.lockUnlock = function(lock, di, showProgress) {
+    if (showProgress===true) {
+        if (lock) {
+            EAction.setProgressText(qsTr("Locking all Layers"));
+        }
+        else {
+            EAction.setProgressText(qsTr("Unlocking all Layers"));
+        }
+    }
+
     var operation = new RModifyObjectsOperation();
     var layers = di.getDocument().queryAllLayers();
     for (var l = 0; l < layers.length; ++l) {
+        if (showProgress===true) {
+            EAction.setProgress(50/layers.length*l);
+        }
+
         var layer = di.getDocument().queryLayer(layers[l]);
         layer.setLocked(lock);
         operation.addObject(layer);
     }
     di.applyOperation(operation);
     di.clearPreview();
+    if (showProgress===true) {
+        EAction.setProgress(90);
+    }
     di.repaintViews();
+    if (showProgress===true) {
+        EAction.setProgress(100);
+    }
+
+    if (showProgress===true) {
+        EAction.setProgressEnd();
+    }
 };
 
 /**
