@@ -489,6 +489,9 @@
         formatAngle
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        setLinearFormat
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getLinearFormat
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue

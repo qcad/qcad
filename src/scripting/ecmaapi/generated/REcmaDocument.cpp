@@ -365,6 +365,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, formatAngle, "formatAngle");
             
+            REcmaHelper::registerFunction(&engine, proto, setLinearFormat, "setLinearFormat");
+            
             REcmaHelper::registerFunction(&engine, proto, getLinearFormat, "getLinearFormat");
             
             REcmaHelper::registerFunction(&engine, proto, getLinearPrecision, "getLinearPrecision");
@@ -12004,6 +12006,61 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocument::formatAngle", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocument::setLinearFormat
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocument::setLinearFormat", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocument::setLinearFormat";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocument* self = 
+                        getSelf("setLinearFormat", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isNumber()
+        ) /* type: RS::LinearFormat */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    RS::LinearFormat
+                    a0 =
+                    (RS::LinearFormat)
+                    (int)
+                    context->argument( 0 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'void'
+    
+               self->setLinearFormat(a0);
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocument.setLinearFormat().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocument::setLinearFormat", context, engine);
             return result;
         }
          QScriptValue

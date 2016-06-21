@@ -164,7 +164,7 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QApplication*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QBrush</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QBrush*</argument>)</argument_list></macro>
-<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QBuffer*</argument>)</argument_list></macro>
+<comment type="line">//Q_DECLARE_METATYPE(QBuffer*)</comment>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QByteArray*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QCloseEvent*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QColor</argument>)</argument_list></macro>

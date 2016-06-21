@@ -421,6 +421,7 @@
     <xsl:param name="baseClassNodes" select="com:node-set()"/>
 
     <xsl:for-each select="$baseClassNodes">
+      <xsl:if test="not(contains(rs:toFunctionName(@name), '::'))">
         <xsl:value-of select="$static"/> QScriptValue <xsl:value-of select="$prefix"/>get<xsl:value-of select="rs:toFunctionName(@name)"/>(QScriptContext *context,
             QScriptEngine *engine)
         <xsl:choose>
@@ -436,6 +437,7 @@
             }
             </xsl:otherwise>
         </xsl:choose>
+      </xsl:if>
     </xsl:for-each>
 
     <xsl:for-each select="$baseClassNodes">
@@ -451,6 +453,7 @@
     <xsl:param name="baseClassNodes" select="com:node-set()"/>
 
     <xsl:for-each select="$baseClassNodes">
+      <xsl:if test="not(contains(rs:toFunctionName(@name), '::'))">
         // conversion for base class <xsl:value-of select="@name"/>
         REcmaHelper::registerFunction(&amp;engine, proto, get<xsl:value-of select="rs:toFunctionName(@name)"/>, "get<xsl:value-of select="rs:toFunctionName(@name)"/>");
         <!--
@@ -459,6 +462,7 @@
         proto->setProperty("get<xsl:value-of select="rs:toFunctionName(@name)"/>", fun,
             QScriptValue::SkipInEnumeration);
         -->
+      </xsl:if>
     </xsl:for-each>
 
     <xsl:for-each select="$baseClassNodes">
