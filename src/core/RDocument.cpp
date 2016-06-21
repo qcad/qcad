@@ -513,10 +513,13 @@ QString RDocument::formatAngle(double value) {
  * \return The linear format type for this document.
  * This is determined by the variable "$DIMLUNIT".
  */
-RS::LinearFormat RDocument::getLinearFormat() {
+RS::LinearFormat RDocument::getLinearFormat() const {
     return (RS::LinearFormat)getKnownVariable(RS::DIMLUNIT, 2).toInt();
 }
 
+void RDocument::setLinearFormat(RS::LinearFormat f) {
+    setKnownVariable(RS::DIMLUNIT, f);
+}
 
 
 /**

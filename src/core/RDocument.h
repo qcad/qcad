@@ -337,7 +337,8 @@ public:
     QString formatLinear(double value);
     QString formatAngle(double value);
 
-    RS::LinearFormat getLinearFormat();
+    void setLinearFormat(RS::LinearFormat f);
+    RS::LinearFormat getLinearFormat() const;
     int getLinearPrecision();
     bool showLeadingZeroes();
     bool showTrailingZeroes();
