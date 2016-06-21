@@ -363,16 +363,19 @@ DimensionSettings.updateLinearFormatFromUnit = function(widgets) {
     if ((DimensionSettings.unit!==RS.Inch && DimensionSettings.unit!==RS.Foot) &&
         (linearFormat===RS.ArchitecturalStacked || linearFormat===RS.Engineering)) {
 
-        var appWin = EAction.getMainWindow();
         widgets["LinearFormat"].currentIndex = 1;
-        QMessageBox.warning(appWin,
-                            qsTr("Unit / Format"),
-                            qsTr("The drawing unit must be 'Inch' or 'Foot' to display dimension labels in "
-                                 + "formats 'Architectural' or 'Engineering'. "
-                                 + "Format changed to 'Decimal'."));
+        DimensionSettings.showLinearFormatWarning();
     }
 };
 
+DimensionSettings.showLinearFormatWarning = function() {
+    var appWin = EAction.getMainWindow();
+    QMessageBox.warning(appWin,
+                        qsTr("Unit / Format"),
+                        qsTr("The drawing unit must be 'Inch' or 'Foot' to display dimension labels in "
+                             + "formats 'Architectural' or 'Engineering'. "
+                             + "Format changed to 'Decimal'."));
+};
 
 /**
  * Updates the linear precision combobox depending on the current

@@ -17,6 +17,8 @@
  * along with QCAD.
  */
 
+include("scripts/Edit/DrawingPreferences/DimensionSettings/DimensionSettings.js");
+
 function UnitSettings() {
 }
 
@@ -39,6 +41,17 @@ UnitSettings.initPreferences = function(pageWidget, calledByPrefDialog, document
     // if necessary:
     unitCombo["activated(int)"].connect(function(u) {
         preferencesAction.unitUpdated(u);
+
+        // change dimension format if necessary:
+        if (!isNull(document)) {
+            var linearFormat = document.getLinearFormat();
+            if ((u!==RS.Inch && u!==RS.Foot) &&
+                (linearFormat===RS.ArchitecturalStacked || linearFormat===RS.Engineering)) {
+
+                document.setLinearFormat(RS.Decimal);
+                DimensionSettings.showLinearFormatWarning();
+            }
+        }
     });
 
     var paperUnitCombo = pageWidget.findChild("PaperUnit");
