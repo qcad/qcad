@@ -454,6 +454,9 @@
         setNotifyListeners
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isDeleting
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         eval
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString

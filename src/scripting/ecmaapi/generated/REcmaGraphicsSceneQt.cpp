@@ -90,8 +90,6 @@
             
             REcmaHelper::registerFunction(&engine, proto, exportArc, "exportArc");
             
-            REcmaHelper::registerFunction(&engine, proto, exportEllipse, "exportEllipse");
-            
             REcmaHelper::registerFunction(&engine, proto, exportThickPolyline, "exportThickPolyline");
             
             REcmaHelper::registerFunction(&engine, proto, exportPolyline, "exportPolyline");
@@ -972,125 +970,6 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::exportArc", context, engine);
-            return result;
-        }
-         QScriptValue
-        REcmaGraphicsSceneQt::exportEllipse
-        (QScriptContext* context, QScriptEngine* engine) 
-        
-        {
-            //REcmaHelper::functionStart("REcmaGraphicsSceneQt::exportEllipse", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaGraphicsSceneQt::exportEllipse";
-            //QCoreApplication::processEvents();
-
-            QScriptValue result = engine->undefinedValue();
-            
-                    // public function: can be called from ECMA wrapper of ECMA shell:
-                    RGraphicsSceneQt* self = 
-                        getSelf("exportEllipse", context);
-                  
-
-                //Q_ASSERT(self!=NULL);
-                if (self==NULL) {
-                    return REcmaHelper::throwError("self is NULL", context);
-                }
-                
-    
-    if( context->argumentCount() ==
-    1 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: REllipse */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    REllipse*
-                    ap0 =
-                    qscriptvalue_cast<
-                    REllipse*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RGraphicsSceneQt: Argument 0 is not of type REllipse.",
-                               context);                    
-                    }
-                    REllipse 
-                    a0 = 
-                    *ap0;
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->exportEllipse(a0);
-    } else
-
-
-        
-    
-    if( context->argumentCount() ==
-    2 && (
-            context->argument(0).isVariant() || 
-            context->argument(0).isQObject() || 
-            context->argument(0).isNull()
-        ) /* type: REllipse */
-     && (
-            context->argument(1).isNumber()
-        ) /* type: double */
-    
-    ){
-    // prepare arguments:
-    
-                    // argument isCopyable and has default constructor and isSimpleClass 
-                    REllipse*
-                    ap0 =
-                    qscriptvalue_cast<
-                    REllipse*
-                        >(
-                        context->argument(
-                        0
-                        )
-                    );
-                    if (ap0 == NULL) {
-                           return REcmaHelper::throwError("RGraphicsSceneQt: Argument 0 is not of type REllipse.",
-                               context);                    
-                    }
-                    REllipse 
-                    a0 = 
-                    *ap0;
-                
-                    // argument isStandardType
-                    double
-                    a1 =
-                    (double)
-                    
-                    context->argument( 1 ).
-                    toNumber();
-                
-    // end of arguments
-
-    // call C++ function:
-    // return type 'void'
-    
-               self->exportEllipse(a0
-        ,
-    a1);
-    } else
-
-
-        
-            {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RGraphicsSceneQt.exportEllipse().",
-                   context);
-            }
-            //REcmaHelper::functionEnd("REcmaGraphicsSceneQt::exportEllipse", context, engine);
             return result;
         }
          QScriptValue

@@ -326,6 +326,10 @@
         <expr_stmt><expr><name>notifyListeners</name> = <name>on</name></expr>;</expr_stmt>
     }</block></function>
 
+    <function><type><name>bool</name></type> <name>isDeleting</name><parameter_list>()</parameter_list> <specifier>const</specifier> <block>{
+        <return>return <expr><name>deleting</name></expr>;</return>
+    }</block></function>
+
     <function_decl><type><name>QVariant</name></type> <name>eval</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>ext</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>script</name></decl></param>)</parameter_list>;</function_decl>
 
 </public><private>private:

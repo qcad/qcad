@@ -335,6 +335,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, setNotifyListeners, "setNotifyListeners");
             
+            REcmaHelper::registerFunction(&engine, proto, isDeleting, "isDeleting");
+            
             REcmaHelper::registerFunction(&engine, proto, eval, "eval");
             
         engine.setDefaultPrototype(
@@ -9352,6 +9354,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDocumentInterface::setNotifyListeners", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDocumentInterface::isDeleting
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDocumentInterface::isDeleting", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDocumentInterface::isDeleting";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDocumentInterface* self = 
+                        getSelf("isDeleting", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->isDeleting();
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDocumentInterface.isDeleting().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDocumentInterface::isDeleting", context, engine);
             return result;
         }
          QScriptValue

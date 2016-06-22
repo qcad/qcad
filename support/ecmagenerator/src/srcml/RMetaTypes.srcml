@@ -164,7 +164,9 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QApplication*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QBrush</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QBrush*</argument>)</argument_list></macro>
-<comment type="line">//Q_DECLARE_METATYPE(QBuffer*)</comment>
+<cpp:if>#<cpp:directive>if</cpp:directive> <expr><name>QT_VERSION</name> &lt; 0x050700</expr></cpp:if>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QBuffer*</argument>)</argument_list></macro>
+<cpp:endif>#<cpp:directive>endif</cpp:directive></cpp:endif>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QByteArray*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QCloseEvent*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>QColor</argument>)</argument_list></macro>
