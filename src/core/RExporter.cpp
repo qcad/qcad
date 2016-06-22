@@ -684,7 +684,7 @@ void RExporter::exportEntity(REntity& entity, bool preview, bool allBlocks, bool
  */
 void RExporter::exportEntity(REntity::Id entityId, bool allBlocks, bool forceSelected) {
     QSharedPointer<REntity> e = document->queryEntityDirect(entityId);
-    if (!e.isNull()) {
+    if (!e.isNull() && !e->isUndone()) {
         exportEntity(*e, false, allBlocks, forceSelected);
     }
     else {
@@ -1371,7 +1371,7 @@ void RExporter::exportPolyline(const RPolyline& polyline, bool polylineGen, doub
     }
 
     // if polyline has individual segment widths, polylineGen has no effect:
-    if (polylineGen && !polyline.hasWidths()) {
+    if (!continuous && polylineGen && !polyline.hasWidths()) {
         // pattern along whole polyline:
         exportExplodable(polyline, offset);
     }
