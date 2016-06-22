@@ -231,16 +231,6 @@ void RGraphicsSceneQt::exportArc(const RArc& arc, double offset) {
     }
 }
 
-void RGraphicsSceneQt::exportEllipse(const REllipse& ellipse, double offset) {
-    bool created = beginPath();
-
-    RGraphicsScene::exportEllipse(ellipse, offset);
-
-    if (created) {
-        endPath();
-    }
-}
-
 void RGraphicsSceneQt::exportThickPolyline(const RPolyline& polyline) {
     if (RPolyline::hasProxy()) {
         QList<RPolyline> pls  = polyline.getOutline();
@@ -652,6 +642,7 @@ double RGraphicsSceneQt::getLineTypePatternScale(const RLinetypePattern& p) cons
 }
 
 void RGraphicsSceneQt::unexportEntity(REntity::Id entityId) {
+    RGraphicsScene::unexportEntity(entityId);
     if (!exportToPreview) {
         drawables.remove(entityId);
         clipRectangles.remove(entityId);
