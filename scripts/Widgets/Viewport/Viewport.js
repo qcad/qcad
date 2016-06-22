@@ -213,19 +213,28 @@ Viewport.prototype.init = function(uiFile, graphicsSceneClass) {
 
     if (RSettings.getBoolValue("GraphicsView/ShowRulers", true)) {
         this.hruler = this.vpWidget.findChild("HorizontalRuler");
-        this.hruler.setGraphicsView(this.graphicsView);
+        if (!isNull(this.hruler)) {
+            this.hruler.setGraphicsView(this.graphicsView);
+            this.documentInterface.addCoordinateListener(this.hruler);
+        }
         this.vruler = this.vpWidget.findChild("VerticalRuler");
-        this.vruler.setGraphicsView(this.graphicsView);
-
-        this.documentInterface.addCoordinateListener(this.hruler);
-        this.documentInterface.addCoordinateListener(this.vruler);
+        if (!isNull(this.vruler)) {
+            this.vruler.setGraphicsView(this.graphicsView);
+            this.documentInterface.addCoordinateListener(this.vruler);
+        }
     } else {
         var hruler = this.vpWidget.findChild("HorizontalRuler");
-        hruler.hide();
+        if (!isNull(hruler)) {
+            hruler.hide();
+        }
         var vruler = this.vpWidget.findChild("VerticalRuler");
-        vruler.hide();
+        if (!isNull(vruler)) {
+            vruler.hide();
+        }
         var cf = this.vpWidget.findChild("cornerFrame");
-        cf.hide();
+        if (!isNull(cf)) {
+            cf.hide();
+        }
     }
 };
 
