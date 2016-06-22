@@ -325,6 +325,10 @@ public:
         notifyListeners = on;
     }
 
+    bool isDeleting() const {
+        return deleting;
+    }
+
     QVariant eval(const QString& ext, const QString& script);
 
 private:
