@@ -232,6 +232,15 @@ void RGraphicsViewQt::mousePressEvent(QMouseEvent* event) {
     if (event==NULL || scene==NULL) {
         return;
     }
+
+#if (QT_VERSION == QT_VERSION_CHECK(5, 7, 0))
+    if (event->button()!=qApp->property("MOUSEBUTTON")) {
+        // eat phantom wacom tablet click:
+        event->accept();
+        return;
+    }
+#endif
+
     RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
     mousePressScreenPosition = e.getScreenPosition();
     mousePressModelPosition = e.getModelPosition();
@@ -248,6 +257,14 @@ void RGraphicsViewQt::mouseReleaseEvent(QMouseEvent* event) {
     if (event==NULL || scene==NULL) {
         return;
     }
+
+#if (QT_VERSION == QT_VERSION_CHECK(5, 7, 0))
+    if (event->button()!=qApp->property("MOUSEBUTTON")) {
+        // eat phantom wacom tablet click:
+        event->accept();
+        return;
+    }
+#endif
 
     event->ignore();
 
@@ -270,6 +287,15 @@ void RGraphicsViewQt::mouseDoubleClickEvent(QMouseEvent* event) {
     if (event==NULL || scene==NULL) {
         return;
     }
+
+#if (QT_VERSION == QT_VERSION_CHECK(5, 7, 0))
+    if (event->button()!=qApp->property("MOUSEBUTTON")) {
+        // eat phantom wacom tablet click:
+        event->accept();
+        return;
+    }
+#endif
+
     RMouseEvent e(*event, *scene, *this, getDevicePixelRatio());
     RGraphicsView::handleMouseDoubleClickEvent(e);
     lastButtonState = event->buttons();
