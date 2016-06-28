@@ -56,11 +56,14 @@ public:
     static RPropertyTypeId PropertyMiddleOfTextX;
     static RPropertyTypeId PropertyMiddleOfTextY;
     static RPropertyTypeId PropertyMiddleOfTextZ;
+
     static RPropertyTypeId PropertyText;
     static RPropertyTypeId PropertyUpperTolerance;
     static RPropertyTypeId PropertyLowerTolerance;
     static RPropertyTypeId PropertyMeasuredValue;
     static RPropertyTypeId PropertyFontName;
+
+    static RPropertyTypeId PropertyDimBlockName;
 
     static RPropertyTypeId PropertyOriginX;
     static RPropertyTypeId PropertyOriginY;
