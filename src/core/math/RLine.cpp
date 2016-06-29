@@ -366,8 +366,9 @@ RS::Ending RLine::getTrimEnd(const RVector& trimPoint, const RVector& clickPoint
     }
 }
 
-bool RLine::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RLine::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint, bool extend) {
     Q_UNUSED(clickPoint)
+    Q_UNUSED(extend)
     RVector tp = getClosestPointOnShape(trimPoint, false);
     if (!tp.isValid()) {
         return false;
@@ -376,8 +377,9 @@ bool RLine::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) 
     return true;
 }
 
-bool RLine::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RLine::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint, bool extend) {
     Q_UNUSED(clickPoint)
+    Q_UNUSED(extend)
     RVector tp = getClosestPointOnShape(trimPoint, false);
     if (!tp.isValid()) {
         return false;

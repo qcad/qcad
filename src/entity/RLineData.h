@@ -76,11 +76,11 @@ public:
     RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
         return RLine::getTrimEnd(trimPoint, clickPoint);
     }
-    bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
-        return RLine::trimStartPoint(trimPoint, clickPoint);
+    bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
+        return RLine::trimStartPoint(trimPoint, clickPoint, extend);
     }
-    bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
-        return RLine::trimEndPoint(trimPoint, clickPoint);
+    bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
+        return RLine::trimEndPoint(trimPoint, clickPoint, extend);
     }
 
     RS::Side getSideOfPoint(const RVector& point) const {

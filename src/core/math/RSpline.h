@@ -167,8 +167,8 @@ public:
     QSharedPointer<RShape> getTransformed(const QTransform& transform) const;
 
     virtual RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint);
-    virtual bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid);
-    virtual bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid);
+    virtual bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);
+    virtual bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);
 
     QList<RSpline> splitAtPoints(const QList<RVector>& points) const;
     QList<RSpline> splitAtParams(const QList<double>& params) const;

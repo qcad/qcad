@@ -74,10 +74,10 @@ public:
     RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
         return RPolyline::getTrimEnd(trimPoint, clickPoint);
     }
-    bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+    bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
         return RPolyline::trimStartPoint(trimPoint, clickPoint);
     }
-    bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+    bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
         return RPolyline::trimEndPoint(trimPoint, clickPoint);
     }
 

@@ -1555,8 +1555,9 @@ RS::Ending RSpline::getTrimEnd(const RVector& trimPoint, const RVector& clickPoi
     }
 }
 
-bool RSpline::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RSpline::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint, bool extend) {
     Q_UNUSED(clickPoint)
+    Q_UNUSED(extend)
     if (!isValid()) {
         return false;
     }
@@ -1576,8 +1577,9 @@ bool RSpline::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint
     return true;
 }
 
-bool RSpline::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RSpline::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint, bool extend) {
     Q_UNUSED(clickPoint)
+    Q_UNUSED(extend)
     if (!isValid()) {
         return false;
     }

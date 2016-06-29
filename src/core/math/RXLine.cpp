@@ -97,8 +97,9 @@ RVector RXLine::getEndPoint() const {
     return getSecondPoint();
 }
 
-bool RXLine::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RXLine::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint, bool extend) {
     Q_UNUSED(clickPoint)
+    Q_UNUSED(extend)
     RVector tp = getClosestPointOnShape(trimPoint, false);
     if (!tp.isValid()) {
         return false;
@@ -107,8 +108,9 @@ bool RXLine::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint)
     return true;
 }
 
-bool RXLine::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RXLine::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint, bool extend) {
     Q_UNUSED(clickPoint)
+    Q_UNUSED(extend)
     RVector tp = getClosestPointOnShape(trimPoint, false);
     if (!tp.isValid()) {
         return false;

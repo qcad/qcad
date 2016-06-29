@@ -74,10 +74,10 @@ public:
     RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
         return RRay::getTrimEnd(trimPoint, clickPoint);
     }
-    bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+    bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
         return RRay::trimStartPoint(trimPoint, clickPoint);
     }
-    bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
+    bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
         return RRay::trimEndPoint(trimPoint, clickPoint);
     }
 

@@ -776,14 +776,16 @@ RS::Ending RArc::getTrimEnd(const RVector& trimPoint, const RVector& clickPoint)
     }
 }
 
-bool RArc::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RArc::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint, bool extend) {
     Q_UNUSED(clickPoint)
+    Q_UNUSED(extend)
     startAngle = center.getAngleTo(trimPoint);
     return true;
 }
 
-bool RArc::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RArc::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint, bool extend) {
     Q_UNUSED(clickPoint)
+    Q_UNUSED(extend)
     endAngle = center.getAngleTo(trimPoint);
     return true;
 }

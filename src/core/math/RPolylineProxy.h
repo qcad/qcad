@@ -42,8 +42,8 @@ class QCADCORE_EXPORT RPolylineProxy {
 public:
     virtual ~RPolylineProxy() {}
     virtual RS::Ending getTrimEnd(RPolyline& polyline, const RVector& trimPoint, const RVector& clickPoint) = 0;
-    virtual bool trimStartPoint(RPolyline& polyline, const RVector& trimPoint, const RVector& clickPoint) = 0;
-    virtual bool trimEndPoint(RPolyline& polyline, const RVector& trimPoint, const RVector& clickPoint) = 0;
+    virtual bool trimStartPoint(RPolyline& polyline, const RVector& trimPoint, const RVector& clickPoint, bool extend = false) = 0;
+    virtual bool trimEndPoint(RPolyline& polyline, const RVector& trimPoint, const RVector& clickPoint, bool extend = false) = 0;
 
     virtual QList<RPolyline> renderThickPolyline(const RPolyline& polyline) = 0;
     virtual QList<RVector> verifyTangency(const RPolyline& polyline, double toleranceMin = RS::AngleTolerance, double toleranceMax = M_PI_4) = 0;

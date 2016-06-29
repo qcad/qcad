@@ -265,11 +265,11 @@ public:
         return data.getTrimEnd(trimPoint, clickPoint);
     }
 
-    bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
-        return data.trimStartPoint(trimPoint, clickPoint);
+    bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
+        return data.trimStartPoint(trimPoint, clickPoint, extend);
     }
-    bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
-        return data.trimEndPoint(trimPoint, clickPoint);
+    bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
+        return data.trimEndPoint(trimPoint, clickPoint, extend);
     }
 
 protected:

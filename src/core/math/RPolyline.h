@@ -157,8 +157,8 @@ public:
     virtual QSharedPointer<RShape> getTransformed(const QTransform& transform) const;
 
     virtual RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint);
-    virtual bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid);
-    virtual bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid);
+    virtual bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);
+    virtual bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);
 
     virtual QList<QSharedPointer<RShape> > getExploded(int segments = RDEFAULT_MIN1) const;
     QList<RPolyline> getOutline() const;

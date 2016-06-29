@@ -138,38 +138,43 @@ Lengthen.prototype.getOperation = function(preview) {
         return undefined;
     }
 
+    var trimStartPoint = this.pos.getDistanceTo(this.entity.getStartPoint()) < this.pos.getDistanceTo(this.entity.getEndPoint());
+    var from;
+    if (trimStartPoint) {
+        from = RS.FromStart;
+    }
+    else {
+        from = RS.FromEnd;
+    }
+
     var iss;
     if (isPolylineEntity(this.entity)) {
         var pl = this.entity.castToShape();
-        iss = pl.getPointsWithDistanceToEnd(-this.amount, RS.FromAny|RS.AlongPolyline);
+        iss = pl.getPointsWithDistanceToEnd(-this.amount, from|RS.AlongPolyline);
     }
     else {
-        iss = this.entity.getPointsWithDistanceToEnd(-this.amount, RS.FromAny|RS.AlongPolyline);
-    }
-
-    if (iss.length!==2) {
-        return undefined;
+        iss = this.entity.getPointsWithDistanceToEnd(-this.amount, from|RS.AlongPolyline);
     }
 
     var is = this.pos.getClosest(iss);
+    qDebug("is:", is);
 
     if (!isValidVector(is)) {
         return undefined;
     }
 
-    if (this.pos.getDistanceTo(this.entity.getStartPoint()) <
-        this.pos.getDistanceTo(this.entity.getEndPoint())) {
+    if (trimStartPoint) {
         if (!isFunction(this.entity.trimStartPoint)) {
             return undefined;
         }
 
-        this.entity.trimStartPoint(is);
+        this.entity.trimStartPoint(is, this.pos, this.amount>0);
     } else {
         if (!isFunction(this.entity.trimEndPoint)) {
             return undefined;
         }
 
-        this.entity.trimEndPoint(is);
+        this.entity.trimEndPoint(is, this.pos, this.amount>0);
     }
 
     return new RAddObjectOperation(this.entity, this.getToolTitle(), false);

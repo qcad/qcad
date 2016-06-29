@@ -85,11 +85,11 @@ public:
     RS::Ending getTrimEnd(const RVector& trimPoint, const RVector& clickPoint) {
         return RArc::getTrimEnd(trimPoint, clickPoint);
     }
-    bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
-        return RArc::trimStartPoint(trimPoint, clickPoint);
+    bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
+        return RArc::trimStartPoint(trimPoint, clickPoint, extend);
     }
-    bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid) {
-        return RArc::trimEndPoint(trimPoint, clickPoint);
+    bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) {
+        return RArc::trimEndPoint(trimPoint, clickPoint, extend);
     }
 
     double getLength() const {

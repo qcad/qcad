@@ -1235,6 +1235,7 @@ QList<RVector> RPolyline::getPointsWithDistanceToEnd(double distance, RS::From f
 
         if (from&RS::FromStart) {
             if (distance<0.0) {
+                // extend at start:
                 ret.append(sub.first()->getPointsWithDistanceToEnd(distance, RS::FromStart));
             }
             else {
@@ -1254,6 +1255,7 @@ QList<RVector> RPolyline::getPointsWithDistanceToEnd(double distance, RS::From f
 
         if (from&RS::FromEnd) {
             if (distance<0.0) {
+                // extend at end:
                 ret.append(sub.last()->getPointsWithDistanceToEnd(distance, RS::FromEnd));
             }
             else {
@@ -1499,16 +1501,16 @@ RS::Ending RPolyline::getTrimEnd(const RVector& trimPoint, const RVector& clickP
     return RS::EndingNone;
 }
 
-bool RPolyline::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RPolyline::trimStartPoint(const RVector& trimPoint, const RVector& clickPoint, bool extend) {
     if (polylineProxy!=NULL) {
-        return polylineProxy->trimStartPoint(*this, trimPoint, clickPoint);
+        return polylineProxy->trimStartPoint(*this, trimPoint, clickPoint, extend);
     }
     return false;
 }
 
-bool RPolyline::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint) {
+bool RPolyline::trimEndPoint(const RVector& trimPoint, const RVector& clickPoint, bool extend) {
     if (polylineProxy!=NULL) {
-        return polylineProxy->trimEndPoint(*this, trimPoint, clickPoint);
+        return polylineProxy->trimEndPoint(*this, trimPoint, clickPoint, extend);
     }
     return false;
 }
