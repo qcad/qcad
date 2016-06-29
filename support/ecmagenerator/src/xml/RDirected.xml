@@ -46,6 +46,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector"
         name="clickPoint" hasDefault="true"
         default="RVector :: invalid" isConst="true" />
+        <arg type="bool" typeName="bool" name="extend"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="trimEndPoint" cppName="trimEndPoint"
@@ -57,6 +59,8 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="RVector &amp;" typeName="RVector"
         name="clickPoint" hasDefault="true"
         default="RVector :: invalid" isConst="true" />
+        <arg type="bool" typeName="bool" name="extend"
+        hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
     <method name="getTrimEnd" cppName="getTrimEnd"

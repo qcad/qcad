@@ -164,6 +164,8 @@ xmlns:rs="http://www.ribbonsoft.com">
     isConst="false" isStatic="true" />
     <property name="PropertyFontName" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
+    <property name="PropertyDimBlockName" type="RPropertyTypeId"
+    isConst="false" isStatic="true" />
     <property name="PropertyOriginX" type="RPropertyTypeId"
     isConst="false" isStatic="true" />
     <property name="PropertyOriginY" type="RPropertyTypeId"

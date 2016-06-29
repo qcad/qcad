@@ -52,13 +52,13 @@
      * \param trimPoint Trim start point or end point to this coordinate.
      * \param clickPoint Point that was clicked by user.
      */</comment>
-    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>trimStartPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>trimStartPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>extend</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <comment type="block">/**
      * \param trimPoint Trim start point or end point to this coordinate.
      * \param clickPoint Point that was clicked by user.
      */</comment>
-    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>trimEndPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>bool</name></type> <name>trimEndPoint</name><parameter_list>(<param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>trimPoint</name></decl></param>, <param><decl><type><name>const</name> <name>RVector</name>&amp;</type> <name>clickPoint</name> =<init> <expr><name><name>RVector</name>::<name>invalid</name></name></expr></init></decl></param>, <param><decl><type><name>bool</name></type> <name>extend</name> =<init> <expr><name>false</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 
     <comment type="block">/**
      * \param trimPoint Trim start point or end point to this coordinate.

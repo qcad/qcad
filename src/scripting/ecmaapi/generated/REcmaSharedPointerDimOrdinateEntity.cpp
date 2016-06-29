@@ -199,6 +199,10 @@
                 qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyFontName),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
             
+            ctor.setProperty("PropertyDimBlockName",
+                qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyDimBlockName),
+                QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
+            
             ctor.setProperty("PropertyOriginX",
                 qScriptValueFromValue(&engine, RDimOrdinateEntity::PropertyOriginX),
                 QScriptValue::SkipInEnumeration | QScriptValue::ReadOnly);
