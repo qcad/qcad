@@ -313,7 +313,7 @@ void RDimensionEntity::print(QDebug dbg) const {
 }
 
 /**
- * \return All used dimension block names (lower case).
+ * \return All used dimension block names (upper case).
  */
 QSet<QString> RDimensionEntity::getDimensionBlockNames(RDocument* doc) {
     if (doc==NULL) {
@@ -341,7 +341,7 @@ QSet<QString> RDimensionEntity::getDimensionBlockNames(RDocument* doc) {
             continue;
         }
 
-        ret.insert(dimEntity->getDimBlockName().toLower());
+        ret.insert(dimEntity->getDimBlockName().toUpper());
     }
 
     return ret;
