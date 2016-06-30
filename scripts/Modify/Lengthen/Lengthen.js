@@ -138,7 +138,14 @@ Lengthen.prototype.getOperation = function(preview) {
         return undefined;
     }
 
-    var trimStartPoint = this.pos.getDistanceTo(this.entity.getStartPoint()) < this.pos.getDistanceTo(this.entity.getEndPoint());
+    var trimStartPoint;
+    if (isPolylineEntity(this.entity)) {
+        trimStartPoint = this.entity.getLengthTo(this.pos) < this.entity.getLength()/2;
+    }
+    else {
+        trimStartPoint = this.pos.getDistanceTo(this.entity.getStartPoint()) < this.pos.getDistanceTo(this.entity.getEndPoint());
+    }
+
     var from;
     if (trimStartPoint) {
         from = RS.FromStart;
@@ -157,7 +164,6 @@ Lengthen.prototype.getOperation = function(preview) {
     }
 
     var is = this.pos.getClosest(iss);
-    qDebug("is:", is);
 
     if (!isValidVector(is)) {
         return undefined;
@@ -168,13 +174,13 @@ Lengthen.prototype.getOperation = function(preview) {
             return undefined;
         }
 
-        this.entity.trimStartPoint(is, this.pos, this.amount>0);
+        this.entity.trimStartPoint(is, is, this.amount>0);
     } else {
         if (!isFunction(this.entity.trimEndPoint)) {
             return undefined;
         }
 
-        this.entity.trimEndPoint(is, this.pos, this.amount>0);
+        this.entity.trimEndPoint(is, is, this.amount>0);
     }
 
     return new RAddObjectOperation(this.entity, this.getToolTitle(), false);
