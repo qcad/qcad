@@ -191,6 +191,8 @@ public:
         return getData().hasDimensionBlockReference();
     }
 
+    static QSet<QString> getDimensionBlockNames(RDocument* doc);
+
 protected:
     virtual void print(QDebug dbg) const;
 };

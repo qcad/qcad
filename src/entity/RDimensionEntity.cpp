@@ -311,3 +311,38 @@ void RDimensionEntity::print(QDebug dbg) const {
                   << ", dimscale: " << getData().getDimScale()
                   << ")";
 }
+
+/**
+ * \return All used dimension block names (lower case).
+ */
+QSet<QString> RDimensionEntity::getDimensionBlockNames(RDocument* doc) {
+    if (doc==NULL) {
+        return QSet<QString>();
+    }
+
+    QSet<QString> ret;
+
+    QList<RS::EntityType> dimTypes;
+    dimTypes.append(RS::EntityDimLinear);
+    dimTypes.append(RS::EntityDimAligned);
+    dimTypes.append(RS::EntityDimRotated);
+    dimTypes.append(RS::EntityDimRadial);
+    dimTypes.append(RS::EntityDimDiametric);
+    dimTypes.append(RS::EntityDimAngular);
+    dimTypes.append(RS::EntityDimOrdinate);
+
+    QSet<REntity::Id> ids = doc->queryAllEntities(false, true, dimTypes);
+    QSet<REntity::Id>::iterator it;
+    for (it=ids.begin(); it!=ids.end(); it++) {
+        int id = *it;
+        QSharedPointer<REntity> e = doc->queryEntityDirect(id);
+        QSharedPointer<RDimensionEntity> dimEntity = e.dynamicCast<RDimensionEntity>();
+        if (dimEntity.isNull()) {
+            continue;
+        }
+
+        ret.insert(dimEntity->getDimBlockName().toLower());
+    }
+
+    return ret;
+}
