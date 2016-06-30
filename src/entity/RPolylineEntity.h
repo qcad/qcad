@@ -234,6 +234,10 @@ public:
         return data.getLength();
     }
 
+    double getLengthTo(const RVector& p, bool limited = true) const {
+        return data.getLengthTo(p, limited);
+    }
+
     QList<QSharedPointer<RShape> > getExploded() const {
         return data.getExploded();
     }
