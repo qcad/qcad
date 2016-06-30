@@ -70,7 +70,7 @@
         <translation>測量</translation>
     </message>
     <message>
-        <location line="+193"/>
+        <location line="+198"/>
         <source>Unit / Format</source>
         <translation>ユニット/フォーマット</translation>
     </message>

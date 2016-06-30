@@ -19,7 +19,7 @@
         <translation>Meetsysteem (voor lijn types en arceerpatronen):</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="+25"/>
+        <location filename="../UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
         <translation>Standaardinstellingen voor nieuwe tekeningen</translation>
     </message>
@@ -35,7 +35,7 @@
         <translation>Algemeen</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+71"/>
         <source>None</source>
         <translation>Geen</translation>
     </message>

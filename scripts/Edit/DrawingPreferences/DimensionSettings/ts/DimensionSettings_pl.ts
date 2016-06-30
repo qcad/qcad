@@ -113,7 +113,7 @@ Jednostki geometryczne</translatorcomment>
         <translation type="unfinished">Jednostki geometryczne</translation>
     </message>
     <message>
-        <location line="+193"/>
+        <location line="+198"/>
         <source>Unit / Format</source>
         <translatorcomment>--google--</translatorcomment>
         <translation type="unfinished">Jednostka / Format</translation>

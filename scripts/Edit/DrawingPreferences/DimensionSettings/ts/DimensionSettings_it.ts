@@ -74,7 +74,7 @@
         <translation>Unità topografiche</translation>
     </message>
     <message>
-        <location line="+193"/>
+        <location line="+198"/>
         <source>Unit / Format</source>
         <translation>Unità / formato</translation>
     </message>

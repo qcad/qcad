@@ -70,7 +70,7 @@
         <translation>Maanmittauksen yksiköt</translation>
     </message>
     <message>
-        <location line="+193"/>
+        <location line="+198"/>
         <source>Unit / Format</source>
         <translation>Yksikkö / Muoto</translation>
     </message>

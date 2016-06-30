@@ -23,7 +23,7 @@ Principal unidade do desenho:</translatorcomment>
         <translation>Sistema de medição (tipos de linha e padrões de hachura):</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="+27"/>
+        <location filename="../UnitSettings.js" line="+29"/>
         <source>General</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--
@@ -53,7 +53,7 @@ Altura texto em unidades de desenho</translatorcomment>
         <translation>Padrões para Novos Desenhos</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+73"/>
         <source>None</source>
         <translatorcomment>--exact match--
 --file: pt_PT.po--

@@ -74,7 +74,7 @@
         <translation>Unidades de medición</translation>
     </message>
     <message>
-        <location line="+193"/>
+        <location line="+198"/>
         <source>Unit / Format</source>
         <translation>Unidades / formato</translation>
     </message>

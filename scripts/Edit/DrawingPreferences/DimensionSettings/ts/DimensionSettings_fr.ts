@@ -74,7 +74,7 @@
         <translation>Unités de géomètre</translation>
     </message>
     <message>
-        <location line="+193"/>
+        <location line="+198"/>
         <source>Unit / Format</source>
         <translation>Unité / format</translation>
     </message>

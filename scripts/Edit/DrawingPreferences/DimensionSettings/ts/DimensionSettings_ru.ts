@@ -70,7 +70,7 @@
         <translation>Геодезические единицы</translation>
     </message>
     <message>
-        <location line="+193"/>
+        <location line="+198"/>
         <source>Unit / Format</source>
         <translation>Единица измерения/Формат</translation>
     </message>

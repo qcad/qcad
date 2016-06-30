@@ -4,7 +4,7 @@
 <context>
     <name>UnitSettings</name>
     <message>
-        <location filename="../UnitSettings.js" line="+27"/>
+        <location filename="../UnitSettings.js" line="+29"/>
         <source>General</source>
         <translation>Allgemein</translation>
     </message>
@@ -18,7 +18,7 @@
         <translation>Standards für neue Zeichnungen</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+73"/>
         <source>None</source>
         <translation>Keine</translation>
     </message>
@@ -148,7 +148,7 @@
         <translation>Messsystem (für Linientypen und Schraffurmuster):</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="-89"/>
+        <location filename="../UnitSettings.js" line="-100"/>
         <location line="+2"/>
         <source>Drawing Unit</source>
         <translation>Zeichnungseinheit</translation>

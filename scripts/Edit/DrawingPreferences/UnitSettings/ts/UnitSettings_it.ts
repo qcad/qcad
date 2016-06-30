@@ -4,7 +4,7 @@
 <context>
     <name>UnitSettings</name>
     <message>
-        <location filename="../UnitSettings.js" line="+27"/>
+        <location filename="../UnitSettings.js" line="+29"/>
         <source>General</source>
         <translation>Generale</translation>
     </message>
@@ -24,7 +24,7 @@
         <translation>Predefiniti per nuovi disegni</translation>
     </message>
     <message>
-        <location line="+62"/>
+        <location line="+73"/>
         <source>None</source>
         <translation>Niente</translation>
     </message>

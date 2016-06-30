@@ -70,7 +70,7 @@
         <translation>Te meten eenheid</translation>
     </message>
     <message>
-        <location line="+193"/>
+        <location line="+198"/>
         <source>Unit / Format</source>
         <translation>Eenheid / Formaat</translation>
     </message>

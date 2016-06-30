@@ -23,7 +23,7 @@ Główna jednostka rysowania:</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="+25"/>
+        <location filename="../UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
         <translatorcomment>--ignored case--
 --file: qcadguiqt_pl.ts--
@@ -50,7 +50,7 @@ General Punctuation</translatorcomment>
         <translation type="unfinished">Ogólny</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+71"/>
         <source>None</source>
         <translatorcomment>--exact match--
 --file: qvfb_pl.ts--

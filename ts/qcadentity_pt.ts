@@ -39,7 +39,7 @@ Arco com Centro, Ponto, Ângulos</translatorcomment>
         <location filename="../src/entity/RDimLinearEntity.cpp" line="+94"/>
         <location line="+4"/>
         <location line="+3"/>
-        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+89"/>
+        <location filename="../src/entity/RDimOrdinateEntity.cpp" line="+93"/>
         <location line="+5"/>
         <location line="+3"/>
         <location filename="../src/entity/RDimRadialEntity.cpp" line="-2"/>

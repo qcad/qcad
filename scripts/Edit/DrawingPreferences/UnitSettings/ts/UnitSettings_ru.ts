@@ -19,7 +19,7 @@
         <translation>Система измерения (для типов линий и образцов штриховки):</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="+25"/>
+        <location filename="../UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
         <translation>Значения по умолчанию для новых чертежей</translation>
     </message>
@@ -35,7 +35,7 @@
         <translation>Основные настройки</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+71"/>
         <source>None</source>
         <translation>Нет</translation>
     </message>

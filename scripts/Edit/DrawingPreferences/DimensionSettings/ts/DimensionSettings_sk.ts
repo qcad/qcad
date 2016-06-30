@@ -70,7 +70,7 @@
         <translation>Prehľad</translation>
     </message>
     <message>
-        <location line="+193"/>
+        <location line="+198"/>
         <source>Unit / Format</source>
         <translation>Jednotka / Formát</translation>
     </message>

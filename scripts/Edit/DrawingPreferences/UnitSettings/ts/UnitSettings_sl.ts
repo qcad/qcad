@@ -19,7 +19,7 @@
         <translation>Merski sistem(za tipe črt ter vzorce šrafur): </translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="+25"/>
+        <location filename="../UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
         <translation>Privzeto za nove risbe</translation>
     </message>
@@ -35,7 +35,7 @@
         <translation>Splošno</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+71"/>
         <source>None</source>
         <translation>Brez</translation>
     </message>

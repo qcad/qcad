@@ -19,7 +19,7 @@
         <translation>Merací systém (pre typy čiar a šrafovacie vzory):</translation>
     </message>
     <message>
-        <location filename="../UnitSettings.js" line="+25"/>
+        <location filename="../UnitSettings.js" line="+27"/>
         <source>Defaults for New Drawings</source>
         <translation>Prednastavené pre Nové výkresy</translation>
     </message>
@@ -35,7 +35,7 @@
         <translation>Všeobecné</translation>
     </message>
     <message>
-        <location line="+60"/>
+        <location line="+71"/>
         <source>None</source>
         <translation>žiadne</translation>
     </message>
