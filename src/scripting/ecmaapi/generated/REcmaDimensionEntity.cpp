@@ -140,6 +140,8 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getStaticPropertyTypeIds, "getStaticPropertyTypeIds");
             
+            REcmaHelper::registerFunction(&engine, &ctor, getDimensionBlockNames, "getDimensionBlockNames");
+            
 
     // static properties:
     
@@ -2303,6 +2305,64 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaDimensionEntity::hasDimensionBlockReference", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaDimensionEntity::getDimensionBlockNames
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaDimensionEntity::getDimensionBlockNames", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaDimensionEntity::getDimensionBlockNames";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RDocument * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is pointer
+                    RDocument * a0 = NULL;
+
+                    a0 = 
+                        REcmaHelper::scriptValueTo<RDocument >(
+                            context->argument(0)
+                        );
+                    
+                    if (a0==NULL && 
+                        !context->argument(0).isNull()) {
+                        return REcmaHelper::throwError("RDimensionEntity: Argument 0 is not of type RDocument *RDocument *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QSet < QString >'
+    QSet < QString > cppResult =
+        RDimensionEntity::
+       getDimensionBlockNames(a0);
+        // return type: QSet < QString >
+                // QSet (convert to QVariantList):
+                result = REcmaHelper::setToScriptValue(engine, cppResult);
+
+                
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDimensionEntity.getDimensionBlockNames().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaDimensionEntity::getDimensionBlockNames", context, engine);
             return result;
         }
          QScriptValue REcmaDimensionEntity::toString

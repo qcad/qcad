@@ -170,6 +170,9 @@
         getLength
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getLengthTo
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         getExploded
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
