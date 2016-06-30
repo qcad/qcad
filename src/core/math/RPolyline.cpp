@@ -1149,6 +1149,10 @@ double RPolyline::getLength() const {
     return ret;
 }
 
+/**
+ * \return Length along polyline from start point to given point p or
+ * the closest point to p on the polyline.
+ */
 double RPolyline::getLengthTo(const RVector& p, bool limited) const {
     double ret = 0.0;
 
