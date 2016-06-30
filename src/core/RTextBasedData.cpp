@@ -176,9 +176,9 @@ double RTextBasedData::getDistanceTo(const RVector& point, bool limited, double 
         return RNANDOUBLE;
     }
 
-    if (painterPaths.size()==0) {
-        qDebug() << "RTextBasedData::getDistanceTo: no painter paths";
-    }
+//    if (painterPaths.size()==0) {
+//        qDebug() << "RTextBasedData::getDistanceTo: no painter paths";
+//    }
 
     //qDebug() << "painterPaths: " << painterPaths.size();
     double ret = RNANDOUBLE;
