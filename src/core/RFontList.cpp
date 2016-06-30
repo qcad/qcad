@@ -44,6 +44,7 @@ void RFontList::init() {
 
     res.resSubstitutionMap.insert("txt", "standard");
     res.resSubstitutionMap.insert("iso", "standard");
+    res.resSubstitutionMap.insert("isocp", "standard");
 }
 
 void RFontList::initSubstitutions() {
