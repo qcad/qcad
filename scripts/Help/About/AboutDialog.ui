@@ -64,6 +64,35 @@
          </property>
         </spacer>
        </item>
+       <item>
+        <widget class="QToolButton" name="toolButton">
+         <property name="minimumSize">
+          <size>
+           <width>128</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>128</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: none;background-color:transparent;</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>BuiltWithQt.png</normaloff>BuiltWithQt.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>128</width>
+           <height>31</height>
+          </size>
+         </property>
+        </widget>
+       </item>
       </layout>
      </item>
      <item>
