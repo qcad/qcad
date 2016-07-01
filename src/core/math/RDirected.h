@@ -50,12 +50,16 @@ public:
     /**
      * \param trimPoint Trim start point or end point to this coordinate.
      * \param clickPoint Point that was clicked by user.
+     * \param extend True if the shape is to be extended.
+     * Used for polylines to determine that the first segment has to be trimmed even if another segment was clicked.
      */
     virtual bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) = 0;
 
     /**
      * \param trimPoint Trim start point or end point to this coordinate.
      * \param clickPoint Point that was clicked by user.
+     * \param extend True if the shape is to be extended.
+     * Used for polylines to determine that the last segment has to be trimmed even if another segment was clicked.
      */
     virtual bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false) = 0;
 
