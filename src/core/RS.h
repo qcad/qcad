@@ -145,7 +145,7 @@ public:
     };
 
     /**
-     * Entity ending. Used for returning which end of an entity is ment.
+     * Entity ending. Used for returning which end of an entity is meant.
      */
     enum Ending {
         EndingStart,    /**< Start point. */
