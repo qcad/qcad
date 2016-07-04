@@ -1281,7 +1281,7 @@ PropertyEditorImpl.prototype.addCustomProperty = function() {
     buttonBox.button(QDialogButtonBox.Ok).enabled = false;
 
     var nameEdit = dialog.findChild("Name");
-    var rx = new RegExp("[^<>/\\\\\":;\?\*|,=`]{1,255}");
+    var rx = new RegExp("[^<>\\\\\":;\?\*|,=`]{1,255}");
     var validator = new QRegExpValidator(rx, nameEdit);
     nameEdit.setValidator(validator);
     nameEdit.textChanged.connect(
