@@ -170,7 +170,12 @@ Offset.prototype.getOperation = function(preview) {
             e = Line.createLineEntity(doc, offsetShapes[i].getStartPoint(), offsetShapes[i].getEndPoint(), this.lineType);
         }
         else {
-            e = shapeToEntity(doc, offsetShapes[i]);
+            if (isFunction(offsetShapes[i].data)) {
+                e = shapeToEntity(doc, offsetShapes[i].data());
+            }
+            else {
+                e = shapeToEntity(doc, offsetShapes[i]);
+            }
         }
 
         if (!isNull(e)) {
