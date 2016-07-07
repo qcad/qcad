@@ -1964,19 +1964,21 @@ ShapeAlgorithms.explodeToTrimmable = function(shape) {
  * \param points Array of RVector, assumed to be on shape.
  */
 ShapeAlgorithms.splitAt = function(shape, points) {
+    if (points.length===0) {
+        return [ shape ];
+    }
+
     var ret = [];
     var i;
     var center;
     var radius;
     var startPoint;
     var endPoint;
+    var rev = false;
 
     if ((isArcShape(shape) || isEllipseShape(shape)) && shape.isReversed()) {
         shape.reverse();
-    }
-
-    if (points.length===0) {
-        return [ shape ];
+        rev = true;
     }
 
     if (isLineShape(shape)) {
@@ -2107,10 +2109,10 @@ ShapeAlgorithms.splitAt = function(shape, points) {
             e.setEndAngle(center.getAngleTo(points[i+1]));
             ret.push(e);
         }
-        return ret;
+        //return ret;
     }
 
-    if (isEllipseShape(shape)) {
+    else if (isEllipseShape(shape)) {
         center = shape.getCenter();
         startPoint = shape.getStartPoint();
         endPoint = shape.getEndPoint();
@@ -2133,7 +2135,16 @@ ShapeAlgorithms.splitAt = function(shape, points) {
             e.setEndParam(e.getParamTo(points[i+1]));
             ret.push(e);
         }
-        return ret;
+        //return ret;
+    }
+
+    if (rev) {
+        var retRev = [];
+        for (i=ret.length-1; i>=0; i--) {
+            ret[i].reverse();
+            retRev.push(ret[i]);
+        }
+        return retRev;
     }
 
     return ret;
