@@ -763,6 +763,7 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutPos1, cutPos2, position) {
         var closed = shape.isGeometricallyClosed();
         if (closed) {
             shape.relocateStartPoint(cutPos1);
+            shape.convertToOpen();
 
 //            var newShape = new RPolyline();
 //            // convert closed to open polyline with start in cutPos1:
