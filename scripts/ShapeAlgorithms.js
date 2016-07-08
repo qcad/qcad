@@ -764,41 +764,10 @@ ShapeAlgorithms.autoSplitManual = function(shape, cutPos1, cutPos2, position) {
         if (closed) {
             shape.relocateStartPoint(cutPos1);
             shape.convertToOpen();
-
-//            var newShape = new RPolyline();
-//            // convert closed to open polyline with start in cutPos1:
-//            // find closest segment of polyline:
-//            var segmentIndex = shape.getClosestSegment(cutPos1);
-//            var firstSegment = shape.getSegmentAt(segmentIndex);
-//            // trim segment start to cutPos1
-//            firstSegment.trimStartPoint(cutPos1);
-//            // start polyline with second part of split segment:
-//            newShape.appendShape(firstSegment.data());
-//            // append rest of polyline:
-//            for (var i=segmentIndex+1; i<shape.countSegments(); i++) {
-//                newShape.appendShape(shape.getSegmentAt(i).data());
-//            }
-//            for (var i=0; i<segmentIndex; i++) {
-//                newShape.appendShape(shape.getSegmentAt(i).data());
-//            }
-//            var lastSegment = shape.getSegmentAt(segmentIndex);
-//            // trim segment end to cutPos1
-//            lastSegment.trimEndPoint(cutPos1);
-//            // end polyline with second part of split segment:
-//            newShape.appendShape(lastSegment.data());
-//            lastSegment = shape.getLastSegment();
-//            newShape.setClosed(false);
-//            shape = newShape;
-
-//            rest1 = shape.clone();
-//            rest2 = shape.clone();
-//            segment = shape.clone();
         }
-//        else {
         rest1 = shape.clone();
         rest2 = shape.clone();
         segment = shape.clone();
-//        }
 
         if (closed) {
             rest1.trimEndPoint(cutPos2, cutPos2);
