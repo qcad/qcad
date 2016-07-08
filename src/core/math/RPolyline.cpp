@@ -98,19 +98,27 @@ void RPolyline::normalize(double tolerance) {
     QList<double> newEndWidths;
 
     RVector vPrev;
+    int newIndex = 0;
 
     for (int i=0; i<vertices.size(); i++) {
         RVector v = vertices[i];
         double b = bulges[i];
+        double s = startWidths[i];
+        double e = endWidths[i];
 
         if (i==0 || !v.equalsFuzzy(vPrev, tolerance)) {
             newVertices.append(v);
             newBulges.append(b);
-            newStartWidths.append(startWidths[i]);
-            newEndWidths.append(endWidths[i]);
+            newStartWidths.append(s);
+            newEndWidths.append(e);
+            newIndex = newIndex + 1;
+            vPrev = v;
         }
-
-        vPrev = v;
+        else if (i > 0) {
+            newBulges[newIndex - 1] = b;
+            newStartWidths[newIndex - 1] = s;
+            newEndWidths[newIndex - 1] = e;
+        }
     }
 
     vertices = newVertices;
