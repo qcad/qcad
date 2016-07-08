@@ -686,6 +686,7 @@ bool RPolyline::relocateStartPoint(const RVector& p) {
     }
 
     // convert closed to open polyline with start in p:
+
     // find closest segment of polyline:
     int segmentIndex = getClosestSegment(p);
     if (segmentIndex<0) {
@@ -724,19 +725,24 @@ bool RPolyline::relocateStartPoint(const RVector& p) {
 
     // end polyline with second part of split segment:
     newShape.appendShape(*lastSegment);
-    newShape.setClosed(false);
+    if (isClosed()) {
+        // if polyline was closed, create a closed polyline as result:
+        newShape.autoClose();
+    }
     *this = newShape;
 
     return true;
 }
 
 bool RPolyline::convertToClosed() {
-    if (!isGeometricallyClosed()) {
-        return false;
+    if (isClosed()) {
+        // nothing to do: polyline is already logically closed:
+        return true;
     }
 
-    if (isClosed()) {
-        return true;
+    if (!isGeometricallyClosed()) {
+        // cannot convert geometrically open polyline to closed (use setClosed instead):
+        return false;
     }
 
     removeLastVertex();
@@ -746,16 +752,12 @@ bool RPolyline::convertToClosed() {
 
 bool RPolyline::convertToOpen() {
     if (!isClosed()) {
-        return false;
-    }
-
-    if (isGeometricallyClosed()) {
+        // nothing to do: polyline is already logically or geometrically open:
         return true;
     }
 
     QSharedPointer<RShape> last = getLastSegment();
     setClosed(false);
-    removeLastVertex();
     appendShape(*last);
     return true;
 }
