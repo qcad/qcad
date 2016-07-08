@@ -383,6 +383,7 @@ Divide.divideShape = function(pos1, pos2, shape) {
     }
     else if (isPolylineShape(shape) && shape.isClosed()) {
         shape.relocateStartPoint(pos1);
+        shape.convertToOpen();
         cutPos1 = pos1;
         if (!isNull(pos2)) {
             return Divide.divideShape(pos2, undefined, shape);
