@@ -33,6 +33,7 @@ function Offset(guiAction) {
     this.distance = undefined;
     this.number = undefined;
     this.entity = undefined;
+    this.entityId = undefined;
     this.shape = undefined;
     this.pos = undefined;
     this.lineType = undefined;
@@ -102,6 +103,7 @@ Offset.prototype.pickEntity = function(event, preview) {
 
     if (isNull(entity)) {
         this.entity = undefined;
+        this.entityId = RObject.INVALID_ID;
         return;
     }
 
@@ -118,6 +120,7 @@ Offset.prototype.pickEntity = function(event, preview) {
 
         if (this.isShapeSupported(shape)) {
             this.entity = entity;
+            this.entityId = entityId;
             this.shape = shape;
             this.pos = pos;
         }
