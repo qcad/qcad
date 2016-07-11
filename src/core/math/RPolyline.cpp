@@ -1546,6 +1546,9 @@ void RPolyline::print(QDebug dbg) const {
     dbg.nospace() << ")";
 }
 
+/**
+ * TODO: use douglas peuker
+ */
 bool RPolyline::simplify(double angleTolerance) {
     bool ret = false;
     RPolyline newPolyline;
