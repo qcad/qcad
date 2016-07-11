@@ -465,14 +465,14 @@ QString RUnit::formatDecimal(double length, RS::Unit unit,
  & \param showUnit Append unit to the value.
  */
 QString RUnit::formatEngineering(double length, RS::Unit unit,
-                                 int prec, bool /*showUnit*/,
-                                 bool /*showLeadingZeroes*/, bool /*showTrailingZeroes*/,
-                                 bool /*onlyPreciseResult*/) {
+                                 int prec, bool showUnit,
+                                 bool showLeadingZeroes, bool showTrailingZeroes,
+                                 bool onlyPreciseResult) {
 
     if (unit!=RS::Inch && unit!=RS::Foot) {
         qWarning() << "RUnit::formatEngineering:"
                    << "Unit must be set to 'Inch' or 'Foot' for engineering format";
-        return "";
+        return formatDecimal(length, unit, prec, showUnit, showLeadingZeroes, showTrailingZeroes, onlyPreciseResult);
     }
 
     QString ret;
@@ -521,12 +521,12 @@ QString RUnit::formatEngineering(double length, RS::Unit unit,
  */
 QString RUnit::formatArchitectural(double length, RS::Unit unit,
                                    int prec, bool showUnit,
-                                   bool /*showLeadingZeroes*/, bool /*showTrailingZeroes*/,
-                                   bool /*onlyPreciseResult*/) {
+                                   bool showLeadingZeroes, bool showTrailingZeroes,
+                                   bool onlyPreciseResult) {
     if (unit!=RS::Inch && unit!=RS::Foot) {
         qWarning() << "RUnit::formatArchitectural:"
                    << "Unit must be set to 'Inch' for architectural format";
-        return "";
+        return formatDecimal(length, unit, prec, showUnit, showLeadingZeroes, showTrailingZeroes, onlyPreciseResult);
     }
 
     QString ret;
