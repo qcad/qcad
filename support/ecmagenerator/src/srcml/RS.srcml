@@ -146,7 +146,7 @@
     }</block>;</enum>
 
     <comment type="block">/**
-     * Entity ending. Used for returning which end of an entity is ment.
+     * Entity ending. Used for returning which end of an entity is meant.
      */</comment>
     <enum>enum <name>Ending</name> <block>{
         <expr><name>EndingStart</name></expr>,    <comment type="block">/**&lt; Start point. */</comment>

@@ -205,6 +205,21 @@
         castToExplodable
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        getOffsetShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getOffsetLines
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getOffsetArcs
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getOffsetEllipses
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getErrorCode
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         dump
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
