@@ -256,6 +256,15 @@ public:
 
     static const RExplodable* castToExplodable(const RShape* shape);
 
+    static QList<QSharedPointer<RShape> > getOffsetShapes(const RShape& shape, double distance, int number, RS::Side side, const RVector& position = RVector::invalid);
+    static QList<QSharedPointer<RShape> > getOffsetLines(const RShape& shape, double distance, int number, RS::Side side, const RVector& position = RVector::invalid);
+    static QList<QSharedPointer<RShape> > getOffsetArcs(const RShape& shape, double distance, int number, RS::Side side, const RVector& position = RVector::invalid);
+    static QList<QSharedPointer<RShape> > getOffsetEllipses(const RShape& shape, double distance, int number, RS::Side side, const RVector& position = RVector::invalid);
+
+    static int getErrorCode() {
+        return errorCode;
+    }
+
     void dump();
 
     /**
@@ -273,6 +282,7 @@ private:
 private:
     static double twopi;
     static double epsTolerance;
+    static int errorCode;
 
 protected:
     virtual void print(QDebug dbg) const;

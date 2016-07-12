@@ -157,7 +157,16 @@ Offset.prototype.getOperation = function(preview) {
 
     var offsetShapes = this.getOffsetShapes(preview);
     if (!preview) {
-        this.error = ShapeAlgorithms.error;
+        this.error = undefined;
+        var c = RShape.getErrorCode();
+        if (c!==0) {
+            if (isCircleShape(this.shape)) {
+                this.error = qsTr("Radius dropped below 0.0 after %1 concentric circle(s).").arg(c-1);
+            }
+            else {
+                this.error = qsTr("Radius dropped below 0.0 after %1 concentric arc(s).").arg(c-1);
+            }
+        }
     }
 
     if (isNull(offsetShapes)) {

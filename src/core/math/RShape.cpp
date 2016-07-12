@@ -34,6 +34,7 @@
 
 double RShape::twopi = M_PI*2;
 double RShape::epsTolerance = 1.0e-04;
+int RShape::errorCode = 0;
 
 /**
  * \return Shortest distance from this shape to the given point.
@@ -1845,6 +1846,298 @@ bool RShape::order(QList<QList<QSharedPointer<RShape> > >& boundary) {
 double RShape::ellipse2tr(double x, double y, double AA, double BB,
                           double CC, double DD, double EE, double FF) {
     return (AA*x*x + BB*x*y + CC*y*y + DD*x + EE*y + FF);
+}
+
+/**
+ * \return Parallels to this shape.
+ * \param distance Distance of first parallel or concentric arc or circle.
+ * \param number Number of offset shapes to generate.
+ * \param side Side, should be RS.LeftHand or RS.RightHand or RS.BothSides.
+ * \param sidePosition Position indicating what side of the shape the parallels should be.
+ *
+ */
+QList<QSharedPointer<RShape> > RShape::getOffsetShapes(const RShape& shape, double distance, int number, RS::Side side, const RVector& position) {
+    // TODO: use RTTI
+    const RLine* line = dynamic_cast<const RLine*>(&shape);
+    const RXLine* xline = dynamic_cast<const RXLine*>(&shape);
+    const RRay* ray = dynamic_cast<const RRay*>(&shape);
+
+    if (line!=NULL || xline!=NULL || ray!=NULL) {
+        return RShape::getOffsetLines(shape, distance, number, side, position);
+    }
+
+    const RArc* arc = dynamic_cast<const RArc*>(&shape);
+    const RCircle* circle = dynamic_cast<const RCircle*>(&shape);
+    if (arc!=NULL || circle!=NULL) {
+        return RShape::getOffsetArcs(shape, distance, number, side, position);
+    }
+
+    const REllipse* ellipse = dynamic_cast<const REllipse*>(&shape);
+    if (ellipse!=NULL) {
+        return RShape::getOffsetEllipses(shape, distance, number, side, position);
+    }
+
+    return QList<QSharedPointer<RShape> >();
+}
+
+QList<QSharedPointer<RShape> > RShape::getOffsetLines(const RShape& shape, double distance, int number, RS::Side side, const RVector& position) {
+    errorCode = 0;
+    QList<QSharedPointer<RShape> > ret;
+    const RDirected* dir = dynamic_cast<const RDirected*>(&shape);
+
+    QList<RS::Side> sides;
+    if (position.isValid()) {
+        sides.append(dir->getSideOfPoint(position));
+    }
+    else {
+        if (side==RS::BothSides) {
+            sides.append(RS::LeftHand);
+            sides.append(RS::RightHand);
+        }
+        else {
+            sides.append(side);
+        }
+    }
+
+    for (int i=0; i<sides.length(); i++) {
+        RS::Side side = sides[i];
+
+        double a;
+        if (side==RS::LeftHand) {
+            a = dir->getDirection1() + M_PI/2.0;
+        }
+        else {
+            a = dir->getDirection1() - M_PI/2.0;
+        }
+
+        RVector distanceV;
+        for (int n=1; n<=number; ++n) {
+            distanceV.setPolar(distance * n, a);
+            RShape* parallel = shape.clone();
+            parallel->move(distanceV);
+            ret.append(QSharedPointer<RShape>(parallel));
+        }
+    }
+    return ret;
+}
+
+QList<QSharedPointer<RShape> > RShape::getOffsetArcs(const RShape& shape, double distance, int number, RS::Side side, const RVector& position) {
+    errorCode = 0;
+    QList<QSharedPointer<RShape> > ret;
+
+    const RArc* arc = dynamic_cast<const RArc*>(&shape);
+    const RCircle* circle = dynamic_cast<const RCircle*>(&shape);
+    //ShapeAlgorithms.error = undefined;
+
+    RVector center;
+    double radius;
+    bool reversed;
+    if (arc!=NULL) {
+        center = arc->getCenter();
+        radius = arc->getRadius();
+        reversed = arc->isReversed();
+    }
+    else if (circle!=NULL) {
+        center = circle->getCenter();
+        radius = circle->getRadius();
+        reversed = false;
+    }
+    else {
+        return ret;
+    }
+
+    QList<bool> insides;
+    if (position.isValid()) {
+        insides.append(center.getDistanceTo(position) < radius);
+    }
+    else {
+        if (side==RS::BothSides) {
+            insides.append(true);
+            insides.append(false);
+        }
+        else {
+            if (!reversed) {
+                if (side==RS::LeftHand) {
+                    insides.append(true);
+                }
+                else {
+                    insides.append(false);
+                }
+            }
+            else {
+                if (side==RS::RightHand) {
+                    insides.append(true);
+                }
+                else {
+                    insides.append(false);
+                }
+            }
+        }
+    }
+
+    for (int i=0; i<insides.length(); i++) {
+        bool inside = insides[i];
+        double d = distance;
+
+        if (inside) {
+            d *= -1;
+        }
+
+        for (int n=1; n<=number; ++n) {
+            QSharedPointer<RShape> s = QSharedPointer<RShape>(shape.clone());
+
+            if (arc!=NULL) {
+                QSharedPointer<RArc> concentric = s.dynamicCast<RArc>();
+                concentric->setRadius(concentric->getRadius() + d*n);
+                if (concentric->getRadius()<0.0) {
+                    errorCode = n;
+                    break;
+                }
+            }
+            if (circle!=NULL) {
+                QSharedPointer<RCircle> concentric = s.dynamicCast<RCircle>();
+                concentric->setRadius(concentric->getRadius() + d*n);
+                if (concentric->getRadius()<0.0) {
+                    errorCode = n;
+                    break;
+                }
+            }
+//            if (concentric->getRadius()<0.0) {
+//                if (isCircleShape(shape)) {
+//                    ShapeAlgorithms.error =
+//                            qsTr("Radius dropped below 0.0 " +
+//                                 "after %1 concentric circle(s).").arg(n-1);
+//                }
+//                else {
+//                    ShapeAlgorithms.error =
+//                            qsTr("Radius dropped below 0.0 " +
+//                                 "after %1 concentric arc(s).").arg(n-1);
+//                }
+
+//                break;
+//            }
+            ret.append(s);
+        }
+    }
+
+    return ret;
+}
+
+/**
+ * \return Array of spline shapes representing the parallel curves to the given ellipse shape.
+ */
+QList<QSharedPointer<RShape> > RShape::getOffsetEllipses(const RShape& shape, double distance, int number, RS::Side side, const RVector& position) {
+    errorCode = 0;
+    QList<QSharedPointer<RShape> > ret;
+    REllipse* ellipse = dynamic_cast<REllipse*>(shape.clone());
+    if (ellipse==NULL) {
+        return ret;
+    }
+
+    RVector center = ellipse->getCenter();
+
+    if (ellipse->isReversed()) {
+        ellipse->reverse();
+    }
+
+    QList<bool> insides;
+    if (position.isValid()) {
+        double ang = center.getAngleTo(position) - ellipse->getAngle();
+        double t = ellipse->angleToParam(ang);
+        RVector p = ellipse->getPointAt(t);
+        insides.append(center.getDistanceTo(position) < center.getDistanceTo(p));
+    }
+    else {
+        if (side==RS::BothSides) {
+            insides.append(true);
+            insides.append(false);
+        }
+        else {
+            if (side==RS::LeftHand) {
+                insides.append(true);
+            }
+            else {
+                insides.append(false);
+            }
+        }
+    }
+
+    double a = ellipse->getMajorRadius();
+    double b = ellipse->getMinorRadius();
+
+    for (int i=0; i<insides.length(); i++) {
+        bool inside = insides[i];
+        double d = distance;
+
+        if (inside) {
+            d *= -1;
+        }
+
+        for (int n=1; n<=number; ++n) {
+            RSpline* spl = NULL;
+            RPolyline* pl = NULL;
+            if (RSpline::hasProxy()) {
+                spl = new RSpline();
+            }
+            else {
+                pl = new RPolyline();
+            }
+
+            double endParam = ellipse->getEndParam();
+            double startParam = ellipse->getStartParam();
+            if (RMath::fuzzyCompare(endParam, 0.0)) {
+                endParam = 2*M_PI;
+            }
+
+            if (endParam<startParam) {
+                endParam += 2*M_PI;
+            }
+
+            double k = d*n;
+            double tMax = endParam+0.1;
+            if (ellipse->isFullEllipse()) {
+                tMax = endParam;
+            }
+
+            for (double t=startParam; t<tMax; t+=0.1) {
+                if (t>endParam) {
+                    t = endParam;
+                }
+
+                double root = sqrt(a*a * pow(sin(t), 2) + b*b * pow(cos(t), 2));
+                double x = (a + (b * k) / root) * cos(t);
+                double y = (b + (a * k) / root) * sin(t);
+                RVector v(x, y);
+                v.rotate(ellipse->getAngle());
+                v.move(center);
+                if (spl!=NULL) {
+                    spl->appendFitPoint(v);
+                }
+                else {
+                    pl->appendVertex(v);
+                }
+            }
+
+            if (ellipse->isFullEllipse()) {
+                if (spl!=NULL) {
+                    spl->setPeriodic(true);
+                }
+                else {
+                    // no ellipse proxy: offset curve is polyline:
+                    pl->setClosed(true);
+                }
+            }
+
+            if (spl!=NULL) {
+                ret.append(QSharedPointer<RShape>(spl));
+            }
+            else {
+                ret.append(QSharedPointer<RShape>(pl));
+            }
+        }
+    }
+
+    return ret;
 }
 
 void RShape::dump() {
