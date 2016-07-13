@@ -129,19 +129,24 @@ Circle2TR.prototype.pickEntity = function(event, preview) {
     var pos = event.getModelPosition();
 
     var shape = undefined;
-    if (!isNull(entity)) {
-        shape = entity.getClosestSimpleShape(pos);
+    if (this.state!==Circle2TR.State.ChoosingSolution) {
+        if (isNull(entity)) {
+            return;
+        }
+        else {
+            shape = entity.getClosestSimpleShape(pos);
 
-        if (!isLineBasedShape(shape) &&
-            !isArcShape(shape) &&
-            !isCircleShape(shape)) {
+            if (!isLineBasedShape(shape) &&
+                !isArcShape(shape) &&
+                !isCircleShape(shape)) {
 
-            if (!preview) {
-                EAction.warnNotLineArcCircle();
-                return;
+                if (!preview) {
+                    EAction.warnNotLineArcCircle();
+                    return;
+                }
+
+                shape = undefined;
             }
-
-            shape = undefined;
         }
     }
 
@@ -265,7 +270,7 @@ Circle2TR.prototype.getCircles2TR = function(preview) {
         var centerPoints = [];
         for (i=0; i<offset1.length; i++) {
             for (k=0; k<offset2.length; k++) {
-                ips = offset1[i].getIntersectionPoints(offset2[k], false);
+                ips = offset1[i].getIntersectionPoints(offset2[k].data(), false);
                 centerPoints = centerPoints.concat(ips);
             }
         }

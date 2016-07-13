@@ -133,7 +133,10 @@ ArcTPR.prototype.pickEntity = function(event, preview) {
     var shape = undefined;
 
     if (this.state!==ArcTPR.State.ChoosingSolution) {
-        if (!isNull(entity)) {
+        if (isNull(entity)) {
+            return;
+        }
+        else {
             shape = entity.getClosestSimpleShape(pos);
 
             if (!isLineBasedShape(shape) &&

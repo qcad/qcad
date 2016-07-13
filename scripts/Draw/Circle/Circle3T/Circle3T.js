@@ -155,7 +155,10 @@ Circle3T.prototype.pickEntity = function(event, preview) {
     var shape = undefined;
 
     if (this.state!==Circle3T.State.ChoosingSolution) {
-        if (!isNull(entity)) {
+        if (isNull(entity)) {
+            return;
+        }
+        else {
             shape = entity.getClosestSimpleShape(pos);
 
             if (!isLineBasedShape(shape) &&
