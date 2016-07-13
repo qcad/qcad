@@ -14,9 +14,26 @@ xmlns:rs="http://www.ribbonsoft.com">
   isCopyable="false" hasShell="false" sharedPointerSupport="true"
   isQObject="false" hasStreamOperator="false" isAbstract="true"
   isScriptable="true">
+    <enum name="Type">
+      <value name="Unknown" />
+      <value name="Point" />
+      <value name="Line" />
+      <value name="Arc" />
+      <value name="Circle" />
+      <value name="Ellipse" />
+      <value name="Polyline" />
+      <value name="Spline" />
+      <value name="Triangle" />
+      <value name="XLine" />
+      <value name="Ray" />
+    </enum>
     <constructor>
       <variant />
     </constructor>
+    <method name="getType" cppName="getType" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RShape::Type" isPureVirtual="false" />
+    </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RShape *" isPureVirtual="false" />
@@ -639,12 +656,10 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="getOffsetShapes" cppName="getOffsetShapes"
-    specifier="public" isStatic="true" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
       isPureVirtual="false">
-        <arg type="RShape &amp;" typeName="RShape" name="shape"
-        isConst="true" />
         <arg type="double" typeName="double" name="distance"
         isConst="false" />
         <arg type="int" typeName="int" name="number"
@@ -692,22 +707,23 @@ xmlns:rs="http://www.ribbonsoft.com">
         default="RVector :: invalid" isConst="true" />
       </variant>
     </method>
-    <method name="getOffsetEllipses" cppName="getOffsetEllipses"
+    <method name="reverseShapeList" cppName="reverseShapeList"
     specifier="public" isStatic="true" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
       isPureVirtual="false">
-        <arg type="RShape &amp;" typeName="RShape" name="shape"
+        <arg type="QList &lt; QSharedPointer &lt; RShape &gt; &gt; &amp;"
+        typeName="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+        name="shapes" isConst="true" />
+      </variant>
+    </method>
+    <method name="splitAt" cppName="splitAt" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="points"
         isConst="true" />
-        <arg type="double" typeName="double" name="distance"
-        isConst="false" />
-        <arg type="int" typeName="int" name="number"
-        isConst="false" />
-        <arg type="RS::Side" typeName="RS::Side" name="side"
-        isConst="false" />
-        <arg type="RVector &amp;" typeName="RVector"
-        name="position" hasDefault="true"
-        default="RVector :: invalid" isConst="true" />
       </variant>
     </method>
     <method name="getErrorCode" cppName="getErrorCode"

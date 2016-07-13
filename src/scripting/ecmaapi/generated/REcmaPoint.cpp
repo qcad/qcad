@@ -76,6 +76,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
             REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
@@ -377,6 +379,55 @@
 
     // public methods:
      QScriptValue
+        REcmaPoint::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaPoint::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaPoint::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPoint* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RShape::Type'
+    RShape::Type cppResult =
+        
+               self->getType();
+        // return type: RShape::Type
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPoint.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaPoint::getType", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaPoint::clone
         (QScriptContext* context, QScriptEngine* engine) 
         

@@ -75,6 +75,9 @@
 
     // public methods:
     static  QScriptValue
+        getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -352,6 +355,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         update
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        splitAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         isDirty

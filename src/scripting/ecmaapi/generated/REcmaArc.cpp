@@ -124,6 +124,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
             REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
@@ -237,6 +239,10 @@
             REcmaHelper::registerFunction(&engine, proto, approximateWithLinesTan, "approximateWithLinesTan");
             
             REcmaHelper::registerFunction(&engine, proto, getTangents, "getTangents");
+            
+            REcmaHelper::registerFunction(&engine, proto, getOffsetShapes, "getOffsetShapes");
+            
+            REcmaHelper::registerFunction(&engine, proto, splitAt, "splitAt");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RArc*>(), *proto);
@@ -1002,6 +1008,55 @@
 
     // public methods:
      QScriptValue
+        REcmaArc::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaArc::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaArc::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RArc* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RShape::Type'
+    RShape::Type cppResult =
+        
+               self->getType();
+        // return type: RShape::Type
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaArc::getType", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaArc::clone
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -5563,6 +5618,236 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaArc::getTangents", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaArc::getOffsetShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaArc::getOffsetShapes", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaArc::getOffsetShapes";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RArc* self = 
+                        getSelf("getOffsetShapes", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: RS::Side */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RS::Side
+                    a2 =
+                    (RS::Side)
+                    (int)
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->getOffsetShapes(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: RS::Side */
+     && (
+            context->argument(3).isVariant() || 
+            context->argument(3).isQObject() || 
+            context->argument(3).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RS::Side
+                    a2 =
+                    (RS::Side)
+                    (int)
+                    context->argument( 2 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap3 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        3
+                        )
+                    );
+                    if (ap3 == NULL) {
+                           return REcmaHelper::throwError("RArc: Argument 3 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a3 = 
+                    *ap3;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->getOffsetShapes(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RArc.getOffsetShapes().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaArc::getOffsetShapes", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaArc::splitAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaArc::splitAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaArc::splitAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RArc* self = 
+                        getSelf("splitAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->splitAt(a0);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RArc.splitAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaArc::splitAt", context, engine);
             return result;
         }
          QScriptValue REcmaArc::toString

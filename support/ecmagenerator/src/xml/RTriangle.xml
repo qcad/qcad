@@ -19,6 +19,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="true" />
       </variant>
     </constructor>
+    <method name="getType" cppName="getType" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RShape::Type" isPureVirtual="false" />
+    </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RTriangle *" isPureVirtual="false" />

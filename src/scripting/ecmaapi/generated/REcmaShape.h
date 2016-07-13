@@ -46,6 +46,9 @@
 
     // public methods:
     static  QScriptValue
+        getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -214,7 +217,10 @@
         getOffsetArcs
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        getOffsetEllipses
+        reverseShapeList
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        splitAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getErrorCode
@@ -227,6 +233,8 @@
     ;static  QScriptValue destroy(QScriptContext *context, QScriptEngine *engine)
     ;static RShape* getSelf(const QString& fName, QScriptContext* context)
     ;static RShape* getSelfShell(const QString& fName, QScriptContext* context)
+    ;static  QScriptValue toScriptValueEnumType(QScriptEngine* engine, const RShape::Type& value)
+    ;static  void fromScriptValueEnumType(const QScriptValue& value, RShape::Type& out)
     ;};
     #endif
     

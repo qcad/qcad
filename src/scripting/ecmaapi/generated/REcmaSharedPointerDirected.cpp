@@ -63,6 +63,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, getEndPoint, "getEndPoint");
             
+            REcmaHelper::registerFunction(&engine, proto, getMiddlePoint, "getMiddlePoint");
+            
             REcmaHelper::registerFunction(&engine, proto, reverse, "reverse");
             
             REcmaHelper::registerFunction(&engine, proto, trimStartPoint, "trimStartPoint");
@@ -401,6 +403,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerDirected::getEndPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerDirected::getMiddlePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerDirected::getMiddlePoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerDirected::getMiddlePoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RDirected* self = 
+                        getSelf("getMiddlePoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getMiddlePoint();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RDirected.getMiddlePoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerDirected::getMiddlePoint", context, engine);
             return result;
         }
          QScriptValue

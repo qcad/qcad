@@ -67,6 +67,9 @@
 
     // public methods:
     static  QScriptValue
+        getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -212,6 +215,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getEndPoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getMiddlePoint
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDirection1

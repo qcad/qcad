@@ -84,6 +84,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
             REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
@@ -387,6 +389,55 @@
 
     // public methods:
      QScriptValue
+        REcmaSharedPointerTriangle::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerTriangle::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerTriangle::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RTriangle* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RShape::Type'
+    RShape::Type cppResult =
+        
+               self->getType();
+        // return type: RShape::Type
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RTriangle.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerTriangle::getType", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerTriangle::clone
         (QScriptContext* context, QScriptEngine* engine) 
         

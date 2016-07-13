@@ -78,6 +78,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
             REcmaHelper::registerFunction(&engine, proto, trimEndPoint, "trimEndPoint");
@@ -91,6 +93,8 @@
             REcmaHelper::registerFunction(&engine, proto, getVectorTo, "getVectorTo");
             
             REcmaHelper::registerFunction(&engine, proto, stretch, "stretch");
+            
+            REcmaHelper::registerFunction(&engine, proto, splitAt, "splitAt");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RRay*>(), *proto);
@@ -463,6 +467,55 @@
 
     // public methods:
      QScriptValue
+        REcmaRay::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRay::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRay::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRay* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RShape::Type'
+    RShape::Type cppResult =
+        
+               self->getType();
+        // return type: RShape::Type
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRay.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRay::getType", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaRay::clone
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -1222,6 +1275,67 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaRay::stretch", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaRay::splitAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaRay::splitAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaRay::splitAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RRay* self = 
+                        getSelf("splitAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->splitAt(a0);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RRay.splitAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaRay::splitAt", context, engine);
             return result;
         }
          QScriptValue REcmaRay::toString

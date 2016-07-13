@@ -104,6 +104,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, getLineShape, "getLineShape");
             
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
@@ -177,6 +179,10 @@
             REcmaHelper::registerFunction(&engine, proto, stretch, "stretch");
             
             REcmaHelper::registerFunction(&engine, proto, getTransformed, "getTransformed");
+            
+            REcmaHelper::registerFunction(&engine, proto, getOffsetShapes, "getOffsetShapes");
+            
+            REcmaHelper::registerFunction(&engine, proto, splitAt, "splitAt");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RXLinePointer>(), *proto);
@@ -696,6 +702,55 @@
 
     // public methods:
      QScriptValue
+        REcmaSharedPointerXLine::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerXLine::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLine::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RXLine* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RShape::Type'
+    RShape::Type cppResult =
+        
+               self->getType();
+        // return type: RShape::Type
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLine.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerXLine::getType", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerXLine::getLineShape
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -3546,6 +3601,236 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerXLine::getTransformed", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerXLine::getOffsetShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerXLine::getOffsetShapes", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLine::getOffsetShapes";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RXLine* self = 
+                        getSelf("getOffsetShapes", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    3 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: RS::Side */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RS::Side
+                    a2 =
+                    (RS::Side)
+                    (int)
+                    context->argument( 2 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->getOffsetShapes(a0
+        ,
+    a1
+        ,
+    a2);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    4 && (
+            context->argument(0).isNumber()
+        ) /* type: double */
+     && (
+            context->argument(1).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: RS::Side */
+     && (
+            context->argument(3).isVariant() || 
+            context->argument(3).isQObject() || 
+            context->argument(3).isNull()
+        ) /* type: RVector */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isStandardType
+                    double
+                    a0 =
+                    (double)
+                    
+                    context->argument( 0 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    int
+                    a1 =
+                    (int)
+                    
+                    context->argument( 1 ).
+                    toNumber();
+                
+                    // argument isStandardType
+                    RS::Side
+                    a2 =
+                    (RS::Side)
+                    (int)
+                    context->argument( 2 ).
+                    toNumber();
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap3 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        3
+                        )
+                    );
+                    if (ap3 == NULL) {
+                           return REcmaHelper::throwError("RXLine: Argument 3 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a3 = 
+                    *ap3;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->getOffsetShapes(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLine.getOffsetShapes().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerXLine::getOffsetShapes", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerXLine::splitAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerXLine::splitAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerXLine::splitAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RXLine* self = 
+                        getSelf("splitAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->splitAt(a0);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RXLine.splitAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerXLine::splitAt", context, engine);
             return result;
         }
          QScriptValue REcmaSharedPointerXLine::toString

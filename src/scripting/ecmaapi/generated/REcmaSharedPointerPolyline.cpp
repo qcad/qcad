@@ -98,6 +98,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
             REcmaHelper::registerFunction(&engine, proto, to2D, "to2D");
@@ -195,6 +197,8 @@
             REcmaHelper::registerFunction(&engine, proto, getStartPoint, "getStartPoint");
             
             REcmaHelper::registerFunction(&engine, proto, getEndPoint, "getEndPoint");
+            
+            REcmaHelper::registerFunction(&engine, proto, getMiddlePoint, "getMiddlePoint");
             
             REcmaHelper::registerFunction(&engine, proto, getDirection1, "getDirection1");
             
@@ -583,6 +587,55 @@
 
     // public methods:
      QScriptValue
+        REcmaSharedPointerPolyline::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RShape::Type'
+    RShape::Type cppResult =
+        
+               self->getType();
+        // return type: RShape::Type
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getType", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSharedPointerPolyline::clone
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -4116,6 +4169,55 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getEndPoint", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::getMiddlePoint
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::getMiddlePoint", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::getMiddlePoint";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("getMiddlePoint", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RVector'
+    RVector cppResult =
+        
+               self->getMiddlePoint();
+        // return type: RVector
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.getMiddlePoint().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::getMiddlePoint", context, engine);
             return result;
         }
          QScriptValue

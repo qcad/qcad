@@ -61,6 +61,9 @@
 
     // public methods:
     static  QScriptValue
+        getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -173,6 +176,12 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getDistanceFromStart
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        getOffsetShapes
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        splitAt
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue toString
     (QScriptContext *context, QScriptEngine *engine)

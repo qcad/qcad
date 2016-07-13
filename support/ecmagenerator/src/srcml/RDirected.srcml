@@ -45,6 +45,7 @@
 
     <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>getStartPoint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
     <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>getEndPoint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
+    <function_decl><type><name>virtual</name> <name>RVector</name></type> <name>getMiddlePoint</name><parameter_list>()</parameter_list> <specifier>const</specifier> <specifier>= 0</specifier>;</function_decl>
 
     <function_decl><type><name>virtual</name> <name>bool</name></type> <name>reverse</name><parameter_list>()</parameter_list> <specifier>= 0</specifier>;</function_decl>
 

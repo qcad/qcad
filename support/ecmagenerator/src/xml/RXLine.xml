@@ -30,6 +30,10 @@ xmlns:rs="http://www.ribbonsoft.com">
         isConst="false" />
       </variant>
     </constructor>
+    <method name="getType" cppName="getType" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="RShape::Type" isPureVirtual="false" />
+    </method>
     <method name="getLineShape" cppName="getLineShape"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -141,7 +145,7 @@ xmlns:rs="http://www.ribbonsoft.com">
       </variant>
     </method>
     <method name="getMiddlePoint" cppName="getMiddlePoint"
-    specifier="public" isStatic="false" isVirtual="false"
+    specifier="public" isStatic="false" isVirtual="true"
     isScriptOverwritable="true">
       <variant returnType="RVector" isPureVirtual="false" />
     </method>
@@ -293,6 +297,31 @@ xmlns:rs="http://www.ribbonsoft.com">
       isPureVirtual="false">
         <arg type="QTransform &amp;" typeName="QTransform"
         name="transform" isConst="true" />
+      </variant>
+    </method>
+    <method name="getOffsetShapes" cppName="getOffsetShapes"
+    specifier="public" isStatic="false" isVirtual="true"
+    isScriptOverwritable="true">
+      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="double" typeName="double" name="distance"
+        isConst="false" />
+        <arg type="int" typeName="int" name="number"
+        isConst="false" />
+        <arg type="RS::Side" typeName="RS::Side" name="side"
+        isConst="false" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="position" hasDefault="true"
+        default="RVector :: invalid" isConst="true" />
+      </variant>
+    </method>
+    <method name="splitAt" cppName="splitAt" specifier="public"
+    isStatic="false" isVirtual="true" isScriptOverwritable="true">
+      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="QList &lt; RVector &gt; &amp;"
+        typeName="QList &lt; RVector &gt;" name="points"
+        isConst="true" />
       </variant>
     </method>
     <method name="print" cppName="print" specifier="protected"

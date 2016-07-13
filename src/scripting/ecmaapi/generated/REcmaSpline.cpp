@@ -130,6 +130,8 @@
 
     // methods:
     
+            REcmaHelper::registerFunction(&engine, proto, getType, "getType");
+            
             REcmaHelper::registerFunction(&engine, proto, clone, "clone");
             
             REcmaHelper::registerFunction(&engine, proto, copySpline, "copySpline");
@@ -311,6 +313,8 @@
             REcmaHelper::registerFunction(&engine, proto, updateFromFitPoints, "updateFromFitPoints");
             
             REcmaHelper::registerFunction(&engine, proto, update, "update");
+            
+            REcmaHelper::registerFunction(&engine, proto, splitAt, "splitAt");
             
             REcmaHelper::registerFunction(&engine, proto, isDirty, "isDirty");
             
@@ -731,6 +735,55 @@
 
     // public methods:
      QScriptValue
+        REcmaSpline::getType
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::getType", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::getType";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("getType", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    0
+    ){
+    // prepare arguments:
+    
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RShape::Type'
+    RShape::Type cppResult =
+        
+               self->getType();
+        // return type: RShape::Type
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.getType().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::getType", context, engine);
+            return result;
+        }
+         QScriptValue
         REcmaSpline::clone
         (QScriptContext* context, QScriptEngine* engine) 
         
@@ -6840,6 +6893,67 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSpline::update", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSpline::splitAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSpline::splitAt", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSpline::splitAt";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RSpline* self = 
+                        getSelf("splitAt", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isArray()
+        ) /* type: QList < RVector > */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument isArray
+                    QList < RVector >
+                    a0;
+                    REcmaHelper::fromScriptValue(
+                        engine,
+                        context->argument(0),
+                        a0
+                    );
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        
+               self->splitAt(a0);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RSpline.splitAt().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSpline::splitAt", context, engine);
             return result;
         }
          QScriptValue
