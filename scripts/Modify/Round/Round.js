@@ -185,7 +185,7 @@ Round.roundShapes = function(shape1, clickPos1, shape2, clickPos2, trim, samePol
 
     var sol2 = simpleShape1.getIntersectionPoints(simpleShape2, false);
 
-    var ipParallel = par1.getIntersectionPoints(par2, false);
+    var ipParallel = par1.getIntersectionPoints(par2.data(), false);
     if (ipParallel.length===0) {
         return [];
     }
