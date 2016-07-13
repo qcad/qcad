@@ -44,6 +44,7 @@ public:
 
     virtual RVector getStartPoint() const = 0;
     virtual RVector getEndPoint() const = 0;
+    virtual RVector getMiddlePoint() const = 0;
 
     virtual bool reverse() = 0;
 

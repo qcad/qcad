@@ -79,7 +79,7 @@ public:
     RVector getDirectionVector() const;
     void setDirectionVector(const RVector& vector);
 
-    RVector getMiddlePoint() const;
+    virtual RVector getMiddlePoint() const;
     
     double getLength() const;
     void setLength(double l);

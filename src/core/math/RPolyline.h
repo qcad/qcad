@@ -122,6 +122,7 @@ public:
 
     virtual RVector getStartPoint() const;
     virtual RVector getEndPoint() const;
+    virtual RVector getMiddlePoint() const;
 
     virtual double getDirection1() const;
     virtual double getDirection2() const;

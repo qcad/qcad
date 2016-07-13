@@ -77,7 +77,7 @@ public:
     virtual RVector getEndPoint() const;
     void setEndPoint(const RVector& vector);
 
-    RVector getMiddlePoint() const;
+    virtual RVector getMiddlePoint() const;
     
     double getLength() const;
     double getAngle() const;

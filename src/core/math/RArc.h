@@ -119,7 +119,7 @@ public:
     virtual RVector getEndPoint() const;
     RVector getPointAtAngle(double a) const;
     virtual double getAngleAt(double distance, RS::From from = RS::FromStart) const;
-    RVector getMiddlePoint() const;
+    virtual RVector getMiddlePoint() const;
 
     void moveStartPoint(const RVector& pos);
     void moveEndPoint(const RVector& pos);

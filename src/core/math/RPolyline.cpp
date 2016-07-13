@@ -1005,6 +1005,14 @@ RVector RPolyline::getEndPoint() const {
     return vertices.last();
 }
 
+RVector RPolyline::getMiddlePoint() const {
+    QList<RVector> pts = getPointsWithDistanceToEnd(getLength()/2, RS::FromStart);
+    if (pts.length()==1) {
+        return pts[0];
+    }
+    return RVector::invalid;
+}
+
 double RPolyline::getDirection1() const {
     if (vertices.size()==0) {
         return RNANDOUBLE;
