@@ -109,7 +109,7 @@ OffsetTest00.prototype.test00 = function() {
     this.setToolOption('OffsetPro/Distance', '2');
     this.setToolOption('OffsetPro/Number', '1');
     this.setToolOption('OffsetPro/SegmentPolylineMode', 'PolylineMode');
-    this.setToolOption('OffsetPro/JoinType', 'JoinBevel');
+    this.setToolOption('OffsetPro/JoinType', 'JoinRound');
     this.setToolOption('OffsetPro/InterpolateArcs', 'false');
     this.setToolOption('OffsetPro/Verify', 'false');
     this.updateToolOptions();
