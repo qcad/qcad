@@ -18,6 +18,7 @@
  */
 #include "RBox.h"
 #include "RPolyline.h"
+#include "RRay.h"
 #include "RXLine.h"
 
 /**
@@ -258,6 +259,30 @@ bool RXLine::stretch(const RPolyline& area, const RVector& offset) {
 QSharedPointer<RShape> RXLine::getTransformed(const QTransform& transform) const {
     QSharedPointer<RShape> line = getLineShape().getTransformed(transform);
     return QSharedPointer<RShape>(new RXLine(*line.dynamicCast<RLine>()));
+}
+
+QList<QSharedPointer<RShape> > RXLine::splitAt(const QList<RVector>& points) const {
+    if (points.length()==0) {
+        return RShape::splitAt(points);
+    }
+
+    QList<QSharedPointer<RShape> > ret;
+
+    QList<RVector> sortedPoints = RVector::getSortedByDistance(points, basePoint - directionVector*1e9);
+
+    ret.append(QSharedPointer<RShape>(new RRay(sortedPoints[0], -directionVector)));
+
+    for (int i=0; i<sortedPoints.length()-1; i++) {
+        if (sortedPoints[i].equalsFuzzy(points[i+1])) {
+            continue;
+        }
+
+        ret.append(QSharedPointer<RShape>(new RLine(sortedPoints[i], sortedPoints[i+1])));
+    }
+
+    ret.append(QSharedPointer<RShape>(new RRay(sortedPoints[sortedPoints.length()-1], directionVector)));
+
+    return ret;
 }
 
 void RXLine::print(QDebug dbg) const {

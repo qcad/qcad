@@ -392,6 +392,33 @@ double RLine::getDistanceFromStart(const RVector& p) const {
     return startPoint.getDistanceTo(p);
 }
 
+QList<QSharedPointer<RShape> > RLine::splitAt(const QList<RVector>& points) const {
+    if (points.length()==0) {
+        return RShape::splitAt(points);
+    }
+
+    QList<QSharedPointer<RShape> > ret;
+
+    QList<RVector> sortedPoints = RVector::getSortedByDistance(points, startPoint);
+
+    if (!startPoint.equalsFuzzy(sortedPoints[0])) {
+        sortedPoints.prepend(startPoint);
+    }
+    if (!endPoint.equalsFuzzy(sortedPoints[sortedPoints.length()-1])) {
+        sortedPoints.append(endPoint);
+    }
+
+    for (int i=0; i<sortedPoints.length()-1; i++) {
+        if (sortedPoints[i].equalsFuzzy(sortedPoints[i+1])) {
+            continue;
+        }
+
+        ret.append(QSharedPointer<RShape>(new RLine(sortedPoints[i], sortedPoints[i+1])));
+    }
+
+    return ret;
+}
+
 void RLine::print(QDebug dbg) const {
 //    dbg.nospace() << "RLine("
 //        << startPoint.x << "," << startPoint.y << " - "

@@ -47,6 +47,10 @@ public:
             double endAngle, bool reversed = false);
     virtual ~RArc();
 
+    virtual RShape::Type getType() const {
+        return Arc;
+    }
+
     virtual RArc* clone() const {
         return new RArc(*this);
     }
@@ -140,6 +144,12 @@ public:
     RPolyline approximateWithLinesTan(double segmentLength);
 
     QList<RLine> getTangents(const RVector& point) const;
+
+    virtual QList<QSharedPointer<RShape> > getOffsetShapes(double distance, int number, RS::Side side, const RVector& position = RVector::invalid) {
+        return RShape::getOffsetArcs(*this, distance, number, side, position);
+    }
+
+    virtual QList<QSharedPointer<RShape> > splitAt(const QList<RVector>& points) const;
 
 protected:
     virtual void print(QDebug dbg) const;

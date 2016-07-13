@@ -51,10 +51,29 @@ class RTriangle;
  */
 class QCADCORE_EXPORT RShape {
 public:
+    enum Type {
+        Unknown = -1,
+        Point = 0,
+        Line = 1,
+        Arc = 2,
+        Circle = 3,
+        Ellipse = 4,
+        Polyline = 5,
+        Spline = 6,
+        Triangle = 7,
+        XLine = 8,
+        Ray = 9
+    };
+
+public:
     RShape() {
     }
 
     virtual ~RShape() {
+    }
+
+    virtual RShape::Type getType() const {
+        return Unknown;
     }
 
     virtual RShape* clone() const = 0;
@@ -256,10 +275,14 @@ public:
 
     static const RExplodable* castToExplodable(const RShape* shape);
 
-    static QList<QSharedPointer<RShape> > getOffsetShapes(const RShape& shape, double distance, int number, RS::Side side, const RVector& position = RVector::invalid);
+    virtual QList<QSharedPointer<RShape> > getOffsetShapes(double distance, int number, RS::Side side, const RVector& position = RVector::invalid);
+
     static QList<QSharedPointer<RShape> > getOffsetLines(const RShape& shape, double distance, int number, RS::Side side, const RVector& position = RVector::invalid);
     static QList<QSharedPointer<RShape> > getOffsetArcs(const RShape& shape, double distance, int number, RS::Side side, const RVector& position = RVector::invalid);
-    static QList<QSharedPointer<RShape> > getOffsetEllipses(const RShape& shape, double distance, int number, RS::Side side, const RVector& position = RVector::invalid);
+
+    static QList<QSharedPointer<RShape> > reverseShapeList(const QList<QSharedPointer<RShape> >& shapes);
+
+    virtual QList<QSharedPointer<RShape> > splitAt(const QList<RVector>& points) const;
 
     static int getErrorCode() {
         return errorCode;
@@ -282,13 +305,14 @@ private:
 private:
     static double twopi;
     static double epsTolerance;
-    static int errorCode;
 
 protected:
     virtual void print(QDebug dbg) const;
+    static int errorCode;
 };
 
 Q_DECLARE_METATYPE(RShape*)
+Q_DECLARE_METATYPE(RShape::Type)
 Q_DECLARE_METATYPE(const RShape*)
 Q_DECLARE_METATYPE(QSharedPointer<RShape>)
 Q_DECLARE_METATYPE(QSharedPointer<const RShape>)

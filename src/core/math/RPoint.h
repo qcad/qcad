@@ -42,6 +42,10 @@ public:
     RPoint(const RVector& position);
     virtual ~RPoint();
 
+    virtual RShape::Type getType() const {
+        return Point;
+    }
+
     virtual RPoint* clone() const {
         return new RPoint(*this);
     }

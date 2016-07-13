@@ -50,6 +50,10 @@ public:
              bool reversed);
     virtual ~REllipse();
 
+    virtual RShape::Type getType() const {
+        return Ellipse;
+    }
+
     virtual REllipse* clone() const {
         return new REllipse(*this);
     }
@@ -163,6 +167,9 @@ public:
     QList<RLine> getTangents(const RVector& point) const;
 
     QList<RSpline> approximateWithSplines() const;
+
+    virtual QList<QSharedPointer<RShape> > getOffsetShapes(double distance, int number, RS::Side side, const RVector& position = RVector::invalid);
+    virtual QList<QSharedPointer<RShape> > splitAt(const QList<RVector>& points) const;
 
     static bool hasProxy() {
         return ellipseProxy!=NULL;

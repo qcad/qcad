@@ -18,8 +18,9 @@
  */
 #include <cmath>
 
-#include "RCircle.h"
+#include "RArc.h"
 #include "RBox.h"
+#include "RCircle.h"
 #include "RTriangle.h"
 
 /**
@@ -266,6 +267,38 @@ QList<RLine> RCircle::getTangents(const RVector& point) const {
         if (ips.length()>1) {
             ret.append(RLine(point, ips[1]));
         }
+    }
+
+    return ret;
+}
+
+QList<QSharedPointer<RShape> > RCircle::splitAt(const QList<RVector>& points) const {
+    if (points.length()==0) {
+        return RShape::splitAt(points);
+    }
+
+    QList<QSharedPointer<RShape> > ret;
+
+    double refAngle = center.getAngleTo(points[0]);
+    RVector startPoint;
+    RVector endPoint;
+
+    startPoint = endPoint = center + RVector::createPolar(radius, refAngle);
+
+    QList<RVector> sortedPoints = RVector::getSortedByAngle(points, center, refAngle);
+
+    if (!startPoint.equalsFuzzy(sortedPoints[0])) {
+        sortedPoints.prepend(startPoint);
+    }
+    if (!endPoint.equalsFuzzy(sortedPoints[sortedPoints.length()-1])) {
+        sortedPoints.append(endPoint);
+    }
+    for (int i=0; i<sortedPoints.length()-1; i++) {
+        if (sortedPoints[i].equalsFuzzy(sortedPoints[i+1])) {
+            continue;
+        }
+
+        ret.append(QSharedPointer<RShape>(new RArc(center, radius, center.getAngleTo(sortedPoints[i]), center.getAngleTo(sortedPoints[i+1]), false)));
     }
 
     return ret;

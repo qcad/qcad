@@ -112,6 +112,32 @@ bool RRay::stretch(const RPolyline& area, const RVector& offset) {
     return ret;
 }
 
+QList<QSharedPointer<RShape> > RRay::splitAt(const QList<RVector>& points) const {
+    if (points.length()==0) {
+        return RShape::splitAt(points);
+    }
+
+    QList<QSharedPointer<RShape> > ret;
+
+    QList<RVector> sortedPoints = RVector::getSortedByDistance(points, basePoint);
+
+    if (!basePoint.equalsFuzzy(sortedPoints[0])) {
+        sortedPoints.prepend(basePoint);
+    }
+
+    for (int i=0; i<sortedPoints.length()-1; i++) {
+        if (sortedPoints[i].equalsFuzzy(sortedPoints[i+1])) {
+            continue;
+        }
+
+        ret.append(QSharedPointer<RShape>(new RLine(sortedPoints[i], sortedPoints[i+1])));
+    }
+
+    ret.append(QSharedPointer<RShape>(new RRay(sortedPoints[sortedPoints.length()-1], directionVector)));
+
+    return ret;
+}
+
 void RRay::print(QDebug dbg) const {
 //    dbg.nospace() << "RRay("
 //        << startPoint.x << "," << startPoint.y << " - "

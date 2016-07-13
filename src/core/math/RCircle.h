@@ -43,6 +43,10 @@ public:
     RCircle(const RVector& center, const double radius);
     virtual ~RCircle();
 
+    virtual RShape::Type getType() const {
+        return Circle;
+    }
+
     virtual RCircle* clone() const {
         return new RCircle(*this);
     }
@@ -96,6 +100,12 @@ public:
     virtual QSharedPointer<RShape> getTransformed(const QTransform& transform) const;
 
     QList<RLine> getTangents(const RVector& point) const;
+
+    virtual QList<QSharedPointer<RShape> > getOffsetShapes(double distance, int number, RS::Side side, const RVector& position = RVector::invalid) {
+        return RShape::getOffsetArcs(*this, distance, number, side, position);
+    }
+
+    virtual QList<QSharedPointer<RShape> > splitAt(const QList<RVector>& points) const;
 
 protected:
     virtual void print(QDebug dbg) const;

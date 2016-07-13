@@ -1061,6 +1061,163 @@ QList<RSpline> REllipse::approximateWithSplines() const {
     return QList<RSpline>();
 }
 
+/**
+ * \return Array of spline shapes representing the parallel curves to this ellipse shape.
+ */
+QList<QSharedPointer<RShape> > REllipse::getOffsetShapes(double distance, int number, RS::Side side, const RVector& position) {
+    errorCode = 0;
+    QList<QSharedPointer<RShape> > ret;
+    REllipse* ellipse = dynamic_cast<REllipse*>(clone());
+    if (ellipse==NULL) {
+        return ret;
+    }
+
+    RVector center = ellipse->getCenter();
+
+    if (ellipse->isReversed()) {
+        ellipse->reverse();
+    }
+
+    QList<bool> insides;
+    if (position.isValid()) {
+        double ang = center.getAngleTo(position) - ellipse->getAngle();
+        double t = ellipse->angleToParam(ang);
+        RVector p = ellipse->getPointAt(t);
+        insides.append(center.getDistanceTo(position) < center.getDistanceTo(p));
+    }
+    else {
+        if (side==RS::BothSides) {
+            insides.append(true);
+            insides.append(false);
+        }
+        else {
+            if (side==RS::LeftHand) {
+                insides.append(true);
+            }
+            else {
+                insides.append(false);
+            }
+        }
+    }
+
+    double a = ellipse->getMajorRadius();
+    double b = ellipse->getMinorRadius();
+
+    for (int i=0; i<insides.length(); i++) {
+        bool inside = insides[i];
+        double d = distance;
+
+        if (inside) {
+            d *= -1;
+        }
+
+        for (int n=1; n<=number; ++n) {
+            RSpline* spl = NULL;
+            RPolyline* pl = NULL;
+            if (RSpline::hasProxy()) {
+                spl = new RSpline();
+            }
+            else {
+                pl = new RPolyline();
+            }
+
+            double endParam = ellipse->getEndParam();
+            double startParam = ellipse->getStartParam();
+            if (RMath::fuzzyCompare(endParam, 0.0)) {
+                endParam = 2*M_PI;
+            }
+
+            if (endParam<startParam) {
+                endParam += 2*M_PI;
+            }
+
+            double k = d*n;
+            double tMax = endParam+0.1;
+            if (ellipse->isFullEllipse()) {
+                tMax = endParam;
+            }
+
+            for (double t=startParam; t<tMax; t+=0.1) {
+                if (t>endParam) {
+                    t = endParam;
+                }
+
+                double root = sqrt(a*a * pow(sin(t), 2) + b*b * pow(cos(t), 2));
+                double x = (a + (b * k) / root) * cos(t);
+                double y = (b + (a * k) / root) * sin(t);
+                RVector v(x, y);
+                v.rotate(ellipse->getAngle());
+                v.move(center);
+                if (spl!=NULL) {
+                    spl->appendFitPoint(v);
+                }
+                else {
+                    pl->appendVertex(v);
+                }
+            }
+
+            if (ellipse->isFullEllipse()) {
+                if (spl!=NULL) {
+                    spl->setPeriodic(true);
+                }
+                else {
+                    // no ellipse proxy: offset curve is polyline:
+                    pl->setClosed(true);
+                }
+            }
+
+            if (spl!=NULL) {
+                ret.append(QSharedPointer<RShape>(spl));
+            }
+            else {
+                ret.append(QSharedPointer<RShape>(pl));
+            }
+        }
+    }
+
+    return ret;
+}
+
+QList<QSharedPointer<RShape> > REllipse::splitAt(const QList<RVector>& points) const {
+    if (points.length()==0) {
+        return RShape::splitAt(points);
+    }
+
+    QList<QSharedPointer<RShape> > ret;
+
+    if (reversed) {
+        REllipse ellipse = *this;
+        ellipse.reverse();
+        ret = ellipse.splitAt(points);
+        return RShape::reverseShapeList(ret);
+    }
+
+    RVector startPoint = getStartPoint();
+    RVector endPoint = getEndPoint();
+
+    QList<RVector> sortedPoints = RVector::getSortedByAngle(points, center, center.getAngleTo(startPoint));
+
+    if (!startPoint.equalsFuzzy(sortedPoints[0])) {
+        sortedPoints.prepend(startPoint);
+    }
+    if (!endPoint.equalsFuzzy(sortedPoints[sortedPoints.length()-1])) {
+        sortedPoints.append(endPoint);
+    }
+    for (int i=0; i<sortedPoints.length()-1; i++) {
+        if (sortedPoints[i].equalsFuzzy(sortedPoints[i+1])) {
+            continue;
+        }
+
+        REllipse* seg = clone();
+        seg->setStartParam(seg->getParamTo(sortedPoints[i]));
+        seg->setEndParam(seg->getParamTo(sortedPoints[i+1]));
+        ret.append(QSharedPointer<RShape>(seg));
+    }
+
+    return ret;
+}
+
+
 void REllipse::print(QDebug dbg) const {
     dbg.nospace() << "REllipse(";
     RShape::print(dbg);

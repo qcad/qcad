@@ -47,6 +47,10 @@ public:
     RXLine(const RVector& basePoint, double angle, double distance);
     virtual ~RXLine();
 
+    virtual RShape::Type getType() const {
+        return XLine;
+    }
+
     RLine getLineShape() const {
         return RLine(basePoint, basePoint + directionVector);
     }
@@ -104,6 +108,12 @@ public:
     virtual bool stretch(const RPolyline& area, const RVector& offset);
 
     virtual QSharedPointer<RShape> getTransformed(const QTransform& transform) const;
+
+    virtual QList<QSharedPointer<RShape> > getOffsetShapes(double distance, int number, RS::Side side, const RVector& position = RVector::invalid) {
+        return RShape::getOffsetLines(*this, distance, number, side, position);
+    }
+
+    virtual QList<QSharedPointer<RShape> > splitAt(const QList<RVector>& points) const;
 
 protected:
     virtual void print(QDebug dbg) const;

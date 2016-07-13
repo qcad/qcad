@@ -47,6 +47,10 @@ public:
     RLine(const RVector& startPoint, double angle, double distance);
     virtual ~RLine();
 
+    virtual RShape::Type getType() const {
+        return Line;
+    }
+
     virtual RLine* clone() const {
         return new RLine(*this);
     }
@@ -106,6 +110,12 @@ public:
     virtual bool trimStartPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);
     virtual bool trimEndPoint(const RVector& trimPoint, const RVector& clickPoint = RVector::invalid, bool extend = false);
     virtual double getDistanceFromStart(const RVector& p) const;
+
+    virtual QList<QSharedPointer<RShape> > getOffsetShapes(double distance, int number, RS::Side side, const RVector& position = RVector::invalid) {
+        return RShape::getOffsetLines(*this, distance, number, side, position);
+    }
+
+    virtual QList<QSharedPointer<RShape> > splitAt(const QList<RVector>& points) const;
 
 protected:
     virtual void print(QDebug dbg) const;

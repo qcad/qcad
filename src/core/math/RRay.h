@@ -47,6 +47,10 @@ public:
     RRay(const RVector& basePoint, double angle, double distance);
     virtual ~RRay();
 
+    virtual RShape::Type getType() const {
+        return Ray;
+    }
+
     virtual RRay* clone() const {
         return new RRay(*this);
     }
@@ -59,6 +63,8 @@ public:
     virtual RVector getVectorTo(const RVector& point, bool limited = true, double strictRange = RMAXDOUBLE) const;
 
     virtual bool stretch(const RPolyline& area, const RVector& offset);
+
+    virtual QList<QSharedPointer<RShape> > splitAt(const QList<RVector>& points) const;
 
 protected:
     virtual void print(QDebug dbg) const;

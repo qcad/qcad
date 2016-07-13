@@ -906,13 +906,53 @@ QList<RLine> RArc::getTangents(const RVector& point) const {
     return circle.getTangents(point);
 }
 
+QList<QSharedPointer<RShape> > RArc::splitAt(const QList<RVector>& points) const {
+    if (points.length()==0) {
+        return RShape::splitAt(points);
+    }
+
+    QList<QSharedPointer<RShape> > ret;
+
+    if (reversed) {
+        RArc arc = *this;
+        arc.reverse();
+        ret = arc.splitAt(points);
+        return RShape::reverseShapeList(ret);
+    }
+
+    RVector startPoint = getStartPoint();
+    RVector endPoint = getEndPoint();
+
+    QList<RVector> sortedPoints = RVector::getSortedByAngle(points, center, getStartAngle());
+
+    if (!startPoint.equalsFuzzy(sortedPoints[0])) {
+        sortedPoints.prepend(startPoint);
+    }
+    if (!endPoint.equalsFuzzy(sortedPoints[sortedPoints.length()-1])) {
+        sortedPoints.append(endPoint);
+    }
+
+    for (int i=0; i<sortedPoints.length()-1; i++) {
+        if (sortedPoints[i].equalsFuzzy(sortedPoints[i+1])) {
+            continue;
+        }
+
+        RArc* seg = clone();
+        seg->setStartAngle(center.getAngleTo(sortedPoints[i]));
+        seg->setEndAngle(center.getAngleTo(sortedPoints[i+1]));
+        ret.append(QSharedPointer<RShape>(seg));
+    }
+
+    return ret;
+}
+
 void RArc::print(QDebug dbg) const {
     dbg.nospace() << "RArc(";
     RShape::print(dbg);
     dbg.nospace() << ", center: " << getCenter()
                   << ", radius: " << getRadius()
-                  << ", startAngle: " << getStartAngle()
-                  << ", endAngle: " << getEndAngle()
+                  << ", startAngle: " << RMath::rad2deg(getStartAngle())
+                  << ", endAngle: " << RMath::rad2deg(getEndAngle())
                   << ", startPoint: " << getStartPoint()
                   << ", endPoint: " << getEndPoint()
                   << ", sweep: " << getSweep()

@@ -1856,26 +1856,11 @@ double RShape::ellipse2tr(double x, double y, double AA, double BB,
  * \param sidePosition Position indicating what side of the shape the parallels should be.
  *
  */
-QList<QSharedPointer<RShape> > RShape::getOffsetShapes(const RShape& shape, double distance, int number, RS::Side side, const RVector& position) {
-    // TODO: use RTTI
-    const RLine* line = dynamic_cast<const RLine*>(&shape);
-    const RXLine* xline = dynamic_cast<const RXLine*>(&shape);
-    const RRay* ray = dynamic_cast<const RRay*>(&shape);
-
-    if (line!=NULL || xline!=NULL || ray!=NULL) {
-        return RShape::getOffsetLines(shape, distance, number, side, position);
-    }
-
-    const RArc* arc = dynamic_cast<const RArc*>(&shape);
-    const RCircle* circle = dynamic_cast<const RCircle*>(&shape);
-    if (arc!=NULL || circle!=NULL) {
-        return RShape::getOffsetArcs(shape, distance, number, side, position);
-    }
-
-    const REllipse* ellipse = dynamic_cast<const REllipse*>(&shape);
-    if (ellipse!=NULL) {
-        return RShape::getOffsetEllipses(shape, distance, number, side, position);
-    }
+QList<QSharedPointer<RShape> > RShape::getOffsetShapes(double distance, int number, RS::Side side, const RVector& position) {
+    Q_UNUSED(distance)
+    Q_UNUSED(number)
+    Q_UNUSED(side)
+    Q_UNUSED(position)
 
     return QList<QSharedPointer<RShape> >();
 }
@@ -2023,120 +2008,30 @@ QList<QSharedPointer<RShape> > RShape::getOffsetArcs(const RShape& shape, double
     return ret;
 }
 
-/**
- * \return Array of spline shapes representing the parallel curves to the given ellipse shape.
- */
-QList<QSharedPointer<RShape> > RShape::getOffsetEllipses(const RShape& shape, double distance, int number, RS::Side side, const RVector& position) {
-    errorCode = 0;
+QList<QSharedPointer<RShape> > RShape::reverseShapeList(const QList<QSharedPointer<RShape> >& shapes) {
     QList<QSharedPointer<RShape> > ret;
-    REllipse* ellipse = dynamic_cast<REllipse*>(shape.clone());
-    if (ellipse==NULL) {
-        return ret;
-    }
 
-    RVector center = ellipse->getCenter();
-
-    if (ellipse->isReversed()) {
-        ellipse->reverse();
-    }
-
-    QList<bool> insides;
-    if (position.isValid()) {
-        double ang = center.getAngleTo(position) - ellipse->getAngle();
-        double t = ellipse->angleToParam(ang);
-        RVector p = ellipse->getPointAt(t);
-        insides.append(center.getDistanceTo(position) < center.getDistanceTo(p));
-    }
-    else {
-        if (side==RS::BothSides) {
-            insides.append(true);
-            insides.append(false);
+    for (int i=shapes.length()-1; i>=0; i--) {
+        QSharedPointer<RShape> shape = QSharedPointer<RShape>(shapes[i]->clone());
+        QSharedPointer<RDirected> dir = shape.dynamicCast<RDirected>();
+        if (!dir.isNull()) {
+            dir->reverse();
         }
-        else {
-            if (side==RS::LeftHand) {
-                insides.append(true);
-            }
-            else {
-                insides.append(false);
-            }
-        }
+        ret.append(shape);
     }
 
-    double a = ellipse->getMajorRadius();
-    double b = ellipse->getMinorRadius();
+    return ret;
+}
 
-    for (int i=0; i<insides.length(); i++) {
-        bool inside = insides[i];
-        double d = distance;
-
-        if (inside) {
-            d *= -1;
-        }
-
-        for (int n=1; n<=number; ++n) {
-            RSpline* spl = NULL;
-            RPolyline* pl = NULL;
-            if (RSpline::hasProxy()) {
-                spl = new RSpline();
-            }
-            else {
-                pl = new RPolyline();
-            }
-
-            double endParam = ellipse->getEndParam();
-            double startParam = ellipse->getStartParam();
-            if (RMath::fuzzyCompare(endParam, 0.0)) {
-                endParam = 2*M_PI;
-            }
-
-            if (endParam<startParam) {
-                endParam += 2*M_PI;
-            }
-
-            double k = d*n;
-            double tMax = endParam+0.1;
-            if (ellipse->isFullEllipse()) {
-                tMax = endParam;
-            }
-
-            for (double t=startParam; t<tMax; t+=0.1) {
-                if (t>endParam) {
-                    t = endParam;
-                }
-
-                double root = sqrt(a*a * pow(sin(t), 2) + b*b * pow(cos(t), 2));
-                double x = (a + (b * k) / root) * cos(t);
-                double y = (b + (a * k) / root) * sin(t);
-                RVector v(x, y);
-                v.rotate(ellipse->getAngle());
-                v.move(center);
-                if (spl!=NULL) {
-                    spl->appendFitPoint(v);
-                }
-                else {
-                    pl->appendVertex(v);
-                }
-            }
-
-            if (ellipse->isFullEllipse()) {
-                if (spl!=NULL) {
-                    spl->setPeriodic(true);
-                }
-                else {
-                    // no ellipse proxy: offset curve is polyline:
-                    pl->setClosed(true);
-                }
-            }
-
-            if (spl!=NULL) {
-                ret.append(QSharedPointer<RShape>(spl));
-            }
-            else {
-                ret.append(QSharedPointer<RShape>(pl));
-            }
-        }
-    }
-
+/**
+ * \return Array of shapes which represent the given shape
+ * split up at the given points.
+ *
+ * \param points Array of RVector, assumed to be on shape.
+ */
+QList<QSharedPointer<RShape> > RShape::splitAt(const QList<RVector>& points) const {
+    QList<QSharedPointer<RShape> > ret;
+    ret.append(QSharedPointer<RShape>(clone()));
     return ret;
 }
 

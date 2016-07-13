@@ -1660,6 +1660,40 @@ RSpline RSpline::createFrom(PLib::NurbsCurve_2Dd& sp) {
 }
 */
 
+QList<QSharedPointer<RShape> > RSpline::splitAt(const QList<RVector>& points) const {
+    if (points.length()==0 || !RSpline::hasProxy()) {
+        return RShape::splitAt(points);
+    }
+
+    QList<QSharedPointer<RShape> > ret;
+
+    RVector startPoint = getStartPoint();
+    RVector endPoint = getEndPoint();
+
+    QMap<double, RVector> sortable;
+    for (int i=0; i<points.length(); i++) {
+        double t = getTAtPoint(points[i]);
+        sortable.insert(t, points[i]);
+    }
+
+    QList<double> keys = sortable.keys();
+    std::sort(keys.begin(), keys.end());
+
+    QList<RVector> sortedPoints;
+    for (int i=0; i<keys.length(); i++) {
+        QList<RVector> values = sortable.values(keys[i]);
+        for (int k=0; k<values.length(); k++) {
+            sortedPoints.append(values[k]);
+        }
+    }
+
+    QList<RSpline> subSplines = splitAtPoints(sortedPoints);
+    for (int i=0; i<subSplines.length(); i++) {
+        ret.append(QSharedPointer<RShape>(subSplines[i].clone()));
+    }
+    return ret;
+}
+
 void RSpline::print(QDebug dbg) const {
     dbg.nospace() << "RSpline(";
     RShape::print(dbg);

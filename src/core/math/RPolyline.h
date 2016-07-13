@@ -54,6 +54,10 @@ public:
     RPolyline(const QList<QSharedPointer<RShape> >& segments);
     virtual ~RPolyline();
 
+    virtual RShape::Type getType() const {
+        return Polyline;
+    }
+
     virtual RPolyline* clone() const {
         return new RPolyline(*this);
     }

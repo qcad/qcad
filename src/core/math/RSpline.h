@@ -59,6 +59,10 @@ public:
     RSpline(const QList<RVector>& controlPoints, int degree);
     virtual ~RSpline();
 
+    virtual RShape::Type getType() const {
+        return Spline;
+    }
+
     virtual RSpline* clone() const {
         return new RSpline(*this);
     }
@@ -195,6 +199,8 @@ public:
     void updateFromControlPoints() const;
     void updateFromFitPoints(bool useTangents = false) const;
     void update() const;
+
+    virtual QList<QSharedPointer<RShape> > splitAt(const QList<RVector>& points) const;
 
     bool isDirty() const {
         return dirty;
