@@ -917,7 +917,7 @@ QList<QSharedPointer<RShape> > RArc::splitAt(const QList<RVector>& points) const
         RArc arc = *this;
         arc.reverse();
         ret = arc.splitAt(points);
-        return RShape::reverseShapeList(ret);
+        return RShape::getReversedShapeList(ret);
     }
 
     RVector startPoint = getStartPoint();

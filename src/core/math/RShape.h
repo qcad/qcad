@@ -280,7 +280,7 @@ public:
     static QList<QSharedPointer<RShape> > getOffsetLines(const RShape& shape, double distance, int number, RS::Side side, const RVector& position = RVector::invalid);
     static QList<QSharedPointer<RShape> > getOffsetArcs(const RShape& shape, double distance, int number, RS::Side side, const RVector& position = RVector::invalid);
 
-    static QList<QSharedPointer<RShape> > reverseShapeList(const QList<QSharedPointer<RShape> >& shapes);
+    static QList<QSharedPointer<RShape> > getReversedShapeList(const QList<QSharedPointer<RShape> >& shapes);
 
     virtual QList<QSharedPointer<RShape> > splitAt(const QList<RVector>& points) const;
 

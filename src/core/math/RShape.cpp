@@ -2008,7 +2008,7 @@ QList<QSharedPointer<RShape> > RShape::getOffsetArcs(const RShape& shape, double
     return ret;
 }
 
-QList<QSharedPointer<RShape> > RShape::reverseShapeList(const QList<QSharedPointer<RShape> >& shapes) {
+QList<QSharedPointer<RShape> > RShape::getReversedShapeList(const QList<QSharedPointer<RShape> >& shapes) {
     QList<QSharedPointer<RShape> > ret;
 
     for (int i=shapes.length()-1; i>=0; i--) {

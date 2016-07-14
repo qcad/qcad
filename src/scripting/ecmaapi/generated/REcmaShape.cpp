@@ -8420,7 +8420,7 @@
     // return type 'QList < QSharedPointer < RShape > >'
     QList < QSharedPointer < RShape > > cppResult =
         RShape::
-       reverseShapeList(a0);
+       getReversedShapeList(a0);
         // return type: QList < QSharedPointer < RShape > >
                 // List of ...:
                 result = REcmaHelper::listToScriptValue(engine, cppResult);

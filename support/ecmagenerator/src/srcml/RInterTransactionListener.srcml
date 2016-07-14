@@ -30,8 +30,11 @@
 
 
 <comment type="block">/**
- * \brief Abstract base class for classes that are intercepting transactions
- * for example to add to a transaction in progress..
+ * \brief Abstract base class for classes that are interested in transactions
+ * in progress.
+ * This can for example be used to add objects to a transaction in progress,
+ * remove objects from a transaction (to prevent modifications of those objects),
+ * etc.
  *
  * \ingroup core
  * \scriptable
@@ -41,7 +44,7 @@
     <destructor><specifier>virtual</specifier> <name>~RInterTransactionListener</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
     <comment type="block">/**
-     * Called by the document whenever the current transaction stack changes.
+     * Called at the end of every transaction, before the transaction is stored.
      */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateInterTransactionListener</name><parameter_list>(<param><decl><type><name>RDocument</name>*</type> <name>document</name></decl></param>, <param><decl><type><name>RTransaction</name>*</type> <name>transaction</name>=<init><expr><name>NULL</name></expr></init></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 </public>}</block>;</class>

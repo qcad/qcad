@@ -1189,7 +1189,7 @@ QList<QSharedPointer<RShape> > REllipse::splitAt(const QList<RVector>& points) c
         REllipse ellipse = *this;
         ellipse.reverse();
         ret = ellipse.splitAt(points);
-        return RShape::reverseShapeList(ret);
+        return RShape::getReversedShapeList(ret);
     }
 
     RVector startPoint = getStartPoint();

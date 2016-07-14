@@ -32,8 +32,8 @@
 <class_decl>class <name>RExporter</name>;</class_decl>
 
 <comment type="block">/**
- * \brief Abstract base class for classes that are interested in the current 
- * focus.
+ * \brief Abstract base class for classes that wish to be notified when an entity is
+ * exported.
  *
  * \ingroup core
  * \scriptable
@@ -42,6 +42,10 @@
 </private><public>public:
     <destructor><specifier>virtual</specifier> <name>~REntityExportListener</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
+    <comment type="block">/**
+     * Registers the given custom property as trigger. The exportEntity function is only
+     * called for entities with a custom property that matches the given title and regular expression.
+     */</comment>
     <function><type><name>virtual</name> <name>void</name></type> <name>registerCustomProperty</name><parameter_list>(<param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>title</name></decl></param>, <param><decl><type><name>const</name> <name>QString</name>&amp;</type> <name>regExp</name></decl></param>)</parameter_list> <block>{
         <expr_stmt><expr><name>registeredProperties</name>.<call><name>insert</name><argument_list>(<argument><expr><call><name>QPair<argument_list>&lt;<argument><name>QString</name></argument>, <argument><name>QString</name></argument>&gt;</argument_list></name><argument_list>(<argument><expr><name>title</name></expr></argument>, <argument><expr><name>regExp</name></expr></argument>)</argument_list></call></expr></argument>)</argument_list></call></expr>;</expr_stmt>
     }</block></function>
@@ -60,7 +64,7 @@
     <comment type="block">/**
      * Called by the document whenever an entity is exporter with 
      * one of the registered custom properties. Can be used to for example
-     * decorate the entity.
+     * to 'decorate' the entity.
      *
      * \param exporter The exporter to use to export decorations to.
      * \param entity The entity currently being drawn.

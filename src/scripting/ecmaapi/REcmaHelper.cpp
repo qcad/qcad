@@ -645,6 +645,11 @@ QScriptValue REcmaHelper::listToScriptValue(QScriptEngine* engine, const QList<Q
 QVariant REcmaHelper::toVariant(const QSharedPointer<RShape>& cppValue) {
     QVariant v;
 
+    if (cppValue.isNull()) {
+        v.setValue(QSharedPointer<RShape>());
+        return v;
+    }
+
     {
         QSharedPointer<RPoint> shape = cppValue.dynamicCast<RPoint>();
         if (!shape.isNull()) {

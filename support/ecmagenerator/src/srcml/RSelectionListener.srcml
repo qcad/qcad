@@ -29,7 +29,7 @@
 
 <comment type="block">/**
  * \brief Abstract base class for classes that are interested in the current 
- * clipboard contents and want to be notified whenever the clipboard changes.
+ * selection and want to be notified whenever the selection changes.
  *
  * \ingroup core
  * \scriptable
@@ -39,7 +39,7 @@
     <destructor><specifier>virtual</specifier> <name>~RSelectionListener</name><parameter_list>()</parameter_list> <block>{}</block></destructor>
 
     <comment type="block">/**
-     * Called by the document whenever the current clipboard changes.
+     * Called by the document whenever the current selection changes.
      */</comment>
     <function_decl><type><name>virtual</name> <name>void</name></type> <name>updateSelectionListener</name><parameter_list>(<param><decl><type><name>RDocumentInterface</name>*</type> <name>documentInterface</name></decl></param>)</parameter_list> <specifier>= 0</specifier>;</function_decl>
 </public>}</block>;</class>
