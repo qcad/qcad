@@ -29,8 +29,8 @@ class RTransaction;
 
 
 /**
- * \brief Abstract base class for classes that are interested in the current 
- * transaction stack.
+ * \brief Abstract base class for classes that wnat to be notified on every transaction
+ * (objects added, removed or modified).
  *
  * \ingroup core
  * \scriptable

@@ -23,6 +23,7 @@ include("../ListenerExamples.js");
 /**
  * \ingroup ecma_misc_examples_listenerexamples
  * \class ExTransactionListener
+ *
  * This action installs a transaction listener and prints information about
  * transactions into the QCAD command line history.
  */

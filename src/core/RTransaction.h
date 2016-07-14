@@ -63,6 +63,10 @@ class RExporter;
  * concept. They are unaware of graphics views or widgets that need 
  * to be updated.
  *
+ * Transaction listeners may be used to intercept, complete or inspect
+ * transactions:
+ * RTransactionListener, RInterTransactionListener.
+ *
  * \ingroup core
  * \scriptable
  * \copyable

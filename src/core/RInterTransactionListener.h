@@ -29,8 +29,11 @@ class RTransaction;
 
 
 /**
- * \brief Abstract base class for classes that are intercepting transactions
- * for example to add to a transaction in progress..
+ * \brief Abstract base class for classes that are interested in transactions
+ * in progress.
+ * This can for example be used to add objects to a transaction in progress,
+ * remove objects from a transaction (to prevent modifications of those objects),
+ * etc.
  *
  * \ingroup core
  * \scriptable
@@ -40,7 +43,7 @@ public:
     virtual ~RInterTransactionListener() {}
 
     /**
-     * Called by the document whenever the current transaction stack changes.
+     * Called at the end of every transaction, before the transaction is stored.
      */
     virtual void updateInterTransactionListener(RDocument* document, RTransaction* transaction=NULL) = 0;
 };
