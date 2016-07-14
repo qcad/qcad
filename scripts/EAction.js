@@ -722,9 +722,9 @@ EAction.prototype.setCrosshairCursor = function() {
         if (RSettings.getDevicePixelRatio()===2 && RS.getSystemId()!=="osx") {
             bitmap = new QBitmap("scripts/CrosshairCursor@2x.png", "PNG");
             mask = new QBitmap("scripts/CrosshairCursorMask@2x.png", "PNG");
-            bitmap.setDevicePixelRatio(2);
-            mask.setDevicePixelRatio(2);
-            EAction.crossCursor = new QCursor(bitmap, mask, 30, 30);
+            //bitmap.setDevicePixelRatio(2);
+            //mask.setDevicePixelRatio(2);
+            EAction.crossCursor = new QCursor(bitmap, mask, 15, 15);
         }
         else {
             bitmap = new QBitmap("scripts/CrosshairCursor.png", "PNG");
