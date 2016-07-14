@@ -31,8 +31,8 @@
 class RExporter;
 
 /**
- * \brief Abstract base class for classes that are interested in the current 
- * focus.
+ * \brief Abstract base class for classes that wish to be notified when an entity is
+ * exported.
  *
  * \ingroup core
  * \scriptable
@@ -41,6 +41,10 @@ class QCADCORE_EXPORT REntityExportListener {
 public:
     virtual ~REntityExportListener() {}
 
+    /**
+     * Registers the given custom property as trigger. The exportEntity function is only
+     * called for entities with a custom property that matches the given title and regular expression.
+     */
     virtual void registerCustomProperty(const QString& title, const QString& regExp) {
         registeredProperties.insert(QPair<QString, QString>(title, regExp));
     }
@@ -59,7 +63,7 @@ public:
     /**
      * Called by the document whenever an entity is exporter with 
      * one of the registered custom properties. Can be used to for example
-     * decorate the entity.
+     * to 'decorate' the entity.
      *
      * \param exporter The exporter to use to export decorations to.
      * \param entity The entity currently being drawn.

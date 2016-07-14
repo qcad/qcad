@@ -28,7 +28,7 @@ class RDocumentInterface;
 
 /**
  * \brief Abstract base class for classes that are interested in the current 
- * clipboard contents and want to be notified whenever the clipboard changes.
+ * selection and want to be notified whenever the selection changes.
  *
  * \ingroup core
  * \scriptable
@@ -38,7 +38,7 @@ public:
     virtual ~RSelectionListener() {}
 
     /**
-     * Called by the document whenever the current clipboard changes.
+     * Called by the document whenever the current selection changes.
      */
     virtual void updateSelectionListener(RDocumentInterface* documentInterface) = 0;
 };
