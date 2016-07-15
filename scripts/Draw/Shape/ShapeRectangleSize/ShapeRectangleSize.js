@@ -45,3 +45,21 @@ ShapeRectangleSize.prototype.getShapes = function(corners) {
 ShapeRectangleSize.prototype.slotCreatePolylineChanged = function(checked) {
     this.createPolyline = checked;
 };
+
+ShapeRectangleSize.prototype.initUiOptions = function(resume, optionsToolBar) {
+    DrawBasedOnRectangleSize.prototype.initUiOptions.call(this, resume, optionsToolBar);
+
+    this.createPolyline = RSettings.getBoolValue(this.settingsGroup + "/CreatePolyline", false);
+
+    //var optionsToolBar = EAction.getOptionsToolBar();
+    var w = optionsToolBar.findChild("CreatePolyline");
+    if (!isNull(w)) {
+        w.checked = this.createPolyline;
+    }
+};
+
+ShapeRectangleSize.prototype.hideUiOptions = function(saveToSettings) {
+    DrawBasedOnRectangleSize.prototype.hideUiOptions.call(this, saveToSettings);
+
+    RSettings.setValue(this.settingsGroup + "/CreatePolyline", this.createPolyline);
+};
