@@ -76,6 +76,38 @@ public:
         return Unknown;
     }
 
+    static bool isPointShape(const RShape& s) {
+        return s.getType()==RShape::Point;
+    }
+    static bool isLineShape(const RShape& s) {
+        return s.getType()==RShape::Line;
+    }
+    static bool isArcShape(const RShape& s) {
+        return s.getType()==RShape::Arc;
+    }
+    static bool isCircleShape(const RShape& s) {
+        return s.getType()==RShape::Circle;
+    }
+    static bool isEllipseShape(const RShape& s) {
+        return s.getType()==RShape::Ellipse;
+    }
+    static bool isFullEllipseShape(const RShape& s);
+    static bool isPolylineShape(const RShape& s) {
+        return s.getType()==RShape::Polyline;
+    }
+    static bool isSplineShape(const RShape& s) {
+        return s.getType()==RShape::Spline;
+    }
+    static bool isTriangleShape(const RShape& s) {
+        return s.getType()==RShape::Triangle;
+    }
+    static bool isXLineShape(const RShape& s) {
+        return s.getType()==RShape::XLine;
+    }
+    static bool isRayShape(const RShape& s) {
+        return s.getType()==RShape::Ray;
+    }
+
     virtual RShape* clone() const = 0;
 
     /**
@@ -283,6 +315,11 @@ public:
     static QList<QSharedPointer<RShape> > getReversedShapeList(const QList<QSharedPointer<RShape> >& shapes);
 
     virtual QList<QSharedPointer<RShape> > splitAt(const QList<RVector>& points) const;
+
+    static QList<QSharedPointer<RShape> > trim(
+            const RShape& trimShape, const RVector& trimClickPos,
+            const RShape& limitingShape, const RVector& limitingClickPos,
+            bool trimBoth, bool samePolyline);
 
     static int getErrorCode() {
         return errorCode;

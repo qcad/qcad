@@ -316,12 +316,12 @@ Trim.trim = function(op, limitingEntity, limitingClickPos, trimEntity, trimClick
         }
     }
 
-    var newShapes = Trim.trimShapes(limitingShape, limitingClickPos, trimShape, trimClickPos, trimBoth, samePolyline);
+    var newShapes = Trim.trimShapes(trimShape, trimClickPos, limitingShape, limitingClickPos, trimBoth, samePolyline);
     if (newShapes.length===0) {
         return false;
     }
 
-    if (!modifyEntity(op, trimEntity.clone(), newShapes[0])) {
+    if (!modifyEntity(op, trimEntity.clone(), newShapes[0].data())) {
         if (!preview) {
             if (trimBoth) {
                 EAction.handleUserWarning(qsTr("First entity cannot be trimmed."));
@@ -338,7 +338,7 @@ Trim.trim = function(op, limitingEntity, limitingClickPos, trimEntity, trimClick
     }
 
     if (trimBoth) {
-        if (!modifyEntity(op, limitingEntity.clone(), newShapes[1])) {
+        if (!modifyEntity(op, limitingEntity.clone(), newShapes[1].data())) {
             if (!preview) {
                 EAction.handleUserWarning(qsTr("Second entity cannot be trimmed."));
             }
@@ -348,184 +348,6 @@ Trim.trim = function(op, limitingEntity, limitingClickPos, trimEntity, trimClick
     return true;
 };
 
-/**
- * Trimming on shape level.
- *
- * \param limitingShape Entity to which the trim entity will be trimmed.
- * \param limitingClickPos Coordinate which defines the intersection to which the
- *    trim entity will be trimmed.
- * \param trimShape Shape which will be trimmed.
- * \param trimClickPos Coordinate which defines which endpoint of the
- *   trim entity to trim.
- * \param trimBoth true: Trim both entities. false: trim trimEntity only.
- */
-Trim.trimShapes = function(limitingShape, limitingClickPos, trimShape, trimClickPos, trimBoth, samePolyline) {
-    var i1, i2, segment;
-
-    var trimShapeSimple = trimShape;
-    if (isPolylineShape(trimShape)) {
-        i1 = trimShape.getClosestSegment(trimClickPos);
-        if (i1<0) {
-            return [];
-        }
-        segment = trimShape.getSegmentAt(i1);
-        if (isNull(segment)) {
-            return [];
-        }
-        trimShapeSimple = segment.data();
-    }
-
-    var limitingShapeSimple = limitingShape;
-    if (isPolylineShape(limitingShape)) {
-        i2 = limitingShape.getClosestSegment(limitingClickPos);
-        if (i2<0) {
-            return [];
-        }
-        segment = limitingShape.getSegmentAt(i2);
-        if (isNull(segment)) {
-            return [];
-        }
-        limitingShapeSimple = segment.data();
-    }
-
-    // possible trim points:
-    var sol = trimShapeSimple.getIntersectionPoints(limitingShapeSimple, false);
-    if (sol.length===0) {
-        return [];
-    }
-
-    var trimmedShape1;
-    var trimmedShape2;
-    var c, r, am, a1, a2;
-    var mp;
-
-    if (isCircleShape(trimShape)) {
-        // convert circle to trimmable arc:
-        c = trimShape.getCenter();
-        r = trimShape.getRadius();
-        am = c.getAngleTo(trimClickPos);
-        a1 = RMath.getNormalizedAngle(am-Math.PI/2);
-        a2 = RMath.getNormalizedAngle(am+Math.PI/2);
-        trimmedShape1 = new RArc(c,r,a1,a2,false);
-    }
-    else if (isFullEllipseShape(trimShape)) {
-        c = trimShape.getCenter();
-        mp = trimShape.getMajorPoint();
-        r = trimShape.getRatio();
-        am = trimShape.getParamTo(trimClickPos);
-        a1 = RMath.getNormalizedAngle(am-Math.PI/2);
-        a2 = RMath.getNormalizedAngle(am+Math.PI/2);
-        trimmedShape1 = new REllipse(c,mp,r,a1,a2,false);
-    }
-    else {
-        if (samePolyline) {
-            trimmedShape1 = trimShapeSimple.clone();
-        }
-        else {
-            trimmedShape1 = trimShape.clone();
-        }
-    }
-
-    if (trimBoth) {
-        if (isCircleShape(limitingShape)) {
-            // convert circle to trimmable arc:
-            c = limitingShape.getCenter();
-            r = limitingShape.getRadius();
-            am = c.getAngleTo(trimClickPos);
-            a1 = RMath.getNormalizedAngle(am-Math.PI/2);
-            a2 = RMath.getNormalizedAngle(am+Math.PI/2);
-            trimmedShape2 = new RArc(c,r,a1,a2,false);
-        }
-        else {
-            if (samePolyline) {
-                trimmedShape2 = limitingShapeSimple.clone();
-            }
-            else {
-                trimmedShape2 = limitingShape.clone();
-            }
-        }
-    }
-
-    // find trim (intersection) point:
-    var isIdx;
-    if (trimBoth || isEllipseShape(trimShape)) {
-        isIdx = trimClickPos.getClosestIndex(sol);
-    }
-    else {
-        isIdx = limitingClickPos.getClosestIndex(sol);
-    }
-    var is = sol[isIdx];
-
-    var is2;
-    if (sol.length===1 || isIdx!==0) {
-        is2 = sol[0];
-    }
-    else {
-        is2 = sol[1];
-    }
-
-    // trim trim entity:
-    var ending1, ending2;
-
-    ending1 = trimmedShape1.getTrimEnd(is, trimClickPos);
-
-    switch (ending1) {
-    case RS.EndingStart:
-        trimmedShape1.trimStartPoint(is, trimClickPos);
-        if (isCircleShape(trimShape) || isFullEllipseShape(trimShape)) {
-            trimmedShape1.trimEndPoint(is2, trimClickPos);
-        }
-        break;
-    case RS.EndingEnd:
-        trimmedShape1.trimEndPoint(is, trimClickPos);
-        if (isCircleShape(trimShape) || isFullEllipseShape(trimShape)) {
-            trimmedShape1.trimStartPoint(is2, trimClickPos);
-        }
-        break;
-    default:
-        break;
-    }
-
-    if (isXLineShape(trimmedShape1)) {
-        trimmedShape1 = xLineToRay(trimmedShape1);
-    }
-    else if (isRayShape(trimShape) && ending1===RS.EndingEnd) {
-        trimmedShape1 = rayToLine(trimmedShape1);
-    }
-
-    // trim limiting shape if possible (not possible for splines):
-    if (trimBoth && isFunction(trimmedShape2.getTrimEnd)) {
-        ending2 = trimmedShape2.getTrimEnd(is, limitingClickPos);
-
-        switch (ending2) {
-        case RS.EndingStart:
-            trimmedShape2.trimStartPoint(is, limitingClickPos);
-            if (isCircleShape(limitingShape) || isFullEllipseShape(limitingShape)) {
-                trimmedShape2.trimEndPoint(is2, limitingClickPos);
-            }
-            break;
-        case RS.EndingEnd:
-            trimmedShape2.trimEndPoint(is, limitingClickPos);
-            if (isCircleShape(limitingShape) || isFullEllipseShape(limitingShape)) {
-                trimmedShape2.trimStartPoint(is2, limitingClickPos);
-            }
-            break;
-        default:
-            break;
-        }
-
-        if (isXLineShape(trimmedShape2)) {
-            trimmedShape2 = xLineToRay(trimmedShape2);
-        }
-        else if (isRayShape(trimmedShape2) && ending2===RS.EndingEnd) {
-            trimmedShape2 = rayToLine(trimmedShape2);
-        }
-    }
-
-    if (samePolyline) {
-        var pl = ShapeAlgorithms.modifyPolylineCorner(trimShape, trimmedShape1, ending1, i1, limitingShape, trimmedShape2, ending2, i2, undefined);
-        return [ pl ];
-    }
-
-    return [ trimmedShape1, trimmedShape2 ];
+Trim.trimShapes = function(trimShape, trimClickPos, limitingShape, limitingClickPos, trimBoth, samePolyline) {
+    return RShape.trim(trimShape, trimClickPos, limitingShape, limitingClickPos, trimBoth, samePolyline);
 };

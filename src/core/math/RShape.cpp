@@ -36,6 +36,10 @@ double RShape::twopi = M_PI*2;
 double RShape::epsTolerance = 1.0e-04;
 int RShape::errorCode = 0;
 
+bool RShape::isFullEllipseShape(const RShape& s) {
+    return s.getType()==RShape::Ellipse && dynamic_cast<const REllipse&>(s).isFullEllipse();
+}
+
 /**
  * \return Shortest distance from this shape to the given point.
  *      Based on \ref getVectorTo.
@@ -2035,6 +2039,212 @@ QList<QSharedPointer<RShape> > RShape::splitAt(const QList<RVector>& points) con
     return ret;
 }
 
+/**
+ * Trims a shape to another or two shapes to each other.
+ *
+ * \param trimShape Shape which will always be trimmed.
+ * \param trimClickPos Coordinate which defines which endpoint of the
+ *   trim entity to trim.
+ * \param limitingShape Entity to which the trim entity will be trimmed.
+ * \param limitingClickPos Coordinate which defines the intersection to which the
+ *    trim entity will be trimmed.
+ * \param trimBoth true: Trim both entities. false: trim trimEntity only.
+ */
+QList<QSharedPointer<RShape> > RShape::trim(
+        const RShape& trimShape, const RVector& trimClickPos,
+        const RShape& limitingShape, const RVector& limitingClickPos,
+        bool trimBoth, bool samePolyline) {
+
+    int i1;
+    QSharedPointer<RShape> segment;
+    QSharedPointer<RShape> trimShapeSimple = QSharedPointer<RShape>(trimShape.clone());
+    if (isPolylineShape(trimShape)) {
+        const RPolyline& polyline = dynamic_cast<const RPolyline&>(trimShape);
+        i1 = polyline.getClosestSegment(trimClickPos);
+        if (i1<0) {
+            return QList<QSharedPointer<RShape> >();
+        }
+        segment = polyline.getSegmentAt(i1);
+        if (segment.isNull()) {
+            return QList<QSharedPointer<RShape> >();
+        }
+        trimShapeSimple = segment;
+    }
+
+    int i2;
+    QSharedPointer<RShape> limitingShapeSimple = QSharedPointer<RShape>(limitingShape.clone());
+    if (isPolylineShape(limitingShape)) {
+        const RPolyline& polyline = dynamic_cast<const RPolyline&>(limitingShape);
+        i2 = polyline.getClosestSegment(limitingClickPos);
+        if (i2<0) {
+            return QList<QSharedPointer<RShape> >();
+        }
+        segment = polyline.getSegmentAt(i2);
+        if (segment.isNull()) {
+            return QList<QSharedPointer<RShape> >();
+        }
+        limitingShapeSimple = segment;
+    }
+
+    // possible trim points:
+    QList<RVector> sol = trimShapeSimple->getIntersectionPoints(*limitingShapeSimple, false);
+    if (sol.isEmpty()) {
+        return QList<QSharedPointer<RShape> >();
+    }
+
+    QSharedPointer<RShape> trimmedTrimShape;
+    QSharedPointer<RShape> trimmedLimitingShape;
+    RVector c;
+    double r, am, a1, a2;
+    RVector mp;
+
+    if (RShape::isCircleShape(trimShape)) {
+        const RCircle& circle = dynamic_cast<const RCircle&>(trimShape);
+        // convert circle to trimmable arc:
+        c = circle.getCenter();
+        r = circle.getRadius();
+        am = c.getAngleTo(trimClickPos);
+        a1 = RMath::getNormalizedAngle(am-M_PI/2);
+        a2 = RMath::getNormalizedAngle(am+M_PI/2);
+        trimmedTrimShape = QSharedPointer<RShape>(new RArc(c,r,a1,a2,false));
+    }
+    else if (RShape::isFullEllipseShape(trimShape)) {
+        const REllipse& ellipse = dynamic_cast<const REllipse&>(trimShape);
+        c = ellipse.getCenter();
+        mp = ellipse.getMajorPoint();
+        r = ellipse.getRatio();
+        am = ellipse.getParamTo(trimClickPos);
+        a1 = RMath::getNormalizedAngle(am-M_PI/2);
+        a2 = RMath::getNormalizedAngle(am+M_PI/2);
+        trimmedTrimShape = QSharedPointer<RShape>(new REllipse(c,mp,r,a1,a2,false));
+    }
+    else {
+        if (samePolyline) {
+            trimmedTrimShape = QSharedPointer<RShape>(trimShapeSimple->clone());
+        }
+        else {
+            trimmedTrimShape = QSharedPointer<RShape>(trimShape.clone());
+        }
+    }
+
+    if (trimBoth) {
+        if (isCircleShape(limitingShape)) {
+            const RCircle& circle = dynamic_cast<const RCircle&>(limitingShape);
+            // convert circle to trimmable arc:
+            c = circle.getCenter();
+            r = circle.getRadius();
+            am = c.getAngleTo(trimClickPos);
+            a1 = RMath::getNormalizedAngle(am-M_PI/2);
+            a2 = RMath::getNormalizedAngle(am+M_PI/2);
+            trimmedLimitingShape = QSharedPointer<RShape>(new RArc(c,r,a1,a2,false));
+        }
+        else {
+            if (samePolyline) {
+                trimmedLimitingShape = QSharedPointer<RShape>(limitingShapeSimple->clone());
+            }
+            else {
+                trimmedLimitingShape = QSharedPointer<RShape>(limitingShape.clone());
+            }
+        }
+    }
+
+    // find trim (intersection) point:
+    bool isIdx;
+    if (trimBoth || isEllipseShape(trimShape)) {
+        isIdx = trimClickPos.getClosestIndex(sol);
+    }
+    else {
+        isIdx = limitingClickPos.getClosestIndex(sol);
+    }
+    RVector is = sol[isIdx];
+
+    RVector is2;
+    if (sol.length()==1 || isIdx!=0) {
+        is2 = sol[0];
+    }
+    else {
+        is2 = sol[1];
+    }
+
+    // trim trim entity:
+    QSharedPointer<RDirected> trimmedShape1Dir = trimmedTrimShape.dynamicCast<RDirected>();
+    RS::Ending ending1 = trimmedShape1Dir->getTrimEnd(is, trimClickPos);
+
+    switch (ending1) {
+    case RS::EndingStart:
+        trimmedShape1Dir->trimStartPoint(is, trimClickPos);
+        if (isCircleShape(trimShape) || isFullEllipseShape(trimShape)) {
+            trimmedShape1Dir->trimEndPoint(is2, trimClickPos);
+        }
+        break;
+    case RS::EndingEnd:
+        trimmedShape1Dir->trimEndPoint(is, trimClickPos);
+        if (isCircleShape(trimShape) || isFullEllipseShape(trimShape)) {
+            trimmedShape1Dir->trimStartPoint(is2, trimClickPos);
+        }
+        break;
+    default:
+        break;
+    }
+
+    if (isXLineShape(*trimmedTrimShape)) {
+        QSharedPointer<const RXLine> xline = trimmedTrimShape.dynamicCast<const RXLine>();
+        trimmedTrimShape = QSharedPointer<RShape>(new RRay(xline->getBasePoint(), xline->getDirectionVector()));
+    }
+    else if (isRayShape(trimShape) && ending1==RS::EndingEnd) {
+        QSharedPointer<RRay> ray = trimmedTrimShape.dynamicCast<RRay>();
+        trimmedTrimShape = QSharedPointer<RShape>(new RLine(ray->getBasePoint(), ray->getSecondPoint()));
+    }
+
+    // trim limiting shape if possible (not possible for splines):
+    RS::Ending ending2 = RS::EndingNone;
+    QSharedPointer<RDirected> trimmedShape2Dir = trimmedLimitingShape.dynamicCast<RDirected>();
+    if (trimBoth && !trimmedShape2Dir.isNull()) {
+        ending2 = trimmedShape2Dir->getTrimEnd(is, limitingClickPos);
+
+        switch (ending2) {
+        case RS::EndingStart:
+            trimmedShape2Dir->trimStartPoint(is, limitingClickPos);
+            if (isCircleShape(limitingShape) || isFullEllipseShape(limitingShape)) {
+                trimmedShape2Dir->trimEndPoint(is2, limitingClickPos);
+            }
+            break;
+        case RS::EndingEnd:
+            trimmedShape2Dir->trimEndPoint(is, limitingClickPos);
+            if (isCircleShape(limitingShape) || isFullEllipseShape(limitingShape)) {
+                trimmedShape2Dir->trimStartPoint(is2, limitingClickPos);
+            }
+            break;
+        default:
+            break;
+        }
+
+        if (isXLineShape(*trimmedLimitingShape)) {
+            QSharedPointer<RXLine> xline = trimmedLimitingShape.dynamicCast<RXLine>();
+            trimmedLimitingShape = QSharedPointer<RShape>(new RRay(xline->getBasePoint(), xline->getDirectionVector()));
+        }
+        else if (isRayShape(*trimmedLimitingShape) && ending2==RS::EndingEnd) {
+            QSharedPointer<RRay> ray = trimmedLimitingShape.dynamicCast<RRay>();
+            trimmedLimitingShape = QSharedPointer<RShape>(new RLine(ray->getBasePoint(), ray->getSecondPoint()));
+        }
+    }
+
+    QList<QSharedPointer<RShape> > ret;
+
+    if (samePolyline && isPolylineShape(trimShape)) {
+        const RPolyline& polyline = dynamic_cast<const RPolyline&>(trimShape);
+        RPolyline pl = polyline.modifyPolylineCorner(*trimmedTrimShape, ending1, i1, *trimmedLimitingShape, ending2, i2);
+        ret.append(QSharedPointer<RShape>(pl.clone()));
+    }
+    else {
+        ret.append(trimmedTrimShape);
+        ret.append(trimmedLimitingShape);
+    }
+
+    return ret;
+}
+
 void RShape::dump() {
     qDebug() << *this;
 }
+
