@@ -65,7 +65,7 @@ ShapeRectanglePP.prototype.slotCreatePolylineChanged = function(checked) {
 };
 
 ShapeRectanglePP.prototype.initUiOptions = function(resume, optionsToolBar) {
-    DrawBasedOnRectangleSize.prototype.initUiOptions.call(this, resume, optionsToolBar);
+    DrawBasedOnRectanglePP.prototype.initUiOptions.call(this, resume, optionsToolBar);
 
     this.createPolyline = RSettings.getBoolValue(this.settingsGroup + "/CreatePolyline", false);
 
@@ -77,7 +77,7 @@ ShapeRectanglePP.prototype.initUiOptions = function(resume, optionsToolBar) {
 };
 
 ShapeRectanglePP.prototype.hideUiOptions = function(saveToSettings) {
-    DrawBasedOnRectangleSize.prototype.hideUiOptions.call(this, saveToSettings);
+    DrawBasedOnRectanglePP.prototype.hideUiOptions.call(this, saveToSettings);
 
     RSettings.setValue(this.settingsGroup + "/CreatePolyline", this.createPolyline);
 };
