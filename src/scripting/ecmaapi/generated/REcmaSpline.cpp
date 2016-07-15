@@ -5346,8 +5346,8 @@
         ,
     a1);
         // return type: RS::Ending
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+                // standard Type
+                result = QScriptValue(cppResult);
             
     } else
 

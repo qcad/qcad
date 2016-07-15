@@ -6432,8 +6432,8 @@
         ,
     a1);
         // return type: RS::Ending
-                // not standard type nor reference
-                result = qScriptValueFromValue(engine, cppResult);
+                // standard Type
+                result = QScriptValue(cppResult);
             
     } else
 
@@ -7887,9 +7887,7 @@
             context->argument(0).isNull()
         ) /* type: RShape */
      && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNull()
+            context->argument(1).isNumber()
         ) /* type: RS::Ending */
      && (
             context->argument(2).isNumber()
@@ -7900,9 +7898,7 @@
             context->argument(3).isNull()
         ) /* type: RShape */
      && (
-            context->argument(4).isVariant() || 
-            context->argument(4).isQObject() || 
-            context->argument(4).isNull()
+            context->argument(4).isNumber()
         ) /* type: RS::Ending */
      && (
             context->argument(5).isNumber()
@@ -7927,21 +7923,13 @@
                     }
                     RShape& a0 = *ap0;
                 
-                    // argument is reference
-                    RS::Ending*
-                    ap1 =
-                    qscriptvalue_cast<
-                    RS::Ending*
-                        >(
-                        context->argument(
-                        1
-                        )
-                    );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RPolyline: Argument 1 is not of type RS::Ending*.",
-                               context);                    
-                    }
-                    RS::Ending& a1 = *ap1;
+                    // argument isStandardType
+                    RS::Ending
+                    a1 =
+                    (RS::Ending)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
                 
                     // argument isStandardType
                     int
@@ -7967,21 +7955,13 @@
                     }
                     RShape& a3 = *ap3;
                 
-                    // argument is reference
-                    RS::Ending*
-                    ap4 =
-                    qscriptvalue_cast<
-                    RS::Ending*
-                        >(
-                        context->argument(
-                        4
-                        )
-                    );
-                    if( ap4 == NULL ){
-                           return REcmaHelper::throwError("RPolyline: Argument 4 is not of type RS::Ending*.",
-                               context);                    
-                    }
-                    RS::Ending& a4 = *ap4;
+                    // argument isStandardType
+                    RS::Ending
+                    a4 =
+                    (RS::Ending)
+                    (int)
+                    context->argument( 4 ).
+                    toNumber();
                 
                     // argument isStandardType
                     int
@@ -8024,9 +8004,7 @@
             context->argument(0).isNull()
         ) /* type: RShape */
      && (
-            context->argument(1).isVariant() || 
-            context->argument(1).isQObject() || 
-            context->argument(1).isNull()
+            context->argument(1).isNumber()
         ) /* type: RS::Ending */
      && (
             context->argument(2).isNumber()
@@ -8037,9 +8015,7 @@
             context->argument(3).isNull()
         ) /* type: RShape */
      && (
-            context->argument(4).isVariant() || 
-            context->argument(4).isQObject() || 
-            context->argument(4).isNull()
+            context->argument(4).isNumber()
         ) /* type: RS::Ending */
      && (
             context->argument(5).isNumber()
@@ -8069,21 +8045,13 @@
                     }
                     RShape& a0 = *ap0;
                 
-                    // argument is reference
-                    RS::Ending*
-                    ap1 =
-                    qscriptvalue_cast<
-                    RS::Ending*
-                        >(
-                        context->argument(
-                        1
-                        )
-                    );
-                    if( ap1 == NULL ){
-                           return REcmaHelper::throwError("RPolyline: Argument 1 is not of type RS::Ending*.",
-                               context);                    
-                    }
-                    RS::Ending& a1 = *ap1;
+                    // argument isStandardType
+                    RS::Ending
+                    a1 =
+                    (RS::Ending)
+                    (int)
+                    context->argument( 1 ).
+                    toNumber();
                 
                     // argument isStandardType
                     int
@@ -8109,21 +8077,13 @@
                     }
                     RShape& a3 = *ap3;
                 
-                    // argument is reference
-                    RS::Ending*
-                    ap4 =
-                    qscriptvalue_cast<
-                    RS::Ending*
-                        >(
-                        context->argument(
-                        4
-                        )
-                    );
-                    if( ap4 == NULL ){
-                           return REcmaHelper::throwError("RPolyline: Argument 4 is not of type RS::Ending*.",
-                               context);                    
-                    }
-                    RS::Ending& a4 = *ap4;
+                    // argument isStandardType
+                    RS::Ending
+                    a4 =
+                    (RS::Ending)
+                    (int)
+                    context->argument( 4 ).
+                    toNumber();
                 
                     // argument isStandardType
                     int
