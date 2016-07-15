@@ -271,7 +271,7 @@ Bevel.bevelShapes = function(shape1, clickPos1, shape2, clickPos2, trim, samePol
     var bevel = new RLine(bp1, bp2);
 
     if (samePolyline) {
-        var pl = ShapeAlgorithms.modifyPolylineCorner(shape1, trimmed1, ending1, i1, shape2, trimmed2, ending2, i2, bevel);
+        var pl = shape1.modifyPolylineCorner(trimmed1, ending1, i1, trimmed2, ending2, i2, bevel);
         return [ pl ];
     }
 
