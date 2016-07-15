@@ -51,6 +51,39 @@
         getType
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        isPointShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isLineShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isArcShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isCircleShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isEllipseShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isFullEllipseShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isPolylineShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isSplineShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isTriangleShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isXLineShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        isRayShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         clone
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -219,10 +252,13 @@
         getOffsetArcs
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
-        reverseShapeList
+        getReversedShapeList
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         splitAt
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        trim
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         getErrorCode

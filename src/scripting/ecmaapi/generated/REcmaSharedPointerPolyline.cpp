@@ -112,6 +112,8 @@
             
             REcmaHelper::registerFunction(&engine, proto, appendShape, "appendShape");
             
+            REcmaHelper::registerFunction(&engine, proto, appendShapeAuto, "appendShapeAuto");
+            
             REcmaHelper::registerFunction(&engine, proto, appendVertex, "appendVertex");
             
             REcmaHelper::registerFunction(&engine, proto, prependVertex, "prependVertex");
@@ -281,6 +283,8 @@
             REcmaHelper::registerFunction(&engine, proto, convertToClosed, "convertToClosed");
             
             REcmaHelper::registerFunction(&engine, proto, convertToOpen, "convertToOpen");
+            
+            REcmaHelper::registerFunction(&engine, proto, modifyPolylineCorner, "modifyPolylineCorner");
             
         engine.setDefaultPrototype(
             qMetaTypeId<RPolylinePointer>(), *proto);
@@ -1036,6 +1040,76 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::appendShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::appendShapeAuto
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::appendShapeAuto", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::appendShapeAuto";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("appendShapeAuto", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        
+               self->appendShapeAuto(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.appendShapeAuto().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::appendShapeAuto", context, engine);
             return result;
         }
          QScriptValue
@@ -7779,6 +7853,328 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::convertToOpen", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaSharedPointerPolyline::modifyPolylineCorner
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaSharedPointerPolyline::modifyPolylineCorner", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaSharedPointerPolyline::modifyPolylineCorner";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+                    // public function: can be called from ECMA wrapper of ECMA shell:
+                    RPolyline* self = 
+                        getSelf("modifyPolylineCorner", context);
+                  
+
+                //Q_ASSERT(self!=NULL);
+                if (self==NULL) {
+                    return REcmaHelper::throwError("self is NULL", context);
+                }
+                
+    
+    if( context->argumentCount() ==
+    6 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RS::Ending */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(3).isVariant() || 
+            context->argument(3).isQObject() || 
+            context->argument(3).isNull()
+        ) /* type: RShape */
+     && (
+            context->argument(4).isVariant() || 
+            context->argument(4).isQObject() || 
+            context->argument(4).isNull()
+        ) /* type: RS::Ending */
+     && (
+            context->argument(5).isNumber()
+        ) /* type: int */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+                    // argument is reference
+                    RS::Ending*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RS::Ending*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RPolyline: Argument 1 is not of type RS::Ending*.",
+                               context);                    
+                    }
+                    RS::Ending& a1 = *ap1;
+                
+                    // argument isStandardType
+                    int
+                    a2 =
+                    (int)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+                    // argument is reference
+                    RShape*
+                    ap3 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        3
+                        )
+                    );
+                    if( ap3 == NULL ){
+                           return REcmaHelper::throwError("RPolyline: Argument 3 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a3 = *ap3;
+                
+                    // argument is reference
+                    RS::Ending*
+                    ap4 =
+                    qscriptvalue_cast<
+                    RS::Ending*
+                        >(
+                        context->argument(
+                        4
+                        )
+                    );
+                    if( ap4 == NULL ){
+                           return REcmaHelper::throwError("RPolyline: Argument 4 is not of type RS::Ending*.",
+                               context);                    
+                    }
+                    RS::Ending& a4 = *ap4;
+                
+                    // argument isStandardType
+                    int
+                    a5 =
+                    (int)
+                    
+                    context->argument( 5 ).
+                    toNumber();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPolyline'
+    RPolyline cppResult =
+        
+               self->modifyPolylineCorner(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+        ,
+    a5);
+        // return type: RPolyline
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+    
+    if( context->argumentCount() ==
+    7 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RS::Ending */
+     && (
+            context->argument(2).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(3).isVariant() || 
+            context->argument(3).isQObject() || 
+            context->argument(3).isNull()
+        ) /* type: RShape */
+     && (
+            context->argument(4).isVariant() || 
+            context->argument(4).isQObject() || 
+            context->argument(4).isNull()
+        ) /* type: RS::Ending */
+     && (
+            context->argument(5).isNumber()
+        ) /* type: int */
+     && (
+            context->argument(6).isVariant() || 
+            context->argument(6).isQObject() || 
+            context->argument(6).isNull()
+        ) /* type: RShape * */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RPolyline: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+                    // argument is reference
+                    RS::Ending*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RS::Ending*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if( ap1 == NULL ){
+                           return REcmaHelper::throwError("RPolyline: Argument 1 is not of type RS::Ending*.",
+                               context);                    
+                    }
+                    RS::Ending& a1 = *ap1;
+                
+                    // argument isStandardType
+                    int
+                    a2 =
+                    (int)
+                    
+                    context->argument( 2 ).
+                    toNumber();
+                
+                    // argument is reference
+                    RShape*
+                    ap3 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        3
+                        )
+                    );
+                    if( ap3 == NULL ){
+                           return REcmaHelper::throwError("RPolyline: Argument 3 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a3 = *ap3;
+                
+                    // argument is reference
+                    RS::Ending*
+                    ap4 =
+                    qscriptvalue_cast<
+                    RS::Ending*
+                        >(
+                        context->argument(
+                        4
+                        )
+                    );
+                    if( ap4 == NULL ){
+                           return REcmaHelper::throwError("RPolyline: Argument 4 is not of type RS::Ending*.",
+                               context);                    
+                    }
+                    RS::Ending& a4 = *ap4;
+                
+                    // argument isStandardType
+                    int
+                    a5 =
+                    (int)
+                    
+                    context->argument( 5 ).
+                    toNumber();
+                
+                    // argument is pointer
+                    RShape * a6 = NULL;
+
+                    a6 = 
+                        REcmaHelper::scriptValueTo<RShape >(
+                            context->argument(6)
+                        );
+                    
+                    if (a6==NULL && 
+                        !context->argument(6).isNull()) {
+                        return REcmaHelper::throwError("RPolyline: Argument 6 is not of type RShape *RShape *.", context);                    
+                    }
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'RPolyline'
+    RPolyline cppResult =
+        
+               self->modifyPolylineCorner(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+        ,
+    a5
+        ,
+    a6);
+        // return type: RPolyline
+                // not standard type nor reference
+                result = qScriptValueFromValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RPolyline.modifyPolylineCorner().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaSharedPointerPolyline::modifyPolylineCorner", context, engine);
             return result;
         }
          QScriptValue

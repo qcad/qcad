@@ -139,6 +139,28 @@
     
     // static methods:
     
+            REcmaHelper::registerFunction(&engine, &ctor, isPointShape, "isPointShape");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isLineShape, "isLineShape");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isArcShape, "isArcShape");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isCircleShape, "isCircleShape");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isEllipseShape, "isEllipseShape");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isFullEllipseShape, "isFullEllipseShape");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isPolylineShape, "isPolylineShape");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isSplineShape, "isSplineShape");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isTriangleShape, "isTriangleShape");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isXLineShape, "isXLineShape");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, isRayShape, "isRayShape");
+            
             REcmaHelper::registerFunction(&engine, &ctor, order, "order");
             
             REcmaHelper::registerFunction(&engine, &ctor, getIntersectionPointsLL, "getIntersectionPointsLL");
@@ -193,7 +215,9 @@
             
             REcmaHelper::registerFunction(&engine, &ctor, getOffsetArcs, "getOffsetArcs");
             
-            REcmaHelper::registerFunction(&engine, &ctor, reverseShapeList, "reverseShapeList");
+            REcmaHelper::registerFunction(&engine, &ctor, getReversedShapeList, "getReversedShapeList");
+            
+            REcmaHelper::registerFunction(&engine, &ctor, trim, "trim");
             
             REcmaHelper::registerFunction(&engine, &ctor, getErrorCode, "getErrorCode");
             
@@ -359,6 +383,666 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaShape::getType", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShape::isPointShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShape::isPointShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShape::isPointShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RShape::
+       isPointShape(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.isPointShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShape::isPointShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShape::isLineShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShape::isLineShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShape::isLineShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RShape::
+       isLineShape(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.isLineShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShape::isLineShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShape::isArcShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShape::isArcShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShape::isArcShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RShape::
+       isArcShape(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.isArcShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShape::isArcShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShape::isCircleShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShape::isCircleShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShape::isCircleShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RShape::
+       isCircleShape(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.isCircleShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShape::isCircleShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShape::isEllipseShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShape::isEllipseShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShape::isEllipseShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RShape::
+       isEllipseShape(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.isEllipseShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShape::isEllipseShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShape::isFullEllipseShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShape::isFullEllipseShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShape::isFullEllipseShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RShape::
+       isFullEllipseShape(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.isFullEllipseShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShape::isFullEllipseShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShape::isPolylineShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShape::isPolylineShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShape::isPolylineShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RShape::
+       isPolylineShape(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.isPolylineShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShape::isPolylineShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShape::isSplineShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShape::isSplineShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShape::isSplineShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RShape::
+       isSplineShape(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.isSplineShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShape::isSplineShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShape::isTriangleShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShape::isTriangleShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShape::isTriangleShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RShape::
+       isTriangleShape(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.isTriangleShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShape::isTriangleShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShape::isXLineShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShape::isXLineShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShape::isXLineShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RShape::
+       isXLineShape(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.isXLineShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShape::isXLineShape", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShape::isRayShape
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShape::isRayShape", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShape::isRayShape";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    1 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'bool'
+    bool cppResult =
+        RShape::
+       isRayShape(a0);
+        // return type: bool
+                // standard Type
+                result = QScriptValue(cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.isRayShape().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShape::isRayShape", context, engine);
             return result;
         }
          QScriptValue
@@ -8386,12 +9070,12 @@
             return result;
         }
          QScriptValue
-        REcmaShape::reverseShapeList
+        REcmaShape::getReversedShapeList
         (QScriptContext* context, QScriptEngine* engine) 
         
         {
-            //REcmaHelper::functionStart("REcmaShape::reverseShapeList", context, engine);
-            //qDebug() << "ECMAScript WRAPPER: REcmaShape::reverseShapeList";
+            //REcmaHelper::functionStart("REcmaShape::getReversedShapeList", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShape::getReversedShapeList";
             //QCoreApplication::processEvents();
 
             QScriptValue result = engine->undefinedValue();
@@ -8430,10 +9114,10 @@
 
         
             {
-               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.reverseShapeList().",
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.getReversedShapeList().",
                    context);
             }
-            //REcmaHelper::functionEnd("REcmaShape::reverseShapeList", context, engine);
+            //REcmaHelper::functionEnd("REcmaShape::getReversedShapeList", context, engine);
             return result;
         }
          QScriptValue
@@ -8495,6 +9179,165 @@
                    context);
             }
             //REcmaHelper::functionEnd("REcmaShape::splitAt", context, engine);
+            return result;
+        }
+         QScriptValue
+        REcmaShape::trim
+        (QScriptContext* context, QScriptEngine* engine) 
+        
+        {
+            //REcmaHelper::functionStart("REcmaShape::trim", context, engine);
+            //qDebug() << "ECMAScript WRAPPER: REcmaShape::trim";
+            //QCoreApplication::processEvents();
+
+            QScriptValue result = engine->undefinedValue();
+            
+    
+    if( context->argumentCount() ==
+    6 && (
+            context->argument(0).isVariant() || 
+            context->argument(0).isQObject() || 
+            context->argument(0).isNull()
+        ) /* type: RShape */
+     && (
+            context->argument(1).isVariant() || 
+            context->argument(1).isQObject() || 
+            context->argument(1).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(2).isVariant() || 
+            context->argument(2).isQObject() || 
+            context->argument(2).isNull()
+        ) /* type: RShape */
+     && (
+            context->argument(3).isVariant() || 
+            context->argument(3).isQObject() || 
+            context->argument(3).isNull()
+        ) /* type: RVector */
+     && (
+            context->argument(4).isBool()
+        ) /* type: bool */
+     && (
+            context->argument(5).isBool()
+        ) /* type: bool */
+    
+    ){
+    // prepare arguments:
+    
+                    // argument is reference
+                    RShape*
+                    ap0 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        0
+                        )
+                    );
+                    if( ap0 == NULL ){
+                           return REcmaHelper::throwError("RShape: Argument 0 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a0 = *ap0;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap1 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        1
+                        )
+                    );
+                    if (ap1 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 1 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a1 = 
+                    *ap1;
+                
+                    // argument is reference
+                    RShape*
+                    ap2 =
+                    qscriptvalue_cast<
+                    RShape*
+                        >(
+                        context->argument(
+                        2
+                        )
+                    );
+                    if( ap2 == NULL ){
+                           return REcmaHelper::throwError("RShape: Argument 2 is not of type RShape*.",
+                               context);                    
+                    }
+                    RShape& a2 = *ap2;
+                
+                    // argument isCopyable and has default constructor and isSimpleClass 
+                    RVector*
+                    ap3 =
+                    qscriptvalue_cast<
+                    RVector*
+                        >(
+                        context->argument(
+                        3
+                        )
+                    );
+                    if (ap3 == NULL) {
+                           return REcmaHelper::throwError("RShape: Argument 3 is not of type RVector.",
+                               context);                    
+                    }
+                    RVector 
+                    a3 = 
+                    *ap3;
+                
+                    // argument isStandardType
+                    bool
+                    a4 =
+                    (bool)
+                    
+                    context->argument( 4 ).
+                    toBool();
+                
+                    // argument isStandardType
+                    bool
+                    a5 =
+                    (bool)
+                    
+                    context->argument( 5 ).
+                    toBool();
+                
+    // end of arguments
+
+    // call C++ function:
+    // return type 'QList < QSharedPointer < RShape > >'
+    QList < QSharedPointer < RShape > > cppResult =
+        RShape::
+       trim(a0
+        ,
+    a1
+        ,
+    a2
+        ,
+    a3
+        ,
+    a4
+        ,
+    a5);
+        // return type: QList < QSharedPointer < RShape > >
+                // List of ...:
+                result = REcmaHelper::listToScriptValue(engine, cppResult);
+            
+    } else
+
+
+        
+            {
+               return REcmaHelper::throwError("Wrong number/types of arguments for RShape.trim().",
+                   context);
+            }
+            //REcmaHelper::functionEnd("REcmaShape::trim", context, engine);
             return result;
         }
          QScriptValue

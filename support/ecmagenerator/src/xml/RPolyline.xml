@@ -66,6 +66,14 @@ xmlns:rs="http://www.ribbonsoft.com">
         hasDefault="true" default="false" isConst="false" />
       </variant>
     </method>
+    <method name="appendShapeAuto" cppName="appendShapeAuto"
+    specifier="public" isStatic="false" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="shape"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="appendVertex" cppName="appendVertex"
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
@@ -723,6 +731,26 @@ xmlns:rs="http://www.ribbonsoft.com">
     specifier="public" isStatic="false" isVirtual="false"
     isScriptOverwritable="true">
       <variant returnType="bool" isPureVirtual="false" />
+    </method>
+    <method name="modifyPolylineCorner"
+    cppName="modifyPolylineCorner" specifier="public"
+    isStatic="false" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="RPolyline" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape"
+        name="trimmedShape1" isConst="true" />
+        <arg type="RS::Ending" typeName="RS::Ending" name="ending1"
+        isConst="false" />
+        <arg type="int" typeName="int" name="segmentIndex1"
+        isConst="false" />
+        <arg type="RShape &amp;" typeName="RShape"
+        name="trimmedShape2" isConst="true" />
+        <arg type="RS::Ending" typeName="RS::Ending" name="ending2"
+        isConst="false" />
+        <arg type="int" typeName="int" name="segmentIndex2"
+        isConst="false" />
+        <arg type="RShape *" typeName="RShape *" name="cornerShape"
+        hasDefault="true" default="NULL" isConst="true" />
+      </variant>
     </method>
     <method name="hasProxy" cppName="hasProxy" specifier="public"
     isStatic="true" isVirtual="false" isScriptOverwritable="true">

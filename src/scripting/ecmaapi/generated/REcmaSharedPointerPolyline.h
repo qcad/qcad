@@ -88,6 +88,9 @@
         appendShape
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
+        appendShapeAuto
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
         appendVertex
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
@@ -344,6 +347,9 @@
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         convertToOpen
+        (QScriptContext* context, QScriptEngine* engine) 
+        ;static  QScriptValue
+        modifyPolylineCorner
         (QScriptContext* context, QScriptEngine* engine) 
         ;static  QScriptValue
         hasProxy

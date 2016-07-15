@@ -34,6 +34,94 @@ xmlns:rs="http://www.ribbonsoft.com">
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RShape::Type" isPureVirtual="false" />
     </method>
+    <method name="isPointShape" cppName="isPointShape"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="s"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="isLineShape" cppName="isLineShape"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="s"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="isArcShape" cppName="isArcShape"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="s"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="isCircleShape" cppName="isCircleShape"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="s"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="isEllipseShape" cppName="isEllipseShape"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="s"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="isFullEllipseShape" cppName="isFullEllipseShape"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="s"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="isPolylineShape" cppName="isPolylineShape"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="s"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="isSplineShape" cppName="isSplineShape"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="s"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="isTriangleShape" cppName="isTriangleShape"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="s"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="isXLineShape" cppName="isXLineShape"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="s"
+        isConst="true" />
+      </variant>
+    </method>
+    <method name="isRayShape" cppName="isRayShape"
+    specifier="public" isStatic="true" isVirtual="false"
+    isScriptOverwritable="true">
+      <variant returnType="bool" isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="s"
+        isConst="true" />
+      </variant>
+    </method>
     <method name="clone" cppName="clone" specifier="public"
     isStatic="false" isVirtual="true" isScriptOverwritable="true">
       <variant returnType="RShape *" isPureVirtual="false" />
@@ -707,9 +795,9 @@ xmlns:rs="http://www.ribbonsoft.com">
         default="RVector :: invalid" isConst="true" />
       </variant>
     </method>
-    <method name="reverseShapeList" cppName="reverseShapeList"
-    specifier="public" isStatic="true" isVirtual="false"
-    isScriptOverwritable="true">
+    <method name="getReversedShapeList"
+    cppName="getReversedShapeList" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
       <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
       isPureVirtual="false">
         <arg type="QList &lt; QSharedPointer &lt; RShape &gt; &gt; &amp;"
@@ -724,6 +812,24 @@ xmlns:rs="http://www.ribbonsoft.com">
         <arg type="QList &lt; RVector &gt; &amp;"
         typeName="QList &lt; RVector &gt;" name="points"
         isConst="true" />
+      </variant>
+    </method>
+    <method name="trim" cppName="trim" specifier="public"
+    isStatic="true" isVirtual="false" isScriptOverwritable="true">
+      <variant returnType="QList &lt; QSharedPointer &lt; RShape &gt; &gt;"
+      isPureVirtual="false">
+        <arg type="RShape &amp;" typeName="RShape" name="trimShape"
+        isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="trimClickPos" isConst="true" />
+        <arg type="RShape &amp;" typeName="RShape"
+        name="limitingShape" isConst="true" />
+        <arg type="RVector &amp;" typeName="RVector"
+        name="limitingClickPos" isConst="true" />
+        <arg type="bool" typeName="bool" name="trimBoth"
+        isConst="false" />
+        <arg type="bool" typeName="bool" name="samePolyline"
+        isConst="false" />
       </variant>
     </method>
     <method name="getErrorCode" cppName="getErrorCode"

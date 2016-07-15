@@ -573,6 +573,7 @@
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::ProjectionRenderingHint</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::Side</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::Ending</argument>)</argument_list></macro>
+<macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::Ending*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::TextDrawingDirection</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::TextDrawingDirection*</argument>)</argument_list></macro>
 <macro><name>Q_DECLARE_METATYPE</name><argument_list>(<argument>RS::TextLineSpacingStyle</argument>)</argument_list></macro>
