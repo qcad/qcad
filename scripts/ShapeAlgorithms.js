@@ -1852,6 +1852,6 @@ ShapeAlgorithms.appendShapeToPolylineAuto = function(pl, shape) {
 ShapeAlgorithms.modifyPolylineCorner = function(polyline1, trimmedShape1, ending1, segmentIndex1,
                                                 polyline2, trimmedShape2, ending2, segmentIndex2, cornerShape) {
 
-    return RPolyline.modifyPolylineCorner(polyline1, trimmedShape1, ending1, segmentIndex1,
+    return polyline1.modifyPolylineCorner(trimmedShape1, ending1, segmentIndex1,
                                           trimmedShape2, ending2, segmentIndex2, cornerShape);
 };
