@@ -3,8 +3,8 @@ function init(basePath) {
     action.setRequiresDocument(true);
     action.setScriptFile(basePath + "/SelectLayer.js");
     action.setIcon(basePath + "/SelectLayer.svg");
-    action.setDefaultShortcut(new QKeySequence("y,+"));
-    action.setDefaultCommands(["layerselect", "selectlayer", "y+"]);
+    action.setDefaultShortcuts([new QKeySequence("y,+"), new QKeySequence("y,c")]);
+    action.setDefaultCommands(["layerselect", "selectlayer", "y+", "yc"]);
     action.setGroupSortOrder(17400);
     action.setSortOrder(100);
     action.setWidgetNames(["LayerMenu", "LayerToolBar", "LayerToolsPanel", "LayerMatrixPanel"]);
